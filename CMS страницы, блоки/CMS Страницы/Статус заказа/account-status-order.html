@@ -1,0 +1,64 @@
+<style>
+	.account clearfix {
+		width: 70%;
+		float: left;
+	}
+
+	.status-message {
+		width: 75% !important;
+	}
+</style>
+<div class="account clearfix">
+<div class="account__content">
+<h2 id="accountTitle" class="account__title">Проверка статуса заказа <img class="js-loader" style="display: none;" src="{{skin url="images/ajax-loader.gif"}}" /></h2>
+<div class="static-block-cms status-order-content">
+<div class="static-block-cms__content status-order-cms">
+<div class="static-block-cms__paragraph">
+<div id="ord_st1" class="order-first-step"><form id="order_status" class="status-form" action="{{store url="customer/account/orderstatus"}}" method="get">
+<div class="input-box"><label class="status-label" for="number">Введите код из своего чека или номер заказа</label>
+<div class="status-form__i">
+<div class="status-input"><input id="number" class="status-code input-text check-status-code required number" title="Введіть номер з свого чека" name="number" type="text" /></div>
+<div class="status-button"><input id="order_status_submit" class="btn-cart-status button" data-gtm="Interactions-click-checkOrderStatus" type="submit" value="Проверить" /> <img id="message_preloader" class="not-found-preloader no-display" src="{{skin url="images/ajax-loader.gif"}}" /></div>
+</div>
+<span id="st_order_error" class="st-order-error no-display"><span class="error-incorrect-code">Код некорректный</span></span></div>
+</form></div>
+<p style="width: 75%;" id="order_status_label" class="status-message"> </p>
+</div>
+<div class="static-block-cms__paragraph">
+<h4>Где вы можете увидеть код для проверки статуса заказа?</h4>
+<ul class="question-block">
+<li> <a class="down" href="#">Чек при продаже</a>
+<div class="answer-block"><img src="{{skin url="images/bill.jpg"}}" /></div>
+</li>
+<li> <a class="down" href="#">Заявка на ответственное хранение (при условии самовывоза)</a>
+<div class="answer-block"><img src="{{skin url="images/order_save.jpg"}}" /></div>
+</li>
+<li> <a class="down" href="#">Заявка на доставку (при условии доставки)</a>
+<div class="answer-block"><img src="{{skin url="images/order_delivery.jpg"}}" /></div>
+</li>
+</ul>
+</div>
+<div class="static-block-cms__paragraph">
+<h4>При продаже в интернет-магазине</h4>
+<ul class="question-block">
+<li> <a class="down" href="#">Код заказа (при оформлении на странице "спасибо за заказ")</a>
+<div class="answer-block"><img src="{{skin url="images/order_online.jpg"}}" /></div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="account__sidebar">
+<ul class="account-links">
+<li class="account-links__item"> <a class="data" href="{{store url="customer/account"}}"> Персональная информация </a> </li>
+<li class="account-links__item"> <a class="orders" href="{{store url="sales/order/history"}}"> Заказы </a> </li>
+<li class="account-links__item"> <a class="wishlist" href="{{store url="wishlist"}}"> Список желаний </a> </li>
+<li class="account-links__item"> <a class="help" href="{{store url="review/customer"}}"> Ваши отзывы </a> </li>
+<li class="account-links__item active"> <a class="status"> Проверить статус заказа </a> </li>
+</ul>
+<!-- <a class="account-banner" href="#" _mce_href="#"> <img src="{{skin url="images/account_banner.jpg"}}" _mce_src="{{skin url="images/account_banner.jpg"}}" alt="" /> </a> --></div>
+</div>
+<script type="text/javascript">// <![CDATA[
+	Translator.add('Code is incorrect', 'Код некорректный');
+// ]]></script>

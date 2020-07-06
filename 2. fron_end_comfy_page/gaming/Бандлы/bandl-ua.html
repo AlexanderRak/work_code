@@ -1,0 +1,599 @@
+<style rel="stylesheet">
+   #geming-bandl p:first-letter {
+      padding-left: 0;
+   }
+
+   #geming-bandl p {
+      margin-bottom: 0;
+   }
+
+   #geming-bandl img:hover {
+      opacity: 1;
+   }
+
+   #geming-bandl img {
+      opacity: 1;
+   }
+
+   #geming-bandl #chatBtn img {
+      cursor: pointer;
+   }
+
+   #geming-bandl {
+      max-width: 1316px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 15px;
+   }
+
+   .breadcrumbs__list {
+      display: none;
+   }
+
+   /* content */
+
+   #geming-bandl .container_banner {}
+
+   #geming-bandl .container_name_category {}
+
+   #geming-bandl .container_tab {
+      display: flex;
+      flex-direction: row;
+   }
+
+   .container_tab .block_tab {
+      display: block;
+      margin: 15px auto;
+   }
+
+   #geming-bandl .container_tab .row_ft {}
+
+   #geming-bandl .container_tab .left_bl {
+      flex: 1 1 30%;
+   }
+
+   a.link_noneklick:hover {
+      border-bottom: 1px solid #000;
+   }
+
+   #geming-bandl .container_tab .right_bl {
+      flex: 1 1 70%;
+   }
+
+   #geming-bandl .block_tab .content .bndl_all {}
+
+   #geming-bandl .block_tab .content .bndl_all.bl_product {
+      flex: 1 1 32%;
+      padding: 0 10px 0;
+   }
+
+   #geming-bandl .block_tab .content .bndl_al.bl_plus {
+      flex: 1 1 5%;
+   }
+
+   #geming-bandl .block_tab .content .bndl_all.bl_last {
+      flex: 1 1 32%;
+      border-right: .2rem solid #ef6437 !important;
+      position: relative;
+      padding-right: 10px;
+   }
+
+   #geming-bandl .block_tab .content .bndl_all.bl_next {
+      margin-left: 2%;
+   }
+
+   #geming-bandl .block_tab .content .bndl_all.bl_last:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: -1rem;
+
+      right: -1.3rem;
+      height: 0;
+      width: 0;
+      border-left: 1.1rem solid #ef6437;
+      border-top: 1.1rem solid transparent;
+      border-bottom: 1.1rem solid transparent;
+   }
+
+   #geming-bandl .block_tab .content .bndl_all.bl_last:after {
+
+      content: "";
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: -1rem;
+
+      height: 0;
+      width: 0;
+      border-left: 1rem solid #fff;
+      border-top: 1rem solid transparent;
+      border-bottom: 1rem solid transparent;
+   }
+
+   /*#geming-bandl .block_tab .content .bndl_all:nth-child(4) {
+      flex: 0 1 31%;
+      margin-bottom: 25px;
+   }
+   */
+   #geming-bandl .block_tab .content .bndl_all .price_line_red {
+      position: relative;
+   }
+
+   #geming-bandl .block_tab .content .bndl_all .cena_right {
+      font: 3.1rem PTSans, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: bold;
+   }
+
+   #geming-bandl .block_tab .content .bndl_all .more_btn {
+      font: 1.7rem PTSans, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 700;
+      padding: .95rem 0;
+      /*width: 75%;*/
+      background: #ff671f;
+      color: #fff;
+      margin-top: 1rem;
+      text-align: center;
+   }
+
+   #geming-bandl .block_tab .content .bndl_all .more_btn a {
+      color: white;
+      padding: 9px 50px;
+      text-transform: capitalize;
+   }
+
+   #geming-bandl .block_tab .content .bndl_all .price_line_red:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: 0;
+      left: 0;
+      height: .2rem;
+      margin-top: -.1rem;
+      background: #ff090b;
+   }
+
+   .cena_up {
+      color: #797979;
+      font-size: 16px;
+      position: relative;
+      width: 70px;
+   }
+
+   .cena_up:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: 0;
+      left: 0;
+      height: .2rem;
+      margin-top: -.1rem;
+      background: #ff090b;
+   }
+
+   #geming-bandl .block_tab .content .bndl_all .content_cart p.name_product {
+      text-align: center;
+      margin: 15px auto;
+      font-size: 1.5rem;
+   }
+
+   #geming-bandl .block_tab .content .bndl_all .content_cart .price_bandl {}
+
+   #geming-bandl .block_tab .content .bndl_all .content_cart .price_bandl .cena {
+      text-align: center;
+      font-size: 2.7rem;
+      color: #797979;
+      font-weight: 700;
+   }
+
+   #geming-bandl .block_tab .content .bndl_all .content_cart img {
+      max-width: 200px;
+      margin: 0 auto;
+      display: block;
+   }
+
+   /* */
+
+   /* BANDL */
+
+   #geming-bandl .block_tab .container_bandl {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 1% 0 5%;
+   }
+
+   #geming-bandl .tabs label {
+      height: inherit;
+      padding: 5px 20px;
+   }
+
+
+
+   /* */
+
+
+
+   /* RESPONSIVE */
+   @media screen and (max-width: 1024px) {
+      #geming-bandl .container_tab .left_bl {
+         display: none;
+      }
+   }
+
+   @media screen and (max-width: 420px) {
+      #geming-bandl .block_tab .content .bl_plus {
+         width: 60px;
+      }
+
+      #geming-bandl .container_tab {
+         overflow: scroll;
+      }
+
+      .tabs label {
+         width: 106px;
+      }
+
+      #geming-bandl .block_tab .content .bndl_all .more_btn {
+         width: 100%;
+      }
+
+      #geming-bandl .block_tab .content .bndl_all .cena_right {
+         font: 1.8rem PTSans, -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+
+      #geming-bandl .block_tab .content .bndl_all:nth-child(3):after {
+         right: -0.9rem;
+      }
+
+      #geming-bandl .block_tab .content .bndl_all .more_btn a {
+         padding: 9px 35px;
+      }
+
+      #geming-bandl .tabs label {
+         font-size: 13px;
+      }
+
+      .tabs input {
+         width: 0;
+      }
+
+      #geming-bandl .block_tab .content .bndl_all .content_cart img {
+         max-width: 150px;
+      }
+
+
+   }
+
+   /* END RESPONSIVE */
+</style>
+<style type="text/css">
+   #bandl_template {
+      max-width: 1316px;
+      width: 100%;
+      display: block;
+      height: auto;
+      margin: 0 auto;
+      background: linear-gradient(85.84deg, #C33764 28.3%, #1D2671 77.39%);
+   }
+
+   .sect-row {
+      content: "";
+      background-image: url(https://cdn.comfy.ua/media/x/img/bg1-gaming.png);
+      background-position: left;
+      background-repeat: repeat-x;
+   }
+
+   .sect-row p.text-bl-gaming {
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      display: table;
+      position: relative;
+      padding: 12px 0 12px 32px;
+   }
+
+   .sect-row p.text-bl-gaming.gaming-before::after {
+      content: "";
+      background-image: url(https://cdn.comfy.ua/media/x/img/ico-g_1.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      right: -55px;
+      top: 10px;
+      width: 45px;
+      height: 29px;
+      -webkit-transition: -webkit-transform .8s ease-in-out;
+      transition: -webkit-transform .8s ease-in-out;
+      transition: transform .8s ease-in-out;
+      transition: transform .8s ease-in-out, -webkit-transform .8s ease-in-out;
+   }
+
+   a.gaming-banner-rote:hover .gaming-before::after {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+   }
+
+
+   @media screen and (min-width: 320px) and (max-width: 480px) {
+      .sect-row p.text-bl-gaming {
+         font-weight: bold;
+         font-size: 13px;
+         padding: 17px 0 17px 15px;
+      }
+
+      .sect-row p.text-bl-gaming.gaming-before::after {
+         top: 50%;
+         -webkit-transform: translateY(-50%);
+         transform: translateY(-50%);
+      }
+   }
+
+   @media screen and (min-width: 481px) and (max-width: 768px) {}
+
+   @media screen and (min-width: 769px) and (max-width: 1024px) {}
+</style>
+<a id="bandl_template" class="gaming-banner-rote" href="/gaming/">
+   <div class="wrapper-gaming-banner">
+      <div class="sect-row">
+         <p class="text-bl-gaming gaming-before">← Всі товари категорії Gaming</p>
+      </div>
+   </div>
+</a>
+<div id="geming-bandl">
+   <section class="container_tab">
+      <div class="block_tab">
+         <div class="content bandl_1">
+            <!--1-->
+            <div class="container_bandl c" id="bandl1">
+               <div class="bndl_all bl_product bl_left">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/a/c/acer-nitro-5-an515-43-wp-01-backlit_2.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/noutbuk-igrovoj-acer-nitro-5-an515-43-nh-q5xeu-001-black.html">Ноутбук игровой Acer Nitro 5 AN515-43 (NH.Q5XEU.001) Black</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_left"><span id="left1" class="price_line_red">16 801<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all  bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+               <div class="bndl_all bl_product bl_right">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/a/4/a4tech_g300_bloody_5_1.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/garnitura-provodnaja-a4tech-g300-bloody-black-red.html">Гарнітура дротова A4tech G300 Bloody (Black+Red)</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_right"><span id="right1" class="price_line_red">500<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+               <div class="bndl_all bl_product bl_right">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/a/4/a4tech_b-081_bloody.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/kovrik-dlja-myshi-a4tech-b-081-bloody.html">Килимок для миші A4tech B-081 Bloody</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_right"><span id="right1" class="price_line_red">199<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+               <div class="bndl_all bl_right bl_last bl_product">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/_/a/_a4tech_q80_bloody_neon_xglide_black_usb_0.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/mysh-provodnaja-igrovaja-a4tech-q80-bloody-neon-xglide-black-usb.html">Миша дротова ігрова A4tech Q80 Bloody Neon XGlide Black USB</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_right"><span id="right1" class="price_line_red">499<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all bl_next">
+                  <!-- <div class="cena cena_up">13898<sup> грн</sup></div> -->
+                  <div class="cena cena_right" id="priceBndl1---">17 999<sup> грн</sup></div>
+                  <div class="more_btn"><a href="https://comfy.ua/checkout/onepage/add/skus/1567537-1045413-1045286-1290393" id="moreBtn_1">купити</a></div>
+               </div>
+            </div>
+         </div>
+         <!--END 1-->
+
+         <div class="content bandl_2">
+            <!--2-->
+            <div class="container_bandl c" id="bandl1">
+               <div class="bndl_all bl_product bl_left">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/a/c/acer_nitro_5_an515-54_black_011.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/noutbuk-igrovoj-acer-nitro-5-an515-54-nh-q5aeu-05g-black.html">Ноутбук игровой Acer Nitro 5 AN515-54 (NH.Q5AEU.05G) Black</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_left"><span id="left1" class="price_line_red">21 700<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all  bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+               <div class="bndl_all bl_product bl_right">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/a/4/a4tech_g300_bloody_5_1.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/garnitura-provodnaja-a4tech-g300-bloody-black-red.html">Гарнітура дротова A4tech G300 Bloody (Black+Red)</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_right"><span id="right1" class="price_line_red">601<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+               <div class="bndl_all bl_product bl_right">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/a/4/a4tech_b-081_bloody.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/kovrik-dlja-myshi-a4tech-b-081-bloody.html">Килимок для миші A4tech B-081 Bloody</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_right"><span id="right1" class="price_line_red">199<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+               <div class="bndl_all bl_product bl_right bl_last">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/_/a/_a4tech_q80_bloody_neon_xglide_black_usb_0.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/mysh-provodnaja-igrovaja-a4tech-q80-bloody-neon-xglide-black-usb.html">Миша дротова ігрова A4tech Q80 Bloody Neon XGlide Black USB</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_right"><span id="right1" class="price_line_red">499<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="bndl_all bl_next">
+                  <!-- <div class="cena cena_up">13898<sup> грн</sup></div> -->
+                  <div class="cena cena_right" id="priceBndl1---">22 999<sup> грн</sup></div>
+                  <div class="more_btn"><a href="https://comfy.ua/checkout/onepage/add/skus/1570825-1045413-1290393-1045286" id="moreBtn_1">купити</a></div>
+               </div>
+            </div>
+         </div>
+         <!--END 2-->
+
+         <div class="content bandl_3">
+            <!--3-->
+            <div class="container_bandl c" id="bandl1">
+               <div class="bndl_all bl_product bl_left">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/a/c/acer_nitro_5_an515-54_black_011_1.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/noutbuk-igrovoj-acer-nitro-5-an515-54-nh-q5aeu-05a-black.html">Ноутбук игровой Acer Nitro 5 AN515-54 (NH.Q5AEU.05A) Black</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_left"><span id="left1" class="price_line_red">18 601<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all  bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+               <div class="bndl_all bl_product bl_right">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/a/4/a4tech_g300_bloody_5_1.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/garnitura-provodnaja-a4tech-g300-bloody-black-red.html">Гарнітура дротова A4tech G300 Bloody (Black+Red)</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_right"><span id="right1" class="price_line_red">500<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+               <div class="bndl_all bl_product bl_right">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/a/4/a4tech_b-081_bloody.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/kovrik-dlja-myshi-a4tech-b-081-bloody.html">Килимок для миші A4tech B-081 Bloody</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_right"><span id="right1" class="price_line_red">199<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+               <div class="bndl_all bl_right bl_last bl_product">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/_/a/_a4tech_q80_bloody_neon_xglide_black_usb_0.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/mysh-provodnaja-igrovaja-a4tech-q80-bloody-neon-xglide-black-usb.html">Миша дротова ігрова A4tech Q80 Bloody Neon XGlide Black USB</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_right"><span id="right1" class="price_line_red">499<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all bl_next">
+                  <!-- <div class="cena cena_up">13898<sup> грн</sup></div> -->
+                  <div class="cena cena_right" id="priceBndl1---">19 799<sup> грн</sup></div>
+                  <div class="more_btn"><a href="https://comfy.ua/checkout/onepage/add/skus/1578032-1045413-1045286-1290393" id="moreBtn_1">купити</a></div>
+               </div>
+            </div>
+         </div>
+         <!--END 3-->
+
+         <div class="content bandl_4">
+            <!--4-->
+            <div class="container_bandl c" id="bandl1">
+               <div class="bndl_all bl_product bl_left">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/l/e/lenovo_l340-17irh_gaming_81ll00alra_black_0_3.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/noutbuk-igrovoj-lenovo-l340-15irh-gaming-81lk010kra-black.html">Ноутбук игровой Lenovo L340-15IRH Gaming (81LK010KRA) Black</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_left"><span id="left1" class="price_line_red">18 555<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all  bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+               <div class="bndl_all bl_product bl_right">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/a/4/a4tech_g300_bloody_5_1.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/garnitura-provodnaja-a4tech-g300-bloody-black-red.html">Гарнітура дротова A4tech G300 Bloody (Black+Red)</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_right"><span id="right1" class="price_line_red">506<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+               <div class="bndl_all bl_product bl_right">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/a/4/a4tech_b-081_bloody.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/kovrik-dlja-myshi-a4tech-b-081-bloody.html">Килимок для миші A4tech B-081 Bloody</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_right"><span id="right1" class="price_line_red">199<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+               <div class="bndl_all bl_right bl_last bl_product">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/_/a/_a4tech_q80_bloody_neon_xglide_black_usb_0.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/mysh-provodnaja-igrovaja-a4tech-q80-bloody-neon-xglide-black-usb.html">Миша дротова ігрова A4tech Q80 Bloody Neon XGlide Black USB</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_right"><span id="right1" class="price_line_red">499<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all bl_next">
+                  <!-- <div class="cena cena_up">13898<sup> грн</sup></div> -->
+                  <div class="cena cena_right" id="priceBndl1---">19 759<sup> грн</sup></div>
+                  <div class="more_btn"><a href="https://comfy.ua/checkout/onepage/add/skus/1569488-1045413-1045286-1290393" id="moreBtn_1">купити</a></div>
+               </div>
+            </div>
+         </div>
+         <!--END 4-->
+
+         <div class="content bandl_4">
+            <!--5-->
+            <div class="container_bandl c" id="bandl1">
+               <div class="bndl_all bl_product bl_left">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/i/m/image_4_1.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/noutbuk-igrovoj-hp-omen-15-dc1007ua-7qf24ea-black.html">Ноутбук игровой HP Omen 15-dc1007ua (7QF24EA) Black</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_left"><span id="left1" class="price_line_red">24 102<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all  bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+               <div class="bndl_all bl_product bl_right">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/a/4/a4tech_g300_bloody_5_1.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/garnitura-provodnaja-a4tech-g300-bloody-black-red.html">Гарнітура дротова A4tech G300 Bloody (Black+Red)</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_right"><span id="right1" class="price_line_red">500<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+               <div class="bndl_all bl_product bl_right">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/a/4/a4tech_b-081_bloody.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/kovrik-dlja-myshi-a4tech-b-081-bloody.html">Килимок для миші A4tech B-081 Bloody</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_right"><span id="right1" class="price_line_red">199<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+               <div class="bndl_all bl_right bl_last bl_product">
+                  <div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/_/a/_a4tech_q80_bloody_neon_xglide_black_usb_0.jpg" />
+                     <p class="name_product"><a target="_blank" class="link_noneklick" href="/mysh-provodnaja-igrovaja-a4tech-q80-bloody-neon-xglide-black-usb.html">Миша дротова ігрова A4tech Q80 Bloody Neon XGlide Black USB</a></p>
+                     <div class="price_bandl">
+                        <div class="cena cena_right"><span id="right1" class="price_line_red">499<sup> грн</sup></span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bndl_all bl_next">
+                  <!-- <div class="cena cena_up">13898<sup> грн</sup></div> -->
+                  <div class="cena cena_right" id="priceBndl1---">25 299<sup> грн</sup></div>
+                  <div class="more_btn"><a href="https://comfy.ua/checkout/onepage/add/skus/1502861-1045413-1045286-1290393" id="moreBtn_1">купити</a></div>
+               </div>
+            </div>
+         </div>
+         <!--END 5-->
+
+   </section>
+</div>

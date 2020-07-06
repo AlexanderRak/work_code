@@ -1,0 +1,132 @@
+<style>
+
+#fail-payment {
+    width: 721px;
+    height: 382px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
+    position: relative;
+    display: block;
+    padding: 60px 0px 0px 0px;
+    margin-top: 90px;
+    margin-bottom: 365px;
+}
+
+#fail-payment .voskl-znak {
+    background: url(https://cdn.comfy.ua/media/x/img/pzyuka/voskl-znak.png) no-repeat;
+    display: block;
+    width: 99px;
+    height: 90px;
+    margin: 0 auto;
+    padding: 0px 0px 0px 0px;
+	
+}
+	
+#fail-payment h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+#fail-payment p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    width: 480px;
+    margin: 20px auto 0;
+}
+
+#fail-payment a {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    color: #41B02A;
+    border-bottom: 1.5px dashed #41B02A;
+    margin: 30px auto 0;
+    display: block;
+    width: 272px;
+}
+
+#fail-payment a:hover {
+border-bottom: 0px solid #41B02A;
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+
+#fail-payment {
+width: 100%;
+margin-top: 10px;
+padding: 25px 0px 0px 0px;
+}
+
+#fail-payment .voskl-znak {
+
+	
+}
+	
+#fail-payment h2 {
+
+}
+
+#fail-payment p {
+width: 100%;
+}
+
+#fail-payment a {
+
+}
+
+#fail-payment a:hover {
+
+
+}
+
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+#fail-payment {
+width: 100%;
+margin-top: 10px;
+padding: 25px 0px 0px 0px;
+}
+
+#fail-payment .voskl-znak {
+
+	
+}
+	
+#fail-payment h2 {
+
+}
+
+#fail-payment p {
+
+}
+
+#fail-payment a {
+
+}
+
+#fail-payment a:hover {
+
+
+}
+
+}
+
+</style>
+<div id="fail-payment">
+<div class="voskl-znak"></div>
+<h2>Ошибка платежа</h2>
+<p>Пожалуйста повторите попытку оформления заказа или измените способ оплаты</p>
+<a href="{{config path="web/secure/base_url"}}checkout/onepage/createNewOrder/last_order_id/{last_order_number}">Вернуться к оформлению</a></div>

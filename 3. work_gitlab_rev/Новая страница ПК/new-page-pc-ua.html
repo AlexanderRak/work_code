@@ -1,0 +1,120 @@
+<style type="text/css">
+
+</style>
+
+<div id="wrapper-page-pc">
+
+   <section class="new-pagepc">
+      <div class="new-pagepc__bgrd">
+
+         <div class="new-pagepc__text">
+            <img src="https://cdn.comfy.ua/media/x/img/new-page-pc/podarok-card.svg" alt="">
+            <div class="new-pagepc__text-p">
+               <p>Не знаешь какой подарок сделать другу или близкому человеку?</p>
+               <p>Хочешь, чтобы твой презент не просто запомнился, но еще и был полезным?</p>
+               <p>При этом, беспокоишься о том, чтобы не прогадать?</p>
+            </div>
+            <img src="https://cdn.comfy.ua/media/x/img/new-page-pc/podarok-card-text2.svg" alt="">
+         </div>
+
+         <div class="new-pagepc__img">
+            <img src="https://cdn.comfy.ua/media/x/img/new-page-pc/card-page.png" alt="">
+         </div>
+
+      </div>
+   </section>
+
+   <section class="tabs-menu">
+      <div class="tabs-menu__tab">
+         <button class="tablinks" onclick="openCity(event, 'tab1')" id="defaultOpen"><span class="before-line">Хочу подарить карту</span></button>
+         <button class="tablinks" onclick="openCity(event, 'tab2')"><span class="before-line">Карта уже есть.  Хочу ее использовать</span></button>
+         <button class="tablinks" onclick="openCity(event, 'tab3')"><span class="before-line">Предложение для корпоративных клиентов</span></button>
+      </div>
+
+      <div id="tab1" class="tabcontent">
+         <div class="tabs-menu__wrap-text">
+            <div class="tabs-menu__item">
+               <img src="https://cdn.comfy.ua/media/x/img/new-page-pc/icon1.svg" alt="">
+            </div>
+            <div class="tabs-menu__item">
+               <div class="tabs-menu__item__text">
+                  <h2>Где купить:</h2>
+                  <p>В любом магазине COMFY</p>
+               </div>
+            </div>
+         </div>
+         <div class="tabs-menu__wrap-text">
+            <div class="tabs-menu__item">
+               <img src="https://cdn.comfy.ua/media/x/img/new-page-pc/icon2.svg" alt="">
+            </div>
+            <div class="tabs-menu__item">
+               <div class="tabs-menu__item__text">
+                  <h2>Номинал:</h2>
+                  <p>Любой от 50 до 10000 грн</p>
+               </div>
+            </div>
+         </div>
+         <div class="tabs-menu__wrap-text">
+            <div class="tabs-menu__item">
+               <img src="https://cdn.comfy.ua/media/x/img/new-page-pc/icon3.svg" alt="">
+            </div>
+            <div class="tabs-menu__item">
+               <div class="tabs-menu__item__text">
+                  <h2>Кому лучше дарить такой подарок:</h2>
+                  <ul>
+                     <li>- Родным и близким, если хочешь подарить что-то ценное и необходимое</li>
+                     <li>- Персоналу, как дополнительная мотивация</li>
+                     <li>- Партнерам, в качестве презента</li>
+                     <li>- Сотрудникам, как лучший подарок к празднику</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="tabs-menu__wrap-text">
+            <div class="tabs-menu__item">
+               <img src="https://cdn.comfy.ua/media/x/img/new-page-pc/icon4.svg" alt="">
+            </div>
+            <div class="tabs-menu__item">
+               <div class="tabs-menu__item__text">
+                  <h2>Преимущества:</h2>
+                  <ul>
+                     <li>- Удобные условия использования, остаток средств не сгорает, возможна доплата наличными или банковской картой</li>
+                     <li>- Можно использовать на любые акционные предложения</li>
+                     <li>- Яркое подарочное оформление</li>
+                     <li>- Нет дополнительных расходов на транспортировку, хранение, подарочную упаковку</li>
+                     <li>- Остаток на карте всегда можно проверить на сайте или в контакт-центре</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="tab2" class="tabcontent">
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque enim commodi vel. Beatae ab quas quidem, praesentium porro alias autem sint nisi odit blanditiis, eum incidunt perspiciatis qui fugiat nostrum.</p>
+      </div>
+
+      <div id="tab3" class="tabcontent">
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quisquam nostrum quod odio nulla eum laboriosam et sint explicabo quos nesciunt quidem, obcaecati temporibus, officia quibusdam accusantium labore possimus id.</p>
+      </div>
+
+   </section>
+
+</div>
+
+<script>
+   function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+         tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+         tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+   }
+
+   document.getElementById("defaultOpen").click();
+</script>

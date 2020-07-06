@@ -1,0 +1,1079 @@
+
+<style type="text/css">
+.std {
+	padding: 5px 0% 2% 0 !important;
+}
+.breadcrumbs { display: none; }
+#lg_glav_container .header_slider { margin-bottom: 4%; }
+.std { background-color: #fff; padding: 2% 0% 2% 0; }
+.main-container_gray { padding-top: 0px !important  }
+
+
+/* SLIDER CSS */
+
+/*------------------------------*/
+
+
+#slideshow-wrap {
+	text-align: center;
+	display: block;
+	min-width: 260px;
+	max-width: 1170px;
+	margin: auto;
+	position: relative;
+}
+
+#slideshow-inner {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+#slideshow-inner>ul {
+	list-style: none;
+	height: 100%;
+	width: 625%;
+	overflow: hidden;
+	position: relative;
+	left: 0px;
+	-webkit-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+	-moz-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+	-o-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+	transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#slideshow-inner>ul>li {
+	width: 16%;
+	float: left;
+	position: relative;
+}
+
+#slideshow-inner>ul>li>img {
+	margin: auto;
+}
+
+#slideshow-wrap input[type=radio] {
+	position: absolute;
+	left: 50%;
+	bottom: 15px;
+	z-index: 100;
+	visibility: hidden;
+}
+
+#slideshow-wrap label:not(.arrows):not(.show-description-label) {
+	position: absolute;
+	border: 1px solid #606a73;
+	left: 48%;
+	bottom: -30px;
+	z-index: 100;
+	width: 12px;
+	height: 12px;
+	background-color: #606a73;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	cursor: pointer;
+	-webkit-transition: background-color .2s;
+	-moz-transition: background-color .2s;
+	-o-transition: background-color .2s;
+	transition: background-color .2s;
+}
+
+#slideshow-wrap label:not(.arrows):active {/* bottom: -31px; */}
+
+#slideshow-wrap input[type=radio]#button-1:checked~label[for=button-1] { background-color: #9f0043; border: 0; }
+
+#slideshow-wrap input[type=radio]#button-2:checked~label[for=button-2] { background-color: #9f0043; border: 0; }
+
+#slideshow-wrap input[type=radio]#button-3:checked~label[for=button-3] { background-color: #9f0043; border: 0; }
+
+#slideshow-wrap input[type=radio]#button-4:checked~label[for=button-4] { background-color: #9f0043; border: 0; }
+
+#slideshow-wrap input[type=radio]#button-5:checked~label[for=button-5] { background-color: #9f0043; border: 0; }
+
+#slideshow-wrap input[type=radio]#button-6:checked~label[for=button-6] { background-color: #9f0043; border: 0; }
+
+#slideshow-wrap label[for=button-1] { margin-left: -44px } /* -36px */
+
+#slideshow-wrap label[for=button-2] { margin-left: -22px } /* -18px */
+
+#slideshow-wrap label[for=button-4] { margin-left: 22px } /* 18px */
+
+#slideshow-wrap label[for=button-5] { margin-left: 44px } /* 36px */
+
+#slideshow-wrap label[for=button-6] { margin-left: 66px } /* 54px */
+
+#slideshow-wrap input[type=radio]#button-1:checked~#slideshow-inner>ul { left: 0 }
+
+#slideshow-wrap input[type=radio]#button-2:checked~#slideshow-inner>ul { left: -100% }
+
+#slideshow-wrap input[type=radio]#button-3:checked~#slideshow-inner>ul { left: -200% }
+
+#slideshow-wrap input[type=radio]#button-4:checked~#slideshow-inner>ul { left: -300% }
+
+#slideshow-wrap input[type=radio]#button-5:checked~#slideshow-inner>ul { left: -400% }
+
+#slideshow-wrap input[type=radio]#button-6:checked~#slideshow-inner>ul { left: -500% }
+
+label.arrows {
+	font-family: 'WebSymbolsRegular';
+	font-size: 25px;
+	color: rgb(255,255,240);
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	display: none;
+	opacity: 0.7;
+	cursor: pointer;
+	z-index: 1000;
+	background-color: transparent;
+	-webkit-transition: opacity .2s;
+	-moz-transition: opacity .2s;
+	-o-transition: opacity .2s;
+	transition: opacity .2s;
+	text-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+label.arrows:hover { opacity: 1 }
+
+label.arrows:active { margin-top: -23px }
+
+input[type=radio]#button-1:checked~.arrows#arrow-2, input[type=radio]#button-2:checked~.arrows#arrow-3, input[type=radio]#button-3:checked~.arrows#arrow-4, input[type=radio]#button-4:checked~.arrows#arrow-5, input[type=radio]#button-5:checked~.arrows#arrow-6 {
+	right: 90px;
+	display: block;
+}
+
+input[type=radio]#button-2:checked~.arrows#arrow-1, input[type=radio]#button-3:checked~.arrows#arrow-2, input[type=radio]#button-4:checked~.arrows#arrow-3, input[type=radio]#button-5:checked~.arrows#arrow-4, input[type=radio]#button-6:checked~.arrows#arrow-5 {
+	left: 125px;
+	display: block;
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+
+input[type=radio]#button-2:checked~.arrows#arrow-1 { left: 125px }
+
+input[type=radio]#button-3:checked~.arrows#arrow-2 { left: 110px }
+
+input[type=radio]#button-4:checked~.arrows#arrow-3 { left: 90px }
+
+input[type=radio]#button-5:checked~.arrows#arrow-4 { left: 70px }
+
+input[type=radio]#button-6:checked~.arrows#arrow-5 { left: 50px }
+
+.description {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 260px;
+	font-family: 'Yanone Kaffeesatz';
+	z-index: 1000;
+}
+
+.description input { visibility: hidden }
+
+.description label {
+	font-family: 'WebSymbolsRegular';
+	background-color: rgba(255,255,240,1);
+	position: relative;
+	left: -17px;
+	top: 00px;
+	width: 40px;
+	height: 27px;
+	display: inline-block;
+	text-align: center;
+	padding-top: 7px;
+	border-bottom-right-radius: 15px;
+	cursor: pointer;
+	opacity: 0;
+	-webkit-transition: opacity .2s;
+	-moz-transition: opacity .2s;
+	-o-transition: opacity .2s;
+	transition: opacity .2s;
+	z-index: 5;
+	color: rgb(20,20,20);
+}
+
+#slideshow-inner>ul>li:hover .description label { opacity: 1 }
+
+.description input[type=checkbox]:checked~label { opacity: 1 }
+
+.description .description-text {
+	background-color: rgba(255,255,230,.5);
+	padding-left: 45px;
+	padding-top: 25px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	position: relative;
+	top: -35px;
+	z-index: 4;
+	opacity: 0;
+	-webkit-transition: opacity .2s;
+	-moz-transition: opacity .2s;
+	-o-transition: opacity .2s;
+	transition: opacity .2s;
+	color: rgb(20,20,20);
+}
+
+.description input[type=checkbox]:checked~.description-text { opacity: 1 }
+
+
+.narrow-container_white { background: transparent;}
+.carousel {
+	color: #fff;
+	overflow: hidden;
+	position: relative;
+	height: 285px;
+}
+
+.carousel-item {
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	transition: opacity 0.6s ease-in-out;
+	width: 100%;
+}
+
+.carousel-active:checked + .carousel-item {
+	opacity: 1;
+	pointer-events: auto;
+	position: static;
+}
+
+.carousel-item tov {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.carousel-controls {
+	height: 100%;
+	width: 100%;
+	padding-top: 7%;
+}
+
+.carousel-control {
+	background: rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	font-size: 28px;
+	height: 90px;
+	text-align: center;
+	transition: background 0.1s ease-in-out;
+	width: 50%;
+	z-index: 2;
+	line-height: 90px;
+}
+
+.carousel-control:hover {
+	background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control.prev {
+	float: left;
+}
+
+.carousel-control.next {
+	float: right;
+}
+
+.carousel-caption {
+	bottom: 15%;
+	font-size: 120%;
+	left: 20%;
+	opacity: 0;
+	right: 20%;
+	text-align: center;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	transition: opacity 0.1s ease-out;
+	z-index: 2;
+}
+
+.carousel-active:checked + .carousel-item .carousel-caption {
+	transition: opacity 0.6s ease-in;
+	opacity: 1;
+}
+
+.carousel-indicators {
+	bottom: 5%;
+	left: 5%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	right: 5%;
+	text-align: center;
+	z-index: 2;
+}
+
+.carousel-indicators li {
+	display: inline-block;
+}
+
+.carousel-indicator {
+	border-radius: 50%;
+	cursor: pointer;
+	display: block;
+	font-size: 28px;
+	line-height: 1;
+	padding: 5px 10px;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	transition: background 0.1s ease-in-out;
+}
+
+.carousel-indicator:hover {
+	background: rgba(0, 0, 0, 0.8);
+}
+
+/* If you`re needing more than 3 banners, maybe you might be using another way to represent your info... ;-) */
+#carousel-1:checked ~ .carousel-indicators .carousel-indicator[for="carousel-1"],
+#carousel-2:checked ~ .carousel-indicators .carousel-indicator[for="carousel-2"],
+#carousel-3:checked ~ .carousel-indicators .carousel-indicator[for="carousel-3"] {
+	color: #007f7f;
+}
+
+@media (min-width: 768px) {
+
+
+	.carousel-indicators {
+		background: transparent;
+	}
+	.carousel-control {
+		width: 5%;
+	}
+	.carousel-controls,
+	.carousel-caption,
+	.carousel-indicators {
+		/*   position: absolute;*/
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	.blcsamsung img {width: 100% ;}
+	.samsung-cms .punkt{width: 50%;}
+	.tov{width: 50%; margin-top: 10px;}
+	.carousel{display: inline-table;}
+	.carousel-controls{padding-top: 0%;}
+	.newprdct {padding-top: 0px;}
+}
+
+
+@media screen and (min-width: 1024px) {
+	/* denys rogachev 05072017 */
+
+	.main-container_gray{
+		padding-top: 20px;
+	}
+
+
+	.samsung-cms .zagolovok {
+		font-size: 20px;
+		letter-spacing: 10px;
+		font-weight: bold;
+	}
+
+	.samsung-cms .punkt {
+		width: 16%;
+	}
+
+	.samsung-cms .cont {
+		text-align: center;
+	}
+}
+
+/*------------------------------*/
+
+/* END SLIDER CSS */
+
+#lg_lending {
+	max-width: 1170px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 55px;
+}
+
+#lg_lending p:first-letter{
+	padding-left: 0;
+}
+#lg_lending p{
+	margin-bottom: 0; 
+}
+
+#lg_lending img:hover {
+	opacity: 1; 
+}
+#lg_lending img {
+	opacity: 1; 
+}
+#lg_lending .one-col .features-desc__text p:first-letter {
+	padding-left: 0rem !important;
+	padding-left: 0rem !important;
+}
+.row_colum_grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, auto);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+}
+.row_colum_grid .item {
+	overflow: hidden;
+}
+.row_colum_grid .item:nth-child(1) {
+	grid-column-start: 1;
+	grid-column-end: -1;
+	background: #606a73;
+	margin-bottom: 35px;
+}
+.row_colum_grid .item:nth-child(2) {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.row_colum_grid .item:nth-child(3) {
+	grid-column-start: 3;
+	grid-column-end: 5;
+}
+.row_colum_grid .item:nth-child(4) {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.row_colum_grid .item:nth-child(5) {
+	grid-column-start: 3;
+	grid-column-end: 5;
+}
+.row_colum_grid .item:nth-child(7) {
+	grid-column-start: 2;
+	grid-column-end: 4;
+}
+
+.flex_container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.item_flex_menu {
+	border-right: 1px solid #fff;
+	width: 100%;
+	padding: 15px 0 0px 0;
+	margin: 15px 0 15px 0;
+	opacity: 1;
+}
+.item_flex_menu:hover { 
+	opacity: 0.6;
+}
+.item_flex_menu.last {
+	border-right: 0px solid #fff;
+}
+.item_flex_menu .flex_content_colum {
+	display: flex;
+	flex-direction: column;
+	min-height: 75px;
+	align-items: center;
+	justify-content: center;
+	width: inherit;
+}
+.item_flex_menu .flex_content_colum img {
+	max-width: 100%;
+	margin: 0 auto;
+	display: block;
+}
+.item_flex_menu p {
+	text-align: center;
+	color: #e1e5ea;
+	margin-top: 6px;
+}
+.container_size .row_cont {
+	position: relative;
+}
+.container_size .row_cont img {
+	max-width: 100%;
+	height: auto;
+}
+.row_cont .text_block img:nth-child(1) {
+	position: absolute;
+	top: 16%;
+	left: 25px;
+}
+.row_cont .text_block.img_top img:nth-child(1) {
+	position: absolute;
+	top: 12%;
+	left: 25px;
+}
+.row_cont .text_block img:nth-child(3) {
+	/* padding: 3% 0 25% 0; */
+}
+.text_block {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 15px 0px 15px 25px;
+	width: 100%;
+}
+
+.text_block.botoombl1 {
+	padding: 15px 15px 15px 0px;
+	width: 48%;
+	right: 0px;
+	justify-content: center;
+	left: inherit;
+	align-items: flex-start;
+}
+.text_block.botoombl1 img:nth-child(1) {
+	right: inherit;
+	left: 0;
+	top: 12%;
+}
+.text_block.botoombl1 p {
+	text-align: left;
+}
+.text_block.botoombl1 a {
+	left: 0;
+}
+
+.text_block.botoombl {
+	/*align-items: flex-end;
+    padding: 15px 15px 15px 25px;
+    width: 100%;*/
+    padding: 15px 25px 15px 25px;
+    width: 64%;
+    right: 0px;
+    justify-content: center;
+    left: inherit;
+    align-items: flex-end;
+}
+.text_block.botoombl img:nth-child(1) {
+	right: 25px;
+	left: initial;
+	top: 12%;
+}
+.row_cont .text_block.botoombl2 img:nth-child(1) {
+	position: initial;
+	margin-top: 12%;
+	padding-bottom: 15px;
+}
+.text_block.botoombl2 {
+	width: 100%;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0px 0px 0px 0px;
+}
+.text_block.botoombl2 p {
+	text-align: center;
+}
+.text_block.botoombl2 a {
+	left: initial;
+}
+.text_block.botoombl p {
+	text-align: right;
+}
+.text_block.botoombl a {
+	right: 25px;
+	left: initial;
+}
+
+.text_block img { max-width: 100%; }
+.text_block p {text-align: left; color: #fff; font-size: 2.3rem;}
+.text_block a { 
+	background-color: #fff;
+	color: #8a8f95;
+	padding: 5px;
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	width: 100px;
+	text-align: center;
+	border-radius: 2px;
+	position: absolute;
+	bottom: 12%;
+	left: 25px; 
+}
+.text_block a:hover {
+	background-color: #e8e8e8;
+	color: #8a8f95;
+}
+.mrgn { margin-top: 15%; }
+
+.label_one_year {
+	/*display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.label_one_year img { 
+	/*position: inherit !important;
+    top: 4.4rem !important;
+    left: initial !important;
+    right: initial !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 85px !important;
+    height: auto !important;*/
+    position: relative !important;
+    top: 7.4rem !important;
+    left: -40px !important;
+    /* right: initial !important; */
+    display: block;
+    float: left;
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    max-width: 85px !important;
+    height: auto !important;
+    padding-right: 5px;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+	.row_colum_grid {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: auto;
+	}
+	.row_cont .text_block img:nth-child(3) {
+		padding: 3% 0 6% 0;
+	}
+	.row_cont .text_block img:nth-child(1) {
+		margin-bottom: 0%;
+	}
+	.label_one_year {
+		bottom: 10px;
+		right: inherit;
+	}
+	.label_one_year img {
+		max-width: 60px !important;
+	}
+	.label_one_year {
+		justify-content: flex-start;
+	}
+	.mrgn { margin-top: 3%; }
+	.row_colum_grid .item:nth-child(1) {
+		grid-column-start: inherit;
+		grid-column-end: inherit;
+	}
+	.label_one_year img {
+		top: 5% !important;
+		left: 25px !important;
+	}
+	.row_colum_grid .item:nth-child(2) {
+		grid-column-start: inherit;
+		grid-column-end: inherit;
+	}
+	.row_colum_grid .item:nth-child(3) {
+		grid-column-start: inherit;
+		grid-column-end: inherit;
+	}
+	.row_colum_grid .item:nth-child(4) {
+		grid-column-start: inherit;
+		grid-column-end: inherit;
+	}
+	.row_colum_grid .item:nth-child(5) {
+		grid-column-start: inherit;
+		grid-column-end: inherit;
+	}
+	.row_colum_grid .item:nth-child(7) {
+		grid-column-start: inherit;
+		grid-column-end: inherit;
+	}
+	.flex_container {
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+	.item_flex_menu {
+		width: 33%;
+	}
+	.text_block {
+		width: 100%;
+	}
+	.text_block a {
+		right: 25px;
+		left: initial;
+	}
+	.xs_none { display: none; }
+	.xs_size_full { width: 100%; }
+	.item_flex_menu { border-right: 0px;  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	.flex_container {
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+	.item_flex_menu {
+		width: 33%;
+	}
+	.label_one_year img {
+		top: 5% !important;
+	}
+	.label_one_year { display: none; }
+	.text_block p {
+		font-size: 1.9rem;
+	}
+	.text_block.botoombl1 {
+		width: 65%;
+	}
+	.xs_none { display: none; }
+	.item_flex_menu { border-right: 0px;  }
+	.row_cont .text_block img:nth-child(3) {
+		padding: 3% 0 6% 0;
+	}
+	.row_cont .text_block img:nth-child(1) {
+		margin-bottom: 0%;
+	}
+	.mrgn { margin-top: 3%; }
+	.text_block a {
+		/*position: initial;
+    	bottom: 0;
+    	left: 0;*/
+    }
+    .text_block.botoombl2 p {
+    	text-align: center;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	.row_cont .text_block img:nth-child(3) {
+		padding: 3% 0 0% 0;
+	}
+	.row_cont .text_block img:nth-child(1) {
+		margin-bottom: 5px;
+		padding-bottom: 0px !important;
+	}
+	.text_block.botoombl1 {
+		width: 52%;
+	}
+}
+.posCont {
+	position: absolute;
+	top: 25px;
+}
+.slog_lg {
+	left: 25px;
+}
+.logo-lg {
+	right: 25px;
+}
+.Cont img { max-width: 100%; height: auto; }
+</style>
+
+<section class="header_slider">
+	<div id="slideshow-wrap">
+
+		<input type="radio" id="button-1" name="controls" checked="checked" /> 
+		<label for="button-1"></label> 
+		<input type="radio" id="button-2" name="controls" /> 
+		<label for="button-2"></label> 
+		<!--<input type="radio" id="button-3" name="controls" /> 
+		<label for="button-3"></label> 
+		<input type="radio" id="button-4" name="controls" /> 
+		<label for="button-4"></label> 
+		<input name="controls" id="button-5" type="radio" /> 
+		<label for="button-5"></label>
+		<input name="controls" id="button-6" type="radio" /> 
+		<label for="button-6"></label>
+
+
+			<label id="arrow-1" class="arrows" for="button-1">></label>
+			<label id="arrow-2" class="arrows" for="button-2">></label>
+			<label id="arrow-3" class="arrows" for="button-3">></label>
+			<label id="arrow-4" class="arrows" for="button-4">></label>
+			<label id="arrow-5" class="arrows" for="button-5">></label>
+			<label id="arrow-6" class="arrows" for="button-6">></label>
+		-->
+
+		<div id="slideshow-inner">
+			<ul>
+
+				<li id="slide1"> <!-- <a href="#" > --> <img src="https://comfy.ua/media/x/img/10_year.jpg" /> <!-- </a> -->
+					<div class="description"><input id="show-description-1" type="checkbox" /></div>
+					<!--<div class="posCont slog_lg"><img src="https://comfy.ua/media/x/img/slog.png"></div>
+					<div class="posCont logo-lg"><img src="https://comfy.ua/media/x/img/logo-lg.png"></div>-->
+				</li>
+
+				<li id="slide2"> <a href="/flat-tvs/brand__lg__os_tv__webos/" >  <img src="https://comfy.ua/media/x/img/6mes.png" />  </a>
+					<div class="description"><input id="show-description-2" type="checkbox" /></div>
+					<!--<div class="posCont slog_lg"><img src="https://comfy.ua/media/x/img/slog.png"></div>
+					<div class="posCont logo-lg"><img src="https://comfy.ua/media/x/img/logo-lg.png"></div>	-->				
+				</li>
+				<!--
+				<li id="slide3">  <img src="https://comfy.ua/media/x/img/lg_lending/slider/new/n2/slide3.jpg" /> 
+					<div class="description"><input id="show-description-3" type="checkbox" /></div>
+					<div class="posCont slog_lg"><img src="https://comfy.ua/media/x/img/slog.png"></div>
+					<div class="posCont logo-lg"><img src="https://comfy.ua/media/x/img/logo-lg.png"></div>				
+				</li>
+
+				<li id="slide4">  <img src="https://comfy.ua/media/x/img/lg_lending/slider/new/n2/slide4.jpg" /> 
+					<div class="description"><input id="show-description-4" type="checkbox" /></div>
+					<div class="posCont slog_lg"><img src="https://comfy.ua/media/x/img/slog.png"></div>
+					<div class="posCont logo-lg"><img src="https://comfy.ua/media/x/img/logo-lg.png"></div>				
+				</li>
+
+				<li id="slide5">  <img src="https://comfy.ua/media/x/img/lg_lending/slider/new/n2/slide5.jpg" /> 
+					<div class="description"><input id="show-description-5" type="checkbox" /></div>
+					<div class="posCont slog_lg"><img src="https://comfy.ua/media/x/img/slog.png"></div>
+					<div class="posCont logo-lg"><img src="https://comfy.ua/media/x/img/logo-lg.png"></div>				
+				</li>
+				-->
+			</ul>
+		</div>
+
+	</div>
+</section>
+
+<div id="lg_lending">
+	<div class="container_grid">
+		<div class="row_colum_grid">
+			<div class="item bl1">
+				<div class="flex_container">
+					<div class="item_flex_menu">
+						<a href="/flat-tvs/brand__lg/">
+							<div class="flex_content_colum">
+								<img src="https://comfy.ua/media/x/img/lg_lending/1_menu.PNG" />
+							</div>
+							<p>Телевізори</p>
+						</a>
+					</div>
+					<div class="item_flex_menu">
+						<a href="/wash-machines/brand__lg/">
+							<div class="flex_content_colum">							
+								<img src="https://comfy.ua/media/x/img/lg_lending/2_menu.PNG" />
+							</div>
+							<p>Пральні машини</p>
+						</a>
+					</div>
+					<div class="item_flex_menu">
+						<a href="/refrigerator/brand__lg/">
+							<div class="flex_content_colum">							
+								<img src="https://comfy.ua/media/x/img/lg_lending/3_menu.png" />					
+							</div>
+							<p>Холодильники</p>	
+						</a>
+					</div>
+					<div class="item_flex_menu">
+						<a href="/microwave-oven/brand__lg/">
+							<div class="flex_content_colum">							
+								<img src="https://comfy.ua/media/x/img/lg_lending/4_menu.PNG" />
+							</div>
+							<p>Мікрохвильові печі</p>
+						</a>
+					</div>
+					<div class="item_flex_menu">
+						<a href="/monitor/brand__lg/">
+							<div class="flex_content_colum">							
+								<img src="https://comfy.ua/media/x/img/lg_lending/5_menu.png" />				
+							</div>
+							<p>Монітори</p>
+						</a>
+					</div>
+					<div class="item_flex_menu">
+						<a href="/smartfon/brand__lg/">
+							<div class="flex_content_colum">							
+								<img src="https://comfy.ua/media/x/img/lg_lending/6_menu.PNG" />							
+							</div>
+							<p>Телефони</p>	
+						</a>
+					</div>
+					<div class="item_flex_menu">
+						<a href="/conditioner-split/brand__lg/">
+							<div class="flex_content_colum">							
+								<img src="https://comfy.ua/media/x/img/lg_lending/7_menu.png" />				
+							</div>
+							<p>Кондиціонери</p>
+						</a>
+					</div>
+					<div class="item_flex_menu last">
+						<a href="/music-center/brand__lg/">
+							<div class="flex_content_colum">							
+								<img src="https://comfy.ua/media/x/img/lg_lending/8_menu.PNG" />						
+							</div>
+							<p>Аудіосистеми</p>
+						</a>
+					</div>
+				</div>	
+			</div>
+			<div class="item bl2">
+				<div class="container_size">
+					<div class="row_cont">
+						<img src="https://comfy.ua/media/x/img/1_len.JPG">
+
+						<div class="text_block">
+							<img src="https://comfy.ua/media/x/img/lg_lending/def/1_len_cont.PNG">
+							<p>Новий погляд на світ</p>
+							<img src="https://comfy.ua/media/x/img/lg_lending/def/1_len_cont2.PNG">
+							<a href="/flat-tvs/brand__lg__tip_televizora__oled/">Детальніше</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="item bl3">
+				<div class="container_size">
+					<div class="row_cont">
+						<img src="https://comfy.ua/media/x/img/2_len.JPG">
+
+						<div class="text_block">
+							<img src="https://comfy.ua/media/x/img/lg_lending/def/2_len_cont.png">
+							<p>Вражаючі кольори</p>
+							<a class="mrgn" href="/ktelevizory-lg/">Детальніше</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="item bl4">
+				<div class="container_size">
+					<div class="row_cont">
+						<img src="https://comfy.ua/media/x/img/lg_lending/def/3_len.jpg">
+
+						<div class="text_block img_top">
+							<img src="https://comfy.ua/media/x/img/lg_lending/def/3_len_cont.PNG">
+							<p>Захист від алергії<br/>до <b>99.9%</b></p>
+							<img style="display: none;" class="xs_none" style="width: 50px; height: auto;" src="https://comfy.ua/media/x/img/lg_lending/def/flower.PNG">
+							<a href="/wash-machines/brand__lg__fynk_par__est/">Детальніше</a>
+
+							<div class="label_one_year">
+								<img src="https://comfy.ua/media/x/img/lg_lending/def/flower.PNG">
+								<img src="https://comfy.ua/media/x/img/oneyear.PNG">
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="item bl5">
+				<div class="container_size">
+					<div class="row_cont">
+						<img src="https://comfy.ua/media/x/img/lg_lending/def/4_len.JPG">
+
+						<div class="text_block img_top">
+							<img src="https://comfy.ua/media/x/img/lg_lending/def/4_len_cont.PNG">
+							<p>Постукайте двічі<br/>та побачите,<br/>що всередині</p>
+							<a href="/refrigerator/brand__lg__holod_osob__door-in-door/">Детальніше</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="item bl6">
+				<div class="container_size">
+					<div class="row_cont">
+						<img class="xs_size_full" src="https://comfy.ua/media/x/img/J7.JPG">
+
+						<div class="text_block botoombl1">
+							<img src="https://comfy.ua/media/x/img/g7_th_1.png">
+							<p>Фокус<br/>на<br/>інтелекті</p>
+							<a href="/smartfon-lg-g7-thinq-black.html">Детальніше</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="item bl7">
+				<div class="container_size">
+					<div class="row_cont">
+						<img src="https://comfy.ua/media/x/img/6_len.JPG">
+
+						<div class="text_block botoombl">
+							<img src="https://comfy.ua/media/x/img/lg_lending/def/6_len_cont.PNG">
+							<p>Робочий простір<br/>твоєї мрії</p>
+							<a href="/monitor/brand__lg__sootnosh_storon_monitor__219/">Детальніше</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="item bl8">
+				<!--
+				<div class="container_size">
+					<div class="row_cont">
+						<img class="xs_size_full" src="https://comfy.ua/media/x/img/7_len.PNG">
+
+						<div class="text_block botoombl2">
+							<img src="https://comfy.ua/media/x/img/lg_lending/def/7_len_cont.PNG">
+							<p>Мистецтво мінімалізму</p>
+							<a href="/microwave-oven/brand__lg/">Детальніше</a>
+						</div>
+
+					</div>
+				</div>
+			-->
+			<div class="container_size">
+				<div class="row_cont">
+					<img class="xs_size_full" src="https://comfy.ua/media/x/img/5_len.jpg">
+
+					<div class="text_block botoombl1">
+						<img src="https://comfy.ua/media/x/img/lg_lending/def/5_len_cont.PNG">
+						<p>Наповніть вечірку сяйвом</p>
+						<a href="/music-center/brand__lg/">Детальніше</a>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<style type="text/css">
+.move_container { display: inline-block; width: 100%; }
+.move_container .row_move { display: flex; flex-direction: row; justify-content: space-between; }
+.move_container .row_move .vid { padding: 10px; width: 49%; }
+.move_container .row_move .vid:first-child { padding-right: 0px; padding-left: 0px; }
+.move_container .row_move .vid:last-child {  padding-right: 0px; padding-left: 0px; }
+.move_container p {
+    text-transform: uppercase;
+    color: #a4acaf;
+    font-size: 2.7rem;
+    margin-bottom: 15px !important;
+    margin-top: 35px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+	.move_container .row_move {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.move_container .row_move .vid {
+		width: 100%;
+		padding: 0px;
+	}
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+}
+</style>
+
+<div class="move_container">
+	<p>Відео</p>
+	<div class="row_move">
+		<div class="vid">
+			<iframe width="100%" height="315" src="https://www.youtube.com/embed/f0TdvK2RPz0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+		</div>
+		<div class="vid">
+			<iframe width="100%" height="315" src="https://www.youtube.com/embed/mfd4N5lZRlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div class="vid">
+			<iframe width="100%" height="315" src="https://www.youtube.com/embed/RIzXEQZ2M6g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
+
+
+</div>

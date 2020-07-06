@@ -1,0 +1,42 @@
+<div class="cms-top-branding" data-id="28570"><img class="cms-top-branding__img" />
+<div class="cms-top-branding__form js-cms-top-branding-form"><form> <input class="cms-top-branding__input js-name" type="text" name="name" placeholder="Ім'я" />
+<div class="cms-top-branding__input-w"><input class="cms-top-branding__input js-phone" type="text" name="phone" placeholder="Телефон" /> <span class="js-cms-top-branding-error" style="display: none;">Введіть номер телефону</span></div>
+<a class="cms-top-branding__submit js-cms-top-branding-submit" href="#">Замовити</a> </form></div>
+<div class="cms-top-branding__success js-cms-top-branding-success" style="display: none;">Дякуємо!<br /> Ми зв'яжемося з вами для уточнення замовлення.</div>
+</div>
+<script type="text/javascript">// <![CDATA[
+jQuery('body').on("click", '.js-cms-top-branding-submit', function (ev) {
+ev.preventDefault();
+// window.location.host
+var url = 'https://comfy.ua' + '/oneclickbuy/cart/add/ajax/1/product/' + jQuery(this).closest('.cms-top-branding').data('id') + '/one_click/1',
+$cmsTopBranding = jQuery('.cms-top-branding'),
+data;
+ 
+if (!$cmsTopBranding.find('.js-phone').val() ) {
+jQuery('.js-cms-top-branding-error').show();
+} else {
+jQuery('.js-cms-top-branding-error').hide();
+ 
+if (!$cmsTopBranding.find('.js-name').val() ) {
+data = {phone: jQuery('.cms-top-branding').find('.js-phone').val()};
+} else {
+data = {phone: $cmsTopBranding.find('.js-phone').val() + '-' + $cmsTopBranding.find('.js-name').val()};
+}
+ 
+jQuery.ajax({
+url: url,
+type: 'post',
+data: data,
+beforeSend: function () {
+jQuery('.js-cms-top-branding-submit').addClass('disabled_progress');
+},
+success: function (response) {
+if (response.status == 'success') {
+jQuery('.js-cms-top-branding-form').remove();
+jQuery('.js-cms-top-branding-success').show();
+}
+}
+});
+}
+});
+// ]]></script>

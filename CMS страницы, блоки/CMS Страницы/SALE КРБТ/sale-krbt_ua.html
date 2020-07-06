@@ -1,0 +1,928 @@
+<script></script>
+<script language="JavaScript" type="text/javascript">// <![CDATA[
+function getCookie(name) {
+   var matches = document.cookie.match(new RegExp(
+      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+      ));
+   return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+var city = getCookie('active_city_id');
+var priceUrl = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id='+city+'&ids=66031, 289753, 539903, 90425, 79647, 331153, 554503, 85982, 542173'
+$.ajax({ url: priceUrl,
+    type: 'get',
+    success: function(output) {
+      var resp = JSON.parse(output);
+
+//ПЕРВА ГРУППА
+					//первый товар
+                    var pr1 = resp['66031']['price'];
+                    var pr1_ = resp['66031']['special_price'];        
+
+                    document.getElementById("price1_").innerHTML = pr1;
+					
+					//второй товар
+                    var pr2 = resp['289753']['price'];
+                    var pr2_ = resp['289753']['special_price'];        
+
+                    document.getElementById("price2_").innerHTML = pr2;
+					
+					//третий товар
+                    var pr3 = resp['539903']['price'];
+                    var pr3_ = resp['539903']['special_price'];        
+
+                    document.getElementById("price3_").innerHTML = pr3;
+					
+//ВТОРАЯ ГРУППА
+					//первый товар
+                    var pr4 = resp['90425']['price'];
+                    var pr4_ = resp['90425']['special_price'];        
+
+                    document.getElementById("price4").innerHTML = pr4;
+					document.getElementById("price4_").innerHTML = pr4_;
+					
+					//второй товар
+                    var pr5 = resp['79647']['price'];
+                    var pr5_ = resp['79647']['special_price'];        
+
+                    document.getElementById("price5").innerHTML = pr5;
+					document.getElementById("price5_").innerHTML = pr5_;
+					
+					//второй товар
+                    var pr6 = resp['331153']['price'];
+                    var pr6_ = resp['331153']['special_price'];        
+
+                    document.getElementById("price6").innerHTML = pr6;
+					document.getElementById("price6_").innerHTML = pr6_;
+					
+//ТРЕТЬЯ ГРУППА
+					//первый товар
+                    var pr7 = resp['554503']['price'];
+                    var pr7_ = resp['554503']['special_price'];        
+
+                    //document.getElementById("price4").innerHTML = pr7;
+					document.getElementById("price7_").innerHTML = pr7;
+					
+					//второй товар
+                    var pr8 = resp['85982']['price'];
+                    var pr8_ = resp['85982']['special_price'];        
+
+                    //document.getElementById("price8").innerHTML = pr8;
+					document.getElementById("price8_").innerHTML = pr8;
+					
+					//второй товар
+                    var pr9 = resp['542173']['price'];
+                    var pr9_ = resp['542173']['special_price'];        
+
+                    //document.getElementById("price9").innerHTML = pr9;
+					document.getElementById("price9_").innerHTML = pr9;
+
+               }
+          });
+// ]]></script>
+<style type="text/css">
+
+.page{
+    background-color: #fff
+}
+.name_top {  }
+.all-bl{
+  /*  padding-top: 20px !important;*/
+  padding-bottom: 50px !important;
+}
+.breadcrumbs{
+    display: none;
+}
+.all-bl{
+    max-width: 1316px; 
+    margin: 0 auto;
+    display: block;
+}
+.block-banner img{
+    width: 100%;
+}
+
+.block-banner{
+    position: relative;
+        padding: 35px 0 0 0;
+}
+
+.block-banner_top p{
+    font-size: 35px;
+    font-weight: bold;
+    margin: 20px 0 0 0;
+}
+
+.block-banner svg{
+    position: absolute;
+    bottom: 0px;
+}
+.tovar-bl{
+    width: 400px;
+    min-height: 400px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    float: left;
+    margin-top: 20px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-left: 60px;
+    padding: 20px 20px 70px 20px;
+    position:relative;
+}
+
+.tovary-bl{ 
+    display: flex;
+    padding-bottom: 25px;
+}
+
+.tovar-bl:first-child{
+    margin-left: 0px;
+}
+.tovar-bl img{
+    max-height: 290px;
+    margin: 0 auto;
+    display: block;
+}
+
+.tovar-bl p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    height: 85px;
+    padding: 20px 0px;
+}
+
+.cena-bl{
+    width: 45%;
+    position: relative;
+}
+.cena{
+    font-weight: bold;
+    font-size: 28px;
+    position: absolute;
+    right: 27px;
+
+}
+.price-currency{
+    top: 1px;
+    right: 4px;
+}
+
+.buy-btn-bl{
+    position: absolute;
+    right: 8%;
+    color: #fff;
+    background-color: #FF671F;
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.btn-all{
+    color: #fff;
+    background-color: #FF671F;
+    border-radius: 25px;
+    padding: 10px 50px;
+    font-size: 23px;
+    font-weight: bold;
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.oldpp{ 
+    color: #797979;
+    position: relative;
+    top: -12px;
+    right: 0px;
+}
+
+.newp{
+    position: absolute;
+    top: 17px;
+    right: 0px;
+}
+
+.oldpp .cena:after{
+    content: "";
+    position: absolute;
+    top: 20px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0px;
+    height: 0.1rem;
+    background: #ff090b;
+    width: 100%;
+}
+/*
+.newp.np .cena:after{
+    content: "";
+    position: absolute;
+    top: 19px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0px;
+    left: 0px;
+    height: 0.1rem;
+    background: #ff090b;
+    width: 100%;
+}*/
+
+.oldpp .cena{
+    font-size: 23px;
+}
+.oldpp ..price-currency{
+    font-size: 11px;
+
+}
+
+.oldpp .price-currency:after{
+    background: #797979;
+}
+
+.cat-on{
+    width: 300px;
+    height: 350px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    float: left;
+    margin-top: 50px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-left: 38px;
+    padding: 20px 20px 70px 20px;
+    position:relative;
+
+}
+
+.cat-on svg{
+    position: absolute;
+    left: 0px;
+    bottom: 0px
+}
+
+.image-on{
+    height: 260px;
+    width: 300px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 25px;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+.image-on.on1{
+    background: url(https://comfy.ua/media/blb/luchshie-planshety-2016-goda_rect_e8466bc88347a41dba80306509bffea3.jpg);
+}
+
+.image-on.on2{
+    background: url(https://comfy.ua/media/blb/printer_2.jpg);
+}
+
+.image-on.on3{
+    background: url(https://comfy.ua/media/blb/samsung-curved-monitor.jpg);
+}
+
+.image-on.on4{
+    background: url(https://comfy.ua/media/blb/best-router-2016-s.jpg);
+}
+
+.image-on.on5{
+    background: url(https://comfy.ua/media/blb/Windows-10.png);
+}
+
+.image-on.on6{
+    background: url(https://comfy.ua/media/blb/Razer-Mamba-TE-right-side.jpg);
+}
+
+.image-on.on7{
+    background: url(https://comfy.ua/media/blb/logitech_craft_keyboard_hero-100734254-large.jpg);
+}
+
+.image-on.on8{ 
+    background: url(https://comfy.ua/media/blb/naush.png);
+}
+
+.all-cat-on a:nth-child(1) .cat-on, .all-cat-on a:nth-child(5) .cat-on{
+    margin-left: 0px;
+}
+
+.cat-on p{
+    position: absolute;
+    bottom: 35px;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    left: 0px;
+}
+
+.all-cat-on{
+    display: inline-block;
+    margin-bottom: 50px;
+
+}
+
+.title-gray{
+    font-size: 30px;
+}
+
+.title-gray__i::before, .title-gray__i::after{
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18.335 30.5' fill='%23a7a7a7'%3E%3Cpath d='M17.938 20.73a.5.5 0 0 0-.707 0l-7.563 7.563V.917a.5.5 0 0 0-1 0V28.46l-7.563-7.563a.5.5 0 0 0-.707.707l8.333 8.333a.498.498 0 0 0 .354.146c.014 0 .028-.007.042-.008.014.001.026.008.041.008a.495.495 0 0 0 .469-.345l8.301-8.301a.5.5 0 0 0 0-.707z'/%3E%3C/svg%3E") no-repeat 50%
+}
+
+
+.tovar-bl p:hover{
+    text-decoration: underline;
+}
+
+.buy-btn-bl:hover { 
+    background-color: #e25c1d;
+}
+
+.btn-all:hover { 
+    background-color: #e25c1d;
+}
+
+.cat-on:hover{
+    -webkit-box-shadow: 0 0 20px 6px rgba(0,0,0,.11);
+    -moz-box-shadow: 0 0 20px 6px rgba(0,0,0,.11);
+    box-shadow: 0 0 4px 1px rgba(0,0,0,.11);
+}
+
+.all-video{
+    max-width: 1316px;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+.video-bl{
+    width: 33%;
+    margin-left: 3%;
+    float: left;
+}
+
+.video-bl:nth-child(1){
+    margin-left: 0%;
+}
+
+.newp.np{
+    top: 6px;
+    position: relative;
+}
+
+.all-news{
+    max-width: 1316px;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+.all-news a{
+    width: 33%;
+    margin-left: 3%;
+    float: left;
+}
+
+
+.all-news a:hover img{
+    opacity: 0.7;
+}
+.all-news a:hover p{
+    text-decoration: none;
+}
+
+.all-news a p{
+    font-size: 17px;
+    text-decoration: underline;
+    margin-top: 10px;
+    color: #39a520;
+}
+
+.all-news a .video-bl{
+    width: 100%
+}
+
+.all-news a:nth-child(1){
+    margin-left: 0%;
+}
+
+@media (max-width: 767px){
+    .block-banner svg{
+        width: 100%;
+        bottom: 2px;
+        height: 24px;
+        position: absolute;
+    }
+
+    .block-banner p{
+
+        font-size: 25px;
+    }
+
+    .tovary-bl{
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .tovar-bl{
+        width: 80%;
+        margin: 0 auto;
+        float: none;
+        margin-top: 50px;
+    }
+
+    .btn-all{
+        display: block;
+        width: 80%;
+        margin-top: 35px;
+        font-size: 16px;
+    }
+
+    .cena-bl{
+        width: 40%;
+    }
+
+    .tovar-bl p{
+        font-size: 16px;
+    }
+
+    .tovar-bl img{
+        max-height: 200px;
+    }
+
+    .buy-btn-bl{
+        font-size: 17px;
+    }
+
+
+    .oldpp .cena{
+        font-size: 21px;
+    }
+
+    .cena{
+        font-size: 26px;
+    }
+
+    .newp{
+        top: 17px;
+    }
+    .oldpp:after{
+        width: 80%;
+    }
+
+    .cat-on{
+        width: 80%;
+        float: none;
+        margin: auto;
+        margin-top: 40px;
+    }
+
+    .all-cat-on{
+        width: 100%;
+        text-align: center;
+    }
+    .all-video{
+        display: block;
+        text-align: center;
+    }
+
+    .video-bl{
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+        float: none;
+    }
+
+    .video-bl:nth-child(1){
+        margin-left: auto;
+    }
+
+    .all-news{
+        width: 85%;
+        display: block;
+    }
+
+    .all-news a{
+        width: 100%;
+        margin-left: 0%;
+        float: none;
+    }
+
+
+}
+
+</style>
+<div class="all-bl">
+<div class="block-banner"><a href="/krbt-kredit/" target="_blank"> <img src="https://comfy.ua/media/x/img/pzyuka/kbt-banner1.png" /> </a> <!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" height="403px" width="1321px" style="display: none;"> <g transform="translate(-60.000000, -464.000000)" fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="back-to-school">
+<path fill="#FFFFFF" id="Rectangle-2" d="M60,464 C91.6419616,464.635831 278.456129,485.83899 620.442503,527.609478 C962.428877,569.379966 1215.94804,565.438395 1381,515.784766 L1381,563 L60,563 L60,464 Z"></path></g> </svg></div>
+<!--
+<div class="block-banner_top">
+<p>Смартфоны</p>
+</div>
+-->
+<div class="tovary-bl">
+<div class="tovar-bl">
+<div class="labels js-product-labels">
+<ul class="label-list gr-9 clearfix">
+<li data-content-url="https://comfy.ua/labels/description.php?label_id=459" class="label-item js-label _has-content"> <img alt="КРЕДИТ БЕЗ ПЕРЕПЛАТ НА 25 ПЛАТЕЖІВ" title="КРЕДИТ БЕЗ ПЕРЕПЛАТ НА 25 ПЛАТЕЖІВ" src="https://cdn.comfy.ua/media/x/img/pzyuka/plashka_kredit25pz.png" class="label-item__img" />
+<div style="left: -142.5px;" class="js-content label-item__content">
+<h3>КРЕДИТ БЕЗ ПЕРЕПЛАТ НА 25 ПЛАТЕЖІВ</h3>
+<style>
+.oplata_chstymi a {
+color: #379424;
+    border-bottom: .1rem solid #379424;
+	    font-weight: 700;
+		    font-size: 1.4rem;
+			line-height: 2.4rem;
+}
+
+.oplata_chstymi a:hover {
+border-bottom: 0;
+}
+
+.oplata_chstymi p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    height: auto;
+    padding: 0;
+    text-align: left;
+    font-weight: normal;
+}
+</style>
+<div class="oplata_chstymi">
+<p>Початковий внесок + 24 платежа = 25 платежів. Не сумісно з подарунками, підвищеними бонусами і акцією 2 в 1. Доступно для ціни без знижки.</p>
+<a href="https://comfy.ua/ua/crediting.html#Credit">Детальніше</a></div>
+<button class="label-item__close hide-on-desktop" type="button"></button></div>
+</li>
+</ul>
+<ul class="label-list gr-20 clearfix">
+<li class="label-item js-label"><img src="https://comfy.ua/media/label/1px_label_55.png" class="label-item__img" /></li>
+<li class="label-item js-label"><img src="https://comfy.ua/media/label/1px_label_52.png" class="label-item__img" /></li>
+<li class="label-item js-label"><img src="https://comfy.ua/media/label/pustoi_pixel_111.png" class="label-item__img" /></li>
+<li class="label-item js-label"><img src="https://comfy.ua/media/label/label1px_3.png" class="label-item__img" /></li>
+</ul>
+</div>
+<a href="/stiral-naja-mashina-samsung-ww60k42106wdua.html"> <img src="https://comfy.ua/media/x/img/pzyuka/samsung_ww60k42106wdua_8_2_1.jpg" />
+<p>Пральна машина Samsung WW60K42106WDUA</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price1">2999</div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price1_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [66031])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl">
+<div class="labels js-product-labels">
+<ul class="label-list gr-9 clearfix">
+<li data-content-url="https://comfy.ua/labels/description.php?label_id=459" class="label-item js-label _has-content"> <img alt="КРЕДИТ БЕЗ ПЕРЕПЛАТ НА 25 ПЛАТЕЖІВ" title="КРЕДИТ БЕЗ ПЕРЕПЛАТ НА 25 ПЛАТЕЖІВ" src="https://cdn.comfy.ua/media/x/img/pzyuka/plashka_kredit25pz.png" class="label-item__img" />
+<div style="left: -142.5px;" class="js-content label-item__content">
+<h3>КРЕДИТ БЕЗ ПЕРЕПЛАТ НА 25 ПЛАТЕЖІВ</h3>
+<style>
+.oplata_chstymi a {
+color: #379424;
+    border-bottom: .1rem solid #379424;
+	    font-weight: 700;
+		    font-size: 1.4rem;
+			line-height: 2.4rem;
+}
+
+.oplata_chstymi a:hover {
+border-bottom: 0;
+}
+
+.oplata_chstymi p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    height: auto;
+    padding: 0;
+    text-align: left;
+    font-weight: normal;
+}
+</style>
+<div class="oplata_chstymi">
+<p>Початковий внесок + 24 платежа = 25 платежів. Не сумісно з подарунками, підвищеними бонусами і акцією 2 в 1. Доступно для ціни без знижки.</p>
+<a href="https://comfy.ua/ua/crediting.html#Credit">Детальніше</a></div>
+<button class="label-item__close hide-on-desktop" type="button"></button></div>
+</li>
+</ul>
+<ul class="label-list gr-20 clearfix">
+<li class="label-item js-label"><img src="https://comfy.ua/media/label/1px_label_55.png" class="label-item__img" /></li>
+<li class="label-item js-label"><img src="https://comfy.ua/media/label/1px_label_52.png" class="label-item__img" /></li>
+<li class="label-item js-label"><img src="https://comfy.ua/media/label/pustoi_pixel_111.png" class="label-item__img" /></li>
+<li class="label-item js-label"><img src="https://comfy.ua/media/label/label1px_3.png" class="label-item__img" /></li>
+</ul>
+</div>
+<a href="/holodil-nik-bosch-kgn36xl30u.html"> <img src="https://cdn.comfy.ua/media/x/img/pzyuka/KGN36XL30U_1.jpg" />
+<p>Холодильник Bosch KGN36XL30U</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price2">2999</div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price2_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [289753])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl">
+<div class="labels js-product-labels">
+<ul class="label-list gr-9 clearfix">
+<li data-content-url="https://comfy.ua/labels/description.php?label_id=459" class="label-item js-label _has-content"> <img alt="КРЕДИТ БЕЗ ПЕРЕПЛАТ НА 25 ПЛАТЕЖІВ" title="КРЕДИТ БЕЗ ПЕРЕПЛАТ НА 25 ПЛАТЕЖІВ" src="https://cdn.comfy.ua/media/x/img/pzyuka/plashka_kredit25pz.png" class="label-item__img" />
+<div style="left: -142.5px;" class="js-content label-item__content">
+<h3>КРЕДИТ БЕЗ ПЕРЕПЛАТ НА 25 ПЛАТЕЖІВ</h3>
+<style>
+.oplata_chstymi a {
+color: #379424;
+    border-bottom: .1rem solid #379424;
+	    font-weight: 700;
+		    font-size: 1.4rem;
+			line-height: 2.4rem;
+}
+
+.oplata_chstymi a:hover {
+border-bottom: 0;
+}
+
+.oplata_chstymi p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    height: auto;
+    padding: 0;
+    text-align: left;
+    font-weight: normal;
+}
+</style>
+<div class="oplata_chstymi">
+<p>Початковий внесок + 24 платежа = 25 платежів. Не сумісно з подарунками, підвищеними бонусами і акцією 2 в 1. Доступно для ціни без знижки.</p>
+<a href="https://comfy.ua/ua/crediting.html#Credit">Детальніше</a></div>
+<button class="label-item__close hide-on-desktop" type="button"></button></div>
+</li>
+</ul>
+<ul class="label-list gr-20 clearfix">
+<li class="label-item js-label"><img src="https://comfy.ua/media/label/1px_label_55.png" class="label-item__img" /></li>
+<li class="label-item js-label"><img src="https://comfy.ua/media/label/1px_label_52.png" class="label-item__img" /></li>
+<li class="label-item js-label"><img src="https://comfy.ua/media/label/pustoi_pixel_111.png" class="label-item__img" /></li>
+<li class="label-item js-label"><img src="https://comfy.ua/media/label/label1px_3.png" class="label-item__img" /></li>
+</ul>
+</div>
+<a href="/duhovoj-shkaf-jelektricheskij-gorenje-bo-737-e36bg-2.html"> <img src="https://cdn.comfy.ua/media/x/img/pzyuka/gorenje_bo_737_e36bg-2881.jpg" />
+<p>Духова шафа електрична Gorenje BO 737 E36BG-2</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price3"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price3_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [539903])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+</div>
+<a href="/krbt-kredit/">
+<div class="btn-all">ПЕРЕГЛЯНУТИ</div>
+</a>
+<div class="block-banner"><a href="/krbt-promo/" target="_blank"> <img src="https://comfy.ua/media/x/img/pzyuka/kbt-banner2.png" /> </a> <!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" height="403px" width="1321px" style="display: none;"> <g transform="translate(-60.000000, -464.000000)" fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="back-to-school">
+<path fill="#FFFFFF" id="Rectangle-2" d="M60,464 C91.6419616,464.635831 278.456129,485.83899 620.442503,527.609478 C962.428877,569.379966 1215.94804,565.438395 1381,515.784766 L1381,563 L60,563 L60,464 Z"></path></g> </svg></div>
+<div class="tovary-bl">
+<div class="tovar-bl"><a href="/stiral-naja-mashina-lg-fh0b8ld6.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/_/l/_lg_fh0b8ld6_1.jpg" />
+<p>Пральна машина LG FH0B8LD6</p>
+</a>
+<div class="cena-bl">
+<div class="oldpp">
+<div id="price4" class="cena"></div>
+<span class="price-currency">грн</span></div>
+<div class="newp np">
+<div id="price4_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [90425])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl"><a href="/holodil-nik-vestfrost-cnf186z-w.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/1/1/1148334_vestfrost_cnf186zw_19.jpg" />
+<p>Холодильник Vestfrost CNF186ZW</p>
+</a>
+<div class="cena-bl">
+<div class="oldpp">
+<div id="price5" class="cena"></div>
+<span class="price-currency">грн</span></div>
+<div class="newp np">
+<div id="price5_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [79647])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl"><a href="/duhovoj-shkaf-gazovyj-bosch-hbf514bs0r.html"> <img src="https://comfy.ua/media/x/img/pzyuka/bosch_hbf514bs0r_21.jpg" />
+<p>Духова шафа електрична Bosch HBF514BS0R</p>
+</a>
+<div class="cena-bl">
+<div class="oldpp">
+<div id="price6" class="cena"></div>
+<span class="price-currency">грн</span></div>
+<div class="newp np">
+<div id="price6_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [331153])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+</div>
+<a href="/krbt-promo/">
+<div class="btn-all">ПЕРЕГЛЯНУТИ</div>
+</a>
+<div class="block-banner"><a href="/morozim-v-minus-ceny-na-ustanovku/" target="_blank"> <img src="https://comfy.ua/media/x/img/pzyuka/kbt-banner3.png" /> </a> <!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" height="403px" width="1321px" style="display: none;"> <g transform="translate(-60.000000, -464.000000)" fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="back-to-school">
+<path fill="#FFFFFF" id="Rectangle-2" d="M60,464 C91.6419616,464.635831 278.456129,485.83899 620.442503,527.609478 C962.428877,569.379966 1215.94804,565.438395 1381,515.784766 L1381,563 L60,563 L60,464 Z"></path></g> </svg></div>
+<div class="tovary-bl">
+<div class="tovar-bl">
+<div class="labels js-product-labels">
+<ul class="label-list gr-12 clearfix">
+<li data-content-url="https://comfy.ua/labels/description.php?label_id=6693" class="label-item js-label _has-content"> <img alt="БЕЗКОШТОВНЕ ВСТАНОВЛЕННЯ при покупці акційних моделей кондиціонерів" title="БЕЗКОШТОВНЕ ВСТАНОВЛЕННЯ при покупці акційних моделей кондиціонерів" src="https://cdn.comfy.ua/media/x/img/pzyuka/plashka_ustanovkapz.png" class="label-item__img" />
+<div style="left: -142.5px;" class="js-content label-item__content">
+<h3>БЕЗКОШТОВНЕ ВСТАНОВЛЕННЯ при покупці акційних моделей кондиціонерів</h3>
+<style>
+.oplata_chstymi a {
+color: #379424;
+    border-bottom: .1rem solid #379424;
+	    font-weight: 700;
+		    font-size: 1.4rem;
+			line-height: 2.4rem;
+}
+
+.oplata_chstymi a:hover {
+border-bottom: 0;
+}
+
+.oplata_chstymi p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    height: auto;
+    padding: 0;
+    text-align: left;
+    font-weight: normal;
+}
+</style>
+<div class="oplata_chstymi">
+<p>Не сумісна з іншими акціями та при оплаті картою.</p>
+</div>
+<button class="label-item__close hide-on-desktop" type="button"></button></div>
+</li>
+</ul>
+</div>
+<a href="/kondicioner-split-vestfrost-vfe07af5.html"> <img src="https://comfy.ua/media/x/img/pzyuka/1457059_vestfrost_vfe07af5_71.jpg" />
+<p>Кондиціонер спліт Vestfrost VFE07AF5</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price7"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price7_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [554503])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl">
+<div class="labels js-product-labels">
+<ul class="label-list gr-12 clearfix">
+<li data-content-url="https://comfy.ua/labels/description.php?label_id=6693" class="label-item js-label _has-content"> <img alt="БЕЗКОШТОВНЕ ВСТАНОВЛЕННЯ при покупці акційних моделей кондиціонерів" title="БЕЗКОШТОВНЕ ВСТАНОВЛЕННЯ при покупці акційних моделей кондиціонерів" src="https://cdn.comfy.ua/media/x/img/pzyuka/plashka_ustanovkapz.png" class="label-item__img" />
+<div style="left: -142.5px;" class="js-content label-item__content">
+<h3>БЕЗКОШТОВНЕ ВСТАНОВЛЕННЯ при покупці акційних моделей кондиціонерів</h3>
+<style>
+.oplata_chstymi a {
+color: #379424;
+    border-bottom: .1rem solid #379424;
+	    font-weight: 700;
+		    font-size: 1.4rem;
+			line-height: 2.4rem;
+}
+
+.oplata_chstymi a:hover {
+border-bottom: 0;
+}
+
+.oplata_chstymi p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    height: auto;
+    padding: 0;
+    text-align: left;
+    font-weight: normal;
+}
+</style>
+<div class="oplata_chstymi">
+<p>Не сумісна з іншими акціями та при оплаті картою.</p>
+</div>
+<button class="label-item__close hide-on-desktop" type="button"></button></div>
+</li>
+</ul>
+</div>
+<a href="/kondicioner-split-vestfrost-vfe09af5.html"> <img src="https://comfy.ua/media/x/img/pzyuka/1155605_vestfrost_vfe09af5_11.jpg" />
+<p>Кондиціонер спліт Vestfrost VFE09AF5</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price8"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price8_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [85982])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl">
+<div class="labels js-product-labels">
+<ul class="label-list gr-12 clearfix">
+<li data-content-url="https://comfy.ua/labels/description.php?label_id=6693" class="label-item js-label _has-content"> <img alt="БЕЗКОШТОВНЕ ВСТАНОВЛЕННЯ при покупці акційних моделей кондиціонерів" title="БЕЗКОШТОВНЕ ВСТАНОВЛЕННЯ при покупці акційних моделей кондиціонерів" src="https://cdn.comfy.ua/media/x/img/pzyuka/plashka_ustanovkapz.png" class="label-item__img" />
+<div style="left: -142.5px;" class="js-content label-item__content">
+<h3>БЕЗКОШТОВНЕ ВСТАНОВЛЕННЯ при покупці акційних моделей кондиціонерів</h3>
+<style>
+.oplata_chstymi a {
+color: #379424;
+    border-bottom: .1rem solid #379424;
+	    font-weight: 700;
+		    font-size: 1.4rem;
+			line-height: 2.4rem;
+}
+
+.oplata_chstymi a:hover {
+border-bottom: 0;
+}
+
+.oplata_chstymi p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    height: auto;
+    padding: 0;
+    text-align: left;
+    font-weight: normal;
+}
+</style>
+<div class="oplata_chstymi">
+<p>Не сумісна з іншими акціями та при оплаті картою.</p>
+</div>
+<button class="label-item__close hide-on-desktop" type="button"></button></div>
+</li>
+</ul>
+</div>
+<a href="/kondicioner-split-samsung-ar09rsfpawqner.html"> <img src="https://comfy.ua/media/x/img/pzyuka/samsung_ar09rsfpawqner91.jpg" />
+<p>Кондиціонер спліт Samsung AR09RSFPAWQNER</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price9"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price9_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [542173])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+</div>
+<a href="/morozim-v-minus-ceny-na-ustanovku/">
+<div class="btn-all">ПЕРЕГЛЯНУТИ</div>
+</a></div>
+<style type="text/css">
+/*
+.seo-text-container { width: 100%; max-width: 1316px; margin: 0 auto; background: #fff; } 
+
+.cms-content { padding: 1.8rem 0 1.5rem !important; }
+.cms-content li { margin-bottom: 0px !important; }
+*/
+</style>
+<!--
+<div class="seo-text-container">
+<div class="cms-content">
+<h1 style="text-align: center;" _mce_style="text-align: center;">День святого Валентина в Украине</h1>
+<p> </p>
+</div>
+</div>
+-->

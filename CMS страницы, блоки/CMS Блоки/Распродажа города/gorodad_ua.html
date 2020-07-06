@@ -1,0 +1,334 @@
+<style>
+.category__list__top .title {display: none;}
+.category-sale .mixed-mode-cms img { display: none; width: 662px;}
+.mixed-mode-cms { margin-top: 0px;}
+.mixed-mode-cms{background: none;}
+.category-sale .breadcrumbs { margin: 0px; opacity: 0;  height: 0px;}
+/* body {background: url(https://cdn.comfy.ua/media/blb/banner_promo/11-1/noimg_1.png) #02a709 center top !important;} */
+body {background: #02a709 center top !important;}
+.products-tiles .coupon__price .bonus-price {display: none;}
+.products-tiles .coupon__price .price {margin-top: 22px;}
+.category-sale .products-labels__i {display:none;}
+.category-sale  li[data-gtm-filter="Наличие-На складе"] {display:none;}
+.category-sale  li[data-gtm-filter="Наявність-На складі"] {display:none;}
+.layer__content__i li[data-filter-code="warehouse"] {display:none;}
+.cat-lbs-ftr {display: none;}
+.layer__choose { display: none;}
+.dropdown-content a {border-bottom:1px solid #ddd;}
+.dropdown-content a:hover {border-bottom:1px solid #ddd;}
+.instruct{background-color: #fff; text-align: center; width: 100%; height: 130px}
+.instruct img {padding-top: 15px;}
+.category-sale .mixed-mode-cms img {display: inline-block;}
+
+
+/*popup*/
+
+.overlay1 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 111111;
+}
+.overlay1:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup1 {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 70%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup1 h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup1 .close1 {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup1 .close1:hover {
+  color: #06D85F;
+}
+.popup1 .content1 {
+  max-height: 60%;
+  overflow: auto;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 700px){
+  .popup{
+    width: 70%;
+  }
+}
+
+.stolb {width: 50%; float: left; line-height: 1.5;}
+.stolb a{color: #3B86C5; text-decoration: underline;}
+.stolb a:hover{color:#009906;}
+.bannnner{display: none;}
+
+.mmm {background-color: #fff; height: 200px; width: 100%;  background-image: url( https://cdn.comfy.ua/media/blb/banner_promo/sale.png ); display:block;}
+.mmm .zz {color: #000; font-size: 18px; text-align: center; padding: 40px 0px 28px;}
+.mmm .zz span{color: #fff;   background-color: #000; padding: 0px 10px }
+.mmm .zz .tt{font-size: 22px; font-weight: bold; text-transform: uppercase;}
+.mmm .zz .ttt{margin-top: 0px;}
+.mmm .zz .tttt{font-size: 34px; font-weight: bold; text-transform: uppercase;}
+.city-506 #cssmenu .c506 {background: #008905;}
+.city-1 #cssmenu .c1 {background: #008905;}
+.city-122 #cssmenu .c122 {background: #008905;}
+.city-641 #cssmenu .c641 {background: #008905;}
+.city-641 #cssmenu .c641 {background: #008905;}
+.city-641 #cssmenu .c641 {background: #008905;}
+.city-641 #cssmenu .c641 {background: #008905;}
+
+
+
+#cssmenu {padding: 0; margin: 0; border: 0; width:100%; display: none;}
+#cssmenu ul, #cssmenu li {list-style: none; margin: 0; padding: 0;}
+#cssmenu ul {position: relative; z-index: 1; }
+#cssmenu ul li { float: left; min-height: 1px; vertical-align: middle; border-right: 1px solid #d63300;}
+#cssmenu ul li li{ border-right: 0px solid #d63300;}
+#cssmenu ul li.hover,
+#cssmenu ul li:hover {position: relative; z-index: 1000; cursor: default;}
+#cssmenu ul ul {visibility: hidden; position: absolute; top: 100%; left: 0; z-index: 1000; width: 100%;}
+#cssmenu ul ul li {float: none;}
+#cssmenu ul ul ul {top: 0; right: auto; left: -99.5%; }
+#cssmenu ul li:hover ul { visibility: visible;}
+#cssmenu ul ul {bottom: 0; left: 0;}
+#cssmenu ul ul {margin-top: 0; }
+#cssmenu ul ul li {font-weight: normal;}
+#cssmenu a { display: block; line-height: 1em; text-decoration: none; }
+
+#cssmenu {
+  border-bottom: 0px solid #009907;
+  margin:0 auto;
+  width:848px;
+  font-size: 12px; 
+}
+
+  #cssmenu ul { *display: inline-block; }
+
+  #cssmenu:after, #cssmenu ul:after {
+    content: '';
+    display: block;
+    clear: both; 
+}
+
+#cssmenu a {
+    background: #F14915;
+    color: #fff;
+    padding: 0 19px; 
+}
+#cssmenu ul { text-transform: uppercase; }
+
+    #cssmenu ul ul {
+      border-top: 0px solid #E24026;
+      text-transform: none;
+      min-width: 295px; 
+}
+      #cssmenu ul ul a {
+        background: #FFFCC7;
+        color: #000;
+        border: 1px solid #E24026;
+        border-top: 0 none;
+        line-height: 150%;
+        padding: 5px 20px; 
+}
+      #cssmenu ul ul ul { border-top: 0 none; }
+
+      #cssmenu ul ul li { position: relative }
+
+#cssmenu ul li  a { line-height: 48px;  }
+
+#cssmenu ul li  ul li a { line-height: 25px;  }
+
+#cssmenu ul ul li:first-child a { border-top: 1px solid #E24026;}
+#cssmenu ul ul li a:after { 
+content: '' !important;
+}
+
+        #cssmenu ul ul li:hover a { background: #F6EF72; color: #000}
+
+        #cssmenu ul ul li:last-child a {
+          border-radius: 0 0 3px 3px;
+          box-shadow: 0 1px 0 #E24026; 
+}
+        #cssmenu ul ul li:last-child:hover a { border-radius: 0 0 0 3px; }
+
+        #cssmenu ul ul li.has-sub a::before {
+          content: '◄';
+          top: 50%;
+          margin-top: -8px;
+          margin-right: 5px;
+	  color: #E24026;
+}
+
+        #cssmenu ul ul li a:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          margin-top: -8px;
+}
+
+/* #cssmenu ul li:hover a, #cssmenu ul li.active a {
+      background: #008905;
+      color: #fff;
+}*/
+	  #cssmenu ul li.has-sub a:after {
+      content: '▼';
+      margin-left: 5px; 
+
+    #cssmenu ul li.last ul {
+      left: auto;
+      right: 0; 
+}
+      #cssmenu ul li.last ul ul {
+        left: auto;
+        right: 99.5%;
+}
+
+
+
+</style>
+<div class="mmm">
+<div class="zz"><span class="tt">Великий розпродаж! Знижки до -50%</span><br />
+<p class="ttt"><span class="tttt">Промо-код на знижку: <span style="color: #e24026;">777-777-777</span></span></p>
+<p class="ttt"><span>Оформляй замовлення на сайті з промо-кодом. Забирай товар зі знижкою.<br />Увага! Кількість акційного товару обмежена!</span></p>
+</div>
+<div id="cssmenu">
+<ul>
+<li class="has-sub"><a class="c506">Київ</a> 
+<ul>
+<li><a href="/sale/warehouse__411/?promo_city=506&amp;promo_warehouse=411">ТЦ "Аркадия", ул. Борщаговская, 154А</a></li>
+<li><a href="/sale/warehouse__444/?promo_city=506&amp;promo_warehouse=444">ТЦ "Городок", пр. Московський, 23</a></li>
+<li><a href="/sale/warehouse__449/?promo_city=506&amp;promo_warehouse=449">ТЦ "NEW WAY", ул.Вербицкого, 1</a></li>
+<li><a href="/sale/warehouse__462/?promo_city=506&amp;promo_warehouse=462">ТЦ "LAVINA", ул. Берковецкая , 6</a></li>
+<li><a href="/sale/warehouse__161/?promo_city=506&amp;promo_warehouse=161">ТЦ "Космополит" (Большевик), ул. В. Гетьмана, 6</a></li>
+<li><a href="/sale/warehouse__189/?promo_city=506&amp;promo_warehouse=189">ТЦ "Аркадия", ул. Днепровская наб., 33</a></li>
+<li><a href="/sale/warehouse__309/?promo_city=506&amp;promo_warehouse=309">ТЦ "Район", ул. Николая Лаврухина, 4</a></li>
+</ul>
+</li>
+<li class="has-sub"><a class="c1">Дніпро</a> 
+<ul>
+<li><a href="/sale/warehouse__96/?promo_city=1&amp;promo_warehouse=96">ТЦ "Апполо", ул. Титова, 36</a></li>
+<li><a href="/sale/warehouse__316/?promo_city=1&amp;promo_warehouse=316">ТЦ "Наша Правда", пр. Слобожанский, 31Д</a></li>
+<li><a href="/sale/warehouse__95/?promo_city=1&amp;promo_warehouse=95">ТЦ "Terra", пр. Богдана Хмельницкого, 118Д</a></li>
+<li><a href="/sale/warehouse__89/?promo_city=1&amp;promo_warehouse=89">ул. Сичеславська Набережна, 31А</a></li>
+<li><a href="/sale/warehouse__93/?promo_city=1&amp;promo_warehouse=93">ТЦ "Мост-Сити", ул. Глинки, 2</a></li>
+<li><a href="/sale/warehouse__190/?promo_city=1&amp;promo_warehouse=190">пр. Героев, 1С</a></li>
+<li><a href="/sale/warehouse__349/?promo_city=1&amp;promo_warehouse=349">ТРК "Дафи", бул. Звездный, 1А</a></li>
+<li><a href="/sale/warehouse__26/?promo_city=1&amp;promo_warehouse=26">ул. Наб. Заводская, 97Д</a></li>
+<li><a href="/sale/warehouse__322/?promo_city=1&amp;promo_warehouse=322">ТЦ "Караван", ул. Нижнеднепровская, 17Б</a></li>
+</ul>
+</li>
+<li class="has-sub"><a class="c122">Харків</a> 
+<ul>
+<li><a href="/sale/warehouse__410/?promo_city=122&amp;promo_warehouse=410">ул. Академика Павлова, 44Б</a></li>
+<li><a href="/sale/warehouse__151/?promo_city=122&amp;promo_warehouse=151">ТЦ "Дафи", ул. Героев Труда, 9</a></li>
+<li><a href="/sale/warehouse__176/?promo_city=122&amp;promo_warehouse=176">ТЦ "Таврия", пр. Московский, 257</a></li>
+<li><a href="/sale/warehouse__186/?promo_city=122&amp;promo_warehouse=186">ул. Плехановская, 135/139</a></li>
+<li><a href="/sale/warehouse__317/?promo_city=122&amp;promo_warehouse=317">ТЦ "Класс", пр. Тракторостроителей, 128В</a></li>
+<li><a href="/sale/warehouse__321/?promo_city=122&amp;promo_warehouse=321">ТЦ "Класс", пр. Московский, 295</a></li>
+</ul>
+</li>
+<li class="has-sub"><a class="c641">Одеса</a> 
+<ul>
+<li><a href="/sale/warehouse__147/?promo_city=641&amp;promo_warehouse=147">ТЦ "Ривьера", пгт. Фонтанка, Ривьера</a></li>
+<li><a href="/sale/warehouse__307/?promo_city=641&amp;promo_warehouse=307">ТЦ "Сити Центр", пр. Маршала Жукова, 2</a></li>
+<li><a href="/sale/warehouse__320/?promo_city=641&amp;promo_warehouse=320">ТЦ "Сити Центр", ул. Давида Ойстраха (Затонского), 32</a></li>
+<li><a href="/sale/warehouse__448/?promo_city=641&amp;promo_warehouse=448">ТЦ "Среднефонтанский", пер.Семафорный, 4</a></li>
+</ul>
+</li>
+<li class="has-sub"><a class="c1375">Запоріжжя</a> 
+<ul>
+<li><a href="/sale/warehouse__155/?promo_city=1375&amp;promo_warehouse=155">ТЦ "Амстор", ул. Чаривная, 74</a></li>
+<li><a href="/sale/warehouse__177/?promo_city=1375&amp;promo_warehouse=177">ТЦ "Амстор",пр. Инженера Преображенского, 13</a></li>
+<li><a href="/sale/warehouse__442/?promo_city=1375&amp;promo_warehouse=442">ТЦ "City Mall", ул. Запорожская, 1Б</a></li>
+<li><a href="/sale/warehouse__94/?promo_city=1375&amp;promo_warehouse=94">ТЦ "Амстор", ул. Победы, 64</a></li>
+</ul>
+</li>
+<li class="has-sub"><a class="c304">Кривий ріг</a> 
+<ul>
+<li><a href="/sale/warehouse__44/?promo_city=304&amp;promo_warehouse=44">пр. 200-я Кривого Рога, 12А</a></li>
+<li><a href="/sale/warehouse__87/?promo_city=304&amp;promo_warehouse=87">ТЦ "Солнечная Галерея", пл. 30 летия Победы, 1</a></li>
+<li><a href="/sale/warehouse__178/?promo_city=304&amp;promo_warehouse=178">ТЦ "Виктори -плаза",ул. Лермонтова, 37</a></li>
+<li><a href="/sale/warehouse__303/?promo_city=304&amp;promo_warehouse=303">м-он 5-й Заречный, 11К</a></li>
+</ul>
+</li>
+<li class="has-sub"><a class="c2050">Львів</a> 
+<ul>
+<li><a href="/sale/warehouse__315/?promo_city=2050&amp;promo_warehouse=315">ТЦ "ВАМ", ул. Ивана Выговского, 100</a></li>
+<li><a href="/sale/warehouse__413/?promo_city=2050&amp;promo_warehouse=413">ТЦ "Форум Львов", ул. Под Дубом, 7Б</a></li>
+</ul>
+</li>
+<li style="border-right: 0;"><a href="#popup11">Інші міста</a></li>
+</ul>
+</div>
+<div id="popup11" class="overlay1">
+<div class="popup1">
+<h2>Інші міста:</h2>
+<a class="close1" href="#">×</a>
+<div class="content1">
+<div class="stolb">
+<p><a href="/sale/warehouse__152/?promo_city=582&amp;promo_warehouse=152">Белая Церковь - ТЦ "Вега", ул. Героев Небесной Сотни 2А</a></p>
+<p><a href="/sale/warehouse__157/?promo_city=375&amp;promo_warehouse=157">Буча - ТЦ "Новая Линия", ул. Новое Шоссе, 48</a></p>
+<p><a href="/sale/warehouse__348/?promo_city=519&amp;promo_warehouse=348">Васильков - ул. Грушевского, 19</a></p>
+<p><a href="/sale/warehouse__154/?promo_city=1193&amp;promo_warehouse=154">Винница - ТЦ "Мегамолл", ул. 600 летия, 17</a></p>
+<p><a href="/sale/warehouse__90/?promo_city=678&amp;promo_warehouse=90">Желтые Воды - ул. Кропоткина, 35</a></p>
+<p><a href="/sale/warehouse__300/?promo_city=1290&amp;promo_warehouse=300">Житомир - ТЦ "Глобал UA", ул. Киевская, 77</a></p>
+<p><a href="/sale/warehouse__386/?promo_city=1290&amp;promo_warehouse=386">Житомир - ТЦ "ЦУМ", ул. Киевская, 37</a></p>
+<p><a href="/sale/warehouse__184/?promo_city=1407&amp;promo_warehouse=184">Ивано-Франковск - ул. Гетьмана Мазепы, 168В</a></p>
+<p><a href="/sale/warehouse__333/?promo_city=2702&amp;promo_warehouse=333">Измаил - ул. Пушкина, 41</a></p>
+<p><a href="/sale/warehouse__360/?promo_city=3204&amp;promo_warehouse=360">Калуш - майдан Шептицкого, 7</a></p>
+<p><a href="/sale/warehouse__20/?promo_city=691&amp;promo_warehouse=20">Каменское - пр. Тараса Шевченка , 7</a></p>
+<p><a href="/sale/warehouse__62/?promo_city=1611&amp;promo_warehouse=62">Кировоград - ул. Юрия Коваленко (Маршала Конева), 2А</a></p>
+<p><a href="/sale/warehouse__464/?promo_city=2606&amp;promo_warehouse=464">Коростышев - ул. Киевская, 66</a></p>
+<p><a href="/sale/warehouse__149/?promo_city=2831&amp;promo_warehouse=149">Краматорск - ТЦ "Амстор", ул. Маяковского, 1М</a></p>
+<p><a href="/sale/warehouse__76/?promo_city=1220&amp;promo_warehouse=76">Кременчуг - ТЦ "Амстор", ул. Халаменюка, 7</a></p>
+<p><a href="/sale/warehouse__456/?promo_city=460&amp;promo_warehouse=456">Мариуполь - ТЦ "Амстор", пр. Ленина 149</a></p>
+<p><a href="/sale/warehouse__310/?promo_city=266&amp;promo_warehouse=310">Мелитополь - ТЦ "Palladium", пр. 50-летия Победы, 18</a></p>
+<p><a href="/sale/warehouse__69/?promo_city=1012&amp;promo_warehouse=69">Николаев - пр. Центральный, д.154</a></p>
+<p><a href="/sale/warehouse__38/?promo_city=753&amp;promo_warehouse=38">Новомосковск - ТЦ "ЦУМ", ул. Гетманская (Советская), 16</a></p>
+</div>
+<div class="stolb">
+<p><a href="/sale/warehouse__363/?promo_city=564&amp;promo_warehouse=363">Обухов - ул. Киевская, 107</a></p>
+<p><a href="/sale/warehouse__35/?promo_city=414&amp;promo_warehouse=35">Павлоград - ТЦ "Олимпия", ул. Горького, 166</a></p>
+<p><a href="/sale/warehouse__392/?promo_city=2899&amp;promo_warehouse=392">Переяслав-Хмельницкий - ул. Школьная, 42</a></p>
+<p><a href="/sale/warehouse__115/?promo_city=1038&amp;promo_warehouse=115">Покровск - ТЦ "Универмаг", ул. Горького, 51</a></p>
+<p><a href="/sale/warehouse__165/?promo_city=229&amp;promo_warehouse=165">Полтава - ТЦ "Экватор", ул. Ковпака, 26</a></p>
+<p><a href="/sale/warehouse__158/?promo_city=722&amp;promo_warehouse=158">Ровно - ТЦ "Фоззи", ул. Курчатова, 9</a></p>
+<p><a href="/sale/warehouse__421/?promo_city=197&amp;promo_warehouse=421">Северодонецк - ТЦ "ЦУМ", пр-т Гвардейский, 42</a></p>
+<p><a href="/sale/warehouse__339/?promo_city=2784&amp;promo_warehouse=339">Смела - ул. Вячеслава Черновола (Дзержинского), 4А</a></p>
+<p><a href="/sale/warehouse__340/?promo_city=2619&amp;promo_warehouse=340">Тернополь - ТЦ"Подоляни" ,ул. Текстильная 28Ч</a></p>
+<p><a href="/sale/warehouse__454/?promo_city=3881&amp;promo_warehouse=454">Ужгород - ТЦ "Tokyo", ул. Легоцкого, 19А</a></p>
+<p><a href="/sale/warehouse__330/?promo_city=2632&amp;promo_warehouse=330">Умань - ул. Большая Фонтанная (Парижской Комуны), 31А</a></p>
+<p><a href="/sale/warehouse__305/?promo_city=1466&amp;promo_warehouse=305">Херсон - ТЦ "Фабрика", ул. Залаэгерсег, 18</a></p>
+<p><a href="/sale/warehouse__354/?promo_city=2851&amp;promo_warehouse=354">Хмельницкий - ул. Свободы, 73</a></p>
+<p><a href="/sale/warehouse__304/?promo_city=166&amp;promo_warehouse=304">Черкассы - ул. Сумгаитская, 10</a></p>
+<p><a href="/sale/warehouse__311/?promo_city=166&amp;promo_warehouse=311">Черкассы - ТЦ "Любава", бул. Шевченко, 208/1</a></p>
+<p><a href="/sale/warehouse__414/?promo_city=3637&amp;promo_warehouse=414">Чернигов - ул. 77-й гвардейской дивизии, 1А</a></p>
+<p><a href="/sale/warehouse__331/?promo_city=655&amp;promo_warehouse=331">Черноморск - ул. Лазурна , 1а</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="instruct"><img src="https://cdn.comfy.ua/media/blb/banner_promo/inst.PNG" /></div>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+</head>
+
+<body>
+
+   <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+
+      p,
+      h2,
+      a,
+      h3 {
+         font-family: 'Fira Sans', sans-serif;
+      }
+
+      html,
+      body {
+         height: 100% !important;
+      }
+
+      .page-wrap {
+         height: 100%;
+      }
+
+      .wrapper.page-content {
+         height: 100%;
+      }
+
+      .main-container {
+         height: 100%;
+      }
+
+      .std {
+         height: 100%;
+      }
+
+      /* */
+
+      .header-container {
+         display: none;
+      }
+
+      .main {
+         display: none;
+      }
+
+      .footer {
+         display: none;
+      }
+
+      /* */
+
+      .word-wrap {
+         word-break: break-word;
+         display: block;
+         padding-bottom: 25px;
+      }
+
+      .a.btn-chat {}
+
+      #wrapper502 {
+         background-color: #43b02a;
+         display: -webkit-box;
+         display: -webkit-flex;
+         display: -ms-flexbox;
+         display: flex;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+         -webkit-flex-direction: column;
+         -ms-flex-direction: column;
+         flex-direction: column;
+         min-height: 100%;
+         width: 100%;
+      }
+
+      .container-contflex {
+         -webkit-box-flex: 1;
+         -webkit-flex: 1 0 auto;
+         -ms-flex: 1 0 auto;
+         flex: 1 0 auto;
+         max-width: 1316px;
+         width: 100%;
+         display: block;
+         margin: 0 auto;
+         padding: 60px 15px 25px 15px;
+      }
+
+      .row-contflex {
+         display: -webkit-box;
+         display: -webkit-flex;
+         display: -ms-flexbox;
+         display: flex;
+         -webkit-box-orient: horizontal;
+         -webkit-box-direction: normal;
+         -webkit-flex-direction: row;
+         -ms-flex-direction: row;
+         flex-direction: row;
+         -webkit-box-align: end;
+         -webkit-align-items: flex-end;
+         -ms-flex-align: end;
+         align-items: flex-end;
+         padding-top: 60px;
+      }
+
+      .itemft:first-child {
+         -webkit-box-flex: 1;
+         -webkit-flex: 1 1 60%;
+         -ms-flex: 1 1 60%;
+         flex: 1 1 60%;
+      }
+
+      .itemft:last-child {
+         -webkit-box-flex: 1;
+         -webkit-flex: 1 1 40%;
+         -ms-flex: 1 1 40%;
+         flex: 1 1 40%;
+      }
+
+      .itemft:nth-child(1) h2 {
+         font-weight: 600;
+         font-size: 40px;
+         padding-bottom: 25px;
+         color: #fff;
+         padding-top: 50px;
+      }
+
+      .itemft:nth-child(1) p {
+         font-size: 24px;
+         padding-bottom: 30px;
+         color: #fff;
+      }
+
+      .itemft:nth-child(1) a {
+         background-color: #FF671F;
+         -webkit-border-radius: 10px;
+         border-radius: 10px;
+         max-width: 196px;
+         width: 100%;
+         color: #fff;
+         font-size: 20px;
+         display: -webkit-box;
+         display: -webkit-flex;
+         display: -ms-flexbox;
+         display: flex;
+         -webkit-box-align: center;
+         -webkit-align-items: center;
+         -ms-flex-align: center;
+         align-items: center;
+         -webkit-box-pack: center;
+         -webkit-justify-content: center;
+         -ms-flex-pack: center;
+         justify-content: center;
+         padding: 10px 0;
+         line-height: 1;
+      }
+
+      .chname {
+         padding-right: 15px;
+         padding-bottom: 2px;
+      }
+
+      .itemft:nth-child(2) p {
+         color: #2C6B1F;
+         font-size: 25px;
+         font-weight: bold;
+      }
+
+      .social-flex {
+         display: -webkit-box;
+         display: -webkit-flex;
+         display: -ms-flexbox;
+         display: flex;
+         -webkit-box-orient: horizontal;
+         -webkit-box-direction: normal;
+         -webkit-flex-direction: row;
+         -ms-flex-direction: row;
+         flex-direction: row;
+         -webkit-box-align: center;
+         -webkit-align-items: center;
+         -ms-flex-align: center;
+         align-items: center;
+      }
+
+      .afss_mins_bv {
+         font-size: 30px;
+         color: #2C6B1F;
+         font-weight: normal;
+      }
+
+      .afss_mins_bv_sbl {
+         color: #2C6B1F;
+         font-size: 30px;
+         position: relative;
+         bottom: 2px;
+      }
+
+      .afss_secs_bv {
+         font-size: 75px;
+         color: #2C6B1F;
+         font-weight: bold;
+      }
+
+      .logo {}
+
+      .numberbl {
+         position: relative;
+         display: -webkit-box;
+         display: -webkit-flex;
+         display: -ms-flexbox;
+         display: flex;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+         -webkit-flex-direction: column;
+         -ms-flex-direction: column;
+         flex-direction: column;
+         -webkit-box-align: start;
+         -webkit-align-items: flex-start;
+         -ms-flex-align: start;
+         align-items: flex-start;
+         -webkit-box-pack: center;
+         -webkit-justify-content: center;
+         -ms-flex-pack: center;
+         justify-content: center;
+         height: 290px;
+         padding-left: 50px;
+      }
+
+      .numberbl::before {
+         content: "";
+         border-left: 5px solid #2C6B1F;
+         position: absolute;
+         left: 0px;
+         top: 0;
+         height: 290px;
+      }
+
+      .itemft:nth-child(1) p.timer {}
+
+      .container-footerbl {
+         -webkit-box-flex: 0;
+         -webkit-flex: 0 0 auto;
+         -ms-flex: 0 0 auto;
+         flex: 0 0 auto;
+         background-color: #379424;
+         width: 100%;
+      }
+
+      .row-footerblflex {
+         display: -webkit-box;
+         display: -webkit-flex;
+         display: -ms-flexbox;
+         display: flex;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+         -webkit-flex-direction: column;
+         -ms-flex-direction: column;
+         flex-direction: column;
+         -webkit-box-align: center;
+         -webkit-align-items: center;
+         -ms-flex-align: center;
+         align-items: center;
+         padding: 25px;
+      }
+
+      .row-footerblflex h2 {
+         font-size: 28px;
+         padding-bottom: 20px;
+         color: #fff;
+         text-align: center;
+      }
+
+      span.social {
+         display: block;
+      }
+
+      span.social:nth-child(2) {
+         padding: 0 30px;
+      }
+
+      @media only screen and (min-device-width : 320px) and (max-device-width : 736px) and (orientation : landscape) {
+
+         html,
+         body {
+            height: auto !important;
+         }
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 480px) {
+
+         html,
+         body {
+            height: auto !important;
+         }
+
+         .logo {
+            text-align: center;
+         }
+
+         .row-contflex {
+            padding-top: 0px;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+         }
+
+         .itemft:nth-child(1) h2 {
+            padding-top: 40px;
+         }
+
+         .numberbl {
+            padding-left: 0;
+            height: auto;
+         }
+
+         .itemft:nth-child(1) a {
+            margin: 0 auto;
+         }
+
+         .itemft:nth-child(2) p {
+            color: #2C6B1F;
+            font-size: 25px;
+            text-align: center;
+            font-weight: bold;
+            padding-top: 30px;
+         }
+
+         .numberbl_bl {
+            margin: 0 auto;
+         }
+
+         .container-footerbl {
+            position: inherit;
+         }
+
+         .numberbl::before {
+            content: initial;
+         }
+
+         #wrapper502 {
+            position: initial;
+         }
+
+         .container-contflex {
+            padding: 60px 15px 25px 15px;
+         }
+      }
+
+      @media screen and (min-width: 481px) and (max-width: 768px) {}
+
+      @media screen and (min-width: 769px) and (max-width: 1024px) {}
+   </style>
+
+   <div id="wrapper502">
+
+      <section class="container-contflex">
+
+         <div class="logo">
+            <svg width="215" height="50" viewBox="0 0 215 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M26.1948 0C80.7835 0.0103224 135.367 -0.0051612 189.956 0.0103224C195.607 -0.0154836 201.238 1.95093 205.64 5.49151C211.431 10.085 215.042 17.3519 214.995 24.7634C215.119 30.8691 212.81 36.9645 208.744 41.5167C204.085 46.8585 197.064 49.9501 189.987 49.981C137.108 49.9965 84.2292 49.981 31.3504 49.9862C26.8922 49.9552 22.3307 50.2804 18.0068 48.9436C9.90652 46.6366 3.22693 39.958 0.974573 31.8394C-0.766357 25.9866 -0.130944 19.5558 2.52953 14.0746C5.94423 6.94181 12.9493 1.67739 20.7602 0.371606C22.5528 0.0670956 24.3815 0 26.1948 0Z" fill="white" />
+               <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="215" height="50">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M26.1948 0C80.7835 0.0103224 135.367 -0.0051612 189.956 0.0103224C195.607 -0.0154836 201.238 1.95093 205.64 5.49151C211.431 10.085 215.042 17.3519 214.995 24.7634C215.119 30.8691 212.81 36.9645 208.744 41.5167C204.085 46.8585 197.064 49.9501 189.987 49.981C137.108 49.9965 84.2292 49.981 31.3504 49.9862C26.8922 49.9552 22.3307 50.2804 18.0068 48.9436C9.90652 46.6366 3.22693 39.958 0.974573 31.8394C-0.766357 25.9866 -0.130944 19.5558 2.52953 14.0746C5.94423 6.94181 12.9493 1.67739 20.7602 0.371606C22.5528 0.0670956 24.3815 0 26.1948 0Z" fill="white" />
+               </mask>
+               <g mask="url(#mask0)">
+                  <path d="M185.561 11.8387C191.92 9.98854 199.2 13.455 201.849 19.4939C203.779 23.5891 203.483 28.6043 201.1 32.4553C198.539 36.7688 193.492 39.5024 188.465 39.1438C181.95 38.9827 176.121 33.5726 175.356 27.1283C174.3 20.419 178.968 13.4601 185.561 11.8387Z" fill="#FF671F" />
+                  <path d="M25.3322 9.49156C31.4265 8.4297 37.9999 11.4142 41.2505 16.672C42.8217 19.2338 40.5241 23.0586 37.4847 22.6256C35.7744 22.8472 34.5689 21.5019 33.652 20.2648C31.4162 17.4916 27.1713 16.7699 24.1062 18.5586C21.0101 20.2184 19.2586 24.2751 20.5361 27.6101C21.4995 30.8421 24.8583 33.2338 28.2429 32.8988C30.9732 33.0173 33.0595 31.0276 34.7647 29.1617C37.0314 26.9709 41.1732 28.8369 41.369 31.8833C41.6832 34.574 39.2878 36.4658 37.4487 38.0122C31.4265 42.7441 22.061 42.1307 16.6879 36.6771C11.1912 31.5276 10.2743 22.3678 14.6737 16.2441C17.1052 12.6617 21.0616 10.1874 25.3322 9.49156Z" fill="#43B02A" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M74.4299 22.0222C72.936 13.816 64.1938 7.87269 56.0183 9.56856C47.3019 10.8985 40.9501 20.3933 43.2837 28.95C44.9837 36.9449 53.5198 42.6046 61.5459 41.0016C70.1387 39.7387 76.5163 30.5016 74.4299 22.0222ZM51.1578 25.7645C50.8178 21.9501 53.7799 18.2645 57.556 17.7129C61.7803 16.8521 66.2158 20.316 66.4682 24.615C66.9679 28.8934 63.1969 33.1408 58.8542 32.9243C54.9081 33.1562 51.3123 29.6666 51.1578 25.7645Z" fill="#43B02A" />
+                  <path d="M77.3371 13.317C77.198 10.1726 81.3502 8.07469 83.7817 10.1108C87.1663 13.2242 90.319 16.6005 93.6005 19.8221C96.7481 16.7139 99.8391 13.5438 103.007 10.4561C104.166 9.30665 106.067 8.9149 107.546 9.65717C109.117 10.3582 110.116 12.1211 110.034 13.8273C110.019 21.5953 110.044 29.3634 110.019 37.1314C110.049 39.5335 107.695 41.6211 105.305 41.2139C103.311 40.9974 101.688 39.1469 101.725 37.1417C101.694 32.5798 101.714 28.0128 101.725 23.451C99.9266 25.1829 98.1751 26.9664 96.3927 28.7139C95.0224 30.0438 92.7608 30.2242 91.2411 29.0335C89.1908 27.353 87.5217 25.2603 85.5487 23.4819C85.492 28.1005 85.595 32.719 85.5023 37.3324C85.5126 39.7396 82.9832 41.7087 80.6547 41.1778C78.7641 40.853 77.1568 39.0386 77.3268 37.0798C77.3217 29.1572 77.3011 21.2396 77.3371 13.317Z" fill="#43B02A" />
+                  <path d="M113.416 13.4657C113.338 11.1409 115.486 9.14608 117.779 9.28525C123.296 9.29556 128.813 9.27494 134.331 9.29556C135.845 9.29556 137.319 10.2389 137.994 11.5945C139.317 13.9399 137.576 17.4038 134.815 17.4708C130.441 17.5791 126.057 17.4811 121.684 17.5172C121.679 19.2079 121.679 20.9038 121.684 22.5945C125.377 22.61 129.071 22.5791 132.765 22.5997C135.366 22.5017 137.7 25.1925 136.953 27.7543C136.541 29.6615 134.66 31.0224 132.734 30.9399C129.05 30.9657 125.367 30.9296 121.684 30.945C121.648 33.1255 121.746 35.3059 121.648 37.4811C121.514 39.9966 118.706 41.878 116.326 41.0481C115.146 40.7749 114.405 39.7646 113.689 38.878C113.199 36.5791 113.441 34.2234 113.395 31.8987C113.41 25.7543 113.354 19.61 113.416 13.4657Z" fill="#43B02A" />
+                  <path d="M140.203 13.8601C139.781 11.1385 142.686 8.62301 145.308 9.43229C147.122 9.95806 148.162 11.6488 149.497 12.8498C151.532 14.7622 153.402 16.8498 155.462 18.7467C158.342 15.9632 161.103 13.0612 163.993 10.288C165.6 8.82404 168.269 9.04054 169.68 10.6746C171.143 12.2106 171.107 14.8498 169.577 16.324C166.26 19.69 162.875 22.9941 159.568 26.3756C159.558 29.9581 159.619 33.5405 159.552 37.123C159.645 39.0457 158.105 40.8189 156.245 41.1539C153.824 41.721 151.181 39.5921 151.356 37.0818C151.32 33.5148 151.356 29.9478 151.346 26.3807C148.683 23.5766 145.855 20.9271 143.176 18.1385C141.97 16.8962 140.265 15.7725 140.203 13.8601Z" fill="#43B02A" />
+               </g>
+            </svg>
+         </div>
+
+         <div class="row-contflex">
+
+            <div class="itemft">
+
+               <h2>Ууупссс...</h2>
+               <p><span class="word-wrap">Очень скоро сайт заработает.</span> Если у вас есть вопросы, наша on-line поддержка<br />всегда рада вам помочь!</p>
+
+               <a target="_blank" class="chatgoto" href="https://widget.sender.mobi/build/popup.html?draggable=true&resizable=true&showButton=true&showBar=true&showContactCard=true&location=https://comfy.ua/dnepropetrovsk/&showControls=true&companyId=i69238662654&lang=uk">
+                  <span class="chname">Начать чат</span>
+                  <span class="chname_icon">
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                           <path d="M11.9739 23.9998C9.78627 23.9998 7.6437 23.3989 5.7461 22.2371L1.26401 23.4609C0.888105 23.5608 0.486179 23.4389 0.235197 23.1399C-0.0157842 22.841 -0.06974 22.4231 0.0962059 22.0711C1.05302 20.0396 1.21597 17.739 0.555135 15.5924C0.39819 15.0925 0.271199 14.5716 0.18021 14.0507C-0.368677 10.8934 0.346156 7.71099 2.1898 5.0905C4.03442 2.47 6.78987 0.724384 9.94725 0.176481C9.96727 0.173481 9.98724 0.17048 10.0073 0.168465C13.0256 -0.341421 16.0901 0.313456 18.6416 2.00812C21.31 3.78276 23.1277 6.49021 23.7605 9.6316C24.3924 12.774 23.7635 15.9734 21.9899 18.6418C20.2162 21.3103 17.5088 23.1289 14.3664 23.7608C13.5695 23.9208 12.7687 23.9998 11.9739 23.9998ZM5.91003 20.1575C6.10499 20.1575 6.29794 20.2145 6.46393 20.3245C8.68747 21.8032 11.353 22.3251 13.9724 21.8012C16.5899 21.2743 18.8465 19.7586 20.3252 17.534C21.8039 15.3105 22.3287 12.644 21.8018 10.0265C21.2749 7.40802 19.7602 5.15247 17.5357 3.67377C15.3991 2.25409 12.8307 1.71322 10.3002 2.14711C10.2822 2.15011 10.2642 2.15311 10.2462 2.15513C7.63371 2.62104 5.35618 4.07176 3.82746 6.24232C2.28875 8.42489 1.6929 11.0764 2.15079 13.7078C2.2258 14.1417 2.33174 14.5757 2.46375 14.9976C3.07264 16.9762 3.11061 19.0578 2.59374 21.0244L5.64611 20.1915C5.73307 20.1685 5.82204 20.1575 5.91003 20.1575Z" fill="white" />
+                           <path d="M15.9982 10.9986H7.9998C7.44791 10.9986 7 10.5507 7 9.99879C7 9.44691 7.44791 8.99899 7.9998 8.99899H15.9982C16.5511 8.99899 16.998 9.44691 16.998 9.99879C16.998 10.5507 16.5511 10.9986 15.9982 10.9986Z" fill="white" />
+                           <path d="M15.9982 14.9978H7.9998C7.44791 14.9978 7 14.5509 7 13.998C7 13.4451 7.44791 12.9982 7.9998 12.9982H15.9982C16.5511 12.9982 16.998 13.4451 16.998 13.998C16.998 14.5509 16.5511 14.9978 15.9982 14.9978Z" fill="white" />
+                        </g>
+                        <defs>
+                           <clipPath id="clip0">
+                              <rect width="24" height="24" fill="white" />
+                           </clipPath>
+                        </defs>
+                     </svg>
+                  </span>
+               </a>
+            </div>
+
+            <div class="itemft">
+
+               <div class="numberbl">
+                  <p>Страница будет<br>перезагружена через:</p>
+                  <!--<p class="timer"><span id="timer_inp">0143</span><p>-->
+                  <div class="numberbl_bl">
+                     <span style="display: none;"></span>
+                     <span style="display: none;" class="afss_day_bv">0</span>
+                     <span style="display: none;" class="afss_hours_bv">00</span>
+                     <span class="afss_mins_bv">00</span><span class="afss_mins_bv_sbl">:</span>
+                     <span class="afss_secs_bv">00</span>
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+      </section>
+
+      <section class="container-footerbl">
+         <div class="row-footerblflex">
+
+            <h2>Мы в социальных сетях:</h2>
+            <div class="social-flex">
+               <span class="social">
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50ZM26.6892 17.3986V20.777H31.7568L30.0676 25H26.6892V38.5135H21.6216V25H18.2432V20.777H21.6216V16.5541C21.6216 13.7551 23.8902 11.4865 26.6892 11.4865H30.0676V15.7095H28.3784C27.4459 15.7095 26.6892 16.4662 26.6892 17.3986Z" fill="white" />
+                  </svg>
+               </span>
+               <span class="social">
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50ZM18.9448 11.4865H31.0548C35.1676 11.4865 38.5135 14.8324 38.5134 18.9449V31.0549C38.5134 35.1674 35.1676 38.5134 31.0548 38.5134H18.9448C14.8323 38.5134 11.4865 35.1676 11.4865 31.0549V18.9449C11.4865 14.8324 14.8323 11.4865 18.9448 11.4865ZM31.0549 36.1154C33.8453 36.1154 36.1156 33.8453 36.1156 31.0549H36.1154V18.9449C36.1154 16.1547 33.8452 13.8844 31.0548 13.8844H18.9448C16.1545 13.8844 13.8844 16.1547 13.8844 18.9449V31.0549C13.8844 33.8453 16.1545 36.1156 18.9448 36.1154H31.0549ZM24.9998 18.0361C21.1598 18.0361 18.0357 21.1602 18.0357 25.0002C18.0357 28.8402 21.1598 31.9641 24.9998 31.9641C28.8399 31.9641 31.964 28.8402 31.964 25.0002C31.964 21.1602 28.8399 18.0361 24.9998 18.0361ZM24.9998 29.5659C22.4822 29.5659 20.4337 27.5178 20.4337 25.0001C20.4337 22.4822 22.482 20.4339 24.9998 20.4339C27.5177 20.4339 29.566 22.4822 29.566 25.0001C29.566 27.5178 27.5175 29.5659 24.9998 29.5659ZM31.0132 16.5176C31.3395 16.1898 31.7934 16.0028 32.2554 16.0028C32.719 16.0028 33.173 16.1898 33.4991 16.5176C33.8269 16.8437 34.0139 17.2977 34.0139 17.7613C34.0139 18.2233 33.8269 18.6773 33.4991 19.005C33.1714 19.3312 32.719 19.5198 32.2554 19.5198C31.7934 19.5198 31.3394 19.3312 31.0132 19.005C30.6855 18.6773 30.4969 18.2235 30.4969 17.7613C30.4969 17.2977 30.6854 16.8437 31.0132 16.5176Z" fill="white" />
+                  </svg>
+
+               </span>
+               <span class="social">
+                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50ZM35.5755 16.4696C36.7331 16.7814 37.646 17.6941 37.9575 18.852C38.5365 20.9668 38.5142 25.3749 38.5142 25.3749C38.5142 25.3749 38.5142 29.7605 37.9578 31.8754C37.646 33.0331 36.7333 33.9459 35.5755 34.2575C33.4605 34.8142 25.0008 34.8142 25.0008 34.8142C25.0008 34.8142 16.5631 34.8142 14.4261 34.2354C13.2682 33.9236 12.3557 33.0109 12.0439 31.8532C11.4873 29.7605 11.4873 25.3526 11.4873 25.3526C11.4873 25.3526 11.4873 20.9668 12.0439 18.852C12.3553 17.6943 13.2905 16.7592 14.4259 16.4477C16.5409 15.891 25.0005 15.891 25.0005 15.891C25.0005 15.891 33.4605 15.891 35.5755 16.4696ZM29.3419 25.3526L22.307 21.3008V29.4043L29.3419 25.3526Z" fill="white" />
+                  </svg>
+               </span>
+            </div>
+
+         </div>
+      </section>
+
+   </div>
+
+
+
+   <script type="text/javascript">
+
+// <p class="timer"><span id="timer_inp">0143</span><p>
+      /*
+            function timer() {
+               var obj = document.getElementById('timer_inp');
+               obj.innerHTML--;
+               if (obj.innerHTML == 0) {
+                  location.reload();
+                  setTimeout(function () { }, 1000);
+               } else {
+                  setTimeout(timer, 1000);
+               }
+            }
+            setTimeout(timer, 1000);
+            */
+   </script>
+
+   <script type="text/javascript">//<![CDATA[
+      var remain_bv = 00146;
+      function parseTime_bv(timestamp) {
+         if (timestamp < 0) timestamp = 0;
+
+         var day = Math.floor((timestamp / 60 / 60) / 24);
+         var hour = Math.floor(timestamp / 60 / 60);
+         var mins = Math.floor((timestamp - hour * 60 * 60) / 60);
+         var secs = Math.floor(timestamp - hour * 60 * 60 - mins * 60);
+         var left_hour = Math.floor((timestamp - day * 24 * 60 * 60) / 60 / 60);
+
+         $('span.afss_day_bv').text(day);
+         $('span.afss_hours_bv').text(left_hour);
+
+         if (String(mins).length > 1)
+            $('span.afss_mins_bv').text(mins);
+         else
+            $('span.afss_mins_bv').text("0" + mins);
+         if (String(secs).length > 1)
+            $('span.afss_secs_bv').text(secs);
+         else
+            $('span.afss_secs_bv').text("0" + secs);
+
+      }
+
+      $(document).ready(function () {
+         setInterval(function () {
+            remain_bv = remain_bv - 1;
+            parseTime_bv(remain_bv);
+            if (remain_bv <= 0) {
+               location.reload();
+               setTimeout(function () { }, 1000);
+            }
+         }, 1000);
+      });//]]>
+
+   </script>
+
+</body>
+
+</html>

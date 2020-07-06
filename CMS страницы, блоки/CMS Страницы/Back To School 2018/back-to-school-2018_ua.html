@@ -1,0 +1,965 @@
+<script></script>
+<script language="JavaScript" type="text/javascript">// <![CDATA[
+function getCookie(name) {
+  var matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+var city = getCookie('active_city_id');
+var priceUrl = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id='+city+'&ids=332643, 298273, 298673, 222923, 162703, 258823, 49393, 317613, 51543, 327253, 278683, 283133, 289893, 75232, 198513, 86729, 312783, 87902, 64737, 299513, 84342, 85324'
+$.ajax({ url: priceUrl,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    //var pr1 = resp['332643']['price'];
+                    var pr1_ = resp['332643']['special_price'];
+                    //var pr2 = resp['298273']['price'];
+                    var pr2_ = resp['298273']['special_price'];
+                    //var pr3 = resp['298673']['price'];
+                    var pr3_ = resp['298673']['special_price'];
+                    //var pr4 = resp['222923']['price'];
+                    var pr4_ = resp['222923']['special_price'];
+                    //var pr5 = resp['162703']['price'];
+                    var pr5_ = resp['162703']['special_price'];
+                    //var pr6 = resp['258823']['price'];
+                    var pr6_ = resp['258823']['special_price'];
+                    //var pr7 = resp['49393']['price'];
+                    var pr7_ = resp['49393']['special_price'];
+                    //var pr8 = resp['317613']['price'];
+                    var pr8_ = resp['317613']['special_price'];
+                    //var pr9 = resp['51543']['price'];
+                    var pr9_ = resp['51543']['special_price'];
+                    var pr10_ = resp['327253']['special_price'];
+                    //var pr11_ = resp['278683']['special_price'];
+                    var pr12_ = resp['283133']['special_price'];
+                    //var pr13 = resp['289893']['price'];
+                    var pr13_ = resp['289893']['special_price'];
+                    //var pr14 = resp['75232']['price'];
+                    var pr14_ = resp['75232']['special_price'];
+                    //var pr15 = resp['198513']['price'];
+                    var pr15_ = resp['198513']['special_price'];
+
+                    //var pr16 = resp['86729']['price'];
+                    var pr16_ = resp['86729']['special_price'];
+                    //var pr17 = resp['312783']['price'];
+                    var pr17_ = resp['312783']['special_price'];
+                    //var pr18 = resp['87902']['price'];
+                    var pr18_ = resp['87902']['special_price'];
+
+                    //var pr19 = resp['64737']['price'];
+                    var pr19_ = resp['64737']['special_price'];
+                    //var pr20 = resp['299513']['price'];
+                    var pr20_ = resp['299513']['special_price'];
+                    //var pr21 = resp['84342']['price'];
+                    var pr21_ = resp['84342']['special_price'];
+                    //var pr22 = resp['85324']['price'];
+                    var pr22_ = resp['85324']['special_price'];
+
+
+                    //document.getElementById("price1").innerHTML = pr1;
+                    document.getElementById("price1_").innerHTML = pr1_;
+                    //document.getElementById("price2").innerHTML = pr2;
+                    document.getElementById("price2_").innerHTML = pr2_;
+                    //document.getElementById("price3").innerHTML = pr3;
+                    document.getElementById("price3_").innerHTML = pr3_;
+                    //document.getElementById("price4").innerHTML = pr4;
+                    document.getElementById("price4_").innerHTML = pr4_;
+                    //document.getElementById("price5").innerHTML = pr5;
+                    document.getElementById("price5_").innerHTML = pr5_;
+                    //document.getElementById("price6").innerHTML = pr6;
+                    document.getElementById("price6_").innerHTML = pr6_;
+                    //document.getElementById("price7").innerHTML = pr7;
+                    document.getElementById("price7_").innerHTML = pr7_;
+                    //document.getElementById("price8").innerHTML = pr8;
+                    document.getElementById("price8_").innerHTML = pr8_;
+                    //document.getElementById("price9").innerHTML = pr9;
+                    document.getElementById("price9_").innerHTML = pr9_;
+                    document.getElementById("price10_").innerHTML = pr10_;
+                    //document.getElementById("price11_").innerHTML = pr11_;
+                    document.getElementById("price12_").innerHTML = pr12_;
+                    //document.getElementById("price13").innerHTML = pr13;
+                    document.getElementById("price13_").innerHTML = pr13_;
+                    //document.getElementById("price14").innerHTML = pr14;
+                    document.getElementById("price14_").innerHTML = pr14_;
+                    //document.getElementById("price15").innerHTML = pr15;
+                    document.getElementById("price15_").innerHTML = pr15_;
+
+                    //document.getElementById("price16").innerHTML = pr16;
+                    document.getElementById("price16_").innerHTML = pr16_;
+                    //document.getElementById("price17").innerHTML = pr17;
+                    document.getElementById("price17_").innerHTML = pr17_;
+                    //document.getElementById("price18").innerHTML = pr18;
+                    document.getElementById("price18_").innerHTML = pr18_;
+
+                    //document.getElementById("price19").innerHTML = pr19;
+                    document.getElementById("price19_").innerHTML = pr19_;
+                    //document.getElementById("price20").innerHTML = pr20;
+                    document.getElementById("price20_").innerHTML = pr20_;                    
+                    //document.getElementById("price21").innerHTML = pr21;
+                    document.getElementById("price21_").innerHTML = pr21_;
+                    //document.getElementById("price22").innerHTML = pr22;
+                    document.getElementById("price22_").innerHTML = pr22_;
+
+                  }
+
+
+});
+// ]]></script>
+<style type="text/css">
+.page{
+    background-color: #fff
+}
+.all-bl{
+    padding-top: 20px !important;
+}
+.breadcrumbs{
+    display: none;
+}
+.all-bl{
+    max-width: 1316px; 
+    margin: 0 auto;
+    display: block;
+}
+.block-banner img{
+    width: 100%;
+}
+
+.block-banner{
+    position: relative;
+}
+
+.block-banner p{
+    position: absolute;
+    bottom: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    left: 20px;
+}
+
+.block-banner svg{
+    position: absolute;
+    bottom: 0px;
+}
+.tovar-bl{
+    width: 400px;
+    min-height: 400px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    float: left;
+    margin-top: 50px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-left: 60px;
+    padding: 20px 20px 70px 20px;
+    position:relative;
+}
+
+.tovary-bl{ 
+    display: flex;
+}
+
+.tovar-bl:first-child{
+    margin-left: 0px;
+}
+.tovar-bl img{
+    max-height: 290px;
+    margin: 0 auto;
+    display: block;
+}
+
+.tovar-bl p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    height: 85px;
+    padding: 20px 0px;
+}
+
+.cena-bl{
+    width: 45%;
+    position: relative;
+}
+.cena{
+    font-weight: bold;
+    font-size: 28px;
+    position: absolute;
+    right: 27px;
+
+}
+.price-currency{
+    top: 1px;
+    right: 4px;
+}
+
+
+.buy-btn-bl{
+    position: absolute;
+    right: 8%;
+    color: #fff;
+    background-color: #FF671F;
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.btn-all{
+    color: #fff;
+    background-color: #FF671F;
+    border-radius: 25px;
+    padding: 10px 50px;
+    font-size: 23px;
+    font-weight: bold;
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.oldpp{ 
+    color: #797979;
+    position: relative;
+    top: -5px;
+    right: 0px;
+}
+
+.newp{
+    position: absolute;
+    top: 19px;
+    right: 0px;
+}
+
+.oldpp:after{
+    content: "";
+    position: absolute;
+    top: 14px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0px;
+    height: 0.1rem;
+    background: #ff090b;
+    width: 54%;
+}
+
+.oldpp .cena{
+    font-size: 23px;
+}
+.oldpp ..price-currency{
+    font-size: 11px;
+
+}
+
+.oldpp .price-currency:after{
+    background: #797979;
+}
+
+.cat-on{
+    width: 300px;
+    height: 350px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    float: left;
+    margin-top: 50px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-left: 38px;
+    padding: 20px 20px 70px 20px;
+    position:relative;
+
+}
+
+.cat-on svg{
+    position: absolute;
+    left: 0px;
+    bottom: 0px
+}
+
+.image-on{
+    height: 260px;
+    width: 300px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 25px;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+.image-on.on1{
+        background: url(https://cdn.comfy.ua/media/blb/luchshie-planshety-2016-goda_rect_e8466bc88347a41dba80306509bffea3.jpg);
+}
+
+.image-on.on2{
+    background: url(https://cdn.comfy.ua/media/blb/printer_2.jpg);
+}
+
+.image-on.on3{
+    background: url(https://cdn.comfy.ua/media/blb/samsung-curved-monitor.jpg);
+}
+
+.image-on.on4{
+    background: url(https://cdn.comfy.ua/media/blb/best-router-2016-s.jpg);
+}
+
+.image-on.on5{
+    background: url(https://cdn.comfy.ua/media/blb/Windows-10.png);
+}
+
+.image-on.on6{
+    background: url(https://cdn.comfy.ua/media/blb/Razer-Mamba-TE-right-side.jpg);
+}
+
+.image-on.on7{
+    background: url(https://cdn.comfy.ua/media/blb/logitech_craft_keyboard_hero-100734254-large.jpg);
+}
+
+.image-on.on8{ 
+    background: url(https://cdn.comfy.ua/media/blb/naush.png);
+}
+
+.all-cat-on a:nth-child(1) .cat-on, .all-cat-on a:nth-child(5) .cat-on{
+    margin-left: 0px;
+}
+
+.cat-on p{
+    position: absolute;
+    bottom: 35px;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    left: 0px;
+}
+
+.all-cat-on{
+    display: inline-block;
+    margin-bottom: 50px;
+
+}
+
+.title-gray{
+    font-size: 30px;
+}
+
+.title-gray__i::before, .title-gray__i::after{
+        background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18.335 30.5' fill='%23a7a7a7'%3E%3Cpath d='M17.938 20.73a.5.5 0 0 0-.707 0l-7.563 7.563V.917a.5.5 0 0 0-1 0V28.46l-7.563-7.563a.5.5 0 0 0-.707.707l8.333 8.333a.498.498 0 0 0 .354.146c.014 0 .028-.007.042-.008.014.001.026.008.041.008a.495.495 0 0 0 .469-.345l8.301-8.301a.5.5 0 0 0 0-.707z'/%3E%3C/svg%3E") no-repeat 50%
+}
+
+
+.tovar-bl p:hover{
+    text-decoration: underline;
+}
+
+.buy-btn-bl:hover { 
+    background-color: #e25c1d;
+}
+
+.btn-all:hover { 
+    background-color: #e25c1d;
+}
+
+.cat-on:hover{
+    -webkit-box-shadow: 0 0 20px 6px rgba(0,0,0,.11);
+    -moz-box-shadow: 0 0 20px 6px rgba(0,0,0,.11);
+    box-shadow: 0 0 4px 1px rgba(0,0,0,.11);
+}
+
+.all-video{
+    max-width: 1316px;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+.video-bl{
+    width: 33%;
+    margin-left: 3%;
+    float: left;
+}
+
+.video-bl:nth-child(1){
+    margin-left: 0%;
+}
+
+.newp.np{
+    top: 6px;
+}
+
+.all-news{
+    max-width: 1316px;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+.all-news a{
+    width: 33%;
+    margin-left: 3%;
+    float: left;
+}
+
+
+.all-news a:hover img{
+    opacity: 0.7;
+}
+.all-news a:hover p{
+    text-decoration: none;
+}
+
+.all-news a p{
+    font-size: 17px;
+    text-decoration: underline;
+    margin-top: 10px;
+    color: #39a520;
+}
+
+.all-news a .video-bl{
+    width: 100%
+}
+
+.all-news a:nth-child(1){
+    margin-left: 0%;
+}
+
+@media (max-width: 767px){
+.block-banner svg{
+    width: 100%;
+    bottom: 2px;
+    height: 24px;
+    position: absolute;
+}
+
+.block-banner p{
+    bottom: -25px;
+    font-size: 25px;
+}
+
+.tovary-bl{
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.tovar-bl{
+    width: 80%;
+    margin: 0 auto;
+    float: none;
+    margin-top: 50px;
+}
+
+.btn-all{
+    display: block;
+    width: 80%;
+    margin-top: 35px;
+    font-size: 16px;
+}
+
+.cena-bl{
+    width: 40%;
+}
+
+.tovar-bl p{
+    font-size: 16px;
+}
+
+.tovar-bl img{
+    max-height: 200px;
+}
+
+.buy-btn-bl{
+    font-size: 17px;
+}
+
+
+.oldpp .cena{
+    font-size: 21px;
+}
+
+.cena{
+    font-size: 26px;
+}
+
+.newp{
+    top: 17px;
+}
+.oldpp:after{
+    width: 80%;
+}
+
+.cat-on{
+    width: 80%;
+    float: none;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.all-cat-on{
+    width: 100%;
+    text-align: center;
+}
+.all-video{
+    display: block;
+    text-align: center;
+}
+
+.video-bl{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    float: none;
+}
+
+.video-bl:nth-child(1){
+    margin-left: auto;
+}
+
+.all-news{
+    width: 85%;
+    display: block;
+}
+
+.all-news a{
+    width: 100%;
+    margin-left: 0%;
+    float: none;
+}
+
+
+}
+
+</style>
+<div class="all-bl">
+<div class="block-banner"><img src="https://cdn.comfy.ua/media/blb/Comfy_gif_1316px_2_1.gif" /> <!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" height="99px" width="1321px"> <g transform="translate(-60.000000, -464.000000)" fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="back-to-school">
+<path fill="#FFFFFF" id="Rectangle-2" d="M60,464 C91.6419616,464.635831 278.456129,485.83899 620.442503,527.609478 C962.428877,569.379966 1215.94804,565.438395 1381,515.784766 L1381,563 L60,563 L60,464 Z"></path></g> </svg>
+<p>Cмартфони</p>
+</div>
+<div class="tovary-bl">
+<div class="tovar-bl"><a href="/smartfon-samsung-j810-galaxy-j8-2018-black.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/s/m/sm-j810f_001_front_black.jpg" />
+<p>Cмартфон Samsung J810<br /> Galaxy J8 2018 Black</p>
+</a>
+<div class="cena-bl">
+<div class="newp np">
+<div id="price1_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [332643])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl"><a href="/smartfon-honor-7a-black.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/i/m/img_4176.jpg" />
+<p>Смартфон Honor 7A Black</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price2">2999</div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price2_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [298273])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl"><a href="/smartfon-honor-9-lite-black.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/i/m/img_4176.jpg" />
+<p>Смартфон Honor 9 Lite Black</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price3-">5999</div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price3_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [298673])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+</div>
+<div class="tovary-bl">
+<div class="tovar-bl"><a href="/smartfon-huawei-p-smart-blue-1.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/n/o/nova_3i_product_image_standard_blue_front_with_ui.png" />
+<p>Смартфон Huawei P Smart+ Blue</p>
+</a>
+<div class="cena-bl">
+<div class="newp np">
+<div id="price10_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [327253])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<!--
+<div class="tovar-bl"><a href="/smartfon-huawei-y6-2018-black.html" _mce_href="/smartfon-huawei-y6-2018-black.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/h/u/huawei_y6_2018_black__1.jpg" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/h/u/huawei_y6_2018_black__1.jpg" />
+<p>Смартфон Huawei Y6 2018 Black</p>
+</a>
+<div class="cena-bl">
+<div class="newp np">
+<div class="cena" id="price11_"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a href="#" _mce_href="#" onclick="$(document).triggerHandler('cart:add', [278683])">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+-->
+<div class="tovar-bl"><a href="/smartfon-samsung-j600-galaxy-j6-black.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/s/a/samsung_j600_galaxy_j6_black__5.jpg" />
+<p>Смартфон Samsung J600 Galaxy J6 Black</p>
+</a>
+<div class="cena-bl">
+<div class="newp np">
+<div id="price12_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [283133])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl"><a href="/smartfon-apple-iphone-7-32gb-black.html"> <img src="https://cdn.comfy.ua/media/x/img/2_apple7_1.png" />
+<p>Смартфон Apple iPhone 7 32GB Black</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price19"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price19_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [64737])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+</div>
+<div class="tovary-bl">
+<div class="tovar-bl"><a href="/smartfon-xiaomi-redmi-note-5-3-32-black.html"> <img src="https://cdn.comfy.ua/media/x/img/2_xiaome_smart_2.png" />
+<p>Смартфон Xiaomi Redmi Note 5 3/32 Black</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price20"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price20_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [299513])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl"><a href="/smartfon-samsung-j530f-galaxy-j5-2017-black.html"> <img src="https://cdn.comfy.ua/media/x/img/2_samsung_3.png" />
+<p>Смартфон Samsung J530F Galaxy J5 2017 Black</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price21"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price21_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [84342])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl"><a href="/smartfon-samsung-j730f-galaxy-j7-2017-black.html"> <img src="https://cdn.comfy.ua/media/x/img/2_smasung_4.png" />
+<p>Смартфон Samsung J730F Galaxy J7 2017 Black</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price22"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price22_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [85324])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+</div>
+<a href="/smartfon/">
+<div class="btn-all">Подивитися всі смартфони</div>
+</a> <!-- /////////////222222222////////////// -->
+<div style="height: 50px; display: block;"></div>
+<div class="block-banner"><img src="https://cdn.comfy.ua/media/blb/Comfy_gif_1316px_3_1.gif" /> <!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" height="99px" width="1321px"> <g transform="translate(-60.000000, -464.000000)" fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="back-to-school">
+<path fill="#FFFFFF" id="Rectangle-2" d="M60,464 C91.6419616,464.635831 278.456129,485.83899 620.442503,527.609478 C962.428877,569.379966 1215.94804,565.438395 1381,515.784766 L1381,563 L60,563 L60,464 Z"></path></g> </svg>
+<p>Ноутбуки</p>
+</div>
+<div class="tovary-bl">
+<div class="tovar-bl"><a href="/noutbuk-lenovo-ideapad-320-15iap-80xr016cra-platinum-grey.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/g/h/ghwerigerg-rhbk_2_1.jpg" />
+<p>Ноутбук Lenovo IdeaPad 320-15IAP<br /> (80XR016CRA) Platinum Grey</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price5"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price5_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [162703])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl"><a href="/noutbuk-lenovo-ideapad-320-15isk-80xh01vrra-platinum-grey.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/m/emogwertg5_-yi50h_tghfghf_1.jpg" />
+<p>Ноутбук Lenovo IdeaPad 320-15ISK (80XH01VRRA) Platinum Grey</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price15"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price15_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [198513])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl"><a href="/noutbuk-igrovoj-acer-nitro-5-an515-31-547r-nh-q2xeu-002.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/a/n/an_an515-31_41_51_bk_wp_01_1_2.jpg" />
+<p>Ноутбук ігровий Acer Nitro 5<br /> AN515-31-547R (NH.Q2XEU.002)</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price6"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price6_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [258823])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+</div>
+<div class="tovary-bl">
+<div class="tovar-bl"><a href="/noutbuk-prestigio-smartbook-141c-psb141c01bfp-bk-cis-black.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/p/r/prestigio_smartbook_141c_psb141c01bfp_bk_cis___7.jpg" />
+<p>Ноутбук Prestigio SmartBook 141C (PSB141C01BFP_BK_CIS) Black</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price13"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price13_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [289893])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl"><a href="/noutbuk-acer-aspire-es1-533-c7n4-nx-gfteu-042.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/a/c/acer_aspire_es1-533-c7n4_nx1.jpg" />
+<p>Ноутбук Acer Aspire ES1-533-C7N4 (NX.GFTEU.042) Black</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price14"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price14_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [75232])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl"><a href="/noutbuk-hp-15-ra023ur-3fy99ea-black.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/_/h/_hp_15-ra023ur_3fy99ea_black_0.jpg" />
+<p>Ноутбук HP 15-ra023ur<br /> (3FY99EA) Black</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price4"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price4_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [222923])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+</div>
+<div class="tovary-bl">
+<div class="tovar-bl"><a href="/noutbuk-apple-macbook-air-13-mqd32ua-a.html"> <img src="https://cdn.comfy.ua/media/x/img/1apple_img1.png" />
+<p>Ноутбук Apple MacBook Air 13<br /> (MQD32UA/A)</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price16"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp">
+<div id="price16_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [86729])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl"><a href="/noutbuk-igrovoj-acer-nitro-5-an515-42-r2vk-nh-q3reu-009-black.html"> <img src="https://cdn.comfy.ua/media/x/img/1nitro_2.png" />
+<p>Ноутбук игровой Acer Nitro 5 AN515-42-R2VK (NH.Q3REU.009) Black</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price17"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price17_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [312783])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl"><a href="/noutbuk-apple-macbook-pro-13-3-retina-mpxq2ua-a-space-grey.html"> <img src="https://cdn.comfy.ua/media/x/img/1apple_3.png" />
+<p>Ноутбук Apple MacBook Pro 13.3 Retina<br /> MPXQ2UA/A Space Grey</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price18"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price18_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [87902])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+</div>
+<a href="/notebook/">
+<div class="btn-all">Подивитися всі ноутбуки</div>
+</a> <!-- //////////////333333333///////////// -->
+<div style="height: 50px; display: block;"></div>
+<div class="block-banner"><img src="https://cdn.comfy.ua/media/blb/Comfy_gif_1316px_1.gif" /> <!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" height="99px" width="1321px"> <g transform="translate(-60.000000, -464.000000)" fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="back-to-school">
+<path fill="#FFFFFF" id="Rectangle-2" d="M60,464 C91.6419616,464.635831 278.456129,485.83899 620.442503,527.609478 C962.428877,569.379966 1215.94804,565.438395 1381,515.784766 L1381,563 L60,563 L60,464 Z"></path></g> </svg>
+<p>Акустика</p>
+</div>
+<div class="tovary-bl">
+<div class="tovar-bl"><a href="/akusticheskie-sistemy-jbl-jblxtremeblkeu.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/j/b/jbl_jblxtremeblkeu.jpg" />
+<p>Портативна акустика <br />JBL JBLXTREMEBLKEU</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price7"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price7_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [49393])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl"><a href="/portativnaja-akustika-ceaudio-h3500-black.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/c/e/ceaudio_h3500_black_0.jpg" />
+<p>Портативна акустика <br />CeAudio H3500 Black</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price8"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price8_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [317613])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+<div class="tovar-bl"><a href="/portativnaja-akustika-jbl-go-blue-jblgoblue.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/j/b/jblgoblue.jpg" />
+<p>Портативна акустика JBL GO Blue (JBLGOBLUE)</p>
+</a>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price9"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price9_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [51543])" href="#">
+<div class="buy-btn-bl">Купити</div>
+</a></div>
+</div>
+<a href="/portable-sound/">
+<div class="btn-all">Переглянути всю акустику</div>
+</a> <!-- /////////////////////////// -->
+<div style="height: 50px; display: block;"></div>
+<div class="narrow-container title-gray"><span class="title-gray__i">Усі категорії</span></div>
+<div class="all-cat-on"><a href="/plane-table-computer/">
+<div class="cat-on">
+<div class="image-on on1"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" height="26px" width="300px"> <g fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="Page-1">
+<polygon points="0 0 150 24 300 0 300 26 0 26" fill="#FFFFFF" id="Rectangle-23"></polygon> </g> </svg></div>
+<p>Планшети</p>
+</div>
+</a> <a href="/printers/">
+<div class="cat-on">
+<div class="image-on on2"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" height="26px" width="300px"> <g fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="Page-1">
+<polygon points="0 0 150 24 300 0 300 26 0 26" fill="#FFFFFF" id="Rectangle-23"></polygon> </g> </svg></div>
+<p>Принтери і БФП</p>
+</div>
+</a> <a href="/monitor/">
+<div class="cat-on">
+<div class="image-on on3"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" height="26px" width="300px"> <g fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="Page-1">
+<polygon points="0 0 150 24 300 0 300 26 0 26" fill="#FFFFFF" id="Rectangle-23"></polygon> </g> </svg></div>
+<p>Монітори</p>
+</div>
+</a> <a href="/internet-router/">
+<div class="cat-on">
+<div class="image-on on4"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" height="26px" width="300px"> <g fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="Page-1">
+<polygon points="0 0 150 24 300 0 300 26 0 26" fill="#FFFFFF" id="Rectangle-23"></polygon> </g> </svg></div>
+<p>Роутери</p>
+</div>
+</a> <a href="/desktop-computer/">
+<div class="cat-on">
+<div class="image-on on5"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" height="26px" width="300px"> <g fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="Page-1">
+<polygon points="0 0 150 24 300 0 300 26 0 26" fill="#FFFFFF" id="Rectangle-23"></polygon> </g> </svg></div>
+<p>Комп'ютери настільні</p>
+</div>
+</a> <a href="/mouse-keyboard/">
+<div class="cat-on">
+<div class="image-on on6"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" height="26px" width="300px"> <g fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="Page-1">
+<polygon points="0 0 150 24 300 0 300 26 0 26" fill="#FFFFFF" id="Rectangle-23"></polygon> </g> </svg></div>
+<p>Мишки</p>
+</div>
+</a> <a href="/keywords/">
+<div class="cat-on">
+<div class="image-on on7"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" height="26px" width="300px"> <g fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="Page-1">
+<polygon points="0 0 150 24 300 0 300 26 0 26" fill="#FFFFFF" id="Rectangle-23"></polygon> </g> </svg></div>
+<p>Клавіатури</p>
+</div>
+</a> <a href="/nayshniki/">
+<div class="cat-on">
+<div class="image-on on8"><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" height="26px" width="300px"> <g fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="Page-1">
+<polygon points="0 0 150 24 300 0 300 26 0 26" fill="#FFFFFF" id="Rectangle-23"></polygon> </g> </svg></div>
+<p>Навушники</p>
+</div>
+</a></div>
+</div>
+<div style="height: 10px; display: block; width: 100%; background-color: #f2f2f2;"></div>
+<div class="narrow-container title-gray"><span class="title-gray__i">Відео</span></div>
+<div class="all-video">
+<div class="video-bl"><iframe src="https://www.youtube.com/embed/6JS1K-q8vMI" width="100%" height="315" frameborder="0"></iframe>
+<p> </p>
+</div>
+<div class="video-bl"><iframe src="https://www.youtube.com/embed/dKY-dw0PTCY" width="100%" height="315" frameborder="0"></iframe></div>
+<div class="video-bl"><iframe src="https://www.youtube.com/embed/n8OD8jNC88U" width="100%" height="315" frameborder="0"></iframe></div>
+</div>
+<div style="height: 10px; display: block; width: 100%; background-color: #f2f2f2;"></div>
+<div class="narrow-container title-gray"><span class="title-gray__i">Корисні статті</span></div>
+<div class="all-news"><a href="https://blog.comfy.ua/ua/gotuehmosya-do-1-go-veresnya-top-noutbukiv-do-15000-griven-dlya-navchannya/" target="_blank">
+<div class="video-bl"><img src="https://cdn.comfy.ua/media/blb/bl-img-1.png" />
+<p>Готуємося до 1-го вересня. ТОП ноутбуків до 15000 гривень для навчання</p>
+</div>
+</a> <a href="https://blog.comfy.ua/kak-vybrat-router-pravilno-sovety-ehkspertov-comfya_a062/" target="_blank">
+<div class="video-bl"><img src="https://cdn.comfy.ua/media/blb/bl-img-2.png" />
+<p>Как выбрать роутер - правильно? Советы экспертов Comfy</p>
+</div>
+</a> <a href="https://blog.comfy.ua/ua/yak-zibrati-komp-yuter/" target="_blank">
+<div class="video-bl"><img src="https://cdn.comfy.ua/media/blb/bl-img-3.png" />
+<p>Як зібрати комп'ютер?</p>
+</div>
+</a></div>

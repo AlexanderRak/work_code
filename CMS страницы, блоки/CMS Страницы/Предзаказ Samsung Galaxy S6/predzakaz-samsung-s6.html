@@ -1,0 +1,313 @@
+<style>
+    @font-face {
+        font-family: 'PT Sans';
+        src: url('https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&amp;amp;amp;subset=latin,cyrillic');
+        font-weight: bold;
+        font-style: normal;
+    }
+    body {
+        font-family: "PT Sans",arial,sans-serif;
+    }
+	
+	.js-informer {
+display: none !important;
+}
+.special-offer{
+display: none !important;
+}
+
+.breadcrumbs{
+display: none !important;
+}
+
+.header__top{
+  background: #16212D !important;
+}
+
+.product-data__availability{
+display: none !important;
+}
+
+.product-additional{
+display: none !important;
+}
+
+
+.comfy2 {
+    background-color:  #02A50A;
+}
+
+.breadcrumbs-list__item {
+    color: #fff;
+}
+
+ .breadcrumbs-list__item span {
+    border-bottom: 1px solid #fff;
+}
+
+.breadcrumbs-list__item:after {
+    display: none;
+}
+
+.breadcrumbs-list__item a {
+    color: #fff;
+}
+
+.cms-top-branding {
+    min-height: 100px;
+}
+
+.cms-top-branding:before, .cms-top-branding:after {
+content: " ";
+display: table;
+}
+.cms-top-branding:after {
+clear: both;
+}
+.cms-top-branding__img {
+display: block;
+float: left;
+}
+.cms-top-branding__input-w {
+display: inline-block;
+vertical-align: top;
+}
+.cms-top-branding span {
+font-size: 11px;
+color: #f40c1a;
+display: block;
+margin: 3px 0 0 5px;
+}
+.cms-top-branding__input {
+display: inline-block;
+vertical-align: top;
+width: 120px;
+margin-left: 5px;
+font-size: 16px;
+border: 1px solid #b7b7b7;
+padding: 7px;
+color: #b7b7b7;
+}
+.cms-top-branding__form {
+float: left;
+    margin-top: 10px;
+    margin-left: 50px;
+ 
+}
+.cms-top-branding__success {
+  float: left;
+  margin-top: 20px;
+  margin-left: 50px;
+  text-align: left;
+  font-size: 18px;
+  color: #fff;
+}
+.cms-top-branding__submit {
+display: inline-block;
+vertical-align: top;
+font-size: 16px;
+font-weight: bold;
+text-decoration: none;
+background: #00AAF1;
+color: #fff;
+padding: 8px 0;
+text-align: center;
+width: 118px;
+border-radius: 10px;
+margin-left: 15px;
+}
+.cms-top-branding__submit.disabled_progress, .cms-top-branding__submit.disabled_progress:hover {
+cursor: wait;
+background: #f06421 url({{skin url='images/btn_loader.gif'}}) no-repeat center center!important;
+text-indent: -999em;
+overflow: hidden;
+}
+.cms-top-branding__submit:hover {
+background: #15971b;
+text-decoration: none;
+color: #fff;
+}
+
+.news_separator {
+
+    background: none repeat scroll 0% 0% transparent;
+}
+
+.banner .control {
+     background: none repeat scroll 0% 0% transparent;
+}
+
+.banner .control li {
+    background: none repeat scroll 0% 0% #15971B;
+}
+
+.breadcrumbs-list__item a:hover span {
+    border-color: #333;
+}
+
+.header__top .hd-links {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.banner .control li {
+    background: none repeat scroll 0% 0% rgb(224,224,224);
+}
+
+.cms-top-branding__submit:hover {
+    background: none repeat scroll 0% 0% #F06421;
+}
+
+.cms-top-branding__input {
+    color: #333;
+}
+
+.cms-predzakaz-samsung-s6, .footer__col.footer-left, .footer__col.footer-right  { background: #16212D; }
+	
+</style>
+<script type="text/javascript">// <![CDATA[
+jQuery('body').on("click", '.js-cms-top-branding-submit', function (ev) {
+ev.preventDefault();
+// window.location.host
+var url = 'https://comfy.ua' + '/oneclickbuy/cart/add/ajax/1/product/' + jQuery(this).closest('.cms-top-branding').data('id') + '/one_click/1',
+$cmsTopBranding = jQuery('.cms-top-branding'),
+data;
+ 
+if (!$cmsTopBranding.find('.js-phone').val() ) {
+jQuery('.js-cms-top-branding-error').show();
+} else {
+jQuery('.js-cms-top-branding-error').hide();
+ 
+if (!$cmsTopBranding.find('.js-name').val() ) {
+data = {phone: jQuery('.cms-top-branding').find('.js-phone').val()};
+} else {
+data = {phone: $cmsTopBranding.find('.js-phone').val() + '-' + $cmsTopBranding.find('.js-name').val()};
+}
+ 
+jQuery.ajax({
+url: url,
+type: 'post',
+data: data,
+beforeSend: function () {
+jQuery('.js-cms-top-branding-submit').addClass('disabled_progress');
+},
+success: function (response) {
+if (response.status == 'success') {
+jQuery('.js-cms-top-branding-form').remove();
+jQuery('.js-cms-top-branding-success').show();
+}
+}
+});
+}
+});
+// ]]></script>
+<div style="width: 1200px; margin: 0 auto 0px; background-color: #ffffff; padding-bottom: 50px;">
+<div style="background: url(https://cdn.comfy.ua/media/blb/samsung/first_block.png); height: 432px; color: #ffffff;">
+<div style="padding: 142px 0 0 52px;">
+<p style="font-size: 19px; margin-top: 10px;">Замовляй до <span style="color: #009ad4;">20 квітня</span></p>
+<p style="font-size: 19px; margin-top: 0px;">Отримай <span style="color: #009ad4;">бездротовий зарядний пристрій</span> у подарунок!</p>
+<p style="font-size: 16px; margin-top: 50px;">Заповніть форму і ми зв'яжемося з вами для уточнення деталей замовлення</p>
+</div>
+<!-- Подписка -->
+<div data-id="28604" class="cms-top-branding">
+<div class="cms-top-branding__form js-cms-top-branding-form"><form> <input type="text" placeholder="Ім'я" name="name" class="cms-top-branding__input js-name" />
+<div class="cms-top-branding__input-w"><input type="text" placeholder="Телефон" name="phone" class="cms-top-branding__input js-phone" /> <span style="display: none;" class="js-cms-top-branding-error">Введіть номер телефону</span></div>
+<a href="#" class="cms-top-branding__submit js-cms-top-branding-submit">Замовити</a> <!--			form--> </form></div>
+<div style="display: none;" class="cms-top-branding__success js-cms-top-branding-success">Дякуємо!<br /> Ми зв'яжемося з вами для уточнення замовлення.</div>
+</div>
+<!-- /Подписка -->
+<div style="color: #7d7d7d; padding: 0px 0 0 50px; margin-top: -15px;">
+<p style="font-size: 13px; margin-bottom: 9px;">Детальні умови на <a href="https://comfy.ua/" style="color: #7d7d7d;">www.comfy.ua</a></p>
+<p style="margin: 0; font-size: 10px;">*Акція діє на території України з 28.03.2015 до 20.04.2015</p>
+<p style="margin: 0; font-size: 10px;">**Під подарунком слід розуміти можливість придбати за 1 грн</p>
+<p style="margin: 0; font-size: 10px;">***За умови внесення передоплати 1000 грн.</p>
+</div>
+</div>
+<div style="background: url(https://cdn.comfy.ua/media/blb/samsung/second_block.png); height: 550px; position: relative; z-index: 2; color: #ffffff;">
+<div style="padding: 8px 0 0 50px;">
+<p style="font-size: 37px;">Будущее сегодня!<br /> Самый желанный смартфон</p>
+<p style="margin-top: 0px; width: 497px; font-size: 17px;">Современные технологии превратили мечты про будущее                     в реальность. Откройте для себя новый виток                     дизайнерского полета  с первым в мире смартфоном                     с краями дисплея, вогнутыми с двух сторон  Samsung Galaxy S6 edge и Samsung Galaxy S6.</p>
+</div>
+</div>
+<div style="background: url(https://cdn.comfy.ua/media/blb/samsung/third_block.png); height: 490px; margin-top: -52px; position: relative; z-index: 1; color: #666666;">
+<div style="float: right; padding: 8px 88px 0 0;">
+<p style="font-size: 37px;">Утонченный и элегантный</p>
+<p style="margin-top: 0px; font-size: 17px; width: 445px;">Вдохновленные произведениями мастеров по стеклу и ювелиров,                     создатели Samsung Galaxy S6 сделали его в виде                     единого сплава из стекла и металла. Подчеркните свой                     неповторимый стиль с помощью надинновационного смартфона Samsung                     Galaxy S6 edge с изогнутым по краям экраном, который передает широчайший спектр цветов радуги.</p>
+</div>
+</div>
+<div style="background: url(https://cdn.comfy.ua/media/blb/samsung/fourth_block.png); height: 485px; color: #666666;">
+<div style="padding: 9px 0 0 52px;">
+<p style="font-size: 37px;">Яркие краски<br />в высокой четкости</p>
+<p style="font-size: 17px; margin-top: 0px; width: 505px;">Получите от жизни максимум!                     Вы не заметите как запускается камера 16 Мп со скоростью 0,7 секунды!                     Отслеживающая автофокусировка способствует созданию                     уникальных снимков движущихся объектов без намека на                     смазывание. Насладиться результатом даже на солнце поможет                     высокая плотность пикселей Quad HD Super AMOLED яркого                     и сочного дисплея.</p>
+</div>
+</div>
+<div style="background: url(https://cdn.comfy.ua/media/blb/samsung/fifth_block.png); height: 470px; color: #666666;">
+<div style="float: right; padding: 9px 70px 0 0;">
+<p style="font-size: 37px;">Быстрый заряд</p>
+<p style="margin-top: 0px; width: 465px; font-size: 17px;">Больше не нужно постоянно думать о заряде. Благодаря                     усовершенствованной технологии смартфон может работать в течение 4х часов после 10ти-минутной подзарядки.                     Более того, вы можете положить свой Galaxy S6                     на беспроводную зарядку, чтобы зарядить свой смартфон                     без использования дополнительных проводов.</p>
+</div>
+</div>
+<p style="color: #666666; text-align: center; margin: 50px 0; font-size: 37px;">Технические характеристики</p>
+<table style="font-size: 15px; margin: 0 auto;">
+<tbody>
+<tr style="color: #ffffff; height: 30px;">
+<th style="width: 240px; border: 1px solid white; background: #71a5d6;">Характеристики</th> <th style="width: 420px; border: 1px solid white; background: #71a5d6;">Galaxy s6</th> <th style="width: 420px; border: 1px solid white; background: #71a5d6;">Galaxy s6 edge</th>
+</tr>
+<tr style="background: #d6ebff; color: #666666; height: 30px; text-align: left;">
+<td style="width: 240px; border: 1px solid white; padding-left: 15px;">Быстрая зарядка</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">Да</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">Да</td>
+</tr>
+<tr style="background: #e9f5ff; color: #666666; height: 30px; text-align: left;">
+<td style="width: 240px; border: 1px solid white; padding-left: 15px;">Беспроводная зарядка</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">Да</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">Да</td>
+</tr>
+<tr style="background: #d6ebff; color: #666666; height: 30px; text-align: left;">
+<td style="width: 240px; border: 1px solid white; padding-left: 15px;">Аккумулятор</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">2.550mAh</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">2.550mAh</td>
+</tr>
+<tr style="background: #e9f5ff; color: #666666; height: 30px; text-align: left;">
+<td style="width: 240px; border: 1px solid white; padding-left: 15px;">Камера</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">16MP + 5MP LED Flash F1.9, OIS, HDR</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">16MP + 5MP LED Flash F1.9, OIS, HDR</td>
+</tr>
+<tr style="background: #d6ebff; color: #666666; height: 30px; text-align: left;">
+<td style="width: 240px; border: 1px solid white; padding-left: 15px;">Размер экрана</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">5.1</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">5.1</td>
+</tr>
+<tr style="background: #e9f5ff; color: #666666; height: 30px; text-align: left;">
+<td style="width: 240px; border: 1px solid white; padding-left: 15px;">Тип экрана</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">QHD sAMOLED</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">QHD sAMOLED Dual Curve</td>
+</tr>
+<tr style="background: #d6ebff; color: #666666; height: 30px; text-align: left;">
+<td style="width: 240px; border: 1px solid white; padding-left: 15px;">Память</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">32/64/128GB (ROM) + 3GB (RAM)</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">64/128GB (ROM) + 3GB (RAM)</td>
+</tr>
+<tr style="background: #e9f5ff; color: #666666; height: 30px; text-align: left;">
+<td style="width: 240px; border: 1px solid white; padding-left: 15px;">Чип</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">Exynos 14nm 64-bit Octa Core</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">Exynos 14nm 64-bit Octa Core</td>
+</tr>
+<tr style="background: #d6ebff; color: #666666; height: 30px; text-align: left;">
+<td style="width: 240px; border: 1px solid white; padding-left: 15px;">Связь</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">WiFia/b/g/n/ac, BT 4.0, nfc</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">WiFia/b/g/n/ac, BT 4.0, nfc</td>
+</tr>
+<tr style="background: #e9f5ff; color: #666666; height: 30px; text-align: left;">
+<td style="width: 240px; border: 1px solid white; padding-left: 15px;">Сеть</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">Cat 6 LTE</td>
+<td style="width: 420px; border: 1px solid white; padding-left: 15px;">Cat 6 LTE</td>
+</tr>
+</tbody>
+</table>
+<p style="color: #666666; text-align: center; margin: 50px 0; font-size: 37px;">Видеообзоры</p>
+<div style="height: 380px; margin: 0 auto 0 53px;">
+<div style="float: left; width: 537px; height: 322px; border: 1px solid #cecece; padding: 15px; box-sizing: border-box;"><iframe src="https://www.youtube.com/embed/DeXtOqd-Hsk?list=PLsEQSDa7QbYHAjNgocbqtlehqlWDdUyCo" style="width: 502px; height: 289px;" frameborder="0"></iframe> <a href="https://www.youtube.com/watch?v=DeXtOqd-Hsk&amp;index=2&amp;list=PLsEQSDa7QbYHAjNgocbqtlehqlWDdUyCo" style="margin: 15px; text-decoration: none; display: inline-block; font-size: 20px; color: #3b86c6;">Первые впечатления от смартфона                     Samsung Galaxy S6 Edge на MWC 2015 от Comfy</a></div>
+<div style="margin-left: 20px; float: left; width: 537px; height: 322px; border: 1px solid #cecece; padding: 15px; box-sizing: border-box;"><iframe src="https://www.youtube.com/embed/74hyjhaG_XI?list=PLsEQSDa7QbYHAjNgocbqtlehqlWDdUyCo" style="width: 502px; height: 289px;" frameborder="0"></iframe> <a href="https://www.youtube.com/watch?v=74hyjhaG_XI&amp;index=1&amp;list=PLsEQSDa7QbYHAjNgocbqtlehqlWDdUyCo" style="margin: 15px; text-decoration: none; display: inline-block; font-size: 20px; color: #3b86c6;">Первые впечатления от смартфона Samsung Galaxy S6                     на MWC 2015 от Comfy</a></div>
+</div>
+</div>

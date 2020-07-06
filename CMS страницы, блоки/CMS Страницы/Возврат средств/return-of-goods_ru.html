@@ -1,0 +1,33 @@
+<div class="static-block-cms static-block-cms_long-block return-of-goods-block">
+<div class="static-block-cms__title">
+<h1 id="returnOfGoodsTitle">Возврат средств - <span class="js-title">Самовывоз из магазина Comfy</span></h1>
+</div>
+<div class="static-block-cms__content"><section id="returnOfGoods" class="return-of-goods">
+<p class="return-of-goods__response-msg js-response hide">Заявка на возврат средств отправлена.</p>
+<p class="return-of-goods__response-msg js-response hide">В ближайшее время с вами свяжется сотрудник Колл Центра.</p>
+<div class="return-of-goods__content js-content">
+<div class="return-of-goods__img-wrapper">
+<ul class="return-of-goods__list js-return-of-goods-img-list">
+<li class="return-of-goods__item js-return-of-goods-img-item"> <img alt="Самовывоз из магазина Comfy" src="https://cdn.comfy.ua/media/blb/elements_site/s1.PNG" /> </li>
+<li class="return-of-goods__item js-return-of-goods-img-item hide"> <img alt="Доставка Comfy" src="https://cdn.comfy.ua/media/blb/elements_site/s2.PNG" /> </li>
+<li class="return-of-goods__item js-return-of-goods-img-item hide"> <img alt="Доставка Новой Почтой" src="https://cdn.comfy.ua/media/blb/elements_site/s3.PNG" /> </li>
+</ul>
+</div>
+<h2 class="return-of-goods__title">Заполните форму:</h2>
+<span class="return-of-goods__note">Все поля обязательны для заполнения</span> <form action="{{config path='web/unsecure/base_url'}}shops/page/refund" id="returnOfGoodsForm" class="return-of-goods__form"> <label for="returnSurname" class="return-of-goods__label">Фамилия</label>
+<div class="return-of-goods__input-wrapper"><input type="text" name="firstname" id="returnSurname" class="return-of-goods__input" /></div>
+<label for="returnName" class="return-of-goods__label">Имя</label>
+<div class="return-of-goods__input-wrapper"><input type="text" name="lastname" id="returnName" class="return-of-goods__input" /></div>
+<label for="returnPatronymic" class="return-of-goods__label">Отчество</label>
+<div class="return-of-goods__input-wrapper"><input type="text" name="middlename" id="returnPatronymic" class="return-of-goods__input" /></div>
+<label for="returnCheckNumber" class="return-of-goods__label">Код чека</label>
+<div class="return-of-goods__input-wrapper"><input type="text" name="check_number" id="returnCheckNumber" class="return-of-goods__input" /></div>
+<label for="returnOrderDate" class="return-of-goods__label">Дата покупки</label>
+<div class="return-of-goods__input-wrapper"><input type="text" name="order_date" id="returnOrderDate" class="return-of-goods__input" /></div>
+<label for="returnReason" class="return-of-goods__label">Причина возврата</label>
+<div class="return-of-goods__input-wrapper"><textarea name="reason" id="returnReason" class="return-of-goods__input return-of-goods__text-area" cols="30" rows="10"></textarea></div>
+<input value="carry" type="hidden" name="placed_from" id="returnPlacedFrom" />
+<div class="return-of-goods__centered"><button type="submit" class="return-of-goods__btn button js-submit">Отправить</button></div>
+</form></div>
+</section></div>
+</div>

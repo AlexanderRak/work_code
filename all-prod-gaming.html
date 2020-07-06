@@ -1,0 +1,80 @@
+<!-- Smartfon Block Bandl RU -->
+<style type="text/css">
+    #bandl_template {
+        max-width: 1316px;
+        width: 100%;
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        background: linear-gradient(85.84deg, #C33764 28.3%, #1D2671 77.39%);
+    }
+
+    .sect-row {
+        content: "";
+        background-image: url(https://cdn.comfy.ua/media/x/img/bg1-gaming.png);
+        background-position: left;
+        background-repeat: repeat-x;
+    }
+
+    .sect-row p.text-bl-gaming {
+        font-weight: bold;
+        font-size: 20px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        display: table;
+        position: relative;
+        padding: 12px 0 12px 32px;
+    }
+
+    .sect-row p.text-bl-gaming.gaming-before::after {
+        content: "";
+        background-image: url(https://cdn.comfy.ua/media/x/img/ico-g_1.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: -55px;
+        top: 10px;
+        width: 45px;
+        height: 29px;
+        -webkit-transition: -webkit-transform .8s ease-in-out;
+        transition: -webkit-transform .8s ease-in-out;
+        transition: transform .8s ease-in-out;
+        transition: transform .8s ease-in-out, -webkit-transform .8s ease-in-out;
+    }
+
+    a.gaming-banner-rote:hover .gaming-before::after {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+
+
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+        .sect-row p.text-bl-gaming {
+            font-weight: bold;
+            font-size: 13px;
+            padding: 17px 0 17px 15px;
+        }
+
+        .sect-row p.text-bl-gaming.gaming-before::after {
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px) {}
+
+    @media screen and (min-width: 769px) and (max-width: 1024px) {}
+</style>
+
+<a id="bandl_template" class="gaming-banner-rote" href="/gaming/">
+    <div class="wrapper-gaming-banner">
+
+        <div class="sect-row">
+            <p class="text-bl-gaming gaming-before">← Все товары категории Gaming</p>
+        </div>
+
+    </div>
+</a>

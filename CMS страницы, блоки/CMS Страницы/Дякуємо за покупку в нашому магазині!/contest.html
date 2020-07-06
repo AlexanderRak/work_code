@@ -1,0 +1,264 @@
+<style type="text/css">
+	.breadcrumbs { display: none !important; }
+
+
+@font-face {
+
+font-family: 'Comfy', PTSans;
+src: url('https://comfy.ua/js/comfy-nornal.ttf') format('ttf');
+src: url('https://comfy.ua/js/comfy-narrow.ttf') format('ttf'),
+
+font-weight: normal;
+font-style: normal;
+
+}
+
+#container_gl p:first-letter{ padding-left: 0; }
+#container_gl p{  }
+#container_gl img:hover { opacity: 1; }
+#container_gl img { opacity: 1; }
+
+#container_gl { background: #fff; width: 100%; max-width: 1316px; margin: 0 auto; height: auto; }
+
+#container_gl h2 { font-family: 'Comfy', PTSans; font-size: 3.6em; color: #fff; font-weight: 700; transform: scale(1,1.2); line-height: 1.1; }
+#container_gl h3 {  }
+#container_gl p { font-size: 17px; }
+#container_gl span { color: #FF671F; font-weight: 700; }
+#container_gl b {  }
+
+.header_top .container_hd { position: relative; position: relative; max-width: 1316px; width: 100%; height: 401px; }
+.header_top .container_hd:before {
+	content: ""; /* width='1315' height='401' */
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg  viewBox='0 0 1315 401' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H1315V400.5L0 353V0Z' fill='%2341B02A'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-size: cover;
+	max-width: 1316px;
+	width: 100%;
+	height: 410px;
+
+	position: absolute;
+   left: 0;
+   top: 0;
+}
+
+.header_top .container_hd .row_rulet:before {
+	content: ""; /* width='1315' height='401' */
+	background-image: url(https://cdn.comfy.ua/media/x/img/rulet.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 540px;
+   height: 352px;
+
+   position: absolute;
+   left: 0;
+   bottom: 13px;
+}
+
+.header_top .container_hd .push:before {
+	content: ""; /* width='1315' height='401' */
+	background-image: url(https://cdn.comfy.ua/media/x/img/push.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 395px;
+    height: 355px;
+    display: block;
+
+    position: absolute;
+    right: 7%;
+    bottom: 0;
+}
+
+.header_top .container_hd .hd_content {
+	position: absolute;
+	top: 45px;
+	left: 30px;
+}
+
+.container_content_trans {
+	transform: skew(0,2deg);
+    background: #fff;
+    margin-top: -25px;
+    height: 35px;
+    width: 100%;
+    z-index: 10;
+ }
+.container_content { z-index: 20; }
+.container_content .row_cnt { padding-top: 0px; }
+
+.container_content .row_cnt {  }
+
+.container_content .row_cnt .block_fl { display: flex; flex-direction: row; }
+.container_content .row_cnt .block_fl .item { flex: 1 1 0; margin: 55px; height: max-content; }
+
+.container_content .row_cnt .block_fl .item:first-child { 
+	margin-right: 27px;
+}
+.container_content .row_cnt .block_fl .item:last-child { 
+	margin-left: 27px;
+}
+
+.container_content .row_cnt .block_fl .item.itm_r { z-index: 20; }
+
+.bgtext {
+	font-weight: 700;
+    font-size: 22px !important;
+    margin-bottom: 25px !important;
+}
+.container_content .row_cnt .block_fl .itm_l p:nth-child(2) {
+	margin-bottom: 25px;
+}
+
+.container_content .row_cnt .block_fl .item.itm_l p:nth-child(3) {
+	margin-bottom: 25px;
+}
+.bgtext_form { font-size: 22px !important; font-weight: 700; text-align: center; }
+span.accordion__link-title { color: #000 !important; font-size: 15px; font-weight: 500 !important; }
+
+.list_text{margin-top: 30px;}
+
+.container_content .row_cnt .block_fl .itm_l .list_text ul:nth-child(1) { 
+	margin-top: 36px;
+}
+.container_content .row_cnt .block_fl .itm_l .list_text ul:nth-child(2) { 
+	margin-top: 27px;
+}
+
+.bl_form{ padding: 25px; background: #F2F2F2;}
+
+.accordion__item-content.result{text-align: center;}
+.accordion__item-content.rules p{font-size: 13px !important;}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+	.header_top .container_hd:before { height: 340px; }
+	.header_top .container_hd .push:before { max-width: 210px; height: 210px; right: 5px; }
+	.header_top .container_hd .row_rulet:before { width: 183px; height: 200px; }
+	#container_gl h2 { font-size: 2.2em; }
+	.header_top .container_hd { height: 320px; }
+	.container_content .row_cnt .block_fl { flex-direction: column; }
+	.container_content .row_cnt .block_fl .item:first-child { margin-right: 15px; }
+	.container_content .row_cnt .block_fl .item { margin: 15px; }
+	.container_content .row_cnt .block_fl .item:last-child { margin-left: 15px; }
+	.accordion__item-content  { padding: 10px 1rem 10px !important; }
+
+	.list_text .accordion.js-accordion-list .accordion__item .accordion__item-content ul:nth-child(1) { margin-top: 0px !important; }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+</style>
+<div id="container_gl"><section class="header_top">
+<div class="container_hd">
+<div class="row_rulet"></div>
+<div class="push"></div>
+<div class="hd_content">
+<h2>В знак подяки за покупку<br /> розігруємо бонуси. Бери участь!</h2>
+</div>
+</div>
+</section> <section class="container_content_trans"> </section> <section class="container_content">
+<div class="row_cnt">
+<div class="block_fl">
+<div class="item itm_l">
+<p class="bgtext">Привіт!</p>
+<p>Дякуємо за покупку і розігруємо щомісяця 5 подарунків по 1000 гривень серед наших покупців. Заповни коротку форму та чекай листа удачі вже 1 березня.</p>
+<p><span>Сподіваємося, тобі пощастить!</span></p>
+</div>
+<div class="item itm_r">
+<div class="bl_form">
+<p class="bgtext_form">Заповни форму для участі у розіграші</p>
+<div class="formgl">
+<div id="formheightcUW7lcKSnnxyBcQmkzf1S8" style="display: none;"></div>
+<div id="mth-rhcUW7lcKSnnxyBcQmkzf1S8">Заполните мою <a href="https://quintadb.ru/widgets/ddU8oQW6bcKBZcNCojvSkf/cUW7lcKSnnxyBcQmkzf1S8">веб-форму</a>.</div>
+<div id="mth-adv" style="font-family: inherit; font-size: small; color: #a7a7a7; text-align: center; display: block;">Лёгкий в использовании и бесплатный <a href="https://quintadb.ru/form-builder?from=bottom_ad">конструктор веб-форм QuintaDB</a>.</div>
+<script type="text/javascript">// <![CDATA[
+var url_height = 'https://quintadb.ru/widgets/ddU8oQW6bcKBZcNCojvSkf/get_form_height/cUW7lcKSnnxyBcQmkzf1S8.js';var rhcUW7lcKSnnxyBcQmkzf1S8;(function(d, t) {var s = d.createElement(t), options = {'userName':'','formHashURL':'/widgets/ddU8oQW6bcKBZcNCojvSkf/cUW7lcKSnnxyBcQmkzf1S8','formHash':'rhcUW7lcKSnnxyBcQmkzf1S8', 'autoResize':true,'height': '442px', 'popup_type': '','heightURL': url_height, 'formID': 'cUW7lcKSnnxyBcQmkzf1S8',
+    'async':true,'host':'quintadb.ru',
+    'header':'show','ssl':true};s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 
+    'quintadb.ru/scripts/form.js';
+    s.onload = s.onreadystatechange = function() {var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+    try { 
+        rhcUW7lcKSnnxyBcQmkzf1S8 = new mthForm();rhcUW7lcKSnnxyBcQmkzf1S8.initialize(options);rhcUW7lcKSnnxyBcQmkzf1S8.display();rhcUW7lcKSnnxyBcQmkzf1S8.addResizeScript(); } catch (e) {}};
+    var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+    })(document, 'script');
+// ]]></script>
+</div>
+</div>
+<div class="list_text">
+<ul class="accordion js-accordion-list">
+<li class="accordion__item"> <a href="#" class="accordion__link js-accordion-link"> <span class="accordion__link-title">Детальні умови розіграшу</span> </a>
+<div class="accordion__item-content rules">
+<ul>
+<center>
+<h3>ПРАВИЛА АКЦІЇ</h3>
+<h3>
+<p><b>«Розіграш бонусів щомісяця».</b></p>
+</h3>
+</center>
+<p>1. Організатором акції виступає ТОВ «КОМФІ ТРЕЙД». Організатор безпосередньо самостійно проводить акцію.</p>
+<p>2. Мета проведення Акції: популяризація ТМ «COMFY UA», привертання нових клієнтів на сайт «comfy.ua».</p>
+<p><b>Період проведення Акції:</b></p>
+<p>2.1 Акція проходить в період 01.02.2019 – 01.08.2019 року включно (далі - Період проведення Акції);</p>
+<p>2.2 Організатор Акції залишає за собою право припиняти і відновлювати проведення Акції.</p>
+<p><b>3. Приз:</b></p>
+<p>3.1 П'ятеро переможців щомісяця отримають по 1000 бонусів кожному з переможців (загалом 5000 бонусів).</p>
+<p><b>Територія проведення Акції:</b></p>
+<p>4.1 Акція проводиться на сторінці https://comfy.ua/contest (далі - Територія проведення Акції).</p>
+<p><b>5. Умови участі та учасники Акції:</b></p>
+<p>5.1 До участі в Акції запрошуються та можуть прийняти участь в Акції необмежене коло дієздатних громадян України, які проживають на території України та в період проведення Акції виконали всі умови і правила Акції (далі – Учасник Акції), які отримали відповідне повідомлення, за винятком працівників та представників Організатора та будь-якої іншої компанії, залученої до проведення Акції (у разі її залучення) (з метою уникнення суб’єктивності та конфлікту інтересів);</p>
+<p>5.2 Організатор розуміє та приймає, що інформація, вказана потенційними учасниками може бути недостовірною, але власно Учасник Акції забезпечує оборотний зв'язок при намірі Організатора повідомити Учаснику Акції результати Акції. Своєю участю в Акції Учасник Акції (кожен з Учасників незалежно один від одного) підтверджують повну згоду з усіма умовами та правилами Акції, а також зобов'язуються їх виконувати. Факт участі в цьому Конкурсі означає ознайомлення і повну згоду всіх Учасників з умовами цих Правил.</p>
+<p>5.3 Учасником акції стає фізична особа, яка в період проведення Акції виконала наступні умови:</p>
+<p>5.3.1 Протягом періоду проведення Акції зареєструвалася на сторінці https://comfy.ua/contest;</p>
+<p><b>6. Переможець:</b></p>
+<p>6.1 Переможців буде визначено: 01.03.2019 р., 01.04.2019 р., 01.05.2019 р., 01.06.2019 р., 01.07.2019 р., 01.08.2019 р.</p>
+<p>6.2 Переможцями кожного місяца може бути обрано п’ять осіб серед усіх учасників Акції, що виконали всі умови та правила Акції (загалом 30 переможців);</p>
+<p>6.3 Визначення Переможців відбудеться за допомогою сервісу www.random.org, автоматично, серед усіх Учасників Акції;</p>
+<p>6.4 Учасник Акції, який не виконав умови та правила Акції, або виконав їх не в повній мірі, не може бути обраним, як Переможець;</p>
+<p>6.5 Організатор оголошує Переможця з іменем, як його було вказано при заповненні форми реєстрації;</p>
+<p>6.6 Результати Акції будуть оприлюднені на сторінці https://comfy.ua/contest.</p>
+<p><b>Умови отримання Призу:</b></p>
+<p>6.7 Переможці Акції отримають Приз на свої бонусні карти.</p>
+<p>6.8 Бонуси нараховуються протягом тижня з моменту визначення Переможців та стають активованими відразу після нарахування.</p>
+<p>6.9 Бонуси діють протягом одного року з моменту нарахування та можуть бути використанні при покупці будь-яких товарів.</p>
+<p>6.10 Додатково Переможцям буде відправлено повідомлення.</p>
+<p><b>7. Правила Акції: ці Правила «Розіграш бонусів щомісяця».</b></p>
+<p><b>Ознайомлення з умовами та правилами Акції:</b></p>
+<p>8. З правилами проведення Акції «Розіграш бонусів щомісяця» можна ознайомитися на сторінці https://comfy.ua/contest.</p>
+<p><b>Застереження:</b></p>
+<p>8.1 Грошовий еквівалент вартості Призу не видається;</p>
+<p>8.2 Переможець Акції не має права вимагати від Організатора будь-якої іншої компенсації;</p>
+<p>8.3 Переможець Акції не може передати право отримання Призу в рамках цієї Акції та на умовах цих Правил будь-якій третій особі;</p>
+<p>8.4 Отриманий Приз обміну та поверненню не підлягає;</p>
+<p>8.5 Організатор не несе зобов'язань по Призу, отриманому в рамках цієї Акції та на умовах, зазначених в цих Правилах;</p>
+<p>8.6 Під «призом» слідує розуміти можливість для Переможця даної Акції отримати 1000 бонусів.</p>
+<p>8.7 У випадку наявності впливу обставин непереборної сили (форс-мажор) ця Акція на розсуд Організатора або скасовується або переноситься на інший період. До обставин форс-мажору відносяться будь-які обставини, що виникли, діють поза волею чи впливом Організатора Акції;</p>
+<p>8.8 Проведення цієї Акції є виключною волею та правом Організатора. Ніхто не може змусити Організатора у проведенні цієї Акції у разі прийняття рішення про її скасування, виникнення обставин непереборної сили, тощо.</p>
+<p><b>9. Персональні дані та надання згоди Учасником Акції та Переможцем Акції:</b></p>
+<p>9.1 Своєю участю в Акції Учасник Акції (кожен з Учасників) та Переможець Акції (незалежно один від одного, тобто кожен) надають Організатору згоду на обробку своїх персональних даних, у розумінні Закону України «Про захист персональних даних», та згоду здійснювати їх використання, виступати володільцем або розпорядником бази персональних даних, що утворилися в такий спосіб. Такі дані, у відповідності до вимог законодавства, що регулює правовідносини, пов’язані із захистом персональних даних є захищеними, обробляються та використовуються в рамках всіх правовідносин за умовами цієї Акції. Усі правовідносини, пов’язані із обробкою та захистом персональних даних, регулюються відповідним законодавством;</p>
+<p>9.2 Організатор гарантує, що персональні дані зберігатимуться та оброблятимуться у відповідності з вимогами Закону України «Про захист персональних даних»;</p>
+<p>9.3 Своєю участю в Акції кожен з Учасників Акції та Переможець Акції (незалежно один від одного, тобто кожен) підтверджують свою згоду на безкоштовне використання свого імені як його було вказано при заповненні форми реєстрації;</p>
+<p>9.4 Якщо Організатором буде заплановано фото та/або відео-зйомка, то Учасник Акції (кожен з Учасників) та Переможець Акції своєю участю в Акції (незалежно один від одного, тобто кожен) надають Організатору таке право на проведення (організацію) ним фото- та/або відео-зйомки з участю Учасника Акції та/або Переможця в рамках Акції без будь-яких компенсацій та відшкодувань;</p>
+<p>9.5 Учасник Акції (кожен з Учасників) та Переможець своєю участю в Акції (незалежно один від одного, тобто кожен) підтверджують і надають згоду на те, що їхні імена та фотографії можуть бути опубліковані та використані Організатором безкоштовно в будь-яких друкованих, аудіо- та відеоматеріалах, що стосуються Акції, в рекламних цілях засобом і методами, які не порушують чинне законодавство України;</p>
+<p>9.6 Будь-який Учасник Акції (кожен з Учасників) та Переможець Акції має право відмовитись від цієї згоди (що вище вказана), якщо надішле письмову відмову Організатору Акції.</p>
+<p><b>10. Інші умови:</b></p>
+<p>10.1 Організатор має право в односторонньому порядку доповнити чи змінити дані Правила;</p>
+<p>10.2 Будь-які зміни затверджуються наказом Генерального директора Організатора;</p>
+<p>10.3 Повідомлення про доповнення або зміну Правил буде оголошено на сторінці https://comfy.ua/contest.</p>
+<p>10.4 Організатор не несе відповідальності за дії органів державної влади та інші незалежні від нього обставини, які можуть унеможливити виконання умов Акції;</p>
+<p>10.5 Організатор не вступає у суперечки, які можуть виникнути між Учасниками Акції щодо Призу;</p>
+<p>10.6 У разі виникнення ситуації, яка допускає неоднозначне тлумачення цих Правил, та/або спірних питань та/або питань, не врегульованих цими Правилами, остаточне рішення приймається Організатором. Рішення Організатора є остаточним і оскарженню не підлягає.</p>
+</ul>
+</div>
+</li>
+</ul>
+<ul class="accordion js-accordion-list">
+<li class="accordion__item"> <a href="#" class="accordion__link js-accordion-link"> <span class="accordion__link-title">Результати попередніх розіграшів</span> </a>
+<div class="accordion__item-content result"><iframe src="https://www.youtube.com/embed/x3Oc_557A7k" width="100%" height="315" frameborder="0"></iframe></div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section></div>

@@ -1,0 +1,113 @@
+<style>
+.overlay1 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 111111;
+}
+.overlay1:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup1 {
+  margin: 70px auto;
+  padding: 20px;
+  background: #E5F4F4;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup1 h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup1 .close1 {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup1 .close1:hover {
+  color: #06D85F;
+}
+.popup1 .content1 {
+  max-height: 60%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .popup{
+    width: 70%;
+  }
+}
+
+.recall__row{width: 100%;}
+.static-block-cms .button{width: 200px;}
+.buy-one-click-lbl{    margin-top: 25px;}
+.static-block-cms{padding:20px;}
+.static-block-cms__content ul{padding-left: 0px;}
+.mobile .static-block-cms {background-color: #fff}
+.mobile .popup1 {width: 90%;}
+.mobile .static-block-cms .button {margin-top: 20px;}
+.mobile .popup1 .close1{top: 0px; right: 10px;}
+.mobile .button {font-size: 16pt;}
+.recall__row .input-text {padding: 10px !important;}
+.buy-one-click__content{}
+</style>
+<div class="static-block-cms">
+<h1>Дорогие участники Клуба Суперпокупателей!</h1>
+<p style="margin-top: 20px;">Для Вашего удобства мы предлагаем объединять все Ваши бонусные карты, если так получилось, что у вас их несколько. Возможно, делая очередную покупку, Вы забыли свою карту, кассир предложил Вам выдать новую и теперь в вашем кошельке теснятся уже 2 бонусные карты?</p>
+<p style="margin-top: 20px;">Мы стремимся к тому, чтобы к Вашему номеру телефона была привязана только одна, основная карта, и делаем все возможное, чтобы защитить Ваши накопления. В такой ситуации Вы сможете спокойно делать свои покупки, называя только свой номер телефона, а пластиковую карту больше не носить с собой.</p>
+<p style="margin-top: 20px;">Поэтому мы собрали все карты, которые были активированы с Вашего номера и предлагаем Вам объединить все накопления на той карте, которой Вы пользовались в последний раз. Ниже мы попытались ответить на вопросы, которые у Вас, возможно, возникли, но, в любом случае, Вы всегда можете обратиться к нам на горячую линию <b style="color: #02a709;">0-800-303-505</b> или через <a style="color: #2e7ec2; text-decoration: underline;" href="#popup11">форму обратной связи</a>:</p>
+<div class="overlay1" id="popup11">
+<div class="popup1"><a href="#" class="close1">×</a>
+<div class="buy-one-click__content js-recall-hide clearfix"><form novalidate="novalidate" id="recallForm" action="https://comfy.ua/oneclickcallback/index/new/ajax/1"> <input value="https://comfy.ua/mb" name="content" type="hidden" />
+<div class="buy-one-click__row recall__row"><label for="recallPhone" class="buy-one-click-lbl"> Если у Вас есть вопросы по объединению карт, пожалуйста, оставьте свой телефон, мы перезвоним Вам </label> <br /> <input class="input-text required" required="Номер телефона" name="phone" id="recallPhone" type="text" /> <input data-gtm="Interactions-click-callback" value="Перезвоните мне" id="recallSubmitForm" class="button_call button" type="submit" /></div>
+</form></div>
+</div>
+</div>
+<div class="static-block-cms__content">
+<div class="static-block-cms__paragraph static-block-cms__paragraph_first">
+<ul class="question-block">
+<li><a class="down" href="#">Как будет происходить объединение карт?</a> <br />
+<p class="answer-block ">Если с Вашего номера телефона было активировано 2 или больше бонусных карт, мы отправим Вам сообщение с предложением объединить все бонусы на одной из карт. При этом мы укажем дату такого слияния, и если Вы не обратитесь на горячую линию, то объединение произойдет автоматически в указанную дату.</p>
+</li>
+<li><a class="down" href="#">Как определяется основная карта?</a> <br />
+<p class="answer-block ">Среди всех карт, активированных с Вашего номера, мы выбирали карту, по которой операция покупки была совершена последней. Если вы хотите выбрать в качестве основной другую карту, обратитесь на горячую линию 0800303505 или через форму обратной связи.</p>
+</li>
+<li><a class="down" href="#">Что будет с моими бонусами?</a> <br />
+<p class="answer-block ">Все бонусы со всех карт сохранят свой срок действия, в полном объеме будут перенесены на основную карту.</p>
+</li>
+<li><a class="down" href="#">Что будет с неосновной картой?</a> <br />
+<p class="answer-block ">Все карты, кроме основной, будут заблокированы.</p>
+</li>
+<li><a class="down" href="#">Если я хочу оставить 2 карты (например, одна из них принадлежит другому человеку)?</a> <br />
+<p class="answer-block ">Позвоните на горячую линию 0800303505 или заполните форму обратной связи и мы переоформим вторую карту на другого клиента.</p>
+</li>
+<li><a class="down" href="#">Если я потерял «основную» карту, можно перенести бонусы на другую карту?</a> <br />
+<p class="answer-block ">Можно, просто обратитесь на горячую линию 0800303505 или через форму обратной связи.</p>
+</li>
+<li><a class="down" href="#">Я не прочитал смс и мои карты объединены, но мне это не подходит, что делать?</a> <br />
+<p class="answer-block ">Обратитесь на горячую линию 0800303505 или через форму обратной связи и мы решим Ваш вопрос.</p>
+</li>
+<li><a class="down" href="#">Почему я получил смс о том, что у меня несколько карт, ведь у меня есть только одна?</a> <br />
+<p class="answer-block ">Возможно, вы помогали кому-то активировать его карту с вашего номера? Обратитесь на горячую линию 0800303505 или через форму обратной связи и мы решим Ваш вопрос.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>

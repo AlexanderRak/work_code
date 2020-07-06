@@ -1,0 +1,948 @@
+<style>
+  #chat_id1 #phone_icon::before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-position: 0 -104px !important;
+    display: block !important;
+  }
+
+  #chat_id1 #popup_wrap_id:hover .show_popup::after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='8' height='4' viewBox='0 0 8 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.108936 3.87999C0.180516 3.95289 0.282895 3.99625 0.39177 3.99977C0.500645 4.00329 0.606306 3.96665 0.68367 3.89857L3.99951 0.911936L7.31536 3.89857C7.39272 3.96665 7.49838 4.00329 7.60726 3.99977C7.71613 3.99625 7.81851 3.95289 7.89009 3.87999C8.04375 3.72629 8.03532 3.49281 7.8709 3.34815L4.25069 0.0967672C4.18276 0.0387919 4.09361 0.00444412 3.99951 0C3.90551 0.00478196 3.81648 0.0390809 3.74834 0.0967672L0.128123 3.34815C-0.0350142 3.4933 -0.0434036 3.72587 0.108936 3.87999Z' fill='white'/%3E%3C/svg%3E");
+  }
+
+  #chat_id1 #popup_wrap_id:hover .content {
+    background-color: #FF671F;
+
+    -webkit-transition: background 0.3s ease-in;
+    transition: background 0.3s ease-in;
+  }
+
+  #chat_id1 #popup_wrap_id:hover.popup_wrap::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='18' cy='18' r='17.5' fill='white' stroke='%23FF671F'/%3E%3Cpath d='M13.3535 25.7156C14.7442 26.5524 16.3343 26.9935 17.9681 26.9935C22.919 26.9935 27 22.9536 27 17.9967C27 13.0456 22.9248 9 17.9681 9C13.0266 9 9.00645 13.036 9.00645 17.9967C9.00645 19.6523 9.44769 21.2546 10.2844 22.6464L9 27L13.3535 25.7156ZM10.0609 17.9967C10.0609 13.6173 13.6081 10.0543 17.9681 10.0543C22.3669 10.0543 25.9457 13.6173 25.9457 17.9967C25.9457 22.3763 22.3669 25.9391 17.9681 25.9391C16.4545 25.9391 14.9836 25.5104 13.7148 24.6991L13.5121 24.5695L10.5594 25.4408L11.4305 22.4879L11.3009 22.2854C10.4896 21.0163 10.0609 19.5334 10.0609 17.9967Z' fill='%23FF671F'/%3E%3Cpath d='M14.8879 22.4122C16.3303 22.3587 17.6386 21.9415 18.8202 21.1336C19.9101 20.3896 20.7352 19.4166 21.3023 18.2258C21.6554 17.4831 21.8792 16.7035 21.9591 15.8843C21.9855 15.6223 22 15.3562 22 15.0922C22.002 14.8948 21.9353 14.7093 21.7947 14.5615C21.6231 14.3839 21.4409 14.2175 21.2739 14.0373C20.8745 13.6069 20.2085 13.597 19.753 13.9997C19.5675 14.1667 19.4368 14.3661 19.3747 14.611C19.277 14.9932 19.1536 15.3701 19.0764 15.7569C19.0071 16.1068 19.1199 16.4243 19.3695 16.6851C19.479 16.7993 19.5913 16.9108 19.7055 17.0217C19.7437 17.058 19.751 17.0897 19.7345 17.1412C19.2553 18.6634 18.2545 19.6635 16.7323 20.146C16.6762 20.1625 16.6432 20.1513 16.6056 20.1104C16.5026 20.0035 16.3976 19.8985 16.29 19.7942C15.987 19.5024 15.6286 19.4067 15.2233 19.5064C14.8695 19.5962 14.5189 19.6978 14.1671 19.7949C13.5446 19.9652 13.0792 20.6946 13.3967 21.3672C13.4456 21.4689 13.5189 21.564 13.5961 21.6478C13.7664 21.8293 13.9473 22.0016 14.1235 22.1792C14.2853 22.3422 14.4886 22.399 14.7097 22.4122C14.7744 22.4155 14.8391 22.4122 14.8879 22.4122Z' fill='%23FF671F'/%3E%3C/svg%3E");
+
+    -webkit-transition: background 0.3s ease-in;
+    transition: background 0.3s ease-in;
+  }
+
+  #chat_id1 #popup_wrap_id:hover #popup30 {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.3s ease-in;
+    transition: opacity 0.3s ease-in;
+  }
+
+  #chat_id1 #popup_wrap_id:hover .content a {
+    color: #fff;
+  }
+
+
+  /*******************************************************/
+
+  #chat_id1 p:first-letter {
+    padding-left: 0;
+  }
+
+  #chat_id1 p {
+    margin-bottom: 0;
+  }
+
+  #chat_id1 img:hover {
+    opacity: 1;
+  }
+
+  #chat_id1 img {
+    opacity: 1;
+    max-width: 100%;
+    display: block;
+  }
+
+  #chat_id1 {
+    max-width: 1316px;
+    margin: 0;
+    height: auto;
+    /* background-color: #fff; */
+    /* padding: 0 5px; */
+    display: inline-block;
+    margin: 0 0 4.3rem;
+  }
+
+  /* #chat_id1 #popup_wrap_id {
+    z-index: 0;
+  } */
+
+  #chat_id1 .popup_wrap {
+    /* border: 1px solid #FF671F;
+    border-radius: 25px;
+    color: #000; */
+    z-index: 1;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    /* -webkit-box-align: end;
+    align-items: flex-end; */
+    position: relative;
+    /* margin-right: 10px; */
+    width: 205px;
+    /* background-color: #fff; */
+    /* z-index: -1; */
+  }
+
+  #chat_id1 .popup_wrap .content {
+    width: 100%;
+
+    border: 1px solid #FF671F;
+    border-radius: 25px;
+    color: #000;
+    z-index: 7;
+
+    position: relative;
+    /* width: 205px; */
+    background-color: #fff;
+  }
+
+  #chat_id1 .show_popup::after {
+    content: '';
+    display: inline-block;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='8' height='4' viewBox='0 0 8 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.89106 0.120014C7.81948 0.04711 7.7171 0.00375169 7.60823 0.000232119C7.49936 -0.00328746 7.39369 0.0333456 7.31633 0.101435L4.00049 3.08806L0.684645 0.101435C0.60728 0.0333456 0.501619 -0.00328746 0.392744 0.000232119C0.28387 0.00375169 0.18149 0.04711 0.109911 0.120014C-0.0437469 0.273709 -0.0353235 0.507195 0.129097 0.651848L3.74931 3.90323C3.81724 3.96121 3.90639 3.99556 4.00049 4C4.09449 3.99522 4.18352 3.96092 4.25166 3.90323L7.87188 0.651848C8.03501 0.5067 8.0434 0.27413 7.89106 0.120014Z' fill='black'/%3E%3C/svg%3E");
+    width: 8px;
+    height: 4px;
+    margin-left: 5px;
+    -webkit-transform: none;
+            transform: none;
+  }
+
+  .features-desc__text img {
+    margin-bottom: 0rem;
+  }
+
+  .one-col .features-desc__text p:first-letter {
+    padding-left: 0rem !important;
+  }
+
+  #chat_id1 .content a {
+    font-weight: normal;
+    text-decoration: none;
+    /* font-family: sans-serif; */
+    color: #000;
+    line-height: normal;
+    font-size: 13px;
+    display: -webkit-box;
+    display: flex;
+    cursor: pointer;
+
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    /* padding-bottom: 16px; */
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    position: relative;
+    -webkit-transform: none;
+    transform: none;
+    padding: 7px 10px 7px 0;
+    float: right;
+
+  }
+
+  #chat_id1 .popup_wrap::before {
+    content: "";
+    width: 36px;
+    height: 36px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='18' cy='18' r='18' fill='%23FF671F'/%3E%3Cpath d='M13.3535 25.7156C14.7442 26.5524 16.3343 26.9935 17.9681 26.9935C22.919 26.9935 27 22.9536 27 17.9967C27 13.0456 22.9248 9 17.9681 9C13.0266 9 9.00645 13.036 9.00645 17.9967C9.00645 19.6523 9.44769 21.2546 10.2844 22.6464L9 27L13.3535 25.7156ZM10.0609 17.9967C10.0609 13.6173 13.6081 10.0543 17.9681 10.0543C22.3669 10.0543 25.9457 13.6173 25.9457 17.9967C25.9457 22.3763 22.3669 25.9391 17.9681 25.9391C16.4545 25.9391 14.9836 25.5104 13.7148 24.6991L13.5121 24.5695L10.5594 25.4408L11.4305 22.4879L11.3009 22.2854C10.4896 21.0163 10.0609 19.5334 10.0609 17.9967Z' fill='white'/%3E%3Cpath d='M14.8879 22.4122C16.3302 22.3587 17.6386 21.9415 18.8202 21.1336C19.91 20.3896 20.7352 19.4166 21.3022 18.2258C21.6554 17.4831 21.8792 16.7035 21.959 15.8843C21.9854 15.6223 22 15.3562 22 15.0922C22.0019 14.8948 21.9353 14.7093 21.7947 14.5615C21.623 14.3839 21.4408 14.2175 21.2738 14.0373C20.8745 13.6069 20.2084 13.597 19.7529 13.9997C19.5674 14.1667 19.4367 14.3661 19.3747 14.611C19.277 14.9932 19.1535 15.3701 19.0763 15.7569C19.007 16.1068 19.1199 16.4243 19.3694 16.6851C19.479 16.7993 19.5912 16.9108 19.7054 17.0217C19.7437 17.058 19.7509 17.0897 19.7344 17.1412C19.2552 18.6634 18.2545 19.6635 16.7322 20.146C16.6761 20.1625 16.6431 20.1513 16.6055 20.1104C16.5025 20.0035 16.3976 19.8985 16.29 19.7942C15.987 19.5024 15.6285 19.4067 15.2232 19.5064C14.8694 19.5962 14.5189 19.6978 14.167 19.7949C13.5446 19.9652 13.0792 20.6946 13.3967 21.3672C13.4455 21.4689 13.5188 21.564 13.596 21.6478C13.7664 21.8293 13.9472 22.0016 14.1235 22.1792C14.2852 22.3422 14.4885 22.399 14.7097 22.4122C14.7743 22.4155 14.839 22.4122 14.8879 22.4122Z' fill='white'/%3E%3C/svg%3E");
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 8;
+    display: block !important;
+  }
+
+  #chat_id1 .popup ul.communication {
+    padding: 0;
+    margin: 0;
+    padding-top: 25px;
+  }
+
+  #chat_id1 .popup ul.communication li {
+    list-style-type: none;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  #chat_id1 .popup ul.communication li a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    /* font-weight: bold; */
+  }
+
+  #chat_id1 .popup ul.communication li:last-child {
+    margin-bottom: 0;
+  }
+
+  #chat_id1 .popup ul.communication li::before {
+    display: block;
+    content: '';
+    min-width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+    position: unset;
+  }
+
+  #chat_id1 .popup ul.communication li p {
+    font-size: 14px;
+    line-height: normal;
+    padding-bottom: 0;
+  }
+
+  #chat_id1 .popup ul.communication li:nth-child(1)::before {
+    background-position: 0 0px !important;
+  }
+
+  #chat_id1 .popup ul.communication li:nth-child(2)::before {
+    background-position: 0 -26px !important;
+  }
+
+  #chat_id1 .popup ul.communication li:nth-child(3)::before {
+    background-position: 0 -52px !important;
+  }
+
+  #chat_id1 .popup ul.communication li:nth-child(4)::before {
+    background-position: 0 -78px !important;
+  }
+
+  #chat_id1 .popup ul.communication li:nth-child(5)::before,
+  #chat_id1 .popup ul.communication li:nth-child(6)::before {
+    display: none;
+  }
+
+  #chat_id1 .popup ul.communication li:nth-child(1),
+  #chat_id1 .popup ul.communication li:nth-child(2),
+  #chat_id1 .popup ul.communication li:nth-child(3),
+  #chat_id1 .popup ul.communication li:nth-child(4) {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: start;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  #chat_id1 .popup .object ul.communication li .telephone a,
+  #chat_id1 .popup .object_reverse ul.communication li .telephone a {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    margin-top: 5px;
+    padding: 0 17px 0 35px !important;
+  }
+
+  #chat_id1 .popup .object ul.communication li .telephone p {
+    color: #999999;
+    line-height: normal;
+    margin-top: 5px;
+  }
+
+  #chat_id1 .popup .object ul.communication li .telephone p span {
+    display: block;
+    line-height: normal;
+    font-size: 12px;
+  }
+
+  #chat_id1 .popup .object ul.communication li .telephone p span:first-of-type {
+    font-weight: bold;
+  }
+
+  /*****************************************************/
+
+  #chat_id1 #popup30 {
+    display: block;
+    visibility: hidden;
+    /* z-index: 1000; */
+    opacity: 0;
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    /* right: 0; */
+    padding: 1.6rem 3% 1.6rem 1.7rem;
+    border-radius: 1rem;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    box-shadow: 0 0 10px 1px rgba(50, 50, 50, .3);
+    background: hsla(0, 0%, 100%, .92);
+    /* opacity: 0; */
+    text-align: left;
+    -webkit-transition: opacity 0.3s ease-in;
+    transition: opacity 0.3s ease-in;
+    width: 205px;
+  }
+
+
+  #chat_id1 .object {
+    padding: 20px 20px 20px 20px;
+    width: 196px;
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.9490196078431372);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: absolute;
+    top: -335px;
+  }
+
+  #chat_id1 .object_reverse {
+    /*padding: 20px 20px 20px 20px; */
+    width: 205px;
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
+    height: auto;
+    /* background-color: rgba(255, 255, 255, 0.9490196078431372); */
+    /* box-sizing: border-box; */
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); */
+    /* border-radius: 1rem; */
+    /* border-top-right-radius: 25px; */
+    /* border-top-left-radius: 25px; */
+    /* position: absolute; */
+    /* top: 0px;*/
+  }
+
+  .chat1 .header-phone__link:after {
+    display: none;
+  }
+
+  /* .chat1 .object::after {
+    content: "";
+    border: 1.4rem solid transparent;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0) scale(0.7) rotate(180deg);
+    transform: translate(-50%, 0) scale(0.7) rotate(180deg);
+    z-index: 5;
+    border-bottom: 1rem solid #fff;
+  } */
+
+  .chat1 .object_reverse::after {
+    content: "";
+    border: 1.4rem solid transparent;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0) scale(0.7);
+    transform: translate(-50%, 0) scale(0.7) rotate(180deg);
+    z-index: 5;
+    border-bottom: 1rem solid #fff;
+    display: none;
+  }
+
+  /*  #chat_id1 .object_reverse::after {
+    display: none;
+  } */
+
+  #chat_id1 .popup ul.communication li:nth-child(3)>span {
+    display: block;
+    width: 11px;
+    height: 11px;
+    background-size: 11px 11px;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg width='11' height='11' viewBox='0 0 10 10' fill='%23ff671f' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M5 10A5 5 0 1 0 5 0a5 5 0 0 0 0 10z'/><path d='M5 1.667a.556.556 0 1 0 .002 1.112A.556.556 0 0 0 5 1.667zM5 3.889a.556.556 0 0 0-.556.555v3.334a.556.556 0 0 0 1.112 0V4.444A.556.556 0 0 0 5 3.89z' fill='%23fff'/></svg>");
+    background-repeat: no-repeat;
+    margin-left: 78px;
+  }
+
+  #chat_id1 .popup ul.communication li:nth-child(3) .tooltip {
+    display: block;
+    width: 180px;
+    max-height: 370px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.9490196078431372);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: absolute;
+    top: 140px;
+    left: 79px;
+    padding: 10px 15px;
+    z-index: 1;
+  }
+
+  #chat_id1 .popup ul.communication li:nth-child(3) .tooltip:after {
+    content: "";
+    border: 1.4rem solid transparent;
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0) scale(0.7);
+    transform: translate(-50%, 0) scale(0.7);
+    z-index: 5;
+    border-bottom: 1rem solid #fff;
+  }
+
+
+
+
+  /**********************************************************************************************************/
+
+  .social-list__link_insta:before {
+    width: 19px;
+    height: 19px;
+    background: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIzMnB4IiBoZWlnaHQ9IjMycHgiIHZpZXdCb3g9IjAgMCAxNjkuMDYzIDE2OS4wNjMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE2OS4wNjMgMTY5LjA2MzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIGQ9Ik0xMjIuNDA2LDBINDYuNjU0QzIwLjkyOSwwLDAsMjAuOTMsMCw0Ni42NTV2NzUuNzUyYzAsMjUuNzI2LDIwLjkyOSw0Ni42NTUsNDYuNjU0LDQ2LjY1NWg3NS43NTIgICBjMjUuNzI3LDAsNDYuNjU2LTIwLjkzLDQ2LjY1Ni00Ni42NTVWNDYuNjU1QzE2OS4wNjMsMjAuOTMsMTQ4LjEzMywwLDEyMi40MDYsMHogTTE1NC4wNjMsMTIyLjQwNyAgIGMwLDE3LjQ1NS0xNC4yMDEsMzEuNjU1LTMxLjY1NiwzMS42NTVINDYuNjU0QzI5LjIsMTU0LjA2MywxNSwxMzkuODYyLDE1LDEyMi40MDdWNDYuNjU1QzE1LDI5LjIwMSwyOS4yLDE1LDQ2LjY1NCwxNWg3NS43NTIgICBjMTcuNDU1LDAsMzEuNjU2LDE0LjIwMSwzMS42NTYsMzEuNjU1VjEyMi40MDd6IiBmaWxsPSIjNzk3OTc5Ii8+Cgk8cGF0aCBkPSJNODQuNTMxLDQwLjk3Yy0yNC4wMjEsMC00My41NjMsMTkuNTQyLTQzLjU2Myw0My41NjNjMCwyNC4wMiwxOS41NDIsNDMuNTYxLDQzLjU2Myw0My41NjFzNDMuNTYzLTE5LjU0MSw0My41NjMtNDMuNTYxICAgQzEyOC4wOTQsNjAuNTEyLDEwOC41NTIsNDAuOTcsODQuNTMxLDQwLjk3eiBNODQuNTMxLDExMy4wOTNjLTE1Ljc0OSwwLTI4LjU2My0xMi44MTItMjguNTYzLTI4LjU2MSAgIGMwLTE1Ljc1LDEyLjgxMy0yOC41NjMsMjguNTYzLTI4LjU2M3MyOC41NjMsMTIuODEzLDI4LjU2MywyOC41NjNDMTEzLjA5NCwxMDAuMjgxLDEwMC4yOCwxMTMuMDkzLDg0LjUzMSwxMTMuMDkzeiIgZmlsbD0iIzc5Nzk3OSIvPgoJPHBhdGggZD0iTTEyOS45MjEsMjguMjUxYy0yLjg5LDAtNS43MjksMS4xNy03Ljc3LDMuMjJjLTIuMDUxLDIuMDQtMy4yMyw0Ljg4LTMuMjMsNy43OGMwLDIuODkxLDEuMTgsNS43MywzLjIzLDcuNzggICBjMi4wNCwyLjA0LDQuODgsMy4yMiw3Ljc3LDMuMjJjMi45LDAsNS43My0xLjE4LDcuNzgtMy4yMmMyLjA1LTIuMDUsMy4yMi00Ljg5LDMuMjItNy43OGMwLTIuOS0xLjE3LTUuNzQtMy4yMi03Ljc4ICAgQzEzNS42NjEsMjkuNDIxLDEzMi44MjEsMjguMjUxLDEyOS45MjEsMjguMjUxeiIgZmlsbD0iIzc5Nzk3OSIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=") no-repeat 50%;
+    background-size: contain;
+  }
+
+  .social-list__link_telegram:before {
+    width: 19px;
+    height: 19px;
+    background: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMDAgMzAwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMDAgMzAwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCI+CjxnIGlkPSJYTUxJRF80OTZfIj4KCTxwYXRoIGlkPSJYTUxJRF80OTdfIiBkPSJNNS4yOTksMTQ0LjY0NWw2OS4xMjYsMjUuOGwyNi43NTYsODYuMDQ3YzEuNzEyLDUuNTExLDguNDUxLDcuNTQ4LDEyLjkyNCwzLjg5MWwzOC41MzItMzEuNDEyICAgYzQuMDM5LTMuMjkxLDkuNzkyLTMuNDU1LDE0LjAxMy0wLjM5MWw2OS40OTgsNTAuNDU3YzQuNzg1LDMuNDc4LDExLjU2NCwwLjg1NiwxMi43NjQtNC45MjZMMjk5LjgyMywyOS4yMiAgIGMxLjMxLTYuMzE2LTQuODk2LTExLjU4NS0xMC45MS05LjI1OUw1LjIxOCwxMjkuNDAyQy0xLjc4MywxMzIuMTAyLTEuNzIyLDE0Mi4wMTQsNS4yOTksMTQ0LjY0NXogTTk2Ljg2OSwxNTYuNzExbDEzNS4wOTgtODMuMjA3ICAgYzIuNDI4LTEuNDkxLDQuOTI2LDEuNzkyLDIuODQxLDMuNzI2TDEyMy4zMTMsMTgwLjg3Yy0zLjkxOSwzLjY0OC02LjQ0Nyw4LjUzLTcuMTYzLDEzLjgyOWwtMy43OTgsMjguMTQ2ICAgYy0wLjUwMywzLjc1OC01Ljc4Miw0LjEzMS02LjgxOSwwLjQ5NGwtMTQuNjA3LTUxLjMyNUM4OS4yNTMsMTY2LjE2LDkxLjY5MSwxNTkuOTA3LDk2Ljg2OSwxNTYuNzExeiIgZmlsbD0iIzc5Nzk3OSIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=") no-repeat 50%;
+    background-size: contain;
+  }
+
+  .social-list__link_blog:before {
+    width: 19px;
+    height: 19px;
+    background: url(https://cdn.comfy.ua/media/blb/push-blog.png) no-repeat 50%;
+    background-size: contain;
+    left: 16px;
+  }
+
+  .social-list__link.social-list__link_blog {
+    width: 7rem;
+    padding-top: 10px;
+    padding-left: 30px;
+    font-weight: 900;
+  }
+
+  .list_img-stl {
+    padding-top: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .list__item-stl {
+    margin: 0 10px 10px 0;
+  }
+
+  @media (max-width: 1024px) and (min-width: 768px) {
+
+    .header-phone__link:before {
+      content: "";
+      width: 26px;
+      height: 26px;
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' …-1.249-.83-2.008s.294-1.472.83-2.008a.434.434 0 0 0 0-.613z'/%3E%3C/svg%3E") no-repeat 50% !important;
+      background-size: contain;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 0;
+      border-radius: inherit;
+    }
+
+    .header-phone__link_1::before {
+      background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26.882 26.883' fill='%23a0a0a0' width='26' height='26'%3E%3Cpath d='M18.894.453H7.988A1.91 1.91 0 0 0 6.081 2.36v22.162a1.91 1.91 0 0 0 1.907 1.908h10.905a1.91 1.91 0 0 0 1.908-1.907V2.36A1.91 1.91 0 0 0 18.894.453zM6.947 3.917h12.988v16.452H6.947V3.917zm1.041-2.598h10.905c.575 0 1.042.467 1.042 1.041v.691H6.947V2.36c0-.574.467-1.041 1.041-1.041zm10.906 24.245H7.988a1.042 1.042 0 0 1-1.041-1.041v-3.288h12.988v3.288c0 .574-.467 1.041-1.041 1.041z'/%3E%3Cpath d='M13.441 21.667c-.955 0-1.732.777-1.732 1.732s.777 1.732 1.732 1.732 1.732-.777 1.732-1.732-.777-1.732-1.732-1.732zm0 2.598a.866.866 0 1 1 0-1.733.866.866 0 0 1 0 1.733zM11.709 2.618h1.732a.433.433 0 0 0 0-.866h-1.732a.433.433 0 0 0 0 .866zM14.74 2.618h.433a.433.433 0 0 0 0-.866h-.433a.433.433 0 0 0 0 .866zM24.962 2.431a.433.433 0 1 0-.612.612 4.154 4.154 0 0 1 0 5.867.433.433 0 1 0 .612.612 5.018 5.018 0 0 0 0-7.091z'/%3E%3Cpath d='M23.139 3.417a.433.433 0 1 0-.612.612c.536.536.83 1.249.83 2.008s-.295 1.472-.83 2.008a.433.433 0 1 0 .612.612c.699-.699 1.084-1.63 1.084-2.62s-.384-1.922-1.084-2.62zM2.532 3.043a.433.433 0 1 0-.612-.612 5.021 5.021 0 0 0 0 7.092.432.432 0 1 0 .612-.612 4.154 4.154 0 0 1 0-5.868z'/%3E%3Cpath d='M4.355 3.297a.433.433 0 0 0-.612 0c-.699.699-1.084 1.63-1.084 2.62s.385 1.921 1.084 2.621a.432.432 0 1 0 .612-.612c-.536-.536-.83-1.249-.83-2.008s.294-1.472.83-2.008a.434.434 0 0 0 0-.613z'/%3E%3C/svg%3E") no-repeat 50% !important;
+    }
+
+    #chat_id1 .popup ul.communication {
+      padding-top: 0;
+     /*  padding-bottom: 25px; */
+    }
+
+    #chat_id1 #popup30 {
+      top: -325px;
+      border-radius: 1rem;
+    }
+
+
+    #chat_id1 {
+      margin: 4.3rem 0 4.3rem 0;
+    }
+
+    #footer .header-phone__link:after {
+      display: none !important;
+    }
+
+    #chat_id1 .popup ul.communication li:nth-child(3) .tooltip {
+      top: 112px;
+      left: 77px;
+    }
+
+    .chat1 .header-phone__link:after {
+      display: none;
+    }
+
+    .chat1 .object_reverse::after {
+      display: block;
+    }
+    .list_img-stl {
+      flex-direction: row;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .footer-contacts__info {
+      position: relative;
+      padding: 3rem 0;
+    }
+
+    #chat_id1 {
+      margin: 0 auto;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+      margin: 0 auto;
+    display: block;
+    }
+
+    #footer .header-phone__link:after {
+      display: none !important;
+    }
+
+    #chat_id1 .popup ul.communication li:nth-child(3) .tooltip {
+      top: 112px;
+      left: 77px;
+    }
+
+    #chat_id1 .popup ul.communication {
+      padding-top: 0;
+      /* padding-bottom: 25px; */
+    }
+
+    #chat_id1 #popup30 {
+      top: -325px;
+      border-radius: 1rem;
+    }
+
+    .chat1 .object_reverse::after {
+      display: block;
+    }
+    .list_img-stl {
+      flex-direction: row;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #chat_id1 {
+      display: block !important;
+      padding: 0;
+    }
+
+    #chat_id1 .content a {
+      position: unset !important;
+      -webkit-transform: unset;
+      transform: unset
+    }
+
+    .list_img-stl {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .list__item-stl {
+      max-width: 33%;
+    }
+    .list__item-stl:last-child {
+      margin: 0 0px 10px 0;
+    }
+
+  }
+
+  /* ************* */
+
+  .footer-info__item {
+    padding: 5px .5rem;
+    letter-spacing: 0;
+    vertical-align: top;
+  }
+  .footer-info__item_delivery span:before {
+    width: 50px;
+  }
+
+  .footer-info__item span {
+    padding: 0 0 0 7rem;
+    text-transform: none;
+    font-size: 14px;
+}
+  .footer-info__item span p {
+    font-weight: normal;
+    text-transform: none;
+    color: #616161;
+    font-size: 12px;
+    padding-top: 5px;
+  }
+  .footer-info__item_delivery span:before {
+    width: 50px;
+  }
+  .footer-info__item_guarantee span:before {
+    left: 0;
+  }
+  span.break-word {
+    display: block;
+    word-wrap: break-word;
+    padding: 0 !important;
+    font-size: 12px;
+  }
+  span.break-word:before {display: none;}
+
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .footer-info {
+      padding: 1.7rem 0;
+    }
+    .footer-info__item_delivery span {
+      padding: 5rem 0 0;
+    }
+    .footer-info__item_guarantee span:before {
+      left: 50%;
+    }
+    .footer-info__item span {
+      padding: 5rem 0 0;
+    }
+
+  }
+
+</style>
+<div class="footer-info hide-on-mobile">
+  <ul class="narrow-container footer-info__i">
+    <li class="footer-info__item footer-info__item_delivery">
+      <span> Доставка
+        <p>Самовивіз з магазину «Comfy», <span class="break-word">доставка за адресою або у відділення</span> «Нова пошта» і Justin.</p>
+      </span>
+    </li>
+    <li class="footer-info__item footer-info__item_guarantee">
+      <span>Гарантія
+        <p>Сертифікована техніка з <span class="break-word">офіційною гарантією від</span> виробника.</p>
+      </span>
+    </li>
+    <li class="footer-info__item footer-info__item_payment">
+      <span>Оплата
+        <p>Оплатити покупку можна <span class="break-word">готівкою, карткою або</span> безготівковим розрахунком.</p>
+      </span>
+    </li>
+    <li class="footer-info__item footer-info__item_return">
+      <span>Повернення
+        <p>Повернення товару здійснюється <span class="break-word">протягом 14 днів після покупки,</span> відповідно до чинного закону.</p>
+      </span>
+    </li>
+  </ul>
+</div>
+<div class="footer-newsletter">
+  <div class="narrow-container footer-newsletter__i">
+    {{block type="newsletter/subscribe" template="newsletter/subscribe.phtml"}}</div>
+</div>
+<div class="narrow-container">
+  <div class="footer__i">
+    <div class="footer-top">
+      <div class="footer-contacts">
+        <div class="footer-contacts__info">
+          <!-- <p class="footer__title footer-contacts__info-title">Гаряча лінія</p> <a class="footer-contacts__phone"
+            href="tel:0800303505">0-800-303-505</a>
+          <p class="footer-contacts__time">з 8:00 до 21:00<span class="hide-on-mobile"> (без вихідних)</span><span
+              class="only-mobile">, пн-нд</span></p>
+          <p class="footer-contacts__free-call only-desktop">Безкоштовно зі стаціонарних і мобільних телефонів в Україні
+          </p>  -->
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+
+          <div class="chat1" id="chat_id1">
+            <div class="popup_wrap" id="popup_wrap_id">
+              <div class="content">
+                <a class="show_popup" id="show_popup30">Допомога і консультація</a>
+              </div>
+              <div class="popup" id="popup30">
+                <div class="object_reverse">
+                  <ul class="communication">
+                    <li class="messengers-sprite-bg">
+                      <a id="chatBtn1" class="js-siteheart-btn">Чат на сайті</a>
+                    </li>
+                    <li class="messengers-sprite-bg">
+                      <a href="https://www.messenger.com/t/comfy.ua">Messenger</a>
+                    </li>
+                    <li class="messengers-sprite-bg">
+                      <a href="viber://pa?chatURI=comfy.ua&context=/startChat">Viber</a>
+                      <span class="i_icon30">
+
+                      </span>
+                    </li>
+                    <li class="messengers-sprite-bg">
+                      <a href="https://t.me/ComfyuaBot?start=startChat">Telegram</a>
+                    </li>
+                    <li>
+                      <div class="telephone">
+                        <a class="header-phone__link header-phone__link_1 messengers-sprite-bg" id="phone_icon"
+                          href="tel:0800303505">0-800-303-505</a>
+                        <p class="header-phone-popup__note">
+                          <span class="header-phone-popup__note-item header-phone-popup__note_bold"> з 8:00 до 21:00 (пн-нд)</span>
+                          <span class="header-phone-popup__note-item">Безкоштовно по Україні</span>
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="telephone">
+                        <a class="header-phone__link header-phone__link_call messengers-sprite-bg" id="phone_icon"
+                          href="tel:0443939505">044-39-39-505</a>
+                        <p class="header-phone-popup__note">
+                          <span class="header-phone-popup__note-item header-phone-popup__note_bold">Безкоштовно по Києву</span>
+                          <span class="header-phone-popup__note-item">зі стаціонарних</span>
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <script>
+              var tooltipTimeout30;
+
+              $(".i_icon30").hover(function () {
+                  tooltipTimeout30 = setTimeout(showTooltip30, 100);
+                },
+                hideTooltip30);
+
+              function showTooltip30() {
+                var tooltip30 = $(
+                  "<div id='tooltip30' class='tooltip'>  Для перехода в диалог с оператором должен быть установлен Viber. После установки повторно нажмите на логотип чата.</div>"
+                );
+                tooltip30.appendTo($(".i_icon30"));
+              }
+
+              function hideTooltip30() {
+                clearTimeout(tooltipTimeout30);
+                $("#tooltip30").fadeOut().remove();
+              }
+            </script>
+
+            <!-- <script>
+              $("#popup_wrap_id").mouseenter(function () {
+                $('#popup30').fadeIn('fast');
+
+                $('#popup30 , #popup_wrap_id').mouseleave(function () {
+                  $('#popup30').hide()
+                });
+              });
+            </script> -->
+
+            <script type="text/javascript">
+              // <![CDATA[
+              window.senderCallback = function () {
+                SenderWidget.init({
+                  companyId: "i69238662654"
+                });
+                SenderWidget.showWidget();
+              }
+              // ]]>
+            </script>
+
+            <script type="text/javascript">
+              // <![CDATA[
+              window.callOnlineHelp = function () {
+                (function (d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = "https://widget.sender.mobi/build/init.js";
+                  fjs.parentNode.insertBefore(js, fjs, 'sender-widget');
+                })(document, 'script');
+              }
+              // ]]>
+            </script>
+
+          </div>
+
+          <p class="footer-contacts__free-call only-desktop"><a
+            class="btn_round btn_round-with-arrow footer-contacts__btn hide-on-mobile"
+            href="{{store url="shops.html"}}"><span>Знайти магазин</span></a></p>
+        </div>
+        <div class="footer-contacts__social">
+          <p class="footer__title">Приєднуйтесь</p>
+          <ul class="social-list">
+            <li class="social-list__item"> <a href="https://www.facebook.com/comfy.ua"
+                class="social-list__link social-list__link_fb" target="_blank"></a> </li>
+            <!-- <li class="social-list__item"> <a target="_blank" class="social-list__link social-list__link_google" href="https://plus.google.com/117556423659360886156" _mce_href="https://plus.google.com/117556423659360886156"></a> </li> -->
+            <li class="social-list__item"> <a href="https://www.instagram.com/comfy_ua/"
+                class="social-list__link social-list__link_insta" target="_blank"></a> </li>
+            <li class="social-list__item"> <a href="https://www.youtube.com/user/comfyua"
+                class="social-list__link social-list__link_youtube" target="_blank"></a> </li>
+            <li class="social-list__item"> <a href="https://t.me/ottakot"
+                class="social-list__link social-list__link_telegram" target="_blank"></a> </li>
+          </ul>
+        </div>
+      </div>
+      <style>
+        .none_desktop {
+          display: none;
+        }
+        @media (max-width: 767px) {
+          .none_desktop {
+            display: block;
+          }
+        }
+        </style>
+      <div class="footer-navigation">
+        <div class="footer-navigation__item js-footer-links">
+          <p class="footer-navigation__title footer__title js-footer-title-links">Comfy</p>
+          <nav>
+            <ul class="footer-navigation__list list">
+              <li class="list__item"> <a href="{{store url=""}}aboutus.html" class="list__link"> Про компанію </a> </li>
+              <li class="list__item"> <a href="{{store url=""}}shops.html" class="list__link"> Магазини</a> </li>
+              <li class="list__item"> <a href="{{store url=""}}contact.html" class="list__link"> Контакти </a> </li>
+              <li class="list__item"> <a href="{{store url=""}}contact-media.html" class="list__link"> Прес-центр </a></li>
+              <li class="list__item"> <a href="http://work.comfy.ua/main/" target="_blank" class="list__link"> Робота у COMFY</a> </li>
+              <li class="list__item"> <a href="http://work.comfy.ua/" target="_blank" class="list__link"> Люди COMFY </a> </li>
+              <li class="list__item"> <a href="{{store url=""}}quality.html" class="list__link"> Політика конфіденційності </a> </li>
+              <li class="list__item"> <a href="{{store url=""}}tender.html" class="list__link"> Тендер </a> </li>
+              <li class="list__item"> <a href="{{store url=""}}partners.html" class="list__link"> Партнерам </a> </li>
+              <li class="list__item"> <a href="{{store url=""}}sitemap.html" class="list__link"> Каталог товарів </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-navigation__item  js-footer-links">
+          <p class="footer-navigation__title footer__title js-footer-title-links">Послуги та сервіси</p>
+          <nav>
+            <ul class="footer-navigation__list list">
+              <li class="list__item"> <a href="{{store url=""}}welcome.html" class="list__link"> Бонусна программа </a></li>
+              <li class="list__item"> <a href="{{store url=""}}gift_card.html" class="list__link"> Подарункові карти</a> </li>
+              <li class="list__item"> <a href="{{store url=""}}crediting.html#Credit" class="list__link"> Кредит та оплата частинами </a> </li>
+              <!-- <li class="list__item"> <a href="{{store url=""}}services.html#1" _mce_href="{{store url=""}}services.html#1" class="list__link"> Доставка з підключенням</a> </li> -->
+              <li class="list__item"> <a href="{{store url=""}}services.html#5" class="list__link"> Встановлення </a></li>
+              <li class="list__item"> <a href="{{store url=""}}services.html#6" class="list__link"> Страховка </a> </li>
+              <li class="list__item"> <a href="{{store url=""}}services.html#4" class="list__link"> Додаткова гарантія</a> </li>
+              <li class="list__item"> <a href="{{store url=""}}services.html#3" class="list__link"> IT-сервис </a> </li>
+              <!-- <li class="list__item"> <a href="{{store url=""}}services.html#3" _mce_href="{{store url=""}}services.html#3" class="list__link"> IT-сервис </a> </li> <li class="list__item"> <a class="list__link" href="{{store url=""}}services.html#7" _mce_href="{{store url=""}}services.html#7"> Супутникове TV</a> </li> -->
+              <!-- <li class="list__item"> <a href="{{store url=""}}trade-in-info.html" class="list__link"> Comfy обмін</a></li> -->
+              <li class="list__item"> <a class="list__link" href="{{store url=""}}for-corporate-clients.html">Безготівковий рахунок</a> </li>
+              <li class="list__item"> <a class="list__link" href="{{store url=""}}oplata.html">Оплата</a> </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-navigation__item js-footer-links">
+          <p class="footer-navigation__title footer__title js-footer-title-links">Допомога покупцеві</p>
+          <nav>
+            <ul class="footer-navigation__list list">
+              <li class="list__item"> <a href="{{store url="status-order.html}}" class="list__link"> Знайти замовлення</a> </li>
+              <li class="list__item"> <a href="{{store url="courier-delivery-self.html"}}" class="list__link"> Умови доставки </a> </li>
+              <li class="list__item"> <a href="{{store url="exchange-and-returns.html"}}" class="list__link"> Обмін і повернення товару </a> </li>
+              <li class="list__item"> <a class="list__link" href="/garantija.html"> Гарантія</a>
+              <li class="list__item"> <a href="{{store url="repair.html}}" class="list__link"> Статус товару в ремонті</a> </li>
+              <li class="list__item"> <a href="{{store url="question.html"}}" class="list__link"> Поширені запитання</a> </li>
+              <!-- <li class="list__item"> <a class="list__link" href="{{store url=""}}payment_document"> Договір публічної оферти</a> -->
+              <!-- <li class="list__item"> <a class="list__link" href="/sitemap/" _mce_href="/sitemap/" title="Мапа сайту">Мапа сайту</a> </li> -->
+            </ul>
+          </nav>
+        </div>
+
+        <style>
+          @media (max-width: 767px) {
+            .footer-navigation__list.footer_list-block {
+              display: none;
+            }
+            ._open .footer-navigation__list.footer_list-block {
+              display: flex;
+          flex-direction: column;
+          padding: 1rem 2.1rem;
+            }
+            span.break-word {
+    display: initial;
+            }
+          }
+
+        .footer_list-block .footer-info__item {
+          padding: 5px 0;
+          letter-spacing: 0;
+          vertical-align: top;
+          display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    border-right: 0;
+    text-transform: uppercase;
+    padding: 1.5rem .5rem;
+    line-height: 1.7;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-align: left;
+        }
+        .footer_list-block {
+
+        }
+
+        </style>
+        <div class="footer-navigation__item  js-footer-links none_desktop">
+          <p class="footer-navigation__title footer__title js-footer-title-links">Наши преимущества</p>
+          <nav>
+            <ul class="footer-navigation__list footer_list-block">
+              <li class="footer-info__item footer-info__item_delivery">
+                <span> Доставка
+                  <p>Самовивіз з магазину «Comfy», <span class="break-word">доставка за адресою або у відділення</span> «Нова пошта» і Justin.</p>
+                </span>
+              </li>
+              <li class="footer-info__item footer-info__item_guarantee">
+                <span>Гарантія
+                  <p>Сертифікована техніка з <span class="break-word">офіційною гарантією від</span> виробника.</p>
+                </span>
+              </li>
+              <li class="footer-info__item footer-info__item_payment">
+                <span>Оплата
+                  <p>Оплатити покупку можна <span class="break-word">готівкою, карткою або</span> безготівковим розрахунком.</p>
+                </span>
+              </li>
+              <li class="footer-info__item footer-info__item_return">
+                <span>Повернення
+                  <p>Повернення товару здійснюється <span class="break-word">протягом 14 днів після покупки,</span> відповідно до чинного закону.</p>
+                </span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-navigation__item  js-footer-links">
+          <nav>
+            <ul class="list list_img-stl">
+              <li class="list__item-stl"> <img title="Оплата онлайн банковской картой Visa" src="https://cdn.comfy.ua/media/x/img/Frame_2.png" alt=""></li>
+              <li class="list__item-stl"> <img title="Оплата онлайн банковской картой MasterCard" src="https://cdn.comfy.ua/media/x/img/Frame_2_1_.png" alt=""></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+    </div>
+  
+  <div class="footer-bottom">
+    <div class="footer-bottom__left">
+      <p class="footer-copyright">© Всі права захищені ТОВ «КОМФІ ТРЕЙД», 2010–2020</p>
+    </div>
+    <div class="footer-bottom__right">
+      <p class="footer-dev">Дизайн i pозробка - <a href="http://oggettoweb.ru/" target="_blank" rel="nofollow"
+          class="footer-dev__logo">Oggetto</a></p>
+    </div>
+  </div>
+</div>

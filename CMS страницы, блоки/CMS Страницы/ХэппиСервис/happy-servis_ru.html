@@ -1,0 +1,471 @@
+<style type="text/css">
+#block_container {
+  width: 100%;
+  max-width: 1000px;
+  display: block;
+  margin: 0 auto;
+      padding: 25px;
+      background: #fff;
+}
+#block_glav .accordion {
+  display: table;
+  height: 58px;
+
+}
+#block_glav .accordion_item {
+  display: table-cell;
+  vertical-align: middle;
+
+}
+#block_glav .accordion_item:last-of-type {
+  border-bottom: none;
+}
+/**
+* Элемент label который запускает открыть/закрыть.
+*/
+#block_glav .accordion_trigger:hover {
+
+}
+#block_glav .accordion_trigger {
+  display: inline-block;
+  font-weight: normal;
+  cursor: pointer;
+  /*margin-left: 10px;*/
+  font-size: 16px;
+  color: #f14915;
+  border-bottom: .1rem dotted #000;
+  font-weight: 400;
+}
+
+/* меняем цвет фона у активного переключателя */
+
+#block_glav .accordion_toggle:checked ~ .accordion_trigger {
+  font-weight: 700;
+      margin-top: 20px;
+}
+
+/**
+ * эти элементы radio/checkbox всегда должны быть скрыты.
+ */
+ #block_glav .accordion_toggle {
+  position: absolute;
+  display: none;
+  
+}
+/**
+* скрытое содержание аккордеона.
+*/
+#block_glav .accordion_target {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 0px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+
+  /*****COLOR FON*******/
+
+  /************/
+}
+/**
+* когда переключатель checked на radio/checkbox, показать содержимое аккордеона.
+*/    
+#block_glav .accordion_toggle:checked ~ .accordion_target {
+  position: static;
+  overflow: visible;
+  clip: auto;
+  margin: auto;
+  padding: 1.2rem;
+  width: auto;
+  height: auto;
+  margin-left: 10px;
+
+  /* задержка появления  функция анимации */
+  -webkit-animation:fadeIn ease-in 0.5s; 
+  -moz-animation:fadeIn ease-in 0.5s;
+  animation:fadeIn ease-in 0.5s; 
+}
+/* анимация при появлении блоков с содержанием */
+@-moz-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1 }
+}
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1 }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1 }
+}
+#block_glav label {
+  position: initial !important;
+
+  width: inherit !important;
+  height: inherit !important;
+  border: inherit !important;
+  line-height: inherit !important;
+  background-color: inherit !important;
+  padding: 0px 0px !important;
+}
+#block_glav {
+  /*  display: inline-block;*/
+  margin-bottom: 3px;
+  margin-top: 0px;
+}
+#block_glav .block_img_col_L {
+  width: 8%;
+  float: left;
+  display: inline-block;
+}
+#block_glav .block_img_col_L img{
+  width: 100%;
+  max-width: 55px;
+    /*display: block;
+    margin: 0 auto;*/
+  }
+  #block_glav .block_content_col_R {
+    width: 92%;
+    display: inline-block;
+  }
+  #block_glav li:before {
+    list-style-type: disc;
+    content: "";
+    position: absolute;
+    top: 1.1rem;
+    left: -1.3rem;
+    border-radius: 50%;
+    width: .5rem;
+    height: .5rem;
+    background-color: #60ae59;
+  }
+  #block_glav i {
+    border-bottom: .1rem dotted #000;
+  }
+  #block_glav i:hover {
+    border-bottom: 0px;
+  }
+  #block_glav .accordion_height_none {
+    height: inherit;
+    margin: 15px 0 10px 0;
+  }
+
+  #block_glav .cms-content {
+    margin: 0px !important;
+    margin: 30px;
+    background: #f4f4f4;
+    padding: 10px 0px 10px 10px;
+  }
+  #block_glav .cms {
+    margin-bottom: 0px; 
+  }
+  .i_color {
+    color: #6bb864;
+  }
+
+  #block_glav .accordion__link_my:after {
+    position: absolute;
+    content: "";
+    background-image: url(https://cdn.comfy.ua/media/x/img/down.png);
+    right: 18px;
+    width: 2.4rem;
+    margin-top: 6px;
+    height: 1.3rem;
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+  }
+  #block_glav .accordion_toggle:checked ~ .accordion__link_my:after {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    
+    -webkit-animation:fadeIn ease-in 0.5s; 
+    -moz-animation:fadeIn ease-in 0.5s;
+    animation:fadeIn ease-in 0.5s;
+  }
+  
+  @media (max-width: 1300px) {
+    #block_glav .accordion {
+      width: 90%;
+    }
+  }
+  .banners_it {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  #tabsHead .tabs-head-item__text:first-child {
+    font: 1.9rem PTSans,sans-serif !important;
+  }
+  #block_glav .cms {
+    margin-bottom: 0px;
+  }
+  #block_glav .cms-content {
+    padding: 10px 0px 10px 10px;
+  }
+  .heppy_banners img {
+    width: 100%;
+    height: auto;
+  }
+  #imp-cms-content .cms-content {
+    padding: 0rem 3.8% 0rem;
+  }
+  #imp-cms-content .cms-content ul{
+    margin-bottom: 0rem;
+  }
+  .size_text {
+margin-top: 0;
+    margin-left: 35px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 1.1em;
+  }
+  #block_container h4 { font-size: 1.1em; }
+  .imp-cms-content { margin-bottom: 25px; }
+  .size_text_span {
+    font-size: 15px;
+    font-weight: 700;
+    background: #43b02a;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.6;
+    color: #fff;
+    float: left;
+  }
+  .text_bottom {
+    padding: 0rem 3.8% 2rem;
+  }
+  .fishka_text_b {
+    margin-bottom: 5px;
+    display: block;
+    font-size: 1.1em;
+  }
+  .fishka {
+    margin-left: 32px;
+  }
+  .fishka p {
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+  /* ****************TABLE**************** */
+  #table_heppy .cms_1 table {
+    font: 13px PTSans,sans-serif;
+    font: 1.3rem PTSans,sans-serif;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  #table_heppy .cms_1 table .bold {
+    color: #000;
+    font-weight: 700;
+    padding: 1%;
+    background-color: #f2f2f2;
+    border-top: none;
+    border-bottom: none;
+  }
+  #table_heppy .cms_1 table tr td {
+    font: 15px PTSans,sans-serif;
+    font: 1.5rem PTSans,sans-serif;
+    color: #797979;
+    cursor: pointer;
+    font-weight: 700;
+    text-align: center;
+    border: .1rem solid #e5e5e5;
+    padding: 2.1% 2.1% 2.1%;
+  }
+  /* ***************END TABLE****************** */
+  .link_doc {
+    font-size: 14px !important; 
+    color: #3b86c5; 
+    text-decoration: underline;
+  }
+  .link_doc:hover {
+    font-size: 14px !important; 
+    color: #3b86c5; 
+    text-decoration: initial;
+  }
+  .cms-content ul {
+    margin-bottom: 0rem !important;
+  }
+
+</style>
+<div id="block_container">
+<div class="cnt">
+<div class="heppy_banners"><img src="https://cdn.comfy.ua/media/x/img/950x285_happy_servise_ru.jpg" /></div>
+<h4 style="color: #f14915;"><b><i>ХэппиСервис</i></b><i> – don’t worry, buy Happy</i></h4>
+<span class="size_text_span">1</span>
+<p class="size_text">Увеличение срока гарантии</p>
+<div id="imp-cms-content">
+<div class="cms-content">
+<ul>
+<li>на крупную бытовую технику и ТВ  - до 5 лет; </li>
+<li>на мелкую бытовую технику – до 3 лет.</li>
+</ul>
+</div>
+<p class="text_bottom">Бесплатный ремонт <b>всех видов гарантийных поломок</b> в течении всего срока действия сервиса – <b>действует неограниченное количество раз.</b></p>
+</div>
+<span class="size_text_span">2</span>
+<p class="size_text">Расширение гарантии</p>
+<div id="imp-cms-content">
+<p class="text_bottom">Бесплатный ремонт <b>любой негарантийной поломки</b> в течении всего срока действия сервиса – <b>действует один раз</b></p>
+</div>
+<span class="size_text_span">3</span>
+<p class="size_text">Бесплатный выезд мастера и ремонт у вас дома всех видов поломок (гарантийных и не гарантийных) - <b>в течение 5 дней</b></p>
+<div id="imp-cms-content">
+<p class="text_bottom">Если ремонт техники дома невозможен – <b>бесплатная доставка</b> техники в сервисный центр на ремонт и обратно, а также ее <b>демонтаж и повторная установка</b></p>
+</div>
+<h4><b>Дополнительные «фишки»:</b></h4>
+<div class="fishka"><b class="fishka_text_b">Страхование техники от перепада напряжения</b>
+<p>В случае повреждения техники из-за перепада напряжения страховая компания компенсирует ремонт или вернет клиенту полную стоимость техники (если техника уничтожена и не подлежит ремонту). Действие страховки идентично сроку действия основного сервиса (т.е. от 2 до 5 лет)</p>
+<b class="fishka_text_b">Возврат стоимости сервиса:</b>
+<p>по окончанию срока действия, если за это время с техникой ничего не случилось.</p>
+</div>
+<!--
+<h4><b></b></h4>
+<div id="imp-cms-content">
+<div class="cms-content">
+<ul>
+</ul>
+</div>
+</div>
+-->
+<div id="block_glav">
+<div class="cms">
+<div class="cms-content">
+<div class="block_img_col_L"><img src="https://cdn.comfy.ua/media/x/img/servise_img/fast-repairs-03.png" /></div>
+<div class="block_content_col_R">
+<div class="accordion"><!--    аккордеон ГЛАВ id1     -->
+<div class="accordion_item"><input type="checkbox" class="accordion_toggle" id="toggle-202" /> <label class="accordion_trigger chek accordion__link_my" for="toggle-202"><i>Если техника сломалась — 3 простых шага</i></label>
+<div class="accordion_target">
+<ul>
+<li>Позвоните нам на горячую линию COMFY (0 800 303 505) и активируйте услугу, назвав номер своего сертификата, который указан на фискальном чеке.</li>
+<li>Выберите удобные день и время для визита мастера к вам домой (мастер приедет в течение пяти рабочих дней от даты вашего обращения).</li>
+<li>Ожидайте профессионального квалифицированного мастера, который отремонтирует технику у вас дома.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--    аккордеон ГЛАВ END     --></div>
+</div>
+</div>
+</div>
+<!--
+<h4><b></b></h4>
+<div id="imp-cms-content">
+<div class="cms-content">
+<ul>
+</ul>
+</div>
+</div>
+-->
+<div id="block_glav">
+<div class="cms">
+<div class="cms-content">
+<div class="block_img_col_L"><img src="https://cdn.comfy.ua/media/x/img/servise_img/fast-repairs-03.png" /></div>
+<div class="block_content_col_R">
+<div class="accordion"><!--    аккордеон ГЛАВ id1     -->
+<div class="accordion_item"><input type="checkbox" class="accordion_toggle" id="toggle-101" /> <label class="accordion_trigger chek accordion__link_my" for="toggle-101"><i>Если ремонт техники невозможен на дому</i></label>
+<div class="accordion_target">
+<ul>
+<li>Мастер организует демонтаж и транспортировку сломанной техники в сервисный центр, а после ремонта она будет доставлена обратно и заново установлена у вас дома.</li>
+<li>Независимо от того, где Вы живете: в городе или отдаленном поселке.</li>
+<li>Стоимость такой доставки, демонтажа и повторной установки техники абсолютно бесплатна!</li>
+</ul>
+</div>
+</div>
+</div>
+<!--    аккордеон ГЛАВ END     --></div>
+</div>
+</div>
+</div>
+<p style="font-weight: 500; margin-top: 25px;">Если же ремонт в принципе невозможен, то Вы получите компенсацию в размере полной стоимости сервиса (в виде электронной подарочной карты соответствующего номинала).</p>
+<h4 style="margin-bottom: 0px;"><b>Как я могу вернуть стоимость сервиса по окончанию срока его действия?</b></h4>
+<p style="font-weight: 500; margin-bottom: 25px;">Если по окончанию срока действия программы ХэппиСервис с техникой ничего не случилось, то Вы можете вернуть себе полную стоимость услуги.</p>
+<h4><b>Для этого необходимо:</b></h4>
+<div id="imp-cms-content">
+<div class="cms-content">
+<ul>
+<li>В течение месяца после окончания срока действия программы ХэппиСервис прийти в любой магазин COMFY;</li>
+<li>Иметь при себе чек, в котором указана дата приобретения сервиса;</li>
+<li>Обратиться к сервис-менеджеру или товароведу;</li>
+<li>Получить бонусную карту с начисленными бонусами, равными номиналу стоимости услуги.</li>
+</ul>
+</div>
+</div>
+<h4><b>Стоимость и наполнение сервиса:</b></h4>
+<div id="table_heppy">
+<div class="cms_1">
+<table style="border: .1rem solid #e5e5e5;" id="table_cervice" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="separate bold" colspan="2">ХэппиСервис</td>
+<td class="separate bold" colspan="4">Срок действия сервиса</td>
+</tr>
+<tr>
+<td rowspan="3">Стоимость сервиса, % от стоимости техники</td>
+<td>Категория техники:</td>
+<td>24 месяца</td>
+<td>36 месяцев</td>
+<td>48 месяцев</td>
+<td>60 месяцев</td>
+</tr>
+<tr>
+<td>Крупная бытовая техника и телевизоры</td>
+<td>-</td>
+<td>10%</td>
+<td>17%</td>
+<td>25%</td>
+</tr>
+<tr>
+<td>Мелкая бытовая техника для кухни, дома и красоты</td>
+<td>10%</td>
+<td>17%</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<div class="content"></div>
+<table style="border: .1rem solid #e5e5e5;" id="table_cervice" cellspacing="0" border="0">
+<tbody>
+<tr>
+<td class="separate bold">Бесплатный ремонт всех гарантийных поломок</td>
+<td class="separate bold">ДА<br />Неограниченное количество раз</td>
+</tr>
+<tr>
+<td>Бесплатная доставка техники в сервисный центр и обратно; демонтаж и установка техники</td>
+<td>ДА</td>
+</tr>
+<tr>
+<td class="separate bold">Возврат стоимости сервиса после окончания срока - если ничего не случилось</td>
+<td class="separate bold">ДА</td>
+</tr>
+<tr>
+<td>Бесплатный ремонт любых негарантийных поломок</td>
+<td>ДА<br /><i>1 раз за срок действия</i></td>
+</tr>
+<tr>
+<td class="separate bold">Гарантированный бесплатный выезд мастера домой к клиенту</td>
+<td class="separate bold">Да<br /> в течение 5 рабочих дней</td>
+</tr>
+<tr>
+<td>Страховка</td>
+<td>От перепада напряжения<br /><i>Срок действия равен сроку действия сервиса</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h4>
+<p>Документы и договоры:</p>
+</h4>
+<a style="font-size: 14px !important; color: #3b86c5; text-decoration: underline;" href="https://cdn.comfy.ua/media/x/pdf/dogov_r-pro-nadannja-poslug-hep_serv_s-2018-v_d_05-07-2018rok.pdf">Договор о предоставлении услуг «ХэппиСервис» (с 14.08.2018)</a><br /> <a style="font-size: 14px !important; color: #3b86c5; text-decoration: underline;" href="https://cdn.comfy.ua/media/x/pdf/dogovor_dobr_strah_336.pdf">Договор добровольного страхования имущества программа "Защита от перепада напряжения" (с 27.07.2018)</a><br /> <!--     <a class="link_doc" href="https://cdn.comfy.ua/media/x/pdf/HAPPY_Service.pdf" _mce_href="https://cdn.comfy.ua/media/x/pdf/HAPPY_Service.pdf" rel="nofollow" target="_blank">ХэппиСервис</a> --></div>
+</div>

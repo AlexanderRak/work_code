@@ -1,0 +1,64 @@
+<div style="margin: 10px;">Сервис "Установка кондиционера на готовую трассу",  цена
+<div id="price1" style="display: inline;"></div>
+грн.  <a href="javascript:void(0)" class="btn js-add-to-cart" data-add-to-cart-url="/comfy_services/cart/addSeparateService/service_id/1141961">Добавить</a></div>
+<div style="margin: 10px;">Сервис "Встановлення TV  стандарт new",  цена
+<div id="price2" style="display: inline;"></div>
+грн.  <a href="javascript:void(0)" class="btn js-add-to-cart" data-add-to-cart-url="/comfy_services/cart/addSeparateService/service_id/1194859">Добавить</a></div>
+<div style="margin: 10px;">Сервис "Встановлення водонагрівача стандарт new",  цена
+<div id="price3" style="display: inline;"></div>
+грн.  <a href="javascript:void(0)" class="btn js-add-to-cart" data-add-to-cart-url="/comfy_services/cart/addSeparateService/service_id/1194860">Добавить</a></div>
+<script type="text/javascript">// <![CDATA[
+    document.addEventListener('DOMContentLoaded', function() {
+
+    function getCookie(name)
+    {
+        var matches=document.cookie.match(new RegExp("(?:^|; )"+name.replace(/([\.$?*|{}\(\)\[\]\\/\+^])/g,'\$1')+"=([^;]*)"));return matches?decodeURIComponent(matches[1]):undefined;
+    }
+
+var city=getCookie('active_city_id');
+var priceUrl='/online_remains/product/service_price.php?ids=1194859&city_id=' + city;
+var priceUrl1='/online_remains/product/service_price.php?ids=1141961&city_id=' + city;
+var priceUrl2='/online_remains/product/service_price.php?ids=1194860&city_id=' + city;
+
+$.ajax(
+{
+url:priceUrl1,
+type:'get',
+success: function(output) {
+    var resp=JSON.parse(output);
+    var pr1=resp['1141961']['price'];
+    document.getElementById("price1").innerHTML=pr1;
+
+}}
+);
+
+$.ajax(
+{
+url:priceUrl,
+type:'get',
+success: function(output) {
+    var resp=JSON.parse(output);
+    var pr2=resp['1194859']['price'];
+    document.getElementById("price2").innerHTML=pr2;
+
+}}
+);
+
+$.ajax(
+{
+url:priceUrl2,
+type:'get',
+success: function(output) {
+    var resp=JSON.parse(output);
+    var pr3=resp['1194860']['price'];
+    document.getElementById("price3").innerHTML=pr3;
+
+}}
+);
+
+
+
+
+});
+// ]]></script>
+<script type="text/javascript"></script>

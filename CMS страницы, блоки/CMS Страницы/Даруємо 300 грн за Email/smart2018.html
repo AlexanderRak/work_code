@@ -1,0 +1,438 @@
+<style>
+
+.bannnner   {display: none;}
+.bannnnerm   {display: none;}
+.daruem{text-align: center; font-weight: bold; font-size: 100px;}
+
+
+.form-panel{display: inline-flex;}
+
+#footer .footer-newsletter{display: none;}
+.footer-newsletter__success-title{color: #fff;}
+#form_samsung .content{width: 45%;}
+.breadcrumbs{display: none;}
+.std {
+background-color: #44af2b;
+border-top: 1px solid #379424;
+}
+
+#form_samsung .form__input-transparent.error{    border: 1px solid #ffffff;}
+#form_samsung .footer-newsletter__item {
+    width: 18.7rem;
+}
+#form_samsung .footer-newsletter__input {
+    border-radius: 5px;
+}
+
+#form_samsung .footer-newsletter__input:focus {
+    background: rgba(136, 134, 133, 0.15);
+}
+
+#form_samsung .footer-newsletter__input:focus:-webkit-input-placeholder { color:transparent; }
+#form_samsung .footer-newsletter__input:focus:-moz-placeholder { color:transparent; }
+#form_samsung .footer-newsletter__input:focus:placeholder { color:transparent; }
+#form_samsung .footer-newsletter__input:autofill {
+    background: #efefef;
+}
+#form_samsung .footer-newsletter__btn {
+    border-radius: 5px;
+    box-shadow: 0px 4px 21px 0px #ff551e;
+    background: #ff551e;
+}
+#form_samsung .footer-newsletter__btn:hover {
+    box-shadow: 0px 0px 0px 0px #ff551e;
+    background: #ff551e;
+}
+/*
+https://cdn.comfy.ua/media/x/img/1316x730_300bg.png
+*/
+#form_samsung {
+    background-image: url(https://cdn.comfy.ua/media/x/img/1316x730_300.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 620px;
+    max-width: 1316px;
+    margin: 0 auto;
+    /*height: auto;*/
+}
+#form_samsung .content img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+#form_samsung .content {
+    float: right;
+    display: inline-block;  
+    margin: 3rem 0rem 0 0;
+}
+#form_samsung .cityHide {
+    display: none;
+}
+#form_samsung .text h2 {
+    color: #fff;
+    line-height: 1 !important;
+   /* text-transform: uppercase;*/
+   margin-bottom: 0.5em;
+    font-weight: 700;
+   /* font: 7.4rem PTSans,sans-serif;*/
+}
+#form_samsung .text p {
+    color: #fff;
+    font-weight: 700;
+    margin: 6% 0 9% 0;
+   /* font: 3.3rem PTSans,sans-serif;*/
+    text-align: center;
+}
+#form_samsung input {
+    text-align: center;
+}
+
+#form_samsung .popup .cms-content {
+    text-align: left;
+}
+
+#form_samsung .popup .cms-content a{
+    color: #73c76c;
+    font-weight: 500;
+    font-size: 1.7rem;
+    text-decoration: underline;
+}
+#form_samsung .popup .cms-content a:hover { 
+    text-decoration: none;
+}
+
+    /*#form_samsung .linkaction a:hover { 
+        text-decoration: none;
+        }*/
+
+        #form_samsung .phone img{
+            display: none;
+            margin: 0 auto;
+            max-width: 400px;
+            width: 100%;
+        }
+
+
+
+        /*********************************************************/
+
+        /* Базовые стили модального окна  */
+        #form_samsung .popup a{
+            color: #73c76c;
+        }
+        #form_samsung .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            bottom: 0;
+            cursor: default;
+            left: 0;
+            opacity: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            visibility: hidden;
+            z-index: 1;
+            -webkit-transition: opacity .5s;
+            -moz-transition: opacity .5s;
+            -ms-transition: opacity .5s;
+            -o-transition: opacity .5s;
+            transition: opacity .5s;
+        }
+        #form_samsung .overlay:target {
+            visibility: visible;
+            opacity: 1;
+        }
+        #form_samsung .popup {
+            background-color: #fff;
+            display: inline-block;
+            left: 35%;
+            width: 50%;
+            opacity: 0;
+            padding: 5px;
+            position: absolute;
+            top: 25%;
+            visibility: hidden;
+            z-index: 10;
+            -webkit-transform: translate(-17%, -17%);
+            -moz-transform: translate(-17%, -17%);
+            -ms-transform: translate(-17%, -17%);
+            -o-transform: translate(-17%, -17%);
+            transform: translate(-17%, -17%);
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+
+            border-radius: 10px;
+
+            -webkit-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+            -moz-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+            -ms-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+            -o-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+            box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+
+            -webkit-transition: opacity .5s, top .5s;
+            -moz-transition: opacity .5s, top .5s;
+            -ms-transition: opacity .5s, top .5s;
+            -o-transition: opacity .5s, top .5s;
+            transition: opacity .5s, top .5s;
+        }
+        #form_samsung .overlay:target+.popup {
+            top: 25%;
+            opacity: 1;
+            visibility: visible;
+        }
+        #form_samsung .close {
+            background-color: rgba(0, 0, 0, 0.8);
+            height: 30px;
+            line-height: 30px;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            text-decoration: none;
+            top: -15px;
+            width: 30px;
+
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            -ms-border-radius: 15px;
+            -o-border-radius: 15px;
+            border-radius: 15px;
+        }
+        #form_samsung .close:before {
+            color: rgba(255, 255, 255, 0.9);
+            content: "x";
+            font-size: 24px;
+            text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+        }
+        #form_samsung .close:hover {
+            background-color: rgba(64, 128, 128, 0.8);
+        }
+        #form_samsung .popup p, .popup div {
+            /* padding: 0px 5px 0px 5px;*/
+        }
+
+        #form_samsung .cms-content ul {
+            margin-bottom: 0px;
+        }
+        #win_pop {
+            color: white;
+            font-size: 1.7rem;
+            text-decoration: underline;
+        }
+        #win_pop:hover{
+            text-decoration: none;
+        }
+
+
+        .form .mob{display: none;}
+        .form .desk{display: block;}
+        /*********************************************************/
+
+            @media screen and (min-width: 320px) and (max-width: 480px) {
+
+                #form_samsung .linkaction {
+                    position: relative;
+                    float: right;
+                }
+                #form_samsung .text h2 {
+                    font: 3.2em PTSans,sans-serif;
+                }
+                #form_samsung .text p {
+                    font: 2em PTSans,sans-serif;
+                }
+                .daruem{    
+                   /* font-size: 75px !important;
+                    font-weight: bold !important;*/
+                }
+                .form {
+                    display: inline-block;
+                    width: 100%;
+                    top: 0;
+                }
+                .form .mob{display: block; width: 90%; margin: 0 auto;}
+                .form .desk{display: none;}
+
+
+                #form_samsung .linkaction {
+                    float: none;
+                }
+                #form_samsung .popup a {
+                    /*text-align: left;*/
+                }
+                #form_samsung .popup {
+                    left: 56%;
+                    position: fixed;
+                }
+                #form_samsung .linkaction a{
+                    text-align: center;
+                    margin: 0 auto;
+                    display: block; 
+                }
+                #form_samsung {
+                    width: inherit;
+                    background-image: url(https://cdn.comfy.ua/media/x/img/form/bg.jpg);
+                    height: auto; 
+                }
+
+                #form_samsung .text p {
+                    text-align: center;
+                    font: 2.3rem PTSans,sans-serif;
+                }
+                #form_samsung .content {
+                    float: initial;
+                    display: block;
+                    margin: 0 auto;
+                    width: 100%;
+                    height: 630px;
+                }
+                #form_samsung .footer-newsletter__item {
+                    width: 100%;
+                }
+
+                #form_samsung .phone img {
+                    display: block;
+                }
+            }
+            @media screen and (min-width: 481px) and (max-width: 768px) {
+                #form_samsung .popup {
+                    position: fixed;
+                }
+                #form_samsung .linkaction {
+                    position: relative;
+                    float: right;
+                    top: 35px;
+                }
+                #form_samsung .content {
+                    width: 90%;
+                    float: inherit;
+                    margin: 0 auto;
+                    display: block;
+                }
+                #form_samsung .text h2 {
+                    font: 3em PTSans,sans-serif;
+                    padding-top: 15px;
+                }
+                #form_samsung .text p {
+                    font: 2em PTSans,sans-serif;
+                }
+                #form_samsung {
+                    width: auto;
+                }
+                #form_samsung .popup {
+                    left: 55%;
+                }
+                #form_samsung .overlay:target+.popup {
+                    top: 25%;
+                }
+                .form iframe {
+                    height: 200px;
+                }
+                #form_samsung{
+                    height: 570px;
+                }
+            }
+            @media screen and (min-width: 769px) and (max-width: 1024px) {
+                #form_samsung {
+                    width: auto;
+                    /*background-size: contain;*/
+                }
+                #form_samsung .linkaction {
+                    text-align:right;
+                    margin-right: 10px;
+                }
+                #form_samsung .content {
+                    width: 70%;
+
+                }
+                #form_samsung .popup {
+                    left: 48%;
+                }
+                #form_samsung .overlay:target+.popup {
+                    top: 18%;
+                }
+                #form_samsung .text h2 {
+                    font: 4em PTSans,sans-serif;
+                }
+                #form_samsung .text p {
+                    font: 2em PTSans,sans-serif;
+                }
+            }
+
+
+            @media screen and (min-width: 1025px) {
+                 #form_samsung {
+                    max-width: 1316px;
+                }
+                #form_samsung .linkaction {
+                    text-align:right;
+                    margin-right: 10px;
+                }
+                #form_samsung .content {
+                    width: 46%;
+
+                }
+                #form_samsung .popup {
+                    left: 34%;
+                }
+                #form_samsung .overlay:target+.popup {
+                    top: 25%;
+                }
+                #form_samsung .text h2 {
+                    font: 5em PTSans,sans-serif;
+                }
+                #form_samsung .text p {
+                    font: 2.5em PTSans,sans-serif;
+                    margin: 1% 0 5% 0;
+                }
+                #form_samsung .form {
+                    height: 70px;
+                    margin-top: 6em;
+                }
+            }
+            .email.valid {
+                background-color: #52944d9c !important;
+            }
+            .firstname {
+                background-color: #52944d9c !important;
+            }
+                
+        </style>
+<div id="form_samsung">
+<div class="content">
+<div class="text">
+<h2 class="daruem">Даруємо 300 грн<br />за Email</h2>
+<p>Залишай свій email та отримуй 300 грн на покупку смартфона, навушників або портативної акустики</p>
+</div>
+<div class="form">
+<div class="desk"><iframe src="https://secure.esputnik.com.ua/FHeqQ66Oes" style="width: 100%; border: 0px;"></iframe></div>
+<div class="mob"><iframe src="https://secure.esputnik.com.ua/2WQOH0mIems" style="width: 100%; border: 0px; height: 250px;"></iframe></div>
+</div>
+<div class="linkaction"><a href="#win1" id="win_pop">Детальні умови акції</a> <a href="#x" class="overlay" id="win1"></a>
+<div class="popup">
+<div class="cms-content">
+<h2>Правила акції «300 грн за Email»</h2>
+<p>В період проведення акції, кожен користувач сайту, який залишив свій email, на акційній сторінці: <b style="color: #64b45d;">comfy.ua/smart2018.html</b> отримує промокод на знижку 300 гривень або 200 гривень, для покупки смартфона, акустики, навушників або ігрової гарнітури в інтернет-магазині comfy.ua.</p>
+<p>Знижка в розмірі 300 гривень, діє при покупці акустики, навушників або ігрової гарнітури від 4 000 гривень.</p>
+<p>Знижка в розмірі 200 гривень, діє при покупці навушників, ігрової гарнітури або акустики, вартістю від 2 000 грн до 3 999 гривень.</p>
+<p>Знижка 200 гривень надається на покупку будь-якого смартфона від 4 000 гривень.</p>
+<br /><b>Механіка акції наступна:</b> 
+<ul>
+<li>1. На акційній сторінці <b style="color: #64b45d;">comfy.ua/smart2018.html</b> у формі для заповнення електронної адреси, користувач залишає свій email, на який йому буде надісланий промокод на знижку.</li>
+<li>2. Перед оформленням замовлення, користувачеві необхідно авторизуватися на сайті comfy.ua, натиснувши на кнопку «Вхід».</li>
+<li>3. Зареєстрований користувач додає в кошик смартфон, акустику, навушники або ігрову гарнітуру і, в формі для оформлення замовлення, вводить промокод на знижку.</li>
+<li>4. Знижка працює одноразово. В одному замовленні може бути не більше 4-х одиниць акційного товару.</li>
+<li>5. Акція несумісна з іншими акціями, що проходять в інтернет-магазині і в магазинах роздрібної мережі.</li>
+<li>6. Данна акція діє тільки за готівковий розрахунок та при оплаті банківською карткою. Не сумісна з оплатою в кредит та оплатою частинами.</li>
+<li>7. Приймаючи умови акції, учасник автоматично дає згоду на отримання email-розсилки.</li>
+</ul>
+<br />
+<p>Акція діє до 30.04 включно* в інтернет-магазині comfy.ua</p>
+<i>* Організатор акції залишає за собою право змінювати умови або термін проведення акції.</i></div>
+<a class="close" href="#close"></a></div>
+</div>
+</div>
+<!--
+<div class="phone"><img src="https://cdn.comfy.ua/media/x/img/form/phone.png" _mce_src="https://cdn.comfy.ua/media/x/img/form/phone.png" /></div>
+--></div>

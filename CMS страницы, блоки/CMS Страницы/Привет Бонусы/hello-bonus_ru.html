@@ -1,0 +1,755 @@
+<script></script>
+<script type="text/javascript" language="JavaScript">// <![CDATA[
+function getCookie(name) {
+  var matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+var city = getCookie('active_city_id');
+var priceUrl = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id='+city+'&ids=332643, 161513, 322903, 55799, 65548, 6561, 80210, 245043, 51600'
+$.ajax({ url: priceUrl,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+
+                    //var pr1 = resp['332643']['price'];
+                    var pr1_ = resp['332643']['special_price'];
+                    //var pr2 = resp['161513']['price'];
+                    var pr2_ = resp['161513']['special_price'];
+                    //var pr3 = resp['322903']['price'];
+                    var pr3_ = resp['322903']['special_price'];
+
+                    //var pr4 = resp['55799']['price'];
+                    var pr4_ = resp['55799']['special_price'];
+                    //var pr5 = resp['65548']['price'];
+                    var pr5_ = resp['65548']['special_price'];
+                    //var pr6 = resp['6561']['price'];
+                    var pr6_ = resp['6561']['special_price'];
+
+                    var pr7_ = resp['80210']['special_price'];
+                    var pr8_ = resp['245043']['special_price'];
+                    var pr9_ = resp['51600']['special_price'];
+
+
+                    //document.getElementById("price1").innerHTML = pr1;
+                    document.getElementById("price1_").innerHTML = pr1_;
+                    //document.getElementById("price2").innerHTML = pr2;
+                    document.getElementById("price2_").innerHTML = pr2_;
+                    //document.getElementById("price3").innerHTML = pr3;
+                    document.getElementById("price3_").innerHTML = pr3_;
+
+                    //document.getElementById("price4").innerHTML = pr4;
+                    document.getElementById("price4_").innerHTML = pr4_;
+                    //document.getElementById("price5").innerHTML = pr5;
+                    document.getElementById("price5_").innerHTML = pr5_;
+                    //document.getElementById("price6").innerHTML = pr6;
+                    document.getElementById("price6_").innerHTML = pr6_;
+
+                    document.getElementById("price7_").innerHTML = pr7_;
+                    document.getElementById("price8_").innerHTML = pr8_;
+                    document.getElementById("price9_").innerHTML = pr9_;
+
+                  }
+});
+// ]]></script>
+<style type="text/css">
+.page{
+    background-color: #fff
+}
+.all-bl{
+    padding-top: 20px !important;
+}
+.breadcrumbs{
+    display: none;
+}
+.all-bl{
+    max-width: 1316px; 
+    margin: 0 auto;
+    display: block;
+}
+.block-banner img{
+    width: 100%;
+}
+
+.block-banner{
+    position: relative;
+}
+
+.block-banner p{
+    position: absolute;
+    bottom: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    left: 20px;
+}
+
+.block-banner svg{
+    position: absolute;
+    bottom: 0px;
+}
+.tovar-bl{
+    width: 400px;
+    min-height: 400px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    float: left;
+    margin-top: 50px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-left: 60px;
+    padding: 20px 20px 70px 20px;
+    position:relative;
+}
+
+.tovary-bl{ 
+    display: flex;
+}
+
+.tovar-bl:first-child{
+    margin-left: 0px;
+}
+.tovar-bl img{
+    max-height: 290px;
+    margin: 0 auto;
+    display: block;
+}
+
+.tovar-bl p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    height: 85px;
+    padding: 20px 0px;
+}
+
+.cena-bl{
+    width: 45%;
+    position: relative;
+
+        display: inline-block;
+        margin-top: 50px;
+}
+.cena{
+    font-weight: bold;
+    font-size: 28px;
+    position: absolute;
+    right: 27px;
+
+}
+.price-currency{
+    top: 1px;
+    right: 4px;
+}
+
+
+.buy-btn-bl{
+    position: absolute;
+    right: 8%;
+    color: #fff;
+    background-color: #FF671F;
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.btn-all{
+    color: #fff;
+    background-color: #FF671F;
+    border-radius: 25px;
+    padding: 10px 50px;
+    font-size: 23px;
+    font-weight: bold;
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.oldpp{ 
+    color: #797979;
+    position: relative;
+    top: -5px;
+    right: 0px;
+}
+
+.newp{
+    position: absolute;
+    top: 19px;
+    right: 0px;
+}
+
+.oldpp:after{
+    content: "";
+    position: absolute;
+    top: 14px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0px;
+    height: 0.1rem;
+    background: #ff090b;
+    width: 54%;
+}
+
+.oldpp .cena{
+    font-size: 23px;
+}
+.oldpp ..price-currency{
+    font-size: 11px;
+
+}
+
+.oldpp .price-currency:after{
+    background: #797979;
+}
+
+.cat-on{
+    width: 300px;
+    height: 350px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.11);
+    float: left;
+    margin-top: 50px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-left: 38px;
+    padding: 20px 20px 70px 20px;
+    position:relative;
+
+}
+
+.cat-on svg{
+    position: absolute;
+    left: 0px;
+    bottom: 0px
+}
+
+.image-on{
+    height: 260px;
+    width: 300px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 25px;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+.image-on.on1{
+        background: url(https://cdn.comfy.ua/media/blb/luchshie-planshety-2016-goda_rect_e8466bc88347a41dba80306509bffea3.jpg);
+}
+
+.image-on.on2{
+    background: url(https://cdn.comfy.ua/media/blb/printer_2.jpg);
+}
+
+.image-on.on3{
+    background: url(https://cdn.comfy.ua/media/blb/samsung-curved-monitor.jpg);
+}
+
+.image-on.on4{
+    background: url(https://cdn.comfy.ua/media/blb/best-router-2016-s.jpg);
+}
+
+.image-on.on5{
+    background: url(https://cdn.comfy.ua/media/blb/Windows-10.png);
+}
+
+.image-on.on6{
+    background: url(https://cdn.comfy.ua/media/blb/Razer-Mamba-TE-right-side.jpg);
+}
+
+.image-on.on7{
+    background: url(https://cdn.comfy.ua/media/blb/logitech_craft_keyboard_hero-100734254-large.jpg);
+}
+
+.image-on.on8{ 
+    background: url(https://cdn.comfy.ua/media/blb/naush.png);
+}
+
+.all-cat-on a:nth-child(1) .cat-on, .all-cat-on a:nth-child(5) .cat-on{
+    margin-left: 0px;
+}
+
+.cat-on p{
+    position: absolute;
+    bottom: 35px;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    left: 0px;
+}
+
+.all-cat-on{
+    display: inline-block;
+    margin-bottom: 50px;
+
+}
+
+.title-gray{
+    font-size: 30px;
+}
+
+.title-gray__i::before, .title-gray__i::after{
+        background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18.335 30.5' fill='%23a7a7a7'%3E%3Cpath d='M17.938 20.73a.5.5 0 0 0-.707 0l-7.563 7.563V.917a.5.5 0 0 0-1 0V28.46l-7.563-7.563a.5.5 0 0 0-.707.707l8.333 8.333a.498.498 0 0 0 .354.146c.014 0 .028-.007.042-.008.014.001.026.008.041.008a.495.495 0 0 0 .469-.345l8.301-8.301a.5.5 0 0 0 0-.707z'/%3E%3C/svg%3E") no-repeat 50%
+}
+
+
+.tovar-bl p:hover{
+    text-decoration: underline;
+}
+
+.buy-btn-bl:hover { 
+    background-color: #e25c1d;
+}
+
+.btn-all:hover { 
+    background-color: #e25c1d;
+}
+
+.cat-on:hover{
+    -webkit-box-shadow: 0 0 20px 6px rgba(0,0,0,.11);
+    -moz-box-shadow: 0 0 20px 6px rgba(0,0,0,.11);
+    box-shadow: 0 0 4px 1px rgba(0,0,0,.11);
+}
+
+.all-video{
+    max-width: 1316px;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+.video-bl{
+    width: 33%;
+    margin-left: 3%;
+    float: left;
+}
+
+.video-bl:nth-child(1){
+    margin-left: 0%;
+}
+
+.newp.np{
+    top: 6px;
+}
+
+.all-news{
+    max-width: 1316px;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+.all-news a{
+    width: 33%;
+    margin-left: 3%;
+    float: left;
+}
+
+
+.all-news a:hover img{
+    opacity: 0.7;
+}
+.all-news a:hover p{
+    text-decoration: none;
+}
+
+.all-news a p{
+    font-size: 17px;
+    text-decoration: underline;
+    margin-top: 10px;
+    color: #39a520;
+}
+
+.all-news a .video-bl{
+    width: 100%
+}
+
+.all-news a:nth-child(1){
+    margin-left: 0%;
+}
+
+@media (max-width: 767px){
+.block-banner svg{
+    width: 100%;
+    bottom: 2px;
+    height: 24px;
+    position: absolute;
+}
+
+.block-banner p{
+    bottom: -25px;
+    font-size: 25px;
+}
+
+.tovary-bl{
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.tovar-bl{
+    width: 80%;
+    margin: 0 auto;
+    float: none;
+    margin-top: 50px;
+}
+
+.btn-all{
+    display: block;
+    width: 80%;
+    margin-top: 35px;
+    font-size: 16px;
+}
+
+.cena-bl{
+    width: 40%;
+}
+
+.tovar-bl p{
+    font-size: 16px;
+}
+
+.tovar-bl img{
+    max-height: 200px;
+}
+
+.buy-btn-bl{
+    font-size: 17px;
+}
+
+
+.oldpp .cena{
+    font-size: 21px;
+}
+
+.cena{
+    font-size: 26px;
+}
+
+.newp{
+    top: 17px;
+}
+.oldpp:after{
+    width: 80%;
+}
+
+.cat-on{
+    width: 80%;
+    float: none;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.all-cat-on{
+    width: 100%;
+    text-align: center;
+}
+.all-video{
+    display: block;
+    text-align: center;
+}
+
+.video-bl{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    float: none;
+}
+
+.video-bl:nth-child(1){
+    margin-left: auto;
+}
+
+.all-news{
+    width: 85%;
+    display: block;
+}
+
+.all-news a{
+    width: 100%;
+    margin-left: 0%;
+    float: none;
+}
+
+
+}
+/* ********BONUS******** */
+.my_bonus{
+       position: relative;
+    top: .4rem;
+    display: inline-block;
+    vertical-align: middle;
+    /*margin-left: 2%;*/
+        margin-right: 3.6%;
+    padding-bottom: 1.1rem;
+    padding-left: 4.2rem;
+    cursor: pointer;
+        float: right;
+}
+
+.my_bonus:before{
+    content: "";
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    margin-top: -.6rem;
+    background: url("data:image/svg+xml;charset=utf-8,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 112.5 82.75' width='30' height='30'&gt;&lt;path fill='%23FDAE55' d='M2.692 26.296L56.417 79.75 31.405 26.296z'/&gt;&lt;path fill='%23F76619' d='M31.405 26.296L56.417 79.75 81.88 26.296z'/&gt;&lt;path fill='%23F65708' d='M87.929 2.729H56.417L81.88 26.296z'/&gt;&lt;path fill='%23F97400' d='M56.417 2.729H24.904l6.501 23.567z'/&gt;&lt;path fill='%23FFF9C8' d='M24.904 2.729L2.692 26.296h28.713z'/&gt;&lt;path fill='%23FEB563' d='M81.88 26.296h28.262L87.929 2.729z'/&gt;&lt;path fill='%23EF9E4A' d='M81.88 26.296L56.417 2.729 31.405 26.296z'/&gt;&lt;path fill='%23CC4906' d='M81.88 26.296L56.417 79.75l53.725-53.454z'/&gt;&lt;g fill='%23FFF'&gt;&lt;path d='M45.131 59.056c-.338.873-.896 1.28-1.753 1.28-.648 0-1.124-.193-1.455-.591-.343-.412-.517-1.038-.517-1.862 0-.809.168-1.42.5-1.817.319-.383.788-.568 1.432-.568.425 0 .78.097 1.085.294.292.189.481.436.58.752l.108.346 2.203-.602-.123-.374c-.264-.81-.734-1.435-1.396-1.858-.649-.413-1.487-.622-2.491-.622-1.385 0-2.463.394-3.207 1.17-.738.771-1.113 1.876-1.113 3.28 0 1.4.387 2.515 1.15 3.312.767.8 1.858 1.206 3.243 1.206.914 0 1.713-.209 2.377-.62.672-.417 1.187-1.056 1.53-1.897l.145-.356-2.164-.817-.134.344zM50.553 53.552h-2.422v8.735h6.707v-2.042h-4.285zM60.912 58.729c0 .535-.128.943-.381 1.213-.249.266-.609.395-1.104.395-.477 0-.82-.121-1.048-.368-.232-.255-.351-.652-.351-1.183v-5.233h-2.422v5.368c0 1.103.335 1.97.997 2.577.653.6 1.587.903 2.779.903 1.223 0 2.194-.313 2.886-.931.707-.629 1.065-1.516 1.065-2.635v-5.283h-2.422v5.177h.001zM71.739 58.052a2.264 2.264 0 0 0-.621-.426c.121-.093.228-.197.32-.313.304-.378.458-.843.458-1.382 0-.79-.309-1.397-.916-1.808-.568-.385-1.36-.571-2.421-.571h-4.027v8.735h4.367c1.043 0 1.88-.225 2.487-.667.643-.471.969-1.139.969-1.986 0-.647-.207-1.179-.616-1.582zM69.3 56.597c-.1.077-.319.168-.802.168h-1.544v-1.222h1.532c.466 0 .699.089.812.163.048.032.176.116.176.451.001.275-.099.382-.174.44zm-2.346 2.159h1.745c1.234 0 1.234.524 1.234.748 0 .358-.13.503-.228.58-.123.097-.388.212-.945.212h-1.807l.001-1.54z'/&gt;&lt;/g&gt;&lt;path fill='%23FFF' d='M63.605 38.461c0-1.26-.637-2.344-1.912-3.249-1.273-.906-3.639-1.7-7.093-2.384-5.209-.998-9.164-2.507-11.864-4.53-2.701-2.021-4.051-4.766-4.051-8.232 0-3.65 1.618-6.762 4.853-9.335s7.54-3.86 12.913-3.86c5.62 0 10.124 1.287 13.51 3.86 3.385 2.574 5.01 5.777 4.873 9.611l-.082.236H63.154c0-1.707-.576-3.098-1.727-4.175-1.152-1.077-2.811-1.615-4.977-1.615-1.919 0-3.441.46-4.564 1.379-1.125.919-1.687 2.048-1.687 3.387 0 1.313.583 2.383 1.748 3.21s3.53 1.569 7.093 2.226c5.455 1.051 9.521 2.594 12.193 4.628 2.674 2.035 4.01 4.839 4.01 8.41 0 3.834-1.713 6.972-5.141 9.414s-7.951 3.663-13.57 3.663c-5.922 0-10.604-1.438-14.044-4.313-3.441-2.875-5.079-6.15-4.915-9.827l.083-.236h10.98c.082 2.284.864 3.938 2.344 4.963s3.413 1.536 5.798 1.536c2.221 0 3.914-.427 5.08-1.28 1.165-.854 1.747-2.015 1.747-3.487z'/&gt;&lt;path fill='none' d='M63.605 38.461c0-1.26-.637-2.344-1.912-3.249-1.273-.906-3.639-1.7-7.093-2.384-5.209-.998-9.164-2.507-11.864-4.53-2.701-2.021-4.051-4.766-4.051-8.232 0-3.65 1.618-6.762 4.853-9.335s7.54-3.86 12.913-3.86c5.62 0 10.124 1.287 13.51 3.86 3.385 2.574 5.01 5.777 4.873 9.611l-.082.236H63.154c0-1.707-.576-3.098-1.727-4.175-1.152-1.077-2.811-1.615-4.977-1.615-1.919 0-3.441.46-4.564 1.379-1.125.919-1.687 2.048-1.687 3.387 0 1.313.583 2.383 1.748 3.21s3.53 1.569 7.093 2.226c5.455 1.051 9.521 2.594 12.193 4.628 2.674 2.035 4.01 4.839 4.01 8.41 0 3.834-1.713 6.972-5.141 9.414s-7.951 3.663-13.57 3.663c-5.922 0-10.604-1.438-14.044-4.313-3.441-2.875-5.079-6.15-4.915-9.827l.083-.236h10.98c.082 2.284.864 3.938 2.344 4.963s3.413 1.536 5.798 1.536c2.221 0 3.914-.427 5.08-1.28 1.165-.854 1.747-2.015 1.747-3.487z'/&gt;&lt;/svg&gt;") no-repeat;
+    -webkit-background-size: 3rem 3rem;
+    background-size: 3rem 3rem;
+}
+.my_bonus span {
+    border-bottom: .1rem dotted #ef6437;
+    font-size: 1.4rem;
+    color: #ff671f;
+    font-weight: 700;
+}
+
+
+
+/* ********BONUS END******** */
+
+.glav_text {
+    text-align: center;
+    font-size: 3rem!important;
+    margin: 25px 0 25px 0;
+    font-weight: 700!important;
+    padding-bottom: 25px;
+}
+
+</style>
+<div id="glav">
+<div class="all-bl">
+<div class="logo_dlav"><img src="https://cdn.comfy.ua/media/x/img/Bonus_1316x580_ru.jpg" />
+<p class="glav_text">Самые выгодные предложения для владельцев бонусных карт</p>
+</div>
+<div class="tovary-bl">
+<div class="tovar-bl"><a href="smartfon-samsung-j810-galaxy-j8-2018-black.html"> <img src="https://cdn.comfy.ua/media/x/img/hello_bonus/1.png" />
+<p>Смартфон Samsung J810 Galaxy J8 2018 Black</p>
+</a>
+<div class="my_bonus">
+<div class="bonus__row">Бонус <span>10%</span></div>
+<div class="bonus__row">Вернем <span>820 грн.</span></div>
+</div>
+<div class="cena-bl">
+<div class="newp np">
+<div id="price1_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [332643])" href="#">
+<div class="buy-btn-bl">Купить</div>
+</a></div>
+<div class="tovar-bl"><a href="/noutbuk-hp-15-bw636ur-2wh69ea-black.html"> <img src="https://cdn.comfy.ua/media/x/img/hello_bonus/2.png" />
+<p>Ноутбук HP 15-bw636ur (2WH69EA) Black</p>
+</a>
+<div class="my_bonus">
+<div class="bonus__row">Бонус <span>12%</span></div>
+<div class="bonus__row">Вернем <span>1260 грн.</span></div>
+</div>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price2"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price2_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [161513])" href="#">
+<div class="buy-btn-bl">Купить</div>
+</a></div>
+<div class="tovar-bl"><a href="/noutbuk-igrovoj-acer-nitro-5-an515-42-r705-nh-q3reu-008-black.html"> <img src="https://cdn.comfy.ua/media/x/img/hello_bonus/3.png" />
+<p>Ноутбук игровой Acer Nitro 5 AN515-42-R705 (NH.Q3REU.008) Black</p>
+</a>
+<div class="my_bonus">
+<div class="bonus__row">Бонус <span>5%</span></div>
+<div class="bonus__row">Вернем <span>1175 грн.</span></div>
+</div>
+<div class="cena-bl"><!--
+<div class="oldpp">
+<div class="cena" id="price3"></div>
+<span class="price-currency">грн</span></div>
+-->
+<div class="newp np">
+<div id="price3_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [322903])" href="#">
+<div class="buy-btn-bl">Купить</div>
+</a></div>
+</div>
+<div class="tovary-bl">
+<div class="tovar-bl"><a href="/stiral-naja-mashina-lg-fh0b8nd1.html"> <img src="https://cdn.comfy.ua/media/x/img/hello_bonus/4.png" />
+<p>Стиральная машина LG FH0B8ND1</p>
+</a>
+<div class="my_bonus">
+<div class="bonus__row">Бонус <span>10%</span></div>
+<div class="bonus__row">Вернем <span>1090 грн.</span></div>
+</div>
+<div class="cena-bl">
+<div class="newp np">
+<div id="price4_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [55799])" href="#">
+<div class="buy-btn-bl">Купить</div>
+</a></div>
+<div class="tovar-bl"><a href="/monitor-hp-prodisplay-p240va-n3h14aa.html"> <img src="https://cdn.comfy.ua/media/x/img/hello_bonus/5.png" />
+<p>Монитор HP ProDisplay P240va (N3H14AA)</p>
+</a>
+<div class="my_bonus">
+<div class="bonus__row">Бонус <span>15%</span></div>
+<div class="bonus__row">Вернем <span>871 грн.</span></div>
+</div>
+<div class="cena-bl">
+<div class="newp np">
+<div id="price5_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [65548])" href="#">
+<div class="buy-btn-bl">Купить</div>
+</a></div>
+<div class="tovar-bl"><a href="/vodonagrevatel-nakopitel-nyj-ariston-blu-r-80v.html"> <img src="https://cdn.comfy.ua/media/x/img/hello_bonus/6.png" />
+<p>Водонагреватель Ariston BLU R 80 V</p>
+</a>
+<div class="my_bonus">
+<div class="bonus__row">Бонус <span>10%</span></div>
+<div class="bonus__row">Вернем <span>324 грн.</span></div>
+</div>
+<div class="cena-bl">
+<div class="newp np">
+<div id="price6_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [6561])" href="#">
+<div class="buy-btn-bl">Купить</div>
+</a></div>
+</div>
+<div class="tovary-bl">
+<div class="tovar-bl"><a href="/sistemnyj-blok-impression-ultimate-vr-i0117.html"> <img src="https://cdn.comfy.ua/media/x/img/1ipmpc.png" />
+<p>Системный блок IMPRESSION ULTIMATE VR I0117</p>
+</a>
+<div class="my_bonus">
+<div class="bonus__row">Бонус <span>15%</span></div>
+<div class="bonus__row">Вернем <span>7500 грн.</span></div>
+</div>
+<div class="cena-bl">
+<div class="newp np">
+<div id="price7_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [80210])" href="#">
+<div class="buy-btn-bl">Купить</div>
+</a></div>
+<div class="tovar-bl"><a href="/mfu-cvetnoj-pechati-hp-ink-tank-415-s-wi-fi-z4b53a.html"> <img src="https://cdn.comfy.ua/media/x/img/2printer.png" />
+<p>МФУ цветной печати HP Ink Tank 415 с Wi-Fi (Z4B53A)</p>
+</a>
+<div class="my_bonus">
+<div class="bonus__row">Бонус <span>10%</span></div>
+<div class="bonus__row">Вернем <span>520 грн.</span></div>
+</div>
+<div class="cena-bl">
+<div class="newp np">
+<div id="price8_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [245043])" href="#">
+<div class="buy-btn-bl">Купить</div>
+</a></div>
+<div class="tovar-bl"><a href="/printer-dlja-cvetnoj-pechati-epson-l805-c-wi-fi.html"> <img src="https://cdn.comfy.ua/media/x/img/3printer.png" />
+<p>Принтер для цветной печати Epson L805 (C11CE86403) c WI-FI</p>
+</a>
+<div class="my_bonus">
+<div class="bonus__row">Бонус <span>10%</span></div>
+<div class="bonus__row">Вернем <span>729 грн.</span></div>
+</div>
+<div class="cena-bl">
+<div class="newp np">
+<div id="price9_" class="cena"></div>
+<span class="price-currency">грн</span></div>
+</div>
+<a onclick="$(document).triggerHandler('cart:add', [51600])" href="#">
+<div class="buy-btn-bl">Купить</div>
+</a></div>
+</div>
+<a href="/bonus/label_actions__2/">
+<div class="btn-all">Еще больше товаров</div>
+</a>
+<style type="text/css">
+    .text_h2 {
+        text-align: center;
+        font-size: 3rem !important;
+        margin: 25px 0 25px 0;
+        font-weight: 700 !important;
+        padding-bottom: 25px;
+    }
+    .text_content{
+        margin: 0px 30px 0 30px;
+    }
+    .text_content .cms-content {
+        padding: 2.8rem 0 1.8% 2.8rem !important;
+    }
+    .text_content .cms-content ul {
+        margin-bottom: 0px !important;
+    }
+    .text_content .cms-content li {
+        list-style-type: decimal !important;
+    }
+    .text_content .cms-content ul &gt;li:before{
+        content: initial !important;
+    }
+    .text_content p, b, li {
+        font-size: 1.6rem;
+    }
+    #glav .text_content a {
+        cursor: pointer;
+        color: #379424;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    #glav .text_content a:hover {
+        text-decoration: underline;
+    }
+    }
+    .size_cnt {
+        display: block !important;
+        margin-top: 20px !important;
+        font-weight: 700 !important;
+    }
+</style>
+<div class="text_content">
+<p class="text_h2">Стань участником клуба «Sуперпокупателей» сети COMFY</p>
+<p>Программа позволяет участникам клуба накапливать бонусы за каждую покупку в магазине или на сайте <a class="link_cont" href="https://comfy.ua/">https://comfy.ua/</a> и использовать их при оплате новых покупок, а также получать дополнительные привилегии (бонусы за покупку акционных товаров, индивидуальные предложения, приглашения на специальные мероприятия и т.д.).</p>
+<p class="size_cnt">Как это работает:</p>
+<div class="cms-content">
+<ul>
+<li>За каждую покупку в магазине розничной сети или в интернет-магазине <a class="link_cont" href="https://comfy.ua/">https://comfy.ua/</a> на ваш бонусный счет зачисляется 1% от суммы покупки  согласно <a href="https://cdn.comfy.ua/media/x/pdf/000258_05_00_18_.pdf">Правилам клуба</a></li>
+<li>Списывать накопленные бонусы на новые покупки можно в розничных магазинах COMFY и при оформлении интернет-заказа на сайте <a class="link_cont" href="https://comfy.ua/">https://comfy.ua/</a>. Оплатить бонусами можно до 100% стоимости вашей покупки.</li>
+<li>На ряд специальных предложений начисляются акционные бонусы (до 25% от стоимости), такие товары отмечены специальными ценниками (пиктограммами) в магазинах и на сайте.             <br /><img src="https://cdn.comfy.ua/media/x/img/vernem.png" /> </li>
+<li>Начисленные бонусы доступны к использованию уже через 14 дней после начисления и только при условии, если ваша бонусная карта активна.</li>
+</ul>
+</div>
+<b class="size_cnt">В сети Comfy работают два вида бонусных карт:</b>
+<div class="cms-content">
+<ul>
+<li><b>Электронная бонусная карта</b> - оформляется оператором контакт центра при подтверждении интернет-заказа, оформленного на сайте <a href="https://comfy.ua/">https://comfy.ua/</a></li>
+<li><b>Пластиковая бонусная карта</b> - оформляется в магазинах сети при оплате товара на кассе.</li>
+</ul>
+<p>Срок действия бонусов – 1 год с момента начисления. Когда срок действия бонусов будет истекать, мы пришлем смс-напоминание.</p>
+</div>
+<p class="text_h2">Добро пожаловать в клуб «Sуперпокупателей»!</p>
+</div>
+</div>
+</div>

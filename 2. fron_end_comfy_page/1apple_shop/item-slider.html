@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<body>
+	
+	<div class="labell">
+
+		<input type="radio" id="r1" name="myRadios" checked="checked" onchange="handleChange(event);" onmousedown="handleMouse(event)" value="1" />
+		<label for="r1"><span></span></label>
+
+		<input type="radio" id="r2" name="myRadios" onchange="handleChange(event);" onmousedown="handleMouse(event)" value="2" />
+		<label for="r2"><span></span></label>
+
+		<input type="radio" id="r3" name="myRadios" onchange="handleChange(event);" onmousedown="handleMouse(event)" value="3" />
+		<label for="r3"><span></span></label>
+
+		<input type="radio" id="r4" name="myRadios" onchange="handleChange(event);" onmousedown="handleMouse(event)" value="4" />
+		<label for="r4"><span></span></label>
+
+		<input type="radio" id="r5" name="myRadios" onchange="handleChange(event);" onmousedown="handleMouse(event)" value="5" />
+		<label for="r5"><span></span></label>
+
+		<input type="radio" id="r6" name="myRadios" onchange="handleChange(event);" onmousedown="handleMouse(event)" value="6" />
+		<label for="r6"><span></span></label>
+
+		
+	</div>
+
+	<div id="block_iphone_1">
+		<div class="none_item_bl">
+			<img id='iphone_item_grey1_1'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_purpule_bl_2.png' />
+			<img id='iphone_item_yellow2_1'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_yellow_bl_2.png' />
+			<img id='iphone_item_green3_1'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_green_bl_2.png' />
+			<img id='iphone_item_bleck4_1'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_bleck_bl_2.png' />
+			<img id='iphone_item_grey_bl5_1'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_grey_bl_2.png' />
+			<img id='iphone_item_yellow6_1'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_red_bl_2.png' />
+		</div>
+	</div>
+
+	<div id="block_iphone_2">
+		<div class="none_item_bl">
+			<img id='iphone_item_grey1_2'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_purpule_bl_1.png' />
+			<img id='iphone_item_yellow2_2'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_yellow_bl_1.png' />
+			<img id='iphone_item_green3_2'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_green_bl_1.png' />
+			<img id='iphone_item_bleck4_2'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_bleck_bl_1.png' />
+			<img id='iphone_item_grey_bl5_2'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_grey_bl_1.png' />
+			<img id='iphone_item_yellow6_2'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_red_bl_1.png' />
+
+		</div>
+	</div>
+
+	<div id="block_iphone_3">
+		<div class="none_item_bl">
+			<img id='iphone_item_grey1_3'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_purpule_bl_3.png' />
+			<img id='iphone_item_yellow2_3'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_yellow_bl_3.png' />
+			<img id='iphone_item_green3_3'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_green_bl_3.png' />
+			<img id='iphone_item_bleck4_3'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_bleck_bl_3.png' />
+			<img id='iphone_item_grey_bl5_3'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_grey_bl_3.png' />
+			<img id='iphone_item_yellow6_3'  src='https://cdn.comfy.ua/media/x/img/appleshop_img/iphone_item_red_bl_3.png' />
+
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		
+		handleChange = function(e){
+
+			console.log("checked value " + e.currentTarget.value);
+
+			if (e.currentTarget.value == 1) {
+
+				document.getElementById('iphone_item_grey1_1').style.display = 'block';
+				document.getElementById('iphone_item_grey1_2').style.display = 'block';
+				document.getElementById('iphone_item_grey1_3').style.display = 'block';
+
+				document.getElementById('iphone_item_yellow2_1').style.display = 'none';
+				document.getElementById('iphone_item_yellow2_2').style.display = 'none';
+				document.getElementById('iphone_item_yellow2_3').style.display = 'none';
+
+				document.getElementById('iphone_item_green3_1').style.display = 'none';
+				document.getElementById('iphone_item_green3_2').style.display = 'none';
+				document.getElementById('iphone_item_green3_3').style.display = 'none';
+
+				document.getElementById('iphone_item_bleck4_1').style.display = 'none';
+				document.getElementById('iphone_item_bleck4_2').style.display = 'none';
+				document.getElementById('iphone_item_bleck4_3').style.display = 'none';
+
+				document.getElementById('iphone_item_grey_bl5_1').style.display = 'none';
+				document.getElementById('iphone_item_grey_bl5_2').style.display = 'none';
+				document.getElementById('iphone_item_grey_bl5_3').style.display = 'none';
+
+				document.getElementById('iphone_item_yellow6_1').style.display = 'none';
+				document.getElementById('iphone_item_yellow6_2').style.display = 'none';
+				document.getElementById('iphone_item_yellow6_3').style.display = 'none';
+
+			}
+
+			if (e.currentTarget.value == 2) {
+
+				document.getElementById('iphone_item_grey1_1').style.display = 'none';
+				document.getElementById('iphone_item_grey1_2').style.display = 'none';
+				document.getElementById('iphone_item_grey1_3').style.display = 'none';
+
+				document.getElementById('iphone_item_yellow2_1').style.display = 'block';
+				document.getElementById('iphone_item_yellow2_2').style.display = 'block';
+				document.getElementById('iphone_item_yellow2_3').style.display = 'block';
+
+				document.getElementById('iphone_item_green3_1').style.display = 'none';
+				document.getElementById('iphone_item_green3_2').style.display = 'none';
+				document.getElementById('iphone_item_green3_3').style.display = 'none';
+
+				document.getElementById('iphone_item_bleck4_1').style.display = 'none';
+				document.getElementById('iphone_item_bleck4_2').style.display = 'none';
+				document.getElementById('iphone_item_bleck4_3').style.display = 'none';
+
+				document.getElementById('iphone_item_grey_bl5_1').style.display = 'none';
+				document.getElementById('iphone_item_grey_bl5_2').style.display = 'none';
+				document.getElementById('iphone_item_grey_bl5_3').style.display = 'none';
+
+				document.getElementById('iphone_item_yellow6_1').style.display = 'none';
+				document.getElementById('iphone_item_yellow6_2').style.display = 'none';
+				document.getElementById('iphone_item_yellow6_3').style.display = 'none';
+
+			}
+
+			if (e.currentTarget.value == 3) {
+
+				document.getElementById('iphone_item_grey1_1').style.display = 'none';
+				document.getElementById('iphone_item_grey1_2').style.display = 'none';
+				document.getElementById('iphone_item_grey1_3').style.display = 'none';
+
+				document.getElementById('iphone_item_yellow2_1').style.display = 'none';
+				document.getElementById('iphone_item_yellow2_2').style.display = 'none';
+				document.getElementById('iphone_item_yellow2_3').style.display = 'none';
+
+				document.getElementById('iphone_item_green3_1').style.display = 'block';
+				document.getElementById('iphone_item_green3_2').style.display = 'block';
+				document.getElementById('iphone_item_green3_3').style.display = 'block';
+
+				document.getElementById('iphone_item_bleck4_1').style.display = 'none';
+				document.getElementById('iphone_item_bleck4_2').style.display = 'none';
+				document.getElementById('iphone_item_bleck4_3').style.display = 'none';
+
+				document.getElementById('iphone_item_grey_bl5_1').style.display = 'none';
+				document.getElementById('iphone_item_grey_bl5_2').style.display = 'none';
+				document.getElementById('iphone_item_grey_bl5_3').style.display = 'none';
+
+				document.getElementById('iphone_item_yellow6_1').style.display = 'none';
+				document.getElementById('iphone_item_yellow6_2').style.display = 'none';
+				document.getElementById('iphone_item_yellow6_3').style.display = 'none';
+
+			}
+
+			if (e.currentTarget.value == 4) {
+
+				document.getElementById('iphone_item_grey1_1').style.display = 'none';
+				document.getElementById('iphone_item_grey1_2').style.display = 'none';
+				document.getElementById('iphone_item_grey1_3').style.display = 'none';
+
+				document.getElementById('iphone_item_yellow2_1').style.display = 'none';
+				document.getElementById('iphone_item_yellow2_2').style.display = 'none';
+				document.getElementById('iphone_item_yellow2_3').style.display = 'none';
+
+				document.getElementById('iphone_item_green3_1').style.display = 'none';
+				document.getElementById('iphone_item_green3_2').style.display = 'none';
+				document.getElementById('iphone_item_green3_3').style.display = 'none';
+
+				document.getElementById('iphone_item_bleck4_1').style.display = 'block';
+				document.getElementById('iphone_item_bleck4_2').style.display = 'block';
+				document.getElementById('iphone_item_bleck4_3').style.display = 'block';
+
+				document.getElementById('iphone_item_grey_bl5_1').style.display = 'none';
+				document.getElementById('iphone_item_grey_bl5_2').style.display = 'none';
+				document.getElementById('iphone_item_grey_bl5_3').style.display = 'none';
+
+				document.getElementById('iphone_item_yellow6_1').style.display = 'none';
+				document.getElementById('iphone_item_yellow6_2').style.display = 'none';
+				document.getElementById('iphone_item_yellow6_3').style.display = 'none';
+
+			}
+
+			if (e.currentTarget.value == 5) {
+
+				document.getElementById('iphone_item_grey1_1').style.display = 'none';
+				document.getElementById('iphone_item_grey1_2').style.display = 'none';
+				document.getElementById('iphone_item_grey1_3').style.display = 'none';
+
+				document.getElementById('iphone_item_yellow2_1').style.display = 'none';
+				document.getElementById('iphone_item_yellow2_2').style.display = 'none';
+				document.getElementById('iphone_item_yellow2_3').style.display = 'none';
+
+				document.getElementById('iphone_item_green3_1').style.display = 'none';
+				document.getElementById('iphone_item_green3_2').style.display = 'none';
+				document.getElementById('iphone_item_green3_3').style.display = 'none';
+
+				document.getElementById('iphone_item_bleck4_1').style.display = 'none';
+				document.getElementById('iphone_item_bleck4_2').style.display = 'none';
+				document.getElementById('iphone_item_bleck4_3').style.display = 'none';
+
+				document.getElementById('iphone_item_grey_bl5_1').style.display = 'block';
+				document.getElementById('iphone_item_grey_bl5_2').style.display = 'block';
+				document.getElementById('iphone_item_grey_bl5_3').style.display = 'block';
+
+				document.getElementById('iphone_item_yellow6_1').style.display = 'none';
+				document.getElementById('iphone_item_yellow6_2').style.display = 'none';
+				document.getElementById('iphone_item_yellow6_3').style.display = 'none';
+
+			}
+
+			if (e.currentTarget.value == 6) {
+
+				document.getElementById('iphone_item_grey1_1').style.display = 'none';
+				document.getElementById('iphone_item_grey1_2').style.display = 'none';
+				document.getElementById('iphone_item_grey1_3').style.display = 'none';
+
+				document.getElementById('iphone_item_yellow2_1').style.display = 'none';
+				document.getElementById('iphone_item_yellow2_2').style.display = 'none';
+				document.getElementById('iphone_item_yellow2_3').style.display = 'none';
+
+				document.getElementById('iphone_item_green3_1').style.display = 'none';
+				document.getElementById('iphone_item_green3_2').style.display = 'none';
+				document.getElementById('iphone_item_green3_3').style.display = 'none';
+
+				document.getElementById('iphone_item_bleck4_1').style.display = 'none';
+				document.getElementById('iphone_item_bleck4_2').style.display = 'none';
+				document.getElementById('iphone_item_bleck4_3').style.display = 'none';
+
+				document.getElementById('iphone_item_grey_bl5_1').style.display = 'none';
+				document.getElementById('iphone_item_grey_bl5_2').style.display = 'none';
+				document.getElementById('iphone_item_grey_bl5_3').style.display = 'none';
+
+				document.getElementById('iphone_item_yellow6_1').style.display = 'block';
+				document.getElementById('iphone_item_yellow6_2').style.display = 'block';
+				document.getElementById('iphone_item_yellow6_3').style.display = 'block';
+
+			}
+
+		}
+
+
+		handleMouse = function(e){
+			var radios = document.getElementsByName("myRadios");
+			var val;
+			for(var i = 1; i < radios.length; i++){
+				if(radios[i].checked){
+					val = radios[i].value;
+				} else {
+					return false;
+				}
+			}
+		}
+
+
+	</script>
+
+	<style type="text/css">
+
+	.none_item_bl img:nth-child(n+2):nth-child(-n+6) {
+		display: none;
+	}
+
+	body img {display: block;float: left;}
+
+
+	input[type="radio"] {
+		display:none;
+	}
+
+	input[type="radio"] + label {
+		color:#f2f2f2;
+		font-family:Arial, sans-serif;
+		font-size:14px;
+	}
+
+	.labell input[type="radio"] + label span {
+		display:inline-block;
+		width:32px;
+		height:32px;
+		margin:-1px 4px 0 0;
+		vertical-align:middle;
+		background:url(https://cdn.comfy.ua/media/x/img/iphoneimgchek/1.png);
+		cursor:pointer;
+	}
+
+	.labell input[type="radio"] + label:nth-child(2) span {
+		background: url(https://cdn.comfy.ua/media/x/img/iphoneimgchek/1.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.labell input[type="radio"] + label:nth-child(4) span {
+		background: url(https://cdn.comfy.ua/media/x/img/iphoneimgchek/2.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.labell input[type="radio"] + label:nth-child(6) span {
+		background: url(https://cdn.comfy.ua/media/x/img/iphoneimgchek/3.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.labell input[type="radio"] + label:nth-child(8) span {
+		background: url(https://cdn.comfy.ua/media/x/img/iphoneimgchek/4.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.labell input[type="radio"] + label:nth-child(10) span {
+		background: url(https://cdn.comfy.ua/media/x/img/iphoneimgchek/5.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.labell input[type="radio"] + label:nth-child(12) span {
+		background: url(https://cdn.comfy.ua/media/x/img/iphoneimgchek/6.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	input[type="radio"]:checked + label span {
+		width: 42px;
+		height: 42px;
+		border-radius: 50%;
+		border: 1px solid #000000;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+
+</style>
+
+</body>
+</html>

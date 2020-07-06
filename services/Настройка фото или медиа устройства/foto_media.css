@@ -1,0 +1,260 @@
+        .set-up-wr {
+            max-width: 1316px;
+            margin: 0 auto;
+        }
+        .bg-img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .calibration-block {
+            display: flex;
+            flex-flow: column-reverse;
+            margin-bottom: 25px;
+        }
+        .calibration-block__content {
+            flex: 1 1 100%;
+            padding: 0 15px;
+        }
+        .calibration-list-wr {
+            display: flex;
+            flex-flow: wrap;
+        }
+        .calibration-list-wr__item {
+            flex:1 1 50%;
+        }
+        .calibration-list-wr__txt img {
+            position: absolute;
+            left: 0;
+        }
+        
+        .calibration-block__title {
+            font-weight: 600;
+            font-size: 42px;
+            line-height: 54px;
+            color: #000000;
+            margin: 0;
+            margin-top: 70px;
+        }
+        
+        .calibration-list-wr__txt {
+            position: relative;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 21px;
+            color: #000000;
+            max-width: 300px;
+            padding-left: 45px;
+            margin: 40px 0px;
+        }
+        
+        .calibration-block__img {
+            flex: 1 1 100%;
+            min-height: 300px;
+            background-size: contain;
+        }
+        .feature-block {
+            position: relative;
+            min-height: 490px;
+            margin: 50px 0;
+        }
+        .camera-roll {
+            /* background-image: url(https://comfy.ua/media/set-up-photo/roll.png) */
+        }
+        .camera-roll img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .feature-block__content {
+            position: absolute;
+            left: 0;
+            top: 25%;
+            max-width: 650px;
+            background: #F1F1F1;
+            padding: 65px;
+            color: #000000;
+            box-sizing: border-box;
+            z-index: 2;
+        }
+        .feature-block__title {
+            font-size: 24px;
+        }
+        .feature-block__txt {
+            margin-top: 30px;
+            font-size: 16px;
+        }
+        .feature-block__image {
+            display: none;
+            position: absolute;
+            right: 0;
+            z-index: 1;
+        }
+        .feature-block__image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        /*  consult-block */
+        
+        .consult-block {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            margin: 50px;
+        }
+        .consult-block__images {
+            display: flex;
+            flex-flow: column;
+            flex: 1 1 100%;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            min-height: 465px;
+        }
+        .consult-block__left {
+            flex: 1 1 100%;
+            margin-right: 0px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        .consult-block__left img {
+            width: 100%;
+            height: auto;
+        }
+        .consult-block__right {
+            flex: 1 1 50%;
+            box-sizing: border-box;
+            display: flex;
+            flex-flow: column;
+        }
+        .consult-block__right-item {
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            flex: 1 1 50%;
+        }
+        .consult-block__right-item:nth-child(2) {
+            margin-bottom: 0px;
+        }
+        .consult-block__list {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+        .consult-block__content {
+            padding: 20px 0px;
+        }
+        .consult-block__txt {
+            position: relative;
+            padding-left: 45px;
+            font-style: normal;
+            font-weight: 400;
+            color: #000000;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+        .consult-block__txt::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 25px;
+            height: 20px;
+            background: url(https://comfy.ua/media/set-up-photo/chack.png);
+        }
+        
+        /* how-to */
+        
+        .how-to-block__title {
+            margin: 0;
+            margin-bottom: 55px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 41px;
+            text-align: center;
+            color: #000000;
+        }
+        .steps-wr {
+            display: flex;
+            flex-flow: column;
+        }
+        .steps-item {
+            flex: 1 1 100%;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        
+        .steps-item__txt {
+            max-width: 170px;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+        
+        @media screen and (min-width: 1025px) {
+            .calibration-block {
+                display: flex;
+                flex-flow: row;
+                margin-bottom: 50px;
+            }
+            .calibration-block__content {
+                flex: 1 1 60%;
+                padding: 0;
+            }
+            .calibration-block__img {
+                flex: 1 1 40%
+            }
+        }
+        @media screen and (min-width: 767px) {
+            .consult-block {
+                display: flex;
+                flex-flow: wrap;
+                align-items: center;
+                margin: 180px 0 70px;
+            }
+            .feature-block {
+                margin: 180px 0;
+            }
+            .consult-block__images {
+                display: flex;
+                flex-flow: row;
+                flex: 1 1 60%;
+                max-width: 60%;
+                box-sizing: border-box;
+                min-height: 465px;
+            }
+            .consult-block__left {
+                flex: 1 1 50%;
+                margin-right: 10px;
+                margin-bottom: 0;
+                box-sizing: border-box;
+            }
+            .consult-block__list {
+                flex: 1 1 40%;
+                max-width: 40%;
+            }
+            .feature-block__image {
+                display: block;
+            }
+            .consult-block__content {
+                padding: 50px 50px 50px 73px;
+            }
+            .steps-wr {
+                display: flex;
+                flex-flow: row;
+            }
+            .steps-item {
+                flex: 1 1 33%;
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                justify-content: center;
+            }
+            .steps-item__txt {
+                max-width: 240px;
+            }
+        }

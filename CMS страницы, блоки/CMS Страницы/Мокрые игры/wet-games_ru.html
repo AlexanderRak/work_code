@@ -1,0 +1,107 @@
+<style>
+
+/*popup*/
+
+.overlay1 {
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(0, 0, 0, 0.7);
+transition: opacity 500ms;
+visibility: hidden;
+opacity: 0;
+z-index: 111111;
+}
+.overlay1:target {
+visibility: visible;
+opacity: 1;
+}
+
+.popup1 {
+margin: 70px auto;
+padding: 20px;
+background: #fff;
+border-radius: 5px;
+width: 59%;
+position: relative;
+transition: all 5s ease-in-out;
+}
+
+.popup1 h2 {
+margin-top: 0;
+color: #333;
+font-family: Tahoma, Arial, sans-serif;
+}
+.popup1 .close1 {
+position: absolute;
+top: 0px;
+right: 10px;
+ transition: all 200ms;
+font-size: 30px;
+font-weight: bold;
+text-decoration: none;
+color: #333;
+}
+.popup1 .close1:hover {
+color: #06D85F;
+}
+.popup1 .content1 {
+max-height: 59%;
+overflow: auto;
+margin-top: 10px;
+}
+
+@media screen and (max-width: 700px){
+.popup{width: 70%;}
+.cls{width: 100% !important;}
+.btn{display: none !important;}
+.m .btn{display: block !important;}
+}
+
+
+.cls{width:60%; padding: 20px; display: block; margin: 0 auto;}
+.cls h1{color: #010A27}
+.cls .pdzg1{font-size: 18px; font-weight: 800;}
+.cls p{font-size: 16px; margin-top: 10px;}
+.cls .number{padding: 3px 9px; border-radius: 10px; border-radius: 30px; background-color: #60ae59; color: #fff;}
+.cls .btn{margin-top: 30px; display: block;}
+.m .btn{display: none;}
+
+.crs{width:38%; float: left; display: inline-block; text-align: center;}
+
+.crs .btn{margin-top: 30px;}
+
+.pravila {margin-top: 150px; display: block; cursor: pointer; color: #60ae59; font-weight: 700; }
+
+</style>
+<div style="background-color: #fff; margin-bottom: 20px;" class="narrow-container"><img src="https://cdn.comfy.ua/media/blb/banner_promo/1316x350_wet-games.jpg" style="width: 100%;" />
+<div class="cls">
+<h1>Безумная акция от COMFY!</h1>
+<p class="pdzg1">28го апреля 2017 года – день, когда в Comfy появится новенький <a href="https://comfy.ua/samsung-galaxy-s8/">Samsung Galaxy S8</a>.</p>
+<p>День, когда Samsung Galaxy S8 может появиться у тебя.</p>
+<p>Всего несколько шагов и он у тебя!</p>
+<p><span class="number">1</span> Регистрируйся - до 27го апреля, к 18:00</p>
+<p><span class="number">2</span> Приходи - Крещатик (г. Киев)</p>
+<p><span class="number">3</span> Окунись - 28го апреля в 12:00</p>
+<p><span class="number">4</span> Выиграй свой Samsung Galaxy S8</p>
+<p>Заинтересовался? Надевай купальный костюм, шапочку для душа и жди новости!</p>
+<p class="pdzg1">Конкурс для самых выносливых!</p>
+<p>На площадке под открытым небом будут стоять 12 ванн, наполненные водой комнатной температуры.</p>
+<p>Участники погружаются в ванны с водой в 12:00. Два финалиста, которые успешно выполнят все задания и просидят в ванне до конца соревнований (до 18 часов) выигрывают главный приз. Финалисты могут находиться в разных ваннах.</p>
+<p>Каждый Час проводятся конкурсы от ведущего. На каждом этапе конкурсной программы те, кто проигрывают - выбывают, остальные продолжают соревнование, сидя в воде.</p>
+<p>Особенности:</p>
+<p><span class="number">1</span> В одной ванне не должно быть больше двух участников.</p>
+<p><span class="number">2</span> Меняться местами с другими участниками запрещается.</p>
+<p><span class="number">3</span> Во время акции обязательно надо участвовать во всех конкурсах от ведущего</p>
+<p><span class="number">4</span> Если участник отказывается участвовать в конкурсе от ведущего, он/она автоматически прекращает участие в акции.</p>
+<a href="#popup11" class="btn">Участвовать</a>
+<div class="m"><a href="https://docs.google.com/forms/d/19MlSHOZRv5AV4Iqx2WKGWpL4F0g-7CTQDLOK6I7w2bY" class="btn">Участвовать</a></div>
+<a class="pravila" href="https://cdn.comfy.ua/media/x/img/pdfFile/pravilaIgry.pdf" target="_blank">Правила проведения конкурса «Мокрые Игры»</a></div>
+<div id="popup11" class="overlay1">
+<div class="popup1">
+<h2></h2>
+<a class="close1" href="#">×</a> <br /> <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe3Mdx-qEeUjx6I9431gGQXY3bnZtFlNt3ShD9cVDkalkK4OA/viewform?embedded=true" width="100%" height="500" marginwidth="0" marginheight="0" frameborder="0">Загрузка...</iframe></div>
+</div>
+</div>

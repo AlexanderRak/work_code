@@ -1,0 +1,387 @@
+<style>
+
+.breadcrumbs { display: none !important; }
+
+#container_pay {
+	max-width: 1316px;
+	margin: 0 auto;
+	display: block;
+	background: #fff;
+}
+
+#col_4_content {
+	display: inline-block;
+	width: 100%;
+	margin-top: 90px;
+}
+
+#site_tov {
+	display: inline-block;
+	width: 100%;
+}
+
+#text_service {
+	display: inline-block;
+	width: 100%;
+	margin: 75px 0 75px 0;
+}
+
+#text_service p {
+	font-size: 1.8em;
+	font-weight: 700;
+	text-align: center;
+}
+
+#col_4_content .container1 .col-4 {
+	display: block !important;
+	margin: 0 auto;
+	width: 33.33333%;
+	text-align: center;
+	float: left;
+	padding: 0px 2% 0 2%;
+}
+#col_4_content .container1 .col-4 .row_col img {
+	max-width: 90px;
+	height: auto;
+	width: 100%;
+}
+
+#col_4_content .container1 .col-4 .row_col p {
+	text-align: center;
+	font-size: 18px;
+}
+
+.text1 {
+	margin-bottom: 35px;
+}
+
+/* **********TAB************ */
+
+
+#site_tov .korpus > div, .korpus > input { display: none; }
+
+#site_tov .korpus label { 
+	margin-bottom: 20px;
+	line-height: 28px; 
+	cursor: pointer; 
+	position: relative; 
+
+}
+#site_tov .korpus input[type="radio"]:checked + label { 
+	font-size: 1.7rem;
+	color: #ff671f;
+	text-shadow: 0px 1px 1px rgba(255, 103, 31, 0.66);
+	-webkit-text-shadow: 0px 1px 1px rgba(255, 103, 31, 0.66);
+	-moz-text-shadow: 0px 1px 1px rgba(255, 103, 31, 0.66);
+
+}
+
+#site_tov .korpus > input:nth-of-type(1):checked ~ div:nth-of-type(1),
+#site_tov .korpus > input:nth-of-type(2):checked ~ div:nth-of-type(2) { display: block; padding: 15px; border-top: 3px solid #f2f2f2; }
+
+.korpus .label1 img {
+	max-width: 110px;
+	width: 100%;
+	height: auto;
+}
+.korpus .label2 img {
+	max-width: 110px;
+	width: 100%;
+	height: auto;
+}
+.align_all {
+	width: 49%;
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+}
+.korpus .label1 {
+	padding-right: 20%;
+}
+.korpus .label2 {
+	padding-left: 20%;
+}
+.tab_magazine {
+	margin-left: 35px;
+}
+.tab_naSite{
+	margin-left: 35px;
+}
+
+.tab_magazine .h2_text {
+	font-size: 1.3em;
+	/*font-weight: 700;*/
+	display: inline-block;
+	margin: 1% 0 1.3% 0;
+	position: absolute;
+}
+.tab_naSite .h2_text {
+	font-size: 1.3em;
+	/*font-weight: 700;*/
+	display: inline-block;
+	margin: 1% 0 1.3% 0;
+	position: absolute;
+}
+.tab_magazine .h2_text .allnumber {
+	color: #ffffff;
+	width: 30px;
+	height: 30px;
+	display: block;
+	float: left;
+	text-align: center;
+	border-radius: 50%;
+	background: #43b02a;
+	margin-right: 20px;
+	line-height: 1.6;
+}
+.tab_naSite .h2_text {
+	font-size: 1.3em;
+	/*font-weight: 700;*/
+	display: inline-block;
+	margin: 1% 0 1.3% 0;
+	/*width: 100%;*/
+}
+.tab_naSite .h2_text .allnumber {
+	color: #ffffff;
+	width: 30px;
+	height: 30px;
+	display: block;
+	float: left;
+	text-align: center;
+	border-radius: 50%;
+	background: #43b02a;
+	margin-right: 20px;
+	line-height: 1.6;
+}
+#site_tov .cms-content {
+	padding: 0.1rem 5.8% 0;
+}
+#site_tov .cms-content ul{ 
+	margin-bottom: 0px; 
+}
+.inf {
+	text-align: center;
+	font-size: 2em;
+	font-weight: 500;
+}
+
+.text_tab_magazine {
+	border-left: 1px solid #43b02a;
+	margin-left: 14px;
+}
+#site_tov .cms-content ul li:before {
+	background-color: #ff671f;
+}
+
+.korpus .label1 img:active {
+
+}
+.korpus .label1 img:focus {
+	
+}
+
+.tab_naSite .align_pos {
+	font-size: 1.3em;
+	margin: 0px 0px 15px 50px;
+	padding-top: 15px;
+
+}
+
+.tab_magazine .align_pos {
+	font-size: 1.3em;
+	margin: 0px 0px 15px 50px;
+	padding-top: 15px;
+
+}
+
+/* **********TAB END********* */
+
+.menu_all {
+	display: block;
+}
+.menu_xs {
+	display: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+	#col_4_content .container1 .col-4 {
+		width: 100%;
+		text-align: center;
+		float: initial;
+		margin-bottom: 24px;
+	}
+	#col_4_content {
+		margin-top: 30px;
+	}
+	#text_service p {
+		font-size: 1.7em;
+		font-weight: 700;
+		text-align: center;
+		margin: 5px 5% 0px 5%;
+	}
+	.menu_all {
+		display: none;
+	}
+	.menu_xs {
+		display: block;
+	}
+	#site_tov .korpus input[type="radio"]:checked+label {
+		background: rgba(67, 176, 42, 0.11);
+	}
+	.korpus .label1 {
+		padding-left: initial; 
+	}
+	.korpus .label2 {
+		padding-right: initial; 
+	}
+	.korpus .label1 img {
+		max-width: 80px;
+		width: 100%;
+		height: auto;
+	}
+	.korpus .label2 img {
+		max-width: 80px;
+		width: 100%;
+		height: auto;
+	}
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	#col_4_content .container1 .col-4 .row_col img {
+		height: initial;
+	}
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+@media screen and (min-width: 1025px) {
+
+}
+
+</style>
+<div id="container_pay">
+	<div id="col_4_content">
+		<div class="container1 bl_col-1">
+			<div class="col-4">
+				<div class="row_col">
+					<div class="img_size"><img src="https://comfy.ua/media/x/img/sr/1.png" /></div>
+					<p>Ви власник приватного бізнесу?</p>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="row_col">
+					<div class="img_size"><img src="https://comfy.ua/media/x/img/sr/2.png" /></div>
+					<p>Шукаєте вигідні пропозиції для корпоративних клієнтів?</p>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="row_col">
+					<div class="img_size"><img src="https://comfy.ua/media/x/img/sr/3.png" /></div>
+					<p>Цінуєте свій час та гроші?</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="text_service">
+		<p class="text1">Скористайтеся сервісом безготівкового розрахунку від COMFY!</p>
+		<p>Оформлюйте рахунок-фактуру зручним для вас способом:</p>
+	</div>
+
+	<div id="site_tov">
+		<div class="site_tov_content">
+			<div class="korpus">
+
+				<input type="radio" name="odin" checked="checked" id="vkl2" /> 
+				<label for="vkl2" class="label2 align_all">
+					<span class="menu_all">
+						<p><img src="https://comfy.ua/media/x/img/service_icon/5.png" /><br />На сайті</p>
+					</span>
+					<span class="menu_xs">
+						<p><img src="https://comfy.ua/media/x/img/222.png" /><br />На сайті</p>
+					</span>
+				</label>
+
+				<input type="radio" name="odin" id="vkl1" />
+				<label for="vkl1" class="label1 align_all">
+					<span class="menu_all">
+						<p><img src="https://comfy.ua/media/x/img/service_icon/7.png" /><br />В магазині</p>
+					</span>
+
+					<span class="menu_xs">
+						<p><img src="https://comfy.ua/media/x/img/111.png" /><br />В магазині</p>
+					</span>
+				</label>
+
+				<!-- tab 1 -->
+				<div>
+
+					<div class="tab_naSite">
+
+						<h3 class="inf">Порядок оформлення рахунку-фактури на сайте</h3>
+
+						<p class="h2_text"><span class="allnumber">1</span><p class="align_pos">Переходьте до оформлення замовлення.</p></p>
+						<p class="h2_text"><span class="allnumber">2</span><p class="align_pos">Вкажіть вірний e-mail для отримання рахунку.</p></p>
+						<p class="h2_text"><span class="allnumber">3</span><p class="align_pos">Підтвердіть замовлення.</p></p>
+						<p class="h2_text"><span class="allnumber">4</span><p class="align_pos">Дочекайтеся дзвінка оператора або відправте e-mail на адресу <b><a style="color: #43b02a;" href="mailto:bn@comfy.ua?subject=Документы%20для%20оформления%20счет-фактуры.%20Заказ%20№[вместо%20этого%20текста%20укажите%20номер%20Вашего%20заказа] ">bn@comfy.ua</a></b> з документами підприємства. В темі листа вкажіть номер замовлення.</p></p>
+						
+						<div class="text_tab_magazine">
+							<div class="cms-content">
+								<ul>
+									<li>свідоцтво про державну реєстрацію або виписку з єдиного державного реєстру;</li>
+									<li>свідоцтво платника ПДВ (для організацій, оформлених в 01.01.2014г);</li>
+									<li>дійсний телефон бухгалтерії і телефон для зв'язку після оплати;</li>
+									<li>адреса магазину, в якому буде зручно отримати товар;</li>
+									<li>код і кількість товару.</li>
+								</ul>
+							</div>
+						</div>
+
+						<p class="h2_text"><span class="allnumber">5</span><p class="align_pos">Оператор відправить рахунок-фактуру на вказаний у замовленні e-mail.</p></p>
+						<p class="h2_text"><span class="allnumber">6</span><p class="align_pos">Після сплати грошових коштів на рахунок, вам буде надіслано лист на електронну адресу з підтвердженням отримання оплати і датою доставки товару в магазин.</p></p>
+						<p class="h2_text"><span class="allnumber">7</span><p class="align_pos">Замовлення прямує до магазину.</p></p>
+						<p class="h2_text"><span class="allnumber">8</span><p class="align_pos">Співробітник зв'яжеться з вами як тільки товар прибуде в магазин і запросить для отримання товару.</p></p>
+						<p class="h2_text"><span class="allnumber">9</span><p class="align_pos">Для отримання товару в магазині візьміть з собою паспорт та довіреність із зазначенням кількості одержуваного товару. Якщо отримує власник підприємства, то досить паспорт і печатку підприємства.</p></p>
+						<!--
+						<p class="h2_text"><span class="allnumber">10</span><p class="align_pos">Якщо немає змоги забрати товар самостійно, в магазині є можливість оформити доставляння.</p></p>
+						-->
+					</div>
+
+				</div><!-- tab 1 END -->
+
+				<!-- tab 2 -->
+				<div>
+
+					<div class="tab_magazine">
+
+						<h3 class="inf">Порядок оформлення рахунку-фактури в магазині</h3>
+
+						<p class="h2_text"><span class="allnumber">1</span><p class="align_pos">Перед першим візитом в магазин підготовте пакет документів:</p></p>
+
+						<div class="text_tab_magazine">
+							<div class="cms-content">
+								<ul>
+									<li>свідоцтво про державну реєстрацію або виписку з єдиного державного реєстру;</li>
+									<li>свідоцтво платника ПДВ (для організацій, оформлених в 01.01.2014г);</li>
+									<li>дійсний телефон бухгалтерії і телефон для зв'язку після оплати;</li>
+									<li>адреса магазину, в якому буде зручно отримати товар;</li>
+									<li>код і кількість товару.</li>
+								</ul>
+							</div>
+						</div>
+
+						<p class="h2_text"><span class="allnumber">2</span><p class="align_pos">Після вибору товару повідомте продавцю, що бажаєте оформити безготівковий розрахунок. Обраний товар буде зарезервовано для вас.</p></p>
+						<p class="h2_text"><span class="allnumber">3</span><p class="align_pos">Працівник магазину підготує рахунок-фактуру.</p></p>
+						<p class="h2_text"><span class="allnumber">4</span><p class="align_pos">Після сплати рахунку ви можете зателефонувати самостійно для перевірки зарахування коштів або дочекатися дзвінка співробітника.</p></p>
+						<p class="h2_text"><span class="allnumber">5</span><p class="align_pos">Для отримання товару в магазині візьміть з собою паспорт та довіреність із зазначенням кількості одержуваного товару. Якщо отримує власник підприємства, то досить паспорт і печатку підприємства.</p></p>
+						<!--
+						<p class="h2_text"><span class="allnumber">6</span><p class="align_pos">Якщо немає змоги забрати товар самостійно, в магазині є можливість оформити доставляння.</p></p>
+						-->
+
+					</div>
+
+				</div>
+				<!-- tab 2 END -->
+
+			</div>
+		</div>
+	</div>
+</div>

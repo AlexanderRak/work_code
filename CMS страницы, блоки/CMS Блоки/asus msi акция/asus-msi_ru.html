@@ -1,0 +1,38 @@
+<style>
+   .actionbl-flex {
+      display: flex;
+      flex-direction: row;
+   }
+
+   .actionbl-flex .item {
+      flex: 1 1 0;
+   }
+
+   .actionbl-flex .item a {
+      display: block;
+   }
+
+   .actionbl-flex .item a img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+   }
+
+   @media screen and (min-width: 320px) and (max-width: 480px) {
+      .actionbl-flex {
+         flex-direction: column;
+      }
+   }
+
+   @media screen and (min-width: 481px) and (max-width: 768px) {
+      .actionbl-flex {
+         flex-direction: column;
+      }
+   }
+</style>
+<div id="wrapper_actionbl">
+<div class="actionbl-flex">
+<div class="item"><a href="/impression-powered-by-asus/" target="_blank"> <img src="https://cdn.comfy.ua/media/x/img/qct/1.jpg" /> </a></div>
+<div class="item"><a href="/impression-powered-by-msi/" target="_blank"> <img src="https://cdn.comfy.ua/media/x/img/qct/2.jpg" /> </a></div>
+</div>
+</div>

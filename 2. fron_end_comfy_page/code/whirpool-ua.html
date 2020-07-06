@@ -1,0 +1,445 @@
+<style>
+
+.vid-logo{display: flex; right: 10%; top: 50px; position: absolute; height: 69px;}
+.footer{background: #f2f2f2;}
+.breadcrumbs{display: none;}
+.conttent{ max-width: 1316px; width: 100%; margin: 0 auto; min-height: 100px; background-color: #fff; margin-top: 50px; }
+.punkt.last{border-right: 0px !important}
+.catwdth {width: 100%}
+.whirpool-cms.narrow-container {margin-top: -100px; max-width: 100%;}
+.header .narrow-container {background-color: #fff;}
+.header-bottom .narrow-container {background-color: #fff;}
+.narrow-container{background-color: #F2F2F2;}
+.footer-newsletter { display: none;}
+._show-newsletter .fixed-buttons {  display: none;}
+.footVid{ display: inline-block; width: 100%; margin-top: 50px;: }
+.vid{ display: inline-block; float: left; width: 33%; padding: 20px; text-align: left}
+.vid span{ font-size: 17px; margin-top: 10px; display: block;}
+.vid span:after{ display: inline-block; content: ''; border: .6rem solid transparent; border-left: .8rem solid #6bb864; position: relative; right: -10px; top: 1px;}
+.footer-info { display:none;}
+.blcwhirpool{ float: left;  width:49%;  text-align: left; padding:10px;}
+.blcwhirpool h3{ font-size: 30px;  font-weight: 800; padding-top: 20px;}
+.blcwhirpool p{ font-size: 16px; line-height: 24px;}
+.footSams{ margin-top: 50px; padding: 20px 50px;}
+.btnSams{ padding: 15px 35px;  background-color: #3B72CC;  text-transform: uppercase;  color: #fff !important;     display: inline-block; border-radius: 30px; font-weight: 600; font-size: 13px; margin-top: 20px; }
+.btnSams:hover{ background-color: #3766b3; }
+
+
+@media screen and (max-width:1062px){
+
+.whirpool
+-cms .punkt a p{min-height: 66px !important;}
+.blocktwo{width: 100% !important;}
+.header-bottom .narrow-container {background-color: transparent !important;}
+.footer {margin-top: 0px;}
+.sd{ padding: 10px 10px !important;}
+.newprdct {padding-top: 0px !important; }
+.carousel-controls {padding-top: 0px !important; }
+.tov {margin-top: -10px !important;}
+.tov a img{  width: 80%; height: auto !important;}
+.vid{ width:100%; margin: 0 auto;}
+.blcwhirpool img{ width: 60%;}
+.blcwhirpool{ width:100%; margin: 0 auto;}
+.footSams{ margin-top: 30px;  display: flex; flex-direction: column;}
+.footSams .sa{ order: 4; padding: 0px 10px;}
+.footSams .sb{ order: 3; margin-top: 40px;}
+.footSams .sc{ order: 1; text-align: center;}
+.footSams .sd{ order: 2;}
+
+}
+
+
+/*------------------------------*/
+
+
+#slideshow-wrap { text-align: center; display: block; min-width: 260px; max-width: 100%; margin: auto; position: relative;height: 400px;}
+#slideshow-inner { width: 100%; height: 100%; overflow: hidden; position: relative; border-bottom: 8px solid #eeb111;}
+#slideshow-inner img{ margin-bottom: -4px;}
+#slideshow-inner&gt;ul { list-style: none; height: 100%; width: 625%; overflow: hidden; position: relative; left: 0px; -webkit-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1); -moz-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1); -o-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1); transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);}
+#slideshow-inner&gt;ul&gt;#slide2{  background-color: #fff;}
+#slideshow-inner&gt;ul&gt;li { width: 16%; float: left; position: relative; background-color: #000; margin-bottom: -3px;}
+#slideshow-inner&gt;ul&gt;li&gt;img {  margin: auto;}
+#slideshow-wrap input[type=radio] { position: absolute; left: 50%; bottom: 15px; z-index: 100; visibility: hidden;}
+#slideshow-wrap label:not(.arrows):not(.show-description-label) { position: absolute; border: 1px solid; left: 51%; bottom: -20px; z-index: 100; width: 12px; height: 12px; background-color: #fff; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; cursor: pointer; -webkit-transition: background-color .2s; -moz-transition: background-color .2s; -o-transition: background-color .2s; transition: background-color .2s;}
+#slideshow-wrap label:not(.arrows):active { bottom: -21px }
+#slideshow-wrap input[type=radio]#button-1:checked~label[for=button-1] { background-color: #000 }
+#slideshow-wrap input[type=radio]#button-2:checked~label[for=button-2] { background-color: #000 }
+#slideshow-wrap input[type=radio]#button-3:checked~label[for=button-3] { background-color: #000 }
+#slideshow-wrap input[type=radio]#button-4:checked~label[for=button-4] { background-color: #000 }
+#slideshow-wrap input[type=radio]#button-5:checked~label[for=button-5] { background-color: #000 }
+#slideshow-wrap input[type=radio]#button-6:checked~label[for=button-6] { background-color: #000 }
+#slideshow-wrap label[for=button-1] { margin-left: -36px }
+#slideshow-wrap label[for=button-2] { margin-left: -18px }
+#slideshow-wrap label[for=button-4] { margin-left: 18px }
+#slideshow-wrap label[for=button-5] { margin-left: 36px }
+#slideshow-wrap label[for=button-6] { margin-left: 54px }
+#slideshow-wrap input[type=radio]#button-1:checked~#slideshow-inner&gt;ul { left: 0 }
+#slideshow-wrap input[type=radio]#button-2:checked~#slideshow-inner&gt;ul { left: -100% }
+#slideshow-wrap input[type=radio]#button-3:checked~#slideshow-inner&gt;ul { left: -200% }
+#slideshow-wrap input[type=radio]#button-4:checked~#slideshow-inner&gt;ul { left: -300% }
+#slideshow-wrap input[type=radio]#button-5:checked~#slideshow-inner&gt;ul { left: -400% }
+#slideshow-wrap input[type=radio]#button-6:checked~#slideshow-inner&gt;ul { left: -500% }
+label.arrows { font-family: 'WebSymbolsRegular'; font-size: 25px; color: rgb(255,255,240); position: absolute; top: 50%; margin-top: -25px; display: none; opacity: 0.7; cursor: pointer; z-index: 1000; background-color: transparent; -webkit-transition: opacity .2s; -moz-transition: opacity .2s; -o-transition: opacity .2s; transition: opacity .2s; text-shadow: 0px 0px 2px rgb(0, 0, 0);}
+label.arrows:hover { opacity: 1 }
+label.arrows:active { margin-top: -23px }
+input[type=radio]#button-1:checked~.arrows#arrow-2, input[type=radio]#button-2:checked~.arrows#arrow-3, input[type=radio]#button-3:checked~.arrows#arrow-4, input[type=radio]#button-4:checked~.arrows#arrow-5, input[type=radio]#button-5:checked~.arrows#arrow-6 { right: 90px; display: block;}
+input[type=radio]#button-2:checked~.arrows#arrow-1, input[type=radio]#button-3:checked~.arrows#arrow-2, input[type=radio]#button-4:checked~.arrows#arrow-3, input[type=radio]#button-5:checked~.arrows#arrow-4, input[type=radio]#button-6:checked~.arrows#arrow-5 { left: 125px; display: block; -webkit-transform: scaleX(-1); -moz-transform: scaleX(-1); -ms-transform: scaleX(-1); -o-transform: scaleX(-1); transform: scaleX(-1);}
+input[type=radio]#button-2:checked~.arrows#arrow-1 { left: 125px }
+input[type=radio]#button-3:checked~.arrows#arrow-2 { left: 110px }
+input[type=radio]#button-4:checked~.arrows#arrow-3 { left: 90px }
+input[type=radio]#button-5:checked~.arrows#arrow-4 { left: 70px }
+input[type=radio]#button-6:checked~.arrows#arrow-5 { left: 50px }
+.description { position: absolute; top: 0; left: 0; width: 260px; font-family: 'Yanone Kaffeesatz'; z-index: 1000;}
+.description input { visibility: hidden }
+.description label { font-family: 'WebSymbolsRegular'; background-color: rgba(255,255,240,1); position: relative; left: -17px; top: 00px; width: 40px; height: 27px; display: inline-block; text-align: center; padding-top: 7px; border-bottom-right-radius: 15px; cursor: pointer; opacity: 0; -webkit-transition: opacity .2s; -moz-transition: opacity .2s; -o-transition: opacity .2s; transition: opacity .2s; z-index: 5; color: rgb(20,20,20);}
+#slideshow-inner&gt;ul&gt;li:hover .description label { opacity: 1 }
+.description input[type=checkbox]:checked~label { opacity: 1 }
+.description .description-text { background-color: rgba(255,255,230,.5); padding-left: 45px; padding-top: 25px; padding-right: 15px; padding-bottom: 15px; position: relative; top: -35px; z-index: 4; opacity: 0; -webkit-transition: opacity .2s; -moz-transition: opacity .2s; -o-transition: opacity .2s; transition: opacity .2s; color: rgb(20,20,20);}
+.description input[type=checkbox]:checked~.description-text { opacity: 1 }
+
+/*------------------------------*/
+
+.tovary { width: 100%; text-align: center; width: 102%;}
+.minitext {display:none;}
+.bannnner {display: none;}
+body {background: url(https://comfy.ua/media/blb/banner_promo/11-1/noimg_1.png) #F5F5F5 center top !important;}
+.header__top {background-color: #02A709;}
+
+.banner .control {margin: -65px 0 0;}
+.whirpool-cms .banner-wrap img {max-height:inherit;}
+.whirpool-cms .banner-wrap {max-width: inherit; max-height: inherit;}
+.whirpool-cms .zagolovok {font-size: 35px; padding: 70px 0px 40px; text-align: center; font-weight: bold;}
+.whirpool-cms .cont { margin-top: 0px; display: inline-block; width: 100%; text-align: center;}
+.whirpool-cms .punkt{text-align: center; float: left; width:11.1%; margin-top: 20px; margin-bottom: 20px;     border-right: 1px solid #eeb111;}
+.whirpool-cms .punkt a p{color:#000; font-weight: 100;  font-size: 12px; min-height: 40px;}
+.tov {float: left; width: 22%; text-align: center; color: #000; margin-top: -85px;}
+.tov a{color: #000;}
+.tov p{padding: 10px; min-height: 57px;}
+.banner .control li {width: 33px; height: 12px; border-radius: 10px; background: #ccc;}
+.banner .control li.selected {background:#3675ab;}
+.newprdct{padding-top: 20px;}
+input[type="checkbox"], input[type="radio"]{display: none;}
+.punkt a:hover img{opacity: 0.6;}
+.five a:hover img{opacity: 0.6;}
+
+.punkt a:hover p{opacity: 0.6;}
+.five a:hover p{opacity: 0.6;}
+/* -------------------------------------------------------- */
+
+.narrow-container_white { background: transparent;}
+.carousel { color: #fff; overflow: hidden; position: relative; height: 320px;}
+.carousel-item { opacity: 0; pointer-events: none; position: absolute; top: 0; transition: opacity 0.6s ease-in-out; width: 100%;}
+.carousel-active:checked + .carousel-item { opacity: 1; pointer-events: auto; position: static;}
+.carousel-item tov { display: block; height: auto; width: 100%;}
+.carousel-controls { height: 100%; width: 100%; padding-top: 7%;}
+.carousel-control { background: rgba(0, 0, 0, 0.2); cursor: pointer; font-size: 28px; height: 90px; text-align: center; transition: background 0.1s ease-in-out; width: 50%; z-index: 2; line-height: 90px;}
+.carousel-control:hover { background: rgba(0, 0, 0, 0.8);}
+.carousel-control.prev { float: left;}
+.carousel-control.next { float: right;}
+.carousel-caption { bottom: 15%; font-size: 120%; left: 20%; opacity: 0; right: 20%; text-align: center; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); transition: opacity 0.1s ease-out; z-index: 2;}
+.carousel-active:checked + .carousel-item .carousel-caption { transition: opacity 0.6s ease-in; opacity: 1;}
+.carousel-indicators { bottom: 5%; left: 5%; list-style: none; margin: 0; padding: 0; right: 5%; text-align: center; z-index: 2;}
+.carousel-indicators li {display: inline-block;}
+.carousel-indicator { border-radius: 50%; cursor: pointer; display: block; font-size: 28px; line-height: 1; padding: 5px 10px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); transition: background 0.1s ease-in-out;}
+.carousel-indicator:hover {background: rgba(0, 0, 0, 0.8);}
+
+/* If you`re needing more than 3 banners, maybe you might be using another way to represent your info... ;-) */
+#carousel-1:checked ~ .carousel-indicators .carousel-indicator[for="carousel-1"],
+#carousel-2:checked ~ .carousel-indicators .carousel-indicator[for="carousel-2"],
+#carousel-3:checked ~ .carousel-indicators .carousel-indicator[for="carousel-3"] { color: #007f7f;}
+
+@media (min-width: 768px) {
+
+.carousel-indicators { background: transparent; }
+.carousel-control { width: 5%;}
+
+}
+
+@media screen and (max-width: 767px) {
+.conttent h2{line-height: 40px;}
+#slideshow-wrap{height: 100px;}
+.vid-logo {display: none;}
+.blcwhirpool img{width: 100%;}
+.tov .btnSams{display: none;}
+.whirpool-cms .punkt a p{font-size: 14px !important;}
+.whirpool-cms .punkt.first{width: 100%; display: none;}
+.whirpool-cms .punkt{width: 49%; margin-top: 10px !important; margin-bottom: 10px !important; border-right: 0px solid #eeb111 !important;}
+.whirpool-cms .five{width: 100%; margin-top: 40px; text-align: center}
+.tov{width: 50%; margin-top: 10px !important;}
+.carousel{display: inline-table;}
+.blocktwo{width: 100% !important}
+.txtLeft {width: 100% !important;background-size: contain; padding-top: 43.25%;height: auto !important;}
+.txtRight { width: 100% !important;}
+.footSams{padding: 20px 20px;}
+.txtbanner { width: 90% !important; height: auto !important; background-color: #00000091 !important; position: absolute !important; left: 5% !important; top: auto !important; padding: 10px !important;}
+.txtbanner h2{ font-size: 12px !important; line-height: 15px !important; margin-bottom: 5px !important;}
+.txtbanner p { font-size: 13px !important; line-height: 17px !important; margin-top: 6px !important;}
+.banline{ border-bottom: 3px solid #EEB111 !important;}
+.whirpool-cms.narrow-container { margin-top: 10px !important;}
+.w-100{width: 100%;}
+.conttent{width: 100% !important; padding: 15px !important;}
+.txtleft{width: 100% !important; margin-bottom: 30px !important; }
+.imgblock.imgrght{width: 100% !important; }
+.txtright {width: 100% !important;  margin-bottom: 30px !important;}
+.imgblock.imgleft{width: 100% !important; }
+.lnblock.rev { display: flex !important;  flex-direction: column-reverse;}
+.video-2 { position: relative !important; overflow: hidden !important; width: 33% !important; height: 45% !important; float: left !important;  margin-left: 2% !important; margin-right: 0px !important;}
+.video-2::before{ content: ""; display: block; padding-top: 108%;}
+.imgtwo {width: 65% !important; float: left !important;}
+.video-1{ position: relative !important; overflow: hidden !important; width: 33% !important; height: 45% !important; float: left !important;  margin-left: 0% !important; margin-right: 2% !important;}
+.video-1::before{ content: ""; display: block; padding-top: 108%;}
+.conttent h2{line-height: 40px !important;}
+.imgtxt{display: none !important;}
+.video{width: 98% !important; margin-top: 50px;}
+}
+
+
+@media (max-width: 1024px) and (min-width: 768px) {
+
+.header-bottom {display: none;}
+.header { padding: 0;}
+.narrow-container_white {background: #fff;}
+.main-container_gray {background: #fff;}
+.category {border-bottom: 0;}
+.gallery .controls { bottom: -55px;}
+.gallery .control-button { font-size: 4em;}
+.whirpool-cms .cont { position: relative; text-align: center;}
+.header {border-bottom: 1px solid  #dadada;}
+.blockone .punkt {width: 12.5% !important; }
+.punkt.last{display: none;}
+.punkt.prelast{border-right: 0px !important;}
+.whirpool-cms.narrow-container{ margin-top: -70px !important; }
+.txtbanner{top: 5% !important;  padding: 20px !important; height: auto !important;}
+
+.video-2 { position: relative !important; overflow: hidden !important; width: 33% !important; height: 45% !important; float: left !important;  margin-left: 2% !important; margin-right: 0px !important;}
+.video-2::before{ content: ""; display: block; padding-top: 108%;}
+.imgtwo {width: 65% !important; float: left !important;}
+.video-1{ position: relative !important; overflow: hidden !important; width: 33% !important; height: 45% !important; float: left !important;  margin-left: 0% !important; margin-right: 2% !important;}
+.video-1::before{ content: ""; display: block; padding-top: 108%;}
+.banline{border-bottom: 4px solid #EEB111 !important;}
+.txtbanner h2{ font-size: 16px !important; line-height: 21px !important;}
+.txtbanner p{font-size: 14px !important; line-height: 16px !important; margin-top: 5px !important;}
+.conttent h2 {font-size: 29px !important; line-height: 35px !important; margin-bottom: 15px !important;}
+.conttent p, .conttent b{    font-size: 15px !important; margin-bottom: 10px !important;}
+.imgtxt{ width: 30%;}
+
+
+}
+
+.txthead{text-align: center; padding: 50px;    background-color: #fff;}
+.txthead h1{font-size: 40px;}
+.txthead p{font-size: 20px;}
+.mrg{ max-width: 1200px; margin: 0 auto; display: block !important;}
+.five{width: 20%; float: left; text-align: center;}
+.punkt .image{height: 100px; line-height: 130px;}
+.five .image{height: 100px; line-height: 120px;}
+.five p{font-weight: 600; text-transform: uppercase; font-size: 16px;}
+.blockone {display: inline-block; width: 100%; background-color: #fff; max-width: 1270px; position: relative;}
+.blocktwo {display: inline-block; width: 70%;}
+.txtLeft {background-image: url(https://comfy.ua/media/blb/whirpool/kupi-razom.png); width: 66%; height: 343px; float: left; background-repeat: no-repeat;}
+.txtRight {width: 34%; height: 343px; background-color: #53B3E3; padding: 50px; float: left; text-align: left; color: #fff;}
+.txtRight h3{font-size: 25px;}
+.txtRight p{font-size: 16px}
+.obvodka {    margin-top: 0px !important; background-color: #fff; padding: 30px 0px; border: 1px solid #E7E7E7;}
+.sa {padding: 25px 10px; margin-bottom: 50px;}
+.vsetov { display: table; margin-top: 20px; padding: 15px 45px; text-transform: uppercase; font-weight: 600; font-size: 20px; text-align: center; border: 2px solid; border-radius: 40px; margin: 0 auto;}
+.vsetov:hover{ background-color: #000; color: #fff; border: 2px solid #000 }
+.obvodka .image img{height: 120px;}
+.obvodka p{font-weight: 400 !important; text-transform: none !important; font-size: 14px !important;}
+.tov a img{height: 200px;}
+.vmestebtn{ border: 2px solid #fff; padding: 10px 20px; font-size: 18px; text-transform: uppercase; border-radius: 40px; color: #fff; font-weight: 600; display: inline-block; margin-top: 20px;}
+.vmestebtn:hover{background-color: #51a4ce;}
+.mrgtop {margin-top: 50px !important;}
+.breadcrumbs__item:last-child .breadcrumbs__lbl, .breadcrumbs__item:last-child .breadcrumbs__lbl:hover {color: #000;}
+.breadcrumbs__lbl { font-weight: normal;}
+.tov .btnSams{margin-top: 10px; }
+.tov a:hover .btnSams{text-decoration: none; background-color: #3766b3;}
+.tov .btnSams:hover {text-decoration: none;}
+.imgblock.imgrght {width: 58%; float: right;}
+.txtleft {width: 40%; float: left; margin-right: 2%}
+.conttent{padding: 30px; display: block;}
+.conttent p, .conttent b{ font-size: 20px; margin-bottom: 20px; display: block;}
+.conttent h2{font-size: 32px; border-bottom: 1px solid #95989A; line-height: 80px; margin-bottom: 30px; }
+.btn {padding: 10px 50px; font-size: 20px; font-weight: bold; display: table; margin-top: 20px; background-color: #EEB111; border-radius: 25px;}
+.btn:hover{background-color: #DFA204 !important;}
+.imgblock.imgleft {width: 58%; float: left;}
+.txtright {width: 40%; float: left; margin-left: 2%}
+.lnblock{width: 100%; display: inline-block; margin-top: 50px;}
+.lnblock.first{margin-top: 0px !important;}
+.orangeline{border-bottom: 1px solid #EEB111; margin-left: -30px; margin-right: -30px; margin-top: 30px;}
+.video{width: 32%; margin-right: 2%; float: left;}
+.video.last{margin-right: 0px !important;}
+.videoblock{display: inline-block; width: 100%; padding-top: 30px;}
+.txtbanner{width: 300px; height: 215px; background-color: #00000091; position: absolute; left: 10%; top: 12%; padding: 30px}
+.banline{border-bottom: 10px solid #EEB111; width: 50%}
+.txtbanner h2{color: #fff; text-align: left; font-size: 20px; line-height: 25px; margin-bottom: 10px;}
+.txtbanner p{color: #fff; text-align: left; font-size: 20px; line-height: 25px; margin-top: 10px;}
+.videohead {font-size: 17px; margin-top: 15px;}
+.videohead span {position: relative;}
+.videohead span:after {content: ""; border: .6rem solid transparent; border-left: .8rem solid #6bb864; position: absolute; right: -2.5rem; bottom: .5rem;}
+.video-1 { position: relative; overflow: hidden !important; width: 256px; height: 249px; float: left; margin-right: 5px;}
+.video-1 video { position: absolute; z-index: 1000; width: auto; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.video-2 { position: relative; overflow: hidden !important; width: 256px; height: 249px; float: right; margin-right: 12px;}
+.video-2 video { position: absolute; z-index: 1000; width: auto; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.videoblock h3{font-size: 35px; margin-top: 0px;}
+
+</style>
+<!-- ============= БАННЕР ============= -->
+<div id="slideshow-wrap">
+<div id="slideshow-inner">
+<ul>
+<li id="slide1">  
+<div class="txtbanner">
+<h2>Індивідуальний догляд за будь-яким безладом</h2>
+<div class="banline"></div>
+<p>Прилади з інтуїтивно зрозумілим сенсорним управлінням</p>
+</div> 
+
+<img class="vid-logo" src="https://comfy.ua/media/blb/lglg.png">
+
+<video id="video" width="100%" height="auto" autoplay="autoplay" loop="loop" preload="auto">
+<source src="https://balabantcev.com/test/Landing1.mp4"></source>
+</video>
+
+<div class="description"><input id="show-description-1" type="checkbox" /></div>
+</li>
+
+</ul>
+</div>
+</div>
+<div class="whirpool-cms narrow-container ">
+<!-- ============= /БАННЕР ============= --> 
+<!-- ============= КАТЕГОРИИ ============= -->
+<div class="cont catwdth">
+<div class="blockone">
+<div class="punkt first"><a href="https://comfy.ua/ua/whirlpool-all/">
+<div class="image"><img src="https://comfy.ua/media/blb/Group_1578.png" /></div>
+<p>Усі <br/> товари</p>
+</a></div>
+<div class="punkt"><a href="/cooking-panel/brand__whirlpool/">
+<div class="image"><img src="https://comfy.ua/media/blb/whirpool_akr_351_ix_01.png" /></div>
+<p>Варильні <br/> панелі</p>
+</a></div>
+<div class="punkt"><a href="/oven/brand__whirlpool/">
+<div class="image"><img src="https://comfy.ua/media/blb/277447.png" /></div>
+<p>Духові <br/> шафи</p>
+</a></div>
+<div class="punkt"><a href="/coffi-mash/brand__whirlpool/">
+<div class="image"><img src="https://comfy.ua/media/blb/whirlpool_ace_102ixl.png" /></div>
+<p>Кавові машини</p>
+</a></div>
+<div class="punkt"><a href="/dish-washing-machine-built/brand__whirlpool/">
+<div class="image"><img src="https://comfy.ua/media/blb/electrolux_esl4555lo.png" /></div>
+<p>Посудомийні машини вбудовуються</p>
+</a></div>
+<div class="punkt"><a href="/refrigerator/brand__whirlpool/">
+<div class="image"><img src="https://comfy.ua/media/blb/whirlpool_bsnf_8121_w0.png" /></div>
+<p>Холодильники</p>
+</a></div>
+<div class="punkt"><a href="/wash-machines/brand__whirlpool/">
+<div class="image"><img src="https://comfy.ua/media/blb/fwsf61053w_eu.png" /></div>
+<p>Пральні <br/> машини</p>
+</a></div>
+<div class="punkt prelast"><a href="/microwave-oven/brand__whirlpool/">
+<div class="image"><img src="https://comfy.ua/media/blb/whirlpool_mwd_121_wh_1_1.png" /></div>
+<p>Мікрохвильові <br/> печі</p>
+</a></div>
+<div class="punkt last"><a href="/dishwasher/brand__whirlpool/">
+<div class="image"><img src="https://comfy.ua/media/blb/whirlpool_wic_3c23_pef.png" /></div>
+<p>Посудомийні <br/> машини</p>
+</a></div>
+</div>
+</div>
+<!-- ============= /КАТЕГОРИИ ============= --> <!-- ============= КОНТЕНТ ============= -->
+
+<div class="conttent">
+
+<div class="lnblock first">
+<div class="txtleft">
+<h2>Охолодження</h2>
+<p>Зачаровує дизайн.</br>
+Неперевершена свіжість.</br>
+Ідеальні рішення для зберігання будь-яких продуктів.</p>
+
+<img class="imgtxt" src="https://comfy.ua/media/blb/11.png">
+<a class="btn" href="/refrigerator/brand__whirlpool/">Всі товари</a>
+</div>
+
+<div class="imgblock imgrght">
+<img class="imgtop w-100" src="https://comfy.ua/media/blb/Cooling-2-ShiSh-Comfy.png">
+<div class="video-1 w-100"> <video width="auto" height="300" autoplay="" loop=""> <source src="https://www.whirlpool.com/content/dam/business-unit/whirlpool/en-us/marketing-content/site-assets/page-content/home-page/refresh/videos/refrigeration.mp4" type="video/mp4"></video> </div>
+<img class="imgtwo w-100" src="https://comfy.ua/media/blb/Cooling-3-ShiSh-Comfy_1_.png">
+</div>
+</div>
+
+<div class="lnblock rev">
+<div class="imgblock imgleft">
+<img class="imgtop w-100" src="https://comfy.ua/media/blb/Cooking-1-ShiSh-Comfy.png">
+<img class="imgtwo w-100" src="https://comfy.ua/media/blb/Cooking-2-ShiSh-Comfy.png">
+<div class="video-2 w-100"> <video width="auto" height="300" autoplay="" loop=""> <source src="https://www.whirlpool.com/content/dam/business-unit/whirlpool/en-us/marketing-content/site-assets/page-content/home-page/refresh/videos/cooking.mp4" type="video/mp4"></video> </div>
+</div>
+
+
+<div class="txtright">
+<h2>Готування</h2>
+<b>Готуйте просто, їжте смачно.</b>
+<p>Технологія 6th sense дозволить Вам всього в 3 кроки встановити всі необхідні параметри. Тепер Ви зможете по-справжньому насолодитися простотою приготування і неперевершеним смаком Ваших страв завдяки 16 автоматичним встановленим рецептами. 
+</p>
+<img class="imgtxt" src="https://comfy.ua/media/blb/22.png">
+<a class="btn" href="/oven/brand__whirlpool/">Всі товари</a>
+</div>
+</div>
+
+<div class="lnblock">
+<div class="txtleft">
+<h2>Посудомийні машини</h2>
+<b>Відкрийте для себе секрет ідеально чистого і сухого посуду всього за 1 годину.</b>
+<p>Висока продуктивність і енергоефективність без компромісів. Посудомийні машини Whirlpool забезпечать чистоту на Вашій кухні в поєднанні з високою ресурсоефективність.</p>
+<img class="imgtxt" src="https://comfy.ua/media/blb/33.png">
+<a class="btn" href="/dishwasher/brand__whirlpool/">Всі товари</a>
+</div>
+
+<div class="imgblock imgrght">
+<img class="imgtop w-100" src="https://comfy.ua/media/blb/hp-dishwasher-image-1.png">
+<div class="video-1"> <video width="auto" height="300" autoplay="" loop=""> <source src="https://www.whirlpool.com/content/dam/business-unit/whirlpool/en-us/marketing-content/site-assets/page-content/home-page/refresh/videos/dishwasher.mp4"></video> </div>
+<img class="imgtwo w-100" src="https://comfy.ua/media/blb/hp-dishwasher-image-2.png">
+</div>
+</div>
+
+<div class="lnblock rev">
+<div class="imgblock imgleft">
+<img class="imgtop w-100" src="https://comfy.ua/media/blb/Laundry-2-ShiSh-Comfy.png">
+<img class="imgtwo w-100" src="https://comfy.ua/media/blb/Laundry-1-ShiSh-Comfy.png">
+<div class="video-2 "> <video width="auto" height="300" autoplay="" loop=""> <source src="https://www.whirlpool.com/content/dam/business-unit/whirlpool/en-us/marketing-content/site-assets/page-content/home-page/refresh/videos/laundry.mp4" type="video/mp4"></video> </div>
+</div>
+
+
+<div class="txtright">
+<h2>Перетворіть прання в задоволення</h2>
+<p>Технологія FreshCare + збереже свіжість і мягность Вашої білизни, навіть якщо Ви не встигли розвісити його по завершенні циклу. </p>
+<img class="imgtxt" src="https://comfy.ua/media/blb/55.png">
+<a class="btn" href="/wash-machines/brand__whirlpool/">Всі товари</a>
+</div>
+</div>
+
+<div class="orangeline"> </div>
+
+<div class="videoblock">
+
+<h3>Відео</h3>
+
+<div class="video">
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/iO11YnhNNs0" frameborder="0" allowfullscreen></iframe>
+<div class="videohead"><span>Холодильники Whirlpool</span></div>
+</div>
+<div class="video">
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/zMzBCvNbWrM" frameborder="0" allowfullscreen></iframe>
+<div class="videohead"><span>Холодильники Whirlpool</span></div>
+</div>
+<div class="video last">
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/Z7Px_CCBKUg" frameborder="0" allowfullscreen></iframe>
+<div class="videohead"><span>6th sense</span></div>
+</div>
+</div>
+
+</div>

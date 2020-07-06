@@ -1,0 +1,1120 @@
+<style>
+.current-action__content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.current-action-left {
+    padding: 5px 30px 5px 0px;
+	    flex: 1 1 40%;
+}
+
+.current-action-right {
+    flex: 1 1 60%;
+}
+
+span.current-action__remaining-title.js-action-remaining-label {
+    font: 1.75rem PT Sans,-apple-system,BlinkMacSystemFont,sans-serif;
+    font-weight: 700;
+}
+
+span.current-action__remaining-date {
+    font: 1.75rem PT Sans,-apple-system,BlinkMacSystemFont,sans-serif;
+    font-weight: 700;
+    color: #ff671f;
+}
+
+
+.current-action__description a {
+    color: #379424;
+    font-weight: 700;
+    border-bottom: .1rem solid transparent;
+}
+
+
+.current-action__description a:hover {
+border-bottom: 1px solid #379424;
+}
+
+
+#container_promo { 
+   width: 100%;
+   max-width: 1316px;
+   background: #fff;
+   margin: 0 auto;
+   padding: 15px 2rem;
+}
+#container_promo p:first-letter{ padding-left: 0; }
+#container_promo p{ margin-bottom: 0; }
+#container_promo img:hover { opacity: 1; }
+#container_promo img { opacity: 1; }
+
+/* container_banner_top */
+
+.container_banner_top {}
+.container_banner_top img {}
+
+/* container_banner_top END */
+
+/* container_product_flex */
+
+.container_product_flex {
+   margin-top: 5rem;
+   margin-bottom: 0rem;
+}
+.row_product_flex {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+.row_product_flex .item {
+   flex: 1 1 0;
+   padding: 0 5px 15px 5px;
+}
+.row_product_flex .item:nth-child(1) {flex: 1 1 21.25%;}
+.row_product_flex .item:nth-child(2) {flex: 1 1 5%;}
+.row_product_flex .item:nth-child(3) {flex: 1 1 21.25%;}
+.row_product_flex .item:nth-child(4) {flex: 1 1 5%;}
+.row_product_flex .item:nth-child(5) {flex: 1 1 21.25%;}
+.row_product_flex .item:nth-child(6) {flex: 1 1 5%;}
+.row_product_flex .item:nth-child(7) {flex: 1 1 21.25%; position: relative;}
+
+.row_product_flex .item:nth-child(1) img {max-width: 225px;}
+.row_product_flex .item:nth-child(2) img {}
+.row_product_flex .item:nth-child(3) img {}
+.row_product_flex .item:nth-child(4) img {}
+.row_product_flex .item:nth-child(5) img {}
+.row_product_flex .item:nth-child(6) img {}
+.row_product_flex .item:nth-child(7) img {    max-width: 225px;
+    /* position: absolute; */
+    margin-top: -57px;}
+
+.row_product_flex .item.item_plus {
+   text-align: center;
+   display: block;
+   font-size: 5rem;
+   color: #ff671f;
+   margin-bottom: 0;
+   padding: 0;
+   height: 100%;
+   width: 100%;
+   margin: auto 0;
+}
+.row_product_flex .item.item_plus span.rdlt_bl {
+   height: 100%;
+   display: block;
+   margin: auto 0;
+}
+
+.row_product_flex .item.item_plus:nth-child(2) span.rdlt_bl {font-size: 70px;}
+.row_product_flex .item.item_plus:nth-child(4) span.rdlt_bl {font-size: 60px;}
+.row_product_flex .item.item_plus:nth-child(6) span.rdlt_bl {font-size: 70px;}
+
+.row_product_flex .item h2 {
+   text-align: center;
+   font-size: 2.3rem;
+   color: #000;
+   line-height: 1.1;
+   margin-top: 15px;
+}
+.row_product_flex .item img {
+   max-width: 190px;
+   width: 100%;
+   height: auto;
+   margin: 0 auto;
+   display: block;
+}
+
+
+/* container_product_flex END */
+
+/* container-price-flex */
+
+.container-price-flex { margin: 0rem 0 0rem; }
+.row-price-flex {
+   display: flex;
+   flex-direction: row;
+}
+.row-price-flex .item {
+   flex: 1 1 0;
+   padding-right: 10px;
+}
+.row-price-flex .item:nth-child(1) {}
+.row-price-flex .item:nth-child(2) {}
+.row-price-flex .item:nth-child(3) {}
+.row-price-flex .item:nth-child(4) { padding-right: 0px;}
+
+#acordion_list {}
+#acordion_list .accordion {}
+#acordion_list .accordion li.accordion__item { margin-bottom: 1rem; }
+#acordion_list .accordion li.accordion__item a.accordion__link {}
+#acordion_list .accordion li.accordion__item a.accordion__link span.accordion__link-title { font-size: 2rem;}
+
+#acordion_list .accordion li.accordion__item .accordion__item-content { padding: 1rem 0rem 0rem; }
+
+#acordion_list .accordion li.accordion__item .accordion__item-content a {
+   color: #43b02a;
+   text-decoration: underline;
+   font-size: 1.5rem;
+   display: block;
+}
+#acordion_list .accordion li.accordion__item .accordion__item-content a:hover {
+   text-decoration: none;
+}
+
+/* container-list-product */
+
+.container-list-product {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   border-bottom: 2px solid #f2f2f2;
+   padding-bottom: 5px;
+}
+.container-list-product .item:nth-child(1) {
+   flex: 1 1 35%;
+}
+.container-list-product .item:nth-child(2) {
+   flex: 1 1 30%;
+}
+.container-list-product .item:nth-child(3) {
+   flex: 1 1 35%;
+   display: flex;
+}
+
+.container-list-product .item span.grnsp {
+    padding: 0 0 0 5px;
+}
+.container-list-product .item img {}
+.container-list-product .item a {}
+.container-list-product .item p.pricebl {    font-weight: bold;
+    font-size: 18px;
+	text-align: right;}
+.container-list-product .item p.pricebl span.grnsp {float: right;}
+
+/* container-list-product END */
+
+/* container-price-flex END */
+
+
+/* media */
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .current-action__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .row_product_flex .item.item_plus:nth-child(4) span.rdlt_bl {
+    font-size: 35px;
+  }
+  .row_product_flex .item.item_plus:nth-child(2) span.rdlt_bl {
+    font-size: 55px;
+  }
+  .container-price-flex {
+    width: 1000px;
+  }
+  .container_product_flex {
+    width: 1000px;
+  }
+  .wrapper_overflow {
+    overflow: auto;
+    position: relative;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .current-action__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .row_product_flex .item.item_plus:nth-child(4) span.rdlt_bl {
+    font-size: 35px;
+  }
+  .row_product_flex .item.item_plus:nth-child(2) span.rdlt_bl {
+    font-size: 55px;
+  }
+    .container-price-flex {
+    width: 1000px;
+  }
+  .container_product_flex {
+    width: 1000px;
+  }
+  .wrapper_overflow {
+    overflow: auto;
+    position: relative;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+
+</style>
+<script></script>
+<script language="JavaScript" type="text/javascript">// <![CDATA[
+function getCookie(name) {
+   var matches = document.cookie.match(new RegExp(
+      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+      ));
+   return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+var city = getCookie('active_city_id');
+var priceUrl = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id='+city+'&ids=554113, 552233, 628023, 622513, 626313, 604593, 603963, 565273, 621263, 608453, 565493, 568473, 575843, 552413, 604603, 569313, 549243, 552823, 552803, 631373, 552723, 552753, 549323, 568413, 587173, 587273, 627713, 370903, 349353, 330953, 331043, 329543, 318993, 327563, 350873, 319003, 372873, 330963, 317973, 605533, 331053, 605493, 61489, 306573, 326663, 322223, 387413, 306553, 372913, 505113, 605433, 386143, 430213, 435753, 636153, 396863, 328653, 325153, 325163, 514843, 318763, 636123, 372573, 608543, 621213, 566973, 573233, 573243'
+$.ajax({ url: priceUrl,
+    type: 'get',
+    success: function(output) {
+      var resp = JSON.parse(output);
+                    var pr1 = resp['554113']['special_price'];
+                    document.getElementById("price1").innerHTML = pr1;
+					
+					var pr2 = resp['552233']['special_price'];
+                    document.getElementById("price2").innerHTML = pr2;
+					
+					var pr3 = resp['628023']['special_price'];
+                    document.getElementById("price3").innerHTML = pr3;
+					
+					var pr4 = resp['622513']['special_price'];
+                    document.getElementById("price4").innerHTML = pr4;
+					
+					var pr5 = resp['626313']['special_price'];
+                    document.getElementById("price5").innerHTML = pr5;
+					
+					var pr6 = resp['604593']['special_price'];
+                    document.getElementById("price6").innerHTML = pr6;
+					
+					var pr7 = resp['603963']['special_price'];
+                    document.getElementById("price7").innerHTML = pr7;
+					
+					var pr8 = resp['565273']['special_price'];
+                    document.getElementById("price8").innerHTML = pr8;
+					
+					var pr9 = resp['621263']['special_price'];
+                    document.getElementById("price9").innerHTML = pr9;
+					
+					var pr10 = resp['608453']['special_price'];
+                    document.getElementById("price10").innerHTML = pr10;
+					
+					var pr11 = resp['565493']['special_price'];
+                    document.getElementById("price11").innerHTML = pr11;
+					
+					var pr12 = resp['568473']['special_price'];
+                    document.getElementById("price12").innerHTML = pr12;
+					
+					var pr13 = resp['575843']['special_price'];
+                    document.getElementById("price13").innerHTML = pr13;
+					
+					var pr14 = resp['552413']['special_price'];
+                    document.getElementById("price14").innerHTML = pr14;
+					
+					var pr15 = resp['604603']['special_price'];
+                    document.getElementById("price15").innerHTML = pr15;
+					
+					var pr16 = resp['569313']['special_price'];
+                    document.getElementById("price16").innerHTML = pr16;
+					
+					var pr17 = resp['549243']['special_price'];
+                    document.getElementById("price17").innerHTML = pr17;
+					
+					var pr18 = resp['552823']['special_price'];
+                    document.getElementById("price18").innerHTML = pr18;
+					
+					var pr19 = resp['552803']['special_price'];
+                    document.getElementById("price19").innerHTML = pr19;
+					
+					var pr20 = resp['631373']['special_price'];
+                    document.getElementById("price20").innerHTML = pr20;
+					
+					var pr21 = resp['552723']['special_price'];
+                    document.getElementById("price21").innerHTML = pr21;
+					
+					var pr22 = resp['552753']['special_price'];
+                    document.getElementById("price22").innerHTML = pr22;
+					
+					var pr23 = resp['549323']['special_price'];
+                    document.getElementById("price23").innerHTML = pr23;
+					
+					var pr24 = resp['568413']['special_price'];
+                    document.getElementById("price24").innerHTML = pr24;
+					
+					var pr25 = resp['587173']['special_price'];
+                    document.getElementById("price25").innerHTML = pr25;
+					
+					var pr26 = resp['587273']['special_price'];
+                    document.getElementById("price26").innerHTML = pr26;
+					
+					var pr27 = resp['627713']['special_price'];
+                    document.getElementById("price27").innerHTML = pr27;
+					
+					var pr28 = resp['370903']['special_price'];
+                    document.getElementById("price28").innerHTML = pr28;
+					
+					var pr29 = resp['349353']['special_price'];
+                    document.getElementById("price29").innerHTML = pr29;
+					
+					var pr30 = resp['330953']['special_price'];
+                    document.getElementById("price30").innerHTML = pr30;
+					
+					var pr31 = resp['331043']['special_price'];
+                    document.getElementById("price31").innerHTML = pr31;
+					
+					var pr32 = resp['329543']['special_price'];
+                    document.getElementById("price32").innerHTML = pr32;
+					
+					var pr33 = resp['318993']['special_price'];
+                    document.getElementById("price33").innerHTML = pr33;
+					
+					var pr34 = resp['327563']['special_price'];
+                    document.getElementById("price34").innerHTML = pr34;
+					
+					var pr35 = resp['350873']['special_price'];
+                    document.getElementById("price35").innerHTML = pr35;
+					
+					var pr36 = resp['319003']['special_price'];
+                    document.getElementById("price36").innerHTML = pr36;
+					
+					var pr37 = resp['372873']['special_price'];
+                    document.getElementById("price37").innerHTML = pr37;
+					
+					var pr38 = resp['330963']['special_price'];
+                    document.getElementById("price38").innerHTML = pr38;
+					
+					var pr39 = resp['317973']['special_price'];
+                    document.getElementById("price39").innerHTML = pr39;
+					
+					var pr40 = resp['605533']['special_price'];
+                    document.getElementById("price40").innerHTML = pr40;
+					
+					var pr41 = resp['331053']['special_price'];
+                    document.getElementById("price41").innerHTML = pr41;
+					
+					var pr42 = resp['605493']['special_price'];
+                    document.getElementById("price42").innerHTML = pr42;
+					
+					var pr43 = resp['61489']['special_price'];
+                    document.getElementById("price43").innerHTML = pr43;
+					
+					var pr44 = resp['306573']['special_price'];
+                    document.getElementById("price44").innerHTML = pr44;
+					
+					var pr45 = resp['326663']['special_price'];
+                    document.getElementById("price45").innerHTML = pr45;
+					
+					var pr46 = resp['322223']['special_price'];
+                    document.getElementById("price46").innerHTML = pr46;
+					
+					var pr47 = resp['387413']['special_price'];
+                    document.getElementById("price47").innerHTML = pr47;
+					
+					var pr48 = resp['306553']['special_price'];
+                    document.getElementById("price48").innerHTML = pr48;
+					
+					var pr49 = resp['372913']['special_price'];
+                    document.getElementById("price49").innerHTML = pr49;
+					
+					var pr50 = resp['505113']['special_price'];
+                    document.getElementById("price50").innerHTML = pr50;
+					
+					var pr51 = resp['605433']['special_price'];
+                    document.getElementById("price51").innerHTML = pr51;
+					
+					var pr52 = resp['386143']['special_price'];
+                    document.getElementById("price52").innerHTML = pr52;
+					
+					var pr53 = resp['430213']['special_price'];
+                    document.getElementById("price53").innerHTML = pr53;
+					
+					var pr54 = resp['435753']['special_price'];
+                    document.getElementById("price54").innerHTML = pr54;
+					
+					var pr55 = resp['636153']['special_price'];
+                    document.getElementById("price55").innerHTML = pr55;
+					
+					var pr56 = resp['396863']['special_price'];
+                    document.getElementById("price56").innerHTML = pr56;
+					
+					var pr57 = resp['328653']['special_price'];
+                    document.getElementById("price57").innerHTML = pr57;
+					
+					var pr58 = resp['325153']['special_price'];
+                    document.getElementById("price58").innerHTML = pr58;
+					
+					var pr59 = resp['325163']['special_price'];
+                    document.getElementById("price59").innerHTML = pr59;
+					
+					var pr60 = resp['514843']['special_price'];
+                    document.getElementById("price60").innerHTML = pr60;
+					
+					var pr61 = resp['318763']['special_price'];
+                    document.getElementById("price61").innerHTML = pr61;
+					
+					var pr62 = resp['636123']['special_price'];
+                    document.getElementById("price62").innerHTML = pr62;
+					
+					var pr63 = resp['372573']['special_price'];
+                    document.getElementById("price63").innerHTML = pr63;
+					
+					var pr64 = resp['608543']['special_price'];
+                    document.getElementById("price64").innerHTML = pr64;
+					
+					var pr65 = resp['621213']['special_price'];
+                    document.getElementById("price65").innerHTML = pr65;
+					
+					var pr66 = resp['566973']['special_price'];
+                    document.getElementById("price66").innerHTML = pr66;
+					
+					var pr67 = resp['573233']['special_price'];
+                    document.getElementById("price67").innerHTML = pr67;
+					
+					var pr68 = resp['573243']['special_price'];
+                    document.getElementById("price68").innerHTML = pr68;
+               }
+          });
+// ]]></script>
+<div id="container_promo"><section class="container_banner_top">
+<div class="current-action__content">
+<div class="current-action-left">
+<div class="current-action__img-wr"><img class="current-action__img" alt="Купи комплект интуитивной техники Electrolux (варочную поверхность и духовой шкаф) - гарантированно получи вытяжку!" src="https://cdn.comfy.ua/media/actions/Electrolux_428%D1%85200_ru_1.jpg" /></div>
+</div>
+<div class="current-action-right">
+<h1 class="current-action__title">Купи комплект интуитивной техники Electrolux (варочную поверхность и духовой шкаф) - гарантированно получи вытяжку!</h1>
+<div class="current-action__remaining"><span class="current-action__remaining-title js-action-remaining-label">Действует до: </span> <span class="current-action__remaining-date"> 31.10.19 </span></div>
+<div class="current-action__description">
+<p>Купи  интуитивный комплект Electrolux (духовой шкаф и варочную поверхность)  – получи вытяжку!</p>
+<p>В акции принимают участие вытяжки <a href="https://comfy.ua/vytjazhka-vstraivaemaja-electrolux-lfg9525s.html" target="_blank">LFG9525S</a>, <a href="https://comfy.ua/vytjazhka-vstraivaemaja-electrolux-lfc9316x.html" target="_blank">LFC9316X</a>, <a href="https://comfy.ua/vytjazhka-vstraivaemaja-electrolux-lfp316s.html" target="_blank">LFP316S</a>.</p>
+<p> </p>
+<p><strong><span style="text-decoration: underline;"><span style="text-decoration-line: underline;">Для </span><span style="text-decoration-line: underline;">участия в акции</span><span style="text-decoration-line: underline;"> добавь 3 товара в корзину</span></span></strong></p>
+<p><span style="text-decoration: underline;"> </span></p>
+<p><span style="text-decoration: underline;">Например: </span></p>
+<a href="https://comfy.ua/electrolux-promo.html" target="_blank">Варочная поверхность + духовой шкаф + акционная модель вытяжки Electolux.</a></div>
+</div>
+</div>
+</section>
+<div class="wrapper_overflow"><section class="container_product_flex">
+<div class="row_product_flex">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/image/1125x700/2e241be6f4f7d74eee7e21d297e09ee6/e/l/electrolux_oed5h70x.jpg" />
+<h2>Духовой шкаф<br />электрический</h2>
+</div>
+<div class="item item_plus"><span class="rdlt_bl">+</span></div>
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/image/1440x1080/2e241be6f4f7d74eee7e21d297e09ee6/1/3/1345774_electrolux_gpe363yk_5.jpg" />
+<h2>Варочная панель<br />газовая</h2>
+</div>
+<div class="item item_plus"><span class="rdlt_bl">или</span></div>
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/image/1440x1080/2e241be6f4f7d74eee7e21d297e09ee6/e/l/electrolux_ipes6452kf1.jpg" />
+<h2>Варочная панель<br />индукционная</h2>
+</div>
+<div class="item item_plus"><span class="rdlt_bl">+</span></div>
+<div class="item"><img src="https://cdn.comfy.ua/media/x/img/surp-vtzh/surp-vtzh.jpg" />
+<h2>Вытяжка</h2>
+</div>
+</div>
+</section> <section class="container-price-flex">
+<div class="row-price-flex">
+<div class="item">
+<div id="acordion_list">
+<ul class="accordion js-accordion-list">
+<li class="accordion__item"> <a href="#" class="accordion__link js-accordion-link"> <span class="accordion__link-title">11 999 и менее</span> </a>
+<div class="accordion__item-content"><!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_oef5e50z.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-oef5e50z.html">Electrolux OEF5E50Z</a></div>
+<div class="item">
+<p id="price1" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_oef5e50x.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-oef5e50x.html">Electrolux OEF5E50X</a></div>
+<div class="item">
+<p id="price2" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_oef5e50v_3.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-oef5e50v.html">Electrolux OEF5E50V</a></div>
+<div class="item">
+<p id="price3" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/p/s/pseeov190pe0000l.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-oed3h50tk.html">Electrolux OED3H50TK</a></div>
+<div class="item">
+<p id="price4" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/p/s/pseeov190pe0002r.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-oef5h50z.html">Electrolux OEF5H50Z</a></div>
+<div class="item">
+<p id="price5" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_oef3h70tk_1.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-oef3h70tk.html">Electrolux OEF3H70TK</a></div>
+<div class="item">
+<p id="price6" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_oef3h70tx_2.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-oef3h70tx.html">Electrolux OEF3H70TX</a></div>
+<div class="item">
+<p id="price7" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_oed3h50tx.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-oed3h50tx.html">Electrolux OED3H50TX</a></div>
+<div class="item">
+<p id="price8" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--></div>
+</li>
+<li class="accordion__item"> <a href="#" class="accordion__link js-accordion-link"> <span class="accordion__link-title">12 000 - 15 999</span> </a>
+<div class="accordion__item-content"><!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/p/s/pseeov190pe0000e.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-eod3c70tk.html">Electrolux EOD3C70TK</a></div>
+<div class="item">
+<p id="price9" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_kodeh70x_3.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-kodeh70x.html">Electrolux KODEH70X</a></div>
+<div class="item">
+<p id="price10" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_oed5h70x.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-oed5h70x.html">Electrolux OED5H70X</a></div>
+<div class="item">
+<p id="price11" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_okd5c51v.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-okd5c51v.html">Electrolux OKD5C51V</a></div>
+<div class="item">
+<p id="price12" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_okd5c51x.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-okd5c51x.html">Electrolux OKD5C51X</a></div>
+<div class="item">
+<p id="price13" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_okc5h50x.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-okc5h50x.html">Electrolux OKC5H50X</a></div>
+<div class="item">
+<p id="price14" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_okd5c70x_2.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-okd5c70x.html">Electrolux OKD5C70X</a></div>
+<div class="item">
+<p id="price15" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_okd5c51z.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-okd5c51z.html">Electrolux OKD5C51Z</a></div>
+<div class="item">
+<p id="price16" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--></div>
+</li>
+<li class="accordion__item"> <a href="#" class="accordion__link js-accordion-link"> <span class="accordion__link-title">16 000 и более</span> </a>
+<div class="accordion__item-content"><!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_okc5h50w1.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-okc5h50w.html">Electrolux OKC5H50W</a></div>
+<div class="item">
+<p id="price17" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_vkl8e00x2.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-vkl8e00x.html">Electrolux VKL8E00X</a></div>
+<div class="item">
+<p id="price18" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_okc8h31x.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-okc8h31x.html">Electrolux OKC8H31X</a></div>
+<div class="item">
+<p id="price19" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_okd6p71x_2.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-okd6p71x.html">Electrolux OKD6P71X</a></div>
+<div class="item">
+<p id="price20" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_okc6p51x12.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-okc6p51x.html">Electrolux OKC6P51X</a></div>
+<div class="item">
+<p id="price21" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_okc8h31v.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-okc8h31v.html">Electrolux OKC8H31V</a></div>
+<div class="item">
+<p id="price22" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_okc8p31x.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-okc8p31x.html">Electrolux OKC8P31X</a></div>
+<div class="item">
+<p id="price23" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_okb8s31x.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-okb8s31x.html">Electrolux OKB8S31X</a></div>
+<div class="item">
+<p id="price24" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/_/e/_electrolux_oka9s31wz_1.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-oka9s31wz.html">Electrolux OKA9S31WZ</a></div>
+<div class="item">
+<p id="price25" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/_/e/_electrolux_oka9s31wx_1.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-oka9s31wx.html">Electrolux OKA9S31WX</a></div>
+<div class="item">
+<p id="price26" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_oka9s31cx_1.jpg" /></div>
+<div class="item"><a href="/duhovoj-shkaf-jelektricheskij-electrolux-oka9s31cx.html">Electrolux OKA9S31CX</a></div>
+<div class="item">
+<p id="price27" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="item">
+<div id="acordion_list">
+<ul class="accordion js-accordion-list">
+<li class="accordion__item"> <a href="#" class="accordion__link js-accordion-link"> <span class="accordion__link-title">4 999 и менее</span> </a>
+<div class="accordion__item-content"><!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/1/3/1368711_electrolux_gpe262mx_6.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gpe262mx.html">Electrolux GPE262MX</a></div>
+<div class="item">
+<p id="price28" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_gpe363mb.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gpe363mb.html">Electrolux GPE363MB</a></div>
+<div class="item">
+<p id="price29" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_gme263lx.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gme263lx.html">Electrolux GME263LX</a></div>
+<div class="item">
+<p id="price30" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--></div>
+</li>
+<li class="accordion__item"> <a href="#" class="accordion__link js-accordion-link"> <span class="accordion__link-title">5 000 - 7 999</span> </a>
+<div class="accordion__item-content"><!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_gme363nb.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gme363nb.html">Electrolux GME363NB</a></div>
+<div class="item">
+<p id="price31" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/1/3/1349036_electrolux_gme263nb_13.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gme263nb.html">Electrolux GME263NB</a></div>
+<div class="item">
+<p id="price32" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/1/3/1335572_electrolux_gpe263mb_11.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gpe263mb.html">Electrolux GPE263MB</a></div>
+<div class="item">
+<p id="price33" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/1/3/1345775_electrolux_gee263mx_5.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gee263mx.html">Electrolux GEE263MX</a></div>
+<div class="item">
+<p id="price34" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_gpe363mw_2_.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gpe363mw.html">Electrolux GPE363MW</a></div>
+<div class="item">
+<p id="price35" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/1/3/1335577_electrolux_gpe263mw_12.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gpe263mw.html">Electrolux GPE263MW</a></div>
+<div class="item">
+<p id="price36" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_gee26mb_1.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gee26mb.html">Electrolux GEE26MB</a></div>
+<div class="item">
+<p id="price37" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_gme363lw.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gme363lw.html">Electrolux GME363LW</a></div>
+<div class="item">
+<p id="price38" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_gme363nx_0.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gme363nx.html">Electrolux GME363NX</a></div>
+<div class="item">
+<p id="price39" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_gee363mx_2_.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gee363mx.html">Electrolux GEE363MX</a></div>
+<div class="item">
+<p id="price40" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_gpe363nk.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gpe363nk.html">Electrolux GPE363NK</a></div>
+<div class="item">
+<p id="price41" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_gpe263yk.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gpe263yk.html">Electrolux GPE263YK</a></div>
+<div class="item">
+<p id="price42" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/1/0/1085841_electrolux_gpe963fx_10.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gpe963fx.html">Electrolux GPE963FX</a></div>
+<div class="item">
+<p id="price43" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/1/3/1335570_electrolux_gpe363yv_11.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gpe363yv.html">Electrolux GPE363YV</a></div>
+<div class="item">
+<p id="price44" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/1/3/1345774_electrolux_gpe363yk_5.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gpe363yk.html">Electrolux GPE363YK</a></div>
+<div class="item">
+<p id="price45" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--></div>
+</li>
+<li class="accordion__item"> <a href="#" class="accordion__link js-accordion-link"> <span class="accordion__link-title">8 000 и более</span> </a>
+<div class="accordion__item-content"><!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/g/p/gpe373mx.png" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gpe373mx.html">Electrolux GPE373MX</a></div>
+<div class="item">
+<p id="price46" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/1/3/1369060_electrolux_gme363nv_7.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gme363nv.html">Electrolux GME363NV</a></div>
+<div class="item">
+<p id="price47" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/_/e/_electrolux_gpe373yk_0_1.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gpe373yk.html">Electrolux GPE373YK</a></div>
+<div class="item">
+<p id="price48" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/_/e/_electrolux_gpe363lk_1.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-gpe363lk.html">Electrolux GPE363LK</a></div>
+<div class="item">
+<p id="price49" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_kgv7539ik5.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-gazovaja-electrolux-kgv7539ik.html">Electrolux KGV7539IK</a></div>
+<div class="item">
+<p id="price50" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="item">
+<div id="acordion_list">
+<ul class="accordion js-accordion-list">
+<li class="accordion__item"> <a href="#" class="accordion__link js-accordion-link"> <span class="accordion__link-title">10 999 и менее</span> </a>
+<div class="accordion__item-content"><!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/_/e/_electrolux_ipe6440kfv_1.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-jelektricheskaja-electrolux-ipe6440kfv.html">Electrolux IPE6440KFV</a></div>
+<div class="item">
+<p id="price51" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/p/s/pseeho180pe0002m.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-jelektricheskaja-electrolux-ipe6440kf.html">Electrolux IPE6440KF</a></div>
+<div class="item">
+<p id="price52" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_ipe6440kxv_5.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-jelektricheskaja-electrolux-ipe6440kxv.html">Electrolux IPE6440KXV</a></div>
+<div class="item">
+<p id="price53" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/5/b/5bfd5d9d0e641_ipe6440kx.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-jelektricheskaja-electrolux-ipe6440kx.html">Electrolux IPE6440KX</a></div>
+<div class="item">
+<p id="price54" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--></div>
+</li>
+<li class="accordion__item"> <a href="#" class="accordion__link js-accordion-link"> <span class="accordion__link-title">11 000 - 14 999</span> </a>
+<div class="accordion__item-content"><!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_ipe6443kfv_10.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-jelektricheskaja-electrolux-ipe6443kfv.html">Electrolux IPE6443KFV</a></div>
+<div class="item">
+<p id="price55" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_ipe6440wi.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-jelektricheskaja-electrolux-ipe6440wi.html">Electrolux IPE6440WI</a></div>
+<div class="item">
+<p id="price56" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/1/3/1348063_electrolux_ipe6443wf_5.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-jelektricheskaja-electrolux-ipe6443wf.html">Electrolux IPE6443WF</a></div>
+<div class="item">
+<p id="price57" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_ipe6454kf.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-jelektricheskaja-electrolux-ipe6454kf.html">Electrolux IPE6454KF</a></div>
+<div class="item">
+<p id="price58" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/1/3/1346347_electrolux_ipe6443sf_13.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-jelektricheskaja-electrolux-ipe6443sf.html">Electrolux IPE6443SF</a></div>
+<div class="item">
+<p id="price59" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_ipes6452kf1.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-jelektricheskaja-electrolux-ipes6452kf.html">Electrolux IPES6452KF</a></div>
+<div class="item">
+<p id="price60" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--></div>
+</li>
+<li class="accordion__item"> <a href="#" class="accordion__link js-accordion-link"> <span class="accordion__link-title">15 000 и более</span> </a>
+<div class="accordion__item-content"><!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/1/3/1343096_electrolux_ipe6463ki_12.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-jelektricheskaja-electrolux-ipe6463ki.html">Electrolux IPE6463KI</a></div>
+<div class="item">
+<p id="price61" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_ipe6443wfv.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-jelektricheskaja-electrolux-ipe6443wfv.html">Electrolux IPE6443WFV</a></div>
+<div class="item">
+<p id="price62" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/1/3/1368978_electrolux_ipe6474kf_13.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-jelektricheskaja-electrolux-ipe6474kf.html">Electrolux IPE6474KF</a></div>
+<div class="item">
+<p id="price63" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_eip7346.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-jelektricheskaja-electrolux-eip7346.html">Electrolux EIP7346</a></div>
+<div class="item">
+<p id="price64" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--> <!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/p/s/pseeho190pe0000i.jpg" /></div>
+<div class="item"><a href="/varochnaja-panel-jelektricheskaja-electrolux-eis7548.html">Electrolux EIS7548</a></div>
+<div class="item">
+<p id="price65" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--></div>
+</li>
+</ul>
+</div>
+</div>
+<div class="item">
+<div id="acordion_list">
+<ul class="accordion js-accordion-list">
+<li class="accordion__item"> <a href="#" class="accordion__link js-accordion-link"> <span class="accordion__link-title">Телескопическая</span> </a>
+<div class="accordion__item-content"><!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_lfp316s.jpg" /></div>
+<div class="item"><a href="/vytjazhka-vstraivaemaja-electrolux-lfp316s.html">Electrolux LFP316S</a></div>
+<div class="item">
+<p id="price66" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--></div>
+</li>
+<li class="accordion__item"> <a href="#" class="accordion__link js-accordion-link"> <span class="accordion__link-title">Полновстраиваемая</span> </a>
+<div class="accordion__item-content"><!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_lfg9525s.jpg" /></div>
+<div class="item"><a href="/vytjazhka-vstraivaemaja-electrolux-lfg9525s.html">Electrolux LFG9525S</a></div>
+<div class="item">
+<p id="price67" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--></div>
+</li>
+<li class="accordion__item"> <a href="#" class="accordion__link js-accordion-link"> <span class="accordion__link-title">Декоративная</span> </a>
+<div class="accordion__item-content"><!--SKU-->
+<div class="container-list-product">
+<div class="item"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/395x554/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_lfc9316x_2_1.jpg" /></div>
+<div class="item"><a href="/vytjazhka-vstraivaemaja-electrolux-lfc9316x.html">Electrolux LFC9316X</a></div>
+<div class="item">
+<p id="price68" class="pricebl"> </p>
+<span class="grnsp">грн</span></div>
+</div>
+<!--END SKU--></div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section></div>
+</div>

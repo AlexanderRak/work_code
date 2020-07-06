@@ -1,0 +1,112 @@
+<style type="text/css">
+
+</style>
+
+<div id="wrapper-game-day">
+
+   <section class="container-bcround-images">
+      <div class="row-bcround-images bg1">
+
+         <div class="container-logo-top">
+            <img src="https://cdn.comfy.ua/media/x/img/game_day/logo.png" alt="">
+         </div>
+
+         <div class="container-prize-pool">
+            <img src="https://cdn.comfy.ua/media/x/img/game_day/price.png" alt="">
+         </div>
+
+         <div class="conainer-device-pos-abs">
+            <img src="https://cdn.comfy.ua/media/x/img/game.png" alt="">
+         </div>
+
+         <div class="container-form">
+            <p class="ptop_text">Хочеш отримати ДОДАТКОВУ знижку 1000 грн на геймерські ноутбуки та 20% на аксесуари?</p>
+            <p class="ts2"><b>Зроби 2 кроки:</b></p>
+            <ul class="list_ank">
+               <li>1. Залиш свої контактні дані.</li>
+               <li>2. Отримай смс з промокодом на знижку.</li>
+            </ul>
+            <i>*промокод дійсний до 10 грудня</i>
+
+            <div class="cont-form-pos">
+
+               <div class="form">
+                  <div class="js-newsletter-parent">
+                     <form id="footerNewsletter" action="https://comfy.ua/newsletter/subscriber/new" method="post" class="footer-newsletter__form js-newsletter-block">
+                        <div class="footer-newsletter__item">
+                           <input oninput="this.value = this.value.replace(/\D/g, '')" maxlength='12' minlength='10' type="text" id="newsletterName" name="firstname" class="form__input form__input-transparent footer-newsletter__input" data-rule-required="true" data-rule-nowhitespaces="true" placeholder="Телефон" />
+                        </div>
+                        <div class="footer-newsletter__item footer-newsletter__item_email">
+                           <input type="email" id="newsletterEmail" name="email" class="form__input form__input-transparent footer-newsletter__input" data-rule-required="true" placeholder="Email" />
+                        </div>
+                        <div class="footer-newsletter__item cityHide">
+                           <input type="text" id="newsletterCity" name="city" class="form__input form__input-transparent footer-newsletter__input js-newsletter-city-input" autocomplete="off" value="ИгроваяАнкета" />
+                        </div>
+                        <div class="footer-newsletter__item"><input type="submit" class="btn footer-newsletter__btn rndcorn" value="Відправити" /></div>
+                     </form>
+
+                     <div id="footerNewsletterSuccess" class="footer-newsletter__success _transparent js-newsletter-block">
+                        <p class="footer-newsletter__success-title footer-newsletter__success-item">Дякую, бро! Очікуй на промокод.</p>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+
+         </div>
+
+
+         <div class="container-info" style="display: none;">
+            <div class="row-info-flex">
+               <div class="item">
+                  <p>10 грудня, 12:00<br /><span class="color_fff">м. Одеси, ТРЦ «караван»</span></p>
+               </div>
+               <div class="item">
+                  <p>турніри з</p>
+                  <div class="cont-game-flex">
+                     <div class="itemg">
+                        <img src="https://cdn.comfy.ua/media/x/img/game_day/1.png" alt="">
+                     </div>
+                     <div class="itemg">
+                        <img src="https://cdn.comfy.ua/media/x/img/game_day/2.png" alt="">
+                     </div>
+                     <div class="itemg">
+                        <img src="https://cdn.comfy.ua/media/x/img/game_day/3.png" alt="">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </section>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">// <![CDATA[
+   $(document).ready(function () {
+      $(".footer-newsletter__btn").click(
+         function sendAjaxForm(result_form, ajax_form) {
+            let people = {
+               numbertel: '',
+               email: ''
+            };
+            people.numbertel = $('#newsletterName').val();
+            people.email = $('#newsletterEmail').val();
+            $.ajax({
+               url: "https://www.corezoid.com/api/1/json/public/605711/a4bb78c96c69d6b0d419aebbdcb08523f1974cd5", //url страницы (action_ajax_form.php)
+               headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded'
+               },
+               type: "POST", //метод отправки
+               dataType: "json", //формат данных
+               data: JSON.stringify(people), // Сеарилизуем объект
+               success: console.log('done')
+            });
+         }
+
+      );
+   });
+// ]]></script>

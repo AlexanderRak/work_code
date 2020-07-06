@@ -1,0 +1,748 @@
+<style type="text/css">
+  
+/** {
+  margin: 0px;
+  padding: 0px;
+}*/
+
+.gallery .control-operator:target ~ .controls .control-button {
+  color: #ccc;
+  color: rgba(216, 207, 207, 0.4);
+}
+
+.gallery .control-operator:target ~ .controls .control-button:focus {
+  color: #ccc;
+  color: rgba(216, 207, 207, 0.4);
+}
+
+.gallery .control-button:first-of-type,
+.gallery .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1),
+.gallery .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),
+.gallery .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3),
+.gallery .control-operator:nth-of-type(4):target ~ .controls .control-button:nth-of-type(4),
+.gallery .control-operator:nth-of-type(5):target ~ .controls .control-button:nth-of-type(5) {
+  color: black;
+  color: black;
+}
+
+.gallery .item:first-of-type {
+  position: static;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.gallery .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.gallery .control-operator {
+  display: none;
+}
+
+.gallery .control-operator:target ~ .item {
+  pointer-events: none;
+  opacity: 0;
+  -webkit-animation: none;
+  -o-animation: none;
+  animation: none;
+}
+
+.gallery .control-operator:target ~ .controls .control-button {
+  -webkit-animation: none;
+  -o-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes controlAnimation-2 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  14.3%, 50% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  64.3%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@-o-keyframes controlAnimation-2 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  14.3%, 50% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  64.3%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@keyframes controlAnimation-2 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  14.3%, 50% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  64.3%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@-webkit-keyframes galleryAnimation-2 {
+  0% {
+    opacity: 0;
+  }
+
+  14.3%, 50% {
+    opacity: 1;
+  }
+
+  64.3%, 100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes galleryAnimation-2 {
+  0% {
+    opacity: 0;
+  }
+
+  14.3%, 50% {
+    opacity: 1;
+  }
+
+  64.3%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes galleryAnimation-2 {
+  0% {
+    opacity: 0;
+  }
+
+  14.3%, 50% {
+    opacity: 1;
+  }
+
+  64.3%, 100% {
+    opacity: 0;
+  }
+}
+
+.gallery .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.gallery .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-2.autoplay .control-button {
+  -webkit-animation: controlAnimation-2 14s infinite;
+  -o-animation: controlAnimation-2 14s infinite;
+  animation: controlAnimation-2 14s infinite;
+}
+
+.items-2.autoplay .item {
+  -webkit-animation: galleryAnimation-2 14s infinite;
+  -o-animation: galleryAnimation-2 14s infinite;
+  animation: galleryAnimation-2 14s infinite;
+}
+
+.items-2 .control-button:nth-of-type(1),
+.items-2 .item:nth-of-type(1) {
+  -webkit-animation-delay: -2s;
+  -o-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+.items-2 .control-button:nth-of-type(2),
+.items-2 .item:nth-of-type(2) {
+  -webkit-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s;
+}
+/*
+@-webkit-keyframes controlAnimation-3 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  9.5%, 33.3% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  42.9%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@-o-keyframes controlAnimation-3 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  9.5%, 33.3% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  42.9%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@keyframes controlAnimation-3 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  9.5%, 33.3% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  42.9%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+*/
+@-webkit-keyframes galleryAnimation-3 {
+  0% {
+    opacity: 0;
+  }
+
+  9.5%, 33.3% {
+    opacity: 1;
+  }
+
+  42.9%, 100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes galleryAnimation-3 {
+  0% {
+    opacity: 0;
+  }
+
+  9.5%, 33.3% {
+    opacity: 1;
+  }
+
+  42.9%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes galleryAnimation-3 {
+  0% {
+    opacity: 0;
+  }
+
+  9.5%, 33.3% {
+    opacity: 1;
+  }
+
+  42.9%, 100% {
+    opacity: 0;
+  }
+}
+
+.gallery .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.gallery .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.gallery .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-3.autoplay .control-button {
+  -webkit-animation: controlAnimation-3 21s infinite;
+  -o-animation: controlAnimation-3 21s infinite;
+  animation: controlAnimation-3 21s infinite;
+}
+
+.items-3.autoplay .item {
+  -webkit-animation: galleryAnimation-3 21s infinite;
+  -o-animation: galleryAnimation-3 21s infinite;
+  animation: galleryAnimation-3 21s infinite;
+}
+
+.items-3 .control-button:nth-of-type(1),
+.items-3 .item:nth-of-type(1) {
+  -webkit-animation-delay: -2s;
+  -o-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+.items-3 .control-button:nth-of-type(2),
+.items-3 .item:nth-of-type(2) {
+  -webkit-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+.items-3 .control-button:nth-of-type(3),
+.items-3 .item:nth-of-type(3) {
+  -webkit-animation-delay: 12s;
+  -o-animation-delay: 12s;
+  animation-delay: 12s;
+}
+
+@-webkit-keyframes controlAnimation-4 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  7.1%, 25% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  32.1%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@-o-keyframes controlAnimation-4 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  7.1%, 25% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  32.1%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@keyframes controlAnimation-4 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  7.1%, 25% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  32.1%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@-webkit-keyframes galleryAnimation-4 {
+  0% {
+    opacity: 0;
+  }
+
+  7.1%, 25% {
+    opacity: 1;
+  }
+
+  32.1%, 100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes galleryAnimation-4 {
+  0% {
+    opacity: 0;
+  }
+
+  7.1%, 25% {
+    opacity: 1;
+  }
+
+  32.1%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes galleryAnimation-4 {
+  0% {
+    opacity: 0;
+  }
+
+  7.1%, 25% {
+    opacity: 1;
+  }
+
+  32.1%, 100% {
+    opacity: 0;
+  }
+}
+
+.gallery .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.gallery .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.gallery .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.gallery .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-4.autoplay .control-button {
+  -webkit-animation: controlAnimation-4 28s infinite;
+  -o-animation: controlAnimation-4 28s infinite;
+  animation: controlAnimation-4 28s infinite;
+}
+
+.items-4.autoplay .item {
+  -webkit-animation: galleryAnimation-4 28s infinite;
+  -o-animation: galleryAnimation-4 28s infinite;
+  animation: galleryAnimation-4 28s infinite;
+}
+
+.items-4 .control-button:nth-of-type(1),
+.items-4 .item:nth-of-type(1) {
+  -webkit-animation-delay: -2s;
+  -o-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+.items-4 .control-button:nth-of-type(2),
+.items-4 .item:nth-of-type(2) {
+  -webkit-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+.items-4 .control-button:nth-of-type(3),
+.items-4 .item:nth-of-type(3) {
+  -webkit-animation-delay: 12s;
+  -o-animation-delay: 12s;
+  animation-delay: 12s;
+}
+
+.items-4 .control-button:nth-of-type(4),
+.items-4 .item:nth-of-type(4) {
+  -webkit-animation-delay: 19s;
+  -o-animation-delay: 19s;
+  animation-delay: 19s;
+}
+/*
+@-webkit-keyframes controlAnimation-5 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  5.7%, 20% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  25.7%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@-o-keyframes controlAnimation-5 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  5.7%, 20% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  25.7%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@keyframes controlAnimation-5 {
+  0% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  5.7%, 20% {
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  25.7%, 100% {
+    color: #ccc;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+*/
+@-webkit-keyframes galleryAnimation-5 {
+  0% {
+    opacity: 0;
+  }
+
+  5.7%, 20% {
+    opacity: 1;
+  }
+
+  25.7%, 100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes galleryAnimation-5 {
+  0% {
+    opacity: 0;
+  }
+
+  5.7%, 20% {
+    opacity: 1;
+  }
+
+  25.7%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes galleryAnimation-5 {
+  0% {
+    opacity: 0;
+  }
+
+  5.7%, 20% {
+    opacity: 1;
+  }
+
+  25.7%, 100% {
+    opacity: 0;
+  }
+}
+
+.gallery .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.gallery .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.gallery .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.gallery .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.gallery .control-operator:nth-of-type(5):target ~ .item:nth-of-type(5) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.items-5.autoplay .control-button {
+  -webkit-animation: controlAnimation-5 35s infinite;
+  -o-animation: controlAnimation-5 35s infinite;
+  animation: controlAnimation-5 35s infinite;
+}
+
+.items-5.autoplay .item {
+  -webkit-animation: galleryAnimation-5 35s infinite;
+  -o-animation: galleryAnimation-5 35s infinite;
+  animation: galleryAnimation-5 35s infinite;
+}
+
+.items-5 .control-button:nth-of-type(1),
+.items-5 .item:nth-of-type(1) {
+  -webkit-animation-delay: -2s;
+  -o-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+.items-5 .control-button:nth-of-type(2),
+.items-5 .item:nth-of-type(2) {
+  -webkit-animation-delay: 5s;
+  -o-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+.items-5 .control-button:nth-of-type(3),
+.items-5 .item:nth-of-type(3) {
+  -webkit-animation-delay: 12s;
+  -o-animation-delay: 12s;
+  animation-delay: 12s;
+}
+
+.items-5 .control-button:nth-of-type(4),
+.items-5 .item:nth-of-type(4) {
+  -webkit-animation-delay: 19s;
+  -o-animation-delay: 19s;
+  animation-delay: 19s;
+}
+
+.items-5 .control-button:nth-of-type(5),
+.items-5 .item:nth-of-type(5) {
+  -webkit-animation-delay: 26s;
+  -o-animation-delay: 26s;
+  animation-delay: 26s;
+}
+
+.gallery .control-button {
+  color: #ccc;
+  color: rgba(103, 98, 98, 0.4);
+}
+
+.gallery .control-button:hover {
+  /*color: white;
+  color: rgba(255, 255, 255, 0.8);*/
+}
+
+
+.gallery {
+  position: relative;
+  max-width: 1316px;
+  margin: 0 auto;
+border-bottom: 10px solid #f2f2f2;
+}
+
+.gallery .item {
+  /*height: 200px;*/
+  overflow: hidden;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  /*background: #4d87e2;*/
+}
+
+.gallery .controls {
+  position: inherit;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+      margin-top: -2em;
+}
+
+
+.gallery .control-button {
+  display: inline-block;
+
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: color .1s;
+  -o-transition: color .1s;
+  transition: color .1s;
+}
+
+.gallery .control-button span{
+  background-color: #030204;
+  border: 1px solid #6b6969;
+}
+.gallery .control-button span:active{
+  background-color: #ccc;
+  border: 1px solid #6b6969;
+}
+
+.item_img_w_h a img {
+  max-width: 1316px;
+  height: auto;
+  width: 100%;
+}
+.controls a {
+  display: inline-block;
+}
+
+.icon_size {
+  font-size: 5em;
+}
+
+</style>
+<!-- autoplay -->
+<div class="gallery items-3">
+<div id="item-1" class="control-operator"></div>
+<div id="item-2" class="control-operator"></div>
+<div id="item-3" class="control-operator"></div>
+<div id="item-4" class="control-operator"></div>
+<figure class="item item_img_w_h"> <a href="https://comfy.ua/smartfon/brand__apple/"> <img src="https://cdn.comfy.ua/media/x/slider_smartfon/2iPhone-X_1316_200_ukr.jpg" /> </a> </figure> <figure class="item item_img_w_h"> <a href="https://comfy.ua/smartfon-samsung-g950-galaxy-s8-64gb-red.html"> <img src="https://cdn.comfy.ua/media/x/slider_smartfon/1S8_1316_200_ru.jpg" /> </a> </figure> <figure class="item item_img_w_h"> <a href="https://comfy.ua/smartfon-nokia-6-dual-sim-matte-black.html"> <img src="https://cdn.comfy.ua/media/x/img/Nokia6_1316_200_ru.jpg" /> </a> </figure> <figure class="item item_img_w_h"> <a href="https://comfy.ua/catalogsearch/result/index?cat=67&amp;q=Nova+lite"> <img src="https://cdn.comfy.ua/media/x/slider_smartfon/huawey/HUAWEI_NovaLite.jpg" /> </a> </figure> <!--           <figure class="item item_img_w_h"> <a href="https://cdn.comfy.ua/media/x/slider_smartfon/huawey/HUAWEI_Psmart_ru.jpg" _mce_href="https://cdn.comfy.ua/media/x/slider_smartfon/huawey/HUAWEI_Psmart_ru.jpg" > <img src="https://comfy.ua/catalogsearch/result/index?cat=67&q=Huawei+P+smart" _mce_src="https://comfy.ua/catalogsearch/result/index?cat=67&amp;q=Huawei+P+smart" /> </a> </figure> <figure class="item item_img_w_h"> <a href="https://cdn.comfy.ua/media/x/slider_smartfon/huawey/HuaweiNova_ru.jpg" _mce_href="https://cdn.comfy.ua/media/x/slider_smartfon/huawey/HuaweiNova_ru.jpg" > <img src="https://comfy.ua/catalogsearch/result?q=Huawei+Nova+%28CAN-L11%29" _mce_src="https://comfy.ua/catalogsearch/result?q=Huawei+Nova+%28CAN-L11%29" /> </a> </figure> <figure class="item item_img_w_h"> <a href="https://cdn.comfy.ua/media/x/slider_smartfon/huawey/HuaweiP8-lite_ru.jpg" _mce_href="https://cdn.comfy.ua/media/x/slider_smartfon/huawey/HuaweiP8-lite_ru.jpg" > <img src="https://comfy.ua/catalogsearch/result/index?cat=67&q=P8+lite+2017" _mce_src="https://comfy.ua/catalogsearch/result/index?cat=67&amp;q=P8+lite+2017" /> </a> </figure> <figure class="item item_img_w_h"> <a href="https://cdn.comfy.ua/media/x/slider_smartfon/huawey/HuaweiY5_spring_ru.jpg" _mce_href="https://cdn.comfy.ua/media/x/slider_smartfon/huawey/HuaweiY5_spring_ru.jpg" > <img src="https://comfy.ua/catalogsearch/result/index?cat=67&q=Y5+2017" _mce_src="https://comfy.ua/catalogsearch/result/index?cat=67&amp;q=Y5+2017" /> </a> </figure> <figure class="item item_img_w_h"> <a href="https://cdn.comfy.ua/media/x/slider_smartfon/huawey/HuaweiY7_ru.jpg" _mce_href="https://cdn.comfy.ua/media/x/slider_smartfon/huawey/HuaweiY7_ru.jpg" > <img src="https://comfy.ua/catalogsearch/result/index?cat=67&q=Huawei++Y7" _mce_src="https://comfy.ua/catalogsearch/result/index?cat=67&amp;q=Huawei++Y7" /> </a> </figure> -->
+<div class="controls"><a href="#item-1" class="control-button">
+<div class="icon_size">•</div>
+</a> <a href="#item-2" class="control-button">
+<div class="icon_size">•</div>
+</a> <a href="#item-3" class="control-button">
+<div class="icon_size">•</div>
+</a> <a href="#item-4" class="control-button">
+<div class="icon_size">•</div>
+</a> <!-- <a class="control-button" href="#item-6" _mce_href="#item-6">
+<div class="icon_size">•</div>
+</a> <a class="control-button" href="#item-7" _mce_href="#item-7">
+<div class="icon_size">•</div>
+</a> <a class="control-button" href="#item-8" _mce_href="#item-8">
+<div class="icon_size">•</div>
+</a> <a class="control-button" href="#item-9" _mce_href="#item-9">
+<div class="icon_size">•</div>
+</a> <a class="control-button" href="#item-10" _mce_href="#item-10">
+<div class="icon_size">•</div>
+</a> --></div>
+</div>

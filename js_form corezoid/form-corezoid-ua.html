@@ -1,0 +1,135 @@
+<style type="text/css">
+   form div.error,
+   form label.error {
+      left: 15px;
+      display: block;
+      position: relative;
+      margin: 4px;
+   }
+
+   #none_form {
+      display: block;
+   }
+
+   #block_text {
+      display: none;
+   }
+</style>
+
+<div id="none_form">
+
+   <form id="valid_form" method="post" name="valid_form">
+
+      <div class="container-flex-form">
+         <div class="row-flex-form">
+            <div class="item_fr item_email">
+               <input type="email" id="email_rw" name="yourmail" class="" placeholder="Email" value="" required />
+            </div>
+            <div class="item_fr item_phone">
+               <input type="text" id="number_rw" name="younember" class="" placeholder="Номер телефона" minlength="10" maxlength="12" value="" required />
+            </div>
+            <div class="item_fr item_phone">
+               <input type="text" id="yourname_rw" name="yourname" class="" placeholder="Имя" value="" required />
+            </div>
+            <div class="item_fr item_sity">
+               <input type="text" id="city_rw" name="yourcity" class="" placeholder="Город" value="" required />
+            </div>
+            <div class="item_fr item_submit">
+               <input type="submit" class="submit-posgo" value="Отправить" name="Submit" />
+            </div>
+         </div>
+      </div>
+
+   </form>
+
+</div>
+
+<div id="block_text">
+   <p>Спасибо! Форма отправлена.</p>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+
+<script>
+
+   $(document).ready(function () {
+      $("fieldset input").click(function () {
+         $("fieldset label.error").remove()
+      });
+
+      $("#valid_form").validate({
+         rules: {
+            yourname: {
+               required: true,
+            },
+            yourcity: {
+               required: true
+            },
+            yourmail: {
+               required: true,
+               email: true
+            },
+            younember: {
+               required: true,
+               number: true,
+               minlength: 10,
+               maxlength: 12
+            }
+         },
+         messages: {
+            yourname: {
+               required: "Обезательное поле."
+            },
+            younember: {
+               required: "Обезательное поле.",
+               number: "Введите только цыфры.",
+               minlength: "В поле должно быть минимум 10 символов",
+               maxlength: "В поле должно быть максимум 13 символов"
+            },
+            yourmail: {
+               required: "Обезательное поле.",
+               email: "Поле должно содержать символ @"
+            },
+            yourcity: {
+               required: "Обезательное поле."
+            }
+         },
+         errorPlacement: function (error, element) {
+            if (element.attr("name") == "yourname") error.insertAfter($("input[name=yourname]"));
+            if (element.attr("name") == "yourcity") error.insertAfter($("input[name=yourcity]"));
+            if (element.attr("name") == "younember") error.insertAfter($("input[name=younember]"));
+            if (element.attr("name") == "yourmail") error.insertAfter($("input[name=yourmail]"));
+         },
+         submitHandler: function (form) {
+            function sendAjaxForm(result_form, ajax_form) {
+               let people = {
+                  numbertel: '',
+                  email: '',
+                  sity: '',
+                  yourname_rw: ''
+               };
+               people.numbertel = $('#number_rw').val();
+               people.email = $('#email_rw').val();
+               people.sity = $('#city_rw').val();
+               people.yourname_rw = $('#yourname_rw').val();
+
+               $.ajax({
+                  url: "https://www.corezoid.com/api/1/json/public/639985/565970e90fa751c5673165a43e764a99590b0062",
+                  headers: {
+                     'Content-Type': 'application/x-www-form-urlencoded'
+                  },
+                  type: "POST", //метод отправки
+                  dataType: "json", //формат данных
+                  data: JSON.stringify(people), // Сеарилизуем объект
+                  success: console.log('done')
+               });
+               var none_form = document.getElementById("none_form").style.display = "none";
+               var block_text = document.getElementById("block_text").style.display = "block";
+            }
+            sendAjaxForm();
+         }
+      });
+   })
+
+</script>

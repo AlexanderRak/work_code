@@ -1,0 +1,785 @@
+<style>
+
+
+.header .narrow-container {background-color: #fff;}
+.header-bottom .narrow-container {background-color: #fff;}
+
+.main-container .narrow-container{
+  max-width: 100%;
+}
+
+.footer {
+    margin-top: -42px;
+}
+
+.footer-newsletter {
+    display: none;
+}
+
+._show-newsletter .fixed-buttons {
+    display: none;
+}
+
+.footVid{
+  display: inline-block;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.vid{
+  display: inline-block;
+  float: left;
+  width: 33%;
+  padding: 20px;
+  text-align: left
+}
+.vid span{
+  font-size: 17px;
+  margin-top: 10px;
+  display: block;
+}
+
+.vid span:after{
+  display: inline-block;
+  content: '';
+    border: .6rem solid transparent;
+    border-left: .8rem solid #6bb864;
+  position: relative;
+  right: -10px;
+  top: 1px;
+}
+
+.footer-info {
+  display:none;
+}
+.blcsamsung{
+  float: left; 
+  width:49%; 
+  text-align: left;
+  padding:10px;
+  height: 400px;
+}
+.blcsamsung h3{
+  font-size: 30px; 
+  font-weight: 800;
+  padding-top: 20px;
+}
+.blcsamsung p{ 
+  font-size: 16px; 
+  line-height: 24px;
+}
+.footSams{
+    margin-top: 50px;
+    padding: 20px 50px;
+}
+.btnSams{
+  padding: 15px 35px; 
+  background-color: #3B72CC; 
+  text-transform: uppercase; 
+  color: #fff !important;    
+  display: inline-block;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: 20px; 
+}
+.btnSams:hover{
+  background-color: #3766b3; 
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .blcsamsung {
+    height: inherit;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .blcsamsung {
+    height: inherit;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .blcsamsung {
+    height: inherit;
+  }
+}
+
+@media screen and (max-width:1062px){
+  .samsung-cms .punkt a p{min-height: 66px !important;}
+  .blocktwo{width: 100% !important;}
+
+  .header-bottom .narrow-container {background-color: transparent !important;}
+
+  .footer {
+    margin-top: 0px;
+}
+
+.sd{
+
+padding: 10px 10px !important;
+}
+.newprdct {padding-top: 0px !important; }
+.carousel-controls {padding-top: 0px !important; }
+
+.tov {margin-top: -10px !important;}
+
+.tov a img{  width: 80%; height: auto !important;}
+
+.vid{
+  width:100%;
+  margin: 0 auto;
+}
+
+.blcsamsung img{
+  width: 60%;
+}
+.blcsamsung{
+  width:100%;
+  margin: 0 auto;
+}
+.footSams{    
+  margin-top: 30px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.footSams .sa{
+  order: 4;
+  padding: 0px 10px;
+}
+.footSams .sb{
+  order: 3;
+  margin-top: 40px;
+}
+.footSams .sc{
+  order: 1;
+  text-align: center;
+}
+.footSams .sd{
+  order: 2;
+}
+
+}
+
+
+/*------------------------------*/
+
+
+#slideshow-wrap {
+    text-align: center;
+    display: block;
+    min-width: 260px;
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+#slideshow-inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#slideshow-inner&gt;ul {
+    list-style: none;
+    height: 100%;
+    width: 625%;
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    -webkit-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+
+#slideshow-inner&gt;ul&gt;#slide2{
+      background-color: #000032;
+}
+
+
+#slideshow-inner&gt;ul&gt;li {
+    width: 16%;
+    float: left;
+    position: relative;
+    background-color: #000;
+    margin-bottom: -3px;
+}
+
+#slideshow-inner&gt;ul&gt;li&gt;img {
+    margin: auto;
+}
+
+#slideshow-wrap input[type=radio] {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    z-index: 100;
+    visibility: hidden;
+}
+
+#slideshow-wrap label:not(.arrows):not(.show-description-label) {
+  position: absolute;
+  border: 1px solid;
+    left: 51%;
+    bottom: -20px;
+    z-index: 100;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: background-color .2s;
+    -moz-transition: background-color .2s;
+    -o-transition: background-color .2s;
+    transition: background-color .2s;
+}
+
+#slideshow-wrap label:not(.arrows):active { bottom: -21px }
+
+#slideshow-wrap input[type=radio]#button-1:checked~label[for=button-1] { background-color: #000 }
+
+#slideshow-wrap input[type=radio]#button-2:checked~label[for=button-2] { background-color: #000 }
+
+#slideshow-wrap input[type=radio]#button-3:checked~label[for=button-3] { background-color: #000 }
+
+#slideshow-wrap input[type=radio]#button-4:checked~label[for=button-4] { background-color: #000 }
+
+#slideshow-wrap input[type=radio]#button-5:checked~label[for=button-5] { background-color: #000 }
+
+#slideshow-wrap input[type=radio]#button-6:checked~label[for=button-6] { background-color: #000 }
+
+#slideshow-wrap label[for=button-1] { margin-left: -36px }
+
+#slideshow-wrap label[for=button-2] { margin-left: -18px }
+
+#slideshow-wrap label[for=button-4] { margin-left: 18px }
+
+#slideshow-wrap label[for=button-5] { margin-left: 36px }
+
+#slideshow-wrap label[for=button-6] { margin-left: 54px }
+
+#slideshow-wrap input[type=radio]#button-1:checked~#slideshow-inner&gt;ul { left: 0 }
+
+#slideshow-wrap input[type=radio]#button-2:checked~#slideshow-inner&gt;ul { left: -100% }
+
+#slideshow-wrap input[type=radio]#button-3:checked~#slideshow-inner&gt;ul { left: -200% }
+
+#slideshow-wrap input[type=radio]#button-4:checked~#slideshow-inner&gt;ul { left: -300% }
+
+#slideshow-wrap input[type=radio]#button-5:checked~#slideshow-inner&gt;ul { left: -400% }
+
+#slideshow-wrap input[type=radio]#button-6:checked~#slideshow-inner&gt;ul { left: -500% }
+
+label.arrows {
+    font-family: 'WebSymbolsRegular';
+    font-size: 25px;
+    color: rgb(255,255,240);
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    display: none;
+    opacity: 0.7;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: transparent;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+label.arrows:hover { opacity: 1 }
+
+label.arrows:active { margin-top: -23px }
+
+input[type=radio]#button-1:checked~.arrows#arrow-2, input[type=radio]#button-2:checked~.arrows#arrow-3, input[type=radio]#button-3:checked~.arrows#arrow-4, input[type=radio]#button-4:checked~.arrows#arrow-5, input[type=radio]#button-5:checked~.arrows#arrow-6 {
+    right: 90px;
+    display: block;
+}
+
+input[type=radio]#button-2:checked~.arrows#arrow-1, input[type=radio]#button-3:checked~.arrows#arrow-2, input[type=radio]#button-4:checked~.arrows#arrow-3, input[type=radio]#button-5:checked~.arrows#arrow-4, input[type=radio]#button-6:checked~.arrows#arrow-5 {
+    left: 125px;
+    display: block;
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+input[type=radio]#button-2:checked~.arrows#arrow-1 { left: 125px }
+
+input[type=radio]#button-3:checked~.arrows#arrow-2 { left: 110px }
+
+input[type=radio]#button-4:checked~.arrows#arrow-3 { left: 90px }
+
+input[type=radio]#button-5:checked~.arrows#arrow-4 { left: 70px }
+
+input[type=radio]#button-6:checked~.arrows#arrow-5 { left: 50px }
+
+.description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+    font-family: 'Yanone Kaffeesatz';
+    z-index: 1000;
+}
+
+.description input { visibility: hidden }
+
+.description label {
+    font-family: 'WebSymbolsRegular';
+    background-color: rgba(255,255,240,1);
+    position: relative;
+    left: -17px;
+    top: 00px;
+    width: 40px;
+    height: 27px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 7px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+    z-index: 5;
+    color: rgb(20,20,20);
+}
+
+#slideshow-inner&gt;ul&gt;li:hover .description label { opacity: 1 }
+
+.description input[type=checkbox]:checked~label { opacity: 1 }
+
+.description .description-text {
+    background-color: rgba(255,255,230,.5);
+    padding-left: 45px;
+    padding-top: 25px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    top: -35px;
+    z-index: 4;
+    opacity: 0;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+    color: rgb(20,20,20);
+}
+
+.description input[type=checkbox]:checked~.description-text { opacity: 1 }
+
+
+/*------------------------------*/
+
+
+.tovary { width: 100%; text-align: center; width: 102%;}
+.minitext {display:none;}
+.bannnner {display: none;}
+body {background: url(https://cdn.comfy.ua/media/blb/banner_promo/11-1/noimg_1.png) #F5F5F5 center top !important;}
+.header__top {background-color: #02A709;}
+
+.banner .control {margin: -65px 0 0;}
+.samsung-cms .banner-wrap img {max-height:inherit;}
+.samsung-cms .banner-wrap {max-width: inherit; max-height: inherit;}
+.samsung-cms .zagolovok {font-size: 35px; padding: 70px 0px 40px; text-align: center; font-weight: bold;}
+.samsung-cms .cont {background-color: #fff; margin-top: 30px; display: inline-block; width: 100%; padding-bottom: 20px; }
+.samsung-cms .punkt{text-align: center; float: left; width:25%; margin-top: 20px;}
+.samsung-cms .punkt a p{color:#000; font-weight: 600; text-transform: uppercase; font-size: 16px; min-height: 40px;}
+.tov {float: left; width: 22%; text-align: center; color: #000; margin-top: -85px;}
+.tov a{color: #000;}
+.tov p{padding: 10px; min-height: 57px;}
+.banner .control li {width: 33px; height: 12px; border-radius: 10px; background: #ccc;}
+.banner .control li.selected {background:#3675ab;}
+.newprdct{padding-top: 20px;}
+input[type="checkbox"], input[type="radio"]{display: none;}
+.punkt a:hover img{opacity: 0.6;}
+.five a:hover img{opacity: 0.6;}
+
+.punkt a:hover p{opacity: 0.6;}
+.five a:hover p{opacity: 0.6;}
+/* -------------------------------------------------------- */
+
+
+.narrow-container_white { background: transparent;}
+.carousel {
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  height: 320px;
+}
+
+.carousel-item {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.6s ease-in-out;
+  width: 100%;
+}
+
+.carousel-active:checked + .carousel-item {
+  opacity: 1;
+  pointer-events: auto;
+  position: static;
+}
+
+.carousel-item tov {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.carousel-controls {
+  height: 100%;
+  width: 100%;
+  padding-top: 7%;
+}
+
+.carousel-control {
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 28px;
+  height: 90px;
+  text-align: center;
+  transition: background 0.1s ease-in-out;
+  width: 50%;
+  z-index: 2;
+  line-height: 90px;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control.prev {
+  float: left;
+}
+
+.carousel-control.next {
+  float: right;
+}
+
+.carousel-caption {
+  bottom: 15%;
+  font-size: 120%;
+  left: 20%;
+  opacity: 0;
+  right: 20%;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.1s ease-out;
+  z-index: 2;
+}
+
+.carousel-active:checked + .carousel-item .carousel-caption {
+  transition: opacity 0.6s ease-in;
+  opacity: 1;
+}
+
+.carousel-indicators {
+  bottom: 5%;
+  left: 5%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  right: 5%;
+  text-align: center;
+  z-index: 2;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+}
+
+.carousel-indicator {
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  font-size: 28px;
+  line-height: 1;
+  padding: 5px 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: background 0.1s ease-in-out;
+}
+
+.carousel-indicator:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* If you`re needing more than 3 banners, maybe you might be using another way to represent your info... ;-) */
+#carousel-1:checked ~ .carousel-indicators .carousel-indicator[for="carousel-1"],
+#carousel-2:checked ~ .carousel-indicators .carousel-indicator[for="carousel-2"],
+#carousel-3:checked ~ .carousel-indicators .carousel-indicator[for="carousel-3"] {
+  color: #007f7f;
+}
+
+@media (min-width: 768px) {
+
+  .carousel-indicators {
+    background: transparent;
+  }
+  .carousel-control {
+    width: 5%;
+  }
+  .carousel-controls,
+  .carousel-caption,
+  .carousel-indicators {
+ /*   position: absolute;*/
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+.blcsamsung img{
+  width: 100%;
+}
+.tov .btnSams{display: none;}
+.samsung-cms .punkt{width: 100%; margin-top: 40px;}
+.samsung-cms .five{width: 100%; margin-top: 40px; text-align: center}
+.tov{width: 50%; margin-top: 10px !important;}
+.carousel{display: inline-table;}
+.blocktwo{width: 100% !important}
+.txtLeft {width: 100% !important;
+    background-size: contain;
+    padding-top: 43.25%;
+    height: auto !important;}
+.txtRight {
+    width: 100% !important;}
+
+.footSams{padding: 20px 20px;}
+
+}
+
+
+@media screen and (min-width: 1024px) {
+/* denys rogachev 05072017 */
+
+
+
+
+.samsung-cms .punkt {
+    width: 25%;
+}
+
+.samsung-cms .cont {
+    text-align: center;
+}
+}
+
+
+.txthead{text-align: center; padding: 50px;    background-color: #fff;}
+.txthead h1{font-size: 40px;}
+.txthead p{font-size: 20px;}
+.mrg{ max-width: 1200px; margin: 0 auto; display: block !important;}
+
+.five{width: 20%; float: left; text-align: center;}
+
+.punkt .image{height: 160px; line-height: 130px;}
+.five .image{height: 100px; line-height: 120px;}
+.five p{font-weight: 600; text-transform: uppercase; font-size: 16px;}
+
+.blockone {display: inline-block; width: 100%;}
+.blocktwo {display: inline-block; width: 70%;}
+
+.txtLeft {background-image: url(https://cdn.comfy.ua/media/blb/samsung/kupi-razom.png); width: 66%; height: 343px; float: left; background-repeat: no-repeat;}
+.txtRight {width: 34%; height: 343px; background-color: #53B3E3; padding: 50px; float: left; text-align: left; color: #fff;}
+.txtRight h3{font-size: 25px;}
+.txtRight p{font-size: 16px}
+.obvodka {    margin-top: 0px !important;
+    background-color: #fff;
+    padding: 30px 0px;
+    border: 1px solid #E7E7E7;}
+.sa {padding: 25px 10px; margin-bottom: 50px;}
+.vsetov {    
+    display: table;
+    margin-top: 20px;
+    padding: 15px 45px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 40px;
+    margin: 0 auto;
+  }
+.vsetov:hover{ background-color: #000; color: #fff; border: 2px solid #000 }
+
+
+.obvodka .image img{height: 120px;}
+.obvodka p{
+    font-weight: 400 !important;
+    text-transform: none !important;
+    font-size: 14px !important;}
+
+.tov a img{height: 200px;}
+
+.vmestebtn{ border: 2px solid #fff; padding: 10px 20px; font-size: 18px; text-transform: uppercase; border-radius: 40px; color: #fff; font-weight: 600; display: inline-block; margin-top: 20px;}
+.vmestebtn:hover{background-color: #51a4ce;}
+.mrgtop {margin-top: 50px !important;}
+
+.breadcrumbs__item:last-child .breadcrumbs__lbl, .breadcrumbs__item:last-child .breadcrumbs__lbl:hover {color: #000;}
+.breadcrumbs__lbl { font-weight: normal;}
+
+.tov .btnSams{margin-top: 10px; }
+.tov a:hover .btnSams{text-decoration: none; background-color: #3766b3;}
+.tov .btnSams:hover {text-decoration: none;}
+
+</style>
+<!-- ============= БАННЕР ============= -->
+<div id="slideshow-wrap"><input type="radio" id="button-1" name="controls" checked="checked" /> <!--<label for="button-1"></label> <input name="controls" id="button-2" type="radio" /> <label for="button-2"></label> -->   <!--<input name="controls" id="button-3" type="radio" /> <label for="button-3"></label> <input name="controls" id="button-4" type="radio" /> <label for="button-4"></label> <input name="controls" id="button-5" type="radio" /> <label for="button-5"></label> <input name="controls" id="button-6" type="radio" /> <label for="button-6"></label> <label id="arrow-1" class="arrows" for="button-1">></label> <label id="arrow-2" class="arrows" for="button-2">></label> <label id="arrow-3" class="arrows" for="button-3">></label> <label id="arrow-4" class="arrows" for="button-4">></label> <label id="arrow-5" class="arrows" for="button-5">></label> <label id="arrow-6" class="arrows" for="button-6">></label> -->
+<div id="slideshow-inner">
+<ul>
+<li id="slide1"> <a href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-s10--samsung-galaxy-s10e--samsung-galaxy-s10plus/"> <img src="https://cdn.comfy.ua/media/x/img/1601_400_S10_Site.jpg" /></a>
+<div class="description"><input id="show-description-1" type="checkbox" /></div>
+</li>
+<!--
+<li id="slide2"> <a href="/samsung-galaxy-halloween-2018/" _mce_href="/samsung-galaxy-halloween-2018/"><img src="https://cdn.comfy.ua/media/x/img/J8_A6_1601_400.jpg" _mce_src="https://cdn.comfy.ua/media/x/img/J8_A6_1601_400.jpg" /></a>
+<div class="description"><input id="show-description-2" type="checkbox" /></div>
+</li>
+--> <!--
+<li id="slide2"> <a href="/samsung-televizory/tip_televizora__qled/" _mce_href="/samsung-televizory/tip_televizora__qled/"><img src="https://i.comfy.ua/media/x/img/eSiS_qled_facebook_banner.jpg" _mce_src="https://cdn.comfy.ua/media/blb/banner_promo/comfy_antitangle.jpg" /></a>
+<div class="description"><input id="show-description-2" type="checkbox" /></div>
+</li>
+<li id="slide3"> <img src="https://cdn.comfy.ua/media/blb/banner_promo/comfy_s8_vera.jpg" _mce_src="https://cdn.comfy.ua/media/blb/banner_promo/comfy_s8_vera.jpg" />
+<div class="description"><input id="show-description-3" type="checkbox" /></div>
+</li>
+<li id="slide4"> <img src="https://i.comfy.ua/media/x/img/eSiS_qled_facebook_banner.jpg" _mce_src="https://i.comfy.ua/media/x/img/eSiS_qled_facebook_banner.jpg" />
+<div class="description"><input id="show-description-4" type="checkbox" /></div>
+</li>
+<li id="slide5"> <img src="https://cdn.comfy.ua/media/blb/banner_promo/A-Series_Monatik_banners-resizes_1182x365px_ua__.jpg" _mce_src="https://cdn.comfy.ua/media/blb/banner_promo/A-Series_Monatik_banners-resizes_1182x365px_ua__.jpg" />
+<div class="description"><input id="show-description-5" type="checkbox" /></div>
+</li>
+<li id="slide6"> <img src="https://cdn.comfy.ua/media/blb/samsung/loveseason_1182x365..jpg" _mce_src="https://cdn.comfy.ua/media/blb/samsung/loveseason_1182x365..jpg" />
+<div class="description"><input id="show-description-6" type="checkbox" /></div>
+</li>
+--> 
+</ul>
+</div>
+</div>
+<div class="samsung-cms narrow-container"><!-- ============= /БАННЕР ============= -->
+<div class="txthead">
+<h1>Смартфони</h1>
+<p>Телефони Samsung настільки гарні,<br />наскільки зручні у використанні</p>
+</div>
+<!-- ============= СЛАЙДЕР ============= -->
+<h2 class="zagolovok">Бестселери</h2>
+<div class="cont mrg">
+<div class="newprdct">
+<div class="carousel" id="carousel"><input checked="checked" aria-hidden="true" name="carousel" id="carousel-1" class="carousel-active" type="radio" />
+<div class="carousel-item">
+<div aria-hidden="true" class="carousel-controls"><label title="Prev" class="carousel-control prev" for="carousel-2">&lt;</label> <label title="Next" class="carousel-control next" for="carousel-2">&gt;</label></div>
+<div class="tovary">
+<div class="tov"><a href="/smartfon-samsung-n960-galaxy-note-9-blue.html"> <img src="https://cdn.comfy.ua/media/x/samsung_mob/1note9.png" />
+<p>Смартфон Samsung N960 Galaxy Note9 128Gb Blue</p>
+</a><a class="btnSams" href="/smartfon-samsung-n960-galaxy-note-9-blue.html">Купити</a></div>
+<div class="tov"><a href="/smartfon-samsung-galaxy-s9-plus-64-gb-black.html"> <img src="https://cdn.comfy.ua/media/x/samsung_mob/2note9_Midnight.png" />
+<p>Смартфон Samsung G965 Galaxy S9+ 64Gb Midnight Black</p>
+</a><a class="btnSams" href="/smartfon-samsung-galaxy-s9-plus-64-gb-black.html">Купити</a></div>
+<div class="tov"><a href="/smartfon-samsung-galaxy-s9-64gb-purple.html"> <img src="https://cdn.comfy.ua/media/x/samsung_mob/3note9_purpule.png" />
+<p>Смартфон Samsung G960 Galaxy S9 64Gb Lilac Purple</p>
+</a><a class="btnSams" href="/smartfon-samsung-galaxy-s9-64gb-purple.html">Купити</a></div>
+<div class="tov"><a href="/smartfon-samsung-galaxy-s8-64gb-midnight-black.html"> <img src="https://cdn.comfy.ua/media/x/samsung_mob/4s9.png" />
+<p>Смартфон Samsung G950 Galaxy S8 64Gb Midnight Black</p>
+</a><a class="btnSams" href="/smartfon-samsung-galaxy-s8-64gb-midnight-black.html">Купити</a></div>
+</div>
+</div>
+<input aria-hidden="true" name="carousel" id="carousel-2" class="carousel-active" type="radio" />
+<div class="carousel-item">
+<div aria-hidden="true" class="carousel-controls"><label title="Prev" class="carousel-control prev" for="carousel-1">&lt;</label> <label title="Next" class="carousel-control next" for="carousel-1">&gt;</label></div>
+<div class="tovary">
+<div class="tov"><a href="/smartfon-samsung-a605-galaxy-a6-black.html"> <img src="https://cdn.comfy.ua/media/x/samsung_mob/5a6.png" />
+<p>Смартфон Samsung A605 Galaxy A6+ Black</p>
+</a><a class="btnSams" href="/smartfon-samsung-a605-galaxy-a6-black.html">Купити</a></div>
+<div class="tov"><a href="/smartfon-samsung-j600-galaxy-j6-black.html"> <img src="https://cdn.comfy.ua/media/x/samsung_mob/6j6.png" />
+<p>Смартфон Samsung J600 Galaxy J6 Black</p>
+</a><a class="btnSams" href="/smartfon-samsung-j600-galaxy-j6-black.html">Купити</a></div>
+<div class="tov"><a href="/smartfon-samsung-j415f-galaxy-j4-black.html"> <img src="https://cdn.comfy.ua/media/x/samsung_mob/7.png" />
+<p>Смартфон Samsung J415F Galaxy J4+ Black</p>
+</a><a class="btnSams" href="/smartfon-samsung-j415f-galaxy-j4-black.html">Купити</a></div>
+<div class="tov"><a href="/smartfon-samsung-j320h-ds-galaxy-j3-2016-black.html"> <img src="https://cdn.comfy.ua/media/x/samsung_mob/8j3.png" />
+<p>Смартфон Samsung J320H/DS Galaxy J3 (2016) Black</p>
+</a><a class="btnSams" href="/smartfon-samsung-j320h-ds-galaxy-j3-2016-black.html">Купити</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ============= /СЛАЙДЕР ============= --> <!-- ============= КАТЕГОРИИ ============= -->
+<div class="cont" style="margin-top: 100px; padding-bottom: 50px;">
+<h2 class="zagolovok" style="padding: 50px 0 30px;">Вибір за категорією</h2>
+<div class="blockone" style="max-width: 1200px;">
+<div class="punkt"><a href="https://comfy.ua/ua/samsung-smartfon/smart_seriya__galaxy-s/">
+<div class="image"><img src="https://cdn.comfy.ua/media/x/img/samsung_menu_smart/logo_s9_1.png" /></div>
+<p>Galaxy S Series</p>
+</a></div>
+<div class="punkt"><a href="https://comfy.ua/ua/samsung-smartfon/smart_seriya__galaxy-a/">
+<div class="image"><img src="https://cdn.comfy.ua/media/x/img/samsung_menu_smart/logo_a8_22.png" /></div>
+<p>Galaxy A Series</p>
+</a></div>
+<div class="punkt"><a href="https://comfy.ua/ua/samsung-smartfon/smart_seriya__galaxy-j/">
+<div class="image"><img src="https://cdn.comfy.ua/media/x/img/samsung_menu_smart/logo_j730_33.png" /></div>
+<p>Galaxy J Series</p>
+</a></div>
+<div class="punkt"><a href="https://comfy.ua/ua/samsung-smartfon/smart_seriya__galaxy-note/">
+<div class="image"><img src="https://cdn.comfy.ua/media/x/img/samsung_menu_smart/logo_note_4.png" /></div>
+<p>Galaxy Note</p>
+</a></div>
+</div>
+</div>
+<!-- ============= /КАТЕГОРИИ ============= --> <!-- ============= КОНТЕНТ ============= -->
+<div class="cont mrg mrgtop">
+<div class="txtLeft"></div>
+<div class="txtRight">
+<h3>Купити разом</h3>
+<p>Відмінні самі по собі, але ще кращі, якщо вони зібрані разом. Тут усе, що вам потрібно для максимального комфорту.</p>
+<!-- <a href="/vmeste-deshevle/brand__samsung__cat__78" _mce_href="/vmeste-deshevle/brand__samsung__cat__78" class="vmestebtn">Посмотреть</a> --></div>
+<div>
+<div class="punkt obvodka"><a href="/smartfon-samsung-galaxy-s9-64-gb-black-acsessuary.html">
+<div class="image"><img src="https://cdn.comfy.ua/media/x/img/s9_152_120_1.png" /></div>
+<p>Смартфон Samsung Galaxy S9 Midnight Black</p>
+</a></div>
+<a href="/smartfon-samsung-galaxy-s9-64-gb-black-acsessuary.html"> </a>
+<div class="punkt obvodka"><a href="/smartfon-samsung-galaxy-s9-64-gb-black-acsessuary.html"></a><a href="/memory-cards/brand__samsung/">
+<div class="image"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/0/1/01_yoga_510_14_inch_white_tour_shot_1.jpg" /></div>
+<p>Карти пам'яті Samsung</p>
+</a></div>
+<a href="/memory-cards/brand__samsung/"> </a>
+<div class="punkt obvodka"><a href="/memory-cards/brand__samsung/"></a><a href="/chehly/brand__samsung__ceh_sov__samsung-galaxy-s9--samsung-galaxy-s9plus/">
+<div class="image"><img src="https://cdn.comfy.ua/media/x/img/s9_chehol_152_120_1.png" /></div>
+<p>Чохли для телефонів Samsung Galaxy S9(2018)</p>
+</a></div>
+<a href="/chehly/brand__samsung__ceh_sov__samsung-galaxy-s9--samsung-galaxy-s9plus/"> </a>
+<div class="punkt obvodka"><a href="/chehly/brand__samsung__ceh_sov__samsung-galaxy-s9--samsung-galaxy-s9plus/"></a><a href="/naushniki-vkladyshi-samsung-level-u-pro-anc-black.html">
+<div class="image"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/s/a/samsung_level_u_pro_black_1_1.jpg" /></div>
+<p>Навушники вкладиші Samsung LEVEL U Pro Black(EO-BN920CBEGRU)</p>
+</a></div>
+<a href="/naushniki-vkladyshi-samsung-level-u-pro-anc-black.html"> </a></div>
+<a href="/naushniki-vkladyshi-samsung-level-u-pro-anc-black.html"> </a></div>
+<a href="/naushniki-vkladyshi-samsung-level-u-pro-anc-black.html"> <!-- =============  ============= --> </a>
+<div class="cont " style="margin-top: 50px; padding-bottom: 100px;"><a href="/naushniki-vkladyshi-samsung-level-u-pro-anc-black.html"> </a>
+<div class="mrg"><a href="/naushniki-vkladyshi-samsung-level-u-pro-anc-black.html"> </a>
+<div class="footSams"><a href="/naushniki-vkladyshi-samsung-level-u-pro-anc-black.html"> </a>
+<div class="blcsamsung sd"><a href="/naushniki-vkladyshi-samsung-level-u-pro-anc-black.html">
+<h3>Камера, створена заново</h3>
+<p>Це не просто камера. Це переосмислення того, на що здатна камера. Зустрічай новий флагман S-серії з революційною камерою, що адаптується до світла подібно до людського ока. З подвійною апертурою, що дозволяє робити вражаючі знімки як за низького, так і за яскравого освітлення. Камера, що сповільнює час до 960 кадрів в секунду. Та дає змогу робити персоналізовані АR-емодзі, якими ти легко зможеш ділитись з друзями у всіх месенджерах.</p>
+</a><a class="btnSams" href="/samsung-galaxy-s9/">Купить</a></div>
+<div class="blcsamsung sc"><img src="https://cdn.comfy.ua/media/x/img/01__.png" style="display: block; margin: 0 auto;" /></div>
+<div class="blcsamsung sb"><img src="https://cdn.comfy.ua/media/x/img/02__.png" style="display: block; margin: 0 auto;" /></div>
+<div class="blcsamsung sa">
+<h3>Ідеальний для селфі</h3>
+<p>Забудь про все, що ти знав про селфі. Зустрічай Galaxy A8 I A8+ з вражаючою подвійною селфі-камерою, що дасть тобі змогу робити знімки в стилі «боке» в один дотик та без будь-яких графічних редакторів. Виходь за рамки обмежень з безмежним дисплеєм та корпусом, що створений за стандартом захисту від води та пилу – ІР68.</p>
+<a class="btnSams" href="/smartfon/seriya_smartphone__samsung-galaxy-a8-2018--samsung-galaxy-a8plus-2018/">Купить</a></div>
+</div>
+<a href="/samsung-smartfon/" class="vsetov">ПОДИВИТИСЬ ВСЕ</a></div>
+</div>
+<!-- ============= /КОНТЕНТ ============= --></div>

@@ -1,0 +1,691 @@
+<style>
+
+.category-gifts-up-to .category-top__info.category-info .category-info__count { display: none !important; }
+.category-gifts-up-to .category-top__sort { display: none !important; }
+.category-gifts-up-to p.category-info__page-count  { display: none !important; }
+
+.category-gifts-up-to .category-top { justify-content: center !important; width: 100%; }
+
+
+.bannnner   {display: none;}
+.bannnnerm   {display: none;}
+.daruem{text-align: center; font-weight: bold; font-size: 100px;}
+
+.cms-content ul li:before {
+	position: inherit !important;
+}
+.form-panel{display: inline-flex;}
+
+#footer .footer-newsletter{display: none;}
+.footer-newsletter__success-title{color: #fff;}
+#form_samsung .content{width: 45%;}
+.breadcrumbs{display: none;}
+.std {
+	background-color:#43b02a;
+	border-top: 1px solid #379424;
+    /*padding-bottom: 25px; */
+}
+
+#form_samsung .form__input-transparent.error{    border: 1px solid #ffffff;}
+#form_samsung .footer-newsletter__item {
+	width: 18.7rem;
+}
+#form_samsung .footer-newsletter__input {
+	border-radius: 5px;
+}
+
+#form_samsung .footer-newsletter__input:focus {
+	background: rgba(136, 134, 133, 0.15);
+}
+
+#form_samsung .footer-newsletter__input:focus:-webkit-input-placeholder { color:transparent; }
+#form_samsung .footer-newsletter__input:focus:-moz-placeholder { color:transparent; }
+#form_samsung .footer-newsletter__input:focus:placeholder { color:transparent; }
+#form_samsung .footer-newsletter__input:autofill {
+	background: #efefef;
+}
+#form_samsung .footer-newsletter__btn {
+	border-radius: 5px;
+	box-shadow: 0px 0px 0px 0px #ff551e;
+	background: #ff551e;
+}
+#form_samsung .footer-newsletter__btn:hover {
+	box-shadow: 0 3px 10px 0 #ff551e;
+	background: #ff551e;
+}
+/*
+https://cdn.comfy.ua/media/x/img/1316x730_200hrn_bg2.png
+*/
+#form_samsung {
+/*
+	background-image: url(https://cdn.comfy.ua/media/x/img/1316x730_200hrn_2.png);
+    */
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 500px;
+        background: #43b02a;
+    max-width: 1316px;
+    margin: 0 auto;
+    z-index: 10;
+    /*height: auto;*/
+}
+/*
+https://cdn.comfy.ua/media/x/img/1316x730_200hrn_bg_1.png
+*/
+#form_samsung2 {
+	background-image: url(https://cdn.comfy.ua/media/x/img/COMFY_0523_4-copy-3.png);
+	/*background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 721px;
+	max-width: 1316px;
+	margin: 0 auto;
+	background-position-y:4rem;
+	z-index: 15;*/
+	/*height: auto;*/
+
+	/*background-position: left;*/
+  background-position: 45px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    max-width: 1316px;
+    margin: 0 auto;
+    background-position-y: 2rem;
+    z-index: 15;
+}
+#form_samsung .content img{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+}
+#form_samsung .content {
+	float: right;
+	display: inline-block;  
+	margin: 4rem 0rem 0 0;
+}
+#form_samsung .cityHide {
+	display: none;
+}
+#form_samsung .text h2 {
+	color: #fff;
+	line-height: 1!important;
+	margin-bottom: .5em;
+	text-transform: uppercase;
+	font-weight: 700 !important;
+	font-size: 6rem !important;
+}
+#form_samsung .text p {
+	color: #fff;
+	font-weight: 700;
+	margin: -7% 0 9% 0 !important;
+	text-align: center;
+	font-size: 3rem !important;
+}
+#form_samsung input {
+	text-align: center;
+}
+
+#form_samsung .popup .cms-content {
+	text-align: left;
+}
+
+#form_samsung .popup .cms-content a{
+	color: #73c76c;
+	font-weight: 500;
+	font-size: 1.7rem;
+	text-decoration: underline;
+}
+#form_samsung .popup .cms-content a:hover { 
+	text-decoration: none;
+}
+
+    /*#form_samsung .linkaction a:hover { 
+        text-decoration: none;
+        }*/
+
+        #form_samsung .phone img{
+        	display: none;
+        	margin: 0 auto;
+        	max-width: 400px;
+        	width: 100%;
+        }
+
+
+
+        /*********************************************************/
+
+        /* Базовые стили модального окна  */
+        #form_samsung .popup a{
+        	color: #73c76c;
+        }
+        #form_samsung .overlay {
+        	background-color: rgba(0, 0, 0, 0.7);
+        	bottom: 0;
+        	cursor: default;
+        	left: 0;
+        	opacity: 0;
+        	position: fixed;
+        	right: 0;
+        	top: 0;
+        	visibility: hidden;
+        	z-index: 1;
+        	-webkit-transition: opacity .5s;
+        	-moz-transition: opacity .5s;
+        	-ms-transition: opacity .5s;
+        	-o-transition: opacity .5s;
+        	transition: opacity .5s;
+        }
+        #form_samsung .overlay:target {
+        	visibility: visible;
+        	opacity: 1;
+        }
+        #form_samsung .popup {
+        	background-color: #fff;
+        	display: inline-block;
+        	left: 35%;
+        	width: 50%;
+        	opacity: 0;
+        	padding: 5px;
+        	position: absolute;
+        	top: 25%;
+        	visibility: hidden;
+        	z-index: 10;
+        	-webkit-transform: translate(-17%, -17%);
+        	-moz-transform: translate(-17%, -17%);
+        	-ms-transform: translate(-17%, -17%);
+        	-o-transform: translate(-17%, -17%);
+        	transform: translate(-17%, -17%);
+        	-webkit-border-radius: 10px;
+        	-moz-border-radius: 10px;
+        	-ms-border-radius: 10px;
+        	-o-border-radius: 10px;
+
+        	border-radius: 10px;
+
+        	-webkit-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+        	-moz-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+        	-ms-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+        	-o-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+        	box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+
+        	-webkit-transition: opacity .5s, top .5s;
+        	-moz-transition: opacity .5s, top .5s;
+        	-ms-transition: opacity .5s, top .5s;
+        	-o-transition: opacity .5s, top .5s;
+        	transition: opacity .5s, top .5s;
+        }
+        #form_samsung .overlay:target+.popup {
+        	top: 25%;
+        	opacity: 1;
+        	visibility: visible;
+        }
+        #form_samsung .close {
+        	background-color: rgba(0, 0, 0, 0.8);
+        	height: 30px;
+        	line-height: 30px;
+        	position: absolute;
+        	right: 0;
+        	text-align: center;
+        	text-decoration: none;
+        	top: -15px;
+        	width: 30px;
+
+        	-webkit-border-radius: 15px;
+        	-moz-border-radius: 15px;
+        	-ms-border-radius: 15px;
+        	-o-border-radius: 15px;
+        	border-radius: 15px;
+        }
+        #form_samsung .close:before {
+        	color: rgba(255, 255, 255, 0.9);
+        	content: "x";
+        	font-size: 24px;
+        	text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+        }
+        #form_samsung .close:hover {
+        	background-color: rgba(64, 128, 128, 0.8);
+        }
+        #form_samsung .popup p, .popup div {
+        	/* padding: 0px 5px 0px 5px;*/
+        }
+
+        #form_samsung .cms-content ul {
+        	margin-bottom: 0px;
+        }
+        #win_pop {
+        	color: white;
+        	font-size: 1.7rem;
+        	text-decoration: none;
+        	border-bottom: 1px solid #f6f6f8;
+        	width: fit-content;
+        }
+        #win_pop:hover{
+        	border-bottom: initial;
+        }
+
+
+        .form .mob{display: none;}
+        .form .desk{
+            display: block;
+            max-width: 375px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .minitext__content {
+            padding: 0px 0px 15px 0px !important;
+        }
+        /*********************************************************/
+
+        @media screen and (min-width: 320px) and (max-width: 480px) {
+
+        	#form_samsung .linkaction {
+        		position: relative;
+        		float: right;
+        	}
+        	#form_samsung .text h2 {
+        		font: 3.2em PTSans,sans-serif;
+        	}
+        	#form_samsung .text p {
+        		font: 2em PTSans,sans-serif;
+        	}
+        	.form {
+        		display: inline-block;
+        		width: 100%;
+        		top: 0;
+        	}
+        	.img_tovar_xs {    
+        		display: block !important;
+        		max-width: 80%;
+        		width: 100% !important;
+        		height: auto !important;
+        		position: relative !important;
+        		margin: 0 auto;
+        	}
+        	#form_samsung .text p {
+        		font-size: 2.5rem !important;
+        	}
+        	.img_logo {
+        		max-width: 325px !important;
+                margin: 0 auto;
+    margin-bottom: 25px;
+        padding-top: 25px;
+        	}
+            #acordion_clid {
+                    margin: 15px !important;
+    width: inherit !important;
+            }
+        	.form .mob{display: block; width: 90%; margin: 0 auto;}
+        	.form .desk{
+        		display: block;
+        		width: 95%;
+        		margin: 0 auto;
+        	}
+
+
+        	#form_samsung .linkaction {
+        		float: none;
+        		padding-bottom: 20px;
+        	}
+        	.std {padding-top: 30px;}
+        	#form_samsung .popup a {
+        		/*text-align: left;*/
+        	}
+        	#form_samsung .popup {
+        		left: 56%;
+        		position: fixed;
+        	}
+        	#form_samsung .linkaction a{
+        		text-align: center;
+        		margin: 0 auto;
+        		display: block; 
+        	}
+        	#form_samsung {
+        		width: inherit;
+/*
+        		background-image: url(https://cdn.comfy.ua/media/x/img/1316x730_200hrn_bg2_1.png);
+                */
+                height: auto;
+                width: inherit;
+            }
+            #form_samsung2 {
+              background-image: initial !important;
+              height: auto;
+          }
+
+          #form_samsung .text p {
+              text-align: center;
+              font: 2.3rem PTSans,sans-serif;
+          }
+          #form_samsung .content {
+              float: initial;
+              display: block;
+              margin: 0 auto;
+              width: 100%;
+              height: auto;
+          }
+          #form_samsung .footer-newsletter__item {
+              width: 100%;
+          }
+
+          #form_samsung .phone img {
+              display: block;
+          }
+      }
+      @media screen and (min-width: 481px) and (max-width: 768px) {
+       #form_samsung .popup {
+          position: fixed;
+      }
+      #form_samsung .linkaction {
+          position: initial!important;
+          float: initial;
+          display: block;
+          top: 35px;
+          margin: 0 auto;
+          text-align: center;
+      }
+      #form_samsung .content {
+        width: 55%;
+        float: right;
+        margin: 0 auto;
+        display: block;
+        margin-top: 15px;
+    }
+    .img_logo {
+      max-width: 355px !important;
+  }
+  #form_samsung .text h2 {
+      font: 3em PTSans,sans-serif;
+      padding-top: 15px;
+  }
+  #form_samsung .text p {
+      font: 2em PTSans,sans-serif;
+  }
+  #form_samsung {
+      width: auto;
+  }
+  #form_samsung .popup {
+      left: 55%;
+  }
+  #form_samsung .overlay:target+.popup {
+      top: 25%;
+  }
+  .form iframe {
+      height: 200px;
+  }
+  #form_samsung{
+      height: 450px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+   #form_samsung {
+      width: auto;
+          height: 521px;
+      /*background-size: contain;*/
+  }
+  #form_samsung .linkaction {
+      text-align:center;
+      margin-right: 10px;
+  }
+  #form_samsung .content {
+      width: 70%;
+
+  }
+  #form_samsung .popup {
+      left: 48%;
+  }
+  #form_samsung .overlay:target+.popup {
+      top: 18%;
+  }
+  #form_samsung .text h2 {
+      font: 4em PTSans,sans-serif;
+  }
+  #form_samsung .text p {
+      font: 2em PTSans,sans-serif;
+  }
+}
+
+
+@media screen and (min-width: 1025px) {
+   #form_samsung {
+      max-width: 1316px;
+  }
+  #form_samsung2 {
+      max-width: 1150px;
+  }
+  #form_samsung .linkaction {
+      text-align:center;
+      margin-right: 10px;
+  }
+  #form_samsung .content {
+      width: 46%;
+
+  }
+  .img_logo {
+      max-width: 520px;
+  }
+  #form_samsung .popup {
+      left: 34%;
+  }
+  #form_samsung .overlay:target+.popup {
+      top: 25%;
+  }
+  #form_samsung .text h2 {
+      font: 5em PTSans,sans-serif;
+  }
+  #form_samsung .text p {
+      font: 2.5em PTSans,sans-serif;
+      margin: 1% 0 5% 0;
+  }
+  #form_samsung .form {
+      margin-top: 4em;
+  }
+}
+.email.valid {
+   background-color: #52944d9c !important;
+}
+.firstname {
+   background-color: #52944d9c !important;
+}
+
+.daruemo_200 {
+   text-transform: uppercase;
+   font-weight: 700;
+   font-size: 7rem;
+}
+.img_logo {
+   position: initial !important;
+   max-width: 585px;
+   width: 100% !important;
+   height: auto !important;
+   display: block;
+   /*margin: 0 auto;*/
+}
+.img_tovar_xs {display: none;}
+
+.textfds {     text-align: center;
+    color: #fff; }
+
+#form_samsung { position: relative; overflow: hidden; }
+
+#form_samsung .block_img_pos { width: 100%; height: 100%; position: absolute; z-index: -1; }
+/*
+#form_samsung .block_img_pos .por_relitibe { position: relative; }
+*/
+#form_samsung .block_img_pos img.img_pos { max-width: 100%; }
+
+#form_samsung .block_img_pos .img_pos { position: absolute; }
+
+#form_samsung .block_img_pos .img_pos.col1{ 
+  right: -42px;
+    top: -42px;
+    max-width: 286px;
+    width: 100%;
+    height: auto;
+}
+
+#form_samsung .block_img_pos .img_pos.col2{ 
+  right: -50px;
+  bottom: 110px;
+  max-width: 10%;
+}
+
+#form_samsung .block_img_pos .img_pos.col3{ left: 0; bottom: 0; }
+
+</style>
+<div id="form_samsung">
+<div class="block_img_pos">
+<div class="por_relitibe"><img src="https://cdn.comfy.ua/media/x/img/300x300.png" class="img_pos col1" /> <img src="https://cdn.comfy.ua/media/x/img/fomt/ball-all.png" class="img_pos col2" /> <img src="https://cdn.comfy.ua/media/x/img/fomt/ball-all-left.png" class="img_pos col3" /></div>
+</div>
+<div id="form_samsung2">
+<div class="content">
+<div class="text"><img src="https://cdn.comfy.ua/media/x/img/text_ukr.png" class="img_logo" /></div>
+<div class="form">
+<div class="desk"><!--                     <iframe src="https://secure.esputnik.com.ua/4p7EL7wouus" _mce_src="https://secure.esputnik.com.ua/4p7EL7wouus" style="width: 100%; border: 0px; height: 200px;" _mce_style="width: 100%; border: 0px; height: 200px;"></iframe> --> <iframe src="https://secure.esputnik.com.ua/5MqWTkxZE8s" width="100%" height="150" scrolling="no" frameborder="0"></iframe></div>
+<img src="https://cdn.comfy.ua/media/x/img/COMFY_0523_4-copy-3.png" class="img_tovar_xs" /> <!--
+<div class="linkaction"><a href="#win1" _mce_href="#win1" id="win_pop">Детальні умови акції</a> <a href="#x" _mce_href="#x" class="overlay" id="win1"></a>
+<div class="popup">
+<div class="cms-content">
+<h2>Правила акції «200 грн за Email»</h2>
+<p>В період проведення акції, кожен користувач сайту, який залишив свій email, на акційній сторінці: <b>comfy.ua/smart-2018.html</b>, отримує промокод на знижку <b>200 гривень</b> для покупки смартфона в інтернет-магазині comfy.ua. Знижка діє на смартфони вартістю від 4 000 гривень.</p>
+<br /> <b>Механіка акції наступна:</b> 
+<ul>
+<li>1. На акційній сторінці <b>comfy.ua/smart-2018.html</b> у формі для заповнення електронної адреси, користувач залишає свій email, на який йому буде надісланий промокод на знижку.</li>
+<li>2. Перед оформленням замовлення, користувачеві необхідно авторизуватися на сайті comfy.ua, натиснувши на кнопку «Вхід».</li>
+<li>3. Зареєстрований користувач додає в кошик смартфон і в формі для оформлення замовлення вводить промокод на знижку.</li>
+<li>4. Знижка працює одноразово. В одному замовленні може бути не більше 5 смартфонів.</li>
+<li>5. Акція несумісна з іншими акціями, що проходять в інтернет-магазині і в магазинах роздрібної мережі.</li>
+<li>6. Приймаючи умови акції, Ви автоматично даєте згоду на отримання е-mail розсилки.</li>
+<li>7. Данна акція діє тільки за готівковий розрахунок та при оплаті банківською карткою. Не сумісна з оплатою в кредит та оплатою частинами.</li>
+</ul>
+<br />
+<p>Акція діє до 05.11 включно* в інтернет-магазині comfy.ua</p>
+<i>* Організатор акції залишає за собою право змінювати умови або термін проведення акції.</i></div>
+<a class="close" href="#close" _mce_href="#close"></a></div>
+</div>
+--></div>
+</div>
+</div>
+</div>
+<style type="text/css">
+
+#acordion_clid {
+    background-color: #fff;
+}
+
+#acordion_clid {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1316px;
+}
+#acordion_clid .accordion__link {
+    padding: 2rem 6rem 2rem 2rem;
+    text-align: center;
+}
+
+#acordion_clid h1 {
+    margin: 0px;
+}
+
+#acordion_clid .accordion__link-title {
+    border-bottom: 0px;
+    line-height: 1;
+    #formcss p {
+    color: #fff;
+    text-align: center;
+    padding: 0px 0 15px 0;
+    font-size: 3.5rem;
+}
+
+#formcss p a{
+    color: #73c76c;
+    border-bottom: 2px solid #73c76c;
+
+}
+#formcss p a:hover{
+    color: #73c76c;
+    border-bottom: 0px solid #73c76c;
+
+}
+
+#formcss {
+    background: #000;
+
+}
+#mform .mainimg {
+
+    width: 100%;
+    max-width: 939px;
+    display: block;
+    margin: 0 auto;
+}
+#formcss .footer-newsletter__input {
+    border: 1px solid #fff;
+}
+</style>
+<div id="acordion_clid" style="display: none;">{{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="160"}}
+<div class="widget widget-static-block"></div>
+<ul class="accordion js-accordion-list accordion__link_active">
+<li class="accordion__item"> <a href="#" class="accordion__link js-accordion-link accordion__link_active">
+<h1><span class="accordion__link-title">День святого Валентина в Украине</span></h1>
+</a>
+<div class="accordion__item-content">
+<div class="minitext__content">
+<p>День святого Валентина - волнительный и долгожданный праздник влюбленных людей. Это хороший повод признаться в своих чувствах и проявить внимание ко второй половинке. Атмосфера романтики вдохновляет дарить приятные эмоции. Влюбленные, между которыми только недавно зародились чувства, удивляют друг друга недорогими и популярными презентами:</p>
+<ul>
+<li>валентинками;</li>
+<li>цветами;</li>
+<li>сладостями;</li>
+<li>мягкими игрушками;</li>
+<li>рамками с совместными фото;</li>
+<li>чашками и подушками с оригинальными надписями.</li>
+</ul>
+<p>Люди в длительных отношениях выбирают практичные подарки на День святого Валентина. Благодаря развитию технологий и появлению современных устройств идей сюрпризов стало больше. На смену романтическим мелочам приходит техника и электроника. Выбирая дорогие бытовые приборы или гаджеты, убедитесь, что они соответствуют ключевым критериям.</p>
+<ol>
+<li>Необходимость. Прежде чем купить подарок на День влюбленных, понаблюдайте за своей половинкой. Убедитесь, что ей действительно нужно устройство, которое вы планируете подобрать. Для этого внимательно слушайте рассказы избранника, ведь он может упоминать о своих пожеланиях. Вы попадете в точку, если подарите замену сломавшемуся устройству или дополнение к имеющемуся. </li>
+<li>Соответствие интересам. Человек, который увлекается фото- или видеосъемкой, будет рад новой камере и комплектующим. Вы осуществите мечту и проявите внимательность, если подберете подарок ко Дню святого Валентина с учетом интересов избранника.</li>
+<li>Оригинальность. Ваш презент будет запоминающимся, если второй половинке такого еще не вручали. Эта техника или электроника вызовет приятные эмоции, когда человек воспользуется ей. </li>
+</ol>
+<p>Варианты устройств и гаджетов для разных групп людей отличаются. В этой статье мы предлагаем идеи презентов, которые можно найти в магазине Comfy.ua, для:</p>
+<ul>
+<li>парня или девушки - молодым людям интересны вещи, соответствующие их интересам и образу жизни;</li>
+<li>мужа или жены - подходят подарки, которые можно использовать в быту;</li>
+<li>мужчины или женщины - сделайте акцент на практичной технике для ухода за собой.</li>
+</ul>
+<h2>Подарок парню на День святого Валентина</h2>
+<p>Если не знаете, что выбрать для молодого человека, обратите внимание на популярные тренды. Один из них - гироборд. Современное средство передвижения - хороший подарок на день влюбленных парню, который ведет активный образ жизни. С помощью гироборда нахождение на свежем воздухе превращается в увлекательную прогулку.</p>
+<p>На гаджетах предусмотрены фары, цветная подсветка. Благодаря этому кататься можно даже в вечернее время. Модель HB 101 Jump White оснащена бескамерными шинами и корпусом с прорезиненными элементами, что позволяет свободно прыгать по ступенькам и преодолевать бордюры.</p>
+<p>Парню спортсмену-экстремалу, который любит снимать захватывающие видео, можно подарить экшн-камеру. Компактная техника зафиксирует каждый момент, передавая динамику событий. Шумоподавление позволяет записывать ролики в любую погоду. С ударопрочным и влагозащищенным корпусом можно искать уникальные кадры в экстремальных условиях, не переживая за целостность устройства. С таким подарком на день св. Валентина любимый парень взорвет интернет шокирующим контентом.</p>
+<p>Избраннику, который увлекается путешествиями, стоит купить квадрокоптер. Летательный аппарат на радиоуправлении поможет юноше увидеть новые места с высоты птичьего полета. Благодаря камере можно запечатлеть уникальные кадры и поделиться ими с подписчиками в интернете.</p>
+<p>Если до вашего молодого человека часто не дозвониться из-за разряженного телефона, подарите ему мобильную батарею Powerbank. Портативное устройство удобно использовать для зарядки не только смартфона, но и умных часов, планшета, ноутбука. Проявите творческие способности и нанесите на Powerbank уникальную надпись или рисунок, чтобы сделать милый подарок парню на 14 февраля. Он оценит полезный и оригинальный презент.</p>
+<h2>День святого Валентина: подарок девушке</h2>
+<p>Цветы и сладости помогут проявить романтичную натуру. Они станут прекрасным дополнением к основному подарку, который ожидает получить избранница. Если ваша девушка ведет активный образ жизни и следит за фигурой, купите ей фитнес-браслет. Спортивный гаджет помогает контролировать:</p>
+<ul>
+<li>количество пройденных шагов;</li>
+<li>пульс;</li>
+<li>количество затраченных калорий;</li>
+<li>продолжительность и фазы сна.</li>
+</ul>
+<p>Модели, представленные в интернет-магазине Comfy.ua, можно подключить к смартфону. Статистика о физической активности будет отображена в приложении. Преимущество фитнес-браслетов Xiaomi MiBand для девушек - возможность менять ремешки. Каждый из них стильно смотрится на руке.</p>
+<p>Хорошая идея сюрприза второй половинке, которая любит читать, - электронная книга. Популярные варианты - устройства производителя PocketBook. Компактный размер и небольшой вес гаджета позволяют носить его в сумке, как смартфон.</p>
+<p>Это практичный и безопасный подарок любимой девушке на День святого Валентина 14 февраля. Электронные книги не портят зрение, поскольку E-Ink дисплеи обеспечивают отсутствие мерцаний. Если вторая половинка читает в темноте или в условиях недостаточного освещения, ее выручит подсветка дисплея.</p>
+<h2>Подарок на 14 февраля любимому мужу и жене</h2>
+<p>День святого Валентина - хороший повод подготовить супругу необычный сюрприз. Парам после нескольких лет совместной жизни проще выбирать подарки друг другу. В поиске подходящего варианта для мужа обратите внимание на его повседневные привычки.</p>
+<p>Любителю выпить чашечку ароматного кофе больше не придется ездить для этого в кафе. Достаточно купить ему устройство для приготовления горячих напитков из зерен. Кофемашина позволит вашему мужу самостоятельно регулировать их крепость в зависимости от вкусовых предпочтений. В Comfy.ua представлены модели с автоматической промывкой устройства, подогревом чашек и функцией управления со смартфона. Такие подарки на День святого Валентина любимому делают добрым каждое утро.</p>
+<p>Жены, которые большую часть времени проводят на кухне, оценят сюрприз в виде мультиварки. Такая помощница подойдет тем, кто придерживается принципов правильного питания. Автоматические программы позволяют тушить, выпекать и готовить блюда на пару. Благодаря мультиварке у вашей жены появится время для других занятий.</p>
+<h2>Подарок мужчине на 14 февраля</h2>
+<p>Стильная и ухоженная борода - популярный тренд. Мужчины следуют модным тенденциям и отращивают волосы на лице. Активный ритм жизни не позволяет регулярно посещать барбершопы. В этом случае идеальный подарок на День святого Валентина для мужчины - устройства для домашнего ухода за бородой и усами.</p>
+<p>В Comfy.ua можно найти электробритвы, которые работают от сети, на аккумуляторе и батарейках. Безопасная конструкция позволяет удалять волоски без раздражения кожи. В некоторых моделях предусмотрена дополнительная насадка - триммер. Если мужчина не бреет бороду, а ухаживает за усами, этот прибор можно купить отдельно. Специальные насадки помогут аккуратно и ровно подстричь волосы на лице.</p>
+<p>Подарки для мужчин на День святого Валентина 14 февраля на автомобильную тематику актуальны для тех, кто много времени проводит в дороге. С GPS-навигатором ваш избранник не пропустит нужный поворот в незнакомом городе. Устройство не только строит оптимальный маршрут движения, но и воспроизводит видео, аудио и графические файлы. С таким устройством в дороге не будет скучно.</p>
+<h2>Подарок на 14 февраля любимой женщине</h2>
+<p>В самый романтический праздник в году от души порадуйте вторую половинку техникой для ухода за волосами. Создание стильных причесок требует специального оборудования. Купите любимой женщине выпрямитель волос с керамическими пластинами. Они обеспечат защиту от перегрева, образования заломов. Обратите внимание на модель Philips Care &amp; Control. Благодаря технологии покрытия SilkySmooth волосы за несколько минут становятся ровными и гладкими.</p>
+<p>Незаменимый прибор для идеальной укладки - фен. Стоит подобрать модель с функцией ионизации, чтобы улучшить состояние волос во время сушки, сделать их гладкими и шелковистыми. Для быстрой и тщательной укладки подойдет насадка-концентратор, для создания объема у корней - диффузор. Фены Rowenta, Philips, Babyliss оборудованы двумя вариантами, благодаря чему женщина сможет делать разные прически в зависимости от настроения.</p>
+<p>Презенты в виде приборов для эпиляции относятся к запрещенным. Но если ваша женщина не воспринимает такие подарки как намек на несовершенную внешность и давно мечтает о об устройстве для удаления волос на теле, почему бы не подарить его на 14 февраля. Фотоэпилятор позволяет проводить бьюти-процедуру в домашних условиях. В моделях Braun BD 3005 и Philips Lumea Advanced предусмотрены датчики фототипа кожи, 5 уровней интенсивности и режимы для сложных участков тела.</p>
+<p>Неважно, какой подарок вы решили сделать второй половинке. Главное - подойти к его выбору с любовью и вручить от чистого сердца. Загляните на Comfy.ua, чтобы купить подарок на День святого Валентина. Среди разнообразия популярной техники и электроники вы найдете подходящий вариант для второй половинки. Не забудьте оформить упаковку, ведь такие нюансы оставляют теплые воспоминания о празднике и сюрпризе. Дарите подарки близким и делитесь приятными эмоциями!</p>
+</div>
+</div>
+</li>
+</ul>
+</div>

@@ -1,0 +1,241 @@
+<html>
+<head>
+<style>
+    .img-block-absolute {
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+    }
+    .block-absolute-absolute {
+        position: absolute;
+        padding: 50px 20px 20px 80px;
+        background: #F1F1F1;
+        right: -11%;
+    }
+    .avast-service {
+        max-width: 1316px;
+        margin: 0 auto;
+    }
+
+    .main-page-title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 41px;
+        color: #000000;
+    }
+    .left-block {
+        margin: 100px 0;
+        display: flex;
+        flex-flow: column;
+        width: 90%;
+        float: left;
+    }
+    .center-block {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        margin: 50px 0px;
+    }
+    .right-block {
+        display: flex;
+        flex-flow: column;
+        width: 90%;
+        float: right;
+    }
+    .right-block-wr {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+    }
+    .right-block-wr.bg-green {
+        height: 560px;
+    }
+    .col-reverse {
+        flex-flow: row-reverse;
+    }
+    .block-list {
+        max-width: 620px;
+    }
+    .title-wr {
+        margin-bottom: 15px;
+    }
+    .title-list {
+        margin: 0;
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+    }
+    .sub-title,
+    .block-list__txt {
+        margin: 0;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        color: #000000;
+    }
+    .block-list__txt {
+        position: relative;
+        padding-left: 45px;
+        margin-bottom: 20px;
+    }
+    .block-list__txt::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 25px;
+        height: 20px;
+        background: url(img/chack.png);
+    }
+    .block-list__txt:nth-last-child(1) {
+        margin-bottom: 0;
+    }
+    .img-block {
+        position: relative;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+    .bg-green {
+        width: 100%;
+        background: #41B02A;
+        border-radius: 2px;
+    }
+    .bg-grey {
+        background: #F1F1F1;
+    }
+
+    @media screen and (max-width: 1200px){
+        .right-block-wr {
+            flex-flow: column;
+        }
+        .right-block,
+        .left-block  {
+            width: 100%;
+            margin: 50px 0;
+        }
+        .img-block {
+            margin-top: 50px;
+        }
+        .img-block-absolute {
+            position: relative;
+            left: 0;
+        }
+        .block-absolute-absolute {
+            position: relative;
+            right: 0;
+        }
+        .right-block-wr.bg-green {
+            height: auto;
+        }
+    }
+</style>
+    <div id="avast-service">
+        <section class="avast-service">
+            <h2 class="main-page-title">
+                Защитите свое мобильное устройство с помощью самой надежной в мире антивирусной программы для Android
+            </h2>
+
+            <div class="center-block">
+                <div class="right-block-wr col-reverse">
+                    <div class="block-list">
+                        <div class="block-list__content">
+                            <div class="title-wr">                
+                                <h2 class="title-list">
+                                    Защита конфиденциальности 
+                                </h2>
+                                <h6 class="sub-title">
+                                    Защитите данные на своем устройстве и свои действия в сети от посторонних глаз
+                                </h6>
+                            </div>
+                            <p class="block-list__txt">Блокировка спама и других нежелательных вызовов</p>
+                            <p class="block-list__txt">Защита фотографий и приложений с помощью PIN-кода, кода, графического ключа и сканирования отпечатка пальца </p>
+                        </div>
+                    </div>
+                    <div class="img-block bg-img">
+                        <img src="img/image-phone-1.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-block">
+                <div class="right-block-wr">
+                    <div class="block-list">
+                        <div class="block-list__content">
+                            <div class="title-wr">                
+                                <h2 class="title-list">
+                                    Блокировка всех потенциальных угроз
+                                </h2>
+                                <h6 class="sub-title">
+                                    Не позволяйте вирусам и другим вредоносным программам заразить ваше устройство Android
+                                </h6>
+                            </div>
+                            <p class="block-list__txt">Регулярное сканирование для обнаружения угроз и уязвимостей</p>
+                            <p class="block-list__txt">Обнаружение вредоносных приложений до их установки </p>
+                            <p class="block-list__txt">Защита от зараженных ссылок в сети и SMS</p>
+                            <p class="block-list__txt">Проверка безопасности сети Wi-Fi кода, перед подключением к ней</p>
+                        </div>
+                    </div>
+                    <div class="img-block bg-img">
+                        <img src="img/image-phone-2.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="left-block">
+                <div class="right-block-wr bg-green">
+                    <div class="img-block-absolute">
+                        <img src="img/image-phone-3.png" alt="">
+                    </div>
+                    <div class="block-list block-absolute-absolute">
+                        <div class="block-list__content">
+                            <div class="title-wr">                
+                                <h2 class="title-list">
+                                    Удаленная защита данных  
+                                </h2>
+                                <h6 class="sub-title">
+                                    Удаленное управление позволяет блокировать попытки злоумышленников завладеть данными пользователя и дает возможность найти устройство в случае утери или кражи
+                                </h6>
+                            </div>
+                            <p class="block-list__txt" style="max-width: 550px;">Отслеживание местоположения устройства</p>
+                            <p class="block-list__txt" style="max-width: 550px;">Блокировка устройства и удаление всех конфиденциальных данных </p>
+                            <p class="block-list__txt" style="max-width: 550px;">Незаметное фотографирование злоумышленника и запись звука </p>
+                            <p class="block-list__txt" style="max-width: 550px;">Автоматическая регистрация устройства как утраченного после смены SIM-кода, карты</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-block">
+                <div class="right-block-wr">
+                    <div class="block-list">
+                        <div class="block-list__content">
+                            <div class="title-wr">                
+                                <h2 class="title-list">
+                                    Повышение производительности 
+                                </h2>
+                                <h6 class="sub-title">
+                                    Поддерживайте максимальную эффективность работы своего устройства Android
+                                </h6>
+                            </div>
+                            <p class="block-list__txt">Удаление ненужных файлов и освобождение места для хранения данных</p>
+                            <p class="block-list__txt">Ускорение работы устройства с помощью оптимизации оперативной памяти </p>
+                            <p class="block-list__txt">Продление работы от аккумулятора путем изменения настроек энергоемких функций системы Android</p>
+                        </div>
+                    </div>
+                    <div class="img-block bg-img">
+                        <img src="img/image-phone-4.png" alt="">
+                    </div>
+                </div>
+                <div class="bg-green" style="height: 106px;"></div>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>

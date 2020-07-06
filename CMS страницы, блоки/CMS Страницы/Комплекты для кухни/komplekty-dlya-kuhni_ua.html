@@ -1,0 +1,2515 @@
+<script></script>
+<style>
+#krbt-pilot p:first-letter {
+	padding-left: 0;
+}
+#krbt-pilot p {
+	margin-bottom: 0;
+}
+#krbt-pilot img:hover {
+	opacity: 1;
+}
+
+#krbt-pilot img {
+	opacity: 1;
+}
+#krbt-pilot #chatBtn  img{
+	cursor: pointer;
+}
+#krbt-pilot {
+	max-width: 1316px;
+	margin: 0 auto;
+	background: #fff;
+}
+/* content */
+
+#krbt-pilot .container_banner {}
+
+#krbt-pilot .container_name_category {}
+
+#krbt-pilot .container_tab {
+	display: flex;
+	flex-direction: row;
+}
+
+#krbt-pilot .container_tab .row_ft {}
+
+#krbt-pilot .container_tab .left_bl {
+	flex: 1 1 30%;
+}
+
+#krbt-pilot .container_tab .right_bl {
+	flex: 1 1 70%;
+}
+
+#krbt-pilot .block_tab .content .bndl_all {  }
+
+#krbt-pilot .block_tab .content .bndl_all:nth-child(1) { flex: 1 1 32%; }
+#krbt-pilot .block_tab .content .bndl_all:nth-child(2) { flex: 1 1 5%; }
+#krbt-pilot .block_tab .content .bndl_all:nth-child(3) { flex: 1 1 32%; border-right: .2rem solid #ef6437 !important;position: relative;}
+#krbt-pilot .block_tab .content .bndl_all:nth-child(3):before{
+	    content: "";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: -1rem;
+
+	right: -1.3rem;
+    height: 0;
+    width: 0;
+    border-left: 1.1rem solid #ef6437;
+    border-top: 1.1rem solid transparent;
+    border-bottom: 1.1rem solid transparent;
+}
+#krbt-pilot .block_tab .content .bndl_all:nth-child(3):after{
+
+	content: "";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: -1rem;
+
+	height: 0;
+    width: 0;
+    border-left: 1rem solid #fff;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+}
+#krbt-pilot .block_tab .content .bndl_all:nth-child(4) { flex: 0 1 31%; margin-left: 2%; margin-bottom: 25px;}
+
+#krbt-pilot .block_tab .content .bndl_all .price_line_red { position: relative; }
+#krbt-pilot .block_tab .content .bndl_all .cena_right { font: 3.1rem PTSans,-apple-system,BlinkMacSystemFont,sans-serif; font-weight: bold;}
+#krbt-pilot .block_tab .content .bndl_all .more_btn{
+	font: 1.7rem PTSans,-apple-system,BlinkMacSystemFont,sans-serif;
+    font-weight: 700;
+    padding: .95rem 0;
+    width: 75%;
+    background: #ff671f;
+    color: #fff;
+    margin-top: 1rem;
+    text-align: center;
+}
+#krbt-pilot .block_tab .content .bndl_all .more_btn a{color:white;
+    padding: 9px 50px;}
+#krbt-pilot .block_tab .content .bndl_all .price_line_red:before {
+	content: "";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+    height: .2rem;
+    margin-top: -.1rem;
+    background: #ff090b;
+}
+.cena_up{
+	color: #797979;
+    font-size: 16px;
+    position: relative;
+    width: 70px;
+}
+.cena_up:before{
+	content: "";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+    height: .2rem;
+    margin-top: -.1rem;
+    background: #ff090b;
+}
+
+#krbt-pilot .block_tab .content .bndl_all .content_cart p.name_product { 
+	text-align: center;
+    margin: 15px auto;
+    font-size: 1.5rem;
+}
+#krbt-pilot .block_tab .content .bndl_all .content_cart .price_bandl {  }
+#krbt-pilot .block_tab .content .bndl_all .content_cart .price_bandl .cena {
+	text-align: center;
+    font-size: 2.7rem;
+    color: #797979;
+    font-weight: 700;
+}
+#krbt-pilot .block_tab .content .bndl_all .content_cart img {
+	max-width: 220px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* */
+
+/* BANDL */
+
+#krbt-pilot .block_tab .container_bandl {
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin:1% 0 5%;
+}
+#krbt-pilot .tabs label {height: inherit; padding: 5px 20px; }
+#krbt-pilot .container_tab
+
+
+/* */
+
+/* TAB */
+.block_tab{
+	position: relative;
+}
+.help-window{
+	width: 468px;
+    max-width: 100%;
+    font-size: 14px;
+    position: absolute;
+    top: 50px;
+    background: #dadada;
+    padding: 10px;
+    z-index: 9;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: none;
+}
+.tabs {
+	position: relative;
+	width: 100%;
+}
+
+.tabs input {
+	position: absolute;
+	z-index: 1000;
+	width: 155px;
+	height: 55px;
+	left: 0px;
+	top: 0px;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.tabs input#tab-2 {
+	left: 155px;
+}
+
+.tabs input#tab-3 {
+	left: 311px;
+}
+
+.tabs input#tab-4 {
+	left: 360px;
+}
+
+.tabs label {
+	background: #e9e9e9;
+	font-size: 15px;
+	line-height: 40px;
+	height: 55px;
+	position: relative;
+	padding: 0 20px;
+	float: left;
+	display: block;
+	width: 155px;
+	color: #385c5b;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+	border-radius: 3px 3px 0 0;
+	box-shadow: 2px 0 2px rgba(0, 0, 0, 0.1), -2px 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.tabs label:after {
+	content: '';
+	background: #fff;
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	display: block;
+}
+
+.tabs input:hover+label {
+	background: #e2e2e2;
+}
+
+.tabs label:first-of-type {
+	z-index: 4;
+	box-shadow: 2px 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.tab-label-2 {
+	z-index: 3;
+}
+
+.tab-label-3 {
+	z-index: 2;
+}
+
+.tab-label-4 {
+	z-index: 1;
+}
+
+.tabs input:checked+label {
+	background: #dadada;
+	z-index: 6;
+}
+
+.clear-shadow {
+	clear: both;
+}
+
+.content {
+	background: #fff;
+	position: relative;
+	width: 100%;
+	/*height: 370px;*/
+	z-index: 5;
+	box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.1);
+	border-radius: 0 3px 3px 3px;
+}
+
+.content div.div_chek {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: none;
+	padding: 25px;
+	z-index: 1;
+	opacity: 0;
+	-webkit-transition: opacity linear 0.1s;
+	-moz-transition: opacity linear 0.1s;
+	-o-transition: opacity linear 0.1s;
+	-ms-transition: opacity linear 0.1s;
+	transition: opacity linear 0.1s;
+}
+
+.tabs input.tab-selector-1:checked~.content .content-1, .tabs input.tab-selector-2:checked~.content .content-2, .tabs input.tab-selector-3:checked~.content .content-3, .tabs input.tab-selector-4:checked~.content .content-4 {
+	display: block;
+	z-index: 100;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+	-webkit-transition: opacity ease-out 0.2s 0.1s;
+	-moz-transition: opacity ease-out 0.2s 0.1s;
+	-o-transition: opacity ease-out 0.2s 0.1s;
+	-ms-transition: opacity ease-out 0.2s 0.1s;
+	transition: opacity ease-out 0.2s 0.1s;
+}
+
+.content div h2, .content div h3 {
+}
+
+.content div p {
+}
+.respNotepad, .respMobile{
+	display: none;
+}
+/* END TAB */
+.btn-all{
+	color: #fff;
+    background-color: #FF671F;
+    border-radius: 25px;
+    padding: 10px 50px;
+    font-size: 23px;
+    font-weight: bold;
+    max-width: 720px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1024px){
+	#krbt-pilot .container_tab .left_bl{
+		display: none;
+	}
+	.respNotepad{
+		display: block;
+		margin: 0px 0 0px 0;
+	}
+}
+@media screen and (max-width: 420px){
+	.respNotepad{
+		display: none;
+	}
+	.respMobile{
+		display: block;
+	}
+	#krbt-pilot .container_tab{
+		overflow: scroll;
+	}
+	.tabs label{
+		/*width: 106px;*/
+		width: 33.3%;
+	}
+	#krbt-pilot .block_tab .content .bndl_all .content_cart img{
+		max-width: 100px;
+	}
+	#krbt-pilot .block_tab .content .bndl_all .content_cart p.name_product{
+		margin:4px auto;
+		font-size: 1rem;
+		text-align: left;
+    	padding: 0 5px 0 7px;
+	}
+	#krbt-pilot .block_tab .content .bndl_all .content_cart .price_bandl .cena{
+		font-size: 1.7rem;
+	}
+	.cena_up{
+		font-size: 13px;
+		width:54px;
+	}
+	#krbt-pilot .block_tab .content .bndl_all:nth-child(4){
+		margin-left: 5%;
+	}
+	#krbt-pilot .block_tab .content .bndl_all .more_btn{
+		width: 100%;
+		font-size: 1rem;
+		padding: .6rem 0;
+	}
+	#krbt-pilot .block_tab .content .bndl_all .cena_right{
+		font: 1.7rem PTSans,-apple-system,BlinkMacSystemFont,sans-serif;
+	}
+	#krbt-pilot .block_tab .content .bndl_all:nth-child(3):after{
+		right: -0.9rem;
+	}
+	#krbt-pilot .block_tab .content .bndl_all .more_btn a{
+		padding: 5px;
+	}
+	#krbt-pilot .tabs label{
+		font-size: 13px;
+	}
+	.tabs input{
+		width: 0;
+	}
+}
+/* END RESPONSIVE */
+</style>
+<script type="text/javascript" language="JavaScript">// <![CDATA[
+function getCookie(name) {
+  var matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+var city = getCookie('active_city_id');
+
+var priceUrl = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00007013&left=1010592&rigths=1244196';
+$.ajax({ url: priceUrl,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl1").style.display = "none";
+                      }
+                    
+                    
+                    var l_1 = resp['1010592'];
+                    var r_1 = resp['1244196'];
+                    var priceBndl_1 = resp['price'];
+
+                    document.getElementById("right1").innerHTML = r_1+"<sup> грн</sup>";
+                    document.getElementById("left1").innerHTML = l_1+"<sup> грн</sup>";
+                    document.getElementById("priceBndl1").innerHTML = priceBndl_1+"<sup> грн</sup>";
+          }          
+});
+
+
+var priceUrl2 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006396&left=1097458&rigths=1223463';
+$.ajax({ url: priceUrl2,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl2").style.display = "none";
+                      }
+                    
+                    
+                    var l_2 = resp['1097458'];
+                    var r_2 = resp['1223463'];
+                    var priceBndl_2 = resp['price'];
+
+                    document.getElementById("right2").innerHTML = r_2+"<sup> грн</sup>";
+                    document.getElementById("left2").innerHTML = l_2+"<sup> грн</sup>";
+                    document.getElementById("priceBndl2").innerHTML = priceBndl_2+"<sup> грн</sup>";
+          }          
+});
+
+
+var priceUrl3 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006704&left=1406521&rigths=1365858';
+$.ajax({ url: priceUrl3,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl3").style.display = "none";
+                      }
+                    
+
+                    var l_3 = resp['1406521'];
+                    var r_3 = resp['1365858'];
+                    var priceBndl_3 = resp['price'];
+
+                    document.getElementById("right3").innerHTML = r_3+"<sup> грн</sup>";
+                    document.getElementById("left3").innerHTML = l_3+"<sup> грн</sup>";
+                    document.getElementById("priceBndl3").innerHTML = priceBndl_3+"<sup> грн</sup>";
+          }          
+});
+
+var priceUrl4 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006704&left=1375996&rigths=1365858';
+$.ajax({ url: priceUrl4,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl4").style.display = "none";
+                      }
+                    
+
+                    var l_4 = resp['1375996'];
+                    var r_4 = resp['1365858'];
+                    var priceBndl_4 = resp['price'];
+
+                    document.getElementById("right4").innerHTML = r_4+"<sup> грн</sup>";
+                    document.getElementById("left4").innerHTML = l_4+"<sup> грн</sup>";
+                    document.getElementById("priceBndl4").innerHTML = priceBndl_4+"<sup> грн</sup>";
+         }           
+});
+
+var priceUrl5 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00007013&left=1044777&rigths=1244196';
+$.ajax({ url: priceUrl5,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl5").style.display = "none";
+                      }
+                    
+
+                    
+                    var l_5 = resp['1044777'];
+                    var r_5 = resp['1244196'];
+                    var priceBndl_5 = resp['price'];
+
+                    document.getElementById("right5").innerHTML = r_5+"<sup> грн</sup>";
+                    document.getElementById("left5").innerHTML = l_5+"<sup> грн</sup>";
+                    document.getElementById("priceBndl5").innerHTML = priceBndl_5+"<sup> грн</sup>";
+         }           
+});
+/*
+var priceUrl52 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006971&left=1449610&rigths=1208072';
+$.ajax({ url: priceUrl52,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl52").style.display = "none";
+                      }
+                    
+
+                    
+                    var l_52 = resp['1449610'];
+                    var r_52 = resp['1208072'];
+                    var priceBndl_52 = resp['price'];
+
+                    document.getElementById("right52").innerHTML = r_52+"<sup> грн</sup>";
+                    document.getElementById("left52").innerHTML = l_52+"<sup> грн</sup>";
+                    document.getElementById("priceBndl52").innerHTML = priceBndl_52+"<sup> грн</sup>";
+         }           
+});
+*/
+
+var priceUrl53 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00007012&left=1449615&rigths=1010592';
+$.ajax({ url: priceUrl53,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl53").style.display = "none";
+                      }
+                    
+
+                    
+                    var l_53 = resp['1449615'];
+                    var r_53 = resp['1010592'];
+                    var priceBndl_53 = resp['price'];
+
+                    document.getElementById("right53").innerHTML = r_53+"<sup> грн</sup>";
+                    document.getElementById("left53").innerHTML = l_53+"<sup> грн</sup>";
+                    document.getElementById("priceBndl53").innerHTML = priceBndl_53+"<sup> грн</sup>";
+         }           
+});
+
+var priceUrl54 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00007012&left=1244196&rigths=1029135';
+$.ajax({ url: priceUrl54,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl54").style.display = "none";
+                      }
+                    
+
+                    
+                    var l_54 = resp['1244196'];
+                    var r_54 = resp['1029135'];
+                    var priceBndl_54 = resp['price'];
+
+                    document.getElementById("right54").innerHTML = r_54+"<sup> грн</sup>";
+                    document.getElementById("left54").innerHTML = l_54+"<sup> грн</sup>";
+                    document.getElementById("priceBndl54").innerHTML = priceBndl_54+"<sup> грн</sup>";
+         }           
+});
+
+var priceUrl55 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00007014&left=1296818&rigths=1303388';
+$.ajax({ url: priceUrl55,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl55").style.display = "none";
+                      }
+                    
+
+                    
+                    var l_55 = resp['1296818'];
+                    var r_55 = resp['1303388'];
+                    var priceBndl_55 = resp['price'];
+
+                    document.getElementById("right55").innerHTML = r_55+"<sup> грн</sup>";
+                    document.getElementById("left55").innerHTML = l_55+"<sup> грн</sup>";
+                    document.getElementById("priceBndl55").innerHTML = priceBndl_55+"<sup> грн</sup>";
+         }           
+});
+
+
+var priceUrl57 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00007008&left=0993355&rigths=1471469';
+$.ajax({ url: priceUrl57,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl57").style.display = "none";
+                      }
+                    
+
+                    
+                    var l_57 = resp['0993355'];
+                    var r_57= resp['1471469'];
+                    var priceBndl_57 = resp['price'];
+
+                    document.getElementById("right57").innerHTML = r_57+"<sup> грн</sup>";
+                    document.getElementById("left57").innerHTML = l_57+"<sup> грн</sup>";
+                    document.getElementById("priceBndl57").innerHTML = priceBndl_57+"<sup> грн</sup>";
+         }           
+});
+
+
+// var priceUrl58 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00007012&left=1450774&rigths=1296820';
+// $.ajax({ url: priceUrl58,
+//          type: 'get',
+//          success: function(output) {
+//                     var resp = JSON.parse(output);
+//                     if(resp['price'] == 0){
+//                         document.getElementById("bandl58").style.display = "none";
+//                       }
+                    
+
+                    
+//                     var l_58 = resp['1450774'];
+//                     var r_58= resp['1296820'];
+//                     var priceBndl_58 = resp['price'];
+
+//                     document.getElementById("right58").innerHTML = r_58+"<sup> грн</sup>";
+//                     document.getElementById("left58").innerHTML = l_58+"<sup> грн</sup>";
+//                     document.getElementById("priceBndl58").innerHTML = priceBndl_58+"<sup> грн</sup>";
+//          }           
+// });
+
+
+
+// var priceUrl59 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00007012&left=1449615&rigths=1010591';
+// $.ajax({ url: priceUrl59,
+//          type: 'get',
+//          success: function(output) {
+//                     var resp = JSON.parse(output);
+//                     if(resp['price'] == 0){
+//                         document.getElementById("bandl59").style.display = "none";
+//                       }
+                    
+
+                    
+//                     var l_59 = resp['1449615'];
+//                     var r_59= resp['1010591'];
+//                     var priceBndl_59 = resp['price'];
+
+//                     document.getElementById("right59").innerHTML = r_59+"<sup> грн</sup>";
+//                     document.getElementById("left59").innerHTML = l_59+"<sup> грн</sup>";
+//                     document.getElementById("priceBndl59").innerHTML = priceBndl_59+"<sup> грн</sup>";
+//          }           
+// });
+
+
+
+var priceUrl60 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006703&left=1349142&rigths=1406521';
+$.ajax({ url: priceUrl60,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl60").style.display = "none";
+                      }
+                    
+
+                    
+                    var l_60 = resp['1349142'];
+                    var r_60= resp['1406521'];
+                    var priceBndl_60 = resp['price'];
+
+                    document.getElementById("right60").innerHTML = r_60+"<sup> грн</sup>";
+                    document.getElementById("left60").innerHTML = l_60+"<sup> грн</sup>";
+                    document.getElementById("priceBndl60").innerHTML = priceBndl_60+"<sup> грн</sup>";
+         }           
+});
+
+var priceUrl61 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00007012&left=1244196&rigths=1296820';
+$.ajax({ url: priceUrl61,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl61").style.display = "none";
+                      }
+                    
+
+                    
+                    var l_61 = resp['1244196'];
+                    var r_61 = resp['1296820'];
+                    var priceBndl_61 = resp['price'];
+
+                    document.getElementById("right61").innerHTML = r_61+"<sup> грн</sup>";
+                    document.getElementById("left61").innerHTML = l_61+"<sup> грн</sup>";
+                    document.getElementById("priceBndl61").innerHTML = priceBndl_61+"<sup> грн</sup>";
+         }           
+});
+
+var priceUrl62 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00007012&left=1449615&rigths=1296820';
+$.ajax({ url: priceUrl62,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl62").style.display = "none";
+                      }
+                    
+
+                    
+                    var l_62 = resp['1449615'];
+                    var r_62 = resp['1296820'];
+                    var priceBndl_62 = resp['price'];
+
+                    document.getElementById("right62").innerHTML = r_62+"<sup> грн</sup>";
+                    document.getElementById("left62").innerHTML = l_62+"<sup> грн</sup>";
+                    document.getElementById("priceBndl62").innerHTML = priceBndl_62+"<sup> грн</sup>";
+         }           
+});
+
+
+var priceUrl63 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00007014&left=1296818&rigths=1244196';
+$.ajax({ url: priceUrl63,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl63").style.display = "none";
+                      }
+                    
+
+                    
+                    var l_63 = resp['1296818'];
+                    var r_63 = resp['1244196'];
+                    var priceBndl_63 = resp['price'];
+
+                    document.getElementById("right63").innerHTML = r_63+"<sup> грн</sup>";
+                    document.getElementById("left63").innerHTML = l_63+"<sup> грн</sup>";
+                    document.getElementById("priceBndl63").innerHTML = priceBndl_63+"<sup> грн</sup>";
+         }           
+});
+
+
+var priceUrl64 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00007014&left=1296818&rigths=1449615';
+$.ajax({ url: priceUrl64,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl64").style.display = "none";
+                      }
+                    
+
+                    
+                    var l_64 = resp['1296818'];
+                    var r_64 = resp['1449615'];
+                    var priceBndl_64 = resp['price'];
+
+                    document.getElementById("right64").innerHTML = r_64+"<sup> грн</sup>";
+                    document.getElementById("left64").innerHTML = l_64+"<sup> грн</sup>";
+                    document.getElementById("priceBndl64").innerHTML = priceBndl_64+"<sup> грн</sup>";
+         }           
+});
+
+var priceUrl65 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00007012&left=1450774&rigths=1029135';
+$.ajax({ url: priceUrl65,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl65").style.display = "none";
+                      }
+                    
+
+                    
+                    var l_65 = resp['1450774'];
+                    var r_65 = resp['1029135'];
+                    var priceBndl_65 = resp['price'];
+
+                    document.getElementById("right65").innerHTML = r_65+"<sup> грн</sup>";
+                    document.getElementById("left65").innerHTML = l_65+"<sup> грн</sup>";
+                    document.getElementById("priceBndl65").innerHTML = priceBndl_65+"<sup> грн</sup>";
+         }           
+});
+
+
+// var priceUrl66 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00007014&left=1450774&rigths=1296818';
+// $.ajax({ url: priceUrl66,
+//          type: 'get',
+//          success: function(output) {
+//                     var resp = JSON.parse(output);
+//                     if(resp['price'] == 0){
+//                         document.getElementById("bandl66").style.display = "none";
+//                       }
+                    
+
+                    
+//                     var l_66 = resp['1450774'];
+//                     var r_66 = resp['1296818'];
+//                     var priceBndl_66 = resp['price'];
+
+//                     document.getElementById("right66").innerHTML = r_66+"<sup> грн</sup>";
+//                     document.getElementById("left66").innerHTML = l_66+"<sup> грн</sup>";
+//                     document.getElementById("priceBndl66").innerHTML = priceBndl_66+"<sup> грн</sup>";
+//          }           
+// });
+
+
+// var priceUrl6 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00005514&left=1134338&rigths=1345775';
+// $.ajax({ url: priceUrl6,
+//          type: 'get',
+//          success: function(output) {
+//                     var resp = JSON.parse(output);
+//                     if(resp['price'] == 0){
+//                           document.getElementById("bandl6").style.display = "none";
+//                       }
+                    
+
+                    
+//                     var l_6 = resp['1134338'];
+//                     var r_6 = resp['1345775'];
+//                     var priceBndl_6 = resp['price'];
+
+//                     document.getElementById("right6").innerHTML = r_6+"<sup> грн</sup>";
+//                     document.getElementById("left6").innerHTML = l_6+"<sup> грн</sup>";
+//                     document.getElementById("priceBndl6").innerHTML = priceBndl_6+"<sup> грн</sup>";
+//         }            
+// });
+
+// var priceUrl7 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006703&left=1349142&rigths=1341074';
+// $.ajax({ url: priceUrl7,
+//          type: 'get',
+//          success: function(output) {
+//                     var resp = JSON.parse(output);
+//                     if(resp['price'] == 0){
+//                         document.getElementById("bandl7").style.display = "none";
+//                       }
+                    
+                   
+                    
+//                     var l_7 = resp['1349142'];
+//                     var r_7 = resp['1341074'];
+//                     var priceBndl_7 = resp['price'];
+
+//                     document.getElementById("right7").innerHTML = r_7+"<sup> грн</sup>";
+//                     document.getElementById("left7").innerHTML = l_7+"<sup> грн</sup>";
+//                     document.getElementById("priceBndl7").innerHTML = priceBndl_7+"<sup> грн</sup>";
+//              }       
+// });
+
+var priceUrl8 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006980&left=980335&rigths=1305811';
+$.ajax({ url: priceUrl8,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl8").style.display = "none";
+                      }
+                    
+                    //
+
+                    
+                    var l_8 = resp['980335'];
+                    var r_8 = resp['1305811'];
+                    var priceBndl_8 = resp['price'];
+
+                    document.getElementById("right8").innerHTML = r_8+"<sup> грн</sup>";
+                    document.getElementById("left8").innerHTML = l_8+"<sup> грн</sup>";
+                    document.getElementById("priceBndl8").innerHTML = priceBndl_8+"<sup> грн</sup>";
+       }             
+});
+
+
+var priceUrl101 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006972&left=1440290&rigths=1449609';
+$.ajax({ url: priceUrl101,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl101").style.display = "none";
+                      }
+                    
+                    //var pr1 = resp['332643']['price'];
+                    //var pr1_ = resp['332643']['special_price'];
+
+
+                    
+                    var l_101 = resp['1440290'];
+                    var r_101 = resp['1449609'];
+                    var priceBndl_101 = resp['price'];
+
+                    document.getElementById("right101").innerHTML = r_101+"<sup> грн</sup>";
+                    document.getElementById("left101").innerHTML = l_101+"<sup> грн</sup>";
+                    document.getElementById("priceBndl101").innerHTML = priceBndl_101+"<sup> грн</sup>";
+              }      
+});
+var priceUrl102 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006981&left=990590&rigths=1067820';
+$.ajax({ url: priceUrl102,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl102").style.display = "none";
+                      }
+                    
+                    
+
+
+                    
+                    var l_102 = resp['990590'];
+                    var r_102 = resp['1067820'];
+                    var priceBndl_102 = resp['price'];
+
+                    document.getElementById("right102").innerHTML = r_102+"<sup> грн</sup>";
+                    document.getElementById("left102").innerHTML = l_102+"<sup> грн</sup>";
+                    document.getElementById("priceBndl102").innerHTML = priceBndl_102+"<sup> грн</sup>";
+              }      
+});
+var priceUrl103 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00005515&left=1193650&rigths=1134338';
+$.ajax({ url: priceUrl103,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl103").style.display = "none";
+                      }
+                    
+                                        
+                    var l_103 = resp['1193650'];
+                    var r_103 = resp['1134338'];
+                    var priceBndl_103 = resp['price'];
+
+                    document.getElementById("right103").innerHTML = r_103+"<sup> грн</sup>";
+                    document.getElementById("left103").innerHTML = l_103+"<sup> грн</sup>";
+                    document.getElementById("priceBndl103").innerHTML = priceBndl_103+"<sup> грн</sup>";
+              }      
+});
+
+var priceUrl104 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006979&left=1067820&rigths=1433343';
+$.ajax({ url: priceUrl104,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl104").style.display = "none";
+                      }
+                                       
+                    var l_104 = resp['1067820'];
+                    var r_104 = resp['1433343'];
+                    var priceBndl_104 = resp['price'];
+
+                    document.getElementById("right104").innerHTML = r_104+"<sup> грн</sup>";
+                    document.getElementById("left104").innerHTML = l_104+"<sup> грн</sup>";
+                    document.getElementById("priceBndl104").innerHTML = priceBndl_104+"<sup> грн</sup>";
+              }      
+});
+// var priceUrl105 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006979&left=1067820&rigths=1433344';
+// $.ajax({ url: priceUrl105,
+//          type: 'get',
+//          success: function(output) {
+//                     var resp = JSON.parse(output);
+//                     if(resp['price'] == 0){
+//                         document.getElementById("bandl105").style.display = "none";
+//                       }
+                                       
+//                     var l_105 = resp['1067820'];
+//                     var r_105 = resp['1433344'];
+//                     var priceBndl_105 = resp['price'];
+
+//                     document.getElementById("right105").innerHTML = r_105+"<sup> грн</sup>";
+//                     document.getElementById("left105").innerHTML = l_105+"<sup> грн</sup>";
+//                     document.getElementById("priceBndl105").innerHTML = priceBndl_105+"<sup> грн</sup>";
+//               }      
+// });
+
+var priceUrl106 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006703&left=1306710&rigths=1341074';
+$.ajax({ url: priceUrl106,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl106").style.display = "none";
+                      }
+                                       
+                    var l_106 = resp['1306710'];
+                    var r_106 = resp['1341074'];
+                    var priceBndl_106 = resp['price'];
+
+                    document.getElementById("right106").innerHTML = r_106+"<sup> грн</sup>";
+                    document.getElementById("left106").innerHTML = l_106+"<sup> грн</sup>";
+                    document.getElementById("priceBndl106").innerHTML = priceBndl_106+"<sup> грн</sup>";
+              }      
+});
+
+// var priceUrl107 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006979&left=1067820&rigths=990590';
+// $.ajax({ url: priceUrl107,
+//          type: 'get',
+//          success: function(output) {
+//                     var resp = JSON.parse(output);
+//                     if(resp['price'] == 0){
+//                         document.getElementById("bandl107").style.display = "none";
+//                       }
+                                       
+//                     var l_107 = resp['1067820'];
+//                     var r_107 = resp['990590'];
+//                     var priceBndl_107 = resp['price'];
+
+//                     document.getElementById("right107").innerHTML = r_107+"<sup> грн</sup>";
+//                     document.getElementById("left107").innerHTML = l_107+"<sup> грн</sup>";
+//                     document.getElementById("priceBndl107").innerHTML = priceBndl_107+"<sup> грн</sup>";
+//               }      
+// });
+
+
+var priceUrl109 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006979&left=0990591&rigths=1305811';
+$.ajax({ url: priceUrl109,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl109").style.display = "none";
+                      }
+                                       
+                    var l_109 = resp['0990591'];
+                    var r_109 = resp['1305811'];
+                    var priceBndl_109 = resp['price'];
+
+                    document.getElementById("right109").innerHTML = r_109+"<sup> грн</sup>";
+                    document.getElementById("left109").innerHTML = l_109+"<sup> грн</sup>";
+                    document.getElementById("priceBndl109").innerHTML = priceBndl_109+"<sup> грн</sup>";
+              }      
+});
+
+var priceUrl110 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00007012&left=1449615&rigths=1151006';
+$.ajax({ url: priceUrl110,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl110").style.display = "none";
+                      }
+                                       
+                    var l_110 = resp['1449615'];
+                    var r_110 = resp['1151006'];
+                    var priceBndl_110 = resp['price'];
+
+                    document.getElementById("right110").innerHTML = r_110+"<sup> грн</sup>";
+                    document.getElementById("left110").innerHTML = l_110+"<sup> грн</sup>";
+                    document.getElementById("priceBndl110").innerHTML = priceBndl_110+"<sup> грн</sup>";
+              }      
+});
+
+var priceUrl111 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00007012&left=1244196&rigths=1151006';
+$.ajax({ url: priceUrl111,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl111").style.display = "none";
+                      }
+                                       
+                    var l_111 = resp['1244196'];
+                    var r_111 = resp['1151006'];
+                    var priceBndl_111 = resp['price'];
+
+                    document.getElementById("right111").innerHTML = r_111+"<sup> грн</sup>";
+                    document.getElementById("left111").innerHTML = l_111+"<sup> грн</sup>";
+                    document.getElementById("priceBndl111").innerHTML = priceBndl_111+"<sup> грн</sup>";
+              }      
+});
+
+
+var priceUrl112 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006703&left=1306710&rigths=1406521';
+$.ajax({ url: priceUrl112,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl112").style.display = "none";
+                      }
+                                       
+                    var l_112 = resp['1306710'];
+                    var r_112 = resp['1406521'];
+                    var priceBndl_112 = resp['price'];
+
+                    document.getElementById("right112").innerHTML = r_112+"<sup> грн</sup>";
+                    document.getElementById("left112").innerHTML = l_112+"<sup> грн</sup>";
+                    document.getElementById("priceBndl112").innerHTML = priceBndl_112+"<sup> грн</sup>";
+              }      
+});
+
+
+var priceUrl113 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00007012&left=1450774&rigths=1151006';
+$.ajax({ url: priceUrl113,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl113").style.display = "none";
+                      }
+                                       
+                    var l_113 = resp['1450774'];
+                    var r_113= resp['1151006'];
+                    var priceBndl_113 = resp['price'];
+
+                    document.getElementById("right113").innerHTML = r_113+"<sup> грн</sup>";
+                    document.getElementById("left113").innerHTML = l_113+"<sup> грн</sup>";
+                    document.getElementById("priceBndl113").innerHTML = priceBndl_113+"<sup> грн</sup>";
+              }      
+});
+
+var priceUrl114 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006703&left=1349142&rigths=1341074';
+$.ajax({ url: priceUrl114,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl114").style.display = "none";
+                      }
+                                       
+                    var l_114 = resp['1349142'];
+                    var r_114= resp['1341074'];
+                    var priceBndl_114 = resp['price'];
+
+                    document.getElementById("right114").innerHTML = r_114+"<sup> грн</sup>";
+                    document.getElementById("left114").innerHTML = l_114+"<sup> грн</sup>";
+                    document.getElementById("priceBndl114").innerHTML = priceBndl_114+"<sup> грн</sup>";
+              }      
+});
+
+var priceUrl115 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006979&left=1067820&rigths=1005337';
+$.ajax({ url: priceUrl115,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl115").style.display = "none";
+                      }
+                                       
+                    var l_115 = resp['1067820'];
+                    var r_115= resp['1005337'];
+                    var priceBndl_115 = resp['price'];
+
+                    document.getElementById("right115").innerHTML = r_115+"<sup> грн</sup>";
+                    document.getElementById("left115").innerHTML = l_115+"<sup> грн</sup>";
+                    document.getElementById("priceBndl115").innerHTML = priceBndl_115+"<sup> грн</sup>";
+              }      
+});
+
+var priceUrl116 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006979&left=1005337&rigths=1305811';
+$.ajax({ url: priceUrl116,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl116").style.display = "none";
+                      }
+                                       
+                    var l_116 = resp['1005337'];
+                    var r_116= resp['1305811'];
+                    var priceBndl_116 = resp['price'];
+
+                    document.getElementById("right116").innerHTML = r_116+"<sup> грн</sup>";
+                    document.getElementById("left116").innerHTML = l_116+"<sup> грн</sup>";
+                    document.getElementById("priceBndl116").innerHTML = priceBndl_116+"<sup> грн</sup>";
+              }      
+});
+
+/*
+var priceUrl12 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006703&left=1306710&rigths=1216052';
+$.ajax({ url: priceUrl12,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl12").style.display = "none";
+                      }
+                    
+                    //var pr1 = resp['332643']['price'];
+                    //var pr1_ = resp['332643']['special_price'];
+
+
+                    
+                    var l_12 = resp['1306710'];
+                    var r_12 = resp['1216052'];
+                    var priceBndl_12 = resp['price'];
+
+                    document.getElementById("right12").innerHTML = r_12+"<sup> грн</sup>";
+                    document.getElementById("left12").innerHTML = l_12+"<sup> грн</sup>";
+                    document.getElementById("priceBndl12").innerHTML = priceBndl_12+"<sup> грн</sup>";
+          }          
+});
+*/
+
+var priceUrl151 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006972&left=1440290&rigths=1457759';
+$.ajax({ url: priceUrl151,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl151").style.display = "none";
+                      }
+                                        
+                    var l_151 = resp['1440290'];
+                    var r_151 = resp['1457759'];
+                    var priceBndl_151 = resp['price'];
+
+                    document.getElementById("right151").innerHTML = r_151+"<sup> грн</sup>";
+                    document.getElementById("left151").innerHTML = l_151+"<sup> грн</sup>";
+                    document.getElementById("priceBndl151").innerHTML = priceBndl_151+"<sup> грн</sup>";
+          }          
+});
+var priceUrl152 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006986&left=1067820&rigths=1366551';
+$.ajax({ url: priceUrl152,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl152").style.display = "none";
+                      }
+                    
+                    
+                    var l_152 = resp['1067820'];
+                    var r_152 = resp['1366551'];
+                    var priceBndl_152 = resp['price'];
+
+                    document.getElementById("right152").innerHTML = r_152+"<sup> грн</sup>";
+                    document.getElementById("left152").innerHTML = l_152+"<sup> грн</sup>";
+                    document.getElementById("priceBndl152").innerHTML = priceBndl_152+"<sup> грн</sup>";
+          }          
+});
+        
+
+var priceUrl154 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006979&left=1067820&rigths=1008472';
+$.ajax({ url: priceUrl154,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl154").style.display = "none";
+                      }
+                    
+                    
+                    var l_154 = resp['1067820'];
+                    var r_154 = resp['1008472'];
+                    var priceBndl_154 = resp['price'];
+
+                    document.getElementById("right154").innerHTML = r_154+"<sup> грн</sup>";
+                    document.getElementById("left154").innerHTML = l_154+"<sup> грн</sup>";
+                    document.getElementById("priceBndl154").innerHTML = priceBndl_154+"<sup> грн</sup>";
+          }          
+});
+
+
+var priceUrl155 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006979&left=1305811&rigths=1008472';
+$.ajax({ url: priceUrl155,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl155").style.display = "none";
+                      }
+                    
+                    
+                    var l_155 = resp['1305811'];
+                    var r_155 = resp['1008472'];
+                    var priceBndl_155 = resp['price'];
+
+                    document.getElementById("right155").innerHTML = r_155+"<sup> грн</sup>";
+                    document.getElementById("left155").innerHTML = l_155+"<sup> грн</sup>";
+                    document.getElementById("priceBndl155").innerHTML = priceBndl_155+"<sup> грн</sup>";
+          }          
+});  
+
+
+// var priceUrl156 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006979&left=1369492&rigths=990590';
+// $.ajax({ url: priceUrl156,
+//          type: 'get',
+//          success: function(output) {
+//                     var resp = JSON.parse(output);
+//                     if(resp['price'] == 0){
+//                         document.getElementById("bandl156").style.display = "none";
+//                       }
+                    
+                    
+//                     var l_156 = resp['1369492'];
+//                     var r_156 = resp['990590'];
+//                     var priceBndl_156 = resp['price'];
+
+//                     document.getElementById("right156").innerHTML = r_156+"<sup> грн</sup>";
+//                     document.getElementById("left156").innerHTML = l_156+"<sup> грн</sup>";
+//                     document.getElementById("priceBndl156").innerHTML = priceBndl_156+"<sup> грн</sup>";
+//           }          
+// }); 
+/*
+var priceUrl157 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006979&left=1369492&rigths=1008472';
+$.ajax({ url: priceUrl157,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl157").style.display = "none";
+                      }
+                    
+                    
+                    var l_157 = resp['1369492'];
+                    var r_157 = resp['1008472'];
+                    var priceBndl_157 = resp['price'];
+
+                    document.getElementById("right157").innerHTML = r_157+"<sup> грн</sup>";
+                    document.getElementById("left157").innerHTML = l_157+"<sup> грн</sup>";
+                    document.getElementById("priceBndl157").innerHTML = priceBndl_157+"<sup> грн</sup>";
+          }          
+});   
+*/
+
+
+var priceUrl159 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006703&left=1306710&rigths=1216052';
+$.ajax({ url: priceUrl159,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl159").style.display = "none";
+                      }
+                    
+                    
+                    var l_159 = resp['1306710'];
+                    var r_159 = resp['1216052'];
+                    var priceBndl_159 = resp['price'];
+
+                    document.getElementById("right159").innerHTML = r_159+"<sup> грн</sup>";
+                    document.getElementById("left159").innerHTML = l_159+"<sup> грн</sup>";
+                    document.getElementById("priceBndl159").innerHTML = priceBndl_159+"<sup> грн</sup>";
+          }          
+});   
+
+
+var priceUrl158 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00006979&left=1369492&rigths=0990590';
+$.ajax({ url: priceUrl158,
+         type: 'get',
+         success: function(output) {
+                    var resp = JSON.parse(output);
+                    if(resp['price'] == 0){
+                        document.getElementById("bandl158").style.display = "none";
+                      }
+                    
+                    
+                    var l_158 = resp['1369492'];
+                    var r_158 = resp['0990590'];
+                    var priceBndl_158 = resp['price'];
+
+                    document.getElementById("right158").innerHTML = r_158+"<sup> грн</sup>";
+                    document.getElementById("left158").innerHTML = l_158+"<sup> грн</sup>";
+                    document.getElementById("priceBndl158").innerHTML = priceBndl_158+"<sup> грн</sup>";
+          }          
+});
+// ]]></script>
+<!--
+<div class="oldpp">
+<div class="cena" id="price1"></div>
+<span class="price-currency">грн</span></div>
+<div class="newp np">
+<div class="cena" id="price2"></div>
+<span class="price-currency">грн</span></div>
+<div class="newp np">
+<div class="cena" id="priceb"></div>
+<span class="price-currency">грн</span></div>
+<a href="#" _mce_href="#" onclick="$(document).triggerHandler('cart:add', [161513])">
+<div class="buy-btn-bl">Купить</div>
+</a> -->
+<div id="krbt-pilot"><section class="container_banner"></section> <section class="container_name_category"></section> <section class="container_tab">
+<div class="left_bl row_ft"><a class="bigBanner"><img src="https://cdn.comfy.ua/media/x/FJ/vubir_3_1.jpg" /></a></div>
+<div class="right_bl row_ft"><a id="chatBtn"> <img src="https://cdn.comfy.ua/media/x/FJ/vubir_750_330.jpg" class="respMobile" /> <img src="https://cdn.comfy.ua/media/x/FJ/vubir_1024_200.jpg" class="respNotepad" /> </a>
+<div class="block_tab">
+<div class="help-window"></div>
+<section class="tabs"> <input checked="checked" class="tab-selector-1" name="radio-set" type="radio" id="tab-1" /> <label class="tab-label-1" for="tab-1">Базовий</label> <input class="tab-selector-2" name="radio-set" type="radio" id="tab-2" /> <label class="tab-label-2" for="tab-2">Стандарт</label> <input class="tab-selector-3" name="radio-set" type="radio" id="tab-3" /> <label class="tab-label-3" for="tab-3">Преміум</label>
+<div class="clear-shadow"></div>
+<div class="content">
+<div class="div_chek content-1"><!-- 1********************************************************************** --> <!--
+<div class="container_bandl" id="bandl1">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1010592-hansa-bhgi63130-7.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1010592-hansa-bhgi63130-7.png" />
+<p class="name_product">Варильна панель газова Hansa BHGI63130</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left1" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1244196-hansa-boes68463-12.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1244196-hansa-boes68463-12.png" />
+<p class="name_product">Духова шафа електрична Hansa BOES68463</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right1" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">12398<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl1"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/varochnaja-panel-gazovaja-hansa-bhgi63130.html" _mce_href="https://comfy.ua/ua/varochnaja-panel-gazovaja-hansa-bhgi63130.html" id="moreBtn_1">Детальніше</a></div>
+</div>
+</div>
+-->  							<!-- 2********************************************************************** --> <!--
+<div class="container_bandl" id="bandl2">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1097458-pyramida-pfe-644-black-13.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1097458-pyramida-pfe-644-black-13.png" />
+<p class="name_product">Варильна панель газова Pyramida PFE 644 BLACK</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left2" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/p/y/pyramida-f-60-m-gbl-7.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/p/y/pyramida-f-60-m-gbl-7.png" />
+<p class="name_product">Духова шафа електрична Pyramida F 60 M GBL</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right2" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">12848<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl2"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/varochnaja-panel-gazovaja-pyramida-pfe-644-black.html" _mce_href="https://comfy.ua/ua/varochnaja-panel-gazovaja-pyramida-pfe-644-black.html" id="moreBtn_2">Детальніше</a></div>
+</div>
+</div>
+--> 							<!-- 3********************************************************************** --> <!--
+<div class="container_bandl" id="bandl3">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/4/1406521-bosch-pbp6c5b90-12.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/4/1406521-bosch-pbp6c5b90-12.png" />
+<p class="name_product">Варильна панель газова Bosch PBP6C5B90</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left3" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/h/b/hbf113ba0q.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/h/b/hbf113ba0q.png" />
+<p class="name_product">Духова шафа електрична Bosch HBF113BA0Q</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right3" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">13298<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl3"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/varochnaja-panel-gazovaja-bosch-pbp6c5b90.html" _mce_href="https://comfy.ua/ua/varochnaja-panel-gazovaja-bosch-pbp6c5b90.html" id="moreBtn_3">Детальніше</a></div>
+</div>
+</div>
+-->  							<!-- 4********************************************************************** --> <!--
+<div class="container_bandl" id="bandl4">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/_/s/_siemens_eg6b5ho90r_023.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/_/s/_siemens_eg6b5ho90r_023.png" />
+<p class="name_product">Варильна панель газова Siemens EG6B5HO90R</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left4" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/h/b/hbf113ba0q.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/h/b/hbf113ba0q.png" />
+<p class="name_product">Духова шафа електрична Bosch HBF113BA0Q</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right4" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">14998<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl4"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/varochnaja-panel-gazovaja-siemens-eg6b5ho90r.html" _mce_href="https://comfy.ua/ua/varochnaja-panel-gazovaja-siemens-eg6b5ho90r.html" id="moreBtn_4">Детальніше</a></div>
+</div>
+</div>
+-->  							<!-- 5********************************************************************** --> <!--
+<div class="container_bandl" id="bandl5">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1044777-hansa-bhgs63030-10.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1044777-hansa-bhgs63030-10.png" />
+<p class="name_product">Варильна панель газова Hansa BHGS63030</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left5" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1244196-hansa-boes68463-12.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1244196-hansa-boes68463-12.png" />
+<p class="name_product">Духова шафа електрична Hansa BOES68463</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right5" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">11448<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl5"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/varochnaja-panel-gazovaja-hansa-bhgs63030.html" _mce_href="https://comfy.ua/ua/varochnaja-panel-gazovaja-hansa-bhgs63030.html" id="moreBtn_5">Детальніше</a></div>
+</div>
+</div>
+--> <!-- 5_2********************************************************************** --> <!--
+<div class="container_bandl" id="bandl52">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/g/o/gorenje_bo_737_e36bg-288555.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/g/o/gorenje_bo_737_e36bg-288555.png" />
+<p class="name_product">Духова шафа електрична Gorenje BO 737 E36BG-2</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left52" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/g/o/gorenje-gt-641-b-6_1.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/g/o/gorenje-gt-641-b-6_1.png" />
+<p class="name_product">Варильна поверхня газова Gorenje GT 641 B</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right52" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">14898<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl52"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-gorenje-bo-737-e36bg-2.html#bundle" _mce_href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-gorenje-bo-737-e36bg-2.html#bundle" id="moreBtn_52">Детальніше</a></div>
+</div>
+</div>
+--> <!-- 5_3********************************************************************** -->
+<div id="bandl53" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/4/1449615-hansa-boeis69407-16.png" />
+<p class="name_product">Духова шафа електрична Hansa BOEIS69407</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left53"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1010592-hansa-bhgi63130-7.png" />
+<p class="name_product">Варильна поверхня  газова Hansa BHGI63130</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right53"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">13898<sup> грн</sup></div>
+<div id="priceBndl53" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_53" href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-hansa-boeis69407.html">Детальніше</a></div>
+</div>
+</div>
+<!-- 54********************************************************************** -->
+<div id="bandl54" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1244196-hansa-boes68463-12.png" />
+<p class="name_product">Духова шафа електрична Hansa BOES68463</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left54"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1029135-hansa-bhks63038-8.png" />
+<p class="name_product">Варильна поверхня  газова Hansa BHGI63130</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right54"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">13448<sup> грн</sup></div>
+<div id="priceBndl54" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_54" href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-hansa-boes68463.html">Детальніше</a></div>
+</div>
+</div>
+<!-- 55********************************************************************** -->
+<div id="bandl55" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1296818-hansa-bhc63366-7.png" />
+<p class="name_product">Варильна поверхня  електрична Hansa BHC63366</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left55"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/b/o/boei68431.png" />
+<p class="name_product">Духова шафа електрична Hansa BOEI68431</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right55"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">12698<sup> грн</sup></div>
+<div id="priceBndl55" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_55" href="https://comfy.ua/ua/varochnaja-panel-jelektricheskaja-hansa-bhc63366.html">Детальніше</a></div>
+</div>
+</div>
+<!-- 57********************************************************************** -->
+<div id="bandl57" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/9/9/993355-hansa-boew64090015-13.png" />
+<p class="name_product">Духова шафа електро Hansa BOEW64090015</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left57"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/h/a/hansa_bhkw63138_2_1.png" />
+<p class="name_product">Варильна поверхня газова Hansa BHKW63138</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right57"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">13978<sup> грн</sup></div>
+<div id="priceBndl57" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_57" href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-standart-hansa-boew64090015.html">Детальніше</a></div>
+</div>
+</div>
+<!-- 58********************************************************************** --> <!--
+<div class="container_bandl" id="bandl58">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/h/a/hansa_boes684271.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/h/a/hansa_boes684271.png" />
+<p class="name_product">Духова шафа електрична Hansa BOES68427</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left58" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1296820-hansa-bhc66506-9.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1296820-hansa-bhc66506-9.png" />
+<p class="name_product">Варильна поверхня  електрична Hansa BHC66506</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right58" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">14698<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl58"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-hansa-boes68427.html" _mce_href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-hansa-boes68427.html" id="moreBtn_58">Детальніше</a></div>
+</div>
+</div>
+--> <!-- 59********************************************************************** --> <!--
+<div class="container_bandl" id="bandl59">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/4/1449615-hansa-boeis69407-16.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/4/1449615-hansa-boeis69407-16.png" />
+<p class="name_product">Духова шафа електрична Hansa BOEIS69407</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left59" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1010591-hansa-bhgi63030-7.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1010591-hansa-bhgi63030-7.png" />
+<p class="name_product">Варильна поверхня  газова Hansa BHGI63030</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right59" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">13498<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl59"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-hansa-boeis69407.html" _mce_href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-hansa-boeis69407.html" id="moreBtn_59">Детальніше</a></div>
+</div>
+</div>
+--> <!-- 60********************************************************************** -->
+<div id="bandl60" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/b/o/bosch_hbf514bs0r_1.png" />
+<p class="name_product">Духова шафа електрична Bosch HBF514BS0R</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left60"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/4/1406521-bosch-pbp6c5b90-12.png" />
+<p class="name_product">Варильна поверхня газова Bosch PBP6C5B90</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right60"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">14028<sup> грн</sup></div>
+<div id="priceBndl60" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_60" href="https://comfy.ua/ua/duhovoj-shkaf-gazovyj-bosch-hbf514bs0r.html">Детальніше</a></div>
+</div>
+</div>
+<!-- 61********************************************************************** -->
+<div id="bandl61" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1244196-hansa-boes68463-12.png" />
+<p class="name_product">Духова шафа електрична Hansa BOES68463</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left61"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1296820-hansa-bhc66506-9.png" />
+<p class="name_product">Варильна поверхня  електрична Hansa BHC66506</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right61"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">13748<sup> грн</sup></div>
+<div id="priceBndl61" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_61" href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-hansa-boes68463.html">Детальніше</a></div>
+</div>
+</div>
+<!-- 62********************************************************************** -->
+<div id="bandl62" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/4/1449615-hansa-boeis69407-16.png" />
+<p class="name_product">Духова шафа електрична Hansa BOEIS69407</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left62"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1296820-hansa-bhc66506-9.png" />
+<p class="name_product">Варильна поверхня  електрична Hansa BHC66506</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right62"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">15248<sup> грн</sup></div>
+<div id="priceBndl62" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_62" href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-hansa-boeis69407.html">Детальніше</a></div>
+</div>
+</div>
+<!-- 63********************************************************************** -->
+<div id="bandl63" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1296818-hansa-bhc63366-7.png" />
+<p class="name_product">Варильна поверхня  електрична Hansa BHC63366</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left63"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1244196-hansa-boes68463-12.png" />
+<p class="name_product">Духова шафа електрична Hansa BOES68463</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right63"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">12848<sup> грн</sup></div>
+<div id="priceBndl63" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_63" href="https://comfy.ua/ua/varochnaja-panel-jelektricheskaja-hansa-bhc63366.html">Детальніше</a></div>
+</div>
+</div>
+<!-- 64********************************************************************** -->
+<div id="bandl64" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1296818-hansa-bhc63366-7.png" />
+<p class="name_product">Варильна поверхня  електрична Hansa BHC63366</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left64"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/4/1449615-hansa-boeis69407-16.png" />
+<p class="name_product">Духова шафа електрична Hansa BOEIS69407</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right64"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">12848<sup> грн</sup></div>
+<div id="priceBndl64" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_64" href="https://comfy.ua/ua/varochnaja-panel-jelektricheskaja-hansa-bhc63366.html">Детальніше</a></div>
+</div>
+</div>
+<!-- 65********************************************************************** -->
+<div id="bandl65" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/h/a/hansa_boes684271.png" />
+<p class="name_product">Духова шафа електрична Hansa BOES68427</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left65"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1029135-hansa-bhks63038-8.png" />
+<p class="name_product">Варильна поверхня газова Hansa BHKS63038</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right65"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">14398<sup> грн</sup></div>
+<div id="priceBndl65" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_65" href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-hansa-boes68427.html">Детальніше</a></div>
+</div>
+</div>
+<!-- 66********************************************************************** --> <!--
+<div class="container_bandl" id="bandl66">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/h/a/hansa_boes684271.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/h/a/hansa_boes684271.png" />
+<p class="name_product">Духова шафа електрична Hansa BOES68427</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left66" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1296820-hansa-bhc66506-9.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1296820-hansa-bhc66506-9.png" />
+<p class="name_product">Варильна поверхня  електрична Hansa BHC66506</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right66" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">14698<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl66"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-hansa-boes68427.html" _mce_href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-hansa-boes68427.html" id="moreBtn_66">Детальніше</a></div>
+</div>
+</div>
+--></div>
+<div class="line_bg_bandl"></div>
+<div class="div_chek content-2"><!-- 6********************************************************************** --> <!--
+<div class="container_bandl" id="bandl6">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_eoa3454aox12.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_eoa3454aox12.png" />
+<p class="name_product">Духова шафа електрична Electrolux EOA3454AOX</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left6" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/3/1345775-electrolux-gee263mx-6.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/3/1345775-electrolux-gee263mx-6.png" />
+<p class="name_product">Варильна панель газова Electrolux GEE263MX</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right6" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">17998<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl6"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-electrolux-eoa3454aox.html" _mce_href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-electrolux-eoa3454aox.html" id="moreBtn_6">Детальніше</a></div>
+</div>
+</div>
+--> 							 <!-- 7********************************************************************** --> <!--
+<div class="container_bandl" id="bandl7">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/b/o/bosch_hbf514bs0r_1.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/b/o/bosch_hbf514bs0r_1.png" />
+<p class="name_product">Духова шафа електрична Bosch HBF514BS0R</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left7" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/_/b/_bosch_pue_611bf1e_1.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/_/b/_bosch_pue_611bf1e_1.png" />
+<p class="name_product">Варильна панель газова Bosch PGP6B5O90R</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right7" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">15598<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl7"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/duhovoj-shkaf-gazovyj-bosch-hbf514bs0r.html" _mce_href="https://comfy.ua/ua/duhovoj-shkaf-gazovyj-bosch-hbf514bs0r.html" id="moreBtn_7">Детальніше</a></div>
+</div>
+</div>
+-->  									<!-- 101********************************************************************** --> <!--
+<div class="container_bandl" id="bandl101">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/g/o/gorenje_it_640_bcsc11.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/g/o/gorenje_it_640_bcsc11.png" />
+<p class="name_product">Варильна поверхня електрична Gorenje IT 640 BCSC</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left101" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/g/o/gorenje_bo_735_e20x-m55555.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/g/o/gorenje_bo_735_e20x-m55555.png" />
+<p class="name_product">Духова шафа електрична Gorenje BO 735 E20X-M</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right101" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">18498<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl101"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/varochnaja-panel-jelektricheskaja-gorenje-it-640-bcsc.html#bundle" _mce_href="https://comfy.ua/ua/varochnaja-panel-jelektricheskaja-gorenje-it-640-bcsc.html#bundle" id="moreBtn_101">Детальніше</a></div>
+</div>
+</div>
+--> 									<!-- 102********************************************************************** -->
+<div id="bandl102" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/9/9/990590-samsung-na64h3000ak-wt-8.png" />
+<p class="name_product">Варильна поверхня  газова Samsung NA64H3000AK/WT</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left102"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1067820-samsung-nv70k2340rb-wt-15.png" />
+<p class="name_product">Духова шафа електро Samsung NV70K2340RB/WT</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right102"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">17598<sup> грн</sup></div>
+<div id="priceBndl102" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_102" href="https://comfy.ua/ua/varochnaja-panel-gazovaja-samsung-na64h3000ak-wt.html#bundle">Детальніше</a></div>
+</div>
+</div>
+<!-- 103********************************************************************** --> <!--
+<div class="container_bandl" id="bandl103">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/1/1193650-electrolux-cpe6433kf-7.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/1/1193650-electrolux-cpe6433kf-7.png" />
+<p class="name_product">Варильна поверхня  електрична Electrolux CPE6433KF</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left103" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_eoa3454aox12.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/e/l/electrolux_eoa3454aox12.png" />
+<p class="name_product">Духова шафа електрична Electrolux EOA3454AOX</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right103" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">20298<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl103"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/varochnaja-panel-jelektricheskaja-electrolux-cpe6433kf.html#bundle" _mce_href="https://comfy.ua/ua/varochnaja-panel-jelektricheskaja-electrolux-cpe6433kf.html#bundle" id="moreBtn_103">Детальніше</a></div>
+</div>
+</div>
+--> <!-- 105********************************************************************** --> <!--
+<div class="container_bandl" id="bandl105">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1067820-samsung-nv70k2340rb-wt-15.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1067820-samsung-nv70k2340rb-wt-15.png" />
+<p class="name_product">Духова шафа електро Samsung NV70K2340RB/WT</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left105" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/s/a/samsung_fw77sutbw11222.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/s/a/samsung_fw77sutbw11222.png" />
+<p class="name_product">Мікрохвильова піч (НВЧ) вбудовувана Samsung FW77SUT/BW</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right105" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">18498<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl105"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/duhovoj-shkaf-jelektro-samsung-nv70k2340rb-wt.html#bundle" _mce_href="https://comfy.ua/ua/duhovoj-shkaf-jelektro-samsung-nv70k2340rb-wt.html#bundle" id="moreBtn_105">Детальніше</a></div>
+</div>
+</div>
+-->   <!-- 106********************************************************************** -->
+<div id="bandl106" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/b/o/bosch_hbj558ys0q_1.png" />
+<p class="name_product">Духова шафа електрична Bosch HBJ558YS0Q</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left106"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/3/1341074-bosch-pgp6b5o90r-11.png" />
+<p class="name_product">Варильна поверхня газова Bosch PGP6B5O90R</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right106"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">19178<sup> грн</sup></div>
+<div id="priceBndl106" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_106" href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-bosch-hbj558ys0q.html">Детальніше</a></div>
+</div>
+</div>
+<!-- 107********************************************************************** --> <!--
+<div class="container_bandl" id="bandl107">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1067820-samsung-nv70k2340rb-wt-15.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1067820-samsung-nv70k2340rb-wt-15.png" />
+<p class="name_product">Духова шафа електрична Samsung NV70K2340RB/WT</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left107" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/9/9/990590-samsung-na64h3000ak-wt-8.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/9/9/990590-samsung-na64h3000ak-wt-8.png" />
+<p class="name_product">Варильна поверхня газова Samsung NA64H3000AK/WT</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right107" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">17598<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl107"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/duhovoj-shkaf-jelektro-samsung-nv70k2340rb-wt.html" _mce_href="https://comfy.ua/ua/duhovoj-shkaf-jelektro-samsung-nv70k2340rb-wt.html" id="moreBtn_107">Детальніше</a></div>
+</div>
+</div>
+--> <!-- 109********************************************************************** -->
+<div id="bandl109" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/9/9/990591-samsung-na64h3010as-wt-8.png" />
+<p class="name_product">Варильна поверхня газова Samsung NA64H3010AS/WT</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left109"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/_/s/_samsung_nv70k2340rs-wt_1.png" />
+<p class="name_product">Духова шафа електрична Samsung NV70K2340RS/WT</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right109"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">16998<sup> грн</sup></div>
+<div id="priceBndl109" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_109" href="https://comfy.ua/varochnaja-panel-gazovaja-samsung-na64h3010as-wt.html">Детальніше</a></div>
+</div>
+</div>
+<!-- 110********************************************************************** -->
+<div id="bandl110" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/4/1449615-hansa-boeis69407-16.png" />
+<p class="name_product">Духова шафа електрична Hansa BOEIS69407</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left110"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/h/a/hansa--bhi68308-6.png" />
+<p class="name_product">Варильна поверхня електрична Hansa BHI68308</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right110"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">17648<sup> грн</sup></div>
+<div id="priceBndl110" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_110" href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-hansa-boeis69407.html">Детальніше</a></div>
+</div>
+</div>
+<!-- 111********************************************************************** -->
+<div id="bandl111" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1244196-hansa-boes68463-12.png" />
+<p class="name_product">Духова шафа електрична Hansa BOES68463</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left111"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/h/a/hansa--bhi68308-6.png" />
+<p class="name_product">Варильна поверхня електрична Hansa BHI68308</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right111"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">16148<sup> грн</sup></div>
+<div id="priceBndl111" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_111" href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-hansa-boes68463.html">Детальніше</a></div>
+</div>
+</div>
+<!-- 113********************************************************************** -->
+<div id="bandl113" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/h/a/hansa_boes684271.png" />
+<p class="name_product">Духова шафа електрична Hansa BOES68427</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left113"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/h/a/hansa--bhi68308-6.png" />
+<p class="name_product">Варильна поверхня електрична Hansa BHI68308</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right113"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">17098<sup> грн</sup></div>
+<div id="priceBndl113" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_113" href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-hansa-boes68427.html">Детальніше</a></div>
+</div>
+</div>
+<!-- 114********************************************************************** -->
+<div id="bandl114" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/b/o/bosch_hbf514bs0r_1.png" />
+<p class="name_product">Духова шафа електрична Bosch HBF514BS0R</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left114"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/3/1341074-bosch-pgp6b5o90r-11.png" />
+<p class="name_product">Варильна поверхня газова Bosch PGP6B5O90R</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right114"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">15728<sup> грн</sup></div>
+<div id="priceBndl114" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_114" href="https://comfy.ua/ua/duhovoj-shkaf-gazovyj-bosch-hbf514bs0r.html">Детальніше</a></div>
+</div>
+</div>
+<!-- 115********************************************************************** -->
+<div id="bandl115" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1067820-samsung-nv70k2340rb-wt-15.png" />
+<p class="name_product">Духова шафа електрична Samsung NV70K2340RB/WT</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left115"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1005337-samsung-ctr364ec01-bwt-13.png" />
+<p class="name_product">Варильна поверхня електрична Samsung CTR364EC01/BWT</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right115"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">18998<sup> грн</sup></div>
+<div id="priceBndl115" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_115" href="https://comfy.ua/ua/duhovoj-shkaf-jelektro-samsung-nv70k2340rb-wt.html">Детальніше</a></div>
+</div>
+</div>
+<!-- 116********************************************************************** -->
+<div id="bandl116" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1005337-samsung-ctr364ec01-bwt-13.png" />
+<p class="name_product">Варильна поверхня електрична Samsung CTR364EC01/BWT</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left116"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/_/s/_samsung_nv70k2340rs-wt_1.png" />
+<p class="name_product">Духова шафа електрична Samsung NV70K2340RS/WT</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right116"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">18998<sup> грн</sup></div>
+<div id="priceBndl116" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_116" href="https://comfy.ua/varochnaja-panel-jelektricheskaja-samsung-ctr364ec01-bwt.html">Детальніше</a></div>
+</div>
+</div>
+</div>
+<div class="div_chek content-3"><!-- 12********************************************************************** --> <!--
+<div class="container_bandl" id="bandl12">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/b/o/bosch_hbj558ys0q_1.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/b/o/bosch_hbj558ys0q_1.png" />
+<p class="name_product">Духова шафа електрична Bosch HBJ558YS0Q</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left12" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/_/b/_bosch_pue_611bf1e_1.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/_/b/_bosch_pue_611bf1e_1.png" />
+<p class="name_product">Варильна панель електрична Bosch PUE 611BF1E</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right12" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">24598<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl12"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-bosch-hbj558ys0q.html" _mce_href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-bosch-hbj558ys0q.html" id="moreBtn_12">Детальніше</a></div>
+</div>
+</div>
+--> 									<!-- 151********************************************************************** --> <!--
+<div class="container_bandl" id="bandl151">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/4/1440290-gorenje-it-640-bcsc-13.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/4/1440290-gorenje-it-640-bcsc-13.png" />
+<p class="name_product">Варильна поверхня електрична Gorenje IT 640 BCSC</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left151" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/g/o/gorenje_bo_737_orab1.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/g/o/gorenje_bo_737_orab1.png" />
+<p class="name_product">Духова шафа електрична Gorenje BO 737 ORAB</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right151" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">21998<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl151"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/varochnaja-panel-jelektricheskaja-gorenje-it-640-bcsc.html#bundle" _mce_href="https://comfy.ua/ua/varochnaja-panel-jelektricheskaja-gorenje-it-640-bcsc.html#bundle" id="moreBtn_151">Детальніше</a></div>
+</div>
+</div>
+--> 									<!-- 152********************************************************************** --> <!--
+<div class="container_bandl" id="bandl152">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1067820-samsung-nv70k2340rb-wt-15.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1067820-samsung-nv70k2340rb-wt-15.png" />
+<p class="name_product">Духова шафа електро Samsung NV70K2340RB/WT</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left152" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/b/r/brb260087ww_002_l-perspective_white_1.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/b/r/brb260087ww_002_l-perspective_white_1.png" />
+<p class="name_product">Холодильник вбудовуваний Samsung BRB260087WW/UA</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right152" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">37498<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl152"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/duhovoj-shkaf-jelektro-samsung-nv70k2340rb-wt.html#bundle" _mce_href="https://comfy.ua/ua/duhovoj-shkaf-jelektro-samsung-nv70k2340rb-wt.html#bundle" id="moreBtn_152">Детальніше</a></div>
+</div>
+</div>
+--> <!-- 154********************************************************************** -->
+<div id="bandl154" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1067820-samsung-nv70k2340rb-wt-15.png" />
+<p class="name_product">Духова шафа електрична Samsung NV70K2340RB/WT</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left154"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1008472-samsung-nz64h57479k-wt-9.png" />
+<p class="name_product">Варильна поверхня електрична Samsung NZ64H57479K/WT</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right154"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">27498<sup> грн</sup></div>
+<div id="priceBndl154" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_154" href="https://comfy.ua/ua/duhovoj-shkaf-jelektro-samsung-nv70k2340rb-wt.html#bundle">Детальніше</a></div>
+</div>
+</div>
+<!-- 155********************************************************************** -->
+<div id="bandl155" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/_/s/_samsung_nv70k2340rs-wt_1.png" />
+<p class="name_product">Духова шафа електрична Samsung NV70K2340RS/WT</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left155"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/0/1008472-samsung-nz64h57479k-wt-9.png" />
+<p class="name_product">Варильна поверхня електрична Samsung NZ64H57479K/WT</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right155"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">27498<sup> грн</sup></div>
+<div id="priceBndl155" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_155" href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-samsung-nv70k2340rs-wt.html#bundle">Детальніше</a></div>
+</div>
+</div>
+<!-- 156********************************************************************** --> <!--
+<div class="container_bandl" id="bandl156">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/s/a/samsung_nv75k5541rb.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/s/a/samsung_nv75k5541rb.png" />
+<p class="name_product">Духова шафа електрична Samsung NV75K5541RB/WT</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left156" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/9/9/990591-samsung-na64h3010as-wt-8.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/9/9/990591-samsung-na64h3010as-wt-8.png">
+<p class="name_product">Варильна поверхня газова Samsung NA64H3010AS/WT</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right156" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">24498<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl156"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-samsung-nv75k5541rb-wt.html#bundle" _mce_href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-samsung-nv75k5541rb-wt.html#bundle" id="moreBtn_156">Детальніше</a></div>
+</div>
+</div>
+--> <!-- 157********************************************************************** --> <!--
+<div class="container_bandl" id="bandl157">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/s/a/samsung_nv75k5541rb.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/s/a/samsung_nv75k5541rb.png" />
+<p class="name_product">Духова шафа електрична Samsung NV75K5541RB/WT</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span id="left157" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" _mce_src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/9/9/990591-samsung-na64h3010as-wt-8.png" _mce_src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/9/9/990591-samsung-na64h3010as-wt-8.png">
+<p class="name_product">Варильна поверхня електрична Samsung NZ64H57479K/WT</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span id="right157" class="price_line_red"></span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">34998<sup> грн</sup></div>
+<div class="cena cena_right" id="priceBndl157"></div>
+<div class="more_btn"><a href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-samsung-nv75k5541rb-wt.html#bundle" _mce_href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-samsung-nv75k5541rb-wt.html#bundle" id="moreBtn_157">Детальніше</a></div>
+</div>
+</div>
+--> 	 <!-- 159********************************************************************** -->
+<div id="bandl159" class="container_bandl">
+<div class="bndl_all bl_left">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/b/o/bosch_hbj558ys0q_1.png" />
+<p class="name_product">Духова шафа електрична Bosch HBJ558YS0Q</p>
+<div class="price_bandl">
+<div class="cena cena_left"><span class="price_line_red" id="left159"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_plus"><img src="https://comfy.ua/media/x/img/plus.png" /></div>
+<div class="bndl_all bl_right">
+<div class="content_cart"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/1/2/1216052-bosch-pue611bf1e-13.png" />
+<p class="name_product">Варильна поверхня електрична Bosch PUE 611BF1E</p>
+<div class="price_bandl">
+<div class="cena cena_right"><span class="price_line_red" id="right159"> </span></div>
+</div>
+</div>
+</div>
+<div class="bndl_all bl_next">
+<div class="cena cena_up">24778<sup> грн</sup></div>
+<div id="priceBndl159" class="cena cena_right"></div>
+<div class="more_btn"><a id="moreBtn_159" href="https://comfy.ua/ua/duhovoj-shkaf-jelektricheskij-bosch-hbj558ys0q.html#bundle">Детальніше</a></div>
+</div>
+</div>
+</div>
+</div>
+<a href="https://comfy.ua/ua/vmeste-deshevle-vst/">
+<div class="btn-all">Більше комплектів &gt;&gt;</div>
+</a> </section></div>
+</div>
+</section></div>
+<script type="text/javascript" language="JavaScript">// <![CDATA[
+				var tab1 = document.querySelector('#tab-1');
+				var tab2 = document.querySelector('#tab-2');
+				var tab3 = document.querySelector('#tab-3');
+				var helpWindow = document.querySelector('.help-window');
+
+				tab1.addEventListener('mouseover',function(){
+
+					helpWindow.style.display = "block";
+					helpWindow.innerHTML = "<strong>Базовий</strong>- комплекти з вигідною ціною до 13 000 грн";
+
+				});
+				tab1.addEventListener('mouseout',function(){
+					helpWindow.style.display = "none";
+					helpWindow.innerHTML = " ";
+					
+				});
+
+				tab2.addEventListener('mouseover',function(){
+
+					helpWindow.style.display = "block";
+					helpWindow.innerHTML = "<strong>Стандарт</strong>- комплекти з вигідною ціною до 18 000 грн";
+				});
+				tab2.addEventListener('mouseout',function(){
+					helpWindow.style.display = "none";
+					helpWindow.innerHTML = " ";
+					
+				});
+				tab3.addEventListener('mouseover',function(){
+
+					helpWindow.style.display = "block";
+					helpWindow.innerHTML = "<strong>Преміум</strong>- комплекти з вигідною ціною від 18 000 грн";
+				});
+				tab3.addEventListener('mouseout',function(){
+					helpWindow.style.display = "none";
+					helpWindow.innerHTML = " ";
+					
+				});
+				
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+				var bigBanner = document.querySelector('.bigBanner');
+				console.log()
+				if(screen.width > 1025){
+					bigBanner.id = "chatBtn";
+				}else{
+					bigBanner.removeAttribute('id');
+				}
+				
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+window.senderCallback = function() {
+	SenderWidget.init({
+		companyId: "i69238662654"
+	});
+	SenderWidget.showWidget();
+}
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+window.callOnlineHelp = function() {
+	(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		js = d.createElement(s);
+		js.id = id;
+		js.src = "https://widget.sender.mobi/build/init.js";
+		fjs.parentNode.insertBefore(js, fjs, 'sender-widget');
+	})(document, 'script');
+}
+// ]]></script>

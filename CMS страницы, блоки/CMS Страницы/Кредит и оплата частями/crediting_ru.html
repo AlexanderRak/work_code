@@ -1,0 +1,597 @@
+<style>
+.cms table td{color:#000;}
+.lle {text-align: left !important;}
+.cms table .bold{border-top: 1px solid #E5E5E5; border-bottom: 1px #E5E5E5;}
+
+.ll_credit dl {margin-top: 3.2rem;}
+.ll_credit dt {width: 37.5%; font-weight: 700;}
+.ll_credit dd { min-width: 56%; margin-left: -4px; }
+.ll_credit dd, .ll_credit dt { display: inline-block; vertical-align: top; line-height: 38px; padding-left: 15px;}
+
+.ll_credit dd:nth-child(1), .ll_credit dd:nth-child(2), .ll_credit dd:nth-child(5), .ll_credit dd:nth-child(6), .ll_credit dd:nth-child(9), .ll_credit dd:nth-child(10), .ll_credit dd:nth-child(13), .ll_credit dd:nth-child(14){background-color: #F6F6D1;}
+.ll_credit dt:nth-child(1), .ll_credit dt:nth-child(2), .ll_credit dt:nth-child(5), .ll_credit dt:nth-child(6), .ll_credit dt:nth-child(9), .ll_credit dt:nth-child(10), .ll_credit dt:nth-child(13), .ll_credit dt:nth-child(14){background-color: #F6F6D1;}
+
+.ll_credit {margin-top: 20px;}
+.ll_credit h3{font: 1.7rem PTSans,sans-serif; font-weight: 700;}
+.hoptxt p{font: 1.5rem PTSans,sans-serif;}
+.cms-sidebar_credit .container{padding: 1.1rem 3rem 1.6rem 5.5rem;}
+.cms-sidebar_credit .cms-content{ background: transparent;  padding: 1.8rem 2.0rem;}
+.cms-sidebar_credit .cms-content p{font: 1.5rem PTSans,sans-serif;  margin: 0.3rem 0;}
+
+</style>
+<div class="mobile-header js-mobile-header"><a class="mobile-header__link js-mobile-header__link" href="#"> <span class="mobile-header__content js-mobile-header__content"> </span> <span class="mobile-arrow"> </span> </a></div>
+<ul class="tabs-head js-slider-tabs hide" id="tabsHead">
+<li data-tab-id="#Credit" class="tabs-head-item js-tabs-item">
+<p class="tabs-head-item__link"><span class="tabs-head-item__text">«Хапай кредит»</span></p>
+</li>
+<li data-tab-id="#payPartMB" class="tabs-head-item js-tabs-item">
+<p class="tabs-head-item__link"><span class="tabs-head-item__text">«Покупка частями»</span></p>
+</li>
+<li data-tab-id="#payPart" class="tabs-head-item js-tabs-item">
+<p class="tabs-head-item__link"><span class="tabs-head-item__text">«Оплата частями»</span></p>
+</li>
+<li data-tab-id="#Akcent-Bank" class="tabs-head-item js-tabs-item">
+<p class="tabs-head-item__link"><span class="tabs-head-item__text">«Плати частями»</span></p>
+</li>
+<li data-tab-id="#instantCredit" class="tabs-head-item js-tabs-item">
+<p class="tabs-head-item__link"><span class="tabs-head-item__text">Мгновенный кредит</span></p>
+</li>
+<li data-tab-id="#General" class="tabs-head-item js-tabs-item">
+<p class="tabs-head-item__link"><span class="tabs-head-item__text">Общая информация</span></p>
+</li>
+</ul>
+<div class="control-container hide" id="ctlContainer"><a href="#" id="prev" class="control-btn control-btn__prev"></a> <a href="#" id="next" class="control-btn control-btn__next"></a></div>
+<ul class="tabs-content" id="tabsContent">
+<li class="tabs-content-item js-tabs-item" id="payPartMB">
+<div class="cms-sidebar_credit"><!--
+<div class="container form-wrapper">
+<h3>Доступная сумма покупок по сервису</h3>
+<h3>«Оплата частями»</h3>
+<p>Для получения доступной суммы покупок введите номер телефона:</p>
+<form id="phoneNumberForm" data-url="https://paypartslimit.privatbank.ua/pp-limit/limit" class="form_validation-process" novalidate="novalidate"> <input class="form__input-transparent" id="jsPhoneMask" placeholder="+38" type="tel"> <input class="btn btn_round btn_round-white" id="phoneSubmit" value="Узнать" type="submit"> </form>
+<div id="phoneStatusLabel" class="hide phone-status"></div>
+</div>
+-->
+<div class="container">
+<h3>Условия</h3>
+<dl> <dt>Первый взнос</dt> <dd>возможен по желанию клиента ( Важно! В момент оформления «Покупка частями» также спишется  первый платеж с карты)</dd> <dt>Срок кредитования</dt> <dd>до 10 платежей</dd> <dt>Ежемесячная комиссия</dt> <dd>0,00001 % годовых от первоначальной стоимости товара</dd> <dt>Минимальная сумма покупки</dt> <dd>1000 грн</dd> <dt>Максимальная сумма покупки</dt> <dd>согласно Вашего лимита</dd> </dl></div>
+</div>
+<section class="cms">
+<div class="cms-content">
+<style type="text/css">
+	.mono.logo_bank {
+		display: flex;
+    	flex-direction: row;
+    	align-items: center;
+    	justify-content: flex-start;
+	}
+	.mono.logo_bank img { max-width: 100%;height: auto; margin-right: 15px; margin-bottom: 15px;  }
+</style>
+<div class="mono logo_bank"><img src="https://comfy.ua/media/bank/icons/mono-logo-check.png" /></div>
+<h3>«Покупка частями» от monobank (ПАО «Универсалбанк») — это простой и быстрый способ кредитования.</h3>
+<p>Как совершить "Покупку частями":</p>
+<ul>
+<li>нужно быть клиентом monobank;</li>
+<li>иметь при себе смартфон с установленным приложением monobank;</li>
+<li>вам должен быть доступен лимит на «Покупку частями».</li>
+</ul>
+<b>Как получить карту?</b>
+<p>Чтобы получить карту достаточно перейти по <a href="http://monobank.ua/get" target="_blank" rel="nofollow">ссылке</a>, установить приложение и следовать инструкциям в нем.</p>
+<!--
+<p>Оформить онлайн-заявку на получение кредитной карты от Монобанк (ПАО «Универсалбанк») можно по <a rel="nofollow" target="_blank" href="https://www.monobank.com.ua/cpa/?utm_source=LA&utm_medium=limit&utm_campaign=733&utm_content=mono7d958628e7006dea000001b7711541666339.9953" _mce_href="https://www.monobank.com.ua/cpa/?utm_source=LA&amp;utm_medium=limit&amp;utm_campaign=733&amp;utm_content=mono7d958628e7006dea000001b7711541666339.9953">ссылке</a>.</p>
+-->
+<h3>Преимущества:</h3>
+<ul>
+<li>для оформления кредита не нужно наличие кредитной карты, ИНН, паспорта;</li>
+<li>простота оформления: выбрал товар от 1000 грн –– подтвердил покупку в приложении – завершил покупку на кассе;</li>
+<li>с тарифами и условиями по «Покупке частями» можно ознакомиться по <a href="https://www.monobank.ua/taryfy" target="_blank" rel="nofollow">ссылке</a>.</li>
+</ul>
+<p>Горячая линия monobank (ПАО «Универсалбанк») 0800205205</p>
+<div class="cms-content__line"></div>
+</div>
+</section> </li>
+<li class="tabs-content-item js-tabs-item" id="General">
+<div class="cms-sidebar_credit"><img src="https://cdn.comfy.ua/media/x/img/bankimg.jpg" alt="bank" /></div>
+<section class="cms">
+<div class="cms-content">
+<div class="container">
+<h3>В соответствии с требованиями Закона Украины "О потребительском кредитовании" от 15.11.2016 года № 1734-VIII</h3>
+<div class="cms-table__wrap">
+<table class="js-cms-table">
+<tbody>
+<tr>
+<td colspan="2" class="separate bold">Наименование кредитодателей, которые предлагают потребительское кредитование на территории ООО "Комфи Трейд": магазины и / или в интернет-магазин</td>
+</tr>
+<tr>
+<td colspan="2" class="separate bold">1. Информация и контактные данные кредитодателя - АО "ОТП Банк"</td>
+</tr>
+<tr>
+<td class="destination">Наименование кредитодателя и его структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>АКЦИОНЕРНОЕ ОБЩЕСТВО "ОТП Банк"</td>
+</tr>
+<tr>
+<td class="destination">Местонахождение кредитодателя и адрес структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>01033, г. Киев, ул. Жилянская, 43</td>
+</tr>
+<tr>
+<td class="destination">Лицензия/Свидетельство</td>
+<td>Лицензия НБУ №191 от 05.10.2011.</td>
+</tr>
+<tr>
+<td class="destination">Номер контактного телефона</td>
+<td>(044) 490-05-00</td>
+</tr>
+<tr>
+<td class="destination">Адрес электронной почты</td>
+<td>call.operator@otpbank.com.ua</td>
+</tr>
+<tr>
+<td>Адрес официального сайта</td>
+<td>www.otpbank.com.ua</td>
+</tr>
+<tr>
+<td colspan="2" class="separate bold">2. Информация и контактные данные кредитодателя - ПАТ "УкрСиббанк"</td>
+</tr>
+<tr>
+<td class="destination">Наименование кредитодателя и его структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "УкрСиббанк"</td>
+</tr>
+<tr>
+<td class="destination">Местонахождение кредитодателя и адрес структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>04070, г. Киев, ул. Андреевская, 2/12<br /> 03115, г. Киев, ул. Ф. Пушиной, 21</td>
+</tr>
+<tr>
+<td class="destination">Лицензия/Свидетельство</td>
+<td>Банковская лицензия № 75 от 5 октября 2011г.<br />Генеральна лицензия НБУ №75-2 від 06.10.2016р</td>
+</tr>
+<tr>
+<td class="destination">Номер контактного телефона</td>
+<td>729</td>
+</tr>
+<tr>
+<td class="destination">Адрес электронной почты</td>
+<td>info@ukrsibbank.com</td>
+</tr>
+<tr>
+<td class="destination">Адрес официального сайта</td>
+<td>www.ukrsibbank.com</td>
+</tr>
+<tr>
+<td colspan="2" class="separate bold">3. Информация и контактные данные кредитодателя - ООО "ФК" ЦФР "(ТМ" Кредит Маркет ")</td>
+</tr>
+<tr>
+<td class="destination">Наименование кредитодателя и его структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ФИНАНСОВАЯ КОМПАНИЯ" ЦЕНТР ФИНАНСОВЫХ РЕШЕНИЙ "</td>
+</tr>
+<tr>
+<td class="destination">Местонахождение кредитодателя и адрес структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>03150, г. Киев, ул. Красноармейская, 72</td>
+</tr>
+<tr>
+<td class="destination">Лицензия/Свидетельство</td>
+<td>Лицензия б/н от 24.04.2012р.<br /> Свидетельство о регистрации финансового учреждения № ИК № 55 от 19.03.2009р.</td>
+</tr>
+<tr>
+<td class="destination">Номер контактного телефона</td>
+<td>0-800-308-707</td>
+</tr>
+<tr>
+<td class="destination">Адрес электронной почты</td>
+<td>office@fsc.ua</td>
+</tr>
+<tr>
+<td class="destination">Адрес официального сайта</td>
+<td>www.kreditmarket.ua</td>
+</tr>
+<tr>
+<td colspan="2" class="separate bold">4. Информация и контактные данные кредитодателя - ООО "Современный факторинг"</td>
+</tr>
+<tr>
+<td class="destination">Наименование кредитодателя и его структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "СОВРЕМЕННЫЙ Факторинг"</td>
+</tr>
+<tr>
+<td class="destination">Местонахождение кредитодателя и адрес структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>03680, г. Киев, ул. Предславинская, 28</td>
+</tr>
+<tr>
+<td class="destination">Лицензия/Свидетельство</td>
+<td>регистрационный номер 13102578, серия и номер ФК №270 выдано 20.01.2011р.</td>
+</tr>
+<tr>
+<td class="destination">Номер контактного телефона</td>
+<td>+38 (044) 593-66-33</td>
+</tr>
+<tr>
+<td class="destination">Адрес электронной почты</td>
+<td>info@sfactor.com.ua</td>
+</tr>
+<tr>
+<td class="destination">Адрес официального сайта</td>
+<td>www.sfactor.com.ua</td>
+</tr>
+<tr>
+<td colspan="2" class="separate bold">5. Информация и контактные данные кредитодателя - ПАО "ПУМБ"</td>
+</tr>
+<tr>
+<td class="destination">Наименование кредитодателя и его структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ПЕРВЫЙ УКРАИНСКИЙ МЕЖДУНАРОДНЫЙ БАНК"</td>
+</tr>
+<tr>
+<td class="destination">Местонахождение кредитодателя и адрес структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>04070, г. Киев, ул. Андреевская, 4</td>
+</tr>
+<tr>
+<td class="destination">Лицензия/Свидетельство</td>
+<td>Генеральная лицензия НБУ №8-2 от 12.02.2015р.<br /> Банковская лицензия НБУ №8 от 06.10.2011р.</td>
+</tr>
+<tr>
+<td class="destination">Номер контактного телефона</td>
+<td>+38 044 290 7 290</td>
+</tr>
+<tr>
+<td class="destination">Адрес электронной почты</td>
+<td>info@fuib.com</td>
+</tr>
+<tr>
+<td class="destination">Адрес официального сайта</td>
+<td>www.pumb.ua</td>
+</tr>
+<tr>
+<td colspan="2" class="separate bold">6. Информация и контактные данные кредитодателя - АО "А-БАНК"</td>
+</tr>
+<tr>
+<td class="destination">Наименование кредитодателя и его структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>АКЦИОНЕРНОЕ ОБЩЕСТВО "А-Банк"</td>
+</tr>
+<tr>
+<td class="destination">Местонахождение кредитодателя и адрес структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>49074, г. Днепр, ул. Батумская, 11</td>
+</tr>
+<tr>
+<td class="destination">Лицензия/Свидетельство</td>
+<td>Лицензия НБУ № 16 от 26.10.2011р.</td>
+</tr>
+<tr>
+<td class="destination">Номер контактного телефона</td>
+<td>0-800-500-809</td>
+</tr>
+<tr>
+<td class="destination">Адрес электронной почты</td>
+<td>help@a-bank.com.ua</td>
+</tr>
+<tr>
+<td class="destination">Адрес официального сайта</td>
+<td>www.a-bank.com.ua</td>
+</tr>
+<tr>
+<td colspan="2" class="separate bold">7. Информация и контактные данные кредитодателя - ПАО КБ "ПРИВАТБАНК"</td>
+</tr>
+<tr>
+<td class="destination">Наименование кредитодателя и его структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО КОММЕРЧЕСКИЙ БАНК "ПРИВАТБАНК"</td>
+</tr>
+<tr>
+<td class="destination">Местонахождение кредитодателя и адрес структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>Юр. 01001, г. Киев, ул. Грушевского, 1д<br /> Адрес для переписки: 49094, г. Днепр, ул. Набережная Победы, 50</td>
+</tr>
+<tr>
+<td class="destination">Лицензия/Свидетельство</td>
+<td>Лицензия НБУ № 22 от 05.10.2011.</td>
+</tr>
+<tr>
+<td class="destination">Номер контактного телефона</td>
+<td>+38-056-716-11-31, 37-00</td>
+</tr>
+<tr>
+<td class="destination">Адрес официального сайта</td>
+<td>www.privatbank.ua</td>
+</tr>
+<!--               --> 
+<tr>
+<td class="separate bold" colspan="2">8. Информация и контактные данные кредитодателя - АО "АЛЬФА-БАНК"</td>
+</tr>
+<tr>
+<td class="destination">Наименование кредитодателя и его структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>АКЦИОНЕРНОЕ ОБЩЕСТВО "Альфа-Банк"</td>
+</tr>
+<tr>
+<td class="destination">Местонахождение кредитодателя и адрес структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>01001, г. Киев, ул. Десятинная, 4/6</td>
+</tr>
+<tr>
+<td class="destination">Лицензия/Свидетельство</td>
+<td>Лицензия НБУ №61 от 05.10.2011г.</td>
+</tr>
+<tr>
+<td class="destination">Номер контактного телефона</td>
+<td>(044) 490 46 00</td>
+</tr>
+<tr>
+<td class="destination">Адрес электронной почты</td>
+<td>ccd@alfabank.kiev.ua</td>
+</tr>
+<tr>
+<td class="destination">Адрес официального сайта</td>
+<td>www.alfabank.ua</td>
+</tr>
+<!--             - --> <!--               --> 
+<tr>
+<td class="separate bold" colspan="2">9. Информация и контактные данные кредитодателя - ПАТ «УНИВЕРСАЛ БАНК»</td>
+</tr>
+<tr>
+<td class="destination">Наименование кредитодателя и его структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>Публичное акционерное общество «УНІВЕРСАЛ БАНК»</td>
+</tr>
+<tr>
+<td class="destination">Местонахождение кредитодателя и адрес структурного или обособленного подразделения, в котором распространяется информация</td>
+<td>04114, г. Киев, ул. Автозаводська, буд. 54/19</td>
+</tr>
+<tr>
+<td class="destination">Лицензия/Свидетельство</td>
+<td>Лицензия НБУ № 92 от 10.10.2011.</td>
+</tr>
+<tr>
+<td class="destination">Номер контактного телефона</td>
+<td>0 800 205 205</td>
+</tr>
+<tr>
+<td class="destination">Адрес электронной почты</td>
+<td></td>
+</tr>
+<tr>
+<td class="destination">Адрес официального сайта</td>
+<td>www.monobank.com.ua</td>
+</tr>
+<!--             - -->
+</tbody>
+</table>
+<div class="cms-table__wrap">
+<table class="js-cms-table">
+<tbody>
+<tr>
+<td colspan="2" class="separate bold">Информация и контактные данные ПРОДАВЦА</td>
+</tr>
+<tr>
+<td class="destination">Наименование</td>
+<td>ООО «КОМФИ ТРЕЙД»</td>
+</tr>
+<tr>
+<td class="destination">Государственная регистрация</td>
+<td>18.02.2010, номер записи в ЕГР 1224102 0000 048892</td>
+</tr>
+<tr>
+<td class="destination">Местонахождение</td>
+<td>49100, город Днепр, бульвар Славы, дом 6 Б, комната 413</td>
+</tr>
+<tr>
+<td class="destination">Номер контактного телефона</td>
+<td>0-800-303-505</td>
+</tr>
+<tr>
+<td class="destination">Адрес электронной почты</td>
+<td>info@comfy.ua</td>
+</tr>
+<tr>
+<td class="destination">Адрес официального сайта</td>
+<td>www.comfy.ua</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Как оформить заказ в оплату частями или в кредит</h3>
+<ol>
+<li>Нажмите кнопку «Купить в кредит» на странице товара. Выберите нужный пакет и нажмите на кнопку «продолжить».</li>
+<li>На странице Корзины вы можете добавить к заказу необходимые аксессуары и сервисы. Для завершения оформления заказа необходимо нажать на кнопку «Оформить заказ». На странице оформления заказа выберите: город, доставку по адресу, заполните персональную информацию. В некоторых случаях необходимо указать Вашу электронную почту. При выборе способа оплаты убедитесь, что выбран нужный пакет. Некоторые кредитные пакеты могут быть доступны только в доставку по адресу. Для оформления «Оплата частями» или мгновенной рассрочки от ПриватБанк необходимо нажать на кнопку «Оформить», после чего вы перейдете на страницу Приватбанка для заполнения данных необходимых для совершения первого платежа. В случае оформления заявки на другие типы кредитных пакетов нажмите на кнопку «Получить код подтверждения заказа». Следующие шаги необходимы только в случае выбора кредитного пакета от Укрсиббанка, ОТП Банка и Банка ПУМБ.</li>
+<li>Введите код из СМС в поле и нажмите «Подтвердить».</li>
+<li>Заполните форму для оформления заявки, указав ФИО, Дату рождения, ИНН и Паспортные данные. Поставьте галочку в пункте с подтверждением достоверности предоставленных данных и согласием на их обработку. Нажмите кнопку «Оформить».</li>
+<li>В магазине при самовывозе обратитесь в кассу магазина и назовите кассиру номер заказа (из смс-сообщения). Кассир выдаст Вам счет-фактуру.</li>
+<li>Обратитесь к сотруднику банка, для подписания кредитного договора. При себе необходимо иметь оригиналы паспорта и идентификационного кода.</li>
+<li>Внесите в кассу первоначальный взнос.</li>
+</ol>
+<p><b>Более подробно об условиях кредитования Вы можете узнать:</b></p>
+<ul>
+<li>У банков-партнеров Comfy (представители находятся в магазинах Comfy)</li>
+<li>По телефону горячей линии 0 800 303 505 (все звонки со стационарных телефонов в пределах Украины бесплатные)</li>
+<li>У сотрудников магазинов Comfy</li>
+</ul>
+<p>Раздел Кредит в интернет-магазине сomfy.ua не является рекламой потребительского кредитования.</p>
+<p><b>Детальная информация про условия потребительского кредитования:</b></p>
+<a target="_blank" href="https://cdn.comfy.ua/media/x/pdf/otpBank.pdf">ОТП Банк</a><br /> <a target="_blank" href="https://comfy.ua/media/x/pdf/urksibbank.pdf">УкрСиббанк</a><br /> <a target="_blank" href="https://comfy.ua/media/x/pdf/pumb_09_11_18.pdf">ПУМБ</a><br /> <a target="_blank" href="https://cdn.comfy.ua/media/x/pdf/_20.09.pdf">Альфа Банк</a><br /> <!--<a href="https://comfy.ua/media/x/pdf/bank_kr/Akcent_Bank.pdf" _mce_href="https://comfy.ua/media/x/pdf/bank_kr/Akcent_Bank.pdf" target="_blank">А-Банк</a><br /> --> <a target="_blank" href="https://comfy.ua/media/x/pdf//bank_kr/sovremenuy_factiring.pdf">Cовременный факторинг</a> <br /> <a target="_blank" href="https://comfy.ua/media/x/pdf/bank_kr/kredit_market.pdf">Кредит Маркет</a><br /> <a target="_blank" href="https://comfy.ua/media/x/pdf/Akcent_bank.pdf">А-Банк</a>
+<p> </p>
+</div>
+</div>
+</div>
+</section> </li>
+<li class="tabs-content-item js-tabs-item" id="payPart">
+<div class="cms-sidebar_credit">
+<div class="container form-wrapper">
+<h3>Доступная сумма покупок по сервису</h3>
+<h3>«Оплата частями»</h3>
+<p>Для получения доступной суммы покупок введите номер телефона:</p>
+<form data-url="https://paypartslimit.privatbank.ua/pp-limit/limit" id="phoneNumberForm"> <input type="tel" placeholder="+38" id="jsPhoneMask" class="form__input-transparent" /> <input type="submit" value="Узнать" id="phoneSubmit" class="btn btn_round btn_round-white" /> </form>
+<div class="hide phone-status" id="phoneStatusLabel"></div>
+</div>
+<div class="container">
+<h3>Условия</h3>
+<dl> <dt>Первый взнос</dt> <dd>отсутствует</dd> <dt>Срок кредитования</dt> <dd>до 15 платежей</dd> <dt>Ежемесячная комиссия</dt> <dd>0.01% в месяц от первоначальной стоимости товара</dd> <dt>Минимальная сумма покупки</dt> <dd>500 грн.</dd> <dt>Максимальная сумма</dt> <dd>согласно Вашего лимита полученного из смс-сообщения</dd> </dl></div>
+</div>
+<section class="cms">
+<div class="cms-content">
+<style type="text/css">
+	.och.logo_bank {
+		display: flex;
+    	flex-direction: row;
+    	align-items: center;
+    	justify-content: flex-start;
+	}
+	.och.logo_bank img { max-width: 100%;height: auto; margin-right: 15px; margin-bottom: 15px;  }
+</style>
+<div class="och logo_bank"><img src="https://comfy.ua/media/bank/icons/privatbank_.png" /></div>
+<h3>«Оплата частями» от Приватбанка!</h3>
+<p>Это самый простой и быстрый способ кредитования. Все что вам нужно для оформления «Оплаты частями» это кредитная карта Приватбанка (<a href="https://privatbank.ua/platezhnie-karty/universalna/?utm_source=comfy" target="_blank" rel="nofollow">«Универсальный»</a> или <a href="https://privatbank.ua/platezhnie-karty/karta-gold/?utm_source=comfy" target="_blank" rel="nofollow">«Gold»</a>), а также элитные карты для VIP-клиентов (Platinum, World Black Edition, World Elite, Visa Infinite). В момент оформления заказа на сайте с Вашего кредитного лимита карты списывается только первый платеж, все последующие — тем же числом в следующих месяцах до полного погашения суммы товара. Оформить онлайн-заявку на получение кредитной карты Приватбанка можно по <a href="https://privatbank.ua/platezhnie-karty/universalna/?utm_source=comfy" target="_blank" rel="nofollow">ссылке</a>.</p>
+<a class="btn btn-main" href="https://comfy.ua/ua/payment-parts/">Смотреть доступные товары</a>
+<div class="cms-content__line"></div>
+<h3>Преимущества</h3>
+<ul>
+<li>Для оформления не нужен паспорт и идентификационный код.</li>
+<li>Нет необходимости посещать банк, вся процедура оформления проходит на сайте интернет-магазина COMFY. Воспользоваться «Оплата частями» так же просто, как оплатить покупку кредитной картой по терминалу в магазине. </li>
+<li>Ежемесячную сумму платежа за покупку, удобно вносить на карту через Приват 24, терминалы самообслуживания или в любом из отделений Приватбанка. </li>
+<li>Вы также можете погасить кредит досрочно, самостоятельно через свой Приват24 или  по  обращению  в  Банк  на  входящую  линию 3700.</li>
+<li>Вы можете управлять кредитом с помощью приложения <a href="https://privatbank.ua/ru/apps/oplata-chast-ami" target="_blank" rel="nofollow">«Оплата частями»</a></li>
+</ul>
+</div>
+</section> </li>
+<li class="tabs-content-item js-tabs-item" id="instantCredit">
+<div class="cms-sidebar_credit"><img alt="bank" src="https://cdn.comfy.ua/media/x/img/f_13597075591437467650.jpg" />
+<div class="container">
+<h3>Условия</h3>
+<dl> <dt>Первый взнос</dt> <dd>отсутствует</dd> <dt>Срок кредитования</dt> <dd>до 24 платежей</dd> <dt>Ежемесячная комиссия</dt> <dd>2,9% от стоимости покупки</dd> <dt>Минимальная сумма покупки</dt> <dd>500 грн.</dd> <dt>Максимальная сумма</dt> <dd>согласно Вашего лимита полученного из смс-сообщения</dd> </dl></div>
+</div>
+<section class="cms">
+<div class="cms-content">
+<style type="text/css">
+	.och.logo_bank {
+		display: flex;
+    	flex-direction: row;
+    	align-items: center;
+    	justify-content: flex-start;
+	}
+.och.logo_bank img { max-width: 100%;height: auto; margin-right: 15px; margin-bottom: 15px;  }
+</style>
+<div class="och logo_bank"><img src="https://comfy.ua/media/bank/icons/privatbank_.png" /></div>
+<h3>Что такое мгновенный кредит от Приватбанка?</h3>
+<p>Это сервис, с помощью которого вы можете совершать покупки и рассчитываться за услуги, оплачивая не всю их стоимость, а только часть до 24 платежей! Мгновенный кредит доступен владельцам: карты <a href="https://privatbank.ua/platezhnie-karty/universalna/?utm_source=comfy" target="_blank" rel="nofollow">«Универсальный»</a>, карты <a href="https://privatbank.ua/platezhnie-karty/karta-gold/?utm_source=comfy" target="_blank" rel="nofollow">«Универсальная Gold»</a>, элитных карт для VIP-клиентов (Platinum, World Black Edition, World Elite, Visa Infinite). Узнайте прямо сейчас доступную сумму лимита по сервису - отправьте SMS на номер 10060 с текстом chast. Оформить онлайн-заявку на получение кредитной карты Приватбанка можно по <a href="https://privatbank.ua/platezhnie-karty/universalna/?utm_source=comfy" target="_blank" rel="nofollow">ссылке</a>.</p>
+<p>Более  детально с  данным  сервисом Вы можете  ознакомиться на  сайте <a href="https://chast.privatbank.ua/" target="_blank" rel="nofollow">Банка</a></p>
+<div class="cms-content__line"></div>
+<h3>Преимущества</h3>
+<ul>
+<li>Выгодные условия — ежемесячная комиссия 2,9% от стоимости покупки.</li>
+<li> Экономия времени — оформление покупки за 30 секунд.</li>
+<li>Простота оформления — договором является чек со всеми необходимыми реквизитами (не нужно никаких документов: ИНН, паспорт). </li>
+<li>Удобное погашение — вносить платежи на карту можно без посещения банка.</li>
+</ul>
+<div style="height: 100px;"></div>
+</div>
+</section> </li>
+<li id="Credit" class="tabs-content-item js-tabs-item">
+<div class="cms-sidebar_credit">
+<div class="container">
+<div class="cms-content">
+<h3>Встречайте новый «Хапай кредит»</h3>
+<br />
+<p>Теперь у кредита в COMFY еще больше преимуществ:</p>
+<ol>
+<li>Единая заявка в разные банки. Удобные условия кредитования: оформляй одну заявку и выбирай самое выгодное предложение.</li>
+<li>Максимальная сумма кредита увеличена до 200 000 грн. Никаких ограничений на пути к мечте!</li>
+<li>Теперь абсолютно весь ассортимент товара можно приобрести в 0,01% кредит на пять платежей.</li>
+</ol> <br />
+<p>«Хапай кредит» работает по всей Украине.</p>
+<a href="https://comfy.ua/r/" class="btn btn-main hapay">Посмотреть товары</a></div>
+</div>
+</div>
+<section class="cms">
+<div class="cms-content">
+<style type="text/css">
+	.logo_bank {
+		display: flex;
+    	flex-direction: row;
+    	align-items: center;
+    	justify-content: flex-start;
+	}
+	.logo_bank img { max-width: 100%;height: auto; margin-right: 15px; margin-bottom: 15px;  }
+</style>
+<div class="logo_bank"><img src="https://comfy.ua/media/x/img/lgbank/1otp.png" /> <img src="https://comfy.ua/media/x/img/lgbank/2kr.png" /> <img src="https://comfy.ua/media/x/img/lgbank/3alfaBank.png" /> <img src="https://comfy.ua/media/x/img/lgbank/4pumb.png" /> <!--<img src="https://comfy.ua/media/bank/icons/mono-logo-check.png" /--></div>
+<div class="youtubehapay"><iframe src="https://www.youtube.com/embed/HqLNRsXiUQQ?feature=oembed" width="100%" height="399" frameborder="0"></iframe></div>
+<p><b style="color: #3333f1; font-size: 2.2rem;">«Хапай Кредит» </b> — простой способ получить товар в кредит.</p>
+<p>Выберите нужные Вам товары на сайте и оформите заказ, выбрав метод оплаты — кредит. Сотрудник контакт-центра в момент подтверждения заказа запросит у Вас недостающие данные и отправит заявку в несколько банков: ОТР Банк, Кредит Маркет, Альфа Банк, ПУМБ. После чего сообщит решение банков и предложенные условия. Вы сможете выбрать наиболее привлекательное для Вас предложение. Получить кредит Вы сможете в магазине COMFY. Вас встретит кредитный специалист с документами, после подписания договора можно сразу забрать свой товар.</p>
+<p>Обращаем Ваше внимание, что срок кредита в различных Банках может отличаться.</p>
+<div class="cms-content__line hide-on-mobile bottom-no"></div>
+</div>
+<div class="cms-content">
+<h2>C условиями банков можно ознакомиться ниже</h2>
+<h3>«0,01% кредит»<br />Банки: ОТП Банк, Альфа Банк, Кредит Маркет, ПУМБ</h3>
+<p>Преимущества:</p>
+<ol>
+<li>Льготный период составляет от 3 до 25 платежей. </li>
+<li>В течение льготного периода процент за пользование кредитом будет составлять 0,01% от задолженности.</li>
+<li>После окончания льготного периода добавляется ежемесячная комиссия 3% (Кредит Маркет, Альфа Банк, ОТП Банк, ПУМБ) от суммы кредита.</li>
+</ol>
+<div class="ll_credit">
+<h3>ОТП Банк, Кредит Маркет, ПУМБ, Альфа Банк</h3>
+<dl> <dt>Рассмотрение заявки</dt> <dd>от 15 минут</dd> <dt>Срок кредитования</dt> <dd>до 25 платежей</dd> <dt>Льготный период</dt> <dd>3,5,7,10,12,15,18,20,25 платежей</dd> <dt>Авансовый взнос</dt> <dd>от 0% от стоимости товара</dd> <dt>Разовая комиссия</dt> <dd>0%</dd> <dt>Ежемесячная комиссия</dt> <dd>3% от стоимости товара, после окончания льготного периода </dd> <dt>Процентная ставка</dt> <dd>0,01% годовых</dd> <dt>Страховой тариф </dt> <dd>0%</dd> </dl></div>
+<div class="ll_credit"><!--
+<h3>ОТП</h3>
+<dl> <dt>Рассмотрение заявки</dt> <dd>от 15 минут</dd> <dt>Срок кредитования</dt> <dd>до 25 платежей</dd> <dt>Льготный период</dt> <dd>3,5,7,10,12,15,18,20,25 платежей</dd> <dt>Авансовый взнос</dt> <dd>от 0% от стоимости товара</dd> <dt>Разовая комиссия</dt> <dd>0%</dd> <dt>Ежемесячная комиссия</dt> <dd>2,25% от стоимости товара, после окончания льготного периода </dd> <dt>Процентная ставка</dt> <dd>0,01% годовых</dd> <dt>Страховой тариф </dt> <dd>0%</dd> </dl>--></div>
+<div class="cms-content__line hide-on-mobile bottom-no"></div>
+</div>
+<div class="cms-content">
+<h3>«Суперкредит»<br />Банки: ОТП Банк, Кредит Маркет, ПУМБ, Альфа Банк</h3>
+<p>Преимущества:</p>
+<ol>
+<li>Позволяет распределить расходы сроком до 24 месяцев.</li>
+<li>Первый взнос может отсутствовать по усмотрению Банка.</li>
+<li>Обязательное страхование отсутствует.</li>
+<li>Для оформления необходимо всего два документа — паспорт и ИНН.</li>
+</ol>
+<div class="ll_credit">
+<h3>Кредит Маркет</h3>
+<dl> <dt>Рассмотрение заявки</dt> <dd> от 15 минут</dd> <dt>Срок кредитования</dt> <dd>24 месяца.</dd> <dt>Авансовый взнос</dt> <dd>0% от стоимости товара</dd> <dt>Разовая комиссия</dt> <dd>0%</dd> <dt>Ежемесячная комиссия</dt> <dd>3% от стоимости товара</dd> <dt>Процентная ставка</dt> <dd>0,01% годовых</dd> <dt>Страховой тариф</dt> <dd>0%</dd> </dl></div>
+<div class="ll_credit">
+<h3>ОТП, ПУМБ</h3>
+<dl> <dt>Рассмотрение заявки</dt> <dd> от 15 минут</dd> <dt>Срок кредитования</dt> <dd>24 месяца.</dd> <dt>Авансовый взнос</dt> <dd>0% от стоимости товара</dd> <dt>Разовая комиссия</dt> <dd>0%</dd> <dt>Ежемесячная комиссия</dt> <dd>2,75% от стоимости товара</dd> <dt>Процентная ставка</dt> <dd>0,01% годовых</dd> <dt>Страховой тариф</dt> <dd>0%</dd> </dl></div>
+<div class="ll_credit">
+<h3>Альфа Банк</h3>
+<dl> <dt>Рассмотрение заявки</dt> <dd> от 15 минут</dd> <dt>Срок кредитования</dt> <dd>24 месяца.</dd> <dt>Авансовый взнос</dt> <dd>0% от стоимости товара</dd> <dt>Разовая комиссия</dt> <dd>0%</dd> <dt>Ежемесячная комиссия</dt> <dd>1.5% от стоимости товара</dd> <dt>Процентная ставка</dt> <dd>0,01% годовых</dd> <dt>Страховой тариф</dt> <dd>0%</dd> </dl></div>
+<div class="cms-content__line hide-on-mobile bottom-no"></div>
+</div>
+<!--
+<div class="cms-content">
+<h3>«10-10-10»<br />Банки: ОТП Банк</h3>
+<p>Преимущества:</p>
+<ol>
+<li>Позволяет распределить расходы сроком до 24 месяцев.</li>
+<li>Обязательное страхование отсутствует.</li>
+<li>Для оформления необходимо всего два документа — паспорт и ИНН.</li>
+</ol>
+<div class="ll_credit"><dl> <dt>Рассмотрение заявки</dt> <dd> от 15 минут</dd> <dt>Срок кредитования</dt> <dd>9 месяцев.</dd> <dt>Авансовый взнос</dt> <dd>10% от стоимости товара</dd> <dt>Разовая комиссия</dt> <dd>0%</dd> <dt>Ежемесячная комиссия</dt> <dd>1,11% от стоимости товара</dd> <dt>Процентная ставка</dt> <dd>0,01% годовых</dd> <dt>Страховой тариф</dt> <dd>0%</dd> </dl></div>
+</div>
+-->
+<div style="height: 10px;"></div>
+</section> </li>
+<li id="Akcent-Bank" class="tabs-content-item js-tabs-item">
+<div class="cms-sidebar_credit">
+<div class="container">
+<h3>Условия</h3>
+<dl> <dt>Первый взнос</dt><dd>возможен по желанию клиента (Важно! В момент оформления «Плати частями» также  спишется  первый платеж с карты)</dd> <dt>Срок кредитования</dt> <dd>до 12 платежей</dd> <dt>Ежемесячная комиссия</dt> <dd>0,12% годовых от суммы кредита</dd> <dt>Минимальная сумма покупки</dt> <dd>300 грн</dd> <dt>Максимальная сумма</dt> <dd>согласно Вашего лимита</dd> </dl></div>
+</div>
+<section class="cms">
+<div class="cms-content">
+<style type="text/css">
+			.mono.logo_bank {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+			}
+			.mono.logo_bank img { max-width: 100%;height: auto; margin-right: 15px; margin-bottom: 15px;  }
+			</style>
+<div class="mono logo_bank"><img src="https://comfy.ua/media/x/img/a-bank-plati.png" /></div>
+<h3>«Плати частями» от АО «Акцент-Банк» — это простой и быстрый способ кредитования.</h3>
+<p>Как совершить покупку  «Плати частями»:</p>
+<ul>
+<li>нужно быть клиентом АО «Акцент-Банк»;</li>
+<li>иметь при себе смартфон с установленным приложением ABank24;</li>
+<li>вам должен быть доступен лимит на «Плати частями».</li>
+</ul>
+<h3>Как получить карту?</h3>
+<p>Оформить кредитную карту от АО «Акцент-Банк»  можно в любой точке кредитования АО «Акцент-Банк» или в отделении банка.</p>
+<p><b>Преимущества:</b></p>
+<ul>
+<li>для оформления кредита не нужно наличие кредитной карты, ИНН, паспорта;</li>
+<li>простота оформления: выбрал товар от 300 грн – подтвердил покупку в приложении – завершил покупку на кассе;</li>
+</ul>
+<p><b>Горячая линия АО «Акцент-Банк» - 7776</b></p>
+</div>
+</section> </li>
+</ul>

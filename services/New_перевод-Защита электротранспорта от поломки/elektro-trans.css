@@ -1,0 +1,307 @@
+        .product-zaschita-jelektrotransporta-ot-polomki-0 .tabs-content { padding: 4.8rem 0; }
+
+        #block_accordion .accordion_row {
+
+            max-width: 100%;
+            min-height: 0;
+            display: block;
+
+
+            margin: 50px 30px auto;
+            padding: 0;
+            overflow: hidden
+        }
+
+        #block_accordion .accordion_row h2 {
+            font-size: 18px;
+            font-weight: 600;
+            display: block;
+            margin: 0;
+            padding: 4px 0px;
+            padding-left: 25px;
+            cursor: pointer;
+            color: #000000;
+            background: #F2F2F2;
+        }
+
+        #block_accordion .msg {
+            position: relative;
+
+                padding: 25px 15px 25px 25px;
+
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        #block_accordion .msg p {
+            color: #000;
+            font-size: 16px;
+        }
+
+        #block_accordion .accordion_row ul {
+            list-style-type: disc;
+        }
+
+        #block_accordion .accordion_row ul ul.list_num {
+            padding-left: 25px;
+            list-style-type: decimal;
+        }
+
+        #block_accordion .accordion_row ul li {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            line-height: 2.3;
+        }
+
+
+        #block_accordion .accordion_row ul li:nth-of-type(1) {
+            animation-delay: 0.5s;
+        }
+        #block_accordion .accordion_row ul li:nth-of-type(2) {
+            animation-delay: 0.75s;
+        }
+        #block_accordion .accordion_row ul li:nth-of-type(3) {
+            animation-delay: 1s;
+        }
+        #block_accordion .accordion_row ul li:last-of-type {
+            padding-bottom: 0;
+        }
+
+        #block_accordion .accordion_row ul li i {
+            position: absolute;
+            transform: translate(-6px, 0);
+            margin-top: 19px;
+
+            right: 25px;
+        }
+
+        #block_accordion .accordion_row ul li i:before {
+            content: "";
+            position: absolute;
+            background-color: #43b02a;
+            width: 3px;
+            height: 9px;
+        }
+        #block_accordion .accordion_row ul li i:after {
+            content: "";
+            position: absolute;
+            background-color: #43b02a;
+            width: 3px;
+            height: 9px;
+        }
+
+        #block_accordion .accordion_row ul li i:before {
+            transform: translate(-2px, 0) rotate(45deg);
+        }
+        #block_accordion .accordion_row ul li i:after {
+            transform: translate(2px, 0) rotate(-45deg);
+        }
+
+        #block_accordion .accordion_row ul li input[type=checkbox] {
+            position: absolute;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+        }
+
+        #block_accordion .accordion_row ul li input[type=checkbox]:checked ~ div.msg {
+            margin-top: 0;
+            max-height: 0;
+            opacity: 0;
+            transform: translate(0, 50%);
+        }
+
+        #block_accordion .accordion_row ul li input[type=checkbox]:checked ~ i:before {
+            transform: translate(2px, 0) rotate(45deg);
+        }
+        #block_accordion .accordion_row ul li input[type=checkbox]:checked ~ i:after {
+            transform: translate(-2px, 0) rotate(-45deg);
+        }
+
+        #block_accordion div.msg ul li i:before {
+            transition: all 0.5s ease-in-out;
+        }
+        #block_accordion div.msg ul li i:after{
+            transition: all 0.5s ease-in-out;
+        }
+        .absolute-ellipse {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .main-page-title {
+            padding-top: 35px;
+            position: relative;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 42px;
+            line-height: 54px;
+            color: #000000;
+            margin: 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        .flx-block {
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+        }
+        .flx-block__image { 
+            flex: 1 1 65%;
+            z-index: 1000;
+        }
+        .flx-block__image img {
+            max-width: 100%; 
+            height: auto; 
+            margin: 0 auto; 
+            display: block; 
+            margin-top: 50px;
+        }
+        .flx-block__list {
+            flex: 1 1 35%;
+        }
+        .flx-block__item {
+            position: relative;
+            padding-left: 45px;
+            padding-right: 5px;
+            margin: 40px 0;
+        }
+        .flx-block__item img {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .absolute-block {
+            display: flex;
+            flex-flow: column-reverse;
+            position: relative;
+            margin: 40px 0;
+            min-height: 590px;
+        }
+        .absolute-block__list {
+            position: relative;
+            padding: 30px 20px;
+            background: #f1f1f1;
+            max-width: 100%;
+            z-index: 2;
+
+            box-sizing: border-box;
+
+        }
+        .absolute-block__title {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 28px;
+            color: #000000;
+            margin: 0;
+            margin-bottom: 35px;
+        }
+        .absolute-block__txt {
+            position: relative;
+            padding-left: 45px;
+            margin-bottom: 35px;
+        }
+        .absolute-block__txt:nth-last-child(1) {
+            margin-bottom: 0;
+        }
+        .absolute-block__txt::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 25px;
+            height: 20px;
+            background: url(https://comfy.ua/media/protect-purchase/chack.png);
+        }
+        .absolute-block-image {
+            position: relative;
+
+        }
+        .absolute-block-image img {
+            width: 100%;
+            height: auto;
+        }
+        .absolute-block-dots {
+            display: none;
+            position: absolute;
+            left: 200px;
+            bottom: -23px;
+        }
+        .details-block__header {
+            position: relative;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: space-between;
+            background: #f1f1f1;
+            padding: 8px 30px;
+        }
+        .details-block__title {
+            margin: 0;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 29px;
+            color: #000000;
+        }
+        .details-block__arrow {
+            position: relative;
+            width: 20px;
+            height: 10px;
+            background: url(https://comfy.ua/media/protect-purchase/arrow-top.png)
+        }
+
+        .details-block__body {
+            padding: 30px;
+        }
+        .details-block__body {
+            display: none;
+        }
+        .details-block__header:focus + .details-block__body{
+            display:block;
+        }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+        .flx-block {
+            flex-flow: column;
+        }
+}
+
+        @media screen and (min-width: 1200px) {
+
+            .flx-block__image {
+                margin-top: 100px;
+            }
+            .absolute-block {
+                margin: 110px 0 70px;
+            }
+            .absolute-block__list {
+                position: absolute;
+                max-width: 660px;
+                padding: 100px 40px 125px 60px;
+                left: 2%;
+                top: -40px;
+
+            }
+            .absolute-block-image {
+                position: absolute;            
+                top: 0;
+                right: 0;            
+            }
+        }
+        @media screen and (min-width: 767px) {
+            .absolute-block-dots {
+                display: block;
+            }
+            .main-page-title {
+                margin-left: 150px;
+            }
+        }

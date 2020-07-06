@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Comfy.ua</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link rel="icon" href="http://balabantcev.com/bf/icon.png" type="image/x-icon">
+
+	<script type="text/javascript">
+		function timer() {
+			var obj = document.getElementById('timer_inp');
+			obj.innerHTML--;
+			if (obj.innerHTML == 0) {
+				location.reload();
+				setTimeout(function () { }, 1000);
+			} else {
+				setTimeout(timer, 1000);
+			}
+		}
+		setTimeout(timer, 1000);
+	</script>
+
+
+	<style>
+		body {
+			padding: 0px;
+			margin: 0px;
+			background-color: #43B02A;
+			font-family: 'PT Sans', sans-serif;
+		}
+
+		.main {
+			display: block;
+			max-width: 1100px;
+			margin: 0 auto;
+		}
+
+		.top-bl {
+			display: inline-block;
+		}
+
+		.bl-l,
+		.bl-r {
+			float: left;
+			width: 30%;
+			padding-top: 150px;
+		}
+
+		.bl-l {
+			padding-top: 90px;
+		}
+
+		.bl-l p {
+			color: #fff;
+			font-size: 16px;
+		}
+
+		.bl-l .h2 {
+			font-size: 22px;
+
+		}
+
+		.bl-l .h2 span {
+			font-size: 30px;
+			font-weight: bold;
+		}
+
+		.bl-l .tel {
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		.bl-c {
+			float: left;
+			width: 40%;
+			text-align: center;
+		}
+
+		.bl-c img {
+			width: 90%;
+		}
+
+		.bl-r p {
+			color: #000;
+			font-size: 22px;
+			text-align: right;
+			margin: 0px;
+		}
+
+		.bl-r span {
+			font-size: 80px;
+			font-weight: bold;
+		}
+
+		.blog-link {
+			width: 100%;
+			height: 130px;
+			background-image: url(http://balabantcev.com/bf/black-friday-shoppers1.jpg);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 15px;
+			display: block;
+			margin-top: 50px;
+			text-decoration: none;
+		}
+
+		.blog-link:hover {
+			text-decoration: none;
+			color: #fc5019;
+		}
+
+		.blog-link .im {
+			background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2));
+			height: 100%;
+			width: 100%;
+			border-radius: 15px;
+			color: #fff;
+			font-size: 30px;
+			text-align: center;
+			line-height: 130px;
+			text-decoration: none;
+		}
+
+		.blog-link .im:hover {
+			background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+		}
+
+		.video-bl {
+			display: inline-block;
+			width: 100%;
+			margin-top: 30px;
+		}
+
+		.video-bl .video-one {
+			width: 22%;
+			margin-right: 1.55%;
+			height: 170px;
+			float: left;
+			border: 10px solid #379424;
+			border-radius: 5px;
+		}
+
+		.video-bl .video-one:last-child {
+			margin-right: 0px;
+		}
+
+		.podpiska {
+			position: relative;
+			display: inline-block;
+			margin-top: 30px;
+			width: 38%;
+			margin-right: 12%;
+			font-size: 14px;
+		}
+
+		.podpiska.two {
+			margin-right: 0px;
+			width: 40%;
+		}
+
+		.h3 {
+			font-weight: bold;
+			font-size: 30px;
+			color: #fff;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		.soc {
+			text-align: center;
+			margin-bottom: 70px;
+		}
+
+		.soc a {
+			text-decoration: none;
+		}
+
+		.soc svg {
+			margin-right: 20px;
+		}
+
+		.soc svg:hover {
+			opacity: 0.7;
+		}
+
+		.ytsub {
+			display: inline-block;
+			position: absolute;
+			right: 0px;
+			top: 13px;
+		}
+
+		.bl-l .sorry {
+			font-size: 20px;
+		}
+
+		@media (max-width: 1100px) {
+			.main {
+				max-width: 90%;
+			}
+
+			.bl-l,
+			.bl-c,
+			.bl-r {
+				width: 100%;
+			}
+
+			.bl-r {
+				padding-top: 10px;
+			}
+
+			.bl-l {
+				padding-top: 10px;
+			}
+
+			.bl-l svg {
+				margin: 0 auto;
+				display: block;
+			}
+
+			.bl-c img {
+				width: 60%;
+			}
+
+			.bl-r p {
+				text-align: center;
+				font-size: 17px;
+			}
+
+			.blog-link .im {
+				padding-top: 10px;
+				font-size: 24px;
+				line-height: 34px;
+				height: 94%;
+			}
+
+			.blog-link {
+				width: 100%;
+
+			}
+
+			.podpiska {
+				width: 100%;
+				margin-right: 0px
+			}
+
+			.podpiska.two {
+				width: 100%;
+				margin-right: 0px
+			}
+
+			.ytsub {
+				left: 0px;
+				top: 37px;
+			}
+
+			.video-bl .video-one {
+				width: 95%;
+				margin-right: 0px;
+				display: block;
+				margin-top: 30px;
+			}
+
+			.video-bl {
+				display: inline-block;
+			}
+
+			.h3 {
+				font-size: 22px;
+			}
+
+			.bl-r br {
+				display: none;
+			}
+
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="main">
+		<div class="top-bl">
+			<div class="bl-l">
+				<svg width="185" height="43" viewBox="0 0 185 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M22.5397 0C69.5114 0.00887726 116.479 -0.00443863 163.45 0.00887726C168.313 -0.0133159 173.159 1.6778 176.946 4.7227C181.929 8.67308 185.036 14.9227 184.996 21.2965C185.103 26.5474 183.116 31.7895 179.617 35.7043C175.608 40.2983 169.567 42.9571 163.477 42.9837C117.977 42.997 72.4763 42.9837 26.976 42.9881C23.1398 42.9615 19.2148 43.2411 15.4942 42.0915C8.52422 40.1075 2.77666 34.3639 0.838586 27.3819C-0.659423 22.3485 -0.112672 16.818 2.17657 12.1041C5.1148 5.96996 11.1424 1.44255 17.8634 0.319581C19.4059 0.0577022 20.9795 0 22.5397 0Z" fill="white" />
+					<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="185" height="43">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M22.5397 0C69.5114 0.00887726 116.479 -0.00443863 163.45 0.00887726C168.313 -0.0133159 173.159 1.6778 176.946 4.7227C181.929 8.67308 185.036 14.9227 184.996 21.2965C185.103 26.5474 183.116 31.7895 179.617 35.7043C175.608 40.2983 169.567 42.9571 163.477 42.9837C117.977 42.997 72.4763 42.9837 26.976 42.9881C23.1398 42.9615 19.2148 43.2411 15.4942 42.0915C8.52422 40.1075 2.77666 34.3639 0.838586 27.3819C-0.659423 22.3485 -0.112672 16.818 2.17657 12.1041C5.1148 5.96996 11.1424 1.44255 17.8634 0.319581C19.4059 0.0577022 20.9795 0 22.5397 0Z" fill="white" />
+					</mask>
+					<g mask="url(#mask0)">
+						<path d="M159.667 10.1812C165.138 8.59007 171.403 11.5712 173.682 16.7647C175.343 20.2866 175.088 24.5996 173.037 27.9115C170.834 31.6211 166.49 33.972 162.165 33.6636C156.559 33.5251 151.544 28.8724 150.886 23.3303C149.977 17.5602 153.993 11.5757 159.667 10.1812Z" fill="#FF671F" />
+						<path d="M21.7961 8.1627C27.04 7.24951 32.6962 9.81621 35.4932 14.3379C36.8452 16.5411 34.8682 19.8303 32.2529 19.458C30.7812 19.6486 29.744 18.4916 28.955 17.4277C27.0312 15.0427 23.3786 14.4221 20.7411 15.9603C18.0771 17.3878 16.5699 20.8765 17.6692 23.7447C18.4982 26.5241 21.3883 28.5811 24.3006 28.2929C26.6499 28.3949 28.4452 26.6837 29.9124 25.079C31.8628 23.195 35.4267 24.7997 35.5952 27.4196C35.8656 29.7336 33.8044 31.3605 32.2219 32.6904C27.04 36.7599 18.9813 36.2324 14.358 31.5423C9.62828 27.1137 8.83926 19.2363 12.6248 13.9699C14.717 10.889 18.1214 8.76116 21.7961 8.1627Z" fill="#43B02A" />
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M64.0439 18.939C62.7584 11.8817 55.236 6.77047 48.2013 8.22893C40.7011 9.37264 35.2356 17.5382 37.2436 24.897C38.7064 31.7725 46.0514 36.64 52.9576 35.2613C60.3514 34.1752 65.8391 26.2313 64.0439 18.939ZM44.0168 22.1574C43.7243 18.877 46.2731 15.7074 49.5223 15.233C53.1571 14.4927 56.9737 17.4717 57.1909 21.1688C57.6208 24.8482 54.3761 28.501 50.6393 28.3148C47.2438 28.5143 44.1498 25.5132 44.0168 22.1574Z" fill="#43B02A" />
+						<path d="M66.5435 11.4525C66.4238 8.74842 69.9966 6.9442 72.0888 8.69523C75.0011 11.3728 77.7139 14.2764 80.5376 17.047C83.246 14.3739 85.9056 11.6476 88.6317 8.99224C89.6291 8.00368 91.2648 7.66677 92.537 8.30512C93.889 8.90801 94.7489 10.4241 94.678 11.8914C94.6647 18.5719 94.6868 25.2524 94.6647 31.933C94.6913 33.9987 92.6655 35.7941 90.6087 35.4439C88.8933 35.2577 87.497 33.6663 87.528 31.9418C87.5014 28.0186 87.5191 24.091 87.528 20.1678C85.981 21.6573 84.4739 23.1911 82.9401 24.6939C81.761 25.8376 79.8151 25.9928 78.5074 24.9687C76.7432 23.5236 75.307 21.7238 73.6092 20.1944C73.5605 24.1664 73.6491 28.1383 73.5694 32.1058C73.5782 34.1761 71.4018 35.8695 69.3982 35.4129C67.7714 35.1336 66.3883 33.5732 66.5346 31.8886C66.5302 25.0751 66.5125 18.2661 66.5435 11.4525Z" fill="#43B02A" />
+						<path d="M97.5879 11.5804C97.5214 9.58116 99.3699 7.86559 101.342 7.98528C106.09 7.99415 110.837 7.97641 115.585 7.99415C116.888 7.99415 118.156 8.80538 118.736 9.97126C119.876 11.9883 118.377 14.9672 116.001 15.0249C112.238 15.118 108.466 15.0337 104.702 15.0648C104.698 16.5188 104.698 17.9772 104.702 19.4313C107.881 19.4446 111.059 19.418 114.237 19.4357C116.476 19.3515 118.484 21.6655 117.841 23.8687C117.486 25.5089 115.868 26.6792 114.211 26.6083C111.041 26.6304 107.872 26.5994 104.702 26.6127C104.671 28.4879 104.756 30.363 104.671 32.2337C104.556 34.397 102.14 36.0151 100.092 35.3014C99.0773 35.0664 98.439 34.1975 97.8228 33.4351C97.4017 31.458 97.6101 29.4321 97.5702 27.4328C97.5835 22.1487 97.5347 16.8646 97.5879 11.5804Z" fill="#43B02A" />
+						<path d="M120.639 11.9197C120.275 9.57905 122.775 7.41575 125.031 8.11173C126.592 8.5639 127.487 10.0179 128.635 11.0508C130.386 12.6954 131.995 14.4908 133.768 16.1221C136.246 13.7283 138.622 11.2326 141.109 8.84761C142.492 7.58864 144.788 7.77482 146.003 9.18008C147.262 10.5011 147.231 12.7708 145.914 14.0386C143.059 16.9334 140.147 19.7749 137.301 22.683C137.292 25.7639 137.346 28.8448 137.288 31.9258C137.368 33.5793 136.042 35.1042 134.442 35.3924C132.359 35.88 130.085 34.0492 130.235 31.8903C130.204 28.8227 130.235 25.755 130.227 22.6874C127.935 20.2759 125.501 17.9973 123.196 15.5991C122.159 14.5307 120.692 13.5643 120.639 11.9197Z" fill="#43B02A" />
+					</g>
+				</svg>
+
+				<p class="h2"><span>Упссс...</span><br> Очень скоро сайт заработает. Извините!</p>
+
+				<!-- <p>Если у вас возникли вопросы относительно заказа или нашей работы, пожалуйста, позвоните нам:</p>
+		<a class="tel">0-800-303-505</a> -->
+			</div>
+
+			<div class="bl-c">
+				<img src="http://balabantcev.com/bf/cat-b.png">
+			</div>
+
+			<div class="bl-r">
+				<p>Страница будет<br> перезагружена через:</p>
+				<p class="timer"><span id="timer_inp">90</span> сек.<p>
+			</div>
+		</div>
+		<a href="https://blog.comfy.ua/gde-skidki-i-rasprodazhi-samye-sladkie-chernaya-pyatnica-2018-v-ukraine/" target="_blank" class="blog-link">
+			<div class="im">Где скидки и распродажи самые сладкие? Черная пятница 2018 в Украине! </div>
+		</a>
+
+		<div class="podpiska">
+			<p>Подпишись на канал Comfy - Годно о технике -</p>
+			<div class="ytsub">
+				<script src="https://apis.google.com/js/platform.js"></script>
+				<div class="g-ytsubscribe" data-channel="comfyua" data-layout="default" data-count="default"></div>
+			</div>
+		</div>
+
+		<div class="podpiska two">
+			<p>Подпишись на канал Comfy – Полезно и lifestyle -</p>
+			<div class="ytsub">
+				<script src="https://apis.google.com/js/platform.js"></script>
+				<div class="g-ytsubscribe" data-channelid="UCgOlNS3sH_GeY8BNMzYkrVQ" data-layout="default" data-count="default"></div>
+			</div>
+		</div>
+
+
+
+		<div class="video-bl">
+			<div class="video-one">
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/eQOjobSNncw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="video-one">
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/3DnMzhS73P4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="video-one">
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/esv0YEnMPp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="video-one">
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/_w_QVZ5TIMU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<p class="h3">Мы в социальных сетях</p>
+		<div class="soc">
+
+			<a href="https://www.facebook.com/comfy.ua" target="_blank">
+				<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0)">
+						<path d="M42.8276 46H3.17238C1.42762 46 0 44.5724 0 42.8276V3.17238C0 1.42762 1.42762 0 3.17238 0H42.8276C44.5724 0 46 1.42762 46 3.17238V42.8276C46 44.5724 44.5724 46 42.8276 46Z" fill="#4D6FA9" />
+						<path d="M38.8621 7.93106V15.8621H31.7242C30.8518 15.8621 30.138 16.5759 30.138 17.4483V22.207H38.069V30.138H30.138V46H22.207V30.1379H15.8621V22.2069H22.207V17.4482C22.207 12.4516 26.0138 8.32754 30.931 7.93097H38.8621V7.93106Z" fill="white" />
+					</g>
+					<defs>
+						<clipPath id="clip0">
+							<rect width="46" height="46" fill="white" />
+						</clipPath>
+					</defs>
+				</svg>
+			</a>
+
+			<a href="https://www.instagram.com/comfy_ua/" target="_blank">
+				<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M31.625 0H14.375C6.43713 0 0 6.43713 0 14.375V31.625C0 39.5629 6.43713 46 14.375 46H31.625C39.5629 46 46 39.5629 46 31.625V14.375C46 6.43713 39.5629 0 31.625 0ZM41.6875 31.625C41.6875 37.1737 37.1737 41.6875 31.625 41.6875H14.375C8.82625 41.6875 4.3125 37.1737 4.3125 31.625V14.375C4.3125 8.82625 8.82625 4.3125 14.375 4.3125H31.625C37.1737 4.3125 41.6875 8.82625 41.6875 14.375V31.625Z" fill="url(#paint0_linear)" />
+					<path d="M23 11.5C16.6491 11.5 11.5 16.6491 11.5 23C11.5 29.3509 16.6491 34.5 23 34.5C29.3509 34.5 34.5 29.3509 34.5 23C34.5 16.6491 29.3509 11.5 23 11.5ZM23 30.1875C19.0382 30.1875 15.8125 26.9618 15.8125 23C15.8125 19.0354 19.0382 15.8125 23 15.8125C26.9618 15.8125 30.1875 19.0354 30.1875 23C30.1875 26.9618 26.9618 30.1875 23 30.1875Z" fill="url(#paint1_linear)" />
+					<path d="M35.3625 12.1699C36.2088 12.1699 36.8949 11.4838 36.8949 10.6375C36.8949 9.7912 36.2088 9.10513 35.3625 9.10513C34.5162 9.10513 33.8301 9.7912 33.8301 10.6375C33.8301 11.4838 34.5162 12.1699 35.3625 12.1699Z" fill="url(#paint2_linear)" />
+					<defs>
+						<linearGradient id="paint0_linear" x1="4.21087" y1="41.7894" x2="41.7891" y2="4.21058" gradientUnits="userSpaceOnUse">
+							<stop stop-color="#FFC107" />
+							<stop offset="0.507" stop-color="#F44336" />
+							<stop offset="0.99" stop-color="#9C27B0" />
+						</linearGradient>
+						<linearGradient id="paint1_linear" x1="14.8685" y1="31.1315" x2="31.1315" y2="14.8685" gradientUnits="userSpaceOnUse">
+							<stop stop-color="#FFC107" />
+							<stop offset="0.507" stop-color="#F44336" />
+							<stop offset="0.99" stop-color="#9C27B0" />
+						</linearGradient>
+						<linearGradient id="paint2_linear" x1="34.2791" y1="11.7212" x2="36.4459" y2="9.55406" gradientUnits="userSpaceOnUse">
+							<stop stop-color="#FFC107" />
+							<stop offset="0.507" stop-color="#F44336" />
+							<stop offset="0.99" stop-color="#9C27B0" />
+						</linearGradient>
+					</defs>
+				</svg>
+			</a>
+		</div>
+
+	</div>
+</body>
+
+</html>

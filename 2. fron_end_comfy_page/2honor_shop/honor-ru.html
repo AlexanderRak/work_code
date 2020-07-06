@@ -1,0 +1,1156 @@
+<style>
+
+.breadcrumbs {display: none;}
+.header .narrow-container {background-color: #fff;}
+.header-bottom .narrow-container {background-color: #fff;}
+
+.main-container .narrow-container{max-width: 100%; }
+
+.footer {
+  margin-top: 15px;
+}
+
+.footer-newsletter {
+  display: none;
+}
+
+._show-newsletter .fixed-buttons {
+  display: none;
+}
+
+.footVid{
+  display: inline-block;
+  width: 100%;
+  margin-top: 50px;: 
+}
+
+.vid{
+  display: inline-block;
+  float: left;
+  width: 33%;
+  padding: 20px;
+  text-align: left
+}
+.vid span{
+  font-size: 17px;
+  margin-top: 10px;
+  display: block;
+}
+
+.vid span:after{
+  display: inline-block;
+  content: '';
+  border: .6rem solid transparent;
+  border-left: .8rem solid #6bb864;
+  position: relative;
+  right: -10px;
+  top: 1px;
+}
+
+.footer-info {
+  display:none;
+}
+.blcsamsung{
+  float: left; 
+  width:49%; 
+  text-align: left;
+  padding:10px;
+}
+.blcsamsung h3{
+  font-size: 30px; 
+  font-weight: 800;
+  padding-top: 20px;
+}
+.blcsamsung p{ 
+  font-size: 16px; 
+  line-height: 24px;
+}
+.footSams{
+  margin-top: 50px;
+  padding: 20px 50px;
+}
+.btnSams{
+  padding: 15px 35px; 
+  background-color: #3B72CC; 
+  text-transform: uppercase; 
+  color: #fff !important;    
+  display: inline-block;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 13px;
+  margin-top: 20px; 
+}
+.btnSams:hover{
+  background-color: #3766b3; 
+}
+
+
+
+@media screen and (max-width:1062px){
+  .samsung-cms .punkt a p{min-height: 66px !important;}
+  .blocktwo{width: 100% !important;}
+
+  .header-bottom .narrow-container {background-color: transparent !important;}
+
+  .footer {
+    margin-top: 0px;
+  }
+
+  .sd{
+
+    padding: 10px 10px !important;
+  }
+  .newprdct {padding-top: 0px !important; }
+  .carousel-controls {padding-top: 0px !important; }
+
+  .tov {margin-top: -10px !important;}
+
+  .tov a img{  width: 80%; height: auto !important;}
+
+  .vid{
+    width:100%;
+    margin: 0 auto;
+  }
+
+  .blcsamsung img{
+    width: 60%;
+  }
+  .blcsamsung{
+    width:100%;
+    margin: 0 auto;
+  }
+  .footSams{    
+    margin-top: 30px; 
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footSams .sa{
+    order: 4;
+    padding: 0px 10px;
+  }
+  .footSams .sb{
+    order: 3;
+    margin-top: 40px;
+  }
+  .footSams .sc{
+    order: 1;
+    text-align: center;
+  }
+  .footSams .sd{
+    order: 2;
+  }
+
+}
+
+
+/*------------------------------*/
+
+
+#slideshow-wrap {
+  text-align: center;
+  display: block;
+  min-width: 260px;
+  max-width: 100%;
+  margin: auto;
+  position: relative;
+  margin-bottom: 55px;
+}
+
+#slideshow-inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#slideshow-inner>ul {
+  list-style: none;
+  height: 100%;
+  width: 625%;
+  overflow: hidden;
+  position: relative;
+  left: 0px;
+  -webkit-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+
+#slideshow-inner>ul>#slide2{
+ /* background-color: #5BB8AE;*/
+}
+
+#slideshow-inner>ul>#slide3{
+  /*  background-color: #E4E4E4;*/
+}
+
+#slideshow-inner>ul>li {
+  width: 16%;
+  float: left;
+  position: relative;
+  /*background-color: #221150;*/
+  margin-bottom: -3px;
+}
+
+#slideshow-inner>ul>li>img {
+  margin: auto;
+}
+
+#slideshow-wrap input[type=radio] {
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  z-index: 100;
+  visibility: hidden;
+}
+
+#slideshow-wrap label:not(.arrows):not(.show-description-label) {
+  position: absolute;
+  border: 1px solid;
+  left: 50%;
+  bottom: -37px;
+  z-index: 100;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: background-color .2s;
+  -moz-transition: background-color .2s;
+  -o-transition: background-color .2s;
+  transition: background-color .2s;
+  color: #c4c4c4;
+}
+
+#slideshow-wrap label:not(.arrows):active { bottom: -36px }
+
+#slideshow-wrap input[type=radio]#button-1:checked~label[for=button-1] { background-color: #C4C4C4; color: #c4c4c4; }
+
+#slideshow-wrap input[type=radio]#button-2:checked~label[for=button-2] { background-color: #C4C4C4; color: #c4c4c4; }
+
+#slideshow-wrap input[type=radio]#button-3:checked~label[for=button-3] { background-color: #C4C4C4; color: #c4c4c4; }
+
+#slideshow-wrap input[type=radio]#button-4:checked~label[for=button-4] { background-color: #C4C4C4; color: #c4c4c4; }
+
+#slideshow-wrap input[type=radio]#button-5:checked~label[for=button-5] { background-color: #C4C4C4; color: #c4c4c4; }
+
+#slideshow-wrap input[type=radio]#button-6:checked~label[for=button-6] { background-color: #C4C4C4; color: #c4c4c4;}
+
+#slideshow-wrap label[for=button-1] { margin-left: -50px }
+
+#slideshow-wrap label[for=button-2] { margin-left: -18px }
+
+#slideshow-wrap label[for=button-3] { margin-left: 15px }
+
+#slideshow-wrap label[for=button-4] { margin-left: 18px }
+
+#slideshow-wrap label[for=button-5] { margin-left: 36px }
+
+#slideshow-wrap label[for=button-6] { margin-left: 54px }
+
+#slideshow-wrap input[type=radio]#button-1:checked~#slideshow-inner>ul { left: 0 }
+
+#slideshow-wrap input[type=radio]#button-2:checked~#slideshow-inner>ul { left: -100% }
+
+#slideshow-wrap input[type=radio]#button-3:checked~#slideshow-inner>ul { left: -200% }
+
+#slideshow-wrap input[type=radio]#button-4:checked~#slideshow-inner>ul { left: -300% }
+
+#slideshow-wrap input[type=radio]#button-5:checked~#slideshow-inner>ul { left: -400% }
+
+#slideshow-wrap input[type=radio]#button-6:checked~#slideshow-inner>ul { left: -500% }
+
+label.arrows {
+  font-family: 'WebSymbolsRegular';
+  font-size: 25px;
+  color: rgb(255,255,240);
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  display: none;
+  opacity: 0.7;
+  cursor: pointer;
+  z-index: 1000;
+  background-color: transparent;
+  -webkit-transition: opacity .2s;
+  -moz-transition: opacity .2s;
+  -o-transition: opacity .2s;
+  transition: opacity .2s;
+  text-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+label.arrows:hover { opacity: 1 }
+
+label.arrows:active { margin-top: -23px }
+
+input[type=radio]#button-1:checked~.arrows#arrow-2, input[type=radio]#button-2:checked~.arrows#arrow-3, input[type=radio]#button-3:checked~.arrows#arrow-4, input[type=radio]#button-4:checked~.arrows#arrow-5, input[type=radio]#button-5:checked~.arrows#arrow-6 {
+  right: 90px;
+  display: block;
+}
+
+input[type=radio]#button-2:checked~.arrows#arrow-1, input[type=radio]#button-3:checked~.arrows#arrow-2, input[type=radio]#button-4:checked~.arrows#arrow-3, input[type=radio]#button-5:checked~.arrows#arrow-4, input[type=radio]#button-6:checked~.arrows#arrow-5 {
+  left: 125px;
+  display: block;
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+input[type=radio]#button-2:checked~.arrows#arrow-1 { left: 125px }
+
+input[type=radio]#button-3:checked~.arrows#arrow-2 { left: 110px }
+
+input[type=radio]#button-4:checked~.arrows#arrow-3 { left: 90px }
+
+input[type=radio]#button-5:checked~.arrows#arrow-4 { left: 70px }
+
+input[type=radio]#button-6:checked~.arrows#arrow-5 { left: 50px }
+
+.description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 260px;
+  font-family: 'Yanone Kaffeesatz';
+  z-index: 1000;
+}
+
+.description input { visibility: hidden }
+
+.description label {
+  font-family: 'WebSymbolsRegular';
+  background-color: rgba(255,255,240,1);
+  position: relative;
+  left: -17px;
+  top: 00px;
+  width: 40px;
+  height: 27px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 7px;
+  border-bottom-right-radius: 15px;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: opacity .2s;
+  -moz-transition: opacity .2s;
+  -o-transition: opacity .2s;
+  transition: opacity .2s;
+  z-index: 5;
+  color: rgb(20,20,20);
+}
+
+#slideshow-inner>ul>li:hover .description label { opacity: 1 }
+
+.description input[type=checkbox]:checked~label { opacity: 1 }
+
+.description .description-text {
+  background-color: rgba(255,255,230,.5);
+  padding-left: 45px;
+  padding-top: 25px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  position: relative;
+  top: -35px;
+  z-index: 4;
+  opacity: 0;
+  -webkit-transition: opacity .2s;
+  -moz-transition: opacity .2s;
+  -o-transition: opacity .2s;
+  transition: opacity .2s;
+  color: rgb(20,20,20);
+}
+
+.description input[type=checkbox]:checked~.description-text { opacity: 1 }
+
+
+/*------------------------------*/
+
+
+.tovary { width: 100%; text-align: center; width: 102%;}
+.minitext {display:none;}
+.bannnner {display: none;}
+body {background: url(https://comfy.ua/media/blb/banner_promo/11-1/noimg_1.png) #F5F5F5 center top !important;}
+.header__top {background-color: #02A709;}
+
+.banner .control {margin: -65px 0 0;}
+.samsung-cms .banner-wrap img {max-height:inherit;}
+.samsung-cms .banner-wrap {max-width: inherit; max-height: inherit;}
+.samsung-cms .zagolovok {font-size: 35px; padding: 70px 0px 40px; text-align: center; font-weight: bold;}
+.samsung-cms .cont {background-color: #fff; display: block; width: 100%; max-width: 1316px; margin: 0 auto; margin-bottom: 15px; padding-top: 0px;}
+.samsung-cms .punkt{text-align: center; float: left; width:33%; margin-top: 20px;}
+.samsung-cms .punkt a p{color:#000; font-weight: 600; font-size: 16px; min-height: 40px;}
+.tov {float: left; width: 22%; text-align: center; color: #000; margin-top: -110px;}
+.tov a{color: #000;}
+.tov p{padding: 10px;}
+.banner .control li {width: 33px; height: 12px; border-radius: 10px; background: #ccc;}
+.banner .control li.selected {background:#3675ab;}
+.newprdct{padding-top: 20px;}
+input[type="checkbox"], input[type="radio"]{display: none;}
+.punkt a:hover img{opacity: 0.6;}
+.five a:hover img{opacity: 0.6;}
+
+.punkt a:hover p{opacity: 0.6;}
+.five a:hover p{opacity: 0.6;}
+/* -------------------------------------------------------- */
+
+
+.narrow-container_white { background: transparent;}
+.carousel {
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  height: 285px;
+}
+
+.carousel-item {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.6s ease-in-out;
+  width: 100%;
+}
+
+.carousel-active:checked + .carousel-item {
+  opacity: 1;
+  pointer-events: auto;
+  position: static;
+}
+
+.carousel-item tov {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.carousel-controls {
+  height: 100%;
+  width: 100%;
+  padding-top: 7%;
+}
+
+.carousel-control {
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 28px;
+  height: 90px;
+  text-align: center;
+  transition: background 0.1s ease-in-out;
+  width: 50%;
+  z-index: 2;
+  line-height: 90px;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control.prev {
+  float: left;
+}
+
+.carousel-control.next {
+  float: right;
+}
+
+.carousel-caption {
+  bottom: 15%;
+  font-size: 120%;
+  left: 20%;
+  opacity: 0;
+  right: 20%;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.1s ease-out;
+  z-index: 2;
+}
+
+.carousel-active:checked + .carousel-item .carousel-caption {
+  transition: opacity 0.6s ease-in;
+  opacity: 1;
+}
+
+.carousel-indicators {
+  bottom: 5%;
+  left: 5%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  right: 5%;
+  text-align: center;
+  z-index: 2;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+}
+
+.carousel-indicator {
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  font-size: 28px;
+  line-height: 1;
+  padding: 5px 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: background 0.1s ease-in-out;
+}
+
+.carousel-indicator:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* If you`re needing more than 3 banners, maybe you might be using another way to represent your info... ;-) */
+#carousel-1:checked ~ .carousel-indicators .carousel-indicator[for="carousel-1"],
+#carousel-2:checked ~ .carousel-indicators .carousel-indicator[for="carousel-2"],
+#carousel-3:checked ~ .carousel-indicators .carousel-indicator[for="carousel-3"] {
+  color: #007f7f;
+}
+
+@media (min-width: 768px) {
+
+  .carousel-indicators {
+    background: transparent;
+  }
+  .carousel-control {
+    width: 5%;
+  }
+  .carousel-controls,
+  .carousel-caption,
+  .carousel-indicators {
+   /*   position: absolute;*/
+ }
+}
+
+@media screen and (max-width: 767px) {
+
+
+  .video-2 { position: relative !important; overflow: hidden !important; width: 33% !important; height: 45% !important; float: left !important;  margin-left: 2% !important; margin-right: 0px !important;}
+  .video-2::before{ content: ""; display: block; padding-top: 108%;}
+  .imgtwo {width: 65% !important; float: left !important;}
+  .video-1{ position: relative !important; overflow: hidden !important; width: 33% !important; height: 45% !important; float: left !important;  margin-left: 0% !important; margin-right: 2% !important;}
+  .video-1::before{ content: ""; display: block; padding-top: 108%;}
+  .conttent h2{line-height: 40px !important;}
+  .imgtxt{display: none !important;}
+  .video{width: 98% !important; margin-top: 50px;}
+
+
+  .blcsamsung img{
+    width: 100%;
+  }
+  .tov .btnSams{display: none;}
+  .samsung-cms .punkt{width: 100%; margin-top: 40px;}
+  .samsung-cms .five{width: 100%; margin-top: 40px; text-align: center}
+  .tov{width: 50%; margin-top: 10px !important;}
+  .carousel{display: inline-table; }
+  .blocktwo{width: 100% !important}
+  .txtLeft {width: 100% !important;
+    background-size: contain;
+    padding-top: 43.25%;
+    height: auto !important;}
+    .txtRight {
+      width: 100% !important;}
+
+      .footSams{padding: 20px 20px;}
+
+    }
+
+
+    @media screen and (min-width: 1024px) {
+      /* denys rogachev 05072017 */
+
+
+
+      .samsung-cms .punkt {
+        width: 33%;
+      }
+
+      .samsung-cms .cont {
+        text-align: center;
+      }
+    }
+
+
+    .txthead{text-align: center; padding: 30px;}
+    .txthead h2{font-size: 30px; letter-spacing: 4px; margin-bottom: 0px;}
+    .mrg{ max-width: 1200px; margin: 0 auto; display: block !important;}
+
+    .five{width: 20%; float: left; text-align: center;}
+
+    .punkt .image{ line-height: 50px; min-height: 240px}
+    .five .image{height: 290px;}
+    .five .image.last{margin-top: 70px; height: 130px;}
+
+    .five p{font-weight: 600; font-size: 16px; margin-bottom: 30px;}
+
+    .blockone {display: inline-block; width: 100%; max-width: 1316px;}
+    .blocktwo {display: inline-block; width: 100%;}
+
+    .txtLeft {background-image: url(https://comfy.ua/media/blb/samsung/cont-img.png); width: 66%; height: 343px; float: left; background-repeat: no-repeat;}
+    .txtRight {width: 34%; height: 343px; background-color: #53B3E3; padding: 50px; float: left; text-align: left; color: #fff;}
+    .txtRight h3{font-size: 25px;}
+    .txtRight p{font-size: 16px}
+    .obvodka {    margin-top: 0px !important;
+      background-color: #fff;
+      padding: 30px 0px;
+      border: 1px solid #E7E7E7;}
+      .sd {padding: 50px 10px;}
+      .sa {padding: 64px 10px; margin-bottom: 50px;}
+      .vsetov {    
+        display: table;
+        margin-top: 20px;
+        padding: 15px 45px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        border: 2px solid;
+        border-radius: 40px;
+        margin: 0 auto;
+      }
+      .vsetov:hover{ background-color: #000; color: #fff; border: 2px solid #000 }
+
+
+      .obvodka .image img{height: 120px;}
+      .obvodka p{
+        font-weight: 400 !important;
+        text-transform: none !important;
+        font-size: 14px !important;}
+
+        .tov a img{height: 200px;}
+
+        .vmestebtn{ border: 2px solid #fff; padding: 10px 20px; font-size: 18px; text-transform: uppercase; border-radius: 40px; color: #fff; font-weight: 600; display: inline-block; margin-top: 20px;}
+        .vmestebtn:hover{background-color: #51a4ce;}
+        .mrgtop {margin-top: 50px !important;}
+
+        .breadcrumbs__item:last-child .breadcrumbs__lbl, .breadcrumbs__item:last-child .breadcrumbs__lbl:hover {color: #000;}
+        .breadcrumbs__lbl { font-weight: normal;}
+
+        .tov .btnSams{margin-top: 10px; }
+        .tov a:hover .btnSams{text-decoration: none; background-color: #3766b3;}
+        .tov .btnSams:hover {text-decoration: none;}
+
+        #slideshow-inner>ul>#slide1{
+          background-image: url(https://comfy.ua/media/x/img/honor_banner/8a_ru.jpg) ;
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: contain;
+
+        }
+        #slideshow-inner>ul>#slide1 div{
+          height: 343px;
+          width: 100%;
+        }
+
+        #slideshow-inner>ul>#slide2{
+          background-image: url(https://comfy.ua/media/x/img/honor_banner/10lite_ru.jpg);
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: contain;
+
+        }
+        #slideshow-inner>ul>#slide2 div{
+          height: 343px;
+          width: 100%;
+        }
+
+        #slideshow-inner>ul>#slide3{
+          background-image: url(https://comfy.ua/media/x/img/honor_banner/honor8X_1920x500.jpg);
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: contain;
+
+        }
+        #slideshow-inner>ul>#slide3 div{
+          height: 343px;
+          width: 100%;
+        }
+
+/*
+        #slideshow-inner>ul>#slide3{
+          background-image: url(https://comfy.ua/media/x/img/xmas10lite_1920x500_ru.jpg);
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: contain;
+
+        }
+        #slideshow-inner>ul>#slide3 div{
+          height: 343px;
+          width: 100%;
+        }
+        */
+
+        .videohead {font-size: 17px; margin-top: 15px; text-align: left;}
+        .videohead span {position: relative;}
+        .videohead span:after {content: ""; border: .6rem solid transparent; border-left: .8rem solid #6bb864; position: absolute; right: -2.5rem; bottom: .5rem;}
+        .video-1 { position: relative; overflow: hidden !important; width: 256px; height: 249px; float: left; margin-right: 5px;}
+        .video-1 video { position: absolute; z-index: 1000; width: auto; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+        .video-2 { position: relative; overflow: hidden !important; width: 256px; height: 249px; float: right; margin-right: 12px;}
+        .video-2 video { position: absolute; z-index: 1000; width: auto; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+        .videoblock h3{font-size: 35px; margin-top: 0px; }
+
+        .orangeline{border-bottom: 1px solid #c0c0c0; }
+        .video{width: 32%; margin-right: 2%; float: left;}
+        .video.last{margin-right: 0px !important;}
+        .videoblock{display: inline-block; width: 100%; padding: 0 30px 30px; background-color: #e7e5e5;}
+        .logobn {position: absolute; top: 50px; right: 10%; z-index: 100; padding: 20px 20px 16px 20px; background-color: rgba(255, 255, 255, 0.65);} 
+        .slideshow-inner {position: relative;}
+
+      </style>
+      <!-- ============= БАННЕР ============= -->
+      <div id="slideshow-wrap">
+        <input type="radio" id="button-1" name="controls" checked="checked" /> 
+        <label for="button-1"></label>
+        <input type="radio" id="button-2" name="controls" /> 
+        <label for="button-2"></label> 
+        <input type="radio" id="button-3" name="controls" /> 
+        <label for="button-3"></label> 
+        <!--<input name="controls" id="button-4" type="radio" /> 
+        <label for="button-4"></label>
+        <input name="controls" id="button-5" type="radio" />
+        <label for="button-5"></label>
+        <input name="controls" id="button-6" type="radio" /> 
+        <label for="button-6"></label> 
+        <label id="arrow-1" class="arrows" for="button-1">></label> 
+        <label id="arrow-2" class="arrows" for="button-2">></label>
+        <label id="arrow-3" class="arrows" for="button-3">></label> 
+        <label id="arrow-4" class="arrows" for="button-4">></label> 
+        <label id="arrow-5" class="arrows" for="button-5">></label> 
+        <label id="arrow-6" class="arrows" for="button-6">></label>-->
+
+<div id="slideshow-inner"><!--
+<div class="logobn"><img src="https://comfy.ua/media/blb/logo-nokia.png" _mce_src="https://comfy.ua/media/blb/logo-nokia.png"></div>
+-->  
+<ul>
+
+ <li id="slide1"> <a href="/smartfon/brand__honor__seriya_smartphone__honor-8a/">
+    <div></div>
+    <div class="description"><input id="show-description-1" type="checkbox" /></div>
+  </a>
+
+</li>
+
+<li id="slide2"> <a href="/smartfon/brand__honor__seriya_smartphone__honor-10-lite/">
+  <div></div>
+  <div class="description"><input type="checkbox" id="show-description-2" /></div>
+</a>
+
+</li>
+
+<li id="slide3"> <a href="/smartfon/brand__honor__seriya_smartphone__honor-8x/">
+  <div></div>
+  <div class="description"><input type="checkbox" id="show-description-3" /></div>
+</a>
+
+</li>
+
+</ul>
+</div>
+</div>
+
+<style type="text/css">
+#content_top_brend {
+  background: #fff;
+  display: block;
+  max-width: 1316px;
+  width: 100%;
+  margin: 0 auto;
+}
+.text_content {
+  display: inline-block;
+  border-bottom: 10px solid #f2f2f2;
+  margin: 4em 0 0px 0;
+  padding-bottom: 4em;
+  border-bottom: 10px solid #f2f2f2;
+}
+.text_content .text_content_left {
+  width: 30%;
+  float: left;
+  display: block;
+}
+.text_content .text_content_left img{
+  width: 185px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  /* margin: 10px 0 40px 0;*/
+}
+.text_content .text_content_right {
+  width: 70%;
+  float: left;
+  display: block;
+}
+.text_content .text_content_right h2 {
+  font-size: 2em;
+  margin: 20px 0 20px 0;
+}
+.text_content .text_content_right p {
+  font-size: 20px;
+  line-height: 1.5;
+  width: 80%;
+  text-align: left;
+}
+.text_content_right a {
+  text-decoration: none;
+  color: #ff671f;
+  padding: .4em 3em .4em 3em;
+  font-size: 19px;
+  display: inline-block;
+  margin-top: 20px;
+  border: 1px solid #ff671f;
+  border-radius: 10px 10px 10px 10px;
+}
+.text_content_right a:hover {
+  background: #fbfbfb;
+}
+
+/* block 2 */
+
+
+#content_top_brend {
+  background: #fff;
+  display: block;
+  max-width: 1316px;
+  width: 100%;
+  margin: 0 auto;
+}
+.block2.text_content {
+  display: inline-block;
+  border-bottom: 0px;
+  margin: 4em 0 0px 0;
+  padding-bottom: 4em;
+}
+.block2.text_content .text_content_left {
+  width: 30%;
+  float: left;
+  display: block;
+}
+.block2.text_content .text_content_left img{
+  width: 324px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  float: left;
+}
+.block2.text_content .text_content_right {
+  width: 70%;
+  float: left;
+  display: block;
+}
+.block2.text_content .text_content_right h2 {
+  font-size: 2em;
+  margin: 20px 0 20px 0;
+}
+.block2.text_content .text_content_right p {
+  font-size: 20px;
+  line-height: 1.5;
+  width: 80%;
+  text-align: left;
+}
+.block2.text_content_right a {
+  text-decoration: none;
+  color: #ff671f;
+  padding: .4em 3em .4em 3em;
+  font-size: 19px;
+  display: inline-block;
+  margin-top: 20px;
+  border: 1px solid #ff671f;
+  border-radius: 10px 10px 10px 10px;
+}
+.block2.text_content_right a:hover {
+  background: #fff9f6;
+}
+.block2.text_content .fixed_margin {
+  margin-left: 12%;
+  display: block;
+}
+
+/* ********* HOVER logo HONER 10 ******** */
+
+.flip-container:hover .flipper,  
+.flip-container.hover .flipper {
+ -webkit-transition: 0.6s;
+}
+.flipper {
+  -webkit-transition: 0.6s;
+}
+
+.back-logo {
+  background: url("https://comfy.ua/media/x/img/1.honor-8x.jpg") no-repeat;
+  width: 165px;
+  height: 462px;
+  background-size: cover;
+  margin: 0 auto;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.back-logo:hover {
+  background: url("https://comfy.ua/media/x/img/1.honor-8x_flip.jpg") no-repeat; 
+  width: 165px;
+  height: 462px;
+  background-size: cover;
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+
+/* *********END HOVER logo HONER 10 ******** */
+
+.ling_goto_cetagory_honor {
+  text-decoration: none;
+  color: #ff671f;
+  padding: .4em 3em .4em 3em;
+  font-size: 19px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: 1px solid #ff671f;
+  border-radius: 10px 10px 10px 10px;
+}
+.ling_goto_cetagory_honor:hover {
+  background: #fbfbfb;
+}
+
+.footVid{
+  display: inline-block;
+  width: 100%;
+  margin-top: 50px;
+  border-top: 10px solid #f2f2f2;
+}
+.vid{
+  display: inline-block;
+  float: left;
+  width: 50%;
+  padding: 20px;
+  text-align: left;
+}
+.vid span{
+  font-size: 17px;
+  margin-top: 10px;
+  display: block;
+}
+
+.vid span:after{
+  display: inline-block;
+  content: '';
+  border: .6rem solid transparent;
+  border-left: .8rem solid #6bb864;
+  position: relative;
+  right: -10px;
+  top: 1px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 630px) {
+  .block2.text_content .text_content_right {width: 100%;}
+  .block2.text_content .text_content_left {width: 100%;}
+  .text_content .text_content_right {width: 100%;}
+  .text_content .text_content_left {width: 100%;}
+  .block2.text_content .fixed_margin {margin-left: 0;}
+  .text_content .text_content_left img {width: 100px;}
+  .text_content .text_content_right p {width: 100%;}
+  .block2.text_content .text_content_left img {width: 115px;}
+  .block2.text_content .text_content_right p {width: 100%;}
+  .block2.text_content .text_content_left img {float: initial;}
+  .raz_flex {
+    display: flex !important;
+    flex-flow: wrap;
+  }
+  .raz_flex div:nth-child(1){
+    order: 1;
+  }
+  .bannnnerm {
+    display: none !important;
+  }
+  .back-logo {
+    max-width: 35%;
+    background-size: contain;
+    height: 250px;
+  }
+  .back-logo:hover {
+    max-width: 35%;
+    background-size: contain;
+    height: 250px;
+  }
+
+  .text_content { 
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+  }
+  .ling_goto_cetagory_honor {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 300px;
+    margin-bottom: 40px;
+  }
+  .samsung-cms .cont {
+    text-align: center;
+    display: inline-block;
+  }
+  #slideshow-inner>ul>#slide1 div {
+    height: 120px;
+  }
+  #slideshow-inner>ul {
+    height: 110px;
+  }
+  .vid{
+    width:100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .samsung-cms .cont {
+    text-align: center;
+    display: inline-block;
+  }
+  #slideshow-inner>ul>#slide1 div {
+    height: 250px;
+  }
+  #slideshow-inner>ul {
+    height: 200px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .samsung-cms .cont {
+    text-align: center;
+    display: inline-block;
+  }
+  #slideshow-inner>ul>#slide1 div {
+    height: 250px;
+  }
+  #slideshow-inner>ul {
+    height: 200px;
+  }
+}
+
+</style>
+
+<div class="samsung-cms narrow-container"><!-- ============= /БАННЕР ============= --> <!-- ============= КАТЕГОРИИ ============= -->
+  <div class="cont">
+    <div class="txthead">
+      <h2>СМАРТФОНЫ</h2>
+    </div>
+    
+    <div class="blockone">
+
+      <div class="punkt">
+        <a href="/smartfon/brand__honor__seriya_smartphone__honor-10-lite/">
+          <div class="image"><img src="https://comfy.ua/media/x/img/4_10lite_cg.jpg" /></div>
+          <p>Honor 10 lite</p>
+        </a>
+      </div>
+
+      <div class="punkt">
+        <a href="/smartfon/brand__honor__seriya_smartphone__honor-7a--honor-7a-pro/">
+          <div class="image"><img src="https://comfy.ua/media/x/img/img_4176.jpg" /></div>
+          <p>Honor 7A</p>
+        </a>
+      </div>
+
+      <div class="punkt">
+        <a href="/smartfon/brand__honor__seriya_smartphone__honor-8a/">
+          <div class="image"><img src="https://comfy.ua/media/x/img/file_94_10_1.jpg" /></div>
+          <p>Honor 8A</p>
+        </a>
+      </div>
+
+      <div class="punkt">
+        <a href="/smartfon/brand__honor__seriya_smartphone__honor-8x/">
+          <div class="image"><img src="https://comfy.ua/media/x/img/2_8x_cg.jpg" /></div>
+          <p>Honor 8X</p>
+        </a>
+      </div>
+
+      <div class="punkt">
+        <a href="/smartfon/brand__honor__seriya_smartphone__honor-play/">
+          <div class="image"><img src="https://comfy.ua/media/x/img/3_play_cg.jpg" /></div>
+          <p>Honor Play</p>
+        </a>
+      </div>
+
+  </div>
+
+  <a class="link_up ling_goto_cetagory_honor" href="/smartfon/brand__honor/">ПОСМОТРЕТЬ ВСЕ СМАРТФОНЫ</a>
+
+</div>
+<!-- ============= /КАТЕГОРИИ ============= --> 
+
+<!-- ============= ВИДЕО ============= 
+
+<div class="orangeline"></div>
+<div class="videoblock">
+<div class="txthead">
+<h2>ВИДЕО</h2>
+</div>
+<div class="video"><iframe src="https://www.youtube.com/embed/LzFx2u0Zt_o" width="100%" height="226" frameborder="0"></iframe>
+<div class="videohead"><span>MWC 2018 ▶️ Новинки NOKIA: "бананофон" 8110, Nokia 7 Plus и Nokia 8 Sirocco</span></div>
+</div>
+<div class="video"><iframe src="https://www.youtube.com/embed/QEDk4zeh-8Y" width="100%" height="226" frameborder="0"></iframe>
+<div class="videohead"><span>Обзор Nokia 8 ▶️ Что интересного в первом флагмане Nokia?</span></div>
+</div>
+<div class="video last"><iframe src="https://www.youtube.com/embed/m3mrQfd1m8s" width="100%" height="226" frameborder="0"></iframe>
+<div class="videohead"><span>Обзор смартфонов Nokia 3 и 5 ▶️ Стоят ли внимания?</span></div>
+</div>
+</div>
+-->
+<!-- ============= /ВИДЕО ============= -->
+</div>
+
+<div id="content_top_brend">
+  <div class="text_content">
+    <div class="text_content_left">
+
+
+      <div class="flip-container">
+        <div class="flipper">
+
+          <div class="back-logo"></div>
+
+        </div>
+      </div>
+    <!--
+    <img class="izo" src="https://comfy.ua/media/x/img/1honor10.jpg">
+  -->
+</div>
+<div class="text_content_right">
+  <h2>Honor 8X<br/>Твой шаг в будущее</h2>
+  <p>HONOR 8X продолжает одну из самых успешных продуктовых линеек HONOR под названием X Series. Он получил процессор Kirin 710, мощную батарею 3750 мАч, двойную основную 20+2МП и 16МП фронтальную камеры с интеллектуальными функциями фотосъёмки, а также FullView дисплей с диагональю 6,5 дюймов, который занимает 91% лицевой панели. Как и все продукты HONOR, смартфон выделяется необычным дизайном. Его градиентная задняя панель сделана из стекла и представлена в сапфирном черном, сапфирном синем, красном и призрачно-синем цветах.</p>
+  <a class="listenerclick" href="/smartfon/brand__honor__seriya_smartphone__honor-8x/">Подробнее</a>
+</div>
+</div>
+
+<div class="block2 text_content raz_flex">
+  <div class="text_content_right ">
+    <span class="fixed_margin">
+      <h2>Honor 8A<br/>Плати удобно с NFC</h2>
+      <p>Молодой бренд HONOR представляет технологичную и, одновременно, доступную модель HONOR 8A. Смартфон получил приятный и функциональный дизайн с двойным текстурным покрытием задней крышки. За фотосъемку отвечает основная камера 13МП с диафрагмой f/1,8 и селфи-камера 8МП. Следуя растущему тренду бесконтактных платажей, компания оснастила смартфон NFC, чтобы пользователи смогли по достоинству оценить технологические преимущества цифрового мира. Для дополнительной защиты личных данных HONOR 8A получил поддержку разблокировки лицом.</p>
+      <a class="listenerclick" href="/smartfon/brand__honor__seriya_smartphone__honor-8a/">Подробнее</a>
+    </span>
+  </div>
+  <div class="text_content_left">
+
+    <img src="https://comfy.ua/media/x/img/efvefefefef3.jpg">
+
+  </div>
+
+</div>
+
+<div class="footVid">
+  <div class="vid"><iframe width="100%" height="315" src="https://www.youtube.com/embed/k-c55KFdzRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!-- <span>HONOR 10: как флагман.</span> --></div>
+  <div class="vid"><iframe width="100%" height="315" src="https://www.youtube.com/embed/0fcdZ2PHA_k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!-- <span>HONOR: разбираемся в линейке смартфонов</span> --></div>
+</div>
+
+</div>
