@@ -31,6 +31,8 @@
     list-style-type: none
     padding: 0
     margin: 0
+  iframe
+    max-width: 100%
   
 
 .features-desc__text 
@@ -43,6 +45,61 @@
 /*end default styles*/
 
 #lg
+  .popup_wrap 
+    .show_popup
+      background: rgba(0, 0, 0, .4)
+      cursor: pointer
+      display: none
+      height: 100%
+      position: fixed
+      text-align: center
+      top: 0
+      left: 0
+      width: 100%
+      z-index: 10000
+      .helper
+        display: inline-block
+        height: 100%
+        vertical-align: middle
+      >div
+        background-color: #fff
+        box-shadow: 10px 10px 60px #555
+        display: inline-block
+        height: auto
+        max-width: max-content
+        min-height: 100px
+        vertical-align: middle
+        width: 60%
+        position: relative
+      .popupCloseButton 
+        background-color: #e70b0b
+        color: white
+        border-radius: 50px
+        cursor: pointer
+        display: inline-block
+        font-family: arial
+        position: absolute
+        top: -15px
+        right: -15px
+        font-size: 25px
+        line-height: 25px
+        width: 25px
+        height: 25px
+        text-align: center
+        &:hover
+          background-color: #ccc      
+    .popup_id
+      cursor: pointer
+      font-size: 16px
+      margin: 20px
+      display: inline-block
+      background-color: #a40033
+      padding: 5px 10px
+      color: #fff
+      border-radius: 8px
+      &:hover
+        cursor: pointer
+        background-color: #710023
   .slick-prev,
   .slick-next
     padding: 0 6px;
@@ -55,47 +112,25 @@
       cursor: pointer
       background-color: #dedede
   .slick-prev
-    left: 40px;
-    z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 40px
+    z-index: 1
+    top: 50%
+    transform: translateY(-50%)
   .slick-next
-    right: 40px;
-    z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 40px
+    z-index: 1
+    top: 50%
+    transform: translateY(-50%)
   .wins
-    background-color: #000
+    background-color: #fff
     .wins_txt
-      color: #fff
+      color: #000
       text-align: center
       max-width: 900px
       padding: 20px
-      margin: 0 auto
-  .work,
-  .work_black
-    padding: 70px
-    display: flex
-    flex-direction: column
-    align-items: center
-    hr
-      display: block
-      width: 60px
-      padding: 1px 0
-      background-color: #000
-      border: none
-    span
-      display: block
-      width: max-content
-      font-weight: bold
-      font-size: 20px
-  .work_black
-    background-color: #000
-    color: #fff
-    hr
-      background-color: #fff
-      
+      margin: 0 auto      
   .ips
+    background-color: #f8f8f8
     .ips_txt
       max-width: 900px
       margin: 0 auto
@@ -105,10 +140,10 @@
       img
         margin: 0 auto
   .nano
-    height: 1189px
+    height: 939px
     box-sizing: border-box
     padding: 70px
-    background-image: url("https://cdn.comfy.ua/media/x/img/1619063/7.jpg")
+    background-image: url("https://cdn.comfy.ua/media/x/img/1631518/12.jpg")
     background-repeat: no-repeat
     background-position: center
     .nano_img
@@ -129,40 +164,49 @@
         margin: 0 auto
   .gsync
     padding: 70px
-    background-color: #000
-    color: #fff
     .gsync_list
       display: flex
       flex-direction: row
       align-items: center
+      &:nth-of-type(n+2)
+        margin-top: 40px
       li
         flex: 1 1 0
         max-width: 50%
         box-sizing: border-box
         &:first-of-type
           padding-right: 40px
-      &:last-of-type
+      &:nth-of-type(even)
+        
         flex-direction: row-reverse
         li
           &:first-of-type
             padding-left: 40px
             padding-right: 0
+    .white_bg
+      background-color: #f8f8f8
 
     span
       display: block
       padding: 20px
+  .black_bg
+    background-color: #131313
+    color: #fff
   .design
     padding: 70px
-    height: 1408px
+    height: 568px
     box-sizing: border-box
-    background-image: url("https://cdn.comfy.ua/media/x/img/1619063/11.jpg")
+    background-image: url("https://cdn.comfy.ua/media/x/img/1631518/9.gif")
     background-repeat: no-repeat
     background-position: center right
+    display: flex
+    flex-direction: row
+    align-items: center
     .design_img
       display: none
     .design_txt
       max-width: 470px
-      margin: 600px 0 0 auto
+      margin: 0 0 0 auto
   .snoska
     span
       display: block
@@ -223,7 +267,6 @@
           position: unset
           transform: unset
           padding: 20px
-          background-color: #000
       .gsync
         .gsync_list
           flex-direction: column !important
@@ -231,7 +274,5 @@
             max-width: 100%
             padding: 0 0 20px 0 !important
             text-align: center
-      .work_black,
-      .work
-        padding: 20px
-
+      .design
+        flex-direction: column-reverse
