@@ -1,0 +1,949 @@
+<style>
+  #samsung_wrap {
+    max-width: 1316px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .zagl {
+    max-width: 1316px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  .footer-newsletter {
+    display: none;
+  }
+
+  ._show-newsletter .fixed-buttons {
+    display: none;
+  }
+
+  .footVid {
+    display: inline-block;
+    width: 100%;
+    margin-top: 50px;
+    background: #fff;
+  }
+
+  .vid {
+    display: inline-block;
+    float: left;
+    width: 33%;
+    padding: 20px;
+    text-align: left
+  }
+
+  .vid span {
+    font-size: 17px;
+    margin-top: 10px;
+    display: block;
+  }
+
+
+  .vid span:after {
+    display: inline-block;
+    content: '';
+    border: .6rem solid transparent;
+    border-left: .8rem solid #6bb864;
+    position: relative;
+    right: -10px;
+    top: 1px;
+  }
+
+  .footer-info {
+    display: none;
+  }
+
+  .blcsamsung {
+    float: left;
+    width: 49%;
+    text-align: left;
+    padding: 10px;
+    height: 400px;
+  }
+
+  .blcsamsung h3 {
+    font-size: 30px;
+    font-weight: 800;
+    padding-top: 20px;
+  }
+
+  .blcsamsung p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .footSams {
+    margin-top: 100px;
+    padding: 20px 50px;
+    display: inline-block;
+    background: #fff;
+  }
+
+  .btnSams {
+    padding: 15px 35px;
+    background-color: #3B72CC;
+    text-transform: uppercase;
+    color: #fff;
+    display: inline-block;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: 20px;
+  }
+
+  .btnSams:hover {
+    background-color: #3766b3;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .blcsamsung {
+      height: inherit;
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .blcsamsung {
+      height: inherit;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .blcsamsung {
+      height: inherit;
+    }
+  }
+
+  @media screen and (max-width:1062px) {
+
+    .footer {
+      margin-top: 0px;
+    }
+
+    .vid {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .blcsamsung img {
+      width: 70%;
+    }
+
+    .blcsamsung {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .footSams {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      padding: 50px 0px;
+    }
+
+    .footSams .sa {
+      order: 2;
+    }
+
+    .footSams .sb {
+      order: 1;
+    }
+
+    .footSams .sc {
+      order: 3;
+      text-align: center;
+    }
+
+    .footSams .sd {
+      order: 4;
+    }
+
+  }
+
+
+  /*------------------------------*/
+
+
+  #slideshow-wrap {
+    text-align: center;
+    display: block;
+    min-width: 260px;
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+  }
+
+  #slideshow-inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #slideshow-inner>ul {
+    list-style: none;
+    height: 100%;
+    width: 625%;
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    -webkit-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  #slideshow-inner>ul>li {
+    width: 16%;
+    float: left;
+    position: relative;
+  }
+
+  #slideshow-inner>ul>li>img {
+    margin: auto;
+  }
+
+  #slideshow-wrap input[type=radio] {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    z-index: 100;
+    visibility: hidden;
+  }
+
+  #slideshow-wrap label:not(.arrows):not(.show-description-label) {
+    position: absolute;
+    border: 1px solid;
+    left: 48%;
+    bottom: -30px;
+    z-index: 100;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: background-color .2s;
+    -moz-transition: background-color .2s;
+    -o-transition: background-color .2s;
+    transition: background-color .2s;
+  }
+
+  #slideshow-wrap label:not(.arrows):active {
+    bottom: -31px
+  }
+
+  #slideshow-wrap input[type=radio]#button-1:checked~label[for=button-1] {
+    background-color: #000
+  }
+
+  #slideshow-wrap input[type=radio]#button-2:checked~label[for=button-2] {
+    background-color: #000
+  }
+
+  #slideshow-wrap input[type=radio]#button-3:checked~label[for=button-3] {
+    background-color: #000
+  }
+
+  #slideshow-wrap input[type=radio]#button-4:checked~label[for=button-4] {
+    background-color: #000
+  }
+
+  #slideshow-wrap input[type=radio]#button-5:checked~label[for=button-5] {
+    background-color: #000
+  }
+
+  #slideshow-wrap input[type=radio]#button-6:checked~label[for=button-6] {
+    background-color: #000
+  }
+
+  #slideshow-wrap label[for=button-1] {
+    margin-left: -36px
+  }
+
+  #slideshow-wrap label[for=button-2] {
+    margin-left: -18px
+  }
+
+  #slideshow-wrap label[for=button-4] {
+    margin-left: 18px
+  }
+
+  #slideshow-wrap label[for=button-5] {
+    margin-left: 36px
+  }
+
+  #slideshow-wrap label[for=button-6] {
+    margin-left: 54px
+  }
+
+  #slideshow-wrap input[type=radio]#button-1:checked~#slideshow-inner>ul {
+    left: 0
+  }
+
+  #slideshow-wrap input[type=radio]#button-2:checked~#slideshow-inner>ul {
+    left: -100%
+  }
+
+  #slideshow-wrap input[type=radio]#button-3:checked~#slideshow-inner>ul {
+    left: -200%
+  }
+
+  #slideshow-wrap input[type=radio]#button-4:checked~#slideshow-inner>ul {
+    left: -300%
+  }
+
+  #slideshow-wrap input[type=radio]#button-5:checked~#slideshow-inner>ul {
+    left: -400%
+  }
+
+  #slideshow-wrap input[type=radio]#button-6:checked~#slideshow-inner>ul {
+    left: -500%
+  }
+
+  label.arrows {
+    font-family: 'WebSymbolsRegular';
+    font-size: 25px;
+    color: rgb(255, 255, 240);
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    display: none;
+    opacity: 0.7;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: transparent;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+  }
+
+  label.arrows:hover {
+    opacity: 1
+  }
+
+  label.arrows:active {
+    margin-top: -23px
+  }
+
+  input[type=radio]#button-1:checked~.arrows#arrow-2,
+  input[type=radio]#button-2:checked~.arrows#arrow-3,
+  input[type=radio]#button-3:checked~.arrows#arrow-4,
+  input[type=radio]#button-4:checked~.arrows#arrow-5,
+  input[type=radio]#button-5:checked~.arrows#arrow-6 {
+    right: 90px;
+    display: block;
+  }
+
+  input[type=radio]#button-2:checked~.arrows#arrow-1,
+  input[type=radio]#button-3:checked~.arrows#arrow-2,
+  input[type=radio]#button-4:checked~.arrows#arrow-3,
+  input[type=radio]#button-5:checked~.arrows#arrow-4,
+  input[type=radio]#button-6:checked~.arrows#arrow-5 {
+    left: 125px;
+    display: block;
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  input[type=radio]#button-2:checked~.arrows#arrow-1 {
+    left: 125px
+  }
+
+  input[type=radio]#button-3:checked~.arrows#arrow-2 {
+    left: 110px
+  }
+
+  input[type=radio]#button-4:checked~.arrows#arrow-3 {
+    left: 90px
+  }
+
+  input[type=radio]#button-5:checked~.arrows#arrow-4 {
+    left: 70px
+  }
+
+  input[type=radio]#button-6:checked~.arrows#arrow-5 {
+    left: 50px
+  }
+
+  .description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+    font-family: 'Yanone Kaffeesatz';
+    z-index: 1000;
+  }
+
+  .description input {
+    visibility: hidden
+  }
+
+  .description label {
+    font-family: 'WebSymbolsRegular';
+    background-color: rgba(255, 255, 240, 1);
+    position: relative;
+    left: -17px;
+    top: 00px;
+    width: 40px;
+    height: 27px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 7px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+    z-index: 5;
+    color: rgb(20, 20, 20);
+  }
+
+  #slideshow-inner>ul>li:hover .description label {
+    opacity: 1
+  }
+
+  .description input[type=checkbox]:checked~label {
+    opacity: 1
+  }
+
+  .description .description-text {
+    background-color: rgba(255, 255, 230, .5);
+    padding-left: 45px;
+    padding-top: 25px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    top: -35px;
+    z-index: 4;
+    opacity: 0;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+    color: rgb(20, 20, 20);
+  }
+
+  .description input[type=checkbox]:checked~.description-text {
+    opacity: 1
+  }
+
+
+  /*------------------------------*/
+
+
+  .tovary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .minitext {
+    display: none;
+  }
+
+  .bannnner {
+    display: none;
+  }
+
+  body {
+    background: url(https://comfy.ua/media/blb/banner_promo/11-1/noimg_1.png) #F5F5F5 center top !important;
+  }
+
+  .header__top {
+    background-color: #02A709;
+  }
+
+  .breadcrumbs {
+    display: none;
+  }
+
+  .banner .control {
+    margin: -65px 0 0;
+  }
+
+  .samsung-cms .banner-wrap img {
+    max-height: inherit;
+  }
+
+  .samsung-cms .banner-wrap {
+    max-width: inherit;
+    max-height: inherit;
+  }
+
+  .samsung-cms .zagolovok {
+    font-size: 24px;
+    margin: 15px 0 0 0;
+    text-align: center;
+    padding-top: 25px;
+  }
+
+  .samsung-cms .cont {
+    /*background-color: #fff;*/
+    margin-top: 20px;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .samsung-cms .punkt {
+    text-align: center;
+    float: left;
+    width: 200px;
+    margin-top: 20px;
+  }
+
+  .samsung-cms .punkt a p {
+    color: #000
+  }
+
+  .tov {
+    float: left;
+    width: 22%;
+    text-align: center;
+    color: #000;
+    margin-top: -70px;
+  }
+
+  .tov a {
+    color: #000;
+  }
+
+  .tov a:hover {
+    text-decoration: underline;
+  }
+
+  .tov p {
+    padding: 10px;
+  }
+
+  .tov img {
+    max-width: 205px;
+  }
+
+  .banner .control li {
+    width: 33px;
+    height: 12px;
+    border-radius: 10px;
+    background: #ccc;
+  }
+
+  .banner .control li.selected {
+    background: #3675ab;
+  }
+
+  .newprdct {
+    padding-top: 20px;
+    background: #fff;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    display: none;
+  }
+
+  .punkt a:hover {
+    opacity: 0.6;
+  }
+
+  /* -------------------------------------------------------- */
+
+
+  .narrow-container_white {
+    background: transparent;
+  }
+
+  .carousel {
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    height: 285px;
+  }
+
+  .carousel-item {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.6s ease-in-out;
+    width: 100%;
+  }
+
+  .carousel-active:checked+.carousel-item {
+    opacity: 1;
+    pointer-events: auto;
+    position: static;
+  }
+
+  .carousel-item tov {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .carousel-controls {
+    height: 100%;
+    width: 100%;
+    padding-top: 7%;
+  }
+
+  .carousel-control {
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 28px;
+    height: 90px;
+    text-align: center;
+    transition: background 0.1s ease-in-out;
+    width: 50%;
+    z-index: 2;
+    line-height: 90px;
+  }
+
+  .carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .carousel-control.prev {
+    float: left;
+  }
+
+  .carousel-control.next {
+    float: right;
+  }
+
+  .carousel-caption {
+    bottom: 15%;
+    font-size: 120%;
+    left: 20%;
+    opacity: 0;
+    right: 20%;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.1s ease-out;
+    z-index: 2;
+  }
+
+  .carousel-active:checked+.carousel-item .carousel-caption {
+    transition: opacity 0.6s ease-in;
+    opacity: 1;
+  }
+
+  .carousel-indicators {
+    bottom: 5%;
+    left: 5%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    right: 5%;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .carousel-indicators li {
+    display: inline-block;
+  }
+
+  .carousel-indicator {
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    font-size: 28px;
+    line-height: 1;
+    padding: 5px 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: background 0.1s ease-in-out;
+  }
+
+  .carousel-indicator:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  /* If you`re needing more than 3 banners, maybe you might be using another way to represent your info... ;-) */
+  #carousel-1:checked~.carousel-indicators .carousel-indicator[for="carousel-1"],
+  #carousel-2:checked~.carousel-indicators .carousel-indicator[for="carousel-2"],
+  #carousel-3:checked~.carousel-indicators .carousel-indicator[for="carousel-3"] {
+    color: #007f7f;
+  }
+
+  @media (min-width: 768px) {
+
+
+    .carousel-indicators {
+      background: transparent;
+    }
+
+    .carousel-control {
+      width: 5%;
+    }
+
+    .carousel-controls,
+    .carousel-caption,
+    .carousel-indicators {
+      /*   position: absolute;*/
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+
+    .blcsamsung img {
+      width: 100%;
+    }
+
+    .samsung-cms .punkt {
+      width: 50%;
+    }
+
+    .tov {
+      width: 50%;
+      margin-top: 10px;
+    }
+
+    .carousel {
+      display: inline-table;
+    }
+
+    .carousel-controls {
+      padding-top: 0%;
+    }
+
+    .newprdct {
+      padding-top: 0px;
+    }
+  }
+
+
+  @media screen and (min-width: 1024px) {
+    /* denys rogachev 05072017 */
+
+    .main-container_gray {
+      padding-top: 20px;
+    }
+
+
+    .samsung-cms .zagolovok {
+      font-size: 20px;
+      letter-spacing: 10px;
+      font-weight: bold;
+    }
+
+    .samsung-cms .punkt {
+      width: 16%;
+    }
+
+    .samsung-cms .cont {
+      text-align: center;
+    }
+  }
+</style>
+<div id="samsung_wrap"><label id="slideshow-wrap"> <input type="radio" id="button-1" name="controls"
+      checked="checked" /> <label for="button-1"></label> <input type="radio" id="button-2" name="controls" /> <label
+      for="button-2"></label> <input name="controls" id="button-3" type="radio" /> <label for="button-3"></label>
+    <!-- <input type="radio" id="button-4" name="controls" /> <label for="button-4"></label> <input name="controls" id="button-5" type="radio" /> <label for="button-5"></label> <input name="controls" id="button-6" type="radio" /> <label for="button-6"></label> -->
+    <!-- <label id="arrow-1" class="arrows" for="button-1">></label> <label id="arrow-2" class="arrows" for="button-2">></label> <label id="arrow-3" class="arrows" for="button-3">></label> <label id="arrow-4" class="arrows" for="button-4">></label> <label id="arrow-5" class="arrows" for="button-5">></label> <label id="arrow-6" class="arrows" for="button-6">></label> -->
+    <div id="slideshow-inner">
+      <ul>
+        <li id="slide1"> <a
+            href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-s20--samsung-galaxy-s20-ultra--samsung-galaxy-s20plus/">
+            <img src="https://cdn.comfy.ua/media/x/img/samsung_galaxy_s20/samsung_1182_365_ua.jpg" /> </a>
+          <div class="description"><input id="show-description-2" type="checkbox" /></div>
+        </li>
+        <li id="slide2"> <a href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-fold/"> <img
+              src="https://cdn.comfy.ua/media/x/img/fold_ua_1.jpg" /> </a>
+          <div class="description"><input id="show-description-1" type="checkbox" /></div>
+        </li>
+        <li id="slide3"> <a href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-a51"> <img
+              src="https://cdn.comfy.ua/media/x/img/samsung_galaxy_s20/a51_ua.jpg" /> </a>
+          <div class="description"><input type="checkbox" id="show-description-3" /></div>
+        </li>
+        <!--
+<li id="slide4"> <a href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-s9s9plus/" _mce_href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-s9s9plus/"> <img src="https://comfy.ua/media/x/img/samsung_str1/S9_1182x365.jpg" _mce_src="https://comfy.ua/media/x/img/samsung_str1/S9_1182x365.jpg" /></a>
+<div class="description"><input type="checkbox" id="show-description-4" /></div>
+</li>
+<li id="slide5"> <a href="/pylesos-dlja-s-u-bez-meshka-samsung-vc15k4176hg-ev.html" _mce_href="/pylesos-dlja-s-u-bez-meshka-samsung-vc15k4176hg-ev.html"> <img src="https://comfy.ua/media/blb/banner_promo/comfy_antitangle.jpg" _mce_src="https://comfy.ua/media/blb/banner_promo/comfy_antitangle.jpg" /> </a>
+<div class="description"><input type="checkbox" id="show-description-5" /></div>
+</li>
+<li id="slide6"> <a href="/smartfon/seriya_smartphone__samsung-galaxy-a7-2018/" _mce_href="/smartfon/seriya_smartphone__samsung-galaxy-a7-2018/"> <img src="https://comfy.ua/media/x/img/Samsung_A7_ua.jpg" _mce_src="https://comfy.ua/media/x/img/Samsung_A7_ua.jpg" /> </a>
+<div class="description"><input type="checkbox" id="show-description-6" /></div>
+</li>
+-->
+      </ul>
+    </div>
+  </label></div>
+<div class="samsung-cms narrow-container">
+  <h1 class="zagl">Техніка та електроніка Samsung</h1>
+  <div style="background: #fff;" class="cont">
+    <div class="punkt"><a href="/samsung/category-mobilnye-ustrojstva/"> <img
+          src="https://comfy.ua/media/blb/samsung/01_1.jpg" />
+        <p>Смартфони</p>
+      </a></div>
+    <div class="punkt"><a href="/samsung/category-tv-i-audio/"> <img src="https://comfy.ua/media/blb/samsung/07.jpg" />
+        <p>Телевізори</p>
+      </a></div>
+    <div class="punkt"><a href="/samsung-planshety/"> <img src="https://comfy.ua/media/blb/samsung/02_1.jpg" />
+        <p>Планшети</p>
+      </a></div>
+    <div class="punkt"><a href="/samsung-nosimye-ustrojstva/"> <img src="https://comfy.ua/media/blb/samsung/03_1.jpg" />
+        <p>Портативні пристрої</p>
+      </a></div>
+    <div class="punkt"><a href="/samsung-mobilnye-aksessuary/"> <img src="https://comfy.ua/media/blb/samsung/04.jpg" />
+        <p>Мобільні аксесуари</p>
+      </a></div>
+    <div class="punkt"><a href="/samsung-monitory/"> <img src="https://comfy.ua/media/blb/samsung/05.jpg" />
+        <p>Монітори</p>
+      </a></div>
+    <div class="punkt"><a href="/samsung-printery/"> <img src="https://comfy.ua/media/blb/samsung/06.jpg" />
+        <p>Принтери</p>
+      </a></div>
+    <div class="punkt"><a href="/samsung-audio-video/"> <img src="https://comfy.ua/media/blb/samsung/08.jpg" />
+        <p>Аудіо/Відео</p>
+      </a></div>
+    <div class="punkt"><a href="/samsung-stiralnye-mashiny/"> <img src="https://comfy.ua/media/blb/samsung/09.jpg" />
+        <p>Пральні машини</p>
+      </a></div>
+    <div class="punkt"><a href="/samsung-holodilniki/"> <img src="https://comfy.ua/media/blb/samsung/10.jpg" />
+        <p>Холодильники</p>
+      </a></div>
+    <div class="punkt"><a href="/samsung-kondicionery/"> <img src="https://comfy.ua/media/blb/samsung/11.jpg" />
+        <p>Кондиціонери</p>
+      </a></div>
+    <div class="punkt"><a href="/samsung-tehnika-dlja-kuhni/"> <img src="https://comfy.ua/media/blb/samsung/12.jpg" />
+        <p>Техніка для кухні</p>
+      </a></div>
+  </div>
+  <p class="zagolovok">НОВИНКИ</p>
+  <div class="cont">
+    <div class="newprdct">
+      <div id="carousel" class="carousel"><input class="carousel-active" id="carousel-1" name="carousel"
+          aria-hidden="true" checked="checked" type="radio" />
+        <div class="carousel-item">
+          <div class="carousel-controls" aria-hidden="true"><label for="carousel-3" class="carousel-control prev"
+              title="Prev">
+              <</label> <label for="carousel-2" class="carousel-control next" title="Next">>
+            </label></div>
+          <div class="tovary">
+            <div class="tov"><a
+                href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-s20--samsung-galaxy-s20-ultra--samsung-galaxy-s20plus/">
+                <img
+                  src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_galaxy_s20_ultra_12-512gb_gray_4.jpg" />
+                <p>Смартфон Samsung Galaxy S20 Ultra</p>
+              </a></div>
+            <div class="tov"><a
+                href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-s20--samsung-galaxy-s20-ultra--samsung-galaxy-s20plus/">
+                <img
+                  src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_galaxy_s20_8256gb_black_05.jpg" />
+                <p>Смартфон Samsung Galaxy S20+</p>
+              </a></div>
+            <div class="tov"><a
+                href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-s20--samsung-galaxy-s20-ultra--samsung-galaxy-s20plus/">
+                <img
+                  src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/0/1/01_3_5.jpg" />
+                <p>Смартфон Samsung Galaxy S20</p>
+              </a></div>
+            <div class="tov"><a href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-z-flip/"> <img
+                  src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_galaxy_z_flip_8256gb_purple_sm-f700n.jpg" />
+                <p>Смартфон Samsung Galaxy Z Flip</p>
+              </a></div>
+          </div>
+        </div>
+        <input class="carousel-active" id="carousel-2" name="carousel" aria-hidden="true" type="radio" />
+        <div class="carousel-item">
+          <div class="carousel-controls" aria-hidden="true"><label for="carousel-1" class="carousel-control prev"
+              title="Prev">
+              <</label> <label for="carousel-3" class="carousel-control next" title="Next">>
+            </label></div>
+          <div class="tovary">
+            <div class="tov"><a href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-fold/"> <img
+                  src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_galaxy_fold_12256gb_black_05.jpg" />
+                <p>Смартфон Samsung Galaxy Fold</p>
+              </a></div>
+            <div class="tov"><a
+                href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-note-10--samsung-galaxy-note-10-lite--samsung-galaxy-note-10plus/">
+                <img
+                  src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_galaxy_note_10_lite_6_128gb_black_010.jpg" />
+                <p>Смартфон Samsung Galaxy Note 10 Lite</p>
+              </a></div>
+            <div class="tov"><a
+                href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-s10--samsung-galaxy-s10-lite--samsung-galaxy-s10e--samsung-galaxy-s10plus/">
+                <img
+                  src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_g970_galaxy_s10e_6128gb_green_01.jpg" />
+                <p>Смартфон Samsung Galaxy S10e</p>
+              </a></div>
+            <div class="tov"><a
+                href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-a70--samsung-galaxy-a71/"> <img
+                  src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_galaxy_a71_black_07.jpg" />
+                <p>Смартфон Samsung Galaxy A71</p>
+              </a></div>
+          </div>
+        </div>
+        <input class="carousel-active" id="carousel-3" name="carousel" aria-hidden="true" type="radio" />
+        <div class="carousel-item">
+          <div class="carousel-controls" aria-hidden="true"><label for="carousel-2" class="carousel-control prev"
+              title="Prev">
+              <</label> <label for="carousel-1" class="carousel-control next" title="Next">>
+            </label></div>
+          <div class="tovary">
+            <div class="tov"><a
+                href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-a50--samsung-galaxy-a51/"> <img
+                  src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_galaxy_a51_464gb_blue_07.jpg" />
+                <p>Смартфон Samsung Galaxy A51</p>
+              </a></div>
+            <div class="tov"><a href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-a40/"> <img
+                  src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/m/sm-a405.jpg" />
+                <p>Смартфон Samsung Galaxy A40</p>
+              </a></div>
+            <div class="tov"><a href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-a30s/"> <img
+                  src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_galaxy_a30s_green_01_2.jpg" />
+                <p>Смартфон Samsung Galaxy A30S</p>
+              </a></div>
+            <div class="tov"><a href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-a20s/"> <img
+                  src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_galaxy_a20s_332gb_blue_sm-a207_0.jpg" />
+                <p>Смартфон Samsung Galaxy A20S</p>
+              </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footSams">
+      <div class="blcsamsung sd">
+        <h3>Рекордна продуктивність Galaxy S20</h3>
+        <p>Справжня революція у світі гаджетів? Так, це серія смартфонів Samsung Galaxy S20! Міць інноваційних
+          процесорів, помножена на дійсно шикарну кількість оперативної пам'яті та величезну ємність керованого AI
+          акумулятора, у комплекті з надшвидкою новою ОС — це саме те, що тобі потрібно. Смартфон, що виходить за рамки
+          простого кишенькового гаджета своєю функціональністю, надійністю та плавністю роботи. Познайомся ближче з
+          крутими новинками від Samsung, й ти закохаєшся у них з першого ж дотику!</p>
+        <a class="btnSams"
+          href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-s20--samsung-galaxy-s20-ultra--samsung-galaxy-s20plus/">Купити</a>
+      </div>
+      <div class="blcsamsung sc"><img src="https://cdn.comfy.ua/media/x/img/samsung_galaxy_s20/1.jpg"
+          style="display: block; margin: 0 auto; max-width: 190px; width: 100%;" /></div>
+      <div class="blcsamsung sb"><img src="https://cdn.comfy.ua/media/x/img/samsung_galaxy_s20/2.jpg"
+          style="display: block; margin: 0 auto; max-width: 430px;" /></div>
+      <div class="blcsamsung sa">
+        <h3>Інноваційна система камер Galaxy S20</h3>
+        <p>Відеокадр 8К, надвисока роздільна здатність фотографій та неймовірні, просто приголомшливі можливості зуму —
+          смартфони серії Samsung Galaxy S20 відкриють перед тобою абсолютно нові горизонти фото- та відеозйомки.
+          Система камер лінійки Galaxy S20 дозволяє робити суперчіткі кадри за умови будь-якого освітлення, збільшувати
+          та всіляко редагувати їх на свій розсуд. У Galaxy S20 і S20 + встановлено камери на 64 МП та 30-кратний зум, а
+          у Galaxy S20 Ultra — на 108 МП та 100-кратний зум. Такої чіткості кадру ти ще не бачив!</p>
+        <a class="btnSams"
+          href="/smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-s20--samsung-galaxy-s20-ultra--samsung-galaxy-s20plus/">Купити</a>
+      </div>
+    </div>
+    <div class="footVid">
+      <div class="vid"><iframe src="https://www.youtube.com/embed/JpfI0wsLsUE" width="100%" height="315"
+          frameborder="0"></iframe> <span>Первый взгляд на Note 10/10+ | Обзор смартфона от COMFY</span></div>
+      <div class="vid"><iframe src="https://www.youtube.com/embed/9j5VlXR7aUI" width="100%" height="315"
+          frameborder="0"></iframe> <span>САМЫЙ ПОДРОБНЫЙ обзор-сравнение смартфонов Samsung A</span></div>
+      <div class="vid"><iframe src="https://www.youtube.com/embed/W3yll0fjemA" width="100%" height="315"
+          frameborder="0"></iframe> <span>Samsung The Serif 2019: QLED TV с уникальным дизайном</span></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,242 @@
+/*default styles*/
+
+#lg 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    font-size: 18px
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 20px 0 10px 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+   
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+
+#lg
+  .wins
+    .wins_txt
+      max-width: 900px
+      text-align: center
+      margin: 0 auto
+  .srgb
+    .srgb_txt
+      text-align: center
+      padding: 70px
+      max-width: 900px
+      margin: 0 auto
+  .sync
+    .sync_txt
+      padding: 70px
+      max-width: 900px
+      margin: 0 auto
+      text-align: center
+    span
+        padding: 20px
+        display: block
+  .hdr
+    .hdr_list
+      display: flex
+      flex-direction: row
+      align-items: center
+      padding: 70px
+      li
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+        &:last-of-type
+          padding-left: 40px
+    span
+      display: block
+      padding: 20px
+  .ips
+    padding: 70px
+    .ips_list
+      display: flex
+      flex-direction: row-reverse
+      align-items: center
+      li
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+        &:last-of-type
+          padding-right: 40px
+  .maxx
+    .maxx_txt
+      max-width: 900px
+      margin: 0 auto
+      text-align: center
+      padding: 20px
+  .onscreen
+    background-color: #e7e7e7
+    .onscreen_txt
+      max-width: 900px
+      margin: 0 auto 
+      text-align: center
+      padding: 70px 0
+      h2
+        margin-top: 0
+
+    .onscreen_img
+      img
+        margin: 0 auto
+  span
+    display: block
+    padding: 20px
+    background-color: #fff
+  .freesync
+    height: 939px
+    box-sizing: border-box
+    padding: 70px
+    background-image: url("https://cdn.comfy.ua/media/x/img/1619059/7.jpg")
+    background-repeat: no-repeat
+    background-position: center
+    .freesync_txt
+      color: #fff
+      text-align: center
+      max-width: 900px
+      margin: 0 auto
+  .dynamic
+    padding: 70px
+    background-color: #131313
+    ul.dynamic_list
+      li
+        display: flex
+        flex-direction: row
+        color: #fff
+        align-items: center
+        >div
+          flex: 1 1 0
+          max-width: 50%
+          box-sizing: border-box
+        .dynamic_txt
+          padding-right: 40px
+        &:nth-of-type(even)
+          flex-direction: row-reverse
+          .dynamic_txt
+            padding-right: 0
+            padding-left: 40px
+  .arcline
+    background-color: #333333
+    .arcline_txt
+      padding: 70px
+      max-width: 900px
+      color: #fff
+          
+
+/*media**************************************************************/
+
+
+@media (max-width: 812px)
+  #lg
+    h2
+      font-size: 28px
+    p
+      >strong
+        font-size: 16px
+    .wins
+      .wins_txt
+        width: unset
+    .srgb
+      .srgb_txt
+        padding: 20px
+    .sync
+      .sync_txt 
+        padding: 20px
+    .freesync
+      background-image: url("https://cdn.comfy.ua/media/x/img/1619059/8.jpg")
+      background-size: cover
+      padding: 20px
+      background-position: center bottom;
+      height: 1020px;
+    .hdr
+      .hdr_list
+        padding: 20px
+    .ips
+      padding: 20px
+    .onscreen
+      .onscreen_txt
+        padding: 20px
+    .dynamic
+      padding: 20px
+    .arcline
+      .arcline_txt
+        padding: 20px
+
+
+  @media (max-width: 480px)
+    #lg
+      .wins
+        .wins_txt
+          width: 80%
+      .hdr
+        .hdr_list
+          flex-direction: column
+          li
+            max-width: 100%
+            &:last-of-type
+              padding: 20px
+              text-align: center
+      .ips
+        .ips_list
+          flex-direction: column
+          li
+            max-width: 100%
+            &:last-of-type
+              padding: 20px 0 0 0
+              text-align: center
+      .freesync
+        background-image: url("https://cdn.comfy.ua/media/x/img/1619059/8.jpg")
+        background-size: cover
+        padding: 20px
+      .hdr
+        .hdr_list
+          padding: 20px
+          li
+            &:last-of-type
+              padding: 20px 0px
+      .ips
+        padding: 20px
+      .onscreen
+        .onscreen_txt
+          padding: 20px
+      .dynamic
+        padding: 20px
+        ul.dynamic_list
+          li
+            flex-direction: column !important
+            .dynamic_txt
+              padding: 20px 0px 40px 0px !important
+              text-align: center
+            >div
+              max-width: 100%

@@ -1,0 +1,607 @@
+<style>
+  #siemens_id p:first-letter {
+    padding-left: 0;
+  }
+
+  #siemens_id p {
+    margin-bottom: 0;
+  }
+
+  #siemens_id img:hover {
+    opacity: 1;
+  }
+
+  #siemens_id img {
+    opacity: 1;
+    max-width: 100%;
+    display: block;
+    vertical-align: middle;
+    height: auto;
+  }
+
+  #siemens_id {
+    max-width: 1316px;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    display: block;
+    background-color: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .features-desc__text img {
+    margin-bottom: 0rem;
+  }
+
+  .one-col .features-desc__text p:first-letter {
+    padding-left: 0rem !important;
+  }
+
+  .siemens {
+    max-width: 1316px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .siemens img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .siemens ul li {
+    list-style-type: none;
+  }
+
+  .siemens p {
+    font-size: 24px !important;
+  }
+
+  .siemens h2 {
+    line-height: normal;
+  }
+
+  .siemens h3 {
+    text-align: left;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+
+  .siemens .siemens_logo {
+    height: 515px;
+    width: 100%;
+    background-image: url("https://cdn.comfy.ua/media/x/img/1290113/sect1_bg1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .siemens .siemens_logo::after {
+    content: "";
+    display: block;
+    height: 89px;
+    width: 209px;
+    background-image: url("https://cdn.comfy.ua/media/x/img/1290113/logo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+  }
+
+  /*section 2*/
+
+  .siemens .antifinger .blue_title {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(45%, rgba(80, 190, 190, 0.9686274509803922)), to(#0099cb));
+    background-image: linear-gradient(90deg, rgba(80, 190, 190, 0.9686274509803922) 45%, #0099cb 100%);
+    width: 100%;
+    color: #fff;
+    padding: 40px 50px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+  }
+
+  .siemens .antifinger .blue_title h2 {
+    font-size: 39px;
+  }
+
+  .siemens .antifinger .blue_title p {
+    font-size: 26px !important;
+    padding-top: 20px;
+  }
+
+  .siemens .antifinger ul.anti_tech li {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: start;
+    align-items: flex-start;
+  }
+
+  .siemens .antifinger ul.anti_tech li:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    flex-direction: row-reverse;
+    padding: 70px 0;
+  }
+
+  .siemens .antifinger ul.anti_tech li .tech_img {
+    -webkit-box-flex: 1.3;
+    flex: 1.3;
+  }
+
+  .siemens .antifinger ul.anti_tech li .tech_img video {
+    max-width: 100%;
+  }
+
+  .siemens .antifinger ul.anti_tech li .tech_txt {
+    -webkit-box-flex: 1;
+    flex: 1;
+  }
+
+  .siemens .antifinger ul.anti_tech li .tech_txt {
+    padding: 0 40px;
+  }
+
+  .siemens .antifinger ul.anti_tech li .tech_txt h3 {
+    font-size: 31px;
+    padding-bottom: 40px;
+  }
+
+  .siemens .antifinger ul.anti_tech:last-child {
+    padding-bottom: 70px;
+  }
+
+  /*section 3*/
+
+  .siemens .polka {
+    height: 987px;
+    width: 100%;
+    box-sizing: border-box;
+    background-image: url("https://cdn.comfy.ua/media/x/img/1290113/sect3_bg1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px 50px;
+  }
+
+  .siemens .polka ul.polka_list {
+    max-width: 60%;
+    float: right;
+    height: 88%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+
+  .siemens .polka ul.polka_list li {
+    color: #fff;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: start;
+    align-items: flex-start;
+  }
+
+  .siemens .polka ul.polka_list li::before {
+    content: "";
+    display: block;
+    width: 153px;
+    min-width: 153px;
+    height: 153px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: 40px;
+  }
+
+  .siemens .polka ul.polka_list li:nth-child(1)::before {
+    background-image: url("https://cdn.comfy.ua/media/x/img/1290113/sect3_icon1.jpg");
+  }
+
+  .siemens .polka ul.polka_list li:nth-child(2)::before {
+    background-image: url("https://cdn.comfy.ua/media/x/img/1290113/sect3_icon2.jpg");
+  }
+
+  .siemens .polka ul.polka_list li:nth-child(3)::before {
+    background-image: url("https://cdn.comfy.ua/media/x/img/1290113/sect3_icon3.jpg");
+  }
+
+  .siemens .polka ul.polka_list li h4 {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  /*section 4*/
+
+  .siemens .siemens_func {
+    padding: 70px 20px;
+  }
+
+  .siemens .siemens_func ul.func_list {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+  }
+
+  .siemens .siemens_func ul.func_list li {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    flex: 1 1 0;
+    text-align: center;
+  }
+
+  .siemens .siemens_func ul.func_list li::before {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: 339px;
+    height: 339px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 60px;
+  }
+
+  .siemens .siemens_func ul.func_list li:nth-child(1)::before {
+    background-image: url("https://cdn.comfy.ua/media/x/img/1290113/sect4_icon1.jpg");
+  }
+
+  .siemens .siemens_func ul.func_list li:nth-child(2)::before {
+    background-image: url("https://cdn.comfy.ua/media/x/img/1290113/sect4_icon2.jpg");
+  }
+
+  .siemens .siemens_func ul.func_list li:nth-child(3)::before {
+    background-image: url("https://cdn.comfy.ua/media/x/img/1290113/sect4_icon3.jpg");
+  }
+
+  .siemens .siemens_func ul.func_list li:nth-child(2) {
+    padding: 0 15px;
+  }
+
+  .siemens .siemens_func ul.func_list li .func_txt h4 {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  /*section 5*/
+
+  .siemens .siemens_img {
+    height: 987px;
+    width: 100%;
+    background-image: url("https://cdn.comfy.ua/media/x/img/1290113/sect5_img1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /***********************************MEDIA*******************************************/
+  @media (max-width: 1024px) and (min-width: 813px) {
+    .siemens h2 {
+      font-size: 30px !important;
+    }
+
+    .siemens h3 {
+      font-size: 26px !important;
+    }
+
+    .siemens p {
+      font-size: 20px !important;
+    }
+
+    .siemens .antifinger .blue_title p {
+      font-size: 22px !important;
+    }
+
+    .siemens .polka {
+      background-position: center left 25%;
+    }
+
+
+  }
+
+  @media (max-width: 812px) and (min-width: 481px) {
+    .siemens h2 {
+      font-size: 30px !important;
+    }
+
+    .siemens h3 {
+      font-size: 22px !important;
+    }
+
+    .siemens p {
+      font-size: 20px !important;
+    }
+
+    .siemens .antifinger .blue_title p {
+      font-size: 22px !important;
+    }
+
+    .siemens .antifinger ul.anti_tech li .tech_txt {
+      padding: 0 20px;
+    }
+
+    .siemens .antifinger ul.anti_tech li .tech_txt h3 {
+      padding-bottom: 20px;
+    }
+
+    .siemens .antifinger ul.anti_tech li:nth-child(even) {
+      padding: 30px 0;
+    }
+
+    .siemens .antifinger .blue_title {
+      padding: 20px 30px;
+    }
+
+    .siemens .polka {
+      background-position: center left 30%;
+      padding: 100px 20px;
+    }
+
+    .siemens h4 {
+      font-size: 20px !important;
+    }
+
+    .siemens .polka ul.polka_list li::before {
+      margin-right: 20px;
+    }
+
+    .siemens .polka ul.polka_list li h4 {
+      margin-bottom: 20px;
+    }
+
+    .siemens .siemens_func {
+      padding: 20px;
+    }
+
+    .siemens .siemens_func ul.func_list li::before {
+      height: 230px;
+    }
+  }
+
+
+  @media (max-width: 480px) and (min-width: 320px) {
+
+    .siemens .siemens_logo {
+      background-position: center left 37%;
+    }
+
+    .siemens .siemens_logo::after {
+      top: 10px;
+      right: 10px;
+    }
+
+    .siemens h2 {
+      font-size: 25px !important;
+    }
+
+    .siemens h3 {
+      font-size: 22px !important;
+    }
+
+    .siemens p {
+      font-size: 18px !important;
+    }
+
+    .siemens .antifinger .blue_title p {
+      font-size: 22px !important;
+    }
+
+    .siemens .antifinger ul.anti_tech li .tech_txt {
+      padding: 20px;
+    }
+
+    .siemens .antifinger ul.anti_tech li .tech_txt h3 {
+      padding-bottom: 20px;
+    }
+
+    .siemens .antifinger ul.anti_tech li:nth-child(even) {
+      padding: 30px 0;
+    }
+
+    .siemens .antifinger .blue_title {
+      padding: 20px 30px;
+    }
+
+    .siemens .antifinger ul.anti_tech li {
+      -webkit-box-orient: vertical !important;
+      -webkit-box-direction: normal !important;
+      flex-direction: column !important;
+    }
+
+    .siemens .polka {
+      padding: 20px;
+      background-size: cover;
+      height: 1120px;
+    }
+
+    .siemens .polka ul.polka_list {
+      max-width: unset;
+      height: 100%;
+    }
+
+    .siemens .polka ul.polka_list li {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      -webkit-box-align: center;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .siemens .polka ul.polka_list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .siemens .polka ul.polka_list li::before {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    .siemens h4 {
+      font-size: 18px !important;
+    }
+
+    .siemens .polka ul.polka_list li h4 {
+      margin-bottom: 20px;
+    }
+
+    .siemens .siemens_func {
+      padding: 20px;
+    }
+
+    .siemens .siemens_func ul.func_list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+    }
+
+    .siemens .siemens_func ul.func_list li::before {
+      margin-bottom: 40px;
+    }
+
+    .siemens .siemens_func ul.func_list li:nth-child(2) {
+      padding: 0;
+      margin: 40px 0;
+    }
+
+    .siemens .siemens_func ul.func_list li .func_txt h4 {
+      margin-bottom: 20px;
+    }
+  }
+</style>
+
+
+<div class="siemens" id="siemens_id">
+  <div class="siemens_logo wow fadeIn" data-wow-duration="2s"></div>
+
+  <div class="antifinger">
+    <div class="blue_title wow fadeInDown" data-wow-duration="1s">
+      <h2 class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">Холодильник Siemens с покрытием
+        Antifingerprint, на котором не остается отпечатков пальцев.</h2>
+    </div>
+    <ul class="anti_tech">
+      <li>
+        <div class="tech_img wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s">
+          <video controls src="https://comfy.ua/media/video/171220_TDV_no-master.mp4"></video>
+          <!--  <img src="https://cdn.comfy.ua/media/x/img/1290113/sect2_img1.jpg" alt="Фото Холодильник Siemens  - 1" title="Холодильник Siemens  - 1"> -->
+        </div>
+        <div class="tech_txt wow fadeIn" data-wow-duration="2s" data-wow-delay="0.s">
+          <h3>Технология noFrost: Больше никакой разморозки</h3>
+          <p>Холодильник Siemens оснащён технологией noFrost, которая предотвращает намерзание льда в
+            морозильной камере. Лишняя влага из воздуха выводится наружу, тем самым не оставляя льду никакого шанса.
+            Поэтому вам больше не придётся размораживать холодильник самостоятельно. Сохраните своё время и усилия
+            для более интересных занятий, чем разморозка холодильника.</p>
+        </div>
+      </li>
+      <li>
+        <div class="tech_img wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.5s">
+          <video controls src="https://comfy.ua/media/video/180110_TDV_hyperFreshpr-master.mp4"></video>
+          <!-- <img src="https://cdn.comfy.ua/media/x/img/1290113/sect2_img2.jpg" alt="Фото Холодильник Siemens  - 2" title="Холодильник Siemens  - 2"> -->
+        </div>
+        <div class="tech_txt wow fadeIn" data-wow-duration="2s" data-wow-delay="0.5s">
+          <h3>Продукты будут свежими до 2-х раз дольше: Технология hyperFresh 0° C plus</h3>
+          <p>Благодаря технологии hyperFresh 0° C plus в специальных отделениях холодильника создаются особые
+            условия для хранения продуктов. С помощью специального слайдера вы сможете регулировать уровень
+            влажности в каждом отделении, тем самым сохраняя свежесть продуктов до 2-х раз дольше. Внутри
+            холодильника расположены 3 зоны свежести hyperFresh 0° C plus: для рыбы, мяса, а также большой контейнер
+            для хранения овощей и фруктов.</p>
+        </div>
+      </li>
+    </ul>
+    <div class="blue_title wow fadeInDown" data-wow-duration="1s">
+      <h2 class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">Siemens — эксперт по хранению продуктов.</h2>
+      <p class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">Холодильник Siemens на базе iSensoric
+        оборудован инновационными сенсорами, которые регулируют работу прибора
+        и настраивают оптимальный уровень температуры внутри холодильного и морозильного отделений.</p>
+    </div>
+    <ul class="anti_tech">
+      <li>
+        <div class="tech_img wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s">
+          <video controls src="https://comfy.ua/media/video/171220_TDV_s-master.mp4"></video>
+          <!-- <img src="https://cdn.comfy.ua/media/x/img/1290113/sect2_img3.jpg" alt="Фото Холодильник Siemens  - 3" title="Холодильник Siemens  - 3"> -->
+        </div>
+        <div class="tech_txt wow fadeIn" data-wow-duration="2s" data-wow-delay="0.5s">
+          <h3>Интуитивное управление прибором: TFT-дисплей.</h3>
+          <p>Теперь вы можете легко управлять прибором благодаря дисплею, который находится на передней панели дверцы.
+            Вы можете снизить или повысить температуру, включить функцию «Суперохлаждения» или, уезжая на длительное
+            время, установить режим «Отпуск», который экономит электроэнергию. Холодильник оснащен двумя
+            независимыми контурами охлаждения, поэтому вы сможете отдельно регулировать температуру как в холодильном,
+            так и в морозильном отделениях.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="polka wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+    <ul class="polka_list">
+      <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+        <div class="polka_txt wow fadeInRight" data-wow-duration="2s" data-wow-delay="3.4">
+          <h4>Легкие и прочные полки.</h4>
+          <p>Полки в холодильнике изготовлены из сверхпрочного закалённого стекла safetyGlass. Поэтому если вы
+            случайно
+            разобъете полку, она не разлетится на мелкие осколки, что обеспечивает полную безопасность.</p>
+        </div>
+      </li>
+      <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">
+        <div class="polka_txt wow fadeInRight" data-wow-duration="2s" data-wow-delay="3.6">
+          <h4>Полка для хранения бутылок.</h4>
+          <p>Теперь размещать бутылки в холодильнике будет гораздо удобнее благодаря специальной волнистой полке.</p>
+        </div>
+      </li>
+      <li class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s">
+        <div class="polka_txt wow fadeInRight" data-wow-duration="2s" data-wow-delay="3.8">
+          <h4>Высокая энергоэффективность.</h4>
+          <p>Энергопотребление холодильников класса А++ до 40% ниже по сравнению с аналогичными моделями класса А.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="siemens_func">
+    <ul class="func_list">
+      <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+        <div class="func_txt wow fadeInRight" data-wow-duration="1.4s" data-wow-delay="0.5s">
+          <h4>Сенсоры freshSense</h4>
+          <p>Интеллектуальные сенсоры freshSense быстро реагируют на смену температуры в холодильной камере при
+            открытии дверцы и автоматически регулируют её до оптимальной, чтобы ваши продукты сохранялись свежими
+            дольше.</p>
+        </div>
+      </li>
+      <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.7s">
+        <div class="func_txt wow fadeInRight" data-wow-duration="1.6s" data-wow-delay="0.7s">
+          <h4>Функция superCooling</h4>
+          <p>Быстро понижает температуру в холодильном отделении до +2 °C. Эта функция подходит в том случае, если вы
+            загружаете новые теплые продукты. Так они быстрее охладятся, а уже охлажденные продукты не будут
+            нагреваться.</p>
+        </div>
+      </li>
+      <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.9s">
+        <div class="func_txt wow fadeInRight" data-wow-duration="1.8s" data-wow-delay="0.9s">
+          <h4>Система multiAirflow</h4>
+          <p>Многопотоковая система охлаждения равномерно распределяет холод по всей холодильной камере, гарантируя
+            идеальное охлаждение продуктов на любой полке.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="siemens_img wow fadeInDown" data-wow-duration="1s" data-wow-delay="1.5s"></div>
+</div>

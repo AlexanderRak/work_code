@@ -1,0 +1,90 @@
+<style>
+
+</style>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<div class="chat" id="chat_id">
+  <div class="popup_wrap">
+    <div class="content">
+      <a class="show_popup" id="show_popup1">Помощь и консультация</a>
+    </div>
+    <div class="popup" id="popup1">
+      <div class="object">
+        <ul class="communication">
+          <li>
+            <a id="chatBtn" class="js-siteheart-btn">Чат на сайте</a>
+          </li>
+<!--           <li>
+            <a href="#">Messenger</a>
+          </li>
+          <li>
+            <a href="#">Viber</a>
+          </li>
+          <li>
+            <a href="#">Telegram</a>
+          </li> -->
+          <li>
+            <div class="telephone">
+              <a class="header-phone__link" href="tel:0800303505">0-800-303-505</a>
+              <p class="header-phone-popup__note">
+                <span class="header-phone-popup__note-item header-phone-popup__note_bold"> c 8:00 до 21:00
+                  (пн-вс)</span>
+                <span class="header-phone-popup__note-item">Бесплатно по Украине</span>
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="telephone">
+              <a class="header-phone__link header-phone__link_call" href="tel:0443939505">044-39-39-505</a>
+              <p class="header-phone-popup__note">
+                <span class="header-phone-popup__note-item header-phone-popup__note_bold">Бесплатно по Киеву</span>
+                <span class="header-phone-popup__note-item">со стационарных</span>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $("#show_popup1").click(function () {
+      $('#popup1').toggle();
+    });
+    $(document).on('click', function (e) {
+      if (!$(e.target).closest(".popup_wrap").length) {
+        $('#popup1').hide();
+      }
+      e.stopPropagation();
+    });
+  </script>
+
+  <script type="text/javascript">
+    // <![CDATA[
+    window.senderCallback = function () {
+      SenderWidget.init({
+        companyId: "i69238662654"
+      });
+      SenderWidget.showWidget();
+    }
+    // ]]>
+  </script>
+  
+  <script type="text/javascript">
+    // <![CDATA[
+    window.callOnlineHelp = function () {
+      (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://widget.sender.mobi/build/init.js";
+        fjs.parentNode.insertBefore(js, fjs, 'sender-widget');
+      })(document, 'script');
+    }
+    // ]]>
+  </script>
+
+</div>

@@ -1,0 +1,266 @@
+/*default styles*/
+
+#bosch p:first-letter {
+  padding-left: 0;
+}
+
+#bosch p {
+  margin-bottom: 0;
+}
+
+#bosch h2 {
+  line-height: normal;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#bosch img:hover {
+  opacity: 1;
+}
+
+#bosch img {
+  opacity: 1;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+#bosch {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.features-desc__text img {
+  margin-bottom: 0rem;
+}
+
+.one-col .features-desc__text p:first-letter {
+  padding-left: 0rem !important;
+}
+
+/*end default styles*/
+
+/*section 1*/
+
+#bosch .logo {
+  display: block;
+  padding: 20px 70px;
+  box-sizing: border-box;
+  height: 554px;
+  background-image: url("img/1.jpg");
+  background-position: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#bosch .logo .logo_img {
+  max-width: 300px;
+  margin-right: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+#bosch .logo .logo_title {
+  margin: 0 auto;
+  display: block;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  padding-left: 280px;
+}
+
+#bosch .logo .logo_title h2:last-of-type {
+  margin-top: 20px;
+}
+
+/*end section 1*/
+
+/*section 2*/
+
+#bosch ul.bosch_list li {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+#bosch ul.bosch_list li:nth-of-type(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+          flex-direction: row-reverse;
+}
+
+#bosch ul.bosch_list li > div {
+  -webkit-box-flex: 1;
+          flex: 1 1 0;
+  max-width: 50%;
+  box-sizing: border-box;
+}
+
+#bosch ul.bosch_list li .bosch_list_txt {
+  padding: 0 20px;
+}
+
+#bosch ul.bosch_list li:nth-of-type(even) .bosch_list_txt {
+  text-align: right;
+}
+
+#bosch ul.bosch_list li .bosch_list_txt h2 {
+  margin-bottom: 20px;
+}
+
+#bosch .bosch_list_title {
+  padding: 40px;
+  text-align: center;
+}
+
+#bosch ul.bosch_list:last-of-type li:nth-of-type(odd) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+          flex-direction: row-reverse;
+}
+
+#bosch ul.bosch_list:last-of-type li:nth-of-type(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+}
+
+#bosch ul.bosch_list:last-of-type li:nth-of-type(odd) .bosch_list_txt {
+  text-align: right;
+}
+
+#bosch ul.bosch_list:last-of-type li:nth-of-type(even) .bosch_list_txt {
+  text-align: left;
+}
+
+#bosch ul.bosch_list li ul.list li {
+  text-align: right;
+  display: list-item;
+  list-style-type: disc;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: 0 0 0 auto;
+}
+
+#bosch ul.bosch_list li ul.list {
+  margin-bottom: 20px;
+}
+
+/*end section 2*/
+
+/*section 3*/
+
+#bosch .bosch_germany {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+#bosch .bosch_germany > div {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+          flex: 1 1 0;
+  max-width: 50%;
+}
+
+#bosch .bosch_germany .bosch_germany_txt {
+  padding: 20px;
+  text-align: center;
+}
+
+#bosch .bosch_germany .bosch_germany_txt h2 {
+  margin-bottom: 20px;
+}
+
+/*end section 3*/
+
+
+
+/*media************************************************************/
+
+@media (max-width: 812px) {
+  #bosch h2 {
+    font-size: 24px;
+  }
+
+  #bosch .logo {
+    padding: 20px;
+    background-position: center right 29%;
+  }
+}
+
+@media (max-width: 812px) and (min-width: 481px) {
+  #bosch .logo .logo_title {
+    text-align: center;
+    padding: 0;
+    margin-top: 460px;
+  }
+}
+
+@media (max-width: 480px) {
+  #bosch .logo {
+    height: 700px;
+    background-size: cover;
+    background-position: center right 25%;
+  }
+
+  #bosch .logo .logo_title {
+    float: unset;
+    padding-left: 0;
+    text-align: center;
+    padding-top: 300px;
+  }
+
+  #bosch .logo .logo_img {
+    max-width: 270px;
+  }
+}
+
+@media (max-width: 480px) {
+  #bosch ul.bosch_list li {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+            flex-direction: column !important;
+  }
+
+  #bosch ul.bosch_list li > div {
+    max-width: 100%;
+  }
+
+  #bosch ul.bosch_list li .bosch_list_txt {
+    padding: 20px 20px 40px 20px;
+    text-align: center !important;
+  }
+
+  #bosch ul.bosch_list li ul.list li {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #bosch .bosch_germany {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+
+  #bosch .bosch_germany > div {
+    max-width: 100%;
+  }
+}

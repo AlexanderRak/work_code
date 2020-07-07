@@ -1,0 +1,335 @@
+<style>
+  #content_ex p:first-letter {
+    padding-left: 0;
+  }
+
+  #content_ex p {
+    margin-bottom: 0;
+    font-size: 2.1rem;
+    line-height: 1.5;
+  }
+
+  #content_ex img:hover {
+    opacity: 1;
+  }
+
+  #content_ex img {
+    opacity: 1;
+    /*     display: block; max-width: 100%; height: auto; margin: 0 auto; */
+  }
+
+  #content_ex {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    max-width: 1316px;
+    margin: 0 auto;
+    /* padding: 0 15px; */
+  }
+
+  #content_ex .container {
+    padding: 0 80px;
+  }
+
+  #content_ex .container h2 {
+    font-size: 46px;
+    line-height: 4rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  #content_ex .container img {
+    max-width: 100%;
+    margin-bottom: 0rem;
+    /* max-height: 700px; */
+  }
+
+  #content_ex .container p {
+    text-align: justify;
+    margin: 15px 0 25px 0;
+  }
+
+  #content_ex .container .container_li_item {
+    text-align: left;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list {
+    padding-left: 1.4rem;
+    margin: 3rem 0rem 3rem 0rem;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list li {
+    position: relative;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list li:before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -1.3rem;
+    border-radius: 50%;
+    width: .5rem;
+    height: .5rem;
+    background-color: #379424;
+  }
+
+  #content_ex ul {
+    padding-left: 25px;
+    padding-bottom: 25px;
+  }
+
+  #content_ex ul li {
+    list-style-type: disc;
+    font-size: 1.9rem;
+    line-height: 1.5;
+  }
+
+  .small {
+    max-width: 350px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small2 {
+    max-width: 600px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small3 {
+    max-width: 350px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small4 {
+    max-width: 390px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small5 {
+    max-width: 700px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .col_fl {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    justify-content: space-around;
+    -webkit-box-align: end;
+    align-items: flex-end;
+    width: 100%;
+    height: auto;
+  }
+
+  .col_fl .item6 {
+    -webkit-box-flex: 1;
+    flex: 1 1 0;
+  }
+
+  .col_fl .item6 img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .col_fl .item6 img {
+    max-height: 437px !important;
+    height: auto;
+  }
+
+  #content_ex .flex_content {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+
+  #content_ex .flex_content_reverse {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    flex-direction: row-reverse;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+
+  #content_ex .flex_content_reverse:first-of-type {
+    margin-top: 0;
+  }
+
+  #content_ex .flex_content_reverse .flex_item,
+  #content_ex .flex_content .flex_item {
+    -webkit-box-flex: 1;
+    flex: 1 1 0;
+  }
+
+  #content_ex .flex_content .flex_item p {
+    margin-right: 40px;
+    text-align: justify;
+  }
+
+  #content_ex .flex_content_reverse .flex_item p {
+    margin-left: 40px;
+    text-align: justify;
+
+  }
+
+  #content_ex .flex_content_reverse .flex_item h2,
+  #content_ex .flex_content .flex_item h2 {
+    text-align: left;
+  }
+
+  #content_ex .flex_content .flex_item h2 {
+    margin-right: 40px;
+  }
+
+  #content_ex .flex_content_reverse .flex_item h2 {
+    margin-left: 40px;
+  }
+
+  #content_ex iframe {
+    width: 100%;
+    height: 800px;
+  }
+
+  /*  #content_ex p, #content_ex h2 { padding: 0 15px; } */
+  /* #content_ex ul { padding: 0 25px; } */
+  @media (max-width: 812px) and (min-width: 481px) {
+    #content_ex .container {
+      padding: 0 20px;
+    }
+
+    #content_ex iframe {
+      height: 400px;
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .col_fl {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      -webkit-box-align: center;
+      align-items: center;
+    }
+
+    .col_fl .item6 {
+      -webkit-box-flex: 1;
+      flex: 1;
+    }
+
+    #content_ex .container {
+      padding: 0 20px;
+    }
+
+    #content_ex iframe {
+      height: 400px;
+    }
+
+    #content_ex .flex_content_reverse,
+    #content_ex .flex_content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+    }
+
+    #content_ex .flex_content_reverse .flex_item p,
+    #content_ex .flex_content .flex_item p,
+    #content_ex .flex_content_reverse .flex_item h2,
+    #content_ex .flex_content .flex_item h2 {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+      text-align: justify !important;
+    }
+
+    #content_ex .container h2 {
+      font-size: 28px;
+    }
+  }
+</style>
+
+<div id="content_ex">
+  <div class="container">
+    <div class="flex_content_reverse">
+      <div class="flex_item">
+        <p>Новий ультрабюджетник від популярного бренду Samsung став хітом початку 2020 року. Модель при своїй невисокій ціні отримала непогане технічне оснащення, але головний сюрприз для користувача – камера з 3 об'єктивів. Samsung Galaxy M21 підтримав тренд на багатомодульні «вічки», який ще до недавнього часу був доступний тільки смартфонам з високими цінниками.</p>
+      </div>
+      <div class="flex_item"> <img src="https://cdn.comfy.ua/media/x/img/1586597/1.jpg" alt="Смартфон Samsung Galaxy M21  — Фото 1" title="Смартфон Samsung Galaxy M21  — Фото 1 — інтернет-магазин COMFY"> </div>
+    </div>
+    <p>Дизайн гаджета не підлягав серйозним змінам. Все такий же плоский пластиковий корпус із закругленими кутами, мінімальні рамки навколо екрану, сканер відбитку пальців на задній панелі Galaxy M21. Об'єктиви основної камери вишикувалися вертикально в ряд на окремому, трохи виступаючим над поверхнею блоці. Фронталка гармонійно розташувалася в каплеподібному вирізі. Все просто і лаконічно, як і повинно бути в сучасному мобільному телефоні. </p>
+    <img src="https://cdn.comfy.ua/media/x/img/1586597/2.jpg" alt="Смартфон Samsung Galaxy M21  — Фото 2" title="Смартфон Samsung Galaxy M21  — Фото 2 — інтернет-магазин COMFY">
+    <h2>Характеристики екрану Samsung Galaxy M21</h2>
+    <p>Новий Samsung M21 має практичні габарити: довжина 159 мм, ширина 75,1 мм, товщина 8,9 мм. Він зручно лежить як у великій чоловічій руці, так і в витончених маленьких жіночих долоньках. З ним приємно і комфортно взаємодіяти, працювати, відпочивати або ж просто проводити час. Додаток Samsung Members подбає про інтерактивну діагностику та оптимізацію роботи вашого гаджета, поки ви дивитеся улюблений фільм або спілкуєтеся з друзями з мессенджері. </p> 
+    <img src="https://cdn.comfy.ua/media/x/img/1586597/3.jpg" alt="Смартфон Samsung Galaxy M21  — Фото 3" title="Смартфон Samsung Galaxy M21  — Фото 3 — інтернет-магазин COMFY">
+    <p>Екран смартфона отримав наступні характеристики:</p>
+    <ul>
+      <li>тип – Infinity-U, займає 84% всієї передньої поверхні, відкриває перед користувачем великі кути огляду; </li>
+      <li>розмір діагоналі – 6,4 дюйма, ідеальне рішення для повсякденних завдань, активного геймінга, спілкування в соціальних мережах тощо; </li>
+      <li>технологія – Super AMOLED FHD +, забезпечує максимальну як для ультрабюджетника яскравість, передачу кольору, контрастність і дуже глибокі відтінки чорного; </li>
+      <li>роздільна здатність – 2340х1080 пікселів, відтворює зображення деталізованим, дозволяє розглянути всі дрібниці навіть на задньому плані; </li>
+      <li>захист – скло Corning Gorilla Glass 3 покоління, розташоване зверху матриці екрана. Його функція полягає в запобіганні тріщин, сколів і подряпин самої матриці. Скло першим приймає на себе механічний вплив. Ну і в разі пошкодження скло змінити на нове набагато простіше і дешевше, ніж будь-які маніпуляції з матрицею. І це ще один привід, щоб купити Galaxy M21. </li>
+    </ul>
+    <p>На такому екрані комфортно дивитися улюблені фільми, передачі, занурюватися у віртуальну реальність, серфити в інтернеті. Кожне торкання пальця до дисплея розцінюється як певна команда, яка миттєво виконується. </p>
+  </div> <img src="https://cdn.comfy.ua/media/x/img/1586597/4.jpg" alt="Смартфон Samsung Galaxy M21  — Фото 4" title="Смартфон Samsung Galaxy M21  — Фото 4 — інтернет-магазин COMFY">
+  <div class="container">
+    <h2>Продуктивність і система гаджета</h2>
+    <p>Вам потрібен девайс з високою продуктивністю? Ви потрапили в точку – новий Samsung M21 купити можна з серйозною технічною начинкою, яка і забезпечує швидку безперебійну роботу фаблета. Це восьмиядерний процесор Exynos 7 Octa 9611, і він відмінно проявляє себе в дії! </p>
+  </div> <img src="https://cdn.comfy.ua/media/x/img/1586597/5.jpg" alt="Смартфон Samsung Galaxy M21  — Фото 5" title="Смартфон Samsung Galaxy M21  — Фото 5 — інтернет-магазин COMFY">
+  <div class="container">
+    <p>Окреме «спасибі» скажуть геймери, які в дійсно недорогому пристрої отримують високу графіку і потокове мовлення на швидкості. А для якісної гри на персональному смартфоні це найкраще, що може бути. Викладайтеся в іграх на повну, Game Booster запам'ятає манеру вашої гри і оптимізує енергоспоживання, температурний режим і використання пам'яті у відповідності до неї. </p>
+  </div> <img src="https://cdn.comfy.ua/media/x/img/1586597/6.jpg" alt="Смартфон Samsung Galaxy M21  — Фото 6" title="Смартфон Samsung Galaxy M21  — Фото 6 — інтернет-магазин COMFY">
+  <div class="container">
+    <div class="flex_content">
+      <div class="flex_item">
+        <p>Управляє смартфоном Samsung M21, ціна якого знаходиться в бюджетній категорії, операційна система Android 10 + One UI 2.0. Вона працює прямо з коробки, але мікропрограму завжди можна оновити до більш нової версії, як тільки та з'явиться у відкритому доступі. </p>
+        <p>За додаткову безпеку відповідають відразу два «фронти»: дактилоскопічний датчик на задній поверхні для сканування відбитку пальців і селфі-камера для розпізнавання особи користувача. Розблокуйте свій телефон одним дотиком або тільки поглядом, а ваші особисті дані завжди будуть під надійним захистом! </p>
+      </div>
+      <div class="flex_item"> <img src="https://cdn.comfy.ua/media/x/img/1586597/7.jpg" alt="Смартфон Samsung Galaxy M21  — Фото 7" title="Смартфон Samsung Galaxy M21  — Фото 7 — інтернет-магазин COMFY"> </div>
+    </div>
+    <h2>Можливості камери смартфона Samsung M21 </h2>
+    <p>Оцініть можливості інноваційної камери девайса! З її допомогою ви отримаєте круті фотографії, які важко буде відрізнити від зроблених на професійному обладнанні. А все завдяки потужним характеристикам камер: </p>
+    <ul>
+      <li>основна камера 48 + 8 + 5 Мп, діафрагма f / 2.0 + f / 2.2 + f / 2.2; </li>
+      <li>LED-спалах основної камери, розташовується в модулі разом з трьома об'єктивами; </li>
+      <li>підтримка відеозйомки у форматі 4К UHD (3840x2160); </li>
+      <li>фронтальна камера 20 Мп. </li>
+    </ul>
+    <img src="https://cdn.comfy.ua/media/x/img/1586597/8.jpg" alt="Смартфон Samsung Galaxy M21  — Фото 8" title="Смартфон Samsung Galaxy M21  — Фото 8 — інтернет-магазин COMFY">
+    <p>Об'єктив на 48 Мп підходить для зйомки фото в будь-якому форматі. Хочете купити Samsung Galaxy M21 для пейзажів і макрозйомки – вперед. Ви отримаєте високоякісні фотографії і залишитеся задоволені результатом. Ширококутний об'єктив передасть ще більше деталей на знімку, і ви не упустите жодної дрібниці, залишаючись на місці. </p>
+    <p>Об'єктив на 5 Мп призначений для коригування глибини сцени. Він мінімізує зовнішні шуми, дозволяючи домогтися професійної якості фотографії. </p> 
+    <img src="https://cdn.comfy.ua/media/x/img/1586597/9.jpg" alt="Смартфон Samsung Galaxy M21  — Фото 9" title="Смартфон Samsung Galaxy M21  — Фото 9 — інтернет-магазин COMFY">
+    <div class="flex_content_reverse">
+      <div class="flex_item">
+        <p>Оцініть приголомшливі можливості зйомки селфі-камерою! 20 Мп для фіксації своїх кращих сторін – це ж щось нове! Скористайтеся функцією розмиття заднього фону і знімайте себе в самих різних місцях і станах – в парку, вдома, в кафе, в машині. Красивих селфі мало не буває! </p>
+      </div>
+      <div class="flex_item"> <img src="https://cdn.comfy.ua/media/x/img/1586597/10.jpg" alt="Смартфон Samsung Galaxy M21  — Фото 10" title="Смартфон Samsung Galaxy M21  — Фото 10 — інтернет-магазин COMFY"> </div>
+    </div>
+    <div class="flex_content_reverse">
+      <div class="flex_item">
+        <h2>Вражаюча автономність </h2>
+        <p>Довгий період роботи телефону без підзарядки – мрія будь-якого користувача. Але тільки не з новим ультрабюджетником Galaxy M21. Ємність батареї становить 6000 мАг, що є дуже великим показником. Якщо порівнювати з іншими смартфонами, M21 не потребує підзарядки набагато довше. І ще один додатковий бонус – це швидка зарядка на 15 Вт. Така батарея приємно здивує вас терміном служби, оскільки рідше заряджається. </p>
+      </div>
+      <div class="flex_item"> <img src="https://cdn.comfy.ua/media/x/img/1586597/11.jpg" alt="Смартфон Samsung Galaxy M21  — Фото 11" title="Смартфон Samsung Galaxy M21  — Фото 11 — інтернет-магазин COMFY"> </div>
+    </div>
+    <p>Зацікавив товар? Купити смартфон Samsung M21 можна в нашому інтернет-магазині. оплата здійснюється різними способами, доставка можлива в будь-яке місто України. Не прогав свій шанс придбати новинку від Samsung – модель М 21 за приємною ціною і з гарантією від виробника. Комфорт і приємні емоції з таким багатофункціональним гаджетом вам забезпечені!
+    </p>
+  </div>
+</div>

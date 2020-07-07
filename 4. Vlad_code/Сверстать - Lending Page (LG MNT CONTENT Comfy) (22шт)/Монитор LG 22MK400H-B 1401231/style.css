@@ -1,0 +1,354 @@
+/*default styles*/
+
+#lg p:first-letter {
+  padding-left: 0;
+}
+
+#lg p {
+  margin-bottom: 0;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+#lg ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#lg h2 {
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+#lg img:hover {
+  opacity: 1;
+}
+
+#lg img {
+  opacity: 1;
+  max-width: 100%;
+  display: block;
+  vertical-align: middle;
+  height: auto;
+}
+
+#lg {
+  max-width: 1316px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.features-desc__text img {
+  margin-bottom: 0rem;
+}
+
+.one-col .features-desc__text p:first-letter {
+  padding-left: 0rem !important;
+}
+
+/*end default styles*/
+
+/*section 1*/
+
+#lg .ips {
+  padding: 70px;
+  box-sizing: border-box;
+  height: 1053px;
+  background-position: center;
+  background-image: url("https://cdn.comfy.ua/media/x/img/1391055/1.png");
+}
+
+#lg .ips .ips_txt {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#lg .ips .ips_txt h2 {
+  padding: 20px 0 10px 0;
+}
+
+#lg .ips .ips_bg_none {
+  display: none;
+}
+
+/*end section 1*/
+
+/*section 2*/
+
+#lg .freesync .freesync_txt {
+  background-color: #131313;
+  color: #fff;
+  text-align: center;
+  padding: 70px;
+}
+
+#lg .freesync .freesync_txt h2 {
+  padding-bottom: 10px;
+}
+
+/*end section 2*/
+
+/*section 3*/
+
+#lg .dynamic {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-align: center;
+          align-items: center;
+  background-color: #131313;
+  padding: 70px;
+  color: #fff;
+}
+
+#lg .dynamic > div {
+  -webkit-box-flex: 1;
+          flex: 1 1 0;
+  max-width: 50%;
+}
+
+#lg .dynamic .dynamic_txt {
+  margin-right: 40px;
+}
+
+#lg .dynamic .dynamic_txt h2 {
+  padding: 20px 0 10px 0;
+}
+
+/*end section 3*/
+
+/*section 4*/
+
+#lg .stab {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+          align-items: center;
+  background-color: #131313;
+  padding: 70px;
+  color: #fff;
+}
+
+#lg .stab > div {
+  -webkit-box-flex: 1;
+          flex: 1 1 0;
+  max-width: 50%;
+}
+
+#lg .stab .stab_txt {
+  margin-left: 40px;
+}
+
+#lg .stab .stab_txt h2 {
+  padding: 20px 0 10px 0;
+}
+
+/*end section 4*/
+
+/*section 5*/
+
+#lg .onscreen .onscreen_txt {
+  text-align: center;
+  padding: 70px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#lg .onscreen .onscreen_txt h2 {
+  padding: 20px 0 10px 0;
+}
+
+#lg .onscreen .onscreen_icon {
+  padding-bottom: 20px;
+}
+
+#lg .onscreen .onscreen_icon img {
+  margin: 0 auto;
+}
+
+/*end section 5*/
+
+/*section 6*/
+
+#lg .wall {
+  height: 707px;
+  box-sizing: border-box;
+  background-position: center;
+  background-image: url("https://cdn.comfy.ua/media/x/img/1384918/8.png");
+  padding: 70px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+#lg .wall .wall_txt {
+  color: #fff;
+  max-width: 600px;
+}
+
+#lg .wall .wall_txt h2 {
+  padding-bottom: 10px;
+}
+
+#lg .wall .wall_bg_none {
+  display: none;
+}
+
+/*end section 6*/
+
+
+
+/*media*************************************************************/
+
+@media (max-width: 812px) and (min-width: 481px) {
+  #lg .ips {
+    padding: 70px 20px 20px 20px;
+  }
+
+  #lg .freesync .freesync_txt {
+    padding: 20px;
+  }
+
+  #lg .stab,
+  #lg .dynamic {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+
+  #lg .stab > div,
+  #lg .dynamic > div {
+    max-width: 100%;
+  }
+
+  #lg .stab,
+  #lg .dynamic {
+    padding: 20px;
+    text-align: center;
+  }
+
+  #lg .dynamic .dynamic_txt {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  #lg .stab .stab_txt {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  #lg .onscreen .onscreen_txt {
+    padding: 20px;
+  }
+
+  #lg .wall {
+    padding: 0px;
+    display: block;
+    background-image: unset;
+    height: auto;
+    background-color: #312f30;
+  }
+
+  #lg .wall .wall_txt {
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #lg .wall .wall_bg_none {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+  #lg .ips {
+    padding: 0px;
+    height: auto;
+    background-image: unset;
+  }
+
+  #lg .ips .ips_txt {
+    padding: 20px;
+  }
+
+  #lg h2 {
+    font-size: 30px;
+  }
+
+  #lg .ips .ips_bg_none {
+    display: block;
+    margin-top: 10px;
+  }
+
+  #lg .freesync .freesync_txt {
+    padding: 20px;
+  }
+  #lg .stab,
+  #lg .dynamic {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+
+  #lg .stab > div,
+  #lg .dynamic > div {
+    max-width: 100%;
+  }
+
+  #lg .stab,
+  #lg .dynamic {
+    padding: 20px;
+    text-align: center;
+  }
+
+  #lg .stab .stab_txt, 
+  #lg .dynamic .dynamic_txt {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  #lg .stab .stab_txt {
+    margin-left: 0;
+  }
+
+  #lg .onscreen .onscreen_txt {
+    padding: 20px;
+  }
+
+  #lg .wall {
+    padding: 0px;
+    display: block;
+    background-image: unset;
+    height: auto;
+    background-color: #312f30;
+  }
+
+  #lg .wall .wall_txt {
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #lg .wall .wall_bg_none {
+    display: block;
+  }
+}

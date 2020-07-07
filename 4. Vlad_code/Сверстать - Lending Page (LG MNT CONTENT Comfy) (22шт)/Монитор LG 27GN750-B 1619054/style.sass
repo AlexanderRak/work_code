@@ -1,0 +1,223 @@
+/*default styles*/
+
+#lg 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    font-size: 18px
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 20px 0 10px 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+   
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+
+#lg
+  .wins
+    position: relative
+    .wins_txt
+      position: absolute
+      top: 20px
+      left: 50%
+      transform: translateX(-50%)
+      width: 900px
+      text-align: center
+      color: #fff
+      max-width: 100%
+  .ips
+    .ips_txt
+      padding: 70px
+      background-color: #333333
+      color: #fff
+  .moment
+    height: 1036px
+    box-sizing: border-box
+    background-image: url("https://cdn.comfy.ua/media/x/img/1619054/4.jpg")
+    background-repeat: no-repeat
+    background-position: center
+    .moment_txt
+      padding: 70px
+      max-width: 900px
+      margin: 0 auto
+      text-align: center
+      color: #fff
+  .srgb
+    .srgb_txt
+      text-align: center
+      padding: 70px
+      max-width: 900px
+      margin: 0 auto
+  .sync
+    .sync_txt
+      padding: 70px
+      max-width: 900px
+      margin: 0 auto
+      text-align: center
+    span
+        padding: 20px
+        display: block
+  .freesync
+    .freesync_list
+      display: flex
+      flex-direction: row
+      align-items: center
+      li
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+        &:last-of-type
+          padding: 40px
+  .hdr
+    height: 1036px
+    box-sizing: border-box
+    background-image: url("https://cdn.comfy.ua/media/x/img/1619054/8.jpg")
+    background-repeat: no-repeat
+    background-position: center
+    .hdr_txt
+      padding: 70px
+      max-width: 900px
+      color: #fff
+      margin: 0 auto
+      text-align: center
+  .dynamic
+    padding: 70px
+    background-color: #000
+    .dynamic_list
+      color: #fff
+      display: flex
+      flex-direction: row
+      align-items: center
+      li
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+        &:last-of-type
+          padding-left: 40px
+  .stab, .optic
+    padding: 70px
+    background-color: #000
+    .stab_list, .optic_list
+      display: flex
+      flex-direction: row-reverse
+      align-items: center
+      li
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+        color: #fff
+        &:last-of-type
+          padding-right: 40px
+  .optic
+    .optic_list
+      flex-direction: row
+      padding-right: 0
+      li
+        &:last-of-type  
+          padding-left: 40px
+          padding-right: 0
+  .design
+    .design_txt
+      max-width: 900px
+      margin: 0 auto
+      padding: 70px
+      text-align: center
+    .design_img
+      img
+        margin: 0 auto
+
+/*media**************************************************************/
+
+
+@media (max-width: 812px)
+  #lg
+    h2
+      font-size: 28px
+    p
+      >strong
+        font-size: 16px
+    .wins
+      .wins_txt
+        width: unset
+    .ips
+      .ips_txt
+        padding: 20px
+    .moment
+      background-image: url("https://cdn.comfy.ua/media/x/img/1619054/4m.jpg")
+      .moment_txt
+        padding: 20px
+    .srgb
+      .srgb_txt
+        padding: 20px
+    .sync
+      .sync_txt 
+        padding: 20px
+    .dynamic, .stab, .optic
+      padding: 20px
+    .hdr
+      .hdr_txt
+        padding: 20px
+    .design
+      .design_txt
+        padding: 20px
+
+  @media (max-width: 480px)
+    #lg
+      .wins
+        .wins_txt
+          width: 80%
+      .ips
+        .ips_txt
+          text-align: center
+      .moment
+        background-size: cover
+        height: 750px
+      .freesync
+        .freesync_list
+          flex-direction: column
+          li
+            max-width: 100%
+            &:last-of-type
+              padding: 20px
+              text-align: center
+      .hdr
+        height: 900px  
+        background-size: cover
+      .dynamic, .stab, .optic
+        .dynamic_list, .stab_list, .optic_list
+          flex-direction: column
+          li
+            max-width: 100%
+            &:last-of-type
+              padding: 20px 0 0 0
+              text-align: center

@@ -1,0 +1,261 @@
+<style>
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<div id="tefal">
+  <div class="technology">
+    <div class="logo_tefal">
+      <img src="https://cdn.comfy.ua/media/x/img/1574127/logo.png" alt="">
+    </div>
+    <div class="tech_txt">
+      <h4>умная технология перемешивания</br> и 3D индукционный нагрев</h4>
+    </div>
+    <ul class="tech_img">
+      <li>
+        <img src="https://cdn.comfy.ua/media/x/img/1574127/sec1_img1.gif" alt="">
+      </li>
+      <li>
+        <img src="https://cdn.comfy.ua/media/x/img/1574127/sec1_img2.png" alt="">
+      </li>
+      <li>
+        <img src="https://cdn.comfy.ua/media/x/img/1574127/sec1_img3.png" alt="">
+      </li>
+    </ul>
+  </div>
+
+  <div class="traditions">
+    <div class="traditions_title">
+      <h2>ЛУЧШИЕ ТРАДИЦИИ</br> В НОВОМ ПОКОЛЕНИИ</h2>
+    </div>
+    <span>Вкус, которым вам хочется поделиться</span>
+
+    <div class="traditions_cont">
+      <div class="slider_wrap">
+        <div class="prev"><a><img src="https://cdn.comfy.ua/media/x/img/1574127/arrow.png"></a></div>
+
+        <div class="slider">
+          <div class="img curry"><img src="https://cdn.comfy.ua/media/x/img/1574127/sec2_img1.png"></div>
+          <div class="img"><img src="https://cdn.comfy.ua/media/x/img/1574127/sec2_img2.png"></div>
+          <div class="img"><img src="https://cdn.comfy.ua/media/x/img/1574127/sec2_img3.png"></div>
+        </div>
+
+        <div class="next"><a><img src="https://cdn.comfy.ua/media/x/img/1574127/arrow.png"></a></div>
+      </div>
+
+      <script>
+        $(document).ready(function () {
+          $('.next').click(function () {
+            var currentImage = $('.img.curry');
+            var currentImageIndex = $('.img.curry').index();
+            var nextImageIndex = currentImageIndex + 1;
+            var nextImage = $('.img').eq(nextImageIndex);
+            /* currentImage.fadeOut(200); */
+            currentImage.removeClass('curry');
+
+            if (nextImageIndex == ($('.img:last').index() + 1)) {
+              /*  $('.img').eq(0).fadeIn(200); */
+              $('.img').eq(0).addClass('curry');
+            } else {
+              nextImage.fadeIn(200);
+              nextImage.addClass('curry');
+            }
+          });
+
+          $('.prev').click(function () {
+            var currentImage = $('.img.curry');
+            var currentImageIndex = $('.img.curry').index();
+            var prevImageIndex = currentImageIndex - 1;
+            var prevImage = $('.img').eq(prevImageIndex);
+
+            /* currentImage.fadeOut(200); */
+            currentImage.removeClass('curry');
+            /* prevImage.fadeIn(200); */
+            prevImage.addClass('curry');
+          });
+        });
+      </script>
+
+
+      <div class="traditions_txt">
+        <h3>3D Индукционная технология</h3>
+        <p class="text_up">Точный контроль температуры и равномерное распределение Нагрева чаши благодаря сферической форме гарантируют правильное приготовление блюд раскрывая их лучшие Вкусовые качества</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mix">
+    <div class="mix_title">
+      <h2>ЗАБУДЬТЕ О ХЛОПОТАХ</br> С ПЕРЕМЕШИВАНИЕМ</h2>
+    </div>
+    <span>Умная лопатка перемешает все за вас</span>
+    <div class="mix_cont">
+      <div class="mix_txt">
+        <p class="text_up">Лопатка работает только при закрытой крышке прибора.</p>
+        <p class="text_up">Вращение происходит благодаря встроенному в крышку мотору.</p>
+        <p class="text_up">Лопатку и чашу можно мыть в посудомоечной машине.</p>
+        <p class="text_up">Все детали безопасны для использования при высоких температурах.</p>
+      </div>
+      <div class="mix_img">
+        <img src="https://cdn.comfy.ua/media/x/img/1574127/sec3_img1.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="program">
+    <h2>Программы</h2>
+    <ul class="program_list">
+      <li>
+        <p class="text_up">Программы с</br> автоматическим </br> перемешиванием</p>
+        <p>Предусмотрено в программах, где приготовление происходит преимущественно перемешиванием: каша, тушение, ризотто, варенье. </p>
+      </li>
+      <li>
+        <p class="text_up">Программы без </br> перемешивания/</br> ручной режим</p>
+        <p>По умолчанию функция перемешивания отсутствует, но может быть принудительно включена пользователем. Вращение лопатки можно принудительно выключить/включить заново во время работы программ.</p>
+      </li>
+      <li>
+        <p class="text_up">Без лопатки</p>
+        <p>Если лопатку (все элементы конструкции) не устанавливать, прибор будет работать без изменений в соответствии с указанными программами. Но не ждите обычного вкуса: благодаря циркуляции воздуха сферическая чаша создает эффект традиционной печи, делая ингредиенты сочными, а блюда — насыщенными.</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="smak">
+    <div class="smak_title">
+      <h2>ПРОСТО И ВКУСНО</br> ЕЖЕДНЕВНО</h2>
+    </div>
+    <div class="smak_list_wrap">
+      <ul class="smak_list">
+        <li>
+          <div class="smak_img">
+            <img src="https://cdn.comfy.ua/media/x/img/1574127/sec5_icon1.png">
+          </div>
+          <div class="smak_txt">
+            <p>36 режимов, вкл. суп, пар, Выпечку, Cу-вид и др. Возможность Настройки t° И времени </p>
+          </div>
+        </li>
+        <li>
+          <div class="smak_img">
+            <img src="https://cdn.comfy.ua/media/x/img/1574127/sec5_icon2.png">
+          </div>
+          <div class="smak_txt">
+            <p>Отложенный старт: все готово тогда, когда вам нужно.</p>
+          </div>
+        </li>
+        <li>
+          <div class="smak_img">
+            <img src="https://cdn.comfy.ua/media/x/img/1574127/sec5_icon3.png">
+          </div>
+          <div class="smak_txt">
+            <p>сенсорный экран</p>
+          </div>
+        </li>
+        <li>
+          <div class="smak_img">
+            <img src="https://cdn.comfy.ua/media/x/img/1574127/sec5_icon4.png">
+          </div>
+          <div class="smak_txt">
+            <p>Функция самоочистки: дополнительная насадка на лопатку.</p>
+          </div>
+        </li>
+        <li>
+          <div class="smak_img">
+            <img src="https://cdn.comfy.ua/media/x/img/1574127/sec5_icon5.png">
+          </div>
+          <div class="smak_txt">
+            <p>79 вкуснейших рецептов</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tefal_modal">
+      <!-- popup -->
+      <a><label id="ppp" for="modal-1">СМОТРЕТЬ</label></a>
+      <!-- Модальное окно -->
+      <div class="modal">
+        <input class="modal-open" id="modal-1" type="checkbox" hidden>
+        <div class="modal-wrap" aria-hidden="true" role="dialog">
+          <label class="modal-overlay" for="modal-1"></label>
+          <div class="modal-dialog">
+            <div class="modal-header">
+              <label class="btn-close" for="modal-1" aria-hidden="true">×</label>
+            </div>
+            <div class="modal-body">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/BA8lVrMiK1s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="smak_img_abs">
+      <img src="https://cdn.comfy.ua/media/x/img/1574127/sec5_img1.png" alt="">
+    </div>
+  </div>
+
+  <div class="cleaning">
+    <div class="cleaning_title">
+      <h2>Самостоятельно перемешивает и...</br> даже моет! </h2>
+    </div>
+    <div class="cleaning_cont">
+      <div class="cleaning_txt">
+        <p class="text_up">Все просто: </p>
+        <p class="text_up">1) Установите специальную насадку</br> 2) Залейте воду</br> 3) Включите режим самоочистки</br> Вращающаяся лопатка не оставит никаких </br> шансов прилипшим кусочкам пищи</p>
+      </div>
+      <div class="cleaning_img">
+        <img src="https://cdn.comfy.ua/media/x/img/1574127/sec6_img1.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="splav">
+    <div class="splav_txt">
+      <p>Шестислойная чаша мультиварки сделана из специального сплава (аллюминий, два слоя антипригарного покрытия), компоненты которого Имеют повышенную теплопроводность, дольше противостоят коррозии И механическим повреждениям. Покрытие с прекрасными показателями Изностоцкости прошло специальные тесты на абразивную обработку, Оно нимально подвержено сколам; чашу можно мыть в посудомоечной машине. </p>
+    </div>
+    <div class="splav_img">
+      <img src="https://cdn.comfy.ua/media/x/img/1574127/sec7_img1.png" alt="">
+    </div>
+  </div>
+
+  <div class="recept">
+    <div class="recept_title">
+      <h2>Большое количество</br> вкусных рецептов</h2>
+    </div>
+    <div class="recept_txt">
+      <p class="text_up">От закусок до десертов, Multicook&Stir IH предлагает бесконечные возможности приготовления вкусных блюд, которых легко достичь в кратчайшие сроки.</p>
+    </div>
+    <div class="recept_list_wrap">
+      <ul class="recept_list">
+        <li>
+          <img src="https://cdn.comfy.ua/media/x/img/1574127/sec8_img1.png">
+        </li>
+        <li>
+          <img src="https://cdn.comfy.ua/media/x/img/1574127/sec8_img2.png">
+        </li>
+        <li>
+          <img src="https://cdn.comfy.ua/media/x/img/1574127/sec8_img3.png">
+        </li>
+        <li>
+          <img src="https://cdn.comfy.ua/media/x/img/1574127/sec8_img4.png">
+        </li>
+        <li>
+          <img src="https://cdn.comfy.ua/media/x/img/1574127/sec8_img5.png">
+        </li>
+        <div class="recept_abs_img">
+          <img src="https://cdn.comfy.ua/media/x/img/1574127/new.png">
+        </div>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tefal_video">
+    <div class="video_logo">
+      <img src="https://cdn.comfy.ua/media/x/img/1574127/tefal.png">
+    </div>
+    <div class="video_frame">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/BA8lVrMiK1s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>

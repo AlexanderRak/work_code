@@ -1,0 +1,243 @@
+#tefal_id p:first-letter { padding-left: 0; }
+#tefal_id p { margin-bottom: 0; }
+#tefal_id img:hover { opacity: 1; }
+#tefal_id img { opacity: 1; max-width: 100%; display: block; vertical-align: middle; height: auto;}
+#tefal_id {
+   max-width: 1000px;
+   width: 100%;
+   margin: 0 auto;
+   height: auto;
+   display: block;
+   background-color: #fff;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
+}
+.features-desc__text img { margin-bottom: 0rem; }
+.one-col .features-desc__text p:first-letter { padding-left: 0rem !important; }
+
+.tefal p {
+  font-size: 16px !important;
+}
+
+.tefal h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.tefal ul li {
+  list-style-type: none;
+}
+
+/*section 1*/
+
+.tefal .tefal_txt {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+.tefal .tefal_txt p {
+  padding: 0 20px;
+  font-size: 30px !important;
+}
+
+.tefal .tefal_txt::before {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 18px;
+  background-image: url("https://cdn.comfy.ua/media/x/img/1517513/line.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 10px;
+}
+
+.tefal .tefal_txt::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 18px;
+  background-image: url("https://cdn.comfy.ua/media/x/img/1517513/line.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  float: right;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-top: 10px;
+}
+
+/*section 2*/
+
+.tefal .tefal_pikt ul.pikt_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+/*   padding: 0 20px; */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.tefal .tefal_pikt ul.pikt_list li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+
+.tefal .tefal_pikt ul.pikt_list>li:nth-child(2) {
+  padding: 0 50px;
+}
+
+.tefal .tefal_pikt ul.pikt_list li .list_txt ul li {
+  list-style-type: disc;
+  display: list-item;
+  list-style-position: inside;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.tefal .tefal_pikt ul.pikt_list li .list_txt ul li:last-child {
+  margin-bottom: 0;
+}
+
+.tefal .tefal_pikt ul.pikt_list li .list_img img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.tefal .tefal_pikt ul.pikt_list li .list_txt p {
+  text-align: center;
+}
+
+.tefal .tefal_pikt ul.pikt_list li .list_txt p>strong {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.tefal .tefal_pikt ul.pikt_list li .list_txt span {
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+}
+
+/*section 3*/
+
+.tefal .border_pikt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.tefal .border_pikt ul.border_list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+
+.tefal .border_pikt ul.border_list h2 {
+  font-size: 22px;
+}
+
+.tefal .border_pikt ul.border_list:first-child {
+  border: 10px solid #757575;
+  padding: 20px;
+  border-top-right-radius: 80px;
+}
+
+.tefal .border_pikt ul.border_list:first-child li:nth-child(2),
+.tefal .border_pikt ul.border_list:last-child li:nth-child(2) {
+  margin-top: 20px;
+}
+
+.tefal .border_pikt ul.border_list:first-child li:nth-child(3),
+.tefal .border_pikt ul.border_list:last-child li:nth-child(3) {
+  margin: 30px 0;
+}
+
+.tefal .border_pikt ul.border_list:last-child {
+  -webkit-box-flex: 0.7;
+      -ms-flex: 0.7 1 0px;
+          flex: 0.7 1 0;
+  margin-left: 70px;
+  border: 10px solid #90eca7;
+  padding: 20px;
+  border-top-right-radius: 80px;
+}
+
+
+/***********************MEDIA******************/
+
+@media (max-width: 812px) and (min-width: 481px) {
+  .tefal .tefal_txt p {
+    font-size: 18px !important;
+  }
+
+  .tefal .border_pikt {
+    /* padding: 0 20px; */
+  }
+
+  .tefal .border_pikt ul.border_list:last-child {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+  .tefal .tefal_txt p {
+    font-size: 15px !important;
+  }
+
+  .tefal .tefal_txt {
+    padding: 0 10px;
+  }
+
+  .tefal .tefal_pikt ul.pikt_list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .tefal .tefal_pikt ul.pikt_list li {
+    padding: 0 !important;
+    margin-bottom: 30px;
+  }
+
+  .tefal .border_pikt {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* padding: 0 20px; */
+  }
+
+  .tefal .border_pikt ul.border_list:last-child {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+
+  .tefal p {
+    font-size: 15px !important;
+  }
+
+  .tefal .tefal_pikt ul.pikt_list li .list_txt ul li {
+    font-size: 15px;
+  }
+}

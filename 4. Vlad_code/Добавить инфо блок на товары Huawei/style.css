@@ -1,0 +1,261 @@
+
+/*default style*/
+
+.features-desc__text img {
+	margin-bottom: 0rem !important;
+}
+
+#instruction p:first-letter {
+	padding-left: 0;
+}
+
+#instruction p {
+	margin-bottom: 0;
+}
+
+#instruction span {
+  line-height: normal;
+}
+
+#instruction img:hover {
+	opacity: 1;
+}
+
+#instruction img {
+	display: block;
+	margin-right: initial;
+  margin-left: initial;
+  opacity: 1;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#instruction {
+  width: 100%;
+  max-width: 1316px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/*end default style*/
+
+#instruction>span {
+  font-size: 20px;
+  font-style: italic;
+  display: block;
+  padding: 10px 15px;
+}
+
+#instruction span.dark_blue_title {
+  display: block;
+  background-color: #042134;
+  color: #fff;
+  font-size: 22px;
+  font-style: normal;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#instruction .wrap_cont {
+  padding: 20px 40px 60px 40px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+}
+
+#instruction .wrap_cont .cal_1,
+#instruction .wrap_cont .cal_2,
+#instruction .wrap_cont .cal_3 {
+  -webkit-box-flex: 1;
+          flex: 1 1 0;
+}
+
+#instruction .wrap_cont .cal_2 {
+  padding: 0 80px;
+}
+
+#instruction .wrap_cont .cal_3 {
+  position: relative;
+}
+
+#instruction .wrap_cont .cal_1 .cal_head,
+#instruction .wrap_cont .cal_2 .cal_head,
+#instruction .wrap_cont .cal_3 .cal_head {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-align: center;
+          align-items: center;
+  margin: 0 auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 20px;
+  min-height: 66px;
+}
+
+#instruction .wrap_cont .cal_1 .cal_head .cal_head_img,
+#instruction .wrap_cont .cal_2 .cal_head .cal_head_img,
+#instruction .wrap_cont .cal_3 .cal_head .cal_head_img {
+  margin-right: 20px;
+}
+
+#instruction .wrap_cont .cal_1 .qr,
+#instruction .wrap_cont .cal_2 .qr,
+#instruction .wrap_cont .cal_3 .qr {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+#instruction .wrap_cont .cal_1 .qr .qr_txt span,
+#instruction .wrap_cont .cal_2 .qr .qr_txt span,
+#instruction .wrap_cont .cal_3 .qr .qr_txt span {
+  display: block;
+  font-size: 14px;
+}
+
+#instruction .wrap_cont .cal_3 .qr_wrap {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  min-width: 450px;
+  position: absolute;
+  right: 50%;
+  -webkit-transform: translate(50%, 0px);
+          transform: translate(50%, 0px);
+  padding-right: 40px;
+}
+
+#instruction .wrap_cont .cal_3 .qr_wrap .qr,
+#instruction .wrap_cont .cal_3 .qr_wrap .qr div {
+  -webkit-box-flex: 1;
+          flex: 1 1 0;
+}
+
+#instruction .wrap_cont .cal_3 .qr_wrap .qr:first-of-type {
+  padding-right: 20px;
+}
+
+#instruction .wrap_cont .cal_3 .qr_wrap .qr:first-of-type .qr_img {
+  -webkit-box-flex: 0.6;
+          flex: 0.6;
+}
+
+#instruction .wrap_cont .cal_3 .qr_wrap .qr:last-of-type .qr_img {
+  -webkit-box-flex: 0.8;
+  flex: 0.8;
+}
+
+#instruction .wrap_cont .cal_3 .qr_wrap .qr:last-of-type .qr_txt {
+  align-self: flex-start;
+}
+
+#instruction .wrap_cont .cal_3 .qr .qr_txt span.small_txt {
+  font-size: 11px;
+}
+
+#instruction .wrap_cont .cal_1 .qr .qr_img,
+#instruction .wrap_cont .cal_2 .qr .qr_img,
+#instruction .wrap_cont .cal_3 .qr .qr_img {
+  margin-left: 10px;
+}
+
+/*media*/
+
+@media (max-width: 1024px) and (min-width: 813px) {
+  #instruction .wrap_cont {
+    padding: 20px;
+  }
+
+  #instruction .wrap_cont .cal_2 {
+    padding: 0 20px;
+  }
+
+  #instruction .wrap_cont .cal_3 .qr_wrap {
+    position: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    min-width: unset;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 812px) and (min-width: 481px) {
+  #instruction .wrap_cont {
+    padding: 20px;
+  }
+
+  #instruction .wrap_cont .cal_2 {
+    padding: 0 20px;
+  }
+
+  #instruction .wrap_cont .cal_3 .qr_wrap {
+    position: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    min-width: unset;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    padding-right: 0;
+  }
+
+  #instruction .wrap_cont .cal_3 .qr_wrap .qr:first-of-type {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+  
+  #instruction .wrap_cont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    padding: 20px;
+  }
+
+  #instruction .wrap_cont .cal_2 {
+    padding: 50px 0;
+  }
+
+  #instruction .wrap_cont .cal_3 .qr_wrap {
+    position: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    min-width: unset;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    padding-right: 0;
+  }
+
+  #instruction span.dark_blue_title {
+    font-size: 18px;
+  }
+
+  #instruction .wrap_cont .cal_3 .qr_wrap .qr:first-of-type {
+    padding-right: 0;
+  }
+
+  #instruction .wrap_cont .cal_3 .qr_wrap .qr:first-of-type .qr_img {
+    -webkit-box-flex: 0.5;
+            flex: 0.5;
+}
+}

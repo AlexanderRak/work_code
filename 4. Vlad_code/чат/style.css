@@ -1,0 +1,207 @@
+#chat_id p:first-letter {
+  padding-left: 0;
+}
+
+#chat_id p {
+  margin-bottom: 0;
+}
+
+#chat_id img:hover {
+  opacity: 1;
+}
+
+#chat_id img {
+  opacity: 1;
+  max-width: 100%;
+  display: block;
+}
+
+#chat_id {
+  max-width: 1316px;
+  margin: 0;
+  height: auto;
+  display: block;
+  background-color: #fff;
+}
+
+.features-desc__text img {
+  margin-bottom: 0rem;
+}
+
+.one-col .features-desc__text p:first-letter {
+  padding-left: 0rem !important;
+}
+
+.content a {
+  font-family: sans-serif;
+  color: #FF671F;
+  line-height: normal;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content a::before {
+  display: block;
+  content: '';
+  min-width: 18px;
+  height: 18px;
+  background-image: url("https://cdn.comfy.ua/media/x/img/chat/icon1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 5px;
+}
+
+.popup ul.communication {
+  padding: 20px;
+  margin: 0;
+}
+
+.popup ul.communication li {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+ /*  margin-bottom: 10px; */
+}
+
+.popup ul.communication li a {
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.popup ul.communication li:last-child {
+  margin-bottom: 0;
+}
+
+.popup ul.communication li::before {
+  display: block;
+  content: '';
+  min-width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+}
+
+.popup ul.communication li p {
+  font-size: 14px;
+  line-height: normal;
+}
+
+.popup ul.communication li:nth-child(1)::before {
+  background-image: url("https://cdn.comfy.ua/media/x/img/chat/icon2.png");
+}
+
+/* .popup ul.communication li:nth-child(2)::before {
+  background-image: url("https://cdn.comfy.ua/media/x/img/chat/icon3.png");
+}
+
+.popup ul.communication li:nth-child(3)::before {
+  background-image: url("https://cdn.comfy.ua/media/x/img/chat/icon4.png");
+}
+
+.popup ul.communication li:nth-child(4)::before {
+  background-image: url("https://cdn.comfy.ua/media/x/img/chat/icon5.png");
+} */
+
+.popup ul.communication li:nth-child(2),
+.popup ul.communication li:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.popup .object ul.communication li .telephone a {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+.popup .object ul.communication li .telephone p {
+  color: #999999;
+  line-height: normal;
+  margin-top: 5px;
+}
+
+.popup .object ul.communication li .telephone p span {
+  display: block;
+  line-height: normal;
+  font-size: 12px;
+}
+
+.popup .object ul.communication li .telephone p span:first-of-type {
+  font-weight: bold;
+}
+
+/*****************************************************/
+
+.popup {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+
+.object {
+  width: 196px;
+  max-height: 370px;
+  height: auto;
+  background-color: #fffffff2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  position: absolute;
+  top: -240px;
+}
+
+.chat .header-phone__link:after {
+  display: none;
+}
+
+.chat .object::after {
+  display: block !important;
+  content: '';
+  width: 12px;
+  height: 7px;
+  background-image: url("https://cdn.comfy.ua/media/x/img/chat/img1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 50%;
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
+}

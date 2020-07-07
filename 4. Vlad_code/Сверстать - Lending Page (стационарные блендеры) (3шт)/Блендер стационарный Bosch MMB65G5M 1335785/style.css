@@ -1,0 +1,204 @@
+/*default styles*/
+
+.features-desc__text img {
+	margin-bottom: 0rem !important;
+}
+
+#bosch p:first-letter {
+	padding-left: 0;
+}
+
+#bosch p {
+	margin-bottom: 0;
+}
+
+#bosch img:hover {
+	opacity: 1;
+}
+
+#bosch img {
+	display: block;
+	margin-right: initial;
+  margin-left: initial;
+  opacity: 1;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#bosch h2,
+#bosch h4 {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+#bosch h2 {
+  font-weight: normal;
+}
+
+#bosch ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#bosch {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*end default styles*/
+
+#bosch .bosch_logo {
+  height: 551px;
+  box-sizing: border-box;
+  background-image: url("https://cdn.comfy.ua/media/x/img/1335785/sec1_bg.jpg");
+  padding: 70px 40px 70px 0;
+  position: relative;
+  background-size: cover;
+}
+
+#bosch .bosch_logo .bosch_logo_txt {
+  max-width: 400px;
+  float: right;
+  text-align: right;
+}
+
+#bosch .bosch_logo .bosch_logo_txt h2 {
+  margin-bottom: 40px;
+  text-align: right;
+}
+
+#bosch ul.bosch_list {
+  padding: 70px;
+}
+
+#bosch ul.bosch_list li {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+#bosch ul.bosch_list li:nth-of-type(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+          flex-direction: row-reverse;
+}
+
+#bosch ul.bosch_list li div {
+  -webkit-box-flex: 1;
+          flex: 1 1 0;
+  max-width: 50%;
+}
+
+#bosch ul.bosch_list li .bosch_img img {
+  max-height: 470px;
+  margin: 0 auto;
+}
+
+#bosch ul.bosch_list li .bosch_txt h4 {
+  margin-bottom: 20px;
+}
+
+#bosch ul.bosch_list li:nth-of-type(even) .bosch_txt {
+  padding-right: 100px;
+}
+
+#bosch ul.bosch_list li:nth-of-type(odd) .bosch_txt {
+  padding-left: 100px;
+}
+
+#bosch ul.bosch_list li:nth-of-type(even) .bosch_txt,
+#bosch ul.bosch_list li:nth-of-type(even) .bosch_txt h4 {
+  text-align: right;
+}
+
+
+/*media**********************************************************/
+
+@media (max-width: 812px) and (min-width: 481px) {
+
+  #bosch ul.bosch_list {
+    padding: 20px;
+  }
+
+  #bosch ul.bosch_list li:nth-of-type(odd) .bosch_txt {
+    padding-left: 40px;
+  }
+
+  #bosch ul.bosch_list li:nth-of-type(even) .bosch_txt {
+    padding-right: 40px;
+  }
+
+  #bosch .bosch_logo .bosch_logo_txt {
+    float: unset;
+    text-align: left;
+    padding: 40px;
+  }
+
+  #bosch .bosch_logo .bosch_logo_txt h2 {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+  #bosch .bosch_logo {
+    padding: 70px 20px;
+  }
+
+  #bosch .bosch_logo .bosch_logo_txt {
+    float: unset;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  #bosch .bosch_logo .bosch_logo_txt h2 {
+    text-align: center;
+  }
+
+  #bosch ul.bosch_list {
+    padding: 0px;
+  }
+
+  #bosch ul.bosch_list li {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+            flex-direction: column !important;
+  }
+
+  #bosch ul.bosch_list li div {
+    max-width: 100%;
+  }
+
+  #bosch ul.bosch_list li .bosch_txt {
+    padding: 40px 20px 60px 20px !important;
+    text-align: center !important;
+  }
+
+  #bosch ul.bosch_list li .bosch_txt h4 {
+    text-align: center !important;
+  }
+
+  #bosch ul.bosch_list li .bosch_img img {
+    max-width: 100%;
+  }
+
+  #bosch .bosch_logo .bosch_logo_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #bosch .bosch_logo .bosch_logo_txt {
+    margin-top: 90px;
+  }
+}

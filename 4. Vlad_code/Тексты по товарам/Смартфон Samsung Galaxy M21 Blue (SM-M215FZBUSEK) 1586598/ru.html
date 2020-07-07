@@ -1,0 +1,331 @@
+<style>
+  #content_ex p:first-letter {
+    padding-left: 0;
+  }
+
+  #content_ex p {
+    margin-bottom: 0;
+    font-size: 2.1rem;
+    line-height: 1.5;
+  }
+
+  #content_ex img:hover {
+    opacity: 1;
+  }
+
+  #content_ex img {
+    opacity: 1;
+    /*     display: block; max-width: 100%; height: auto; margin: 0 auto; */
+  }
+
+  #content_ex {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    max-width: 1316px;
+    margin: 0 auto;
+    /* padding: 0 15px; */
+  }
+
+  #content_ex .container {
+    padding: 0 80px;
+  }
+
+  #content_ex .container h2 {
+    font-size: 46px;
+    line-height: 4rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  #content_ex .container img {
+    max-width: 100%;
+    margin-bottom: 0rem;
+    /* max-height: 700px; */
+  }
+
+  #content_ex .container p {
+    text-align: justify;
+    margin: 15px 0 25px 0;
+  }
+
+  #content_ex .container .container_li_item {
+    text-align: left;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list {
+    padding-left: 1.4rem;
+    margin: 3rem 0rem 3rem 0rem;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list li {
+    position: relative;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list li:before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -1.3rem;
+    border-radius: 50%;
+    width: .5rem;
+    height: .5rem;
+    background-color: #379424;
+  }
+
+  #content_ex ul {
+    padding-left: 25px;
+    padding-bottom: 25px;
+  }
+
+  #content_ex ul li {
+    list-style-type: disc;
+    font-size: 1.9rem;
+    line-height: 1.5;
+  }
+
+  .small {
+    max-width: 350px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small2 {
+    max-width: 600px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small3 {
+    max-width: 350px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small4 {
+    max-width: 390px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small5 {
+    max-width: 700px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .col_fl {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    justify-content: space-around;
+    -webkit-box-align: end;
+            align-items: flex-end;
+    width: 100%;
+    height: auto;
+  }
+
+  .col_fl .item6 {
+    -webkit-box-flex: 1;
+            flex: 1 1 0;
+  }
+
+  .col_fl .item6 img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .col_fl .item6 img {
+    max-height: 437px !important;
+    height: auto;
+  }
+
+  #content_ex .flex_content {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-align: center;
+            align-items: center;
+    margin-top: 25px;
+  }
+
+  #content_ex .flex_content_reverse {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+            align-items: center;
+    margin-top: 25px;
+  }
+
+  #content_ex .flex_content_reverse:first-of-type {
+    margin-top: 0;
+  }
+
+  #content_ex .flex_content_reverse .flex_item,
+  #content_ex .flex_content .flex_item {
+    -webkit-box-flex: 1;
+            flex: 1 1 0;
+  }
+
+  #content_ex .flex_content .flex_item p {
+    margin-right: 40px;
+    text-align: justify;
+  }
+
+  #content_ex .flex_content_reverse .flex_item p {
+    margin-left: 40px;
+    text-align: justify;
+
+  }
+
+  #content_ex .flex_content_reverse .flex_item h2,
+  #content_ex .flex_content .flex_item h2 {
+    text-align: left;
+  }
+
+  #content_ex .flex_content .flex_item h2 {
+    margin-right: 40px;
+  }
+
+  #content_ex .flex_content_reverse .flex_item h2 {
+    margin-left: 40px;
+  }
+
+  #content_ex iframe {
+    width: 100%;
+    height: 800px;
+  }
+
+  /*  #content_ex p, #content_ex h2 { padding: 0 15px; } */
+  /* #content_ex ul { padding: 0 25px; } */
+  @media (max-width: 812px) and (min-width: 481px) {
+    #content_ex .container {
+      padding: 0 20px;
+    }
+
+    #content_ex iframe {
+      height: 400px;
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .col_fl {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-box-align: center;
+              align-items: center;
+    }
+
+    .col_fl .item6 {
+      -webkit-box-flex: 1;
+              flex: 1;
+    }
+
+    #content_ex .container {
+      padding: 0 20px;
+    }
+
+    #content_ex iframe {
+      height: 400px;
+    }
+
+    #content_ex .flex_content_reverse,
+    #content_ex .flex_content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+    }
+
+    #content_ex .flex_content_reverse .flex_item p,
+    #content_ex .flex_content .flex_item p,
+    #content_ex .flex_content_reverse .flex_item h2,
+    #content_ex .flex_content .flex_item h2 {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+      text-align: justify !important;
+    }
+
+    #content_ex .container h2 {
+      font-size: 28px;
+    }
+  }
+</style>
+
+<div id="content_ex">
+  <div class="container">
+    <div class="flex_content_reverse">
+      <div class="flex_item">
+        <p>Новый ультрабюджетник от популярного бренда Samsung стал хитом начала 2020 года. Модель при своей невысокой цене получила неплохую техническую оснастку, но главный сюрприз для пользователя – камера из 3 объективов. Samsung Galaxy M21 Blue поддержал тренд на многомодульные «глазки», который еще до недавленого времени был доступен только смартфонам с высокими ценниками. </p>
+      </div>
+      <div class="flex_item"> <img src="https://cdn.comfy.ua/media/x/img/1586597/1.jpg" alt="Смартфон Samsung Galaxy M21 Blue — Фото 1" title="Смартфон Samsung Galaxy M21 Blue — Фото 1 — интернет-магазин COMFY"> </div>
+    </div>
+    <p>Дизайн гаджета не пережил серьезные изменения. Все такой же плоский пластиковый корпус с закругленными углами, минимальные рамки вокруг экрана, сканер отпечатка пальцев на задней панели Galaxy M21. Объективы основной камеры выстроились вертикально в ряд на отдельном, чуть выступающим над поверхностью блоке. Фронталка гармонично расположилась в каплевидном вырезе. Все просто и лаконично, как и должно быть в современном мобильном телефоне. </p> <img src="https://cdn.comfy.ua/media/x/img/1586597/2.jpg" alt="Смартфон Samsung Galaxy M21 Blue — Фото 2" title="Смартфон Samsung Galaxy M21 Blue — Фото 2 — интернет-магазин COMFY">
+    <h2>Характеристики экрана Samsung Galaxy M21 Blue </h2>
+    <p>Новый Samsung M21 Blue имеет практичные габариты: длина 159 мм, ширина 75,1 мм, толщина 8,9 мм. Он удобно лежит как в большой мужской руке, так и в изящных маленьких женских ладошках. С ним приятно и комфортно взаимодействовать, работать, отдыхать или же просто проводить время. Приложение Samsung Members позаботится об интерактивной диагностике и оптимизации работы вашего гаджета, пока вы смотрите любимый фильм или общаетесь с друзьями в мессенджере. </p> <img src="https://cdn.comfy.ua/media/x/img/1586597/3.jpg" alt="Смартфон Samsung Galaxy M21 Blue — Фото 3" title="Смартфон Samsung Galaxy M21 Blue — Фото 3 — интернет-магазин COMFY">
+    <p>Экран смартфон получил следующие характеристики: </p>
+    <ul>
+      <li>тип – Infinity-U, занимает 84% всей передней поверхности, открывает перед пользователем большие углы обзора; </li>
+      <li>размер диагонали – 6,4 дюйма, идеальное решение для повседневных задач, активного гейминга, общения в соцсетях и тому подобное; </li>
+      <li>технология – Super AMOLED FHD+, обеспечивает максимальную как для ультрабюджетника яркость, цветопередачу, контрастность и очень глубокие оттенки черного; </li>
+      <li>разрешение – 2340х1080 пикселей, воспроизводит изображение детализированным, позволяет рассмотреть все мелочи даже на заднем плане; </li>
+      <li>защита – стекло Corning Gorilla Glass 3 поколения, расположенное сверху матрицы экрана. Его функция заключается в предотвращении трещин, сколов и царапин самой матрицы. Стекло первым принимает на себя механическое воздействие. Ну и в случае повреждения стекло сменить на новое намного проще и дешевле, чем любые манипуляции с матрицей. И это еще один повод, чтобы купить Galaxy M21 Blue. </li>
+    </ul>
+    <p>На таком экране комфортно смотреть любимые фильмы, передачи, погружаться в виртуальную реальность, серфить в интернете. Каждое касание пальца к дисплею расценивается как определенная команда, которая мгновенно выполняется. </p>
+  </div> <img src="https://cdn.comfy.ua/media/x/img/1586597/4.jpg" alt="Смартфон Samsung Galaxy M21 Blue — Фото 4" title="Смартфон Samsung Galaxy M21 Blue — Фото 4 — интернет-магазин COMFY">
+  <div class="container">
+    <h2>Производительность и система гаджета </h2>
+    <p>Вам нужен девайс с высокой производительностью? Вы попали в точку – новый Samsung M21 Blue купить можно с серьезной техничной начинкой, которая и обеспечивает быструю бесперебойную работу фаблета. Это восьмиядерный процессор Exynos 7 Octa 9611, и он отлично проявляется себя в действии! </p>
+  </div> <img src="https://cdn.comfy.ua/media/x/img/1586597/5.jpg" alt="Смартфон Samsung Galaxy M21 Blue — Фото 5" title="Смартфон Samsung Galaxy M21 Blue — Фото 5 — интернет-магазин COMFY">
+  <div class="container">
+    <p>Отдельное «спасибо» скажут геймеры, которые в действительно недорогом устройстве получают высокую графику и потоковое вещание на скорости. А для качественной игры на персональном смартфоне это лучшее, что может быть. Выкладывайтесь в играх на полную, Game Booster запомнит все манеру вашей игры и оптимизирует энергопотребление, температурный режим и использование памяти в соответствие ней. </p>
+  </div> <img src="https://cdn.comfy.ua/media/x/img/1586597/6.jpg" alt="Смартфон Samsung Galaxy M21 Blue — Фото 6" title="Смартфон Samsung Galaxy M21 Blue — Фото 6 — интернет-магазин COMFY">
+  <div class="container">
+    <div class="flex_content">
+      <div class="flex_item">
+        <p>Управляет смартфоном Samsung M21 Blue, цена которого находится в бюджетной категории, операционная система Android 10 + One UI 2.0. Она работает прямо из коробки, но микропрограмму всегда можно обновить до более новой версии, как только та появится в открытом доступе. </p>
+        <p>За дополнительную безопасность отвечают сразу два «фронта»: дактилоскопический датчик на задней поверхности для сканирования отпечатка пальцев и селфи-камера для распознавания лица пользователя. Разблокируйте свой телефон одним касанием или только взглядом, а ваши личные данные всегда будут под надежной защитой! </p>
+      </div>
+      <div class="flex_item"> <img src="https://cdn.comfy.ua/media/x/img/1586597/7.jpg" alt="Смартфон Samsung Galaxy M21 Blue — Фото 7" title="Смартфон Samsung Galaxy M21 Blue — Фото 7 — интернет-магазин COMFY"> </div>
+    </div>
+    <h2>Возможности камеры смартфона Samsung M21 Blue </h2>
+    <p>Оцените возможности инновационной камеры девайса! С ее помощью вы получите крутые фотографии, которые трудно будет отличить от сделанных на профессиональном оборудовании. А все благодаря мощным характеристикам камер: </p>
+    <ul>
+      <li>основная камера 48 + 8 + 5 Мп, диафрагма f/2.0 + f/2.2 + f/2.2; </li>
+      <li>LED-вспышка основной камеры, располагается в модуле вместе с тремя объективами; </li>
+      <li>поддержка видеосъемки в формате 4К UHD (3840x2160); </li>
+      <li>фронтальная камера 20 Мп. </li>
+    </ul> 
+    <img src="https://cdn.comfy.ua/media/x/img/1586597/8.jpg" alt="Смартфон Samsung Galaxy M21 Blue — Фото 8" title="Смартфон Samsung Galaxy M21 Blue — Фото 8 — интернет-магазин COMFY">
+    <p>Объектив на 48 Мп подходит для съемки фото в любом формате. Хотите купить Samsung Galaxy M21 Blue для пейзажей и макросъемки – вперед. Вы получите высококачественные фотографии и останетесь довольными результатом. Сверхширокоугольный объектив передаст еще больше деталей на снимке, и вы упустите ни единой мелочи, оставаясь на месте. </p> 
+    <p>Объектив на 5 Мп предназначен для корректирования глубины сцены. Он минимизирует внешние шумы, позволяя добиться профессионального качества фотографии. </p> <img src="https://cdn.comfy.ua/media/x/img/1586597/9.jpg" alt="Смартфон Samsung Galaxy M21 Blue — Фото 9" title="Смартфон Samsung Galaxy M21 Blue — Фото 9 — интернет-магазин COMFY">
+    <div class="flex_content_reverse">
+      <div class="flex_item">
+        <p>Оцените потрясающие возможности съемки селфи-камерой! 20 Мп для запечатления своих лучших сторон – это же нечто новое! Воспользуйтесь функцией размытия заднего фона и снимайте себя в самых разных места и состояниях – в парке, дома, в кафе, а машине. Красивых селфи мало не бывает! </p>
+      </div>
+      <div class="flex_item"> <img src="https://cdn.comfy.ua/media/x/img/1586597/10.jpg" alt="Смартфон Samsung Galaxy M21 Blue — Фото 10" title="Смартфон Samsung Galaxy M21 Blue — Фото 10 — интернет-магазин COMFY"> </div>
+    </div>
+    <div class="flex_content_reverse">
+      <div class="flex_item">
+        <h2>Впечатляющая автономность </h2>
+        <p>Долгий период работы телефона без подзарядки – мечта любого пользователя. Но только не с новым ультрабюджетником Galaxy M21 Blue. Емкость батареи становит 6000 мАч, что является очень большим показателем. Если сравнивать с другими смартфонами, M21 не нуждается в подзарядке намного дольше. И еще один дополнительный бонус – эти быстрая зарядка на 15 Вт. Такая батарея приятно удивит вас сроком службы, поскольку реже заряжается. </p>
+      </div>
+      <div class="flex_item"> <img src="https://cdn.comfy.ua/media/x/img/1586597/11.jpg" alt="Смартфон Samsung Galaxy M21 Blue — Фото 11" title="Смартфон Samsung Galaxy M21 Blue — Фото 11 — интернет-магазин COMFY"> </div>
+    </div>
+    <p>Заинтересовал товар? Купить смартфон Samsung M21 Blue можно в нашем интернет-магазине. оплата осуществляется разными способами, доставка возможна в любой город Украины. Не упусти свой шанс приобрести новинку от Samsung – модель М 21 по приятной цене и с гарантией от производителя. Комфорт и приятные эмоции с таким многофункциональным гаджетом вам обеспечены! </p>
+  </div>
+</div>

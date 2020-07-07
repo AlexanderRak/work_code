@@ -1,0 +1,121 @@
+/*default styles*/
+
+#siemens p:first-letter {
+  padding-left: 0;
+}
+
+#siemens p {
+  margin-bottom: 0;
+}
+
+#siemens img:hover {
+  opacity: 1;
+}
+
+#siemens img {
+  opacity: 1;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+#siemens {
+  max-width: 1316px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+#siemens h2 {
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+.features-desc__text img {
+  margin-bottom: 0rem;
+}
+
+.one-col .features-desc__text p:first-letter {
+  padding-left: 0rem !important;
+}
+
+/*end default styles*/
+
+/*section*/
+
+#siemens ul.siemens_list {
+  padding: 0 20px;
+}
+
+#siemens ul.siemens_list li {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+#siemens ul.siemens_list li:nth-of-type(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+          flex-direction: row-reverse;
+}
+
+#siemens ul.siemens_list li>div {
+  -webkit-box-flex: 1;
+          flex: 1 1 0;
+  max-width: 50%;
+  box-sizing: border-box;
+}
+
+
+
+#siemens ul.siemens_list li .siemens_txt h2 {
+  margin-bottom: 20px;
+  color: #fff;
+  background: rgb(108,217,217);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(108,217,217,1)), to(rgba(37,185,185,1)));
+  background: linear-gradient(90deg, rgba(108,217,217,1) 0%, rgba(37,185,185,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6cd9d9",endColorstr="#25b9b9",GradientType=1);
+  padding: 30px;
+}
+
+#siemens ul.siemens_list li .siemens_txt p {
+  padding: 0 40px;
+}
+
+#siemens ul.siemens_list li:nth-of-type(odd) .siemens_txt {
+  padding-left: 40px;
+}
+
+#siemens ul.siemens_list li:nth-of-type(even) .siemens_txt {
+  padding-right: 40px;
+}
+
+/*end section*/
+
+/*media*************************************************************/
+
+@media (max-width: 480px) and (min-width: 320px) {
+  #siemens ul.siemens_list li {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+            flex-direction: column !important;
+  }
+
+  #siemens ul.siemens_list li > div {
+    max-width: 100%;
+  }
+
+  #siemens ul.siemens_list li .siemens_txt {
+    padding: 40px 0 40px 0 !important;
+    text-align: center; 
+  }
+} 
