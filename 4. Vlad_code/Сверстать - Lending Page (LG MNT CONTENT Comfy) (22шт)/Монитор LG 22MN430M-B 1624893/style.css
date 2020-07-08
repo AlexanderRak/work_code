@@ -54,91 +54,15 @@
 }
 
 /*end default styles*/
-#lg .slick-prev,
-#lg .slick-next {
-  padding: 0 6px;
-  color: #000;
-  font-size: 20px;
-  border-radius: 50%;
-  background-color: #fff;
-  position: absolute;
-}
-
-#lg .slick-prev:hover,
-#lg .slick-next:hover {
-  cursor: pointer;
-  background-color: #dedede;
-}
-
-#lg .slick-prev {
-  left: 40px;
-  z-index: 1;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-#lg .slick-next {
-  right: 40px;
-  z-index: 1;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-#lg .wins {
-  background-color: #000;
-}
-
 #lg .wins .wins_txt {
-  color: #fff;
   text-align: center;
   max-width: 900px;
   padding: 20px;
   margin: 0 auto;
 }
 
-#lg .work,
-#lg .work_black {
-  padding: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#lg .work hr,
-#lg .work_black hr {
-  display: block;
-  width: 60px;
-  padding: 1px 0;
-  background-color: #000;
-  border: none;
-}
-
-#lg .work span,
-#lg .work_black span {
-  display: block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-#lg .work_black {
-  background-color: #000;
-  color: #fff;
-}
-
-#lg .work_black hr {
-  background-color: #fff;
+#lg .ips {
+  background-color: #e7e7e7;
 }
 
 #lg .ips .ips_txt {
@@ -153,11 +77,11 @@
 }
 
 #lg .nano {
-  height: 1189px;
+  height: 939px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 70px;
-  background-image: url("https://cdn.comfy.ua/media/x/img/1619063/7.jpg");
+  background-image: url("https://cdn.comfy.ua/media/x/img/1624893/4.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -186,8 +110,6 @@
 
 #lg .gsync {
   padding: 70px;
-  background-color: #000;
-  color: #fff;
 }
 
 #lg .gsync .gsync_list {
@@ -216,16 +138,20 @@
   padding-right: 40px;
 }
 
-#lg .gsync .gsync_list:last-of-type {
+#lg .gsync .gsync_list:nth-of-type(even) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
 
-#lg .gsync .gsync_list:last-of-type li:first-of-type {
+#lg .gsync .gsync_list:nth-of-type(even) li:first-of-type {
   padding-left: 40px;
   padding-right: 0;
+}
+
+#lg .gsync .gsync_list:nth-of-type(n+2) {
+  margin-top: 40px;
 }
 
 #lg .gsync span {
@@ -235,10 +161,10 @@
 
 #lg .design {
   padding: 70px;
-  height: 1408px;
+  height: 707px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-image: url("https://cdn.comfy.ua/media/x/img/1619063/11.jpg");
+  background-image: url("https://cdn.comfy.ua/media/x/img/1624893/11.jpg");
   background-repeat: no-repeat;
   background-position: center right;
 }
@@ -248,8 +174,9 @@
 }
 
 #lg .design .design_txt {
-  max-width: 470px;
-  margin: 600px 0 0 auto;
+  max-width: 620px;
+  margin-top: 80px;
+  color: #fff;
 }
 
 #lg .snoska span {
@@ -270,6 +197,12 @@
 }
 
 /*media**************************************************************/
+@media (max-width: 1024px) {
+  #lg .design .design_txt {
+    max-width: 470px;
+  }
+}
+
 @media (max-width: 812px) {
   #lg h2 {
     font-size: 28px;
@@ -302,6 +235,7 @@
     padding: 20px;
   }
   #lg .design {
+    background-color: #000;
     padding: 0;
     background-image: unset;
     height: auto;
@@ -323,7 +257,6 @@
     -webkit-transform: unset;
             transform: unset;
     padding: 20px;
-    background-color: #000;
   }
   #lg .gsync .gsync_list {
     -webkit-box-orient: vertical !important;

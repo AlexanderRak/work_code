@@ -43,59 +43,14 @@
 /*end default styles*/
 
 #lg
-  .slick-prev,
-  .slick-next
-    padding: 0 6px;
-    color: #000
-    font-size: 20px
-    border-radius: 50%
-    background-color: #fff
-    position: absolute
-    &:hover
-      cursor: pointer
-      background-color: #dedede
-  .slick-prev
-    left: 40px;
-    z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
-  .slick-next
-    right: 40px;
-    z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
   .wins
-    background-color: #000
     .wins_txt
-      color: #fff
       text-align: center
       max-width: 900px
       padding: 20px
       margin: 0 auto
-  .work,
-  .work_black
-    padding: 70px
-    display: flex
-    flex-direction: column
-    align-items: center
-    hr
-      display: block
-      width: 60px
-      padding: 1px 0
-      background-color: #000
-      border: none
-    span
-      display: block
-      width: max-content
-      font-weight: bold
-      font-size: 20px
-  .work_black
-    background-color: #000
-    color: #fff
-    hr
-      background-color: #fff
-      
   .ips
+    background-color: #e7e7e7
     .ips_txt
       max-width: 900px
       margin: 0 auto
@@ -105,10 +60,10 @@
       img
         margin: 0 auto
   .nano
-    height: 1189px
+    height: 939px
     box-sizing: border-box
     padding: 70px
-    background-image: url("https://cdn.comfy.ua/media/x/img/1619063/7.jpg")
+    background-image: url("https://cdn.comfy.ua/media/x/img/1624893/4.jpg")
     background-repeat: no-repeat
     background-position: center
     .nano_img
@@ -129,8 +84,6 @@
         margin: 0 auto
   .gsync
     padding: 70px
-    background-color: #000
-    color: #fff
     .gsync_list
       display: flex
       flex-direction: row
@@ -141,28 +94,31 @@
         box-sizing: border-box
         &:first-of-type
           padding-right: 40px
-      &:last-of-type
+      &:nth-of-type(even)
         flex-direction: row-reverse
         li
           &:first-of-type
             padding-left: 40px
             padding-right: 0
+      &:nth-of-type(n+2)
+        margin-top: 40px
 
     span
       display: block
       padding: 20px
   .design
     padding: 70px
-    height: 1408px
+    height: 707px
     box-sizing: border-box
-    background-image: url("https://cdn.comfy.ua/media/x/img/1619063/11.jpg")
+    background-image: url("https://cdn.comfy.ua/media/x/img/1624893/11.jpg")
     background-repeat: no-repeat
     background-position: center right
     .design_img
       display: none
     .design_txt
-      max-width: 470px
-      margin: 600px 0 0 auto
+      max-width: 620px
+      margin-top: 80px
+      color: #fff
   .snoska
     span
       display: block
@@ -179,7 +135,11 @@
     
 
 /*media**************************************************************/
-
+@media (max-width: 1024px)
+  #lg
+    .design
+      .design_txt
+        max-width: 470px
 
 @media (max-width: 812px)
   #lg
@@ -204,6 +164,7 @@
     .gsync
       padding: 20px
     .design
+        background-color: #000
         padding: 0
         background-image: unset
         height: auto
@@ -223,7 +184,6 @@
           position: unset
           transform: unset
           padding: 20px
-          background-color: #000
       .gsync
         .gsync_list
           flex-direction: column !important
