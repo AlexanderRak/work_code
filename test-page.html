@@ -1,21 +1,44 @@
-
 <style>
+  #wrapper_actionbl {
+    max-width: 1316px;
+    height: auto;
+    margin: 0 auto;
+  }
 
+  #wrapper_actionbl .actionbl-flexbl {
+    display: flex;
+    flex-direction: row;
+  }
 
+  #wrapper_actionbl .actionbl-flexbl .item_bl1 {
+    flex: 1 1 0;
+  }
+
+  #wrapper_actionbl .actionbl-flexbl .item_bl1 a.linkbl {
+    display: block;
+  }
+
+  #wrapper_actionbl .actionbl-flexbl .item_bl1 a.linkbl img.imgbl {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    #wrapper_actionbl .actionbl-flexbl {
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    #wrapper_actionbl .actionbl-flexbl {
+      flex-direction: column;
+    }
+  }
 </style>
-
-<div class="wrap-btn">
-  <ul class="wrap-btn__list">
-    <li class="wrap-btn__list-item">1</li>
-    <li class="wrap-btn__list-item">2</li>
-    <li class="wrap-btn__list-item">3</li>
-    <li class="wrap-btn__list-item">4</li>
-  </ul>
-</div>
-
-<div class="wrap-content">
-  <div class="wrap-content__wrap"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint iusto nulla, illum et nisi sapiente magnam, quidem cumque sit libero officia nam corrupti inventore expedita magni, animi ipsam beatae nemo. </div>
-  <div class="wrap-content__wrap"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium aspernatur fugit deserunt saepe quasi eveniet beatae exercitationem odit similique obcaecati, debitis labore! Incidunt quo temporibus dolorem facilis autem! Nostrum, harum! </div>
-  <div class="wrap-content__wrap"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolorum harum, eveniet doloribus debitis, suscipit, ratione consequuntur natus porro tempore distinctio? Nostrum sapiente ducimus possimus reiciendis provident. Id, voluptatum fuga. </div>
-  <div class="wrap-content__wrap"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolorem debitis similique ipsum culpa magni quas porro eius, harum iste aliquid iusto nostrum saepe quis eveniet reprehenderit commodi! Libero, quia! </div>
+<div id="wrapper_actionbl">
+  <div class="actionbl-flexbl">
+    <div class="item_bl1"><a class="linkbl" target="_blank" href="/expert-pc-based-on-asus-components/"> <img class="imgbl" src="https://cdn.comfy.ua/media/x/img/Comfy_ASUS_658x200_ru.jpg" /> </a></div>
+    <div class="item_bl1"><a class="linkbl" target="_blank" href="/expert-pc-based-on-msi-components/"> <img class="imgbl" src="https://cdn.comfy.ua/media/x/img/Comfy_MSI_658x200_ru.jpg" /> </a></div>
+  </div>
 </div>
