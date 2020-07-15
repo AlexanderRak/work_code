@@ -5,6 +5,7 @@
    width: 100%
    overflow: hidden
    background: #fff
+   position: relative
 
 span.word-wrap 
    display: block
@@ -30,7 +31,7 @@ span.fw-bold
    margin-left: initial
 
 #smart-s-wrap h2
-   font-size: 4rem
+   font-size: 3rem
    letter-spacing: 3px
    line-height: 1.1
 
@@ -50,4 +51,194 @@ span.fw-bold
 
 #smart-s-wrap p
    font-size: 1.9rem
+   display: block
 
+// sect-hdr-wrap
+
+.sect-hdr-wrap
+
+.sect-hdr-wrap__content
+   max-width: 1265px
+   margin: 70px auto
+   padding: 0 15px
+
+.sect-hdr-wrap__content-flex
+   display: flex
+   flex-direction: row
+   align-items: center
+   position: relative
+   .sect-hdr-wrap__context-item
+      &:first-child
+         flex: 1 1 60%
+         padding-right: 15px
+      &:last-child
+         flex: 1 1 40%
+   .sect-hdr-wrap__context-item__text
+      height: 100%
+      .sect-hdr-wrap__logo-y8p
+         display: inline-block
+         .sect-hdr-wrap__item
+            &:last-child span
+               font-size: 1.8rem
+               margin-top: 5px
+               display: block
+   .sect-hdr-wrap__app-logo-pos
+      position: absolute
+      bottom: 0
+      right: 0
+      max-width: 200px
+               
+// sect-oled-display
+
+.sect-oled-display
+
+.sect-oled-display__content
+   max-width: 1265px
+   margin: 150px auto 100px auto
+   padding: 0 15px
+
+.sect-oled-display__content-flex
+   display: flex
+   flex-direction: row
+   align-items: flex-start
+   justify-content: space-between
+   max-width: 1140px
+   margin: 0 auto
+   .sect-oled-display__content-item
+      &:first-child
+         width: 100%
+      &:last-child
+         max-width: 575px
+         width: 100%
+         padding-left: 15px
+
+.sect-oled-display__content-img
+   margin: 65px 0
+   img
+      display: block
+      margin: 0 auto !important
+
+// sect-shadow
+
+.item-none
+   display: none
+
+.sect-shadow
+
+.sect-shadow__content
+   width: 100%
+
+.sect-shadow__content-flex
+   display: flex
+   flex-direction: row
+   .sect-shadow__content-item
+      flex: 1 1 0
+      background-color: #f5f5f5
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      min-height: 500px
+      overflow: hidden
+      &:nth-child(2)
+         margin: 0 10px
+         .sect-shadow__content-item__img-list
+            max-width: 90%
+            margin: 0 0 0 auto
+      &:nth-child(3)
+         .sect-shadow__content-item__img-list
+            max-width: 78%
+            margin: 0 auto
+      .sect-shadow__content-item__radio-check
+         padding: 0 15px 15px 15px
+         margin: 0 auto
+         .sect-shadow__content-item-img
+            max-width: 71%
+            margin: 0 auto
+
+.sect-shadow__content-item-radio__checked
+   text-align: center
+   display: block
+   padding: 15px 0px 10px 0
+   input[type="radio"]
+      display: none
+      &+label span
+         display: inline-block
+         width: 25px
+         height: 25px
+         margin: 0px 10px 0 0
+         vertical-align: middle
+         cursor: pointer
+         border-radius: 50%
+      &:checked+label span
+         transition: 0.3s
+         position: relative
+         &::before
+            content: ""
+            width: 35px
+            height: 35px
+            border-radius: 50%
+            border: 2px solid #c7c7c7
+            position: absolute
+            margin: 0 auto
+            display: block
+            left: -5px
+            top: -5px
+      &+label
+         &:nth-child(2) span
+            background-image: linear-gradient(0deg, #8c97fc 0%, #b1eafa 99%)
+            &:hover
+               box-shadow: 0 0 5px 2px #9bb9fb
+         &:nth-child(4) span
+            background-image: linear-gradient(0deg, #3d291c 11%, #273251 99%)
+            margin: 0px 0px 0 0
+            &:hover
+               box-shadow: 0 0 5px 2px #332d33
+
+.sect-shadow__content-item-radio__text-checked
+   font-size: 1.6rem
+   font-weight: bold
+   text-align: center
+   letter-spacing: 1px
+   color: #1c1c1c
+
+// sect-fingerprint
+
+.sect-fingerprint
+
+.sect-fingerprint__content
+   max-width: 100%
+   margin: 100px auto 100px auto
+   padding: 0 15px
+   position: relative
+
+.sect-fingerprint__text-flex
+   display: flex
+   flex-direction: row
+   align-items: flex-start
+   justify-content: space-between
+   max-width: 926px
+   position: relative
+   z-index: 8
+   margin-left: 6%
+   padding-top: 15rem
+   .sect-fingerprint__text-item
+      &:first-child
+         width: 100%
+      &:last-child
+         max-width: 575px
+         width: 100%
+         padding-left: 15px
+
+.sect-fingerprint__prod
+
+.sect-fingerprint__img-pos
+   position: absolute
+   right: 0
+   top: 0
+   z-index: 7
+   max-width: 32%
+
+.sect-fingerprint__prod
+   max-width: 92%
+   text-align: center
+   padding: 7rem 0 0 0
