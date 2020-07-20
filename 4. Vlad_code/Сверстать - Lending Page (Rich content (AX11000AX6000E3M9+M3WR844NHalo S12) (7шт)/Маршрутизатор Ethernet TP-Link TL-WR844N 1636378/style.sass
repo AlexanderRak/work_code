@@ -1,0 +1,545 @@
+/*default styles*/
+
+#mercusys 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin: 0
+    padding: 0
+    font-size: 18px
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+  span
+    font-size: 16px
+    line-height: normal
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#mercusys 
+  .wifi
+    padding: 70px
+    box-sizing: border-box
+    height: 619px
+    background-image: url("https://cdn.comfy.ua/media/x/img/1636378/1.jpg")
+    background-repeat: no-repeat
+    background-position: center right
+    .wifi_txt
+      span
+        display: block
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1.333333333333333;
+        color: #fff;
+        display: inline-block;
+        background-color: rgba(42,110,166,.6);
+        border-radius: .5em;
+        padding: 0 .5em;
+        margin-top: .5em;
+  
+  .speed
+    background-color: #f4f8fb
+    .speed_txt
+      padding: 70px
+      text-align: center
+      h2
+        padding-bottom: 20px
+
+  .signal
+    padding: 70px
+    box-sizing: border-box
+    background-image: url("https://cdn.comfy.ua/media/x/img/1636378/3.jpg")
+    height: 657px
+    background-position: center
+    position: relative
+    .signal_txt
+      text-align: center
+      color: #fff
+      h2
+        padding-bottom: 20px
+    .signal_abs
+      position: absolute 
+      right: 50%
+      top: 30em
+      transform: translateX(50%)
+      span
+        color: #fff
+        display: block
+
+  .control
+    padding: 70px
+    .control_txt
+      text-align: center
+      h2
+        padding-bottom: 20px
+    .control_list
+      display: flex
+      flex-direction: row
+      max-width: 80%
+      margin: 0 auto
+      li
+        flex: 1 1 0
+        &:nth-of-type(2)
+          margin: 0 20px
+        span.blue
+          display: flex
+          flex-direction: row
+          align-items: center
+          color: #3ef5fc;
+          font-size: 24px
+          margin-bottom: 20px
+          margin-top: 40px
+          &::before
+            content: ''
+            display: block
+            min-width: 17px
+            height: 17px
+            background-image: url("https://cdn.comfy.ua/media/x/img/1636378/arrow.png")
+            background-repeat: no-repeat
+            background-size: contain
+            margin-right: 10px
+            margin-left: -27px
+    .control_abs
+      margin-top: 80px
+      position: relative
+      img
+        max-width: 60%
+        margin: 0 auto
+      .abs_cont_top
+        li
+          position: absolute
+          span
+            font-size: 1.5em
+            color: #666
+          &:nth-of-type(1)
+            top: -1em;
+            right: 30em;
+          &:nth-of-type(2)
+            top: 6.5em;
+            right: 17em;
+          &:nth-of-type(3)
+            top: 12em;
+            right: 6em;
+      .abs_cont_middle
+        position: absolute
+        top: 50%
+        right: 50%
+        transform: translate(100%, -4%) skewY(20deg);
+        li
+          .blue
+            color: #4acbd6
+          &:nth-of-type(1)
+            text-align: center
+          &:nth-of-type(2)
+            margin: 10px 0
+            
+            
+      .abs_cont_down
+        li
+          position: absolute
+          .blue
+            color: #4acbd6
+          span
+            font-size: 1.5em
+            color: #666
+          &:nth-of-type(1)
+            bottom: 7em;
+            left: 24em;
+          &:nth-of-type(2)
+            bottom: 3em;
+            left: 36em;
+          &:nth-of-type(3)
+            bottom: 0;
+            left: 45em;
+
+  .multi
+    padding: 70px
+    background-color: #f4f8fb
+    overflow: hidden
+    .multi_title
+      text-align: center
+    .multi_list
+      display: flex
+      flex-direction: row
+      margin-top: 40px
+      li
+        flex: 1 1 0
+        min-width: 282px
+        &:nth-of-type(n+2)
+          margin-left: 15px
+        .multi_img
+          padding: 10px
+          background-color: #e3f1ff
+          min-height: 210px
+          position: relative
+          .multi_abs
+            span
+              font-size: 1em
+              position: absolute
+        .multi_txt
+          text-align: center
+          margin-top: 20px
+          p
+            >strong
+              display: block
+              margin-bottom: 10px
+        &:nth-of-type(1)
+          .multi_img 
+            .multi_abs 
+              span
+                &:nth-of-type(1)
+                  top: 1.5em
+                &:nth-of-type(2)
+                  bottom: 4em
+                  left: 3em
+        &:nth-of-type(2)
+          .multi_img 
+            .multi_abs 
+              span
+                &:nth-of-type(1)
+                  top: 1.5em
+                &:nth-of-type(2)
+                  bottom: 2em
+                  left: 5em
+                &:nth-of-type(3)
+                  bottom: 3em
+                  left: 12em
+        &:nth-of-type(3)
+          .multi_img 
+            .multi_abs 
+              span
+                &:nth-of-type(1)
+                  top: 1.5em
+                &:nth-of-type(2)
+                  bottom: 3em
+                  left: 4em
+                &:nth-of-type(3)
+                  bottom: 4em
+                  left: 10em
+        &:nth-of-type(4)
+          .multi_img 
+            .multi_abs 
+              span
+                &:nth-of-type(1)
+                  bottom: 5em
+                &:nth-of-type(2)
+                  bottom: 5em
+                  left: 5em
+
+  .cont
+    .cont_list
+      li
+        display: flex
+        flex-direction: row
+        align-items: center
+        > div
+          flex: 1 1 0
+          max-width: 50%
+        &:nth-of-type(even)
+          flex-direction: row-reverse
+        .cont_txt
+          text-align: center
+          padding: 40px
+          box-sizing: border-box
+          h2
+            margin-bottom: 10px
+        &:last-of-type
+          padding: 70px
+          .cont_txt
+            &::before
+              display: none
+        .cont_txt
+          &::before
+            content: ''
+            display: block
+            min-width: 90px
+            height: 90px
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center
+        &:nth-of-type(1)
+          .cont_txt
+            &::before
+              background-image: url("https://cdn.comfy.ua/media/x/img/1636378/12.png")
+        &:nth-of-type(2)
+          .cont_txt
+            &::before
+              background-image: url("https://cdn.comfy.ua/media/x/img/1636378/13.png")
+
+  .settings
+    background-color: #f0f7fd
+    padding: 70px 0
+    .settings_list
+      display: flex
+      flex-direction: row
+      align-items: center
+      li
+        flex: 1 1 0
+        &:last-of-type
+          padding: 0 70px
+          h2
+            margin-bottom: 20px
+          .set_img
+            margin-top: 40px
+            display: flex
+            flex-direction: row
+            width: auto
+            align-items: center 
+            img
+              &:nth-of-type(1)
+                margin: 0
+              &:nth-of-type(2)
+                margin: 0 10px
+            .set_col
+              a
+                cursor: pointer
+                img
+                  padding: 0.1em        
+
+  .func
+    padding: 70px 100px     
+    background-color: #7097b7
+    .func_list
+      display: flex
+      flex-direction: row
+      li
+        text-align: center
+        flex: 1 1 0
+        color: #fff
+        &:nth-of-type(2)
+          margin: 0 40px
+        p
+          >strong
+            display: block
+            margin-bottom: 10px
+        &::before
+          content: ''
+          display: block
+          height: 54px
+          min-width: 70px
+          background-size: contain
+          background-position: center
+          background-repeat: no-repeat
+          margin-bottom: 10px
+        &:nth-of-type(1)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1636378/15.png")
+        &:nth-of-type(2)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1636378/16.png")
+        &:nth-of-type(3)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1636378/17.png")
+          
+          
+
+
+/*media*************************************************************************/
+
+@media (max-width: 1024px)
+  #mercusys 
+    .multi 
+      .multi_list
+        overflow-x: scroll
+    .control 
+      .control_abs
+        font-size: 1vw
+
+
+@media (max-width: 812px)
+  #mercusys 
+    h2 
+      font-size: 30px
+    .wifi,
+    .speed .speed_txt,
+    .signal,
+    .control,
+    .multi,
+    .func,
+      padding: 20px
+    .func .func_list li:nth-of-type(2)
+      margin: 0 20px
+    .control 
+      overflow: hidden
+      .control_list
+        padding-left: 30px
+        overflow-x: scroll
+        max-width: 100%
+        li
+          min-width: 217px
+      .control_abs
+        img
+          max-width: 100% !important
+        span
+          font-size: 2em !important
+        .abs_cont_top 
+          li
+            &:nth-of-type(1)
+              right: 32em
+            &:nth-of-type(2)
+              top: 12.5em;
+              right: 18em;
+              max-width: 100px;
+              text-align: center;
+            &:nth-of-type(3)
+              top: 23em;
+              right: 0em;
+              max-width: 100px;
+              text-align: center;
+        .abs_cont_down
+          li
+            &:nth-of-type(1)
+              bottom: 13em;
+              left: 14em;
+            &:nth-of-type(2)
+              bottom: 6em
+            &:nth-of-type(3)
+              left: 54em
+    .cont 
+      .cont_list 
+        li 
+          .cont_txt
+            padding: 20px
+
+    .settings 
+      padding: 20px 0
+      .settings_list li:last-of-type
+        padding: 0 20px
+
+@media (max-width: 480px)
+  #mercusys 
+    h2
+      font-size: 28px
+    .wifi
+      display: flex
+      flex-direction: row
+      align-items: center
+      text-align: center
+    
+    .control 
+      .control_abs
+        transform: translateX(-35px);
+      .control_list 
+        li 
+          span.blue
+            font-size: 18px
+      .control_abs 
+        span
+          font-size: 2.5em !important
+        .abs_cont_top 
+          li
+            max-width: 50px !important
+            text-align: center
+            &:nth-of-type(2)
+              top: 11em;
+              right: 13em;
+            &:nth-of-type(3)
+              top: 20em;
+              right: -4em;
+        .abs_cont_middle
+          transform: translate(100%, 20%) skewY(20deg);
+          li
+            &:nth-of-type(2)
+              margin: 5px 0
+
+    .multi
+      .multi_list
+        flex-direction: column
+        li
+          min-width: unset
+          width: 100%
+          &:nth-of-type(n+2)
+            margin-left: 0
+            margin-top: 20px
+          &:nth-of-type(1) 
+            .multi_img 
+              .multi_abs 
+                span
+                  &:nth-of-type(2)
+                    bottom: 3em
+                    left: 6em
+          &:nth-of-type(2) 
+            .multi_img 
+              .multi_abs 
+                span
+                  &:nth-of-type(2)
+                    bottom: 2em
+                  &:nth-of-type(3)
+                    bottom: 3em
+                    left: 14em
+          &:nth-of-type(3) 
+            .multi_img 
+              .multi_abs 
+                span
+                  &:nth-of-type(2)
+                    bottom: 4em
+                    left: 6em
+                  &:nth-of-type(3)
+                    bottom: 5em
+                    left: 13em
+          &:nth-of-type(4) 
+            .multi_img 
+              .multi_abs 
+                span
+                  &:nth-of-type(1)
+                    bottom: 3em
+                    left: 1em
+                  &:nth-of-type(2)
+                    bottom: 3em
+                    left: 7em
+
+    .cont
+      .cont_list
+        li
+          flex-direction: column !important
+          >div
+            max-width: 100%
+          &:last-of-type
+            padding: 0
+
+    .settings .settings_list
+      flex-direction: column
+      li
+        &:last-of-type
+          margin-top: 20px
+    
+    .func .func_list
+      flex-direction: column
+      li
+        &:nth-of-type(2)
+          margin: 40px 0
+          
+            
+              
+              
