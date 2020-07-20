@@ -1,0 +1,324 @@
+/*default styles*/
+
+#halo 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin: 0
+    font-size: 18px
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: bold
+    padding: 0 0 15px 0
+    margin: 0
+  h3
+    display: block
+    text-align: unset
+    font-weight: bold
+    color: #545454;
+    font-size: 24px
+    line-height: normal
+    margin: 0
+    padding: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#halo 
+  .wifi
+    height: 640px
+    padding: 70px
+    box-sizing: border-box
+    background-image: url("https://cdn.comfy.ua/media/x/img/1635020/1.jpg")
+    background-repeat: no-repeat
+    background-position: center
+    .wifi_txt
+      span
+        background: #3bb7ff;
+        color: #fff;
+        border-radius: 1em;
+        display: inline-block;
+        font-size: 1.45em;
+        line-height: 1.36;
+        margin: 1.25em 0 0;
+        padding: 0.35em 1em;
+  
+  .home
+    padding: 70px
+    .home_txt
+      text-align: center
+    .home_list
+      display: flex
+      flex-direction: row
+      margin-top: 40px
+      a
+        flex: 1 1 0
+        text-align: center
+        &::before
+          display: block
+          content: ''
+          min-width: 75px
+          height: 75px
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center
+          margin: 0 auto
+          margin-bottom: 20px
+        &:nth-of-type(1)
+          &:before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1635020/i1.png")
+        &:nth-of-type(2)
+          &:before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1635020/i2.png")
+        &:nth-of-type(3)
+          &:before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1635020/i3.png")
+        &:nth-of-type(4)
+          &:before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1635020/i4.png")
+        &:nth-of-type(5)
+          &:before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1635020/i5.png")
+        &:nth-of-type(6)
+          &:before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1635020/i6.png")
+        &:nth-of-type(n+2)
+          margin-left: 40px
+
+  .vezde
+    padding: 70px
+    height: 772px
+    box-sizing: border-box
+    background-image: url("https://cdn.comfy.ua/media/x/img/1635020/2.jpg")
+    background-repeat: no-repeat
+    background-position: center
+    .vezde_txt 
+      max-width: 560px
+      margin: 0 0 0 auto
+    .vezde_img
+      display: none
+
+  .rouming
+    padding: 70px
+    .rouming_txt
+      text-align: center
+    img
+      margin: 0 auto
+    .rouming_list
+      display: flex
+      flex-direction: row
+      li
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+        &:first-of-type
+          margin-right: 80px
+          img
+            &:first-of-type
+              margin-bottom: 1.5em
+
+  .halo_cont
+    .cont_list
+      >li
+        display: flex
+        flex-direction: row
+        align-items: center
+        &:nth-of-type(even)
+          flex-direction: row-reverse
+          .cont_txt
+            text-align: left
+        &:first-of-type
+          .line_list
+            margin-top: 30px
+            li
+              span
+                &:nth-of-type(even)
+                  height: 0.5em;
+                  width: 15em;
+                  background: #0aa6fe;
+                  margin: 0 1em 0 0.5em;       
+                  display: inline-block
+                &:nth-of-type(odd)
+                  width: 4.5em;
+                  font-size: 1em;
+                  text-align: left;
+              &:last-of-type
+                margin-top: 20px
+                span
+                  &:nth-of-type(even)
+                    background: #75d1f9;
+                    height: 0.5em;
+                    width: 5em;
+                    margin: 0 1em 0 0.5em;
+        >div
+          flex: 1 1 0
+          box-sizing: border-box
+        .cont_img
+          flex: 2
+        .cont_txt
+          text-align: right
+          padding: 20px
+
+        &:last-of-type
+          p
+            &:last-of-type
+              margin: 50px 0 20px 0
+
+  .func
+    padding: 40px 0 0 0
+    background-color: #f8f8f8
+    .func_list
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      li
+        flex: 1 1 0
+        max-width: 33.33%
+        min-width: 33.33%
+        box-sizing: border-box
+        text-align: center
+        padding: 0 50px 40px 50px
+
+        &::before
+          content: ''
+          display: block
+          min-width: 75px
+          height: 75px
+          background-position: center          
+          background-size: contain
+          background-repeat: no-repeat
+
+        &:nth-of-type(1)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1635020/i7.png")
+        
+        &:nth-of-type(2)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1635020/i8.png")
+        
+        &:nth-of-type(3)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1635020/i9.png")
+        
+        &:nth-of-type(4)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1635020/i10.png")
+        
+        &:nth-of-type(5)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1635020/i11.png")
+        
+        &:nth-of-type(6)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1635020/i12.png")
+
+          
+          
+          
+/*media**********************************************/
+
+@media (max-width: 812px)
+  #halo
+    .wifi,
+    .home,
+    .vezde,
+    .rouming
+      padding: 20px
+    .home
+      overflow: hidden
+      .home_list
+        overflow-x: scroll
+    .vezde
+      .vezde_txt 
+        text-align: center
+        max-width: 100%
+    .halo_cont 
+      .cont_list 
+        > li 
+          .cont_img
+            flex: 1.3
+          
+          &:first-of-type 
+            .line_list 
+              li 
+                span:nth-of-type(even)
+                  width: 5em
+                &:last-of-type
+                  span:nth-of-type(even)
+                    width: 1em
+    .func 
+      .func_list 
+        li
+          padding: 0 20px 20px 20px
+
+@media (max-width: 480px) and (min-width: 320px) 
+  #halo
+    h2
+      font-size: 28px
+    h3
+      font-size: 22px
+
+    .wifi
+      background-size: cover
+      height: 500px
+
+    .vezde
+      height: auto
+      background: unset
+      .vezde_img
+        display: block
+
+    .rouming
+      padding: 20px 0
+      .rouming_txt
+        padding: 0 20px
+      .rouming_list
+        flex-direction: column
+        li
+          max-width: 100%
+          &:first-of-type
+            margin-right: 0
+            margin-bottom: 40px
+
+    .halo_cont 
+      .cont_list 
+        > li
+          flex-direction: column !important
+          >div
+            max-width: 100%
+            flex: unset
+          .cont_txt
+            text-align: center !important
+
+    .func 
+      .func_list
+        flex-direction: column 
+        li
+          max-width: 100%
