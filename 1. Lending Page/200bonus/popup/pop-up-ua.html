@@ -1,0 +1,297 @@
+<style>
+	#pushgames-widget {
+		display: none;
+	}
+
+	.popup__head {
+		/*display: none;*/
+	}
+
+	.popup__head .popup-title {
+		display: none;
+	}
+
+	#wrapper-popup-action {
+		/*padding: 10rem;*/
+	}
+
+	.fancybox-lock {
+		overflow: overlay !important;
+		width: auto;
+	}
+
+	.popup[data-v-a06dd506] {
+		position: absolute;
+		overflow: initial !important;
+	}
+
+	div[data-v-a06dd506].popup__content {
+		max-height: 400px !important;
+		overflow: inherit !important;
+		-ms-scroll-chaining: initial !important;
+		overscroll-behavior: initial !important;
+	}
+
+	.popup-wr[data-v-a06dd506] {
+		position: fixed;
+		top: inherit;
+		right: 0rem;
+		bottom: 0rem;
+		left: inherit;
+		width: 515px;
+		height: 370px;
+		overflow: hidden;
+	}
+
+	.cont-popup {
+		position: relative;
+	}
+
+	.cont-popup-action {
+		position: relative;
+		display: inline-block;
+	}
+
+	.linear-gradient-popup {
+		background: linear-gradient(301.84deg, #82DF0B 20.5%, #43B02A 76.3%);
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+		width: 352px;
+		height: 176px;
+		z-index: 6;
+		overflow: hidden;
+	}
+
+	.content-text {
+		background-image: url(https://cdn.comfy.ua/media/x/img/pop_bonus_ru.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: absolute;
+		width: 352px;
+    	height: 176px;
+		z-index: 8;
+		left: 0;
+		bottom: 0;
+	}
+
+	.images-push {
+		background-image: url(https://cdn.comfy.ua/media/x/img/popup/shar-push_1.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: relative;
+		bottom: -2rem;
+		left: 0;
+		width: 130px;
+		height: 78%;
+		z-index: 10;
+	}
+	.images-push__before {
+		position: relative;
+		height: 100%;
+	}
+	.images-push__before::before {
+		content: "200";
+		position: absolute;
+		left: 13px;
+		right: 0;
+		display: block;
+		margin: 0 auto;
+		top: 50%;
+		transform: translateY(-50%);
+		color: #fff;
+		font-size: 6rem;
+		font-weight: bold;
+		z-index: 11;
+	}
+
+	@-webkit-keyframes rotate360 {
+		to {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes rotate360 {
+		to {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+
+	.images-push {
+		-webkit-animation: 20s rotate360 infinite linear;
+		animation: 20s rotate360 infinite linear;
+	}
+
+	.qclose-pp {
+		position: absolute;
+		background: #379424;
+		z-index: 99999;
+		line-height: 0.6;
+		cursor: pointer;
+		font-size: 18px;
+		top: -10px;
+		right: inherit;
+		left: -10px;
+		color: #fff;
+		border-radius: 50%;
+		padding: 8px;
+	}
+
+	.qclose-pp:hover {
+		color: #ef5e19;
+	}
+
+	.cont-popup-action {
+		position: relative;
+		display: inline-block;
+		/*float: right;*/
+		/*padding-right: 15px;*/
+	}
+
+	.popup-close[data-v-a06dd506] {
+		z-index: 10;
+		top: -12px;
+		left: -12px;
+		width: 12px;
+		height: 12px;
+		background: #FF090B url(https://cdn.comfy.ua/media/x/img/exit.svg) no-repeat 50%;
+		padding: 14px;
+		border-radius: 50%;
+		background-size: 13px;
+	}
+
+	.popup-close[data-v-a06dd506]:hover {
+		background-color: #de0002;
+	}
+
+	.popup__head[data-v-a06dd506] {
+		border-bottom: 0px solid #e5e5e5;
+	}
+
+	@media (max-width: 767px) {
+		.content-text {
+			background-image: url(https://cdn.comfy.ua/media/x/img/bonus_ru_mob.png);
+			bottom: 0;
+			width: 279px;
+			height: 55px;
+			z-index: 8;
+			left: 5px;
+		}
+
+		.linear-gradient-popup {
+			width: 295px;
+    		height: 56px;
+			overflow: inherit;
+			background: #43B02A;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+		}
+
+		.images-push__before::before {
+			content: "200";
+			left: 5px;
+			right: 0;
+			font-size: 3.2rem;
+		}
+
+		.fancybox-lock {
+			position: relative;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			top: 0;
+		}
+
+		.popup-wr[data-v-a06dd506] {
+			height: 225px;
+			width: 100%;
+		}
+
+		.popup-close[data-v-a06dd506] {
+			top: -12px;
+			right: -5px;
+			left: inherit;
+		}
+
+		.images-push {
+			bottom: 9px;
+			left: -6px;
+			width: 75px;
+			height: 75px;
+			z-index: 10;
+		}
+
+		.cont-popup-action {
+			padding-right: 7px;
+		}
+	}
+
+	@media (max-width: 1024px) and (min-width: 768px) {
+		.content-text {
+			background-image: url(https://cdn.comfy.ua/media/x/img/bonus_ru_mob.png);
+			bottom: 0;
+			width: 279px;
+			height: 55px;
+			z-index: 8;
+			left: 5px;
+		}
+
+		.linear-gradient-popup {
+			width: 295px;
+    		height: 56px;
+			overflow: inherit;
+			background: #43B02A;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+		}
+
+		.images-push__before::before {
+			content: "200";
+			left: 5px;
+			right: 0;
+			font-size: 3.2rem;
+		}
+
+		.fancybox-lock {
+			position: relative;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			top: 0;
+		}
+
+		.images-push {
+			bottom: 9px;
+			left: -6px;
+			width: 75px;
+			height: 75px;
+			z-index: 10;
+		}
+
+		.popup-wr[data-v-a06dd506] {
+			height: 210px;
+			width: 100%;
+		}
+
+		.popup-close[data-v-a06dd506] {
+			top: -12px;
+			right: -5px;
+			left: inherit;
+		}
+	}
+</style>
+<div id="wrapper-popup-action">
+	<div class="cont-popup-action">
+		<a href="/twohundred-bonus.html">
+			<div class="cont-popup">
+				<div class="linear-gradient-popup">
+					<div class="images-push__before">
+						<div class="images-push"></div>
+					</div>
+				</div>
+				<div class="content-text"></div>
+			</div>
+		</a>
+	</div>
+</div>
