@@ -1,0 +1,254 @@
+#night-kach
+   display: block
+   margin: 0 auto
+   max-width: 1316px
+   width: 100%
+   height: auto
+   overflow: hidden
+   background-color: #43b02a
+   position: relative
+   img
+      &:hover
+         opacity: 1
+   &:first-letter
+      padding-left: 0
+   img
+      display: block
+      margin-right: initial
+      margin-left: initial
+   h2
+      line-height: 1.1
+      text-transform: uppercase
+      letter-spacing: 1px
+      // font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 18px)
+      font-size: calc(1rem + 5vw)
+      padding-bottom: 4rem
+   h3
+      padding-top: 0
+      line-height: 1.1
+      font-size: calc(1rem + 1.7vw)
+      text-transform: uppercase
+      font-weight: normal
+      max-width: 780px
+      margin: 0 auto
+   p
+      margin-bottom: 0
+      font-size: calc(1rem + 0.9vw)
+      color: #fff
+      padding-top: 25px
+.breadcrumbs
+   display: none
+
+.brendirovaniy
+   display: none
+   
+span.word-wrap 
+   display: block
+   word-wrap: break-word
+
+span.fw-bold
+   font-weight: bold
+
+// default style END
+
+
+// sect-wra-kach
+.sect-wra-kach__content
+   position: relative
+   &.sect-wra-kach_bgrd
+      width: 100%
+      max-width: 1316px
+      min-height: auto
+      position: relative
+      z-index: 7
+      &::before
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img/left-form.png)
+         background-repeat: no-repeat
+         background-size: cover
+         position: absolute
+         left: 0
+         bottom: 0
+         width: 422px
+         height: 565px
+      &::after
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img/right-form.png)
+         background-repeat: no-repeat
+         background-size: cover
+         position: absolute
+         right: 0
+         bottom: 0
+         width: 328px
+         height: 643px
+   .sect-wra-kach__text
+      max-width: 985px
+      margin: 0 auto
+      padding: 8rem 15px 15px 15px
+      position: relative
+      z-index: 9
+      color: #fff
+      .sect-wra-kach__text-top
+         text-align: center
+      .sect-wra-kach__text-form
+         padding: 50px 0 55px 0
+      .sect-wra-kach__text-bottom
+         text-align: center
+
+// form
+
+#wrapper-form-corizoid
+   // padding: 50px 90px 50px 90px
+   form div.error, form label.error
+      left: 15px
+      display: block
+      position: relative
+      margin: 4px 4px 4px 0px
+      top: 0 !important
+#form-submit-none
+   display: block
+#text-submit-block
+   display: none
+   text-align: center
+   font-size: 2.5rem
+   color: #fff
+
+.row-flex-form
+   display: flex
+   flex-direction: column
+   align-items: flex-start
+   justify-content: center
+   width: 100%
+   max-width: 525px
+   margin: 0 auto
+   .item_fr
+      padding: 0 0px 20px 0
+      width: 100%
+      display: grid
+      &:last-child
+         padding: 0 0 0 0
+      .item-input-frm
+         font-size: 23px
+         margin: 0
+         padding: 1.2rem 1.7rem
+         border-radius: 10px
+         text-align: left
+         line-height: 1
+         height: 65px
+         background: #43af2954
+         border: 2px solid #FFFFFF
+         box-sizing: border-box
+         border-radius: 30px
+         color: #fff
+         &:focus
+            background: #49a434
+            border: 2px solid #ffffff
+            box-shadow: inset 0 0 6px white
+         &::-webkit-input-placeholder
+            color: #fff
+         &.item-input-frm__submit
+            background: #ff671f
+            transition: .3s
+            color: #fff
+            width: 100%
+            text-align: center
+            border: 2px solid #ff671f
+            font-weight: bold
+            text-transform: uppercase
+            font-size: 25px
+            letter-spacing: 3px
+            &:hover
+               box-shadow: 0 0 10px #ff671f
+               cursor: pointer
+.text-submit-block-cl p
+   font-size: 30px
+   color: #fff
+   text-transform: uppercase
+
+@media (min-width: 320px) and (max-width: 480px)
+   #night-kach h2
+      font-size: calc(1rem + 10vw)
+      letter-spacing: 0px
+   
+   #night-kach h3
+      font-size: calc(1rem + 5vw)
+
+   #night-kach p
+      font-size: calc(1rem + 2vw)
+
+   .sect-wra-kach__content
+      .sect-wra-kach__text
+         padding: 2rem 15px 15px 15px
+         max-width: 560px
+
+   .sect-wra-kach__content
+      &.sect-wra-kach_bgrd
+         min-height: auto
+   
+   .row-flex-form
+      max-width: 380px
+
+   .row-flex-form
+      .item_fr
+         .item-input-frm
+            height: 45px
+            font-size: 20px;
+
+   .sect-wra-kach__content
+      &.sect-wra-kach_bgrd
+         &::before
+            display: none
+
+   .sect-wra-kach__content
+      &.sect-wra-kach_bgrd
+         &::after
+            display: none
+
+@media (min-width: 481px) and (max-width: 768px)
+   .sect-wra-kach__content
+      .sect-wra-kach__text
+         padding: 5rem 15px 15px 15px
+         max-width: 480px
+
+   .sect-wra-kach__content
+      &.sect-wra-kach_bgrd
+         min-height: 620px
+   
+   .row-flex-form
+      max-width: 380px
+
+   .sect-wra-kach__content
+      &.sect-wra-kach_bgrd
+         &::before
+            width: 260px
+            height: 335px
+
+   .sect-wra-kach__content
+      &.sect-wra-kach_bgrd
+         &::after
+            width: 220px
+            height: 518px
+
+@media (min-width: 769px) and (max-width: 1024px)
+   .sect-wra-kach__content
+      .sect-wra-kach__text
+         max-width: 615px
+
+   .sect-wra-kach__content
+      &.sect-wra-kach_bgrd
+         min-height: 700px
+   
+   .row-flex-form
+      max-width: 425px
+
+   .sect-wra-kach__content
+      &.sect-wra-kach_bgrd
+         &::before
+            width: 312px
+            height: 395px
+
+   .sect-wra-kach__content
+      &.sect-wra-kach_bgrd
+         &::after
+            width: 220px
+            height: 518px
