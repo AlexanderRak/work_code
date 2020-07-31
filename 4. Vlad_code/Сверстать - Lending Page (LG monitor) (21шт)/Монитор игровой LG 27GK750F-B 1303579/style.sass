@@ -1,0 +1,162 @@
+@mixin text_black
+  text-align: center
+  padding: 70px
+  color: #fff
+  background-color: #000
+  
+
+/*default styles*/
+#lg 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+
+  .none_pic
+    display: none
+
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0 0 20px 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none !important
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#lg
+  .snoska,
+  .snoska_black
+    padding: 20px
+    font-size: 14px
+    text-align: center
+    display: block
+
+  .snoska_black
+    color: #fff
+    background-color: #000
+
+  .monik
+    .monik_txt
+      @include text_black
+  
+  .chastota
+    .chastota_txt
+      @include text_black
+      
+  .blur
+    .blur_txt
+      @include text_black
+      
+  .gsync   
+    .gsync_txt
+      @include text_black
+
+  .freesync
+    .freesync_txt
+      @include text_black
+
+  .mode
+    .mode_txt
+      @include text_black
+
+  .dynamic
+    padding: 70px
+    background-color: #131313
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+      >div
+        max-width: 50%
+        flex: 1 1 0
+        box-sizing: border-box
+      .dynamic_txt
+        padding: 40px
+        color: #fff
+        
+
+/*media*****************************************************************/
+
+@media (max-width: 812px)
+  #lg .monik .monik_txt,
+  #lg .chastota .chastota_txt,
+  #lg .blur .blur_txt,
+  #lg .gsync .gsync_txt,
+  #lg .freesync .freesync_txt,
+  #lg .mode .mode_txt,
+  #lg .dynamic,
+  #lg .dynamic li .dynamic_txt
+    padding: 20px
+
+@media (max-width: 480px)
+  #lg
+    .none_pic
+      display: block !important
+    h2
+      font-size: 24px
+    .chastota
+      .chastota_img
+        img
+          display: none
+    
+    .gsync
+      .gsync_img
+        img
+          display: none
+
+    .freesync
+      .freesync_img
+        img
+          display: none
+
+    .mode
+      .mode_img
+        img
+          display: none
+
+    .dynamic
+      padding: 0
+      li
+        flex-direction: column !important
+        >div
+          max-width: 100%
+        .dynamic_txt
+          text-align: center
+
+
+
+  
+        
+
+    

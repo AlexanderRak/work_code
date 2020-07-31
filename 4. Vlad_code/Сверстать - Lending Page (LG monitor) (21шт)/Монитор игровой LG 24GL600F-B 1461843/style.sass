@@ -1,0 +1,261 @@
+/*default styles*/
+
+#lg 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 32px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+  span
+    display: block
+    line-height: normal
+    font-size: 16px
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#lg
+  h2
+    padding-bottom: 20px
+  p>strong
+    display: block
+    padding-bottom: 10px
+  
+  .snoska,
+  .snoska_black
+    padding: 20px
+    text-align: center
+  
+  .snoska_black
+    background-color: #000
+    color: #fff
+
+  .wins
+    position: relative
+    .wins_txt
+      position: absolute
+      text-align: center
+      padding: 70px 20px 0px 20px
+      right: 50%
+      transform: translateX(50%)
+    
+  .speed
+    background-color: #000000
+    .speed_txt
+      text-align: center
+      padding: 70px
+      color: #fff
+    .speed_list
+      display: flex
+      flex-direction: row
+      justify-content: center
+      justify-content: space-between
+      max-width: 60%
+      margin: 0 auto
+      padding: 70px
+      align-items: center
+      li
+        color: #fff 
+        padding: 0 10px
+        p
+          font-size: 24px
+        &:nth-of-type(2)
+          border: 1px solid #8a3466
+          border-top: none
+          border-bottom: none
+          padding: 0 20px
+
+  .chastota
+    background-image: url("https://cdn.comfy.ua/media/x/img/1461843/4.jpg")
+    background-position: center bottom
+    background-size: cover
+    .chastota_txt       
+      padding: 70px 
+      color: #fff
+      text-align: center
+  
+  .refresh
+    position: relative
+    .refresh_txt
+      position: absolute
+      color: #fff
+      left: 70px
+      bottom: 50%
+      transform: translateY(50%)
+
+  .respond
+    position: relative
+    .respond_txt
+      position: absolute
+      color: #fff
+      right: 70px
+      bottom: 50%
+      transform: translateY(50%)
+      max-width: 480px
+
+  .monik
+    .monik_txt
+      padding: 70px
+      color: #fff
+      background-color: #000
+      text-align: center
+
+  .freesync
+    .freesync_txt
+      background-color: #000
+      color: #fff
+      text-align: center
+      padding: 70px
+
+  .mode
+    .mode_title
+      background-color: #000
+      color: #fff
+      text-align: center
+      padding: 70px 70px 0 70px
+    
+    .slider
+      .slider_item
+        position: relative
+        .mode_txt
+          top: 50px
+          padding: 0 20px
+          color: #fff
+          text-align: center
+          position: absolute
+          right: 50%
+          transform: translateX(50%)
+
+  .dynamic
+    padding: 70px
+    background-color: #000
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      >div
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+        .dynamic_txt
+          padding-left: 40px
+          padding-right: 0
+      .dynamic_txt
+        color: #fff
+        padding-right: 40px
+  
+  .slick-prev:before, .slick-next:before
+    font-size: 30px
+    color: #fff
+  
+  .slick-next
+    right: 25px
+    width: 30px
+    height: 30px
+    z-index: 2
+  
+  .slick-prev
+    left: 25px
+    width: 30px
+    height: 30px
+    z-index: 2
+        
+
+
+/*media**************************************************************/
+
+@media (max-width: 812px)
+  #lg
+    .speed .speed_txt,
+    .speed .speed_list,
+    .chastota .chastota_txt,
+    .monik .monik_txt,
+    .freesync .freesync_txt,
+    .dynamic,
+    .dynamic li .dynamic_txt
+      padding: 20px
+    
+    .speed 
+      .speed_list
+        max-width: 100%
+        li
+          flex: 1 1 0
+
+    .refresh 
+      .refresh_txt
+        left: 20px
+        max-width: 300px
+
+    .respond 
+      .respond_txt
+        right: 20px
+        max-width: 300px
+
+    .mode .mode_title
+      padding: 20px 20px 0 20px
+    
+
+@media (max-width: 480px)
+  #lg
+    h2
+      font-size: 24px
+    .wins 
+      .wins_txt
+        width: 200px;
+        color: #fff;
+        text-shadow: 2px 1px 3px black;
+        width: 100%
+        padding: 20px
+
+    .speed .speed_list li p
+      font-size: 14px
+      line-height: normal
+
+    .mode .slider .slider_item .mode_txt
+      width: 100%;
+      top: 10px;
+  
+    .dynamic 
+      li
+        flex-direction: column !important
+        >div
+          max-width: 100%
+      .dynamic_txt
+        padding: 20px 0 40px 0 !important
+        text-align: center
+    

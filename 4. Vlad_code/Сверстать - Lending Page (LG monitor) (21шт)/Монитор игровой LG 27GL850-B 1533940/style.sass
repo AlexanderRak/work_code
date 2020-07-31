@@ -1,0 +1,243 @@
+@mixin text_black
+  text-align: center
+  padding: 70px
+  background-color: #000
+  color: #fff
+  
+
+
+/*default styles*/
+#lg 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+
+  .none_pic
+    display: none
+
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0 0 20px 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none !important
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#lg
+  .snoska,
+  .snoska_black
+    padding: 20px
+    font-size: 14px
+    text-align: center
+    display: block
+
+  .snoska_black
+    color: #fff
+    background-color: #000
+
+  .wins
+    position: relative
+    .wins_txt
+      position: absolute
+      color: #fff
+      padding: 70px
+      box-sizing: border-box
+      width: 100%
+      text-align: center
+
+  .ips
+    .ips_txt
+      @include text_black
+  
+  .nano
+    position: relative
+    .nano_txt
+      position: absolute
+      color: #fff
+      max-width: 600px
+      right: 0
+      bottom: 50%
+      padding: 70px
+      box-sizing: border-box
+      transform: translateY(50%)
+  
+  .respond
+    position: relative
+    .respond_txt
+      position: absolute
+      color: #fff
+      padding: 70px
+      box-sizing: border-box
+      max-width: 600px
+      bottom: 50%
+      transform: translateY(50%)
+
+  .gsync
+    .gsync_txt
+      padding: 70px
+      text-align: center
+
+  .freesync
+    padding: 70px
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      >div
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+      .freesync_txt
+        padding: 40px
+        
+  .hdr
+    position: relative
+    .hdr_txt  
+      position: absolute
+      color: #fff
+      padding: 70px
+      box-sizing: border-box
+      width: 100%
+      text-align: center
+  
+  .dynamic
+    padding: 70px
+    background-color: #000
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+      >div
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+      .dynamic_txt
+        padding: 40px
+        color: #fff
+
+  .frame
+    .frame_img
+      img
+        margin: 0 auto
+    .frame_txt
+      padding: 70px
+      text-align: center
+        
+        
+  
+
+/*media*****************************************************************/
+
+@media (max-width: 1024px)
+  #lg .nano .nano_txt
+    max-width: 500px
+  #lg .respond .respond_txt
+    max-width: 500px
+
+@media (max-width: 812px)
+  #lg .wins .wins_txt,
+  #lg .ips .ips_txt,
+  #lg .nano .nano_txt,
+  #lg .respond .respond_txt,
+  #lg .gsync .gsync_txt,
+  #lg .freesync,
+  #lg .freesync li .freesync_txt,
+  #lg .hdr .hdr_txt,
+  #lg .dynamic,
+  #lg .dynamic li .dynamic_txt,
+  #lg .frame .frame_txt
+    padding: 20px
+
+  #lg .nano .nano_txt
+    max-width: 300px
+
+@media (max-width: 480px)
+  #lg
+    .none_pic
+      display: block !important
+    h2
+      font-size: 24px
+    .nano
+      .nano_img
+        img
+          display: none
+    .respond
+      .respond_img
+        img
+          display: none
+    .hdr
+      .hdr_img
+        img
+          display: none
+    .nano .nano_txt
+      position: unset
+      transform: unset
+      background-color: #000
+      max-width: 100%
+      text-align: center
+
+    .respond .respond_txt
+      position: unset
+      transform: unset
+      background-color: #000
+      max-width: 100%
+      text-align: center
+    
+    .freesync 
+      padding: 0
+      li
+        flex-direction: column !important
+        >div
+          max-width: 100%
+        .freesync_txt
+          text-align: center
+
+    .dynamic
+      padding: 0 
+      li
+        flex-direction: column !important
+        >div
+          max-width: 100%
+        .dynamic_txt
+          text-align: center
+
+
+
+  
+        
+
+    
