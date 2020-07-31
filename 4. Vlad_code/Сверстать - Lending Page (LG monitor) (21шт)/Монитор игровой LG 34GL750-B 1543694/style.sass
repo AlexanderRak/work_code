@@ -1,0 +1,220 @@
+/*default styles*/
+
+@mixin text_black
+  text-align: center
+  padding: 70px
+  color: #fff
+  background-color: #000
+
+@mixin text_white
+  text-align: center
+  padding: 70px
+
+@mixin dis_flex
+  display: flex
+  flex-direction: row
+  align-items: center
+
+#lg 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+
+  .none_pic
+    display: none
+
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0 0 20px 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none !important
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#lg
+  .snoska,
+  .snoska_black
+    padding: 20px
+    font-size: 14px
+    text-align: center
+    display: block
+
+  .snoska_black
+    color: #fff
+    background-color: #000
+
+  .wins
+    .wins_txt
+      @include text_black
+      background-color: #1b1c1e
+  
+  .compatibility
+    .compatibility_txt
+      @include text_white
+      
+  .freesync
+    padding: 70px
+    @include dis_flex
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .freesync_txt
+      padding: 40px
+
+  .hdr
+    .hdr_txt
+      @include text_white
+      background-image: url("https://cdn.comfy.ua/media/x/img/1543694/5bg.jpg")
+      background-size: cover
+      background-position: center bottom
+
+  .ips
+    position: relative
+    .ips_txt
+      position: absolute
+      color: #fff
+      padding: 0 70px
+      box-sizing: border-box
+      max-width: 700px
+      right: 0
+      bottom: 50%
+      transform: translateY(50%)
+
+  .ultrawide
+    .ultrawide_txt
+      @include text_black
+
+  .mbr
+    .mbr_txt
+      @include text_black
+      
+  .dynamic    
+    padding: 70px
+    background-color: #131313
+    li
+      @include dis_flex
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+      >div
+        max-width: 50%
+        flex: 1 1 0
+        box-sizing: border-box
+      .dynamic_txt
+        color: #fff
+        padding: 40px
+
+  .design
+    .design_txt
+      @include text_white
+    .design_img
+      img
+        margin: 0 auto
+        
+  
+
+/*media*****************************************************************/
+
+@media (max-width: 1024px)
+  #lg .ips .ips_txt
+    max-width: 500px
+
+@media (max-width: 812px)
+  #lg .wins .wins_txt,
+  #lg .compatibility .compatibility_txt,
+  #lg .freesync,
+  #lg .freesync .freesync_txt,
+  #lg .hdr .hdr_txt,
+  #lg .ips .ips_txt,
+  #lg .ultrawide .ultrawide_txt,
+  #lg .mbr .mbr_txt,
+  #lg .dynamic,
+  #lg .dynamic li .dynamic_txt,
+  #lg .design .design_txt
+    padding: 20px
+
+  #lg .ips .ips_txt
+    max-width: 400px
+
+@media (max-width: 480px)
+  #lg
+    .none_pic
+      display: block !important
+    h2
+      font-size: 24px
+
+    .wins
+      .wins_img
+        img
+          display: none
+    
+    .ips
+      .ips_img
+        img
+          display: none
+      .ips_txt
+        position: unset
+        background-color: #000
+        text-align: center
+    
+    .ultrawide
+      .ultrawide_img
+        img
+          display: none
+
+    .mbr
+      .mbr_img
+        img
+          display: none
+
+    .freesync
+      flex-direction: column-reverse
+      >div
+        max-width: 100%
+        padding: 0 !important
+      .freesync_txt
+        text-align: center
+
+    .dynamic
+      padding: 0
+      li
+        flex-direction: column !important
+        >div
+          max-width: 100%
+        .dynamic_txt
+          text-align: center
+
+  
+        
+
+    

@@ -1,0 +1,251 @@
+/*default styles*/
+
+#lg 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+
+  .none_pic
+    display: none
+
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0 0 20px 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#lg
+  .snoska
+    padding: 20px
+    font-size: 14px
+    text-align: center
+    display: block
+  .uhd
+    .uhd_txt
+      padding: 70px
+      text-align: center
+      background-color: #fff
+
+  .dci
+    .dci_txt
+      text-align: center
+      padding: 70px
+      background-image: url("https://cdn.comfy.ua/media/x/img/1519218/3bg.jpg")
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center bottom
+
+  .color
+    padding: 70px
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+      &:nth-of-type(1)
+        .color_txt
+          text-align: right
+      >div
+        width: max-content
+        box-sizing: border-box
+      .color_img
+        min-width: max-content
+        img
+          margin: 0 auto
+      .color_txt
+        padding: 0 70px
+
+  .freesync
+    .freesync_txt
+      padding: 70px
+      text-align: center
+
+  .slick-prev:before, 
+  .slick-next:before
+      font-size: 30px
+      color: #fff
+    
+  .slick-next
+    right: 25px
+    width: 30px
+    height: 30px
+    z-index: 2
+  
+  .slick-prev
+    left: 25px
+    width: 30px
+    height: 30px
+    z-index: 2
+  
+  .slick-dots
+    position: absolute
+    bottom: 10px
+    li
+      opacity: 1
+  
+  .slick-active
+    background: #a40033;
+
+  .mode
+    position: relative
+    .mode_title
+      top: 50px
+      padding: 0 20px
+      color: #fff
+      text-align: center
+      position: absolute
+      right: 50%
+      transform: translateX(50%)
+      z-index: 2
+    .slider
+      position: relative
+      margin: 0
+    
+  .dynamic
+    padding: 70px
+    background-color: #131313
+    li
+      align-items: center
+      display: flex
+      flex-direction: row
+      >div
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+      .dynamic_txt
+        padding: 40px
+        color: #fff
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+
+  .screen
+    .screen_txt
+      padding: 70px
+      text-align: center
+    .screen_img
+      img
+        margin: 0 auto
+
+  .arcline
+    position: relative
+    .arcline_txt
+      position: absolute
+      left: 70px
+      bottom: 50%
+      transform: translateY(50%)
+      max-width: 400px
+
+
+/*media*****************************************************************/
+
+@media (max-width: 1024px)
+  #lg
+    .mode .mode_title
+      width: 100%
+
+
+@media (max-width: 812px)
+  #lg 
+    .uhd .uhd_txt,
+    .dci .dci_txt,
+    .freesync .freesync_txt,
+    .dynamic,
+    .dynamic li .dynamic_txt,
+    .screen .screen_txt,
+    .color
+      padding: 20px
+    .arcline .arcline_txt
+      position: unset
+      transform: unset !important
+      max-width: 100%
+      text-align: center
+      padding: 20px
+      background-color: #e6e6e6
+    .color li .color_txt
+      padding: 0 20px
+    .mode .mode_title
+      top: 0px
+      width: 100%
+      padding: 20px
+      box-sizing: border-box
+
+
+@media (max-width: 480px)
+  #lg
+    h2
+      font-size: 24px
+    .none_pic
+      display: block !important
+    .logo
+      img
+        display: none
+    .uhd
+      .uhd_img
+        img
+          display: none
+    .mode
+      .mode_title
+        position: unset
+        background-color: #000
+        transform: unset !important
+        padding: 20px
+      .slider
+        .slider_item
+          .mode_img
+            img
+              display: none
+    .arcline
+      .arcline_img
+        img
+          display: none
+
+    .color 
+      li
+        flex-direction: column !important
+        .color_txt
+          text-align: center !important
+          max-width: 100%
+          padding: 20px
+    
+    .dynamic 
+      padding: 0
+      li
+        flex-direction: column !important
+        >div
+          max-width: 100%
+        .dynamic_txt
+          padding: 20px 20px 40px 20px
+          text-align: center

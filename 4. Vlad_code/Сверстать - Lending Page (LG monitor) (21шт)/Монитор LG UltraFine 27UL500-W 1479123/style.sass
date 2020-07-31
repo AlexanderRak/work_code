@@ -1,0 +1,203 @@
+/*default styles*/
+
+#lg 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+
+  .none_pic
+    display: none
+
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0 0 20px 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none !important
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#lg
+  .snoska
+    padding: 20px
+    font-size: 14px
+    text-align: center
+    display: block
+
+  .hdr
+    .hdr_txt
+      text-align: center
+      padding: 70px
+      background-image: url("https://cdn.comfy.ua/media/x/img/1479123/1bg.jpg")
+      background-size: cover
+      background-position: center bottom
+
+  .ips
+    padding: 70px
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      &:nth-of-type(2)
+        flex-direction: row-reverse
+      >div
+        max-width: 50%
+        flex: 1 1 0
+        box-sizing: border-box
+      .ips_txt
+        padding: 40px
+
+  .compatibility
+    display: flex
+    flex-direction: row
+    align-items: center
+    li
+      &:last-of-type
+        text-align: center
+        padding: 0 70px 70px 70px
+
+  .freesync
+    .freesync_txt
+      background-color: #000
+      color: #fff
+      text-align: center
+      padding: 70px
+        
+  .mode
+    .mode_txt
+      padding: 70px
+      text-align: center
+      color: #fff
+      background-image: url("https://cdn.comfy.ua/media/x/img/1479123/4bg.jpg")
+      background-size: cover
+      background-position: center bottom
+
+  .dynamic
+    padding: 70px
+    background-color: #131313
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+      >div
+        max-width: 50%
+        flex: 1 1 0
+        box-sizing: border-box
+      .dynamic_txt
+        padding: 40px
+        color: #fff
+
+  .screen
+    .screen_txt
+      padding: 70px
+      text-align: center
+      background-image: url("https://cdn.comfy.ua/media/x/img/1479123/5bg.jpg")
+      background-size: cover
+      background-position: center bottom
+        
+
+
+
+/*media*****************************************************************/
+
+@media (max-width: 812px)
+  #lg 
+    .hdr .hdr_txt,
+    .ips,
+    .ips li .ips_txt,
+    .compatibility li:last-of-type,
+    .freesync .freesync_txt,
+    .mode .mode_txt,
+    .dynamic,
+    .dynamic li .dynamic_txt,
+    .screen .screen_txt
+      padding: 20px
+   
+    
+    
+
+
+@media (max-width: 480px)
+  #lg
+    .none_pic
+      display: block !important
+    h2
+      font-size: 24px
+    .hdr
+      .hdr_img
+        img
+          display: none
+    .freesync
+      .freesync_img
+        img
+          display: none
+
+    .mode
+      .mode_img
+        img
+          display: none
+      .mode_txt
+        background-image: unset
+        background-color: #000
+    
+    .ips
+      padding: 0
+      li
+        flex-direction: column !important
+        >div
+          max-width: 100%
+        .ips_txt
+          text-align: center
+    
+    .compatibility
+      flex-direction: column
+      text-align: center
+
+    .dynamic
+      padding: 0
+      li
+        flex-direction: column !important
+        >div
+          max-width: 100%
+        .dynamic_txt
+          text-align: center
+    
+    .screen
+      .screen_img
+        img
+          display: none
+
+    
+
+    

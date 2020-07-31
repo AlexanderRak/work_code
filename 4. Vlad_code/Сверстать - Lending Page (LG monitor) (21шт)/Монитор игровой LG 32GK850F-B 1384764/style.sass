@@ -1,0 +1,176 @@
+/*default styles*/
+
+#lg 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+
+  .none_pic
+    display: none
+
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0 0 20px 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none !important
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#lg
+  .snoska,
+  .snoska_black
+    padding: 20px
+    font-size: 14px
+    text-align: center
+    display: block
+
+  .snoska_black
+    color: #fff
+    background-color: #000
+
+  .monitor
+    position: relative
+    .monitor_txt 
+      position: absolute
+      padding: 70px
+      text-align: center
+      color: #fff
+      right: 50%        
+      transform: translateX(50%)
+      width: 100%
+      box-sizing: border-box
+
+  .saturation
+    .saturation_txt
+      padding: 70px 70px 0 70px
+      text-align: center
+      color: #fff
+      background-color: #000
+  
+  .hdr
+    .hdr_txt
+      text-align: center
+      color: #fff
+      background-color: #000
+      padding: 70px 70px 0 70px
+
+  .freesync
+    .freesync_txt
+      color: #fff
+      background-color: #000
+      text-align: center
+      padding: 70px 70px 0 70px
+
+  .chastota
+    .chastota_txt
+      text-align: center
+      color: #fff
+      background-color: #000
+      padding: 70px 70px 0 70px
+
+  .blur
+    .blur_txt
+      text-align: center
+      color: #fff
+      background-color: #000
+      padding: 70px 70px 0 70px
+
+  .interface
+    position: relative
+    .interface_txt
+      text-align: center
+      color: #fff
+      background-color: #000
+      padding: 70px 70px 0 70px
+
+  .function
+    position: relative
+    .function_txt
+      text-align: center
+      color: #fff
+      background-color: #000
+      padding: 70px 70px 0 70px
+  
+
+
+/*media*****************************************************************/
+
+@media (max-width: 812px)
+  #lg .monitor .monitor_txt
+    padding: 20px
+
+  #lg .saturation .saturation_txt,
+  #lg .hdr .hdr_txt,
+  #lg .freesync .freesync_txt,
+  #lg .chastota .chastota_txt,
+  #lg .blur .blur_txt,
+  #lg .interface .interface_txt,
+  #lg .function .function_txt
+    padding: 20px 20px 0 20px
+
+
+@media (max-width: 480px)
+  #lg
+    .none_pic
+      display: block !important
+    h2
+      font-size: 24px
+
+    .saturation
+      .saturation_img
+        img
+          display: none
+
+    .freesync
+      .freesync_img
+        img
+          display: none
+
+    .interface
+      .interface_img
+        img
+          display: none
+
+    .function
+      .function_img
+        img
+          display: none
+
+    .chastota
+      position: relative
+      .chastota_img
+        img
+          display: none
+        
+
+    

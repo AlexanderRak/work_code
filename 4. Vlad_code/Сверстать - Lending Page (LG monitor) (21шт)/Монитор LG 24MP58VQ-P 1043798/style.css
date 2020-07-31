@@ -1,0 +1,231 @@
+/*default styles*/
+#lg {
+  max-width: 1316px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#lg p {
+  margin-bottom: 0;
+  margin: 0;
+}
+
+#lg p:first-letter {
+  padding-left: 0;
+}
+
+#lg h2 {
+  display: block;
+  line-height: normal;
+  font-size: 32px;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+#lg img {
+  opacity: 1;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+#lg img:hover {
+  opacity: 1;
+}
+
+#lg ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#lg span {
+  display: block;
+  line-height: normal;
+  font-size: 16px;
+}
+
+.features-desc__text img {
+  margin-bottom: 0rem;
+}
+
+.one-col .features-desc__text p:first-letter {
+  padding-left: 0rem !important;
+}
+
+/*end default styles*/
+#lg h2 {
+  padding-bottom: 20px;
+}
+
+#lg p > strong {
+  display: block;
+  padding-bottom: 10px;
+}
+
+#lg .snoska {
+  padding: 20px;
+  text-align: center;
+}
+
+#lg .qualit .qualit_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#lg .qualit .qualit_list li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  max-width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#lg .qualit .qualit_list li:last-of-type {
+  padding: 40px;
+}
+
+#lg .arcline {
+  position: relative;
+}
+
+#lg .arcline .arcline_txt {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  padding: 70px;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+#lg .design {
+  position: relative;
+}
+
+#lg .design .design_txt {
+  position: absolute;
+  max-width: 600px;
+  left: 70px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#lg .vision {
+  position: relative;
+}
+
+#lg .vision .vision_txt {
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  max-width: 470px;
+  color: #fff;
+}
+
+#lg .stab .stab_txt {
+  background-color: #000;
+  color: #fff;
+  padding: 70px;
+  text-align: center;
+}
+
+#lg .oneclick .oneclick_txt {
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  padding: 70px;
+}
+
+#lg .multi .multi_txt {
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+  padding: 70px;
+}
+
+#lg .colors .colors_txt {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 70px;
+}
+
+/*media**************************************************************/
+@media (max-width: 812px) {
+  #lg .qualit .qualit_list li:last-of-type {
+    padding: 20px;
+  }
+  #lg .design .design_txt {
+    left: 20px;
+    max-width: 400px;
+  }
+  #lg .vision .vision_txt {
+    right: 20px;
+    max-width: 350px;
+  }
+  #lg .stab .stab_txt,
+  #lg .oneclick .oneclick_txt,
+  #lg .multi .multi_txt,
+  #lg .colors .colors_txt,
+  #lg .arcline .arcline_txt {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #lg h2 {
+    font-size: 24px;
+  }
+  #lg .qualit .qualit_list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #lg .qualit .qualit_list li {
+    text-align: center;
+    max-width: 100%;
+  }
+  #lg .arcline .arcline_txt {
+    position: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    color: #000;
+  }
+  #lg .design .design_txt {
+    position: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    text-align: center;
+    padding: 20px;
+  }
+  #lg .vision .vision_txt {
+    position: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    max-width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

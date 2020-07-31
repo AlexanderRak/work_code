@@ -1,0 +1,148 @@
+/*default styles*/
+
+#lg 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 32px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+  span
+    display: block
+    line-height: normal
+    font-size: 16px
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#lg
+  h2
+    padding-bottom: 20px
+  p>strong
+    display: block
+    padding-bottom: 10px
+  
+  .snoska
+    padding: 20px
+    text-align: center
+  
+  .blur
+    .blur_txt
+      padding: 70px
+      text-align: center
+      background-image: url("https://cdn.comfy.ua/media/x/img/1182350/new/1bg.jpg")
+      color: #fff
+      background-position: center bottom
+      background-repeat: no-repeat
+      background-size: cover
+  
+  .freesync
+    padding: 270px 70px
+    height: 832px
+    box-sizing: border-box
+    background-image: url("https://cdn.comfy.ua/media/x/img/1182350/new/2.jpg")
+    background-position: center left
+
+    .freesync_txt
+      color: #fff
+      max-width: 600px
+
+    .freesync_img
+      display: none
+
+  .dynamic
+    .dynamic_txt
+      background-color: #000
+      color: #fff
+      text-align: center
+      padding: 70px
+
+  .stab
+    .stab_txt
+      color: #fff
+      padding: 70px
+      text-align: center
+      background-image: url("https://cdn.comfy.ua/media/x/img/1182350/new/4bg.jpg")
+      background-position: center bottom
+      background-size: cover
+
+  .gaming
+    .gaming_txt
+      color: #fff
+      text-align: center
+      padding: 70px
+      background-image: url("https://cdn.comfy.ua/media/x/img/1182350/new/5bg.jpg")
+      background-position: center bottom
+      background-size: cover
+
+  .design
+    .design_txt
+      color: #fff
+      text-align: center
+      padding: 70px
+      background-image: url("https://cdn.comfy.ua/media/x/img/1182350/new/6bg.jpg")
+      background-size: cover
+      background-position: center top
+
+
+
+/*media**************************************************************/
+
+@media (max-width: 812px)
+  #lg
+    .blur .blur_txt,
+    .dynamic .dynamic_txt,
+    .stab .stab_txt,
+    .gaming .gaming_txt,
+    .design .design_txt
+      padding: 20px
+    
+    .freesync
+      padding: 270px 20px 20px 20px
+
+
+@media (max-width: 480px)
+  #lg
+    h2
+      font-size: 24px
+
+    .freesync
+      height: auto
+      padding: 0px
+      text-align: center
+      .freesync_txt
+        padding: 20px
+      .freesync_img
+        display: block
