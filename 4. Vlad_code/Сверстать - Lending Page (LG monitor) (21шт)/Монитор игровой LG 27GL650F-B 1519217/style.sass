@@ -1,0 +1,205 @@
+/*default styles*/
+
+#lg 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 32px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+  span
+    display: block
+    line-height: normal
+    font-size: 16px
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#lg
+  h2
+    padding-bottom: 20px
+  p>strong
+    display: block
+    padding-bottom: 10px
+
+  .none_pic
+    display: none
+  
+  .snoska,
+  .snoska_black
+    padding: 20px
+    text-align: center
+  
+  .snoska_black
+    background-color: #000
+    color: #fff
+
+  .wins
+    position: relative
+    .wins_txt
+      color: #fff
+      text-align: center
+      padding: 70px 20px 20px 20px
+      position: absolute
+      width: 100%
+      right: 50%
+      transform: translateX(50%)
+      box-sizing: border-box
+
+  .freesync
+    .freesync_txt
+      padding: 70px
+      text-align: center
+      color: #fff
+      background-color: #181818
+
+  .hdr
+    .hdr_txt
+      padding: 70px
+      background-image: url("https://cdn.comfy.ua/media/x/img/1519217/4bg.jpg")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center bottom
+      text-align: center
+
+  .ips
+    position: relative
+    .ips_txt
+      position: absolute
+      color: #fff
+      max-width: 530px
+      right: 70px
+      bottom: 50%
+      transform: translateY(50%)
+
+  .blur
+    .blur_txt 
+      padding: 70px
+      text-align: center
+      color: #fff
+      background-color: #000
+
+  .dynamic
+    padding: 70px
+    background-color: #131313
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+      >div
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+      .dynamic_txt
+        padding: 40px
+        color: #fff
+
+  .design
+    .design_txt
+      text-align: center
+      padding: 70px
+    .design_img
+      img
+        margin: 0 auto
+        
+        
+
+
+/*media**************************************************************/
+
+@media (max-width: 1024px)
+  #lg .ips .ips_txt
+    max-width: 400px
+
+@media (max-width: 812px)
+  #lg
+    .freesync .freesync_txt,
+    .hdr .hdr_txt,
+    .blur .blur_txt,
+    .dynamic,
+    .dynamic li .dynamic_txt,
+    .design .design_txt
+      padding: 20px
+
+    .ips .ips_txt
+      right: 20px
+      max-width: 300px
+
+    
+
+@media (max-width: 480px)
+  #lg
+    h2
+      font-size: 24px
+    .none_pic
+      display: block !important
+    .wins
+      .wins_img
+        img
+          display: none
+      .wins_txt
+        padding: 20px
+    .ips
+      .ips_img
+        img
+          display: none
+      .ips_txt
+        position: unset
+        transform: unset
+        text-align: center
+        background-color: #000
+        max-width: 100%
+        padding: 20px
+    .blur
+      .blur_img
+        img
+          display: none
+    .dynamic 
+      padding: 0
+      li
+        flex-direction: column !important
+        >div
+          max-width: 100%
+        .dynamic_txt
+          padding: 20px
+          text-align: center
+        &:nth-of-type(2)
+          margin: 40px 0
+          
+
+    
