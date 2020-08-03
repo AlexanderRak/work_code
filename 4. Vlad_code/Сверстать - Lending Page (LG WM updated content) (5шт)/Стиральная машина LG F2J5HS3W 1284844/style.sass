@@ -1,0 +1,345 @@
+@mixin text_black
+  text-align: center
+  background-color: #0e0e0e
+  color: #fff
+  padding: 70px
+
+/*default styles*/
+
+#lg 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0 0 20px 0
+    margin: 0
+  h3
+    display: block
+    margin: 0
+    padding: 0
+    font-size: 24px
+    line-height: normal
+    text-align: unset
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+    font-size: 18px
+  
+  .none_pic
+    display: none
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#lg
+  .snoska
+    padding: 20px
+    text-align: center
+    font-size: 16px
+  .inverter
+    .inverter_txt
+      @include text_black
+  
+  .motion
+    position: relative
+    background-image: url("https://cdn.comfy.ua/media/x/img/1284858/2.png")
+    background-position: center
+    background-size: cover
+    box-sizing: border-box
+    background-repeat: no-repeat
+    .motion_title
+      text-align: center
+      padding: 70px
+      box-sizing: border-box
+      width: 100%
+      color: #fff
+    .motion_col
+      padding: 70px
+      box-sizing: border-box
+      bottom: 0
+      color: #fff
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      width: 100%
+      .motion_list
+        >span
+          color: #ae1a4a
+          font-size: 20px
+        li
+          display: flex
+          flex-direction: column
+          align-items: center
+          &::before
+            content: ""
+            display: block
+            width: 166px
+            height: 165px
+            background-position: center
+            background-repeat: no-repeat !important
+            background-size: contain
+            box-sizing: border-box
+            margin-right: -20px
+          &:nth-of-type(1)
+            margin-top: 20px
+            &::before
+              background-image: url("https://cdn.comfy.ua/media/x/img/1284858/icon1.png")
+          &:nth-of-type(2)
+            margin: 40px 0
+            &::before
+              background-image: url("https://cdn.comfy.ua/media/x/img/1284858/icon2.png")
+          &:nth-of-type(3)
+            &::before
+              background-image: url("https://cdn.comfy.ua/media/x/img/1284858/icon3.png")
+      .motion_list_2
+        >span
+          color: #ae1a4a
+          font-size: 20px
+        li
+          display: flex
+          flex-direction: column
+          align-items: center
+          &::before
+            content: ""
+            display: block
+            width: 166px
+            height: 165px
+            background-position: center
+            background-repeat: no-repeat !important
+            background-size: contain
+            box-sizing: border-box
+            margin-right: -20px
+          &:nth-of-type(1)
+            margin-top: 20px
+            &::before
+              background-image: url("https://cdn.comfy.ua/media/x/img/1284858/icon4.png")
+          &:nth-of-type(2)
+            margin: 40px 0
+            &::before
+              background-image: url("https://cdn.comfy.ua/media/x/img/1284858/icon5.png")
+          &:nth-of-type(3)
+            &::before
+              background-image: url("https://cdn.comfy.ua/media/x/img/1284858/icon6.png")
+
+  .work
+    position: relative
+    .work_txt
+      position: absolute
+      max-width: 500px
+      padding: 70px
+      bottom: 50%
+      transform: translateY(50%)
+
+  .wash
+    position: relative
+    .wash_txt
+      position: absolute
+      padding: 70px
+      box-sizing: border-box
+      text-align: center
+
+  .smart
+    position: relative
+    .smart_txt
+      max-width: 600px
+      position: absolute
+      color: #fff
+      padding: 70px
+      right: 0
+      bottom: 50%
+      transform: translateY(50%)
+
+  .program
+    background-color: #333
+    display: flex
+    flex-direction: row
+    align-items: center
+    box-sizing: border-box
+    padding: 70px
+    li
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+      &:nth-of-type(1)
+        margin-right: 40px
+      .program_txt
+        color: #fff
+        .program_title
+          margin-bottom: 20px
+          display: flex
+          flex-direction: row
+          align-items: center
+          img
+            margin: 0 20px 0 0
+            height: max-content
+
+  .power
+    padding: 70px
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      >div
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+        img
+          margin: 0 auto
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+
+  .spa
+    position: relative
+    .spa_txt
+      position: absolute
+      max-width: 400px
+      padding: 70px
+      bottom: 50%
+      transform: translateY(50%)
+      box-sizing: content-box
+
+  .alergy
+    position: relative
+    .alergy_txt
+      position: absolute
+      color: #fff
+      max-width: 400px
+      padding: 70px
+      bottom: 50%
+      transform: translateY(50%)
+      box-sizing: content-box
+        
+
+/*media****************************************************************/
+
+@media (max-width: 1024px)
+  #lg .work .work_txt
+    max-width: 500px
+
+@media (max-width: 812px)
+  #lg .inverter .inverter_txt,
+  #lg .motion .motion_title,
+  #lg .motion .motion_col,
+  #lg .work .work_txt,
+  #lg .wash .wash_txt,
+  #lg .smart .smart_txt,
+  #lg .program,
+  #lg .power,
+  #lg .spa .spa_txt,
+  #lg .alergy .alergy_txt
+    padding: 20px
+  #lg .work .work_txt
+    position: unset
+    transform: unset
+    max-width: 100%
+    text-align: center
+  #lg .smart .smart_txt
+    position: unset
+    transform: unset
+    color: #000
+    text-align: center
+    max-width: 100%
+
+@media (max-width: 480px)
+  #lg
+    h2
+      font-size: 24px
+    h3
+      font-size: 20px
+    .none_pic
+      display: block !important
+    .inverter
+      .inverter_img
+        img
+          display: none
+
+    .motion .motion_col li
+      text-align: center
+        
+    .motion .motion_col .motion_list li::before,
+    .motion .motion_col .motion_list_2 li::before
+      width: 100px
+      height: 100px
+
+    .motion .motion_col .motion_list li .motion_txt,
+    .motion .motion_col .motion_list_2 li .motion_txt
+      min-height: 42px
+    
+    .motion .motion_col .motion_list > span,
+    .motion .motion_col .motion_list_2 > span
+      min-height: 45px
+      text-align: center
+
+    .wash
+      .wash_img
+        img
+          display: none
+
+    .program
+      flex-direction: column
+      li
+        max-width: 100%
+        &:nth-of-type(1)
+          margin-right: 0
+          margin-bottom: 40px
+
+    .power
+      li
+        flex-direction: column-reverse !important
+        >div
+          max-width: 100%
+        .power_txt
+          text-align: center
+        &:nth-of-type(2)
+          margin: 40px 0
+
+    .spa
+      .spa_img
+        img
+          display: none
+      .spa_txt
+        position: unset
+        transform: unset
+        text-align: center
+    
+    .alergy
+      .alergy_img
+        img
+          display: none     
+      .alergy_txt     
+        position: unset
+        transform: unset
+        text-align: center
+        background-color: #000
+          
