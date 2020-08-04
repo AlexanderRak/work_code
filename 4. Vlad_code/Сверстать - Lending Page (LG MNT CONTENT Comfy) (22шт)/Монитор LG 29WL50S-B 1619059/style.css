@@ -80,13 +80,16 @@
 
 #lg .hdr .hdr_list {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 70px;
@@ -94,6 +97,7 @@
 
 #lg .hdr .hdr_list li {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   max-width: 50%;
@@ -116,19 +120,23 @@
 
 #lg .ips .ips_list {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 #lg .ips .ips_list li {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   max-width: 50%;
@@ -196,20 +204,24 @@
 
 #lg .dynamic ul.dynamic_list li {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   color: #fff;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 #lg .dynamic ul.dynamic_list li > div {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   max-width: 50%;
@@ -224,6 +236,7 @@
 #lg .dynamic ul.dynamic_list li:nth-of-type(even) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
@@ -262,7 +275,8 @@
   }
   #lg .freesync {
     background-image: url("https://cdn.comfy.ua/media/x/img/1619059/8.jpg");
-    background-size: cover;
+    -webkit-background-size: cover;
+            background-size: cover;
     padding: 20px;
     background-position: center bottom;
     height: 1020px;
@@ -291,6 +305,7 @@
   #lg .hdr .hdr_list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -304,6 +319,7 @@
   #lg .ips .ips_list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -316,7 +332,8 @@
   }
   #lg .freesync {
     background-image: url("https://cdn.comfy.ua/media/x/img/1619059/8.jpg");
-    background-size: cover;
+    -webkit-background-size: cover;
+            background-size: cover;
     padding: 20px;
   }
   #lg .hdr .hdr_list {
@@ -337,6 +354,7 @@
   #lg .dynamic ul.dynamic_list li {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
   }
@@ -348,4 +366,3 @@
     max-width: 100%;
   }
 }
-/*# sourceMappingURL=style.css.map */
