@@ -1,0 +1,321 @@
+@mixin text_row
+  padding: 0 70px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-bottom: 60px
+
+/*default styles*/
+
+#huawei 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  h3
+    display: block
+    line-height: normal
+    font-size: 24px
+    font-weight: bold
+    text-align: unset
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+    ol
+      padding: 0
+      margin: 0
+    li
+      font-size: 16px
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#huawei
+
+  sup
+    font-size: 14px
+    color: red
+
+  .none_pic
+    display: none
+
+  .logo
+    padding: 70px
+    display: flex
+    flex-direction: row
+    align-items: center
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .logo_txt
+      padding-left: 40px
+
+  .beautiful
+    padding: 70px
+    .beautiful_txt
+      max-width: 1000px
+      text-align: center
+      margin: 0 auto
+      padding-bottom: 60px
+      h3
+        padding-bottom: 30px
+
+  .light
+    padding-bottom: 130px
+    position: relative
+    .light_img
+      img
+        margin: 0 auto
+      .light_abs
+        .light_abs_item
+          position: absolute;
+          right: 50%;
+          transform: translateX(50%);
+          bottom: 8em;
+          max-width: 510px;
+          h3
+            padding-bottom: 20px
+
+  .force
+    position: relative
+    .force_txt
+      position: absolute
+      color: #ffffff
+      width: 100%
+      max-width: 900px
+      box-sizing: border-box
+      right: 50%
+      transform: translateX(50%)
+      @include text_row
+      padding: 70px
+      >div
+        flex: 1 1 0
+
+  .cool
+    .cool_txt
+      padding: 0 200px 70px 200px
+      box-sizing: content-box
+      text-align: center
+      color: #fff
+      background-color: #000
+      h3
+        margin-bottom: 20px
+
+  .share
+    padding: 70px
+    .share_txt
+      text-align: center
+      padding-bottom: 60px
+      h3
+        margin-bottom: 20px
+
+  .power
+    .power_txt
+      @include text_row
+      >div
+        flex: 1 1 0
+
+  .eyes
+    padding: 70px
+    .eyes_txt
+      text-align: center
+      padding-bottom: 60px
+      max-width: 1000px
+      margin: 0 auto
+      h3
+        margin-bottom: 20px
+    .eyes_img
+      img
+        margin: 0 auto
+  
+  .unlock
+    background-color: #f7f7f7
+    display: flex
+    flex-direction: row
+    align-items: center
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .unlock_txt
+      padding: 70px
+      h3
+        margin-bottom: 20px
+
+
+  .privacy
+    padding: 70px
+    .privacy_title
+      @include text_row
+      >div
+        flex: 1 1 0
+
+  .rapid
+    background-color: #000
+    .rapid_txt
+      text-align: center
+      color: #ffffff
+      margin: 0 auto
+      max-width: 1000px
+      padding: 70px
+      h3
+        margin-bottom: 20px
+
+  .plug  
+    padding: 70px
+    position: relative
+    .plug_txt
+      position: absolute
+      @include text_row
+      right: 50%
+      transform: translateX(50%)
+      width: 100%
+      >div
+        flex: 1 1 0
+    .privacy_list
+      padding-top: 60px
+      max-width: 900px
+      margin: 0 auto
+      li
+        &:nth-of-type(n+2)
+          margin-top: 5px
+      
+
+/*media***********************************************************/
+
+@media (max-width: 1024px)
+  #huawei .plug .plug_txt
+    position: unset
+    transform: unset
+    h3
+      margin-bottom: 20px
+
+@media (max-width: 812px)
+  #huawei .logo,
+  #huawei .beautiful,
+  #huawei .force .force_txt,
+  #huawei .cool .cool_txt,
+  #huawei .share,
+  #huawei .power .power_txt,
+  #huawei .eyes,
+  #huawei .privacy,
+  #huawei .rapid .rapid_txt,
+  #huawei .unlock .unlock_txt,
+  #huawei .privacy .privacy_title,
+  #huawei .plug .plug_txt,
+  #huawei .plug
+    padding: 20px
+
+  #huawei .power .power_img img
+    display: none
+  #huawei .none_pic
+    display: block !important
+
+  #huawei .light .light_img .light_abs .light_abs_item
+    bottom: 3em
+    left: -11em
+
+  #huawei .plug .plug_txt
+    position: unset
+    transform: unset
+
+
+@media (max-width: 480px)
+  #huawei 
+    h2
+      font-size: 24px
+    h3
+      font-size: 20px
+
+  #huawei .force .force_txt
+    position: unset
+    transform: unset
+    background-color: #000
+    display: block
+    text-align: center
+    h3
+      margin-bottom: 20px
+  
+  #huawei .power .power_txt
+    display: block
+    text-align: center
+    .power_txt_col:nth-of-type(1)
+      margin-bottom: 20px
+
+  #huawei 
+    .light
+      padding-bottom: 0
+      .light_img 
+        .light_abs 
+          .light_abs_item
+            position: unset
+            transform: unset
+            text-align: center
+            padding: 20px
+
+  #huawei .logo
+    display: block
+    >div
+      max-width: 100%
+  #huawei .logo .logo_txt
+    padding-left: 0
+    text-align: center
+    padding-top: 20px
+
+  #huawei .unlock
+    flex-direction: column-reverse
+    >div
+      max-width: 100%
+    .unlock_txt
+      text-align: center
+
+  #huawei .privacy .privacy_title
+    display: block
+    text-align: center
+    h3
+      margin-bottom: 20px
+
+  #huawei .plug .plug_txt
+    display: block
+    text-align: center
+    h3
+      margin-bottom: 20px
