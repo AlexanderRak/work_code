@@ -69,7 +69,8 @@
   text-align: center;
   padding: 70px;
   background-image: url("https://cdn.comfy.ua/media/x/img/1479123/1bg.jpg");
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-position: center bottom;
 }
 
@@ -79,13 +80,16 @@
 
 #lg .ips li {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -93,6 +97,7 @@
 #lg .ips li:nth-of-type(2) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
@@ -100,6 +105,7 @@
 #lg .ips li > div {
   max-width: 50%;
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   -webkit-box-sizing: border-box;
@@ -112,13 +118,16 @@
 
 #lg .compatibility {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -140,7 +149,8 @@
   text-align: center;
   color: #fff;
   background-image: url("https://cdn.comfy.ua/media/x/img/1479123/4bg.jpg");
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-position: center bottom;
 }
 
@@ -151,13 +161,16 @@
 
 #lg .dynamic li {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -165,6 +178,7 @@
 #lg .dynamic li:nth-of-type(even) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
@@ -172,6 +186,7 @@
 #lg .dynamic li > div {
   max-width: 50%;
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   -webkit-box-sizing: border-box;
@@ -187,7 +202,8 @@
   padding: 70px;
   text-align: center;
   background-image: url("https://cdn.comfy.ua/media/x/img/1479123/5bg.jpg");
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-position: center bottom;
 }
 
@@ -232,6 +248,7 @@
   #lg .ips li {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
   }
@@ -244,6 +261,7 @@
   #lg .compatibility {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
@@ -254,6 +272,7 @@
   #lg .dynamic li {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
   }
@@ -267,4 +286,3 @@
     display: none;
   }
 }
-/*# sourceMappingURL=style.css.map */

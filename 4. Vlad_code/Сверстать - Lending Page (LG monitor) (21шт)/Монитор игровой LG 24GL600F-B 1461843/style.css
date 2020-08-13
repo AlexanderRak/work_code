@@ -90,6 +90,7 @@
   padding: 70px 20px 0px 20px;
   right: 50%;
   -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
           transform: translateX(50%);
 }
 
@@ -105,22 +106,27 @@
 
 #lg .speed .speed_list {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 60%;
   margin: 0 auto;
   padding: 70px;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -144,7 +150,8 @@
 #lg .chastota {
   background-image: url("https://cdn.comfy.ua/media/x/img/1461843/4.jpg");
   background-position: center bottom;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
 }
 
 #lg .chastota .chastota_txt {
@@ -163,6 +170,7 @@
   left: 70px;
   bottom: 50%;
   -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
           transform: translateY(50%);
 }
 
@@ -176,6 +184,7 @@
   right: 70px;
   bottom: 50%;
   -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
           transform: translateY(50%);
   max-width: 480px;
 }
@@ -213,6 +222,7 @@
   position: absolute;
   right: 50%;
   -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
           transform: translateX(50%);
 }
 
@@ -223,19 +233,23 @@
 
 #lg .dynamic li {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 #lg .dynamic li > div {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   max-width: 50%;
@@ -246,6 +260,7 @@
 #lg .dynamic li:nth-of-type(even) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
@@ -295,6 +310,7 @@
   }
   #lg .speed .speed_list li {
     -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0;
         -ms-flex: 1 1 0px;
             flex: 1 1 0;
   }
@@ -333,6 +349,7 @@
   #lg .dynamic li {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
   }
@@ -344,4 +361,3 @@
     text-align: center;
   }
 }
-/*# sourceMappingURL=style.css.map */

@@ -96,6 +96,7 @@
   width: 100%;
   right: 50%;
   -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
           transform: translateX(50%);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -112,7 +113,8 @@
   padding: 70px;
   background-image: url("https://cdn.comfy.ua/media/x/img/1519217/4bg.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-position: center bottom;
   text-align: center;
 }
@@ -128,6 +130,7 @@
   right: 70px;
   bottom: 50%;
   -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
           transform: translateY(50%);
 }
 
@@ -145,13 +148,16 @@
 
 #lg .dynamic li {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -159,12 +165,14 @@
 #lg .dynamic li:nth-of-type(even) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
 
 #lg .dynamic li > div {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   max-width: 50%;
@@ -227,6 +235,7 @@
   #lg .ips .ips_txt {
     position: unset;
     -webkit-transform: unset;
+        -ms-transform: unset;
             transform: unset;
     text-align: center;
     background-color: #000;
@@ -242,6 +251,7 @@
   #lg .dynamic li {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
   }
@@ -256,4 +266,3 @@
     margin: 40px 0;
   }
 }
-/*# sourceMappingURL=style.css.map */

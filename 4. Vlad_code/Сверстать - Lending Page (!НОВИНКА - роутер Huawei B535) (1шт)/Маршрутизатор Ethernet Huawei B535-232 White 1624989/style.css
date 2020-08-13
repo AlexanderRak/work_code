@@ -73,19 +73,23 @@
 
 #huawei .logo .huawei_list {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 #huawei .logo .huawei_list li {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
@@ -145,13 +149,16 @@
   position: absolute;
   top: 35px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
@@ -169,7 +176,8 @@
   height: -webkit-max-content !important;
   height: -moz-max-content !important;
   height: max-content !important;
-  border-radius: 20px;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
   padding: 0px 30px;
   opacity: 1;
   border: solid black 3px;
@@ -234,6 +242,7 @@
   position: absolute;
   top: 50%;
   -webkit-transform: translate(6em, -50%);
+      -ms-transform: translate(6em, -50%);
           transform: translate(6em, -50%);
 }
 
@@ -266,6 +275,7 @@
   #huawei .logo .huawei_list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -290,6 +300,7 @@
   #huawei .slider_wrap .slider .slider_txt {
     min-width: unset;
     -webkit-transform: translate(4em, -50%);
+        -ms-transform: translate(4em, -50%);
             transform: translate(4em, -50%);
   }
   #huawei .slider_wrap .slider .slider_txt-1 {
@@ -310,4 +321,3 @@
     height: 20px;
   }
 }
-/*# sourceMappingURL=style.css.map */

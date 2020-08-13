@@ -90,7 +90,8 @@
   position: relative;
   background-image: url("https://cdn.comfy.ua/media/x/img/1284858/2.png");
   background-position: center;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-repeat: no-repeat;
@@ -112,13 +113,16 @@
   bottom: 0;
   color: #fff;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
@@ -131,13 +135,16 @@
 
 #lg .motion .motion_col .motion_list li {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -149,7 +156,8 @@
   height: 165px;
   background-position: center;
   background-repeat: no-repeat !important;
-  background-size: contain;
+  -webkit-background-size: contain;
+          background-size: contain;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-right: -20px;
@@ -182,13 +190,16 @@
 
 #lg .motion .motion_col .motion_list_2 li {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -200,7 +211,8 @@
   height: 165px;
   background-position: center;
   background-repeat: no-repeat !important;
-  background-size: contain;
+  -webkit-background-size: contain;
+          background-size: contain;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-right: -20px;
@@ -236,6 +248,7 @@
   padding: 70px;
   bottom: 50%;
   -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
           transform: translateY(50%);
 }
 
@@ -263,19 +276,23 @@
   right: 0;
   bottom: 50%;
   -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
           transform: translateY(50%);
 }
 
 #lg .program {
   background-color: #333;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-sizing: border-box;
@@ -285,6 +302,7 @@
 
 #lg .program li {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   max-width: 50%;
@@ -303,13 +321,16 @@
 #lg .program li .program_txt .program_title {
   margin-bottom: 20px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -327,19 +348,23 @@
 
 #lg .power li {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 #lg .power li > div {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   max-width: 50%;
@@ -354,6 +379,7 @@
 #lg .power li:nth-of-type(even) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
@@ -368,6 +394,7 @@
   padding: 70px;
   bottom: 50%;
   -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
           transform: translateY(50%);
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -384,6 +411,7 @@
   padding: 70px;
   bottom: 50%;
   -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
           transform: translateY(50%);
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -412,6 +440,7 @@
   #lg .work .work_txt {
     position: unset;
     -webkit-transform: unset;
+        -ms-transform: unset;
             transform: unset;
     max-width: 100%;
     text-align: center;
@@ -419,6 +448,7 @@
   #lg .smart .smart_txt {
     position: unset;
     -webkit-transform: unset;
+        -ms-transform: unset;
             transform: unset;
     color: #000;
     text-align: center;
@@ -462,6 +492,7 @@
   #lg .program {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -475,6 +506,7 @@
   #lg .power li {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: reverse !important;
+    -webkit-flex-direction: column-reverse !important;
         -ms-flex-direction: column-reverse !important;
             flex-direction: column-reverse !important;
   }
@@ -493,6 +525,7 @@
   #lg .spa .spa_txt {
     position: unset;
     -webkit-transform: unset;
+        -ms-transform: unset;
             transform: unset;
     text-align: center;
   }
@@ -502,9 +535,9 @@
   #lg .alergy .alergy_txt {
     position: unset;
     -webkit-transform: unset;
+        -ms-transform: unset;
             transform: unset;
     text-align: center;
     background-color: #000;
   }
 }
-/*# sourceMappingURL=style.css.map */

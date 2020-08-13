@@ -31,16 +31,20 @@ span.word-wrap {
 
 .prod-null {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-right: 45px;
@@ -60,6 +64,7 @@ span.word-wrap {
   .prod-null {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     padding-right: 0;
@@ -68,4 +73,3 @@ span.word-wrap {
     padding-top: 15px;
   }
 }
-/*# sourceMappingURL=empty-product-list.css.map */

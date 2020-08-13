@@ -53,11 +53,11 @@
 	}
 
 	.linear-gradient-popup {
-		background: linear-gradient(230.22deg, #82DF0B 4.97%, #43B02A 98.93%);
+		background: linear-gradient(301.84deg, #82DF0B 20.5%, #43B02A 76.3%);
 		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 		border-radius: 10px;
-		width: 355px;
-		height: 181px;
+		width: 350px;
+    	height: 183px;
 		z-index: 6;
 		overflow: hidden;
 	}
@@ -73,6 +73,7 @@
 		height: 165px;
 		z-index: 8;
 		left: 0;
+		bottom: 0px;
 	}
 
 	.images-push {
@@ -88,7 +89,7 @@
 		z-index: 4; */
 	}
 
-	@-webkit-keyframes rotate360 {
+	/* @-webkit-keyframes rotate360 {
 		to {
 			-webkit-transform: rotate(360deg);
 			transform: rotate(360deg);
@@ -105,7 +106,7 @@
 	.images-push {
 		-webkit-animation: 20s rotate360 infinite linear;
 		animation: 20s rotate360 infinite linear;
-	}
+	} */
 
 	.qclose-pp {
 		position: absolute;
@@ -136,18 +137,17 @@
 	.popup-close[data-v-a06dd506] {
 		z-index: 10;
 		top: -12px;
-		right: inherit;
 		left: -12px;
 		width: 12px;
 		height: 12px;
-		background: #ff0000 url(https://cdn.comfy.ua/media/x/img/exit.svg) no-repeat 50%;
+		background: #FF090B url(https://cdn.comfy.ua/media/x/img/exit.svg) no-repeat 50%;
 		padding: 14px;
 		border-radius: 50%;
 		background-size: 13px;
 	}
 
 	.popup-close[data-v-a06dd506]:hover {
-		background-color: #d81515;
+		background-color: #de0002;
 	}
 
 	.popup__head[data-v-a06dd506] {
@@ -169,8 +169,11 @@
 		}
 
 		.linear-gradient-popup {
-			width: 280px;
-			height: 55px;
+			width: 275px;
+    		height: 56px;
+
+			background: #43B02A;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 		}
 
 		.fancybox-lock {
@@ -181,23 +184,19 @@
 			top: 0;
 		}
 
-		.qclose-pp {}
-
 		.popup-wr[data-v-a06dd506] {
 			height: 225px;
 			width: 100%;
 		}
 
-		.cont-popup-action {
-			padding-right: 15px;
-		}
-
 		.popup-close[data-v-a06dd506] {
 			top: -12px;
-			right: 0px;
+			right: -5px;
 			left: inherit;
-			width: 28px;
-			height: 28px;
+		}
+
+		.cont-popup-action {
+			padding-right: 7px;
 		}
 	}
 
@@ -216,16 +215,11 @@
 		}
 
 		.linear-gradient-popup {
-			width: 280px;
-			height: 55px;
-		}
+			width: 275px;
+    		height: 56px;
 
-		.popup-close[data-v-a06dd506] {
-			top: -12px;
-			right: -10px;
-			left: inherit;
-			width: 28px;
-			height: 28px;
+			background: #43B02A;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 		}
 
 		.fancybox-lock {
@@ -242,15 +236,23 @@
 			height: 210px;
 			width: 100%;
 		}
+
+		.popup-close[data-v-a06dd506] {
+			top: -12px;
+			right: -5px;
+			left: inherit;
+		}
 	}
 </style>
 <div id="wrapper-popup-action">
-	<div class="cont-popup-action"><a href="/product-day/">
+	<div class="cont-popup-action">
+		<a href="/product-day/">
 			<div class="cont-popup">
 				<div class="linear-gradient-popup">
 					<div class="images-push"></div>
 				</div>
 				<div class="content-text"></div>
 			</div>
-		</a></div>
+		</a>
+	</div>
 </div>
