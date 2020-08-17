@@ -14,31 +14,33 @@
       <div class="blank-checkout__content">
          <h2>Помилка при отриманні даних</h2>
          <p>Спробуйте оформити замовлення трохи пізніше
-         <div class="chat" id="chat_id">
-            <div class="popup_wrap">
-               <div class="content"><p>або&nbsp;</p> <a class="show_popup" id="show_popup1">зв'яжіться з нами</a></div>
-               <div id="popup1" class="popup">
-                  <div class="object">
-                     <ul class="communication">
-                        <li> <a class="js-siteheart-btn" id="chatBtn1">Чат на сайті</a> </li>
-                        <li> <a href="https://www.messenger.com/t/comfy.ua">Messenger</a> </li>
-                        <li> <a href="viber://pa?chatURI=comfy.ua&context=/startChat">Viber</a> <span id="i_icon_1" class="i_icon"> </span> </li>
-                        <li> <a href="https://t.me/ComfyuaBot?start=startChat">Telegram</a> </li>
-                        <li>
-                           <div class="telephone"><a href="tel:0800303505" class="header-phone__link header-phone__link_1">0-800-303-505</a>
-                              <p class="header-phone-popup__note"><span class="header-phone-popup__note-item header-phone-popup__note_bold"> з 8:00 до 21:00 (пн-нд)</span> <span class="header-phone-popup__note-item">Безкоштовно по Україні</span></p>
-                           </div>
-                        </li>
-                        <li>
-                           <div class="telephone"><a href="tel:0443939505" class="header-phone__link header-phone__link_call">044-39-39-505</a>
-                              <p class="header-phone-popup__note"><span class="header-phone-popup__note-item header-phone-popup__note_bold">Безкоштовно по Києву</span> <span class="header-phone-popup__note-item">зі стаціонарних</span></p>
-                           </div>
-                        </li>
-                     </ul>
+            <div class="chat" id="chat_id">
+               <div class="popup_wrap">
+                  <div class="content">
+                     <p>або&nbsp;</p> <a class="show_popup" id="show_popup1">зв'яжіться з нами</a>
+                  </div>
+                  <div id="popup1" class="popup">
+                     <div class="object">
+                        <ul class="communication">
+                           <li> <a class="js-siteheart-btn" id="chatBtn1">Чат на сайті</a> </li>
+                           <li> <a href="https://www.messenger.com/t/comfy.ua">Messenger</a> </li>
+                           <li> <a href="viber://pa?chatURI=comfy.ua&context=/startChat">Viber</a> <span id="i_icon_1" class="i_icon"> </span> </li>
+                           <li> <a href="https://t.me/ComfyuaBot?start=startChat">Telegram</a> </li>
+                           <li>
+                              <div class="telephone"><a href="tel:0800303505" class="header-phone__link header-phone__link_1">0-800-303-505</a>
+                                 <p class="header-phone-popup__note"><span class="header-phone-popup__note-item header-phone-popup__note_bold"> з 8:00 до 21:00 (пн-нд)</span> <span class="header-phone-popup__note-item">Безкоштовно по Україні</span></p>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="telephone"><a href="tel:0443939505" class="header-phone__link header-phone__link_call">044-39-39-505</a>
+                                 <p class="header-phone-popup__note"><span class="header-phone-popup__note-item header-phone-popup__note_bold">Безкоштовно по Києву</span> <span class="header-phone-popup__note-item">зі стаціонарних</span></p>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
 
          </p>
       </div>
@@ -48,38 +50,38 @@
 
 <script type="text/javascript">
    // <![CDATA[
-   var tooltipTimeout1;
+   window.addEventListener('DOMContentLoaded', function () {
+      var tooltipTimeout1;
 
-   $("#i_icon_1").hover(function () {
-      tooltipTimeout1 = setTimeout(showTooltip1, 100);
-   },
-      hideTooltip1);
+      $("#i_icon_1").hover(function () {
+            tooltipTimeout1 = setTimeout(showTooltip1, 100);
+         },
+         hideTooltip1);
 
-   function showTooltip1() {
-      var tooltip1 = $(
-         "<div id='tooltip1' class='tooltip'>  Для переходу в діалог з оператором повинен бути встановлений Viber. Після встановлення повторно натисніть на логотип чату.</div>"
-      );
-      tooltip1.appendTo($("#i_icon_1"));
-   }
-
-   function hideTooltip1() {
-      clearTimeout(tooltipTimeout1);
-      $("#tooltip1").fadeOut().remove();
-   }
-     // ]]>
-</script>
-<script type="text/javascript">
-   // <![CDATA[
-   $("#show_popup1").click(function () {
-      $('#popup1').toggle();
-   });
-   $(document).on('click', function (e) {
-      if (!$(e.target).closest(".popup_wrap").length) {
-         $('#popup1').hide();
+      function showTooltip1() {
+         var tooltip1 = $(
+            "<div id='tooltip1' class='tooltip'>  Для переходу в діалог з оператором повинен бути встановлений Viber. Після установки повторно натисніть на логотип чату.</div>"
+         );
+         tooltip1.appendTo($("#i_icon_1"));
       }
-      e.stopPropagation();
+
+      function hideTooltip1() {
+         clearTimeout(tooltipTimeout1);
+         $("#tooltip1").fadeOut().remove();
+      }
+
+      $("#show_popup1").click(function () {
+         $('#popup1').toggle();
+      });
+
+      $(document).on('click', function (e) {
+         if (!$(e.target).closest(".popup_wrap").length) {
+            $('#popup1').hide();
+         }
+         e.stopPropagation();
+      });
    });
-     // ]]>
+   // ]]>
 </script>
 <script type="text/javascript">
    // <![CDATA[
@@ -89,7 +91,7 @@
       });
       SenderWidget.showWidget();
    }
-     // ]]>
+   // ]]>
 </script>
 <script type="text/javascript">
    // <![CDATA[
@@ -102,5 +104,5 @@
          fjs.parentNode.insertBefore(js, fjs, 'sender-widget');
       })(document, 'script');
    }
-     // ]]>
+   // ]]>
 </script>
