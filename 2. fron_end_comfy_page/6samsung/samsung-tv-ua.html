@@ -1,166 +1,201 @@
 <style>
+  .header .narrow-container {
+    background-color: #fff;
+  }
+
+  .header-bottom .narrow-container {
+    background-color: #fff;
+  }
+
+  .main-container .narrow-container {
+    max-width: 100%;
+  }
 
 
-.header .narrow-container {background-color: #fff;}
-.header-bottom .narrow-container {background-color: #fff;}
-
-.main-container .narrow-container{max-width: 100%; }
-
-
-.footer-newsletter {
+  .footer-newsletter {
     display: none;
-}
+  }
 
-._show-newsletter .fixed-buttons {
+  ._show-newsletter .fixed-buttons {
     display: none;
-}
+  }
 
-.footVid{
-  display: inline-block;
-  width: 100%;
-  margin-top: 50px;
-}
+  .footVid {
+    display: inline-block;
+    width: 100%;
+    margin-top: 50px;
+  }
 
-.vid{
-  display: inline-block;
-  float: left;
-  width: 33%;
-  padding: 20px;
-  text-align: left
-}
-.vid span{
-  font-size: 17px;
-  margin-top: 10px;
-  display: block;
-}
+  .vid {
+    display: inline-block;
+    float: left;
+    width: 33%;
+    padding: 20px;
+    text-align: left
+  }
 
-.vid span:after{
-  display: inline-block;
-  content: '';
+  .vid span {
+    font-size: 17px;
+    margin-top: 10px;
+    display: block;
+  }
+
+  .vid span:after {
+    display: inline-block;
+    content: '';
     border: .6rem solid transparent;
     border-left: .8rem solid #6bb864;
-  position: relative;
-  right: -10px;
-  top: 1px;
-}
+    position: relative;
+    right: -10px;
+    top: 1px;
+  }
 
-.footer-info {
-  display:none;
-}
-.blcsamsung{
-  float: left; 
-  width:49%; 
-  text-align: left;
-  padding:10px;
-}
-.blcsamsung h3{
-  font-size: 30px; 
-  font-weight: 800;
-  padding-top: 20px;
-}
-.blcsamsung p{ 
-  font-size: 16px; 
-  line-height: 24px;
-}
-.footSams{
+  .footer-info {
+    display: none;
+  }
+
+  .blcsamsung {
+    float: left;
+    width: 49%;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .blcsamsung h3 {
+    font-size: 30px;
+    font-weight: 800;
+    padding-top: 20px;
+  }
+
+  .blcsamsung p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .footSams {
     margin-top: 50px;
     padding: 20px 50px;
-}
-.btnSams{
-  padding: 15px 35px; 
-  background-color: #3B72CC; 
-  text-transform: uppercase; 
-  color: #fff !important;    
-  display: inline-block;
+  }
+
+  .btnSams {
+    padding: 15px 35px;
+    background-color: #3B72CC;
+    text-transform: uppercase;
+    color: #fff !important;
+    display: inline-block;
     border-radius: 30px;
     font-weight: 600;
     font-size: 13px;
-    margin-top: 20px; 
-}
-.btnSams:hover{
-  background-color: #3766b3; 
-}
+    margin-top: 20px;
+  }
+
+  .btnSams:hover {
+    background-color: #3766b3;
+  }
 
 
 
-@media screen and (max-width:1062px){
-  .samsung-cms .punkt a p{min-height: 66px !important;}
-  .blocktwo{width: 100% !important;}
+  @media screen and (max-width:1062px) {
+    .samsung-cms .punkt a p {
+      min-height: 66px !important;
+    }
 
-  .header-bottom .narrow-container {background-color: transparent !important;}
+    .blocktwo {
+      width: 100% !important;
+    }
 
-  .footer {
-    margin-top: 0px;
-}
+    .header-bottom .narrow-container {
+      background-color: transparent !important;
+    }
 
-.sd{
+    .footer {
+      margin-top: 0px;
+    }
 
-padding: 10px 10px !important;
-}
-.newprdct {padding-top: 0px !important; }
-.carousel-controls {padding-top: 0px !important; }
+    .sd {
 
-.tov {margin-top: -10px !important;}
+      padding: 10px 10px !important;
+    }
 
-.tov a img{  width: 80%; height: auto !important;}
+    .newprdct {
+      padding-top: 0px !important;
+    }
 
-.vid{
-  width:100%;
-  margin: 0 auto;
-}
+    .carousel-controls {
+      padding-top: 0px !important;
+    }
 
-.blcsamsung img{
-  width: 60%;
-}
-.blcsamsung{
-  width:100%;
-  margin: 0 auto;
-}
-.footSams{    
-  margin-top: 30px; 
-  display: flex;
-    flex-direction: column;
-}
+    .tov {
+      margin-top: -10px !important;
+    }
 
-.footSams .sa{
-  order: 4;
-  padding: 0px 10px;
-}
-.footSams .sb{
-  order: 3;
-  margin-top: 40px;
-}
-.footSams .sc{
-  order: 1;
-  text-align: center;
-}
-.footSams .sd{
-  order: 2;
-}
+    .tov a img {
+      width: 80%;
+      height: auto !important;
+    }
 
-}
+    .vid {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .blcsamsung img {
+      width: 60%;
+    }
+
+    .blcsamsung {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .footSams {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footSams .sa {
+      order: 4;
+      padding: 0px 10px;
+    }
+
+    .footSams .sb {
+      order: 3;
+      margin-top: 40px;
+    }
+
+    .footSams .sc {
+      order: 1;
+      text-align: center;
+    }
+
+    .footSams .sd {
+      order: 2;
+    }
+
+  }
 
 
-/*------------------------------*/
+  /*------------------------------*/
 
 
-#slideshow-wrap {
+  #slideshow-wrap {
     text-align: center;
     display: block;
     min-width: 260px;
     max-width: 100%;
     margin: auto;
     position: relative;
-}
+  }
 
-#slideshow-inner {
+  #slideshow-inner {
     width: 100%;
     height: 100%;
     overflow: hidden;
     position: relative;
-}
+  }
 
-#slideshow-inner>ul {
+  #slideshow-inner>ul {
     list-style: none;
     height: 100%;
     width: 625%;
@@ -171,48 +206,48 @@ padding: 10px 10px !important;
     -moz-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
     -o-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
     transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
-}
+  }
 
 
-#slideshow-inner>ul>#slide1{
-      background-color: #f3f3f3;
-}
+  #slideshow-inner>ul>#slide1 {
+    background-color: #f3f3f3;
+  }
 
-#slideshow-inner>ul>#slide2{
-      background-color: #0d0e10;
-}
+  #slideshow-inner>ul>#slide2 {
+    background-color: #0d0e10;
+  }
 
-#slideshow-inner>ul>#slide3{
-      background-color: #5BB8AE;
-}
+  #slideshow-inner>ul>#slide3 {
+    background-color: #5BB8AE;
+  }
 
-#slideshow-inner>ul>#slide4{
-      background-color: #E4E4E4;
-}
+  #slideshow-inner>ul>#slide4 {
+    background-color: #E4E4E4;
+  }
 
-#slideshow-inner>ul>li {
+  #slideshow-inner>ul>li {
     width: 16%;
     float: left;
     position: relative;
     background-color: #0d0e10;
     margin-bottom: -3px;
-}
+  }
 
-#slideshow-inner>ul>li>img {
+  #slideshow-inner>ul>li>img {
     margin: auto;
-}
+  }
 
-#slideshow-wrap input[type=radio] {
+  #slideshow-wrap input[type=radio] {
     position: absolute;
     left: 50%;
     bottom: 15px;
     z-index: 100;
     visibility: hidden;
-}
+  }
 
-#slideshow-wrap label:not(.arrows):not(.show-description-label) {
-  position: absolute;
-  border: 1px solid;
+  #slideshow-wrap label:not(.arrows):not(.show-description-label) {
+    position: absolute;
+    border: 1px solid;
     left: 51%;
     bottom: -30px;
     z-index: 100;
@@ -227,48 +262,84 @@ padding: 10px 10px !important;
     -moz-transition: background-color .2s;
     -o-transition: background-color .2s;
     transition: background-color .2s;
-}
+  }
 
-#slideshow-wrap label:not(.arrows):active { bottom: -31px }
+  #slideshow-wrap label:not(.arrows):active {
+    bottom: -31px
+  }
 
-#slideshow-wrap input[type=radio]#button-1:checked~label[for=button-1] { background-color: #000 }
+  #slideshow-wrap input[type=radio]#button-1:checked~label[for=button-1] {
+    background-color: #000
+  }
 
-#slideshow-wrap input[type=radio]#button-2:checked~label[for=button-2] { background-color: #000 }
+  #slideshow-wrap input[type=radio]#button-2:checked~label[for=button-2] {
+    background-color: #000
+  }
 
-#slideshow-wrap input[type=radio]#button-3:checked~label[for=button-3] { background-color: #000 }
+  #slideshow-wrap input[type=radio]#button-3:checked~label[for=button-3] {
+    background-color: #000
+  }
 
-#slideshow-wrap input[type=radio]#button-4:checked~label[for=button-4] { background-color: #000 }
+  #slideshow-wrap input[type=radio]#button-4:checked~label[for=button-4] {
+    background-color: #000
+  }
 
-#slideshow-wrap input[type=radio]#button-5:checked~label[for=button-5] { background-color: #000 }
+  #slideshow-wrap input[type=radio]#button-5:checked~label[for=button-5] {
+    background-color: #000
+  }
 
-#slideshow-wrap input[type=radio]#button-6:checked~label[for=button-6] { background-color: #000 }
+  #slideshow-wrap input[type=radio]#button-6:checked~label[for=button-6] {
+    background-color: #000
+  }
 
-#slideshow-wrap label[for=button-1] { margin-left: -36px }
+  #slideshow-wrap label[for=button-1] {
+    margin-left: -36px
+  }
 
-#slideshow-wrap label[for=button-2] { margin-left: -18px }
+  #slideshow-wrap label[for=button-2] {
+    margin-left: -18px
+  }
 
-#slideshow-wrap label[for=button-4] { margin-left: 18px }
+  #slideshow-wrap label[for=button-4] {
+    margin-left: 18px
+  }
 
-#slideshow-wrap label[for=button-5] { margin-left: 36px }
+  #slideshow-wrap label[for=button-5] {
+    margin-left: 36px
+  }
 
-#slideshow-wrap label[for=button-6] { margin-left: 54px }
+  #slideshow-wrap label[for=button-6] {
+    margin-left: 54px
+  }
 
-#slideshow-wrap input[type=radio]#button-1:checked~#slideshow-inner>ul { left: 0 }
+  #slideshow-wrap input[type=radio]#button-1:checked~#slideshow-inner>ul {
+    left: 0
+  }
 
-#slideshow-wrap input[type=radio]#button-2:checked~#slideshow-inner>ul { left: -100% }
+  #slideshow-wrap input[type=radio]#button-2:checked~#slideshow-inner>ul {
+    left: -100%
+  }
 
-#slideshow-wrap input[type=radio]#button-3:checked~#slideshow-inner>ul { left: -200% }
+  #slideshow-wrap input[type=radio]#button-3:checked~#slideshow-inner>ul {
+    left: -200%
+  }
 
-#slideshow-wrap input[type=radio]#button-4:checked~#slideshow-inner>ul { left: -300% }
+  #slideshow-wrap input[type=radio]#button-4:checked~#slideshow-inner>ul {
+    left: -300%
+  }
 
-#slideshow-wrap input[type=radio]#button-5:checked~#slideshow-inner>ul { left: -400% }
+  #slideshow-wrap input[type=radio]#button-5:checked~#slideshow-inner>ul {
+    left: -400%
+  }
 
-#slideshow-wrap input[type=radio]#button-6:checked~#slideshow-inner>ul { left: -500% }
+  #slideshow-wrap input[type=radio]#button-6:checked~#slideshow-inner>ul {
+    left: -500%
+  }
 
-label.arrows {
+  label.arrows {
     font-family: 'WebSymbolsRegular';
     font-size: 25px;
-    color: rgb(255,255,240);
+    color: rgb(255, 255, 240);
     position: absolute;
     top: 50%;
     margin-top: -25px;
@@ -282,18 +353,30 @@ label.arrows {
     -o-transition: opacity .2s;
     transition: opacity .2s;
     text-shadow: 0px 0px 2px rgb(0, 0, 0);
-}
+  }
 
-label.arrows:hover { opacity: 1 }
+  label.arrows:hover {
+    opacity: 1
+  }
 
-label.arrows:active { margin-top: -23px }
+  label.arrows:active {
+    margin-top: -23px
+  }
 
-input[type=radio]#button-1:checked~.arrows#arrow-2, input[type=radio]#button-2:checked~.arrows#arrow-3, input[type=radio]#button-3:checked~.arrows#arrow-4, input[type=radio]#button-4:checked~.arrows#arrow-5, input[type=radio]#button-5:checked~.arrows#arrow-6 {
+  input[type=radio]#button-1:checked~.arrows#arrow-2,
+  input[type=radio]#button-2:checked~.arrows#arrow-3,
+  input[type=radio]#button-3:checked~.arrows#arrow-4,
+  input[type=radio]#button-4:checked~.arrows#arrow-5,
+  input[type=radio]#button-5:checked~.arrows#arrow-6 {
     right: 90px;
     display: block;
-}
+  }
 
-input[type=radio]#button-2:checked~.arrows#arrow-1, input[type=radio]#button-3:checked~.arrows#arrow-2, input[type=radio]#button-4:checked~.arrows#arrow-3, input[type=radio]#button-5:checked~.arrows#arrow-4, input[type=radio]#button-6:checked~.arrows#arrow-5 {
+  input[type=radio]#button-2:checked~.arrows#arrow-1,
+  input[type=radio]#button-3:checked~.arrows#arrow-2,
+  input[type=radio]#button-4:checked~.arrows#arrow-3,
+  input[type=radio]#button-5:checked~.arrows#arrow-4,
+  input[type=radio]#button-6:checked~.arrows#arrow-5 {
     left: 125px;
     display: block;
     -webkit-transform: scaleX(-1);
@@ -301,32 +384,44 @@ input[type=radio]#button-2:checked~.arrows#arrow-1, input[type=radio]#button-3:c
     -ms-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     transform: scaleX(-1);
-}
+  }
 
-input[type=radio]#button-2:checked~.arrows#arrow-1 { left: 125px }
+  input[type=radio]#button-2:checked~.arrows#arrow-1 {
+    left: 125px
+  }
 
-input[type=radio]#button-3:checked~.arrows#arrow-2 { left: 110px }
+  input[type=radio]#button-3:checked~.arrows#arrow-2 {
+    left: 110px
+  }
 
-input[type=radio]#button-4:checked~.arrows#arrow-3 { left: 90px }
+  input[type=radio]#button-4:checked~.arrows#arrow-3 {
+    left: 90px
+  }
 
-input[type=radio]#button-5:checked~.arrows#arrow-4 { left: 70px }
+  input[type=radio]#button-5:checked~.arrows#arrow-4 {
+    left: 70px
+  }
 
-input[type=radio]#button-6:checked~.arrows#arrow-5 { left: 50px }
+  input[type=radio]#button-6:checked~.arrows#arrow-5 {
+    left: 50px
+  }
 
-.description {
+  .description {
     position: absolute;
     top: 0;
     left: 0;
     width: 260px;
     font-family: 'Yanone Kaffeesatz';
     z-index: 1000;
-}
+  }
 
-.description input { visibility: hidden }
+  .description input {
+    visibility: hidden
+  }
 
-.description label {
+  .description label {
     font-family: 'WebSymbolsRegular';
-    background-color: rgba(255,255,240,1);
+    background-color: rgba(255, 255, 240, 1);
     position: relative;
     left: -17px;
     top: 00px;
@@ -343,15 +438,19 @@ input[type=radio]#button-6:checked~.arrows#arrow-5 { left: 50px }
     -o-transition: opacity .2s;
     transition: opacity .2s;
     z-index: 5;
-    color: rgb(20,20,20);
-}
+    color: rgb(20, 20, 20);
+  }
 
-#slideshow-inner>ul>li:hover .description label { opacity: 1 }
+  #slideshow-inner>ul>li:hover .description label {
+    opacity: 1
+  }
 
-.description input[type=checkbox]:checked~label { opacity: 1 }
+  .description input[type=checkbox]:checked~label {
+    opacity: 1
+  }
 
-.description .description-text {
-    background-color: rgba(255,255,230,.5);
+  .description .description-text {
+    background-color: rgba(255, 255, 230, .5);
     padding-left: 45px;
     padding-top: 25px;
     padding-right: 15px;
@@ -364,234 +463,443 @@ input[type=radio]#button-6:checked~.arrows#arrow-5 { left: 50px }
     -moz-transition: opacity .2s;
     -o-transition: opacity .2s;
     transition: opacity .2s;
-    color: rgb(20,20,20);
-}
+    color: rgb(20, 20, 20);
+  }
 
-.description input[type=checkbox]:checked~.description-text { opacity: 1 }
-
-
-/*------------------------------*/
-
-
-.tovary { width: 100%; text-align: center; width: 102%;}
-.minitext {display:none;}
-.bannnner {display: none;}
-body {background: url(https://comfy.ua/media/blb/banner_promo/11-1/noimg_1.png) #F5F5F5 center top !important;}
-.header__top {background-color: #02A709;}
-
-.banner .control {margin: -65px 0 0;}
-.samsung-cms .banner-wrap img {max-height:inherit;}
-.samsung-cms .banner-wrap {max-width: inherit; max-height: inherit;}
-.samsung-cms .zagolovok {font-size: 35px; padding: 70px 0px 40px; text-align: center; font-weight: bold;}
-.samsung-cms .cont {background-color: #fff; margin-top: 30px; display: inline-block; width: 100%; padding-bottom: 20px; }
-.samsung-cms .punkt{text-align: center; float: left; width:25%; margin-top: 20px;}
-.samsung-cms .punkt a p{color:#000; font-weight: 600; text-transform: uppercase; font-size: 16px; min-height: 40px;}
-.tov {float: left; width: 22%; text-align: center; color: #000; margin-top: -110px;}
-.tov a{color: #000;}
-.tov p{padding: 10px;}
-.banner .control li {width: 33px; height: 12px; border-radius: 10px; background: #ccc;}
-.banner .control li.selected {background:#3675ab;}
-.newprdct{padding-top: 20px;}
-input[type="checkbox"], input[type="radio"]{display: none;}
-.punkt a:hover img{opacity: 0.6;}
-.five a:hover img{opacity: 0.6;}
-
-.punkt a:hover p{opacity: 0.6;}
-.five a:hover p{opacity: 0.6;}
-/* -------------------------------------------------------- */
+  .description input[type=checkbox]:checked~.description-text {
+    opacity: 1
+  }
 
 
-.narrow-container_white { background: transparent;}
-.carousel {
-  color: #fff;
-  overflow: hidden;
-  position: relative;
-  height: 285px;
-}
+  /*------------------------------*/
 
-.carousel-item {
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  transition: opacity 0.6s ease-in-out;
-  width: 100%;
-}
 
-.carousel-active:checked + .carousel-item {
-  opacity: 1;
-  pointer-events: auto;
-  position: static;
-}
+  .tovary {
+    width: 100%;
+    text-align: center;
+    width: 102%;
+  }
 
-/* .carousel-item .tov {
+  .minitext {
+    display: none;
+  }
+
+  .bannnner {
+    display: none;
+  }
+
+  body {
+    background: url(https://comfy.ua/media/blb/banner_promo/11-1/noimg_1.png) #F5F5F5 center top !important;
+  }
+
+  .header__top {
+    background-color: #02A709;
+  }
+
+  .banner .control {
+    margin: -65px 0 0;
+  }
+
+  .samsung-cms .banner-wrap img {
+    max-height: inherit;
+  }
+
+  .samsung-cms .banner-wrap {
+    max-width: inherit;
+    max-height: inherit;
+  }
+
+  .samsung-cms .zagolovok {
+    font-size: 35px;
+    padding: 70px 0px 40px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .samsung-cms .cont {
+    background-color: #fff;
+    margin-top: 30px;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .samsung-cms .punkt {
+    text-align: center;
+    float: left;
+    width: 25%;
+    margin-top: 20px;
+  }
+
+  .samsung-cms .punkt a p {
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    min-height: 40px;
+  }
+
+  .tov {
+    float: left;
+    width: 22%;
+    text-align: center;
+    color: #000;
+    margin-top: -110px;
+  }
+
+  .tov a {
+    color: #000;
+  }
+
+  .tov p {
+    padding: 10px;
+
+    max-width: 250px;
+  }
+
+  .banner .control li {
+    width: 33px;
+    height: 12px;
+    border-radius: 10px;
+    background: #ccc;
+  }
+
+  .banner .control li.selected {
+    background: #3675ab;
+  }
+
+  .newprdct {
+    padding-top: 20px;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    display: none;
+  }
+
+  .punkt a:hover img {
+    opacity: 0.6;
+  }
+
+  .five a:hover img {
+    opacity: 0.6;
+  }
+
+  .punkt a:hover p {
+    opacity: 0.6;
+  }
+
+  .five a:hover p {
+    opacity: 0.6;
+  }
+
+  /* -------------------------------------------------------- */
+
+
+  .narrow-container_white {
+    background: transparent;
+  }
+
+  .carousel {
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    /* height: 285px; */
+    height: 290px;
+  }
+
+  .carousel-item {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.6s ease-in-out;
+    width: 100%;
+  }
+
+  .carousel-active:checked+.carousel-item {
+    opacity: 1;
+    pointer-events: auto;
+    position: static;
+  }
+
+  /* .carousel-item .tov {
   display: block;
   height: auto;
   width: 100%;
 } */
 
-.carousel-controls {
-  height: 100%;
-  width: 100%;
-  padding-top: 7%;
-}
-
-.carousel-control {
-  background: rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  font-size: 28px;
-  height: 90px;
-  text-align: center;
-  transition: background 0.1s ease-in-out;
-  width: 50%;
-  z-index: 2;
-  line-height: 90px;
-}
-
-.carousel-control:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.carousel-control.prev {
-  float: left;
-}
-
-.carousel-control.next {
-  float: right;
-}
-
-.carousel-caption {
-  bottom: 15%;
-  font-size: 120%;
-  left: 20%;
-  opacity: 0;
-  right: 20%;
-  text-align: center;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  transition: opacity 0.1s ease-out;
-  z-index: 2;
-}
-
-.carousel-active:checked + .carousel-item .carousel-caption {
-  transition: opacity 0.6s ease-in;
-  opacity: 1;
-}
-
-.carousel-indicators {
-  bottom: 5%;
-  left: 5%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  right: 5%;
-  text-align: center;
-  z-index: 2;
-}
-
-.carousel-indicators li {
-  display: inline-block;
-}
-
-.carousel-indicator {
-  border-radius: 50%;
-  cursor: pointer;
-  display: block;
-  font-size: 28px;
-  line-height: 1;
-  padding: 5px 10px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  transition: background 0.1s ease-in-out;
-}
-
-.carousel-indicator:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-/* If you`re needing more than 3 banners, maybe you might be using another way to represent your info... ;-) */
-#carousel-1:checked ~ .carousel-indicators .carousel-indicator[for="carousel-1"],
-#carousel-2:checked ~ .carousel-indicators .carousel-indicator[for="carousel-2"],
-#carousel-3:checked ~ .carousel-indicators .carousel-indicator[for="carousel-3"] {
-  color: #007f7f;
-}
-
-@media (min-width: 768px) {
-
-  .carousel-indicators {
-    background: transparent;
+  .carousel-controls {
+    height: 100%;
+    width: 100%;
+    padding-top: 7%;
   }
+
   .carousel-control {
-    width: 5%;
-  }
-  .carousel-controls,
-  .carousel-caption,
-  .carousel-indicators {
- /*   position: absolute;*/
-  }
-}
-
-@media screen and (max-width: 767px) {
-
-.blcsamsung img{
-  width: 100%;
-}
-.tov .btnSams{display: none;}
-.samsung-cms .punkt{width: 100%; margin-top: 40px;}
-.samsung-cms .five{width: 100%; margin-top: 40px; text-align: center}
-.tov{width: 50%; margin-top: 10px !important;}
-.carousel{display: inline-table; }
-.blocktwo{width: 100% !important}
-.txtLeft {width: 100% !important;
-    background-size: contain;
-    padding-top: 43.25%;
-    height: auto !important;}
-.txtRight {
-    width: 100% !important;}
-
-.footSams{padding: 20px 20px;}
-
-}
-
-
-@media screen and (min-width: 1024px) {
-/* denys rogachev 05072017 */
-
-
-
-.samsung-cms .punkt {
-    width: 25%;
-}
-
-.samsung-cms .cont {
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 28px;
+    height: 90px;
     text-align: center;
-}
-}
+    transition: background 0.1s ease-in-out;
+    width: 50%;
+    z-index: 2;
+    line-height: 90px;
+  }
+
+  .carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .carousel-control.prev {
+    float: left;
+  }
+
+  .carousel-control.next {
+    float: right;
+  }
+
+  .carousel-caption {
+    bottom: 15%;
+    font-size: 120%;
+    left: 20%;
+    opacity: 0;
+    right: 20%;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.1s ease-out;
+    z-index: 2;
+  }
+
+  .carousel-active:checked+.carousel-item .carousel-caption {
+    transition: opacity 0.6s ease-in;
+    opacity: 1;
+  }
+
+  .carousel-indicators {
+    bottom: 5%;
+    left: 5%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    right: 5%;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .carousel-indicators li {
+    display: inline-block;
+  }
+
+  .carousel-indicator {
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    font-size: 28px;
+    line-height: 1;
+    padding: 5px 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: background 0.1s ease-in-out;
+  }
+
+  .carousel-indicator:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  /* If you`re needing more than 3 banners, maybe you might be using another way to represent your info... ;-) */
+  #carousel-1:checked~.carousel-indicators .carousel-indicator[for="carousel-1"],
+  #carousel-2:checked~.carousel-indicators .carousel-indicator[for="carousel-2"],
+  #carousel-3:checked~.carousel-indicators .carousel-indicator[for="carousel-3"] {
+    color: #007f7f;
+  }
+
+  @media (min-width: 768px) {
+
+    .carousel-indicators {
+      background: transparent;
+    }
+
+    .carousel-control {
+      width: 5%;
+    }
+
+    .carousel-controls,
+    .carousel-caption,
+    .carousel-indicators {
+      /*   position: absolute;*/
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+
+    .blocktwo {
+      flex-direction: column !important;
+    }
+
+    .blcsamsung img {
+      width: 100%;
+    }
+
+    .tov .btnSams {
+      display: none;
+    }
+
+    .samsung-cms .punkt {
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    .samsung-cms .five {
+      width: 100%;
+      margin-top: 40px;
+      text-align: center
+    }
+
+    .tov {
+      width: 50%;
+      margin-top: 10px !important;
+    }
+
+    .carousel {
+      display: inline-table;
+    }
+
+    .blocktwo {
+      width: 100% !important
+    }
+
+    .txtLeft {
+      width: 100% !important;
+      background-size: contain;
+      padding-top: 43.25%;
+      height: auto !important;
+    }
+
+    .txtRight {
+      width: 100% !important;
+    }
+
+    .footSams {
+      padding: 20px 20px;
+    }
+
+  }
 
 
-.txthead{text-align: center; padding: 50px;    background-color: #fff;}
-.txthead h1{font-size: 40px;}
-.txthead p{font-size: 20px;}
-.mrg{ max-width: 1200px; margin: 0 auto; display: block !important;}
+  @media screen and (min-width: 1024px) {
+    /* denys rogachev 05072017 */
 
-.five{width: 20%; float: left; text-align: center;}
 
-.punkt .image{height: 130px; line-height: 130px;}
-.five .image{height: 100px; line-height: 120px;}
-.five p{font-weight: 600; text-transform: uppercase; font-size: 16px;}
 
-.blockone {display: inline-block; width: 100%;}
-.blocktwo {display: inline-block; width: 70%;}
+    .samsung-cms .punkt {
+      width: 25%;
+    }
 
-.txtLeft {background-image: url(https://comfy.ua/media/blb/samsung/cont-img.png); width: 66%; height: 343px; float: left; background-repeat: no-repeat;}
-.txtRight {width: 34%; height: 343px; background-color: #53B3E3; padding: 50px; float: left; text-align: left; color: #fff;}
-.txtRight h3{font-size: 25px;}
-.txtRight p{font-size: 16px}
-.obvodka {    margin-top: 0px !important;
+    .samsung-cms .cont {
+      text-align: center;
+    }
+  }
+
+
+  .txthead {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+  }
+
+  .txthead h1 {
+    font-size: 40px;
+  }
+
+  .txthead p {
+    font-size: 20px;
+  }
+
+  .mrg {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block !important;
+  }
+
+  .five {
+    /* width: 20%;
+    float: left; */
+    text-align: center;
+  }
+
+  .punkt .image {
+    height: 130px;
+    line-height: 130px;
+  }
+
+  .five .image {
+    height: 130px;
+    line-height: 120px;
+  }
+
+  .five p {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  .blockone {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .blocktwo {
+    /* display: inline-block; */
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .txtLeft {
+    background-image: url(https://comfy.ua/media/blb/samsung/cont-img.png);
+    width: 66%;
+    height: 343px;
+    float: left;
+    background-repeat: no-repeat;
+  }
+
+  .txtRight {
+    width: 34%;
+    height: 343px;
+    background-color: #53B3E3;
+    padding: 50px;
+    float: left;
+    text-align: left;
+    color: #fff;
+  }
+
+  .txtRight h3 {
+    font-size: 25px;
+  }
+
+  .txtRight p {
+    font-size: 16px
+  }
+
+  .obvodka {
+    margin-top: 0px !important;
     background-color: #fff;
     padding: 30px 0px;
-    border: 1px solid #E7E7E7;}
-.sd {padding: 50px 10px;}
-.sa {padding: 64px 10px; margin-bottom: 50px;}
-.vsetov {    
+    border: 1px solid #E7E7E7;
+  }
+
+  .sd {
+    padding: 50px 10px;
+  }
+
+  .sa {
+    padding: 64px 10px;
+    margin-bottom: 50px;
+  }
+
+  .vsetov {
     display: table;
     margin-top: 20px;
     padding: 15px 45px;
@@ -603,50 +911,92 @@ input[type="checkbox"], input[type="radio"]{display: none;}
     border-radius: 40px;
     margin: 0 auto;
   }
-.vsetov:hover{ background-color: #000; color: #fff; border: 2px solid #000 }
+
+  .vsetov:hover {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000
+  }
 
 
-.obvodka .image img{height: 120px;}
-.obvodka p{
+  .obvodka .image img {
+    height: 120px;
+  }
+
+  .obvodka p {
     font-weight: 400 !important;
     text-transform: none !important;
-    font-size: 14px !important;}
+    font-size: 14px !important;
+  }
 
-.tov a img{height: 200px;}
+  .tov a img {
+    height: 200px;
+  }
 
-.vmestebtn{ border: 2px solid #fff; padding: 10px 20px; font-size: 18px; text-transform: uppercase; border-radius: 40px; color: #fff; font-weight: 600; display: inline-block; margin-top: 20px;}
-.vmestebtn:hover{background-color: #51a4ce;}
-.mrgtop {margin-top: 50px !important;}
+  .vmestebtn {
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 40px;
+    color: #fff;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 20px;
+  }
 
-.breadcrumbs__item:last-child .breadcrumbs__lbl, .breadcrumbs__item:last-child .breadcrumbs__lbl:hover {color: #000;}
-.breadcrumbs__lbl { font-weight: normal;}
+  .vmestebtn:hover {
+    background-color: #51a4ce;
+  }
 
-.tov .btnSams{margin-top: 10px; }
-.tov a:hover .btnSams{text-decoration: none; background-color: #3766b3;}
-.tov .btnSams:hover {text-decoration: none;}
+  .mrgtop {
+    margin-top: 50px !important;
+  }
 
+  .breadcrumbs__item:last-child .breadcrumbs__lbl,
+  .breadcrumbs__item:last-child .breadcrumbs__lbl:hover {
+    color: #000;
+  }
+
+  .breadcrumbs__lbl {
+    font-weight: normal;
+  }
+
+  .tov .btnSams {
+    margin-top: 10px;
+  }
+
+  .tov a:hover .btnSams {
+    text-decoration: none;
+    background-color: #3766b3;
+  }
+
+  .tov .btnSams:hover {
+    text-decoration: none;
+  }
 </style>
 <!-- ============= БАННЕР ============= -->
-<div id="slideshow-wrap"> <input checked="checked" name="controls" id="button-1" type="radio" /> <label for="button-1"></label> <input name="controls" id="button-2" type="radio" /> <label for="button-2"></label> <input name="controls" id="button-3" type="radio" /> <label for="button-3"></label> <input name="controls" id="button-4" type="radio" /> <label for="button-4"></label> <!--<input name="controls" id="button-5" type="radio" /> <label for="button-5"></label> <input name="controls" id="button-6" type="radio" /> <label for="button-6"></label> <label id="arrow-1" class="arrows" for="button-1">></label> <label id="arrow-2" class="arrows" for="button-2">></label> <label id="arrow-3" class="arrows" for="button-3">></label> <label id="arrow-4" class="arrows" for="button-4">></label> <label id="arrow-5" class="arrows" for="button-5">></label> <label id="arrow-6" class="arrows" for="button-6">></label> -->
-<div id="slideshow-inner">
-<ul>
+<div id="slideshow-wrap"> <input checked="checked" name="controls" id="button-1" type="radio" /> <label for="button-1"></label> <input name="controls" id="button-2" type="radio" /> <label for="button-2"></label> <input name="controls" id="button-3" type="radio" /> <label for="button-3"></label> <input name="controls" id="button-4" type="radio" /> <label for="button-4"></label>
+  <!--<input name="controls" id="button-5" type="radio" /> <label for="button-5"></label> <input name="controls" id="button-6" type="radio" /> <label for="button-6"></label> <label id="arrow-1" class="arrows" for="button-1">></label> <label id="arrow-2" class="arrows" for="button-2">></label> <label id="arrow-3" class="arrows" for="button-3">></label> <label id="arrow-4" class="arrows" for="button-4">></label> <label id="arrow-5" class="arrows" for="button-5">></label> <label id="arrow-6" class="arrows" for="button-6">></label> -->
+  <div id="slideshow-inner">
+    <ul>
 
-<li id="slide1"> <a rel="nofollow" target="_blank" href="/new-samsung-galaxy/"> <img src="https://cdn.comfy.ua/media/x/img/new1316_484__ote20-20Ultra_ua.jpg" /></a>
-<div class="description"><input type="checkbox" id="show-description-1" /></div>
-</li>
+      <li id="slide1"> <a rel="nofollow" target="_blank" href="/flat-tvs/brand__samsung/"> <img src="https://cdn.comfy.ua/media/x/img/1316x484_AV_Sammer_TV_gasoline_promo_comfy_ua.jpg" /></a>
+        <div class="description"><input type="checkbox" id="show-description-1" /></div>
+      </li>
 
-<li id="slide2"> <a href="/samsung-televizory/tip_televizora__qled/"> <img src="https://comfy.ua/media/blb/samsung/bann-1.jpg" /></a>
-<div class="description"><input type="checkbox" id="show-description-2" /></div>
-</li>
+      <li id="slide2"> <a href="/flat-tvs/brand__samsung/"> <img src="https://cdn.comfy.ua/media/x/img/1316x484_AV_Samsung-Weeks_comfy_ua.jpg" /></a>
+        <div class="description"><input type="checkbox" id="show-description-2" /></div>
+      </li>
 
-<li id="slide3"> <a href="/catalogsearch/result?q=Smart+TV+MU9000"><img src="https://comfy.ua/media/blb/samsung/bann-2.jpg"/></a>
-<div class="description"><input id="show-description-3" type="checkbox" /></div>
-</li>
-<li id="slide4"> <a href="/catalogsearch/result/index?cat=78&q=Q7C"><img src="https://comfy.ua/media/blb/samsung/bann-3.jpg"/></a>
-<div class="description"><input id="show-description-4" type="checkbox" /></div>
-</li>
+      <li id="slide3"> <a href="/flat-tvs/brand__samsung/"><img src="https://cdn.comfy.ua/media/x/img/1316x484_lifestyleTV_Jysk_promo_comfy_ua.jpg" /></a>
+        <div class="description"><input id="show-description-3" type="checkbox" /></div>
+      </li>
+      <li id="slide4"> <a href="/flat-tvs/brand__samsung/"><img src="https://cdn.comfy.ua/media/x/img/1316x484_QLED-8K-Official-Launch_comfy_ua.jpg" /></a>
+        <div class="description"><input id="show-description-4" type="checkbox" /></div>
+      </li>
 
-<!--
+      <!--
 <li id="slide4"> <img src="https://i.comfy.ua/media/x/img/eSiS_qled_facebook_banner.jpg"/>
 <div class="description"><input id="show-description-4" type="checkbox" /></div>
 </li>
@@ -656,257 +1006,269 @@ input[type="checkbox"], input[type="radio"]{display: none;}
 <li id="slide6"> <img src="https://comfy.ua/media/blb/samsung/loveseason_1182x365..jpg"/>
 <div class="description"><input id="show-description-6" type="checkbox" /></div>
 </li>
---> 
-</ul>
-</div>
+-->
+    </ul>
+  </div>
 </div>
 <div class="samsung-cms narrow-container">
 
-<!-- ============= /БАННЕР ============= -->
-<div class="txthead">
-<h1>Телевізори</h1>
-<p>Відкрийте для себе неперевершену якість зображення з високим рівнем яскравості,<br> контрасту і відмінною передачею кольору</p>
-</div>
+  <!-- ============= /БАННЕР ============= -->
+  <div class="txthead">
+    <h1>Телевізори</h1>
+    <p>Відкрийте для себе неперевершену якість зображення з високим рівнем яскравості,<br> контрасту і відмінною передачею кольору</p>
+  </div>
 
-<div class="samsung-cms narrow-container-category">
-  <style>
-    .narrow-container-category {
-      max-width: 1316px;
-      margin: 0 auto;
-    }
-    .zagl {
-      text-align: left;
-      margin-top: 50px;
-      margin: 0;
-      font-size: 2em;
-      padding: 65px 0 0 0;
-    }
-    .samsung-cms .cont {
-      background-color: #fff;
-      margin-top: 20px;
-      display: inline-block;
-      width: 100%;
-      padding-bottom: 20px;
-    }
-  
-    .samsung-cms .punkt_cntg {
-      text-align: center;
-      float: left;
-      width: 200px;
-      margin-top: 20px;
-    }
-  
-    .samsung-cms .punkt_cntg a p {
-      color: #000
-    }
-    .punkt_cntg a:hover {
-      opacity: 0.6;
-    }
-    @media screen and (max-width: 767px) {
-  
-      .samsung-cms .punkt_cntg {
-        width: 50%;
+  <div class="samsung-cms narrow-container-category">
+    <style>
+      .narrow-container-category {
+        max-width: 1316px;
+        margin: 0 auto;
       }
-    }
-    @media screen and (min-width: 1024px) {
-      .samsung-cms .punkt_cntg {
-        width: 16%;
+
+      .zagl {
+        text-align: left;
+        margin-top: 50px;
+        margin: 0;
+        font-size: 2em;
+        padding: 65px 0 0 0;
       }
+
       .samsung-cms .cont {
-        text-align: center;
+        background-color: #fff;
+        margin-top: 20px;
+        display: inline-block;
+        width: 100%;
+        padding-bottom: 20px;
       }
-    }
-  </style>
-  
-  <h1 class="zagl">Техніка та електроніка Samsung</h1>
-  <div class="cont">
-    <div class="punkt_cntg"><a href="/samsung/category-tv-i-audio/"> <img src="https://comfy.ua/media/blb/samsung/07.jpg">
-      <p>Телевізори</p>
-    </a></div>
-  <div class="punkt_cntg"><a href="/smartfon/brand__samsung/"> <img src="https://comfy.ua/media/blb/samsung/01_1.jpg">
-      <p>Смартфони</p>
-    </a></div>
-    <!-- /samsung/category-mobilnye-ustrojstva/ -->
-  <div class="punkt_cntg"><a href="/samsung-planshety/"> <img src="https://comfy.ua/media/blb/samsung/02_1.jpg">
-      <p>Планшети</p>
-    </a></div>
-  <div class="punkt_cntg"><a href="/samsung-nosimye-ustrojstva/"> <img src="https://comfy.ua/media/blb/samsung/03_1.jpg">
-      <p>Портативні пристрої</p>
-    </a></div>
-  <div class="punkt_cntg"><a href="/samsung-mobilnye-aksessuary/"> <img src="https://comfy.ua/media/blb/samsung/04.jpg">
-      <p>Мобільні аксесуари</p>
-    </a></div>
-  <div class="punkt_cntg"><a href="/samsung-monitory/"> <img src="https://comfy.ua/media/blb/samsung/05.jpg">
-      <p>Монітори</p>
-    </a></div>
-  <div class="punkt_cntg"><a href="/samsung-printery/"> <img src="https://comfy.ua/media/blb/samsung/06.jpg">
-      <p>Принтери</p>
-    </a></div>
-  <div class="punkt_cntg"><a href="/samsung-audio-video/"> <img src="https://comfy.ua/media/blb/samsung/08.jpg">
-      <p>Аудіо/Відео</p>
-    </a></div>
-  <div class="punkt_cntg"><a href="/samsung-stiralnye-mashiny/"> <img src="https://comfy.ua/media/blb/samsung/09.jpg">
-      <p>Пральні машини</p>
-    </a></div>
-  <div class="punkt_cntg"><a href="/samsung-holodilniki/"> <img src="https://comfy.ua/media/blb/samsung/10.jpg">
-      <p>Холодильники</p>
-    </a></div>
-  <div class="punkt_cntg"><a href="/samsung-kondicionery/"> <img src="https://comfy.ua/media/blb/samsung/11.jpg">
-      <p>Кондиціонери</p>
-    </a></div>
-  <div class="punkt_cntg"><a href="/samsung-tehnika-dlja-kuhni/"> <img src="https://comfy.ua/media/blb/samsung/12.jpg">
-      <p>Техніка для кухні</p>
-    </a></div>
+
+      .samsung-cms .punkt_cntg {
+        text-align: center;
+        float: left;
+        width: 200px;
+        margin-top: 20px;
+      }
+
+      .samsung-cms .punkt_cntg a p {
+        color: #000
+      }
+
+      .punkt_cntg a:hover {
+        opacity: 0.6;
+      }
+
+      @media screen and (max-width: 767px) {
+
+        .samsung-cms .punkt_cntg {
+          width: 50%;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .samsung-cms .punkt_cntg {
+          width: 16%;
+        }
+
+        .samsung-cms .cont {
+          text-align: center;
+        }
+      }
+    </style>
+
+    <h1 class="zagl">Техніка та електроніка Samsung</h1>
+    <div class="cont">
+      <div class="punkt_cntg"><a href="/flat-tvs/brand__samsung/"> <img src="https://comfy.ua/media/blb/samsung/07.jpg">
+          <p>Телевізори</p>
+        </a></div>
+      <div class="punkt_cntg"><a href="/smartfon/brand__samsung/"> <img src="https://comfy.ua/media/blb/samsung/01_1.jpg">
+          <p>Смартфони</p>
+        </a></div>
+      <!-- /samsung/category-mobilnye-ustrojstva/ -->
+      <div class="punkt_cntg"><a href="/samsung-planshety/"> <img src="https://comfy.ua/media/blb/samsung/02_1.jpg">
+          <p>Планшети</p>
+        </a></div>
+      <div class="punkt_cntg"><a href="/samsung-nosimye-ustrojstva/"> <img src="https://comfy.ua/media/blb/samsung/03_1.jpg">
+          <p>Портативні пристрої</p>
+        </a></div>
+      <div class="punkt_cntg"><a href="/samsung-mobilnye-aksessuary/"> <img src="https://comfy.ua/media/blb/samsung/04.jpg">
+          <p>Мобільні аксесуари</p>
+        </a></div>
+      <div class="punkt_cntg"><a href="/samsung-monitory/"> <img src="https://comfy.ua/media/blb/samsung/05.jpg">
+          <p>Монітори</p>
+        </a></div>
+      <div class="punkt_cntg"><a href="/samsung-printery/"> <img src="https://comfy.ua/media/blb/samsung/06.jpg">
+          <p>Принтери</p>
+        </a></div>
+      <div class="punkt_cntg"><a href="/samsung-audio-video/"> <img src="https://comfy.ua/media/blb/samsung/08.jpg">
+          <p>Аудіо/Відео</p>
+        </a></div>
+      <div class="punkt_cntg"><a href="/samsung-stiralnye-mashiny/"> <img src="https://comfy.ua/media/blb/samsung/09.jpg">
+          <p>Пральні машини</p>
+        </a></div>
+      <div class="punkt_cntg"><a href="/samsung-holodilniki/"> <img src="https://comfy.ua/media/blb/samsung/10.jpg">
+          <p>Холодильники</p>
+        </a></div>
+      <div class="punkt_cntg"><a href="/samsung-kondicionery/"> <img src="https://comfy.ua/media/blb/samsung/11.jpg">
+          <p>Кондиціонери</p>
+        </a></div>
+      <div class="punkt_cntg"><a href="/samsung-tehnika-dlja-kuhni/"> <img src="https://comfy.ua/media/blb/samsung/12.jpg">
+          <p>Техніка для кухні</p>
+        </a></div>
+    </div>
+
   </div>
-  
+
+  <!-- ============= СЛАЙДЕР ============= -->
+  <h2 class="zagolovok">Бестселери</h2>
+  <div class="cont mrg">
+    <div class="newprdct">
+      <div id="carousel" class="carousel"><input type="radio" class="carousel-active" id="carousel-1" name="carousel" aria-hidden="true" checked="checked" />
+        <div class="carousel-item">
+          <div class="carousel-controls" aria-hidden="true"><label for="carousel-2" class="carousel-control prev" title="Prev">
+              <</label> <label for="carousel-2" class="carousel-control next" title="Next">>
+            </label></div>
+          <div class="tovary">
+            <div class="tov"><a href="/televizor-samsung-qe55q77tauxua.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/q/7/q70t_0_2.jpg" />
+                <p>Телевізор Samsung QE55Q77TAUXUA</p>
+                <a href="/televizor-samsung-qe55q77tauxua.html" class="btnSams">Купити</a>
+              </a></div>
+            <div class="tov"><a href="/televizor-samsung-qe55ls03tauxua.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_qe55ls03tauxua_043.jpg" />
+                <p>Телевізор Samsung QE55LS03TAUXUA</p>
+                <a href="/televizor-samsung-qe55ls03tauxua.html" class="btnSams">Купити</a>
+              </a></div>
+            <div class="tov"><a href="/televizor-samsung-qe50q60tauxua.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/0/_/0_3_4.jpg" />
+                <p>Телевізор Samsung QE50Q60TAUXUA</p>
+                <a href="/televizor-samsung-qe50q60tauxua.html" class="btnSams">Купити</a>
+              </a></div>
+            <div class="tov"><a href="/televizor-samsung-ue55tu8500uxua.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/t/u/tu8500_43utn1_0_1.jpg" />
+                <p>Телевізор Samsung UE55TU8500UXUA</p>
+                <a href="/televizor-samsung-ue55tu8500uxua.html" class="btnSams">Купити</a>
+              </a></div>
+          </div>
+        </div>
+        <input type="radio" class="carousel-active" id="carousel-2" name="carousel" aria-hidden="true" />
+        <div class="carousel-item">
+          <div class="carousel-controls" aria-hidden="true"><label for="carousel-1" class="carousel-control prev" title="Prev">
+              <</label> <label for="carousel-1" class="carousel-control next" title="Next">>
+            </label></div>
+          <div class="tovary">
+            <div class="tov"><a href="/televizor-samsung-qe43q60tauxua.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/0/_/0_3_5.jpg" />
+                <p>Телевізор Samsung QE43Q60TAUXUA</p>
+                <a href="/televizor-samsung-qe43q60tauxua.html" class="btnSams">Купити</a>
+              </a></div>
+            <div class="tov"><a href="/televizor-samsung-qe55ls01tauxua.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_qe43ls01tauxua_0347_2.jpg" />
+                <p>Телевізор Samsung QE55LS01TAUXUA</p>
+                <a href="/televizor-samsung-qe55ls01tauxua.html" class="btnSams">Купити</a>
+              </a></div>
+            <div class="tov"><a href="/televizor-samsung-qe65q950tsuxua.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_qe65q950tsuxua_1_.jpg" />
+                <p>Телевізор Samsung QE65Q950TSUXUA</p>
+                <a href="/televizor-samsung-qe65q950tsuxua.html" class="btnSams">Купити</a>
+              </a></div>
+            <div class="tov"><a href="/televizor-samsung-ue50tu8000uxua.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/t/u/tu8000_uth1_0_1_3.jpg" />
+                <p>Телевізор Samsung UE50TU8000UXUA</p>
+                <a href="/televizor-samsung-ue50tu8000uxua.html" class="btnSams">Купити</a>
+              </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- ============= /СЛАЙДЕР ============= -->
 
-<!-- ============= СЛАЙДЕР ============= -->
-<h2 class="zagolovok">Бестселери</h2>
-<div class="cont mrg">
-<div class="newprdct">
-<div id="carousel" class="carousel"><input type="radio" class="carousel-active" id="carousel-1" name="carousel" aria-hidden="true" checked="checked" />
-<div class="carousel-item">
-<div class="carousel-controls" aria-hidden="true"><label for="carousel-2" class="carousel-control prev" title="Prev"><</label> <label for="carousel-2" class="carousel-control next" title="Next">></label></div>
-<div class="tovary">
-<div class="tov"><a href="/televizor-samsung-ue40k6500buxua.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/1/1/1114607_samsung_ue40k6500buxua_1_.jpg" />
-<p>Телевізор Samsung UE40K6500BUXUA</p>
-<a href="/televizor-samsung-ue40k6500buxua.html" class="btnSams">Купити</a>
-</a></div>
-<div class="tov"><a href="/televizor-samsung-ue40mu6100uxua.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/u/e/ue40mu6100uxua_4_.jpg" />
-<p>Телевізор Samsung UE40MU6100UXUA</p>
-<a href="/televizor-samsung-ue40mu6100uxua.html" class="btnSams">Купити</a>
-</a></div>
-<div class="tov"><a href="/televizor-samsung-ue40ku6400uxua.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_ue55ku6400uxua_1_1.jpg" />
-<p>Телевізор Samsung UE40KU6400UXUA</p>
-<a href="/televizor-samsung-ue40ku6400uxua.html" class="btnSams">Купити</a>
-</a></div>
-<div class="tov"><a href="/televizor-samsung-ue49k6500auxua.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/k/6/k6300aw_001_front_black_2.jpg" />
-<p>Телевізор Samsung UE49K6500AUXUA</p>
-<a href="/televizor-samsung-ue49k6500auxua.html" class="btnSams">Купити</a>
-</a></div>
-</div>
-</div>
-<input type="radio" class="carousel-active" id="carousel-2" name="carousel" aria-hidden="true" />
-<div class="carousel-item">
-<div class="carousel-controls" aria-hidden="true"><label for="carousel-1" class="carousel-control prev" title="Prev"><</label> <label for="carousel-1" class="carousel-control next" title="Next">></label></div>
-<div class="tovary">
-<div class="tov"><a href="/televizor-samsung-ue49k6500buxua.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/u/e/ue49k6500buxua_.jpg" />
-<p>Телевізор Samsung UE49K6500BUXUA</p>
-<a href="/televizor-samsung-ue49k6500buxua.html" class="btnSams">Купити</a>
-</a></div>
-<div class="tov"><a href="/televizor-samsung-ue49ku6300uxua.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/u/e/ue49ku6300uxua_1.jpg" />
-<p>Телевізор Samsung UE49KU6300UXUA</p>
-<a href="/televizor-samsung-ue49ku6300uxua.html" class="btnSams">Купити</a>
-</a></div>
-<div class="tov"><a href="/televizor-samsung-ue55k5500auxua.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_k5500_2.jpg" />
-<p>Телевізор Samsung UE55K5500AUXUA</p>
-<a href="/televizor-samsung-ue55k5500auxua.html" class="btnSams">Купити</a>
-</a></div>
-<div class="tov"><a href="/televizor-samsung-ue55k5500buxua.html"> <img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/u/e/ue55k5500buxua.jpg" />
-<p>Телевізор Samsung UE55K5500BUXUA</p>
-<a href="/televizor-samsung-ue55k5500buxua.html" class="btnSams">Купити</a>
-</a></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- ============= /СЛАЙДЕР ============= --> 
+  <!-- ============= КАТЕГОРИИ ============= -->
+  <div style="margin-top: 100px; padding-bottom: 50px;" class="cont">
+    <h2 style="padding: 50px 0 30px;" class="zagolovok">Вибір за категорією</h2>
+    <div class="blockone">
+      <div class="punkt"><a href="/flat-tvs/brand__samsung__tip_televizora__qled/">
+          <div class="image"><img src="https://comfy.ua/media/blb/samsung/smart.png" /></div>
+          <p>QLED</p>
+        </a></div>
+      <div class="punkt"><a href="/flat-tvs/brand__samsung__naznach_tv_mv__dizajnerskie-tv/">
+          <div class="image"><img src="https://comfy.ua/media/blb/samsung/curved.png" /></div>
+          <p>Lifestyle TV</p>
+        </a></div>
+      <div class="punkt"><a href="/flat-tvs/brand__samsung__podderzhka_videorezhima__8k-7680h4320/">
+          <div class="image"><img src="https://comfy.ua/media/blb/samsung/fullhd.png" /></div>
+          <p>8K</p>
+        </a></div>
+      <div class="punkt"><a href="/flat-tvs/brand__samsung__podderzhka_videorezhima__4k-ultra-hd-3840x2160/">
+          <div class="image"><img src="https://comfy.ua/media/blb/samsung/hdtv.png" /></div>
+          <p>4K</p>
+        </a></div>
+    </div>
+    <h2 style="padding: 70px 0 30px;" class="zagolovok">Вибір за розміром екрану</h2>
+    <div class="blocktwo">
+      <div class="five"><a href="/flat-tvs/brand__samsung__diag_tvf__80-i-bolee--ot-61-do-65--ot-66-do-70--ot-71-do-75--ot-76-do-77/">
+          <div class="image"><img src="https://cdn.comfy.ua/media/catalog/category/smart-tv-160x111-5.png" /></div>
+          <p>65″ і більше</p>
+        </a></div>
+      <div class="five"><a href="/flat-tvs/brand__samsung__diag_tvf__ot-49-do-50--ot-51-do-55--ot-56-do-58--ot-59-do-60/">
+          <div class="image"><img src="https://cdn.comfy.ua/media/catalog/category/smart-tv-160x111-3.png" /></div>
+          <p>49″ - 55″</p>
+        </a></div>
+      <div class="five"><a href="/flat-tvs/brand__samsung__diag_tvf__ot-40-do-42--ot-43-do-46/">
+          <div class="image"><img src="https://cdn.comfy.ua/media/catalog/category/smart-tv-160x111-2.png" /></div>
+          <p>39″ - 45″</p>
+        </a></div>
+      <div class="five"><a href="/flat-tvs/brand__samsung__diag_tvf__ot-19-do-20--ot-21-do-22--ot-23-do-24--ot-25-do-28--ot-29-do-32--ot-33-do-39/">
+          <div class="image"><img src="https://cdn.comfy.ua/media/catalog/category/smart_tv_160x111.png" /></div>
+          <p>До 32″</p>
+        </a></div>
+    </div>
+  </div>
+  <!-- ============= /КАТЕГОРИИ ============= -->
+  <!-- ============= КОНТЕНТ ============= -->
+  <div class="cont mrg mrgtop">
+    <div class="txtLeft"></div>
+    <div class="txtRight">
+      <h3>Купити разом</h3>
+      <p>Різні самі по собі, але ще краще, якщо вони разом. Тут все, що вам потрібно для максимального комфорту.</p>
+      <!-- <a href="/vmeste-deshevle/brand__samsung__cat__78" class="vmestebtn">Посмотреть</a> -->
+    </div>
 
-<!-- ============= КАТЕГОРИИ ============= -->
-<div style="margin-top: 100px; padding-bottom: 50px;" class="cont">
-<h2 style="padding: 50px 0 30px;" class="zagolovok">Вибір за категорією</h2>
-<div class="blockone">
-<div class="punkt"><a href="/samsung-televizory/tv_tehnolog__smart-tv/">
-<div class="image"><img src="https://comfy.ua/media/blb/samsung/smart.png" /></div>
-<p>Smart TV</p>
-</a></div>
-<div class="punkt"><a href="/samsung-televizory/iz_ek__est/">
-<div class="image"><img src="https://comfy.ua/media/blb/samsung/curved.png" /></div>
-<p>Curved TV</p>
-</a></div>
-<div class="punkt"><a href="/samsung-televizory/podderzhka_videorezhima__1920x1080-full-hd/">
-<div class="image"><img src="https://comfy.ua/media/blb/samsung/fullhd.png" /></div>
-<p>Full HD TV</p>
-</a></div>
-<div class="punkt"><a href="/samsung-televizory/podderzhka_videorezhima__1366x768-hd/">
-<div class="image"><img src="https://comfy.ua/media/blb/samsung/hdtv.png" /></div>
-<p>HD TV</p>
-</a></div>
-</div>
-<h2 style="padding: 70px 0 30px;" class="zagolovok">Вибір за розміром екрану</h2>
-<div class="blocktwo">
-<div class="five"><a href="/samsung-televizory/diag_tvf__55-i-bolee/">
-<div class="image"><img src="https://comfy.ua/media/blb/samsung/over-60.png" /></div>
-<p>55″ і більше</p>
-</a></div>
-<div class="five"><a href="/samsung-televizory/diag_tvf__ot-46-do-53/">
-<div class="image"><img src="https://comfy.ua/media/blb/samsung/46-59.png" /></div>
-<p>46″ - 53″</p>
-</a></div>
-<div class="five"><a href="/samsung-televizory/diag_tvf__ot-37-do-43/">
-<div class="image"><img src="https://comfy.ua/media/blb/samsung/40-43.png" /></div>
-<p>37″ - 43″</p>
-</a></div>
-<div class="five"><a href="/samsung-televizory/diag_tvf__ot-28-do-32/">
-<div class="image"><img src="https://comfy.ua/media/blb/samsung/32-39.png" /></div>
-<p>28″ - 32″</p>
-</a></div>
-<div class="five"><a href="/samsung-televizory/diag_tvf__ot-15-do-27/">
-<div class="image"><img src="https://comfy.ua/media/blb/samsung/under-29.png" /></div>
-<p>27″ і менш</p>
-</a></div>
-</div>
-</div>
-<!-- ============= /КАТЕГОРИИ ============= --> <!-- ============= КОНТЕНТ ============= -->
-<div class="cont mrg mrgtop">
-<div class="txtLeft"></div>
-<div class="txtRight">
-<h3>Купити разом</h3>
-<p>Різні самі по собі, але ще краще, якщо вони разом. Тут все, що вам потрібно для максимального комфорту.</p>
-<!-- <a href="/vmeste-deshevle/brand__samsung__cat__78" class="vmestebtn">Посмотреть</a> --></div>
+    <div>
+      <div class="punkt obvodka"><a href="/televizor-samsung-qe55ls03tauxua.html">
+          <div class="image"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_qe55ls03tauxua_043.jpg" /></div>
+          <p>Телевізор Samsung QE55LS03TAUXUA</p>
+      </div>
+      <div class="punkt obvodka"><a href="/zvukovoj-proektor-samsung-hw-s60t-ru.html">
+          <div class="image"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_hw-s60tru_010.jpg" /></div>
+          <p>Звуковий проектор Samsung HW-S60T/RU</p>
+      </div>
+      <div class="punkt obvodka"><a href="/zvukovoj-proektor-samsung-hw-q70t-ru.html">
+          <div class="image"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsunghw-q70t_03.jpg" /></div>
+          <p>Звуковий проектор Samsung HW-Q70T/RU</p>
+      </div>
+      <div class="punkt obvodka"><a href="/kreplenie-dlja-televizora-samsung-wmn-m25eb-ru.html">
+          <div class="image"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/small_image/270x265/62defc7f46f3fbfc8afcd112227d1181/s/a/samsung_wmn-m25eb-_ru.jpg" /></div>
+          <p>Кріплення для телевізора Samsung WMN-M25EB/RU</p>
+      </div>
+    </div>
+  </div>
+  <!-- =============  ============= -->
+  <div style="margin-top: 50px; padding-bottom: 100px;" class="cont ">
+    <div class="mrg">
+      <div class="footSams">
 
-<div>
-<div class="punkt obvodka"><a href="/televizor-samsung-ue55ku6500uxua.html">
-<div class="image"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/u/e/ue55ku6500uxua.jpg" /></div>
-<p>Телевізор Samsung UE55KU6500UXUA</p>
-</div>
-<div class="punkt obvodka"><a href="/zvukovoj-proektor-samsung-hw-j7500r-ru.html">
-<div class="image"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/s/a/samsung_hw-j7500r_5.jpg" /></div>
-<p>Звуковий проектор Samsung HW-J7500R/RU</p>
-</div>
-<div class="punkt obvodka"><a href="/naushniki-nakladnye-samsung-eo-pn900bbegru.html"><div class="image"><img src="https://cdn.comfy.ua/media/catalog/product/cache/4/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/s/a/samsung_eo-pn900bbegru.jpg" /></div>
-<p>Навушники накладні Samsung LEVEL on Blue Black (EO-PN900BBEGRU)</p>
-</div>
-<div class="punkt obvodka"><a href="/zvukovoj-proektor-samsung-hw-j7501-ru.html">
-<div class="image"><img src="https://cdn.comfy.ua/media/catalog/product/cache/5/thumbnail/279x221/9df78eab33525d08d6e5fb8d27136e95/_/s/_samsung_hw-j7501_3.jpg" /></div>
-<p>Звуковий проектор Samsung HW-J7501/RU</p>
-</div>
-</div>
-</div>
-<!-- =============  ============= -->
-<div style="margin-top: 50px; padding-bottom: 100px;" class="cont ">
-<div class="mrg">
-<div class="footSams">
+        <div class="blcsamsung sd">
+          <h3>QLED TV</h3>
+          <p>Нова Ера в TV<br />Перетворює світло на живі природні кольори.<br /> Всі відтінки кольорів ніби оживають</p>
+          <a href="/samsung-televizory/tip_televizora__qled/" class="btnSams">Купити</a>
+        </div>
 
-<div class="blcsamsung sd">
-<h3>QLED TV</h3>
-<p>Нова Ера в TV<br />Перетворює світло на живі природні кольори.<br /> Всі відтінки кольорів ніби оживають</p>
-<a href="/samsung-televizory/tip_televizora__qled/" class="btnSams">Купити</a></div>
+        <div class="blcsamsung sc"><img src="https://comfy.ua/media/blb/samsung/ft-img-1.png" /></div>
 
-<div class="blcsamsung sc"><img src="https://comfy.ua/media/blb/samsung/ft-img-1.png" /></div>
+        <div style="text-align: center;" class="blcsamsung sb"><img src="https://comfy.ua/media/blb/samsung/ft-img-2.png" /></div>
 
-<div style="text-align: center;" class="blcsamsung sb"><img src="https://comfy.ua/media/blb/samsung/ft-img-2.png" /></div>
+        <div class="blcsamsung sa">
+          <h3>Smart TV</h3>
+          <p>Швидкий і зручний доступ до всіх джерел контенту
+            Новий Smart Hub забезпечує єдину точку достуупу до контенту Live TV, Over The Top (OTT), ігор і багато іншого. Ви можете отримати доступ до улюбленого контенту, тільки увімкніть телевізор</p>
+          <a href="/samsung-televizory/tv_tehnolog__smart-tv/" class="btnSams">Купити</a>
+        </div>
+      </div>
 
-<div class="blcsamsung sa">
-<h3>Smart TV</h3>
-<p>Швидкий і зручний доступ до всіх джерел контенту
-Новий Smart Hub забезпечує єдину точку достуупу до контенту Live TV, Over The Top (OTT), ігор і багато іншого. Ви можете отримати доступ до улюбленого контенту, тільки увімкніть телевізор</p>
-<a href="/samsung-televizory/tv_tehnolog__smart-tv/" class="btnSams">Купити</a></div>
+      <a class="vsetov" href="/samsung-televizory/">ПОДИВИТИСЬ ВСЕ</a>
+    </div>
+  </div>
+  <!-- ============= /КОНТЕНТ ============= -->
 </div>
-
-<a class="vsetov" href="/samsung-televizory/">ПОДИВИТИСЬ ВСЕ</a>
-</div>
-</div>
-<!-- ============= /КОНТЕНТ ============= --></div>
