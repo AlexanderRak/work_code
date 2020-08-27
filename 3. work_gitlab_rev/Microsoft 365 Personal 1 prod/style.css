@@ -17,7 +17,7 @@
 .megogo-prod__flex {
    display: flex;
    flex-direction: row;
-   flex-wrap: wrap;
+   /* flex-wrap: wrap; */
 }
 
 .megogo-prod__item {
@@ -34,6 +34,7 @@
    align-items: center;
    justify-content: center;
    height: 100%;
+   background-color: #fff;
 }
 
 .megogo-prod__img {
@@ -326,7 +327,17 @@ svg.svg-promo.svg-circle-2 path {
    height: 200px;
 }
 
+@media (max-width: 812px) {
+   .megogo-prod__item-flex-itm:first-child {
+      width: 87%;
+   }
+}
+
 @media screen and (min-width: 320px) and (max-width: 480px) {
+
+   .megogo-prod__img {
+      max-width: 45%;
+   }
 
    #wrapper-banner {
       border-radius: inherit;
@@ -450,7 +461,7 @@ svg.svg-promo.svg-circle-2 path {
 
    .megogo-prod__item-flex-itm:first-child {
       max-width: 285px;
-      width: 100%;
+      width: 95%;
    }
 
    .megogo-prod__item-flex-itm:last-child {
