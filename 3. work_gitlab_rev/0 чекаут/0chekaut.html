@@ -13,11 +13,13 @@
 
       <div class="blank-checkout__content">
          <h2>Ошибка при получении данных</h2>
-         <p>Попробуйте оформить заказ немного позже 
+         <p>Попробуйте оформить заказ немного позже
 
             <div class="chat" id="chat_id">
                <div class="popup_wrap">
-                  <div class="content"><p>или&nbsp;</p> <a class="show_popup" id="show_popup1">свяжитесь с нами</a></div>
+                  <div class="content">
+                     <p>или&nbsp;</p> <a class="show_popup" id="show_popup1">свяжитесь с нами</a>
+                  </div>
                   <div class="popup" id="popup1">
                      <div class="object">
                         <ul class="communication">
@@ -49,38 +51,38 @@
 
 <script type="text/javascript">
    // <![CDATA[
-   var tooltipTimeout1;
+   window.addEventListener('DOMContentLoaded', function () {
+      var tooltipTimeout1;
 
-   $("#i_icon_1").hover(function () {
-      tooltipTimeout1 = setTimeout(showTooltip1, 100);
-   },
-      hideTooltip1);
+      $("#i_icon_1").hover(function () {
+            tooltipTimeout1 = setTimeout(showTooltip1, 100);
+         },
+         hideTooltip1);
 
-   function showTooltip1() {
-      var tooltip1 = $(
-         "<div id='tooltip1' class='tooltip'>  Для перехода в диалог с оператором должен быть установлен Viber. После установки повторно нажмите на логотип чата.</div>"
-      );
-      tooltip1.appendTo($("#i_icon_1"));
-   }
-
-   function hideTooltip1() {
-      clearTimeout(tooltipTimeout1);
-      $("#tooltip1").fadeOut().remove();
-   }
-     // ]]>
-</script>
-<script type="text/javascript">
-   // <![CDATA[
-   $("#show_popup1").click(function () {
-      $('#popup1').toggle();
-   });
-   $(document).on('click', function (e) {
-      if (!$(e.target).closest(".popup_wrap").length) {
-         $('#popup1').hide();
+      function showTooltip1() {
+         var tooltip1 = $(
+            "<div id='tooltip1' class='tooltip'>  Для перехода в диалог с оператором должен быть установлен Viber. После установки повторно нажмите на логотип чата.</div>"
+         );
+         tooltip1.appendTo($("#i_icon_1"));
       }
-      e.stopPropagation();
+
+      function hideTooltip1() {
+         clearTimeout(tooltipTimeout1);
+         $("#tooltip1").fadeOut().remove();
+      }
+
+      $("#show_popup1").click(function () {
+         $('#popup1').toggle();
+      });
+
+      $(document).on('click', function (e) {
+         if (!$(e.target).closest(".popup_wrap").length) {
+            $('#popup1').hide();
+         }
+         e.stopPropagation();
+      });
    });
-     // ]]>
+   // ]]>
 </script>
 <script type="text/javascript">
    // <![CDATA[
@@ -90,7 +92,7 @@
       });
       SenderWidget.showWidget();
    }
-     // ]]>
+   // ]]>
 </script>
 <script type="text/javascript">
    // <![CDATA[
@@ -103,5 +105,5 @@
          fjs.parentNode.insertBefore(js, fjs, 'sender-widget');
       })(document, 'script');
    }
-     // ]]>
+   // ]]>
 </script>
