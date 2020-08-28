@@ -1,4 +1,4 @@
-// <script language="JavaScript" type="text/javascript"> // <![CDATA[
+//<script language="JavaScript" type="text/javascript"> // <![CDATA[
 
 function getCookie(name) {
    var matches = document.cookie.match(new RegExp(
