@@ -1,9 +1,27 @@
-#wrap-profilaktika p:first-letter{ padding-left: 0; }
-#wrap-profilaktika p{ margin-bottom: 0; }
-.features-desc__text p { font-size: 1.9rem !important; }
-#wrap-profilaktika img:hover { opacity: 1; }
-#wrap-profilaktika img { opacity: 1; margin-bottom: 0; }
-.tabs-content { padding: 1rem 0 0 0; }
+#wrap-profilaktika p:first-letter {
+   padding-left: 0;
+}
+
+#wrap-profilaktika p {
+   margin-bottom: 0;
+}
+
+.features-desc__text p {
+   font-size: 1.9rem !important;
+}
+
+#wrap-profilaktika img:hover {
+   opacity: 1;
+}
+
+#wrap-profilaktika img {
+   opacity: 1;
+   margin-bottom: 0;
+}
+
+.tabs-content {
+   padding: 1rem 0 0 0;
+}
 
 #wrap-profilaktika {
    max-width: 1316px;
@@ -47,6 +65,7 @@
 .wrap-hdr {
    position: relative;
 }
+
 .wrap-hdr__bgrd {
    background-image: url(https://cdn.comfy.ua/media/x/img/profilaktik/bgrd4.png);
    background-position: center;
@@ -57,49 +76,92 @@
    position: relative;
    z-index: 5;
 }
+
 .wrap-hdr__content-flex {
    display: flex;
    flex-direction: row;
    align-items: center;
    justify-content: space-around;
-   padding: 125px 0 50px 100px;
+   padding: 200px 0 50px 100px;
    position: relative;
    z-index: 6;
    margin: -43rem 0 0 0;
 }
+
 .wrap-hdr__item {
    flex: 1 1 0;
 }
+
 .wrap-hdr__item:last-child {
    text-align: center;
 }
+
 .wrap-hdr__item-list {
    max-width: 560px;
 }
+
 .wrap-hdr__item-list ul {
    margin-top: 32px;
    list-style-type: none;
 }
+
 .wrap-hdr__item-list ul li {
-   position: relative;
-   padding-left: 18px; 
+   /* position: relative; */
+   display: -webkit-box;
+   display: flex;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+   flex-direction: row;
+   -webkit-box-align: center;
+   align-items: center;
+   /* padding-left: 18px;  */
    color: #3C3C3C;
    margin-bottom: 32px;
 }
+
 .wrap-hdr__item-list ul li:last-child {
    margin-bottom: 0;
 }
+
 .wrap-hdr__item-list ul li::before {
    content: "";
-   width: 5px;
-   height: 5px;
-   background: #43B02A;
-   position: absolute;
+   display: block;
+   min-width: 35px;
+   height: 35px;
+   background-repeat: no-repeat;
+   background-position: center;
+   margin-right: 10px;
+   /* position: absolute;
    left: 0;
-   top: 7px;
+   top: 7px; */
+}
+
+.wrap-hdr__item-list ul li:nth-of-type(1)::before {
+   background-image: url("https://cdn.comfy.ua/media/x/img/profilaktika/boiler/sect1_icon4.svg");
+}
+
+.wrap-hdr__item-list ul li:nth-of-type(2)::before {
+   background-image: url("https://cdn.comfy.ua/media/x/img/profilaktika/boiler/sect1_icon3.svg");
+}
+
+.wrap-hdr__item-list ul li:nth-of-type(3)::before {
+   background-image: url("https://cdn.comfy.ua/media/x/img/profilaktika/boiler/sect1_icon1.svg");
+}
+
+.wrap-hdr__item-list ul li:nth-of-type(4)::before {
+   background-image: url("https://cdn.comfy.ua/media/x/img/profilaktika/boiler/sect1_icon2.svg");
+}
+
+.wrap-hdr__item-list ul li:nth-of-type(5)::before {
+   background-image: url("https://cdn.comfy.ua/media/x/img/profilaktika/boiler/sect1_icon6.svg");
+}
+
+.wrap-hdr__item-list ul li:nth-of-type(6)::before {
+   background-image: url("https://cdn.comfy.ua/media/x/img/profilaktika/boiler/sect1_icon5.svg");
 }
 
 .wrap-oneyear {}
+
 .wrap-oneyear__content-flex {
    display: flex;
    flex-direction: row;
@@ -108,12 +170,14 @@
    padding: 0 5rem;
    padding: 0 5rem 5rem 0;
 }
+
 .wrap-oneyear__item:last-child {
    max-width: 505px;
    padding-left: 35px;
 }
 
 .wrap-includ-prflkd {}
+
 .wrap-includ-prflkd_content-flex {
    display: flex;
    flex-direction: row;
@@ -121,29 +185,37 @@
    max-width: 1150px;
    width: 100%;
    margin: auto 0 0 0;
-   padding: 45px 0 45px 100px;
+   padding: 80px 0 80px 100px;
+   margin-bottom: 60px;
 }
+
 .wrap-includ-prflkd__item {
    position: relative;
 }
+
 .wrap-includ-prflkd__item:last-child {
    flex: 1 0 auto;
 }
+
 .wrap-includ-prflkd__list {
    max-width: 535px;
 }
+
 .wrap-includ-prflkd__list ul {
    list-style-type: none;
    padding-top: 32px;
 }
+
 .wrap-includ-prflkd__list ul li {
    position: relative;
    padding-left: 40px;
    padding-bottom: 32px;
 }
+
 .wrap-includ-prflkd__list ul li:last-child {
    padding-bottom: 0;
 }
+
 .wrap-includ-prflkd__list ul li::before {
    content: "";
    background-image: url(https://cdn.comfy.ua/media/x/img/profilaktik/ckeck_mark.png);
@@ -156,97 +228,129 @@
    width: 20px;
    height: 17px;
 }
+
 .wrap-includ-prflkd__list p {
    /* text-transform: uppercase; */
    padding-top: 10px;
 }
+
 .wrap-includ-prflkd__pddleft {
    padding-left: 40px;
 }
+
 .wrap-includ-prflkd__item {}
+
 .wrap-includ-prflkd__img-list {
-   position: relative;
+   position: absolute;
    right: -10rem;
-   top: -10rem;
+   /* top: -10rem; */
    display: flex;
    flex-direction: column;
    align-items: flex-end;
+   bottom: 50%;
+   transform: translateY(50%);
 }
+
 #wrap-profilaktika .wrap-includ-prflkd__img-list img {
    margin-bottom: 32px;
 }
+
 #wrap-profilaktika .wrap-includ-prflkd__img-list img:last-child {
    margin-bottom: 0px;
 }
+
 .wrap-clear-teh {}
+
 .wrap-clear-teh__content {}
+
 .wrap-clear-teh__content-text {
    text-align: center;
    padding: 40px 15px;
 }
+
 .wrap-clear-teh__attention {
    background: #FF090B;
    text-align: center;
    color: #fff;
    font-weight: bold;
 }
+
 .wrap-clear-teh__attention p {
    padding: 22px 15px;
    font-size: 22px !important;
 }
+
 .wrap-clear-teh__content-flex {
    display: flex;
    flex-direction: row;
 }
+
 .wrap-clear-teh__item {
    flex: 1 1 0;
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
+   .wrap-includ-prflkd__list {
+      padding: 0 20px;
+   }
+
    #wrap-profilaktika h2 {
       font-size: 25px;
    }
+
    #wrap-profilaktika h4 {
       font-size: 25px;
    }
+
    #wrap-profilaktika h3 {
       font-size: 23px;
    }
+
    .wrap-hdr__content-flex {
       flex-direction: column-reverse;
       align-items: center;
       padding: 25px 15px 35px 15px;
       margin: -38rem 0 0 0;
    }
+
    .wrap-includ-prflkd__item:first-child {
       padding: 0 15px 15px 15px;
    }
+
    .wrap-hdr__item:last-child {
       text-align: center;
-      max-width: 55%;
+      max-width: 90%;
       padding-right: 0;
       padding-bottom: 15px;
    }
+
    .wrap-oneyear__content-flex {
       flex-direction: column;
       padding: 0 15px 15px 15px;
    }
+
    .wrap-oneyear__item:last-child {
       padding-left: 0;
    }
+
    .wrap-includ-prflkd_content-flex {
       padding: 25px 0 0 0;
       flex-direction: column;
    }
+
    .wrap-includ-prflkd__img-list {
       right: 0;
       top: 0;
       flex-direction: column;
       align-items: flex-end;
+      position: relative;
+      transform: unset;
    }
+
    #wrap-profilaktika .wrap-includ-prflkd__img-list img {
       margin-bottom: -1px;
    }
+
    .wrap-clear-teh__content-flex {
       flex-direction: column;
    }
@@ -256,12 +360,15 @@
    #wrap-profilaktika h2 {
       font-size: 23px;
    }
+
    #wrap-profilaktika h4 {
       font-size: 35px;
    }
+
    #wrap-profilaktika h3 {
       font-size: 23px;
    }
+
    .wrap-includ-prflkd__img-list {
       right: 0rem;
       top: 0;
@@ -269,34 +376,45 @@
       flex-direction: row;
       align-items: inherit;
       padding-top: 32px;
+      position: relative;
+      transform: unset;
+      flex-wrap: wrap;
    }
+
    #wrap-profilaktika .wrap-includ-prflkd__img-list img {
       margin-bottom: 0;
       max-width: 50%;
    }
+
    #wrap-profilaktika .wrap-includ-prflkd__img-list img:last-child {
       margin-bottom: 0;
    }
+
    .wrap-hdr__content-flex {
       padding: 125px 0 50px 25px;
       justify-content: space-around;
    }
+
    .wrap-oneyear__content-flex {
       padding: 0 25px 5rem 25px;
    }
+
    .wrap-includ-prflkd_content-flex {
-      padding: 45px 0 45px 25px;
+      padding: 45px 25px 45px 25px;
    }
+
    .wrap-includ-prflkd_content-flex {
       flex-direction: column;
    }
+
    .wrap-hdr__item {
       flex: 1 1 0;
       max-width: 380px;
    }
+
    .wrap-hdr__item:last-child {
       text-align: center;
-      max-width: 30%;
+      max-width: 45%;
       padding-right: 25px;
    }
 
@@ -306,16 +424,20 @@
    #wrap-profilaktika h4 {
       font-size: 35px;
    }
+
    .wrap-includ-prflkd__img-list {
-      position: relative;
+      /* position: relative; */
       right: 0rem;
    }
+
    .wrap-hdr__content-flex {
       padding: 125px 0 50px 25px;
    }
+
    .wrap-oneyear__content-flex {
       padding: 0 5rem 5rem 5rem;
    }
+
    .wrap-includ-prflkd_content-flex {
       padding: 45px 0 45px 25px;
    }
