@@ -1,0 +1,751 @@
+<style>
+/*default styles */
+
+#vodafone p:first-letter {
+  padding-left: 0;
+}
+
+#vodafone p {
+  margin-bottom: 0;
+  line-height: normal;
+}
+
+#vodafone img:hover {
+  opacity: 1;
+}
+
+#vodafone img {
+  opacity: 1;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+#vodafone {
+  max-width: 1316px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#vodafone h2 {
+  line-height: normal;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+}
+
+#vodafone ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-desc__text img {
+  margin-bottom: 0rem;
+}
+
+.one-col .features-desc__text p:first-letter {
+  padding-left: 0rem !important;
+}
+
+/*end default styles */
+
+/*section*/
+
+#vodafone .logo {
+  height: 312px;
+  box-sizing: border-box;
+  background-position: center;
+  background-image: url("https://cdn.comfy.ua/media/x/img/1349343/1.png");
+}
+
+#vodafone .tarif ul.tarif_list {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-align: center;
+          align-items: center;
+  margin-top: 20px;
+  padding: 0 70px;
+}
+
+#vodafone .tarif ul.tarif_list li {
+  -webkit-box-flex: 1;
+          flex: 1 1 0;
+  max-width: 50%;
+  box-sizing: border-box;
+  /* padding: 30px 10px; */
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+#vodafone .tarif ul.tarif_list li:nth-of-type(1) {
+  color: #fff;
+  background-color: #e60000;
+}
+
+#vodafone .tarif ul.tarif_list li:nth-of-type(2) {
+  border: 1px solid #e60000;
+  margin-left: 100px;
+}
+
+#vodafone .tarif ul.tarif_list li span {
+  display: block;
+  position: relative;
+}
+
+#vodafone .tarif ul.tarif_list li span>strong {
+  font-size: 36px;
+}
+
+#vodafone .tarif ul.tarif_list li span:nth-of-type(2) {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-align: center;
+          align-items: center;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+#vodafone .tarif ul.tarif_list li span .tarif_i {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  color: #666;
+  padding: 6px 14px;
+  background-color: #ededed;
+  width: 200px;
+  border-radius: 10px;
+  bottom: 30px;
+  left: -19px;
+}
+
+#vodafone .tarif ul.tarif_list li span .tarif_i p {
+  position: relative;
+  z-index: 2;
+}
+
+#vodafone .tarif ul.tarif_list li span .tarif_i::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #ededed;
+  width: 20px;
+  height: 20px;
+  right: 50%;
+  top: 60px;
+  -webkit-transform: rotate(45deg) translate(50%, -50%);
+          transform: rotate(45deg) translate(50%, -50%);
+  z-index: 1;
+}
+
+#vodafone .tarif ul.tarif_list li span img {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#vodafone .tarif_i {
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.3);
+}
+
+#vodafone .tarif ul.tarif_list li span .i_hover:hover .tarif_i {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: ease-in-out all 200ms;
+  transition: ease-in-out all 200ms;
+}
+
+#vodafone .tarif ul.uslovija {
+  margin: 20px 70px 0 70px;
+  padding: 20px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  border: 1px solid #e4e4e4;
+}
+
+#vodafone .tarif ul.uslovija li {
+  -webkit-box-flex: 1;
+          flex: 1 1 0;
+  text-align: center;
+}
+
+#vodafone .tarif ul.uslovija li span {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+}
+
+#vodafone .tarif ul.uslovija li span::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+
+#vodafone .tarif ul.uslovija li:nth-of-type(1) span::before {
+  background-image: url("https://cdn.comfy.ua/media/x/img/1349343/icon_4g.svg");
+}
+
+#vodafone .tarif ul.uslovija li:nth-of-type(2) span::before {
+  background-image: url("https://cdn.comfy.ua/media/x/img/1349343/icon_bezlim.svg");
+}
+
+#vodafone .tarif ul.uslovija li:nth-of-type(3) span::before {
+  background-image: url("https://cdn.comfy.ua/media/x/img/1349343/icon_phone.svg");
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(3) {
+  margin-top: 0;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(3) li:nth-of-type(1) span::before {
+  background-image: url("https://cdn.comfy.ua/media/x/img/1349343/icon_earth.svg");
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(3) li:nth-of-type(2) {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+          flex-direction: column !important;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(3) li:nth-of-type(2)::before,
+#vodafone .tarif ul.uslovija:nth-of-type(3) li:nth-of-type(2)::after {
+  content: "";
+  display: block;
+  height: 100%;
+  background-color: #999;
+  width: 2px;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(3) li:nth-of-type(2) p {
+  padding: 5px 0;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(4) {
+  margin-top: 0;
+  background-color: #f4f4f4;
+  position: relative;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(1) {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(1) img.phone_i {
+  margin: 0 10px;
+  display: inline;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(2) span::before {
+  background-image: url("https://cdn.comfy.ua/media/x/img/1349343/icon_message.svg");
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(3) li span {
+  position: relative;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(3) li span .i_i {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(3) li span .tarif_i {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  color: #666;
+  padding: 6px 14px;
+  background-color: #ededed;
+  width: 200px;
+  border-radius: 10px;
+  bottom: 35px;
+  left: 159px;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(3) li span .tarif_i p {
+  position: relative;
+  z-index: 2;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(3) li span .tarif_i p>strong>a {
+  text-decoration: none;
+  color: #000;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(3) li span .tarif_i p>img {
+  display: inline;
+  margin-left: 10px;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(3) li span .i_hover:hover .tarif_i {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: ease-in-out opacity 200ms;
+  transition: ease-in-out opacity 200ms;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(3) li span .tarif_i::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #ededed;
+  width: 20px;
+  height: 20px;
+  right: 50%;
+  top: 215px;
+  -webkit-transform: rotate(45deg) translate(50%, -50%);
+          transform: rotate(45deg) translate(50%, -50%);
+  z-index: 1;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(1) .uslovija_cont {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  position: relative;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(1) .uslovija_cont>img {
+  margin-bottom: 10px;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(4) li .uslovija_cont .i_hover {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(4) li .i_hover:hover .tarif_i {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: ease-in-out opacity 200ms;
+  transition: ease-in-out opacity 200ms;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(4) li .tarif_i {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  color: #666;
+  padding: 6px 14px;
+  background-color: #ededed;
+  width: 200px;
+  border-radius: 10px;
+  bottom: 42px;
+  left: 87px;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(4) li .i_hover:hover .tarif_i p strong a {
+  text-decoration: none;
+  color: #000;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(4) li .i_hover:hover .tarif_i p {
+  font-weight: normal;
+  font-size: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(2) span .i_hover {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(4) li .i_hover:hover .tarif_i::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #ededed;
+  width: 20px;
+  height: 20px;
+  right: 50%;
+  top: 195px;
+  -webkit-transform: rotate(45deg) translate(50%, -50%);
+          transform: rotate(45deg) translate(50%, -50%);
+  z-index: 1;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(4) li:last-of-type .i_hover:hover .tarif_i::after {
+  top: 235px;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(2) .tarif_i {
+  left: unset;
+  right: 98px;
+  bottom: 86px;
+}
+
+#vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(2) .tarif_i .phone_i {
+  display: inline;
+  margin: 0 10px;
+}
+
+#vodafone .alert span {
+  font-size: 12px;
+  display: block;
+  margin-top: 40px;
+  padding: 0 70px;
+}
+
+
+/*end section*/
+
+/*media*************************************************/
+
+@media (max-width: 1024px) {
+  #vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(2) .tarif_i {
+    right: 25px;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(3) li span .tarif_i {
+    left: 111px;
+  }
+}
+
+@media (max-width: 812px) {
+  #vodafone .tarif ul.uslovija:nth-of-type(3) li span .i_hover {
+    -webkit-box-ordinal-group: 0;
+            order: -1;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(3) li .phone_i {
+    margin-left: 10px;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(3) li span .i_hover:hover .tarif_i {
+    left: -63px;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(3) li span .i_i {
+    margin-right: 10px;
+    margin-left: 0;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(2) span .i_hover {
+    -webkit-box-ordinal-group: 0;
+            order: -1;
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(4) li .i_hover:hover .tarif_i {
+    right: 205px;
+  }
+}
+
+
+@media (max-width: 812px) and (min-width: 481px) {
+  #vodafone .tarif ul.tarif_list {
+    padding: 0 20px;
+  }
+
+  #vodafone .tarif ul.tarif_list li:nth-of-type(2) {
+    margin-left: 40px;
+  }
+
+  #vodafone .tarif ul.uslovija {
+    margin: 20px 20px 0 20px;
+  }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+  #vodafone h2 {
+    font-size: 22px;
+  }
+
+  #vodafone .logo {
+    background-size: cover;
+    height: 150px;
+  }
+
+  #vodafone .tarif ul.tarif_list {
+    padding: 0;
+  }
+
+  #vodafone .tarif ul.tarif_list li:nth-of-type(2) {
+    margin-left: 0px;
+  }
+
+  #vodafone .tarif {
+    overflow: hidden;
+  }
+
+  #vodafone .tarif ul.tarif_list li span>strong {
+    font-size: 22px;
+  }
+
+  #vodafone .tarif ul.tarif_list li span:nth-of-type(2) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+            flex-direction: row-reverse;
+    padding-top: 6px;
+  }
+
+  #vodafone .tarif ul.tarif_list li span img {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  #vodafone .tarif ul.tarif_list li span .tarif_i {
+    left: -94px;
+  }
+
+  #vodafone .tarif ul.uslovija {
+    margin: 20px 0 0 0;
+  }
+
+  #vodafone .tarif ul.uslovija li span {
+    font-size: 18px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+
+  #vodafone .tarif ul.uslovija li span::before {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  #vodafone .tarif ul.uslovija li p {
+    font-size: 14px;
+  }
+
+  #vodafone .tarif ul.uslovija li:nth-of-type(2) {
+    margin: 0 10px;
+  }
+
+  /* #vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(2) span::before {
+    display: none;
+  } */
+
+  #vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(1) {
+    align-self: flex-Pro;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(1)::before {
+    background-size: contain;
+    width: 160px;
+    background-repeat: no-repeat;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(3) li span {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-child(3) li span::before {
+    margin: 0 10px;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(3) li span .i_hover:hover .tarif_i {
+    max-width: 170px;
+    left: -80px;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(3) li span .tarif_i {
+    bottom: 40px;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(3) li span .tarif_i::after {
+    top: 295px;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(1) .uslovija_cont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(4) li .uslovija_cont .i_hover {
+    margin-bottom: 5px;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(4) li .i_hover:hover .tarif_i::after {
+    top: 235px;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(4) li .i_hover:hover .tarif_i {
+    left: -11px;
+    bottom: 64px;
+    width: 170px;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(2) span .i_hover .tarif_i {
+    right: 32px;
+    bottom: 120px;
+    left: unset;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(2) span .i_hover .tarif_i::after {
+    top: 315px !important;
+  }
+
+  #vodafone .tarif ul.tarif_list li span .tarif_i::after {
+    top: 55px;
+  }
+}
+
+@media (max-width: 320px) {
+  #vodafone .logo {
+    background-size: cover;
+    height: 135px;
+    background-position: center right 48%;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(2) span .i_hover .tarif_i {
+    right: 13px;
+    bottom: 160px;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(4) li .uslovija_cont .i_hover {
+    margin-bottom: 5px;
+    margin-left: 27px;
+    margin-right: 0;
+  }
+
+  #vodafone .tarif ul.uslovija:nth-of-type(4) li:nth-of-type(2) span .i_hover {
+    margin-right: 0;
+  }
+}
+</style>
+
+<div id="vodafone">
+  <div class="logo"></div>
+
+  <div class="tarif">
+    <ul class="tarif_list">
+      <li>
+        <h2>Vodafone </br>SuperNet Pro</h2>
+      </li>
+      <li>
+        <span><strong>150 грн</strong>/месяц</span>
+        <span>5 грн/день
+          <div class="i_hover">
+            <img src="https://cdn.comfy.ua/media/x/img/1349343/i.png" alt="">
+            <div class="tarif_i">
+              <p>Ориентировочная стоимость тарифа за день.</p>
+            </div>
+          </div>
+        </span>
+      </li>
+    </ul>
+
+    <ul class="uslovija">
+      <li>
+        <span>12 ГБ</span>
+        <p>4G/3G интернета</p>
+      </li>
+      <li>
+        <span>Безлимит</span>
+        <p>в сети Vodafone Украина</p>
+      </li>
+      <li>
+        <span>150 мин</span>
+        <p>звонки на другие сети Украины</p>
+      </li>
+    </ul>
+
+    <ul class="uslovija">
+      <li>
+        <span>50 мин</span>
+        <p>Польша, Германия, Италия и еще 27 стран</p>
+      </li>
+      <li>
+        <p>или</p>
+      </li>
+      <li>
+        <span>+150 мин
+          <div class="i_hover">
+            <img class="i_i" src="https://cdn.comfy.ua/media/x/img/1349343/i.png" alt="">
+            <div class="tarif_i">
+              <p>150 мин недостаточно для звонков по Украине? Обменяйте 50 мин за границу на дополнительные 150 мин по
+                Украине и получайте всего 300 мин каждый месяц. Наберите <strong><a
+                    href="tel:*301*100#">*301*100#</a></strong><img class="phone_i"
+                  src="https://cdn.comfy.ua/media/x/img/1349343/phone.png" alt=""> и
+                дождитесь SMS о подключении услуги.
+              </p>
+            </div>
+          </div>
+        </span>
+        <p>по Украине с услугой «Обмен минут»</p>
+      </li>
+    </ul>
+
+    <ul class="uslovija">
+      <li>
+        <div class="uslovija_cont">
+          <img src="https://cdn.comfy.ua/media/x/img/1349343/icon_youtube.svg">
+          <div class="i_hover">
+            <img class="i_i" src="https://cdn.comfy.ua/media/x/img/1349343/i.png" alt="">
+            <div class="tarif_i">
+              <p>Акция «YouTube без перерывов»
+                4 месяца бесплатного пользования YouTube Premium + Video Pass с момента подключения акции. Подключайте <strong><a
+                    href="tel:*313#">*313#</a></strong><img class="phone_i"
+                  src="https://cdn.comfy.ua/media/x/img/1349343/phone.png" alt=""> после активации пакета на месяц.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p>4 МЕСЯЦА БЕСПЛАТНО + услуга Video PASS</p>
+      </li>
+      <li>
+        <span>50 SMS</span>
+        <p>на мобильные сети Украины – 50 шт. за 1,50 грн/день</p>
+      </li>
+    </ul>
+
+    <div class="alert">
+      <span>Увага! Продаж стартового пакету можливий не більше трьох штук в одні руки.</span>
+    </div>
+  </div>
+</div>
