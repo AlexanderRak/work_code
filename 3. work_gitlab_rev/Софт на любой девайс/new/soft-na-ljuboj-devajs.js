@@ -76,7 +76,7 @@ $.ajax({
    }
 });
 
-var priceUrl2 = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id=' + city + '&ids=35614,566243';
+var priceUrl2 = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id=' + city + '&ids=35614';
 $.ajax({
    url: priceUrl2,
    type: 'get',
@@ -84,15 +84,13 @@ $.ajax({
       var resp = JSON.parse(output);
 
       var pr34 = resp['35614']['price'];
-      var pr35 = resp['566243']['price'];
 
       document.getElementById("sku-986078").innerHTML = pr34;
-      document.getElementById("sku-1462781").innerHTML = pr35;
 
    }
 });
 
-var priceUrl3 = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id=' + city + '&ids=537523,1002043,344563,355603,726813,418303';
+var priceUrl3 = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id=' + city + '&ids=537523,1002043,344563,355603,418303';
 $.ajax({
    url: priceUrl3,
    type: 'get',
@@ -102,21 +100,19 @@ $.ajax({
       var pr36 = resp['418303']['price'];
       var pr37 = resp['344563']['price'];
       var pr38 = resp['355603']['price'];
-      var pr39 = resp['726813']['price'];
       var pr40 = resp['1002043']['price'];
       var pr41 = resp['537523']['price'];
       
       document.getElementById("sku-1386570").innerHTML = pr36;
       document.getElementById("sku-1349305").innerHTML = pr37;
       document.getElementById("sku-1349306").innerHTML = pr38;
-      document.getElementById("sku-1530379").innerHTML = pr39;
       document.getElementById("sku-1609548").innerHTML = pr40;
       document.getElementById("sku-1397152").innerHTML = pr41;
 
    }
 });
 
-var priceUrl6 = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id=' + city + '&ids=605033,1078013,1078023,1078033,1078043,1078053,1078063,1078073,1043323,975913,935013,756633';
+var priceUrl6 = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id=' + city + '&ids=605033,1078013,1078023,1078033,1078043,1078053,1078063,1078073,975913,935013,756633';
 $.ajax({
    url: priceUrl6,
    type: 'get',
@@ -133,7 +129,6 @@ $.ajax({
       var pr54 = resp['1078053']['price'];
       var pr55 = resp['1078063']['price'];
       var pr56 = resp['1078073']['price'];
-      var pr57 = resp['1043323']['price'];
       var pr58 = resp['975913']['price'];
       
       document.getElementById("sku-1538640").innerHTML = pr44;
@@ -146,7 +141,6 @@ $.ajax({
       document.getElementById("sku-1576097").innerHTML = pr54;
       document.getElementById("sku-1576098").innerHTML = pr55;
       document.getElementById("sku-1576099").innerHTML = pr56;
-      document.getElementById("sku-1609546").innerHTML = pr57;
       document.getElementById("sku-1605069").innerHTML = pr58;
    }
 });
