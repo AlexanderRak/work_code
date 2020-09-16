@@ -7,6 +7,7 @@
   display: block;
   background-color: #fff;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -100,11 +101,14 @@
   position: absolute;
   padding: 70px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   right: 0;
   bottom: 50%;
   -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
       -ms-transform: translateY(50%);
+       -o-transform: translateY(50%);
           transform: translateY(50%);
 }
 
@@ -122,6 +126,8 @@
 #lg .design .design_txt {
   background-image: url("https://cdn.comfy.ua/media/x/img/1311958/5bg.jpg");
   -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
           background-size: cover;
   background-position: center bottom;
   padding: 70px;
@@ -148,7 +154,9 @@
   position: absolute;
   bottom: 50%;
   -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
       -ms-transform: translateY(50%);
+       -o-transform: translateY(50%);
           transform: translateY(50%);
   padding: 70px;
 }
@@ -156,15 +164,19 @@
 #lg .func .func_img .func_list li {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
   -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -190,6 +202,7 @@
 #lg .func .func_img .func_list li:nth-of-type(1) > span {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   text-align: center;
@@ -240,16 +253,21 @@
   #lg .lightening .lightening_img .lightening_list {
     display: -webkit-box;
     display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     position: unset;
     -webkit-transform: unset;
+       -moz-transform: unset;
         -ms-transform: unset;
+         -o-transform: unset;
             transform: unset;
   }
   #lg .lightening {
@@ -261,7 +279,9 @@
   #lg .func .func_img .func_list {
     position: unset;
     -webkit-transform: unset;
+       -moz-transform: unset;
         -ms-transform: unset;
+         -o-transform: unset;
             transform: unset;
   }
   #lg .func .func_img > img {
@@ -300,6 +320,8 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
