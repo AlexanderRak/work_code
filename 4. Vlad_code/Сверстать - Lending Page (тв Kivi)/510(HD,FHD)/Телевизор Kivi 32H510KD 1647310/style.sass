@@ -1,0 +1,233 @@
+/*default styles*/
+
+#kivi
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 28px
+    font-weight: normal
+    padding: 0 0 20px 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#kivi
+  span
+    font-size: 50px
+    font-weight: bold
+    padding-bottom: 40px
+    display: block
+    line-height: normal
+  .voice
+    padding: 70px
+    height: 765px
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url("https://cdn.comfy.ua/media/x/img/1647308/1.png")
+    box-sizing: border-box
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    .voice_txt
+      color: #fff
+      margin-left: 350px
+      span
+        font-size: 70px
+        font-weight: bold
+  
+  .memc
+    .memc_txt
+      padding: 70px
+      text-align: center
+  
+  .uniformity
+    padding-bottom: 70px
+    display: flex
+    flex-direction: row
+    align-items: center
+    >div
+      flex: 1 1 0
+      box-sizing: border-box
+      max-width: 50%
+    .uniformity_txt
+      padding: 70px
+
+  .interier
+    position: relative
+    z-index: 10
+    .interier_txt
+      text-align: center
+      padding: 70px
+          
+  .connected    
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    padding: 70px
+    position: relative
+    .connected_txt
+      z-index: 2
+      >span
+        color: #fff
+      .connected_list
+        margin-top: 60px
+        li
+          display: flex
+          flex-direction: row
+          align-items: center
+          &::before
+            content: ""
+            display: block
+            min-width: 65px
+            height: 37px
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            margin-right: 30px
+          &:first-of-type
+            &::before
+              background-image: url("https://cdn.comfy.ua/media/x/img/1647300/hdmi.png")
+          &:last-of-type
+            &::before
+              background-image: url("https://cdn.comfy.ua/media/x/img/1647300/usb.png")
+          .connected_list_txt  
+            p>strong
+              font-size: 20px
+            p
+              text-transform: uppercase
+              padding-top: 10px
+          &:last-of-type
+            margin-top: 40px
+    .connected_img
+      z-index: 2
+
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      right: 0
+      top: 0
+      left: 0
+      bottom: 27em
+      background-color: #0a5fda
+      z-index: 1        
+
+  .mediaplayer  
+    .mediaplayer_title
+      padding: 70px
+      text-align: center
+    .mediaplayer_list
+      padding: 0 70px 70px 70px
+      display: flex
+      flex-direction: row
+      li
+        flex: 1 1 0
+        box-sizing: border-box
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        .mediaplayer_txt
+          margin-left: 30px
+          p>strong
+            font-size: 20px
+            margin-bottom: 5px
+            display: block
+
+/*media*******************************************************/
+
+@media (max-width: 1024px)
+  #kivi .mediaplayer .mediaplayer_list
+    padding: 0 20px 20px 20px
+  
+  #kivi 
+    .mediaplayer 
+      overflow: hidden
+      .mediaplayer_list 
+        overflow-x: scroll
+        li
+          min-width: 320px
+
+
+@media (max-width: 812px)
+  #kivi .voice,
+  #kivi .memc .memc_txt,
+  #kivi .uniformity .uniformity_txt,
+  #kivi .connected,
+  #kivi .interier .interier_txt
+    padding: 20px
+
+  #kivi span
+    font-size: 28px
+    padding-bottom: 20px
+
+  #kivi .connected::before
+    bottom: 20em
+
+@media (max-width: 767px)
+  #kivi .voice .voice_txt
+    margin-left: 0
+
+@media (max-width: 480px)
+  #kivi .voice .voice_txt span
+    font-size: 40px
+
+  #kivi .uniformity
+    flex-direction: column
+    padding-bottom: 0
+    >div
+      max-width: 100%
+      text-align: center
+
+  #kivi .connected
+    flex-direction: column
+  
+  #kivi .connected::before
+    display: none
+
+  #kivi .connected .connected_txt > span
+    color: #000
+    text-align: center
+  
+  #kivi .connected .connected_txt .connected_list
+    margin-top: 0
+  
+  #kivi .connected .connected_img
+    margin-top: 20px
+
+  #kivi .voice
+    background-size: cover;
+    height: 500px;

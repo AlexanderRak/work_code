@@ -1,0 +1,318 @@
+/*default styles*/
+
+#kivi
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 28px
+    font-weight: normal
+    padding: 0 0 20px 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#kivi
+  span
+    font-size: 50px
+    font-weight: bold
+    padding-bottom: 40px
+    display: block
+    line-height: normal
+  .voice
+    padding: 70px
+    height: 700px
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url("https://cdn.comfy.ua/media/x/img/1647300/1.png")
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    .voice_txt
+      color: #fff
+      span
+        font-size: 70px
+        font-weight: bold
+    .logo
+      img
+        margin: 0
+  
+  .gpu
+    height: 747px
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url("https://cdn.comfy.ua/media/x/img/1647300/2.png")
+    box-sizing: border-box
+    padding: 70px
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    align-items: center
+    .gpu_txt
+      color: #fff
+      max-width: 220px
+
+  .func
+    .func_list
+      li
+        display: flex
+        flex-direction: row
+        align-items: center
+        >div
+          flex: 1 1 0
+          max-width: 50%
+          box-sizing: border-box
+        .func_txt
+          padding: 70px
+          
+            display: block
+          p:nth-of-type(2)
+            padding-top: 10px
+        &:nth-of-type(even)
+          flex-direction: row-reverse
+  
+  .memc
+    padding: 70px 0 0 0
+    .memc_txt
+      padding: 70px
+      text-align: center
+  
+  .uniformity
+    padding-bottom: 70px
+    display: flex
+    flex-direction: row
+    align-items: center
+    >div
+      flex: 1 1 0
+      box-sizing: border-box
+      max-width: 50%
+    .uniformity_txt
+      padding: 70px
+
+  .audio
+    background-color: #000
+    .audio_row
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      .audio_row_txt
+        padding: 70px
+        color: #fff
+
+  .bluestring
+    background-color: #0a5fda
+    padding: 40px 70px
+    .bluestring_list
+      display: flex
+      flex-direction: row
+      align-items: center
+      li
+        flex: 1 1 0
+        max-width: 25%
+        box-sizing: border-box
+        display: flex
+        flex-direction: row
+        align-items: center
+        padding: 0 10px
+        img
+          margin: 0 auto
+        &:not(:last-child)
+          &::after
+            content: ""
+            display: block
+            height: 50px
+            width: 2px
+            min-width: 2px
+            background-color: #fff
+            margin: 0 20px
+
+  .eco
+    display: flex
+    flex-direction: row
+    align-items: center
+    >div
+      max-width: 50%
+      flex: 1 1 0
+      box-sizing: border-box
+    .eco_txt
+      padding: 70px
+      span:first-of-type
+        padding-bottom: 0px
+      .blue
+        color: #0a5fda
+
+  .interier
+    position: relative
+    z-index: 10
+    .interier_txt
+      text-align: center
+      padding: 70px
+          
+  .connected    
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    padding: 70px
+    position: relative
+    z-index: 5
+    margin-top: -22px
+    .connected_txt
+      z-index: 2
+      >span
+        color: #fff
+      .connected_list
+        margin-top: 60px
+        li
+          display: flex
+          flex-direction: row
+          align-items: center
+          &::before
+            content: ""
+            display: block
+            min-width: 65px
+            height: 37px
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
+            margin-right: 30px
+          &:first-of-type
+            &::before
+              background-image: url("https://cdn.comfy.ua/media/x/img/1647300/hdmi.png")
+          &:last-of-type
+            &::before
+              background-image: url("https://cdn.comfy.ua/media/x/img/1647300/usb.png")
+          .connected_list_txt  
+            p>strong
+              font-size: 20px
+            p
+              text-transform: uppercase
+              padding-top: 10px
+          &:last-of-type
+            margin-top: 40px
+    .connected_img
+      z-index: 2
+
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      right: 0
+      top: 0
+      left: 0
+      bottom: 27em
+      background-color: #0a5fda
+      z-index: 1          
+
+/*media*******************************************************/
+
+@media (max-width: 1024px)
+  #kivi 
+    .bluestring 
+      overflow: hidden
+      .bluestring_list 
+        overflow-x: scroll
+        li
+          min-width: 294px
+
+@media (max-width: 812px)
+  #kivi .voice,
+  #kivi .gpu,
+  #kivi .func .func_list li .func_txt,
+  #kivi .memc .memc_txt,
+  #kivi .uniformity .uniformity_txt,
+  #kivi .audio .audio_row .audio_row_txt,
+  #kivi .bluestring,
+  #kivi .eco .eco_txt,
+  #kivi .connected,
+  #kivi .interier .interier_txt
+    padding: 20px
+
+  #kivi span
+    font-size: 28px
+    padding-bottom: 20px
+
+  #kivi .connected::before
+    bottom: 20em
+
+@media (max-width: 480px)
+  #kivi .voice .voice_txt span
+    font-size: 40px
+  
+  #kivi .gpu
+    justify-content: center
+    background-size: cover
+    height: 500px
+    text-align: center
+
+  #kivi .func .func_list li
+    flex-direction: column !important
+    >div
+      max-width: 100%
+      text-align: center
+    .func_txt
+      padding: 20px 20px 40px 20px
+
+  #kivi .uniformity
+    flex-direction: column
+    >div
+      max-width: 100%
+      text-align: center
+
+  #kivi .eco
+    flex-direction: column
+    >div
+      max-width: 100%
+      text-align: center
+
+  #kivi .connected
+    flex-direction: column
+  
+  #kivi .connected::before
+    display: none
+
+  #kivi .connected .connected_txt > span
+    color: #000
+    text-align: center
+  
+  #kivi .connected .connected_txt .connected_list
+    margin-top: 0
+  
+  #kivi .connected .connected_img
+    margin-top: 20px
+
+  #kivi .voice
+    background-size: cover;
+    height: 500px;

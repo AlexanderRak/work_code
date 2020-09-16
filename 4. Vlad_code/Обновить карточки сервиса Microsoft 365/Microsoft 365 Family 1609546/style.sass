@@ -1,0 +1,308 @@
+/*default styles*/
+  
+#ms
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 28px
+    font-weight: bold
+    padding: 0
+    margin: 0
+    padding-bottom: 20px
+  h3
+    display: block
+    line-height: normal
+    font-size: 22px
+    font-weight: bold
+    padding: 0
+    margin: 0
+    padding-bottom: 20px
+    text-align: unset
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#ms
+  .none_pic
+    display: none
+  
+  .present
+    position: relative
+    .present_txt
+      position: absolute
+      max-width: 500px
+      padding: 70px
+      box-sizing: content-box
+      bottom: 50%
+      transform: translateY(50%)
+  
+  .complate
+    padding: 70px
+    .complate_list 
+      display: flex
+      flex-direction: row
+      align-items: flex-start
+      margin-top: 50px
+      >li
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+        .complate_txt
+          margin-bottom: 30px
+        .complate_img
+          .complate_cont
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            li
+              flex: 1 1 0
+              .complate_icon_img
+                img
+                  margin: 0 auto
+              .complate_icon_txt
+                span
+                  text-align: center
+                  display: block
+                  font-size: 18px
+                  margin-top: 10px
+        &:first-of-type
+          margin-right: 70px
+        &:last-of-type
+          .complate_img
+            .complate_cont
+
+  .saved
+    padding: 70px
+    .saved_list
+      display: flex
+      flex-direction: row
+      align-items: center
+      li:first-of-type
+        min-width: max-content
+        margin-right: 40px
+    .saved_video
+      iframe
+        margin: 70px auto 0 auto
+        display: block
+        max-width: 100%
+        width: 100%
+        height: 32em
+
+  .new
+    padding: 70px
+    .new_title
+      text-align: center
+      margin-bottom: 30px
+    .new_list
+      li
+        display: flex
+        flex-direction: row
+        align-items: center
+        >div
+          flex: 1 1 0
+          max-width: 50%
+          box-sizing: border-box
+        .new_txt
+          padding-right: 40px
+        &:nth-of-type(even)
+          flex-direction: row-reverse
+          .new_txt
+           padding-right: 0px
+           padding-left: 40px
+
+  .protect
+    padding: 70px 200px
+    .protect_title
+      text-align: center
+    .protect_list
+      display: flex
+      flex-direction: row
+      li
+        flex: 1 1 0
+        max-width: 50%
+        &:first-of-type
+          margin-right: 40px
+        .protect_txt
+          margin-top: 40px
+          
+  .table
+    .table_grid
+      display: grid;
+      grid-gap: unset
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 1px 1px;
+      grid-template-areas: ". . . ." ". . . ." ". . . ." ". . . ." ". . . ." ". . . ." ". . . ." ". . . .";
+      grid-gap: unset !important
+
+      .bold_txt
+        font-weight: bold
+
+      div
+        text-align: center
+        padding: 20px
+        &:nth-of-type(-n+4)
+          background-color: #000
+          color: #fff
+        &:nth-of-type(n+5)
+          background-color: #fff
+          color: #000
+        &:nth-of-type(n+9)
+          background-color: #e0e0e0
+          color: #000
+        &:nth-of-type(n+13)
+          background-color: #fff
+          color: #000
+        &:nth-of-type(n+17)
+          background-color: #e0e0e0
+          color: #000
+        &:nth-of-type(n+21)
+          background-color: #fff
+          color: #000
+        &:nth-of-type(n+25)
+          background-color: #e0e0e0
+          color: #000
+        &:nth-of-type(n+29)
+          background-color: #fff
+          color: #000
+
+    .table_spisok
+      padding: 20px
+      p:first-of-type
+        margin-bottom: 10px
+        
+
+/*media**********************************************/
+
+@media (max-width: 1024px)
+  #ms .present .present_txt
+    box-sizing: border-box
+    padding: 20px
+  
+  #ms .complate,
+  #ms .saved,
+  #ms .new
+    padding: 20px
+
+  #ms .complate .complate_list > li .complate_img .complate_cont:last-of-type li:nth-of-type(2)
+    min-width: max-content
+  
+  #ms .complate .complate_list > li .complate_img .complate_cont li:nth-of-type(n+2)
+    margin-left: 20px
+  
+
+@media (max-width: 1000px)
+  #ms .complate .complate_list
+    flex-direction: column
+    li
+      &:first-of-type
+        margin-right: 0
+        margin-bottom: 30px
+      width: 100%
+      max-width: 100%
+      .complate_txt
+        text-align: center
+  
+  #ms .present .present_txt
+    max-width: 350px
+
+@media (max-width: 768px)
+  #ms .new .new_list li
+    flex-direction: column !important
+    >div
+      max-width: 100%
+      text-align: center
+    .new_txt
+      padding: 40px 20px 20px 20px
+
+  #ms .protect
+    padding: 20px
+
+@media (max-width: 767px)
+  #ms .saved .saved_list
+    flex-direction: column
+  
+  #ms .saved .saved_list li:first-of-type
+    margin-right: 0
+    min-width: unset
+    margin-bottom: 20px
+  
+  #ms .saved .saved_list li:last-of-type
+    text-align: center
+
+  #ms 
+    .table 
+      overflow: hidden
+      .table_grid 
+        overflow-x: scroll
+        div
+          min-width: 205px
+
+@media (max-width: 480px)
+  #ms
+    .none_pic
+      display: block !important
+    
+  #ms .present .present_txt
+    max-width: 100%
+    text-align: center
+    transform: unset
+    position: unset
+    background-color: #eaebea
+  
+  #ms .present .present_img img
+    display: none
+
+  #ms .complate .complate_list
+    overflow: hidden
+
+  #ms .complate .complate_list > li .complate_img .complate_cont
+    overflow-x: scroll
+  
+  #ms .complate .complate_list > li .complate_img .complate_cont:first-of-type li
+    min-width: 160px
+
+  #ms .complate .complate_list > li .complate_img .complate_cont:last-of-type li
+    min-width: 224px
+
+  #ms .protect .protect_list
+    flex-direction: column
+    li
+      max-width: 100%
+      text-align: center
+      &:first-of-type
+        margin-right: 0
+        margin-bottom: 40px
+  
+  #ms .saved .saved_video iframe
+    height: 11em

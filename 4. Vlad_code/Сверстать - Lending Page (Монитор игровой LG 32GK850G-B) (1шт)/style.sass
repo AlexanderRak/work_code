@@ -1,0 +1,210 @@
+@mixin text_black
+  text-align: center
+  padding: 70px
+  background-color: #000
+  color: #fff
+
+/*default styles*/
+
+#lg 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0 0 20px 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#lg
+  .none_pic
+    display: none
+  .ekran
+    .ekran_txt
+      @include text_black
+      
+  .sync
+    .sync_txt
+      @include text_black
+      
+  .chastota
+    .chastota_txt
+      @include text_black
+      
+  .lightening
+    height: auto
+    padding-bottom: 70px
+    background-color: #000
+    .lightening_txt
+      @include text_black
+    .lightening_img
+      position: relative
+      .lightening_list
+        position: absolute
+        padding: 70px
+        box-sizing: border-box
+        right: 0
+        bottom: 50%
+        transform: translateY(50%)
+        li
+          color: #fff
+          text-align: center
+          p
+            max-width: 250px
+            margin: 0 auto      
+            margin-top: 20px
+
+  .design
+    .design_txt
+      background-image: url("https://cdn.comfy.ua/media/x/img/1311958/5bg.jpg")
+      background-size: cover
+      background-position: center bottom
+      padding: 70px
+      text-align: center
+      color: #fff
+
+  .func
+    .func_txt
+      @include text_black
+      p
+        padding-bottom: 10px
+    .func_img
+      position: relative
+      .func_list
+        position: absolute
+        bottom: 50%
+        transform: translateY(50%)
+        padding: 70px
+        li
+          display: flex
+          flex-direction: row
+          align-items: center
+          .func_list_txt
+            color: #fff
+            max-width: 270px
+            margin-left: 20px
+            p>strong
+              color: #c00c3f
+              margin-bottom: 5px
+              display: block
+          &:nth-of-type(1)
+            color: #fff
+            max-width: 250px
+            margin-bottom: 10px
+            >span
+              flex: 1 1 0
+              text-align: center
+              &:nth-of-type(2)
+                color: #c00c3f
+          &:nth-of-type(3)
+            border-bottom: 1px solid #fff
+            border-top: 1px solid #fff
+            padding: 10px 0
+            margin: 10px 0
+          .func_list_img
+            max-width: 300px
+
+/*media***************************************************************/
+
+@media (max-width: 1024px)
+  #lg .lightening .lightening_img .lightening_list li .lightening_list_img img
+    max-height: 150px
+    
+
+@media (max-width: 812px)
+  #lg .ekran .ekran_txt,
+  #lg .sync .sync_txt,
+  #lg .chastota .chastota_txt,
+  #lg .lightening .lightening_txt,
+  #lg .lightening .lightening_img .lightening_list,
+  #lg .design .design_txt,
+  #lg .func .func_txt,
+  #lg .func .func_img .func_list
+    padding: 20px
+  #lg .none_pic
+    display: block !important
+  #lg .lightening .lightening_img
+    font-size: unset
+    >img
+      display: none
+    .lightening_list
+      display: flex
+      flex-direction: row
+      position: unset
+      transform: unset
+  
+  #lg .lightening
+    padding: 0
+
+  #lg .func 
+    background-color: #000
+
+  #lg .func .func_img .func_list
+    position: unset
+    transform: unset
+
+  #lg .func .func_img >img
+    display: none
+
+  #lg .func .func_img .func_list
+    max-width: max-content
+    margin: 0 auto
+    li
+      max-width: max-content
+
+@media (max-width: 480px)
+  #lg h2
+    font-size: 24px
+
+  #lg .lightening .lightening_img
+    overflow: hidden
+  
+  #lg .lightening .lightening_img .lightening_list
+    overflow-x: scroll
+
+  #lg .lightening .lightening_img .lightening_list li
+    min-width: 200px
+  
+  #lg .lightening .lightening_img .lightening_list li:nth-of-type(2)
+    margin: 0 20px
+
+  #lg .func .func_img .func_list li:nth-of-type(n+2)
+    flex-direction: column
+    .func_list_txt
+      max-width: 100%
+      margin: 10px 0 0 0
+  
+  #lg .func .func_img .func_list li .func_list_img
+    max-width: 100%
