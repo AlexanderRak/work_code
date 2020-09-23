@@ -1,0 +1,491 @@
+<style>
+  /*default styles*/
+#apple {
+  max-width: 1316px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#apple p {
+  margin-bottom: 0;
+  margin: 0;
+}
+
+#apple p:first-letter {
+  padding-left: 0;
+}
+
+#apple h2 {
+  display: block;
+  line-height: normal;
+  font-size: 36px;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+#apple h3 {
+  display: block;
+  font-weight: bold;
+}
+
+#apple img {
+  opacity: 1;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+#apple img:hover {
+  opacity: 1;
+}
+
+#apple ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#apple sup {
+  font-size: 12px;
+}
+
+.features-desc__text img {
+  margin-bottom: 0rem;
+}
+
+.one-col .features-desc__text p:first-letter {
+  padding-left: 0rem !important;
+}
+
+/*end default styles*/
+#apple .logo {
+  padding: 40px 0;
+}
+
+#apple .logo img {
+  margin: 0 auto;
+}
+
+#apple .logo h2 {
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 0;
+}
+
+#apple .func {
+  text-align: center;
+}
+
+#apple .func img {
+  margin: 0 auto;
+}
+
+#apple .func .func_title {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#apple .func .func-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  gap: 10px 10px;
+      grid-template-areas: "cal1 cal2" "cal1 cal3" "cal4 cal4";
+}
+
+#apple .func .func-container .cal1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: cal1;
+  background-color: #f5f5f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#apple .func .func-container .cal2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: cal2;
+  background-color: #f5f5f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#apple .func .func-container .cal3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: cal3;
+  background-color: #f5f5f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#apple .func .func-container .cal4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: cal4;
+  background-color: #f5f5f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#apple .cont_list li {
+  padding: 40px;
+}
+
+#apple .cont_list li img {
+  margin: 0 auto;
+}
+
+#apple .cont_list li .cont_list_txt {
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+#apple .cont_list li:nth-of-type(1) {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+#apple .cont_list li:nth-of-type(2) {
+  background-color: #f5f5f7;
+  padding: 40px 40px 0 40px;
+}
+
+#apple .cont_list li:nth-of-type(3) {
+  background-color: #fff;
+  padding: 0;
+}
+
+#apple .cont_list li:nth-of-type(3) .cont_list_txt {
+  padding: 40px;
+}
+
+#apple .settings {
+  padding: 40px 0;
+}
+
+#apple .settings .settings_title {
+  text-align: center;
+}
+
+#apple .settings .settings_title h2 {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#apple .settings .settings_call {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#apple .settings .settings_call .settings_list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  max-width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#apple .settings .settings_call .settings_list:nth-of-type(1) {
+  margin-right: 100px;
+}
+
+#apple .settings .settings_call .settings_list li:nth-of-type(n+2)::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100px;
+  background-color: #000;
+  margin: 35px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#apple .settings .settings_img {
+  background-color: #f5f5f7;
+}
+
+#apple .settings .settings_img img {
+  margin: 40px auto 0 auto;
+}
+
+#apple .poscriptum {
+  background-color: #f5f5f7;
+}
+
+#apple .poscriptum .snoska {
+  padding: 40px;
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  color: #8f8f8f;
+}
+
+#apple .bracer {
+  background-color: #f5f5f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#apple .bracer > div {
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#apple .bracer .bracer_cal:last-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#apple .bracer .bracer_cal:last-of-type img:last-of-type {
+  padding-top: 40px;
+}
+
+/*media********************************************/
+@media (max-width: 812px) {
+  #apple .settings .settings_call,
+  #apple .poscriptum .snoska {
+    padding: 20px;
+  }
+  #apple .bracer .bracer_cal:last-of-type img:last-of-type {
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  #apple .settings {
+    padding: 20px 0;
+  }
+  #apple h2 {
+    font-size: 28px;
+  }
+  #apple .func .func_cont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #apple .logo .logo_txt {
+    padding: 0 20px;
+  }
+  #apple .settings .settings_call .settings_list:nth-of-type(1) {
+    margin-right: 20px;
+  }
+  #apple .bracer .bracer_cal:last-of-type img:last-of-type {
+    padding-top: 10px;
+  }
+  #apple .bracer > div {
+    padding: 5px;
+  }
+  #apple .func .func-container {
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+  }
+  #apple .cont_list li:nth-of-type(3) .cont_list_txt {
+    padding: 0 40px;
+  }
+}
+
+</style>
+
+<div id="apple">
+  <div class="logo">
+    <div class="logo_img">
+      <img src="https://cdn.comfy.ua/media/x/img/1659912/logo.png">
+    </div>
+    <h2>Невероятно функциональный. <br> Несомненно iPad.</h2>
+    <div class="logo_img">
+      <img src="https://cdn.comfy.ua/media/x/img/1659912/1.png" alt="Фото Планшет Apple iPad - 1" title="Планшет Apple iPad - 1">
+    </div>
+  </div>
+
+  <div class="func">
+    <div class="func_title">
+      <h3>iPad с дисплеем Retina 10,2 дюйма сочетает в себе невероятные возможности и удивительную простоту использования.</h3>
+      <p>А мощный процессор A12 Bionic, поддержка Apple Pencil<sup>1</sup> и замечательные новые функции iPadOS 14 делают его ещё более универсальным и по‑настоящему уникальным устройством.</p>
+    </div>
+    <div class="func-container">
+      <div class="cal1">
+        <h3>Дисплей Retina</h3>
+        <img src="https://cdn.comfy.ua/media/x/img/1659912/2.png" alt="Фото Планшет Apple iPad - 2" title="Планшет Apple iPad - 2">
+      </div>
+      <div class="cal2">
+        <img src="https://cdn.comfy.ua/media/x/img/1659912/3.png">
+        <h3>Процессор <br> Bionic</h3>
+      </div>
+      <div class="cal3">
+        <img src="https://cdn.comfy.ua/media/x/img/1659912/4.png">
+        <h3>Весь день <br>без подзарядки</h3>
+      </div>
+      <div class="cal4">
+        <img src="https://cdn.comfy.ua/media/x/img/1659912/5.png" alt="Фото Планшет Apple iPad - 3" title="Планшет Apple iPad - 3">
+      </div>
+    </div>
+  </div>
+
+  <ul class="cont_list">
+    <li>
+      <div class="cont_list_txt">
+        <h3>Новый iPad. Он станет вашим блокнотом для записей, мобильным офисом, фотостудией, игровой приставкой и даже личным кинотеатром. </h3>
+        <p>С Apple Pencil делать заметки на iPad просто как никогда.<sup>1</sup> Добавьте полноразмерную клавиатуру Smart Keyboard для удобного набора текста.<sup>1</sup></p>
+      </div>
+      <div class="cont_list_img">
+        <img src="https://cdn.comfy.ua/media/x/img/1659912/6.png" alt="Фото Планшет Apple iPad - 4" title="Планшет Apple iPad - 4">
+      </div>
+    </li>
+    <li>
+      <div class="cont_list_txt">
+        <h3>Редактируйте тексты, ищите в интернете и одновременно общайтесь 
+          с коллегами по FaceTime. </h3>
+      </div>
+      <div class="cont_list_img">
+        <img src="https://cdn.comfy.ua/media/x/img/1659912/7.png" alt="Фото Планшет Apple iPad - 5" title="Планшет Apple iPad - 5">
+      </div>
+    </li>
+    <li>
+      <div class="cont_list_txt">
+        <h3>Подключайтесь по сетям Wi‑Fi и 4G LTE Advanced.2 И пользуйтесь iPad весь день без подзарядки.<sup>3</sup></h3>
+      </div>
+      <div class="cont_list_img">
+        <img src="https://cdn.comfy.ua/media/x/img/1659912/8.png" alt="Фото Планшет Apple iPad - 6" title="Планшет Apple iPad - 6">
+      </div>
+    </li>
+  </ul>
+
+  <div class="settings">
+    <div class="settings_title">
+      <h2>Основные характеристики</h2>
+    </div>
+    <div class="settings_call">
+      <ul class="settings_list">
+        <li>
+          <p>Великолепный дисплей Retina 10,2 дюйма</p>
+        </li>
+        <li>
+          <p>Процессор A12 Bionic с системой Neural Engine</p>
+        </li>
+        <li>
+          <p>Поддержка Apple Pencil (1‑го поколения) и клавиатуры Smart Keyboard<sup>1</sup></p>
+        </li>
+        <li>
+          <p>Камера 8 Мп на задней панели и фронтальная камера FaceTime HD 1,2 Мп</p>
+        </li>
+        <li>
+          <p>Стереодинамики</p>
+        </li>
+        <li>
+          <p>До 10 часов работы без подзарядки<sup>3</sup></p>
+        </li>
+      </ul>
+      <ul class="settings_list">
+        <li>
+          <p>Передача данных по сетям Wi‑Fi 802.11ac и сотовым сетям 4G LTE Advanced<sup>2</sup></p>
+        </li>
+        <li>
+          <p>Разъём Lightning для зарядки и подключения аксессуаров</p>
+        </li>
+        <li>
+          <p>Touch ID для безопасной аутентификации и Apple Pay</p>
+        </li>
+        <li>
+          <p>Доступные цвета: «серый космос» и серебристый</p>
+        </li>
+        <li>
+          <p>Новые возможности iPadOS 14 разработаны специально для iPad</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bracer">
+    <div class="bracer_cal">
+      <img src="https://cdn.comfy.ua/media/x/img/1659912/9.png" alt="Фото Планшет Apple iPad - 7" title="Планшет Apple iPad - 7">
+    </div>
+    <div class="bracer_cal">
+      <img src="https://cdn.comfy.ua/media/x/img/1659888/12.png" alt="Фото Планшет Apple iPad - 8" title="Планшет Apple iPad - 8">
+      <img src="https://cdn.comfy.ua/media/x/img/1659912/10.png" alt="Фото Планшет Apple iPad - 9" title="Планшет Apple iPad - 9">
+    </div>
+  </div>
+
+  <div class="poscriptum">
+    <span class="snoska">Приложения представлены в App Store. Наличие не гарантируется. <sup>1</sup>Аксессуары продаются отдельно. Совместимость зависит от поколения устройств. <sup>2</sup>Требуется тарифный план передачи данных. Сети 4G LTE Advanced, 4G LTE и вызовы по Wi‑Fi доступны не во всех регионах и не у всех операторов связи. Скорость рассчитана на основе теоретической пропускной способности и зависит от местных условий. Подробную информацию о поддержке LTE можно получить у вашего оператора связи или на странице apple.com/ipad/LTE. <sup>3</sup>Время работы от аккумулятора зависит от конфигурации и характера использования устройства.</span>
+  </div>
+</div>

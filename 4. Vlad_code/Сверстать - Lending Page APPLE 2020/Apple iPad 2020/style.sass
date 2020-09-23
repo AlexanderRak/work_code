@@ -1,0 +1,216 @@
+/*default styles*/
+
+#apple 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  h3 
+    display: block
+    font-weight: bold
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  sup
+    font-size: 12px
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#apple 
+  .logo
+    padding: 40px 0
+    img
+      margin: 0 auto
+    h2
+      font-weight: bold
+      text-align: center
+      margin: 30px 0
+  
+  .func
+    text-align: center
+    img
+      margin: 0 auto
+    .func_title
+      text-align: center
+      max-width: 700px
+      margin: 0 auto
+      padding: 20px
+    .func-container 
+      display: grid
+      grid-template-columns: auto auto
+      grid-template-rows: auto auto auto
+      gap: 10px 10px
+      grid-template-areas: "cal1 cal2" "cal1 cal3" "cal4 cal4";
+      .cal1 
+        grid-area: cal1;
+        background-color: #f5f5f7
+        display: flex
+        flex-direction: column
+        justify-content: center
+      .cal2 
+        grid-area: cal2;
+        background-color: #f5f5f7
+        display: flex
+        flex-direction: column
+        justify-content: center
+      .cal3 
+        grid-area: cal3;
+        background-color: #f5f5f7
+        display: flex
+        flex-direction: column
+        justify-content: center
+      .cal4 
+        grid-area: cal4;
+        background-color: #f5f5f7
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+          
+  
+  .cont_list
+    li
+      padding: 40px
+      img
+        margin: 0 auto
+      .cont_list_txt
+        max-width: 500px
+        text-align: center
+        margin: 0 auto
+        margin-bottom: 40px
+      &:nth-of-type(1)
+        background-color: #fff
+        padding: 40px 0
+      &:nth-of-type(2)
+        background-color: #f5f5f7
+        padding: 40px 40px 0 40px
+      &:nth-of-type(3)
+        background-color: #fff
+        padding: 0
+        .cont_list_txt
+          padding: 40px
+        
+  .settings
+    padding: 40px 0
+    .settings_title
+      text-align: center
+      h2
+        font-weight: bold
+        margin-bottom: 30px
+    .settings_call
+      display: flex
+      flex-direction: row
+      justify-content: center
+      max-width: 800px
+      margin: 0 auto
+      .settings_list
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+        &:nth-of-type(1)
+          margin-right: 100px
+        li:nth-of-type(n+2)
+          &::before
+            content: ""
+            display: block
+            height: 1px
+            width: 100px
+            background-color: #000
+            margin: 35px 0
+            box-sizing: border-box
+    .settings_img 
+      background-color: #f5f5f7
+      img
+        margin: 40px auto 0 auto
+  .poscriptum
+    background-color: #f5f5f7
+    .snoska
+      padding: 40px
+      display: block
+      max-width: 800px
+      margin: 0 auto
+      text-align: center
+      font-size: 12px
+      color: #8f8f8f
+  
+  .bracer
+    background-color: #f5f5f7
+    display: flex
+    flex-direction: row
+    justify-content: center
+    >div
+      padding: 20px
+      box-sizing: border-box
+    .bracer_cal:last-of-type
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      img:last-of-type
+        padding-top: 40px
+
+/*media********************************************/
+
+@media (max-width: 812px)
+  #apple .settings .settings_call,
+  #apple .poscriptum .snoska
+    padding: 20px
+
+  #apple .bracer .bracer_cal:last-of-type img:last-of-type
+    padding-top: 0px
+
+@media (max-width: 480px)
+  #apple .settings
+    padding: 20px 0
+  #apple h2
+    font-size: 28px
+  #apple .func .func_cont
+    flex-direction: column
+  #apple .logo .logo_txt
+    padding: 0 20px
+  #apple .settings .settings_call .settings_list:nth-of-type(1)
+    margin-right: 20px
+  #apple .bracer .bracer_cal:last-of-type img:last-of-type
+    padding-top: 10px
+  #apple .bracer > div
+    padding: 5px
+  #apple .func .func-container
+    grid-template-rows: auto auto auto;
+  #apple .cont_list li:nth-of-type(3) .cont_list_txt
+    padding: 0 40px
+
+
+            
+    
+
+      
