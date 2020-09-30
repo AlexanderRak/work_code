@@ -1,0 +1,194 @@
+/*default styles*/
+
+#apple 
+  /** max-width: 1316px **/
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  /** background-color: #fff **/
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    font-size: 30px
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+.breadcrumbs 
+  display: none
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#apple
+  overflow: hidden
+  .green_button
+    color: #fff 
+    font-size: 16px
+    text-decoration: none
+    padding: 12px 20px
+    background-color: #43B02A
+    box-sizing: border-box
+    border-radius: 8px
+
+  .wrap_black,
+  .wrap_white
+    width: 100%
+    margin: 0 auto
+
+  .wrap_black
+    background-color: #000
+  .wrap_white
+    background-color: #fff
+
+  .apple_list
+    background-color: #000
+    color: #fff
+    padding: 45px 170px
+    max-width: 1316px
+    box-sizing: border-box
+    margin: 0 auto
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      box-sizing: border-box
+      .apple_txt
+        .logo_img
+          img
+            margin: auto 0 0 0
+        .logo_button 
+          margin-top: 12px
+        .apple_txt
+          width: max-content
+      div:nth-of-type(2)
+            padding: 30px 0
+      &:last-of-type
+        flex-direction: row-reverse
+        margin-top: 20px
+
+  .apple_list_white
+    background-color: #fff
+    color: #000
+    position: relative
+    li
+      transform: translateY(-17%)
+      >div
+        flex: 1 1 0
+      .slide_list
+        margin-left: 70px
+        li:nth-of-type(n+2)
+          margin-top: 30px
+      .slide_list_row
+        display: flex
+        flex-direction: row
+        position: relative
+        height: 500px
+        padding: 40px 0
+        margin-left: 170px
+        li
+          position: absolute
+          &:nth-of-type(1)
+            z-index: 7
+            transform: translateX(-60%)
+          &:nth-of-type(2)
+            z-index: 8
+            transform: translateX(-40%)
+          &:nth-of-type(3)
+            z-index: 9
+            transform: translateX(-20%)
+          &:nth-of-type(4)
+            z-index: 10
+            transform: translateX(0%)
+          &:nth-of-type(n+2)
+            margin-top: 0px
+
+#apple .apple_list li:nth-of-type(2) .apple_txt
+  text-align: right
+  .logo_img img
+    margin: 0 0 0 auto
+
+
+/*media***********************/
+
+@media (max-width: 1024px)
+  #apple .apple_list
+    padding: 40px
+  
+  #apple .apple_list_white li .slide_list_row
+    height: 420px
+    padding: 0
+
+@media (max-width: 812px)
+  #apple p
+    font-size: 22px
+
+  #apple .apple_list
+    padding: 20px
+
+  #apple .apple_list .apple_txt
+    min-width: 320px
+
+  #apple .apple_list_white li .slide_list_row
+    margin-left: 130px
+    height: 330px
+
+@media (max-width: 480px)
+  #apple .apple_list li
+    flex-direction: column !important
+  #apple .apple_list .apple_txt
+    text-align: center !important
+
+  #apple .apple_list li .apple_txt .logo_img img
+    margin: 0 auto !important
+
+  #apple .apple_list_white li
+    transform: unset
+
+  #apple .apple_list_white li .slide_list
+    margin-left: 0
+
+  #apple .apple_list_white li .slide_list
+    position: unset
+  
+  #apple .apple_list_white li .slide_list_row li:nth-of-type(1)
+    transform: translateX(-90%);
+  
+  #apple .apple_list_white li .slide_list_row li:nth-of-type(2)
+    transform: translateX(-65%)
+
+  #apple .apple_list_white li .slide_list_row li:nth-of-type(3)
+    transform: translateX(-35%)
+
+  #apple .apple_list_white li .slide_list_row li:nth-of-type(4)
+    transform: translateX(-10%)
+
+  #apple .apple_list_white li .slide_list_row
+    height: 220px
+    margin-bottom: 20px

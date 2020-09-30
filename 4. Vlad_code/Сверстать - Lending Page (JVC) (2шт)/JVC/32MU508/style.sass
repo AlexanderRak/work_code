@@ -1,0 +1,242 @@
+/*default styles*/
+
+#jvc 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: bold
+    padding: 0
+    margin: 0 0 20px 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#jvc
+  .ultra
+    .ultra_title
+      background-color: #000
+      color: #fff
+      text-align: center
+      padding: 70px
+
+  .matrix
+    .matrix_title
+      padding: 70px
+      text-align: center
+    .matrix_list
+      display: flex
+      flex-direction: row
+      li
+        flex: 1 1 0
+        position: relative
+        span
+          display: flex
+          flex-direction: row
+          align-items: center
+          position: absolute
+          font-weight: bold
+          font-size: 30px
+          color: #fff
+        &:nth-of-type(1)
+          position: relative
+          span
+            right: 0
+            top: 40px
+          span:after
+            display: block
+            content: ""
+            width: 40px
+            height: 53px
+            background-image: url("https://cdn.comfy.ua/media/x/img/1620798/triangle.png")
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            margin-left: 20px
+        &:nth-of-type(2)
+          span
+            left: 0
+            top: 40px
+          span:before
+            display: block
+            content: ""
+            width: 40px
+            height: 53px
+            background-image: url("https://cdn.comfy.ua/media/x/img/1620798/triangle.png")
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            margin-right: 20px
+            transform: rotate(180deg)
+
+  .sound
+    padding: 70px 0
+    .sound_list
+      li
+        display: flex
+        flex-direction: row
+        align-items: center
+        >div
+          flex: 1 1 0
+          max-width: 50%
+          box-sizing: border-box
+        .sound_txt
+          padding: 70px
+          img
+            margin-bottom: 20px
+        &:nth-of-type(even)
+          flex-direction: row-reverse
+
+  .eco
+    .eco_title
+      text-align: center
+      padding: 70px
+    .eco_list  
+      margin-bottom: 70px
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      li
+        flex: 1 1 0
+        img
+          margin: 0 auto
+          max-width: 45%
+    .eco_img
+      img
+        margin: 0 auto
+
+  .design
+    padding-top: 70px
+    display: flex
+    flex-direction: row
+    background-color: #000
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .design_txt
+      color: #fff
+      padding: 70px
+
+  .history
+    padding: 70px
+    display: flex
+    flex-direction: row
+    align-items: center
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .history_txt
+      p:last-of-type
+        margin-top: 20px
+
+/*media**********************/
+
+@media (max-width: 812px)
+  #jvc .history .history_img
+    padding-right: 70px
+
+@media (max-width: 480px)
+  #jvc h2
+    font-size: 28px
+  #jvc .ultra .ultra_title,
+  #jvc .matrix .matrix_title,
+  #jvc .sound .sound_list li .sound_txt,
+  #jvc .eco .eco_title,
+  #jvc .design .design_txt,
+  #jvc .history
+    padding: 20px
+
+  #jvc .matrix .matrix_list li span
+    font-size: 20px
+  
+  #jvc .matrix .matrix_list li:nth-of-type(1) span:after,
+  #jvc .matrix .matrix_list li:nth-of-type(2) span:before
+    width: 30px
+    height: 36px
+        
+  #jvc .sound
+    padding: 20px 0
+  #jvc .design
+    padding-top: 20px
+  #jvc .history .history_img
+    padding-right: 0
+  #jvc .matrix .matrix_list
+    flex-direction: column
+  #jvc .matrix .matrix_list li:nth-of-type(1) span
+    top: unset
+    bottom: 0
+    right: 50%
+    transform: translateX(50%)
+    flex-direction: column
+    height: auto
+    &::after
+      margin-left: 0
+      transform: rotate(90deg)
+  #jvc .matrix .matrix_list li:nth-of-type(2) span
+    flex-direction: column
+    left: unset
+    right: 50%
+    transform: translateX(50%)
+    top: 0
+    &::before
+      transform: rotate(-90deg)
+      margin-right: 0
+
+  #jvc .sound .sound_list li
+    flex-direction: column !important
+    >div
+      max-width: 100%
+      text-align: center
+      img
+        margin: 0 auto
+
+  #jvc 
+    .eco 
+      overflow: hidden
+      .eco_list 
+        overflow-x: scroll
+        justify-content: unset
+        li
+          min-width: 230px
+
+  #jvc .design,
+  #jvc .history
+    flex-direction: column
+    >div
+      max-width: 100%
+      text-align: center
+
+  

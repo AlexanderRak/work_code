@@ -1,0 +1,247 @@
+/*default styles*/
+
+#apple 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  h3 
+    display: block
+    font-weight: bold
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  sup
+    font-size: 12px
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#apple 
+  padding: 40px 0
+  .logo
+    img
+      margin: 0 auto
+    h2
+      font-weight: bold
+      text-align: center
+      margin: 30px 0
+    .logo_txt
+      max-width: 500px
+      margin: 0 auto
+      text-align: center
+      margin-top: 40px
+
+  .func
+    .func_cont
+      display: flex
+      flex-direction: row
+      justify-content: center
+      .func_list
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+      .func_list li
+        background-color: #f5f5f7
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        margin: 10px
+        padding: 0 30px
+        box-sizing: border-box
+        height: 100%
+        .small_pic
+          /** max-width: 50% **/
+          margin: 0 auto
+      .func_list li .func_txt h3
+        text-align: center
+      .func_list li .func_txt h3>strong
+        color: #5ac6c9  
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        
+        &::before
+          width: 40px
+          height: 40px
+          content: ""
+          display: block
+          background-image: url("https://cdn.comfy.ua/media/x/img/1659824/icon1.png")
+          background-position: center
+          background-repeat: no-repeat
+          background-size: contain
+          margin-right: 10px
+      .func_list li .func_txt h3>strong.heart
+        color: unset
+        &::before
+          background-image: url("https://cdn.comfy.ua/media/x/img/1659824/icon2.png")
+      
+      .func_list li.txt_list
+        display: flex
+        flex-direction: row
+        padding: 0
+        
+        .func_txt, .func_img
+          flex: 1 1 0
+          max-width: 50%
+          box-sizing: border-box
+        .func_txt
+          margin-right: 10px
+          >h3
+            padding: 20px
+            display: block
+            text-align: left
+        .txt_list_color h3
+          margin: 0
+          width: max-content
+          display: flex
+          flex-direction: row
+          align-items: center
+          padding: 5px 10px
+          border-radius: 0 20px 20px 0;
+          &::after
+            display: block
+            content: ""
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            margin-left: 5px
+          &:nth-of-type(1)
+            background-color: #eb3b7b
+            &::after
+              width: 15px
+              height: 17px
+              background-image: url("https://cdn.comfy.ua/media/x/img/1659824/icon3.png")
+          &:nth-of-type(2)
+            background-color: #bdff00
+            margin: 10px 0
+            &::after
+              width: 21px
+              height: 20px
+              background-image: url("https://cdn.comfy.ua/media/x/img/1659824/icon4.png")
+          &:nth-of-type(3)
+            background-color: #63beb5
+            &::after
+              width: 20px
+              height: 16px
+              background-image: url("https://cdn.comfy.ua/media/x/img/1659824/icon5.png")
+  
+  .cont_list
+    li
+      padding: 40px
+      img
+        margin: 0 auto
+      .cont_list_txt
+        max-width: 500px
+        text-align: center
+        margin: 0 auto
+        margin-bottom: 40px
+      &:nth-of-type(1)
+        background-color: #dbf8fc
+      &:nth-of-type(2)
+        background-color: #ffe3cd
+      &:nth-of-type(3)
+        background-color: #d6f7c0
+      &:nth-of-type(4)
+        background-color: #c7d4f6
+        
+  .settings
+    padding: 40px 0
+    .settings_title
+      text-align: center
+      h2
+        font-weight: bold
+        margin-bottom: 30px
+    .settings_call
+      display: flex
+      flex-direction: row
+      justify-content: center
+      max-width: 800px
+      margin: 0 auto
+      .settings_list
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+        &:nth-of-type(1)
+          margin-right: 100px
+        li:nth-of-type(n+2)
+          &::before
+            content: ""
+            display: block
+            height: 1px
+            width: 100px
+            background-color: #000
+            margin: 35px 0
+            box-sizing: border-box
+    .settings_img 
+      background-color: #f5f5f7
+      img
+        margin: 40px auto 0 auto
+
+  .snoska
+    display: block
+    max-width: 800px
+    margin: 0 auto
+    text-align: center
+    font-size: 12px
+    color: #8f8f8f
+
+/*media********************************************/
+
+@media (max-width: 812px)
+  #apple .settings .settings_call,
+  #apple .snoska
+    padding: 20px
+
+@media (max-width: 480px)
+  #apple,
+  #apple .settings
+    padding: 20px 0
+  #apple h2
+    font-size: 28px
+  #apple .func .func_cont
+    flex-direction: column
+  #apple .logo .logo_txt
+    padding: 0 20px
+  #apple .func .func_cont .func_list li .small_pic
+    max-width: 100%
+  #apple .settings .settings_call .settings_list:nth-of-type(1)
+    margin-right: 20px
+
+
+            
+    
+
+      
