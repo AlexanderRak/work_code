@@ -35,6 +35,5 @@ $.ajax({ url: priceUrl,
                     document.getElementById("price5_").innerHTML = pr5_;
                     document.getElementById("price6").innerHTML = pr6;
                     document.getElementById("price6_").innerHTML = pr6_;
-
                }
           });
