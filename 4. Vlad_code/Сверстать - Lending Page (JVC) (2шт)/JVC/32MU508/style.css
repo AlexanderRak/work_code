@@ -7,6 +7,7 @@
   display: block;
   background-color: #fff;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -68,16 +69,23 @@
 
 #jvc .matrix .matrix_list {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
 
 #jvc .matrix .matrix_list li {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   position: relative;
@@ -85,13 +93,20 @@
 
 #jvc .matrix .matrix_list li span {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
@@ -117,7 +132,10 @@
   background-image: url("https://cdn.comfy.ua/media/x/img/1620798/triangle.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  -webkit-background-size: contain;
+     -moz-background-size: contain;
+       -o-background-size: contain;
+          background-size: contain;
   margin-left: 20px;
 }
 
@@ -134,9 +152,15 @@
   background-image: url("https://cdn.comfy.ua/media/x/img/1620798/triangle.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  -webkit-background-size: contain;
+     -moz-background-size: contain;
+       -o-background-size: contain;
+          background-size: contain;
   margin-right: 20px;
   -webkit-transform: rotate(180deg);
+     -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+       -o-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
@@ -146,23 +170,33 @@
 
 #jvc .sound .sound_list li {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 #jvc .sound .sound_list li > div {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   max-width: 50%;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -177,6 +211,9 @@
 #jvc .sound .sound_list li:nth-of-type(even) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
@@ -189,22 +226,33 @@
 #jvc .eco .eco_list {
   margin-bottom: 70px;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 #jvc .eco .eco_list li {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
@@ -221,10 +269,15 @@
 #jvc .design {
   padding-top: 70px;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   background-color: #000;
@@ -232,10 +285,13 @@
 
 #jvc .design > div {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   max-width: 50%;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -247,23 +303,33 @@
 #jvc .history {
   padding: 70px;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 #jvc .history > div {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   max-width: 50%;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -310,6 +376,9 @@
   #jvc .matrix .matrix_list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -318,9 +387,15 @@
     bottom: 0;
     right: 50%;
     -webkit-transform: translateX(50%);
+       -moz-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+         -o-transform: translateX(50%);
             transform: translateX(50%);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     height: auto;
@@ -328,27 +403,42 @@
   #jvc .matrix .matrix_list li:nth-of-type(1) span::after {
     margin-left: 0;
     -webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+         -o-transform: rotate(90deg);
             transform: rotate(90deg);
   }
   #jvc .matrix .matrix_list li:nth-of-type(2) span {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     left: unset;
     right: 50%;
     -webkit-transform: translateX(50%);
+       -moz-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+         -o-transform: translateX(50%);
             transform: translateX(50%);
     top: 0;
   }
   #jvc .matrix .matrix_list li:nth-of-type(2) span::before {
     -webkit-transform: rotate(-90deg);
+       -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+         -o-transform: rotate(-90deg);
             transform: rotate(-90deg);
     margin-right: 0;
   }
   #jvc .sound .sound_list li {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
+       -moz-box-orient: vertical !important;
+       -moz-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
   }
@@ -365,6 +455,8 @@
   #jvc .eco .eco_list {
     overflow-x: scroll;
     -webkit-box-pack: unset;
+    -webkit-justify-content: unset;
+       -moz-box-pack: unset;
         -ms-flex-pack: unset;
             justify-content: unset;
   }
@@ -375,6 +467,9 @@
   #jvc .history {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
