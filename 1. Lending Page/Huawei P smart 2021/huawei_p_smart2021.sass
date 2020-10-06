@@ -27,7 +27,6 @@
 		letter-spacing: 2px
 		line-height: 1
 		padding: 0
-		text-transform: uppercase
 		text-align: inherit
 		margin-top: 25px
 	h3
@@ -264,6 +263,8 @@ span.fw-bold
 	max-width: 365px
 	h2
 		margin-bottom: 15px
+	&.max-width100
+		max-width: 100%
 .sect-rowinfo__img
 	margin-top: 5rem
 	&.center-img-and-maxW
@@ -287,3 +288,92 @@ span.fw-bold
 		margin: 0 0 0 auto
 .maxW45
 	max-width: 45%
+.sect-rowinfo__h3-flex
+	display: flex
+	align-items: center
+	span
+		display: block
+		padding-left: 15px
+	img
+		width: 65px
+// sect-list-footer__content
+.sect-list-footer__content
+	color: grey
+	padding: 0 5rem 5rem 5rem
+	ul
+		list-style-type: none
+		li
+			padding-bottom: 5px
+			display: block
+			&:last-child
+				padding-bottom: 0
+
+/************media***********/
+// @media (max-width: 1250px)
+@media (max-width: 1024px)
+	#huawei_p_smart2021
+		h4
+			font-size: 21px
+		h2
+			font-size: 25px
+		p
+			font-size: 17px
+	.sect-slider
+		padding: 0 15px
+	.sect-rows-bl
+		padding: 2rem 15px 5rem 15px
+	.sect-macro
+		padding: 2rem 15px 0 15px
+	.sect-rowinfo_wrap
+		padding: 0 15px 2rem 15px
+	.sect-list-footer__content
+		padding: 0 15px 2rem 15px
+	.sect-slider__content
+		flex-direction: column
+	.sect-slider__dot
+		flex-direction: row
+		width: 150px
+		justify-content: space-between
+		margin-top: 2rem
+	.sect-slider__item-dot
+		margin: 0
+		&:nth-child(1)
+			margin: 0
+	.sect-rows-bl__text
+		padding: 0 15px 0 25px
+	.sect-camera__wrap
+		padding: 5rem 25px 15px 25px
+@media (max-width: 812px)
+	#huawei_p_smart2021
+		h4
+			font-size: 21px
+		h2
+			font-size: 25px
+		p
+			font-size: 17px
+	.sect-slider
+		padding: 0 15px
+	.sect-rows-bl
+		padding: 2rem 15px 5rem 15px
+	.sect-macro
+		padding: 2rem 15px 0 15px
+	.sect-rowinfo_wrap
+		padding: 0 15px 2rem 15px
+	.sect-list-footer__content
+		padding: 0 15px 2rem 15px
+	.sect-slider__content
+		flex-direction: column
+	.sect-slider__dot
+		flex-direction: row
+		width: 150px
+		justify-content: space-between
+		margin-top: 2rem
+	.sect-slider__item-dot
+		margin: 0
+		&:nth-child(1)
+			margin: 0
+	.sect-rows-bl__text
+		padding: 15px 15px 15px 25px
+	.sect-camera__wrap
+		padding: 5rem 25px 15px 25px
+// @media (max-width: 480px)
