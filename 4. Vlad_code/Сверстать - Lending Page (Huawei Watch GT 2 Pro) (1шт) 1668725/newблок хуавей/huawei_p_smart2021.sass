@@ -50,10 +50,13 @@
 .haawei-new-app__item-text
 	display: block
 	margin-top: 20px
+	&:nth-child(2)
+		padding: 0 15px
 	p
 		font-size: 1.8rem
 		text-align: left
 		line-height: 1.7
+		min-height: 165px
 
 .item-text__qr-code
 	display: flex
@@ -68,6 +71,9 @@
 			padding: 0
 		&:first-child
 			margin-right: 10px
+		&:last-child
+			max-width: 85px
+			min-width: 85px
 
 .qr-code3__cont
 	display: flex
@@ -132,6 +138,14 @@
 				margin-bottom: 20px
 	
 @media (max-width: 480px)
+
+	.haawei-new-app__header
+		span.dark_blue_title
+			font-size: 18px
+			padding: 10px 15px
+		.haawei-new-app__item
+			&:nth-child(2)
+				margin: 15px 0
 
 	.qr-code__flex__item
 		span

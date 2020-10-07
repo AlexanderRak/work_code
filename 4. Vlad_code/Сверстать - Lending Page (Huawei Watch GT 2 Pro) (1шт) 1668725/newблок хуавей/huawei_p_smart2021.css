@@ -85,10 +85,15 @@
   margin-top: 20px;
 }
 
+.haawei-new-app__item-text:nth-child(2) {
+  padding: 0 15px;
+}
+
 .haawei-new-app__item-text p {
   font-size: 1.8rem;
   text-align: left;
   line-height: 1.7;
+  min-height: 165px;
 }
 
 .item-text__qr-code {
@@ -116,6 +121,11 @@
 
 .item-text__qr-code .qr-code__item:first-child {
   margin-right: 10px;
+}
+
+.item-text__qr-code .qr-code__item:last-child {
+  max-width: 85px;
+  min-width: 85px;
 }
 
 .qr-code3__cont {
@@ -202,6 +212,13 @@
 }
 
 @media (max-width: 480px) {
+  .haawei-new-app__header span.dark_blue_title {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+  .haawei-new-app__header .haawei-new-app__item:nth-child(2) {
+    margin: 15px 0;
+  }
   .qr-code__flex__item span {
     font-size: 16px;
   }
