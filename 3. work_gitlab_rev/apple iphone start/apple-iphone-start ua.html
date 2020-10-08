@@ -1,0 +1,58 @@
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<style>
+
+</style>
+
+<div id="apple-applestrt">
+
+   <div class="sect-applestrt__container banner">
+      <div class="sect-applestrt__bgrd">
+         <div class="sect-applestrt__bgrd-1 img">
+            <div class="sect-applestrt__bgrd-1_1 img">
+               <div class="sect-applestrt__bgrd-2 img">
+                  <div class="sect-applestrt__bgrd-3 img">
+                     <div class="sect-applestrt__bgrd-4 img">
+                        <div class="sect-applestrt__bgrd-5logo img"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="sect-applestrt__text">
+         <h1>13 жовтня</h1>
+         <h2>20:00</h2>
+         <a target="_blank" rel="nofollow" href="https://blog.comfy.ua/ua/druga-chastina-prezentaciyi-apple-divimosya-13-zhovtnya/">Дивитись презентацію</a>
+      </div>
+   </div>
+
+</div>
+
+<script>
+
+   $(document).ready(function () {
+      var banner = $(".banner");
+      var imgs = $(".img");
+      function showAllObjects(object) {
+         object.fadeIn(300);
+      }
+      function moving(object, speed) {
+         banner.on('mousemove', function (event) {
+            var X = Math.floor((event.pageX) / speed - 10) + "px";
+            var Y = Math.floor((event.pageY) / speed) + "px";
+            object.css('transform', 'translate(' + X + ' , ' + Y + ')');
+         });
+      }
+      function moveAll(object) {
+         moving($(object[0]), 70);
+         moving($(object[1]), 71);
+         moving($(object[2]), 72);
+         moving($(object[3]), 73);
+         moving($(object[4]), 74);
+         moving($(object[5]), 75);
+      }
+      showAllObjects(imgs);
+      moveAll(imgs);
+   });
+
+</script>
