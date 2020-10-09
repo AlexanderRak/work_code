@@ -235,6 +235,22 @@ span.word-wrap {
   z-index: 8;
 }
 
+.sect-prodfooter__cloud-text::before {
+  content: "";
+  background-image: url(https://cdn.comfy.ua/media/x/img/str.svg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  position: absolute;
+  top: 10rem;
+  right: 3rem;
+  width: 72px;
+  height: 42px;
+  z-index: 8;
+}
+
 @media (max-width: 1024px) {
   #cms-hi-bomus p {
     font-size: 23px;
@@ -258,6 +274,9 @@ span.word-wrap {
   }
   .cms-hi-bomus__wrap {
     padding: 0 15px;
+  }
+  .cms-hi-bomus__wrap.cms-hi-bomus__footer {
+    padding: 0 0;
   }
   .sect-bonusshpo__flex {
     -webkit-box-orient: horizontal;
@@ -295,6 +314,12 @@ span.word-wrap {
   .sect-prodfooter__cloud.cloud-bgrd {
     max-width: 442px;
     height: 281px;
+  }
+  .sect-prodfooter__cloud-text::before {
+    top: 7rem;
+    right: 7rem;
+    width: 41px;
+    height: 24px;
   }
 }
 
@@ -382,5 +407,11 @@ span.word-wrap {
   }
   .sect-prodfooter__cloud-text {
     max-width: 205px;
+  }
+  .sect-prodfooter__cloud-text::before {
+    top: 6rem;
+    right: 3rem;
+    width: 41px;
+    height: 24px;
   }
 }

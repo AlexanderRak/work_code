@@ -7,6 +7,7 @@
   display: block;
   background-color: #fff;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -78,16 +79,25 @@
 /*end default styles*/
 #huawei .logo {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding: 100px 150px;
@@ -109,10 +119,15 @@
 #huawei .logo .logo_row .logo_txt {
   margin-top: 10px;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
@@ -152,6 +167,7 @@
   max-width: 700px;
   margin: 0 auto;
   -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
           box-sizing: content-box;
 }
 
@@ -166,6 +182,7 @@
   max-width: 700px;
   margin: 0 auto;
   -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
           box-sizing: content-box;
 }
 
@@ -184,16 +201,22 @@
   margin: 0 auto;
   padding: 0 150px 60px 150px;
   -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
           box-sizing: content-box;
 }
 
 #huawei .modes .modes_img {
   background-color: #f4f3f3;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   padding-top: 100px;
@@ -234,16 +257,26 @@
 
 #huawei .modes .modes_buttons {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-transform: translateY(-180px);
+     -moz-transform: translateY(-180px);
+      -ms-transform: translateY(-180px);
+       -o-transform: translateY(-180px);
           transform: translateY(-180px);
   max-width: 340px;
   z-index: 10;
@@ -253,13 +286,19 @@
 
 #huawei .modes .modes_buttons a {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   color: #969696;
   border: solid #969696 2px;
   text-align: center;
-  border-radius: 20px;
+  -webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
+          border-radius: 20px;
   -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  -moz-transition: all 0.7s;
   transition: all 0.7s;
 }
 
@@ -285,16 +324,25 @@
 
 #huawei .kids .kids_img {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   max-width: 700px;
@@ -303,6 +351,8 @@
 
 #huawei .kids .kids_img li {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
@@ -310,6 +360,8 @@
 #huawei .kids .kids_img li:nth-of-type(2) {
   margin: 0 20px;
   -webkit-box-flex: 3;
+  -webkit-flex: 3;
+     -moz-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
 }
@@ -423,6 +475,9 @@
   #huawei .modes .modes_buttons {
     margin-top: 20px;
     -webkit-transform: unset;
+       -moz-transform: unset;
+        -ms-transform: unset;
+         -o-transform: unset;
             transform: unset;
   }
   #huawei .snoska .snoska_list {
@@ -447,13 +502,20 @@
   }
   #huawei .kids .kids_img li:nth-of-type(odd) {
     display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     overflow-x: scroll;

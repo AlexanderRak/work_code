@@ -134,6 +134,17 @@ span.word-wrap
    top: 50%
    transform: translateY(-50%)
    z-index: 8
+   &::before
+      content: ""
+      background-image: url(https://cdn.comfy.ua/media/x/img/str.svg)
+      background-repeat: no-repeat
+      background-size: cover
+      position: absolute
+      top: 10rem
+      right: 3rem
+      width: 72px
+      height: 42px
+      z-index: 8
 
 // @media (max-width: 1250px)
 @media (max-width: 1024px)
@@ -155,6 +166,8 @@ span.word-wrap
          font-size: 45px
    .cms-hi-bomus__wrap
       padding: 0 15px
+      &.cms-hi-bomus__footer
+         padding: 0 0
    .sect-bonusshpo__flex
       flex-direction: row
    .sect-bonusshpo__item
@@ -178,6 +191,12 @@ span.word-wrap
       &.cloud-bgrd
          max-width: 442px
          height: 281px
+   .sect-prodfooter__cloud-text
+      &::before
+         top: 7rem
+         right: 7rem
+         width: 41px
+         height: 24px
 
 @media (max-width: 480px)
    #cms-hi-bomus
@@ -240,3 +259,8 @@ span.word-wrap
       min-height: 268px
    .sect-prodfooter__cloud-text
       max-width: 205px
+      &::before
+         top: 6rem
+         right: 3rem
+         width: 41px
+         height: 24px
