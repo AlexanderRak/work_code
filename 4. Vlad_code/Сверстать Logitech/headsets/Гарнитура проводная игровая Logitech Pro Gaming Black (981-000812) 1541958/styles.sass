@@ -1,0 +1,324 @@
+@mixin white_text
+  color: #fff
+  padding: 70px
+  max-width: 500px
+
+/*default styles*/
+
+#logitech 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0
+    margin: 0
+
+  h3
+    display: block
+    line-height: normal
+    font-size: 24px
+    font-weight: bold
+    text-align: unset
+    padding: 0
+    margin: 0
+    text-transform: uppercase
+    &::after
+      content: ""
+      display: block
+      height: 2px
+      width: 200px
+      background-color: #fff
+      margin: 20px 0
+
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#logitech
+  .voice
+    background-color: #000
+    display: flex
+    flex-direction: row
+    align-items: center
+    .voice_txt
+      color: #fff
+      padding: 70px
+      box-sizing: border-box
+      max-width: 500px
+      span
+        display: block
+        font-size: 24px
+  
+  .performance
+    background-image: url("https://cdn.comfy.ua/media/x/img/1541957/2.png")
+    background-size: cover
+    background-position: center top
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    height: 674px
+    .performance_flex
+      @include white_text
+      /** margin: 0 auto **/
+      text-align: center
+      position: unset
+      transform: unset
+      text-align: left
+      padding: 40px
+      flex: 1 1 0
+      h3::after
+        margin: 20px 0
+      .performance_list
+        text-align: right
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        li
+          flex: 1 1 0
+          &:nth-of-type(2)
+            padding: 30px 0
+        h3::after
+          display: none
+
+  .filter
+    position: relative
+    .filter_txt
+      @include white_text
+      position: absolute
+      bottom: 50%
+      right: 50%
+      transform: translate(50%, 50%)
+      box-sizing: content-box  
+      h3::after
+        margin: 20px 0
+
+
+  .comfort
+    background-color: #000
+    display: flex
+    flex-direction: row
+    align-items: center
+    .comfort_txt
+      @include white_text
+      box-sizing: content-box
+
+  .steel
+    position: relative
+    .steel_txt
+      position: absolute
+      @include white_text
+      right: 0
+      bottom: 50%
+      transform: translateY(50%)
+
+  .volume
+    background-color: #000
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    .volume_txt
+      @include white_text
+      box-sizing: content-box
+
+  .diffusor
+    background-color: #000
+    display: flex
+    flex-direction: row-reverse
+    align-items: center
+    justify-content: space-between
+    .diffusor_txt
+      @include white_text
+      box-sizing: content-box
+
+  .equlizer    
+    background-color: #000
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    .equlizer_txt 
+      @include white_text
+      box-sizing: content-box
+      
+  .accessories
+    background-color: #262626
+    padding: 70px
+    .accessories_img
+      img
+        margin: 0 auto
+    .accessories_txt
+      display: flex
+      flex-direction: row
+      align-items: flex-start
+      .accessories_txt_row
+        @include white_text
+        box-sizing: content-box
+        h3::after
+          margin: 20px 0
+          
+  .pro
+    background-color: #000
+    .pro_txt 
+      @include white_text
+      margin: 0 auto
+      box-sizing: content-box
+      h3::after
+        margin: 20px 0
+
+  .coplete
+    background-color: #000
+    display: flex
+    flex-direction: row
+    align-items: center
+    .coplete_txt
+      @include white_text
+      box-sizing: content-box
+      p
+        &:nth-of-type(n+2)
+          margin-top: 10px
+          
+      
+      
+
+
+/*media********************************************************/
+
+@media (max-width: 1024px)
+  #logitech .performance .grid-performance .performance_txt
+    padding: 20px
+
+  #logitech .steel .steel_txt
+    max-width: 370px
+  
+  #logitech .performance .performance_flex
+    max-width: max-content
+
+@media (max-width: 812px)
+  #logitech h3
+    font-size: 20px
+  
+  #logitech h2
+    font-size: 30px
+
+  #logitech .voice .voice_txt,
+  #logitech .performance .performance_flex,
+  #logitech .filter .filter_txt,
+  #logitech .comfort .comfort_txt,
+  #logitech .steel .steel_txt,
+  #logitech .volume .volume_txt,
+  #logitech .diffusor .diffusor_txt,
+  #logitech .equlizer .equlizer_txt,
+  #logitech .accessories,
+  #logitech .pro .pro_txt,
+  #logitech .coplete .coplete_txt,
+  #logitech .accessories .accessories_txt .accessories_txt_row
+    padding: 20px
+  
+  #logitech .performance
+    max-height: 500px
+
+  #logitech .volume .volume_txt,
+  #logitech .diffusor .diffusor_txt,
+  #logitech .equlizer .equlizer_txt,
+  #logitech .comfort .comfort_txt
+    max-width: 400px
+  
+  #logitech .voice .voice_txt span
+    font-size: 20px
+  
+  #logitech .filter .filter_txt
+    max-width: 700px
+    width: 100%
+  
+  #logitech .steel .steel_txt
+    max-width: 300px
+
+  #logitech 
+    .performance 
+      overflow: hidden
+      .grid-performance 
+        overflow-x: scroll
+        .performance_txt
+           min-width: 250px
+           box-sizing: border-box
+
+  #logitech 
+    .accessories 
+      overflow: hidden
+      .accessories_txt 
+        overflow-x: scroll
+        .accessories_txt_row
+          flex: 1 1 0
+          max-width: 50%
+          box-sizing: border-box
+          min-width: 280px
+
+@media (max-width: 480px)
+  #logitech .voice,
+  #logitech .comfort,
+  #logitech .volume,
+  #logitech .diffusor,
+  #logitech .equlizer,
+  #logitech .coplete
+    flex-direction: column
+    text-align: center
+
+  #logitech .filter .filter_txt,
+  #logitech .steel .steel_txt
+      position: unset
+      transform: unset
+      background-color: #000
+      box-sizing: border-box
+      max-width: 100%
+      text-align: center
+  
+  #logitech h3::after
+    margin: 20px auto
+  
+  #logitech .filter .filter_txt h3::after
+    margin: 20px auto
+  
+  #logitech .performance
+    justify-content: unset
+    flex-direction: column
+    max-height: unset
+    height: auto
+    .performance_flex
+      text-align: center
+      h3::after
+        margin: 20px auto
+      .performance_list
+        text-align: center
