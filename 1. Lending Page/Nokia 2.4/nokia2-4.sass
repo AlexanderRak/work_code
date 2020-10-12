@@ -1,0 +1,224 @@
+#nokia2_4
+	display: block
+	margin: 0 auto
+	max-width: 1280px
+	width: 100%
+	height: auto
+	overflow: hidden
+	background: #fff
+	position: relative
+	img
+		&:hover
+			opacity: 1
+	&:first-letter
+		padding-left: 0
+	img
+		display: block
+		margin-right: initial
+		margin-left: initial
+	p
+		font-size: calc(1rem + 0.5vw)
+		margin-bottom: 0
+		padding-top: 15px
+	h2
+		font-size: calc(1rem + 1.1vw)
+		line-height: 1.1
+      // text-transform: uppercase
+		letter-spacing: 3px
+	h3
+		font-size: calc(1rem + 0.6vw)
+		margin: 0
+		padding-top: 0
+		line-height: 1.1
+		letter-spacing: 2px
+		text-align: inherit
+		font-weight: bold
+		padding-bottom: 25px
+	h4
+		font-size: calc(1rem + 0.5vw)
+		line-height: 1.1
+      // text-transform: uppercase
+		letter-spacing: 3px
+		margin: 15px 0 0 0
+span.word-wrap
+	display: block
+	word-wrap: break-word
+span.fw-bold
+	font-weight: bold
+span.tx-uppercase
+	text-transform: uppercase
+// default
+
+.sect-containerbg
+	display: block
+	width: 100%
+	height: auto
+.sect-containerbg__row-bgrd
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	position: relative
+	max-width: 1280px
+	width: 100%
+	height: 850px
+	z-index: 6
+	transition: opacity 1s ease-in-out
+	&.bgrd-img1
+		background-image: url(https://cdn.comfy.ua/media/x/img/nokia24/image1.png)
+	&.bgrd-img2
+		background-image: url(https://cdn.comfy.ua/media/x/img/nokia24/image2.png)
+	&.bgrd-img3
+		background-image: url(https://cdn.comfy.ua/media/x/img/nokia24/image3.png)
+	&.bgrd-img4
+		background-image: url(https://cdn.comfy.ua/media/x/img/nokia24/image4.png)
+	&.bgrd-img5
+		background-image: url(https://cdn.comfy.ua/media/x/img/image8new.png)
+	&.bgrd-img6
+		background-image: url(https://cdn.comfy.ua/media/x/img/nokia24/image6.png)
+	&.bgrd-img7
+		background-image: url(https://cdn.comfy.ua/media/x/img/nokia24/image7.png)
+	&.bgrd-img8
+		background-image: url(https://cdn.comfy.ua/media/x/img/nokia24/image9.png)
+	&.bgrd-pos-left
+		background-position: left
+	&.bgrd-pos-right
+		background-position: right
+	&.bgrd-pos-top
+		background-position: top
+.sect-containerbg__row-img-pos
+	position: absolute
+	&.img-pos
+		right: 0
+		top: 0
+		z-index: 7
+		max-width: 50%
+		position: relative
+		margin: 0 0 0 auto
+		height: 100%
+		&.w55
+			max-width: 55%
+			margin-right: 5rem
+		.img-posbl
+			max-width: 100%
+			margin: 0 auto !important
+			top: 50%
+			transform: translateY(-50%)
+			position: absolute
+			left: 0
+			right: 0
+			&.img1w
+				max-width: 40%
+		&.img-pos-img-left
+			right: inherit
+			left: 0
+			margin: auto 0 0 0
+.sect-containerbg__row-text
+	max-width: 500px
+	width: 100%
+	height: auto
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	z-index: 8
+	margin: 5rem
+	color: #fff
+	&.maxw450
+		max-width: 450px
+	&.text-pos-left
+		left: 0
+	&.text-pos-center
+		left: 0
+		right: 0
+		margin: 5rem auto 15px auto
+		top: 0
+		transform: inherit
+		max-width: 895px
+		text-align: center
+	&.text-pos-right
+		right: 0
+	&.color_bleak
+		color: #000
+
+// media
+// @media (max-width: 1250px)
+@media (max-width: 1024px)
+	.sect-containerbg__row-bgrd
+		height: 610px
+	.sect-containerbg__row-text
+		margin: 0 0 0 5rem
+		max-width: 385px
+		&.text-pos-right
+			margin: 0 5rem 0 0
+		&.maxw450
+			max-width: 385px
+	.sect-containerbg__row-img-pos
+		position: absolute
+		&.img-pos
+			right: 0
+			top: 0
+			z-index: 7
+			max-width: 50%
+			position: relative
+			margin: 0 0 0 auto
+			height: 100%
+			&.w55
+				max-width: 50%
+				margin-right: 15px
+			.img-posbl
+				&.img1w
+					max-width: 30%
+			&.img-pos-img-left
+				right: inherit
+				left: 0
+				margin: auto 0 0 0
+@media (max-width: 812px)
+	.sect-containerbg__row-bgrd
+		height: 550px
+	.sect-containerbg__row-text
+		margin: 0 0 0 5rem
+		max-width: 325px
+		padding: 0 15px
+		&.text-pos-right
+			margin: 0 15px 0 0
+		&.maxw450
+			max-width: 325px
+@media (max-width: 480px)
+	#nokia3_4
+		p
+			font-size: calc(1rem + 1vw)
+		h2
+			font-size: calc(1rem + 2vw)
+		h3
+			font-size: calc(1rem + 1vw)
+			padding-bottom: 15px
+		h4
+			font-size: calc(1rem + 0.8vw)
+	.sect-containerbg__row-bgrd
+		height: 500px
+	.sect-containerbg__row-text
+		margin: 0 0 0 0
+		max-width: 100%
+		padding: 25px 15px 0 15px
+		top: 0
+		transform: none
+		position: relative
+		&.text-pos-right
+			margin: 0 0 0 0
+		&.maxw450
+			max-width: 100%
+		&.text-pos-center
+			margin: 0 auto 0 auto
+	.sect-containerbg__row-img-pos
+		position: absolute
+		&.img-pos
+			max-width: 100%
+			margin-top: 15px
+			&.w55
+				max-width: 100%
+				margin-right: 15px
+			.img-posbl
+				max-width: 65%
+				transform: none
+				top: 0
+				&.img1w
+					max-width: 40%
