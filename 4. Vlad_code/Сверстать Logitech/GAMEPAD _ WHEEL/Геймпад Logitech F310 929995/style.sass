@@ -1,0 +1,125 @@
+/*default styles*/
+
+#logitech 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  
+  h3
+    display: block
+    line-height: normal
+    font-size: 24px
+    font-weight: bold
+    padding: 0
+    margin: 0
+    text-align: unset
+    text-transform: uppercase
+
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#logitech
+  background-color: #000
+  h3
+    &::after
+      content: ""
+      display: block
+      height: 2px
+      width: 200px
+      background-color: #fff
+
+  .logitech_img
+    img
+      max-height: 600px
+      margin: 0 auto
+  
+  .logitech_list
+    padding: 40px
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      >div
+        max-width: 50%
+        box-sizing: border-box
+        flex: 1 1 0
+      .logitech_list_txt
+        color: #fff
+        text-align: right
+        padding: 40px
+        h3
+          &::after
+            margin: 10px 0 20px auto
+
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+        .logitech_list_txt
+          text-align: left
+          h3
+            &::after
+              margin: 10px auto 20px 0
+      
+      &:last-of-type
+        p:first-of-type
+          margin-bottom: 40px
+        
+
+/*media**************************************************************/
+
+@media (max-width: 812px)
+  #logitech h3
+    font-size: 20px
+  #logitech .logitech_list,
+  #logitech .logitech_list li .logitech_list_txt
+    padding: 20px
+
+@media (max-width: 480px)
+  #logitech .logitech_list
+    padding: 20px 0
+  #logitech .logitech_list li
+    flex-direction: column !important
+    >div
+      max-width: 100%
+  #logitech .logitech_list li .logitech_list_txt
+    text-align: center !important
+  
+  #logitech .logitech_list li .logitech_list_txt h3::after
+    margin: 10px auto 20px auto !important
+  
+  #logitech .logitech_list li:nth-of-type(n+1)
+    margin-top: 40px

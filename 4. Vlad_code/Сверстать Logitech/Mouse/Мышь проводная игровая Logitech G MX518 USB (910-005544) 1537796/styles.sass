@@ -1,0 +1,237 @@
+@mixin white_text
+  color: #fff
+  position: absolute
+  padding: 70px
+  max-width: 500px
+  bottom: 50%
+  transform: translateY(50%)
+
+/*default styles*/
+
+#logitech 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0
+    margin: 0
+
+  h3
+    display: block
+    line-height: normal
+    font-size: 24px
+    font-weight: bold
+    text-align: unset
+    padding: 0
+    margin: 0
+    text-transform: uppercase
+    &::after
+      content: ""
+      display: block
+      height: 2px
+      width: 200px
+      background-color: #fff
+      margin: 20px 0
+
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#logitech
+  .none_pic
+    display: none
+  .logitech_img
+    .logitech_list
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      padding: 20px
+      li
+        max-width: 400px
+        text-align: center
+        flex: 1 1 0
+        span
+          text-transform: uppercase
+          >strong
+            font-size: 24px
+            font-weight: bold
+            color: #676767
+        &:nth-of-type(2)
+          margin: 0 40px
+
+  .cont
+    position: relative
+    .cont_txt
+      @include white_text
+      bottom: unset
+      transform: unset
+      top: 0
+      box-sizing: content-box
+    .cont_txt_2
+      top: unset
+      bottom: 50%
+      transform: translateY(50%)
+      right: 0
+      max-width: 370px
+    .cont_txt_3
+      top: unset
+      bottom: 50%
+      transform: translateY(50%)
+      p:nth-of-type(2)
+        margin-top: 10px
+    .cont_txt_4
+      bottom: 0
+      top: unset
+    .cont_txt_5
+      right: 0
+    .black_text
+      color: #000
+      h3:after
+        background-color: #000
+
+  .hero
+    .hero_txt
+      text-align: center
+      padding: 70px
+      h3:after
+        background-color: #000
+        margin: 20px auto
+    .hero_img
+      img
+        margin: 0 auto
+    .hero_txt_2
+      text-align: left
+      display: flex
+      flex-direction: row
+      width: 70%
+      margin: 0 auto
+      h3, p
+        flex: 1 1 0
+      h3:after
+        margin: 20px 0
+
+/*media********************************************************/
+
+@media (max-width: 1024px)
+  #logitech .cont .cont_txt
+    max-width: 370px
+    box-sizing: content-box
+    padding: 20px
+
+  #logitech .cont .cont_txt_2
+    max-width: 500px
+
+@media (max-width: 812px)
+  #logitech h3
+    font-size: 20px
+
+  #logitech .logitech_img .logitech_list
+    padding: 0
+
+  #logitech .logitech_img .logitech_list li
+    padding: 20px
+    box-sizing: border-box
+  
+  #logitech .logitech_img .logitech_list li span
+    font-size: 20px
+
+  #logitech .logitech_img .logitech_list li:first-of-type
+    margin-right: 0
+
+  
+  #logitech .logitech_img .logitech_list li:nth-of-type(2)
+    margin: 0
+  
+  #logitech h2
+    font-size: 30px
+
+  #logitech .cont .cont_txt_3
+    max-width: 370px
+    text-align: left
+    h3:after
+      margin: 20px 0
+
+  #logitech .cont .txt_left
+    max-width: 300px
+    text-align: left
+    h3:after
+      margin: 20px 0
+  
+  #logitech .hero .hero_txt
+    padding: 20px
+
+@media (max-width: 480px)
+  #logitech
+    overflow: hidden
+    .logitech_img 
+      overflow-x: hidden
+      .logitech_list
+        overflow-x: scroll
+        justify-content: flex-start
+        li
+          min-width: 250px
+      
+  #logitech .cont .cont_txt
+    position: unset
+    background-color: #000
+    transform: unset
+    text-align: center
+    h3::after
+      margin: 20px auto
+
+  #logitech .none_pic
+    display: block !important
+
+  #logitech .hide_pic
+    display: none !important
+
+  #logitech .cont .cont_txt_5,
+  #logitech .cont .cont_txt_3,
+  #logitech .cont .cont_txt_2
+    background-color: #1f1f1f
+
+  #logitech .cont .txt_left
+    max-width: 100%
+
+  #logitech .hero .hero_txt_2
+    display: block
+    text-align: center
+    width: 100%
+    box-sizing: border-box
+    h3:after
+      margin: 20px auto
+
+  #logitech .cont .black_text
+    background-color: #c4c6c8
