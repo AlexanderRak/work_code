@@ -1,0 +1,302 @@
+/*default styles*/
+
+#toshiba
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 26px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  h4
+    display: block
+    line-height: normal
+    font-size: 18px
+    font-weight: bold
+    padding: 0
+    margin: 0 0 20px 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#toshiba
+  .logo
+    background-color: #f4f4f4;
+    padding: 25px;
+    img
+      margin-left: 40px
+
+  .char
+    .char_img
+      img
+        margin: 70px auto 0 auto
+    .char_txt
+      padding: 30px 40px
+      span
+        font-size: 18px
+        display: block
+        line-height: normal
+        color: #ef1616
+        text-transform: uppercase
+        font-weight: bold
+        margin-bottom: 15px
+      h2
+        margin-bottom: 40px
+      .char_list
+        li
+          display: flex
+          flex-direction: row
+          align-items: flex-start
+          font-size: 18px
+          line-height: 16px
+          &:nth-of-type(n+2)
+            margin-top: 20px
+          &::before
+            content: ""
+            display: block
+            width: 12px
+            height: 12px
+            background-color: #ef1616
+            margin-right: 20px
+
+  .feature
+    .feature_title
+      text-align: center
+      margin-top: 80px
+      h2
+        margin-bottom: 30px
+      img
+        margin: 0 auto
+    .feature_list
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      margin-top: 50px
+      li
+        min-width: 50%
+        max-width: 50%
+        padding: 20px
+        box-sizing: border-box
+        flex: 1 1 0
+        text-align: center
+        img
+          margin: 10px auto
+        h4
+          border-left: 7px solid #ef1616
+
+  .tech
+    margin-top: 80px
+    .tech_title
+      text-align: center
+    .tech_list
+      display: flex
+      flex-direction: row
+      li
+        flex: 1 1 0
+        padding: 20px
+        box-sizing: border-box
+        text-align: center
+        img
+          margin: 0 auto
+        h4
+          margin-top: 30px
+
+  .tech:last-of-type
+    margin-top: 0
+
+  .func
+    padding: 40px
+    .func_title
+      text-align: center
+      margin-bottom: 30px
+    .func_list
+      li
+        img
+          margin: 20px auto
+        h4
+          display: flex
+          flex-direction: row
+          align-items: center
+          &::before
+            content: ""
+            display: block
+            width: 16px
+            height: 16px
+            background-color: #ef1616;
+            margin-right: 10px
+        p
+          padding-left: 26px
+
+  .interesting
+    padding: 40px
+    background-color: #f4f4f4
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    .i_row
+      span
+        display: block
+        font-size: 36px
+        font-weight: bold
+        background-color: #ef1616;
+        color: #fff
+        padding: 0 10px 3px;
+        line-height: normal
+        max-width: max-content
+      p
+        font-size: 20px
+      flex: 1 1 0
+  
+  .sertifikat
+    padding: 40px
+    .sertifikat_title
+      text-align: center
+      margin-bottom: 70px
+    .sertifikat_txt
+      text-align: center
+      h2
+        margin-bottom: 30px
+    .sertifikat_img
+      display: flex
+      flex-direction: row
+      align-items: center
+      li
+        flex: 1 1 0
+        img
+          margin: 0 auto
+        &:nth-of-type(2)
+          margin: 0 40px
+
+  .questions
+    padding: 65px
+    border-top: 1px solid #ebebeb;
+    .questions_title
+      position: relative
+      .questions_img
+        position: absolute
+      .questions_txt
+        padding-top: 70px
+        span
+          display: block
+          line-height: normal
+          font-size: 45px
+          color: #ef1616
+          font-weight: bold
+          text-align: center   
+    .questions_cont     
+      padding: 150px 100px 40px 100px   
+      h4   
+        margin: 0
+        background-color: #ef1616;
+        color: #fff;
+        padding: 5px 15px;
+        display: inline-block
+      p
+        margin: 10px 0
+  
+  .toshiba_footer
+    padding: 35px 50px;
+    background-color: #f4f4f4;
+    display: flex
+    flex-direction: row
+    align-items: flex-end
+    justify-content: space-between
+    div
+      h2>span
+        color: #ef1616;
+
+/*media*************************************************/
+
+@media (max-width: 812px)
+  #toshiba .tech
+    margin-top: 0
+  #toshiba .questions .questions_title .questions_img
+    display: none
+  #toshiba .questions
+    padding: 40px
+  #toshiba .questions .questions_cont
+    padding: 40px 0 0 0
+  #toshiba .questions .questions_title .questions_txt
+    padding-top: 0
+  #toshiba .feature .feature_title
+    padding: 0 40px
+  
+@media (max-width: 480px)
+  #toshiba .char .char_txt
+    padding: 20px
+  #toshiba .char .char_txt span,
+  #toshiba .char .char_txt h2
+    text-align: center
+  #toshiba .char .char_txt .char_list li
+    line-height: 20px
+  #toshiba .char .char_txt .char_list li::before
+    min-width: 12px
+    margin-top: 5px
+  #toshiba .feature .feature_list
+    flex-direction: column
+    margin: 50px 0
+    li
+      max-width: 100%
+  #toshiba .feature .feature_list li h4
+    padding: 0 10px;
+  #toshiba .tech .tech_list
+    overflow-x: scroll
+  #toshiba .tech .tech_list li
+    min-width: 220px
+  #toshiba .func
+    padding: 20px
+  #toshiba .interesting
+    flex-direction: column
+    text-align: center
+    padding: 20px
+  #toshiba .interesting .i_row span
+    margin-bottom: 20px
+  #toshiba .sertifikat
+    padding: 20px
+  #toshiba .sertifikat .sertifikat_img
+    overflow-x: scroll
+  #toshiba .sertifikat .sertifikat_img li
+    min-width: 220px
+  #toshiba .questions
+    padding: 20px
+  #toshiba .questions .questions_title .questions_txt span
+    font-size: 30px
+  #toshiba .logo img
+    margin-left: 0
+  #toshiba .toshiba_footer
+    padding: 35px 10px
+    div:first-of-type
+      margin-right: 40px
+  #toshiba .feature .feature_title
+    padding: 0 20px
