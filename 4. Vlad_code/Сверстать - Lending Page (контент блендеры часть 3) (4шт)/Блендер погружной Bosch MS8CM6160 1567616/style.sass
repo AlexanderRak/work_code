@@ -1,0 +1,147 @@
+/*default styles*/
+
+#bosch
+  max-width: 1000px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#bosch
+  .logo
+    position: relative
+    .logo_title
+      position: absolute
+      display: flex
+      flex-direction: row
+      .logo_title_img 
+        margin-right: 20px
+        img
+          max-width: 400px
+      .logo_title_txt
+        padding: 20px
+        box-sizing: border-box
+
+  .bosch_cont
+    .bosch_list
+      li
+        display: flex
+        flex-direction: row
+        align-items: center
+        >div
+          flex: 1 1 0
+          max-width: 50%
+          box-sizing: border-box
+        .bosch_list_txt
+          padding: 40px
+          span
+            display: block
+            font-size: 20px
+            font-weight: bold
+            margin-bottom: 15px
+        &:nth-of-type(even)
+          flex-direction: row-reverse
+          .bosch_list_txt
+            text-align: right
+        ul 
+          margin-bottom: 10px
+          li
+            list-style-type: disc
+            display: list-item
+            
+      h2
+        text-align: center
+        margin: 50px 0
+  
+  .germany
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 40px 0
+    >div
+      flex: 1 1 0
+      max-width: 50%
+    .germany_txt
+      padding: 0 40px
+      text-align: center
+      span
+        display: block
+        line-height: normal
+        font-size: 24px
+        font-weight: bold
+        margin-bottom: 20px
+
+
+/*media********************************************************/
+
+@media (max-width: 812px)
+  #bosch .logo .logo_title .logo_title_img img
+    max-width: 250px
+  
+  #bosch h2
+    font-size: 24px
+
+@media (max-width: 480px)
+  #bosch .logo .logo_title
+    flex-direction: column
+    position: unset
+    text-align: center
+  
+  #bosch .bosch_cont .bosch_list li
+    flex-direction: column !important
+    >div
+      max-width: 100%
+  #bosch .bosch_cont .bosch_list li .bosch_list_txt
+    padding: 20px
+    text-align: center !important
+  
+  #bosch .germany
+    flex-direction: column
+    >div
+      max-width: 100%
+  
+  #bosch .germany .germany_txt
+    padding: 20px
+  
+  #bosch .bosch_cont .bosch_list li ul li
+    max-width: max-content
+    margin: 0 auto
+
+          
+
+
