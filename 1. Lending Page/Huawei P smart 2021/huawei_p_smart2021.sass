@@ -9,6 +9,8 @@
 
 	img
 		opacity: 1
+		display: block
+		max-width: 100%
 		&:hover
 			opacity: 1
 	&:first-letter
@@ -164,17 +166,36 @@ span.fw-bold
 
 // sect-header-banner
 .sect-header-banner__bgrd
-	background-image: url(https://cdn.comfy.ua/media/x/img/p_smart/img1.png)
-	background-position: center
-	background-repeat: no-repeat
-	background-size: cover
-	width: 100%
-	min-height: 616px
-	position: relative
-.sect-header-banner__logo-img-pos
-	position: absolute
-	right: 5rem
-	bottom: 5rem
+	display: flex
+	flex-direction: row
+	.sect-header-banner__bgrd-row
+		flex: 1 1 0
+		box-sizing: border-box
+		max-width: 50%
+		.logo 
+			width: 100%
+			img
+				display: block
+				margin: 0 0 0 auto !important
+		span.style-design
+			display: block
+			text-align: center
+			font-size: 28px
+			margin-top: 10px
+		&:last-of-type
+			padding: 30px
+			position: relative
+			img
+				margin: 30px auto 0 auto !important
+			.abs_img
+				position: absolute
+				bottom: 0
+				right: 0
+				padding: 40px
+
+.string_bg
+	background-color: #efefef
+	padding: 15px
 
 // sect-slider
 .sect-slider
@@ -412,9 +433,106 @@ span.fw-bold
 			&:last-child
 				padding-bottom: 0
 
+.huawei_video
+	iframe
+		width: 100%
+		height: 730px
+
+.resons
+	.resons_title
+		padding: 50px 20px
+		text-align: center
+		h2
+			letter-spacing: unset !important
+	.grid-container
+		padding: 0 60px
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 20px 20px;
+		grid-template-areas: "cal1 cal2 cal3" "cal4 cal5 cal6";
+		span
+			background-color: #efefef
+			display: block
+			text-align: center
+			font-size: 20px
+			padding: 15px
+			max-width: 386px
+			box-sizing: border-box
+		img
+			// width: 100% !important
+	.cal1
+		grid-area: cal1;
+	.cal2
+		grid-area: cal2;
+	.cal3
+		grid-area: cal3;
+	.cal4
+		grid-area: cal4;
+	.cal5
+		grid-area: cal5;
+	.cal6
+		grid-area: cal6;
+
+	.string_bg
+		padding: 15px
+		margin: 20px 60px 0 60px
+
+.search
+	padding: 40px
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: center
+	.search_txt
+		span
+			display: block
+			font-size: 30px
+			text-align: center
+		span.blue
+			margin: 40px auto 0 auto
+			max-width: max-content
+			color: #0cacea
+			display: flex
+			flex-direction: row
+			align-items: center
+			&::after
+				content: ""
+				display: block
+				width: 47px
+				height: 47px
+				background-image: url("https://cdn.comfy.ua/media/x/img/1669645/icon7.png")
+				background-position: center
+				background-repeat: no-repeat
+				margin-left: 20px
+				text-align: center
+
+.gender
+	.gender_list
+		display: flex
+		flex-direction: row
+		padding: 0
+		margin: 0
+		list-style-type: none
+		border-bottom: 15px solid #efefef
+
+		li
+			flex: 1 1 0
+			max-width: 50%
+			box-sizing: border-box
+			&:first-of-type
+				margin-right: 10px
+				
+
 /************media***********/
 // @media (max-width: 1250px)
 @media (max-width: 1024px)
+	.resons .grid-container
+		padding: 0
+	.resons .grid-container span
+		font-size: 17px
+	.resons .string_bg
+		margin: 20px 0 0 0
 	#huawei_p_smart2021
 		h4
 			font-size: 21px
@@ -460,7 +578,15 @@ span.fw-bold
 		padding: 0 15px 0 25px
 	.sect-camera__wrap
 		padding: 5rem 25px 15px 25px
+	.sect-header-banner__bgrd .sect-header-banner__bgrd-row:last-of-type .abs_img
+		padding: 20px
 @media (max-width: 812px)
+	.search
+		padding: 20px
+	.resons .grid-container
+		grid-template-columns: 1fr 1fr
+		grid-template-rows: 1fr 1fr 1fr
+		grid-template-areas: "cal1 cal2" "cal3 cal4" "cal5 cal6";
 	#huawei_p_smart2021
 		h4
 			font-size: 21px
@@ -506,7 +632,34 @@ span.fw-bold
 		padding: 15px 15px 15px 25px
 	.sect-camera__wrap
 		padding: 5rem 25px 15px 25px
+	.sect-header-banner__bgrd
+		display: block
+		.sect-header-banner__bgrd-row
+			max-width: 100%
+	.sect-header-banner__bgrd .sect-header-banner__bgrd-row >img
+		margin: 0 auto !important
+	
 @media (max-width: 480px)
+	.gender .gender_list
+		display: block
+		li
+			max-width: 100%
+			&:first-of-type
+				margin-right: 0
+	.search
+		display: block
+		.search_img
+			margin-bottom: 20px
+	.search .search_txt span
+		font-size: 24px
+	.search .search_txt span.blue
+		margin: 20px auto 0 auto
+	.huawei_video iframe
+		height: 400px
+	.resons .grid-container
+		grid-template-columns: 1fr 
+		grid-template-rows: 1fr 1fr 1fr 1fr
+		grid-template-areas: "cal1" "cal2" "cal3" "cal4" "cal5" "cal6";
 	#huawei_p_smart2021
 		h4
 			font-size: 18px
@@ -644,3 +797,7 @@ span.fw-bold
 	.item-text__qr-code
 		width: 100%
 		justify-content: space-between
+	.sect-header-banner__bgrd .sect-header-banner__bgrd-row:last-of-type .abs_img
+    max-width: 35%
+	.sect-header-banner__bgrd .sect-header-banner__bgrd-row:last-of-type .abs_img
+		padding: 10px
