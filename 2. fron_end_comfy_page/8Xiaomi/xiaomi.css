@@ -352,6 +352,10 @@ span.fw-bold {
   color: #868EA3;
 }
 
+.color938A78 {
+  color: #938A78;
+}
+
 .wrap-container {
   position: relative;
   width: 100%;
@@ -392,18 +396,30 @@ span.fw-bold {
   padding-right: 15rem;
 }
 
-.wrap-container-flex__text-flex.before-prodimg1::before {
-  content: "";
-  background-image: url(https://cdn.comfy.ua/media/x/img/xiaomi/img8_korzina.png);
+.wrap-container-flex__text-flex::before {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
   position: absolute;
+}
+
+.wrap-container-flex__text-flex.before-prodimg1::before {
+  content: "";
+  background-image: url(https://cdn.comfy.ua/media/x/img/xiaomi/img8_korzina.png);
   right: 0;
   width: 110px;
   height: 165px;
+  z-index: 8;
+}
+
+.wrap-container-flex__text-flex.before-prodimg2::before {
+  content: "";
+  background-image: url(https://cdn.comfy.ua/media/x/img/xiaomi/img14_watch.png);
+  right: 0;
+  width: 147px;
+  height: 183px;
   z-index: 8;
 }
 
