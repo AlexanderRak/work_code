@@ -80,6 +80,170 @@ span.word-wrap {
   background: #ffffff;
 }
 
+.slider-container {
+  padding-top: 24px;
+}
+
+.slideshow-container {
+  max-width: 1366px;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 0 15px 0 15px;
+  -webkit-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+  -moz-transition: 0.6s ease;
+  transition: 0.6s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+span.str-slid.rotate img {
+  -webkit-transform: rotate(180deg);
+     -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+       -o-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.next {
+  right: 0;
+  -webkit-border-radius: 3px 0 0 3px;
+     -moz-border-radius: 3px 0 0 3px;
+          border-radius: 3px 0 0 3px;
+}
+
+.next:hover {
+  -webkit-transform: translateX(5px) translateY(-50%);
+     -moz-transform: translateX(5px) translateY(-50%);
+      -ms-transform: translateX(5px) translateY(-50%);
+       -o-transform: translateX(5px) translateY(-50%);
+          transform: translateX(5px) translateY(-50%);
+}
+
+.prev:hover {
+  -webkit-transform: translateX(-5px) translateY(-50%);
+     -moz-transform: translateX(-5px) translateY(-50%);
+      -ms-transform: translateX(-5px) translateY(-50%);
+       -o-transform: translateX(-5px) translateY(-50%);
+          transform: translateX(-5px) translateY(-50%);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
+  -moz-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.active:hover, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-name: fade;
+    -o-animation-name: fade;
+       animation-name: fade;
+  -moz-animation-duration: 1.5s;
+    -o-animation-duration: 1.5s;
+       animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#xiaomi-brent-page img.bannet-iten {
+  margin: 0 auto;
+}
+
+#xiaomi-brent-page .bl-show__decktop-ipad {
+  display: block;
+}
+
+#xiaomi-brent-page .bl-show__mob {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  #xiaomi-brent-page .bl-show__decktop-ipad {
+    display: none;
+  }
+  #xiaomi-brent-page .bl-show__mob {
+    display: block;
+  }
+}
+
 .grid-container {
   display: -ms-grid;
   display: grid;
@@ -87,7 +251,7 @@ span.word-wrap {
       grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 24px 24px;
       grid-template-areas: "item1 item1 item2 item3" "item1 item1 item4 item5" "item6 item6 item6 item6" "item7 item7 item7 item7" "item8 item9 item12 item12" "item10 item11 item12 item12" "item13 item13 item13 item13" "item14 item15 item16 item17" "item18 item18 item18 item18" "item19 item19 item20 item21" "item19 item19 item20 item21" "item22 item22 item22 item22" "item23 item24 item25 item25" "item26 item26 item26 item26" "item27 item27 item28 item28" "item27 item27 item29 item29";
-  padding: 25px 20px 80px 20px;
+  padding: 24px 20px 80px 20px;
 }
 
 .item1 {
@@ -291,10 +455,54 @@ span.word-wrap {
   min-height: 324px;
   height: 100%;
   width: 100%;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
 }
 
 .bgrd-color.h119px {
   background: transparent;
+}
+
+.bgrd-color.h119px .mrgn-bl {
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+}
+
+.bgrd-color.h119px .mrgn-bl:hover {
+  -webkit-box-shadow: inset 0 0 15px 0px #c3c3c3;
+     -moz-box-shadow: inset 0 0 15px 0px #c3c3c3;
+          box-shadow: inset 0 0 15px 0px #c3c3c3;
+  -webkit-transform: scale(1.01);
+     -moz-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+       -o-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.bgrd-color.h119px:hover {
+  -webkit-box-shadow: inherit !important;
+     -moz-box-shadow: inherit !important;
+          box-shadow: inherit !important;
+  -webkit-transform: none !important;
+     -moz-transform: none !important;
+      -ms-transform: none !important;
+       -o-transform: none !important;
+          transform: none !important;
+}
+
+.bgrd-color:hover {
+  -webkit-box-shadow: inset 0 0 15px 0px #c3c3c3;
+     -moz-box-shadow: inset 0 0 15px 0px #c3c3c3;
+          box-shadow: inset 0 0 15px 0px #c3c3c3;
+  -webkit-transform: scale(1.01);
+     -moz-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+       -o-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 .bgrdEAF3FF {
@@ -905,7 +1113,7 @@ span.word-wrap {
   .wrap-container__img.img-center-bottom.img-bottom-left-pos-rel {
     bottom: -5px;
     left: -58px;
-    max-width: 90%;
+    max-width: 245px;
   }
   .wrap-container__img.img-center-bottom.img-bottom-15 {
     bottom: -3px;
@@ -1012,7 +1220,7 @@ span.word-wrap {
     max-width: 105px;
   }
   .item5 .wrap-container__img {
-    max-width: 55%;
+    max-width: 75px;
   }
   .item6 .wrap-container__img {
     max-width: 90%;
@@ -1048,7 +1256,7 @@ span.word-wrap {
     max-width: 250px;
   }
   .item20 .wrap-container__img {
-    max-width: 100%;
+    max-width: 160px;
   }
   .item21 .wrap-container__img {
     max-width: 115px;

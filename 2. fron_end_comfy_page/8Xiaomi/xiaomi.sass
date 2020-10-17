@@ -55,13 +55,100 @@ span.word-wrap
    background: #ffffff
 // default style END
 
+// slider
+.slider-container
+   padding-top: 24px
+.slideshow-container
+   max-width: 1366px
+   height: auto
+   position: relative
+   margin: 0 auto
+
+.mySlides
+   display: none
+
+.prev, .next
+   cursor: pointer
+   position: absolute
+   top: 50%
+   transform: translateY(-50%)
+   padding: 0 15px 0 15px
+   transition: 0.6s ease
+   user-select: none
+
+span.str-slid
+   &.rotate
+      img
+         transform: rotate(180deg)
+
+.next
+   right: 0
+   border-radius: 3px 0 0 3px
+
+.next
+   &:hover
+      transform: translateX(5px) translateY(-50%)
+.prev
+   &:hover
+      transform: translateX(-5px) translateY(-50%)
+
+.text
+   color: #f2f2f2
+   font-size: 15px
+   padding: 8px 12px
+   position: absolute
+   bottom: 8px
+   width: 100%
+   text-align: center
+
+.dot
+   cursor: pointer
+   height: 15px
+   width: 15px
+   margin: 0 2px
+   background-color: #bbb
+   border-radius: 50%
+   display: inline-block
+   transition: background-color 0.6s ease
+
+.active, .dot
+   &:hover
+      background-color: #717171
+
+.fade
+   -webkit-animation-name: fade
+   -webkit-animation-duration: 1.5s
+   animation-name: fade
+   animation-duration: 1.5s
+
+@keyframes fade
+   from
+      opacity: .4
+   to
+      opacity: 1
+#xiaomi-brent-page
+   img
+      &.bannet-iten
+         margin: 0 auto
+   .bl-show__decktop-ipad
+      display: block
+   .bl-show__mob
+      display: none
+@media (max-width: 480px)
+   #xiaomi-brent-page
+      .bl-show__decktop-ipad
+         display: none
+      .bl-show__mob
+         display: block
+// slider END
+
 .grid-container
    display: grid
    grid-template-columns: (1fr 1fr 1fr 1fr)
    // grid-template-rows: (1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr)
    gap: 24px 24px
    grid-template-areas: "item1 item1 item2 item3" "item1 item1 item4 item5" "item6 item6 item6 item6" "item7 item7 item7 item7" "item8 item9 item12 item12" "item10 item11 item12 item12" "item13 item13 item13 item13" "item14 item15 item16 item17" "item18 item18 item18 item18" "item19 item19 item20 item21" "item19 item19 item20 item21" "item22 item22 item22 item22" "item23 item24 item25 item25" "item26 item26 item26 item26" "item27 item27 item28 item28" "item27 item27 item29 item29"
-   padding: 25px 20px 80px 20px
+   padding: 24px 20px 80px 20px
 
 .item1
    grid-area: item1
@@ -156,12 +243,20 @@ span.word-wrap
    min-height: 324px
    height: 100%
    width: 100%
+   transition: .3s
    &.h119px
       background: transparent
-   // transition: .3s
-   // &:hover
-   //    box-shadow: inset 0 0 15px 0px #c3c3c3
-   //    transform: scale(1.01)
+      .mrgn-bl
+         transition: .3s
+         &:hover
+            box-shadow: inset 0 0 15px 0px #c3c3c3
+            transform: scale(1.01)
+      &:hover
+         box-shadow: inherit !important
+         transform: none !important
+   &:hover
+      box-shadow: inset 0 0 15px 0px #c3c3c3
+      transform: scale(1.01)
 .bgrdEAF3FF
    background: #EAF3FF
 
@@ -578,7 +673,7 @@ span.word-wrap
          &.img-bottom-left-pos-rel
             bottom: -5px
             left: -58px
-            max-width: 90%
+            max-width: 245px
          &.img-bottom-15
             bottom: -3px
          &.img-bottom-10
@@ -669,7 +764,7 @@ span.word-wrap
    .item4 .wrap-container__img
       max-width: 105px
    .item5 .wrap-container__img
-      max-width: 55%
+      max-width: 75px
    .item6 .wrap-container__img
       max-width: 90%
    .item8 .wrap-container__img
@@ -693,7 +788,7 @@ span.word-wrap
    .item19 .wrap-container__img
       max-width: 250px
    .item20 .wrap-container__img
-      max-width: 100%
+      max-width: 160px
    .item21 .wrap-container__img
       max-width: 115px
    .item23 .wrap-container__img
