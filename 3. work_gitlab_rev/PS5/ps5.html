@@ -4,7 +4,114 @@
 
 <div id="playstation5">
 
-   1. Изменить размеры текст для тобов(подогнать)
-   2. Кнопка корзины убрать(не работает функционал)
-   3. кнопки джостика нужно по отдельности!
+   <section class="sect-headerPS5 sect1_bgrd">
+      <div class="sect-headerPS5__wrap maxW">
+
+         <div class="sect-headerPS5__container-top">
+            <span>Почуствуй игру</span>
+         </div>
+
+         <div class="sect-headerPS5__container-bottom">
+
+            <div class="sect-headerPS5__bottom-bl leftbl">
+               <div class="sect-headerPS5__text">
+                  <img src="https://cdn.comfy.ua/media/x/img/ps5/img1_header-bnr-ps.svg" alt="">
+                  <div class="sect-headerPS5__text-link">
+                     <a class="link_blue" href="#"><span class="link_blue-before">Купить</span></a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="sect-headerPS5__bgrd-bl">
+               <div class="sect-headerPS5__bgrd-gif-pos"></div>
+               <div class="sect-headerPS5__bgrd-banner-ps"></div>
+            </div>
+
+            <div class="sect-headerPS5__bottom-bl rightbl">
+               <div class="sect-headerPS5__text">
+                  <img src="https://cdn.comfy.ua/media/x/img/ps5/img1_header-bnr-ps.svg" alt="">
+                  <div class="sect-headerPS5__text-link">
+                     <a class="link_blue" href="#"><span class="link_blue-before">Купить</span></a>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+
+      </div>
+   </section>
+
+   <section class="sect-advantage maxW">
+      <div class="sect-advantage__wrap sect2_bgrd">
+         <div class="sect-advantage__container">
+            <div class="sect-advantage__text advantage-text">
+               <h2>Это круто</h2>
+               <p>Потому что:</p>
+            </div>
+            <div class="sect-advantage__img-pos">
+               <img src="https://cdn.comfy.ua/media/x/img/ps5/img4.png" alt="">
+            </div>
+            <div class="sect-advantage__text advantage-list-flex">
+               <ul class="advantage__item">
+                  <li>Молниеносная загрузка игр</li>
+                  <li>Самые ТОПовые тайтлы</li>
+                  <li>Супер реалистичная графика</li>
+               </ul>
+               <ul class="advantage__item">
+                  <div class="advantage__item-txt-right">
+                     <li>Тактильная отдача</li>
+                     <li>3D-звук</li>
+                  </div>
+               </ul>
+            </div>
+            <div class="sect-advantage__text advantage-link">
+               <a class="link_blue" href="#"><span class="link_blue-before">Купить</span></a>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="sect-consolefunc sect3_bgrd maxW">
+      <div class="sect-consolefunc__container">
+
+         <div class="sect-consolefunc__tabs">
+            <div class="consolefunc__tabs">
+               <button id="defaultOpen" class="consolefunc__tabslinks active" onclick="openCity(event, 'consPS')">Консоль PS5</button>
+               <button class="consolefunc__tabslinks" onclick="openCity(event, 'consPS2')">Цифрове издание PS5</button>
+            </div>
+         </div>
+
+         <div class="sect-consolefunc__content">
+            <div id="consPS" class="consolefunc__tabs-content active">
+               1
+            </div>
+
+            <div id="consPS2" class="consolefunc__tabs-content">
+               2
+            </div>
+         </div>
+
+      </div>
+   </section>
+
 </div>
+
+<script>
+   function openCity(evt, cityName) {
+
+      var i, tabcontent, tablinks;
+
+      tabcontent = document.getElementsByClassName("consolefunc__tabs-content");
+      for (i = 0; i < tabcontent.length; i++) {
+         tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("consolefunc__tabslinks");
+      for (i = 0; i < tablinks.length; i++) {
+         tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+   }
+   document.getElementById("defaultOpen").click();
+</script>
