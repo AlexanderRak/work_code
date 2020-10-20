@@ -1,7 +1,7 @@
 #xiaomi-brent-page
    display: block
    margin: 0 auto
-   max-width: 1366px
+   max-width: 1406px
    width: 100%
    background: #fff
    position: relative
@@ -49,17 +49,98 @@
 span.word-wrap
    display: block
    word-wrap: break-word
-span.fw-bold
-   font-weight: bold
-.grey-color
-   background: #F4F2F3
-.margin-bottom-bl
-   margin-bottom: 5rem
-   &:last-child
-      margin-bottom: 0
+.breadcrumbs
+   display: none
 .main-container_gray
    background: #ffffff
 // default style END
+
+// slider
+.slider-container
+   padding-top: 24px
+.slideshow-container
+   max-width: 1366px
+   height: auto
+   position: relative
+   margin: 0 auto
+
+.mySlides
+   display: none
+
+.prev, .next
+   cursor: pointer
+   position: absolute
+   top: 50%
+   transform: translateY(-50%)
+   padding: 0 15px 0 15px
+   transition: 0.6s ease
+   user-select: none
+
+span.str-slid
+   &.rotate
+      img
+         transform: rotate(180deg)
+
+.next
+   right: 0
+   border-radius: 3px 0 0 3px
+
+.next
+   &:hover
+      transform: translateX(5px) translateY(-50%)
+.prev
+   &:hover
+      transform: translateX(-5px) translateY(-50%)
+
+.text
+   color: #f2f2f2
+   font-size: 15px
+   padding: 8px 12px
+   position: absolute
+   bottom: 8px
+   width: 100%
+   text-align: center
+
+.dot
+   cursor: pointer
+   height: 15px
+   width: 15px
+   margin: 0 2px
+   background-color: #bbb
+   border-radius: 50%
+   display: inline-block
+   transition: background-color 0.6s ease
+
+.active, .dot
+   &:hover
+      background-color: #717171
+
+.fade
+   -webkit-animation-name: fade
+   -webkit-animation-duration: 1.5s
+   animation-name: fade
+   animation-duration: 1.5s
+
+@keyframes fade
+   from
+      opacity: .4
+   to
+      opacity: 1
+#xiaomi-brent-page
+   img
+      &.bannet-iten
+         margin: 0 auto
+   .bl-show__decktop-ipad
+      display: block
+   .bl-show__mob
+      display: none
+@media (max-width: 480px)
+   #xiaomi-brent-page
+      .bl-show__decktop-ipad
+         display: none
+      .bl-show__mob
+         display: block
+// slider END
 
 .grid-container
    display: grid
@@ -67,6 +148,7 @@ span.fw-bold
    // grid-template-rows: (1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr)
    gap: 24px 24px
    grid-template-areas: "item1 item1 item2 item3" "item1 item1 item4 item5" "item6 item6 item6 item6" "item7 item7 item7 item7" "item8 item9 item12 item12" "item10 item11 item12 item12" "item13 item13 item13 item13" "item14 item15 item16 item17" "item18 item18 item18 item18" "item19 item19 item20 item21" "item19 item19 item20 item21" "item22 item22 item22 item22" "item23 item24 item25 item25" "item26 item26 item26 item26" "item27 item27 item28 item28" "item27 item27 item29 item29"
+   padding: 24px 20px 80px 20px
 
 .item1
    grid-area: item1
@@ -160,7 +242,21 @@ span.fw-bold
    border-radius: 8px
    min-height: 324px
    height: 100%
-
+   width: 100%
+   transition: .3s
+   &.h119px
+      background: transparent
+      .mrgn-bl
+         transition: .3s
+         &:hover
+            box-shadow: 0px 47px 86px -4px rgba(0, 0, 0, 0.12), 0px 58.1519px 60.5296px -4px rgba(0, 0, 0, 0.0548889), 0px 43.8148px 14.2037px -4px rgba(0, 0, 0, 0.0111111)
+            transform: scale(1.01)
+      &:hover
+         box-shadow: inherit !important
+         transform: none !important
+   &:hover
+      box-shadow: 0px 47px 86px -4px rgba(0, 0, 0, 0.12), 0px 58.1519px 60.5296px -4px rgba(0, 0, 0, 0.0548889), 0px 43.8148px 14.2037px -4px rgba(0, 0, 0, 0.0111111)
+      transform: scale(1.01)
 .bgrdEAF3FF
    background: #EAF3FF
 
@@ -187,17 +283,27 @@ span.fw-bold
 
 .h671px
    min-height: 671px
-
 .h119px
    min-height: 119px
-
+.mrgn-bl
+   margin: 30px 0
+   border-radius: 8px
 .wrap-link
    display: block
    height: 100%
-
 .color868EA3
    color: #868EA3
-
+.color938A78
+   color: #938A78
+.color7FA37E
+   color: #7FA37E
+.color9C789F
+   color: #9C789F
+.color8E786B
+   color: #8E786B
+#xiaomi-brent-page
+   .colorfff h2
+      color: #fff
 .wrap-container
    position: relative
    width: 100%
@@ -206,27 +312,51 @@ span.fw-bold
    display: flex
    align-items: center
    justify-content: space-between
-   padding: 0 100px 0 100px
+   padding: 0 0 0 100px
 .wrap-container-flex__text-flex
    display: flex
    align-items: center
    position: relative
-   padding-right: 15rem
+   padding-right: 270px
+   &::before
+      content: ""
+      background-repeat: no-repeat
+      background-size: cover
+      position: absolute
+      z-index: 8
    &.before-prodimg1
       &::before
-         content: ""
          background-image: url(https://cdn.comfy.ua/media/x/img/xiaomi/img8_korzina.png)
-         background-repeat: no-repeat
-         background-size: cover
-         position: absolute
-         right: 0
+         right: 82px
          width: 110px
          height: 165px
-         z-index: 8
+   &.before-prodimg2
+      &::before
+         background-image: url(https://cdn.comfy.ua/media/x/img/xiaomi/img14_watch.png)
+         right: 63px
+         width: 147px
+         height: 183px
+   &.before-prodimg3
+      &::before
+         background-image: url(https://cdn.comfy.ua/media/x/img/xiaomi/img17_portfl.png)
+         right: 82px
+         width: 106px
+         height: 157px
+   &.before-prodimg4
+      &::before
+         background-image: url(https://cdn.comfy.ua/media/x/img/xiaomi/img21_camer.png)
+         right: 30px
+         width: 215px
+         height: 145px
+   &.before-prodimg5
+      &::before
+         background-image: url(https://cdn.comfy.ua/media/x/img/xiaomi/img25_krug.png)
+         right: 30px
+         width: 149px
+         height: 163px
 .wrap-container__text
-   position: absolute
-   left: 30px
-   top: 30px
+   position: relative
+   padding: 30px 15px 0 30px
    z-index: 8
 .wrap-container__img
    position: absolute
@@ -250,8 +380,12 @@ span.fw-bold
          bottom: -15px
       &.img-right-10
          right: -10px
+      &.img-right-15
+         right: -15px
       &.img-right-15plus
          right: 15px
+      &.img-right-70plus
+         right: 70px
       &.img-bottom-15plus
          bottom: 15px
    &.img-left-bottom
@@ -259,6 +393,9 @@ span.fw-bold
       bottom: 0
       &.img-bottom-15
          bottom: -15px
+      &.img-bottom-20top-left20
+         bottom: 20px
+         left: -20px
    &.img-center-bottom
       left: 0
       right: 0
@@ -268,8 +405,24 @@ span.fw-bold
          margin: 0 auto !important
       &.img-bottom-15
          bottom: -15px
+      &.img-bottom-10
+         bottom: -10px
+      &.img-bottom-18
+         bottom: -18px
+      &.img-bottom-28
+         bottom: -28px
+      &.img-bottom-20-top
+         bottom: 20px
       &.img-bottom-15-top
          bottom: 15px
+      &.img-bottom-50-top
+         bottom: 50px
+         img
+            position: relative
+            left: 10px
+      &.img-bottom-left-pos-rel
+         bottom: -28px
+         left: -98px
    &.img-center-center
       left: 0
       right: 0
@@ -277,3 +430,382 @@ span.fw-bold
       top: 50%
       transform: translateY(-50%)
       width: max-content
+      img
+         margin: 0 auto !important
+// @media (max-width: 1250px)
+@media (max-width: 1024px)
+   #xiaomi-brent-page
+      h2
+         font-size: 21px
+      h3
+         font-size: 25px
+   .wrap-container__text
+      padding: 15px 10px 0 10px
+   .wrap-container__img
+      &.img-center-center
+         width: inherit
+   .wrap-container__img
+      &.img-before1
+         &::before
+            width: 240px
+            height: 182px
+            left: -5px
+            right: 0
+            margin: 0 auto
+   .bgrd-color
+      min-height: 238px
+   .h671px
+      min-height: 500px
+   .h119px
+      min-height: 119px
+   .wrap-container-flex
+      padding: 0 0 0 20px
+   .item19
+      min-height: 500px
+   .wrap-container__img
+      &.img-center-bottom
+         &.img-bottom-left-pos-rel
+            bottom: -18px
+            left: -75px
+            max-width: 90%
+   .wrap-container-flex__text-flex
+      padding-right: 200px
+      &.before-prodimg1
+         &::before
+            right: 47px
+      &.before-prodimg2
+         &::before
+            right: 25px
+      &.before-prodimg3
+         &::before
+            right: 50px
+      &.before-prodimg4
+         &::before
+            right: 15px
+      &.before-prodimg5
+         &::before
+            right: 25px
+   .item2 .wrap-container__img
+      max-width: 80%
+   .item4 .wrap-container__img
+      max-width: 85%
+   .item5 .wrap-container__img
+      max-width: 60%
+   .item6 .wrap-container__img
+      max-width: 85%
+   .item8 .wrap-container__img
+      max-width: 43%
+   .item9 .wrap-container__img
+      max-width: 90%
+   .item10 .wrap-container__img
+      max-width: 65%
+   .item11 .wrap-container__img
+      max-width: 50%
+   .item12 .wrap-container__img
+      max-width: 90%
+   .item14 .wrap-container__img
+      max-width: 70%
+   .item15 .wrap-container__img
+      max-width: 70%
+   .item16 .wrap-container__img
+      max-width: 60%
+   .item17 .wrap-container__img
+      max-width: 90%
+   .item19 .wrap-container__img
+      max-width: 90%
+   .item20 .wrap-container__img
+      max-width: 100%
+   .item21 .wrap-container__img
+      max-width: 90%
+   .item23 .wrap-container__img
+      max-width: 90%
+   .item24 .wrap-container__img
+      max-width: 80%
+   .item25 .wrap-container__img
+      max-width: 90%
+   .item27 .wrap-container__img
+      max-width: 55%
+   .item28 .wrap-container__img
+      max-width: 70%
+   .item29 .wrap-container__img
+      max-width: 47%
+@media (max-width: 812px)
+   #xiaomi-brent-page
+      h2
+         font-size: 17px
+      h3
+         font-size: 20px
+   .mrgn-bl
+      margin: 50px 0 30px 0
+   .wrap-container__text
+      padding: 15px 10px 0 10px
+   .wrap-container__img
+      &.img-center-center
+         width: inherit
+   .wrap-container__img
+      &.img-before1
+         &::before
+            width: 175px
+            height: 133px
+            left: -3px
+   .bgrd-color
+      min-height: 175px
+   .h671px
+      min-height: 380px
+   .h119px
+      min-height: 119px
+   .wrap-container-flex
+      padding: 0 0 0 20px
+   .item19
+      min-height: 400px
+   .wrap-container__img
+      &.img-center-bottom
+         &.img-bottom-left-pos-rel
+            bottom: -18px
+            left: -75px
+            max-width: 90%
+   .wrap-container-flex__text-flex
+      padding-right: 200px
+      &.before-prodimg1
+         &::before
+            right: 47px
+      &.before-prodimg2
+         &::before
+            right: 25px
+      &.before-prodimg3
+         &::before
+            right: 50px
+      &.before-prodimg4
+         &::before
+            right: 15px
+      &.before-prodimg5
+         &::before
+            right: 25px
+   .wrap-container__img
+      &.img-center-bottom
+         &.img-bottom-50-top
+            bottom: 15px
+         &.img-bottom-28
+            bottom: -15px
+         &.img-bottom-20-top
+            bottom: 15px
+      &.img-left-bottom
+         &.img-bottom-20top-left20
+            bottom: 15px
+            left: -10px
+   .item2 .wrap-container__img
+      max-width: 80%
+   .item4 .wrap-container__img
+      max-width: 85%
+   .item5 .wrap-container__img
+      max-width: 60%
+   .item6 .wrap-container__img
+      max-width: 80%
+   .item8 .wrap-container__img
+      max-width: 43%
+   .item9 .wrap-container__img
+      max-width: 90%
+   .item10 .wrap-container__img
+      max-width: 70%
+   .item11 .wrap-container__img
+      max-width: 52%
+   .item12 .wrap-container__img
+      max-width: 90%
+   .item14 .wrap-container__img
+      max-width: 70%
+   .item15 .wrap-container__img
+      max-width: 75%
+   .item16 .wrap-container__img
+      max-width: 62%
+   .item17 .wrap-container__img
+      max-width: 90%
+   .item19 .wrap-container__img
+      max-width: 90%
+   .item20 .wrap-container__img
+      max-width: 100%
+   .item21 .wrap-container__img
+      max-width: 90%
+   .item23 .wrap-container__img
+      max-width: 90%
+   .item24 .wrap-container__img
+      max-width: 80%
+   .item25 .wrap-container__img
+      max-width: 90%
+   .item27 .wrap-container__img
+      max-width: 55%
+   .item28 .wrap-container__img
+      max-width: 70%
+   .item29 .wrap-container__img
+      max-width: 47%
+@media (max-width: 480px)
+   #xiaomi-brent-page
+      h2
+         font-size: 14px
+      h3
+         font-size: 16px
+      i
+         font-size: 10px
+   span.word-wrap
+      display: initial
+   .wrap-container__text
+      padding: 10px 5px 0 5px
+   .wrap-container__img
+      &.img-center-center
+         width: inherit
+   .wrap-container__img
+      &.img-before1
+         &::before
+            width: 140px
+            height: 100px
+            left: -4px
+   .bgrd-color
+      min-height: 135px
+      &.item20
+         min-height: 280px
+   .h671px
+      min-height: 280px
+   .h119px
+      min-height: 50px
+   .wrap-container-flex
+      padding: 0 0 0 10px
+   .wrap-container__img
+      &.img-center-bottom
+         &.img-bottom-left-pos-rel
+            bottom: -5px
+            left: -58px
+            max-width: 245px
+         &.img-bottom-15
+            bottom: -3px
+         &.img-bottom-10
+            bottom: -3px
+      &.img-right-bottom
+         &.img-bottom-15
+            bottom: -3px
+   .wrap-container-flex__text-flex
+      padding-right: 68px
+      &.before-prodimg1
+         &::before
+            right: 20px
+            width: 56px
+            height: 75px
+            bottom: 0px
+      &.before-prodimg2
+         &::before
+            width: 56px
+            height: 64px
+            right: -5px
+            bottom: 0
+      &.before-prodimg3
+         &::before
+            right: 8px
+            width: 66px
+            height: 80px
+            bottom: 0
+      &.before-prodimg4
+         &::before
+            right: -5px
+            width: 88px
+            height: 54px
+            bottom: 0
+      &.before-prodimg5
+         &::before
+            right: 5px
+            width: 65px
+            height: 67px
+            bottom: 0
+   .wrap-container-flex__item
+      &:first-child
+         position: absolute
+         h3.maxw_mob
+            max-width: 157px
+      &:last-child
+         position: relative
+         margin: 0 0 0 auto
+   .wrap-container-flex__text-item
+      &:first-child
+         position: absolute
+         width: 155px
+         bottom: -20px
+         right: 0
+      &:last-child
+         max-width: 50px
+   .wrap-container__img
+      &.img-center-bottom
+         &.img-bottom-50-top
+            bottom: 15px
+         &.img-bottom-28
+            bottom: -15px
+         &.img-bottom-20-top
+            bottom: 10px
+         &.img-bottom-15-top
+            bottom: 10px
+         &.img-bottom-18
+            bottom: -8px
+      &.img-left-bottom
+         &.img-bottom-20top-left20
+            bottom: 10px
+            left: -5px
+      &.img-right-bottom
+         &.img-bottom-15plus
+            bottom: 5px
+         &.img-right-15plus
+            right: 10px
+         &.img-right-15
+            right: -5px
+   .bgrdDEECD7, .bgrdF7E8F2, .bgrdFEF4D8
+      min-height: 60px
+      .wrap-container-flex__text-item
+         &:last-child
+            max-width: 70px
+   .item1 .wrap-container__img
+      max-width: 80%
+   .item2 .wrap-container__img
+      max-width: 70%
+   .item4 .wrap-container__img
+      max-width: 105px
+   .item5 .wrap-container__img
+      max-width: 75px
+   .item6 .wrap-container__img
+      max-width: 90%
+   .item8 .wrap-container__img
+      max-width: 55px
+   .item9 .wrap-container__img
+      max-width: 90%
+   .item10 .wrap-container__img
+      max-width: 85px
+   .item11 .wrap-container__img
+      max-width: 60px
+   .item12 .wrap-container__img
+      max-width: 260px
+   .item14 .wrap-container__img
+      max-width: 87px
+   .item15 .wrap-container__img
+      max-width: 93px
+   .item16 .wrap-container__img
+      max-width: 77px
+   .item17 .wrap-container__img
+      max-width: 112px
+   .item19 .wrap-container__img
+      max-width: 250px
+   .item20 .wrap-container__img
+      max-width: 160px
+   .item21 .wrap-container__img
+      max-width: 115px
+   .item23 .wrap-container__img
+      max-width: 125px
+   .item24 .wrap-container__img
+      max-width: 105px
+   .item25 .wrap-container__img
+      max-width: 90%
+   .item27 .wrap-container__img
+      max-width: 142px
+   .item28 .wrap-container__img
+      max-width: 190px
+   .item29 .wrap-container__img
+      max-width: 121px
+   .grid-container
+      display: grid
+      grid-template-columns: (1fr 1fr)
+      gap: 10px 10px
+      grid-template-areas: "item1 item1" "item1 item1" "item2 item3" "item4 item5" "item6 item6" "item7 item7" "item8 item9" "item10 item11" "item12 item12" "item12 item12" "item13 item13" "item14 item15" "item16 item17" "item18 item18" "item19 item19" "item19 item19" "item20 item21" "item20 item21" "item22 item22" "item23 item24" "item25 item25" "item26 item26" "item27 item27" "item27 item27" "item28 item28" "item29 item29"
+      padding: 25px 20px 55px 20px
