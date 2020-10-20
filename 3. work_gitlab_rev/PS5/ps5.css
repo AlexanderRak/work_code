@@ -45,7 +45,9 @@
 
 #playstation5 h3 {
   margin: 0;
-  letter-spacing: 0.2em;
+  font-size: 52px;
+  color: #4F4F4F;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   padding-bottom: 0;
   padding-top: 0;
@@ -123,6 +125,54 @@
   background: #116be4;
 }
 
+#playstation5 a.link_grey {
+  background: #394B4C;
+  color: #fff;
+  text-align: center;
+  max-width: 205px;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#playstation5 a.link_grey .link_grey-before {
+  position: relative;
+  padding-right: 23px;
+}
+
+#playstation5 a.link_grey .link_grey-before::before {
+  content: ">>";
+  position: absolute;
+  right: 0;
+  top: 1px;
+  font-size: 15px;
+}
+
+#playstation5 a.link_grey:hover {
+  background: #303f3f;
+}
+
+#playstation5 a.link_grey.bgrdnew {
+  background: #3A6575;
+}
+
+#playstation5 a.link_grey.bgrdnew:hover {
+  background: #315664;
+}
+
 #playstation5 span.word-wrap {
   display: block;
   word-wrap: break-word;
@@ -149,7 +199,7 @@
 }
 
 .sect4_bgrd {
-  background: #E5E5E5;
+  background: #E8EBF0;
 }
 
 .sect5_bgrd {
@@ -568,6 +618,11 @@
   color: #616161;
   border-bottom: 4px solid #CCCCCC;
   font-weight: bold;
+  margin-right: 12px;
+}
+
+.sect-games__tabs button:last-child {
+  margin-right: 0;
 }
 
 .sect-games__tabs button:hover {
@@ -594,4 +649,160 @@
   to {
     opacity: 1;
   }
+}
+
+.sect-games__top-bl {
+  background: #E8EBF0;
+  padding: 92px 15px 86px 117px;
+}
+
+.sect-games__top-txt {
+  text-align: left;
+}
+
+.sect-games__top-txt p {
+  font-size: 20px;
+  color: #000000;
+  padding-top: 21px;
+}
+
+.sect-games__bottom-bl {
+  position: relative;
+  height: 567px;
+}
+
+.sect-games__bottom-bl.bgrd_tab1 {
+  background: #071E1F;
+}
+
+.sect-games__bottom-bl.bgrd_tab1 .sect-games__bottom-img__one {
+  position: absolute;
+  right: 50px;
+  bottom: 60px;
+  z-index: 5;
+}
+
+.sect-games__bottom-bl.bgrd_tab2 {
+  background: #212326;
+}
+
+.sect-games__bottom-bl.bgrd_tab2 .sect-games__bottom-img__one {
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+  z-index: 5;
+}
+
+.sect-games__bottom-bl.bgrd_tab3 {
+  background: #091E29;
+}
+
+.sect-games__bottom-bl.bgrd_tab3 .sect-games__bottom-img__one {
+  position: absolute;
+  right: 58px;
+  bottom: 0;
+  z-index: 5;
+}
+
+.sect-games__bottom-bl.bgrd_tab4 {
+  background: #111D20;
+}
+
+.sect-games__bottom-bl.bgrd_tab4 .sect-games__bottom-img__one {
+  position: absolute;
+  right: 270px;
+  bottom: 0;
+  z-index: 5;
+}
+
+.sect-games__bottom-bl.bgrd_tab5 {
+  background: #093F52;
+}
+
+.sect-games__bottom-bl.bgrd_tab5 .sect-games__bottom-img__one {
+  position: absolute;
+  right: 265px;
+  bottom: 0;
+  z-index: 5;
+}
+
+.sect-games__bottom-txt {
+  max-width: 457px;
+  width: 100%;
+  position: relative;
+  z-index: 6;
+  text-align: left;
+  margin: 75px 15px 108px 117px;
+  display: inline-block;
+}
+
+.sect-games__bottom-txt p {
+  font-size: 16px;
+  color: #fff;
+  padding: 37px 0 44px 0;
+}
+
+.sect-games__bottom-img {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.sect-games__bottom-img__two {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px 20px;
+      grid-template-areas: "itm-grd1 itm-grd1 itm-grd1 itm-grd1" "itm-grd2 itm-grd2 itm-grd2 itm-grd1" "itm-grd3 itm-grd3 itm-grd4 itm-grd4" "itm-grd5 itm-grd5 itm-grd6 itm-grd6";
+}
+
+.itm-grd1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: itm-grd1;
+}
+
+.itm-grd2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: itm-grd2;
+}
+
+.itm-grd3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: itm-grd3;
+}
+
+.itm-grd4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: itm-grd4;
+}
+
+.itm-grd5 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: itm-grd5;
+}
+
+.itm-grd6 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: itm-grd6;
 }

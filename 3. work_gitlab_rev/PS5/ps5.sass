@@ -29,7 +29,9 @@
       text-transform: uppercase
    h3
       margin: 0
-      letter-spacing: 0.2em
+      font-size: 52px
+      color: #4F4F4F
+      letter-spacing: 0.02em
       text-transform: uppercase
       padding-bottom: 0
       padding-top: 0
@@ -72,6 +74,30 @@
                height: 20px
       &:hover
          background: #116be4
+      &.link_grey
+         background: #394B4C
+         color: #fff
+         text-align: center
+         max-width: 205px
+         height: 40px
+         display: flex
+         align-items: center
+         justify-content: center
+         .link_grey-before
+            position: relative
+            padding-right: 23px
+            &::before
+               content: ">>"
+               position: absolute
+               right: 0
+               top: 1px
+               font-size: 15px
+         &:hover
+            background: #303f3f
+         &.bgrdnew
+            background: #3A6575
+            &:hover
+               background: #315664
    span.word-wrap
       display: block
       word-wrap: break-word
@@ -84,7 +110,7 @@
 .sect3_bgrd
    background: #F6F6F6
 .sect4_bgrd
-   background: #E5E5E5
+   background: #E8EBF0
 .sect5_bgrd
    background: linear-gradient(180deg, #F3F3F3 0%, rgba(243, 243, 243, 0) 100%)
 .sect6_bgrd
@@ -320,6 +346,9 @@
    color: #616161
    border-bottom: 4px solid #CCCCCC
    font-weight: bold
+   margin-right: 12px
+   &:last-child
+      margin-right: 0
 
 .sect-games__tabs button
    &:hover
@@ -339,6 +368,92 @@
       opacity: 0
    to
       opacity: 1
+
+.sect-games__top-bl
+   background: #E8EBF0
+   padding: 92px 15px 86px 117px
+.sect-games__top-txt
+   text-align: left
+   p
+      font-size: 20px
+      color: #000000
+      padding-top: 21px
+.sect-games__bottom-bl
+   position: relative
+   height: 567px
+   &.bgrd_tab1
+      background: #071E1F
+      .sect-games__bottom-img__one
+         position: absolute
+         right: 50px
+         bottom: 60px
+         z-index: 5
+   &.bgrd_tab2
+      background: #212326
+      .sect-games__bottom-img__one
+         position: absolute
+         right: 100px
+         bottom: 0
+         z-index: 5
+   &.bgrd_tab3
+      background: #091E29
+      .sect-games__bottom-img__one
+         position: absolute
+         right: 58px
+         bottom: 0
+         z-index: 5
+   &.bgrd_tab4
+      background: #111D20
+      .sect-games__bottom-img__one
+         position: absolute
+         right: 270px
+         bottom: 0
+         z-index: 5
+   &.bgrd_tab5
+      background: #093F52
+      .sect-games__bottom-img__one
+         position: absolute
+         right: 265px
+         bottom: 0
+         z-index: 5
+.sect-games__bottom-txt
+   max-width: 457px
+   width: 100%
+   position: relative
+   z-index: 6
+   text-align: left
+   margin: 75px 15px 108px 117px
+   display: inline-block
+   p
+      font-size: 16px
+      color: #fff
+      padding: 37px 0 44px 0
+.sect-games__bottom-img
+   position: absolute
+   width: 100%
+   bottom: 0
+.sect-games__bottom-img__two
+   position: absolute
+   right: 0
+   bottom: 0
+   z-index: 4
+.grid-container
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 1fr
+   gap: 20px 20px
+   grid-template-areas: "itm-grd1 itm-grd1 itm-grd1 itm-grd1""itm-grd2 itm-grd2 itm-grd2 itm-grd1""itm-grd3 itm-grd3 itm-grd4 itm-grd4""itm-grd5 itm-grd5 itm-grd6 itm-grd6"
+.itm-grd1
+   grid-area: itm-grd1
+.itm-grd2
+   grid-area: itm-grd2
+.itm-grd3
+   grid-area: itm-grd3
+.itm-grd4
+   grid-area: itm-grd4
+.itm-grd5
+   grid-area: itm-grd5
+.itm-grd6
+   grid-area: itm-grd6
 
 // @media (max-width: 1250px)
 // @media (max-width: 1024px)
