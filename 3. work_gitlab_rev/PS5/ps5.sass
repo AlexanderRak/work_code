@@ -111,6 +111,8 @@
    background: #F6F6F6
 .sect4_bgrd
    background: #E8EBF0
+.sect5_bgrdfff
+   background: #fff
 .sect5_bgrd
    background: linear-gradient(180deg, #F3F3F3 0%, rgba(243, 243, 243, 0) 100%)
 .sect6_bgrd
@@ -437,11 +439,23 @@
    right: 0
    bottom: 0
    z-index: 4
-.grid-container
+// sect5
+.sect-games__container-grid
+   display: block
+   padding: 0 44px 60px 44px
+.sect-games__h4
+   text-align: center
+   font-weight: bold
+   font-size: 28px
+   letter-spacing: 0.2em
+   text-transform: uppercase
+   color: #000000
+   padding: 170px 15px 60px 15px
+.sect-games__wrap-grid
    display: grid
    grid-template-columns: 1fr 1fr 1fr 1fr
    gap: 20px 20px
-   grid-template-areas: "itm-grd1 itm-grd1 itm-grd1 itm-grd1""itm-grd2 itm-grd2 itm-grd2 itm-grd1""itm-grd3 itm-grd3 itm-grd4 itm-grd4""itm-grd5 itm-grd5 itm-grd6 itm-grd6"
+   grid-template-areas: "itm-grd1 itm-grd1 itm-grd1 itm-grd1""itm-grd2 itm-grd2 itm-grd3 itm-grd3""itm-grd4 itm-grd4 itm-grd5 itm-grd5"
 .itm-grd1
    grid-area: itm-grd1
 .itm-grd2
@@ -454,7 +468,129 @@
    grid-area: itm-grd5
 .itm-grd6
    grid-area: itm-grd6
+.sect-games__item-grid
+   position: relative
+   border-radius: 4px
+   // &:first-child
+   //    min-height: 493px
+   // &:nth-child(n+2)
+   //    min-height: 416px
+.sect-games__content-grd
+   width: 100%
+   height: 100%
 
+.sect-games__cnt-statik
+   position: relative
+   cursor: pointer
+   transition: .3s
+   z-index: 5
+.sect-games__cnt-pos
+   position: absolute
+   left: 0
+   top: 0
+   right: 0
+   bottom: 0
+   opacity: 0
+   animation: fadeEffect3 1s
+   &.bgrd_nover1
+      background: #EEE200
+   &.bgrd_nover2
+      background: #2D3A43
+   &.bgrd_nover3
+      background: #A31A23
+   &.bgrd_nover4
+      background: #FD2249
+   &.bgrd_nover5
+      background: #333C39
+.sect-games__cnt-maxW
+   max-width: 1070px
+   width: 100%
+   margin: 0 auto
+   position: absolute
+   height: 100%
+   right: 0
+.sect-games__cnt-statik
+   &:hover
+      .sect-games__cnt-pos
+         opacity: 1
+         z-index: 6
+         animation: fadeEffect2 1s
+@keyframes fadeEffect2
+   from
+      opacity: 0
+   to
+      opacity: 1
+@keyframes fadeEffect3
+   from
+      opacity: 1
+   to
+      opacity: 0
+.sect-games__cnt-text
+   max-width: 305px
+   text-align: left
+   margin: 42px 45px 0 auto
+   &.cnt-text__bl1
+      margin: 80px 180px 0 auto
+   h4
+      font-weight: bold
+      font-size: 24px
+      color: #fff
+      &.color000
+         color: #000
+   p
+      font-size: 14px
+      color: #E5E5E5
+      padding: 13px 0 23px 0
+      &.color616161
+         color: #616161
+.sect-games__bnt
+   display: flex
+   align-items: center
+   justify-content: flex-end
+.sect-games__bnt-left
+   position: relative
+   span
+      display: block
+.sect-games__bnt-right
+   padding-left: 18px
+.sect-games__price-top
+   font-size: 12px
+   color: #999999
+   text-decoration-line: line-through
+.sect-games__price-bottom
+   font-size: 24px
+   font-weight: bold
+   color: #fff
+   &.color000
+      color: #000
+.sect-games__bnt-right
+   a
+      background: #43B02A
+      border-radius: 8px
+      width: 52px
+      height: 42px
+      display: block
+      position: relative
+      transition: .3s
+      &:hover
+         background: #379424 !important
+.sect-games__bnt-icon
+   &::before
+      content: ""
+      background-image: url(https://cdn.comfy.ua/media/x/img/ps5/add.svg)
+      background-repeat: no-repeat
+      position: absolute
+      left: 0
+      right: 0
+      margin: 0 auto
+      top: 50%
+      transform: translateY(-50%)
+      width: 20px
+      height: 20px
+.sect-games__cnt-img-pos
+   position: absolute
+   left: 0
+   bottom: 0
 // @media (max-width: 1250px)
 // @media (max-width: 1024px)
 // @media (max-width: 812px)
