@@ -1,0 +1,130 @@
+/*default styles*/
+
+#bosch
+  max-width: 1000px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: bold
+    padding: 0
+    margin: 0 0 20px 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#bosch
+  .cont
+    position: relative
+    .cont_txt
+      position: absolute
+      text-align: center
+      padding: 40px
+      max-width: 400px
+      right: 0
+      box-sizing: content-box
+    .cont_left
+      right: unset
+      left: 0
+    .cont_img img
+      margin: 0 auto
+
+  .block
+    .block_title
+      padding: 40px
+      text-align: center
+    .block_img img
+      max-width: 800px
+      width: 100%
+      margin: 0 auto
+    .block_txt
+      padding: 40px
+      text-align: center
+      max-width: 400px
+      margin: -100px auto 0 auto
+      box-sizing: content-box
+  
+  .brush
+    position: relative
+    .brush_txt
+      text-align: center
+      .brush_flex
+        position: absolute
+        display: flex
+        flex-direction: column
+        padding: 40px
+        box-sizing: border-box
+        height: 100%
+        justify-content: space-between
+        max-width: 500px
+  
+  .warranty
+    .warranty_img img
+      margin: 0 auto
+    .warranty_txt 
+      max-width: 800px
+      text-align: center
+      padding: 40px
+      margin: 0 auto
+      
+/*media*****************************************************/
+
+@media (max-width: 480px)
+  #bosch h2
+    font-size: 24px
+  #bosch .cont .cont_txt
+    position: unset
+    padding: 20px
+  #bosch .cont .cont_left
+    background-color: #edebf5
+
+  #bosch .brush .brush_txt .brush_flex
+    color: #5c5c5c
+    padding: 20px
+  
+  #bosch .block .block_title
+    padding: 20px
+  
+  #bosch .block .block_txt
+    margin: 0
+    padding: 20px
+
+  #bosch .warranty .warranty_txt
+    padding: 20px
+  
+  #bosch .brush .brush_txt .brush_flex p
+    line-height: 15px
+
+@media (max-width: 320px)
+  #bosch .brush .brush_txt .brush_flex h2 
+    margin-bottom: 10px
+    font-size: 20px
