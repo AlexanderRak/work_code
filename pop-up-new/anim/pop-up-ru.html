@@ -75,58 +75,24 @@
 	}
 	.linear-gradient__img {
 		position: absolute;
-		left: 0;
-		right: 0;
-		top: 50%;
-		transform: translateY(-50%);
 		z-index: 7;
-		text-align: center;
+		display: none;
 	}
 
 	.content-text {
-		background-image: url(https://cdn.comfy.ua/media/x/img/bgrd1popup.png);
+		background-image: url(https://cdn.comfy.ua/media/x/img/_-_-2.gif);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;
 		position: absolute;
-		width: 385px;
-    	height: 465px;
+		width: 352px;
+    	height: 177px;
 		z-index: 5;
 		left: 0;
 		bottom: 0;
-		transition: all 0.5s ease;
-		-webkit-animation-name: slider-right;
-		animation-name: slider-right;
-		-webkit-animation-duration: 45s, 45s;
-		animation-duration: 50s, 50s;
-		-webkit-animation-timing-function: linear;
-		animation-timing-function: linear;
-		-webkit-animation-iteration-count: infinite;
-		animation-iteration-count: infinite;
-		animation-direction: alternate;
+		border-radius: 10px;
 	}
-  
-	@keyframes slider-right {
-      0% {
-         background-position: 0 0;
-		}
-		
-		25% {
-			background-position: 0 125px;
-		}
 
-		50% {
-			background-position: 0 250px;
-		}
-
-		75% {
-			background-position: 0 125px;
-		}
-
-      100% {
-         background-position: 0 0;
-      }
-   }
 	.qclose-pp {
 		position: absolute;
 		background: #379424;
@@ -172,18 +138,14 @@
 		border-bottom: 0px solid #e5e5e5;
 	}
 
+	
+
 	@media (max-width: 767px) {
 		.content-text {
-			background-image: url(https://cdn.comfy.ua/media/x/img/bgrd1popup_mob.png);
-			width: 296px;
-    		height: 166px;
+			background-image: url(https://cdn.comfy.ua/media/x/img/_-_-_.gif);
+			width: 280px;
+    		height: 55px;
 			z-index: 5;
-			transition: all 0.5s ease;
-			animation-name: slider-right;
-			animation-duration: 50s, 50s;
-			animation-timing-function: linear;
-			animation-iteration-count: infinite;
-			animation-direction: alternate;
 		}
 		.linear-gradient__text h2 {
 			font-size: 15px;
@@ -197,27 +159,7 @@
 			top: inherit;
 			transform: inherit;
 			max-width: 15%;
-		}
-		@keyframes slider-right {
-			0% {
-				background-position: 0 0;
-			}
-			
-			25% {
-				background-position: 0 100px;
-			}
-
-			50% {
-				background-position: 0 166px;
-			}
-
-			75% {
-				background-position: 0 100px;
-			}
-
-			100% {
-				background-position: 0 0;
-			}
+			display: block;
 		}
 		.images-push {
 			display: none;
@@ -253,18 +195,12 @@
 
 	@media (max-width: 1024px) and (min-width: 768px) {
 		.content-text {
-			background-image: url(https://cdn.comfy.ua/media/x/img/bgrd1popup_mob.png);
-			width: 296px;
-    		height: 166px;
+			background-image: url(https://cdn.comfy.ua/media/x/img/_-_-_.gif);
+			width: 280px;
+    		height: 55px;
 			z-index: 5;
 			left: 0;
 			top: 0;
-			transition: all 0.5s ease;
-			animation-name: slider-right;
-			animation-duration: 50s, 50s;
-			animation-timing-function: linear;
-			animation-iteration-count: infinite;
-			animation-direction: alternate;
 		}
 		.linear-gradient__text h2 {
 			font-size: 15px;
@@ -278,27 +214,7 @@
 			top: inherit;
 			transform: inherit;
 			max-width: 15%;
-		}
-		@keyframes slider-right {
-			0% {
-				background-position: 0 0;
-			}
-			
-			25% {
-				background-position: 0 100px;
-			}
-
-			50% {
-				background-position: 0 166px;
-			}
-
-			75% {
-				background-position: 0 100px;
-			}
-
-			100% {
-				background-position: 0 0;
-			}
+			display: block;
 		}
 		.images-push {
 			display: none;
