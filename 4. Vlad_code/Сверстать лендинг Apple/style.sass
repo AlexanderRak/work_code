@@ -6,7 +6,7 @@
   margin: 0 auto
   height: auto
   display: block
-  /** background-color: #fff **/
+  background-color: #000
   box-sizing: border-box
   p  
     margin-bottom: 0
@@ -47,6 +47,361 @@
 
 #apple
   overflow: hidden
+
+  a.prod
+    border-radius: 42px
+    position: relative
+    background: linear-gradient(90deg, #005E7F 0%, #61B6CD 100%);
+    z-index: 10
+    display: block
+    text-decoration: none
+    padding: 14px 48px
+    color: #fff
+    text-align: center
+    max-width: 100%
+    width: max-content
+    cursor: pointer
+    z-index: 100
+    position: relative
+    font-weight: bold
+    &::before
+      z-index: 100
+      content: ""
+      display: block
+      position: absolute
+      top: 2px 
+      bottom: 2px 
+      left: 2px
+      right: 2px
+      background: #000
+      border-radius: 42px
+      z-index: -1       
+    &:hover::before
+      background: linear-gradient(90deg, #005E7F 0%, #61B6CD 100%) !important;
+
+
+  .none_pic
+    display: none
+
+  .smartphone
+    background-color: #000
+    padding: 330px 170px 0 170px
+    position: relative
+    max-width: 1316px
+    margin: 0 auto
+    .smartphone_oval
+      padding-top: 30px;
+      position: absolute;
+      top: 0;
+      right: 50%;
+      width: 130%;
+      transform: translateX(50%);
+      img
+        margin: 0 auto
+    .grid-container
+      position: relative
+      display: grid
+      grid-template-columns: 230px auto 230px
+      grid-template-rows: auto
+      gap: 0px 0px
+      grid-template-areas: "cal1 cal4 cal5" "cal2 cal4 cal6" "cal3 cal4 cal7"
+      z-index: 20
+      
+      >div
+        display: flex
+        flex-direction: column
+        justify-content: center
+        max-width: 100%
+        z-index: 10
+      .cal1
+        grid-area: cal1
+        align-items: start
+        img
+          margin-bottom: 25px
+          max-height: 22px
+        span:nth-of-type(n+2)
+          margin-top: 5px
+      .cal2
+        grid-area: cal2
+        align-items: start
+        margin: 30px 0
+        img
+          margin-bottom: 25px
+          &:last-of-type
+            margin-top: 30px
+        span:nth-of-type(n+2)
+          margin-top: 5px
+      .cal3
+        grid-area: cal3
+        align-items: start
+        justify-content: flex-start
+        span
+          margin: 25px 0
+      .cal4
+        grid-area: cal4
+        max-width: 514px
+        margin: 0 20px;
+        align-self: start;
+        padding-top: 20px;
+        justify-self: center
+      .cal5
+        grid-area: cal5
+        align-items: flex-end
+        text-align: right
+        img
+          margin-bottom: 25px
+          max-height: 22px
+        span:nth-of-type(n+2)
+          margin-top: 5px
+      .cal6
+        grid-area: cal6
+        align-items: flex-end
+        text-align: right
+        margin: 30px 0
+        img
+          margin-bottom: 25px
+          &:last-of-type
+            margin-top: 30px
+        span:nth-of-type(n+2)
+          margin-top: 5px
+      .cal7
+        grid-area: cal7
+        align-items: flex-end
+        text-align: right
+        span
+          margin: 25px 0
+      span
+        display: block
+        font-weight: bold
+        color: #A1A1A6
+        font-size: 16px
+        line-height: 20px
+      // a
+      //   border-radius: 42px
+      //   position: relative
+      //   background: linear-gradient(90deg, #005E7F 0%, #61B6CD 100%);
+      //   z-index: 10
+      //   display: block
+      //   text-decoration: none
+      //   padding: 14px 48px
+      //   color: #fff
+      //   text-align: center
+      //   max-width: 100%
+      //   width: max-content
+      //   cursor: pointer
+      //   &::before
+      //     content: ""
+      //     display: block
+      //     position: absolute
+      //     top: 2px 
+      //     bottom: 2px 
+      //     left: 2px
+      //     right: 2px
+      //     background: #000
+      //     border-radius: 42px
+      //     z-index: -1       
+      //   &:hover::before
+      //     background: linear-gradient(90deg, #005E7F 0%, #61B6CD 100%);
+
+      .text-gradient
+        background: linear-gradient(90deg, #005E7F 0%, #61B6CD 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      
+    #grid
+      margin-top: 170px
+      z-index: 10
+      &::after
+        display: block
+        position: absolute
+        content: ""
+        top: -250px
+        right: 0
+        left: -50%
+        height: 800px
+        background-image: url("https://cdn.comfy.ua/media/x/img/apple_landing/bg_oval_02.png")
+        background-position: center top
+        background-repeat: no-repeat
+        background-size: 1960px
+        padding: 100%
+        
+    .circle
+      background-color: #fff;
+      position: absolute;
+      right: 50%;
+      -webkit-transform: translateX(50%);
+      transform: translateX(50%);
+      width: 1440px;
+      z-index: 1;
+      top: 40%;
+      &::before
+        position: absolute
+        width: 1440px
+        height: 720px
+        top: 0
+        right: 0
+        left: 0
+        z-index: 2
+        content: ""
+        display: block
+        background-color: #000
+      .round
+        display: block
+        width: 1440px
+        height: 1440px
+        background-color: #000
+        border-radius: 50%
+
+  .case_wrap
+    position: relative
+    background-color: #000
+    .case
+      max-width: 1440px
+      margin: 0 auto
+      background-color: #fff
+      .elipse
+        position: absolute;
+        top: -100%;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+        width: 1440px;
+        height: 755px;
+        background-image: url("https://cdn.comfy.ua/media/x/img/apple_landing/Ellipse.png");
+        background-position: center bottom;
+        z-index: 1;
+        img
+          margin: 0 auto
+      .case_img
+        margin-top: 280px;
+        position: relative
+        z-index: 2
+        img
+          margin: 0 auto
+      .case_cont
+        display: flex
+        flex-direction: row
+        justify-content: center
+        position: relative
+        align-items: center
+        margin-top: 30px
+        .case_row
+          span
+            font-size: 30px
+            line-height: 32px
+            display: block
+            margin-right: 90px
+          a.prod
+            color: #000000
+            position: relative
+            cursor: pointer
+            &::before
+              background: #fff
+            &:hover
+              color: #fff
+              
+  .airpods_wrap
+    width: 100%
+    background-color: #000
+    position: relative;
+    z-index: 10;
+    .airpods
+      background-color: #fff
+      max-width: 1440px
+      margin: 0 auto
+      position: relative
+      padding-top: 165px
+      .airpods_buy
+        position: absolute
+        right: 50%
+        bottom: 25%
+        transform: translate(50%, 50%)
+        z-index: 10
+        a.prod
+          color: #000000
+          position: relative
+          cursor: pointer
+          &::before
+            background: #fff
+          &:hover
+            color: #fff
+      
+  .adapter_wrap
+    width: 100%
+    background-color: #000
+    position: relative
+    .adapter
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 0 170px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 10;
+      border-radius: 50%;
+      max-width: 1270px;
+      position: relative
+      .elipse
+        position: absolute;
+        top: 22%;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+        width: 1440px;
+        height: 700px;
+        background-image: url("https://cdn.comfy.ua/media/x/img/apple_landing/Ellipse.png");
+        background-position: center bottom;
+        z-index: 1;
+        img
+          margin: 0 auto
+      .adapter_list
+        height: 720px
+        display: flex
+        flex-direction: row
+        align-items: center
+        >div
+          box-sizing: border-box
+        .adapter_txt
+          max-width: 274px
+          span
+            display: block
+            font-size: 30px
+          a.prod
+            color: #000000
+            position: relative
+            cursor: pointer
+            margin-top: 25px
+            &::before
+              background: #fff
+            &:hover
+              color: #fff
+    .circle
+      background-color: #000;
+      position: absolute;
+      right: 50%;
+      transform: translateX(50%);
+      width: 1440px;
+      z-index: 1;
+      top: -88%;
+      &::before
+        position: absolute;
+        width: 1440px;
+        height: 720px;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        content: "";
+        display: block;
+        background-color: #fff;
+      .round
+        display: block;
+        width: 1440px;
+        height: 1440px;
+        background-color: #fff;
+        border-radius: 50%;
+
+
+
   .green_button
     color: #fff 
     font-size: 16px
@@ -73,6 +428,7 @@
     max-width: 1316px
     box-sizing: border-box
     margin: 0 auto
+    margin-top: -5%
     li
       display: flex
       flex-direction: row
@@ -88,14 +444,16 @@
         .apple_txt
           width: max-content
       div:nth-of-type(2)
-            padding: 30px 0
+        padding: 30px 0
+        position: relative
+        z-index: 10
       &:last-of-type
         flex-direction: row-reverse
         margin-top: 20px
 
   .apple_list_white
-    background-color: #fff
-    color: #000
+    background-color: #000
+    color: #fff
     position: relative
     li
       transform: translateY(-17%)
@@ -133,11 +491,22 @@
   text-align: right
   .logo_img img
     margin: 0 0 0 auto
+#apple .apple_list_white li .logo_img img
+  filter: invert(100%) contrast(150%);
 
 
 /*media***********************/
 
+@media (max-width: 1367px)
+  #apple .smartphone
+    padding: 295px 170px 0 170px;
+
+// @media (max-width: 1275px)
+
+
 @media (max-width: 1024px)
+  #apple .smartphone
+    padding: 220px 40px 0 40px
   #apple .apple_list
     padding: 40px
   
@@ -146,6 +515,24 @@
     padding: 0
 
 @media (max-width: 812px)
+  #apple .smartphone #grid .cal1 img
+    margin-bottom: unset
+    margin: 0 0 auto 0;
+  #apple .smartphone .grid-container .cal1
+    justify-content: flex-end
+  #apple .smartphone #grid::after
+    background-size: 100%;
+    top: -145px;
+  #apple .smartphone
+    padding: 100px 40px 0 40px;
+  #apple .smartphone .grid-container .cal4
+    margin-top: -200px
+    align-self: center
+    padding-top: 0
+  #apple .smartphone .grid-container
+    grid-template-columns: 1fr 2fr 1fr
+  #apple .smartphone .grid-container > div
+    width: 100%
   #apple p
     font-size: 22px
 
@@ -159,7 +546,227 @@
     margin-left: 130px
     height: 330px
 
+@media (max-width: 320px)
+  #apple .adapter_wrap
+    background-color: #fff;
+  #apple .adapter_wrap .adapter
+    margin: 0 10px
+  #apple .case_wrap .case .elipse
+    background-image: url("https://cdn.comfy.ua/media/x/img/apple_landing/Ellipse-mob.png");
+    top: -33% !important
+    right: 50%;
+    z-index: 2
+    width: 320px !important
+    height: 160px !important
+
+  #apple .smartphone .circle
+    background-color: #fff;
+    position: absolute;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+    width: 320px !important
+    z-index: 2;
+    top: 88% !important
+  #apple .smartphone .circle::before
+    position: absolute;
+    width: 320px !important
+    height: 160px !important
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    content: "";
+    display: block;
+    background-color: #000000;
+  #apple .smartphone .circle .round
+    display: block;
+    width: 320px !important
+    height: 320px !important
+    background-color: #000000;
+    border-radius: 50%;
+  #apple .adapter_wrap .circle
+    ackground-color: #000;
+    position: absolute;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+    width: 320px !important
+    z-index: 1;
+    top: 39% !important
+  #apple .adapter_wrap .circle::before
+    position: absolute;
+    width: 320px !important
+    height: 160px !important
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    content: "";
+    display: block;
+    background-color: #fff;
+  #apple .adapter_wrap .circle .round
+    isplay: block;
+    width: 320px !important
+    height: 320px !important
+    background-color: #fff;
+    border-radius: 50%;
+  #apple .adapter_wrap .adapter .elipse
+    background-image: url("https://cdn.comfy.ua/media/x/img/apple_landing/Ellipse-mob.png");
+    width: 320px !important
+    height: 160px !important
+    top: 89% !important
+
 @media (max-width: 480px)
+  #apple .apple_list li div:nth-of-type(2)
+    position: unset
+  #apple .adapter_wrap .adapter .elipse
+    width: 480px
+    height: 240px
+    top: 69%
+  #apple .apple_list_white
+    margin-top: unset !important
+    // margin-bottom: -80%;
+  #apple .apple_list
+    margin-top: 40%
+  #apple .adapter_wrap .circle
+    background-color: #000;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    width: 480px
+    z-index: 1;
+    top: 0%;
+  #apple .adapter_wrap .circle::before
+    position: absolute;
+    width: 480px
+    height: 240px
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    content: "";
+    display: block;
+    background-color: #fff;
+  #apple .adapter_wrap .circle .round
+    display: block;
+    width: 480px
+    height: 480px
+    background-color: #fff;
+    border-radius: 50%;
+  #apple .adapter_wrap .adapter
+    padding: 0 20px
+    border-radius: unset
+  #apple .adapter_wrap .adapter .adapter_list
+    flex-direction: column-reverse
+    height: auto
+    padding-top: 60px
+  #apple .adapter_wrap .adapter .adapter_list .adapter_txt span
+    font-size: 16px
+    text-align: center
+  #apple .adapter_wrap .adapter .adapter_list .adapter_txt a.prod
+    margin: 25px auto 0 auto
+  #apple .airpods_wrap .airpods
+    padding-top: 80px
+  #apple .airpods_wrap .airpods .airpods_buy
+    position: relative
+    transform: unset
+    right: 0
+    bottom: 0
+  #apple .airpods_wrap .airpods .airpods_buy a.prod
+    margin: 20px auto 0 auto
+    font-size: 16px
+  #apple .case_wrap .case .case_cont .case_row a.prod
+    font-size: 16px
+  #apple .smartphone .circle
+    background-color: #fff;
+    position: absolute;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+    width: 480px;
+    z-index: 2;
+    top: 81%;
+  #apple .smartphone .circle::before
+    position: absolute;
+    width: 480px;
+    height: 240px;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    content: "";
+    display: block;
+    background-color: #000000;
+  #apple .smartphone .circle .round
+    display: block;
+    width: 480px;
+    height: 480px;
+    background-color: #000000;
+    border-radius: 50%;
+  #apple .case_wrap .case .elipse
+    // background-image: url("https://cdn.comfy.ua/media/x/img/apple_landing/Ellipse-mob.png");
+    top: -44%;
+    right: 50%;
+    z-index: 2
+    width: 480px;
+    height: 190px;
+  
+  #apple .case_wrap .case .case_cont
+    flex-direction: column
+    margin-top: 20px
+  #apple .case_wrap .case .case_cont .case_row
+    z-index: 30;
+    position: relative;
+  #apple .case_wrap .case .case_cont .case_row span
+    font-size: 16px
+    line-height: 20px
+    text-align: center
+    margin-right: 0
+    padding: 0 20px 30px 20px
+  
+  #apple .case_wrap .case .case_img
+    margin-top: 40px;
+  #apple .case_wrap .case .case_img img
+    max-width: 280px;
+  #grid::after
+    background-size: 140%;
+    top: -130px;
+  #apple .smartphone .smartphone_oval
+    width: 200%
+  #apple .smartphone .grid-container a
+    padding: 8px
+    font-size: 14px
+  #apple .smartphone .grid-container a::before
+    top: 1.5px;
+    bottom: 1.5px;
+    left: 1.5px;
+    right: 1.5px;
+  #apple .smartphone .grid-container span
+    font-size: 14px
+    line-height: 18px
+  #apple .smartphone .grid-container .cal4
+    margin-top: unset
+    margin-bottom: 40px
+    img
+      max-width: 220px
+      margin: 0 auto
+  #apple .smartphone .grid-container .cal2
+    align-items: center
+  #apple .hide_pic
+    display: none
+  #apple .none_pic
+    display: block
+    max-height: unset !important
+  #apple .smartphone .grid-container .cal6
+    display: none
+  #apple .smartphone
+    padding: 130px 20px 0px 20px
+  #apple .smartphone .grid-container
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-template-areas: "cal4 cal4" "cal1 cal5" "cal2 cal2" "cal3 cal7"
   #apple .apple_list li
     flex-direction: column !important
   #apple .apple_list .apple_txt
