@@ -270,11 +270,11 @@
          </div>
 
          <div class="sect-games__tabs">
-            <button id="defaultOpen2" class="sect-games__tabslinks active2" onclick="openCity2(event, 'tabs1')">Spider-Man: Miles Morales</button>
-            <button class="sect-games__tabslinks" onclick="openCity2(event, 'tabs2')">DEMONS SOULS</button>
-            <button class="sect-games__tabslinks" onclick="openCity2(event, 'tabs3')">God of War ragnarok</button>
-            <button class="sect-games__tabslinks" onclick="openCity2(event, 'tabs4')">Final Fantasy VII</button>
-            <button class="sect-games__tabslinks" onclick="openCity2(event, 'tabs5')">Horizon 2 Forbidden West</button>
+            <button id="defaultOpen2" class="sect-games__tabslinks active2" onclick="openCity2(event, 'tabs1')"><span class="pos-txt-mob">Spider-Man: Miles Morales</span></button>
+            <button class="sect-games__tabslinks" onclick="openCity2(event, 'tabs2')"><span class="pos-txt-mob">DEMONS SOULS</span></button>
+            <button class="sect-games__tabslinks" onclick="openCity2(event, 'tabs3')"><span class="pos-txt-mob">God of War ragnarok</span></button>
+            <button class="sect-games__tabslinks" onclick="openCity2(event, 'tabs4')"><span class="pos-txt-mob">Final Fantasy VII</span></button>
+            <button class="sect-games__tabslinks" onclick="openCity2(event, 'tabs5')"><span class="pos-txt-mob">Horizon 2 Forbidden West</span></button>
          </div>
       </div>
 
@@ -453,12 +453,12 @@
       </div>
    </section>
 
-   <section class="sect-acsps">
+   <section class="sect-acsps maxW">
       <div class="sect-acsps__container">
 
          <div class="sect-acsps__left-item">
 
-            <div class="sect-acsps__prod hover_bl prod1">
+            <div class="sect-acsps__prod prod1">
                <div class="sect-acsps__prod-img">
                   <div class="sect-acsps__prod-img-hover">
                      <img src="https://cdn.comfy.ua/media/x/img/ps5/img7_item1.png" alt="">
@@ -473,7 +473,7 @@
                </div>
             </div>
 
-            <div class="sect-acsps__prod hover_bl prod2">
+            <div class="sect-acsps__prod prod2">
                <div class="sect-acsps__prod-img">
                   <div class="sect-acsps__prod-img-hover">
                      <img src="https://cdn.comfy.ua/media/x/img/ps5/img7_item3.png" alt="">
@@ -492,7 +492,7 @@
 
          <div class="sect-acsps__right-item">
 
-            <div class="sect-acsps__prod hover_bl prod3">
+            <div class="sect-acsps__prod prod3">
                <div class="sect-acsps__prod-img">
                   <div class="sect-acsps__prod-img-hover">
                      <img src="https://cdn.comfy.ua/media/x/img/ps5/img7_item2.png" alt="">
@@ -507,7 +507,7 @@
                </div>
             </div>
 
-            <div class="sect-acsps__prod hover_bl prod4">
+            <div class="sect-acsps__prod prod4">
                <div class="sect-acsps__prod-img">
                   <div class="sect-acsps__prod-img-hover">
                      <img src="https://cdn.comfy.ua/media/x/img/ps5/img7_item4.png" alt="">
@@ -527,7 +527,29 @@
       </div>
    </section>
 
+   <section class="sect-move-footer maxW">
+      <div class="sect-move-footer__wrap">
+         <img src="https://cdn.comfy.ua/media/x/img/ps5/img8_move.png" alt="">
+      </div>
+   </section>
+
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+   $(document).ready(function () {
+      $(".sect-acsps__prod").hover(function () {
+         // $(".sect-acsps__prod").css("opacity", "0.5");
+         // $(".sect-acsps__prod").animate({opacity:'0.5'}, 'slow');
+         $(".sect-acsps__prod").addClass("hover-bl");
+         $(".sect-acsps__prod").removeClass("not-hover-bl");
+      }, function () {
+         // $(".sect-acsps__prod").css("opacity", "1");
+         // $(".sect-acsps__prod").animate({opacity:'1'}, 'slow');
+         $(".sect-acsps__prod").addClass("not-hover-bl");
+         $(".sect-acsps__prod").removeClass("hover-bl");
+      });
+   });
+</script>
 
 <script>
    function openCity(evt, cityName) {

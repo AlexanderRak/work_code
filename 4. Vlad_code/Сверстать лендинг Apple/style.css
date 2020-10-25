@@ -7,6 +7,7 @@
   display: block;
   background-color: #000;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -64,9 +65,14 @@
 }
 
 #apple a.prod {
-  border-radius: 42px;
+  -webkit-border-radius: 42px;
+     -moz-border-radius: 42px;
+          border-radius: 42px;
   position: relative;
   background: -webkit-gradient(linear, left top, right top, from(#005E7F), to(#61B6CD));
+  background: -webkit-linear-gradient(left, #005E7F 0%, #61B6CD 100%);
+  background: -moz-linear-gradient(left, #005E7F 0%, #61B6CD 100%);
+  background: -o-linear-gradient(left, #005E7F 0%, #61B6CD 100%);
   background: linear-gradient(90deg, #005E7F 0%, #61B6CD 100%);
   z-index: 10;
   display: block;
@@ -94,12 +100,17 @@
   left: 2px;
   right: 2px;
   background: #000;
-  border-radius: 42px;
+  -webkit-border-radius: 42px;
+     -moz-border-radius: 42px;
+          border-radius: 42px;
   z-index: -1;
 }
 
 #apple a.prod:hover::before {
   background: -webkit-gradient(linear, left top, right top, from(#005E7F), to(#61B6CD)) !important;
+  background: -webkit-linear-gradient(left, #005E7F 0%, #61B6CD 100%) !important;
+  background: -moz-linear-gradient(left, #005E7F 0%, #61B6CD 100%) !important;
+  background: -o-linear-gradient(left, #005E7F 0%, #61B6CD 100%) !important;
   background: linear-gradient(90deg, #005E7F 0%, #61B6CD 100%) !important;
 }
 
@@ -122,6 +133,9 @@
   right: 50%;
   width: 130%;
   -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+       -o-transform: translateX(50%);
           transform: translateX(50%);
 }
 
@@ -144,13 +158,20 @@
 
 #apple .smartphone .grid-container > div {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 100%;
@@ -162,6 +183,8 @@
   -ms-grid-column: 1;
   grid-area: cal1;
   -webkit-box-align: start;
+  -webkit-align-items: start;
+     -moz-box-align: start;
       -ms-flex-align: start;
           align-items: start;
 }
@@ -180,6 +203,8 @@
   -ms-grid-column: 1;
   grid-area: cal2;
   -webkit-box-align: start;
+  -webkit-align-items: start;
+     -moz-box-align: start;
       -ms-flex-align: start;
           align-items: start;
   margin: 30px 0;
@@ -202,9 +227,13 @@
   -ms-grid-column: 1;
   grid-area: cal3;
   -webkit-box-align: start;
+  -webkit-align-items: start;
+     -moz-box-align: start;
       -ms-flex-align: start;
           align-items: start;
   -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
@@ -220,9 +249,10 @@
   grid-area: cal4;
   max-width: 514px;
   margin: 0 20px;
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
+  -webkit-align-self: start;
+      -ms-flex-item-align: start;
+              -ms-grid-row-align: start;
+          align-self: start;
   padding-top: 20px;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -233,6 +263,8 @@
   -ms-grid-column: 3;
   grid-area: cal5;
   -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+     -moz-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   text-align: right;
@@ -252,6 +284,8 @@
   -ms-grid-column: 3;
   grid-area: cal6;
   -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+     -moz-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   text-align: right;
@@ -275,6 +309,8 @@
   -ms-grid-column: 3;
   grid-area: cal7;
   -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+     -moz-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   text-align: right;
@@ -294,6 +330,9 @@
 
 #apple .smartphone .grid-container .text-gradient {
   background: -webkit-gradient(linear, left top, right top, from(#005E7F), to(#61B6CD));
+  background: -webkit-linear-gradient(left, #005E7F 0%, #61B6CD 100%);
+  background: -moz-linear-gradient(left, #005E7F 0%, #61B6CD 100%);
+  background: -o-linear-gradient(left, #005E7F 0%, #61B6CD 100%);
   background: linear-gradient(90deg, #005E7F 0%, #61B6CD 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -315,7 +354,10 @@
   background-image: url("https://cdn.comfy.ua/media/x/img/apple_landing/bg_oval_02.png");
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: 1960px;
+  -webkit-background-size: 1960px 1960px;
+     -moz-background-size: 1960px;
+       -o-background-size: 1960px;
+          background-size: 1960px;
   padding: 100%;
 }
 
@@ -324,7 +366,10 @@
   position: absolute;
   right: 50%;
   -webkit-transform: translateX(50%);
-  transform: translateX(50%);
+  -moz-transform: translateX(50%);
+   -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+       transform: translateX(50%);
   width: 1440px;
   z-index: 1;
   top: 40%;
@@ -348,7 +393,9 @@
   width: 1440px;
   height: 1440px;
   background-color: #000;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
 }
 
 #apple .case_wrap {
@@ -367,7 +414,10 @@
   top: -100%;
   right: 50%;
   -webkit-transform: translateX(50%);
-  transform: translateX(50%);
+  -moz-transform: translateX(50%);
+   -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+       transform: translateX(50%);
   width: 1440px;
   height: 755px;
   background-image: url("https://cdn.comfy.ua/media/x/img/apple_landing/Ellipse.png");
@@ -391,17 +441,26 @@
 
 #apple .case_wrap .case .case_cont {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-top: 30px;
@@ -448,6 +507,9 @@
   right: 50%;
   bottom: 25%;
   -webkit-transform: translate(50%, 50%);
+     -moz-transform: translate(50%, 50%);
+      -ms-transform: translate(50%, 50%);
+       -o-transform: translate(50%, 50%);
           transform: translate(50%, 50%);
   z-index: 10;
 }
@@ -477,10 +539,13 @@
   background-color: #fff;
   padding: 0 170px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
   z-index: 10;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
   max-width: 1270px;
   position: relative;
 }
@@ -490,7 +555,10 @@
   top: 22%;
   right: 50%;
   -webkit-transform: translateX(50%);
-  transform: translateX(50%);
+  -moz-transform: translateX(50%);
+   -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+       transform: translateX(50%);
   width: 1440px;
   height: 700px;
   background-image: url("https://cdn.comfy.ua/media/x/img/apple_landing/Ellipse.png");
@@ -505,19 +573,27 @@
 #apple .adapter_wrap .adapter .adapter_list {
   height: 720px;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 #apple .adapter_wrap .adapter .adapter_list > div {
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -550,6 +626,9 @@
   position: absolute;
   right: 50%;
   -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+       -o-transform: translateX(50%);
           transform: translateX(50%);
   width: 1440px;
   z-index: 1;
@@ -574,7 +653,9 @@
   width: 1440px;
   height: 1440px;
   background-color: #fff;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
 }
 
 #apple .green_button {
@@ -584,8 +665,11 @@
   padding: 12px 20px;
   background-color: #43B02A;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 8px;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
 }
 
 #apple .wrap_black,
@@ -608,6 +692,7 @@
   padding: 45px 170px;
   max-width: 1316px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 auto;
   margin-top: -5%;
@@ -615,19 +700,29 @@
 
 #apple .apple_list li {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -654,6 +749,9 @@
 #apple .apple_list li:last-of-type {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   margin-top: 20px;
@@ -667,11 +765,16 @@
 
 #apple .apple_list_white li {
   -webkit-transform: translateY(-17%);
+     -moz-transform: translateY(-17%);
+      -ms-transform: translateY(-17%);
+       -o-transform: translateY(-17%);
           transform: translateY(-17%);
 }
 
 #apple .apple_list_white li > div {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
@@ -686,10 +789,15 @@
 
 #apple .apple_list_white li .slide_list_row {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   position: relative;
@@ -705,24 +813,36 @@
 #apple .apple_list_white li .slide_list_row li:nth-of-type(1) {
   z-index: 7;
   -webkit-transform: translateX(-60%);
+     -moz-transform: translateX(-60%);
+      -ms-transform: translateX(-60%);
+       -o-transform: translateX(-60%);
           transform: translateX(-60%);
 }
 
 #apple .apple_list_white li .slide_list_row li:nth-of-type(2) {
   z-index: 8;
   -webkit-transform: translateX(-40%);
+     -moz-transform: translateX(-40%);
+      -ms-transform: translateX(-40%);
+       -o-transform: translateX(-40%);
           transform: translateX(-40%);
 }
 
 #apple .apple_list_white li .slide_list_row li:nth-of-type(3) {
   z-index: 9;
   -webkit-transform: translateX(-20%);
+     -moz-transform: translateX(-20%);
+      -ms-transform: translateX(-20%);
+       -o-transform: translateX(-20%);
           transform: translateX(-20%);
 }
 
 #apple .apple_list_white li .slide_list_row li:nth-of-type(4) {
   z-index: 10;
   -webkit-transform: translateX(0%);
+     -moz-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+       -o-transform: translateX(0%);
           transform: translateX(0%);
 }
 
@@ -770,11 +890,16 @@
   }
   #apple .smartphone .grid-container .cal1 {
     -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+       -moz-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
   #apple .smartphone #grid::after {
-    background-size: 100%;
+    -webkit-background-size: 100% 100%;
+       -moz-background-size: 100%;
+         -o-background-size: 100%;
+            background-size: 100%;
     top: -145px;
   }
   #apple .smartphone {
@@ -782,9 +907,10 @@
   }
   #apple .smartphone .grid-container .cal4 {
     margin-top: -200px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
+            align-self: center;
     padding-top: 0;
   }
   #apple .smartphone .grid-container {
@@ -829,7 +955,10 @@
     position: absolute;
     right: 50%;
     -webkit-transform: translateX(50%);
-    transform: translateX(50%);
+    -moz-transform: translateX(50%);
+     -ms-transform: translateX(50%);
+      -o-transform: translateX(50%);
+         transform: translateX(50%);
     width: 320px !important;
     z-index: 2;
     top: 88% !important;
@@ -851,14 +980,19 @@
     width: 320px !important;
     height: 320px !important;
     background-color: #000000;
-    border-radius: 50%;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
   }
   #apple .adapter_wrap .circle {
     ackground-color: #000;
     position: absolute;
     right: 50%;
     -webkit-transform: translateX(50%);
-    transform: translateX(50%);
+    -moz-transform: translateX(50%);
+     -ms-transform: translateX(50%);
+      -o-transform: translateX(50%);
+         transform: translateX(50%);
     width: 320px !important;
     z-index: 1;
     top: 39% !important;
@@ -880,7 +1014,9 @@
     width: 320px !important;
     height: 320px !important;
     background-color: #fff;
-    border-radius: 50%;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
   }
   #apple .adapter_wrap .adapter .elipse {
     background-image: url("https://cdn.comfy.ua/media/x/img/apple_landing/Ellipse-mob.png");
@@ -910,6 +1046,9 @@
     position: absolute;
     right: 50%;
     -webkit-transform: translateX(50%);
+       -moz-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+         -o-transform: translateX(50%);
             transform: translateX(50%);
     width: 480px;
     z-index: 1;
@@ -932,15 +1071,22 @@
     width: 480px;
     height: 480px;
     background-color: #fff;
-    border-radius: 50%;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
   }
   #apple .adapter_wrap .adapter {
     padding: 0 20px;
-    border-radius: unset;
+    -webkit-border-radius: unset;
+       -moz-border-radius: unset;
+            border-radius: unset;
   }
   #apple .adapter_wrap .adapter .adapter_list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+       -moz-box-orient: vertical;
+       -moz-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     height: auto;
@@ -959,6 +1105,9 @@
   #apple .airpods_wrap .airpods .airpods_buy {
     position: relative;
     -webkit-transform: unset;
+       -moz-transform: unset;
+        -ms-transform: unset;
+         -o-transform: unset;
             transform: unset;
     right: 0;
     bottom: 0;
@@ -975,7 +1124,10 @@
     position: absolute;
     right: 50%;
     -webkit-transform: translateX(50%);
-    transform: translateX(50%);
+    -moz-transform: translateX(50%);
+     -ms-transform: translateX(50%);
+      -o-transform: translateX(50%);
+         transform: translateX(50%);
     width: 480px;
     z-index: 2;
     top: 81%;
@@ -997,7 +1149,9 @@
     width: 480px;
     height: 480px;
     background-color: #000000;
-    border-radius: 50%;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
   }
   #apple .case_wrap .case .elipse {
     top: -44%;
@@ -1009,6 +1163,9 @@
   #apple .case_wrap .case .case_cont {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     margin-top: 20px;
@@ -1031,7 +1188,10 @@
     max-width: 280px;
   }
   #grid::after {
-    background-size: 140%;
+    -webkit-background-size: 140% 140%;
+       -moz-background-size: 140%;
+         -o-background-size: 140%;
+            background-size: 140%;
     top: -130px;
   }
   #apple .smartphone .smartphone_oval {
@@ -1061,6 +1221,8 @@
   }
   #apple .smartphone .grid-container .cal2 {
     -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
@@ -1088,6 +1250,9 @@
   #apple .apple_list li {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
+       -moz-box-orient: vertical !important;
+       -moz-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
   }
@@ -1099,6 +1264,9 @@
   }
   #apple .apple_list_white li {
     -webkit-transform: unset;
+       -moz-transform: unset;
+        -ms-transform: unset;
+         -o-transform: unset;
             transform: unset;
   }
   #apple .apple_list_white li .slide_list {
@@ -1109,18 +1277,30 @@
   }
   #apple .apple_list_white li .slide_list_row li:nth-of-type(1) {
     -webkit-transform: translateX(-90%);
+       -moz-transform: translateX(-90%);
+        -ms-transform: translateX(-90%);
+         -o-transform: translateX(-90%);
             transform: translateX(-90%);
   }
   #apple .apple_list_white li .slide_list_row li:nth-of-type(2) {
     -webkit-transform: translateX(-65%);
+       -moz-transform: translateX(-65%);
+        -ms-transform: translateX(-65%);
+         -o-transform: translateX(-65%);
             transform: translateX(-65%);
   }
   #apple .apple_list_white li .slide_list_row li:nth-of-type(3) {
     -webkit-transform: translateX(-35%);
+       -moz-transform: translateX(-35%);
+        -ms-transform: translateX(-35%);
+         -o-transform: translateX(-35%);
             transform: translateX(-35%);
   }
   #apple .apple_list_white li .slide_list_row li:nth-of-type(4) {
     -webkit-transform: translateX(-10%);
+       -moz-transform: translateX(-10%);
+        -ms-transform: translateX(-10%);
+         -o-transform: translateX(-10%);
             transform: translateX(-10%);
   }
   #apple .apple_list_white li .slide_list_row {
