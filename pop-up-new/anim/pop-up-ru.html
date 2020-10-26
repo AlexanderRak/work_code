@@ -53,60 +53,45 @@
 	}
 
 	.linear-gradient-popup {
-		background: #fff;
-		/* background: linear-gradient(287.34deg, #82DF0B 20.5%, #43B02A 76.3%); */
-		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+		background: #000;
 		border-radius: 10px;
-		width: 350px;
-		height: 175px;
+		width: 352px;
+    	height: 177px;
 		z-index: 6;
 		overflow: hidden;
 	}
+	.linear-gradient__text h2 {
+		font-size: 24px;
+		color: #43B02A;
+		text-transform: uppercase;
+		font-weight: bold;
+		position: absolute;
+		top: 15px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		z-index: 6;
+		text-align: center;
+	}
+	.linear-gradient__img {
+		position: absolute;
+		z-index: 7;
+		display: none;
+	}
 
 	.content-text {
-		background-image: url(https://cdn.comfy.ua/media/x/img/ps5.png);
+		background-image: url(https://cdn.comfy.ua/media/x/img/_-_-2.gif);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;
 		position: absolute;
 		width: 352px;
-		height: 177px;
-		z-index: 8;
-		left: 0px;
-    	bottom: 0px;
+    	height: 177px;
+		z-index: 5;
+		left: 0;
+		bottom: 0;
+		border-radius: 10px;
 	}
-
-	.images-push {
-		/* background-image: url(https://cdn.comfy.ua/media/x/img/popup/shar-push_1.png);
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: contain;
-		position: relative;
-		bottom: -8rem;
-		left: -35px;
-		width: 141px;
-		height: 150px;
-		z-index: 4; */
-	}
-
-	/* @-webkit-keyframes rotate360 {
-		to {
-			-webkit-transform: rotate(360deg);
-			transform: rotate(360deg);
-		}
-	}
-
-	@keyframes rotate360 {
-		to {
-			-webkit-transform: rotate(360deg);
-			transform: rotate(360deg);
-		}
-	}
-
-	.images-push {
-		-webkit-animation: 20s rotate360 infinite linear;
-		animation: 20s rotate360 infinite linear;
-	} */
 
 	.qclose-pp {
 		position: absolute;
@@ -130,8 +115,7 @@
 	.cont-popup-action {
 		position: relative;
 		display: inline-block;
-		/*float: right;*/
-		/*padding-right: 15px;*/
+		overflow: hidden;
 	}
 
 	.popup-close[data-v-a06dd506] {
@@ -154,16 +138,29 @@
 		border-bottom: 0px solid #e5e5e5;
 	}
 
+	
+
 	@media (max-width: 767px) {
 		.content-text {
-			background-image: url(https://cdn.comfy.ua/media/x/img/ps5_mob.png);
+			background-image: url(https://cdn.comfy.ua/media/x/img/_-_-_.gif);
 			width: 280px;
-			height: 55px;
-			z-index: 8;
-			left: 0px;
-    		top: 0px;
+    		height: 55px;
+			z-index: 5;
 		}
-
+		.linear-gradient__text h2 {
+			font-size: 15px;
+			top: 15px;
+			left: 15px;
+			right: inherit;
+		}
+		.linear-gradient__img {
+			left: inherit;
+			right: 18px;
+			top: inherit;
+			transform: inherit;
+			max-width: 15%;
+			display: block;
+		}
 		.images-push {
 			display: none;
 		}
@@ -171,8 +168,6 @@
 		.linear-gradient-popup {
 			width: 280px;
     		height: 55px;
-
-			/* background: #43B02A; */
 			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 		}
 
@@ -180,8 +175,6 @@
 			position: relative;
 			height: 100%;
 			width: 100%;
-			left: 0;
-			top: 0;
 		}
 
 		.popup-wr[data-v-a06dd506] {
@@ -202,23 +195,35 @@
 
 	@media (max-width: 1024px) and (min-width: 768px) {
 		.content-text {
-			background-image: url(https://cdn.comfy.ua/media/x/img/ps5_mob.png);
+			background-image: url(https://cdn.comfy.ua/media/x/img/_-_-_.gif);
 			width: 280px;
-			height: 55px;
-			z-index: 8;
-			left: 0px;
-    		top: 0px;
+    		height: 55px;
+			z-index: 5;
+			left: 0;
+			top: 0;
 		}
-
+		.linear-gradient__text h2 {
+			font-size: 15px;
+			top: 15px;
+			left: 15px;
+			right: inherit;
+		}
+		.linear-gradient__img {
+			left: inherit;
+			right: 18px;
+			top: inherit;
+			transform: inherit;
+			max-width: 15%;
+			display: block;
+		}
 		.images-push {
 			display: none;
 		}
 
 		.linear-gradient-popup {
 			width: 280px;
-    	height: 55px;
+    		height: 55px;
 
-			/* background: #43B02A; */
 			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 		}
 
@@ -246,13 +251,19 @@
 </style>
 <div id="wrapper-popup-action">
 	<div class="cont-popup-action">
-		<a href="/new-playstation/">
+		<a href="/goods-for-every-day/">
 			<div class="cont-popup">
 				<div class="linear-gradient-popup">
-					<div class="images-push"></div>
+					<div class="linear-gradient__text">
+						<h2>Они нужны каждый день</h2>
+					</div>
+					<div class="linear-gradient__img">
+						<img src="https://cdn.comfy.ua/media/x/img/girl_pop_up.png" alt="">
+					</div>
 				</div>
 				<div class="content-text"></div>
 			</div>
 		</a>
 	</div>
 </div>
+<!-- https://cdn.comfy.ua/media/x/img/bgrd1popup_mob.png -->
