@@ -1179,6 +1179,18 @@
 		a
 			&.link_blue
 				margin: 0 auto
+				.link_blue-before
+					padding-left: 30px
+					font-weight: bold
+					font-size: 16px
+			&.link_grey
+				&.link_grey__blue-bgrd
+					text-transform: uppercase
+					font-weight: bold
+					border-radius: 8px
+				.link_grey-before
+					&::before
+						top: 0
 	.sect-headerPS5__container-top span
 		padding: 20px 15px
 		font-size: 20px
@@ -1292,7 +1304,7 @@
 				max-width: 405px
 		&.bgrd_tab4
 			.sect-games__bottom-img__one
-				right: 7
+				right: 7px
 				max-width: 768px
 		&.bgrd_tab5
 			.sect-games__bottom-img__one
@@ -1303,10 +1315,10 @@
 		display: none
 	.sect-games__container-grid
 		display: block
-		padding: 0 25px 60px 25px
+		padding: 40px 12px 60px 12px
 	.sect-games__h4
-		padding: 30px 15px 40px 15px
-		font-size: 23px
+		padding: 30px 0 40px 0
+		font-size: 16px
 	.sect-games__cnt-statik
 		min-height: 390px
 	.sect-games__cnt-pos
@@ -1320,26 +1332,30 @@
 		margin: 25px 15px 0 15px
 		padding-left: 0
 		&.cnt-text__bl1
-			margin: 25px 25px 0 auto
+			margin: 25px 15px 0 15px
 	.sect-games__cnt-img-pos
-		left: -32px
+		left: 5px
 		bottom: 0
 		z-index: 5
 		max-width: 52%
 		&.cnt-img-pos__left
-			left: -40px
+			left: -5px
 	.sect-games__item-grid
 		&.itm-grd1
 			.sect-games__cnt-img-pos
 				max-width: 60%
-				left: -70px
+				left: -76px
 	.sect-aksessuary__keyboard-hover
 		opacity: 1
 		z-index: 6
 	.sect-acsps__container
-		padding: 50px 0 60px 0
+		padding: 100px 12px 50px 12px
 	.sect-acsps__prod-img-hover
 		max-width: 90% !important
+		position: relative
+		top: 0
+		transform: none
+		transition: none
 	.sect-acsps__prod
 		opacity: 1
 		animation: none
@@ -1359,27 +1375,27 @@
 				animation: none
 		&.prod1
 			.sect-acsps__prod-img
-				max-width: 100%
+				max-width: 195px
 				width: 100%
-				height: 542px
+				height: auto
 		&.prod2
-			margin-top: 230px
+			margin-top: 80px
 			.sect-acsps__prod-img
-				max-width: 100%
+				max-width: 245px
 				width: 100%
-				height: 460px
+				height: auto
 		&.prod3
-			margin-top: 430px
+			margin-top: 80px
 			.sect-acsps__prod-img
-				max-width: 100%
+				max-width: 235px
 				width: 100%
-				height: 480px
+				height: auto
 		&.prod4
-			margin-top: 230px
+			margin-top: 80px
 			.sect-acsps__prod-img
-				max-width: 100%
+				max-width: 274px
 				width: 100%
-				height: 275px
+				height: auto
 	.advantage__item li
 		position: relative
 		padding-left: 45px
@@ -1398,7 +1414,9 @@
 		font-size: 16px
 		font-weight: bold
 	.sect-aksessuary__h4
-		padding: 50px 15px 60px 15px
+		padding: 50px 15px 30px 15px
+		h4
+			font-size: 20px
 	.sect-games__cnt-text p
 		min-height: 200px
 	.sect-consolefunc__container
@@ -1415,3 +1433,25 @@
 		margin-bottom: 12px
 	.sect-games__top-txt
 		text-align: center
+	.sect-games__wrap-grid
+		grid-template-columns: 1fr 1fr
+		gap: 20px 20px
+		grid-template-areas: "itm-grd1 itm-grd1""itm-grd2 itm-grd2" "itm-grd3 itm-grd3" "itm-grd4 itm-grd4" "itm-grd5 itm-grd5"
+	.sect-aksessuary__text h4
+		font-size: 16px
+		b
+			font-weight: normal !important
+	.sect-aksessuary__keyboard-hover
+		background: #E8EBF0
+	.sect-acsps__left-item
+		width: 100%
+		float: none
+	.sect-acsps__right-item
+		width: 100%
+		float: none
+	.sect-acsps__prod-text h4
+		font-size: 16px
+		color: #000
+		font-weight: bold
+	.sect-acsps__prod-text
+		padding-top: 28px

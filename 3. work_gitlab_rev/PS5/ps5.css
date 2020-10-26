@@ -2100,6 +2100,21 @@
   #playstation5 a.link_blue {
     margin: 0 auto;
   }
+  #playstation5 a.link_blue .link_blue-before {
+    padding-left: 30px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  #playstation5 a.link_grey.link_grey__blue-bgrd {
+    text-transform: uppercase;
+    font-weight: bold;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+  }
+  #playstation5 a.link_grey .link_grey-before::before {
+    top: 0;
+  }
   .sect-headerPS5__container-top span {
     padding: 20px 15px;
     font-size: 20px;
@@ -2272,7 +2287,7 @@
     max-width: 405px;
   }
   .sect-games__bottom-bl.bgrd_tab4 .sect-games__bottom-img__one {
-    right: 7;
+    right: 7px;
     max-width: 768px;
   }
   .sect-games__bottom-bl.bgrd_tab5 .sect-games__bottom-img__one {
@@ -2289,11 +2304,11 @@
   }
   .sect-games__container-grid {
     display: block;
-    padding: 0 25px 60px 25px;
+    padding: 40px 12px 60px 12px;
   }
   .sect-games__h4 {
-    padding: 30px 15px 40px 15px;
-    font-size: 23px;
+    padding: 30px 0 40px 0;
+    font-size: 16px;
   }
   .sect-games__cnt-statik {
     min-height: 390px;
@@ -2311,30 +2326,41 @@
     padding-left: 0;
   }
   .sect-games__cnt-text.cnt-text__bl1 {
-    margin: 25px 25px 0 auto;
+    margin: 25px 15px 0 15px;
   }
   .sect-games__cnt-img-pos {
-    left: -32px;
+    left: 5px;
     bottom: 0;
     z-index: 5;
     max-width: 52%;
   }
   .sect-games__cnt-img-pos.cnt-img-pos__left {
-    left: -40px;
+    left: -5px;
   }
   .sect-games__item-grid.itm-grd1 .sect-games__cnt-img-pos {
     max-width: 60%;
-    left: -70px;
+    left: -76px;
   }
   .sect-aksessuary__keyboard-hover {
     opacity: 1;
     z-index: 6;
   }
   .sect-acsps__container {
-    padding: 50px 0 60px 0;
+    padding: 100px 12px 50px 12px;
   }
   .sect-acsps__prod-img-hover {
     max-width: 90% !important;
+    position: relative;
+    top: 0;
+    -webkit-transform: none;
+       -moz-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+    -webkit-transition: none;
+    -o-transition: none;
+    -moz-transition: none;
+    transition: none;
   }
   .sect-acsps__prod {
     opacity: 1;
@@ -2372,33 +2398,33 @@
             animation: none;
   }
   .sect-acsps__prod.prod1 .sect-acsps__prod-img {
-    max-width: 100%;
+    max-width: 195px;
     width: 100%;
-    height: 542px;
+    height: auto;
   }
   .sect-acsps__prod.prod2 {
-    margin-top: 230px;
+    margin-top: 80px;
   }
   .sect-acsps__prod.prod2 .sect-acsps__prod-img {
-    max-width: 100%;
+    max-width: 245px;
     width: 100%;
-    height: 460px;
+    height: auto;
   }
   .sect-acsps__prod.prod3 {
-    margin-top: 430px;
+    margin-top: 80px;
   }
   .sect-acsps__prod.prod3 .sect-acsps__prod-img {
-    max-width: 100%;
+    max-width: 235px;
     width: 100%;
-    height: 480px;
+    height: auto;
   }
   .sect-acsps__prod.prod4 {
-    margin-top: 230px;
+    margin-top: 80px;
   }
   .sect-acsps__prod.prod4 .sect-acsps__prod-img {
-    max-width: 100%;
+    max-width: 274px;
     width: 100%;
-    height: 275px;
+    height: auto;
   }
   .advantage__item li {
     position: relative;
@@ -2426,7 +2452,10 @@
     font-weight: bold;
   }
   .sect-aksessuary__h4 {
-    padding: 50px 15px 60px 15px;
+    padding: 50px 15px 30px 15px;
+  }
+  .sect-aksessuary__h4 h4 {
+    font-size: 20px;
   }
   .sect-games__cnt-text p {
     min-height: 200px;
@@ -2449,5 +2478,36 @@
   }
   .sect-games__top-txt {
     text-align: center;
+  }
+  .sect-games__wrap-grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 20px 20px;
+        grid-template-areas: "itm-grd1 itm-grd1" "itm-grd2 itm-grd2" "itm-grd3 itm-grd3" "itm-grd4 itm-grd4" "itm-grd5 itm-grd5";
+  }
+  .sect-aksessuary__text h4 {
+    font-size: 16px;
+  }
+  .sect-aksessuary__text h4 b {
+    font-weight: normal !important;
+  }
+  .sect-aksessuary__keyboard-hover {
+    background: #E8EBF0;
+  }
+  .sect-acsps__left-item {
+    width: 100%;
+    float: none;
+  }
+  .sect-acsps__right-item {
+    width: 100%;
+    float: none;
+  }
+  .sect-acsps__prod-text h4 {
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+  }
+  .sect-acsps__prod-text {
+    padding-top: 28px;
   }
 }
