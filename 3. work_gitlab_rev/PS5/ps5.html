@@ -24,7 +24,7 @@
 
             <div class="sect-headerPS5__bgrd-bl">
                <div class="sect-headerPS5__bgrd-gif-pos maxWmove">
-                  <video class="maxWmove" autoplay muted>
+                  <video class="maxWmove" autoplay muted playsinline>
                      <source src="https://cdn.comfy.ua/media/video/PS5.mp4" type="video/mp4">
                   </video>
                </div>
@@ -33,11 +33,15 @@
 
             <div class="sect-headerPS5__bottom-bl rightbl">
                <div class="sect-headerPS5__text">
-                  <img src="https://cdn.comfy.ua/media/x/img/ps5/img1_header-bnr-ps.svg" alt="">
+                  <img src="https://cdn.comfy.ua/media/x/img/img1_header-bnr-ps2.svg" alt="">
                   <div class="sect-headerPS5__text-link">
                      <a class="link_blue" href="#"><span class="link_blue-before">Купить</span></a>
                   </div>
                </div>
+            </div>
+
+            <div class="sect-headerPS5__bottom-bl centerbl-mob">
+               <a class="link_blue" href="#"><span class="link_blue-before">Купить</span></a>
             </div>
 
          </div>
@@ -538,17 +542,14 @@
 <script>
    $(document).ready(function () {
       $(".sect-acsps__prod").hover(function () {
-         // $(".sect-acsps__prod").css("opacity", "0.5");
-         // $(".sect-acsps__prod").animate({opacity:'0.5'}, 'slow');
          $(".sect-acsps__prod").addClass("hover-bl");
          $(".sect-acsps__prod").removeClass("not-hover-bl");
       }, function () {
-         // $(".sect-acsps__prod").css("opacity", "1");
-         // $(".sect-acsps__prod").animate({opacity:'1'}, 'slow');
          $(".sect-acsps__prod").addClass("not-hover-bl");
          $(".sect-acsps__prod").removeClass("hover-bl");
       });
    });
+
 </script>
 
 <script>

@@ -189,6 +189,10 @@
 		left: 60px
 	&.rightbl
 		right: 60px
+	&.centerbl-mob
+		right: 0
+		left: 0
+		display: none
 .sect-headerPS5__text-link
 	padding: 15px 0 0 35px
 // sect2
@@ -375,7 +379,7 @@
 
 .sect-games__tabs-content
 	display: none
-	animation: fadeEffect 1s
+	animation: fadeEffect 0.3s
 
 @keyframes fadeEffect
 	from
@@ -800,7 +804,9 @@
 		ul
 			li
 				font-size: 20px
-
+		a
+			&.link_blue
+				margin: 0 0 0 auto
 	.sect-headerPS5__container-top span
 		padding: 25px 15px
 		font-size: 30px
@@ -887,7 +893,525 @@
 	.sect-games__h4
 		padding: 50px 15px 60px 15px
 		font-size: 25px
+	.sect-games__cnt-statik
+		min-height: 350px
 	.sect-games__cnt-pos
 		opacity: 1
-// @media (max-width: 812px)
-// @media (max-width: 480px)
+		z-index: 6
+		min-height: 350px
+	.sect-games__cnt-text
+		z-index: 6
+		position: relative
+		max-width: 345px
+		margin: 25px 25px 0 auto
+		padding-left: 25px
+		&.cnt-text__bl1
+			margin: 25px 25px 0 auto
+	.sect-games__cnt-img-pos
+		left: -32px
+		bottom: 0
+		z-index: 5
+		max-width: 52%
+		&.cnt-img-pos__left
+			left: -90px
+	.sect-aksessuary__keyboard-hover
+		opacity: 1
+		z-index: 6
+	.sect-acsps__container
+		padding: 50px 0 60px 0
+	.sect-acsps__prod-img-hover
+		max-width: 90% !important
+	.sect-acsps__prod
+		opacity: 1
+		animation: none
+		.sect-acsps__prod-link
+			opacity: 1
+			transition: none
+		&:hover
+			opacity: 1 !important
+			&.prod1, &.prod2, &.prod3, &.prod4
+				.sect-acsps__prod-img
+					.sect-acsps__prod-img-hover
+						max-width: 100%
+						transition: none
+			.sect-acsps__prod-link
+				opacity: 1
+				transition: none
+				animation: none
+		&.prod1
+			.sect-acsps__prod-img
+				max-width: 100%
+				width: 100%
+				height: 542px
+		&.prod2
+			margin-top: 230pxx
+			.sect-acsps__prod-img
+				max-width: 100%
+				width: 100%
+				height: 460px
+		&.prod3
+			margin-top: 430px
+			.sect-acsps__prod-img
+				max-width: 100%
+				width: 100%
+				height: 480px
+		&.prod4
+			margin-top: 230px
+			.sect-acsps__prod-img
+				max-width: 100%
+				width: 100%
+				height: 275px
+@media (max-width: 812px)
+	#playstation5
+		h2
+			font-size: 38px
+		h3
+			font-size: 35px
+		ul
+			li
+				font-size: 15px
+		a
+			&.link_blue
+				margin: 0 0 0 auto
+	.sect-headerPS5__container-top span
+		padding: 25px 15px
+		font-size: 30px
+	.sect-headerPS5__bgrd-banner-ps
+		max-width: 768px
+		height: 495px
+		top: -19px
+	.maxWmove
+		max-width: 445px
+		width: 100%
+		height: 275px
+		left: -7px
+	.sect-headerPS5__bottom-bl
+		&.leftbl
+			left: 15px
+		&.rightbl
+			right: 15px
+	.sect-advantage
+		border-radius: 0
+	.sect-advantage__wrap
+		padding: 25px 15px 35px 0
+	.sect-advantage__text
+		max-width: 395px
+		padding: 0 15px
+		p
+			padding: 15px 0 25px 0
+			font-size: 21px
+	.sect-advantage__img-pos
+		left: -20rem
+		max-width: 70%
+	.sect-consolefunc__cols-flex
+		padding: 0 15px 50px 15px
+	.sect-consolefunc__item
+		&:nth-child(2)
+			flex: 1 1 500px
+			max-width: 500px
+			img
+				margin: 0 auto !important
+		&:nth-child(3)
+			display: none
+	.sect-games__top-bl
+		padding: 50px 15px 60px 25px
+	.sect-games__bottom-txt
+		margin: 35px 15px 60px 15px
+		max-width: 370px
+		img
+			max-width: 70%
+	.sect-games__tabs-content
+		overflow: hidden
+	.sect-games__tabs
+		padding: 50px 25px 15px 25px
+		position: relative
+	.sect-games__tabs button
+		padding: 10px 5px 15px 5px
+		max-width: 100%
+		width: 100%
+		min-width: auto
+		font-size: 20px
+		span
+			opacity: 0
+			transition: 1s
+			position: absolute
+			top: 25px
+			left: 0
+			right: 0
+		&.active2 span
+			opacity: 1
+	.sect-games__bottom-bl
+		height: 500px
+		&.bgrd_tab1
+			.sect-games__bottom-img__one
+				right: -200px
+				bottom: 30px
+		&.bgrd_tab2
+			.sect-games__bottom-img__one
+				right: -87px
+				max-width: 550px
+		&.bgrd_tab3
+			.sect-games__bottom-img__one
+				right: -150px
+				max-width: 550px
+		&.bgrd_tab4
+			.sect-games__bottom-img__one
+				right: 95px
+				max-width: 615px
+		&.bgrd_tab5
+			.sect-games__bottom-img__one
+				right: 20px
+				max-width: 345px
+	.sect-games__bottom-img__two
+		right: -200px
+		bottom: 0
+		max-height: 500px
+		display: flex
+	.sect-games__container-grid
+		display: block
+		padding: 0 25px 60px 25px
+	.sect-games__h4
+		padding: 30px 15px 40px 15px
+		font-size: 23px
+	.sect-games__cnt-statik
+		min-height: 390px
+	.sect-games__cnt-pos
+		opacity: 1
+		z-index: 6
+		min-height: 390px
+	.sect-games__cnt-text
+		z-index: 6
+		position: relative
+		max-width: 345px
+		margin: 25px 15px 0 15px
+		padding-left: 0
+		&.cnt-text__bl1
+			margin: 25px 25px 0 auto
+	.sect-games__cnt-img-pos
+		left: -32px
+		bottom: 0
+		z-index: 5
+		max-width: 52%
+		&.cnt-img-pos__left
+			left: -40px
+	.sect-games__item-grid
+		&.itm-grd1
+			.sect-games__cnt-img-pos
+				max-width: 60%
+				left: -70px
+	.sect-aksessuary__keyboard-hover
+		opacity: 1
+		z-index: 6
+	.sect-acsps__container
+		padding: 50px 0 60px 0
+	.sect-acsps__prod-img-hover
+		max-width: 90% !important
+	.sect-acsps__prod
+		opacity: 1
+		animation: none
+		.sect-acsps__prod-link
+			opacity: 1
+			transition: none
+		&:hover
+			opacity: 1 !important
+			&.prod1, &.prod2, &.prod3, &.prod4
+				.sect-acsps__prod-img
+					.sect-acsps__prod-img-hover
+						max-width: 100%
+						transition: none
+			.sect-acsps__prod-link
+				opacity: 1
+				transition: none
+				animation: none
+		&.prod1
+			.sect-acsps__prod-img
+				max-width: 100%
+				width: 100%
+				height: 542px
+		&.prod2
+			margin-top: 230px
+			.sect-acsps__prod-img
+				max-width: 100%
+				width: 100%
+				height: 460px
+		&.prod3
+			margin-top: 430px
+			.sect-acsps__prod-img
+				max-width: 100%
+				width: 100%
+				height: 480px
+		&.prod4
+			margin-top: 230px
+			.sect-acsps__prod-img
+				max-width: 100%
+				width: 100%
+				height: 275px
+	.advantage__item li
+		position: relative
+		padding-left: 45px
+		min-height: 40px
+		margin-bottom: 25px
+		padding-right: 10px
+		&::before
+			width: 30px
+			height: 30px
+			background-size: contain
+	.advantage-link
+		margin-top: 50px
+	.consolefunc__tabs
+		padding: 50px 0 30px 0
+	.sect-games__top-txt p
+		font-size: 15px
+	.sect-aksessuary__h4
+		padding: 50px 15px 60px 15px
+	.sect-games__cnt-text p
+		min-height: 200px
+@media (max-width: 480px)
+	#playstation5
+		h2
+			font-size: 36px
+			font-weight: bold
+		h3
+			font-size: 35px
+		ul
+			li
+				font-size: 15px
+		a
+			&.link_blue
+				margin: 0 auto
+	.sect-headerPS5__container-top span
+		padding: 20px 15px
+		font-size: 20px
+	.sect-headerPS5__bgrd-banner-ps
+		max-width: 768px
+		height: 235px
+		top: 0
+	.maxWmove
+		max-width: 445px
+		width: 100%
+		height: 135px
+		left: -3px
+		top: 10px
+	.sect-headerPS5__bottom-bl
+		position: absolute
+		top: inherit
+		transform: inherit
+		z-index: 7
+		bottom: 40px
+		&.leftbl
+			display: none
+		&.rightbl
+			display: none
+		&.centerbl-mob
+			display: block
+	.sect-advantage
+		border-radius: 0
+	.sect-advantage__wrap
+		padding: 40px 25px 70px 25px
+	.sect-headerPS5__container-bottom
+		padding-bottom: 85px
+	.sect-advantage__text
+		max-width: 100%
+		padding: 0 0
+		p
+			padding: 15px 0 25px 0
+			font-size: 20px
+	.advantage-list-flex
+		flex-direction: column
+	.advantage__item li
+		&:last-child
+			margin-bottom: 25px
+	.sect-advantage__img-pos
+		left: 0
+		max-width: 216px
+		margin: 0 auto
+		right: 0
+		position: relative
+		top: 0
+		transform: none
+		padding: 25px 0 40px 0
+	.sect-consolefunc__cols-flex
+		padding: 0 0 60px 0
+		flex-direction: column-reverse
+	.sect-consolefunc__item
+		&:nth-child(1)
+			flex: 1 1 100%
+			max-width: 100%
+			width: 100%
+			margin-top: 15px
+		&:nth-child(2)
+			flex: auto
+			max-width: 115px
+			margin: 0 auto
+			img
+				margin: 0 auto !important
+		&:nth-child(3)
+			display: none
+	.sect-games__top-bl
+		padding: 45px 15px 45px 25px
+	.sect-games__bottom-txt
+		margin: 35px 0 35px 0
+		max-width: 100%
+		padding: 0 15px
+		img
+			max-width: 70%
+	.sect-games__tabs-content
+		overflow: hidden
+	.sect-games__tabs
+		padding: 25px 15px 15px 15px
+		position: relative
+	.sect-games__tabs button
+		padding: 10px 5px 15px 5px
+		max-width: 100%
+		width: 100%
+		min-width: auto
+		font-size: 17px
+		span
+			opacity: 0
+			transition: 1s
+			position: absolute
+			top: 15px
+			left: 0
+			right: 0
+		&.active2 span
+			opacity: 1
+	.sect-games__bottom-bl
+		height: 475px
+		&.bgrd_tab1
+			.sect-games__bottom-img__one
+				right: -185px
+				bottom: 155px
+				max-width: 340px
+		&.bgrd_tab2
+			.sect-games__bottom-img__one
+				right: -190px
+				max-width: 420px
+		&.bgrd_tab3
+			.sect-games__bottom-img__one
+				right: -200px
+				max-width: 405px
+		&.bgrd_tab4
+			.sect-games__bottom-img__one
+				right: 7
+				max-width: 768px
+		&.bgrd_tab5
+			.sect-games__bottom-img__one
+				right: -130px
+				max-width: 260px
+				transform: scaleX(-1)
+	.sect-games__bottom-img__two
+		display: none
+	.sect-games__container-grid
+		display: block
+		padding: 0 25px 60px 25px
+	.sect-games__h4
+		padding: 30px 15px 40px 15px
+		font-size: 23px
+	.sect-games__cnt-statik
+		min-height: 390px
+	.sect-games__cnt-pos
+		opacity: 1
+		z-index: 6
+		min-height: 390px
+	.sect-games__cnt-text
+		z-index: 6
+		position: relative
+		max-width: 345px
+		margin: 25px 15px 0 15px
+		padding-left: 0
+		&.cnt-text__bl1
+			margin: 25px 25px 0 auto
+	.sect-games__cnt-img-pos
+		left: -32px
+		bottom: 0
+		z-index: 5
+		max-width: 52%
+		&.cnt-img-pos__left
+			left: -40px
+	.sect-games__item-grid
+		&.itm-grd1
+			.sect-games__cnt-img-pos
+				max-width: 60%
+				left: -70px
+	.sect-aksessuary__keyboard-hover
+		opacity: 1
+		z-index: 6
+	.sect-acsps__container
+		padding: 50px 0 60px 0
+	.sect-acsps__prod-img-hover
+		max-width: 90% !important
+	.sect-acsps__prod
+		opacity: 1
+		animation: none
+		.sect-acsps__prod-link
+			opacity: 1
+			transition: none
+		&:hover
+			opacity: 1 !important
+			&.prod1, &.prod2, &.prod3, &.prod4
+				.sect-acsps__prod-img
+					.sect-acsps__prod-img-hover
+						max-width: 100%
+						transition: none
+			.sect-acsps__prod-link
+				opacity: 1
+				transition: none
+				animation: none
+		&.prod1
+			.sect-acsps__prod-img
+				max-width: 100%
+				width: 100%
+				height: 542px
+		&.prod2
+			margin-top: 230px
+			.sect-acsps__prod-img
+				max-width: 100%
+				width: 100%
+				height: 460px
+		&.prod3
+			margin-top: 430px
+			.sect-acsps__prod-img
+				max-width: 100%
+				width: 100%
+				height: 480px
+		&.prod4
+			margin-top: 230px
+			.sect-acsps__prod-img
+				max-width: 100%
+				width: 100%
+				height: 275px
+	.advantage__item li
+		position: relative
+		padding-left: 45px
+		min-height: 40px
+		margin-bottom: 25px
+		padding-right: 10px
+		&::before
+			width: 30px
+			height: 30px
+			background-size: contain
+	.advantage-link
+		margin-top: 0
+	.consolefunc__tabs
+		padding: 15px 0 19px 0
+	.sect-games__top-txt p
+		font-size: 16px
+		font-weight: bold
+	.sect-aksessuary__h4
+		padding: 50px 15px 60px 15px
+	.sect-games__cnt-text p
+		min-height: 200px
+	.sect-consolefunc__container
+		padding: 0 12px
+	.consolefunc__tabs button
+		font-size: 13px
+		padding: 15px 5px
+		min-width: auto
+		width: 100%
+	.sect-consolefunc__h4
+		display: none
+	.sect-consolefunc__text
+		padding: 31px 20px
+		margin-bottom: 12px
+	.sect-games__top-txt
+		text-align: center
