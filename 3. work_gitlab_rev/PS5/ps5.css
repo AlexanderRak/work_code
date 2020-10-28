@@ -190,6 +190,10 @@
   display: none;
 }
 
+.main-container_gray {
+  background: #000000;
+}
+
 .sect1_bgrd {
   background: #000000;
 }
@@ -396,13 +400,21 @@
 
 .sect-advantage__img-pos {
   position: absolute;
-  left: -29rem;
+  left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
      -moz-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
        -o-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.sect-advantage__img-pos .advantage__maxWmove:first-child {
+  display: block;
+}
+
+.sect-advantage__img-pos .advantage__maxWmove:last-child {
+  display: none;
 }
 
 .advantage-list-flex {
@@ -934,11 +946,11 @@
 }
 
 .sect-games__cnt-pos.bgrd_nover4 {
-  background: #FD2249;
+  background: #DA0E33;
 }
 
 .sect-games__cnt-pos.bgrd_nover5 {
-  background: #333C39;
+  background: #758A4B;
 }
 
 .sect-games__cnt-maxW {
@@ -1566,6 +1578,28 @@
   opacity: 1;
 }
 
+.sect-games__mob {
+  display: none;
+}
+
+.maxWmove2 {
+  width: 100%;
+  height: auto;
+}
+
+.sect-move-footer__wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media (max-width: 1024px) {
   #playstation5 h2 {
     font-size: 45px;
@@ -1612,7 +1646,7 @@
     max-width: 525px;
   }
   .sect-advantage__img-pos {
-    left: -48rem;
+    left: 0;
   }
   .sect-consolefunc__cols-flex {
     padding: 0 25px 50px 25px;
@@ -1850,7 +1884,7 @@
     font-size: 21px;
   }
   .sect-advantage__img-pos {
-    left: -20rem;
+    left: 0;
     max-width: 70%;
   }
   .sect-consolefunc__cols-flex {
@@ -2184,7 +2218,7 @@
   }
   .sect-advantage__img-pos {
     left: 0;
-    max-width: 216px;
+    max-width: 100%;
     margin: 0 auto;
     right: 0;
     position: relative;
@@ -2195,6 +2229,12 @@
          -o-transform: none;
             transform: none;
     padding: 25px 0 40px 0;
+  }
+  .sect-advantage__img-pos .advantage__maxWmove:first-child {
+    display: none;
+  }
+  .sect-advantage__img-pos .advantage__maxWmove:last-child {
+    display: block;
   }
   .sect-consolefunc__cols-flex {
     padding: 0 0 60px 0;
@@ -2274,9 +2314,10 @@
     height: 475px;
   }
   .sect-games__bottom-bl.bgrd_tab1 .sect-games__bottom-img__one {
-    right: -185px;
-    bottom: 155px;
+    right: -160px;
+    bottom: -70px;
     max-width: 340px;
+    opacity: 0.5;
   }
   .sect-games__bottom-bl.bgrd_tab2 .sect-games__bottom-img__one {
     right: -190px;
@@ -2309,6 +2350,7 @@
   .sect-games__h4 {
     padding: 30px 0 40px 0;
     font-size: 16px;
+    color: #4F4F4F;
   }
   .sect-games__cnt-statik {
     min-height: 390px;
@@ -2480,6 +2522,7 @@
     text-align: center;
   }
   .sect-games__wrap-grid {
+    display: none !important;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     gap: 20px 20px;
@@ -2509,5 +2552,70 @@
   }
   .sect-acsps__prod-text {
     padding-top: 28px;
+  }
+  .sect-games__mob {
+    display: block;
+  }
+  .sect-games__mob-wrap {
+    margin-bottom: 58px;
+  }
+  .sect-games__mob-wrap:last-child {
+    margin-bottom: 0;
+  }
+  .sect-games__mob-wrap h4 {
+    font-size: 18px;
+    color: #000;
+    text-align: left;
+    margin: 15px 0 10px 0 !important;
+    display: inline-block;
+    position: relative;
+  }
+  .sect-games__mob-wrap h4::before {
+    content: "";
+    background-image: url(https://cdn.comfy.ua/media/x/img/arrow_mob.svg);
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    width: 21px;
+    height: 10px;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .sect-games__mob-wrap p {
+    color: #616161;
+    font-size: 16px;
+    text-align: left;
+  }
+  .sect-games__mob-bgrd-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    max-width: 100%;
+    height: 215px;
+  }
+  .sect-games__mob-bgrd-img.blitem1 {
+    background-image: url(https://cdn.comfy.ua/media/x/img/ps5/img5_tab1.png);
+  }
+  .sect-games__mob-bgrd-img.blitem2 {
+    background-image: url(https://cdn.comfy.ua/media/x/img/ps5/img5_tab2.png);
+  }
+  .sect-games__mob-bgrd-img.blitem3 {
+    background-image: url(https://cdn.comfy.ua/media/x/img/ps5/img5_tab3.png);
+  }
+  .sect-games__mob-bgrd-img.blitem4 {
+    background-image: url(https://cdn.comfy.ua/media/x/img/fifa21.png);
+  }
+  .sect-games__mob-bgrd-img.blitem5 {
+    background-image: url(https://cdn.comfy.ua/media/x/img/gta5.png);
+  }
+  .maxWmove2 {
+    position: relative;
+    height: 250px;
   }
 }

@@ -107,6 +107,8 @@
 		word-wrap: break-word
 .breadcrumbs
 	display: none
+.main-container_gray
+	background: #000000
 .sect1_bgrd
 	background: #000000
 .sect2_bgrd
@@ -218,9 +220,14 @@
 		padding: 15px 0 72px 0
 .sect-advantage__img-pos
 	position: absolute
-	left: -29rem
+	left: 0
 	top: 50%
 	transform: translateY(-50%)
+	.advantage__maxWmove
+		&:first-child
+			display: block
+		&:last-child
+			display: none
 .advantage-list-flex
 	display: flex
 	align-items: flex-start
@@ -517,9 +524,9 @@
 	&.bgrd_nover3
 		background: #A31A23
 	&.bgrd_nover4
-		background: #FD2249
+		background: #DA0E33
 	&.bgrd_nover5
-		background: #333C39
+		background: #758A4B
 .sect-games__cnt-maxW
 	max-width: 1070px
 	width: 100%
@@ -794,6 +801,14 @@
 .not-hover-bl
 	opacity: 1
 
+.sect-games__mob
+	display: none
+.maxWmove2
+	width: 100%
+	height: auto
+.sect-move-footer__wrap
+	display: flex
+	align-items: center
 // @media (max-width: 1250px)
 @media (max-width: 1024px)
 	#playstation5
@@ -831,7 +846,7 @@
 	.sect-advantage__text
 		max-width: 525px
 	.sect-advantage__img-pos
-		left: -48rem
+		left: 0
 	.sect-consolefunc__cols-flex
 		padding: 0 25px 50px 25px
 	.sect-consolefunc__item
@@ -1001,7 +1016,7 @@
 			padding: 15px 0 25px 0
 			font-size: 21px
 	.sect-advantage__img-pos
-		left: -20rem
+		left: 0
 		max-width: 70%
 	.sect-consolefunc__cols-flex
 		padding: 0 15px 50px 15px
@@ -1235,13 +1250,18 @@
 			margin-bottom: 25px
 	.sect-advantage__img-pos
 		left: 0
-		max-width: 216px
+		max-width: 100%
 		margin: 0 auto
 		right: 0
 		position: relative
 		top: 0
 		transform: none
 		padding: 25px 0 40px 0
+		.advantage__maxWmove
+			&:first-child
+				display: none
+			&:last-child
+				display: block
 	.sect-consolefunc__cols-flex
 		padding: 0 0 60px 0
 		flex-direction: column-reverse
@@ -1291,9 +1311,10 @@
 		height: 475px
 		&.bgrd_tab1
 			.sect-games__bottom-img__one
-				right: -185px
-				bottom: 155px
+				right: -160px
+				bottom: -70px
 				max-width: 340px
+				opacity: 0.5
 		&.bgrd_tab2
 			.sect-games__bottom-img__one
 				right: -190px
@@ -1319,6 +1340,7 @@
 	.sect-games__h4
 		padding: 30px 0 40px 0
 		font-size: 16px
+		color: #4F4F4F
 	.sect-games__cnt-statik
 		min-height: 390px
 	.sect-games__cnt-pos
@@ -1434,6 +1456,7 @@
 	.sect-games__top-txt
 		text-align: center
 	.sect-games__wrap-grid
+		display: none !important
 		grid-template-columns: 1fr 1fr
 		gap: 20px 20px
 		grid-template-areas: "itm-grd1 itm-grd1""itm-grd2 itm-grd2" "itm-grd3 itm-grd3" "itm-grd4 itm-grd4" "itm-grd5 itm-grd5"
@@ -1455,3 +1478,48 @@
 		font-weight: bold
 	.sect-acsps__prod-text
 		padding-top: 28px
+	.sect-games__mob
+		display: block
+	.sect-games__mob-wrap
+		margin-bottom: 58px
+		&:last-child
+			margin-bottom: 0
+		h4
+			font-size: 18px
+			color: #000
+			text-align: left
+			margin: 15px 0 10px 0 !important
+			display: inline-block
+			position: relative
+			&::before
+				content: ""
+				background-image: url(https://cdn.comfy.ua/media/x/img/arrow_mob.svg)
+				position: absolute
+				right: -30px
+				top: 50%
+				width: 21px
+				height: 10px
+				transform: translateY(-50%)
+		p
+			color: #616161
+			font-size: 16px
+			text-align: left
+	.sect-games__mob-bgrd-img
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		max-width: 100%
+		height: 215px
+		&.blitem1
+			background-image: url(https://cdn.comfy.ua/media/x/img/ps5/img5_tab1.png)
+		&.blitem2
+			background-image: url(https://cdn.comfy.ua/media/x/img/ps5/img5_tab2.png)
+		&.blitem3
+			background-image: url(https://cdn.comfy.ua/media/x/img/ps5/img5_tab3.png)
+		&.blitem4
+			background-image: url(https://cdn.comfy.ua/media/x/img/fifa21.png)
+		&.blitem5
+			background-image: url(https://cdn.comfy.ua/media/x/img/gta5.png)
+	.maxWmove2
+		position: relative
+		height: 250px
