@@ -1,0 +1,298 @@
+<style type="text/css">
+  #content_ex p:first-letter {
+    padding-left: 0;
+  }
+
+  #content_ex p {
+    margin-bottom: 0;
+  }
+
+  #content_ex img:hover {
+    opacity: 1;
+  }
+
+  #content_ex img {
+    opacity: 1;
+  }
+
+  #content_ex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -o-flexbox;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  #content_ex .container h2 {
+    font: 28px PTSans, sans-serif;
+    font: 2.8rem PTSans, sans-serif;
+    line-height: 3rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  #content_ex .container img {
+    max-width: 100%;
+    margin-bottom: 0rem;
+  }
+
+  #content_ex .container p {
+    text-align: justify;
+    max-width: 80%;
+    margin: 15px auto 25px;
+    text-align: center;
+
+  }
+
+  #content_ex .container .container_li_item {
+    text-align: left;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list {
+    padding-left: 1.4rem;
+    margin: 3rem 0rem 3rem 0rem;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list li {
+    position: relative;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list li:before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -1.3rem;
+    border-radius: 50%;
+    width: .5rem;
+    height: .5rem;
+    background-color: #379424;
+  }
+
+  .small3 {
+    max-width: 600px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small2 {
+    max-width: 450px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small {
+    max-width: 600px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+
+  .col_fl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+  }
+
+  #content_ex .col_fl .item6 p {
+    max-width: 100%;
+    margin: 15px;
+  }
+
+  .col_fl .item6:first-child {
+    padding-left: 0%;
+  }
+
+  .col_fl .item6:last-child {
+    padding-right: 0%;
+  }
+
+  .col_fl .item6 {
+    flex: 1 1 0;
+    padding: 1%;
+  }
+
+  .col_fl .item6 img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .col_fl .item6 img {
+    max-height: 485px !important;
+    height: auto;
+  }
+
+  .cont_ul {
+    list-style-type: disc;
+    padding-left: 50px;
+    max-width: 80%;
+    margin: 15px auto 10px;
+    font-size: 18px;
+  }
+
+  .container_fl_content {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+  }
+
+  .container_fl_content .row_fl_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container_fl_content .row_fl_content.row_reverse_fl {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container_fl_content .row_fl_content.row_reverse_fl .item_fullstyle.itmfl_right span.text_fl_content h2 {
+    text-align: right !important;
+  }
+
+  .container_fl_content .row_fl_content .item_fullstyle {
+    flex: 1 1 0;
+  }
+
+  .container_fl_content .row_fl_content .item_fullstyle.itmfl_right .text_fl_content {
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .container_fl_content .row_fl_content .item_fullstyle.itmfl_right span.text_fl_content h2 {
+    text-align: left !important;
+  }
+
+  .container_fl_content .row_fl_content .item_fullstyle.itmfl_right .text_fl_content p {
+    max-width: 100% !important;
+  }
+
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .container_fl_content .row_fl_content.row_reverse_fl {
+      flex-direction: column;
+    }
+
+    .container_fl_content .row_fl_content {
+      flex-direction: column;
+    }
+
+    .container_fl_content .row_fl_content .item_fullstyle.itmfl_right .text_fl_content {
+      max-width: 100%;
+    }
+
+    .container_fl_content .row_fl_content .item_fullstyle {
+      flex: 1;
+    }
+
+    .container_fl_content .row_fl_content .item_fullstyle.itmfl_right span.text_fl_content h2 {
+      text-align: center !important;
+    }
+
+    .container_fl_content .row_fl_content.row_reverse_fl .item_fullstyle.itmfl_right span.text_fl_content h2 {
+      text-align: center !important;
+    }
+
+    .col_fl {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #content_ex .col_fl .item6 p {
+      margin: 15px auto 25px;
+    }
+
+    .col_fl .item6 {
+      flex: 1;
+    }
+
+    .cont_ul {
+      max-width: 100%;
+    }
+
+    #content_ex .container p {
+      max-width: 100%;
+    }
+
+    #content_ex {
+      margin: 15px;
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    #content_ex .col_fl .item6 h2 {
+      line-height: 1;
+      height: 50px;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    #content_ex .col_fl .item6 h2 {
+      line-height: 1;
+      height: 50px;
+    }
+  }
+</style>
+
+<div id="content_ex">
+  <div class="container">
+
+    <img src="https://cdn.comfy.ua/media/x/img/1575147/ua/2.jpg" alt="">
+    <img src="https://cdn.comfy.ua/media/x/img/1575147/ua/3.jpg" alt="">
+    <img src="https://cdn.comfy.ua/media/x/img/1575147/ua/4.jpg" alt="">
+
+    <h2>InstaView Door-in-Door</h2>
+    <img src="https://cdn.comfy.ua/media/x/img/1534685/ua2.jpg" />
+    <p>Двері холодильника LG InstaView ™ Door-in-Door® зроблена зі скла із дзеркальною поверхнею, що дозволяє побачити вміст полиць просто постукавши по ньому. Це допомагає зберігати порядок в основній камері та економити енергію, оскільки не має потреби охолоджувати великий обсяг після кожного відкривання.</p>
+
+    <h2>Нове покоління Door-in-Door</h2>
+    <img src="https://cdn.comfy.ua/media/x/img/1534685/ua3.jpg" />
+    <p>Інноваційна система InstaView Door-in-Door ™ заощаджує не тільки Ваш час, а й електроенергію. Адже для того, щоб перевірити вміст, достатньо двічі постукати по скляних дверцятах холодильника. Додаткові відділення в подвійних дверях призначені для тих продуктів, які Ви споживаєте частіше. Не потрібно кожного разу відкривати основні двері, тим самим випускаючи охолоджене повітря.</p>
+
+    <h2>Технологія DoorCooling+</h2>
+    <img src="https://cdn.comfy.ua/media/x/img/1534686/2.jpg" />
+    <p>На 32%* більш швидке та рівномірне охолодження в будь-якому відсіку холодильника. Технологія DoorCooling + забезпечує циркуляцію холодного повітря з верхньої частини холодильника, щоб підтримувати однакову температуру навіть у важкодоступних зонах. Це значно зменшує перепад температур між дверима та внутрішнім простором холодильної камери, та дозволяє зберігати свіжими усі продукти.</p>
+
+    <h2>Інверторний Лінійний Компресор</h2>
+    <img src="https://cdn.comfy.ua/media/x/img/1534685/ua1.jpg" />
+    <p>Головними перевагами Інверторного Лінійного компресора LG безумовно є економія електроенергії, знижений рівень шуму, підвищена надійність та збільшення терміну експлуатації холодильника. А постійний температурний режим забезпечує оптимальні умови для зберігання продуктів.</p>
+
+    <h2>Wi-Fi з підключенням до ThinQ</h2>
+    <img src="https://cdn.comfy.ua/media/x/img/1534685/ua5.jpg" />
+    <p>Технологія Wi-Fi c підключенням до Smart ThinQ ™ допоможе регулювати температуру у Вашому холодильнику в будь-який час і з будь-якої відстані. Ви можете налаштувати параметри температури та контролювати Ваш холодильник за допомогою гаджетів в режимі онлайн, а також отримувати повідомлення про неполадки.</p>
+
+    <h2>Hygiene Fresh + вбиває до 99,9% бактерій</h2>
+    <img src="https://cdn.comfy.ua/media/x/img/1534685/ua6.jpg" />
+    <p>Завдяки унікальній технології Hygiene Fresh + від LG спеціальний фільтр видаляє з повітря в холодильному відсіку до 99,9% забруднень. Система очищення складається з 4-х фільтруючих шарів, які ретельно очищають повітря від пилу, спор грибків, бактерій та неприємних запахів, таким чином дозволяючи продуктам в холодильнику довше залишатися свіжими та корисними.</p>
+
+    <h2>Складана полиця</h2>
+    <img src="https://cdn.comfy.ua/media/x/img/1534686/1.jpg">
+    <p>Зручна для зберігання предметів будь-якого об’єму та величини. Складана полиця дозволяє без зусиль організувати місце для громіздких та високих предметів лише у 2 кроки.</p>
+
+    <!-- <h2>Зручне зберігання</h2>
+      <img src="https://cdn.comfy.ua/media/x/img/1534685/ua12.jpg" /> 
+      <p>Порядок та комфорт для Вашої кухні. Зручність зберігання та постійний порядок у холодильнику тепер легко досяжні завдяки полиці для вина та складаної полиці у два кроки, які допоможуть економно та ергономічно організувати простір у Вашому холодильнику.</p> -->
+
+    <h2>Moist Balance Crisper</h2>
+    <img src="https://cdn.comfy.ua/media/x/img/1534685/ua13.jpg" />
+    <p>Завдяки системі Moist Balance Crisper овочі та фрукти в спеціальному контейнері залишаються свіжими і зберігають свої корисні властивості набагато довше, адже спеціальні комірки на поверхні кришки дозволяють вологості всередині контейнера знаходиться на певному рівні і створюють відповідні затвори, конденсуючи вологу всередині себе.</p>
+
+    <!-- <h2>Total No Frost</h2>
+      <img src="https://cdn.comfy.ua/media/x/img/1534685/ua14.jpg" /> 
+      <p>Холодильники з технологією LG Total No Frost перешкоджають утворенню льоду і намерзанню вологи на стінках холодильника. Тепер Вам не потрібно регулярно розморожувати холодильник. Забудьте про неприємні запахи, і насолоджуйтеся гігієнічною чистотою.</p> -->
+
+    <h2>Технологія контролю напруги</h2>
+    <img src="https://cdn.comfy.ua/media/x/img/1534685/ua15.jpg" />
+    <p>Забезпечить безперебійну роботу Вашого холодильника навіть при перепаді напруги до 400 Вольт.</p>
+
+  </div>
+</div>
