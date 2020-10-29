@@ -290,6 +290,15 @@
   }
 }
 
+.sect-headerPS5__img {
+  display: none !important;
+  padding: 0 0 5px 0 !important;
+}
+
+.sect-headerPS5__img img {
+  margin: 0 auto !important;
+}
+
 .sect-headerPS5__container-bottom {
   position: relative;
   width: 100%;
@@ -409,12 +418,55 @@
           transform: translateY(-50%);
 }
 
+.sect-advantage__img-pos .advantage__maxWmove img {
+  position: relative;
+  z-index: 4;
+}
+
 .sect-advantage__img-pos .advantage__maxWmove:first-child {
   display: block;
+  position: relative;
+}
+
+.sect-advantage__img-pos .advantage__maxWmove:first-child::before {
+  content: "";
+  background-image: url(https://cdn.comfy.ua/media/x/img/sesk.svg);
+  position: absolute;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  width: 309px;
+  height: 65px;
+  right: 0;
+  bottom: 12px;
 }
 
 .sect-advantage__img-pos .advantage__maxWmove:last-child {
   display: none;
+  position: relative;
+}
+
+.sect-advantage__img-pos .advantage__maxWmove:last-child::before {
+  content: "";
+  background-image: url(https://cdn.comfy.ua/media/x/img/Ellipse_4.svg);
+  width: 84px;
+  height: 18px;
+  position: absolute;
+  left: 27px;
+  bottom: 10px;
+  z-index: 3;
+}
+
+.sect-advantage__img-pos .advantage__maxWmove:last-child::after {
+  content: "";
+  background-image: url(https://cdn.comfy.ua/media/x/img/Ellipse_4.svg);
+  width: 84px;
+  height: 18px;
+  position: absolute;
+  right: 28px;
+  bottom: 10px;
+  z-index: 3;
 }
 
 .advantage-list-flex {
@@ -472,7 +524,7 @@
 }
 
 .advantage__item:last-child li:nth-child(1)::before {
-  background-image: url(https://cdn.comfy.ua/media/x/img/ps5/img2_item4.svg);
+  background-image: url(https://cdn.comfy.ua/media/x/img/ps5_item1.svg);
 }
 
 .advantage__item:last-child li:nth-child(2)::before {
@@ -1279,26 +1331,26 @@
   margin: 0 auto !important;
   left: 0;
   right: 0;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  -moz-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .sect-acsps__prod {
   opacity: 1;
-  -webkit-animation: fadeEffect66 1s;
-     -moz-animation: fadeEffect66 1s;
-       -o-animation: fadeEffect66 1s;
-          animation: fadeEffect66 1s;
+  -webkit-animation: fadeEffect66 0.5s;
+     -moz-animation: fadeEffect66 0.5s;
+       -o-animation: fadeEffect66 0.5s;
+          animation: fadeEffect66 0.5s;
 }
 
 .sect-acsps__prod .sect-acsps__prod-link {
   opacity: 0;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  -moz-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .sect-acsps__prod:hover {
@@ -1307,22 +1359,22 @@
 
 .sect-acsps__prod:hover.prod1 .sect-acsps__prod-img .sect-acsps__prod-img-hover, .sect-acsps__prod:hover.prod2 .sect-acsps__prod-img .sect-acsps__prod-img-hover, .sect-acsps__prod:hover.prod3 .sect-acsps__prod-img .sect-acsps__prod-img-hover, .sect-acsps__prod:hover.prod4 .sect-acsps__prod-img .sect-acsps__prod-img-hover {
   max-width: 100%;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  -moz-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .sect-acsps__prod:hover .sect-acsps__prod-link {
   opacity: 1;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  -moz-transition: 1s;
-  transition: 1s;
-  -webkit-animation: fadeEffect6 1s;
-     -moz-animation: fadeEffect6 1s;
-       -o-animation: fadeEffect6 1s;
-          animation: fadeEffect6 1s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-animation: fadeEffect6 0.5s;
+     -moz-animation: fadeEffect6 0.5s;
+       -o-animation: fadeEffect6 0.5s;
+          animation: fadeEffect6 0.5s;
 }
 
 .sect-acsps__prod.prod1 .sect-acsps__prod-text p {
@@ -1613,6 +1665,11 @@
   #playstation5 a.link_blue {
     margin: 0 0 0 auto;
   }
+  .sect-advantage__img-pos .advantage__maxWmove:first-child::before {
+    width: 240px;
+    height: 50px;
+    bottom: 12px;
+  }
   .sect-headerPS5__container-top span {
     padding: 25px 15px;
     font-size: 30px;
@@ -1647,6 +1704,7 @@
   }
   .sect-advantage__img-pos {
     left: 0;
+    max-width: 50%;
   }
   .sect-consolefunc__cols-flex {
     padding: 0 25px 50px 25px;
@@ -1846,6 +1904,11 @@
   #playstation5 a.link_blue {
     margin: 0 0 0 auto;
   }
+  .sect-advantage__img-pos .advantage__maxWmove:first-child::before {
+    width: 205px;
+    height: 42px;
+    bottom: 7px;
+  }
   .sect-headerPS5__container-top span {
     padding: 25px 15px;
     font-size: 30px;
@@ -1885,7 +1948,7 @@
   }
   .sect-advantage__img-pos {
     left: 0;
-    max-width: 70%;
+    max-width: 50%;
   }
   .sect-consolefunc__cols-flex {
     padding: 0 15px 50px 15px;
@@ -2150,8 +2213,9 @@
     top: 0;
   }
   .sect-headerPS5__container-top span {
-    padding: 20px 15px;
+    padding: 20px 0;
     font-size: 20px;
+    width: 100%;
   }
   .sect-headerPS5__bgrd-banner-ps {
     max-width: 768px;
@@ -2235,6 +2299,9 @@
   }
   .sect-advantage__img-pos .advantage__maxWmove:last-child {
     display: block;
+    width: 270px;
+    height: 154px;
+    margin: 0 auto;
   }
   .sect-consolefunc__cols-flex {
     padding: 0 0 60px 0;
@@ -2275,19 +2342,23 @@
     padding: 45px 15px 45px 25px;
   }
   .sect-games__bottom-txt {
-    margin: 35px 0 35px 0;
+    margin: 45px 0 35px 0;
     max-width: 100%;
     padding: 0 15px;
   }
   .sect-games__bottom-txt img {
     max-width: 70%;
   }
+  .sect-games__bottom-txt p {
+    font-size: 14px;
+  }
   .sect-games__tabs-content {
-    overflow: hidden;
+    overflow: inherit;
   }
   .sect-games__tabs {
     padding: 25px 15px 15px 15px;
     position: relative;
+    margin-top: 20px;
   }
   .sect-games__tabs button {
     padding: 10px 5px 15px 5px;
@@ -2311,13 +2382,12 @@
     opacity: 1;
   }
   .sect-games__bottom-bl {
-    height: 475px;
+    height: 490px;
   }
   .sect-games__bottom-bl.bgrd_tab1 .sect-games__bottom-img__one {
-    right: -160px;
-    bottom: -70px;
-    max-width: 340px;
-    opacity: 0.5;
+    right: -65px;
+    bottom: -20px;
+    max-width: 200px;
   }
   .sect-games__bottom-bl.bgrd_tab2 .sect-games__bottom-img__one {
     right: -190px;
@@ -2342,6 +2412,13 @@
   }
   .sect-games__bottom-img__two {
     display: none;
+  }
+  .sect-games__bottom-bl.bgrd_tab1 .sect-games__bottom-img__two {
+    display: block;
+    max-width: 165px;
+    min-height: auto;
+    bottom: 0;
+    right: -38px;
   }
   .sect-games__container-grid {
     display: block;
@@ -2586,7 +2663,7 @@
   }
   .sect-games__mob-wrap p {
     color: #616161;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
   }
   .sect-games__mob-bgrd-img {
@@ -2617,5 +2694,8 @@
   .maxWmove2 {
     position: relative;
     height: 250px;
+  }
+  .sect-headerPS5__img {
+    display: block !important;
   }
 }
