@@ -14,6 +14,7 @@
   height: auto;
   display: block;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #f2f2f2;
 }
@@ -65,19 +66,28 @@
 /*end default styles*/
 #happy .complete {
   background-color: #fff;
-  border-radius: 8px;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
   padding: 50px 0;
 }
 
 #happy .complete .complete_list {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -93,10 +103,15 @@
 
 #happy .complete .complete_list li .complete_txt .list_content > li {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
@@ -120,9 +135,10 @@
 }
 
 #happy .complete .complete_list li .complete_txt .list_content > li:nth-of-type(1) p {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
 }
 
 #happy .complete .complete_list li .complete_txt .list_content > li:nth-of-type(1)::before {
@@ -160,7 +176,9 @@
 #happy .issue {
   margin: 10px 0;
   background-color: #fff;
-  border-radius: 8px;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
   padding: 50px 70px;
 }
 
@@ -171,22 +189,33 @@
 
 #happy .issue .issue_list {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 #happy .issue .issue_list li {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   max-width: 178px;
@@ -195,13 +224,20 @@
 #happy .issue .issue_list li .issue_img {
   height: 130px;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+     -moz-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
 }
@@ -219,7 +255,9 @@
 #happy .crash {
   background-color: #fff;
   padding: 50px 90px 65px 90px;
-  border-radius: 8px;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
 }
 
 #happy .crash .crash_title {
@@ -229,19 +267,28 @@
 
 #happy .crash .crash_list {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 #happy .crash .crash_list li {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   max-width: 200px;
@@ -262,7 +309,9 @@
 
 #happy .stat {
   background-color: #fff;
-  border-radius: 8px;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
   margin: 10px 0;
 }
 
@@ -277,6 +326,9 @@
   right: 50%;
   bottom: 50%;
   -webkit-transform: translate(50%, 50%);
+     -moz-transform: translate(50%, 50%);
+      -ms-transform: translate(50%, 50%);
+       -o-transform: translate(50%, 50%);
           transform: translate(50%, 50%);
   min-width: 100%;
 }
@@ -288,17 +340,26 @@
 #happy .stat .diagram .diagram_list {
   position: relative;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   min-height: 723px;
   -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+     -moz-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   z-index: 2;
@@ -306,10 +367,13 @@
 
 #happy .stat .diagram .diagram_list > li {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   max-width: 50%;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
@@ -329,6 +393,9 @@
   right: 50%;
   bottom: 50%;
   -webkit-transform: translate(50%, 50%);
+     -moz-transform: translate(50%, 50%);
+      -ms-transform: translate(50%, 50%);
+       -o-transform: translate(50%, 50%);
           transform: translate(50%, 50%);
 }
 
@@ -356,10 +423,15 @@
 
 #happy .stat .diagram .diagram_list > li:last-of-type .percent li {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
@@ -379,7 +451,9 @@
   max-width: 12px;
   min-width: 12px;
   height: 12px;
-  border-radius: 4px;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
   margin-right: 20px;
 }
 
@@ -441,6 +515,8 @@
 
 #happy .stat #block_accordion .accordion_row ul li:nth-of-type(1) {
   -webkit-animation-delay: 0.5s;
+     -moz-animation-delay: 0.5s;
+       -o-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
@@ -453,13 +529,20 @@
 
 #happy .stat #block_accordion .accordion_row ul li ul li {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   color: #3c3c3c;
@@ -479,6 +562,9 @@
   margin-top: 5px;
   margin-right: 10px;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF671F), to(#FDAE55));
+  background: -webkit-linear-gradient(top, #FF671F 0%, #FDAE55 100%);
+  background: -moz-linear-gradient(top, #FF671F 0%, #FDAE55 100%);
+  background: -o-linear-gradient(top, #FF671F 0%, #FDAE55 100%);
   background: linear-gradient(180deg, #FF671F 0%, #FDAE55 100%);
 }
 
@@ -497,22 +583,34 @@
   max-height: 0;
   opacity: 0;
   -webkit-transform: translate(0, 50%);
-  transform: translate(0, 50%);
+  -moz-transform: translate(0, 50%);
+   -ms-transform: translate(0, 50%);
+    -o-transform: translate(0, 50%);
+       transform: translate(0, 50%);
 }
 
 #happy .stat #block_accordion .accordion_row ul li input[type=checkbox]:checked ~ i:before {
   -webkit-transform: translate(2px, 0) rotate(45deg);
+     -moz-transform: translate(2px, 0) rotate(45deg);
+      -ms-transform: translate(2px, 0) rotate(45deg);
+       -o-transform: translate(2px, 0) rotate(45deg);
           transform: translate(2px, 0) rotate(45deg);
 }
 
 #happy .stat #block_accordion .accordion_row ul li input[type=checkbox]:checked ~ i:after {
   -webkit-transform: translate(-2px, 0) rotate(-45deg);
+     -moz-transform: translate(-2px, 0) rotate(-45deg);
+      -ms-transform: translate(-2px, 0) rotate(-45deg);
+       -o-transform: translate(-2px, 0) rotate(-45deg);
           transform: translate(-2px, 0) rotate(-45deg);
 }
 
 #happy .stat #block_accordion .accordion_row ul li i {
   position: absolute;
   -webkit-transform: translate(-6px, 0);
+     -moz-transform: translate(-6px, 0);
+      -ms-transform: translate(-6px, 0);
+       -o-transform: translate(-6px, 0);
           transform: translate(-6px, 0);
   margin-top: 19px;
   right: 25px;
@@ -525,6 +623,9 @@
   width: 3px;
   height: 9px;
   -webkit-transform: translate(-2px, 0) rotate(45deg);
+     -moz-transform: translate(-2px, 0) rotate(45deg);
+      -ms-transform: translate(-2px, 0) rotate(45deg);
+       -o-transform: translate(-2px, 0) rotate(45deg);
           transform: translate(-2px, 0) rotate(45deg);
 }
 
@@ -535,6 +636,9 @@
   width: 3px;
   height: 9px;
   -webkit-transform: translate(2px, 0) rotate(-45deg);
+     -moz-transform: translate(2px, 0) rotate(-45deg);
+      -ms-transform: translate(2px, 0) rotate(-45deg);
+       -o-transform: translate(2px, 0) rotate(-45deg);
           transform: translate(2px, 0) rotate(-45deg);
 }
 
@@ -556,7 +660,10 @@
   padding: 40px 30px 25px 55px;
   opacity: 1;
   -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+   -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+       transform: translate(0, 0);
 }
 
 #happy .stat #block_accordion .accordion_row ul ul.list_num {
@@ -581,13 +688,20 @@
 
 #happy .stat .downbl5 .container_bl5_download .row_download {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 35px;
@@ -610,6 +724,8 @@
 @media (max-width: 1024px) {
   #happy .complete .complete_list li {
     -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0;
+       -moz-box-flex: 1;
         -ms-flex: 1 1 0px;
             flex: 1 1 0;
   }
@@ -646,9 +762,12 @@
     padding: 20px 0;
   }
   #happy .issue .issue_list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
@@ -660,14 +779,16 @@
     padding: 20px 0;
   }
   #happy .crash .crash_list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
   }
   #happy .crash .crash_list li {
     min-width: 50%;
     max-width: 50%;
     padding: 10px;
     -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
             box-sizing: border-box;
   }
   #happy .crash .crash_list li .crash_txt {
@@ -691,6 +812,9 @@
   #happy .stat .diagram .diagram_list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
