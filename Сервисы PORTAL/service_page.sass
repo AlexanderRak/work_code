@@ -83,11 +83,6 @@ span.tx-uppercase
 .item-tabcontent
 	display: none
 	animation: fadeEffect_tab 1s
-@keyframes fadeEffect_tab
-	from
-		opacity: 0
-	to
-		opacity: 1
 .tabs-grd-container
 	display: grid
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr
@@ -96,6 +91,10 @@ span.tx-uppercase
 	&.clmn-grid6
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
 		grid-template-areas: "tab-item-grd1 tab-item-grd2 tab-item-grd3 tab-item-grd4 tab-item-grd5 tab-item-grd6"
+	&.clmn-grid4
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-areas: "tab-item-grd1 tab-item-grd2 tab-item-grd3 tab-item-grd4"
+
 .tab-item-grd1
 	grid-area: tab-item-grd1
 .tab-item-grd2
@@ -151,6 +150,9 @@ span.tx-uppercase
 			&.tabimg11
 				right: -20px
 				top: -15px
+			&.tabimg19
+				top: -20px
+				right: -18px
 		&:hover
 			background: linear-gradient(203.43deg, #7F95B6 3.08%, #7C5D4E 100%)
 	&.tab2
@@ -173,6 +175,9 @@ span.tx-uppercase
 			&.tabimg13
 				right: -19px
 				top: 10px
+			&.tabimg18
+				right: -25px
+				top: -15px
 		&:hover
 			background: linear-gradient(203.43deg, #B67F7F 3.08%, #4E7C71 100%)
 	&.tab4
@@ -184,6 +189,9 @@ span.tx-uppercase
 			&.tabimg14
 				right: -20px
 				top: -11px
+			&.tabimg16
+				right: -30px
+				top: -17px
 		&:hover
 			background: linear-gradient(203.43deg, #6E7587 3.08%, #252C3E 100%)
 	&.tab5
@@ -192,15 +200,18 @@ span.tx-uppercase
 			&.tabimg10
 				right: -20px
 				top: -15px
-			&.tabimg15
-				top: 10px
-				right: -20px
+			&.tabimg17
+				right: -85px
+				top: -51px
 		&:hover
 			background: linear-gradient(203.43deg, #7F95B6 3.08%, #784343 100%)
 	&.tab6
 		.tab__container__img
 			right: -20px
 			top: -20px
+			&.tabimg15
+				top: 10px
+				right: -20px
 		&:hover
 			background: linear-gradient(203.43deg, #89ACD4 3.08%, #5A4E7C 100%)
 
@@ -222,6 +233,9 @@ span.tx-uppercase
 	padding: 60px 0 0 0
 	&.active-tab
 		display: block
+	&.active-tab-imp
+		display: block
+		padding: 0 0 0 0
 .tab-prod-flex
 	display: flex
 	flex-direction: row
@@ -269,6 +283,62 @@ span.tx-uppercase
 		font-weight: bold
 		font-size: 16px
 		margin: 25px 0 0 auto
+.sect-tabs-content__tab2
+	overflow: hidden
+	display: flex
+	padding: 0 0 30px 0
+	justify-content: center
+	button
+		cursor: pointer
+		transition: 0.3s
+		color: #000
+		opacity: 0.4
+		min-height: 30px
+		font-size: 18px
+		border-bottom: 2px solid #fff
+		padding: 0
+		margin-right: 30px
+		&:hover
+			opacity: 1
+		&.active
+			opacity: 1
+			border-bottom: 2px solid #000
+		&:last-child
+			margin-right: 0
+.item-tabcontent__tab2
+	display: none
+	animation: fadeEffect_tab 1s
+
+.sect-tabs-content__tab3
+	overflow: hidden
+	display: flex
+	padding: 0 0 30px 0
+	justify-content: center
+	button
+		cursor: pointer
+		transition: 0.3s
+		color: #000
+		opacity: 0.4
+		min-height: 30px
+		font-size: 18px
+		border-bottom: 2px solid #fff
+		padding: 0
+		margin-right: 30px
+		&:hover
+			opacity: 1
+		&.active
+			opacity: 1
+			border-bottom: 2px solid #000
+		&:last-child
+			margin-right: 0
+.item-tabcontent__tab3
+	display: none
+	animation: fadeEffect_tab 1s
+@keyframes fadeEffect_tab
+	from
+		opacity: 0
+	to
+		opacity: 1
 // media
 // @media (max-width: 1250px)
 @media (max-width: 1024px)
@@ -301,6 +371,9 @@ span.tx-uppercase
 				&.tabimg11
 					right: -20px
 					top: -10px
+				&.tabimg19
+					top: -20px
+					right: -18px
 		&.tab2
 			.tab__container__img
 				right: -27px
@@ -319,6 +392,9 @@ span.tx-uppercase
 				&.tabimg13
 					right: -30px
 					top: 10px
+				&.tabimg18
+					right: -25px
+					top: -15px
 		&.tab4
 			.tab__container__img
 				right: -20px
@@ -328,19 +404,25 @@ span.tx-uppercase
 				&.tabimg14
 					right: -40px
 					top: -10px
+				&.tabimg16
+					right: -30px
+					top: -17px
 		&.tab5
 			.tab__container__img
 				right: -20px
 				&.tabimg10
 					right: -40px
 					top: -10px
-				&.tabimg15
-					top: 40px
-					right: -10px
+				&.tabimg17
+					right: -85px
+					top: -51px
 		&.tab6
 			.tab__container__img
 				right: -20px
 				top: -10px
+				&.tabimg15
+					top: 40px
+					right: -10px
 	.tab__container__img
 		top: -10px
 		max-width: 185px
