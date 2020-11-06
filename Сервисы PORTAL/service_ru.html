@@ -6,8 +6,8 @@
    <!-- sect1 -->
    <section class="sect-header-service">
       <div class="sect-header-service__text">
-         <h2>Воспользуйтесь нашими услугами.</h2>
-         <h3>Если вам необходима помощь специалиста, для вашей техники не стесняйтесь <span class="word-wrap">обращаться к нам и получите профессиональный результат.</span></h3>
+         <h2>WOW-услуги COMFY</h2>
+         <h3>Услуги, в которых мы стали экспертами. Гарантируем высокое качество и всестороннюю поддержку</h3>
       </div>
       <div class="sect-header-service__logo">
          <img src="https://cdn.comfy.ua/media/x/img/portalsrvs/bgrd.png" alt="">
@@ -35,6 +35,8 @@
                </button>
             </div>
          </div>
+
+
 
          <div id="tab_service1" class="item-tabcontent">
 
@@ -95,7 +97,7 @@
                </div>
             </div>
 
-            <div class="tab__container-wrap">
+            <div id="myDiv" class="tab__container-wrap">
 
                <div class="tab__container-content">
 
@@ -253,7 +255,7 @@
                </div>
             </div>
 
-            <div class="tab__container-wrap">
+            <div id="myDiv" class="tab__container-wrap">
 
                <div class="tab__container-content">
                   <div class="tab-prod-flex">
@@ -579,7 +581,7 @@
                </div>
             </div>
 
-            <div class="tab__container-wrap">
+            <div id="myDiv" class="tab__container-wrap">
 
                <div class="tab__container-content">
                   <div class="tab-prod-flex">
@@ -720,7 +722,7 @@
 
             </div>
 
-            <div class="tab__container-wrap">
+            <div id="myDiv" class="tab__container-wrap">
 
                <div class="tab__container-content">
                   <div class="sect-tabs-content__tab-overplay-mob">
@@ -1153,4 +1155,12 @@
          });
       });
    })(jQuery);
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+   $(".tab-item-grd_wrap").click(function() {
+      $('html, body').animate({
+         scrollTop: $("#myDiv").offset().top
+      }, 1000);
+   });
 </script>

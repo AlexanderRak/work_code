@@ -322,7 +322,7 @@
             </a>
             <div class="product-wrap__pay-flex">
                <div class="product-wrap__item-pay">
-                  <span id="sku-1555049" class="pay__price pay__price-none"></span>
+                  <span id="sku-1555049" class="pay__price"></span>
                   <span id="sku-1555049_" class="pay__price"></span>
                </div>
                <div class="buy">
@@ -493,7 +493,7 @@
             </a>
             <div class="product-wrap__pay-flex">
                <div class="product-wrap__item-pay">
-                  <span id="sku-1632049" class="pay__price pay__price-none"></span>
+                  <span id="sku-1632049" class="pay__price"></span>
                   <span id="sku-1632049_" class="pay__price"></span>
                </div>
                <div class="buy">
@@ -700,43 +700,70 @@
 
          var pr1 = resp['803463']['price'];
          var pr1_ = resp['803463']['special_price'];
-         if(pr1_ == pr1) { document.getElementById('sku-1555049_' ).style.display = 'none'; } else {
+         if(pr1_ == pr1) {
+            document.getElementById('sku-1555049_' ).style.display = 'none';
+            document.getElementById('sku-1555049').classList.add("pay__price-none");
+         } else {
             document.getElementById("sku-1555049_").innerHTML = pr1_; }
 
          var pr2 = resp['214953']['price'];
          var pr2_ = resp['214953']['special_price'];
-         if(pr2_ == pr2) { document.getElementById('sku-1290288_' ).style.display = 'none'; } else {
+         if(pr2_ == pr2) {
+            document.getElementById('sku-1290288_' ).style.display = 'none';
+            document.getElementById('sku-1290288').classList.add("pay__price-none");
+         } else {
             document.getElementById("sku-1290288_").innerHTML = pr2_; }
 
          var pr3 = resp['1136973']['price'];
          var pr3_ = resp['1136973']['special_price'];
-         if(pr3 == pr3_) { document.getElementById('sku-1639379_' ).style.display = 'none'; } else {
+         if(pr3 == pr3_) {
+            document.getElementById('sku-1639379_' ).style.display = 'none';
+            document.getElementById('sku-1639379').classList.add("pay__price-none");
+         } else {
             document.getElementById("sku-1639379_").innerHTML = pr3_; }
 
          var pr4 = resp['42444']['price'];
          var pr4_ = resp['42444']['special_price'];
-         if(pr4_ == pr4) { document.getElementById('sku-1029237_' ).style.display = 'none'; } else {
+         if(pr4_ == pr4) {
+            document.getElementById('sku-1029237_' ).style.display = 'none';
+            document.getElementById('sku-1029237').classList.add("pay__price-none");
+         } else {
             document.getElementById("sku-1029237_").innerHTML = pr4_; }
 
          var pr5 = resp['1022343']['price'];
          var pr5_ = resp['1022343']['special_price'];
-         if(pr5_ == pr5) { document.getElementById('sku-1582554_' ).style.display = 'none'; } else {
+         if(pr5_ == pr5) {
+            document.getElementById('sku-1582554_' ).style.display = 'none';
+            document.getElementById('sku-1582554').classList.add("pay__price-none");
+         } else {
             document.getElementById("sku-1582554_").innerHTML = pr5_; }
 
          var pr6 = resp['65480']['price'];
          var pr6_ = resp['65480']['special_price'];
-         if(pr6_ == pr6) { document.getElementById('sku-1103490_' ).style.display = 'none'; } else {
+         if(pr6_ == pr6) {
+            document.getElementById('sku-1103490_' ).style.display = 'none';
+            document.getElementById('sku-1103490').classList.add("pay__price-none");
+         } else {
             document.getElementById("sku-1103490_").innerHTML = pr6_; }
 
          var pr7 = resp['1044653']['price'];
          var pr7_ = resp['1044653']['special_price'];
-         if(pr7_ == pr7) { document.getElementById('sku-1616901_' ).style.display = 'none'; } else {
+         if(pr7_ == pr7) { 
+            document.getElementById('sku-1616901_' ).style.display = 'none';
+            document.getElementById('sku-1616901').classList.add("pay__price-none");
+         } else {
             document.getElementById("sku-1616901_").innerHTML = pr7_; }
 
          var pr8 = resp['1102383']['price'];
          var pr8_ = resp['1102383']['special_price'];
-         if(pr8_ == pr8) { document.getElementById('sku-1632049_' ).style.display = 'none'; } else {
-            document.getElementById("sku-1632049_").innerHTML = pr8_; }
+         if(pr8_ == pr8)
+         {
+            document.getElementById('sku-1632049_' ).style.display = 'none';
+            document.getElementById('sku-1632049').classList.add("pay__price-none");
+         }
+         else {
+            document.getElementById("sku-1632049_").innerHTML = pr8_;
+         }
          
          document.getElementById("sku-1555049").innerHTML = pr1;
          document.getElementById("sku-1555049_").innerHTML = pr1_;
