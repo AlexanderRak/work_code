@@ -1033,6 +1033,20 @@ span.tx-uppercase {
   .tab-item-grd_wrap.active-tab:hover {
     overflow: inherit;
   }
+  .tab-item-grd_wrap:hover {
+    -webkit-box-shadow: inherit;
+       -moz-box-shadow: inherit;
+            box-shadow: inherit;
+  }
+  .tab-item-grd_wrap:hover .tab__container__text {
+    color: #000;
+  }
+  .tab-item-grd_wrap:hover.active-tab .tab__container__text {
+    color: #fff;
+  }
+  .tab-item-grd_wrap.tab1:hover::before, .tab-item-grd_wrap.tab2:hover::before, .tab-item-grd_wrap.tab3:hover::before, .tab-item-grd_wrap.tab4:hover::before, .tab-item-grd_wrap.tab5:hover::before, .tab-item-grd_wrap.tab6:hover::before {
+    opacity: 0;
+  }
   .sect-tabs-content__tab2 button {
     font-size: 16px;
     margin-right: 5px;

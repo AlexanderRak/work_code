@@ -520,6 +520,15 @@ span.tx-uppercase
 			overflow: visible
 			&:hover
 				overflow: inherit
+		&:hover
+			box-shadow: inherit
+			.tab__container__text
+				color: #000
+			&.active-tab
+				.tab__container__text
+					color: #fff
+		&.tab1:hover::before,&.tab2:hover::before,&.tab3:hover::before,&.tab4:hover::before,&.tab5:hover::before,&.tab6:hover::before
+			opacity: 0
 	.sect-tabs-content__tab2 button
 		font-size: 16px
 		margin-right: 5px
