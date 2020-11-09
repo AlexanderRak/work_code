@@ -1,0 +1,294 @@
+/*default styles*/
+
+#lg 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    font-size: 17px
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: normal
+    padding: 0
+    margin: 0 0 20px 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#lg 
+  .active_lg
+    z-index: 10 !important
+    opacity: 1 !important
+
+  .fade_lg
+    animation-name: fade;
+    animation-duration: 1.5s;
+
+  @keyframes fade
+    0%
+      opacity: 0.1
+    100%
+      opacity: 1
+
+  .none_pic
+    display: none
+  
+  .foryou
+    position: relative
+    .foryou_txt
+      position: absolute
+      text-align: center
+      color: #fff
+      max-width: 500px
+      bottom: 40px
+      right: 50%
+      transform: translateX(50%)
+
+  .th
+    display: flex
+    flex-direction: row
+    padding: 40px
+    .th_txt
+      flex: 1 1 0
+      text-align: center
+      span
+        font-weight: bold
+        font-size: 20px
+        margin-bottom: 10px
+        display: block
+      &:nth-of-type(2)
+        margin: 0 40px
+      p
+        color: #a9a9a9
+        
+  .picture
+    .picture_txt
+      padding: 40px
+      text-align: center
+      background-color: #f8f8f8
+
+  .follow
+    position: relative
+    .follow_txt
+      position: absolute
+      color: #fff
+      max-width: 500px
+      left: 40px
+      bottom: 50%
+      transform: translateY(50%)
+  
+  .move
+    display: flex
+    flex-direction: row
+    .move_cont
+      flex: 1 1 0
+      &:first-of-type
+        margin-right: 40px
+      span
+        display: block
+        background-color: #9d9d9d
+        color: #fff
+        padding: 10px
+        font-size: 16px
+
+  .portrait
+    display: flex
+    flex-direction: row
+    margin: 40px 0
+    .portrait_cont
+      flex: 1 1 0
+      &:nth-of-type(2)
+        margin: 0 40px
+      span
+        display: block
+        background-color: #9d9d9d
+        color: #fff
+        padding: 10px
+        font-size: 16px
+  .snoska
+    padding: 20px
+    span
+      font-size: 14px
+      color: #a9a9a9
+  
+  .personal
+    .personal_txt
+      text-align: center
+      padding: 40px
+      box-sizing: content-box
+      max-width: 580px
+      margin: 0 auto
+    .slider
+      padding: 40px 0 80px 0
+      box-sizing: border-box
+      .grid-container
+        box-sizing: border-box
+        max-height: 620px
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr
+        grid-template-rows: auto
+        gap: 20px 20px
+        grid-template-areas: "cal1 cal1 cal2" "cal1 cal1 cal3" "cal1 cal1 cal4"
+
+        .cal1 
+          grid-area: cal1
+          position: relative
+          .slide
+            opacity: 0;
+            position: absolute
+            z-index: 0
+            height: 100%
+            img
+              width: 100%
+              height: 100%
+
+        .btn_lg
+          opacity: 0.5
+          &:hover
+            transition: opacity .5s
+            cursor: pointer
+            opacity: 1
+        .cal2 
+          grid-area: cal2
+        .cal3 
+          grid-area: cal3
+        .cal4 
+          grid-area: cal4
+
+  .fully
+    position: relative
+    .fully_txt 
+      position: absolute
+      padding: 40px
+      box-sizing: content-box
+      max-width: 500px
+
+  .periphery
+    display: grid;
+    grid-template-columns: auto
+    grid-template-rows: auto
+    gap: 20px 20px
+    grid-template-areas: "elem1 elem1 elem4" "elem2 elem3 elem4"
+    img
+      width: 100%
+      height: 100%
+    .elem1
+      grid-area: elem1
+      position: relative
+    .elem2
+      grid-area: elem2
+      position: relative
+    .elem3
+      grid-area: elem3
+      position: relative
+    .elem4
+      grid-area: elem4
+      position: relative
+    .elem_txt
+      text-align: center
+      position: absolute
+      color: #fff
+      top: 0px
+      padding: 20px
+      span
+        font-size: 18px
+        font-weight: bold
+        margin-bottom: 10px
+        display: block
+
+// media *********************************************
+
+@media (max-width: 1024px)
+  #lg .follow .follow_txt,
+  #lg .fully .fully_txt
+    max-width: 350px
+
+@media (max-width: 812px)
+  #lg .follow,
+  #lg .fully
+    display: flex
+    flex-direction: column-reverse
+    background-color: #333333
+  #lg .fully .fully_txt,
+  #lg .follow .follow_txt
+    position: unset
+    transform: unset
+    max-width: 100%
+    text-align: center
+    padding: 20px
+  #lg .fully
+    background-color: unset  
+
+@media (max-width: 768px)
+  #lg .hide_pic
+    display: none
+  #lg .none_pic
+    display: block
+  #lg .foryou .foryou_txt
+    bottom: 23%
+
+@media (max-width: 480px)
+  #lg h2
+    font-size: 28px
+  #lg .foryou .foryou_txt
+    width: 100%
+    padding: 20px
+    box-sizing: border-box
+    bottom: 40px
+  #lg .th
+    padding: 20px
+    flex-direction: column
+  #lg .th .th_txt:nth-of-type(2)
+    margin: 40px 0
+  #lg .move,
+  #lg .portrait
+    flex-direction: column
+  #lg .move .move_cont:first-of-type
+    margin-right: 0
+    margin-bottom: 40px
+  #lg .portrait .portrait_cont:nth-of-type(2)
+    margin: 40px 0
+  #lg .personal .personal_txt
+    padding: 20px
+  #lg .personal .slider
+    padding: 20px 0 20px 0
+  #lg .personal .slider .grid-container
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas: "cal1 cal1 cal1" "cal1 cal1 cal1" "cal2 cal3 cal4"
+  #lg .periphery
+    grid-template-columns: auto
+    grid-template-rows: auto
+    gap: 10px 10px
+    grid-template-areas: "elem1" "elem2" "elem3" "elem4"
+    
+    
