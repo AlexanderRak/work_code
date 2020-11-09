@@ -39,6 +39,27 @@
   display: none;
 }
 
+.lovely-smile-bl {
+  position: relative;
+  padding-right: 40px;
+  display: inline-block;
+}
+
+.lovely-smile-bl::before {
+  content: "";
+  background-image: url(https://cdn.comfy.ua/media/x/img/smilebl.svg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 35px;
+  height: 35px;
+}
+
 .shopping-day__wrap {
   width: 100%;
   height: auto;
@@ -212,6 +233,7 @@
   font-size: 30px;
   color: #fff;
   text-transform: uppercase;
+  text-align: center;
 }
 
 /* form END */
@@ -296,7 +318,13 @@
     font-size: 15px;
   }
   .text-submit-block-cl p {
-    font-size: 23px;
-    text-align: center;
+    font-size: 17px;
+  }
+  .lovely-smile-bl {
+    padding-right: 25px;
+  }
+  .lovely-smile-bl::before {
+    width: 22px;
+    height: 22px;
   }
 }
