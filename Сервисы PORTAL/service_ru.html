@@ -163,7 +163,60 @@
                </div>
 
                <div class="tab__container-content">
-                  4tst
+                  <div class="sect-tabs-content__tab-overplay-mob">
+                     <div class="sect-tabs-content__tab4">
+                        <button class="item-tablinks4" onclick="openTab4(event, 'tab_service1tab4')" id="defaultOpen4">
+                           <span class="tab-link">Смартфоны</span>
+                        </button>
+                        <button class="item-tablinks4" onclick="openTab4(event, 'tab_service2tab4')">
+                           <span class="tab-link">Планшеты</span>
+                        </button>
+                        <button class="item-tablinks4" onclick="openTab4(event, 'tab_service3tab4')">
+                           <span class="tab-link">Ноутбуки</span>
+                        </button>
+                        <button class="item-tablinks4" onclick="openTab4(event, 'tab_service4tab4')">
+                           <span class="tab-link">Аксессуары</span>
+                        </button>
+                     </div>
+                  </div>
+                  <div id="tab_service1tab4" class="item-tabcontent__tab4">
+                     <div class="tab-prod-flex">
+                        <a href="/smart-zahist.html" class="tab__itemflx-bl">
+                           <div class="tab__itemflx">
+                              <div class="tab__img">
+                                 <img src="https://cdn.comfy.ua/media/x/img/portalsrvs/smartarrw_item3.svg" alt="">
+                              </div>
+                              <div class="tab__text">
+                                 <h4>Смарт Защита +</h4>
+                                 <p>Мы не будем спрашивать что произошло, просто бесплатно заменим разбитый экран!</p>
+                                 <span class="ling-goto-prod">Купить</span>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div id="tab_service2tab4" class="item-tabcontent__tab4">
+                     <div class="tab-prod-flex">
+                        <a href="/smart-zahist.html" class="tab__itemflx-bl">
+                           <div class="tab__itemflx">
+                              <div class="tab__img">
+                                 <img src="https://cdn.comfy.ua/media/x/img/portalsrvs/smartarrw_item3.svg" alt="">
+                              </div>
+                              <div class="tab__text">
+                                 <h4>Смарт Защита +</h4>
+                                 <p>Мы не будем спрашивать что произошло, просто бесплатно заменим разбитый экран!</p>
+                                 <span class="ling-goto-prod">Купить</span>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div id="tab_service3tab4" class="item-tabcontent__tab4">
+                     <span class="service_null">Сайт пополняеться асортиментом</span>
+                  </div>
+                  <div id="tab_service4tab4" class="item-tabcontent__tab4">
+                     <span class="service_null">Сайт пополняеться асортиментом</span>
+                  </div>
                </div>
 
                <div class="tab__container-content">
@@ -978,7 +1031,7 @@
 
                   <div id="tab_service2tab3" class="item-tabcontent__tab3">
                      <div class="tab-prod-flex">
-                        <a href="#" class="tab__itemflx-bl">
+                        <a href="/podderzhka-mac-all-inclusive.html" class="tab__itemflx-bl">
                            <div class="tab__itemflx">
                               <div class="tab__img">
                                  <img src="https://cdn.comfy.ua/media/x/img/tab5phone-settings_new2.svg" alt="">
@@ -990,7 +1043,7 @@
                               </div>
                            </div>
                         </a>
-                        <a href="#" class="tab__itemflx-bl">
+                        <a href="/podderzhka-mac-ultimate.html" class="tab__itemflx-bl">
                            <div class="tab__itemflx">
                               <div class="tab__img">
                                  <img src="https://cdn.comfy.ua/media/x/img/tab5phone-settings_new2.svg" alt="">
@@ -1186,6 +1239,26 @@
 
    }
    document.getElementById("defaultOpen3").click();
+</script>
+<script>
+   function openTab4(tabevt, tabName) {
+      var i, tabcontent, tablinks;
+
+      tabcontent = document.getElementsByClassName("item-tabcontent__tab4");
+      for (i = 0; i < tabcontent.length; i++) {
+         tabcontent[i].style.display = "none";
+      }
+
+      tablinks = document.getElementsByClassName("item-tablinks4");
+      for (i = 0; i < tablinks.length; i++) {
+         tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      document.getElementById(tabName).style.display = "block";
+      tabevt.currentTarget.className += " active";
+
+   }
+   document.getElementById("defaultOpen4").click();
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>

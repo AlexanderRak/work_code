@@ -7,6 +7,7 @@
   display: block;
   background-color: #fff;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -78,10 +79,14 @@
   max-width: 580px;
   padding: 40px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 auto;
   right: 50%;
   -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+       -o-transform: translateX(50%);
           transform: translateX(50%);
   color: #fff;
 }
@@ -89,10 +94,13 @@
 #lg .monitor .monitor_txt .modal-btn-2 {
   font-size: 20px;
   -webkit-text-decoration-line: underline;
+     -moz-text-decoration-line: underline;
           text-decoration-line: underline;
   line-height: 20px;
   cursor: pointer;
   -webkit-transition: color .5s;
+  -o-transition: color .5s;
+  -moz-transition: color .5s;
   transition: color .5s;
   margin-top: 20px;
   display: block;
@@ -116,18 +124,26 @@
 #lg .picture {
   padding: 40px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
 
 #lg .picture .picture_txt {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   text-align: center;
@@ -154,20 +170,29 @@
 
 #lg .support {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 40px;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 #lg .support > div {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
@@ -184,6 +209,7 @@
 #lg .vivid .vivid_txt {
   max-width: 500px;
   -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
           box-sizing: content-box;
   padding: 40px;
   text-align: center;
@@ -193,6 +219,7 @@
 #lg .design .design_txt {
   max-width: 500px;
   -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
           box-sizing: content-box;
   padding: 40px;
   text-align: center;
@@ -202,7 +229,9 @@
 #lg .design .design_txt .modal-btn {
   background-color: #a60035;
   padding: 10px 20px;
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
   font-size: 20px;
   color: #fff;
   line-height: 20px;
@@ -217,6 +246,8 @@
   cursor: pointer;
   background-color: #ff0c5a;
   -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  -moz-transition: all .5s;
   transition: all .5s;
 }
 
@@ -245,12 +276,18 @@
   height: 100%;
   background: #000000bd;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -276,19 +313,27 @@
   max-width: -moz-max-content;
   max-width: max-content;
   margin: 0 0 0 auto;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
   min-width: 30px;
   height: 30px;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   font-weight: bold;
@@ -299,12 +344,15 @@
   cursor: pointer;
   background-color: #3d3d3d;
   -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  -moz-transition: all .5s;
   transition: all .5s;
 }
 
 #lg .fluid .fluid_txt {
   max-width: 500px;
   -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
           box-sizing: content-box;
   padding: 40px;
   text-align: center;
@@ -313,22 +361,32 @@
 
 #lg .sync {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 #lg .sync > div {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
@@ -339,22 +397,32 @@
 
 #lg .clearer {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 40px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 #lg .clearer > div {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
@@ -366,6 +434,7 @@
 #lg .gratification .gratification_title {
   max-width: 500px;
   -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
           box-sizing: content-box;
   padding: 40px;
   text-align: center;
@@ -387,15 +456,22 @@
   max-width: 580px;
   padding: 40px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 auto;
   right: 50%;
   -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+       -o-transform: translateX(50%);
           transform: translateX(50%);
   color: #fff;
   left: 0;
   top: 100px;
   -webkit-transform: unset;
+     -moz-transform: unset;
+      -ms-transform: unset;
+       -o-transform: unset;
           transform: unset;
   text-align: left;
 }
@@ -410,13 +486,20 @@
   max-width: 580px;
   padding: 40px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 auto;
   right: 50%;
   -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+       -o-transform: translateX(50%);
           transform: translateX(50%);
   color: #fff;
   -webkit-transform: unset;
+     -moz-transform: unset;
+      -ms-transform: unset;
+       -o-transform: unset;
           transform: unset;
   top: 200px;
   right: 40px;
@@ -433,14 +516,21 @@
   max-width: 580px;
   padding: 40px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 auto;
   right: 50%;
   -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+       -o-transform: translateX(50%);
           transform: translateX(50%);
   color: #fff;
   text-align: left;
   -webkit-transform: unset;
+     -moz-transform: unset;
+      -ms-transform: unset;
+       -o-transform: unset;
           transform: unset;
   left: 0px;
   top: 300px;
@@ -449,6 +539,7 @@
 #lg .creative .creative_txt {
   max-width: 500px;
   -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
           box-sizing: content-box;
   padding: 40px;
   text-align: center;
@@ -475,48 +566,72 @@
   }
   #lg .sound {
     display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+       -moz-box-orient: vertical;
+       -moz-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
   #lg .sound .sound_txt {
     position: unset;
     -webkit-transform: unset;
+       -moz-transform: unset;
+        -ms-transform: unset;
+         -o-transform: unset;
             transform: unset;
     background-color: #000;
     max-width: 100%;
   }
   #lg .video_sync {
     display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+       -moz-box-orient: vertical;
+       -moz-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
   #lg .video_sync .video_sync_txt {
     position: unset;
     -webkit-transform: unset;
+       -moz-transform: unset;
+        -ms-transform: unset;
+         -o-transform: unset;
             transform: unset;
     max-width: 100%;
     background-color: #000;
   }
   #lg .ambiance {
     display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+       -moz-box-orient: vertical;
+       -moz-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
   #lg .ambiance .ambiance_txt {
     position: unset;
     -webkit-transform: unset;
+       -moz-transform: unset;
+        -ms-transform: unset;
+         -o-transform: unset;
             transform: unset;
     background-color: #000;
     max-width: 100%;
@@ -524,6 +639,9 @@
   #lg .picture {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -562,6 +680,9 @@
   #lg .support {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -572,12 +693,18 @@
   #lg .sync {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+       -moz-box-orient: vertical;
+       -moz-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
   #lg .clearer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
