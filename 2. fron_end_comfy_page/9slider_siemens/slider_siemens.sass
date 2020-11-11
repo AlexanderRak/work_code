@@ -28,13 +28,13 @@ span.word-wrap
 span.fw-bold
 	font-weight: bold
 // default
-
 .siemans-container
 	overflow: hidden
 	position: relative
 	&.bgrdall
-		background-image: url(https://cdn.comfy.ua/media/x/img/siemansslider/bgrd_all.png)
-		background-position: center
+		// background-image: url(https://cdn.comfy.ua/media/x/img/siemansslider/bgrd_all.png)
+		background-image: url(https://cdn.comfy.ua/media/x/img/bgrd1all.png)
+		background-position: bottom
 		background-repeat: repeat
 		background-size: cover
 		max-width: 1316px
@@ -42,30 +42,28 @@ span.fw-bold
 		height: 492px
 		z-index: 5
 		position: relative
-.siemans__bgrd-top-before
-	position: relative
-	&::before
-		content: ""
-		background-image: url(https://cdn.comfy.ua/media/x/img/bgrd_top.png)
-		background-position: center
-		background-repeat: no-repeat
-		background-size: cover
-		max-width: 1316px
-		width: 100%
-		height: 209px
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		z-index: 6
+// .siemans__bgrd-top-before
+// 	position: relative
+// 	&::before
+// 		content: ""
+// 		background-image: url(https://cdn.comfy.ua/media/x/img/bgrd_top.png)
+// 		background-position: center
+// 		background-repeat: no-repeat
+// 		background-size: cover
+// 		max-width: 1316px
+// 		width: 100%
+// 		height: 209px
+// 		position: absolute
+// 		top: 0
+// 		left: 0
+// 		right: 0
+// 		z-index: 6
 .siemans__logo-pos
 	position: absolute
-	top: 58px
+	top: 30px
 	left: 0
-	right: 0
-	margin: 0 auto
 	z-index: 7
-	max-width: 790px
+	max-width: 144px
 .siemans__slider
 	// display: flex
 	// align-items: flex-end
@@ -174,23 +172,18 @@ span.fw-bold
 @media (max-width: 1024px)
 	.siemans__logo-pos
 		top: 25px
-		max-width: 590px
 	.siemans-container
 		&.bgrdall
 			height: 425px
-	.siemans__logo-pos
-		max-width: 450px
 @media (max-width: 812px)
 	.siemans__logo-pos
 		top: 25px
-		max-width: 590px
 	.siemans-container
 		&.bgrdall
 			height: 480px
 @media (max-width: 480px)
 	.siemans__logo-pos
-		top: 72px
-		max-width: 295px
+		top: 25px
 	.siemans-container
 		&.bgrdall
 			height: 415px
