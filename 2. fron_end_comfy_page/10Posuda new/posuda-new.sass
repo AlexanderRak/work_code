@@ -1,0 +1,412 @@
+#posud-page-wrap
+	display: block
+	margin: 0 auto
+	max-width: 1366px
+	width: 100%
+	height: auto
+	overflow: hidden
+	background: #fff
+	position: relative
+	img
+		&:hover
+			opacity: 1
+	&:first-letter
+		padding-left: 0
+	img
+		display: block
+		margin-right: initial
+		margin-left: initial
+	p
+		font-size: 16px
+		margin-bottom: 0
+	h2
+		font-size: 34px
+		line-height: 1.1
+	h3
+		font-size: 24px
+		margin: 0
+		padding-top: 0
+		line-height: 1.1
+		text-align: inherit
+		font-weight: normal
+	.slick-track
+		position: inherit
+		left: inherit
+		top: inherit
+		display: flex
+		height: 100%
+		align-items: flex-end
+		justify-content: space-between
+	.slick-slider
+		height: 100%
+		z-index: 7
+	.slick-slide
+		float: inherit
+		height: auto
+		min-height: inherits
+	.slick-dots
+		position: relative
+		left: inherit
+		transform: inherit
+		bottom: inherit
+		font-size: 0
+		text-align: center
+	.slick-dots
+		li
+			display: inline-block
+			width: 40px !important
+			height: 40px !important
+			border-radius: inherit
+			border: inherit
+			background-color: transparent
+			margin: 0 20px 0 0
+			border-bottom: 3px solid rgba(51, 51, 51, 0.3)
+			opacity: 1
+			&:last-child
+				margin: 0 0px 0 0
+			&.slick-active
+				border-bottom: 3px solid #F9B700
+	.maxW1300
+		max-width: 1300px
+		width: 100%
+		height: auto
+		margin: 0 auto
+.main-container_gray
+	background: #ffffff
+	padding-left: 0
+	padding-right: 0
+span.word-wrap
+	display: block
+	word-wrap: break-word
+span.fw-bold
+	font-weight: bold
+span.tx-uppercase
+	text-transform: uppercase
+
+// default
+
+.sect-slider-container
+	padding: 10px 0 0 0
+	position: relative
+	z-index: 7
+.sect-slider__arrow
+	position: absolute
+	z-index: 8
+	width: 100%
+	top: 50%
+	transform: translateY(-50%)
+	.slick-arrow
+		width: 15px
+		height: 38px
+		cursor: pointer
+		&.slick-disabled
+			opacity: 0.5
+			cursor: default
+	.slick-prev
+		position: relative
+		float: left
+		left: 10px
+		&::before
+			content: ""
+			background-image: url(https://cdn.comfy.ua/media/x/img/posudnew/str_left.svg)
+			background-position: center
+			background-repeat: no-repeat
+			background-size: contain
+			position: absolute
+			width: 15px
+			height: 38px
+			left: 0
+			right: 0
+			margin: 0 auto
+			top: 50%
+			transform: translateY(-50%)
+	.slick-next
+		position: relative
+		float: right
+		right: 10px
+		&::before
+			content: ""
+			background-image: url(https://cdn.comfy.ua/media/x/img/posudnew/str_right.svg)
+			background-position: center
+			background-repeat: no-repeat
+			background-size: contain
+			position: absolute
+			width: 15px
+			height: 38px
+			left: 0
+			right: 0
+			margin: 0 auto
+			top: 50%
+			transform: translateY(-50%)
+.sect-cetegory-flex
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+	padding: 60px 0 0px 0
+.sect-cetegory__item
+	flex: 1 1 0
+	display: flex
+	flex-direction: column
+	align-items: center
+	transition: .5s
+	&:hover
+		.item__img-statik
+			opacity: 0
+		.item__img-hover
+			opacity: 1
+		.item__img
+			&::before
+				animation: animBefore .5s forwards
+.item__img
+	position: relative
+	width: 100px
+	height: 100px
+	margin-bottom: 20px
+	transition: .5s
+	&::before
+		content: ""
+		width: 100px
+		height: 2px
+		background: #F9B700
+		position: absolute
+		bottom: -20px
+		left: 0
+		opacity: 0
+.item__img-statik
+	opacity: 1
+	transition: .5s
+.item__img-hover
+	position: absolute
+	left: 0
+	top: 0
+	opacity: 0
+	transition: .5s
+.item__text
+	text-align: center
+	min-height: 40px
+	display: flex
+	align-items: flex-start
+	padding-top: 8px
+@keyframes animBefore
+	0%
+		opacity: 0
+	50%
+		opacity: 0.5
+	100%
+		opacity: 1
+.sect-line__wrap
+	border-top: 1px solid #CCCCCC
+	width: 100%
+	margin: 60px 0
+.sect-technology__container
+	position: relative
+.sect-technology__grid
+	display: grid
+	grid-template-columns: 1fr 1fr
+	grid-gap: 10px 10px
+	position: relative
+	z-index: 7
+.sect-technology__item
+	position: relative
+	transition: .5s
+	&:hover
+		.grid-item__img
+			&::before
+				opacity: 0.85
+		.grid-text__activeH2
+			padding-bottom: 20px
+			&::before
+				opacity: 0
+		.grid-text__hover-bl
+			opacity: 1
+			position: relative
+			transition: .5s
+		~ .sect-technology__logo
+			opacity: 0
+.grid-item__img
+	position: relative
+	z-index: 6
+	transition: .5s
+	&::before
+		content: ""
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+		opacity: 0.4
+		transition: .5s
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%)
+.grid-item__text
+	position: absolute
+	bottom: 30px
+	left: 65px
+	text-align: left
+	color: #fff
+	z-index: 7
+	transition: .5s
+	&.txt-right
+		text-align: right
+		left: inherit
+		right: 65px
+.sect-technology__logo
+	position: absolute
+	left: 0
+	right: 0
+	margin: 0 auto
+	top: 50%
+	transform: translateY(-50%)
+	z-index: 8
+	background: #FFFFFF
+	width: 280px
+	height: 280px
+	display: flex
+	align-items: center
+	justify-content: center
+	transition: .5s
+.grid-text__hover-bl
+	opacity: 0
+	position: absolute
+	bottom: 0
+	padding-top: 20px
+	transition: .5s
+	&::before
+		content: ""
+		width: 300px
+		height: 4px
+		background: #F9B700
+		position: absolute
+		left: -30px
+		top: 0
+		transition: .5s
+	&.right-before2
+		transition: .5s
+		&::before
+			left: inherit
+			right: -30px
+.grid-text__activeH2
+	position: relative
+	transition: .5s
+	&::before
+		content: ""
+		width: 4px
+		height: 80px
+		background: #FFFFFF
+		position: absolute
+		left: -30px
+		top: 0
+		transition: .5s
+	&.right-before
+		transition: .5s
+		img
+			margin: 0 0 0 auto !important
+		&::before
+			left: inherit
+			right: -30px
+// media
+// @media (max-width: 1250px)
+@media (max-width: 1024px)
+	.sect-technology__logo
+		display: none
+	.grid-item__img::before
+		opacity: 0.85
+	.grid-text__hover-bl
+		opacity: 1
+		position: relative
+	.grid-text__activeH2
+		padding-bottom: 20px
+		&::before
+			display: none
+	.sect-technology__item
+		overflow: hidden
+	.grid-item__text
+		left: 15px
+		&.txt-right
+			right: 15px
+@media (max-width: 812px)
+	#posud-page-wrap
+		h2
+			font-size: 25px
+		h3
+			font-size: 18px
+	.sect-cetegory-flex
+		justify-content: space-between
+	.sect-cetegory__item
+		flex: 1 1 167px
+		max-width: 167px
+		padding-bottom: 25px
+	.sect-line__wrap
+		margin: 35px 0 60px 0
+	.sect-technology__logo
+		display: none
+	.grid-item__img::before
+		opacity: 0.85
+	.grid-text__hover-bl
+		opacity: 1
+		position: relative
+	.grid-text__activeH2
+		padding-bottom: 20px
+		&::before
+			display: none
+	.sect-technology__item
+		overflow: hidden
+	.grid-item__text
+		left: 15px
+		&.txt-right
+			right: 15px
+@media (max-width: 480px)
+	#posud-page-wrap
+		h2
+			font-size: 24px
+		h3
+			font-size: 14px
+	.sect-cetegory-flex
+		justify-content: space-between
+		padding: 70px 0 0px 0
+	.sect-cetegory__item
+		flex: 1 1 50%
+		max-width: 50%
+		padding-bottom: 60px
+	.sect-technology__logo
+		display: none
+	.sect-technology__grid
+		grid-template-columns: 1fr
+		grid-gap: 5px 5px
+	.grid-text__activeH2
+		&::before
+			height: 54px
+	.sect-technology__logo
+		display: none
+	.grid-item__img::before
+		opacity: 0.85
+	.grid-text__hover-bl
+		opacity: 1
+		position: relative
+		padding-top: 10px
+		padding-left: 15px
+		&::before
+			left: 0
+			width: 160px
+		&.right-before2
+			&::before
+				left: 0
+				right: inherit
+	.grid-text__activeH2
+		padding-bottom: 10px
+		padding-left: 15px
+		&::before
+			display: none
+	.sect-technology__item
+		overflow: hidden
+	.grid-item__text
+		left: 15px
+		&.txt-right
+			text-align: left
+			left: 15px
+			right: inherit
+	.sect-line__wrap
+    	margin: 30px 0 30px 0
+	.sect-cetegory__item
+		&:nth-last-child(-n+3)
+			padding-bottom: 0
+			
