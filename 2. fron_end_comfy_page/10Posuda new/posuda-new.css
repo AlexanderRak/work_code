@@ -136,6 +136,15 @@ span.tx-uppercase {
   text-transform: uppercase;
 }
 
+.not-link-slider {
+  pointer-events: none;
+  cursor: default;
+}
+
+.breadcrumbs {
+  display: none;
+}
+
 .sect-slider-container {
   padding: 10px 0 0 0;
   position: relative;
@@ -163,6 +172,14 @@ span.tx-uppercase {
 .sect-slider__arrow .slick-arrow.slick-disabled {
   opacity: 0.5;
   cursor: default;
+}
+
+.sect-slider__arrow .slick-arrow.slick-disabled.slick-prev:hover::before {
+  background-image: url(https://cdn.comfy.ua/media/x/img/posudnew/str_left.svg);
+}
+
+.sect-slider__arrow .slick-arrow.slick-disabled.slick-next:hover::before {
+  background-image: url(https://cdn.comfy.ua/media/x/img/posudnew/str_right.svg);
 }
 
 .sect-slider__arrow .slick-prev {
@@ -194,6 +211,10 @@ span.tx-uppercase {
           transform: translateY(-50%);
 }
 
+.sect-slider__arrow .slick-prev:hover::before {
+  background-image: url(https://cdn.comfy.ua/media/x/img/str_left_hover.svg);
+}
+
 .sect-slider__arrow .slick-next {
   position: relative;
   float: right;
@@ -221,6 +242,10 @@ span.tx-uppercase {
       -ms-transform: translateY(-50%);
        -o-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.sect-slider__arrow .slick-next:hover::before {
+  background-image: url(https://cdn.comfy.ua/media/x/img/str_right_hover.svg);
 }
 
 .sect-cetegory-flex {
@@ -436,10 +461,6 @@ span.tx-uppercase {
   -o-transition: .5s;
   -moz-transition: .5s;
   transition: .5s;
-}
-
-.sect-technology__item:hover ~ .sect-technology__logo {
-  opacity: 0;
 }
 
 .grid-item__img {
@@ -727,14 +748,18 @@ span.tx-uppercase {
     position: relative;
     padding-top: 10px;
     padding-left: 15px;
+    padding-right: 15px;
   }
   .grid-text__hover-bl::before {
     left: 0;
     width: 160px;
   }
+  .grid-text__hover-bl.right-before2 {
+    padding-right: 15px;
+  }
   .grid-text__hover-bl.right-before2::before {
-    left: 0;
-    right: inherit;
+    left: inherit;
+    right: 0;
   }
   .grid-text__activeH2 {
     padding-bottom: 10px;
@@ -743,16 +768,14 @@ span.tx-uppercase {
   .grid-text__activeH2::before {
     display: none;
   }
+  .grid-text__activeH2.right-before {
+    padding-right: 15px;
+  }
   .sect-technology__item {
     overflow: hidden;
   }
   .grid-item__text {
     left: 15px;
-  }
-  .grid-item__text.txt-right {
-    text-align: left;
-    left: 15px;
-    right: inherit;
   }
   .sect-line__wrap {
     margin: 30px 0 30px 0;
