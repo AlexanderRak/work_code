@@ -6,13 +6,37 @@
 
 <div id="wrapper_bf2019_form">
 
-   <section class="container-header">
+   <!-- <section class="container-header">
       <div class="row-header bgimg1 size_default_container"></div>
 
       <div class="container-header-mob none_block">
          <img src="https://cdn.comfy.ua/media/x/img/bf2020/1.png" alt="">
       </div>
 
+   </section> -->
+
+   <section class="container-header-dog">
+      <div class="header-dog__wrap header-dog__bgrd">
+         <div class="header-dog__text">
+            <div class="header-dog__text-img-lg">
+               <img src="https://cdn.comfy.ua/media/x/img/ru_text_bf2020.svg" alt="">
+            </div>
+            <div class="header-dog__text-img-lg-mob">
+               <img src="https://cdn.comfy.ua/media/x/img/ru_text_mob_bf2020.svg" alt="">
+            </div>
+            <div class="header-dog__logo logo-ru">
+               <img src="https://cdn.comfy.ua/media/x/img/logo_bf2020.svg" alt="">
+            </div>
+         </div>
+         <div class="header-dog__dog-img">
+            <img src="https://cdn.comfy.ua/media/x/img/dog_bf2020.gif" alt="">
+         </div>
+         <div class="header-dog__mess">
+            <div class="messbl messbl1">Прівєтікі!<br />Я кожен собака</div>
+            <div class="messbl messbl2">І я знаю, що на чорну<br />п’ятницю в COMFY<br />знижечки до 50%</div>
+            <div class="messbl messbl3">Ще і доставка за<br />1 гривню</div>
+         </div>
+      </div>
    </section>
 
    <section class="container-timer">
@@ -337,7 +361,7 @@
                </div> -->
             </div>
          </li>
-         
+
          <li>
             <a href="/stiral-naja-mashina-vestfrost-xmv-105-f2.html">
                <div class="tovar_img">
@@ -521,7 +545,7 @@
          <div class="footer__text">
             <h1>Черная пятница</h1>
             <p>
-               <p>Приближается самый желанный для шопоголиков день в году. Цены превращаются не в тыкву, а в потрясающие скидочные предложения, и каждый может побаловать себя новенькими вещами из заветного wish list. Это не магия, друзья, а Черная пятница! Уже 26 ноября на магазины обрушатся лавины скидок.</p>
+            <p>Приближается самый желанный для шопоголиков день в году. Цены превращаются не в тыкву, а в потрясающие скидочные предложения, и каждый может побаловать себя новенькими вещами из заветного wish list. Это не магия, друзья, а Черная пятница! Уже 26 ноября на магазины обрушатся лавины скидок.</p>
             </p>
          </div>
 
@@ -837,4 +861,25 @@
    });
 
    // ]]>
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+   var newsIndex = 1;
+   function NewsRotator() {
+      $(".messbl").fadeOut();
+      $(".messbl" + newsIndex).fadeIn();
+
+      var newsCount = 3;
+      newsIndex++;
+      if (newsIndex > newsCount) {
+         newsIndex = 1;
+      }
+   }
+
+   $(document).ready(function () {
+      NewsRotator();
+      setInterval(NewsRotator, 3000);
+   });
+
 </script>
