@@ -1,0 +1,256 @@
+/*default styles*/
+#samsung {
+  max-width: 1316px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#samsung p {
+  margin-bottom: 0;
+  margin: 0;
+}
+
+#samsung p:first-letter {
+  padding-left: 0;
+}
+
+#samsung h2 {
+  display: block;
+  line-height: normal;
+  font-size: 34px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+#samsung img {
+  opacity: 1;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+#samsung img:hover {
+  opacity: 1;
+}
+
+#samsung ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-desc__text img {
+  margin-bottom: 0rem;
+}
+
+.one-col .features-desc__text p:first-letter {
+  padding-left: 0rem !important;
+}
+
+/*end default styles*/
+#samsung .working {
+  padding: 40px;
+}
+
+#samsung .working .working__txt {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+#samsung .working .working__txt p > strong {
+  margin: 50px 0 30px;
+  display: block;
+}
+
+#samsung .working .slider .slide {
+  display: none;
+}
+
+#samsung .working .slider .slider__dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  max-width: 200px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 40px auto 0 auto;
+}
+
+#samsung .working .slider .slider__dots span {
+  border-radius: 50%;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #d9d9d9;
+  cursor: pointer;
+}
+
+#samsung .working__active {
+  background-color: #92d050 !important;
+}
+
+#samsung .working__show {
+  display: block !important;
+}
+
+#samsung .fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#samsung .wash {
+  padding: 40px;
+}
+
+#samsung .wash .wash__txt {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+}
+
+#samsung .wash .wash__txt p > strong {
+  display: block;
+  margin: 50px 0 30px;
+}
+
+#samsung .wash .snoska {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#samsung .wash .snoska span {
+  font-size: 14px;
+  line-height: normal;
+}
+
+#samsung .clean {
+  padding: 40px;
+}
+
+#samsung .clean .clean__flex {
+  max-width: 900px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#samsung .clean .clean__flex > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  max-width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#samsung .clean .clean__flex .clean__txt {
+  padding-left: 40px;
+}
+
+#samsung .clean .clean__flex .clean__txt p > strong {
+  display: block;
+  margin: 50px 0 30px;
+}
+
+#samsung .clean .clean__flex .clean__txt img {
+  margin-bottom: 20px;
+}
+
+#samsung .fresh {
+  padding: 40px;
+}
+
+#samsung .fresh .fresh__txt {
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+#samsung .fresh .fresh__txt p > strong {
+  display: block;
+  margin: 50px 0 30px;
+}
+
+@media (max-width: 812px) {
+  #samsung .working,
+  #samsung .wash,
+  #samsung .clean,
+  #samsung .fresh {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #samsung .clean .clean__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #samsung .clean .clean__flex > div {
+    max-width: 100%;
+  }
+  #samsung .clean .clean__flex .clean__txt {
+    padding-left: 0;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  #samsung .clean .clean__flex .clean__txt img {
+    margin: 0 auto 20px auto;
+  }
+  #samsung p > strong {
+    margin: 30px 0 10px 0 !important;
+  }
+  #samsung h2 {
+    font-size: 28px;
+  }
+  #samsung .working {
+    padding: 0;
+  }
+  #samsung .working .working__txt {
+    padding: 20px;
+  }
+}

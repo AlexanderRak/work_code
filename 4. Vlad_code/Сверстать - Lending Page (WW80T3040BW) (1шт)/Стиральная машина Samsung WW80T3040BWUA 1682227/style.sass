@@ -1,0 +1,160 @@
+/*default styles*/
+
+#samsung
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#samsung
+  .working
+    padding: 40px
+    .working__txt
+      text-align: center
+      max-width: 900px
+      margin: 0 auto
+      margin-bottom: 40px
+      p>strong
+        margin: 50px 0 30px
+        display: block
+    .slider
+      .slide
+        display: none
+      .slider__dots
+        display: flex
+        flex-direction: row
+        width: 100%
+        max-width: 200px
+        justify-content: space-between
+        margin: 40px auto 0 auto
+        span
+          border-radius: 50%
+          display: block
+          width: 12px
+          height: 12px
+          background-color: #d9d9d9
+          cursor: pointer
+  .working__active
+    background-color: #92d050 !important
+  .working__show
+    display: block !important
+  .fade
+    animation-name: fade;
+    animation-duration: 1.5s;
+
+  @keyframes fade
+    0%
+      opacity: 0.1
+    100%
+      opacity: 1
+
+  .wash
+    padding: 40px
+    .wash__txt
+      text-align: center
+      max-width: 900px
+      margin: 0 auto 40px auto
+      p>strong
+        display: block
+        margin: 50px 0 30px
+    .snoska
+      text-align: center
+      margin-top: 20px
+      span
+        font-size: 14px
+        line-height: normal
+  .clean
+    padding: 40px
+    .clean__flex
+      max-width: 900px
+      margin: 0 auto
+      display: flex
+      flex-direction: row
+      align-items: center
+      >div
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+      .clean__txt
+        padding-left: 40px
+        p>strong
+          display: block
+          margin: 50px 0 30px
+        img
+          margin-bottom: 20px
+
+  .fresh
+    padding: 40px
+    .fresh__txt
+      max-width: 900px
+      text-align: center
+      margin: 0 auto
+      margin-bottom: 40px
+      p>strong
+        display: block
+        margin: 50px 0 30px
+
+// media ****************************************
+
+@media (max-width: 812px)
+  #samsung .working,
+  #samsung .wash,
+  #samsung .clean,
+  #samsung .fresh
+    padding: 20px
+
+@media (max-width: 480px)
+  #samsung .clean .clean__flex
+    flex-direction: column-reverse
+    >div
+      max-width: 100%
+  #samsung .clean .clean__flex .clean__txt
+    padding-left: 0
+    padding-bottom: 40px
+    text-align: center
+    img
+      margin: 0 auto 20px auto
+  #samsung p>strong
+    margin: 30px 0 10px 0 !important
+  #samsung h2
+    font-size: 28px
+  #samsung .working
+    padding: 0
+  #samsung .working .working__txt
+    padding: 20px
