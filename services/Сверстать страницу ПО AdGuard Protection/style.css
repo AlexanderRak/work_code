@@ -173,6 +173,11 @@
       -ms-flex-direction: row;
           flex-direction: row;
   padding-bottom: 30px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #adguard .slider .slide {
@@ -194,11 +199,7 @@
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 0;
-     -moz-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -269,7 +270,7 @@
 #adguard .slider .slide .slide_cont {
   cursor: auto;
   max-width: 757px;
-  min-width: 757px;
+  min-width: 500px;
   padding: 50px 40px;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;

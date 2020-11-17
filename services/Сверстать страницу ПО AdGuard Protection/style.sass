@@ -84,8 +84,6 @@
   .system_nav_not_active  
     display: none !important
 
-
-
 // end class for js
 
 #adguard
@@ -94,12 +92,13 @@
     display: flex
     flex-direction: row
     padding-bottom: 30px
+    justify-content: space-between
     .slide
       height: 580px
       display: flex
       flex-direction: row
       align-items: center
-      flex: 1 1 0
+      width: 100%
       cursor: pointer
       &:nth-of-type(n+2)
         margin-left: 2px
@@ -126,9 +125,9 @@
             font-size: 34px
             line-height: 40px
       .slide_cont
-        cursor: auto;
+        cursor: auto
         max-width: 757px
-        min-width: 757px
+        min-width: 500px
         padding: 50px 40px
         box-sizing: border-box
         img
