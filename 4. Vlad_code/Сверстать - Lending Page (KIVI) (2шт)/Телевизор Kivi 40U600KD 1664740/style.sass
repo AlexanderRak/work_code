@@ -1,0 +1,276 @@
+/*default styles*/
+
+#kiwi
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#kiwi
+  .premium
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 90px
+    box-sizing: border-box
+    height: 765px
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url("https://cdn.comfy.ua/media/x/img/1661820/2.png")
+    .premium__txt
+      color: #fff
+      margin-left: 450px
+  span.large
+    font-size: 80px
+    font-weight: bold
+    line-height: normal
+    display: block
+    margin-bottom: 80px
+  .proc
+    padding: 90px
+    height: 748px
+    box-sizing: border-box
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url("https://cdn.comfy.ua/media/x/img/1661820/1.png")
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    .proc__txt
+      max-width: 330px
+      color: #fff
+      p
+        font-size: 24px
+  .tech
+    span.large
+      margin-bottom: 30px
+    .tech__list
+      li
+        display: flex
+        flex-direction: row
+        align-items: center
+        >div
+          flex: 1 1 0
+          max-width: 50%
+        .tech__txt
+          padding: 90px
+          box-sizing: border-box
+        &:nth-of-type(even)
+          flex-direction: row-reverse
+        .tech__img
+          position: relative
+          .abs__elem
+            position: absolute
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            width: 100%
+            padding: 20px 90px
+            box-sizing: border-box
+            bottom: 0
+            span
+              display: block
+              color: #fff
+              font-size: 20px
+              background-color: #0a5fda
+              padding: 5px 20px
+              min-width: 102px
+              text-align: center
+        &:last-of-type 
+          span.large
+            font-size: 60px
+  .android
+    height: 647px
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url("https://cdn.comfy.ua/media/x/img/1647307/4.png")
+    display: flex
+    align-items: center
+    .android__flex
+      display: flex
+      flex-direction: row
+      align-items: center
+      >div
+        flex: 1 1 0
+      .android__item
+        color: #fff
+        span.large
+          margin-bottom: 0
+        span.kiwi__vision
+          display: block
+          line-height: normal
+          color: #0a5fda
+          font-size: 24px
+          background-color: #fff
+          max-width: max-content
+          padding: 5px 20px
+          margin: 30px 0
+        &:last-of-type
+          padding: 90px
+          max-width: max-content
+  .digital
+    background-image: url("https://cdn.comfy.ua/media/x/img/1647307/6.png")
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center top
+    padding: 0 0 90px 0
+    box-sizing: border-box
+    height: 1110px;
+    .digital__list
+      transform: translateY(-170px);
+      >li
+        display: flex
+        flex-direction: row
+        align-items: center
+        >div
+          flex: 1 1 0
+          padding: 90px 90px 0 90px
+        &:nth-of-type(even)
+          flex-direction: row-reverse
+        .digital__txt
+          color: #fff
+          span.large
+            margin-bottom: 30px
+          >p
+            margin-bottom: 30px
+        .digital__list__icon
+          padding-left: 50px
+          li
+            display: flex
+            flex-direction: row
+            align-items: center
+            .digital__list__icon__img
+              min-width: 57px
+              margin-right: 30px
+              img
+                filter: invert(100%)
+                margin: 0 auto
+            &:nth-of-type(n+2)
+              margin-top: 10px
+  .interier
+    position: relative
+    .interier__txt
+      box-sizing: border-box
+      width: 100%
+      position: absolute
+      padding: 90px
+      text-align: center
+      right: 50%          
+      transform: translateX(50%)
+
+  .memc
+    margin-top: 100px
+    .memc__txt
+      box-sizing: border-box
+      padding: 90px
+      text-align: center
+      max-width: 660px
+      margin: 0 auto
+//media*********************************************
+
+@media (max-width: 1024px)
+  #kiwi .digital .digital__list
+    transform: unset
+  #kiwi .digital
+    height: 100%
+  #kiwi .tech .tech__list li .tech__txt
+    padding: 40px
+
+@media (max-width: 812px)
+  #kiwi .memc .memc__txt
+    padding: 20px
+    span.large
+      margin-bottom: 40px
+  #kiwi .premium
+    padding: 20px
+  #kiwi .premium .premium__txt
+    margin-left: 0
+    text-align: center
+  #kiwi span.large
+    font-size: 45px
+  #kiwi .android
+    height: 400px
+  #kiwi .android .android__flex .android__item:last-of-type
+    padding: 20px
+  #kiwi .digital .digital__list > li > div
+    padding: 20px
+  #kiwi .interier .interier__txt
+    padding: 20px
+  #kiwi .tech .tech__list li:last-of-type span.large
+    font-size: 45px
+
+@media (max-width: 480px)
+  #kiwi .premium
+    height: 500px
+  #kiwi .uniformity .uniformity__flex
+    flex-direction: column
+  #kiwi .android .android__flex
+    flex-direction: column
+  #kiwi .android
+    height: 100%
+  #kiwi .android .android__flex .android__item:last-of-type
+    max-width: 100%
+    text-align: center
+  #kiwi .android .android__flex .android__item span.kiwi__vision
+    margin: 30px auto
+  #kiwi .digital .digital__list > li
+    flex-direction: column-reverse !important
+  #kiwi .digital
+    padding-bottom: 0
+  #kiwi .interier .interier__txt span.large
+    margin-bottom: 0
+    width: 100%
+  #kiwi span.large
+    font-size: 28px
+  #kiwi .tech .tech__list li
+    flex-direction: column !important
+  #kiwi .tech .tech__list li >div
+    max-width: 100%
+  #kiwi .tech .tech__list li .tech__txt
+    padding: 20px 20px 40px 20px
+    text-align: center
+  #kiwi .tech .tech__list li .tech__img .abs__elem
+    padding: 20px
+  #kiwi .tech .tech__list li:last-of-type span.large
+    font-size: 28px
+  #kiwi .proc
+    height: 400px
+    padding: 20px
+    text-align: center
+  
