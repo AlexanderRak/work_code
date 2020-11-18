@@ -7,6 +7,7 @@
   display: block;
   background-color: #fff;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -129,6 +130,7 @@
   background-color: #A9B7BD;
   padding: 35px 35px 35px 120px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 0 0 auto;
 }
@@ -158,6 +160,7 @@
   text-align: center;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -244,6 +247,8 @@
   }
   #wmf .wmf__cont .wmf__cont__list li > div {
     -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0;
+       -moz-box-flex: 1;
         -ms-flex: 1 1 0px;
             flex: 1 1 0;
   }
@@ -270,10 +275,15 @@
   }
   #wmf .quote {
     display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+       -moz-box-orient: vertical;
+       -moz-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     margin: 20px 0;
@@ -281,6 +291,9 @@
   #wmf .wmf__cont .wmf__cont__list li {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
+       -moz-box-orient: vertical !important;
+       -moz-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
   }
