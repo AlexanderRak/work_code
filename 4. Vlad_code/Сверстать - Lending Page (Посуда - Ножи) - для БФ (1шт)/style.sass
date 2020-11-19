@@ -1,0 +1,366 @@
+/*default styles*/
+
+#mwf
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    font-size: 17px
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: normal
+    padding: 0
+    margin: 0
+    text-transform: uppercase
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    margin: 0 auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#mwf
+  i.line__bg
+      display: block
+      width: 100%
+      max-width: 600px
+      height: 3px
+      background: rgb(0,0,0);
+      background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 100%);
+      margin: 20px auto 35px auto
+  .logo
+    .logo__icon
+      box-sizing: border-box
+      padding: 30px
+      max-width: 950px
+      margin: 0 auto
+      margin-bottom: -126px
+      background-color: #ffffffd4
+      position: relative
+      -webkit-box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.7); 
+      box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.7);
+      .logo__title
+        text-align: center
+    .logo__img
+      &::before
+        display: block
+        content: ""
+        max-width: 990px
+        width: 100%
+        height: 20px
+        background-color: #a4b2b9
+        margin: 0 auto
+  .knife
+    text-align: center
+    padding: 30px 60px 0 60px
+    .knife__title
+      max-width: 980px
+      margin: 0 auto
+      span
+        font-size: 30px
+        line-height: normal
+        display: block
+        text-transform: uppercase
+        >b
+          font-size: 46px
+    .knife__img
+      max-width: 980px
+      margin: 75px auto 0 auto
+      .knife__img__wrap
+        position: relative
+        img
+          margin: 0
+          position: relative
+          z-index: 1
+        i.gray
+          display: block
+          width: 100%
+          height: 4px
+          background: rgb(164,178,185);
+          background: linear-gradient(90deg, rgba(164,178,185,1) 40%, rgba(0,0,0,0) 100%);
+          position: absolute
+          z-index: 0
+          &:nth-of-type(1)
+            top: 0
+          &:nth-of-type(2)
+            bottom: 0
+          &:nth-of-type(3)
+            width: 4px
+            height: 50%
+            background: rgb(164,178,185);
+            background: linear-gradient(180deg, rgba(164,178,185,1) 40%, rgba(0,0,0,0) 100%);
+        .knife__img__abs
+          position: absolute
+          bottom: 50%
+          right: 50%
+          transform: translate(80%, 50%)
+          max-width: 610px
+          width: 100%
+          box-sizing: border-box
+          text-align: right
+          background-color: #a4b2b9
+          padding: 25px 25px 25px 85px
+          z-index: 10
+          span
+            display: block
+            text-transform: uppercase
+            font-size: 32px
+            font-weight: bold
+            line-height: normal
+            color: #fff
+      .knife__img__txt
+        text-align: left
+        padding: 25px
+
+  .steel
+    padding: 60px 60px
+    .steel__title
+      text-align: center
+      max-width: 980px
+      margin: 0 auto
+      .steel__snoska
+        margin-bottom: 30px
+        span
+          display: flex
+          flex-direction: row
+          align-items: center
+          line-height: normal
+          font-size: 30px
+          &:nth-of-type(2)
+            margin: 20px 0
+          &::before
+            content: ""
+            display: block
+            min-width: 24px
+            height: 24px
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            background-image: url("https://cdn.comfy.ua/media/x/img/mwf-nozhi/circle.png")
+            margin-right: 30px
+          &::after
+            content: ""
+            display: block
+            min-width: 24px
+            height: 24px
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            background-image: url("https://cdn.comfy.ua/media/x/img/mwf-nozhi/circle.png")
+            margin-left: 30px
+            transform: scale(-1, -1) 
+    .steel__img
+      h2        
+        background-color: #a4b2b9
+        color: #fff
+        text-align: center
+        max-width: 998px
+        margin: 0 auto
+        padding: 30px
+        box-sizing: border-box
+    .steel__txt
+      max-width: 998px
+      margin: 0 auto
+      padding: 25px
+      box-sizing: border-box
+      position: relative
+      i.gray
+        display: block
+        position: absolute
+        z-index: 0
+        width: 4px
+        height: 100%
+        background: rgb(164,178,185);
+        background: linear-gradient(180deg, rgba(164,178,185,1) 40%, rgba(0,0,0,0) 100%);
+        &:nth-of-type(1)
+          right: 0
+          top: 0
+        &:nth-of-type(2)
+          left: 0
+          top: 0
+  .tech
+    padding: 0 60px
+    box-sizing: border-box
+    .tech__title
+      text-align: center
+    .tech__wrap
+      max-width: 980px
+      display: flex
+      flex-direction: row
+      margin: 0 auto
+      // align-items: center
+      .tech__txt
+        padding: 0 180px 0 25px
+        position: relative
+        i.gray
+          display: block
+          position: absolute
+          z-index: 0
+          width: 4px
+          height: 100%
+          background: rgb(164,178,185);
+          background: linear-gradient(180deg, rgba(164,178,185,1) 40%, rgba(0,0,0,0) 100%);
+          left: 0
+          top: 0
+      .tech__img
+        min-width: max-content
+        background-color: #a4b2b9
+        padding: 20px
+        position: relative
+        .tech__img__elem
+          &::before
+            content: ""
+            display: block
+            height: 4px
+            width: 70%
+            background: rgb(0,0,0);
+            background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 60%);
+            margin: 35px 0 35px auto
+            margin-right: -20px
+          &:nth-of-type(2)
+            &::after
+              content: ""
+              display: block
+              height: 4px
+              width: 70%
+              background: rgb(0,0,0);
+              background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 60%);
+              margin: 35px 0 35px auto
+              margin-right: -20px
+
+  .maslo
+    padding: 60px
+    .maslo__title
+      text-align: center
+    .maslo__txt
+      max-width: 980px
+      margin: 0 auto
+      padding: 0 25px 65px 25px
+      box-sizing: border-box
+      position: relative
+      i.gray
+        display: block
+        position: absolute
+        z-index: 0
+        width: 4px
+        height: 175%
+        background: rgb(164,178,185);
+        background: linear-gradient(360deg, rgba(164,178,185,1) 40%, rgba(0,0,0,0) 100%);
+        left: 0
+        top: 0
+    .maslo__img
+      max-width: 980px
+      margin: 0 auto
+      position: relative
+    
+  .care
+    padding: 0 60px 60px 60px
+    .care__title
+      text-align: center
+    .care__img
+      &::after
+        content: ""
+        display: block
+        width: 926px
+        height: 25px
+        background-color: #a3b1b9
+        max-width: 100%
+        margin: 0 auto
+    .care__txt
+      max-width: 980px
+      margin: 0 auto
+      padding: 25px 0
+      position: relative
+      &::before
+        content: ""
+        display: block
+        height: 4px
+        width: 70%
+        background: rgb(0,0,0);
+        background: linear-gradient(260deg, rgba(0,0,0,0) 0%, rgba(165,179,186,1) 60%);
+        margin-bottom: 25px
+      &::after
+        content: ""
+        display: block
+        height: 4px
+        width: 70%
+        background: rgb(0,0,0);
+        background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(165,179,186,1) 60%);
+        margin: 25px 0 0 auto
+
+//media**********************************************        
+
+@media (max-width: 812px)
+  #mwf h2
+    font-size: 28px
+  #mwf .knife
+    padding: 30px 20px 0 20px;
+  #mwf .knife .knife__img .knife__img__wrap .knife__img__abs span
+    font-size: 16px
+  #mwf .knife .knife__img .knife__img__wrap .knife__img__abs
+    right: 40%
+    width: 50%
+  #mwf .steel
+    padding: 20px
+  #mwf .tech
+    padding: 0 20px
+  #mwf .tech .tech__wrap .tech__txt
+    padding: 0 80px 0 25px;
+  #mwf .maslo
+    padding: 20px
+  #mwf .maslo .maslo__txt i.gray
+    height: 158%
+  #mwf .care
+    padding: 0 20px 20px 20px
+
+@media (max-width: 480px)
+  #mwf h2
+    font-size: 24px
+  #mwf .knife .knife__title span > b
+    font-size: 30px
+  #mwf .knife .knife__title span
+    font-size: 24px
+  #mwf .knife .knife__img .knife__img__wrap .knife__img__abs
+    position: unset
+    transform: unset
+    width: 100%
+    padding: 20px
+  #mwf .knife .knife__img .knife__img__wrap i.gray:nth-of-type(3)
+    height: 193%
+  #mwf .steel .steel__title .steel__snoska span
+    font-size: 18px
+  #mwf .tech .tech__wrap .tech__txt
+    padding: 0 25px 25px 25px;
+  #mwf .tech .tech__wrap
+    flex-direction: column
+  #mwf .maslo .maslo__txt i.gray
+    height: 113%
+  #mwf .tech .tech__wrap .tech__img
+    min-width: unset
+    
