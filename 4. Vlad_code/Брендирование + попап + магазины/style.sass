@@ -1,0 +1,80 @@
+/*default styles*/
+
+#magazine 
+  max-width: 100%
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#magazine 
+  a
+    text-decoration: none
+  .magazine__wrap
+    background: linear-gradient(103.96deg, #EE0979 0.34%, #FF6A00 100%);
+    transition: background .3s;
+    span
+      font-size: 30px
+      line-height: 40px
+      text-align: center
+      display: block
+      padding: 9px 0 11px 0
+      color: #fff
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      &::after
+        display: block
+        content: ""
+        width: 17px
+        height: 15px
+        background-position: center
+        background-repeat: no-repeat
+        background-image: url("https://cdn.comfy.ua/media/x/img/magazine-work/arrow.png")
+        margin-left: 13px
+    // &:hover
+    //   background: linear-gradient(103.96deg, #FF6A00 0.34%, #EE0979 100%);
+
+
+//media*********************************************
+
+@media (max-width: 480px)
+  #magazine .magazine__wrap span
+    font-size: 16px
+    line-height: 24px
