@@ -1,0 +1,184 @@
+/*default styles*/
+
+#shops 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  // background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#shops 
+  .shops__wrap
+    margin-top: 23px
+    background: linear-gradient(284.29deg, #9000FF 23.61%, #4E19FF 75.73%, #0036FF 98.29%);
+    border-radius: 8px;
+    padding: 30px 95px
+    .shops__flex
+      display: flex
+      flex-direction: row
+      align-items: center
+      .shops__cont
+        flex: 1 1 0
+        display: flex
+        flex-direction: row
+        align-items: center
+        span
+          display: block
+          line-height: 20px
+          font-size: 16px
+          color: #fff
+        &::before
+          content: ""
+          display: block
+          min-width: 80px
+          height: 80px
+          background-repeat: no-repeat
+          background-position: center
+          margin-right: 10px
+
+        &:nth-of-type(1)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/magazine-blocks/1.svg")
+
+        &:nth-of-type(2)
+          margin: 0 50px
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/magazine-blocks/2.svg")
+
+        &:nth-of-type(3)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/magazine-blocks/3.svg")
+    .shops__button  
+      margin-top: 30px
+      label.link
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        cursor: pointer
+      #hider 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    
+      #hider:checked + .shop__hiden 
+        display: block;
+
+      .shop__hiden 
+        margin-top: 30px;
+        display: none;
+
+      span
+        display: block
+        line-height: 18px
+        color: #fff
+        font-size: 14px
+        &:nth-of-type(2)
+          display: flex
+          flex-direction: row
+          align-items: center
+          &::after
+            content: ""
+            display: block
+            width: 12px
+            height: 8px
+            background-repeat: no-repeat
+            background-position: center
+            background-image: url("https://cdn.comfy.ua/media/x/img/magazine-blocks/4.svg")
+            margin-left: 8px  
+    span.yellow__txt
+      font-size: 22px 
+      color: #FFE000
+
+  .proverka
+    text-align: center
+    margin: 30px 0
+    span
+      font-size: 15px
+      line-height: 18px
+      font-weight: 400
+      font-weight: bold
+      
+
+//media****************************************************
+
+@media (max-width: 1024px)
+  #shops .shops__wrap
+    padding: 30px;
+    margin: 8px 8px 0 8px
+
+@media (max-width: 812px)
+  #shops .shops__wrap .shops__flex
+    #shops .shops__wrap .shops__flex .shops__cont:nth-of-type(2)
+      margin: 0 20px
+  #shops .shops__wrap
+    padding: 20px 15px
+  #shops .shops__wrap .shops__flex .shops__cont span
+    font-size: 14px
+  #shops .shops__wrap .shops__flex .shops__cont::before
+    width: 40px
+    height: 40px
+    min-width: 40px
+    background-size: contain
+  #shops .shops__wrap .shops__flex .shops__cont:nth-of-type(2)
+    margin: 0 20px;
+  #shops .shops__wrap .shops__flex .shops__cont
+    flex: unset
+    max-width: 33.33%
+  #shops .shops__wrap span.yellow__txt
+    font-size: 14px
+
+@media (max-width: 480px)
+  #shops .shops__wrap .shops__flex
+    flex-direction: column
+    align-items: flex-start
+
+  #shops .shops__wrap .shops__flex .shops__cont
+    max-width: 100%
+  #shops .shops__wrap .shops__flex .shops__cont:nth-of-type(2)
+    margin: 10px 0
+  
+  #shops .shops__wrap .shops__button
+    margin-top: 20px
+  #shops .shops__wrap .shops__button label.link
+    flex-direction: column;
+    align-items: flex-start;
+  #shops .shops__wrap span.yellow__txt
+    margin-bottom: 10px
+  #shops .proverka
+    margin: 13px 0 22px 0
