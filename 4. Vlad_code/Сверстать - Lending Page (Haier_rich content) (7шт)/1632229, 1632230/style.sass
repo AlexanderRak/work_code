@@ -1,0 +1,156 @@
+/*default styles*/
+
+#haier 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    font-size: 20px
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 28px
+    font-weight: bold
+    padding: 0
+    margin: 0
+    text-transform: uppercase
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#haier
+  .represent
+    position: relative
+    .represent__txt
+      position: absolute
+      color: #fff
+      right: 0
+      top: 0
+      max-width: 480px
+      padding: 40px 20px
+      box-sizing: border-box
+      h2
+        margin-bottom: 10px
+
+  .seria
+    h2
+      text-align: center
+      padding: 20px
+    ul
+      list-style-type: disc
+      padding-left: 40px
+      li:nth-of-type(n+2)
+        margin-top: 10px
+
+  .haier__img
+    margin: 40px 0 
+
+  .cholod
+    display: flex
+    flex-direction: row
+    .cholod__item
+      flex: 1 1 0
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      text-align: center
+      .cholod__txt
+        margin-bottom: 10px
+        span
+          line-height: normal
+          font-size: 16px
+          display: block
+
+  .invertor
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin-top: 40px
+    background-color: #000
+    .invertor__txt
+      color: #fff
+      padding: 40px
+      box-sizing: border-box
+      h2
+        margin-bottom: 10px
+
+  .tech
+    margin: 40px 0
+    .tech__list
+      li
+        display: flex
+        flex-direction: row
+        align-items: center
+        >div
+          flex: 1 1 0
+          max-width: 50%
+          box-sizing: border-box
+        .tech__txt
+          padding: 40px
+          h2
+            margin-bottom: 10px
+        &:nth-of-type(odd)
+          img
+            margin: 0 0 0 auto
+        &:nth-of-type(even)
+          flex-direction: row-reverse
+          img
+            margin: auto 0 0 0
+
+//media********************************************
+
+@media (max-width: 812px)
+  #haier .cholod .cholod__item
+    min-width: 230px
+  #haier .cholod
+    overflow-x: scroll
+
+@media (max-width: 480px)
+  #haier h2
+    font-size: 24px
+  #haier p
+    font-size: 17px
+  #haier .represent .represent__txt
+    position: unset
+    background-color: #000
+  #haier .seria ul
+    padding: 20px
+  #haier .invertor .invertor__txt
+    padding: 20px
+  #haier .invertor
+    flex-direction: column
+    text-align: center
+  #haier .tech .tech__list li .tech__txt
+    padding: 20px
+  #haier .tech .tech__list li
+    flex-direction: column !important
+    >div
+      max-width: 100%
+      text-align: center
