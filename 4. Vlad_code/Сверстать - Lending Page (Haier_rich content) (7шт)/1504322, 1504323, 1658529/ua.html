@@ -1,0 +1,404 @@
+<style>
+  #content_ex p:first-letter {
+    padding-left: 0;
+  }
+
+  #content_ex p {
+    margin-bottom: 0;
+  }
+
+  #content_ex img:hover {
+    opacity: 1;
+  }
+
+  #content_ex img {
+    opacity: 1;
+  }
+
+  #content_ex {
+    max-width: 1316px;
+    background-color: #fff;
+    margin: 0 auto;
+  }
+
+  #content_ex h2 {
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    text-transform: uppercase;
+  }
+
+  #content_ex img {
+    max-width: 100%;
+    max-height: 700px;
+    margin: 0 auto 10px;
+    display: block;
+  }
+
+  #content_ex p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  #content_ex .haier_bg {
+    position: relative;
+  }
+
+  #content_ex .haier_bg-box {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    color: #fff;
+    max-width: 480px;
+    padding-right: 10px;
+  }
+
+
+  #content_ex .haier_box__info {
+    text-align: center;
+  }
+
+  #content_ex .haier_box__info ul {
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 40px;
+  }
+
+  #content_ex .haier__color-items p {
+    text-align: center;
+  }
+
+  #content_ex .haier__color-inner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  #content_ex .haier__color-inner .haier__color-items p {
+    display: block;
+    min-height: 95px;
+  }
+
+  #content_ex .haier__row-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #content_ex .haier__row-inner-rev {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #content_ex .haier__row-items {
+    padding: 0px 40px;
+    flex: 1 0 50%;
+    box-sizing: border-box;
+  }
+
+  #content_ex .haier__row .haier__row-img {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  #content_ex .haier__row .haier__row-img>div {
+    flex: 1 1 0;
+    max-width: 50%;
+    box-sizing: border-box;
+  }
+
+  #content_ex .haier__row .haier__row-img>div img {
+    margin-bottom: 0;
+    margin: 0;
+  }
+
+  #content_ex .haier__row .haier__row-img div:nth-of-type(2) {
+    padding: 40px;
+    background-image: url("https://cdn.comfy.ua/media/x/img/1504322/4.png");
+    background-position: center right;
+    align-self: stretch;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+
+  #content_ex .haier__row .haier__row-img div:nth-of-type(2) span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 480px) {
+    #content_ex .haier__color-inner .haier__color-items:nth-of-type(n+2) {
+      margin-left: 0 !important;
+    }
+
+    #content_ex .haier__row-items {
+      padding: 0 15px;
+    }
+
+    #content_ex .haier__row .haier__row-img {
+      flex-direction: column;
+    }
+
+    #content_ex .haier__row .haier__row-img>div {
+      max-width: 100%;
+    }
+
+    #content_ex .haier__row .haier__row-img div:nth-of-type(2) {
+      padding: 15px;
+
+    }
+  }
+
+
+  @media screen and (max-width: 882px) {
+    #content_ex .haier_bg-box {
+      position: static;
+      color: #000;
+      max-width: 100%;
+      padding-right: 0;
+      text-align: center;
+    }
+
+    #content_ex .haier__row-inner-rev,
+    #content_ex .haier__row-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+  }
+
+  @media (max-width: 812px) {
+    #content_ex .haier__color-inner .haier__color-items:nth-of-type(n+2) {
+      margin-left: 15px;
+    }
+
+  }
+
+  @media screen and (max-width: 706px) {
+    #content_ex .haier__color-items img {
+      max-width: 64%;
+    }
+
+    #content_ex .haier__color-inner {
+      max-width: 600px;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 680px) {
+
+    #content_ex {
+      margin: 15px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    #content_ex p {
+      padding: 0 15px 10px;
+      /* text-align: justify; */
+    }
+
+    #content_ex h2 {
+      text-align: center;
+    }
+
+    #content_ex .haier__color-items p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (max-width: 495px) {
+    #content_ex .haier__color-inner {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+</style>
+
+
+<div id="content_ex">
+  <section class="haier_bg">
+    <div class="haier_bg-box">
+      <h2>БЕЗДОГАННА РЕПУТАЦІЯ</h2>
+      <p>HAIER — світовий лідер великої побутової техніки
+        За данними Euromonitor International за 2019р.
+        бренд Haier - №1 у світі серед виробників великої побутової техніки.
+        Haier утримує цей статус у рейтингу більше 10 років.</p>
+    </div>
+    <div class="haier_bg-img">
+      <img src="https://cdn.comfy.ua/media/x/img/1214374/01ukr.png" alt="">
+    </div>
+  </section>
+  <section class="haier_box">
+    <div class="haier_box__info">
+      <h2>Серія A2 | 737</h2>
+      <ul>
+        <li>
+          <p>Трьох камерний холодильник Haier з технологією Total No Frost привнесе своєму власникові відчуття комфорту від використання</p>
+        </li>
+        <li>
+          <p>Ідеальне поєднання нових технологій і якості допоможе зберігати свіжість продуктів довше, Три окремі камери - тепер запахи різних продуктів точно не будуть змішані.</p>
+        </li>
+        <li>
+          <p>Інверторний двигун працює тихо і споживає мало електроенергії</p>
+        </li>
+        <li>
+          <p>Повністю складна полиця дозволяє розмістити великі ємності.</p>
+        </li>
+        <li>
+          <p>Функції супер охолодження і супер заморожування.</p>
+        </li>
+        <li>
+          <p>Є можливість перевісити двері.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="haier_box__img">
+      <img src="https://cdn.comfy.ua/media/x/img/1214374/02ukr.png" alt="">
+    </div>
+  </section>
+  <section class="haier__color">
+    <div class="haier__color-row">
+      <div class="haier__color-inner">
+        <div class="haier__color-items">
+          <p>A2F737CLBG<sup>*</sup><br>
+            Світло-коричневий
+          </p>
+          <img src="https://cdn.comfy.ua/media/x/img/1504322/1.png" alt="">
+        </div>
+        <div class="haier__color-items">
+          <p>A2F737CDBG<sup>*</sup><br>
+            Темно-коричневий
+          </p>
+          <img src="https://cdn.comfy.ua/media/x/img/1504322/2.png" alt="">
+        </div>
+        <div class="haier__color-items">
+          <p>A2F737CBXG<sup>*</sup><br>
+            Чорна нержавіюча сталь
+          </p>
+          <img src="https://cdn.comfy.ua/media/x/img/1504322/3.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- <div class="haier__color-img">
+          <img src="https://cdn.comfy.ua/media/x/img/1214374/3.png" alt="">
+      </div> -->
+  </section>
+  <section class="haier__row">
+    <div class="haier__row-img">
+      <div>
+        <img src="https://cdn.comfy.ua/media/x/img/1504322/5.png" alt="">
+      </div>
+      <div>
+        <div>
+          <span>Инверторный компрессор</span>
+          <p>Эффективная работа с уровнем шума всего в 38 дБ Энергопотребление класса А++</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="haier__row-inner-rev">
+      <div class="haier__row-items">
+        <h2>Трі відокремлені камери</h2>
+        <p>Комфортне, роздільне зберігання продуктів не дає змішуватися запахам продуктів, що зберігаються в незалежних відділах холодильної та морозильної камери.</p>
+        <p>Морозильні камери обладнані авто доводчиком</p>
+      </div>
+      <div class="haier__row-items-img">
+        <img src="https://cdn.comfy.ua/media/x/img/1504322/6.png" alt="">
+      </div>
+    </div>
+
+    <div class="haier__row-img">
+      <img alt="" class=" lazyloaded" data-src="https://cdn.comfy.ua/media/x/img/1214374/05.png" src="https://cdn.comfy.ua/media/x/img/1214374/05.png">
+    </div>
+
+    <div class="haier__row-inner">
+      <div class="haier__row-items">
+        <h2>TOTAL NO FROST</h2>
+        <p>Більше немає необхідності розморожувати холодильник. Процес охолодження повітря постійний - це створює ідеальний клімат для зберігання в усіх відділах</p>
+      </div>
+      <div class="haier__row-items-img">
+        <img src="https://cdn.comfy.ua/media/x/img/1214374/06.png" alt="">
+      </div>
+    </div>
+    <div class="haier__row-inner-rev">
+      <div class="haier__row-items">
+        <h2>Динамічне охолодження MultiFlow
+        </h2>
+        <p>Рівномірний розподіл повітряних потоків і точне підтримання оптимальної температури.
+        </p>
+      </div>
+      <div class="haier__row-items-img">
+        <img src="https://cdn.comfy.ua/media/x/img/1214374/07.png" alt="">
+      </div>
+    </div>
+    <div class="haier__row-inner">
+      <div class="haier__row-items">
+        <h2>ПОДВІЙНА СКЛАДНА ПОЛИЧКА</h2>
+        <p>Складні полиці служать варіативності внутрішнього простору холодильника - щоб легко вміщувалися великі каструлі, високі ємності та інші «габаритні» продукти.</p>
+      </div>
+      <div class="haier__row-items-img">
+        <img src="https://cdn.comfy.ua/media/x/img/1214374/08.png" alt="">
+      </div>
+    </div>
+    <div class="haier__row-inner-rev">
+      <div class="haier__row-items">
+        <h2>0° ZONE</h2>
+        <p>Відділення з температурою 0 ° для дбайливого зберігання м'яса, риби, сирів і молочних продуктів.</p>
+      </div>
+      <div class="haier__row-items-img">
+        <img src="https://cdn.comfy.ua/media/x/img/1214374/09.png" alt="">
+      </div>
+    </div>
+    <div class="haier__row-inner">
+      <div class="haier__row-items">
+        <h2>ТЕХНОЛОГІЯ Т.АВТ</h2>
+        <p>Інноваційне рішення від компанії Haier. Антибактеріальний модуль, з використанням турмаліну, гарантує іонізацію і знезараження повітря в холодильниках Haier.</p>
+      </div>
+      <div class="haier__row-items-img">
+        <img src="https://cdn.comfy.ua/media/x/img/1214374/010.png" alt="">
+      </div>
+    </div>
+    <div class="haier__row-inner-rev">
+      <div class="haier__row-items">
+        <h2>ПОДТРИМКА ВОЛОГОСТІ HCS</h2>
+        <p>Спеціальна мембрана відводить зайву вологу якщо її рівень перевищує 90% і накопичує вологу при її надлишку в повітрі. Ваші продукти довше зберігатимуть свіжість.</p>
+      </div>
+      <div class="haier__row-items-img">
+        <img src="https://cdn.comfy.ua/media/x/img/1504322/7.png" alt="">
+      </div>
+    </div>
+    <div class="haier__row-inner-rev">
+      <div class="haier__row-items">
+        <h2>LED-дисплей</h2>
+        <p>Комфортне керування всіма функціями холодильника навіть не відкриваючи його. Всередині не буде перепаду температур, що також додасть термін зберігання продуктам, і зменшить енергоспоживання.</p>
+      </div>
+      <div class="haier__row-items-img">
+        <img src="https://cdn.comfy.ua/media/x/img/1504322/8.png" alt="">
+      </div>
+    </div>
+    <div class="haier__row-inner">
+      <div class="haier__row-items">
+        <h2>12 РОКІВ ГАРАНТІЯ НА КОМПРЕСОР</h2>
+        <p>Компресори для компанії Haier поставляються світовими партнерами які зарекомендували себе як дуже надійні, тихі і енергоефективні за якістю.</p>
+      </div>
+      <div class="haier__row-items-img">
+        <img src="https://cdn.comfy.ua/media/x/img/1214374/012.png" alt="">
+      </div>
+    </div>
+  </section>
+</div>
