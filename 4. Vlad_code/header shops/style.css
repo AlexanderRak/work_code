@@ -6,6 +6,7 @@
   height: auto;
   display: block;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -55,36 +56,57 @@
 /*end default styles*/
 #shops .shops__wrap {
   margin-top: 23px;
+  background: -webkit-linear-gradient(165.71deg, #9000FF 23.61%, #4E19FF 75.73%, #0036FF 98.29%);
+  background: -moz-linear-gradient(165.71deg, #9000FF 23.61%, #4E19FF 75.73%, #0036FF 98.29%);
+  background: -o-linear-gradient(165.71deg, #9000FF 23.61%, #4E19FF 75.73%, #0036FF 98.29%);
   background: linear-gradient(284.29deg, #9000FF 23.61%, #4E19FF 75.73%, #0036FF 98.29%);
-  border-radius: 8px;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
   padding: 30px 95px;
 }
 
 #shops .shops__wrap .shops__flex {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 #shops .shops__wrap .shops__flex .shops__cont {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -128,16 +150,25 @@
 
 #shops .shops__wrap .shops__button label.link {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   cursor: pointer;
@@ -167,13 +198,20 @@
 
 #shops .shops__wrap .shops__button span:nth-of-type(2) {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -227,13 +265,18 @@
     width: 40px;
     height: 40px;
     min-width: 40px;
-    background-size: contain;
+    -webkit-background-size: contain;
+       -moz-background-size: contain;
+         -o-background-size: contain;
+            background-size: contain;
   }
   #shops .shops__wrap .shops__flex .shops__cont:nth-of-type(2) {
     margin: 0 20px;
   }
   #shops .shops__wrap .shops__flex .shops__cont {
     -webkit-box-flex: unset;
+    -webkit-flex: unset;
+       -moz-box-flex: unset;
         -ms-flex: unset;
             flex: unset;
     max-width: 33.33%;
@@ -247,9 +290,14 @@
   #shops .shops__wrap .shops__flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+       -moz-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
   }
@@ -265,9 +313,14 @@
   #shops .shops__wrap .shops__button label.link {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+       -moz-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
   }

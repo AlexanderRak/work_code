@@ -1,0 +1,134 @@
+#kids-wrapper
+	display: block
+	margin: 0 auto
+	max-width: 1316px
+	width: 100%
+	height: auto
+	overflow: hidden
+	background: #fff
+	position: relative
+	img
+		&:hover
+			opacity: 1
+	&:first-letter
+		padding-left: 0
+	img
+		display: block
+		margin: 0 auto
+	p
+		font-size: 12px
+		margin-bottom: 0
+		text-align: center
+span.word-wrap
+	display: block
+	word-wrap: break-word
+span.fw-bold
+	font-weight: bold
+span.tx-uppercase
+	text-transform: uppercase
+// default
+
+.kids-container
+	position: relative
+	overflow: hidden
+	display: flex
+	justify-content: flex-start
+	margin: 25px 0
+.kids-row-flex
+	// max-width: 1200px
+	width: 100%
+	position: relative
+	z-index: 7
+.kids-row__item
+	border: 1px solid #E5E5E5
+	border-radius: 8px
+	// flex: 1 1 150px
+	// max-width: 150px
+	min-height: 100px
+	max-height: 100px
+	overflow: hidden
+	// margin-right: 15px
+	transition: .3s
+	&:last-child
+		margin-right: 0
+	&:hover
+		border: 1px solid #999999
+.kids-row__item__text
+	min-height: 32px
+	display: flex
+	align-items: center
+	justify-content: center
+	line-height: 16px
+	margin: 4px 8px 8px 8px
+#kids-wrapper
+	.slick-track
+		position: inherit
+		left: inherit
+		top: inherit
+		height: 100%
+		display: flex
+		align-items: flex-start
+	.slick-slider
+		height: 100%
+		z-index: 7
+	.slick-slide
+		float: inherit
+		height: auto
+	.your-class-arrow
+		display: block
+		.slick-prev, .slick-next
+			border-radius: 8px
+			border: 1px solid #E5E5E5
+			background: rgba(255, 255, 255, 1)
+			width: 36px
+			height: 100%
+			// position: relative
+			position: absolute
+			z-index: 8
+			&::before
+				background: #000000
+				width: 16px
+				height: 16px
+				border-radius: 50%
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				color: #fff
+				font-size: 13px
+				line-height: 1.2
+				left: 0
+				right: 0
+				margin: 0 auto
+			&::after
+				content: ""
+				position: absolute
+				top: 0
+				width: 20px
+				height: 100%
+				z-index: 8
+			&.slick-disabled
+				// opacity: 0
+				&::before
+					background: #E5E5E5
+		.slick-prev
+			left: 0
+			top: 0
+			&::before
+				content: "<"
+			&::after
+				background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%)
+				right: -21px
+		.slick-next
+			right: 0
+			top: 0
+			&::before
+				content: ">"
+			&::after
+				background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%,rgb(255, 255, 255) 100%)
+				left: -21px
+
+// media
+// @media (max-width: 1250px)
+// @media (max-width: 1024px)
+// @media (max-width: 812px)
+// @media (max-width: 480px)
