@@ -54,7 +54,7 @@ span.tx-uppercase {
      -moz-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin: 25px 0;
+  margin: 25px 0 15px 0;
 }
 
 .kids-row-flex {
@@ -68,9 +68,16 @@ span.tx-uppercase {
   -webkit-border-radius: 8px;
      -moz-border-radius: 8px;
           border-radius: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 140px;
+     -moz-box-flex: 1;
+      -ms-flex: 1 1 140px;
+          flex: 1 1 140px;
+  max-width: 140px;
   min-height: 100px;
   max-height: 100px;
   overflow: hidden;
+  margin-right: 15px;
   -webkit-transition: .3s;
   -o-transition: .3s;
   -moz-transition: .3s;
@@ -126,11 +133,16 @@ span.tx-uppercase {
 #kids-wrapper .slick-slider {
   height: 100%;
   z-index: 7;
+  margin-top: 0;
 }
 
 #kids-wrapper .slick-slide {
   float: inherit;
   height: auto;
+}
+
+#kids-wrapper .slick-list {
+  margin: 0 50px;
 }
 
 #kids-wrapper .your-class-arrow {
@@ -147,6 +159,11 @@ span.tx-uppercase {
   height: 100%;
   position: absolute;
   z-index: 8;
+  display: inline-block !important;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
 }
 
 #kids-wrapper .your-class-arrow .slick-prev::before, #kids-wrapper .your-class-arrow .slick-next::before {
@@ -180,8 +197,24 @@ span.tx-uppercase {
   z-index: 8;
 }
 
+#kids-wrapper .your-class-arrow .slick-prev:hover, #kids-wrapper .your-class-arrow .slick-next:hover {
+  border: 1px solid #999999;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 0 2px 0px #999999;
+     -moz-box-shadow: inset 0 0 2px 0px #999999;
+          box-shadow: inset 0 0 2px 0px #999999;
+}
+
 #kids-wrapper .your-class-arrow .slick-prev.slick-disabled::before, #kids-wrapper .your-class-arrow .slick-next.slick-disabled::before {
   background: #E5E5E5;
+}
+
+#kids-wrapper .your-class-arrow .slick-prev.slick-disabled:hover, #kids-wrapper .your-class-arrow .slick-next.slick-disabled:hover {
+  border: 1px solid #E5E5E5;
+  cursor: default;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
 }
 
 #kids-wrapper .your-class-arrow .slick-prev {
@@ -218,4 +251,93 @@ span.tx-uppercase {
   background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 100%);
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
   left: -21px;
+}
+
+.kids-tags {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.kids-tags__link {
+  background: #F2F2F2;
+  -webkit-border-radius: 17px;
+     -moz-border-radius: 17px;
+          border-radius: 17px;
+  padding: 8px 12px;
+  text-align: center;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.kids-tags__link:hover {
+  background: #dedcdc;
+}
+
+.kids-tags__link:last-child {
+  margin-right: 0;
+}
+
+.kids-tags__link p {
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .kids-row__item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+       -moz-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 812px) {
+  .kids-row__item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+       -moz-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .kids-row__item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+       -moz-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    max-width: 100%;
+  }
+  .kids-row__item {
+    margin-right: 0;
+  }
+  #kids-wrapper .slick-list {
+    margin: 0 40px;
+  }
+  #kids-wrapper .slick-slide.slick-current.slick-active {
+    margin-right: 2.5px;
+    margin-left: 0;
+  }
+  #kids-wrapper .slick-slide.slick-active {
+    margin-left: 2.5px;
+    margin-right: 0;
+  }
 }

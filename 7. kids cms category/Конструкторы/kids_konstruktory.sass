@@ -33,7 +33,7 @@ span.tx-uppercase
 	overflow: hidden
 	display: flex
 	justify-content: flex-start
-	margin: 25px 0
+	margin: 25px 0 15px 0
 .kids-row-flex
 	// max-width: 1200px
 	width: 100%
@@ -42,12 +42,12 @@ span.tx-uppercase
 .kids-row__item
 	border: 1px solid #E5E5E5
 	border-radius: 8px
-	// flex: 1 1 150px
-	// max-width: 150px
+	flex: 1 1 140px
+	max-width: 140px
 	min-height: 100px
 	max-height: 100px
 	overflow: hidden
-	// margin-right: 15px
+	margin-right: 15px
 	transition: .3s
 	&:last-child
 		margin-right: 0
@@ -71,9 +71,12 @@ span.tx-uppercase
 	.slick-slider
 		height: 100%
 		z-index: 7
+		margin-top: 0
 	.slick-slide
 		float: inherit
 		height: auto
+	.slick-list
+		margin: 0 50px
 	.your-class-arrow
 		display: block
 		.slick-prev, .slick-next
@@ -82,9 +85,10 @@ span.tx-uppercase
 			background: rgba(255, 255, 255, 1)
 			width: 36px
 			height: 100%
-			// position: relative
 			position: absolute
 			z-index: 8
+			display: inline-block !important
+			transition: .3s
 			&::before
 				background: #000000
 				width: 16px
@@ -106,10 +110,18 @@ span.tx-uppercase
 				width: 20px
 				height: 100%
 				z-index: 8
+			&:hover
+				border: 1px solid #999999
+				cursor: pointer
+				box-shadow: inset 0 0 2px 0px #999999
 			&.slick-disabled
 				// opacity: 0
 				&::before
 					background: #E5E5E5
+				&:hover
+					border: 1px solid #E5E5E5
+					cursor: default
+					box-shadow: none
 		.slick-prev
 			left: 0
 			top: 0
@@ -126,9 +138,42 @@ span.tx-uppercase
 			&::after
 				background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%,rgb(255, 255, 255) 100%)
 				left: -21px
-
+.kids-tags
+	display: flex
+	align-items: flex-start
+	flex-wrap: wrap
+	position: relative
+	padding-bottom: 15px
+.kids-tags__link
+	background: #F2F2F2
+	border-radius: 17px
+	padding: 8px 12px
+	text-align: center
+	margin-right: 8px
+	margin-bottom: 8px
+	display: block
+	&:hover
+		background: #dedcdc
+	&:last-child
+		margin-right: 0
+	p
+		font-weight: bold
 // media
-// @media (max-width: 1250px)
-// @media (max-width: 1024px)
-// @media (max-width: 812px)
-// @media (max-width: 480px)
+@media (min-width: 1025px)
+	#kids-wrapper
+		.slick-list
+			margin: 0 0px
+@media (max-width: 1024px)
+	.kids-row__item
+		flex: 1 1 auto
+		max-width: 100%
+@media (max-width: 812px)
+	.kids-row__item
+		flex: 1 1 auto
+		max-width: 100%
+@media (max-width: 480px)
+	.kids-row__item
+		flex: 1 1 auto
+		max-width: 100%
+	.kids-row__item
+		margin-right: 0
