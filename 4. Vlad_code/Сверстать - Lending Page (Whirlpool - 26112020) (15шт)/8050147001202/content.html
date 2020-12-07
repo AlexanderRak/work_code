@@ -1,0 +1,811 @@
+<style>
+  .esm-content {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    color: #60656b
+  }
+
+  .esm-content * {
+    box-sizing: border-box;
+    line-height: 1.5
+  }
+
+  .esm-content .esm-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 8px 0
+  }
+
+  .esm-content [class*="esm-col-"] {
+    padding: 0;
+    width: 100%
+  }
+
+  .esm-content .esm-col-1 {
+    width: 8.3333%
+  }
+
+  .esm-content .esm-col-2 {
+    width: 16.6666%
+  }
+
+  .esm-content .esm-col-3 {
+    width: 25%
+  }
+
+  .esm-content .esm-col-4 {
+    width: 33.3333%
+  }
+
+  .esm-content .esm-col-5 {
+    width: 41.6666%
+  }
+
+  .esm-content .esm-col-6 {
+    width: 50%
+  }
+
+  .esm-content .esm-col-7 {
+    width: 58.3333%
+  }
+
+  .esm-content .esm-col-8 {
+    width: 66.6666%
+  }
+
+  .esm-content .esm-col-9 {
+    width: 75%
+  }
+
+  .esm-content .esm-col-10 {
+    width: 83.3333%
+  }
+
+  .esm-content .esm-col-11 {
+    width: 91.6666%
+  }
+
+  .esm-content .esm-col-12 {
+    width: 100%
+  }
+
+  @media only screen and (min-width: 0px) {
+    .esm-content .esm-col-s-1 {
+      width: 8.3333%
+    }
+
+    .esm-content .esm-col-s-2 {
+      width: 16.6666%
+    }
+
+    .esm-content .esm-col-s-3 {
+      width: 25%
+    }
+
+    .esm-content .esm-col-s-4 {
+      width: 33.3333%
+    }
+
+    .esm-content .esm-col-s-5 {
+      width: 41.6666%
+    }
+
+    .esm-content .esm-col-s-6 {
+      width: 50%
+    }
+
+    .esm-content .esm-col-s-7 {
+      width: 58.3333%
+    }
+
+    .esm-content .esm-col-s-8 {
+      width: 66.6666%
+    }
+
+    .esm-content .esm-col-s-9 {
+      width: 75%
+    }
+
+    .esm-content .esm-col-s-10 {
+      width: 83.3333%
+    }
+
+    .esm-content .esm-col-s-11 {
+      width: 91.6666%
+    }
+
+    .esm-content .esm-col-s-12 {
+      width: 100%
+    }
+  }
+
+  @media only screen and (min-width: 769px) {
+    .esm-content .esm-col-m-1 {
+      width: 8.3333%
+    }
+
+    .esm-content .esm-col-m-2 {
+      width: 16.6666%
+    }
+
+    .esm-content .esm-col-m-3 {
+      width: 25%
+    }
+
+    .esm-content .esm-col-m-4 {
+      width: 33.3333%
+    }
+
+    .esm-content .esm-col-m-5 {
+      width: 41.6666%
+    }
+
+    .esm-content .esm-col-m-6 {
+      width: 50%
+    }
+
+    .esm-content .esm-col-m-7 {
+      width: 58.3333%
+    }
+
+    .esm-content .esm-col-m-8 {
+      width: 66.6666%
+    }
+
+    .esm-content .esm-col-m-9 {
+      width: 75%
+    }
+
+    .esm-content .esm-col-m-10 {
+      width: 83.3333%
+    }
+
+    .esm-content .esm-col-m-11 {
+      width: 91.6666%
+    }
+
+    .esm-content .esm-col-m-12 {
+      width: 100%
+    }
+  }
+
+  @media only screen and (min-width: 920px) {
+    .esm-content .esm-col-1 {
+      width: 8.3333%
+    }
+
+    .esm-content .esm-col-2 {
+      width: 16.6666%
+    }
+
+    .esm-content .esm-col-3 {
+      width: 25%
+    }
+
+    .esm-content .esm-col-4 {
+      width: 33.3333%
+    }
+
+    .esm-content .esm-col-5 {
+      width: 41.6666%
+    }
+
+    .esm-content .esm-col-6 {
+      width: 50%
+    }
+
+    .esm-content .esm-col-7 {
+      width: 58.3333%
+    }
+
+    .esm-content .esm-col-8 {
+      width: 66.6666%
+    }
+
+    .esm-content .esm-col-9 {
+      width: 75%
+    }
+
+    .esm-content .esm-col-10 {
+      width: 83.3333%
+    }
+
+    .esm-content .esm-col-11 {
+      width: 91.6666%
+    }
+
+    .esm-content .esm-col-12 {
+      width: 100%
+    }
+  }
+
+  .esm-content p,
+  .esm-content span {
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    color: #333333;
+    margin: 0
+  }
+
+  .esm-content img {
+    display: block;
+    max-width: 100%;
+    width: unset;
+    border: 0;
+    margin: 0 auto
+  }
+
+  .esm-content .esm-vertical-align {
+    align-items: center
+  }
+
+  .esm-content .esm-center {
+    text-align: center
+  }
+
+  .esm-content .esm-row-reverse {
+    flex-direction: row-reverse
+  }
+
+  .esm-content .esm-banner-section {
+    padding-bottom: 25px
+  }
+
+  .esm-content .esm-banner-section .esm-image {
+    max-width: 1200px
+  }
+
+  .esm-content .esm-features-section {
+    padding: 25px 0;
+    align-items: center
+  }
+
+  .esm-content .esm-features-section .esm-image {
+    max-width: 600px
+  }
+
+  .esm-content .esm-features-section .esm-features-box {
+    margin-left: 75px;
+    align-items: center
+  }
+
+  .esm-content .esm-features-section .esm-features-box .esm-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    padding-bottom: 15px
+  }
+
+  .esm-content .esm-features-section .esm-features-box p {
+    padding-left: 15px;
+    padding-bottom: 15px
+  }
+
+  .esm-content .esm-features-section .esm-features-box .esm-icon {
+    margin: 0 auto;
+    max-width: 56px;
+    padding-bottom: 15px
+  }
+
+  @media only screen and (max-width: 767px) {
+    .esm-content .esm-features-section .esm-features-box {
+      margin: 0px 25px !important
+    }
+  }
+
+  .esm-content .esm-technologies-section {
+    padding: 25px 0
+  }
+
+  .esm-content .esm-technologies-section .esm-technologies-box {
+    text-align: center;
+    border: 1px solid #ededed;
+    padding: 25px
+  }
+
+  .esm-content .esm-technologies-section .esm-technologies-box .esm-technologies-name {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    color: black;
+    padding: 15px 0
+  }
+
+  .esm-content .esm-technologies-section .esm-technologies-box .esm-icon {
+    max-height: 150px;
+    max-width: 150px;
+    margin: 0 auto
+  }
+
+  .esm-content .esm-technologies-section .esm-technologies-box:nth-child(3n+0) {
+    border-left: none
+  }
+
+  .esm-content .esm-technologies-section .esm-technologies-box:nth-child(3n+2) {
+    border-left: none
+  }
+
+  .esm-content .esm-technologies-section .esm-technologies-box:nth-child(n+4) {
+    border-top: none
+  }
+
+  @media only screen and (max-width: 767px) {
+    .esm-content .esm-technologies-section .esm-technologies-box {
+      border: 1px solid #ededed !important
+    }
+
+    .esm-content .esm-technologies-section .esm-technologies-box:nth-child(n+2) {
+      border-top: none !important
+    }
+  }
+
+  .esm-content .esm-benefits-section .esm-benefit-box {
+    align-items: center;
+    padding: 15px 0
+  }
+
+  .esm-content .esm-benefits-section .esm-benefit-box .esm-benefit-description {
+    text-align: center;
+    padding: 20px 40px
+  }
+
+  .esm-content .esm-benefits-section .esm-benefit-box .esm-benefit-description .esm-benefit-name {
+    font-size: 18px;
+    color: #a2a2a2
+  }
+
+  .esm-content .esm-benefits-section .esm-benefit-box .esm-benefit-description .esm-benefit-info {
+    font-size: 24px;
+    color: #edb112;
+    padding-bottom: 15px
+  }
+
+  .esm-content .esm-benefits-section .esm-benefit-box .esm-image {
+    max-width: 600px
+  }
+
+  .esm-content .esm-image {
+    margin: 0 auto;
+  }
+
+  .esm-content .esm-features-section .esm-features-box p {
+    text-align: left;
+  }
+
+  .esm-content .esm-benefits-section {
+    background-color: #242021;
+    padding: 0 8px;
+  }
+
+  .esm-content .esm-benefits-section .esm-benefit-box .esm-benefit-description .esm-benefit-name {
+    font-size: 14px;
+    display: block;
+    color: white;
+  }
+
+  .esm-content .esm-benefits-section .esm-benefit-box .esm-benefit-description .esm-benefit-info {
+    font-size: 20px;
+    display: block;
+    color: #00cae1;
+    padding-bottom: 10px;
+    line-height: 25px;
+  }
+
+  .esm-content .esm-benefits-section .esm-benefit-box .esm-benefit-description p {
+    color: white;
+    font-size: 12px;
+  }
+
+  .esm-content .esm-benefits-section .esm-benefit-box {
+    padding: 8px 0;
+  }
+</style>
+
+
+
+
+<div class="esm-content">
+
+
+  <div class="esm-row esm-banner-section">
+    <div class="esm-col-12">
+      <div class="esm-image">
+
+
+        <img src="https://cdn.comfy.ua/media/x/img/1189599/1.jpg" />
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="esm-row esm-features-section">
+
+    <div class="esm-col-5 esm-col-m-5 esm-col-s-12">
+
+
+      <div class="esm-image">
+
+        <img src="https://cdn.comfy.ua/media/x/img/1627893/1.png" />
+
+      </div>
+
+
+    </div>
+
+    <div class="esm-col-7 esm-col-m-7 esm-col-s-12">
+      <div class="esm-features-box esm-row">
+        <div class="esm-col-12">
+
+          <span class="esm-title">FA2841JHBLHA:</span>
+
+        </div>
+
+
+        <div class="esm-col-1">
+          <div class="esm-icon">
+
+            <img src="https://cdn.comfy.ua/media/x/img/1189599/galka.png" />
+
+          </div>
+        </div>
+        <div class="esm-col-11">
+          <p><b>Класс энергопотребления: A+</b><br />Экономит 23% энергии по сравнению с духовкой класса А</p>
+        </div>
+
+        <div class="esm-col-1">
+          <div class="esm-icon">
+
+            <img src="https://cdn.comfy.ua/media/x/img/1189599/galka.png" />
+
+          </div>
+        </div>
+        <div class="esm-col-11">
+          <p><b>Количество функций: 8</b><br /></p>
+        </div>
+
+        <div class="esm-col-1">
+          <div class="esm-icon">
+
+            <img src="https://cdn.comfy.ua/media/x/img/1189599/galka.png" />
+
+          </div>
+        </div>
+        <div class="esm-col-11">
+          <p><b>Цифровой дисплей</b><br /></p>
+        </div>
+
+        <div class="esm-col-1">
+          <div class="esm-icon">
+
+            <img src="https://cdn.comfy.ua/media/x/img/1189599/galka.png" />
+
+          </div>
+        </div>
+        <div class="esm-col-11">
+          <p><b>Система очистки: Diamond Clean</b><br /></p>
+        </div>
+
+        <div class="esm-col-1">
+          <div class="esm-icon">
+
+            <img src="https://cdn.comfy.ua/media/x/img/1189599/galka.png" />
+
+          </div>
+        </div>
+        <div class="esm-col-11">
+          <p><b>Телескопические направляющие: 1 уровень</b><br /></p>
+        </div>
+
+        <div class="esm-col-1">
+          <div class="esm-icon">
+
+            <img src="https://cdn.comfy.ua/media/x/img/1189599/galka.png" />
+
+          </div>
+        </div>
+        <div class="esm-col-11">
+          <p><b>Объем: 71 л</b><br />Большой объем для максимального удобства с возможностью готовить на 5 разных уровнях одновременно</p>
+        </div>
+
+        <div class="esm-col-1">
+          <div class="esm-icon">
+
+            <img src="https://cdn.comfy.ua/media/x/img/1189599/galka.png" />
+
+          </div>
+        </div>
+        <div class="esm-col-11">
+          <p><b>Страна - производитель: Польша</b><br /></p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <div class="esm-row esm-technologies-section" style="padding-bottom: 0; padding-top: 0;">
+
+    <div class="esm-col-4 esm-col-m-4 esm-col-s-12 esm-technologies-box">
+      <div class="esm-icon">
+
+        <img src="https://cdn.comfy.ua/media/x/img/1189599/icon1.png" />
+
+      </div>
+      <span class="esm-technologies-name">Технология Multiflow</span>
+      <p>
+
+        Интегрированная технология гарантирует наилучший результат приготовления ваших любимых блюд.
+
+      </p>
+    </div>
+
+    <div class="esm-col-4 esm-col-m-4 esm-col-s-12 esm-technologies-box">
+      <div class="esm-icon">
+
+        <img src="https://cdn.comfy.ua/media/x/img/1189599/icon2.png" />
+
+      </div>
+      <span class="esm-technologies-name">Система очистки: Diamond Clean</span>
+      <p>
+
+        Быстрый, эффективный и экологически чистый цикл очистки без применения моющих средств.
+
+      </p>
+    </div>
+
+    <div class="esm-col-4 esm-col-m-4 esm-col-s-12 esm-technologies-box">
+      <div class="esm-icon">
+
+        <img src="https://cdn.comfy.ua/media/x/img/1189599/icon3.png" />
+
+      </div>
+      <span class="esm-technologies-name">Откидной гриль</span>
+      <p>
+
+        Высокопроизводительный гриль, который можно очищать легко и абсолютно безопасно.
+
+      </p>
+    </div>
+
+    <div class="esm-col-4 esm-col-m-4 esm-col-s-12 esm-technologies-box">
+      <div class="esm-icon">
+
+        <img src="https://cdn.comfy.ua/media/x/img/1457736/icon4.png" />
+
+      </div>
+      <span class="esm-technologies-name">Цифровой дисплей</span>
+      <p>
+
+        Идеальный контроль времени приготовления благодаря большому дисплею.
+
+      </p>
+    </div>
+
+    <div class="esm-col-4 esm-col-m-4 esm-col-s-12 esm-technologies-box">
+      <div class="esm-icon">
+
+        <img src="https://cdn.comfy.ua/media/x/img/1189599/icon7.png" />
+
+      </div>
+      <span class="esm-technologies-name">Телескопические направляющие</span>
+      <p>
+
+        Удобно и безопасно ставьте и вынимайте посуду.
+
+      </p>
+    </div>
+
+  </div>
+
+
+  <div class="esm-row esm-benefits-section">
+
+
+
+    <div class="esm-col-12 esm-row esm-benefit-box ">
+      <div class="esm-col-6 esm-col-m-6 esm-col-s-12">
+        <div class="esm-image">
+
+
+
+          <img src="https://cdn.comfy.ua/media/x/img/1501579/2.jpg" />
+
+
+
+        </div>
+      </div>
+      <div class="esm-col-6 esm-col-m-6 esm-col-s-12 esm-benefit-description">
+        <span class="esm-benefit-name">Class 2</span>
+
+        <span class="esm-benefit-info">Когда форма сочетается с содержанием</span>
+
+
+
+
+
+        <p>Совершенство и практичность стали придает оригинальности дизайну линейки, делая его функциональным и понятным. Это особая линейка бытовой техники, которая идеально подходит для каждой кухни благодаря неподвластному времени дизайну. Это ответ Hotpoint на практические вызовы настоящего.</p>
+
+
+
+
+      </div>
+    </div>
+
+
+    <div class="esm-col-12 esm-row esm-benefit-box  esm-row-reverse ">
+      <div class="esm-col-6 esm-col-m-6 esm-col-s-12">
+        <div class="esm-image">
+
+
+
+          <img src="https://cdn.comfy.ua/media/x/img/1189599/4.gif" />
+
+
+
+        </div>
+      </div>
+      <div class="esm-col-6 esm-col-m-6 esm-col-s-12 esm-benefit-description">
+        <span class="esm-benefit-name">Технология Multiflow</span>
+
+        <span class="esm-benefit-info">Интегрированная технология гарантирует наилучший результат приготовления ваших любимых блюд.</span>
+
+
+
+
+
+        <p>Передовая вентиляционная система с оптимизированной задней панелью позволяет лучше распределять тепловые потоки внутри духовки, не создавая зон рециркуляции. Равномерная циркуляция горячего воздуха во всех направлениях и электронный контроль гарантируют непревзойденное приготовление блюд на всех уровнях камеры.</p>
+
+
+
+
+      </div>
+    </div>
+
+
+    <div class="esm-col-12 esm-row esm-benefit-box ">
+      <div class="esm-col-6 esm-col-m-6 esm-col-s-12">
+        <div class="esm-image">
+
+
+
+          <img src="https://cdn.comfy.ua/media/x/img/1189599/5.gif" />
+
+
+
+        </div>
+      </div>
+      <div class="esm-col-6 esm-col-m-6 esm-col-s-12 esm-benefit-description">
+        <span class="esm-benefit-name">Система очистки: Diamond Clean</span>
+
+        <span class="esm-benefit-info">Быстрая, эффективная и экологическая очистка</span>
+
+
+
+
+
+        <p>Diamond Clean — это эксклюзивная технология, применяющая силу пара для очистки духовки без моющих средств. Духовка имеет уникальное покрытие с очистительными свойствами, которое активируется во время цикла очистки паром, когда температура внутри камеры достигает 90°С и занимает всего 35 минут. Это решение гарантирует существенную экономию энергии и экологичность. Стекло дверцы духовки всегда идеально чистое и не оставляет разводов.</p>
+
+
+
+
+      </div>
+    </div>
+
+
+    <div class="esm-col-12 esm-row esm-benefit-box  esm-row-reverse ">
+      <div class="esm-col-6 esm-col-m-6 esm-col-s-12">
+        <div class="esm-image">
+
+
+
+          <img src="https://cdn.comfy.ua/media/x/img/1189599/6.gif" />
+
+
+
+        </div>
+      </div>
+      <div class="esm-col-6 esm-col-m-6 esm-col-s-12 esm-benefit-description">
+        <span class="esm-benefit-name">Откидной гриль</span>
+
+        <span class="esm-benefit-info">Высокопроизводительный гриль, который можно очищать легко и абсолютно безопасно.</span>
+
+
+
+
+
+        <p>Тщательная очистка всей рабочей камеры: просто опустите верхний гриль и осторожно очистите поверхность над ним.</p>
+
+
+
+
+      </div>
+    </div>
+
+
+    <div class="esm-col-12 esm-row esm-benefit-box ">
+      <div class="esm-col-6 esm-col-m-6 esm-col-s-12">
+        <div class="esm-image">
+
+
+
+          <img src="https://cdn.comfy.ua/media/x/img/1457736/3.jpg" />
+
+
+
+        </div>
+      </div>
+      <div class="esm-col-6 esm-col-m-6 esm-col-s-12 esm-benefit-description">
+        <span class="esm-benefit-name">Цифровой дисплей</span>
+
+        <span class="esm-benefit-info">Идеальный контроль времени приготовления благодаря большому дисплею.</span>
+
+
+
+
+
+        <p>Контролируйте время приготовления любимых блюд с помощью нового дисплея. Наслаждайтесь легкой настройкой.</p>
+
+
+
+
+      </div>
+    </div>
+
+
+    <div class="esm-col-12 esm-row esm-benefit-box  esm-row-reverse ">
+      <div class="esm-col-6 esm-col-m-6 esm-col-s-12">
+        <div class="esm-image">
+
+
+
+          <img src="https://cdn.comfy.ua/media/x/img/1189599/10.gif" />
+
+
+
+        </div>
+      </div>
+      <div class="esm-col-6 esm-col-m-6 esm-col-s-12 esm-benefit-description">
+        <span class="esm-benefit-name">Телескопические направляющие</span>
+
+        <span class="esm-benefit-info">Удобно и безопасно ставьте и вынимайте посуду.</span>
+
+
+
+
+
+        <p>Телескопические направляющие, функциональные и практичные для размещения и извлечения поддона, делают приготовление любимых блюд простым и безопасным.</p>
+
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="esm-col-8 esm-col-m-10 esm-col-s-12 " style="margin: 25px auto;">
+
+
+    <p>Производитель оставляет за собой право вносить изменения в конструкцию, дизайн и комплектацию изделия без предварительного уведомления. Визуальные (видео- и фото-) материалы используются в демонстрационных целях и могут отличаться в зависимости от модели.</p>
+
+  </div>
+
+</div>
