@@ -1,0 +1,205 @@
+/*default styles*/
+
+#moulinex 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    margin: 0 auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#moulinex 
+  .logo
+    .logo__icon
+      padding: 25px
+    .logo__img
+      position: relative
+      .logo__abs
+        position: absolute
+        top: 200px
+        right: 0
+        display: flex
+        flex-direction: row
+        align-items: center
+        .logo__abs__img
+          z-index: 10
+        .logo__abs__txt
+          background-color: #ffffffa6
+          padding: 10px 0 10px 40px
+          margin-left: -90px
+          width: 100%
+          max-width: 400px
+          span
+            font-size: 30px
+            line-height: normal
+            display: block
+            font-weight: bold
+
+  .helper
+    padding: 70px
+    box-sizing: border-box
+    height: 845px
+    background-image: url("https://cdn.comfy.ua/media/x/img/1342930/2.png")
+    background-repeat: no-repeat
+    background-position: center
+    margin: 70px 0
+    .helper__txt
+      max-width: 400px
+      margin-top: 150px
+
+  .grind
+    .grind__title
+      text-align: center
+      padding: 20px
+      background-color: #e6e6e6
+    .grind__list
+      display: flex
+      flex-direction: row
+      padding: 70px
+      >li
+        flex: 1 1 0
+        text-align: center
+        &:nth-of-type(2)
+          margin: 0 50px
+
+  .nasadka
+    margin-top: 70px
+    .nasadka__title 
+      text-align: center
+      padding: 20px
+      background-color: #e6e6e6
+    .nasadka__flex
+      display: flex
+      flex-direction: row
+      align-items: center
+      padding: 40px 0px
+      >div
+        flex: 1 1 0
+        box-sizing: border-box
+        max-width: 50%
+      .nasadka__txt
+        padding: 0 70px
+        img
+          margin-top: 20px
+        ul
+          li
+            display: flex
+            flex-direction: row
+            align-items: flex-start
+            margin-top: 40px
+            &::before
+              content: ""
+              display: block
+              min-width: 10px
+              height: 10px
+              background-color: #e82c2d
+              border-radius: 50%
+              margin-right: 20px
+
+
+    &:nth-of-type(odd)
+      .nasadka__flex
+        flex-direction: row-reverse
+    &:last-of-type
+      .nasadka__flex
+        flex-direction: row
+      .nasadka__img
+        img
+          max-width: 40%
+
+//media*******************************************************************
+
+@media (max-width: 1024px)
+  #moulinex .logo .logo__img .logo__abs
+    top: 0
+
+@media (max-width: 812px)
+  #moulinex .logo .logo__img .logo__abs .logo__abs__txt span
+    font-size: 24px
+  #moulinex .logo .logo__img .logo__abs .logo__abs__txt
+    max-width: 335px
+    margin-left: -70px
+  #moulinex .logo .logo__img .logo__abs .logo__abs__img img
+    max-width: 200px
+  #moulinex .helper
+    padding: 20px
+    max-height: 700px
+    // background-size: cover
+  #moulinex h2
+    font-size: 28px
+  #moulinex .grind .grind__list
+    padding: 20px
+  #moulinex 
+    .grind 
+      .grind__list 
+        overflow-x: scroll
+        >li
+          min-width: 204px
+  #moulinex .nasadka .nasadka__flex .nasadka__txt
+    padding: 0 20px
+  #moulinex .nasadka .nasadka__flex
+    padding: 20px 0
+
+@media (max-width: 480px)
+  #moulinex .logo .logo__img .logo__abs .logo__abs__txt span
+    font-size: 16px
+  #moulinex .logo .logo__img .logo__abs .logo__abs__img img
+    max-width: 135px
+  #moulinex .logo .logo__img .logo__abs .logo__abs__txt
+    max-width: 250px;
+    margin-left: -60px;
+  #moulinex .helper
+    max-height: 500px
+    background-position: center left
+  #moulinex .helper .helper__txt
+    margin-top: 50px
+  #moulinex h2
+    font-size: 24px
+  #moulinex .nasadka .nasadka__flex
+    flex-direction: column !important
+    >div
+      max-width: 100%
+      text-align: center
+  #moulinex .nasadka .nasadka__flex .nasadka__txt ul
+    margin-bottom: 20px
+  #moulinex .nasadka:last-of-type .nasadka__img 
+    margin-top: 20px
+    img
+      max-width: 70%
+      
+          
