@@ -7,6 +7,7 @@
   overflow: hidden;
   background: #fff;
   position: relative;
+  padding: 15px 2.8rem 0rem;
 }
 
 #kids-wrapper img:hover {
@@ -54,7 +55,7 @@ span.tx-uppercase {
      -moz-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin: 25px 0 15px 0;
+  margin: 0 0 15px 0;
 }
 
 .kids-row-flex {
@@ -90,6 +91,10 @@ span.tx-uppercase {
 
 .kids-row__item:hover {
   border: 1px solid #999999;
+}
+
+.kids-row__item__img {
+  padding-top: 8px;
 }
 
 .kids-row__item__text {
@@ -205,7 +210,7 @@ span.tx-uppercase {
   color: #fff;
   font-size: 13px;
   line-height: 1.2;
-  left: 0;
+  left: 1px;
   right: 0;
   margin: 0 auto;
 }
@@ -245,7 +250,7 @@ span.tx-uppercase {
 }
 
 #kids-wrapper .your-class-arrow .slick-prev::before {
-  content: "<";
+  content: url(https://cdn.comfy.ua/media/x/img/str-left-kids.svg);
 }
 
 #kids-wrapper .your-class-arrow .slick-prev::after {
@@ -263,7 +268,7 @@ span.tx-uppercase {
 }
 
 #kids-wrapper .your-class-arrow .slick-next::before {
-  content: ">";
+  content: url(https://cdn.comfy.ua/media/x/img/str-right-kids.svg);
 }
 
 #kids-wrapper .your-class-arrow .slick-next::after {
@@ -290,7 +295,6 @@ span.tx-uppercase {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   position: relative;
-  padding-bottom: 15px;
 }
 
 .kids-tags__link {
@@ -315,12 +319,6 @@ span.tx-uppercase {
 
 .kids-tags__link p {
   font-weight: bold;
-}
-
-@media (min-width: 1025px) {
-  #kids-wrapper .slick-list {
-    margin: 0 0px;
-  }
 }
 
 @media (max-width: 1024px) {

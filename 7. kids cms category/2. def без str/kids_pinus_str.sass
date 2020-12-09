@@ -7,6 +7,7 @@
 	overflow: hidden
 	background: #fff
 	position: relative
+	padding: 15px 2.8rem 0rem
 	img
 		&:hover
 			opacity: 1
@@ -33,7 +34,7 @@ span.tx-uppercase
 	overflow: hidden
 	display: flex
 	justify-content: flex-start
-	margin: 25px 0 15px 0
+	margin: 0 0 15px 0
 .kids-row-flex
 	// max-width: 1200px
 	width: 100%
@@ -53,6 +54,8 @@ span.tx-uppercase
 		margin-right: 0
 	&:hover
 		border: 1px solid #999999
+.kids-row__item__img
+	padding-top: 8px
 .kids-row__item__text
 	min-height: 32px
 	display: flex
@@ -106,7 +109,7 @@ span.tx-uppercase
 				color: #fff
 				font-size: 13px
 				line-height: 1.2
-				left: 0
+				left: 1px
 				right: 0
 				margin: 0 auto
 			&::after
@@ -132,7 +135,7 @@ span.tx-uppercase
 			left: 0
 			top: 0
 			&::before
-				content: "<"
+				content: url(https://cdn.comfy.ua/media/x/img/str-left-kids.svg)
 			&::after
 				background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%)
 				right: -21px
@@ -140,7 +143,7 @@ span.tx-uppercase
 			right: 0
 			top: 0
 			&::before
-				content: ">"
+				content: url(https://cdn.comfy.ua/media/x/img/str-right-kids.svg)
 			&::after
 				background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%,rgb(255, 255, 255) 100%)
 				left: -21px
@@ -149,7 +152,6 @@ span.tx-uppercase
 	align-items: flex-start
 	flex-wrap: wrap
 	position: relative
-	padding-bottom: 15px
 .kids-tags__link
 	background: #F2F2F2
 	border-radius: 17px
@@ -165,10 +167,10 @@ span.tx-uppercase
 	p
 		font-weight: bold
 // media
-// @media (min-width: 1025px)
-// 	#kids-wrapper
-// 		.slick-list
-// 			margin: 0 0px
+@media (min-width: 1025px)
+	#kids-wrapper
+		.slick-list
+			margin: 0 0px
 @media (max-width: 1024px)
 	.kids-row__item
 		flex: 1 1 auto
