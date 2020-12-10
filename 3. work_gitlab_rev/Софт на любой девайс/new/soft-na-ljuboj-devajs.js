@@ -7,15 +7,15 @@ function getCookie(name) {
    return matches ? decodeURIComponent(matches[1]) : undefined;
 }
 var city = getCookie('active_city_id');
-var priceUrl = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id=' + city + '&ids=1522633,1522643,1522653,1522663,1522673,1522683,1522693,1522703,1522713,762033,762043,690883,690893,774133,774113,774123,683043,683033,125053,125063,125103,424493';
+var priceUrl = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id=' + city + '&ids=1522533,1522543,1522653,1522663,1522673,1522683,1522693,1522703,1522713,762033,762043,690883,690893,774133,774113,774123,683043,683033,125053,125063,125103,424493';
 $.ajax({
    url: priceUrl,
    type: 'get',
    success: function (output) {
       var resp = JSON.parse(output);
 
-      var pr1 = resp['1522633']['price'];
-      var pr2 = resp['1522643']['price'];
+      var pr1 = resp['1522533']['price'];
+      var pr2 = resp['1522543']['price'];
       var pr3 = resp['1522653']['price'];
       var pr4 = resp['1522663']['price'];
       var pr5 = resp['1522673']['price'];
@@ -38,8 +38,8 @@ $.ajax({
       var pr29 = resp['424493']['price'];
       
       
-      document.getElementById("sku-1700016").innerHTML = pr1;
-      document.getElementById("sku-1700018").innerHTML = pr2;
+      document.getElementById("sku-1699941").innerHTML = pr1;
+      document.getElementById("sku-1699945").innerHTML = pr2;
       document.getElementById("sku-1700020").innerHTML = pr3;
       document.getElementById("sku-1700022").innerHTML = pr4;
       document.getElementById("sku-1700023").innerHTML = pr5;
