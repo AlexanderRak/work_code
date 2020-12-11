@@ -1,0 +1,336 @@
+/*default styles*/
+
+#povert 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    margin: 0 auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+.tabs-content
+  padding: 0 0 0 0
+  
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#povert 
+  .use
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    background-image: url("https://cdn.comfy.ua/media/x/img/1710225/new/1.png")
+    background-repeat: no-repeat
+    background-position: center
+    height: 960.79px
+    position: relative
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .use__txt
+      max-width: 583px
+      margin-top: -100px
+      padding-left: 80px
+      box-sizing: content-box
+      h2
+        color: #180D5B
+        &::after
+          content: ""
+          display: block
+          width: 114px
+          height: 6px
+          background-color: #FF671F
+          border-radius: 6px
+          margin: 16px 0 18px -57px
+      span
+        display: block
+        line-height: 24px
+        font-size: 20px
+        font-weight: bold
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        color: #180D5B
+        &::before
+          content: ""
+          display: block
+          min-width: 24px
+          height: 24px
+          background-image: url("https://cdn.comfy.ua/media/x/img/1710225/galka.svg")
+          margin-right: 16px
+        &:nth-of-type(n+2)
+          margin-top: 30px
+    .use__img 
+      margin-top: -100px
+      img
+        margin: 0 190px 0 auto
+    .use__abs
+      position: absolute
+      left: 0
+      top: 45px
+
+  .how
+    background-image: url("https://cdn.comfy.ua/media/x/img/1710225/new/3.png")
+    background-repeat: no-repeat
+    background-position: center top
+    padding-top: 50px
+    height: 637px
+    margin-top: -50px
+    .how__title
+      h2
+        text-align: center
+        max-width: max-content
+        margin: 0 auto
+        color: #180D5B
+        &::after
+          content: ""
+          display: block
+          width: 114px
+          height: 6px
+          background-color: #FF671F
+          border-radius: 6px
+          margin: 16px 0 18px -57px
+    .how__list
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      max-width: 1000px
+      margin: 0 auto
+      >li
+        flex: 1 1 0
+        min-width: 50%
+        box-sizing: border-box
+        display: flex
+        flex-direction: row
+        align-items: flex-end
+        max-width: 448px
+        .how__list__txt
+          width: 338px
+          padding: 10px
+          box-sizing: border-box
+          background: #FFFFFF;
+          box-shadow: 0px 9px 28px rgba(151, 104, 220, 0.2);
+          border-radius: 20px;
+          margin-left: -40px
+          p
+            font-size: 18px
+            line-height: 24px
+            font-weight: bold
+            br.hide__br
+              content: ""
+              display: none
+
+  .kids
+    height: 902px
+    background-image: url("https://cdn.comfy.ua/media/x/img/1710224/4.png")
+    background-repeat: no-repeat
+    background-position: center top
+    position: relative
+    .kids__txt 
+      position: absolute
+      left: 230px
+      top: 200px
+      h2
+        color: #180D5B
+        &::after
+          content: ""
+          display: block
+          width: 114px
+          height: 6px
+          background-color: #FF671F
+          border-radius: 6px
+          margin: 16px 0 18px -57px
+      span
+        display: block
+        font-weight: bold
+        font-size: 20px
+        line-height: 24px
+        color: #180D5B
+        br.hide__br
+          content: ""
+          display: none
+        &:nth-of-type(n+2)
+          margin-top: 20px
+
+
+//media**************************************************************
+
+@media (max-width: 1024px)
+  #povert .kids .kids__txt
+    left: 70px
+
+  #povert .use .use__txt
+    padding: 0 40px
+    box-sizing: content-box
+  
+  #povert .use .use__txt h2::after
+    margin: 16px 0 18px 0px
+
+  #povert .how .how__list
+    padding: 0 40px
+    box-sizing: content-box
+    
+              
+@media (max-width: 812px)
+  #povert .kids .kids__txt
+    left: 20px
+
+  #povert .kids .kids__txt h2::after
+    margin: 16px 0 18px 0px
+
+  #povert .how .how__list > li .how__list__txt p br
+    content: "";
+
+  #povert .use
+    background-position: center top
+    height: 860px
+  #povert .use .use__abs
+    top: 10px
+
+  #povert .use .use__img img
+    margin: 0
+  
+  #povert h2
+    font-size: 24px
+
+  #povert .use .use__txt span
+    font-size: 18px
+
+  #povert .how .how__list
+    padding: 0 20px
+
+@media (max-width: 500px)
+  #povert .how
+    margin-bottom: 80px
+    
+  #povert .kids
+    background-image: url("https://cdn.comfy.ua/media/x/img/1710224/4m.png")
+    height: 1202px
+  #povert .use
+    flex-direction: column
+    background-image: url("https://cdn.comfy.ua/media/x/img/1710225/new/1m.png")
+    background-position: center bottom
+    height: 918px
+
+  #povert .use .use__img
+    display: none
+  
+  #povert .use .use__txt
+    padding: 0 20px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin-top: -180px
+  
+  #povert .use .use__txt h2::after
+    margin: 20px 0
+  
+  #povert .use .use__txt span
+    font-size: 16px
+    line-height: 20px
+  
+  #povert .use .use__txt span:nth-of-type(n+2)
+    margin-top: 14px
+
+  #povert h2
+    font-size: 20px
+  
+  #povert .use .use__abs
+    top: 15px
+    max-width: 100%
+
+  #povert .how .how__list
+    flex-direction: column
+  
+  #povert .how .how__list > li
+    &:nth-of-type(n+2)
+      margin-top: 30px
+
+@media (max-width: 480px)
+  #povert .kids
+    height: 1020px
+
+  #povert .use .use__txt h2
+    max-width: 280px
+  #povert .how
+    height: unset
+    background-image: unset
+
+  #povert .how .how__list
+    padding: 0 10px 0 20px
+  
+  #povert .how .how__list > li .how__list__img img
+    margin: 0
+  
+  #povert .how .how__list > li .how__list__txt
+    width: 240px
+    margin-left: 50px
+    margin-top: -40px
+    position: relative
+    p
+      br
+        content: ""
+        display: none
+      br.hide__br
+        display: block
+
+  #povert .how .how__list > li .how__list__img img
+    max-width: 71px
+
+  #povert .how .how__list > li
+    display: block
+      
+          
+@media (max-width: 320px)
+  #povert .use .use__txt span
+    &:nth-of-type(1)
+      max-width: 220px
+    &:last-of-type
+      max-width: 240px
+  
+  #povert .use .use__txt
+    width: 100%
+    box-sizing: border-box
+    margin-top: -220px
+
+  #povert .kids .kids__txt
+    top: 250px
+
+  #povert .kids .kids__txt span
+    font-size: 16px
+    line-height: 20px
+    br.hide__br
+      display: block
