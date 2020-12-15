@@ -1,0 +1,385 @@
+/*default styles*/
+
+#interline 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  overflow: hidden
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  h3 
+    display: block
+    line-height: normal
+    font-size: 28px
+    font-weight: bold
+    padding: 0
+    margin: 0
+    margin-bottom: 20px
+    text-align: unset
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    margin: 0 auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#interline 
+  .logo
+    background-color: #2f3239
+    padding: 30px 75px
+    img
+      margin: 0
+  
+  .func
+    height: 799px
+    background-image: url("https://cdn.comfy.ua/media/x/img/1702202/1bg.png")
+    background-repeat: no-repeat
+    background-position: center bottom
+    .func__flex
+      display: flex
+      flex-direction: row
+      align-items: flex-end
+      >div
+        max-width: 50%
+        box-sizing: border-box
+        flex: 1 1 0
+      .func__img
+        img
+          margin: 0 0 0 auto
+      .func__txt
+        padding: 0 70px
+        max-width: 100%
+        h2
+          margin-bottom: 25px
+        ul
+          display: flex
+          flex-direction: row
+          max-width: max-content
+          margin-top: 80px
+          li
+            flex: 1 1 0
+            display: flex
+            flex-direction: column
+            span
+              display: block
+              line-height: normal
+              font-size: 12px
+              font-weight: bold
+              text-align: center
+              margin-top: 10px
+            &::before
+              content: ""
+              display: block
+              min-width: 60px
+              height: 60px
+              background-repeat: no-repeat
+              background-position: center
+            &:nth-of-type(1)
+              &::before
+                background-image: url("https://cdn.comfy.ua/media/x/img/1702202/icon1.png")
+            &:nth-of-type(2)
+              &::before
+                background-image: url("https://cdn.comfy.ua/media/x/img/1702202/icon2.png")
+            &:nth-of-type(3)
+              &::before
+                background-image: url("https://cdn.comfy.ua/media/x/img/1702202/icon3.png")
+            &:nth-of-type(4)
+              &::before
+                background-image: url("https://cdn.comfy.ua/media/x/img/1702202/icon4.png")
+            &:nth-of-type(n+2)
+              margin-left: 70px
+
+  .inverter
+    background-color: #2f3239
+    padding: 0 70px 100px 70px
+    position: relative
+    z-index: 1
+    .inverter__flex
+      display: flex
+      flex-direction: row
+      align-items: flex-end
+      >div
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+      .inverter__item
+        color: #fff
+        &:nth-of-type(1)
+          text-align: center
+          .inverter__item__cal
+            &:nth-of-type(1)
+              img
+                margin-bottom: 50px
+                margin-top: -50px
+            &:nth-of-type(2)
+              position: relative
+              max-width: max-content
+              margin: 0 auto
+              padding-top: 30px
+              .abs
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                margin-left: -40px
+                padding: 30px 20px 0 0
+                p
+                  display: block
+        &:nth-of-type(1)
+          padding-right: 40px
+        &:nth-of-type(2)
+          padding-left: 40px
+          img
+            margin: 0
+            &:nth-of-type(2)
+              margin-top: 50px
+          p>strong
+            display: block
+            margin: 60px 0 30px 0
+            font-size: 24px
+
+  .fry
+    background-image: url("https://cdn.comfy.ua/media/x/img/1702202/3bg.png")
+    background-position: center left
+    height: 960px
+    .fry__row
+      display: flex
+      flex-direction: row
+      padding: 0 70px
+      align-items: center
+      justify-content: space-between
+      &:nth-of-type(1)
+        margin-top: -30px
+        position: relative
+        z-index: 2
+      &:nth-of-type(2)
+        padding: 0 70px 0 0
+      .fry__txt
+        display: flex
+        flex-direction: row
+        max-width: 720px
+        p
+          max-width: 480px
+        &::before
+          content: ""
+          display: block
+          min-width: 82px
+          height: 82px
+          background-repeat: no-repeat
+          background-position: center
+          background-image: url("https://cdn.comfy.ua/media/x/img/1702202/icon5.png")
+          margin-right: 45px
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+        padding-right: 70px
+        .fry__txt
+          max-width: 680px
+          p
+            max-width: unset
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1702202/icon6.png")
+
+  .cook
+    background-color: #2f3239
+    .cook__txt
+      max-width: 610px
+      text-align: center
+      color: #fff
+      margin: 0 auto
+      padding: 85px
+      box-sizing: border-box
+
+  .tech
+    padding: 120px 140px 140px 140px
+    box-sizing: border-box
+    background-image: url("https://cdn.comfy.ua/media/x/img/1702202/5bg.png")
+    background-repeat: no-repeat
+    background-position: center
+    h2
+      text-align: center
+      margin-bottom: 80px
+    .tech__list
+      display: flex
+      flex-direction: row
+      li
+        flex: 1 1 0
+        &::before
+          content: ""
+          display: block
+          min-width: 80px
+          height: 80px
+          background-repeat: no-repeat
+          background-position: center
+          margin-bottom: 30px
+        &:nth-of-type(1)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1702202/icon7.png")
+        &:nth-of-type(2)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1702202/icon8.png")
+        &:nth-of-type(3)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1702202/icon9.png")
+        &:nth-of-type(4)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1702202/icon10.png")
+        &:nth-of-type(5)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1702202/icon11.png")
+        &:nth-of-type(6)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1702202/icon12.png")
+        span
+          display: block
+          text-align: center
+          font-weight: bold
+          font-size: 16px
+
+  .logo__foot
+    background-color: #2f3239
+    padding: 60px 75px
+    position: relative
+    &::before
+      content: ""
+      display: block
+      width: 1152px
+      height: 226px
+      background-image: url("https://cdn.comfy.ua/media/x/img/1702202/6bg.png")
+      background-repeat: no-repeat
+      position: absolute
+      left: 40px
+      bottom: 20px
+    img
+      margin: 0 auto
+
+//media**************************************************************
+
+@media (max-width: 1024px)
+  #interline .func
+    height: 450px
+  #interline .fry
+    height: 660px
+
+@media (max-width: 812px)
+  #interline .func .func__flex .func__txt
+    padding: 20px
+    text-align: center
+  #interline .func 
+    height: auto
+    background-size: cover
+    .func__flex
+      flex-direction: column
+  #interline .func .func__flex .func__txt ul
+    margin: 80px auto 0 auto
+  #interline .func .func__flex .func__img img
+    margin: 20px auto 40px auto
+  #interline .func .func__flex > div
+    width: 100%
+    max-width: 100%
+  #interline .inverter
+    padding: 20px
+  #interline .inverter .inverter__flex
+    flex-direction: column
+    >div
+      max-width: 100%
+  #interline .inverter .inverter__flex .inverter__item:nth-of-type(2)
+    padding-left: 0
+    padding-top: 40px
+    text-align: center
+    img
+      margin: 0 auto
+  #interline .inverter .inverter__flex .inverter__item:nth-of-type(1)
+    padding-right: 0
+    margin: -20px auto 0 auto
+  #interline .fry .fry__row:nth-of-type(1)
+    padding: 20px
+    margin-top: 0
+    flex-direction: column
+  #interline .fry .fry__row:nth-of-type(even)
+    padding: 0
+    flex-direction: column
+    .fry__img
+      align-self: flex-start
+    .fry__txt
+      padding: 20px
+  #interline .fry
+    height: auto
+  #interline .cook .cook__txt
+    padding: 20px
+  #interline .tech
+    padding: 120px 20px
+  #interline 
+    .tech 
+      .tech__list 
+        overflow-x: scroll
+        li
+          min-width: 118px
+
+@media (max-width: 480px)
+  #interline .logo__foot::before
+    display: none
+  #interline h2
+    font-size: 28px
+  #interline h3
+    font-size: 24px
+  #interline .logo img
+    margin: 0 auto
+  #interline .inverter .inverter__flex .inverter__item:nth-of-type(1) .inverter__item__cal:nth-of-type(2) .abs
+    margin-left: 0
+    padding: 30px 0 0 0;
+  #interline .inverter .inverter__flex .inverter__item:nth-of-type(2) p > strong
+    font-size: 20px
+  #interline .fry .fry__row .fry__txt::before
+    margin-right: 20px
+    min-width: 50px;
+    height: 50px;
+    background-size: contain
+  #interline .fry .fry__row .fry__txt h3 >br
+    content: ""
+    display: none
+  #interline .tech
+    padding: 40px 20px
+  #interline .logo__foot
+    padding: 20px
+  #interline .logo
+    padding: 20px
+  #interline .inverter .inverter__flex .inverter__item:nth-of-type(1) .inverter__item__cal:nth-of-type(2) .abs p:nth-of-type(1)
+    margin-right: 10px
+  #interline .func .func__flex .func__txt ul li:nth-of-type(n+2)
+    margin-left: 20px
+
+@media (max-width: 320px)
+  #interline .func .func__flex .func__txt 
+    ul 
+      overflow-x: scroll
+      li
+        min-width: 60px
