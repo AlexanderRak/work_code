@@ -1,0 +1,280 @@
+/*default styles*/
+
+#moulinex 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    font-size: 20px
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 40px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    margin: 0 auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#moulinex
+  .logo
+    padding: 20px
+  
+  .power
+    height: 920px
+    background-image: url("https://cdn.comfy.ua/media/x/img/1492150/new/1.png")
+    background-repeat: no-repeat
+    background-position: center
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    .power__txt
+      padding: 20px
+
+  .helper
+    height: 845px
+    background-image: url("https://cdn.comfy.ua/media/x/img/1492150/new/2.png")
+    background-repeat: no-repeat
+    background-position: center
+    margin: 80px 0
+    .helper__txt
+      max-width: 400px
+      padding: 180px 80px 80px 80px
+      box-sizing: content-box
+
+  .grind
+    .grind__title
+      text-align: center
+      background-color: #e6e6e6
+      padding: 20px
+      margin-bottom: 40px
+    .grind__list
+      display: flex
+      flex-direction: row
+      padding: 0 80px 80px 80px
+      li
+        text-align: center
+        flex: 1 1 0
+        &:nth-of-type(2)
+          margin: 0 40px
+        &::before
+          content: ""
+          display: block
+          width: 100%
+          max-width: 360px
+          height: 361px
+          background-repeat: no-repeat
+          background-position: center
+          background-size: contain
+        &:nth-of-type(1)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1492150/new/icon1.png")
+        &:nth-of-type(2)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1492150/new/icon2.png")
+        &:nth-of-type(3)
+          &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img/1492150/new/icon3.png")
+
+  .tomate
+    margin: 80px 0
+    .tomate__title
+      text-align: center
+      background-color: #e6e6e6
+      padding: 20px
+    .tomate__wrap
+      height: 518px
+      background-image: url("https://cdn.comfy.ua/media/x/img/1492150/new/4.png")
+      background-repeat: no-repeat
+      background-position: center
+      .tomate__flex
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100%
+        padding: 40px
+        box-sizing: border-box
+        max-width: 800px
+        margin: 0 0 0 auto
+        .tomate__img
+          img
+            max-width: 70%
+
+  .sausage
+    .sausage_title
+      text-align: center
+      background-color: #e6e6e6
+      padding: 20px
+      margin-bottom: 40px
+    .sausage__flex
+      display: flex
+      flex-direction: row
+      align-items: flex-end
+      >div
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+      .sausage__txt
+        padding: 0 80px
+        img
+          margin-top: 40px
+
+  .shredder,
+  .conus
+    margin: 80px 0
+    .shredder__title,
+    .conus__title
+      text-align: center
+      background-color: #e6e6e6
+      padding: 20px
+      margin-bottom: 40px
+    .shredder__flex,
+    .conus__flex
+      display: flex
+      flex-direction: row
+      align-items: center
+      >div
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+      .shredder__txt,
+      .conus__txt
+        padding: 0 80px
+        p>strong
+          display: block
+          font-size: 30px
+          margin-bottom: 40px
+        img
+          margin-bottom: 40px
+        ul
+          margin-top: 40px
+          >li
+            display: flex
+            flex-direction: row
+            align-items: flex-start
+            &::before
+              min-width: 12px
+              height: 12px
+              border-radius: 50%
+              content: ""
+              display: block
+              background-color: #e82c2d
+              margin-right: 20px
+            &:nth-of-type(2)
+              margin: 20px 0
+  .conus .conus__flex
+    flex-direction: row-reverse
+
+//media********************************************************************
+
+@media (max-width: 812px)
+  #moulinex .power
+    background-position: center left
+    justify-content: center
+    align-items: flex-start
+    text-align: center
+  
+  #moulinex .helper .helper__txt
+    padding: 180px 20px 20px 20px
+  
+  #moulinex .grind .grind__list
+    padding: 20px
+  
+  #moulinex .grind
+    overflow: hidden 
+    .grind__list 
+      overflow-x: scroll
+      li
+        min-width: 300px
+
+  #moulinex .tomate .tomate__wrap
+    background-position: center right
+    height: unset
+
+  #moulinex .tomate .tomate__wrap .tomate__flex .tomate__img
+    margin-bottom: 20px
+
+  #moulinex .sausage .sausage__flex .sausage__txt,
+  #moulinex .shredder .shredder__flex .shredder__txt, #moulinex .shredder .shredder__flex .conus__txt, #moulinex .shredder .conus__flex .shredder__txt, #moulinex .shredder .conus__flex .conus__txt, #moulinex .conus .shredder__flex .shredder__txt, #moulinex .conus .shredder__flex .conus__txt, #moulinex .conus .conus__flex .shredder__txt, #moulinex .conus .conus__flex .conus__txt
+    padding: 20px
+    text-align: center
+  
+  #moulinex .sausage .sausage__flex,
+  #moulinex .shredder .shredder__flex, #moulinex .shredder .conus__flex, #moulinex .conus .shredder__flex, #moulinex .conus .conus__flex
+    flex-direction: column
+    >div
+      max-width: 100%
+      width: 100%
+  
+  #moulinex .tomate .tomate__wrap .tomate__flex
+    padding: 20px
+
+@media (max-width: 480px)
+  #moulinex h2
+    font-size: 24px
+  
+  #moulinex p
+    font-size: 16px
+  
+  #moulinex .power
+    background-repeat: no-repeat
+    height: 550px
+    background-size: cover
+
+  #moulinex .helper
+    height: 500px
+    background-size: cover
+    background-position: center left
+    margin: 40px 0
+
+  #moulinex .helper .helper__txt
+    padding: 85px 20px 20px 20px
+
+  #moulinex .tomate,
+  #moulinex .shredder, #moulinex .conus
+    margin: 40px 0
+
+  #moulinex .conus__flex .conus__txt img
+    &:last-of-type
+      margin-bottom: 0 !important
+
+  #moulinex .conus .conus__flex .conus__txt p > strong
+    font-size: 20px
+    margin-bottom: 20px
+
+  #moulinex .conus:last-of-type
+    margin-bottom: 20px
+
+  #moulinex .grind .grind__list li
+    min-width: 250px
+  
+  #moulinex .tomate .tomate__wrap .tomate__flex
+    text-align: center
