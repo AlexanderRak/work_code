@@ -127,5 +127,51 @@ $.ajax({
    }
 });
 
+var priceUrl33 = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id=' + city + '&ids=1522493,1522483,1522473,1522463,1522453';
+$.ajax({
+   url: priceUrl33,
+   type: 'get',
+   success: function (output) {
+      var resp = JSON.parse(output);
+
+      var pr36 = resp['1522453']['price'];
+      var pr40 = resp['1522463']['price'];
+      var pr41 = resp['1522473']['price'];
+      var pr42 = resp['1522483']['price'];
+      var pr43 = resp['1522493']['price'];
+      
+      document.getElementById("sku-1696532").innerHTML = pr36;
+      document.getElementById("sku-1696535").innerHTML = pr40;
+      document.getElementById("sku-1696537").innerHTML = pr41;
+      document.getElementById("sku-1696538").innerHTML = pr42;
+      document.getElementById("sku-1696539").innerHTML = pr43;
+
+   }
+});
+
+var priceUrl34 = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id=' + city + '&ids=1248513,1248523,1373683,1373693,1248533,1248543';
+$.ajax({
+   url: priceUrl34,
+   type: 'get',
+   success: function (output) {
+      var resp = JSON.parse(output);
+
+      var pr36 = resp['1248513']['price'];
+      var pr40 = resp['1248523']['price'];
+      var pr41 = resp['1373683']['price'];
+      var pr42 = resp['1373693']['price'];
+      var pr43 = resp['1248533']['price'];
+      var pr44 = resp['1248543']['price'];
+      
+      document.getElementById("sku-1663203").innerHTML = pr36;
+      document.getElementById("sku-1663204").innerHTML = pr40;
+      document.getElementById("sku-1663205").innerHTML = pr41;
+      document.getElementById("sku-1663206").innerHTML = pr42;
+      document.getElementById("sku-1663207").innerHTML = pr43;
+      document.getElementById("sku-1663210").innerHTML = pr44;
+
+   }
+});
+
 //
 // ]]></script>
