@@ -1,0 +1,94 @@
+<style>
+
+</style>
+
+<div id="cartfree">
+
+	<div class="cart-header maxW">
+		<div class="cart-header__contaner">
+			<div class="cart-header__text-top"><span>Даруйте вибір!</span></div>
+			<div class="cart-header__cart">
+				<div class="cart-header__cart-text-left">
+					<h2>Подарункові <span class="word-wrap"> картки</span></h2>
+				</div>
+				<div class="cart-header__cart-img-right-pos">
+					<img src="https://cdn.comfy.ua/media/x/img/Frame_947.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="cart-sentence maxW">
+		<div class="cart-sentence__container">
+
+			<div class="cart-sentence__tabs maxW">
+				<div class="cart-sentence__tabs-wp">
+					<button class="tablinks" onclick="openCity(event, 'tab1')" id="defaultOpen">
+						<div class="tablinks-content">
+							<div class="tablinks-content__text">
+								<span class="cart-name-top">Для компаній</span>
+								<span class="cart-name-botoom">Краще привітання співробітнику - дати <span class="word-wrap">йому обрати подарунок</span></span>
+							</div>
+							<div class="tablinks-content__img"></div>
+						</div>
+					</button>
+					<button class="tablinks" onclick="openCity(event, 'tab2')">
+						<div class="tablinks-content">
+							<div class="tablinks-content__text">
+								<span class="cart-name-top">Для близьких</span>
+								<span class="cart-name-botoom">Родичі та друзі краще самі знають <span class="word-wrap">що їм треба!</span></span>
+							</div>
+							<div class="tablinks-content__img"></div>
+						</div>
+					</button>
+					<button class="tablinks" onclick="openCity(event, 'tab3')">
+						<div class="tablinks-content">
+							<div class="tablinks-content__text">
+								<span class="cart-name-top">Для власників карток</span>
+								<span class="cart-name-botoom">Як використати</span>
+							</div>
+							<div class="tablinks-content__img"></div>
+						</div>
+					</button>
+				</div>
+			</div>
+			<div class="cart-sentence__content">
+				<div id="tab1" class="tabcontent active">
+					<h3>London</h3>
+					<p>London is the capital city of England.</p>
+				</div>
+
+				<div id="tab2" class="tabcontent">
+					<h3>Paris</h3>
+					<p>Paris is the capital of France.</p>
+				</div>
+
+				<div id="tab3" class="tabcontent">
+					<h3>Tokyo</h3>
+					<p>Tokyo is the capital of Japan.</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+<script>
+	function openCity(evt, cityName) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
+</script>
