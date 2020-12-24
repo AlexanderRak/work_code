@@ -1,0 +1,549 @@
+<style>
+
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" href="http://kenwheeler.github.io/slick/slick/slick-theme.css">
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<div id="kids">
+	<section class="kids-box">
+		<div class="kids-box__inner">
+			<div class="kids-box__items">
+				<div class="kids-box__child child">
+					<h2 class="child__title">Игрушки для:</h2>
+					<div class="child__inner">
+						<div class="child__inner-items">
+							<div class="child__inner-bg">
+								<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/baby-boy.png" alt="" class="child__inner-img">
+								<p class="child__inner-name"><a href="/all-toys/vozrast_igrushki_dlja_malisha__0,36/">Малыша</a></p>
+							</div>
+							<ul class="child__inner-list">
+								<li><a href="/all-toys/vozrast_igrushki_dlja_malisha__0,3/" class="child__inner-list__link">0-3 мес</a></li>
+								<li><a href="/all-toys/vozrast_igrushki_dlja_malisha__3,6/" class="child__inner-list__link">3-6 мес</a></li>
+								<li><a href="/all-toys/vozrast_igrushki_dlja_malisha__6,12/" class="child__inner-list__link">6-12 мес</a></li>
+								<li><a href="/all-toys/vozrast_igrushki_dlja_malisha__12,24/" class="child__inner-list__link">12-24 мес</a></li>
+								<li><a href="/all-toys/vozrast_igrushki_dlja_malisha__24,36/" class="child__inner-list__link">24-36 мес</a></li>
+							</ul>
+						</div>
+						<div class="child__inner-items">
+							<div class="child__inner-bg">
+								<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/daughter1.png" alt="" class="child__inner-img">
+								<p class="child__inner-name"><a href="/all-toys/vozrast_igrushek__3,12/">Ребенка</a></p>
+							</div>
+							<ul class="child__inner-list">
+								<li><a href="/all-toys/vozrast_igrushek__3,5/" class="child__inner-list__link">3-5 лет</a></li>
+								<li><a href="/all-toys/vozrast_igrushek__3,9/" class="child__inner-list__link">6-9 лет</a></li>
+								<li><a href="/all-toys/vozrast_igrushek__9,12/" class="child__inner-list__link">9-12 лет</a></li>
+							</ul>
+						</div>
+						<div class="child__inner-items">
+							<div class="child__inner-bg">
+								<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/man1.png" alt="" class="child__inner-img">
+								<p class="child__inner-name"><a href="/all-toys/vozrast_igrushek__12,18/">Подростка</a></p>
+							</div>
+							<ul class="child__inner-list">
+								<li><a href="/all-toys/vozrast_igrushek__12,18/" class="child__inner-list__link">12+ лет</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="kids-box__price price-kids">
+					<h2 class="price-kids__title">Игрушки по цене:</h2>
+					<div class="price-kids__inner">
+						<div class="price-kids__items">
+							<a href="/all-toys/price_from__0__price_to__300/" class="price-kids__number-link">0-300 ₴</a>
+						</div>
+						<div class="price-kids__items">
+							<a href="/all-toys/price_from__300__price_to__500/" class="price-kids__number-link">300-500 ₴</a>
+						</div>
+						<div class="price-kids__items">
+							<a href="/all-toys/price_from__500__price_to__1000/" class="price-kids__number-link">500-1000 ₴</a>
+						</div>
+						<div class="price-kids__items">
+							<a href="/all-toys/price_from__500__price_to__1000/" class="price-kids__number-link">1000-1500 ₴</a>
+						</div>
+						<div class="price-kids__items">
+							<a href="/all-toys/price_from__1500__price_to__100000/" class="price-kids__number-link">1500+ ₴</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+			<div class="kids-box__slider slider-kids">
+				<div class="mySlides1">
+					<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/banner-1.jpg" style="width:100%">
+				</div>
+				<div class="mySlides1">
+					<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/banner-1.jpg" style="width:100%">
+				</div>
+				<div class="mySlides1">
+					<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/banner-1.jpg" style="width:100%">
+				</div>
+
+				<a class="prev" onclick="plusSlides(-1, 0)">
+					<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/arrow_prev.png" alt=""></a>
+				<a class="next" onclick="plusSlides(1, 0)">
+					<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/arrow_next.png" alt=""></a>
+			</div>
+			<script>
+				var slideIndex = [1, 1];
+				var slideId = ["mySlides1", "mySlides2"]
+				showSlides(1, 0);
+				showSlides(1, 1);
+
+				function plusSlides(n, no) {
+					showSlides(slideIndex[no] += n, no);
+				}
+
+				function showSlides(n, no) {
+					var i;
+					var x = document.getElementsByClassName(slideId[no]);
+					if (n > x.length) { slideIndex[no] = 1 }
+					if (n < 1) { slideIndex[no] = x.length }
+					for (i = 0; i < x.length; i++) {
+						x[i].style.display = "none";
+					}
+					x[slideIndex[no] - 1].style.display = "block";
+				}
+			</script>
+
+		</div>
+	</section>
+
+	<section class="slider-bg">
+		<div class="slider-bg__box">
+			<div class="slider-bg__inner">
+				<div class="slider-bg__logo">
+					<a href="/all-toys/brand__lego/"><img src="https://cdn.comfy.ua/media/blb/Lego.svg" alt=""></a>
+				</div>
+				<div class="slider-bg__logo">
+					<a href="/all-toys/brand__hot-wheels/"><img src="https://cdn.comfy.ua/media/blb/Hot_Wheels.svg" alt=""></a>
+				</div>
+				<div class="slider-bg__logo">
+					<a href="/all-toys/brand__barbie/"><img src="https://cdn.comfy.ua/media/blb/Barbie.svg" alt=""></a>
+				</div>
+				<div class="slider-bg__logo">
+					<a href="https://comfy.ua/all-toys/brand__disney/"><img src="https://cdn.comfy.ua/media/blb/Disney.svg" alt=""></a>
+				</div>
+				<div class="slider-bg__logo">
+					<img src="https://cdn.comfy.ua/media/blb/Tiny_love.svg" alt="">
+				</div>
+				<div class="slider-bg__logo">
+					<img src="https://cdn.comfy.ua/media/blb/Nerf.svg" alt="">
+				</div>
+				<div class="slider-bg__logo">
+					<a href="/all-toys/brand__lol-surprise/"><img src="https://cdn.comfy.ua/media/blb/LOL.svg" alt=""></a>
+				</div>
+				<div class="slider-bg__logo">
+					<a href="https://comfy.ua/all-toys/brand__hasbro/"><img src="https://cdn.comfy.ua/media/blb/Hasbro.svg" alt=""></a>
+				</div>
+				<div class="slider-bg__logo">
+					<a href="/all-toys/brand__furreal-friends/"><img src="https://cdn.comfy.ua/media/blb/Fischer_Price.svg" alt=""></a>
+				</div>
+				<div class="slider-bg__logo">
+					<a href="/all-toys/brand__fisher-price/"><img src="https://cdn.comfy.ua/media/blb/Furreal.svg" alt=""></a>
+				</div>
+				<div class="slider-bg__logo">
+					<img src="https://cdn.comfy.ua/media/blb/Play_Doh.svg" alt="">
+				</div>
+
+			</div>
+
+			<script>
+				$(document).ready(function () {
+					$('.slider-bg__inner').slick({
+						slidesToShow: 8,
+						slidesToScroll: 1,
+						arrows: true,
+						infinite: true,
+						dots: false,
+						prevArrow: '<button class="slick-arrow slick-prev"><img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/arrow_left.png" alt=""></button>',
+						nextArrow: '<button class="slick-arrow slick-next"><img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/arrow_right.png" alt=""></button>',
+						responsive: [
+							{
+								breakpoint: 737,
+								settings: {
+									slidesToShow: 1,
+								}
+							},
+							{
+								breakpoint: 450,
+								settings: {
+									arrows: false,
+									slidesToShow: 1,
+								}
+							},
+						]
+					});
+				});
+			</script>
+		</div>
+	</section>
+
+	<div id="kids__tabs">
+		<div class="grid-container">
+
+			<div class="cal1_item cal1 parent">
+				<div class="parent-wrap">
+					<div class="kids__img">
+						<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/img-1.png">
+					</div>
+					<div class="tabs__txt">
+						<a href="/toys-for-children/toddler-toys/"><b>Игрушки для малышей</b></a>
+						<a href="/teethers/">Прорезыватели</a>
+						<a href="/rattles/">Погремушки</a>
+						<a href="/toys-for-children/toddler-toys/stroller-and-crib-toys/">Игрушки на коляску и кроватку</a>
+						<a href="/developing-rugs/">Развивающие коврики</a>
+						<a href="/toys-for-children/toddler-toys/educational-toys/">Развивающие игрушки</a>
+						<a href="/toys-for-children/toddler-toys/walker-toys/">Ходунки, игровые центры, каталки</a>
+						<a href="/bath-toys/">Игрушки для ванной</a>
+						<a href="/toys-for-children/toddler-toys/game-transport/">Игровой транспорт и наборы</a>
+						<a href="/interactive-toys-for-toddlers/">Интерактивные игрушки для малышей</a>
+					</div>
+					<div class="kids__btn">
+						<div class="kids__btn__img"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cal2_item cal9 parent">
+				<div class="parent-wrap">
+					<div class="kids__img">
+						<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/img-9.png">
+					</div>
+					<div class="tabs__txt">
+						<a href="/constructor/"><b>Конструкторы</b></a>
+						<a href="/constructor/vid_konstruktora__derevjannyj-konstruktor/">Конструкторы деревянные</a>
+						<a href="/constructor/vid_konstruktora__magnitnyj-konstruktor/">Магнитные конструкторы</a>
+						<a href="/constructor/vid_konstruktora__metallicheskij-konstruktor/">Металлические конструкторы</a>
+						<a href="/constructor/vid_konstruktora__jelektronnyj-konstruktor/">Электронные конструкторы</a>
+						<a href="/constructor/vid_konstruktora__plastikovyj-konstruktor/">Пластиковые конструкторы</a>
+						<a href="/constructor/vozrast_igrushek__0,3/">Конструкторы для малышей</a>
+					</div>
+					<div class="kids__btn">
+						<div class="kids__btn__img"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cal3_item cal10 parent">
+				<div class="parent-wrap">
+					<div class="kids__img">
+						<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/img-10.png">
+					</div>
+					<div class="tabs__txt">
+						<a href="/lego/"><b>LEGO</b></a>
+						<a href="/lego/serija_lego__lego-duplo/">LEGO DUPLO</a>
+						<a href="/lego/serija_lego__lego-city/">LEGO City</a>
+						<a href="/lego/serija_lego__lego-friends/">LEGO Friends</a>
+						<a href="/lego/serija_lego__lego-ninjago/">LEGO NINJAGO</a>
+						<a href="/lego/serija_lego__lego-minecraft/">LEGO Minecraft</a>
+						<a href="/lego/serija_lego__lego-creator/">LEGO Creator</a>
+						<a href="/lego/serija_lego__lego-technic/">LEGO Technic</a>
+						<a href="/lego/serija_lego__lego-classic/">LEGO Classic</a>
+					</div>
+					<div class="kids__btn">
+						<div class="kids__btn__img"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cal4_item cal5 parent">
+				<div class="parent-wrap">
+					<div class="kids__img">
+						<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/img-5.png">
+					</div>
+					<div class="tabs__txt">
+						<a href="/toys-for-children/dolls-and-bobbleheads/"><b>Куклы и пупсы</b></a>
+						<a href="/dolls/">Куклы</a>
+						<a href="/bobbleheads/">Пупсы</a>
+						<a href="/strollers-for-dolls/">Коляски для кукол и пупсов</a>
+						<a href="/acc-and-clothing/">Аксессуары и одежда</a>
+						<a href="/furniture-and-home/">Мебель и дома</a>
+						<a href="/transport-and-pets/">Транспорт и питомцы</a>
+					</div>
+					<div class="kids__btn">
+						<div class="kids__btn__img"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cal5_item cal14 parent">
+				<div class="parent-wrap">
+					<div class="kids__img">
+						<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/img-14.png">
+					</div>
+					<div class="tabs__txt">
+						<a href="/toys-for-children/board-games-and-puzzles/"><b>Настольные игры и пазлы</b></a>
+						<a href="/board-games/">Настольные игры</a>
+						<a href="/jigsaw-puzzles/">Пазлы</a>
+						<a href="/conundrum/">Головоломки</a>
+					</div>
+					<div class="kids__btn">
+						<div class="kids__btn__img"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cal6_item cal6 parent">
+				<div class="parent-wrap">
+					<div class="kids__img">
+						<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/img-6.png">
+					</div>
+					<div class="tabs__txt">
+						<a href="/toys-for-children/toy-transport/"><b>Игрушечный транспорт</b></a>
+						<a href="/aerial-technology/">Воздушная техника</a>
+						<a href="/water-technology/">Водная техника</a>
+						<a href="/ground-vehicles/">Наземная техника</a>
+						<a href="/railway-engineering/">Железнодорожная техника</a>
+						<a href="/playsets/">Игровые наборы, треки и гаражи</a>
+						<a href="/collectible-technique/">Коллекционная техника</a>
+						<a href="/collectible-cars/">Коллекционные машинки</a>
+						<a href="/hot-wheels/">Hot Wheels</a>
+					</div>
+					<div class="kids__btn">
+						<div class="kids__btn__img"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cal7_item cal7 parent">
+				<div class="parent-wrap">
+					<div class="kids__img">
+						<img src="https://cdn.comfy.ua/media/x/img/itb1.png">
+					</div>
+					<div class="tabs__txt">
+						<a href="/toys-for-children/radio-controlled-toys/"><b>Радиоуправляемые игрушки</b></a>
+						<a href="/transport-and-technology/">Транспорт и техника</a>
+						<a href="/toy-cars/">Машинки</a>
+						<a href="/toys/">Игрушки</a>
+						<a href="/robots-and-transformers/">Роботы и трансформеры</a>
+						<a href="/baby-drones/">Дроны</a>
+					</div>
+					<div class="kids__btn">
+						<div class="kids__btn__img"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cal8_item cal2 parent">
+				<div class="parent-wrap">
+					<div class="kids__img">
+						<img src="https://cdn.comfy.ua/media/x/img/itb2.png">
+					</div>
+					<div class="tabs__txt">
+						<a href="/toys-for-children/radio-controlled-toys/"><b>Интерактивные игрушки</b></a>
+						<a href="/transport-and-technology/">Транспорт и техника</a>
+						<a href="/toy-cars/">Машинки</a>
+						<a href="/toys/">Игрушки</a>
+						<a href="/robots-and-transformers/">Роботы и трансформеры</a>
+						<a href="/baby-drones/">Дроны</a>
+					</div>
+					<div class="kids__btn">
+						<div class="kids__btn__img"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cal9_item cal8 parent">
+				<div class="parent-wrap">
+					<div class="kids__img">
+						<img src="https://cdn.comfy.ua/media/x/img/itb3.png">
+					</div>
+					<div class="tabs__txt">
+						<a href="/figures-and-robots/"><b>Фигурки и роботы</b></a>
+						<a href="/figures-and-robots/tip_figurki__figurki-sjurprizy/">Фигурки-сюрпризы</a>
+						<a href="/figures-and-robots/vid_figurki__dikie-zhivotnye--domashnie-zhivotnye--zhivotnye/">Фигурки животных</a>
+						<a href="/figures-and-robots/vid_figurki__soldatiki/">Фигурки солдатиков</a>
+						<a href="/figures-and-robots/vid_figurki__mificheskie-suschestva/">Фигурки мифических существ</a>
+						<a href="/figures-and-robots/complekt_figurki__nabor-figurok/">Наборы игровых фигурок</a>
+						<a href="/figures-and-robots/tip_figurki__kollekcionnye-figurki/">Коллекционные фигурки</a>
+						<a href="/figures-and-robots/tip_figurki__roboty/">Роботы</a>
+						<a href="/figures-and-robots/tip_figurki__figurki-transformery/">Трансформеры</a>
+						<a href="/figures-and-robots/tip_figurki__aksessuary-k-figurkam/">Аксессуары для фигурок</a>
+						<a href="/figures-and-robots/vid_figurki__dinozavry/">Динозавры</a>
+					</div>
+					<div class="kids__btn">
+						<div class="kids__btn__img"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cal10_item cal12 parent">
+				<div class="parent-wrap">
+					<div class="kids__img">
+						<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/img-12.png">
+					</div>
+					<div class="tabs__txt">
+						<a href="/toys-for-children/toy-weapon/"><b>Игрушечное оружие</b></a>
+						<a href="/blasters/">Бластеры</a>
+						<a href="/weapon/">Стрелковое оружие</a>
+						<a href="/throwing-weapon/">Холодное и метательное оружие</a>
+						<a href="/water-weapon/">Водяное оружие</a>
+						<a href="/laser-weapon/">Лазерное оружие</a>
+						<a href="/toy-weapon-acc/">Аксессуары для игрушечного оружия</a>
+					</div>
+					<div class="kids__btn">
+						<div class="kids__btn__img"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cal11_item cal11 parent">
+				<div class="parent-wrap">
+					<div class="kids__img">
+						<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/img-11.png">
+					</div>
+					<div class="tabs__txt">
+						<a href="/toys-for-children/role-playing-games/"><b>Сюжетно-ролевые игры</b></a>
+						<a href="/beauty/">Салоны красоты, косметика, прически</a>
+						<a href="/costumes-and-masks/">Костюмы и маски</a>
+						<a href="/profession-kits/">Наборы профессий</a>
+						<a href="/the-shops/">Магазины</a>
+						<a href="/houses/">Дома</a>
+						<a href="/kitchens/">Кухни</a>
+					</div>
+					<div class="kids__btn">
+						<div class="kids__btn__img"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cal12_item cal3 parent">
+				<div class="parent-wrap">
+					<div class="kids__img">
+						<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/img-3.png">
+					</div>
+					<div class="tabs__txt">
+						<a href="/interactive-books/"><b>Интерактивные книги</b></a>
+					</div>
+					<div class="kids__btn" style="display: none;"></div>
+				</div>
+			</div>
+
+			<div class="cal13_item cal4 parent">
+				<div class="parent-wrap">
+					<div class="kids__img">
+						<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/img-4.png">
+					</div>
+					<div class="tabs__txt">
+						<a href="/stuffed-toys/"><b>Мягкие игрушки</b></a>
+						<a href="/stuffed-toys/vid_m_igrushki__zhivotnye/">Мягкая игрушка животное</a>
+						<a href="/stuffed-toys/osobenosti_m_igrushki__s-bolshimi-glazami/">Мягкая игрушка глазастик</a>
+						<a href="/stuffed-toys/vid_m_igrushki__geroi-multfilmov/">Мягкая игрушка герой</a>
+						<a href="/stuffed-toys/tip_m_igrushki__igrushka-sjurpriz/">Мягкая игрушка-сюрприз</a>
+					</div>
+					<div class="kids__btn">
+						<div class="kids__btn__img"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cal14_item cal13 parent">
+				<div class="parent-wrap">
+					<div class="kids__img">
+						<img src="https://cdn.comfy.ua/media/x/img/kidsimg_1/img-13.png">
+					</div>
+					<div class="tabs__txt">
+						<a href="/toys-for-children/creativity-and-development/"><b>Творчество и развитие</b></a>
+						<a href="/toys-for-children/creativity-and-development/molding/">Лепка</a>
+						<a href="/everything-for-drawing/">Все для рисования</a>
+						<a href="/creator-kit/">Наборы для творчества</a>
+						<a href="/sets-for-needlework/">Наборы для рукоделия</a>
+						<a href="/3d-creativity/">3D творчество</a>
+						<a href="/research-kits/">Наборы для исследований</a>
+						<a href="/magic-kits/">Наборы для фокусов и расследований</a>
+						<a href="/modeling-kits/">Наборы для моделирования</a>
+						<a href="/mosaic/">Мозаика</a>
+						<a href="/musical-instruments/">Музыкальные инструменты и микрофоны</a>
+					</div>
+					<div class="kids__btn">
+						<div class="kids__btn__img"></div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+</div>
+
+<script>
+	const btn = document.querySelectorAll('.kids__btn');
+	const inf = document.querySelectorAll('.tabs__txt');
+	const parent = document.querySelectorAll('.parent');
+	const parent2 = document.querySelectorAll('.kids__btn__img');
+
+	function activeInf(n) {
+		for (item of inf) {
+			item.classList.remove('active');
+		}
+
+		for (element of parent) {
+			element.classList.remove('active__inf');
+		}
+
+		for (btns of parent2) {
+			btns.classList.remove('active__btn');
+		}
+
+		inf[n].classList.add('active');
+		parent[n].classList.add('active__inf');
+		parent2[n].classList.add('active__btn');
+
+	}
+
+	const activeBtn = function (n) {
+		for (b of btn) {
+
+		}
+	}
+
+	btn.forEach((item, indexItem) => {
+		item.addEventListener('click', () => {
+			index = indexItem;
+			activeInf(index);
+
+			// for (let i = 0; i > 0; i++) {
+			// 	tabClode();
+			// 	abClode2();
+			// }
+
+		});
+	});
+
+	function tabClode() {
+		var panels = document.getElementsByClassName("parent");
+		var actives = document.getElementsByClassName('active');
+		for (i = 0; panels.length > i; i++) {
+			panels[i].onclick = function () {
+				var currentActive = actives[0];
+				if (currentActive)
+					currentActive.classList.remove("active");
+
+				if (currentActive !== this)
+					this.classList.add("active");
+			};
+		}
+	}
+
+	function tabClode2() {
+		var panels = document.getElementsByClassName("parent");
+		var actives = document.getElementsByClassName('active__inf');
+		for (i = 0; panels.length > i; i++) {
+			panels[i].onclick = function () {
+				var currentActive = actives[0];
+				if (currentActive)
+					currentActive.classList.remove("active__inf");
+
+				if (currentActive !== this)
+					this.classList.add("active__inf");
+			};
+		}
+	}
+
+</script>
