@@ -2,8 +2,6 @@
 
 </style>
 
-<link rel="stylesheet" href="cartfree.css">
-
 <div id="cartfree">
 
 	<div class="cart-header maxW">
@@ -651,31 +649,23 @@
 
 		<!-- фиксирование табов -->
 
-		<!-- <script>
+		<script>
 			const btns = document.querySelectorAll('.tablinks');
-
-			// function allBtn(n) {
-			// 	for (item of btns) {
-			// 		item.classList.remove('scroll');
-			// 	}
-
-			// 	btns[n].classList.add('scroll');
-			// }
-
-			// allBtn(0);
-
-
+			const maxW = document.querySelectorAll('.maxW');
+			
 			window.onscroll = function () {
 
-				if (window.scrollY > 400) {
-					// allBtn();
-					console.log('done');
+				if (window.scrollY > 600) {
+					btns.forEach(element => {
+						element.classList.add('scroll');
+					});
+					maxW[1].classList.add('scroll__for__maxW');
 				}
 				else {
-					for (btn of btns) {
-						btn.classList.remove('scroll');
-					}
-					// $('.header').removeClass('scroll')
+					btns.forEach(element => {
+						element.classList.remove('scroll');
+					});
+					maxW[1].classList.remove('scroll__for__maxW');
 				}
 			};
-		</script> -->
+		</script>

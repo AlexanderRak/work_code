@@ -6,6 +6,28 @@ html
 .std
 	background: black
 
+.scroll
+	max-height: 50px
+	min-height: unset !important
+	.tablinks-content
+		padding: 10px 30px !important
+	.cart-name-botoom
+		display: none !important
+	.tablinks-content__img
+		top: unset !important
+		bottom: 50%
+		transform: translateY(50%)
+	.tablinks-content__text span
+		text-align: center !important
+	.cart-name-top
+		z-index: 100
+		position: relative
+
+// .scroll__for__grid
+.scroll__for__maxW
+	max-width: 100% !important
+	// display: none !important
+
 .main-container.page
 	padding-left: 0
 	padding-right: 0
@@ -438,7 +460,8 @@ html
 		z-index: 5
 		.cart-sentence__tabs
 			position: sticky
-			top: -100px
+			top: 55px
+			z-index: 100
 	.cart-sentence__tabs-wp
 		display: grid
 		grid-template-columns: 1fr 1fr 1fr
@@ -565,18 +588,33 @@ html
 		transform: unset
 		align-self: unset
 		margin-bottom: 20px
+	#cartfree .tablinks:nth-child(1) .tablinks-content__img::before, #cartfree .tablinks:nth-child(2) .tablinks-content__img::before, #cartfree .tablinks:nth-child(3) .tablinks-content__img::before
+		width: 44px
+		height: 30px
+		background-size: contain
+		background-repeat: no-repeat
+		margin-top: 5px
 
 @media (max-width: 812px)
 	#cartfree .tablinks:nth-child(1) .tablinks-content__img::before, #cartfree .tablinks:nth-child(2) .tablinks-content__img::before, #cartfree .tablinks:nth-child(3) .tablinks-content__img::before
 		position: unset
 		display: block
+		width: 59px
+		height: 41px
 	#cartfree .tablinks-content__img
 		position: unset
 		align-self: center
-		margin-bottom: 10px
+		margin-bottom: 30px
+	.scroll
+		max-height: unset
+	#cartfree .tablinks.active::after
+		right: 45%
+	#cartfree .cart-sentence__container .cart-sentence__tabs
+		top: 57px
 	#cartfree .tablinks-content
 		display: flex
 		flex-direction: column-reverse
+		justify-content: flex-end
 	#cartfree .tabcontent
 		overflow: hidden
 		box-sizing: border-box
@@ -664,7 +702,7 @@ html
 		overflow-x: scroll
 	#cartfree .cart-sentence__tabs-wp button
 		margin-bottom: 20px
-		min-height: 211px
+		min-height: 209px
 	#cartfree .tablinks-content
 		padding: 17px
 		height: 100%
