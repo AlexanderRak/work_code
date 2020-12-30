@@ -1,0 +1,413 @@
+/*default styles*/
+
+#apple__mini
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 54px
+    line-height: 60px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  h3
+    display: block
+    line-height: normal
+    font-size: 40px
+    line-height: 40px
+    font-weight: bold
+    text-align: unset
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    margin: 0 auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#apple__mini
+  .logo
+    padding: 60px 100px 30px 100px
+    box-sizing: border-box
+    .logo__txt
+      text-align: center
+      h3
+        padding: 50px 0 45px 0
+      p
+        font-size: 30px
+        line-height: 40px
+        margin-bottom: 35px
+
+  .retina
+    background-color: #000
+    .retina__title
+      padding: 65px 90px 60px 90px
+      color: #fff
+      text-align: center
+      h3
+        font-weight: normal
+        margin-top: 45px
+    .retina__flex
+      display: flex
+      flex-direction: row
+      .retina__txt
+        max-width: 453px
+        color: #fff
+        padding: 0 20px 0 90px
+        box-sizing: content-box
+        p
+          font-size: 24px
+          line-height: 40px
+          display: block
+          &:nth-of-type(n+2)
+            &::before
+              display: block
+              content: ""
+              width: 240px
+              height: 1px
+              background-color: #fff
+              margin: 20px 0
+      .retina__img
+        margin: auto 0 0 auto
+        img
+          margin: 0
+
+  .proc
+    .proc__title
+      text-align: center
+      padding: 50px 20px
+      h2
+        line-height: 40px
+    .grid-container
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr 1fr 1fr
+      gap: 16px 16px
+      grid-template-areas: "cal1 cal3" "cal1 cal4" "cal2 cal4"
+      >div
+        background-color: #F5F5F7
+        text-align: center
+      p
+        font-size: 20px
+        line-height: 30px
+        display: block
+      span
+        display: block
+        font-size: 30px
+        line-height: 40px
+      .cal1
+        grid-area: cal1
+        img
+          &:nth-of-type(2)
+            margin: 10px auto
+        span
+          &:nth-of-type(1)
+            margin-top: 20px
+      .cal2
+        grid-area: cal2
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        padding: 25px
+        text-align: left
+        img
+          margin-right: 35px
+          max-width: 88px
+      .cal3
+        grid-area: cal3
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        img
+          margin-top: 20px
+      .cal4
+        grid-area: cal4
+        display: flex
+        flex-direction: column
+        justify-content: center
+        img
+          margin-bottom: 25px
+
+  .dolby
+    background-color: #DAE4EB
+    .dolby__title
+      padding: 70px 20px 80px 20px
+      text-align: center
+      max-width: 1150px
+      margin: 0 auto
+      h2
+        margin-bottom: 35px
+      span
+        display: block
+        font-size: 30px
+        line-height: 40px
+    .dolby__flex
+      display: flex
+      flex-direction: row
+      align-items: flex-end
+      .dolby__txt
+        max-width: 518px
+        padding: 0 16px 75px 60px
+        box-sizing: content-box
+        p
+          font-size: 24px
+          line-height: 40px
+
+  .perspective
+    background-color: #F6F6F8
+    .perspective__txt
+      max-width: 1100px
+      margin: 0 auto
+      padding: 60px 0 40px 0
+      h2
+        text-align: center
+        margin-bottom: 45px
+      p
+        display: block
+        font-size: 24px
+        line-height: 34px
+        &:nth-of-type(n+2)
+          margin-top: 20px
+
+  .aksi
+    padding: 70px 20px 0 20px
+    .aksi__title
+      text-align: center
+      margin-bottom: 40px
+    .aksi__img
+      display: flex
+      flex-direction: row
+      justify-content: center
+      i
+        display: block
+        font-size: 24px
+        line-height: 30px
+        margin-top: 75px
+        transform: translateX(150px)
+      .aksi__img__item
+        &:nth-of-type(1)
+          margin-right: 100px
+    .aksi__txt
+      padding: 60px 0px 40px 0px
+      background-color: #E6F2DE
+      p
+        padding-left: 100px
+        font-size: 24px
+        line-height: 40px
+        padding-right: 60px
+        >b
+          display: block
+          margin-bottom: 40px
+          padding-right: 130px
+        &:nth-of-type(2)
+
+  .settings
+    .settings__title
+      padding: 50px 90px 80px 90px
+      text-align: center
+      span
+        font-size: 36px
+        line-height: 60px
+        display: block
+        margin-top: 40px
+    .settings__flex
+      display: flex
+      flex-direction: row
+      padding: 0 200px 60px 200px
+      .settings__txt
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+        &:nth-of-type(1)
+          margin-right: 135px
+        p
+          font-size: 30px
+          line-height: 40px
+          display: block
+          &:nth-of-type(n+2)
+            &::before
+              content: ""
+              display: block
+              width: 239px
+              height: 1px
+              background-color: #000
+              margin: 30px 0
+
+  .complete
+    background-color: #F5F5F7
+    p
+      font-size: 30px
+      line-height: 40px
+    .complete__title
+      padding: 60px 20px
+      text-align: center
+    .complete__flex
+      display: flex
+      flex-direction: row
+      justify-content: center
+      text-align: center
+      .complete__img
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        &:nth-of-type(1)
+          margin-right: 70px
+        &:nth-of-type(2)
+        p
+          margin-top: 30px
+    .complete__txt
+      padding: 105px 130px 95px 100px
+
+//media*********************************************
+
+@media (max-width: 1024px)
+  #apple__mini .aksi .aksi__img i
+    transform: unset
+  #apple__mini .perspective .perspective__txt
+    padding-right: 20px
+    padding-left: 20px
+
+@media (max-width: 812px)
+  #apple__mini .logo
+    padding: 60px 20px 20px 20px
+  #apple__mini .retina .retina__flex
+    flex-direction: column
+  #apple__mini .retina .retina__flex .retina__txt
+    max-width: 100%
+    padding: 20px
+    text-align: center
+  #apple__mini .retina .retina__flex .retina__txt p:nth-of-type(n+2)::before
+    margin: 20px auto
+  #apple__mini .proc .grid-container
+    grid-template-areas: "cal1" "cal2" "cal3" "cal4"
+    grid-template-columns: unset
+    grid-template-rows: unset
+    margin-bottom: 16px
+    >div
+      padding: 20px
+    .cal1
+      padding-top: 0
+  #apple__mini .dolby .dolby__flex
+    flex-direction: column
+  #apple__mini .dolby .dolby__flex .dolby__txt
+    max-width: 100%
+    padding: 20px
+  #apple__mini .dolby .dolby__title
+    padding-bottom: 20px
+  #apple__mini .aksi .aksi__txt p
+    padding: 20px
+    text-align: center
+    >b
+      padding: 20px
+  #apple__mini .settings .settings__title
+    padding: 50px 20px 20px 20px
+  #apple__mini .settings .settings__flex
+    padding: 20px
+  #apple__mini .complete .complete__txt
+    padding: 20px
+
+@media (max-width: 480px)
+  #apple__mini h3
+    font-size: 24px
+    line-height: unset
+  #apple__mini h2,
+  #apple__mini .proc .proc__title h2
+    font-size: 28px
+    line-height: unset
+  #apple__mini .logo .logo__txt p,
+  #apple__mini .retina .retina__flex .retina__txt p,
+  #apple__mini .dolby .dolby__flex .dolby__txt p,
+  #apple__mini .perspective .perspective__txt p,
+  #apple__mini .aksi .aksi__txt p,
+  #apple__mini .settings .settings__flex .settings__txt p,
+  #apple__mini .complete p
+    font-size: 16px
+    line-height: unset
+  #apple__mini .retina .retina__title
+    padding: 20px
+  #apple__mini .proc .grid-container span,
+  #apple__mini .dolby .dolby__title span,
+  #apple__mini .settings .settings__title span
+    font-size: 20px
+    line-height: normal
+  #apple__mini .proc .grid-container .cal2
+    flex-direction: column
+    text-align: center
+  #apple__mini .proc .grid-container .cal2 img
+    max-width: unset
+    margin: 0 auto
+    margin-bottom: 20px
+  #apple__mini .dolby .dolby__flex .dolby__txt,
+  #apple__mini .perspective .perspective__txt
+    text-align: center
+  #apple__mini .aksi 
+    overflow: hidden
+    padding-right: 0
+    padding-left: 0
+    .aksi__img 
+      flex-direction: column
+      .aksi__img__item
+        &:nth-of-type(1)
+          margin-right: 0px
+  #apple__mini .aksi .aksi__img i
+    font-size: 14px
+    margin-top: 0px
+    padding: 20px
+    text-align: center
+  #apple__mini .aksi .aksi__txt
+    padding: 0
+  #apple__mini .aksi .aksi__txt p > b
+    margin-bottom: 0
+    padding: 0
+  #apple__mini .settings .settings__flex
+    flex-direction: column
+  #apple__mini .settings .settings__flex .settings__txt
+    max-width: 100%
+    text-align: center
+  #apple__mini .settings .settings__flex .settings__txt:nth-of-type(1)
+    margin-right: 0
+  #apple__mini .settings .settings__flex .settings__txt p:nth-of-type(n+2)::before
+    margin: 30px auto
+  #apple__mini .complete 
+    overflow: hidden
+    .complete__flex 
+      flex-direction: column
+      .complete__img
+        &:nth-of-type(1)
+          margin-right: 0px
+  #apple__mini .complete .complete__txt
+    text-align: center
+  #apple__mini .dolby .dolby__title,
+  #apple__mini .dolby .dolby__flex .dolby__txt, #apple__mini .perspective .perspective__txt,
+  #apple__mini .aksi,
+  #apple__mini .settings .settings__title,
+  #apple__mini .complete .complete__title
+    padding-top: 20px
