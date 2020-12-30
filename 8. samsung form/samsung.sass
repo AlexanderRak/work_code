@@ -1,0 +1,208 @@
+#samsung
+	display: block
+	margin: 0 auto
+	max-width: 100%
+	width: 100%
+	height: auto
+	overflow: hidden
+	background: #f4f4f4
+	position: relative
+	img
+		&:hover
+			opacity: 1
+	&:first-letter
+		padding-left: 0
+	img
+		display: block
+		margin-right: initial
+		margin-left: initial
+	p
+		font-size: 18px
+		margin-bottom: 0
+		line-height: 30px
+		color: #000000
+	h2
+		font-size: 50px
+		text-transform: uppercase
+		line-height: 1
+		color: #000000
+		display: block
+		padding-bottom: 30px
+	h3
+		font-size: 24px
+		margin: 0
+		padding-top: 0
+		line-height: 34px
+		color: #000000
+		padding-bottom: 30px
+		display: block
+	h4
+		font-size: 20px
+		text-transform: inherit
+		font-weight: 500
+		padding-bottom: 30px
+		color: #000000
+		margin: 0
+span.word-wrap
+	display: block
+	word-wrap: break-word
+span.fw-bold
+	font-weight: bold
+span.tx-uppercase
+	text-transform: uppercase
+.breadcrumbs
+	display: none
+.main-container.page
+	padding-left: 0
+	padding-right: 0
+// default
+
+.wrap-samsung
+	max-width: 1130px
+	width: 100%
+	margin: 0 auto
+	padding: 58px 15px 60px 15px
+	overflow: hidden
+	position: relative
+.content-text
+	position: relative
+	width: 100%
+	display: block
+	height: 315px
+.pos-img
+	position: absolute
+	right: 45px
+	bottom: 0
+	z-index: 5
+.rel-text
+	position: relative
+	z-index: 6
+	left: 0
+	top: 0
+
+/* form */
+#wrapper-form-corizoid
+	width: 100%
+	margin: 40px 0 0 0
+	background: #E5E5E5
+	border-radius: 8px
+	padding: 40px
+	form
+		div.error, label.error
+			color: #000000
+			left: 0
+			padding-left: 15px
+			display: block
+			position: relative
+			margin: 4px 4px 4px 0px
+			top: 0
+#form-submit-none
+  display: block
+#text-submit-block
+  display: none
+.row-flex-form
+	display: flex
+	flex-direction: row
+	align-items: flex-start
+	justify-content: center
+	width: 100%
+	.item_fr
+		padding: 0 15px 0 0
+		width: 100%
+		display: grid
+		&:last-child
+			padding: 0 0 0 0
+		.item-input-frm
+			font-size: 2rem
+			margin: 0
+			padding: 1.2rem 1.7rem
+			border: 0px solid rgba(255, 255, 255, 0)
+			border-radius: 16px
+			text-align: left
+			background: #fff
+			line-height: 1
+			height: 50px
+			&:focus
+				box-shadow: inset 0px 0px 10px 0px #e5e5e5
+.item-input-frm::placeholder
+  color: #000
+
+.row-flex-form
+	.item_fr
+		.item-input-frm
+			&.item-input-frm__submit
+				background: #000
+				transition: .3s
+				color: #fff
+				width: 100%
+				text-align: center
+				font-weight: 500
+				&:hover
+					// box-shadow: inset 0 0 15px 0px #379424
+					cursor: pointer
+
+.text-submit-block-cl p
+  font-size: 20px !important
+  color: #000
+  text-align: center
+
+/* form END */
+
+// media
+// @media (max-width: 1250px)
+// @media (max-width: 1024px)
+@media (max-width: 812px)
+	.pos-img
+		position: absolute
+		right: 15px
+	.row-flex-form
+		.item_fr
+			.item-input-frm
+				font-size: 16px
+@media (max-width: 480px)
+	span.word-wrap
+		display: initial
+	#samsung
+		h2
+			text-align: center
+			font-size: 40px
+			font-weight: 500
+			padding-bottom: 20px
+		h3
+			font-size: 20px
+			font-weight: bold
+			text-align: center
+			padding-bottom: 20px
+		h4
+			text-align: center
+	#wrapper-form-corizoid
+		form
+			div.error, label.error
+				margin: 5px 4px 8px 0px
+				font-size: 15px
+	span.word-wrap-mob
+		display: block
+		word-wrap: break-word
+	.pos-img
+		position: relative
+		right: 0
+		max-width: 160px
+		margin: 0 auto
+		margin-bottom: 20px
+	.wrap-samsung
+		padding: 25px 15px 60px 15px
+	.content-text
+		height: auto
+		text-align: center
+	#wrapper-form-corizoid
+		padding: 30px 12px 30px 12px
+		margin: 20px 0 0 0
+	.row-flex-form
+		flex-direction: column
+	.row-flex-form
+		.item_fr
+			padding: 0 0 32px 0
+	.row-flex-form
+		.item_fr
+			.item-input-frm
+				font-size: 20px

@@ -1,0 +1,145 @@
+<style>
+
+</style>
+
+<div id="samsung">
+   <div class="wrap-samsung">
+
+      <div class="content-text">
+         <div class="pos-img">
+            <img src="https://cdn.comfy.ua/media/x/img/img1sms.png" alt="">
+         </div>
+         <div class="rel-text">
+            <h2>КАМООН!</h2>
+            <h3>14 січня о 16:00 презентація <span class="word-wrap-mob">SAMSUNG</span> <span class="word-wrap">Обережно, може розтопити <span class="word-wrap-mob">серце <span>&#128293;</span></span></span></h3>
+            <p>Дивіться разом з нами та отримайте ШАНС <span class="word-wrap">ВИГРАТИ одну з представлених новинок <span>&#128521;</span></span></p>
+         </div>
+      </div>
+      <div class="content-form">
+         <div id="wrapper-form-corizoid" class="form-corizoid">
+            <div id="form-submit-none">
+               <h4><span>&#128071;</span> Заповнюйте рядки та ставайте учасником розіграшу</h4>
+               <form id="valid_form" method="post" name="valid_form">
+
+                  <div class="container-flex-form">
+                     <div class="row-flex-form">
+                        <div class="item_fr item_phone">
+                           <input type="text" id="number_rw" name="younember" class="item-input-frm" placeholder="Телефон" minlength="10" maxlength="12" value="" required />
+                        </div>
+                        <div class="item_fr item_email">
+                           <input type="email" id="email_rw" name="yourmail" class="item-input-frm" placeholder="E-mail" value="" required />
+                        </div>
+                        <!-- <div class="item_fr item_name">
+                           <input type="text" id="yourname_rw" name="yourname" class="item-input-frm yourname_rw" placeholder="Имя" value="" required />
+                        </div> -->
+                        <!-- <div class="item_fr item_sity">
+                           <input type="text" id="city_rw" name="yourcity" class="item-input-frm" placeholder="Город" value="" required />
+                        </div> -->
+                        <div class="item_fr item_submit">
+                           <input type="submit" class="submit-posgo item-input-frm item-input-frm__submit" value="ВІДПРАВИТИ" name="Submit" />
+                        </div>
+                     </div>
+                  </div>
+
+               </form>
+            </div>
+
+            <div id="text-submit-block" class="text-submit-block-cl">
+               <p><span class="formgoto">Дякую!</span></p>
+            </div>
+         </div>
+      </div>
+
+   </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+
+<script>
+
+   $(document).ready(function () {
+      $("fieldset input").click(function () {
+         $("fieldset label.error").remove()
+      });
+
+      $("#valid_form").validate({
+         rules: {
+            yourname: {
+               required: true
+            },
+            yourcity: {
+               required: true
+            },
+            yourmail: {
+               required: true,
+               email: true
+            },
+            younember: {
+               required: true,
+               number: true,
+               minlength: 10,
+               maxlength: 12
+            }
+         },
+         messages: {
+            yourname: {
+               required: "*Обов'язкове поле."
+            },
+            younember: {
+               required: "*Обов'язкове поле.",
+               number: "Введіть номер телефону.",
+               minlength: "В поле повинно бути мінімум 10 символів",
+               maxlength: "В поле повинно бути максимум 12 символів"
+            },
+            yourmail: {
+               required: "*Обов'язкове поле.",
+               email: "*Обов'язкові символи @"
+            },
+            yourcity: {
+               required: "*Обов'язкове поле."
+            }
+         },
+         errorPlacement: function (error, element) {
+            // if (element.attr("name") == "yourname") error.insertAfter($("input[name=yourname]"));
+            // if (element.attr("name") == "yourcity") error.insertAfter($("input[name=yourcity]"));
+            if (element.attr("name") == "younember") error.insertAfter($("input[name=younember]"));
+            if (element.attr("name") == "yourmail") error.insertAfter($("input[name=yourmail]"));
+         },
+         submitHandler: function (form) {
+            function sendAjaxForm(result_form, ajax_form) {
+               let people = {
+                  numbertel: '',
+                  email: '',
+                  // sity: '',
+                  // yourname_rw: '',
+                  nameAction: ''
+               };
+               // people.numbertel = $('#number_rw').val();
+               people.email = $('#email_rw').val();
+               // people.sity = $('#city_rw').val();
+               people.yourname_rw = $('#yourname_rw').val();
+               people.nameAction = "Samsung2021";
+               $.ajax({
+                  url: "https://www.corezoid.com/api/1/json/public/873756/ceaa5c98b15df198a91db302b0a40c72c402271c",
+                  headers: {
+                     'Content-Type': 'application/x-www-form-urlencoded'
+                  },
+                  type: "POST", //метод отправки
+                  dataType: "json", //формат данных
+                  data: JSON.stringify(people), // Сеарилизуем объект
+                  success: console.log('done')
+               });
+               var none_form = document.getElementById("form-submit-none").style.display = "none";
+               var block_text = document.getElementById("text-submit-block").style.display = "block";
+            }
+            sendAjaxForm();
+         }
+      });
+   })
+
+   // $(function () {
+   //    $("#number_rw").mask("380999999999");
+   // });
+
+</script>
