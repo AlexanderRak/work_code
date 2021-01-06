@@ -7,6 +7,7 @@
   display: block;
   background-color: #fff;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
 }
@@ -72,6 +73,7 @@
   position: relative;
   margin: auto;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
 }
@@ -95,8 +97,12 @@
   font-weight: bold;
   font-size: 18px;
   -webkit-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+  -moz-transition: 0.6s ease;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  -webkit-border-radius: 0 3px 3px 0;
+     -moz-border-radius: 0 3px 3px 0;
+          border-radius: 0 3px 3px 0;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -107,7 +113,9 @@
 
 #twinkly .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  -webkit-border-radius: 3px 0 0 3px;
+     -moz-border-radius: 3px 0 0 3px;
+          border-radius: 3px 0 0 3px;
 }
 
 #twinkly .prev:hover, #twinkly .next:hover {
@@ -123,8 +131,12 @@
   text-align: center;
   bottom: 50%;
   -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+       -o-transform: translateY(50%);
           transform: translateY(50%);
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -142,9 +154,13 @@
   width: 15px;
   margin: 0 2px;
   background-color: #bbb;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
   display: inline-block;
   -webkit-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
+  -moz-transition: background-color 0.6s ease;
   transition: background-color 0.6s ease;
 }
 
@@ -155,11 +171,33 @@
 #twinkly .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+  -moz-animation-name: fade;
+    -o-animation-name: fade;
+       animation-name: fade;
+  -moz-animation-duration: 1.5s;
+    -o-animation-duration: 1.5s;
+       animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fade {
   from {
     opacity: .4;
   }
@@ -186,18 +224,28 @@
   margin-top: 28px;
   padding: 40px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   height: 934px;
@@ -219,26 +267,40 @@
 
 #twinkly .world .world__list {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
 
 #twinkly .world .world__list li {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+     -moz-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
@@ -271,9 +333,13 @@
   background-repeat: no-repeat;
   background-position: center;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -287,25 +353,37 @@
 #twinkly .only .swipe__txt,
 #twinkly .only .lider__txt,
 #twinkly .only .only__txt {
-  -ms-flex-item-align: stretch;
-      align-self: stretch;
+  -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+          align-self: stretch;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   color: #fff;
   max-width: 650px;
   padding: 70px 140px;
   background-color: rgba(0, 0, 0, 0.8);
-  background-size: cover;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
   bottom: 50%;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -348,10 +426,15 @@
 
 #twinkly .effects {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   background-color: #000;
@@ -359,10 +442,13 @@
 
 #twinkly .effects > div {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   max-width: 50%;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -373,13 +459,20 @@
 #twinkly .effects .effects__txt {
   padding: 70px;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
@@ -396,13 +489,20 @@
 
 #twinkly .letsplay {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #000;
@@ -410,15 +510,19 @@
 
 #twinkly .letsplay > div {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 #twinkly .letsplay .letsplay__txt {
   padding: 70px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   max-width: 500px;
 }
@@ -435,6 +539,8 @@
 
 #twinkly .letsplay .letsplay__img {
   -webkit-box-flex: 1.5;
+  -webkit-flex: 1.5;
+     -moz-box-flex: 1.5;
       -ms-flex: 1.5;
           flex: 1.5;
 }
@@ -459,7 +565,10 @@
   }
   #twinkly .world {
     height: auto;
-    background-size: cover;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
   }
   #twinkly .world .world__list li:nth-of-type(2) {
     margin: 0 30px;
@@ -478,7 +587,10 @@
   }
   #twinkly .lider, #twinkly .swipe, #twinkly .only {
     height: 350px;
-    background-size: cover;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
   }
   #twinkly .lider .swipe__txt, #twinkly .lider .lider__txt, #twinkly .lider .only__txt, #twinkly .swipe .swipe__txt, #twinkly .swipe .lider__txt, #twinkly .swipe .only__txt, #twinkly .only .swipe__txt, #twinkly .only .lider__txt, #twinkly .only .only__txt {
     max-width: 220px;
@@ -490,6 +602,9 @@
   #twinkly .effects {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+       -moz-box-orient: vertical;
+       -moz-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
@@ -500,6 +615,9 @@
   #twinkly .letsplay {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;

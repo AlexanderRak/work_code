@@ -1,0 +1,250 @@
+/*default styles*/
+
+#adguard
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    font-size: 20px
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  h4
+    display: block
+    line-height: normal
+    font-size: 24px
+    font-weight: bold
+    padding: 0
+    margin: 0 0 25px 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+// class for js
+
+#adguard
+  .fade
+    animation-name: fade;
+    animation-duration: .7s;
+
+  @keyframes fade
+    0%
+      opacity: 0.1
+    100%
+      opacity: 1
+
+  .rotate_txt
+    transform: rotate(90deg)
+    margin-top: 0 !important;
+    display: flex;
+    align-items: center
+
+  .show_protect
+    display: block !important
+
+  .hide_protect
+    display: none !important
+  
+  .blocker_nav_active
+    width: 20px !important
+    background: #43B02A !important
+  .system_nav_active
+    display: block !important
+    cursor: pointer
+  .system_nav_not_active  
+    display: none !important
+
+// end class for js
+
+#adguard
+  border-radius: 8px
+  .slider
+    display: flex
+    flex-direction: row
+    padding-bottom: 30px
+    justify-content: space-between
+    .slide
+      height: 580px
+      display: flex
+      flex-direction: row
+      align-items: center
+      width: 100%
+      cursor: pointer
+      &:nth-of-type(n+2)
+        margin-left: 2px
+      .slide_btn
+        background: linear-gradient(180deg, #68BC71 0%, #67B279 100%);
+        height: 100%
+        width: 100%
+        border-radius: 4px;
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        padding: 100px 0 85px 0
+        box-sizing: border-box
+        >div
+          flex: 1 1 0
+        .slide_txt
+          text-align: center
+          max-width: 185px
+          margin-top: 135px
+          span
+            color: #fff
+            font-weight: bold
+            font-size: 34px
+            line-height: 40px
+      .slide_cont
+        cursor: auto
+        max-width: 757px
+        min-width: 500px
+        padding: 50px 40px
+        box-sizing: border-box
+        img
+          margin: 0 auto 60px auto
+
+  .blocker
+    .system_nav
+      display: flex
+      flex-direction: row
+      justify-content: center
+      padding-top: 60px
+      align-items: flex-end
+      .windows
+        margin-right: 60px
+    .blocker_flex
+      display: flex
+      flex-direction: row
+      align-items: center
+      padding: 35px 60px
+      >div
+        flex: 1 1 0
+      .blocker_flex_cal
+        &:first-of-type, &:nth-of-type(2)
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+        .blocker_flex_txt
+          max-width: 470px
+          margin-left: 80px
+          h2
+            margin-bottom: 5px
+    .blocker_nav
+      display: flex
+      flex-direction: row
+      margin-top: 25px
+      span
+        cursor: pointer
+        display: block
+        background: #E5E5E5;
+        width: 10px;
+        height: 10px;
+        border-radius: 20px
+        line-height: unset
+        &:nth-of-type(2)
+          margin: 0 15px
+          
+// media **********************************************
+
+
+@media (max-width: 1024px)
+  #adguard .slider .slide .slide_cont
+    min-width: 440px
+  #adguard .slider .slide .slide_btn .slide_txt span
+    font-size: 30px
+
+@media (max-width: 812px)
+  #adguard .blocker .blocker_flex
+    flex-direction: column-reverse
+  #adguard .blocker .blocker_flex .blocker_flex_cal .blocker_flex_txt
+    margin-left: 0
+    max-width: 100%
+  #adguard .slider
+    flex-direction: column
+  #adguard .slider .slide
+    height: auto
+  #adguard .slider .slide .slide_btn
+    flex-direction: row
+    padding: 25px 45px
+  #adguard .slider .slide .slide_btn .slide_txt
+    margin-top: 0
+  #adguard .slider .slide .slide_cont
+    max-width: 100%
+    min-width: unset
+  #adguard .rotate_txt
+    transform: unset
+  #adguard .slider .slide:nth-of-type(n+2)
+    margin-left: 0
+    margin-top: 2px
+  #adguard .blocker .blocker_flex .blocker_flex_cal
+    min-height: max-content
+    height: 100%
+  #adguard .slider .slide
+    min-height: max-content
+    height: 100%
+@media (max-width: 480px)
+  #adguard h2
+    font-size: 24px
+  #adguard h4
+    font-size: 20px
+    margin: 0 0 15px 0
+  #adguard p
+    font-size: 16px
+  #adguard .blocker .system_nav
+    padding: 60px 20px 20px 20px
+  #adguard .blocker .blocker_flex
+    padding: 10px
+  #adguard .blocker .blocker_flex .blocker_flex_cal:first-of-type, #adguard .blocker .blocker_flex .blocker_flex_cal:nth-of-type(2)
+    padding-top: 20px
+  #adguard .slider .slide .slide_btn .slide_txt span
+    font-size: 20px
+    line-height: 24px
+  #adguard .slider .slide .slide_btn .slide_img img
+    max-width: 60%
+    margin-right: 30px
+  #adguard .slider
+    margin-top: 35px
+  #adguard .slider .slide .slide_cont
+    padding: 20px
+  #adguard .slider .slide .slide_cont img
+    max-width: 60%
+    margin: 0 auto 20px auto;
+  #adguard .blocker .system_nav
+    padding: 20px
+  #adguard .blocker .blocker_flex .blocker_flex_cal
+    min-height: max-content
+    height: 100%
+  #adguard .slider .slide
+    min-height: max-content
+    height: 100%

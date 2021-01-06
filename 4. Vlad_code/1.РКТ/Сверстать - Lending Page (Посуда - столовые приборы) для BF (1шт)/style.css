@@ -7,6 +7,7 @@
   display: block;
   background-color: #fff;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -255,16 +256,25 @@
 
 #wmf .excellence .excellence__list li {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
@@ -287,6 +297,7 @@
 
 #wmf .excellence .excellence__list li::before {
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
   left: 0;
@@ -296,6 +307,9 @@
   height: 3px;
   background: black;
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(100%, black), to(white));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, black 100%, white 100%);
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, black 100%, white 100%);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, black 100%, white 100%);
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%, white 100%);
   margin-right: 10px;
   background-position: center left;

@@ -7,6 +7,7 @@
   display: block;
   background-color: #fff;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -64,12 +65,16 @@
   height: 3px;
   background: black;
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(35%, black), color-stop(65%, black), to(rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, black 35%, black 65%, rgba(0, 0, 0, 0) 100%);
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, black 35%, black 65%, rgba(0, 0, 0, 0) 100%);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, black 35%, black 65%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 35%, black 65%, rgba(0, 0, 0, 0) 100%);
   margin: 20px auto 35px auto;
 }
 
 #mwf .logo .logo__icon {
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   padding: 30px;
   max-width: 950px;
@@ -78,7 +83,8 @@
   background-color: #ffffffd4;
   position: relative;
   -webkit-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.7);
-  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.7);
+       box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.7);
 }
 
 #mwf .logo .logo__icon .logo__title {
@@ -137,6 +143,9 @@
   height: 4px;
   background: #a4b2b9;
   background: -webkit-gradient(linear, left top, right top, color-stop(40%, #a4b2b9), to(rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(left, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
+  background: -moz-linear-gradient(left, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
+  background: -o-linear-gradient(left, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(90deg, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
   position: absolute;
   z-index: 0;
@@ -155,6 +164,9 @@
   height: 50%;
   background: #a4b2b9;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #a4b2b9), to(rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(top, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
+  background: -moz-linear-gradient(top, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
+  background: -o-linear-gradient(top, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(180deg, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
 }
 
@@ -163,10 +175,14 @@
   bottom: 50%;
   right: 50%;
   -webkit-transform: translate(80%, 50%);
+     -moz-transform: translate(80%, 50%);
+      -ms-transform: translate(80%, 50%);
+       -o-transform: translate(80%, 50%);
           transform: translate(80%, 50%);
   max-width: 610px;
   width: 100%;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   text-align: right;
   background-color: #a4b2b9;
@@ -204,13 +220,20 @@
 
 #mwf .steel .steel__title .steel__snoska span {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   line-height: normal;
@@ -228,7 +251,10 @@
   height: 24px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  -webkit-background-size: contain;
+     -moz-background-size: contain;
+       -o-background-size: contain;
+          background-size: contain;
   background-image: url("https://cdn.comfy.ua/media/x/img/mwf-nozhi/circle.png");
   margin-right: 30px;
 }
@@ -240,10 +266,16 @@
   height: 24px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  -webkit-background-size: contain;
+     -moz-background-size: contain;
+       -o-background-size: contain;
+          background-size: contain;
   background-image: url("https://cdn.comfy.ua/media/x/img/mwf-nozhi/circle.png");
   margin-left: 30px;
   -webkit-transform: scale(-1, -1);
+     -moz-transform: scale(-1, -1);
+      -ms-transform: scale(-1, -1);
+       -o-transform: scale(-1, -1);
           transform: scale(-1, -1);
 }
 
@@ -255,6 +287,7 @@
   margin: 0 auto;
   padding: 30px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -263,6 +296,7 @@
   margin: 0 auto;
   padding: 25px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
 }
@@ -275,6 +309,9 @@
   height: 100%;
   background: #a4b2b9;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #a4b2b9), to(rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(top, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
+  background: -moz-linear-gradient(top, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
+  background: -o-linear-gradient(top, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(180deg, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
 }
 
@@ -291,6 +328,7 @@
 #mwf .tech {
   padding: 0 60px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -301,10 +339,15 @@
 #mwf .tech .tech__wrap {
   max-width: 980px;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 0 auto;
@@ -323,6 +366,9 @@
   height: 100%;
   background: #a4b2b9;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #a4b2b9), to(rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(top, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
+  background: -moz-linear-gradient(top, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
+  background: -o-linear-gradient(top, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(180deg, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
   left: 0;
   top: 0;
@@ -344,6 +390,9 @@
   width: 70%;
   background: black;
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(60%, white));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, white 60%);
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, white 60%);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, white 60%);
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, white 60%);
   margin: 35px 0 35px auto;
   margin-right: -20px;
@@ -356,6 +405,9 @@
   width: 70%;
   background: black;
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(60%, white));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, white 60%);
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, white 60%);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, white 60%);
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, white 60%);
   margin: 35px 0 35px auto;
   margin-right: -20px;
@@ -374,6 +426,7 @@
   margin: 0 auto;
   padding: 0 25px 65px 25px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
 }
@@ -386,6 +439,9 @@
   height: 175%;
   background: #a4b2b9;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(40%, #a4b2b9), to(rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(bottom, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
+  background: -moz-linear-gradient(bottom, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
+  background: -o-linear-gradient(bottom, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(360deg, #a4b2b9 40%, rgba(0, 0, 0, 0) 100%);
   left: 0;
   top: 0;
@@ -428,6 +484,9 @@
   height: 4px;
   width: 70%;
   background: black;
+  background: -webkit-linear-gradient(190deg, rgba(0, 0, 0, 0) 0%, #a5b3ba 60%);
+  background: -moz-linear-gradient(190deg, rgba(0, 0, 0, 0) 0%, #a5b3ba 60%);
+  background: -o-linear-gradient(190deg, rgba(0, 0, 0, 0) 0%, #a5b3ba 60%);
   background: linear-gradient(260deg, rgba(0, 0, 0, 0) 0%, #a5b3ba 60%);
   margin-bottom: 25px;
 }
@@ -439,6 +498,9 @@
   width: 70%;
   background: black;
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(60%, #a5b3ba));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #a5b3ba 60%);
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #a5b3ba 60%);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #a5b3ba 60%);
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #a5b3ba 60%);
   margin: 25px 0 0 auto;
 }
@@ -490,6 +552,9 @@
   #mwf .knife .knife__img .knife__img__wrap .knife__img__abs {
     position: unset;
     -webkit-transform: unset;
+       -moz-transform: unset;
+        -ms-transform: unset;
+         -o-transform: unset;
             transform: unset;
     width: 100%;
     padding: 20px;
@@ -506,6 +571,9 @@
   #mwf .tech .tech__wrap {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }

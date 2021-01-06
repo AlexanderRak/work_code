@@ -53,27 +53,52 @@
 	}
 
 	.linear-gradient-popup {
-		/* background: linear-gradient(287.34deg, #82DF0B 20.5%, #43B02A 76.3%);
-		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25); */
-		background: #000;
+		background: linear-gradient(287.34deg, #82DF0B 20.5%, #43B02A 76.3%);
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 		border-radius: 10px;
-		width: 351px;
-    	height: 175px;
+		width: 352px;
+		height: 177px;
 		z-index: 6;
 		overflow: hidden;
 	}
 
+	.text-wrap {
+		padding: 17px 0 0 25px;
+		text-align: left;
+		position: relative;
+		z-index: 10;
+	}
+
+	.linear-gradient-popup span.big-text {
+		font-weight: bold;
+		font-size: 25px;
+		text-transform: uppercase;
+		max-width: 228px;
+		display: block;
+		color: #fff;
+		padding-bottom: 10px;
+		text-shadow: 0 0 10px black;
+	}
+
+	.linear-gradient-popup span.small-text {
+		font-size: 23px;
+		display: block;
+		color: #fff;
+		text-shadow: 0 0 10px black;
+	}
+
 	.content-text {
-		background-image: url(https://cdn.comfy.ua/media/x/img/posud.png);
+		background-image: url(https://cdn.comfy.ua/media/x/img/popup-desk.png);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;
 		position: absolute;
-		width: 353px;
-		height: 177px;
+		width: 362px;
+		height: 190px;
 		z-index: 8;
 		left: 0;
-    	bottom: 0;
+		bottom: 0;
+		border-radius: 10px;
 	}
 
 	.images-push {
@@ -135,7 +160,7 @@
 	}
 
 	.popup-close[data-v-a06dd506] {
-		z-index: 10;
+		z-index: 12;
 		top: -12px;
 		left: -12px;
 		width: 12px;
@@ -156,12 +181,12 @@
 
 	@media (max-width: 767px) {
 		.content-text {
-			background-image: url(https://cdn.comfy.ua/media/x/img/posud_mob.png);
-			width: 280px;
-			height: 55px;
+			background-image: url(https://cdn.comfy.ua/media/x/img/popup-desk-mob.png);
+			width: 258px;
+			height: 72px;
 			z-index: 8;
-			left: 0;
-			top: 0;
+			left: 5px;
+    		top: -7px;
 		}
 
 		.images-push {
@@ -170,9 +195,9 @@
 
 		.linear-gradient-popup {
 			width: 280px;
-    		height: 55px;
+			height: 55px;
 
-			/* background: #43B02A; */
+			background: #43B02A;
 			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 		}
 
@@ -198,16 +223,29 @@
 		.cont-popup-action {
 			padding-right: 7px;
 		}
+
+		.text-wrap {
+			padding: 10px 0 0 5px;
+		}
+
+		.linear-gradient-popup span.big-text {
+			font-size: 14px;
+			padding-bottom: 0px;
+		}
+
+		.linear-gradient-popup span.small-text {
+			font-size: 14px;
+		}
 	}
 
 	@media (max-width: 1024px) and (min-width: 768px) {
 		.content-text {
-			background-image: url(https://cdn.comfy.ua/media/x/img/posud_mob.png);
-			width: 280px;
-			height: 55px;
+			background-image: url(https://cdn.comfy.ua/media/x/img/popup-desk-mob.png);
+			width: 258px;
+			height: 72px;
 			z-index: 8;
-			left: 0;
-			top: 0;
+			left: 5px;
+    		top: -7px;
 		}
 
 		.images-push {
@@ -216,9 +254,9 @@
 
 		.linear-gradient-popup {
 			width: 280px;
-    		height: 55px;
+			height: 55px;
 
-			/* background: #43B02A; */
+			background: #43B02A;
 			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 		}
 
@@ -246,10 +284,14 @@
 </style>
 <div id="wrapper-popup-action">
 	<div class="cont-popup-action">
-		<a href="/cook-at-home/">
+		<a href="/pulse-oximeters/">
 			<div class="cont-popup">
 				<div class="linear-gradient-popup">
-					<div class="images-push"></div>
+					<!-- <div class="images-push"></div> -->
+					<!-- <div class="text-wrap">
+						<span class="big-text">Смарт-гирлянды Twinkly</span>
+						<span class="small-text">Чудо от 1680 грн</span>
+					</div> -->
 				</div>
 				<div class="content-text"></div>
 			</div>

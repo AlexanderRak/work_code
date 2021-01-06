@@ -1,0 +1,198 @@
+#kids-wrapper
+	display: block
+	margin: 0 auto
+	max-width: 1316px
+	width: 100%
+	height: auto
+	overflow: hidden
+	background: #fff
+	position: relative
+	padding: 15px 2.8rem 0rem
+	img
+		&:hover
+			opacity: 1
+	&:first-letter
+		padding-left: 0
+	img
+		display: block
+		margin: 0 auto
+		width: 48px
+		height: auto
+	p
+		font-size: 12px
+		margin-bottom: 0
+		text-align: center
+span.word-wrap
+	display: block
+	word-wrap: break-word
+span.fw-bold
+	font-weight: bold
+span.tx-uppercase
+	text-transform: uppercase
+// default
+
+.kids-container
+	position: relative
+	height: 100px
+	max-height: 100px
+	overflow: hidden
+	display: flex
+	justify-content: flex-start
+	margin: 0 0 15px 0
+.kids-row-flex
+	// max-width: 1200px
+	width: 100%
+	position: relative
+	z-index: 7
+.kids-row__item
+	border: 1px solid #E5E5E5
+	border-radius: 8px
+	flex: 1 1 140px
+	max-width: 140px
+	min-height: 100px
+	max-height: 100px
+	overflow: hidden
+	margin-right: 15px
+	transition: .3s
+	&:last-child
+		margin-right: 0
+	&:hover
+		border: 1px solid #999999
+.kids-row__item__img
+	padding-top: 8px
+.kids-row__item__text
+	min-height: 32px
+	display: flex
+	align-items: center
+	justify-content: center
+	line-height: 16px
+	margin: 4px 8px 8px 8px
+.kids-row__item-wrp
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	height: 100px
+#kids-wrapper
+	.slick-track
+		position: inherit
+		left: inherit
+		top: inherit
+		height: 100%
+		display: flex
+		align-items: flex-start
+		overflow: hidden
+	.slick-slider
+		height: 100%
+		z-index: 7
+		margin-top: 0
+	.slick-slide
+		float: inherit
+		height: auto
+	.slick-list
+		margin: 0 50px
+	.your-class-arrow
+		display: block
+		.slick-prev, .slick-next
+			border-radius: 8px
+			border: 1px solid #E5E5E5
+			background: rgba(255, 255, 255, 1)
+			width: 36px
+			height: 100%
+			position: absolute
+			z-index: 8
+			display: inline-block !important
+			transition: .3s
+			&::before
+				background: #000000
+				width: 16px
+				height: 16px
+				border-radius: 50%
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				color: #fff
+				font-size: 13px
+				line-height: 1.2
+				left: 1px
+				right: 0
+				margin: 0 auto
+			&::after
+				content: ""
+				position: absolute
+				top: 0
+				width: 20px
+				height: 100%
+				z-index: 8
+			&:hover
+				border: 1px solid #999999
+				cursor: pointer
+				box-shadow: inset 0 0 2px 0px #999999
+			&.slick-disabled
+				// opacity: 0
+				&::before
+					background: #E5E5E5
+				&:hover
+					border: 1px solid #E5E5E5
+					cursor: default
+					box-shadow: none
+		.slick-prev
+			left: 0
+			top: 0
+			&::before
+				content: url(https://cdn.comfy.ua/media/x/img/str-left-kids.svg)
+			&::after
+				background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%)
+				right: -21px
+		.slick-next
+			right: 0
+			top: 0
+			&::before
+				content: url(https://cdn.comfy.ua/media/x/img/str-right-kids.svg)
+			&::after
+				background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%,rgb(255, 255, 255) 100%)
+				left: -21px
+.kids-tags
+	display: flex
+	align-items: flex-start
+	flex-wrap: wrap
+	position: relative
+.kids-tags__link
+	background: #F2F2F2
+	border-radius: 17px
+	padding: 8px 12px
+	text-align: center
+	margin-right: 8px
+	margin-bottom: 8px
+	display: block
+	&:hover
+		background: #dedcdc
+	&:last-child
+		margin-right: 0
+	p
+		font-weight: bold
+// media
+// @media (min-width: 1025px)
+@media (max-width: 1024px)
+	.kids-row__item
+		flex: 1 1 auto
+		max-width: 100%
+@media (max-width: 812px)
+	.kids-row__item
+		flex: 1 1 auto
+		max-width: 100%
+@media (max-width: 480px)
+	.kids-row__item
+		flex: 1 1 100%
+		max-width: 100%
+		&:nth-child(even)
+			margin: 0 10px 0 5px
+		&:nth-of-type(odd)
+			margin: 0 5px 0 10px
+	#kids-wrapper
+		padding: 10px 10px 0rem
+		.slick-list
+			margin: 0 40px
+	.your-class-arrow
+		.slick-prev, .slick-next
+			&::after
+				display: none
