@@ -6,6 +6,10 @@ html
 .std
 	background: black
 
+.fixed
+	position: fixed !important
+	top: -10px !important
+
 .scroll
 	max-height: 50px
 	min-height: unset !important
@@ -655,8 +659,8 @@ html
 @media (max-width: 480px)
 	.scroll .tablinks-content__img
 		display: none !important
-	.wrapper, .page
-		overflow: unset !important
+	// .wrapper, .page
+	// 	overflow: unset !important
 	#cartfree .tabcontent .tabcontent__list br
 		content: ""
 		display: none
