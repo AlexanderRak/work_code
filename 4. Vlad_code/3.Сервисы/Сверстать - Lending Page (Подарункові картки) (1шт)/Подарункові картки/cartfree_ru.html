@@ -18,7 +18,7 @@
 		</div>
 	</div>
 
-	<div class="cart-sentence">
+	<div id="tabs" class="cart-sentence">
 		<div class="cart-sentence__container">
 
 			<div class="cart-sentence__tabs maxW">
@@ -650,6 +650,18 @@
 <script>
 	const btns = document.querySelectorAll('.tablinks');
 	const maxW = document.querySelectorAll('.maxW');
+	const tabs = document.querySelectorAll('.cart-sentence__tabs');
+	const jakor = document.getElementById('tabs');
+
+	function scrolling() {
+		btns.forEach(element => {
+			element.addEventListener('click', () => {
+				jakor.scrollIntoView();
+			});
+		});
+	}
+
+	scrolling();
 
 	window.onscroll = function () {
 
@@ -664,6 +676,20 @@
 				element.classList.remove('scroll');
 			});
 			maxW[1].classList.remove('scroll__for__maxW');
+		}
+
+		if (window.matchMedia("(max-width: 481px)").matches) {
+
+			if (window.scrollY > 600 && window.scrollY < 2000) {
+				tabs.forEach(element => {
+					element.classList.add('fixed');
+				});
+			}
+			else {
+				tabs.forEach(element => {
+					element.classList.remove('fixed');
+				});
+			}
 		}
 	};
 </script>
