@@ -79,13 +79,15 @@ span.word-wrap
 		padding-top: 10px
 		font-weight: bold
 		font-size: 16px
-.header-s21__link
+.s21__link
 	background: #000000
 	border-radius: 28px
 	width: 100%
 	max-width: 275px
 	margin: 0 auto
 	margin-bottom: 30px
+	&.mb0imp
+		margin-bottom: 0
 	a
 		text-transform: uppercase
 		color: #fff
@@ -96,8 +98,296 @@ span.word-wrap
 .header-s21__phone-desk img
 	margin: 0 auto !important
 	display: block
+
+.zoom-s21
+	background: #F4F4F4
+	border-radius: 16px
+	margin-top: 20px
+.zoom-s21__container
+	padding: 50px 75px 25px 55px
+.zoom-s21__h2
+	padding-bottom: 30px
+	text-align: center
+.zoom-s21__flex
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 100%
+	padding-bottom: 50px
+.zoom-s21__item
+	flex: 1 1 0
+.zoom-s21__item-h2
+	text-align: left
+	padding-bottom: 45px
+.gr-item-normal
+	font-size: 24px
+	color: #000000
+	font-weight: normal
+.gr-item-bold
+	font-size: 20px
+	color: #000000
+	font-weight: bold
+.zoom-s21__table-grid
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr
+	gap: 18px 5px
+	width: 100%
+	grid-template-areas: "item-grid1 item-grid2 item-grid3" "item-grid4 item-grid5 item-grid6" "item-grid7 item-grid8 item-grid9" "item-grid10 item-grid11 item-grid12" "item-grid13 item-grid14 item-grid15"
+.item-grid1
+	grid-area: item-grid1
+.item-grid2
+	grid-area: item-grid2
+.item-grid3
+	grid-area: item-grid3
+.item-grid4
+	grid-area: item-grid4
+.item-grid5
+	grid-area: item-grid5
+.item-grid6
+	grid-area: item-grid6
+.item-grid7
+	grid-area: item-grid7
+.item-grid8
+	grid-area: item-grid8
+.item-grid9
+	grid-area: item-grid9
+.item-grid10
+	grid-area: item-grid10
+.item-grid11
+	grid-area: item-grid11
+.item-grid12
+	grid-area: item-grid12
+.item-grid13
+	grid-area: item-grid13
+.item-grid14
+	grid-area: item-grid14
+.item-grid15
+	grid-area: item-grid15
+.footer-s21
+	margin-top: 20px
+.footer-s21__container-flex
+	display: flex
+	width: 100%
+	justify-content: space-between
+	padding-bottom: 40px
+.footer-s21__item
+	flex: 1 1 0
+	background: #F4F4F4
+	border-radius: 16px
+	padding: 35px 15px 27px 15px
+	&:first-child
+		margin-right: 15px
+	&:last-child
+		margin-left: 15px
+.footer-s21__item-h2
+	text-align: center
+	padding-bottom: 18px
+.footer-s21__item-h3
+	text-align: center
+	padding-bottom: 33px
+.footer-s21__item-img
+	img
+		margin: 0 auto !important
+.footer-s21__item-icon-flex
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+	padding-bottom: 40px
+.footer-s21__item-icon
+	flex: 1 1 0
+.footer-s21__item-icon
+	img
+		margin: 0 auto !important
+	.footer-s21__item-icon__text
+		text-align: center
+		padding-top: 10px
+		font-weight: bold
+.footer-s21__item-img
+	height: 307px
+.header-s21__phone-desk
+	display: block
+.header-s21__phone-mob
+	display: none
+// slider
+.slideshow-container
+	position: relative
+	margin: auto
+
+.mySlides
+	display: none
+	img
+		margin: 0 auto !important
+
+.prev
+	cursor: pointer
+	position: absolute
+	top: 50%
+	width: auto
+	margin-top: -22px
+	padding: 16px
+	color: white
+	font-weight: bold
+	font-size: 18px
+	transition: 0.6s ease
+	border-radius: 0 3px 3px 0
+	user-select: none
+
+.next
+	cursor: pointer
+	position: absolute
+	top: 50%
+	width: auto
+	margin-top: -22px
+	padding: 16px
+	color: white
+	font-weight: bold
+	font-size: 18px
+	transition: 0.6s ease
+	border-radius: 0 3px 3px 0
+	user-select: none
+	right: 0
+	border-radius: 3px 0 0 3px
+
+.fade
+	-webkit-animation-name: fade
+	-webkit-animation-duration: 1.5s
+	animation-name: fade
+	animation-duration: 1.5s
+
+@-webkit-keyframes fade
+	from
+	opacity: .4
+	to
+	opacity: 1
+
+@keyframes fade
+	from
+		opacity: .4
+	to
+		opacity: 1
 // media
 // @media (max-width: 1250px)
-// @media (max-width: 1024px)
-// @media (max-width: 812px)
-// @media (max-width: 480px)
+@media (max-width: 1024px)
+	#samsungs21 h2
+		font-size: 45px
+	.header-s21__container
+		padding: 85px 20px 0 20px
+	.zoom-s21__container
+		padding: 50px 15px 25px 15px
+	.zoom-s21__flex
+		flex-direction: column
+	.zoom-s21__item
+		&:first-child
+			padding-top: 20px
+	.footer-s21__item-img
+		height: 250px
+		display: flex
+		align-items: center
+	.footer-s21__item-icon-flex
+		min-height: 145px
+@media (max-width: 812px)
+	#samsungs21
+		h2
+			font-size: 40px
+		h3
+			font-size: 30px
+	.header-s21__container
+		padding: 85px 20px 0 20px
+	.zoom-s21__container
+		padding: 50px 15px 25px 15px
+	.zoom-s21__flex
+		flex-direction: column
+	.zoom-s21__item
+		&:first-child
+			padding-top: 20px
+	.footer-s21__item-img
+		height: 250px
+		display: flex
+		align-items: center
+	.footer-s21__item-icon-flex
+		min-height: 145px
+	.header-s21__item
+		flex: 1 1 80px
+		max-width: 80px
+@media (max-width: 480px)
+	#samsungs21
+		h2
+			font-size: 35px
+		h3
+			font-size: 30px
+	.header-s21__container
+		padding: 30px 20px 0 20px
+		margin-top: 0
+	.header-s21__logo
+		position: relative
+		left: 0
+		top: 0
+		padding-bottom: 45px
+		img
+			margin: 0 auto !important
+	.header-s21__item-flex
+		justify-content: center
+	.header-s21__item
+		flex: 1 1 50%
+		max-width: 50%
+		padding-bottom: 40px
+		&:last-child
+			padding-bottom: 0
+		img
+			margin: 0 auto !important
+	.zoom-s21__flex
+		flex-direction: column-reverse
+	.zoom-s21__item-h2
+		h2
+			text-align: left !important
+	.zoom-s21__h2
+		padding-bottom: 40px
+		h2
+			text-align: left !important
+	.zoom-s21__container
+		padding: 35px 15px 25px 15px
+	.item-grid1
+		display: none
+	.zoom-s21__table-grid
+		grid-template-columns: 1fr 1fr
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+		gap: 18px 0
+		grid-template-areas: "item-grid2 item-grid3" "item-grid4 item-grid4" "item-grid5 item-grid6" "item-grid7 item-grid7" "item-grid8 item-grid9" "item-grid10 item-grid10" "item-grid11 item-grid12" "item-grid13 item-grid13" "item-grid14 item-grid15"
+	.item-grid
+		text-align: center
+	.gr-item-bold.fw-normal
+		font-weight: normal
+	.zoom-s21__item
+		&:first-child
+			position: relative
+			right: -32px
+	.footer-s21__container-flex
+		flex-direction: column
+	.footer-s21__item
+		border-radius: 0
+		&:first-child
+			margin-right: 0
+		&:last-child
+			margin-left: 0
+			margin-top: 20px
+			.footer-s21__item-img
+				max-width: 265px
+				margin: 0 auto
+	.footer-s21__item-icon-flex
+		flex-wrap: wrap
+		justify-content: center
+	.footer-s21__item-icon
+		flex: 1 1 50%
+		max-width: 50%
+		padding-bottom: 22px
+		&:last-child
+			padding-bottom: 0
+	.header-s21__phone-mob
+		display: block
+	.header-s21__phone-desk
+		display: none
+	.header-s21
+		border-radius: 0
+	.zoom-s21
+		border-radius: 0
