@@ -1,7 +1,7 @@
-#matepadt10 {
+#lego-wrap {
   display: block;
   margin: 0 auto;
-  max-width: 1316px;
+  max-width: 1366px;
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -9,55 +9,44 @@
   position: relative;
 }
 
-#matepadt10 img:hover {
+#lego-wrap img:hover {
   opacity: 1;
 }
 
-#matepadt10:first-letter {
+#lego-wrap:first-letter {
   padding-left: 0;
 }
 
-#matepadt10 img {
+#lego-wrap img {
   display: block;
   margin-right: initial;
   margin-left: initial;
 }
 
-#matepadt10 p {
-  font-size: -webkit-calc(1rem + 0.5vw);
-  font-size: -moz-calc(1rem + 0.5vw);
-  font-size: calc(1rem + 0.5vw);
+#lego-wrap p {
+  font-size: 24px;
   margin-bottom: 0;
+  color: #000000;
 }
 
-#matepadt10 h2 {
-  font-size: -webkit-calc(1rem + 2vw);
-  font-size: -moz-calc(1rem + 2vw);
-  font-size: calc(1rem + 2vw);
+#lego-wrap h2 {
+  font-size: 94px;
   line-height: 1.1;
-  letter-spacing: 3px;
-}
-
-#matepadt10 h3 {
-  font-size: -webkit-calc(1rem + 1vw);
-  font-size: -moz-calc(1rem + 1vw);
-  font-size: calc(1rem + 1vw);
-  margin: 0;
-  padding-top: 0;
-  line-height: 1.1;
-  text-align: inherit;
+  color: #000000;
   font-weight: bold;
 }
 
-#matepadt10 li {
-  font-size: -webkit-calc(1rem + 0.3vw);
-  font-size: -moz-calc(1rem + 0.3vw);
-  font-size: calc(1rem + 0.3vw);
-  padding-bottom: 10px;
+#lego-wrap h3 {
+  font-size: 34px;
+  margin: 0;
+  padding-top: 0;
+  line-height: 1.1;
 }
 
-#matepadt10 li:last-child {
-  padding-bottom: 0;
+#lego-wrap a {
+  color: #0071BC;
+  font-size: 16px;
+  display: block;
 }
 
 span.word-wrap {
@@ -65,14 +54,301 @@ span.word-wrap {
   word-wrap: break-word;
 }
 
-span.fw-bold {
-  font-weight: bold;
-}
-
-span.tx-uppercase {
-  text-transform: uppercase;
-}
-
 .breadcrumbs {
   display: none;
+}
+
+.bgrd-colorFFD500 {
+  background: #FFD500;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+}
+
+.main-container.page {
+  padding-left: 0;
+  padding-right: 0;
+  background: #fff;
+}
+
+.lego-header {
+  margin-top: 55px;
+  margin-bottom: 65px;
+  display: inline-block;
+  width: 100%;
+}
+
+.lego-header__container {
+  position: relative;
+  min-height: 665px;
+  height: 100%;
+}
+
+.lego-header__logo {
+  position: relative;
+  padding: 30px 0 0 40px;
+  z-index: 10;
+}
+
+.lego-header__text {
+  padding: 30px 0 50px 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.lego-header__banner {
+  position: absolute;
+  right: 0;
+  top: -35px;
+  z-index: 9;
+  display: block;
+}
+
+.lego-header__banner-mob {
+  display: none;
+}
+
+.lego-header__menu-flex {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  max-width: 1225px;
+  margin: 0 auto;
+  width: 100%;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+     -moz-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.lego-header__menu-item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 280px;
+     -moz-box-flex: 1;
+      -ms-flex: 1 1 280px;
+          flex: 1 1 280px;
+  max-width: 280px;
+  margin-right: 10px;
+  min-height: 280px;
+  position: relative;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+     -moz-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+}
+
+.lego-header__menu-item:last-child {
+  margin-right: 0;
+}
+
+.lego-header__menu-item:hover .lego-header__bgrd-hover {
+  background-image: url(https://cdn.comfy.ua/media/x/img/lego/ellipse_hover.png);
+}
+
+.lego-header__bgrd-hover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-image: url(https://cdn.comfy.ua/media/x/img/lego/ellipse.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+     -moz-background-size: contain;
+       -o-background-size: contain;
+          background-size: contain;
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  z-index: 7;
+  bottom: -30px;
+}
+
+.lego-header__img-category {
+  position: relative;
+  z-index: 8;
+  bottom: -35px;
+}
+
+.lego-header__category-text {
+  position: absolute;
+  z-index: 9;
+  bottom: 87px;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  font-weight: bold;
+  -webkit-transform: rotate(-2.78deg);
+     -moz-transform: rotate(-2.78deg);
+      -ms-transform: rotate(-2.78deg);
+       -o-transform: rotate(-2.78deg);
+          transform: rotate(-2.78deg);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  #lego-wrap p {
+    font-size: 15px;
+  }
+  .lego-header__menu-flex {
+    -webkit-box-pack: space-evenly;
+    -webkit-justify-content: space-evenly;
+       -moz-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .lego-header__menu-item {
+    min-height: 275px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 190px;
+       -moz-box-flex: 1;
+        -ms-flex: 1 1 190px;
+            flex: 1 1 190px;
+    max-width: 190px;
+    min-height: 240px;
+  }
+  .lego-header__category-text {
+    bottom: 70px;
+  }
+  .lego-header__container {
+    min-height: 585px;
+  }
+  .lego-header__bgrd-hover {
+    bottom: 0;
+    height: 190px;
+  }
+  .lego-header__img-category {
+    bottom: -20px;
+  }
+}
+
+@media (max-width: 812px) {
+  #lego-wrap p {
+    font-size: 15px;
+  }
+  .lego-header__menu-flex {
+    -webkit-box-pack: space-evenly;
+    -webkit-justify-content: space-evenly;
+       -moz-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .lego-header__menu-item {
+    min-height: 275px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 190px;
+       -moz-box-flex: 1;
+        -ms-flex: 1 1 190px;
+            flex: 1 1 190px;
+    max-width: 190px;
+    min-height: 240px;
+  }
+  .lego-header__category-text {
+    bottom: 70px;
+  }
+  .lego-header__container {
+    min-height: 585px;
+  }
+  .lego-header__bgrd-hover {
+    bottom: 0;
+    height: 190px;
+  }
+  .lego-header__img-category {
+    bottom: -20px;
+  }
+}
+
+@media (max-width: 480px) {
+  span.word-wrap {
+    display: initial;
+  }
+  #lego-wrap h2 {
+    font-size: 34px;
+  }
+  .lego-header__banner {
+    display: none;
+  }
+  .lego-header__banner-mob {
+    display: block;
+  }
+  .lego-header__logo {
+    padding: 30px 0 0 0px;
+  }
+  .lego-header__logo img {
+    margin: 0 auto !important;
+    max-width: 60px;
+  }
+  .lego-header {
+    margin-top: 20px;
+  }
+  .lego-header__text {
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+  }
+  .word-wrap-mob {
+    display: block;
+    word-wrap: break-word;
+  }
+  .lego-header__banner-mob img {
+    margin: 0 auto !important;
+  }
+  .lego-header__menu-flex {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    position: relative;
+  }
+  .lego-header__menu-item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 42%;
+       -moz-box-flex: 1;
+        -ms-flex: 1 1 42%;
+            flex: 1 1 42%;
+    max-width: 42%;
+    min-height: 134px;
+    margin-right: 0;
+  }
+  .lego-header__bgrd-hover {
+    height: 134px;
+  }
+  .lego-header__category-img {
+    max-width: 134px;
+  }
 }

@@ -48,7 +48,7 @@ span.word-wrap
 	background: #F4F4F4
 	border-radius: 16px
 .header-s21__container
-	padding: 60px 20px 0 20px
+	padding: 60px 20px 40px 20px
 	margin-top: 20px
 	position: relative
 .header-s21__logo
@@ -80,14 +80,11 @@ span.word-wrap
 		font-weight: bold
 		font-size: 16px
 .s21__link
-	background: #000000
+	background: #FF671F
 	border-radius: 28px
 	width: 100%
 	max-width: 275px
 	margin: 0 auto
-	margin-bottom: 30px
-	&.mb0imp
-		margin-bottom: 0
 	a
 		text-transform: uppercase
 		color: #fff
@@ -104,7 +101,7 @@ span.word-wrap
 	border-radius: 16px
 	margin-top: 20px
 .zoom-s21__container
-	padding: 50px 75px 25px 55px
+	padding: 50px 75px 40px 55px
 .zoom-s21__h2
 	padding-bottom: 30px
 	text-align: center
@@ -113,7 +110,7 @@ span.word-wrap
 	justify-content: space-between
 	align-items: center
 	width: 100%
-	padding-bottom: 50px
+	padding-bottom: 40px
 .zoom-s21__item
 	flex: 1 1 0
 .zoom-s21__item-h2
@@ -250,31 +247,70 @@ span.word-wrap
 	border-radius: 3px 0 0 3px
 
 .fade
-	-webkit-animation-name: fade
-	-webkit-animation-duration: 1.5s
-	animation-name: fade
 	animation-duration: 1.5s
-
-@-webkit-keyframes fade
-	from
-	opacity: .4
-	to
-	opacity: 1
 
 @keyframes fade
 	from
 		opacity: .4
 	to
 		opacity: 1
+// action
+.action-blok
+	position: relative
+	max-width: 800px
+	margin: 0 auto
+	padding: 20px 0 40px 0
+.action-blok__container-flex
+	display: flex
+	align-items: center
+	justify-content: space-between
+.action-blok__item
+	margin-right: 15px
+	img
+		margin: 0 auto !important
+	&:nth-child(2n+1)
+		flex: 1 1 20px
+		max-width: 20px
+	&:nth-child(2n)
+		flex: 1 1 185px
+		max-width: 185px
+	&:nth-child(4)
+		flex: 1 1 255px
+		max-width: 255px
+	&:last-child
+		flex: 1 1 210px
+		max-width: 210px
+		margin-right: 0
+.action-blok__text
+	font-weight: bold
+	font-size: 20px
+	text-align: center
+	color: #000
+	padding-top: 5px
+.action-blok__img
+	min-height: 105px
+	display: flex
+	align-items: flex-end
+.action-blok-price
+	display: block
+	padding: 0 0 50px 0
+.action-blok-price__img
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+	min-height: 175px
+	img
+		margin: 0 auto !important
 // media
 // @media (max-width: 1250px)
 @media (max-width: 1024px)
 	#samsungs21 h2
 		font-size: 45px
 	.header-s21__container
-		padding: 85px 20px 0 20px
+		padding: 85px 20px 40px 20px
 	.zoom-s21__container
-		padding: 50px 15px 25px 15px
+		padding: 50px 15px 40px 15px
 	.zoom-s21__flex
 		flex-direction: column
 	.zoom-s21__item
@@ -293,7 +329,7 @@ span.word-wrap
 		h3
 			font-size: 30px
 	.header-s21__container
-		padding: 85px 20px 0 20px
+		padding: 85px 20px 30px 20px
 	.zoom-s21__container
 		padding: 50px 15px 25px 15px
 	.zoom-s21__flex
@@ -310,6 +346,9 @@ span.word-wrap
 	.header-s21__item
 		flex: 1 1 80px
 		max-width: 80px
+	.action-blok__text
+		font-weight: bold
+		font-size: 18px
 @media (max-width: 480px)
 	#samsungs21
 		h2
@@ -317,7 +356,7 @@ span.word-wrap
 		h3
 			font-size: 30px
 	.header-s21__container
-		padding: 30px 20px 0 20px
+		padding: 30px 20px 30px 20px
 		margin-top: 0
 	.header-s21__logo
 		position: relative
@@ -391,3 +430,25 @@ span.word-wrap
 		border-radius: 0
 	.zoom-s21
 		border-radius: 0
+	.action-blok__container-flex
+		flex-direction: column
+	.action-blok__item
+		margin-right: 0
+		margin-bottom: 31px
+		&:last-child
+			margin-bottom: 0
+		&:nth-child(2n+1)
+			flex: 1 1 100%
+			max-width: 100%
+		&:nth-child(2n)
+			flex: 1 1 100%
+			max-width: 100%
+		&:nth-child(4)
+			flex: 1 1 100%
+			max-width: 100%
+		&:last-child
+			flex: 1 1 100%
+			max-width: 100%
+			margin-right: 0
+	.action-blok__img
+		min-height: auto
