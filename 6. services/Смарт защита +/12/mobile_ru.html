@@ -1,7 +1,237 @@
-<style>
+<style type="text/css">
+  .tabs-content {
+    padding: 0 0;
+  }
 
+  #servs-mob-plsh {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    background: #fff;
+  }
+
+  #servs-mob-plsh img:hover {
+    opacity: 1;
+  }
+
+  #servs-mob-plsh img {
+    opacity: 1;
+  }
+
+  #servs-mob-plsh {
+    max-width: 1316px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background: #fff;
+  }
+
+  #servs-mob-plsh section.serv-mob1 {
+    background: url(https://cdn.comfy.ua/media/x/img/1493841/volna2.png) no-repeat;
+    background-position: top;
+    background-size: contain;
+    /* height: 533px; */
+    display: flex;
+    align-items: center;
+    padding-top: 110px;
+    position: relative;
+    margin-bottom: 100px;
+
+  }
+
+  a.link-goto {
+    color: #43b02a;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  a.link-goto:hover {
+    text-decoration: none;
+  }
+
+
+  .col:first-child {
+    flex: 1;
+    text-align: center;
+  }
+
+  .col:last-child {
+    flex: 2;
+    max-width: 515px;
+    margin-right: 100px;
+    width: 100%;
+  }
+
+  .col h2 {
+    text-align: left;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    color: #000000;
+    margin-bottom: 50px;
+  }
+
+  .wrap-prod-h2 h2 {
+    text-align: left;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    color: #000000;
+    margin-bottom: 45px;
+  }
+
+  .wrap-prod-flex-wr {
+    padding: 0px 25px 50px 100px;
+  }
+
+  .wrap-prod-flex {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .wrap-prod-flex_item {
+    flex: 1 1 0;
+  }
+
+  .wrap-prod-flex_item ul {
+    list-style-type: none;
+  }
+
+  .wrap-prod-flex_item li {
+    position: relative;
+    margin-bottom: 25px;
+    padding-left: 45px;
+    font-size: 16px;
+    color: #000000;
+    min-height: 30px;
+  }
+
+  .wrap-prod-flex_item li:last-child {
+    padding-bottom: 0;
+  }
+
+  .wrap-prod-flex_item li::before {
+    content: "";
+    width: 28px;
+    height: 28px;
+    background: #43B02A;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: #fff;
+    line-height: 1.7;
+  }
+
+  .wrap-prod-flex_item li:nth-child(1)::before {
+    content: "1";
+  }
+
+  .wrap-prod-flex_item li:nth-child(2)::before {
+    content: "2";
+  }
+
+  .wrap-prod-flex_item li:nth-child(3)::before {
+    content: "3";
+  }
+
+  .wrap-prod-flex_item li:nth-child(4)::before {
+    content: "4";
+  }
+
+  .col p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 25px;
+  }
+
+  .col ul {
+    list-style-type: none;
+    padding-bottom: 25px;
+  }
+
+  .col li {
+    padding-bottom: 15px;
+    font-size: 16px;
+  }
+
+  .col li:last-child {
+    padding-bottom: 0;
+  }
+
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    #servs-mob-plsh section.serv-mob1 {
+      flex-direction: column;
+      padding: 45px 15px 0 15px;
+      margin-bottom: 15px;
+    }
+
+    .col:last-child {
+      flex: 2;
+      max-width: 100%;
+      margin-right: 0;
+    }
+
+    .col:first-child img {
+      max-width: 65%;
+    }
+
+    .col h2 {
+      font-size: 25px;
+      margin-bottom: 25px;
+    }
+
+    .wrap-prod-flex-wr {
+      padding: 0px 15px 50px 15px;
+    }
+
+    .wrap-prod-h2 h2 {
+      font-size: 25px;
+    }
+
+    .wrap-prod-flex {
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    #servs-mob-plsh section.serv-mob1 {
+      align-items: center;
+      padding-top: 25px;
+    }
+
+    .col:last-child {
+      flex: 2;
+      max-width: 395px;
+      margin-right: 15px;
+    }
+
+    .wrap-prod-flex-wr {
+      padding: 0px 25px 50px 15px;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    #servs-mob-plsh section.serv-mob1 {
+      align-items: center;
+      padding-top: 25px;
+    }
+
+    .wrap-prod-flex-wr {
+      padding: 0px 25px 50px 15px;
+    }
+
+    .col:last-child {
+      max-width: 415px;
+      margin-right: 15px;
+    }
+  }
 </style>
-
 
 <div id="servs-mob-plsh">
 
@@ -9,11 +239,11 @@
   <section class="serv-mob1">
 
     <div class="col">
-      <img src="https://cdn.comfy.ua/media/x/img/prod1_1.png">
+      <img src="https://cdn.comfy.ua/media/x/img/smart-zashhita/img_1.png">
     </div>
 
     <div class="col">
-      <h2>Что входит в "Смарт защита+"?</h2>
+      <h2>Что входит в услугу<br />"Смарт защита +"</h2>
       <p><b>1.</b> БЕСПЛАТНО в сертифицированных сервисных центрах: </p>
       <ul>
         <li>- замена разбитого экрана</li>
@@ -29,29 +259,27 @@
 
   <section class="wrap-prod-flex-wr">
     <div class="wrap-prod-h2">
-      <h2>Что делать, если смартфон<br/> подвёл?</h2>
+      <h2>Что делать, если смартфон<br>(гаджет) подвёл?</h2>
     </div>
     <div class="wrap-prod-flex">
       <div class="wrap-prod-flex_item">
         <ul>
-          <li>Обратиться на горячую линию страховой компании ""ЭКТА"" 0 800 305 122 и зарегистрировать обращение</li>
-          <li>Отправить технику в сервисный центр</li>
-          <li>Отправить копии:<br />
-            <p>- заявление на ремонт (скачать на сайте ""Экта""/получить у оператора ""Экта"" в Viber)</p><br />
-            <p>- заполненный гарантийный талон</p><br />
-            <p>- копия фискального чека на смартфон</p><br />
-            <p>- копия фискального чека "Смарт защита +"</p><br />
-            <p>в отделение Новой Почты № 268 г. Киев (получатель: СКЛАД ""ЭКТА Сервис"")</p>
+          <li>Обратиться на горячую линию страховой компании "ЭКТА" 0 800 305 122 и зарегистрировать обращение</li>
+          <li>
+            <p>Подготовить копии таких документов:</p><br>
+            <p>- заявление на ремонт <a target="_blank" class="link-goto" href="https://cdn.comfy.ua/media/x/pdf/zajava-smart-zahist.pdf">скачать</a></p><br>
+            <p>- заполненный гарантийный талон</p><br>
+            <p>- копия фискального чека на смартфон</p><br>
+            <p>- номер договора «Смарт защита +», который находится в нижней части фискального чека</p><br>
           </li>
+          <li>Отправить смартфон с копиями документов в сервисный центр (отделение Новой Почты № 268 г. Киев, получатель: СКЛАД "ЭКТА Сервис")</li>
           <li>Получить отремонтированную технику</li>
         </ul>
       </div>
-      <div class="wrap-prod-flex_item">
-        <img src="https://cdn.comfy.ua/media/x/img/prod2_1.png" alt="">
+      <div style="display: flex; justify-content: center;" class="wrap-prod-flex_item">
+        <img src="https://cdn.comfy.ua/media/x/img/Group_53.png" alt="">
       </div>
     </div>
   </section>
-
-
 
 </div>
