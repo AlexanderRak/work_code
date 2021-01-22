@@ -1,0 +1,237 @@
+/*default styles*/
+
+#nokia 
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 32px
+    font-weight: bold
+    padding: 0
+    margin: 20px 0 30px 0
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#nokia 
+  .camera
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding-top: 70px
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .camera__txt
+      padding: 70px
+  
+  .proc
+    text-align: center
+    padding: 40px 70px
+    img
+      margin: 0 auto
+      margin-top: 20px
+    .proc__txt
+      max-width: 500px
+      box-sizing: border-box
+      margin: 0 auto
+
+  .ekran
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding-bottom: 40px
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .ekran__txt
+      padding: 70px
+
+  .battery
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 40px 0
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+      img
+        margin: 0 auto
+    .battery__txt
+      padding: 70px
+
+  .android
+    display: flex
+    flex-direction: row
+    align-items: center
+    position: relative
+    padding-bottom: 40px
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .android__txt
+      padding: 70px
+      img
+        position: absolute
+        bottom: 20px
+        right: 20px
+  
+  .img__android
+    position: relative
+    img
+      &:last-of-type
+        position: absolute
+        bottom: 20px
+        right: 20px
+
+  .func
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 40px 0
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+      padding: 0 70px
+    .func__icon
+      .func__list
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        >li
+          max-width: 50%
+          box-sizing: border-box
+          text-align: center
+          padding: 20px
+          img
+            margin: 0 auto
+          p>strong
+            display: block
+            margin: 30px 0 20px 0
+          p 
+            font-size: 14px
+          &:nth-of-type(odd)
+            border-right: solid 1px #dddee0
+          &:nth-of-type(even)
+            border-left: solid 1px #dddee0
+          &:nth-of-type(1),
+          &:nth-of-type(2)
+            border-bottom: solid 1px #dddee0
+          &:nth-of-type(3),
+          &:nth-of-type(4)
+            border-top: solid 1px #dddee0
+            
+//media******************************************************************       
+
+@media (max-width: 812px)
+  #nokia .camera
+    padding-top: 40px
+  #nokia .camera .camera__txt
+    padding: 20px
+  #nokia h2
+    font-size: 26px
+  #nokia .proc
+    padding: 40px 20px
+  #nokia .ekran .ekran__txt
+    padding: 20px
+  #nokia .battery .battery__txt
+    padding: 20px
+  #nokia .android .android__txt
+    padding: 20px
+  #nokia .func > div
+    padding: 0 20px
+  #nokia .func
+    flex-direction: column
+    >div
+      max-width: 100%
+      text-align: center
+    .func__icon
+      margin-top: 20px
+
+@media (max-width: 480px)
+  #nokia
+    overflow: hidden
+    .image__size
+      // min-height: 720px
+      min-width: 800px
+      transform: translateX(-27%)
+  #nokia .camera
+    flex-direction: column-reverse
+    >div
+      max-width: 100%
+  #nokia h2
+    font-size: 24px
+  #nokia .proc .proc__txt
+    text-align: left
+  #nokia .ekran
+    flex-direction: column-reverse
+    >div
+      max-width: 100%
+  #nokia .ekran .ekran__txt
+    text-align: center
+  #nokia .battery
+    flex-direction: column-reverse
+    >div
+      max-width: 100%
+  #nokia .battery .battery__txt
+    padding-top: 0
+  #nokia .android
+    flex-direction: column
+    >div
+      max-width: 100%
+  #nokia .func > div
+    text-align: left
+  #nokia .func .func__icon .func__list
+    flex-direction: column
+    >li
+      border: none !important
+      max-width: 100%
+      text-align: left
+      display: flex
+      flex-direction: row
+      align-items: center
+      padding: 0
+      img
+        flex: 0.5
+        max-width: max-content
+      div
+        flex: 0.7
+  #nokia .android .android__txt img,
+  #nokia .img__android img:nth-of-type(2)
+    max-width: 30%
+  #nokia .camera
+    padding-top: 0
