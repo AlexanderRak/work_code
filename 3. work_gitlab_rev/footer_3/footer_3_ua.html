@@ -594,7 +594,7 @@
   }
 
   .footer-info__item span {
-    padding: 0 0 0 7rem;
+    /* padding: 0 0 0 7rem; */
     text-transform: none;
     font-size: 14px;
 }
@@ -612,10 +612,12 @@
     left: 0;
   }
   span.break-word {
-    display: block;
+    display: block !important;
     word-wrap: break-word;
     padding: 0 !important;
-    font-size: 12px;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    color: #616161 !important;
   }
   span.break-word:before {display: none;}
 
@@ -629,9 +631,9 @@
     .footer-info__item_guarantee span:before {
       left: 50%;
     }
-    .footer-info__item span {
+    /* .footer-info__item span {
       padding: 5rem 0 0;
-    }
+    } */
 
   }
 
@@ -639,24 +641,28 @@
 <div class="footer-info hide-on-mobile">
   <ul class="narrow-container footer-info__i">
     <li class="footer-info__item footer-info__item_delivery">
-      <span> Доставка
+      <div>
+        <span>Доставка</span>
         <p>Самовивіз з магазину «Comfy», <span class="break-word">доставка за адресою або у відділення</span> «Нова пошта» і Justin.</p>
-      </span>
+      </div>
     </li>
     <li class="footer-info__item footer-info__item_guarantee">
-      <span>Гарантія
+      <div>
+        <span>Гарантія</span>
         <p>Сертифікована техніка з <span class="break-word">офіційною гарантією від</span> виробника.</p>
-      </span>
+      </div>
     </li>
     <li class="footer-info__item footer-info__item_payment">
-      <span>Оплата
+      <div>
+        <span>Оплата</span>
         <p>Оплатити покупку можна <span class="break-word">готівкою, карткою або</span> безготівковим розрахунком.</p>
-      </span>
+      </div>
     </li>
     <li class="footer-info__item footer-info__item_return">
-      <span>Повернення
+      <div>
+        <span>Повернення</span>
         <p>Повернення товару здійснюється <span class="break-word">протягом 14 днів після покупки,</span> відповідно до чинного закону.</p>
-      </span>
+      </div>
     </li>
   </ul>
 </div>
@@ -824,7 +830,7 @@
               <li class="list__item"> <a href="{{store url=""}}contact.html" class="list__link"> Контакти </a> </li>
               <li class="list__item"> <a href="{{store url=""}}contact-media.html" class="list__link"> Прес-центр </a></li>
               <li class="list__item"> <a href="http://work.comfy.ua/main/" target="_blank" class="list__link"> Робота у COMFY</a> </li>
-              <li class="list__item"> <a href="http://work.comfy.ua/" target="_blank" class="list__link"> Люди COMFY </a> </li>
+              <!-- <li class="list__item"> <a href="http://work.comfy.ua/" target="_blank" class="list__link"> Люди COMFY </a> </li> -->
               <li class="list__item"> <a href="{{store url=""}}quality.html" class="list__link"> Політика конфіденційності </a> </li>
               <li class="list__item"> <a href="{{store url=""}}tender.html" class="list__link"> Тендер </a> </li>
               <li class="list__item"> <a href="{{store url=""}}partners.html" class="list__link"> Партнерам </a> </li>
@@ -863,6 +869,7 @@
               <li class="list__item"> <a class="list__link" href="/garantija.html"> Гарантія</a>
               <li class="list__item"> <a href="{{store url="repair.html}}" class="list__link"> Статус товару в ремонті</a> </li>
               <li class="list__item"> <a href="{{store url="question.html"}}" class="list__link"> Поширені запитання</a> </li>
+              <li class="list__item"> <a class="list__link" href="{{store url="pravila-polzovanija-sajtom.html"}}"> Правила користування сайтом </a> </li>
               <!-- <li class="list__item"> <a class="list__link" href="{{store url=""}}payment_document"> Договір публічної оферти</a> -->
               <!-- <li class="list__item"> <a class="list__link" href="/sitemap/" _mce_href="/sitemap/" title="Мапа сайту">Мапа сайту</a> </li> -->
             </ul>
@@ -946,11 +953,11 @@
   
   <div class="footer-bottom">
     <div class="footer-bottom__left">
-      <p class="footer-copyright">© Всі права захищені ТОВ «КОМФІ ТРЕЙД», 2010–2020</p>
+      <p class="footer-copyright">© Всі права захищені ТОВ «КОМФІ ТРЕЙД», 2010–2021</p>
     </div>
-    <div class="footer-bottom__right">
+    <!-- <div class="footer-bottom__right">
       <p class="footer-dev">Дизайн i pозробка - <a href="http://oggettoweb.ru/" target="_blank" rel="nofollow"
           class="footer-dev__logo">Oggetto</a></p>
-    </div>
+    </div> -->
   </div>
 </div>

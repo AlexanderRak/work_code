@@ -595,7 +595,7 @@
   }
 
   .footer-info__item span {
-    padding: 0 0 0 7rem;
+    /* padding: 0 0 0 7rem; */
     text-transform: none;
     font-size: 14px;
 }
@@ -613,10 +613,12 @@
     left: 0;
   }
   span.break-word {
-    display: block;
+    display: block !important;
     word-wrap: break-word;
     padding: 0 !important;
-    font-size: 12px;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    color: #616161 !important;
   }
   span.break-word:before {display: none;}
 
@@ -630,9 +632,9 @@
     .footer-info__item_guarantee span:before {
       left: 50%;
     }
-    .footer-info__item span {
+    /* .footer-info__item span {
       padding: 5rem 0 0;
-    }
+    } */
 
   }
 </style>
@@ -640,24 +642,28 @@
 <div class="footer-info hide-on-mobile">
   <ul class="narrow-container footer-info__i">
     <li class="footer-info__item footer-info__item_delivery">
-      <span> Доставка
+      <div>
+        <span>Доставка</span>
         <p>Самовывоз из магазина «Comfy», <span class="break-word">доставка по адресу или в отделения</span>«Нова пошта» и Justin</p>
-      </span>
+      </div>
     </li>
     <li class="footer-info__item footer-info__item_guarantee">
-      <span>Гарантия
+      <div>
+        <span>Гарантия</span>
         <p>Сертифицированная техника с <span class="break-word">официальной гарантией от</span> производителя.</p>
-      </span>
+      </div>
     </li>
     <li class="footer-info__item footer-info__item_payment">
-      <span>Оплата
+      <div>
+        <span>Оплата</span>
         <p>Оплатить покупку можно <span class="break-word">наличными, картой или</span> безналичным расчетом.</p>
-      </span>
+      </div>
     </li>
     <li class="footer-info__item footer-info__item_return">
-      <span>Возврат
+      <div>
+        <span>Возврат</span>
         <p>Возврат товара осуществляется в <span class="break-word">течение 14 дней после покупки, в</span> соответствии с действующим законом.</p>
-      </span>
+      </div>
     </li>
   </ul>
 </div>
@@ -825,7 +831,7 @@
               <li class="list__item"> <a class="list__link" href="{{store url=""}}contact.html"> Контакты </a> </li>
               <li class="list__item"> <a class="list__link" href="{{store url=""}}contact-media.html"> Пресс-центр </a></li>
               <li class="list__item"> <a class="list__link" href="http://work.comfy.ua/main/" target="_blank"> Работа в COMFY </a> </li>
-              <li class="list__item"> <a class="list__link" href="http://work.comfy.ua/" target="_blank"> Люди COMFY </a> </li>
+              <!-- <li class="list__item"> <a class="list__link" href="http://work.comfy.ua/" target="_blank"> Люди COMFY </a> </li> -->
               <li class="list__item"> <a class="list__link" href="{{store url=""}}quality.html"> Политика конфиденциальности </a> </li>
               <li class="list__item"> <a class="list__link" href="{{store url=""}}tender.html"> Тендер </a> </li>
               <li class="list__item"> <a class="list__link" href="{{store url=""}}partners.html"> Партнерам </a> </li>
@@ -865,6 +871,7 @@
               <li class="list__item"> <a class="list__link" href="/garantija.html"> Гарантия</a>
               <li class="list__item"> <a class="list__link" href="{{store url="repair.html"}}"> Статус товара в ремонте</a> </li>
               <li class="list__item"> <a class="list__link" href="{{store url="question.html"}}"> Часто задаваемые вопросы </a> </li>
+              <li class="list__item"> <a class="list__link" href="{{store url="pravila-polzovanija-sajtom.html"}}"> Правила пользования сайтом </a> </li>
               <!-- <li class="list__item"> <a class="list__link" href="{{store url=""}}payment_document"> Договор публичной оферты</a> -->
               <!-- <li class="list__item"> <a class="list__link" href="/sitemap/" _mce_href="/sitemap/" title="Карта сайта">Карта сайта</a> </li> -->
             </ul>
@@ -947,12 +954,12 @@
     
     <div class="footer-bottom">
       <div class="footer-bottom__left">
-        <p class="footer-copyright">© Все права защищены ООО «КОМФИ ТРЕЙД», 2010–2020</p>
+        <p class="footer-copyright">© Все права защищены ООО «КОМФИ ТРЕЙД», 2010–2021</p>
       </div>
-      <div class="footer-bottom__right">
+      <!-- <div class="footer-bottom__right">
         <p class="footer-dev">Дизайн и разработка - <a href="http://oggettoweb.ru/" target="_blank" rel="nofollow"
             class="footer-dev__logo">Oggetto</a></p>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
