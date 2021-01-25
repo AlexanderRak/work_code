@@ -100,6 +100,9 @@ span.word-wrap
 	&:hover
 		.lego-header__bgrd-hover
 			background-image: url(https://cdn.comfy.ua/media/x/img/lego/ellipse_hover.png)
+	&:nth-child(3)
+		p
+			padding-left: 45px
 .lego-header__bgrd-hover
 	position: absolute
 	left: 0
@@ -130,13 +133,170 @@ span.word-wrap
 	left: 0
 	right: 0
 	margin: 0 auto
-
+.lego-top__container
+	padding: 30px 0 95px 0
+.lego-top__text
+	text-align: left
+.lego-top__wrap
+	position: relative
+	width: 100%
+	height: auto
+	z-index: 10
+.lego-top__wrap-flex
+	display: flex
+	justify-content: space-between
+	padding: 50px 18px 35px 18px
+	position: relative
+.lego-top__img
+	position: relative
+	&::before
+		content: ""
+		background-image: url(https://cdn.comfy.ua/media/x/img/lego/sect2_img1.png)
+		background-position: center
+		background-size: contain
+		position: absolute
+		left: 0
+		right: 0
+		top: -39px
+		margin: 0 auto
+		width: 440px
+		height: 75px
+		z-index: 1
+.lego-top__wrap-item
+	flex: 1 1 436px
+	max-width: 436px
+	position: relative
+	transition: .3s
+	margin-right: 10px
+	border-radius: 8px
+	&:last-child
+		margin-right: 0
+	&.item-bgrd1, &.item-bgrd2, &.item-bgrd3
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		width: 100%
+		height: 220px
+	&.item-bgrd1
+		background-image: url(https://cdn.comfy.ua/media/x/img2/item1_lego.png.png)
+	&.item-bgrd2
+		background-image: url(https://cdn.comfy.ua/media/x/img2/item2_lego.png.png)
+	&.item-bgrd3
+		background-image: url(https://cdn.comfy.ua/media/x/img2/item3_lego.png.png)
+	&:hover
+		.lego-top__text h3
+			text-decoration: underline
+.lego-top__text
+	position: absolute
+	left: 15px
+	top: 15px
+	color: #fff
+	text-align: left
+.lego-top__img-pos
+	position: absolute
+	bottom: -95px
+	left: 0
+	right: 0
+	margin: 0 auto
+.lego-top__text-top
+	padding: 0 0 30px 40px
+.lego-years__text-top
+	text-align: left
+	padding: 0 0 30px 40px
+.lego-years__wrap-flex
+	display: flex
+	justify-content: space-between
+.lego-years__item
+	flex: 1 1 267px
+	max-width: 267px
+	position: relative
+	margin-right: 8px
+	&:last-child
+		margin-right: 0
+	&:hover
+		.lego-years__text h3
+			text-decoration: underline
+.lego-years__text
+	position: absolute
+	left: 0
+	right: 0
+	top: 20px
+	margin: 0 auto
+	text-align: center
+	color: #000
+.lego-games__text-top
+	text-align: left
+	padding: 0 0 30px 40px
+.lego-years__container
+	padding-bottom: 30px
+.btn-clik
+	max-width: 335px
+	text-align: center
+	border-radius: 8px
+	border: 2px solid #fcbf00
+	color: #000
+	font-weight: bold
+	font-size: 15px
+	padding: 31px 5px
+	position: relative
+	cursor: pointer
+	margin: 0 auto
+	overflow: hidden
+	transition: .3s
+	&::before
+		content: ""
+		background-image: url(https://cdn.comfy.ua/media/x/img2/bfr.png)
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		position: absolute
+		left: 0
+		top: 0px
+		width: 54px
+		height: 19px
+		transform: rotate(180deg)
+	&::after
+		content: ""
+		background-image: url(https://cdn.comfy.ua/media/x/img2/aftr.png)
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		position: absolute
+		right: -2px
+		bottom: 0
+		width: 77px
+		height: 27px
+	&:hover
+		box-shadow: inset 0 0 10px 1px#fcbf00
+	&.active-btn
+		color: red
+.lego-games__wrap-flex
+	&.active-content
+		color: red
+.lego-games__wrap
+	display: block
+.lego-games__wrap
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-start
+	justify-content: space-between
+.lego-games__item
+	flex: 1 1 198px
+	max-width: 198px
+.lego-games__p
+	text-align: center
+	padding: 5px
+	font-size: 16px
+	color: #0071BC
 // media
 // @media (max-width: 1250px)
 @media (max-width: 1024px)
 	#lego-wrap
 		p
-			font-size: 15px
+			font-size: 20px
+			line-height: 1
+		h3
+			font-size: 27px
 	.lego-header__menu-flex
 		justify-content: space-evenly
 	.lego-header__menu-item
@@ -145,7 +305,11 @@ span.word-wrap
 		max-width: 190px
 		min-height: 240px
 	.lego-header__category-text
-		bottom: 70px
+		bottom: 50px
+		height: 50px
+		display: flex
+		align-items: center
+		justify-content: center
 	.lego-header__container
 		min-height: 585px
 	.lego-header__bgrd-hover
@@ -153,10 +317,34 @@ span.word-wrap
 		height: 190px
 	.lego-header__img-category
 		bottom: -20px
+	.lego-header__menu-item
+		&:last-child
+			.lego-header__category-img img
+				max-width: 155px
+				margin: 0 auto
+		&:nth-child(3)
+			p
+				padding-left: 25px
+	.word-wrap-mob2
+		display: block
+		word-wrap: break-word
+
+	.lego-years__wrap-flex
+		padding: 0 18px
+	.lego-top__wrap-item
+		&.item-bgrd1, &.item-bgrd2, &.item-bgrd3
+			height: 175px
+	#lego-wrap .lego-years__text h3
+		font-size: 25px
+	.lego-years__text
+		top: 5px
 @media (max-width: 812px)
 	#lego-wrap
 		p
-			font-size: 15px
+			font-size: 20px
+			line-height: 1
+		h3
+			font-size: 21px
 	.lego-header__menu-flex
 		justify-content: space-evenly
 	.lego-header__menu-item
@@ -165,7 +353,11 @@ span.word-wrap
 		max-width: 190px
 		min-height: 240px
 	.lego-header__category-text
-		bottom: 70px
+		bottom: 50px
+		height: 50px
+		display: flex
+		align-items: center
+		justify-content: center
 	.lego-header__container
 		min-height: 585px
 	.lego-header__bgrd-hover
@@ -173,12 +365,41 @@ span.word-wrap
 		height: 190px
 	.lego-header__img-category
 		bottom: -20px
+	.lego-header__menu-item
+		&:last-child
+			.lego-header__category-img img
+				max-width: 155px
+				margin: 0 auto
+		&:nth-child(3)
+			p
+				padding-left: 25px
+	.word-wrap-mob2
+		display: block
+		word-wrap: break-word
+	.lego-top__wrap-item
+		&.item-bgrd1, &.item-bgrd2, &.item-bgrd3
+			height: 135px
+	#lego-wrap .lego-years__text h3
+		font-size: 21px
+	.lego-years__text
+		top: 5px
+	.lego-top__img-pos
+		bottom: -70px
+	.lego-top__container
+		padding: 30px 0 60px 0
 @media (max-width: 480px)
 	span.word-wrap
 		display: initial
 	#lego-wrap
 		h2
 			font-size: 34px
+		p
+			font-size: 15px
+			line-height: 1
+			max-width: 100px
+			margin: 0 auto
+		h3
+			font-size: 24px
 	.lego-header__banner
 		display: none
 	.lego-header__banner-mob
@@ -190,10 +411,14 @@ span.word-wrap
 			max-width: 60px
 	.lego-header
 		margin-top: 20px
+		margin-bottom: 20px
 	.lego-header__text
 		text-align: center
 		padding: 20px 20px 20px 20px
 	.word-wrap-mob
+		display: block
+		word-wrap: break-word
+	.word-wrap-mob2
 		display: block
 		word-wrap: break-word
 	.lego-header__banner-mob img
@@ -206,7 +431,65 @@ span.word-wrap
 		max-width: 42%
 		min-height: 134px
 		margin-right: 0
+		&:last-child
+			.lego-header__category-img img
+				max-width: 115px
+				margin: 0 auto
+		&:nth-child(3)
+			p
+				padding-left: 20px
 	.lego-header__bgrd-hover
-		height: 134px
+		height: 120px
+		max-width: 120px
 	.lego-header__category-img
 		max-width: 134px
+	.lego-header__img-category
+		bottom: -12px
+	.lego-header__category-text
+		bottom: 34px
+		height: 35px
+		display: flex
+		align-items: center
+		text-align: center
+	.lego-top__wrap-flex
+		flex-direction: column
+		padding: 50px 15px 20px 15px
+		align-items: center
+	.lego-top__wrap-item
+		flex: 1 1 auto
+		margin-right: 0
+		max-width: 280px
+		margin-bottom: 100px
+	.lego-top__text-top
+		padding: 0 15px 70px 15px
+		text-align: center
+	#lego-wrap .lego-top__text h3
+		font-size: 18px
+	.lego-top__img-pos
+		bottom: -80px
+	.lego-top__wrap
+		border-radius: 0
+	.lego-years__wrap-flex
+		flex-wrap: wrap
+		justify-content: center
+	.lego-years__item
+		flex: 1 1 135px
+		max-width: 135px
+		margin-right: 0
+		margin-bottom: 8px
+		&:nth-of-type(odd)
+			margin-right: 8px
+		&:last-child
+			margin-bottom: 8px
+	.lego-years__wrap-flex
+		padding: 0 15px
+	.lego-years__text-top
+		text-align: center
+		padding: 0 15px 30px 15px
+	.lego-top__container
+		padding: 30px 0 30px 0
+	#lego-wrap .lego-years__text h3
+		font-size: 16px
+	.lego-games__text-top
+		text-align: center
+		padding: 0 15px 30px 15px
