@@ -323,7 +323,29 @@
                   <div class="lego-games__p">LEGO DC Super Hero Girl</div>
                </a>
             </div>
-            <div class="btn-clik">Показать больше</div>
+            <div class="btn-clik">Показать больше <span class="btn-clik__str"></span></div>
+         </div>
+      </div>
+   </div>
+
+   <div class="lego-footer bgrd-colorFFD500">
+      <div class="lego-footer__container">
+         <div class="lego-footer__logo">
+            <img src="https://cdn.comfy.ua/media/x/img/lego/footer_img3.png" alt="">
+            <h3>Каталог 2021</h3>
+            <p>січень-ТРАВЕНЬ</p>
+         </div>
+         <div class="lego-footer__img-left1">
+            <img src="https://cdn.comfy.ua/media/x/img/lego/footer_img1.png" alt="">
+         </div>
+         <div class="lego-footer__img-left2">
+            <img src="https://cdn.comfy.ua/media/x/img/lego/footer_img2.png" alt="">
+         </div>
+         <div class="lego-footer__img-right1">
+            <img src="https://cdn.comfy.ua/media/x/img/lego/footer_img4.png" alt="">
+         </div>
+         <div class="lego-footer__img-right2">
+            <img src="https://cdn.comfy.ua/media/x/img/lego/footer_img5.png" alt="">
          </div>
       </div>
    </div>
@@ -335,13 +357,13 @@
    jQuery(document).ready(function ($) {
       $('.btn-clik').click(function () {
          $(this).toggleClass('active-btn');
-         $('.lego-games__wrap-flex').addClass("active-content");
+         $('.lego-games__item').addClass("active-content");
          if ($(this).hasClass('active-btn')) {
-            $(this).html('Показать меньше');
+            $(this).html('Показать меньше' + '<span class="btn-clik__str"></span>');
          }
          else {
-            $('.lego-games__wrap-flex').removeClass("active-content");
-            $(this).html('Показать больше');
+            $('.lego-games__item').removeClass("active-content");
+            $(this).html('Показать больше' + '<span class="btn-clik__str"></span>');
          };
       });
    });
