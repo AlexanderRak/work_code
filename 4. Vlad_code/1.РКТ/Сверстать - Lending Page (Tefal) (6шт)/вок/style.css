@@ -117,19 +117,19 @@
           align-items: center;
 }
 
-#tefal .gen .gen__txt span {
+#tefal .gen .gen__txt > span {
   display: block;
   text-transform: uppercase;
 }
 
-#tefal .gen .gen__txt span:nth-of-type(1) {
+#tefal .gen .gen__txt > span:nth-of-type(1) {
   text-align: center;
   font-size: 36px;
   font-weight: bold;
   line-height: normal;
 }
 
-#tefal .gen .gen__txt span:nth-of-type(1)::before {
+#tefal .gen .gen__txt > span:nth-of-type(1)::before {
   content: "";
   display: block;
   min-width: 144px;
@@ -139,7 +139,7 @@
   margin-left: -40px;
 }
 
-#tefal .gen .gen__txt span:nth-of-type(1)::after {
+#tefal .gen .gen__txt > span:nth-of-type(1)::after {
   content: "";
   display: block;
   min-width: 144px;
@@ -154,7 +154,7 @@
           transform: scale(-1, -1);
 }
 
-#tefal .gen .gen__txt span:nth-of-type(2) {
+#tefal .gen .gen__txt a {
   font-size: 24px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -182,9 +182,19 @@
      -moz-border-radius-bottomright: 30px;
           border-bottom-right-radius: 30px;
   margin-top: 80px;
+  text-decoration: none;
+  color: #fff;
 }
 
-#tefal .gen .gen__txt span:nth-of-type(2)::after {
+#tefal .gen .gen__txt a:hover {
+  background-color: #c50510;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#tefal .gen .gen__txt a::after {
   content: "";
   display: block;
   min-width: 93px;
@@ -461,7 +471,7 @@
   #tefal .gen .gen__img img {
     min-width: 900px;
   }
-  #tefal .gen .gen__txt span:nth-of-type(1) {
+  #tefal .gen .gen__txt > span:nth-of-type(1) {
     text-shadow: 3px 1px 5px black;
   }
   #tefal .represent .represent__cont .represent__txt {
