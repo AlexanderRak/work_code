@@ -68,7 +68,7 @@
       display: flex
       flex-direction: column
       align-items: center
-      span
+      >span
         display: block
         text-transform: uppercase
         &:nth-of-type(1)
@@ -93,24 +93,30 @@
             background-repeat: no-repeat
             margin-right: -40px
             transform: scale(-1,-1)
-        &:nth-of-type(2)
-          font-size: 24px
-          display: flex
-          flex-direction: row
-          align-items: center
-          background-color: #e30613
-          padding: 15px 20px
-          border-top-left-radius: 30px
-          border-bottom-right-radius: 30px
-          margin-top: 80px
-          &::after
-            content: ""
-            display: block
-            min-width: 93px
-            height: 104px
-            background-image: url("https://cdn.comfy.ua/media/x/img/1687019/kub.png")
-            background-repeat: no-repeat
-            margin-left: 20px
+      a
+        font-size: 24px
+        display: flex
+        flex-direction: row
+        align-items: center
+        background-color: #e30613
+        padding: 15px 20px
+        border-top-left-radius: 30px
+        border-bottom-right-radius: 30px
+        margin-top: 80px
+        text-decoration: none
+        color: #fff
+        text-transform: uppercase
+        &:hover
+          background-color: #c50510
+          transition: all 0.3s
+        &::after
+          content: ""
+          display: block
+          min-width: 93px
+          height: 104px
+          background-image: url("https://cdn.comfy.ua/media/x/img/1687019/kub.png")
+          background-repeat: no-repeat
+          margin-left: 20px
   .represent
     .represent__title
       padding: 50px
@@ -269,7 +275,7 @@
     .gen__img
       img
         min-width: 900px
-  #tefal .gen .gen__txt span:nth-of-type(1)
+  #tefal .gen .gen__txt >span:nth-of-type(1)
     text-shadow: 3px 1px 5px black
   #tefal .represent .represent__cont .represent__txt
     padding: 20px
@@ -361,7 +367,7 @@
       &:nth-of-type(1)
         min-width: 700px
         transform: translateX(-46%)
-  #tefal .induction .induction__txt 
+  #tefal .induction .induction__txt
     padding-bottom: 20px
     padding-top: 40px
     p
@@ -369,12 +375,12 @@
   #tefal .safely .safely__txt,
   #tefal .francia .francia__txt
     padding-top: 40px
-  #tefal .induction .induction__img 
+  #tefal .induction .induction__img
     >img
       &:nth-of-type(1)
         min-width: 700px
         transform: translateX(-33%)
-  #tefal .induction .induction__img .induction__img__abs 
+  #tefal .induction .induction__img .induction__img__abs
     right: 20px
     top: -40px
     img
@@ -385,7 +391,7 @@
     font-size: 17px
   #tefal .safely .safely__txt h2
     font-size: 24px
-  #tefal .safely .safely__img .safely__img__abs 
+  #tefal .safely .safely__img .safely__img__abs
     right: 10px
     img
       max-width: 230px
@@ -395,8 +401,8 @@
       transform: translateX(-22%)
   #tefal .francia .francia__txt p
     font-size: 17px
-  #tefal .francia 
-    .francia__img 
+  #tefal .francia
+    .francia__img
       >img
         min-width: 700px
         transform: translateX(-17%)
@@ -407,4 +413,3 @@
     top: -40px
   #tefal p
     font-size: 15px !important
-        

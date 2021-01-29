@@ -68,7 +68,7 @@
       display: flex
       flex-direction: column
       align-items: center
-      span
+      >span
         display: block
         text-transform: uppercase
         &:nth-of-type(1)
@@ -93,24 +93,29 @@
             background-repeat: no-repeat
             margin-right: -40px
             transform: scale(-1,-1)
-        &:nth-of-type(2)
-          font-size: 24px
-          display: flex
-          flex-direction: row
-          align-items: center
-          background-color: #e30613
-          padding: 15px 20px
-          border-top-left-radius: 30px
-          border-bottom-right-radius: 30px
-          margin-top: 80px
-          &::after
-            content: ""
-            display: block
-            min-width: 93px
-            height: 104px
-            background-image: url("https://cdn.comfy.ua/media/x/img/1687019/kub.png")
-            background-repeat: no-repeat
-            margin-left: 20px
+      a
+        font-size: 24px
+        display: flex
+        flex-direction: row
+        align-items: center
+        background-color: #e30613
+        padding: 15px 20px
+        border-top-left-radius: 30px
+        border-bottom-right-radius: 30px
+        margin-top: 80px
+        text-decoration: none
+        color: #fff
+        &:hover
+          background-color: #c50510
+          transition: all 0.3s
+        &::after
+          content: ""
+          display: block
+          min-width: 93px
+          height: 104px
+          background-image: url("https://cdn.comfy.ua/media/x/img/1687019/kub.png")
+          background-repeat: no-repeat
+          margin-left: 20px
   .represent
     .represent__title
       padding: 50px
@@ -269,7 +274,7 @@
     .gen__img
       img
         min-width: 900px
-  #tefal .gen .gen__txt span:nth-of-type(1)
+  #tefal .gen .gen__txt >span:nth-of-type(1)
     text-shadow: 3px 1px 5px black
   #tefal .represent .represent__cont .represent__txt
     padding: 20px
