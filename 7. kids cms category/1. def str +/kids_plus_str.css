@@ -7,7 +7,6 @@
   overflow: hidden;
   background: #fff;
   position: relative;
-  padding: 15px 2.8rem 0rem;
 }
 
 #kids-wrapper img:hover {
@@ -368,12 +367,21 @@ span.tx-uppercase {
     margin: 0 5px 0 10px;
   }
   #kids-wrapper {
-    padding: 10px 10px 0rem;
+    padding: 0 10px 0rem;
   }
   #kids-wrapper .slick-list {
     margin: 0 40px;
   }
   .your-class-arrow .slick-prev::after, .your-class-arrow .slick-next::after {
     display: none;
+  }
+  .kids-tags {
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    overflow: scroll;
+  }
+  .kids-tags__link {
+    white-space: nowrap;
   }
 }

@@ -7,7 +7,6 @@
 	overflow: hidden
 	background: #fff
 	position: relative
-	padding: 15px 2.8rem 0rem
 	img
 		&:hover
 			opacity: 1
@@ -192,10 +191,15 @@ span.tx-uppercase
 		&:nth-of-type(odd)
 			margin: 0 5px 0 10px
 	#kids-wrapper
-		padding: 10px 10px 0rem
+		padding: 0 10px 0rem
 		.slick-list
 			margin: 0 40px
 	.your-class-arrow
 		.slick-prev, .slick-next
 			&::after
 				display: none
+	.kids-tags
+		flex-wrap: nowrap
+		overflow: scroll
+	.kids-tags__link
+		white-space: nowrap

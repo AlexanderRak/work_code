@@ -118,7 +118,7 @@
     height: 4px;
     margin-left: 5px;
     -webkit-transform: none;
-            transform: none;
+    transform: none;
   }
 
   .features-desc__text img {
@@ -480,7 +480,7 @@
 
     #chat_id1 .popup ul.communication {
       padding-top: 0;
-     /*  padding-bottom: 25px; */
+      /*  padding-bottom: 25px; */
     }
 
     #chat_id1 #popup30 {
@@ -509,6 +509,7 @@
     .chat1 .object_reverse::after {
       display: block;
     }
+
     .list_img-stl {
       flex-direction: row;
     }
@@ -526,7 +527,7 @@
       width: -moz-max-content;
       width: max-content;
       margin: 0 auto;
-    display: block;
+      display: block;
     }
 
     #footer .header-phone__link:after {
@@ -551,6 +552,7 @@
     .chat1 .object_reverse::after {
       display: block;
     }
+
     .list_img-stl {
       flex-direction: row;
     }
@@ -573,9 +575,11 @@
       align-items: center;
       justify-content: center;
     }
+
     .list__item-stl {
       max-width: 33%;
     }
+
     .list__item-stl:last-child {
       margin: 0 0px 10px 0;
     }
@@ -589,6 +593,7 @@
     letter-spacing: 0;
     vertical-align: top;
   }
+
   .footer-info__item_delivery span:before {
     width: 50px;
   }
@@ -597,7 +602,8 @@
     /* padding: 0 0 0 7rem; */
     text-transform: none;
     font-size: 14px;
-}
+  }
+
   .footer-info__item span p {
     font-weight: normal;
     text-transform: none;
@@ -605,12 +611,15 @@
     font-size: 12px;
     padding-top: 5px;
   }
+
   .footer-info__item_delivery span:before {
     width: 50px;
   }
+
   .footer-info__item_guarantee span:before {
     left: 0;
   }
+
   span.break-word {
     display: block !important;
     word-wrap: break-word;
@@ -619,24 +628,29 @@
     font-weight: normal !important;
     color: #616161 !important;
   }
-  span.break-word:before {display: none;}
+
+  span.break-word:before {
+    display: none;
+  }
 
   @media (max-width: 1024px) and (min-width: 768px) {
     .footer-info {
       padding: 1.7rem 0;
     }
+
     .footer-info__item_delivery span {
       padding: 5rem 0 0;
     }
+
     .footer-info__item_guarantee span:before {
       left: 50%;
     }
+
     /* .footer-info__item span {
       padding: 5rem 0 0;
     } */
 
   }
-
 </style>
 <div class="footer-info hide-on-mobile">
   <ul class="narrow-container footer-info__i">
@@ -710,8 +724,7 @@
                     </li>
                     <li>
                       <div class="telephone">
-                        <a class="header-phone__link header-phone__link_1" id="phone_icon"
-                          href="tel:0800303505">0-800-303-505</a>
+                        <a class="header-phone__link header-phone__link_1" id="phone_icon" href="tel:0800303505">0-800-303-505</a>
                         <p class="header-phone-popup__note">
                           <span class="header-phone-popup__note-item header-phone-popup__note_bold"> з 8:00 до 21:00 (пн-нд)</span>
                           <span class="header-phone-popup__note-item">Безкоштовно по Україні</span>
@@ -720,8 +733,7 @@
                     </li>
                     <li>
                       <div class="telephone">
-                        <a class="header-phone__link header-phone__link_call" id="phone_icon"
-                          href="tel:0443939505">044-39-39-505</a>
+                        <a class="header-phone__link header-phone__link_call" id="phone_icon" href="tel:0443939505">044-39-39-505</a>
                         <p class="header-phone-popup__note">
                           <span class="header-phone-popup__note-item header-phone-popup__note_bold">Безкоштовно по Києву</span>
                           <span class="header-phone-popup__note-item">зі стаціонарних</span>
@@ -737,8 +749,8 @@
               var tooltipTimeout30;
 
               $(".i_icon30").hover(function () {
-                  tooltipTimeout30 = setTimeout(showTooltip30, 100);
-                },
+                tooltipTimeout30 = setTimeout(showTooltip30, 100);
+              },
                 hideTooltip30);
 
               function showTooltip30() {
@@ -791,35 +803,54 @@
 
           </div>
 
-          <p class="footer-contacts__free-call only-desktop"><a
-            class="btn_round btn_round-with-arrow footer-contacts__btn hide-on-mobile"
-            href="{{store url="shops.html"}}"><span>Знайти магазин</span></a></p>
+          <p class="footer-contacts__free-call only-desktop"><a class="btn_round btn_round-with-arrow footer-contacts__btn hide-on-mobile" href="{{store url=" shops.html"}}"><span>Знайти магазин</span></a></p>
         </div>
         <div class="footer-contacts__social">
           <p class="footer__title">Приєднуйтесь</p>
           <ul class="social-list">
-            <li class="social-list__item"> <a href="https://www.facebook.com/comfy.ua"
-                class="social-list__link social-list__link_fb" target="_blank"></a> </li>
+            <li class="social-list__item"> <a href="https://www.facebook.com/comfy.ua" class="social-list__link social-list__link_fb" target="_blank"></a> </li>
             <!-- <li class="social-list__item"> <a target="_blank" class="social-list__link social-list__link_google" href="https://plus.google.com/117556423659360886156" _mce_href="https://plus.google.com/117556423659360886156"></a> </li> -->
-            <li class="social-list__item"> <a href="https://www.instagram.com/comfy_ua/"
-                class="social-list__link social-list__link_insta" target="_blank"></a> </li>
-            <li class="social-list__item"> <a href="https://www.youtube.com/user/comfyua"
-                class="social-list__link social-list__link_youtube" target="_blank"></a> </li>
-            <li class="social-list__item"> <a href="https://t.me/ottakot"
-                class="social-list__link social-list__link_telegram" target="_blank"></a> </li>
+            <li class="social-list__item"> <a href="https://www.instagram.com/comfy_ua/" class="social-list__link social-list__link_insta" target="_blank"></a> </li>
+            <li class="social-list__item"> <a href="https://www.youtube.com/user/comfyua" class="social-list__link social-list__link_youtube" target="_blank"></a> </li>
+            <li class="social-list__item"> <a href="https://t.me/ottakot" class="social-list__link social-list__link_telegram" target="_blank"></a> </li>
           </ul>
         </div>
       </div>
       <style>
+        .list_img-stl {
+          padding-top: 1.2rem;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: center;
+        }
+
         .none_desktop {
           display: none;
         }
+
         @media (max-width: 767px) {
           .none_desktop {
             display: block;
           }
+
+          .none-mob {
+            display: none;
+          }
         }
-        </style>
+
+        @media (max-width: 1024px) and (min-width: 768px) {
+          .none-mob {
+            display: none;
+          }
+        }
+
+        @media (max-width: 1024px) {
+          .none-mob {
+            display: none;
+          }
+        }
+      </style>
       <div class="footer-navigation">
         <div class="footer-navigation__item js-footer-links">
           <p class="footer-navigation__title footer__title js-footer-title-links">Comfy</p>
@@ -863,15 +894,19 @@
           <p class="footer-navigation__title footer__title js-footer-title-links">Допомога покупцеві</p>
           <nav>
             <ul class="footer-navigation__list list">
-              <li class="list__item"> <a href="{{store url="status-order.html}}" class="list__link"> Знайти замовлення</a> </li>
-              <li class="list__item"> <a href="{{store url="courier-delivery-self.html"}}" class="list__link"> Умови доставки </a> </li>
-              <li class="list__item"> <a href="{{store url="exchange-and-returns.html"}}" class="list__link"> Обмін і повернення товару </a> </li>
+              <li class="list__item"> <a href="{{store url=" status-order.html}}" class="list__link"> Знайти замовлення</a> </li>
+              <li class="list__item"> <a href="{{store url=" courier-delivery-self.html"}}" class="list__link"> Умови доставки </a> </li>
+              <li class="list__item"> <a href="{{store url=" exchange-and-returns.html"}}" class="list__link"> Обмін і повернення товару </a> </li>
               <li class="list__item"> <a class="list__link" href="/garantija.html"> Гарантія</a>
-              <li class="list__item"> <a href="{{store url="repair.html}}" class="list__link"> Статус товару в ремонті</a> </li>
-              <li class="list__item"> <a href="{{store url="question.html"}}" class="list__link"> Поширені запитання</a> </li>
-              <li class="list__item"> <a class="list__link" href="{{store url="pravila-polzovanija-sajtom.html"}}"> Правила користування сайтом </a> </li>
+              <li class="list__item"> <a href="{{store url=" repair.html}}" class="list__link"> Статус товару в ремонті</a> </li>
+              <li class="list__item"> <a href="{{store url=" question.html"}}" class="list__link"> Поширені запитання</a> </li>
+              <li class="list__item"> <a class="list__link" href="{{store url=" pravila-polzovanija-sajtom.html"}}"> Правила користування сайтом </a> </li>
               <!-- <li class="list__item"> <a class="list__link" href="{{store url=""}}payment_document"> Договір публічної оферти</a> -->
               <!-- <li class="list__item"> <a class="list__link" href="/sitemap/" _mce_href="/sitemap/" title="Мапа сайту">Мапа сайту</a> </li> -->
+            </ul>
+            <ul class="list list_img-stl none-mob">
+              <li class="list__item-stl"> <img title="Оплата онлайн банковской картой Visa" src="https://cdn.comfy.ua/media/x/img/Frame_2.png" alt=""></li>
+              <li class="list__item-stl"> <img title="Оплата онлайн банковской картой MasterCard" src="https://cdn.comfy.ua/media/x/img/Frame_2_1_.png" alt=""></li>
             </ul>
           </nav>
         </div>
@@ -881,35 +916,35 @@
             .footer-navigation__list.footer_list-block {
               display: none;
             }
+
             ._open .footer-navigation__list.footer_list-block {
               display: flex;
-          flex-direction: column;
-          padding: 1rem 2.1rem;
+              flex-direction: column;
+              padding: 1rem 2.1rem;
             }
+
             span.break-word {
-    display: initial;
+              display: initial;
             }
           }
 
-        .footer_list-block .footer-info__item {
-          padding: 5px 0;
-          letter-spacing: 0;
-          vertical-align: top;
-          display: table-cell;
-    vertical-align: middle;
-    width: 100%;
-    border-right: 0;
-    text-transform: uppercase;
-    padding: 1.5rem .5rem;
-    line-height: 1.7;
-    font-weight: 700;
-    letter-spacing: .1rem;
-    text-align: left;
-        }
-        .footer_list-block {
+          .footer_list-block .footer-info__item {
+            padding: 5px 0;
+            letter-spacing: 0;
+            vertical-align: top;
+            display: table-cell;
+            vertical-align: middle;
+            width: 100%;
+            border-right: 0;
+            text-transform: uppercase;
+            padding: 1.5rem .5rem;
+            line-height: 1.7;
+            font-weight: 700;
+            letter-spacing: .1rem;
+            text-align: left;
+          }
 
-        }
-
+          .footer_list-block {}
         </style>
         <div class="footer-navigation__item  js-footer-links none_desktop">
           <p class="footer-navigation__title footer__title js-footer-title-links">Наші переваги</p>
@@ -950,14 +985,14 @@
 
       </div>
     </div>
-  
-  <div class="footer-bottom">
-    <div class="footer-bottom__left">
-      <p class="footer-copyright">© Всі права захищені ТОВ «КОМФІ ТРЕЙД», 2010–2021</p>
-    </div>
-    <!-- <div class="footer-bottom__right">
+
+    <div class="footer-bottom">
+      <div class="footer-bottom__left">
+        <p class="footer-copyright">© Всі права захищені ТОВ «КОМФІ ТРЕЙД», 2010–2021</p>
+      </div>
+      <!-- <div class="footer-bottom__right">
       <p class="footer-dev">Дизайн i pозробка - <a href="http://oggettoweb.ru/" target="_blank" rel="nofollow"
           class="footer-dev__logo">Oggetto</a></p>
     </div> -->
+    </div>
   </div>
-</div>
