@@ -1,0 +1,322 @@
+/*default styles*/
+
+#mirta
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p
+    margin-bottom: 0
+    margin: 0
+    font-size: 20px
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: normal
+    text-transform: uppercase
+    padding: 0
+    margin: 0
+    margin-bottom: 20px
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#mirta
+  overflow: hidden
+  .power
+    position: relative
+    .power__logo
+      position: absolute
+      right: 40px
+      top: 40px
+    .power__txt
+      position: absolute
+      bottom: 50%
+      transform: translateY(50%)
+      text-align: center
+      padding: 40px
+      color: #fff
+      max-width: max-content
+      img
+        margin: 0 auto
+        margin-top: 60px
+      h2
+        &::after
+          content: ""
+          display: block
+          width: 100%
+          height: 2px
+          background-color: #fff
+          margin-bottom: 20px
+          margin-top: 10px
+  .settings
+    position: relative
+    .settings__logo
+      position: absolute
+      right: 40px
+      top: 40px
+    .settings__txt
+      position: absolute
+      bottom: 50%
+      right: 40px
+      transform: translateY(50%)
+      text-align: center
+      padding: 40px
+      color: #fff
+      max-width: max-content
+      h2
+        &::after
+          content: ""
+          display: block
+          width: 960px
+          height: 244px
+          background-image: url("https://cdn.comfy.ua/media/x/img/1610395/icon3.png")
+          position: absolute
+          top: 3%
+          left: -60%
+      img
+        margin: 0 auto
+        margin-top: 60px
+  .access
+    position: relative
+    .access__logo
+      position: absolute
+      left: 40px
+      top: 40px
+    .access__txt
+      position: absolute
+      bottom: 50%
+      transform: translateY(50%)
+      text-align: center
+      padding: 40px
+      color: #fff
+      max-width: max-content
+      img
+        margin: 0 auto
+        margin-top: 60px
+      h2
+        &::after
+          content: ""
+          display: block
+          width: 100%
+          height: 2px
+          background-color: #fff
+          margin-bottom: 20px
+          margin-top: 10px
+  .cold
+    position: relative
+    .cold__logo
+      position: absolute
+      left: 40px
+      top: 40px
+    .cold__txt
+      position: absolute
+      bottom: 30%
+      right: 50%
+      transform: translate(50%, 75%)
+      text-align: center
+      padding: 40px
+      color: #fff
+      display: flex
+      flex-direction: row
+      align-items: center
+      img
+        margin: 0 auto
+        // margin-bottom: 60px
+        margin-left: -45%
+      &::after
+        content: ""
+        display: block
+        width: 640px
+        height: 241px
+        background-image: url("https://cdn.comfy.ua/media/x/img/1610394/icon2.png")
+        background-position: center right
+        position: absolute
+        top: -49%
+        right: -33%
+  .sight
+    position: relative
+    .sight__logo
+      position: absolute
+      right: 40px
+      top: 40px
+    .sight__txt
+      position: absolute
+      bottom: 50%
+      right: 40px
+      transform: translateY(50%)
+      text-align: center
+      padding: 40px
+      color: #fff
+      max-width: max-content
+      h2
+        width: max-content
+        margin: 0 auto
+        margin-bottom: 20px
+        &::after
+          content: ""
+          display: block
+          width: 100%
+          height: 2px
+          background-color: #fff
+          margin-top: 10px
+      img
+        margin: 0 auto
+        margin-top: 60px
+
+//media******************************************************
+
+@media (max-width: 1024px)
+  #mirta .settings .settings__txt h2::after
+    top: 0%
+    left: -29%
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    width: 768px
+  #mirta .settings .settings__txt
+    transform: translateY(63%)
+    right: 10px
+  #mirta .access .access__txt
+    transform: translateY(65%)
+  #mirta .cold .cold__txt
+    bottom: 6%
+    transform: translate(43%, 16%)
+  #mirta .cold .cold__txt::after
+    content: ""
+    background-position: center right
+    top: -40%
+    right: -38%
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center right
+
+@media (max-width: 812px)
+  #mirta .power .power__txt
+    padding: 20px
+  #mirta .power .power__logo,
+  #mirta .settings .settings__logo,
+  #mirta .access .access__logo,
+  #mirta .cold .cold__logo,
+  #mirta .sight .sight__logo
+    max-width: 18%
+  #mirta .settings .settings__txt h2::after,
+  #mirta .cold .cold__txt::after
+    display: none
+  #mirta .settings .settings__txt
+    max-width: 400px
+    padding: 20px
+    img
+      margin-top: 20px
+  #mirta .settings .settings__img
+    img
+      min-width: 960px
+  #mirta .access .access__img img
+    min-width: 960px
+    margin-left: -145px
+  #mirta .access .access__txt
+    padding: 20px
+    img
+      margin-top: 20px
+  #mirta .cold .cold__txt img
+    // margin-bottom: 20px
+    max-width: 40%
+  #mirta .cold .cold__img img
+    min-width: 960px
+    margin-left: -145px
+  #mirta .cold .cold__txt
+    padding: 20px
+    transform: translate(50%, 0%)
+  #mirta .sight .sight__txt
+    padding: 20px
+
+@media (max-width: 480px)
+  #mirta
+    .power
+      display: flex
+      flex-direction: column
+      .power__txt
+        position: unset
+        transform: unset
+        background-color: #262626
+        max-width: 100%
+        img
+          margin-top: 20px
+      .power__img img
+        min-width: 900px
+        margin-left: -350px
+  #mirta p
+    font-size: 15px
+  #mirta h2
+    font-size: 24px
+  #mirta
+    .settings
+      display: flex
+      flex-direction: column
+      background-color: #262626
+      .settings__txt
+        position: unset
+        transform: unset
+  #mirta
+    .access
+      background-color: #1c1c1c
+      .access__img img
+        margin-left: -434px
+        min-width: 800px
+      .access__txt
+        position: unset
+        transform: unset
+        max-width: 100%
+  #mirta
+    .cold
+      background-color: #1c1c1c
+      .cold__txt
+        position: unset
+        transform: unset
+        max-width: 100%
+        display: block
+        img
+          margin: 0 auto 10px auto !important
+    .cold__img
+      img
+        min-width: 600px !important
+        margin-left: -220px !important
+  #mirta
+    .sight
+      background-color: #262626
+      .sight__txt
+        position: unset
+        transform: unset
+        max-width: 100%
+      .sight__img
+        img
+          min-width: 700px
+  #mirta .settings .settings__img img
+    min-width: 860px
+
+@media (max-width: 320px)
+  #mirta .settings .settings__img img
+    margin-left: -30px

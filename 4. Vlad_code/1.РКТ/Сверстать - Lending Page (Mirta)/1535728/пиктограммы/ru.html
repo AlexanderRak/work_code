@@ -1,0 +1,50 @@
+<style>
+  
+</style>
+
+<div id="uam">
+  <div class="items">
+    <img class="adapt" src="https://cdn.comfy.ua/media/x/img/1535728/pictogram/1.png">
+    <div class="item__text">
+      <p>Множество программ для приготовления различных блюд</p>
+    </div>
+  </div>
+  <div class="items">
+    <img src="https://cdn.comfy.ua/media/x/img/1535728/pictogram/2.png">
+    <div class="item__text">
+      <p>Благодаря работе под давлением блюда готовятся вдвое быстрее</p>
+    </div>
+  </div>
+  <div class="items">
+    <img src="https://cdn.comfy.ua/media/x/img/1535728/pictogram/3.png">
+    <div class="item__text">
+      <p>Функция автоматического подогрева не даст блюду остыть</p>
+    </div>
+  </div>
+  <div class="items">
+    <img src="https://cdn.comfy.ua/media/x/img/1535728/pictogram/4.png">
+    <div class="item__text">
+      <p>В большой чаше с антипригарным покрытием можно приготовить блюдо на всю семью</p>
+    </div>
+  </div>
+  <div class="items">
+    <img src="https://cdn.comfy.ua/media/x/img/1535728/pictogram/5.png">
+    <div class="item__text">
+      <p>Полезные аксессуары сделают использование мультиварки-скороварки более комфортным</p>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.item__text').hide();
+      $('.items img').mouseover(function () {
+        $(this).next('.item__text').show();
+        $(this).mouseleave(function () {
+          $('.item__text').hide();
+        });
+      });
+    });
+  </script>
+</div>

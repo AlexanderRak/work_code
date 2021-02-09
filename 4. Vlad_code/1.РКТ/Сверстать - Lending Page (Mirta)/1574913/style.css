@@ -1,0 +1,469 @@
+/*default styles*/
+#mirta {
+  max-width: 1316px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#mirta p {
+  margin-bottom: 0;
+  margin: 0;
+  font-size: 20px;
+}
+
+#mirta p:first-letter {
+  padding-left: 0;
+}
+
+#mirta h2 {
+  display: block;
+  line-height: normal;
+  font-size: 34px;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+#mirta img {
+  opacity: 1;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+#mirta img:hover {
+  opacity: 1;
+}
+
+#mirta ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-desc__text img {
+  margin-bottom: 0rem;
+}
+
+.one-col .features-desc__text p:first-letter {
+  padding-left: 0rem !important;
+}
+
+/*end default styles*/
+#mirta {
+  overflow: hidden;
+}
+
+#mirta .show__img {
+  display: none;
+}
+
+#mirta .blackstyle,
+#mirta .whitestyle {
+  position: relative;
+}
+
+#mirta .blackstyle::before,
+#mirta .whitestyle::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 110px;
+  bottom: 20px;
+  right: 20px;
+  left: 20px;
+  z-index: 3;
+  border: 3px solid black;
+  border-top: none;
+}
+
+#mirta .blackstyle .blackstyle__logo,
+#mirta .blackstyle .whitestyle__logo,
+#mirta .whitestyle .blackstyle__logo,
+#mirta .whitestyle .whitestyle__logo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+#mirta .blackstyle .blackstyle__logo img,
+#mirta .blackstyle .whitestyle__logo img,
+#mirta .whitestyle .blackstyle__logo img,
+#mirta .whitestyle .whitestyle__logo img {
+  max-width: 70%;
+  margin: 0;
+}
+
+#mirta .blackstyle .blackstyle__txt,
+#mirta .blackstyle .whitestyle__txt,
+#mirta .whitestyle .blackstyle__txt,
+#mirta .whitestyle .whitestyle__txt {
+  position: absolute;
+  right: 60px;
+  top: 90px;
+  text-align: center;
+}
+
+#mirta .blackstyle .blackstyle__txt::before,
+#mirta .blackstyle .whitestyle__txt::before,
+#mirta .whitestyle .blackstyle__txt::before,
+#mirta .whitestyle .whitestyle__txt::before {
+  content: "";
+  display: block;
+  position: absolute;
+  max-height: 3px;
+  bottom: 0;
+  top: 20px;
+  right: 100%;
+  left: -208%;
+  z-index: 10;
+  background-color: #000;
+}
+
+#mirta .blackstyle .blackstyle__txt::after,
+#mirta .blackstyle .whitestyle__txt::after,
+#mirta .whitestyle .blackstyle__txt::after,
+#mirta .whitestyle .whitestyle__txt::after {
+  content: "";
+  display: block;
+  position: absolute;
+  max-height: 3px;
+  bottom: 0;
+  top: 20px;
+  right: -40px;
+  left: 100%;
+  z-index: 10;
+  background-color: #000;
+}
+
+#mirta .blackstyle .blackstyle__txt img,
+#mirta .blackstyle .whitestyle__txt img,
+#mirta .whitestyle .blackstyle__txt img,
+#mirta .whitestyle .whitestyle__txt img {
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 30%;
+}
+
+#mirta .whitestyle {
+  position: relative;
+}
+
+#mirta .whitestyle::before {
+  border: 3px solid white;
+  border-top: none;
+}
+
+#mirta .whitestyle .whitestyle__txt {
+  color: #fff;
+}
+
+#mirta .whitestyle .whitestyle__txt::before {
+  background-color: #fff;
+  left: -202.5%;
+  right: 90%;
+}
+
+#mirta .whitestyle .whitestyle__txt::after {
+  background-color: #fff;
+  left: 90%;
+}
+
+#mirta .whitestyle .whitestyle__abs {
+  position: absolute;
+  z-index: 10;
+  bottom: 50%;
+  right: 50%;
+  -webkit-transform: translate(57%, 78%);
+     -moz-transform: translate(57%, 78%);
+      -ms-transform: translate(57%, 78%);
+       -o-transform: translate(57%, 78%);
+          transform: translate(57%, 78%);
+  width: 100%;
+}
+
+#mirta .whitestyle__two .whitestyle__abs {
+  bottom: 65%;
+}
+
+#mirta .whitestyle__two .whitestyle__txt::before {
+  left: -174.5%;
+  right: 100%;
+}
+
+#mirta .whitestyle__two .whitestyle__txt::after {
+  left: 100%;
+}
+
+#mirta .sect__two::before {
+  left: -174% !important;
+}
+
+#mirta .sect__two::after {
+  left: 100% !important;
+}
+
+#mirta .sect__three {
+  background-color: #e2e2e2;
+}
+
+#mirta .sect__three .blackstyle__img {
+  position: relative;
+  z-index: 20;
+}
+
+#mirta .sect__three .blackstyle__img img {
+  max-width: 70%;
+  margin-left: -70px;
+  padding-bottom: 50px;
+}
+
+#mirta .sect__three .blackstyle__txt::before {
+  left: -193.5%;
+  right: 90%;
+}
+
+#mirta .sect__three .blackstyle__txt::after {
+  left: 90%;
+}
+
+#mirta .sect__three .blackstyle__txt img {
+  max-width: 100%;
+}
+
+#mirta .sect__four .blackstyle__txt::before {
+  left: -177.5%;
+  right: 88%;
+}
+
+#mirta .sect__four .blackstyle__txt::after {
+  left: 88%;
+}
+
+#mirta .sect__four .blackstyle__abs {
+  position: absolute;
+  z-index: 10;
+  top: 33%;
+  left: 20%;
+}
+
+#mirta .sect__four .blackstyle__abs img {
+  max-width: 96%;
+}
+
+#mirta .sect__five .blackstyle__txt::before {
+  right: 84%;
+  left: -199%;
+}
+
+#mirta .sect__five .blackstyle__txt::after {
+  left: 84%;
+}
+
+#mirta .sect__five .blackstyle__txt img {
+  max-width: 50%;
+}
+
+#mirta .sect__six .blackstyle__txt::before {
+  right: 86%;
+  left: -184.5%;
+}
+
+#mirta .sect__six .blackstyle__txt::after {
+  left: 86%;
+}
+
+#mirta .sect__six .blackstyle__txt img {
+  max-width: 50%;
+}
+
+@media (max-width: 1024px) {
+  #mirta .whitestyle .whitestyle__abs {
+    width: 81%;
+  }
+  #mirta .blackstyle .blackstyle__txt, #mirta .blackstyle .whitestyle__txt, #mirta .whitestyle .blackstyle__txt, #mirta .whitestyle .whitestyle__txt {
+    bottom: 40%;
+  }
+  #mirta .blackstyle .blackstyle__txt::before, #mirta .blackstyle .whitestyle__txt::before, #mirta .whitestyle .blackstyle__txt::before, #mirta .whitestyle .whitestyle__txt::before {
+    left: -135%;
+  }
+  #mirta .whitestyle .whitestyle__txt::before {
+    left: -131%;
+  }
+  #mirta .sect__two::before {
+    left: -109.5% !important;
+  }
+  #mirta .sect__three .blackstyle__txt::before {
+    left: -124%;
+  }
+  #mirta .sect__four .blackstyle__txt::before {
+    left: -112%;
+  }
+  #mirta .sect__five .blackstyle__txt::before {
+    left: -128%;
+  }
+  #mirta .sect__six .blackstyle__txt::before {
+    left: -117%;
+  }
+  #mirta .sect__four .blackstyle__abs img {
+    max-width: 93%;
+  }
+  #mirta .sect__six .blackstyle__txt img {
+    max-width: 40%;
+  }
+  #mirta .whitestyle__two .whitestyle__txt::before {
+    left: -109.5%;
+  }
+}
+
+@media (max-width: 812px) {
+  #mirta .blackstyle .blackstyle__logo img, #mirta .blackstyle .whitestyle__logo img, #mirta .whitestyle .blackstyle__logo img, #mirta .whitestyle .whitestyle__logo img {
+    max-width: 50%;
+  }
+  #mirta h2 {
+    font-size: 24px;
+  }
+  #mirta .blackstyle .blackstyle__txt img, #mirta .blackstyle .whitestyle__txt img, #mirta .whitestyle .blackstyle__txt img, #mirta .whitestyle .whitestyle__txt img {
+    max-width: 100px;
+  }
+  #mirta .blackstyle::before, #mirta .whitestyle::before {
+    top: 80px;
+  }
+  #mirta .whitestyle .whitestyle__txt {
+    text-shadow: -3px 1px 7px black;
+  }
+  #mirta .blackstyle::before, #mirta .whitestyle::before {
+    display: none;
+  }
+  #mirta .blackstyle .blackstyle__txt::before, #mirta .blackstyle .whitestyle__txt::before, #mirta .whitestyle .blackstyle__txt::before, #mirta .whitestyle .whitestyle__txt::before {
+    display: none;
+  }
+  #mirta .blackstyle .blackstyle__txt::after, #mirta .blackstyle .whitestyle__txt::after, #mirta .whitestyle .blackstyle__txt::after, #mirta .whitestyle .whitestyle__txt::after {
+    display: none;
+  }
+  #mirta .whitestyle .whitestyle__abs {
+    right: 51%;
+    bottom: 42%;
+  }
+  #mirta .whitestyle__two .whitestyle__abs {
+    width: 60%;
+  }
+  #mirta .sect__three .blackstyle__txt {
+    z-index: 20;
+  }
+  #mirta .sect__three .blackstyle__txt img {
+    max-width: 45%;
+  }
+  #mirta .sect__five .blackstyle__txt img,
+  #mirta .sect__six .blackstyle__txt img {
+    max-width: 30%;
+    margin-top: 20px;
+  }
+  #mirta .sect__one .blackstyle__img img {
+    -webkit-filter: opacity(0.6);
+            filter: opacity(0.6);
+  }
+  #mirta .sect__one .blackstyle__logo img {
+    position: relative;
+    z-index: 50;
+  }
+  #mirta .sect__six .blackstyle__img img {
+    opacity: 0.7;
+  }
+  #mirta .sect__six .blackstyle__logo img {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 480px) {
+  #mirta {
+    overflow: hidden;
+  }
+  #mirta .blackstyle .blackstyle__img img,
+  #mirta .whitestyle .whitestyle__img img {
+    min-width: 700px;
+  }
+  #mirta .blackstyle .blackstyle__txt img, #mirta .blackstyle .whitestyle__txt img, #mirta .whitestyle .blackstyle__txt img, #mirta .whitestyle .whitestyle__txt img {
+    margin-top: 20px;
+  }
+  #mirta .blackstyle::before, #mirta .whitestyle::before {
+    display: none;
+  }
+  #mirta h2 {
+    font-size: 20px;
+  }
+  #mirta .blackstyle .blackstyle__txt, #mirta .blackstyle .whitestyle__txt, #mirta .whitestyle .blackstyle__txt, #mirta .whitestyle .whitestyle__txt {
+    right: 50%;
+    -webkit-transform: translate(50%, 0%);
+       -moz-transform: translate(50%, 0%);
+        -ms-transform: translate(50%, 0%);
+         -o-transform: translate(50%, 0%);
+            transform: translate(50%, 0%);
+    width: 100%;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #mirta .blackstyle .blackstyle__txt h2 > br, #mirta .blackstyle .whitestyle__txt h2 > br, #mirta .whitestyle .blackstyle__txt h2 > br, #mirta .whitestyle .whitestyle__txt h2 > br {
+    content: "";
+    display: none;
+  }
+  #mirta .whitestyle .whitestyle__abs {
+    right: 59%;
+  }
+  #mirta .sect__three .blackstyle__txt {
+    z-index: 20;
+  }
+  #mirta .sect__three .blackstyle__txt img {
+    max-width: 45%;
+  }
+  #mirta .sect__five .blackstyle__txt img,
+  #mirta .sect__six .blackstyle__txt img {
+    max-width: 36%;
+  }
+  #mirta .blackstyle .blackstyle__txt img, #mirta .blackstyle .whitestyle__txt img, #mirta .whitestyle .blackstyle__txt img, #mirta .whitestyle .whitestyle__txt img {
+    margin-top: 20px;
+  }
+  #mirta .sect__one .blackstyle__img img {
+    -webkit-filter: opacity(0.6);
+            filter: opacity(0.6);
+  }
+  #mirta .sect__one .blackstyle__logo img {
+    position: relative;
+    z-index: 50;
+  }
+  #mirta .whitestyle .whitestyle__abs {
+    display: none;
+  }
+  #mirta .hide__img {
+    display: none;
+  }
+  #mirta .show__img {
+    display: block !important;
+  }
+  #mirta .sect__three .blackstyle__img img {
+    margin-left: -135px;
+    opacity: 0.7;
+  }
+  #mirta .sect__four .blackstyle__abs {
+    display: none;
+  }
+  #mirta .sect__five .blackstyle__img img,
+  #mirta .sect__six .blackstyle__img img {
+    margin-left: -92px;
+    min-width: 930px;
+  }
+  #mirta .opacity__img {
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,341 @@
+/*default styles*/
+
+#mirta
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  p
+    margin-bottom: 0
+    margin: 0
+    font-size: 20px
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: normal
+    text-transform: uppercase
+    padding: 0
+    margin: 0
+    margin-bottom: 20px
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#mirta
+  overflow: hidden
+  .result
+    display: flex
+    flex-direction: row
+    align-items: flex-end
+    background-color: #d19471
+    position: relative
+    align-items: center
+    .result__logo
+      position: absolute
+      top: 50px
+      right: 40px
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .result__img
+      img
+        margin: 0
+    .result__cont
+      transform: translateX(-20%)
+      img
+        margin: 0 -50px 60px auto
+        transform: translateX(-80px)
+      .result__txt
+        text-align: center
+        color: #fff
+        h2
+          &::after
+            content: ""
+            display: block
+            height: 2px
+            background-color: #fff
+            width: 100%
+            max-width: 300px
+            margin: 10px auto 20px auto
+  .hot
+    position: relative
+    background-color: #d19471
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 40px
+    justify-content: center
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .hot__logo
+      position: absolute
+      top: 50px
+      right: 40px
+    .hot__img
+      img
+        margin: 0 auto
+    .hot__txt
+      color: #fff
+      text-align: center
+      img
+        margin: 0 auto
+        max-width: 20%
+        margin-bottom: 30px
+      h2
+        &::after
+          content: ""
+          display: block
+          height: 2px
+          width: 100%
+          max-width: 350px
+          background-color: #fff
+          margin: 0 auto
+          margin-top: 10px
+      span
+        font-size: 60px
+        line-height: normal
+        margin-top: 40px
+        display: block
+  .hair
+    position: relative
+    background-color: #d19471
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 40px 0
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .hair__logo
+      position: absolute
+      top: 50px
+      left: 40px
+    .hair__img
+      img
+        margin: 0 0 0 auto
+    .hair__txt
+      padding: 40px
+      text-align: center
+      color: #fff
+      margin-top: -3%
+      img
+        margin: 60px auto 0 auto
+      h2
+        &::after
+          content: ""
+          display: block
+          height: 2px
+          width: 100%
+          max-width: 450px
+          background-color: #fff
+          margin: 10px auto 0 auto
+  .design
+    position: relative
+    background-color: #d19471
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding-top: 60px
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .design__logo
+      position: absolute
+      top: 0px
+      right: 40px
+    .design__img
+      padding-right: 40px
+    .design__txt
+      padding: 40px
+      text-align: center
+      color: #fff
+      transform: translateX(5%)
+      img
+        margin: 0 auto 20px 30px
+      h2
+        &::after
+          content: ""
+          display: block
+          height: 2px
+          width: 100%
+          max-width: 290px
+          background-color: #fff
+          margin: 10px auto 0 auto
+  .use
+    position: relative
+    background-color: #d19471
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 40px
+    box-sizing: border-box
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .use__logo
+      position: absolute
+      top: 50px
+      right: 40px
+    .use__img
+      img
+        margin: 0 auto
+    .use__txt
+      padding: 40px
+      text-align: center
+      color: #fff
+      transform: translateX(5%)
+      img
+        margin: 0 auto 20px -45px
+      h2
+        &::after
+          content: ""
+          display: block
+          height: 2px
+          width: 100%
+          max-width: 290px
+          background-color: #fff
+          margin: 10px auto 0 auto
+
+//media******************************************************
+
+@media (max-width: 1024px)
+  #mirta .hot .hot__txt
+    margin-top: 5%
+  #mirta .hair .hair__txt
+    margin-top: 0%
+  #mirta .hair
+    padding-top: 50px
+  #mirta .design .design__txt
+    margin-top: 0%
+  #mirta .result .result__cont
+    transform: translateX(-4%)
+    margin-top: 10%
+  #mirta .result .result__cont img
+    transform: translateX(-40px)
+  #mirta .design .design__txt img
+    margin: 0 auto 20px -55px
+
+@media (max-width: 812px)
+  #mirta .result .result__logo,
+  #mirta .hot .hot__logo,
+  #mirta .hair .hair__logo,
+  #mirta .design .design__logo,
+  #mirta .use .use__logo
+    max-width: 17%
+  #mirta .result
+    flex-direction: column
+    >div
+      max-width: 100%
+      width: 100%
+  #mirta .result .result__cont .result__txt
+    margin-left: 0
+    padding-top: 20px
+  #mirta .result .result__cont
+    padding-left: 0
+  #mirta .hot
+    flex-direction: column
+    padding: 0
+    >div
+      max-width: 100%
+      width: 100%
+  #mirta .hot .hot__txt
+    margin-top: 0
+    padding: 40px
+    margin: 0 auto
+  #mirta .hair
+    flex-direction: column-reverse
+    >div
+      max-width: 100%
+      width: 100%
+  #mirta .hair .hair__txt h2::after
+    display: none
+  #mirta .design
+    flex-direction: column
+    padding-top: 0
+    >div
+      max-width: 100%
+      width: 100%
+  #mirta .design .design__txt
+    transform: unset
+  #mirta .hair .hair__img,
+  #mirta .design .design__img
+    padding-right: 0
+  #mirta .result .result__cont
+    padding: 20px
+    margin: 0 auto
+    transform: unset
+  #mirta .design .design__txt img
+    margin: 0 auto 20px 50px
+  #mirta .use
+    flex-direction: column
+    >div
+      max-width: 100%
+      width: 100%
+  #mirta .use .use__txt
+    margin: 0 auto
+    transform: unset
+  #mirta .design .design__img img
+    margin: 0
+  #mirta .result .result__cont img
+    transform: translateX(-111px)
+
+@media (max-width: 480px)
+  #mirta h2
+    font-size: 24px
+  #mirta p
+    font-size: 15px
+  #mirta .result .result__logo, #mirta .hot .hot__logo, #mirta .hair .hair__logo, #mirta .design .design__logo
+    top: 10px
+  #mirta .hot .hot__txt span
+    font-size: 40px
+    margin-top: 10px
+  #mirta p > br
+    content: ""
+    display: none
+  #mirta .result .result__cont img
+    transform: unset
+    margin: 0 auto
+  #mirta .result .result__cont .result__txt h2::after,
+  #mirta .hot .hot__txt h2::after,
+  #mirta .design .design__txt h2::after,
+  #mirta .use .use__txt h2::after
+    max-width: 160px
+  #mirta .hot .hot__txt img
+    max-width: 40%
+  #mirta .hair .hair__txt
+    padding-bottom: 0
+  #mirta .use .use__txt
+    padding: 40px 0 0 0
+  #mirta .design .design__txt img
+    margin: 0 auto 20px 0
+  #mirta .hair
+    padding-top: 0
