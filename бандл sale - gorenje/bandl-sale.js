@@ -7,7 +7,7 @@ function getCookie(name) {
 }
 var city = getCookie('active_city_id');
 /*******1***** */
-
+// Кредит 25 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 var priceUrl1 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00009548&left=1575576&rigths=1295926';
 $.ajax({
   url: priceUrl1,
