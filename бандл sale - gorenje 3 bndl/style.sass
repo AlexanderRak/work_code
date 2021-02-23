@@ -1,0 +1,194 @@
+/*default styles*/
+
+#krbt-pilot
+  max-width: 1366px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #f2f2f2
+  box-sizing: border-box
+  p
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#krbt-pilot
+  padding-bottom: 68px
+  .krbt-pilot__title
+    padding: 72px 0 40px 0
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    span
+      text-align: center
+      display: block
+      line-height: normal
+      font-weight: bold
+      font-size: 58px
+      margin: 0 40.5px
+      background: linear-gradient(180deg, #FF671F 0%, #FDAE55 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+    &::before, &::after
+      content: ""
+      display: block
+      width: 142px
+      height: 2px
+      background-color: #43B02A
+  .bandl
+    display: flex
+    flex-direction: row
+    align-items: center
+    background-color: #fff
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15)
+    border-radius: 16px
+    flex-wrap: nowrap
+    padding: 40px 0 48px 80px
+    box-sizing: border-box
+    .bandl__cont
+      a
+        text-decoration: underline
+        color: #43B02A
+        font-size: 16px
+        line-height: 20px
+        margin-top: 16px
+        display: block
+        font-weight: bold
+      p
+        font-size: 16px
+        line-height: 20px
+        margin-top: 24px
+    .plus,
+    .ravno
+      margin: -70px 60px 0 60px
+    &:last-of-type
+      margin-top: 16px
+    .bl_next
+      margin-top: -100px
+      .cena_up
+        display: inline-block
+        color: #ccc
+        font-size: 34px
+        position: relative
+        width: auto
+        font-weight: bold
+        &::before
+          content: ""
+          position: absolute
+          top: 50%
+          -webkit-transform: translateY(-50%)
+          -ms-transform: translateY(-50%)
+          transform: translateY(-50%)
+          right: 0
+          left: 0
+          height: 1px
+          margin-top: -.1rem
+          background: #FF090B
+      .cena_right
+        font-size: 58px
+        font-weight: bold
+        margin: 8px 0
+      .more_btn
+        padding: 9px 20px
+        background: #43B02A
+        border-radius: 8px
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        width: 123px
+        box-sizing: border-box
+        img
+          margin-right: 12.62px
+        a
+          font-size: 16px
+          line-height: 20px
+          color: #fff
+          font-weight: bold
+
+//media***********************
+
+@media (max-width: 1024px)
+  #krbt-pilot .bandl
+    padding: 40px
+  #krbt-pilot .bandl .bl_next .cena_right
+    display: flex
+    flex-direction: row
+  #krbt-pilot .bandl .bl_next .cena_right
+    font-size: 3.1em
+    >sup
+      line-height: 1
+      position: relative
+      vertical-align: baseline
+      top: 0em
+      font-size: 75%
+
+@media (max-width: 812px)
+  #krbt-pilot .krbt-pilot__title span
+    margin: 0 10px
+    font-size: 42px
+  #krbt-pilot .bandl .bandl__cont p
+    font-size: 1.5rem
+  #krbt-pilot .bandl .plus, #krbt-pilot .bandl .ravno
+    margin: -90px 30px 0 30px
+
+@media (max-width: 480px)
+  #krbt-pilot .bandl
+    padding: 40px 8px 37px 8px
+    margin: 0 20px
+    flex-direction: column
+  #krbt-pilot .bandl .bandl__cont p
+    font-size: 16px
+    margin-top: 24px
+  #krbt-pilot .bandl .plus, #krbt-pilot .bandl .ravno
+    margin: 40px 0
+  #krbt-pilot .bandl .bl_next
+    margin-top: unset
+  #krbt-pilot .bandl .bl_next .cena_right
+    font-size: 58px
+  #krbt-pilot .bandl .bl_next .more_btn
+    margin: 0 auto
+  #krbt-pilot .bandl .bl_next .cena_up
+    display: block
+    width: max-content
+    text-align: center
+    margin: 0 auto
+  #krbt-pilot .krbt-pilot__title span
+    font-size: 24px
+    margin: 0 8px
+  #krbt-pilot .krbt-pilot__title::before, #krbt-pilot .krbt-pilot__title::after
+    width: 40px
+  #krbt-pilot .krbt-pilot__title
+    padding: 16px 0
+  #krbt-pilot
+    padding-bottom: 36px

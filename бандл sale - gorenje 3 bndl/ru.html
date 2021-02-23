@@ -1,0 +1,145 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+
+</style>
+
+<script language="JavaScript" type="text/javascript">
+  // <![CDATA[
+  function getCookie(name) {
+    var matches = document.cookie.match(new RegExp(
+      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+  }
+  var city = getCookie('active_city_id');
+  /*******1***** */
+
+  var priceUrl1 = 'https://comfy.ua/online_remains/product/bundle_price.php?bundle_id=00011746&left=1704718&rigths=1465834';
+  $.ajax({
+    url: priceUrl1,
+    type: 'get',
+    success: function (output) {
+      var resp = JSON.parse(output);
+      // if (resp['price'] == 0) {
+      //   document.getElementById("bandl1").style.display = "none";
+      // }
+
+
+      // var l_1 = resp['1498354'];
+      // var r_1 = resp['1205988'];
+      var priceBndl_1 = resp['price'];
+
+      // document.getElementById("right1").innerHTML = r_1 + "<sup> грн</sup>";
+      // document.getElementById("left1").innerHTML = l_1 + "<sup> грн</sup>";
+      document.getElementById("priceBndl1").innerHTML = priceBndl_1 + "<sup> ₴</sup>";
+    }
+  });
+
+  /*******2***** */
+
+  function getCookie(name) {
+    var matches = document.cookie.match(new RegExp(
+      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+  }
+  var city2 = getCookie('active_city_id');
+  var priceUrl2 = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id=' + city + '&ids=1241153'
+  $.ajax({
+    url: priceUrl2,
+    type: 'get',
+    success: function (output) {
+      var resp = JSON.parse(output);
+      var pr1 = resp['1241153']['price'];
+      var pr1_ = resp['1241153']['special_price'];
+
+      document.getElementById("priceBndl2").innerHTML = pr1 + "<sup> ₴</sup>";
+      document.getElementById("priceBndl2_").innerHTML = pr1_ + "<sup> ₴</sup>";
+    }
+  });
+
+</script>
+
+<div id="krbt-pilot">
+  <div class="krbt-pilot__title">
+    <span>Вместе выгоднее</span>
+  </div>
+
+  <div class="bandl">
+    <div class="bandl__cont">
+      <img src="https://cdn.comfy.ua/media/x/img2/img/prod1.png">
+
+      <p class="name_product">Духовой шкаф электрический<br>Gorenje BOS737E10BG</p>
+
+      <a target="_blank" href="/duhovoj-shkaf-varochnaja-panel-indukcionnaja-gorenje-bos737e10bg-it40sc.html">О товаре</a>
+    </div>
+
+    <div class="plus">
+      <img src="https://cdn.comfy.ua/media/x/img2/img/plus.svg">
+    </div>
+
+    <div class="bandl__cont">
+      <img src="https://cdn.comfy.ua/media/x/img2/img/prod2.png">
+
+      <p class="name_product">Варочная панель индукционная<br>Gorenje IT40SC</p>
+
+      <a target="_blank" href="/duhovoj-shkaf-varochnaja-panel-indukcionnaja-gorenje-bos737e10bg-it40sc.html">О товаре</a>
+    </div>
+
+    <div class="ravno">
+      <img src="https://cdn.comfy.ua/media/x/img2/img/ravno.svg">
+    </div>
+
+    <div class="bndl_all bl_next">
+
+      <!-- <div class="cena cena_up">21 999<sup> ₴</sup></div> -->
+
+      <div class="cena cena_up" id="priceBndl2"></div>
+
+      <div class="cena cena_right" id="priceBndl2_"></div>
+      <div class="more_btn">
+        <img src="https://cdn.comfy.ua/media/x/img2/img/add.svg">
+          <a href="https://comfy.ua/checkout/onepage/add/skus/1659059-1659059" id="moreBtn_2">Купить</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bandl">
+    <div class="bandl__cont">
+      <div class="content_cart">
+        <img src="https://cdn.comfy.ua/media/x/img2/img/prod3.png">
+        <p class="name_product">Духовой шкаф электрический<br>Gorenje BO735E32XG-2</Духовой></p>
+        <a target="_blank" href="/duhovoj-shkaf-jelektricheskij-gorenje-bo735e32xg-2.html">О товаре</a>
+    </div>
+  </div>
+
+    <div class="plus">
+      <img src="https://cdn.comfy.ua/media/x/img2/img/plus.svg">
+    </div>
+
+    <div class="bandl__cont">
+      <div class="content_cart">
+        <img src="https://cdn.comfy.ua/media/x/img2/img/prod4.png">
+        <p class="name_product">Варочная панель газовая<br>Gorenje GT642AB</p>
+        <a target="_blank" href="/varochnaja-panel-gazovaja-gorenje-gt642ab.html">О товаре</a>
+      </div>
+    </div>
+
+    <div class="ravno">
+      <img src="https://cdn.comfy.ua/media/x/img2/img/ravno.svg">
+    </div>
+
+    <div class="bndl_all bl_next">
+
+      <div class="cena cena_up">17 398<sup> ₴</sup></div>
+
+      <div class="cena cena_right" id="priceBndl1"></div>
+      <div class="more_btn">
+        <img src="https://cdn.comfy.ua/media/x/img2/img/add.svg">
+          <a href="https://comfy.ua/checkout/onepage/add/skus/1465834-1704718" id="moreBtn_1">Купить</a>
+      </div>
+    </div>
+  </div>
+</div>
