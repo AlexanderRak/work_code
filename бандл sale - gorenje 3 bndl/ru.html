@@ -33,7 +33,7 @@
 
       // document.getElementById("right1").innerHTML = r_1 + "<sup> грн</sup>";
       // document.getElementById("left1").innerHTML = l_1 + "<sup> грн</sup>";
-      document.getElementById("priceBndl1").innerHTML = priceBndl_1 + "<sup> ₴</sup>";
+      document.getElementById("priceBndl1").innerHTML = priceBndl_1 + "<sub> ₴</sub>";
     }
   });
 
@@ -55,8 +55,8 @@
       var pr1 = resp['1241153']['price'];
       var pr1_ = resp['1241153']['special_price'];
 
-      document.getElementById("priceBndl2").innerHTML = pr1 + "<sup> ₴</sup>";
-      document.getElementById("priceBndl2_").innerHTML = pr1_ + "<sup> ₴</sup>";
+      document.getElementById("priceBndl2").innerHTML = pr1 + "<sub> ₴</sub>";
+      document.getElementById("priceBndl2_").innerHTML = pr1_ + "<sub> ₴</sub>";
     }
   });
 
@@ -133,7 +133,7 @@
 
     <div class="bndl_all bl_next">
 
-      <div class="cena cena_up">17 398<sup> ₴</sup></div>
+      <div class="cena cena_up">17 398<sub> ₴</sub></div>
 
       <div class="cena cena_right" id="priceBndl1"></div>
       <div class="more_btn">

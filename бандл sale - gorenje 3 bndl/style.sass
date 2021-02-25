@@ -31,6 +31,8 @@
     list-style-type: none
     padding: 0
     margin: 0
+  sub
+    bottom: 0
 
 .features-desc__text
   img
@@ -44,7 +46,7 @@
 #krbt-pilot
   padding-bottom: 68px
   .krbt-pilot__title
-    padding: 72px 0 40px 0
+    padding: 20px 0
     display: flex
     flex-direction: row
     align-items: center
@@ -105,7 +107,7 @@
         &::before
           content: ""
           position: absolute
-          top: 50%
+          top: 60%
           -webkit-transform: translateY(-50%)
           -ms-transform: translateY(-50%)
           transform: translateY(-50%)
@@ -114,6 +116,7 @@
           height: 1px
           margin-top: -.1rem
           background: #FF090B
+          z-index: 10
       .cena_right
         font-size: 58px
         font-weight: bold
@@ -164,16 +167,20 @@
 
 @media (max-width: 480px)
   #krbt-pilot .bandl
-    padding: 40px 8px 37px 8px
-    margin: 0 20px
-    flex-direction: column
+    padding: 16px 8px
+    margin: 0 12px
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: flex-start
+    .bandl__cont
+      max-width: 120px
+      width: 100%
   #krbt-pilot .bandl .bandl__cont p
-    font-size: 16px
-    margin-top: 24px
-  #krbt-pilot .bandl .plus, #krbt-pilot .bandl .ravno
-    margin: 40px 0
+    font-size: 14px
+    margin-top: 8px
   #krbt-pilot .bandl .bl_next
     margin-top: unset
+    margin: 0 auto
   #krbt-pilot .bandl .bl_next .cena_right
     font-size: 58px
   #krbt-pilot .bandl .bl_next .more_btn
@@ -183,6 +190,8 @@
     width: max-content
     text-align: center
     margin: 0 auto
+  #krbt-pilot .bandl .bl_next .cena_up
+    font-size: 18px
   #krbt-pilot .krbt-pilot__title span
     font-size: 24px
     margin: 0 8px
@@ -192,3 +201,24 @@
     padding: 16px 0
   #krbt-pilot
     padding-bottom: 36px
+  #krbt-pilot .bandl .plus
+    width: 16px
+    margin-top: 55px
+    margin-right: 11px
+    margin-left: 11px
+  #krbt-pilot .bandl .ravno
+    width: 100%
+    margin: 14px 0
+    img
+      max-width: 24px
+      margin: 0 auto
+  #krbt-pilot .bandl .bl_next .cena_right sub
+    bottom: -24px
+    left: 3px
+  #krbt-pilot .bandl .bl_next .cena_right
+    font-size: 34px
+  #krbt-pilot .bandl .bandl__cont a
+    font-size: 14px
+    line-height: 18px
+  #krbt-pilot .bandl .bandl__cont:nth-of-type(3) a
+    margin-top: 29px
