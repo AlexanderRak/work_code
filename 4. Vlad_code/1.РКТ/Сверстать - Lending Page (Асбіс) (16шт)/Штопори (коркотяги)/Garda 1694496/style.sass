@@ -1,0 +1,93 @@
+/*default styles*/
+
+#asbis
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  background-color: #fff
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    color: #fff
+    // font-size: 17px
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 30px
+    font-weight: bold
+    text-transform: uppercase
+    padding: 0
+    margin: 0 0 20px 0
+    color: #fff
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#asbis
+  .autoshtopor, .openen, .aerator, .knife, .design
+    position: relative
+    box-sizing: border-box
+    .autoshtopor__txt, .openen__txt, .aerator__txt, .knife__txt, .design__txt
+      position: absolute
+      top: 20px
+      width: 100%
+      max-width: max-content
+      text-align: center
+      right: 50%
+      transform: translateX(50%)
+      p
+        max-width: 700px
+  .autoshtopor .autoshtopor__txt
+    h2
+      color: #000
+    p
+      color: #000
+
+//media***********************************
+
+@media (max-width: 480px)
+  #asbis h2
+    font-size: 24px
+  #asbis .autoshtopor .autoshtopor__txt, #asbis .autoshtopor .openen__txt, #asbis .autoshtopor .aerator__txt, #asbis .autoshtopor .knife__txt, #asbis .autoshtopor .design__txt, #asbis .openen .autoshtopor__txt, #asbis .openen .openen__txt, #asbis .openen .aerator__txt, #asbis .openen .knife__txt, #asbis .openen .design__txt, #asbis .aerator .autoshtopor__txt, #asbis .aerator .openen__txt, #asbis .aerator .aerator__txt, #asbis .aerator .knife__txt, #asbis .aerator .design__txt, #asbis .knife .autoshtopor__txt, #asbis .knife .openen__txt, #asbis .knife .aerator__txt, #asbis .knife .knife__txt, #asbis .knife .design__txt, #asbis .design .autoshtopor__txt, #asbis .design .openen__txt, #asbis .design .aerator__txt, #asbis .design .knife__txt, #asbis .design .design__txt
+    position: unset
+    transform: unset
+    background-color: #000
+    padding: 1em
+    box-sizing: border-box
+  #asbis .autoshtopor .autoshtopor__txt h2,
+  #asbis .autoshtopor .autoshtopor__txt p
+    color: #fff
+  #asbis .autoshtopor .autoshtopor__img img,
+  #asbis .openen .openen__img img,
+  #asbis .aerator .aerator__img img,
+  #asbis .knife .knife__img img,
+  #asbis .design .design__img img
+    max-width: 700px
+    margin-left: -41%
+
+@media (max-width: 320px)
+  #asbis .autoshtopor .autoshtopor__img img, #asbis .openen .openen__img img, #asbis .aerator .aerator__img img, #asbis .knife .knife__img img, #asbis .design .design__img img
+    margin-left: -56%

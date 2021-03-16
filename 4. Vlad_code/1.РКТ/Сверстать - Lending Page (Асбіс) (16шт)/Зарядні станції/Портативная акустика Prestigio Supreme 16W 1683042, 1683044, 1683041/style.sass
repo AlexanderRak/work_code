@@ -1,0 +1,153 @@
+/*default styles*/
+
+#asbis
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#asbis
+  h2
+    margin-bottom: 20px
+    text-transform: uppercase
+  .innovation,
+  .desk,
+  .battery,
+  .combine,
+  .secure,
+  .voice
+    position: relative
+    .innovation__txt,
+    .desk__txt,
+    .battery__txt,
+    .combine__txt,
+    .secure__txt,
+    .voice__txt
+      position: absolute
+      padding: 40px
+      max-width: 1000px
+      top: 0
+      color: #fff
+      text-align: center
+      right: 50%
+      transform: translateX(50%)
+      width: 100%
+    .secure__txt
+      color: #000
+      text-shadow: unset
+    .voice__img
+      .show-mob
+        display: none
+    .voice__abs
+      span
+        display: block
+        line-height: 1
+        font-size: 20px
+        position: absolute
+        &:nth-of-type(1)
+          left: 8%
+          bottom: 32%
+          max-width: 12%
+        &:nth-of-type(2)
+          left: 8%
+          bottom: 22%
+        &:nth-of-type(3)
+          left: 8%
+          bottom: 11%
+        &:nth-of-type(4)
+          right: 15%
+          bottom: 51%
+        &:nth-of-type(5)
+          right: 16%
+          bottom: 39%
+          width: 15%
+        &:nth-of-type(6)
+          right: 9%
+          bottom: 28%
+
+//media***********************************************
+
+@media (max-width: 1024px)
+  #asbis .innovation .innovation__txt, #asbis .innovation .desk__txt, #asbis .innovation .battery__txt, #asbis .innovation .combine__txt, #asbis .innovation .secure__txt, #asbis .desk .innovation__txt, #asbis .desk .desk__txt, #asbis .desk .battery__txt, #asbis .desk .combine__txt, #asbis .desk .secure__txt, #asbis .battery .innovation__txt, #asbis .battery .desk__txt, #asbis .battery .battery__txt, #asbis .battery .combine__txt, #asbis .battery .secure__txt, #asbis .combine .innovation__txt, #asbis .combine .desk__txt, #asbis .combine .battery__txt, #asbis .combine .combine__txt, #asbis .combine .secure__txt, #asbis .secure .innovation__txt, #asbis .secure .desk__txt, #asbis .secure .battery__txt, #asbis .secure .combine__txt, #asbis .secure .secure__txt
+    padding: 40px 1em
+    box-sizing: border-box
+  #asbis .voice .voice__abs span:nth-of-type(1)
+    max-width: 16%
+  #asbis .voice .voice__abs span:nth-of-type(3)
+    bottom: 10%
+    max-width: 30%
+  #asbis .voice .voice__abs span:nth-of-type(4)
+    right: 10%
+  #asbis .voice .voice__abs span:nth-of-type(5)
+    right: 10%
+    bottom: 38%
+    width: 20%
+  #asbis .voice .voice__abs span:nth-of-type(6)
+    right: 6%
+    bottom: 28%
+
+@media (max-width: 812px)
+  #asbis .innovation .innovation__txt, #asbis .innovation .desk__txt, #asbis .innovation .battery__txt, #asbis .innovation .combine__txt, #asbis .innovation .secure__txt, #asbis .desk .innovation__txt, #asbis .desk .desk__txt, #asbis .desk .battery__txt, #asbis .desk .combine__txt, #asbis .desk .secure__txt, #asbis .battery .innovation__txt, #asbis .battery .desk__txt, #asbis .battery .battery__txt, #asbis .battery .combine__txt, #asbis .battery .secure__txt, #asbis .combine .innovation__txt, #asbis .combine .desk__txt, #asbis .combine .battery__txt, #asbis .combine .combine__txt, #asbis .combine .secure__txt, #asbis .secure .innovation__txt, #asbis .secure .desk__txt, #asbis .secure .battery__txt, #asbis .secure .combine__txt, #asbis .secure .secure__txt, #asbis .voice .voice__txt
+    padding: 1em
+    position: unset
+    transform: unset
+    background-color: #000
+    box-sizing: border-box
+  #asbis h2
+    font-size: 24px
+  #asbis .secure .secure__txt
+    background-color: #e2e2e2
+  #asbis
+    .voice
+      .voice__img
+        .hide-mob
+          display: none
+        .show-mob
+          display: block
+      .voice__abs
+        display: none
+
+@media (max-width: 480px)
+  #asbis h2
+    font-size: 22px
+  #asbis img
+    min-width: 140%
+    margin-left: -20%
+  #asbis .voice img
+    min-width: unset
+    margin-left: unset
