@@ -1,0 +1,647 @@
+#service-portal
+	display: block
+	margin: 0 auto
+	max-width: 1440px
+	width: 100%
+	height: auto
+	overflow: hidden
+	background: #fff
+	position: relative
+	padding: 60px 60px 60px 60px
+	img
+		&:hover
+			opacity: 1
+	&:first-letter
+		padding-left: 0
+	img
+		display: block
+		margin-right: initial
+		margin-left: initial
+	p
+		font-size: 16px
+		color: #000
+	h2
+		font-size: calc(1rem + 2.3vw)
+		line-height: 1
+		color: #000
+	h3
+		font-size: 18px
+		line-height: 1
+		color: #000000
+		margin: 0
+		font-weight: bold
+	h4
+		font-size: 18px
+		line-height: 1
+		margin: 0
+		font-weight: bold
+span.word-wrap
+	display: block
+	word-wrap: break-word
+span.fw-bold
+	font-weight: bold
+span.tx-uppercase
+	text-transform: uppercase
+.breadcrumbs
+	display: none
+// default
+
+// fdsf
+.sect-tabs-content__container.tabs
+	display: flex
+	flex-direction: column
+// .tabs__links
+// 	background-color: #fff
+// 	border: 1px solid #e3f2fd
+// 	box-shadow: 0 2px 4px 0 #e3f2fd
+
+.tabs__links>a
+	cursor: pointer
+	transition: 0.3s
+	color: #000
+	opacity: 1
+	min-height: 30px
+	font-size: 16px
+	min-height: 52px
+	padding: 6px 20px
+	border-radius: 8px
+	background: rgba(67, 176, 42, 0.1)
+
+.tabs__links>a:hover
+	background-color: rgba(227, 242, 253, 0.3)
+
+.tabs>#content-1:target~.tabs__links>a[href="#content-1"],
+.tabs>#content-2:target~.tabs__links>a[href="#content-2"],
+.tabs>#content-3:target~.tabs__links>a[href="#content-3"],
+.tabs>#content-4:target~.tabs__links>a[href="#content-4"],
+.tabs>#content-5:target~.tabs__links>a[href="#content-5"],
+.tabs__links>a[href="#content-1"]
+	opacity: 1
+	background: #43B02A
+	color: #fff
+	font-weight: bold
+	box-shadow: none
+	cursor: default
+
+.tabs>div:target~#content-1~.tabs__links>a[href="#content-1"]
+	cursor: pointer
+	transition: 0.3s
+	color: #000
+	opacity: 1
+	min-height: 30px
+	font-size: 16px
+	min-height: 52px
+	padding: 6px 20px
+	border-radius: 8px
+	background: rgba(67, 176, 42, 0.1)
+	font-weight: normal
+
+.tabs>div:not(.tabs__links),
+.tabs>div:target~#content-1
+	display: none
+	order: 1
+
+.tabs>div:target
+	display: block
+
+.tabs>div:target,#content-1
+	display: block
+
+// fdfds
+
+// sect1
+.sect-header-service
+	position: relative
+	border-bottom: 5px solid #43B02A
+.sect-header-service__text
+	text-align: left
+	position: relative
+	z-index: 5
+	h3
+		padding: 24px 0 46px 0
+.sect-header-service__logo
+	position: absolute
+	right: 80px
+	bottom: -5px
+	z-index: 2
+	background: #fff
+// sect2
+.sect-tabs-content__tab
+	overflow: hidden
+	display: flex
+	padding: 32px 0 60px 0
+	justify-content: space-between
+	align-items: center
+	order: 0
+	button
+		cursor: pointer
+		transition: 0.3s
+		color: #000
+		opacity: 1
+		min-height: 30px
+		font-size: 16px
+		min-height: 52px
+		padding: 6px 20px
+		border-radius: 8px
+		background: rgba(67, 176, 42, 0.1)
+		&:hover
+			opacity: 1
+			box-shadow: inset 0 0 10px 0px #43b02a2e
+		&.active
+			opacity: 1
+			background: #43B02A
+			color: #fff
+			font-weight: bold
+			box-shadow: none
+.linebefore
+	background: #CCCCCC
+	opacity: 0.6
+	width: 1px
+	height: 32px
+.item-tabcontent
+	display: none
+	animation: fadeEffect_tab 1s
+.tabs-grd-container
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+	gap: 0px 10px
+	grid-template-areas: "tab-item-grd1 tab-item-grd2 tab-item-grd3 tab-item-grd4 tab-item-grd5"
+	&.clmn-grid6
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+		grid-template-areas: "tab-item-grd1 tab-item-grd2 tab-item-grd3 tab-item-grd4 tab-item-grd5 tab-item-grd6"
+	&.clmn-grid4
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-areas: "tab-item-grd1 tab-item-grd2 tab-item-grd3 tab-item-grd4"
+.tab-item-grd1
+	grid-area: tab-item-grd1
+.tab-item-grd2
+	grid-area: tab-item-grd2
+.tab-item-grd3
+	grid-area: tab-item-grd3
+.tab-item-grd4
+	grid-area: tab-item-grd4
+.tab-item-grd5
+	grid-area: tab-item-grd5
+.tab-item-grd6
+	grid-area: tab-item-grd6
+.tab-item-grd_wrap
+	background: #F2F2F2
+	border-radius: 4px
+	position: relative
+	width: 100%
+	min-height: 395px
+	overflow: hidden
+	z-index: 7
+	&:hover
+		overflow: inherit
+		cursor: pointer
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3)
+		z-index: 8
+		.tab__container__text
+			color: #fff
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		transition: opacity 0.3s
+		border-radius: 4px
+	&.tab1:hover::before,&.tab2:hover::before,&.tab3:hover::before,&.tab4:hover::before,&.tab5:hover::before,&.tab6:hover::before
+		opacity: 1
+	&.active-tab
+		cursor: default
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3)
+		&:hover
+			overflow: hidden
+		.tab__container__text
+			color: #fff
+		&.tab1
+			background: linear-gradient( #7F95B6 3.08%, #7C5D4E 100%)
+		&.tab2
+			background: linear-gradient( #A1B67F 3.08%, #4E717C 100%)
+		&.tab3
+			background: linear-gradient( #B67F7F 3.08%, #4E7C71 100%)
+		&.tab4
+			background: linear-gradient( #6E7587 3.08%, #252C3E 100%)
+		&.tab5
+			background: linear-gradient( #7F95B6 3.08%, #784343 100%)
+		&.tab6
+			background: linear-gradient( #89ACD4 3.08%, #5A4E7C 100%)
+	&.tab1
+		.tab__container__img
+			right: -20px
+			&.tabimg6
+				right: -16px
+				top: 45px
+			&.tabimg11
+				right: -20px
+				top: -15px
+			&.tabimg19
+				top: -20px
+				right: -18px
+		&::before
+			background: linear-gradient( #7F95B6 3.08%, #7C5D4E 100%)
+	&.tab2
+		.tab__container__img
+			right: -27px
+			&.tabimg7
+				right: -20px
+				top: 30px
+			&.tabimg12
+				right: -19px
+				top: 10px
+		&::before
+			background: linear-gradient( #A1B67F 3.08%, #4E717C 100%)
+	&.tab3
+		.tab__container__img
+			right: -27px
+			&.tabimg8
+				right: -21px
+				top: -21px
+			&.tabimg13
+				right: -19px
+				top: 10px
+			&.tabimg18
+				right: -25px
+				top: -15px
+		&::before
+			background: linear-gradient( #B67F7F 3.08%, #4E7C71 100%)
+	&.tab4
+		.tab__container__img
+			right: -20px
+			&.tabimg9
+				right: -65px
+				top: -15px
+			&.tabimg14
+				right: -20px
+				top: -11px
+			&.tabimg16
+				right: -30px
+				top: -17px
+		&::before
+			background: linear-gradient( #6E7587 3.08%, #252C3E 100%)
+	&.tab5
+		.tab__container__img
+			right: -20px
+			&.tabimg10
+				right: -20px
+				top: -15px
+			&.tabimg17
+				right: -85px
+				top: -51px
+		&::before
+			background: linear-gradient( #7F95B6 3.08%, #784343 100%)
+	&.tab6
+		.tab__container__img
+			right: -20px
+			top: -20px
+			&.tabimg15
+				top: 10px
+				right: -20px
+		&::before
+			background: linear-gradient( #89ACD4 3.08%, #5A4E7C 100%)
+.tab__container__img
+	position: absolute
+	top: -15px
+	z-index: 4
+.tab__container__text
+	position: absolute
+	z-index: 5
+	bottom: 16px
+	left: 16px
+	color: #000
+	transition: 0.3s
+.tab__container-content
+	display: none
+	max-width: 1186px
+	width: 100%
+	margin: 0 auto
+	padding: 60px 0 0 0
+	&.active-tab
+		display: block
+	&.active-tab-imp
+		display: block
+		padding: 0 0 0 0
+.tab-prod-flex
+	display: grid
+	grid-template-columns: 1fr 1fr
+	grid-gap: 25px 25px
+.tab__itemflx
+	border: 1px solid #E5E5E5
+	border-radius: 8px
+	padding: 20px 20px 25px 20px
+	max-width: 578px
+	min-height: 200px
+	display: flex
+	align-items: flex-start
+	transition: .3s
+	height: 100%
+	&:hover
+		box-shadow: 0px 2px 5px 2px #e6e6e6
+		border: 1px solid #fff
+		.ling-goto-prod
+			background: #41a22b
+	&.minH245
+		min-height: 245px
+.tab__img
+	min-width: 100px
+	height: auto
+.tab__text
+	margin: 0 0 0 20px
+	height: 100%
+	display: flex
+	flex-direction: column
+	h4
+		padding-bottom: 25px
+	.ling-goto-prod
+		background: #43B02A
+		border-radius: 8px
+		max-width: 100px
+		width: 100%
+		height: 45px
+		display: flex
+		align-items: center
+		justify-content: center
+		color: #fff
+		font-weight: bold
+		font-size: 16px
+		margin: auto 0 0 auto
+	p
+		padding-bottom: 25px
+.sect-tabs-content__tab2
+	overflow: hidden
+	display: flex
+	padding: 0 0 30px 0
+	justify-content: center
+	button
+		cursor: pointer
+		transition: 0.3s
+		color: #000
+		opacity: 0.4
+		min-height: 30px
+		font-size: 18px
+		border-bottom: 2px solid #fff
+		padding: 0
+		margin-right: 30px
+		&:hover
+			opacity: 1
+		&.active
+			opacity: 1
+			border-bottom: 2px solid #000
+		&:last-child
+			margin-right: 0
+.item-tabcontent__tab2
+	display: none
+	animation: fadeEffect_tab 1s
+
+.sect-tabs-content__tab3
+	overflow: hidden
+	display: flex
+	padding: 0 0 30px 0
+	justify-content: center
+	button
+		cursor: pointer
+		transition: 0.3s
+		color: #000
+		opacity: 0.4
+		min-height: 30px
+		font-size: 18px
+		border-bottom: 2px solid #fff
+		padding: 0
+		margin-right: 30px
+		&:hover
+			opacity: 1
+		&.active
+			opacity: 1
+			border-bottom: 2px solid #000
+		&:last-child
+			margin-right: 0
+.item-tabcontent__tab3
+	display: none
+	animation: fadeEffect_tab 1s
+.sect-tabs-content__tab4
+	overflow: hidden
+	display: flex
+	padding: 0 0 30px 0
+	justify-content: center
+	button
+		cursor: pointer
+		transition: 0.3s
+		color: #000
+		opacity: 0.4
+		min-height: 30px
+		font-size: 18px
+		border-bottom: 2px solid #fff
+		padding: 0
+		margin-right: 30px
+		&:hover
+			opacity: 1
+		&.active
+			opacity: 1
+			border-bottom: 2px solid #000
+		&:last-child
+			margin-right: 0
+.item-tabcontent__tab4
+	display: none
+	animation: fadeEffect_tab 1s
+@keyframes fadeEffect_tab
+	from
+		opacity: 0
+	to
+		opacity: 1
+.service_null
+	text-align: left
+	font-size: 17px
+	display: block
+// @media (max-width: 1250px)
+@media (max-width: 1024px)
+	#service-portal
+		padding: 25px 20px 50px 20px
+		p
+			font-size: 16px
+		h2
+			font-size: calc(1rem + 2.1vw)
+		h3
+			font-size: 16px
+		h4
+			font-size: 15px
+	.sect-header-service
+		border-bottom: 3px solid #43B02A
+	.sect-header-service__logo
+		bottom: -3px
+		max-width: 80px
+	.sect-tabs-content__tab button
+		font-size: 16px
+		min-height: 45px
+	.tab-item-grd_wrap
+		min-height: 250px
+		height: 100%
+	.tab__container
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: flex-start
+		height: 100%
+	.tab__container__img
+		position: inherit
+		max-height: 235px
+		display: flex
+		margin: 0 auto
+		align-items: flex-end
+	.tab__container__text
+		position: initial
+		padding: 15px 5px 5px 5px
+	.tab__itemflx
+		padding: 20px 15px 25px 15px
+	.tab__img
+		min-width: 80px
+	.tab__text
+		margin: 0 0 0 10px
+	.tab-prod-flex
+		grid-gap: 20px 20px
+@media (max-width: 812px)
+	#service-portal
+		padding: 25px 20px 50px 20px
+		p
+			font-size: 16px
+		h2
+			font-size: calc(1rem + 2.1vw)
+		h3
+			font-size: 16px
+		h4
+			font-size: 15px
+	.sect-header-service
+		border-bottom: 3px solid #43B02A
+	.sect-header-service__logo
+		bottom: -3px
+		max-width: 80px
+	.sect-tabs-content__tab button
+		font-size: 14px
+		min-height: 45px
+		padding: 8px 8px
+	.tab-item-grd_wrap
+		min-height: 250px
+		height: 100%
+	.tab__container
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: flex-start
+		height: 100%
+	.tab__container__img
+		position: inherit
+		max-height: 235px
+		display: flex
+		margin: 0 auto
+		align-items: flex-end
+	.tab__container__text
+		position: initial
+		padding: 15px 5px 5px 5px
+	.tab__itemflx
+		padding: 20px 15px 25px 15px
+	.tab__img
+		min-width: 80px
+	.tab__text
+		margin: 0 0 0 10px
+	.tab-prod-flex
+		grid-gap: 20px 20px
+@media (max-width: 480px)
+	#service-portal
+		padding: 25px 20px 50px 20px
+		p
+			font-size: 16px
+		h2
+			font-size: 24px
+		h3
+			font-size: 16px
+		h4
+			font-size: 15px
+	.tabs-grd-container
+		display: grid
+		grid-template-columns: 1fr
+		gap: 20px 0px
+		grid-template-areas: "tab-item-grd1" "tab-item-grd2" "tab-item-grd3" "tab-item-grd4" "tab-item-grd5"
+		&.clmn-grid6
+			grid-template-columns: 1fr
+			grid-template-areas: "tab-item-grd1" "tab-item-grd2" "tab-item-grd3" "tab-item-grd4" "tab-item-grd5" "tab-item-grd6"
+		&.clmn-grid4
+			grid-template-columns: 1fr
+			grid-template-areas: "tab-item-grd1" "tab-item-grd2" "tab-item-grd3" "tab-item-grd4"
+	.sect-tabs-content__tab
+		width: 920px
+	.sect-tabs-content__tab-overplay-mob
+		overflow: scroll
+	.sect-header-service
+		border-bottom: 2px solid #43B02A
+	.sect-header-service__logo
+		bottom: -2px
+		max-width: 55px
+		right: 25px
+	.sect-tabs-content__tab button
+		font-size: 16px
+		min-height: 35px
+	.tab-item-grd_wrap
+		min-height: 95px
+		height: 100%
+	.tab__container
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: flex-start
+		height: 100%
+	.tab__container__img
+		position: inherit
+		max-height: 235px
+		display: flex
+		margin: 0 auto
+		align-items: flex-end
+	.tab__container__text
+		position: initial
+		padding: 15px 5px 5px 5px
+	.tab__itemflx
+		padding: 20px 15px 25px 15px
+	.tab__img
+		min-width: 80px
+	.tab__text
+		margin: 0 0 0 10px
+	.tab-prod-flex
+		grid-gap: 20px 0
+		grid-template-columns: 1fr
+	.sect-header-service__text h3
+		padding: 24px 0 75px 0
+	.tab__container__text
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: 15px
+		padding: 0 0 0 0
+		bottom: inherit
+	.tab__container__img
+		position: absolute
+		max-width: 75px
+		right: 8px !important
+		bottom: 5px !important
+		top: inherit !important
+	.tab-item-grd_wrap
+		&.active-tab
+			overflow: visible
+			&:hover
+				overflow: inherit
+		&:hover
+			box-shadow: inherit
+			.tab__container__text
+				color: #000
+			&.active-tab
+				.tab__container__text
+					color: #fff
+		&.tab1:hover::before,&.tab2:hover::before,&.tab3:hover::before,&.tab4:hover::before,&.tab5:hover::before,&.tab6:hover::before
+			opacity: 0
+	.sect-tabs-content__tab2 button
+		font-size: 16px
+		margin-right: 5px
+	.sect-tabs-content__tab3 button
+		margin-right: 10px
+		font-size: 16px

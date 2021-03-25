@@ -1,0 +1,90 @@
+#wrapper-banner-bts
+   width: 100%
+   background: #FF671F
+   height: 60px
+   overflow: hidden
+   position: relative
+.container-banner__flex
+   max-width: 1316px
+   width: 100%
+   margin: 0 auto
+   display: flex
+   justify-content: space-between
+   align-items: center
+   height: 60px
+   overflow: hidden
+.container-banner__item
+   position: relative
+   p,a
+      font-size: 24px
+      color: #fff
+   &:first-child
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      p
+         padding-left: 63px
+   &:last-child
+      width: 520px
+      height: 60px
+      p
+         position: absolute
+         left: 0
+         right: 0
+         top: 50%
+         transform: translateY(-50%)
+         text-align: center
+         margin: 0 auto
+         display: block
+   a
+      &:hover
+         text-decoration: underline
+   .pos
+      position: relative
+      &::before
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img2/Group_300.png)
+         background-position: center
+         background-repeat: no-repeat
+         background-size: cover
+         width: 520px
+         height: 60px
+         position: absolute
+         left: 0
+         top: 0
+@media (max-width: 1024px)
+   .container-banner__item
+      p,a
+         font-size: 17px
+@media (max-width: 812px)
+   .left-img
+      display: none
+   .container-banner__item
+      .pos
+         &::before
+            width: 385px
+            background-size: contain
+   .container-banner__item:last-child
+      width: 390px
+      height: 60px
+@media (max-width: 480px)
+   .left-img
+      display: none
+   .container-banner__item
+      .pos
+         &::before
+            width: 162px
+            background-image: url(https://cdn.comfy.ua/media/x/img2/Group_301.png)
+            background-size: cover
+   .container-banner__item:last-child
+      width: 162px
+      height: 60px
+   .container-banner__item
+      p,a
+         font-size: 14px
+   .container-banner__item:first-child p
+      padding-left: 15px
+      max-width: 160px
+   .container-banner__item:last-child p
+      max-width: 100px
+      text-align: left
