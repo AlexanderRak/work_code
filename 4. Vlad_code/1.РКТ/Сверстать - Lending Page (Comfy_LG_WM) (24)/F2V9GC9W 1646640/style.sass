@@ -1,0 +1,268 @@
+/*default styles*/
+
+#lg
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#lg
+  .show__mob
+    display: none
+
+  .wash
+    position: relative
+    h2
+      color: #fff
+    .wash__txt
+      position: absolute
+      top: 80px
+      right: 50%
+      transform: translateX(50%)
+      text-align: center
+
+  .aidd
+    background-color: #000
+    .aidd__txt
+      text-align: center
+      color: #fff
+      padding: 80px
+      h2
+        margin: 10px 0 20px 0
+    .snoska
+      background-color: #fff
+      padding: 20px
+
+  .howwork
+    .howwork__flex
+      display: flex
+      flex-direction: row
+      align-items: center
+      >div
+        max-width: 50%
+        box-sizing: border-box
+      .howwork__txt
+        padding: 80px
+        h2
+          margin-bottom: 20px
+
+  .sushka
+    .sushka__txt
+      padding: 0 80px
+      text-align: center
+      h2
+        margin: 10px 0 20px 0
+
+  .time
+    .time__flex
+      display: flex
+      flex-direction: row
+      align-items: center
+      >div
+        max-width: 50%
+        box-sizing: border-box
+      .time__txt
+        padding: 80px
+        h2
+          margin: 10px 0 20px 0
+
+  .turbo
+    .turbo__txt
+      text-align: center
+      padding: 80px
+      h2
+        margin: 10px 0 20px
+    .snoska
+      padding: 20px
+      background-color: #000
+      color: #fff
+
+  .electro
+    background-color: #000
+    .electro__txt
+      text-align: center
+      padding: 80px
+      color: #fff
+      h2
+        margin-bottom: 20px
+
+  .water
+    background-color: #f3f3f3
+    .water__txt
+      text-align: center
+      padding: 80px
+      h2
+        margin-bottom: 20px
+    .water__img
+      img
+        margin: 0 auto
+
+  .steam
+    .steam__txt
+      padding: 80px 80px 0 80px
+      text-align: center
+      h2
+        margin: 10px 0 20px 0
+    .snoska
+      background-color: #e0e7ef
+      padding: 20px
+
+  .allergic,
+  .skladka
+    background-color: #e0e7ef
+    .allergic__flex,
+    .skladka__flex
+      display: flex
+      flex-direction: row
+      align-items: center
+      >div
+        max-width: 50%
+        box-sizing: border-box
+      .allergic__txt,
+      .skladka__txt
+        padding: 80px
+        padding-right: 0
+        h2
+          margin: 10px 0 20px
+    .skladka__flex
+      flex-direction: row-reverse
+      .skladka__txt
+        padding: 80px
+        padding-left: 0
+
+  .volume
+    .volume__txt  
+      padding: 80px
+      text-align: center
+      h2
+        margin: 10px 0 20px
+
+  .safety
+    .safety__txt 
+      text-align: center
+      padding: 80px
+      h2
+        margin: 10px 0 20px 0
+
+  .design
+    .design__flex
+      display: flex
+      flex-direction: row
+      align-items: center
+      >div
+        max-width: 50%
+        box-sizing: border-box
+      .design__txt
+        padding: 80px
+        padding-right: 0
+        h2
+          margin: 10px 0 20px 0
+
+  .thinq
+    .thinq__txt
+      padding: 80px 80px 0 80px
+      text-align: center
+      h2
+        margin: 10px 0 20px 0
+    .snoska
+      padding: 20px
+
+  .choise
+    .choise__flex
+      display: flex
+      flex-direction: row
+      align-items: center
+      >div
+        max-width: 50%
+        box-sizing: border-box
+      .choise__txt 
+        padding: 80px
+        h2
+          margin-bottom: 20px
+
+//media*************************************************
+
+@media (max-width: 812px)
+  #lg h2
+    font-size: 28px
+  #lg .wash .wash__txt
+    top: 1em
+  #lg .aidd .aidd__txt,
+  #lg .aidd .snoska,
+  #lg .howwork .howwork__flex .howwork__txt,
+  #lg .turbo .turbo__txt,
+  #lg .steam .snoska,
+  #lg .allergic .allergic__flex .allergic__txt,
+  #lg .volume .volume__txt,
+  #lg .safety .safety__txt,
+  #lg .design .design__flex .design__txt,
+  #lg .thinq .snoska,
+  #lg .choise .choise__flex .choise__txt,
+  #lg .time .time__flex .time__txt,
+  #lg .electro .electro__txt,
+  #lg .water .water__txt,
+  #lg .skladka .skladka__flex .skladka__txt,
+  #lg .turbo .snoska
+    padding: 1em
+    text-align: center
+  #lg .howwork .howwork__flex,
+  #lg .allergic .allergic__flex,
+  #lg .design .design__flex,
+  #lg .choise .choise__flex,
+  #lg .time .time__flex,
+  #lg .skladka .skladka__flex
+    flex-direction: column
+    >div
+      max-width: 100%
+  #lg .sushka .sushka__txt
+    padding: 0 1em
+  #lg .steam .steam__txt,
+  #lg .thinq .thinq__txt
+    padding: 1em 1em 0 1em
+
+@media (max-width: 768px)
+  #lg .hide__mob
+    display: none
+  #lg .show__mob
+    display: block
+
+@media (max-width: 480px)
+  #lg h2
+    font-size: 22px
+  #lg .wash .wash__txt
+    width: 100%
