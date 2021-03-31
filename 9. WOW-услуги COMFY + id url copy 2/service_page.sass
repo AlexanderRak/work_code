@@ -81,14 +81,14 @@ span.tx-uppercase
 	z-index: 2
 	background: #fff
 // sect2
-.sect-tabs-content__tab
+.sect-tabs-content__tab .mCSB_container, .sect-tabs-content__tab
 	overflow: hidden
 	display: flex
 	padding: 32px 0 60px 0
 	justify-content: space-between
 	align-items: center
 	order: 0
-	div
+	li
 		cursor: pointer
 		transition: 0.3s
 		color: #000
@@ -429,7 +429,7 @@ span.tx-uppercase
 	.sect-header-service__logo
 		bottom: -3px
 		max-width: 80px
-	.sect-tabs-content__tab a
+	.sect-tabs-content__tab .mCSB_container, .sect-tabs-content__tab li
 		font-size: 16px
 		min-height: 45px
 	.tab-item-grd_wrap
@@ -474,7 +474,7 @@ span.tx-uppercase
 	.sect-header-service__logo
 		bottom: -3px
 		max-width: 80px
-	.sect-tabs-content__tab a
+	.sect-tabs-content__tab .mCSB_container, .sect-tabs-content__tab li
 		font-size: 14px
 		min-height: 45px
 		padding: 8px 8px
@@ -536,7 +536,7 @@ span.tx-uppercase
 		bottom: -2px
 		max-width: 55px
 		right: 25px
-	.sect-tabs-content__tab a
+	.sect-tabs-content__tab .mCSB_container, .sect-tabs-content__tab a
 		font-size: 16px
 		min-height: 35px
 	.tab-item-grd_wrap
@@ -601,3 +601,23 @@ span.tx-uppercase
 	.sect-tabs-content__tab3 button
 		margin-right: 10px
 		font-size: 16px
+@media (max-width: 767px)
+	.tabs-head:not(.product-tabs) .tabs-head-item
+		background: rgba(67, 176, 42, 0.1) !important
+		background-color: inherit
+		position: inherit
+		display: inherit
+	.tabs-head:not(.product-tabs) ._active
+		background-color: inherit
+		background: #43B02A !important
+	.tabs-head:not(.product-tabs)
+		position: inherit
+		top: inherit
+		width: inherit
+		display: flex !important
+		z-index: inherit
+		box-shadow: inherit
+	.tabs-head:not(.product-tabs) .tabs-head-item:after
+		display: none
+	.hide
+   	display: block !important
