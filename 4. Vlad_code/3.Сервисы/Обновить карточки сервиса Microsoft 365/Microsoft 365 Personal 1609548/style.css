@@ -67,6 +67,174 @@
 }
 
 /*end default styles*/
+.cont-microsoft-hdr {
+  position: relative;
+}
+
+.cont-microsoft-hdr__contant-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 25px 70px 10px 70px;
+}
+
+.cont-microsoft-hdr__item:first-child {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.cont-microsoft-hdr__item .cont-microsoft-hdr__logo {
+  padding-bottom: 50px;
+  max-width: 200px;
+}
+
+.cont-microsoft-hdr__item .cont-microsoft-hdr__img-mob {
+  display: none;
+}
+
+.cont-microsoft-hdr__item .cont-microsoft-hdr__img {
+  padding-top: 15px;
+  max-width: 400px;
+}
+
+.cont-microsoft-hdr__item .cont-microsoft-hdr__img-desc {
+  max-width: 415px;
+  margin-right: 10rem;
+}
+
+#ms .cont-microsoft-hdr__item .cont-microsoft-hdr__text h2 {
+  padding-bottom: 10px;
+  font-size: 34px;
+}
+
+#ms .cont-microsoft-hdr__item .cont-microsoft-hdr__text p {
+  font-size: 21px;
+}
+
+.cont-microsoft-items {
+  position: relative;
+  background-color: #f1f1f2;
+}
+
+#ms .cont-microsoft-items__content {
+  padding: 50px 70px 50px 70px;
+  max-width: 1045px;
+  margin: 0 auto;
+}
+
+#ms .cont-microsoft-items__content h2 {
+  font-size: 34px;
+  padding-bottom: 15px;
+}
+
+.cont-microsoft-items__flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.cont-microsoft-items__flex-items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.cont-microsoft-items__flex-items:last-child {
+  margin-bottom: 0;
+}
+
+.cont-microsoft-items__flex-items .cont-microsoft-items__items-left {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 70px;
+     -moz-box-flex: 1;
+      -ms-flex: 1 1 70px;
+          flex: 1 1 70px;
+  max-width: 70px;
+  margin-right: 70px;
+}
+
+.cont-microsoft-items__flex-items .cont-microsoft-items__items-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 100%;
+     -moz-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+}
+
+#ms .cont-microsoft-items__flex-items .cont-microsoft-items__items-right h3 {
+  font-size: 32px;
+  padding-bottom: 5px;
+}
+
+#ms .cont-microsoft-items__flex-items .cont-microsoft-items__items-right p {
+  font-size: 19px;
+}
+
+.link-microsoft {
+  color: #03a2ff;
+  text-decoration: underline;
+}
+
+.link-microsoft:hover {
+  text-decoration: none;
+}
+
 #ms .none_pic {
   display: none;
 }
@@ -404,6 +572,19 @@
   #ms .complate .complate_list > li .complate_img .complate_cont li:nth-of-type(n+2) {
     margin-left: 20px;
   }
+  .cont-microsoft-hdr__contant-flex {
+    padding: 25px 20px 10px 20px;
+  }
+  .cont-microsoft-hdr__item .cont-microsoft-hdr__img-desc {
+    max-width: 400px;
+    margin-right: 0rem;
+  }
+  #ms .cont-microsoft-items__content {
+    padding: 20px 20px 20px 20px;
+  }
+  .cont-microsoft-items__flex-items .cont-microsoft-items__items-left {
+    margin-right: 40px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -532,5 +713,48 @@
   }
   #ms .saved .saved_video iframe {
     height: 11em;
+  }
+  .cont-microsoft-hdr__contant-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cont-microsoft-hdr__item .cont-microsoft-hdr__img-mob {
+    display: block;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  #ms .cont-microsoft-hdr__item .cont-microsoft-hdr__text h2 {
+    padding-bottom: 10px;
+    font-size: 21px;
+    padding-top: 15px;
+  }
+  #ms .cont-microsoft-hdr__item .cont-microsoft-hdr__text p {
+    font-size: 16px;
+  }
+  .cont-microsoft-hdr__item .cont-microsoft-hdr__logo {
+    padding-bottom: 15px;
+  }
+  .cont-microsoft-hdr__item .cont-microsoft-hdr__img-desc {
+    display: none;
+  }
+  .cont-microsoft-hdr__contant-flex {
+    padding: 25px 20px 25px 20px;
+  }
+  #ms .cont-microsoft-items__content h2 {
+    font-size: 21px;
+  }
+  #ms .cont-microsoft-items__flex-items .cont-microsoft-items__items-right h3 {
+    font-size: 22px;
+  }
+  .cont-microsoft-items__flex-items .cont-microsoft-items__items-left {
+    margin-right: 15px;
+  }
+  #ms .cont-microsoft-items__flex-items .cont-microsoft-items__items-right p {
+    font-size: 15px;
   }
 }

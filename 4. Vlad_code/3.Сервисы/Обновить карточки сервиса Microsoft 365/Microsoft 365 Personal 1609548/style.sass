@@ -52,6 +52,79 @@
 
 /*end default styles*/
 
+// cont-microsoft-hdr
+
+.cont-microsoft-hdr
+  position: relative
+.cont-microsoft-hdr__contant-flex
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 25px 70px 10px 70px
+.cont-microsoft-hdr__item
+  &:first-child
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+  .cont-microsoft-hdr__logo
+    padding-bottom: 50px
+    max-width: 200px
+  .cont-microsoft-hdr__img-mob
+    display: none
+  .cont-microsoft-hdr__img
+    padding-top: 15px
+    max-width: 400px
+  .cont-microsoft-hdr__img-desc
+    max-width: 415px
+    margin-right: 10rem
+#ms .cont-microsoft-hdr__item .cont-microsoft-hdr__text
+  h2
+    padding-bottom: 10px
+    font-size: 34px
+  p
+    font-size: 21px
+// cont-microsoft-hdr END
+// cont-microsoft-items
+
+.cont-microsoft-items
+  position: relative
+  background-color: #f1f1f2
+#ms .cont-microsoft-items__content
+  padding: 50px 70px 50px 70px
+  max-width: 1045px
+  margin: 0 auto
+  h2
+    font-size: 34px
+    padding-bottom: 15px
+.cont-microsoft-items__flex
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+.cont-microsoft-items__flex-items
+  display: flex
+  flex-direction: row
+  align-items: flex-start
+  margin-bottom: 25px
+  &:last-child
+    margin-bottom: 0
+  .cont-microsoft-items__items-left
+    flex: 1 1 70px
+    max-width: 70px
+    margin-right: 70px
+  .cont-microsoft-items__items-right
+    flex: 1 1 100%
+#ms .cont-microsoft-items__flex-items .cont-microsoft-items__items-right
+    h3
+      font-size: 32px
+      padding-bottom: 5px
+    p
+      font-size: 19px
+.link-microsoft
+  color: #03a2ff
+  text-decoration: underline
+  &:hover
+    text-decoration: none
+// cont-microsoft-items END
 #ms
   .none_pic
     display: none
@@ -220,7 +293,15 @@
   #ms .complate .complate_list > li .complate_img .complate_cont li:nth-of-type(n+2)
     margin-left: 20px
   
-
+  .cont-microsoft-hdr__contant-flex
+    padding: 25px 20px 10px 20px
+  .cont-microsoft-hdr__item .cont-microsoft-hdr__img-desc
+    max-width: 400px
+    margin-right: 0rem
+  #ms .cont-microsoft-items__content
+    padding: 20px 20px 20px 20px
+  .cont-microsoft-items__flex-items .cont-microsoft-items__items-left
+    margin-right: 40px
 @media (max-width: 1000px)
   #ms .complate .complate_list
     flex-direction: column
@@ -306,3 +387,29 @@
   
   #ms .saved .saved_video iframe
     height: 11em
+  .cont-microsoft-hdr__contant-flex
+    flex-direction: column
+  .cont-microsoft-hdr__item .cont-microsoft-hdr__img-mob
+    display: block
+    max-width: 250px
+    margin: 0 auto
+  #ms .cont-microsoft-hdr__item .cont-microsoft-hdr__text h2
+    padding-bottom: 10px
+    font-size: 21px
+    padding-top: 15px
+  #ms .cont-microsoft-hdr__item .cont-microsoft-hdr__text p
+    font-size: 16px
+  .cont-microsoft-hdr__item .cont-microsoft-hdr__logo
+    padding-bottom: 15px
+  .cont-microsoft-hdr__item .cont-microsoft-hdr__img-desc
+    display: none
+  .cont-microsoft-hdr__contant-flex
+    padding: 25px 20px 25px 20px
+  #ms .cont-microsoft-items__content h2
+    font-size: 21px
+  #ms .cont-microsoft-items__flex-items .cont-microsoft-items__items-right h3
+    font-size: 22px
+  .cont-microsoft-items__flex-items .cont-microsoft-items__items-left
+    margin-right: 15px
+  #ms .cont-microsoft-items__flex-items .cont-microsoft-items__items-right p
+    font-size: 15px
