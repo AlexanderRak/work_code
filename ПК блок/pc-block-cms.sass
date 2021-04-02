@@ -5,7 +5,6 @@
 	width: 100%
 	height: auto
 	overflow: hidden
-	background: #f2f2f2
 	position: relative
 	img
 		&:hover
@@ -17,12 +16,12 @@
 		margin-right: initial
 		margin-left: initial
 	p
-		font-size: 16px
+		font-size: 14px
 		margin-bottom: 0
 		color: #FFFFFF
 		font-weight: bold
 	h2
-		font-size: 20px
+		font-size: 16px
 		line-height: 1
 		color: #FF671F
 		font-weight: bold
@@ -40,8 +39,9 @@ span.word-wrap
 	max-width: 430px
 	border-radius: 8px
 	transition: .3s
-	&:nth-child(2)
-		margin: 0 5px
+	margin: 0 15px 0 0
+	&:last-child
+		margin: 0
 	&:hover
 		box-shadow: 0 0 10px 0 #090908
 .cms-pc-category__item-content
@@ -79,8 +79,8 @@ span.word-wrap
 	padding-left: 10px
 .cms-pc-category__logo
 	position: absolute
-	right: 20px
-	top: 15px
+	right: 10px
+	top: 10px
 // media
 // @media (max-width: 1250px)
 @media (max-width: 1024px)
@@ -95,12 +95,30 @@ span.word-wrap
 			position: absolute
 			right: 5px
 			top: 5px
+	.cms-pc-category__container
+		flex-wrap: wrap
+		justify-content: space-evenly
+		padding: 5px 10px
+	.cms-pc-category__itam
+		margin: 0 10px 10px 0
+	.cms-pc-category__itam
+		flex: 1 1 49%
+		max-width: 50%
+	.cms-pc-category__itam:nth-child(2)
+		margin: 0 0px 10px 0
 @media (max-width: 812px)
 	#cms-pc-category
 		h2
 			font-size: 13px
 	.cms-pc-category__img
 		margin-left: -40px
+	.cms-pc-category__container
+		flex-wrap: wrap
+		justify-content: space-evenly
+	.cms-pc-category__itam
+		margin: 0 5px 5px 0
+	.cms-pc-category__container
+		padding: 5px 5px
 @media (max-width: 480px)
 	span.word-wrap-mob
 		display: block
@@ -111,8 +129,7 @@ span.word-wrap
 	.cms-pc-category__itam
 		flex: 1 1 100%
 		max-width: 100%
-		&:nth-child(2)
-			margin: 15px 0
+		margin: 0 0 15px 0
 	#cms-pc-category
 		h2
 			font-size: 18px
@@ -123,3 +140,5 @@ span.word-wrap
 	#cms-pc-category .cms-pc-category__logo
 		right: 10px
 		top: 10px
+	.cms-pc-category__itam:nth-child(2)
+		margin: 0 0px 15px 0

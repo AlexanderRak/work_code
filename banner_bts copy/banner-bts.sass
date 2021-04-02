@@ -13,6 +13,13 @@
    align-items: center
    height: 60px
    overflow: hidden
+   padding: 0 40px
+.flexdost
+   display: flex
+   max-width: 205px
+   width: 100%
+   justify-content: space-between
+   align-items: center
 .container-banner__item
    position: relative
    p,a
@@ -22,8 +29,10 @@
       display: flex
       align-items: center
       justify-content: flex-start
+      width: 100%
+      max-width: 475px
       p
-         padding-left: 63px
+         padding-left: 80px
    &:last-child
       width: 520px
       height: 60px
@@ -56,6 +65,8 @@
    .container-banner__item
       p,a
          font-size: 17px
+   .container-banner__flex
+      padding: 0 0 0 5px
 @media (max-width: 812px)
    .left-img
       display: none
@@ -64,9 +75,15 @@
          &::before
             width: 385px
             background-size: contain
+   .container-banner__item:first-child
+      max-width: 255px
+   .flexdost
+      max-width: 130px
    .container-banner__item:last-child
       width: 390px
       height: 60px
+   .container-banner__item:first-child p
+      padding-left: 35px
 @media (max-width: 480px)
    .left-img
       display: none
@@ -86,5 +103,9 @@
       padding-left: 15px
       max-width: 160px
    .container-banner__item:last-child p
-      max-width: 100px
+      max-width: 115px
       text-align: left
+   .flexdost
+      display: none
+   .container-banner__item:first-child
+      max-width: 120px
