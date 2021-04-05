@@ -1,0 +1,784 @@
+<style>
+	#service {
+		max-width: 1316px;
+		width: 100%;
+		background-color: #fff;
+		margin: 0 auto;
+		border-radius: 16px;
+	}
+
+	#service h2 {
+		font-weight: bold;
+		font-size: 34px;
+		line-height: 40px;
+		padding: 0;
+		margin: 0;
+	}
+
+	#service p {
+		font-weight: 500;
+		font-size: 17px;
+		line-height: 24px;
+		padding: 0;
+		margin: 0;
+	}
+
+	#service img:hover {
+		opacity: 1;
+	}
+
+	#service img {
+		max-width: 100%;
+		opacity: 1;
+	}
+
+	#service .service-top {
+		margin-bottom: 63px;
+		padding-top: 76px;
+	}
+
+	#service .service-top__wrapper {
+		padding-left: 40px;
+		padding-right: 20px;
+	}
+
+	#service .service-top__inner {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+	}
+
+	#service .service-top__left {
+		-webkit-box-flex: 1;
+		-ms-flex: 1 1 0px;
+		flex: 1 1 0;
+		max-width: 444px;
+	}
+
+	#service .service-top__left-top {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		margin-bottom: 74px;
+	}
+
+	#service .service-top__left-item {
+		padding-left: 21px;
+	}
+
+	#service .service-top__left-info p {
+		font-weight: bold;
+		font-size: 54px;
+		line-height: 60px;
+		padding-left: 23px;
+		padding-bottom: 30px;
+		position: relative;
+	}
+
+	#service .service-top__left-info p::before {
+		position: absolute;
+		content: "";
+		background-image: url("https://cdn.comfy.ua/media/x/img/services-img/img10.png");
+		background-repeat: no-repeat;
+		background-size: auto;
+		background-position: center;
+		width: 100%;
+		height: 100%;
+		z-index: 5;
+		bottom: -22%;
+		right: -16%;
+	}
+
+	#service .service-top__left-info-line {
+		width: 300px;
+		border-bottom: 2px solid #000;
+		margin-bottom: 40px;
+	}
+
+	#service .service-top__left-sub p {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 18px;
+		color: #FF671F;
+		padding-left: 23px;
+	}
+
+	#service .service-top__right {
+		-webkit-box-flex: 1;
+		-ms-flex: 1 1 0px;
+		flex: 1 1 0;
+	}
+
+	#service .service-content__title {
+		text-align: center;
+		max-width: 686px;
+		margin: 0 auto;
+	}
+
+	#service .service-content__title h2 {
+		margin-bottom: 30px;
+	}
+
+	#service .service-content__title-line {
+		width: 300px;
+		border-bottom: 2px solid #000;
+		margin: 0 auto 30px;
+	}
+
+	#service .service-content__wrapper {
+		margin-bottom: 60px;
+		padding: 0 15px;
+	}
+
+	#service .service-content__info p {
+		font-size: 24px;
+		line-height: 30px;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	#service .service-content__inner {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+
+	#service .service-content__items {
+		border: 1px solid #E5E5E5;
+		border-radius: 16px;
+		max-width: 370px;
+		-webkit-box-flex: 1;
+		-ms-flex: 1 1 0px;
+		flex: 1 1 0;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 30px;
+		margin: 0 15px;
+		text-align: center;
+	}
+
+	#service .service-content__item img {
+		margin-bottom: 17px;
+	}
+
+	#service .service-condition__wrapper {
+		margin-bottom: 60px;
+		padding-left: 40px;
+		padding-right: 20px;
+	}
+
+	#service .service-condition__inner {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+	}
+
+	#service .service-condition__left {
+		padding-right: 15px;
+	}
+
+	#service .service-condition__left-title {
+		margin-bottom: 30px;
+	}
+
+	#service .service-condition__left-title h2 {
+		padding-left: 23px;
+		padding-bottom: 30px;
+	}
+
+	#service .service-condition__left-title-line {
+		width: 300px;
+		border-bottom: 2px solid #000;
+	}
+
+	#service .service-condition__left-items {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		max-width: 400px;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 16px 45px;
+		background: #E9F5FF;
+		border-radius: 16px;
+		margin-bottom: 20px;
+	}
+
+	#service .service-condition__left-item--numb {
+		font-weight: bold;
+		font-size: 34px;
+		line-height: 40px;
+		padding-right: 40px;
+	}
+
+	#service .service-bottom {
+		padding-bottom: 150px;
+	}
+
+	#service .service-bottom__title {
+		margin-bottom: 86px;
+		text-align: center;
+	}
+
+	#service .service-bottom__title h2 {
+		padding-bottom: 30px;
+	}
+
+	#service .service-bottom__title-line {
+		width: 300px;
+		border-bottom: 2px solid #000;
+		margin: 0 auto;
+	}
+
+	#service .service-bottom__wrapper {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		background-image: url(https://cdn.comfy.ua/media/x/img/services-img/img7.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 383px;
+		position: relative;
+		z-index: 1;
+	}
+
+	#service .service-bottom__wrapper::after,
+	#service .service-bottom__wrapper::before {
+		position: absolute;
+		content: "";
+		bottom: -30%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: -1;
+	}
+
+	#service .service-bottom__wrapper::after {
+		background-image: url(https://cdn.comfy.ua/media/x/img/services-img/img9.png);
+		width: 594px;
+		height: 355px;
+		right: 0;
+	}
+
+	#service .service-bottom__wrapper::before {
+		background-image: url(https://cdn.comfy.ua/media/x/img/services-img/img8.png);
+		width: 684px;
+		height: 409px;
+		left: 0;
+	}
+
+	#service .service-bottom__inner-pos {
+		margin-top: -4%;
+	}
+
+	#service .service-bottom__inner {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+
+	#service .service-bottom__items {
+		max-width: 370px;
+		-webkit-box-flex: 1;
+		-ms-flex: 1 1 0px;
+		flex: 1 1 0;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		margin: 0 15px;
+		position: relative;
+	}
+
+	#service .service-bottom__item-img img {
+		border-radius: 16px 16px 0 0;
+	}
+
+	#service .service-bottom__item {
+		background-color: #fff;
+		border-radius: 16px;
+		min-height: 184px;
+		padding: 20px;
+		position: absolute;
+		bottom: -46%;
+		left: 0;
+		right: 0;
+		z-index: 4;
+	}
+
+	#service .service-bottom__img {
+		position: relative;
+		z-index: 1;
+	}
+
+	#service .service-bottom__img::after,
+	#service .service-bottom__img::before {
+		position: absolute;
+		content: "";
+		bottom: -30%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: auto;
+		z-index: -1;
+	}
+
+	#service .service-bottom__img::after {
+		background-image: url(https://cdn.comfy.ua/media/x/img/services-img/img9.png);
+		width: 594px;
+		height: 355px;
+		right: 0;
+	}
+
+	#service .service-bottom__img::before {
+		background-image: url(https://cdn.comfy.ua/media/x/img/services-img/img8.png);
+		width: 684px;
+		height: 409px;
+		left: 0;
+	}
+
+	@media screen and (max-width: 933px) {
+		#service .service-top__left-info p {
+			font-size: 40px;
+			line-height: 50px;
+			padding-bottom: 28px;
+		}
+
+		#service .service-top__left-top {
+			margin-bottom: 38px;
+		}
+
+		#service .service-top__left-info-line {
+			margin-bottom: 28px;
+		}
+	}
+
+	@media screen and (max-width: 906px) {
+		#service .service-bottom__item {
+			bottom: -63%;
+		}
+	}
+
+	@media screen and (max-width: 851px) {
+		#service .service-bottom__item {
+			bottom: -82%;
+		}
+	}
+
+	@media screen and (max-width: 810px) {
+		#service .service-bottom__items {
+			margin: 0 5px;
+		}
+
+		#service .service-bottom__item {
+			bottom: -68%;
+		}
+	}
+
+	@media screen and (max-width: 766px) {
+		#service .service-bottom__inner {
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+		}
+
+		#service .service-bottom__items {
+			min-height: 431px;
+		}
+
+		#service .service-bottom__item {
+			bottom: 7%;
+		}
+
+		#service .service-bottom__inner-pos {
+			margin-top: 0;
+		}
+
+		#service .service-bottom__wrapper-mob {
+			background-image: url(https://cdn.comfy.ua/media/x/img/services-img/img7-1.png) !important;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+		}
+
+		#service .service-bottom__title {
+			margin-bottom: 30px;
+		}
+
+		#service .service-bottom__wrapper {
+			background-image: none;
+		}
+	}
+
+	@media screen and (max-width: 723px) {
+		#service .service-top__left-info p::before {
+			right: -7%;
+		}
+
+		#service .service-condition__inner {
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+
+		#service .service-top__wrapper {
+			padding-left: 20px;
+		}
+
+		#service .service-top__inner {
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+		}
+
+		#service .service-top__left {
+			padding-bottom: 15px;
+		}
+	}
+
+	@media screen and (max-width: 645px) {
+		#service .service-condition__inner {
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+		}
+
+		#service .service-condition__wrapper {
+			padding-left: 20px;
+		}
+
+		#service .service-condition__left {
+			padding-right: 0;
+		}
+	}
+
+	@media screen and (max-width: 583px) {
+		#service .service-content__inner {
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+		}
+
+		#service .service-content__items {
+			margin: 0 auto 10px;
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+
+		#service .service-bottom__wrapper::after,
+		#service .service-bottom__wrapper::before {
+			bottom: -14%;
+		}
+
+		#service .service-bottom__items {
+			margin: 0 15px;
+		}
+
+		#service .service-condition__left-title h2 {
+			padding-left: 0;
+			padding-bottom: 16px;
+			text-align: center;
+		}
+
+		#service .service-condition__left-title-line {
+			margin: 0 auto;
+		}
+
+		#service .service-condition__left-items {
+			margin: 0 auto 20px;
+		}
+
+		#service .service-top__left-info-line {
+			margin-bottom: 16px;
+		}
+
+		#service .service-top__left-top {
+			margin-bottom: 24px;
+		}
+
+		#service .service-top {
+			padding-top: 25px;
+			margin-bottom: 10px;
+		}
+
+		#service .service-top__left-item p {
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		#service .service-top__left-item {
+			padding-left: 15px;
+		}
+
+		#service .service-top__left-info p {
+			font-size: 24px;
+			line-height: 30px;
+			padding-bottom: 16px;
+		}
+
+		#service h2 {
+			font-size: 20px;
+			line-height: 24px;
+		}
+
+		#service .service-content__info p {
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		#service p {
+			font-size: 14px;
+			line-height: 18px;
+		}
+
+		#service .service-top__left-info p::before {
+			display: none;
+		}
+
+		#service .service-top__left-info p::after {
+			position: absolute;
+			content: "";
+			background-image: url(https://cdn.comfy.ua/media/x/img/services-img/img10-mob.png);
+			background-repeat: no-repeat;
+			background-size: auto;
+			background-position: center;
+			width: 100%;
+			height: 100%;
+			z-index: 5;
+			bottom: -11%;
+			right: 15%;
+		}
+	}
+
+	@media screen and (max-width: 435px) {
+		#service .service-top__left-info p::after {
+			right: 10%;
+		}
+	}
+
+	@media screen and (max-width: 392px) {
+		#service .service-top__left-info p::after {
+			right: 4%;
+		}
+	}
+
+	@media screen and (max-width: 376px) {
+		#service .service-bottom__item {
+			bottom: 15%;
+		}
+	}
+
+	@media screen and (max-width: 362px) {
+		#service .service-top__left-info p::after {
+			bottom: -22%;
+			right: 2%;
+		}
+	}
+
+	@media screen and (max-width: 322px) {
+		#service .service-top__left-info p::after {
+			right: -5%;
+		}
+	}
+</style>
+
+<div id="service">
+	<section class="service-top">
+		<div class="service-top__wrapper">
+			<div class="service-top__inner">
+				<div class="service-top__left">
+					<div class="service-top__left-top">
+						<div class="service-top__left-item-img">
+							<img src="https://cdn.comfy.ua/media/x/img/services-img/img1-3.png" alt="">
+						</div>
+						<div class="service-top__left-item">
+							<p>Ремонт задней крышки</p>
+						</div>
+					</div>
+					<div class="service-top__left-info">
+						<p>Разбилась задняя крышка?<br>Поможем</p>
+						<div class="service-top__left-info-line"></div>
+					</div>
+					<div class="service-top__left-sub">
+						<p>*Cтоимость зависит от модели устройства</p>
+					</div>
+					<div class="service-top__left-btn"></div>
+				</div>
+				<div class="service-top__right">
+					<img src="https://cdn.comfy.ua/media/x/img/services-img/img2-3.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="service-content">
+		<div class="service-content__wrapper">
+			<div class="service-content__title">
+				<h2>Даже картинка разбитой задней крышки портит вид и настроение</h2>
+				<div class="service-content__title-line"></div>
+			</div>
+			<div class="service-content__info">
+				<p>Преимущества «Ремонта задней крышки»</p>
+			</div>
+			<div class="service-content__inner">
+				<div class="service-content__items">
+					<div class="service-content__item">
+						<img src="https://cdn.comfy.ua/media/x/img/services-img/icon1.png" alt="">
+					</div>
+					<div class="service-content__item">
+						<p>6 месяцев бесплатной замены, если экран разобьется повторно</p>
+					</div>
+				</div>
+				<div class="service-content__items">
+					<div class="service-content__item">
+						<img src="https://cdn.comfy.ua/media/x/img/services-img/icon2.png" alt="">
+					</div>
+					<div class="service-content__item">
+						<p>Не нужно искать хороший сервисный центр и мастера</p>
+					</div>
+				</div>
+				<div class="service-content__items">
+					<div class="service-content__item">
+						<img src="https://cdn.comfy.ua/media/x/img/services-img/icon3.png" alt="">
+					</div>
+					<div class="service-content__item">
+						<p>Не беспокоитесь о качестве работы</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="service-condition">
+		<div class="service-condition__wrapper">
+			<div class="service-condition__inner">
+				<div class="service-condition__left">
+					<div class="service-condition__left-title">
+						<h2>Условия:</h2>
+						<div class="service-condition__left-title-line"></div>
+					</div>
+					<div class="service-condition__left-items">
+						<div class="service-condition__left-item">
+							<p class="service-condition__left-item--numb">1</p>
+						</div>
+						<div class="service-condition__left-item">
+							<p>Сервис можно купить после того, как разбили заднию крышку</p>
+						</div>
+					</div>
+					<div class="service-condition__left-items">
+						<div class="service-condition__left-item">
+							<p class="service-condition__left-item--numb">2</p>
+						</div>
+						<div class="service-condition__left-item">
+							<p>Место покупки устройства не имеет значения</p>
+						</div>
+					</div>
+					<div class="service-condition__left-items">
+						<div class="service-condition__left-item">
+							<p class="service-condition__left-item--numb">3</p>
+						</div>
+						<div class="service-condition__left-item">
+							<p>Стоимость услуги зависит от модели</p>
+						</div>
+					</div>
+				</div>
+				<div class="service-condition__right">
+					<img src="https://cdn.comfy.ua/media/x/img/services-img/img3.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="service-bottom">
+		<div class="service-bottom__title">
+			<h2>Как это работает?</h2>
+			<div class="service-bottom__title-line"></div>
+		</div>
+		<div class="service-bottom__wrapper service-bottom__wrapper-mob">
+			<div class="service-bottom__inner-pos">
+				<div class="service-bottom__inner">
+					<div class="service-bottom__items">
+						<div class="service-bottom__item-img">
+							<img src="https://cdn.comfy.ua/media/x/img/services-img/img4.png" alt="">
+						</div>
+						<div class="service-bottom__item">
+							<p>Регистрируете заявку по номеру</p>
+							<p><b>0 800 305 122</b></p>
+							<p>(Пн - Пт с 9:00 до 18:00)</p>
+						</div>
+					</div>
+					<div class="service-bottom__items">
+						<div class="service-bottom__item-img">
+							<img src="https://cdn.comfy.ua/media/x/img/services-img/img5.png" alt="">
+						</div>
+						<div class="service-bottom__item">
+							<p>Бесплатно отправляете
+								Новой Почтой поврежденную технику, гарантийный талон и чек на товар с услугой
+								<b>“Ремонт задней крышки”</b>
+							</p>
+						</div>
+					</div>
+					<div class="service-bottom__items">
+						<div class="service-bottom__item-img">
+							<img src="https://cdn.comfy.ua/media/x/img/services-img/img6.png" alt="">
+						</div>
+						<div class="service-bottom__item">
+							<p>Получаете SMS в течение 5 рабочих дней. Сообщаем о бесплатном ремонте или о
+								компенсации в
+								виде кода электронного подарочного сертификата</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="service-bottom__img">
+                    <img src="https://cdn.comfy.ua/media/x/img/services-img/img7.png" alt="">
+                </div> -->
+		</div>
+	</section>
+</div>
