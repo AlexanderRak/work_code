@@ -3,7 +3,9 @@
   width: 100%;
   background-color: #fff;
   margin: 0 auto;
-  border-radius: 16px;
+  -webkit-border-radius: 16px;
+     -moz-border-radius: 16px;
+          border-radius: 16px;
 }
 
 #service h2 {
@@ -43,19 +45,28 @@
 
 #service .service-top__inner {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 #service .service-top__left {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   max-width: 444px;
@@ -63,13 +74,20 @@
 
 #service .service-top__left-top {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 74px;
@@ -93,7 +111,10 @@
   content: "";
   background-image: url("https://cdn.comfy.ua/media/x/img/services-img/img10.png");
   background-repeat: no-repeat;
-  background-size: auto;
+  -webkit-background-size: auto auto;
+     -moz-background-size: auto;
+       -o-background-size: auto;
+          background-size: auto;
   background-position: center;
   width: 100%;
   height: 100%;
@@ -118,6 +139,8 @@
 
 #service .service-top__right {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
@@ -152,25 +175,37 @@
 
 #service .service-content__inner {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 #service .service-content__items {
   border: 1px solid #E5E5E5;
-  border-radius: 16px;
+  -webkit-border-radius: 16px;
+     -moz-border-radius: 16px;
+          border-radius: 16px;
   max-width: 370px;
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   padding: 30px;
   margin: 0 15px;
@@ -189,13 +224,20 @@
 
 #service .service-condition__inner {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
@@ -220,21 +262,31 @@
 
 #service .service-condition__left-items {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   max-width: 400px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   padding: 16px 45px;
   background: #E9F5FF;
-  border-radius: 16px;
+  -webkit-border-radius: 16px;
+     -moz-border-radius: 16px;
+          border-radius: 16px;
   margin-bottom: 20px;
 }
 
@@ -266,15 +318,22 @@
 
 #service .service-bottom__wrapper {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   background-image: url(https://cdn.comfy.ua/media/x/img/services-img/img7.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
   width: 100%;
   height: 383px;
   position: relative;
@@ -287,7 +346,10 @@
   bottom: -30%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
   z-index: -1;
 }
 
@@ -311,10 +373,15 @@
 
 #service .service-bottom__inner {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
@@ -322,21 +389,28 @@
 #service .service-bottom__items {
   max-width: 370px;
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0 15px;
   position: relative;
 }
 
 #service .service-bottom__item-img img {
-  border-radius: 16px 16px 0 0;
+  -webkit-border-radius: 16px 16px 0 0;
+     -moz-border-radius: 16px 16px 0 0;
+          border-radius: 16px 16px 0 0;
 }
 
 #service .service-bottom__item {
   background-color: #fff;
-  border-radius: 16px;
+  -webkit-border-radius: 16px;
+     -moz-border-radius: 16px;
+          border-radius: 16px;
   min-height: 184px;
   padding: 20px;
   position: absolute;
@@ -357,7 +431,10 @@
   bottom: -30%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  -webkit-background-size: auto auto;
+     -moz-background-size: auto;
+       -o-background-size: auto;
+          background-size: auto;
   z-index: -1;
 }
 
@@ -414,6 +491,9 @@
   #service .service-bottom__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -430,7 +510,10 @@
     background-image: url(https://cdn.comfy.ua/media/x/img/services-img/img7-1.png) !important;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
     width: 100%;
     height: 100%;
   }
@@ -448,6 +531,8 @@
   }
   #service .service-condition__inner {
     -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
@@ -457,6 +542,9 @@
   #service .service-top__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -469,6 +557,9 @@
   #service .service-condition__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -484,6 +575,9 @@
   #service .service-content__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -560,7 +654,10 @@
     content: "";
     background-image: url(https://cdn.comfy.ua/media/x/img/services-img/img10-mob.png);
     background-repeat: no-repeat;
-    background-size: auto;
+    -webkit-background-size: auto auto;
+       -moz-background-size: auto;
+         -o-background-size: auto;
+            background-size: auto;
     background-position: center;
     width: 100%;
     height: 100%;
@@ -609,4 +706,3 @@
     right: -5%;
   }
 }
-/*# sourceMappingURL=style.css.map */
