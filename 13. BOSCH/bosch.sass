@@ -1,0 +1,219 @@
+#bosch
+	display: block
+	margin: 0 auto
+	max-width: 1316px
+	width: 100%
+	height: auto
+	overflow: hidden
+	background: #43B02A
+	position: relative
+	img
+		&:hover
+			opacity: 1
+	&:first-letter
+		padding-left: 0
+	img
+		display: block
+		margin-right: initial
+		margin-left: initial
+	p
+		font-size: 24px
+		color: #fff
+		text-align: center
+		margin-bottom: 0
+span.word-wrap
+	display: block
+	word-wrap: break-word
+span.fw-bold
+	font-weight: bold
+span.tx-uppercase
+	text-transform: uppercase
+// default
+.bosch-container
+	margin: 20px 0 75px 0
+.bosch-header
+	position: relative
+	height: 109px
+.bosch-header__bgrd
+	&::before
+		content: ""
+		background-image: url(https://cdn.comfy.ua/media/x/img2/boschimg/bgrd.png)
+		background-position: right
+		background-repeat: no-repeat
+		background-size: cover
+		position: absolute
+		left: 0
+		top: 0
+		width: 1366px
+		height: 109px
+		z-index: 8
+.bosch-header__logo
+	position: absolute
+	left: 0
+	top: 0
+	z-index: 9
+.bosch-content
+	position: relative
+	padding-bottom: 20px
+.bosch-content__prod
+	height: 320px
+	display: flex
+	align-items: center
+	position: relative
+	z-index: 6
+	img
+		margin: 0 auto !important
+.bosch-content__text
+	text-align: center
+	margin-top: 32px
+	position: relative
+	z-index: 10
+	display: table
+	margin: 0 auto
+	padding: 12px 12px
+	font-weight: bold
+.bosch-row__item
+	&:hover
+		.bosch-content__text
+			background: #FF671F
+			box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.5)
+			border-radius: 8px
+			transition: .3s
+.bosch-content__prod-hover
+	position: absolute
+	left: 0
+	right: 0
+	margin: 0 auto
+	top: 50%
+	transform: translateY(-50%)
+	z-index: 10
+	opacity: 0
+	transition: .3s
+	&.hover-prod3
+		top: 0
+		transform: translateY(10px)
+	&.hover-prod4
+		top: -2px
+		transform: translateY(10px)
+		left: 10px
+.bosch-row__item
+	&:hover
+		.bosch-content__prod-hover
+			opacity: 1
+// slick
+#bosch
+	.slick-track
+		position: inherit
+		left: inherit
+		top: inherit
+		height: 100%
+		display: flex
+		align-items: flex-start
+		overflow: hidden
+	.slick-slider
+		height: 100%
+		z-index: 7
+		margin-top: 0
+	.slick-slide
+		float: inherit
+		height: auto
+	.your-class-arrow
+		display: block
+		.slick-prev, .slick-next
+			background: #E5E5E5
+			width: 33px
+			height: 33px
+			position: absolute
+			z-index: 8
+			display: inline-block !important
+			transition: .3s
+			border-radius: 50%
+			&::before
+				width: 10px
+				height: 15px
+				border-radius: 50%
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				color: #fff
+				font-size: 13px
+				line-height: 1.2
+				left: 1px
+				right: 0
+				margin: 0 auto
+			&:hover
+				cursor: pointer
+			&.slick-disabled
+				opacity: 0.5
+				&::before
+					background: #E5E5E5
+		.slick-prev
+			left: 5px
+			top: 50%
+			transform: translateY(-50%)
+			&::before
+				content: url(https://cdn.comfy.ua/media/x/img2/str-left.svg)
+		.slick-next
+			right: 5px
+			top: 50%
+			transform: translateY(-50%)
+			&::before
+				content: url(https://cdn.comfy.ua/media/x/img2/str-right.svg)
+
+// media
+@media (max-width: 1024px)
+	.bosch-content__prod-hover
+		opacity: 1
+	.bosch-row__item:hover .bosch-content__text
+		background: inherit
+		box-shadow: inherit
+		border-radius: 0px
+	.bosch-content__text
+		padding: 5px 10px
+		border-bottom: 5px solid #FF671F
+	.bosch-container
+		margin: 0px 0 5px 0
+// @media (max-width: 812px)
+@media (max-width: 480px)
+	.bosch-header__logo
+		left: 5px
+		top: 10px
+		max-width: 170px
+	.bosch-header__bgrd::before
+		background-image: url(https://cdn.comfy.ua/media/x/img2/bgrd_mob.png)
+		left: inherit
+		right: 0
+		top: 0
+		width: 136px
+		height: 88px
+	.bosch-content__prod
+		height: 295px
+		&.pdd-mob1
+			max-width: 250px
+			margin: 0 auto
+			.bosch-content__prod-hover.hover-prod1
+				max-width: 220px
+				padding-bottom: 12px
+		&.pdd-mob2
+			max-width: 260px
+			margin: 0 auto
+			.bosch-content__prod-hover.hover-prod2
+				max-width: 225px
+				padding-bottom: 7px
+		&.pdd-mob3
+			max-width: 204px
+			margin: 0 auto
+			.bosch-content__prod-hover.hover-prod3
+				max-width: 180px
+				margin-top: 5px
+		&.pdd-mob4
+			max-width: 300px
+			margin: 0 auto
+			.bosch-content__prod-hover.hover-prod4
+				max-width: 243px
+				margin-top: -8px
+				left: 7px
+	.bosch-header
+		height: 80px
+	.bosch-content__text
+		margin-top: -15px
