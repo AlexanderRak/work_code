@@ -1,0 +1,937 @@
+<style>
+  .cms table td {
+    font-size: 1.1rem;
+  }
+  #chat_id p:first-letter {
+    padding-left: 0;
+  }
+
+  #chat_id p {
+    margin-bottom: 0;
+  }
+
+  #chat_id img:hover {
+    opacity: 1;
+  }
+
+  #chat_id img {
+    opacity: 1;
+    max-width: 100%;
+    display: block;
+  }
+
+  #chat_id {
+    max-width: 1316px;
+    margin: 0;
+    height: auto;
+    background-color: #fff;
+    padding: 0 5px;
+    display: inline-block;
+  }
+
+  .features-desc__text img {
+    margin-bottom: 0rem;
+  }
+
+  .one-col .features-desc__text p:first-letter {
+    padding-left: 0rem !important;
+  }
+
+  #chat_id .content a {
+    font-weight: normal;
+    text-decoration: underline;
+    font-family: sans-serif;
+    color: #FF671F;
+    line-height: normal;
+    font-size: 14px;
+    display: -webkit-box;
+    display: flex;
+    cursor: pointer;
+
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    /* padding-bottom: 16px; */
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    position: relative;
+    -webkit-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+  }
+
+  #chat_id .content a::before {
+    display: block;
+    content: '';
+    min-width: 18px;
+    height: 18px;
+    background-image: url("https://cdn.comfy.ua/media/x/img/chat/icon1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 5px;
+  }
+
+  #chat_id .popup ul.communication {
+    padding: 0;
+    margin: 0;
+  }
+
+  #chat_id .popup ul.communication li {
+    list-style-type: none;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  #chat_id .popup ul.communication li a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  #chat_id .popup ul.communication li:last-child {
+    margin-bottom: 0;
+  }
+
+  #chat_id .popup ul.communication li::before {
+    display: block;
+    content: '';
+    min-width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+    position: unset;
+  }
+
+  #chat_id .popup ul.communication li p {
+    font-size: 14px;
+    line-height: normal;
+    padding-bottom: 0;
+  }
+
+  #chat_id .popup ul.communication li:nth-child(1)::before {
+    background-image: url("https://cdn.comfy.ua/media/x/img/chat/icon2.png");
+  }
+
+  #chat_id .popup ul.communication li:nth-child(2)::before {
+    background-image: url("https://cdn.comfy.ua/media/x/img/chat/icon3.png");
+  }
+
+  #chat_id .popup ul.communication li:nth-child(3)::before {
+    background-image: url("https://cdn.comfy.ua/media/x/img/chat/icon4.png");
+  }
+
+  #chat_id .popup ul.communication li:nth-child(4)::before {
+    background-image: url("https://cdn.comfy.ua/media/x/img/chat/icon5.png");
+  }
+
+  #chat_id .popup ul.communication li:nth-child(5)::before,
+  #chat_id .popup ul.communication li:nth-child(6)::before {
+    display: none;
+  }
+
+  #chat_id .popup ul.communication li:nth-child(1),
+  #chat_id .popup ul.communication li:nth-child(2),
+  #chat_id .popup ul.communication li:nth-child(3),
+  #chat_id .popup ul.communication li:nth-child(4) {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: start;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  #chat_id .popup .object ul.communication li .telephone a,
+  #chat_id .popup .object_reverse ul.communication li .telephone a {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    margin-top: 5px;
+    padding: 0 17px 0 35px !important;
+  }
+
+  #chat_id .popup .object ul.communication li .telephone p {
+    color: #999999;
+    line-height: normal;
+    margin-top: 5px;
+  }
+
+  #chat_id .popup .object ul.communication li .telephone p span {
+    display: block;
+    line-height: normal;
+    font-size: 12px;
+  }
+
+  #chat_id .popup .object ul.communication li .telephone p span:first-of-type {
+    font-weight: bold;
+  }
+
+  /*****************************************************/
+
+  #chat_id .popup {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+
+
+  #chat_id .object {
+    padding: 20px 20px 20px 20px;
+    width: 196px;
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.9490196078431372);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: absolute;
+    top: -335px;
+  }
+
+  #chat_id .object_reverse {
+    padding: 20px 20px 20px 20px;
+    width: 196px;
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.9490196078431372);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: absolute;
+    top: 8px;
+  }
+
+  .chat .header-phone__link:after {
+    display: none;
+  }
+
+  .chat .object::after {
+    content: "";
+    border: 1.4rem solid transparent;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0) scale(0.7) rotate(180deg);
+    transform: translate(-50%, 0) scale(0.7) rotate(180deg);
+    z-index: 5;
+    border-bottom: 1rem solid #fff;
+  }
+
+  .chat .object_reverse::after {
+    content: "";
+    border: 1.4rem solid transparent;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0) scale(0.7);
+    transform: translate(-50%, 0) scale(0.7);
+    z-index: 5;
+    border-bottom: 1rem solid #fff;
+  }
+
+  #chat_id .popup ul.communication li:nth-child(3)&amp;
+  gt;
+
+  span {
+    display: block;
+    width: 11px;
+    height: 11px;
+    background-size: 11px 11px;
+    background-image: url("data:image/svg+xml;charset=utf-8,&amp;lt;svg width='11' height='11' viewBox='0 0 10 10' fill='%23ff671f' xmlns='http://www.w3.org/2000/svg'&amp;gt;&amp;lt;path fill-rule='evenodd' clip-rule='evenodd' d='M5 10A5 5 0 1 0 5 0a5 5 0 0 0 0 10z'/&amp;gt;&amp;lt;path d='M5 1.667a.556.556 0 1 0 .002 1.112A.556.556 0 0 0 5 1.667zM5 3.889a.556.556 0 0 0-.556.555v3.334a.556.556 0 0 0 1.112 0V4.444A.556.556 0 0 0 5 3.89z' fill='%23fff'/&amp;gt;&amp;lt;/svg&amp;gt;");
+    background-repeat: no-repeat;
+    margin-left: 78px;
+  }
+
+  #chat_id .popup ul.communication li:nth-child(3) .tooltip {
+    display: block;
+    width: 180px;
+    max-height: 370px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.9490196078431372);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    padding: 10px 15px;
+    z-index: 1;
+  }
+
+  #chat_id .popup ul.communication li:nth-child(3) .tooltip:after {
+    content: "";
+    border: 1.4rem solid transparent;
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0) scale(0.7);
+    transform: translate(-50%, 0) scale(0.7);
+    z-index: 5;
+    border-bottom: 1rem solid #fff;
+  }
+
+
+  @media (max-width: 1024px) and (min-width: 768px) {
+
+    .header-phone__link:before {
+      content: "";
+      width: 26px;
+      height: 26px;
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' …-1.249-.83-2.008s.294-1.472.83-2.008a.434.434 0 0 0 0-.613z'/%3E%3C/svg%3E") no-repeat 50% !important;
+      background-size: contain;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 0;
+      border-radius: inherit;
+    }
+
+    .header-phone__link_1::before {
+      background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26.882 26.883' fill='%23a0a0a0' width='26' height='26'%3E%3Cpath d='M18.894.453H7.988A1.91 1.91 0 0 0 6.081 2.36v22.162a1.91 1.91 0 0 0 1.907 1.908h10.905a1.91 1.91 0 0 0 1.908-1.907V2.36A1.91 1.91 0 0 0 18.894.453zM6.947 3.917h12.988v16.452H6.947V3.917zm1.041-2.598h10.905c.575 0 1.042.467 1.042 1.041v.691H6.947V2.36c0-.574.467-1.041 1.041-1.041zm10.906 24.245H7.988a1.042 1.042 0 0 1-1.041-1.041v-3.288h12.988v3.288c0 .574-.467 1.041-1.041 1.041z'/%3E%3Cpath d='M13.441 21.667c-.955 0-1.732.777-1.732 1.732s.777 1.732 1.732 1.732 1.732-.777 1.732-1.732-.777-1.732-1.732-1.732zm0 2.598a.866.866 0 1 1 0-1.733.866.866 0 0 1 0 1.733zM11.709 2.618h1.732a.433.433 0 0 0 0-.866h-1.732a.433.433 0 0 0 0 .866zM14.74 2.618h.433a.433.433 0 0 0 0-.866h-.433a.433.433 0 0 0 0 .866zM24.962 2.431a.433.433 0 1 0-.612.612 4.154 4.154 0 0 1 0 5.867.433.433 0 1 0 .612.612 5.018 5.018 0 0 0 0-7.091z'/%3E%3Cpath d='M23.139 3.417a.433.433 0 1 0-.612.612c.536.536.83 1.249.83 2.008s-.295 1.472-.83 2.008a.433.433 0 1 0 .612.612c.699-.699 1.084-1.63 1.084-2.62s-.384-1.922-1.084-2.62zM2.532 3.043a.433.433 0 1 0-.612-.612 5.021 5.021 0 0 0 0 7.092.432.432 0 1 0 .612-.612 4.154 4.154 0 0 1 0-5.868z'/%3E%3Cpath d='M4.355 3.297a.433.433 0 0 0-.612 0c-.699.699-1.084 1.63-1.084 2.62s.385 1.921 1.084 2.621a.432.432 0 1 0 .612-.612c-.536-.536-.83-1.249-.83-2.008s.294-1.472.83-2.008a.434.434 0 0 0 0-.613z'/%3E%3C/svg%3E") no-repeat 50% !important;
+    }
+
+    #chat_id .object {
+      top: -330px;
+    }
+
+  }
+
+  @media (max-width: 812px) {
+    .cms table td {
+      font-size: 0.9rem;
+    }
+
+    .cms table td {
+      width: 100px;
+    }
+
+    .accordion__item {
+      overflow: hidden;
+    }
+
+    .accordion__link_active+.accordion__item-content {
+      overflow-x: scroll;
+      padding: 1rem;
+      margin-right: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #chat_id {
+      display: block !important;
+      padding: 0;
+    }
+
+    #chat_id .content a {
+      position: unset !important;
+      -webkit-transform: unset;
+      transform: unset
+    }
+
+    #chat_id .object {
+      top: -335px;
+    }
+  }
+</style>
+<div class="cms">
+  <div class="cms-content">
+    <h2>Часто задаваемые вопросы</h2>
+    {{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="160"}}
+    <h3>Покупка в интернет-магазине</h3>
+    <ul class="accordion js-accordion-list">
+      <li class="accordion__item"> <a class="accordion__link js-accordion-link" href="#"> <span class="accordion__link-title">Как покупать в интернет-магазине?</span> </a>
+        <div class="accordion__item-content">
+          <h3>Покупка в интернет-магазине Comfy — комфортная и надежная!</h3>
+          <ul>
+            <li>Мы всегда предлагаем товар, который есть в наличии на складе или в магазинах нашей сети.</li>
+            <li>Для товара, которого нет в наличии, мы предлагаем услугу «сообщить о поступлении» на склад.</li>
+            <li>Цена товара всегда актуальна и указана в гривнах, она фиксируется при оформлении заказа.</li>
+            <li>Дату и стоимость доставки Вы можете всегда узнать во время оформления заказа на сайте интернет-магазина. </li>
+            <li>Мы доставляем товар на указанный Вами адрес нашей службой доставки в более чем 2000 населенных пунктов Украины</a></li>
+            <!-- <li>Мы доставляем товар на указанный Вами адрес нашей службой доставки <a href="{{config path=" class="go-to">в более чем 2000 населенных пунктов Украины</a></li> -->
+            <li>Мы отправляем товар через оператора «Нова Пошта» в более чем 1000 населенных пунктов Украины.</li>
+            <li>Вы можете осуществить самовывоз заказанных Вами товаров из <a href="{{config path=" class="go-to">сети магазинов Comfy</a></li>
+          </ul>
+          <h3>Чтобы оформить заказ в интернет-магазине Comfy</h3>
+          <ul>
+            <li>Нажмите кнопку "купить" на странице желаемого вами товара.</li>
+            <li>Ознакомьтесь с ценой заказанных товаров.</li>
+            <li>Выберите удобный для Вас адрес доставки или выберите магазин, в котором получите ваш заказ.</li>
+            <li>Выберите удобный для Вас способ оплаты и подтвердите ваш заказ!</li>
+          </ul>
+          <h3>Сразу после утверждения вами заказа:</h3>
+          <ul>
+            <li>На указанный Вами номер мобильного телефона мы отправим SMS или Viber-сообщение с номером заказа.</li>
+            <li>Для подтверждения заказа Вам всегда позвонит консультант COMFY, который сможет отредактировать заказ, если необходимо.</li>
+            <!-- this -->
+            <li>Актуальный статус Ваших заказов Вы можете проверить самостоятельно на странице <a href="https://comfy.ua/status-order.html"> проверки заказа</a></li>
+            <!-- <li>Актуальный статус Ваших заказов Вы можете проверить самостоятельно на странице <a href="https://comfy.ua/status-order.html"> проверки заказа</a> или обратившись в
+              <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+              <div id="chat_id" class="chat">
+                <div class="popup_wrap">
+                  <div class="content"><a id="show_popup1" class="show_popup">Помощь и консультация</a></div>
+                  <div id="popup1" class="popup">
+                    <div class="object">
+                      <ul class="communication">
+                        <li> <a class="js-siteheart-btn" id="chatBtn1">Чат на сайте</a> </li>
+                        <li> <a href="https://www.messenger.com/t/comfy.ua">Messenger</a> </li>
+                        <li> <a href="viber://pa?chatURI=comfy.ua&amp;context=/startChat">Viber</a> <span id="i_icon_1" class="i_icon"> </span> </li>
+                        <li> <a href="https://t.me/ComfyuaBot?start=startChat">Telegram</a> </li>
+                        <li>
+                          <div class="telephone"><a href="tel:0800303505" class="header-phone__link header-phone__link_1">0-800-303-505</a>
+                            <p class="header-phone-popup__note"><span class="header-phone-popup__note-item header-phone-popup__note_bold"> c 8:00 до 21:00 (пн-вс)</span> <span class="header-phone-popup__note-item">Бесплатно по Украине</span></p>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="telephone"><a href="tel:0443939505" class="header-phone__link header-phone__link_call">044-39-39-505</a>
+                            <p class="header-phone-popup__note"><span class="header-phone-popup__note-item header-phone-popup__note_bold">Бесплатно по Киеву</span> <span class="header-phone-popup__note-item">со стационарных</span></p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/javascript">// <![CDATA[
+                  var tooltipTimeout1;
+
+                  $("#i_icon_1").hover(function () {
+                    tooltipTimeout1 = setTimeout(showTooltip1, 100);
+                  },
+                    hideTooltip1);
+
+                  function showTooltip1() {
+                    var tooltip1 = $(
+                      "<div id='tooltip1' class='tooltip'>  Для перехода в диалог с оператором должен быть установлен Viber. После установки повторно нажмите на логотип чата.</div>"
+                    );
+                    tooltip1.appendTo($("#i_icon_1"));
+                  }
+
+                  function hideTooltip1() {
+                    clearTimeout(tooltipTimeout1);
+                    $("#tooltip1").fadeOut().remove();
+                  }
+// ]]></script>
+                <script type="text/javascript">// <![CDATA[
+                  $("#show_popup1").click(function () {
+                    $('#popup1').toggle();
+                  });
+                  $(document).on('click', function (e) {
+                    if (!$(e.target).closest(".popup_wrap").length) {
+                      $('#popup1').hide();
+                    }
+                    e.stopPropagation();
+                  });
+// ]]></script>
+                <script type="text/javascript">// <![CDATA[
+                  window.senderCallback = function () {
+                    SenderWidget.init({
+                      companyId: "i69238662654"
+                    });
+                    SenderWidget.showWidget();
+                  }
+// ]]></script>
+                <script type="text/javascript">// <![CDATA[
+                  window.callOnlineHelp = function () {
+                    (function (d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0];
+                      js = d.createElement(s);
+                      js.id = id;
+                      js.src = "https://widget.sender.mobi/build/init.js";
+                      fjs.parentNode.insertBefore(js, fjs, 'sender-widget');
+                    })(document, 'script');
+                  }
+// ]]></script>
+              </div>
+            </li> -->
+          </ul>
+        </div>
+      </li>
+      <li class="accordion__item"> <a class="accordion__link js-accordion-link" href="#"> <span class="accordion__link-title">Как получить заказанный товар?</span> </a>
+        <div class="accordion__item-content">
+          <p>Для получения товара есть два варианта: самовывоз, доставка. Под самовывозом подразумевается получения товара в любом из наших розничных магазинов, что не влияет на стоимость товара. Доставка осуществляется нашей курьерской службой, с ее стоимостью можно ознакомиться <a href="{{store url=">здесь</a></p>
+        </div>
+      </li>
+      <li class="accordion__item"> <a class="accordion__link js-accordion-link" href="#"> <span class="accordion__link-title">Какие способы оплаты предусмотрены при покупке в интернет-магазине?</span> </a>
+        <div class="accordion__item-content">
+          <p>Заказ, оформленный на нашем интернет-сайте, можно оплатить наличными, по безналичному расчету, пластиковой картой или оформить в кредит.</p>
+          <h3>Оплата наличными</h3>
+          <ul>
+            <li>При получении товара в розничном магазине</li>
+            <li>При получении товара на отделении «Нова Пошта» через финансовую компанию ООО «Пост Финанс» (платежная система FORPOST)</li>
+          </ul>
+          <h3>Оплата по безналичному расчету: через кассу банка; через платежные ресурсы банка (в т.ч. интернет-эквайринг Приватбанка (способ liqpay) с зачислением денег на расчетный счет ООО «Комфи Трейд»)</h3>
+          <ul>
+            <li>В момент оформления заказа с доставкой на дом</li>
+            <li>При получении товара в магазине</li>
+            <li>При получении товара через курьерские службы</li>
+          </ul>
+          <p>Подробно с условиями кредита можно ознакомиться <a href="{{store url=" crediting"}}">здесь</a></p>
+        </div>
+      </li>
+      <li class="accordion__item"> <a class="accordion__link js-accordion-link" href="#"> <span class="accordion__link-title">Предоставляется гарантия на товары, приобретенные в интернет-магазине?</span> </a>
+        <div class="accordion__item-content">
+          <h2>Гарантия на товар</h2>
+          <p>Покупая технику в COMFY, Вы получаете надежность с гарантией. Все товары в сети COMFY продаются с гарантией производителя, действующей на территории Украины. Срок гарантийного обслуживания и детальные условия гарантии каждого конкретного товара указаны в эксплуатационных документах.</p>
+          <p>Гарантия приобретает силу лишь в случае наличия печати/штампа магазина на заполненном продавцом оригинальном гарантийном талоне производителя, который выдается к каждому товару после продажи. Обратите на это внимание во время получения товара.</p>
+          <p>Прежде чем начать эксплуатацию, рекомендуем Вам внимательно ознакомиться с гарантийными условиями и инструкцией по эксплуатации — это поможет не допустить возможных проблем в случае неправильного использования товара.</p>
+          <p>Чтобы избежать возможных недоразумений, необходимо сохранять на протяжении гарантийного срока все документы, которые прилагаются к товару при его продаже. Гарантийный талон находится в комплекте вместе с товаром, он может быть размещен на первой или последней странице оригинальной инструкции к технике.</p>
+          <p>Гарантийный ремонт осуществляется в течение предусмотренного гарантийного срока представителями производителя (авторизованным сервисным центром) при соблюдении следующих условий:</p>
+          <ul>
+            <li>Наличие заполненного гарантийного талона с печатью/штампом продавца;</li>
+            <li>Документа, который подтверждает оплату товара;</li>
+            <li>Сохранение всех предусмотренных пломб на товаре.</li>
+          </ul>
+          <p>Обратите внимание, что гарантийное обслуживание не распространяется на товар, неисправности в котором возникли после передачи товара покупателю вследствие:</p>
+          <ul>
+            <li>Нарушения потребителем правил эксплуатации, хранения или транспортировки товара, указанных в сопроводительных эксплуатационных документах (инструкции); </li>
+            <li>Несанкционированного ремонта;</li>
+            <li>Отклонений норм питательных, телекоммуникационных и кабельных сетей;</li>
+            <li>Неправильной установки и подключения изделия.</li>
+          </ul>
+          <h3>Куда обращаться за гарантийным обслуживанием</h3>
+          <p>Ремонт техники осуществляют авторизованные производителем сервисные центры. Информация о сервисных центрах содержится:</p>
+          <ul>
+            <li>На официальном сайте производителя/бренда;</li>
+            <li>В оригинальном гарантийном талоне на товар;</li>
+          </ul>
+          <!-- this -->
+          <p style="display: inline;">Также информацию об адресах авторизованных сервисных центров.<br /></p>
+          <!-- <p style="display: inline;">Также информацию об адресах авторизованных сервисных центров.<br /> Вы можете получить написав в
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+          </p> -->
+          <!-- <div id="chat_id" class="chat">
+            <div class="popup_wrap">
+              <div class="content"><a id="show_popup2" class="show_popup">Помощь и консультация</a></div>
+              <div id="popup2" class="popup">
+                <div class="object">
+                  <ul class="communication">
+                    <li> <a class="js-siteheart-btn" id="chatBtn1">Чат на сайте</a> </li>
+                    <li> <a href="https://www.messenger.com/t/comfy.ua">Messenger</a> </li>
+                    <li> <a href="viber://pa?chatURI=comfy.ua&amp;context=/startChat">Viber</a> <span id="i_icon_2" class="i_icon"> </span> </li>
+                    <li> <a href="https://t.me/ComfyuaBot?start=startChat">Telegram</a> </li>
+                    <li>
+                      <div class="telephone"><a href="tel:0800303505" class="header-phone__link header-phone__link_1">0-800-303-505</a>
+                        <p class="header-phone-popup__note"><span class="header-phone-popup__note-item header-phone-popup__note_bold"> c 8:00 до 21:00 (пн-вс)</span> <span class="header-phone-popup__note-item">Бесплатно по Украине</span></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="telephone"><a href="tel:0443939505" class="header-phone__link header-phone__link_call">044-39-39-505</a>
+                        <p class="header-phone-popup__note"><span class="header-phone-popup__note-item header-phone-popup__note_bold">Бесплатно по Киеву</span> <span class="header-phone-popup__note-item">со стационарных</span></p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">// <![CDATA[
+              var tooltipTimeout2;
+
+              $("#i_icon_2").hover(function () {
+                tooltipTimeout2 = setTimeout(showTooltip2, 100);
+              },
+                hideTooltip2);
+
+              function showTooltip2() {
+                var tooltip2 = $(
+                  "<div id='tooltip2' class='tooltip'>  Для перехода в диалог с оператором должен быть установлен Viber. После установки повторно нажмите на логотип чата.</div>"
+                );
+                tooltip2.appendTo($("#i_icon_2"));
+              }
+
+              function hideTooltip2() {
+                clearTimeout(tooltipTimeout2);
+                $("#tooltip2").fadeOut().remove();
+              }
+// ]]></script>
+            <script type="text/javascript">// <![CDATA[
+              $("#show_popup2").click(function () {
+                $('#popup2').toggle();
+              });
+              $(document).on('click', function (e) {
+                if (!$(e.target).closest(".popup_wrap").length) {
+                  $('#popup2').hide();
+                }
+                e.stopPropagation();
+              });
+// ]]></script>
+            <script type="text/javascript">// <![CDATA[
+              window.senderCallback = function () {
+                SenderWidget.init({
+                  companyId: "i69238662654"
+                });
+                SenderWidget.showWidget();
+              }
+// ]]></script>
+            <script type="text/javascript">// <![CDATA[
+              window.callOnlineHelp = function () {
+                (function (d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = "https://widget.sender.mobi/build/init.js";
+                  fjs.parentNode.insertBefore(js, fjs, 'sender-widget');
+                })(document, 'script');
+              }
+// ]]></script>
+          </div> -->
+          <!-- <p> </p> -->
+          <p>Для осуществления гарантийного ремонта вам необходимо иметь:</p>
+          <ul>
+            <li>Чек о покупке товара в сети COMFY;</li>
+            <li>Заполненный гарантийный талон с печатью/штампом магазина, в котором Вы совершали покупку;</li>
+            <li>Изделие в полной комплектации и упаковке с целостными пломбами, если таковые предусмотрены на товар. </li>
+          </ul>
+          <!-- this -->
+          <p style="display: inline;">При возникновении дополнительных вопросов по сервисному обслуживанию можете обратиться любой магазин COMFY</p>
+          <!-- <p style="display: inline;">При возникновении дополнительных вопросов по сервисному обслуживанию можете обратиться в
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+          </p> -->
+          <!-- <div id="chat_id" class="chat">
+            <div class="popup_wrap">
+              <div class="content"><a id="show_popup3" class="show_popup">Помощь и консультация</a></div>
+              <div id="popup3" class="popup">
+                <div class="object">
+                  <ul class="communication">
+                    <li> <a class="js-siteheart-btn" id="chatBtn1">Чат на сайте</a> </li>
+                    <li> <a href="https://www.messenger.com/t/comfy.ua">Messenger</a> </li>
+                    <li> <a href="viber://pa?chatURI=comfy.ua&amp;context=/startChat">Viber</a> <span id="i_icon_3" class="i_icon"> </span> </li>
+                    <li> <a href="https://t.me/ComfyuaBot?start=startChat">Telegram</a> </li>
+                    <li>
+                      <div class="telephone"><a href="tel:0800303505" class="header-phone__link header-phone__link_1">0-800-303-505</a>
+                        <p class="header-phone-popup__note"><span class="header-phone-popup__note-item header-phone-popup__note_bold"> c 8:00 до 21:00 (пн-вс)</span> <span class="header-phone-popup__note-item">Бесплатно по Украине</span></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="telephone"><a href="tel:0443939505" class="header-phone__link header-phone__link_call">044-39-39-505</a>
+                        <p class="header-phone-popup__note"><span class="header-phone-popup__note-item header-phone-popup__note_bold">Бесплатно по Киеву</span> <span class="header-phone-popup__note-item">со стационарных</span></p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">// <![CDATA[
+              var tooltipTimeout3;
+
+              $("#i_icon_3").hover(function () {
+                tooltipTimeout3 = setTimeout(showTooltip3, 100);
+              },
+                hideTooltip3);
+
+              function showTooltip3() {
+                var tooltip3 = $(
+                  "<div id='tooltip3' class='tooltip'>  Для перехода в диалог с оператором должен быть установлен Viber. После установки повторно нажмите на логотип чата.</div>"
+                );
+                tooltip3.appendTo($("#i_icon_3"));
+              }
+
+              function hideTooltip3() {
+                clearTimeout(tooltipTimeout3);
+                $("#tooltip3").fadeOut().remove();
+              }
+// ]]></script>
+            <script type="text/javascript">// <![CDATA[
+              $("#show_popup3").click(function () {
+                $('#popup3').toggle();
+              });
+              $(document).on('click', function (e) {
+                if (!$(e.target).closest(".popup_wrap").length) {
+                  $('#popup3').hide();
+                }
+                e.stopPropagation();
+              });
+// ]]></script>
+            <script type="text/javascript">// <![CDATA[
+              window.senderCallback = function () {
+                SenderWidget.init({
+                  companyId: "i69238662654"
+                });
+                SenderWidget.showWidget();
+              }
+// ]]></script>
+            <script type="text/javascript">// <![CDATA[
+              window.callOnlineHelp = function () {
+                (function (d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = "https://widget.sender.mobi/build/init.js";
+                  fjs.parentNode.insertBefore(js, fjs, 'sender-widget');
+                })(document, 'script');
+              }
+// ]]></script>
+          </div> -->
+          <!-- или в любой магазин COMFY -->
+          <!-- <p> </p> -->
+        </div>
+      </li>
+      <!-- <li class="accordion__item"> <a class="accordion__link js-accordion-link" href="#"> <span class="accordion__link-title">Как отказаться от заказа в интернет-магазине?</span> </a> -->
+        <!-- <div class="accordion__item-content"> -->
+          <!-- this -->
+          <!-- <p style="display: inline;">Для отмены заказа можно обратиться в
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+          </p>
+          <div id="chat_id" class="chat">
+            <div class="popup_wrap">
+              <div class="content"><a id="show_popup4" class="show_popup">Помощь и консультация</a></div>
+              <div id="popup4" class="popup">
+                <div class="object">
+                  <ul class="communication">
+                    <li> <a class="js-siteheart-btn" id="chatBtn1">Чат на сайте</a> </li>
+                    <li> <a href="https://www.messenger.com/t/comfy.ua">Messenger</a> </li>
+                    <li> <a href="viber://pa?chatURI=comfy.ua&amp;context=/startChat">Viber</a> <span id="i_icon_4" class="i_icon"> </span> </li>
+                    <li> <a href="https://t.me/ComfyuaBot?start=startChat">Telegram</a> </li>
+                    <li>
+                      <div class="telephone"><a href="tel:0800303505" class="header-phone__link header-phone__link_1">0-800-303-505</a>
+                        <p class="header-phone-popup__note"><span class="header-phone-popup__note-item header-phone-popup__note_bold"> c 8:00 до 21:00 (пн-вс)</span> <span class="header-phone-popup__note-item">Бесплатно по Украине</span></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="telephone"><a href="tel:0443939505" class="header-phone__link header-phone__link_call">044-39-39-505</a>
+                        <p class="header-phone-popup__note"><span class="header-phone-popup__note-item header-phone-popup__note_bold">Бесплатно по Киеву</span> <span class="header-phone-popup__note-item">со стационарных</span></p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">// <![CDATA[
+              var tooltipTimeout4;
+
+              $("#i_icon_4").hover(function () {
+                tooltipTimeout4 = setTimeout(showTooltip4, 100);
+              },
+                hideTooltip4);
+
+              function showTooltip4() {
+                var tooltip4 = $(
+                  "<div id='tooltip4' class='tooltip'>  Для перехода в диалог с оператором должен быть установлен Viber. После установки повторно нажмите на логотип чата.</div>"
+                );
+                tooltip4.appendTo($("#i_icon_4"));
+              }
+
+              function hideTooltip4() {
+                clearTimeout(tooltipTimeout4);
+                $("#tooltip4").fadeOut().remove();
+              }
+// ]]></script>
+            <script type="text/javascript">// <![CDATA[
+              $("#show_popup4").click(function () {
+                $('#popup4').toggle();
+              });
+              $(document).on('click', function (e) {
+                if (!$(e.target).closest(".popup_wrap").length) {
+                  $('#popup4').hide();
+                }
+                e.stopPropagation();
+              });
+// ]]></script>
+            <script type="text/javascript">// <![CDATA[
+              window.senderCallback = function () {
+                SenderWidget.init({
+                  companyId: "i69238662654"
+                });
+                SenderWidget.showWidget();
+              }
+// ]]></script>
+            <script type="text/javascript">// <![CDATA[
+              window.callOnlineHelp = function () {
+                (function (d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = "https://widget.sender.mobi/build/init.js";
+                  fjs.parentNode.insertBefore(js, fjs, 'sender-widget');
+                })(document, 'script');
+              }
+// ]]></script>
+          </div> -->
+          <!-- <p> </p> -->
+        <!-- </div> -->
+      <!-- </li> -->
+    </ul>
+    <h3>Покупка в кредит через интернет</h3>
+    <ul class="accordion js-accordion-list">
+      <li class="accordion__item"> <a class="accordion__link js-accordion-link" href="#"> <span class="accordion__link-title">Какие документы необходимы для оформления кредита?</span> </a>
+        <div class="accordion__item-content">
+          <!--
+<p>Для оформления кредита необходим минимальный пакет документов: паспорт и идентификационный номер. Обратите внимание, что в отдельных случаях, если возникнет такая необходимость, сотрудники банка могут попросить вас предоставить справку о доходах.</p>
+-->
+          <p>Для оформления кредита необходим минимальный пакет документов: Паспорт( ID паспорт), идентификационный код, вытяг.</p>
+        </div>
+      </li>
+      <li class="accordion__item"> <a class="accordion__link js-accordion-link" href="#"> <span class="accordion__link-title">С какого возраста можно оформить кредит?</span> </a>
+        <div class="accordion__item-content">
+          <table>
+            <tbody>
+              <tr>
+                <td>Банки-партнеры</td>
+                <td>АО "ОТП Банк"</td>
+                <td>АО "ПУМБ"</td>
+                <td>АО "УКРСИББАНК"</td>
+                <td>АО "АЛЬФА БАНК"</td>
+                <td>АО "ИДЕЯ БАНК"</td>
+                <td>АО "КБ"ГЛОБУС"</td>
+                <td>ООО "Современный факторинг"</td>
+              </tr>
+              <!-- <tr>
+                <td>Банки-партнеры</td>
+                <td>АТ "ОТП Банк"</td>
+                <td>ПАТ "ПУМБ"</td>
+                <td>АТ "АЛЬФА БАНК "</td>
+                <td>ТОВ "ФК "ЦФР"</td>
+                <td>ТОВ "Сучасний факторинг"</td>
+              </tr> -->
+              <tr>
+                <td>Необходимые документы</td>
+                <td colspan="7">Паспорт( ID паспорт) , идентификационный код, Вытяг</td>
+              </tr>
+              <tr>
+                <td>Минимальный возраст для оформления</td>
+                <td>18</td>
+                <td>18</td>
+                <td>21</td>
+                <td>18</td>
+                <td>21</td>
+                <td>18</td>
+                <td>18</td>
+              </tr>
+              <!-- <tr>
+                <td>Минимальный возраст для оформления</td>
+                <td>18</td>
+                <td>18</td>
+                <td>18</td>
+                <td>21</td>
+                <td>18</td>
+              </tr> -->
+              <tr>
+                <td>Максимальный возраст</td>
+                <td>69</td>
+                <td>70</td>
+                <td>65</td>
+                <td>70</td>
+                <td>65</td>
+                <td>75</td>
+                <td>69</td>
+              </tr>
+              <!-- <tr>
+                <td>Максимальный возраст</td>
+                <td>69</td>
+                <td>70</td>
+                <td>70</td>
+                <td>70</td>
+                <td>69</td>
+              </tr> -->
+              <tr>
+                <td>Минимальная сумма кредита, <symbol>₴</symbol>.</td>
+                <td>300</td>
+                <td>1000</td>
+                <td>300</td>
+                <td>1000</td>
+                <td>500</td>
+                <td>1000</td>
+                <td>1000</td>
+              </tr>
+              <!-- <tr>
+                <td>Минимальная сумма кредита, <symbol>₴</symbol>.</td>
+                <td>300</td>
+                <td>500</td>
+                <td>1000</td>
+                <td>500</td>
+                <td>1000</td>
+              </tr> -->
+              <tr>
+                <td>Максимальная сумма кредита, без справки о доходах, <symbol>₴</symbol>.</td>
+                <td>200000</td>
+                <td>100000</td>
+                <td>100000</td>
+                <td>150000</td>
+                <td>75000</td>
+                <td>100000</td>
+                <td>50000</td>
+              </tr>
+              <!-- <tr>
+                <td>Максимальная сумма кредита, без справки о доходах, <symbol>₴</symbol>.</td>
+                <td>200000</td>
+                <td>100000</td>
+                <td>150000</td>
+                <td>100000</td>
+                <td>150000</td>
+              </tr> -->
+              <tr>
+                <td>Резидент Украины</td>
+                <td>Да</td>
+                <td>Да</td>
+                <td>Да</td>
+                <td>Да</td>
+                <td>Да</td>
+                <td>Да</td>
+                <td>Да</td>
+              </tr>
+              <!-- <tr>
+                <td>Резидент Украины</td>
+                <td>Да</td>
+                <td>Да</td>
+                <td>Да</td>
+                <td>Да</td>
+                <td>Да</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li class="accordion__item"> <a class="accordion__link js-accordion-link" href="#"> <span class="accordion__link-title">Нужно быть официально трудоустроенным для оформления кредита?</span> </a>
+        <div class="accordion__item-content">
+          <p>Да, необходимо быть официально трудоустроенным.</p>
+        </div>
+      </li>
+      <li class="accordion__item"> <a class="accordion__link js-accordion-link" href="#"> <span class="accordion__link-title">Представители каких банков присутствуют в магазинах COMFY?</span> </a>
+        <div class="accordion__item-content">
+          <p>Акцент-Банк, Укрсиббанк, ПУМБ и ОТП Банк(Банк агент, выдает заявки по АО "АЛЬФА БАНК ", АО "ИДЕЯ БАНК", АО "КБ"ГЛОБУС", ООО "Современный факторинг").</p>
+          <!-- <p>Акцент-Банк, Укрсиббанк, ПУМБ и ОТП Банк(Банк агент, выдает заявки по АТ "АЛЬФА БАНК ", ТОВ "ФК "ЦФР", ТОВ "Сучасний факторинг").</p> -->
+        </div>
+      </li>
+      <li class="accordion__item"> <a class="accordion__link js-accordion-link" href="#"> <span class="accordion__link-title">Что происходит после заполнения формы для оформления кредита на сайте? Могу ли я быть уверенным в неразглашении моих данных?</span> </a>
+        <div class="accordion__item-content">
+          <p>Данные передаются в банк для проверки возможности предоставления кредита. Мы гарантируем, что ваши данные используются исключительно для предварительной проверки и не могут быть разглашены третьим лицам.</p>
+        </div>
+      </li>
+    </ul>
+    <h3>Бонусная программа</h3>
+    <ul class="accordion js-accordion-list">
+      <li class="accordion__item"> <a class="accordion__link js-accordion-link" href="#"> <span class="accordion__link-title">Действует ли бонусная программа Клуб Суперпокупателей и акционные предложения в интернет-магазине?</span> </a>
+        <div class="accordion__item-content">
+          <p>В интернет-магазине возможно начисление бонусов. Сумма бонусов указана на карточке товара возле кнопки Купить. Для начисления бонусов необходимо указать номер бонусной карты при оформлении заказа. К сожалению, воспользоваться бонусами можно только в розничных магазинах сети, оплатить покупку в интернет-магазине нет возможности, но она появится в ближайшее время. Акционные предложения действуют исключительно в розничных магазинах сети.</p>
+        </div>
+      </li>
+    </ul>
+    <h3>Приватмаркет</h3>
+    <p><a href="https://cdn.comfy.ua/media/Privat-Market-and-Comfy.pdf" class="go-to">Правила работы с интернет-платформой Приват-Маркет</a></p>
+  </div>
+</div>
