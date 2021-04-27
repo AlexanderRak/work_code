@@ -1,0 +1,119 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<style>
+
+</style>
+
+<div id="samsung">
+
+	<div class="samsung-header">
+		<div class="samsung-header__logo">
+			<img src="https://cdn.comfy.ua/media/x/img2/logo_samsung.png" alt="Лого samsung">
+		</div>
+	</div>
+
+	<div class="samsung-container">
+		<!-- <div class="samsung-row samsung-row__slick-prev your-class-arrow">
+         <button id="prev" type="button" class="slick-prev"></button>
+      </div> -->
+		<div class="samsung-row samsung-row-flex">
+			<a href="https://comfy.ua/built-in-samsung/cat__88/" class="samsung-row__item">
+				<div class="samsung-content">
+					<div class="samsung-content__prod pdd-mob1">
+						<img src="https://cdn.comfy.ua/media/x/img2/prod1_samsung.png" alt="">
+						<div class="samsung-content__prod-hover hover-prod1">
+							<img src="https://cdn.comfy.ua/media/x/img2/prod1_2samsung_bgrd.png" alt="">
+						</div>
+					</div>
+					<div class="samsung-content__text">
+						<p>Духовые шкафы</p>
+					</div>
+				</div>
+			</a>
+			<a href="https://comfy.ua/built-in-samsung/cat__80/" class="samsung-row__item">
+				<div class="samsung-content">
+					<div class="samsung-content__prod pdd-mob2">
+						<img src="https://cdn.comfy.ua/media/x/img2/prod2_samsung.png" alt="">
+						<div class="samsung-content__prod-hover hover-prod2">
+							<img src="https://cdn.comfy.ua/media/x/img2/prod1_2samsung_bgrd.png" alt="">
+						</div>
+					</div>
+					<div class="samsung-content__text">
+						<p>Варочные поверхности</p>
+					</div>
+				</div>
+			</a>
+			<a href="https://comfy.ua/built-in-samsung/cat__148/" class="samsung-row__item">
+				<div class="samsung-content">
+					<div class="samsung-content__prod pdd-mob3">
+						<img src="https://cdn.comfy.ua/media/x/img2/prod3_samsung.png" alt="">
+						<div class="samsung-content__prod-hover hover-prod3">
+							<img src="https://cdn.comfy.ua/media/x/img2/prod3_samsung_bgrd.png" alt="">
+						</div>
+					</div>
+					<div class="samsung-content__text">
+						<p>Посудомоечные машины</p>
+					</div>
+				</div>
+			</a>
+		</div>
+		<!-- <div class="samsung-row samsung-row__slick-next your-class-arrow">
+         <button id="next" type="button" class="slick-next"></button>
+      </div> -->
+		<div class="your-class-arrow"></div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('.samsung-row-flex').slick({
+			dots: false,
+			arrows: true,
+			// prevArrow: $('.slick-prev'),
+			// nextArrow: $('.slick-next'),
+			appendArrows: $('.your-class-arrow'),
+			prevArrow: '<button id="prev" type="button" class="slick-prev"></button>',
+			nextArrow: '<button id="next" type="button" class="slick-next"></button>',
+			infinite: false,
+			centerMode: false,
+			centerPadding: '0',
+			slidesToShow: 3,
+			slidesToScroll: 0,
+			responsive: [
+				{
+					breakpoint: 1025,
+					settings: {
+						arrows: true,
+						centerMode: false,
+						centerPadding: '0',
+						slidesToShow: 2,
+						slidesToScroll: 1,
+					}
+				},
+				{
+					breakpoint: 812,
+					settings: {
+						arrows: true,
+						centerMode: false,
+						centerPadding: '0',
+						slidesToShow: 2,
+						slidesToScroll: 1,
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						arrows: true,
+						centerMode: false,
+						centerPadding: '0',
+						slidesToShow: 1,
+						slidesToScroll: 1,
+					}
+				}
+			]
+		});
+	});
+</script>

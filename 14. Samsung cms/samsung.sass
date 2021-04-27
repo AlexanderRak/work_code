@@ -1,0 +1,210 @@
+#samsung
+	display: block
+	margin: 0 auto
+	max-width: 1316px
+	width: 100%
+	height: auto
+	overflow: hidden
+	background: linear-gradient(180deg, #020623 0%, #2F4994 100%)
+	position: relative
+	img
+		&:hover
+			opacity: 1
+	&:first-letter
+		padding-left: 0
+	img
+		display: block
+		margin-right: initial
+		margin-left: initial
+	p
+		font-size: 24px
+		color: #fff
+		text-align: center
+		margin-bottom: 0
+span.word-wrap
+	display: block
+	word-wrap: break-word
+span.fw-bold
+	font-weight: bold
+span.tx-uppercase
+	text-transform: uppercase
+// default
+.samsung-container
+	margin: -15px 0 0 0
+.samsung-header
+	position: relative
+	height: 109px
+.samsung-header__logo
+	position: absolute
+	left: 35px
+	top: 31px
+	z-index: 2
+.samsung-content
+	position: relative
+	padding-bottom: 20px
+.samsung-content__prod
+	height: 435px
+	display: flex
+	align-items: flex-end
+	position: relative
+	z-index: 6
+	img
+		margin: 0 auto !important
+		position: relative
+		z-index: 10
+.samsung-content__text
+	text-align: center
+	margin-top: 32px
+	position: relative
+	z-index: 10
+	display: table
+	margin: 0 auto
+	padding: 20px
+	font-weight: bold
+	border: 2px solid #FFFFFF
+	border-radius: 85px
+	min-width: 250px
+	margin-top: 28px
+.samsung-row__item
+	&:hover
+		.samsung-content__text
+			background: #000
+			transition: .3s
+			color: #fff
+			border: 2px solid #000
+.samsung-content__prod-hover
+	position: absolute
+	left: 0
+	right: 0
+	margin: 0 auto
+	top: 50%
+	transform: translateY(-50%)
+	z-index: 9
+	opacity: 0
+	transition: .3s
+	&.hover-prod1
+		bottom: -23px
+	&.hover-prod2
+		bottom: -23px
+	&.hover-prod3
+		bottom: 0
+.samsung-row__item
+	&:hover
+		.samsung-content__prod-hover
+			opacity: 1
+// slick
+#samsung
+	.slick-track
+		position: inherit
+		left: inherit
+		top: inherit
+		height: 100%
+		display: flex
+		align-items: flex-end
+		overflow: hidden
+	.slick-slider
+		height: 100%
+		z-index: 7
+		margin-top: -180px
+	.slick-slide
+		float: inherit
+		height: auto
+	.your-class-arrow
+		display: block
+		.slick-prev, .slick-next
+			background: #E5E5E5
+			width: 33px
+			height: 33px
+			position: absolute
+			z-index: 8
+			display: inline-block !important
+			transition: .3s
+			border-radius: 50%
+			&::before
+				width: 10px
+				height: 15px
+				border-radius: 50%
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				color: #fff
+				font-size: 13px
+				line-height: 1.2
+				left: 1px
+				right: 0
+				margin: 0 auto
+			&:hover
+				cursor: pointer
+			&.slick-disabled
+				opacity: 0.5
+				&::before
+					background: #E5E5E5
+		.slick-prev
+			left: 5px
+			top: 50%
+			transform: translateY(-50%)
+			&::before
+				content: url(https://cdn.comfy.ua/media/x/img2/str-left.svg)
+		.slick-next
+			right: 5px
+			top: 50%
+			transform: translateY(-50%)
+			&::before
+				content: url(https://cdn.comfy.ua/media/x/img2/str-right.svg)
+
+// media
+@media (max-width: 1024px)
+	.samsung-content__prod-hover
+		opacity: 1
+	.samsung-content__text
+		padding: 5px 10px
+	.samsung-container
+		margin: 0px 0 5px 0
+	.samsung-content__prod-hover
+		&.hover-prod1
+			bottom: -25px
+		&.hover-prod2
+			bottom: -25px
+		&.hover-prod3
+			bottom: 0
+// @media (max-width: 812px)
+@media (max-width: 480px)
+	.samsung-header__logo
+		left: 0
+		right: 0
+		margin: 0 auto
+		img
+			margin: 0 auto !important
+	.samsung-content__prod
+		// height: 295px
+		&.pdd-mob1
+			max-width: 100%
+			margin: 0 auto
+			.samsung-content__prod-hover.hover-prod1
+				max-width: 100
+				padding-bottom: 12px
+		&.pdd-mob2
+			max-width: 100%
+			margin: 0 auto
+			.samsung-content__prod-hover.hover-prod2
+				max-width: 100%
+				padding-bottom: 7px
+		&.pdd-mob3
+			max-width: 100%
+			margin: 0 auto
+			.samsung-content__prod-hover.hover-prod3
+				max-width: 100%
+				margin-top: 5px
+	.samsung-header
+		height: 80px
+	.samsung-content__text
+		margin-top: 28px
+	.samsung-content__prod-hover
+		&.hover-prod1
+			bottom: 15px
+		&.hover-prod2
+			bottom: 35px
+		&.hover-prod3
+			bottom: 0
+	#samsung .slick-slider 
+		margin-top: -150px
