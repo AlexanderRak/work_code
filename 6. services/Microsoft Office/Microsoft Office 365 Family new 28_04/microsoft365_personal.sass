@@ -57,7 +57,7 @@ span.tx-uppercase
 			font-size: 2.5rem
 			color: #7b7474
 			padding-bottom: 15px
-.tabs-content 
+.tabs-content
 	padding: 0
 // default
 .personal365-header
@@ -191,6 +191,39 @@ span.tx-uppercase
 			margin: 0 auto
 .pdd-bottom
 	padding-bottom: 15px
+.family-prod__container
+	padding: 5rem
+	h3
+		text-align: center
+.family-prod__flex
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	padding-top: 5rem
+.family-prod__item
+	flex: 1 1 250px
+	max-width: 250px
+	margin: 0 auto
+	.family-prod__p
+		text-align: center
+		padding-top: 15px
+.family-prod__img
+	height: 110px
+	display: flex
+	align-items: center
+	justify-content: center
+.family-prod__contant
+	padding: 15px
+.family-update__container
+	padding: 0 5rem 5rem 0
+.family-update__flex
+	display: flex
+	align-items: center
+#office365-personal
+	.family-update__item
+		flex: 1 1 0
+		h4
+			font-size: 4rem
 // media
 // @media (max-width: 1250px)
 @media (max-width: 1024px)
@@ -203,6 +236,7 @@ span.tx-uppercase
 		height: 500px
 	.personal365-header__text
 		max-width: 500px
+		margin: 7rem 15px 15px 15px
 	.personal365-free__item:first-child
 		flex: 1 1 270px
 		max-width: 270px
@@ -230,6 +264,9 @@ span.tx-uppercase
 		max-width: 325px
 	#office365-personal .personal365-list
 		padding: 0 15px 3rem 15px
+	.family-prod__item
+		flex: 1 1 200px
+		max-width: 200px
 @media (max-width: 480px)
 	#office365-personal
 		h2
@@ -238,9 +275,12 @@ span.tx-uppercase
 			font-size: 2.1rem
 		p
 			font-size: 1.9rem
+	.family-prod__item
+		flex: 1 1 50%
+		max-width: 50%
 	.personal365-header__bgrd
 		height: 325px
-		background-position: left
+		background-position: right
 	.personal365-header__text
 		margin: 25px 0 0 0
 		padding: 0 15px
@@ -263,3 +303,15 @@ span.tx-uppercase
 	.personal365-optimal__items-prod-office
 		flex: 1 1 55px
 		max-width: 55px
+	.family-prod__container
+		padding: 3rem 15px 3rem 15px
+	.family-update__container
+		padding: 0 15px 3rem 0
+	#office365-personal .family-update__item h4
+		font-size: 2rem
+		padding: 0px 0 15px 0
+		min-height: auto
+	.personal365-optimal
+		padding: 3rem 0
+	.personal365-free__item:last-child
+		padding: 0
