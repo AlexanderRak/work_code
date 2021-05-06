@@ -412,6 +412,30 @@ span.tx-uppercase
 	text-align: left
 	font-size: 17px
 	display: block
+// pagitation
+.paginator
+	padding: 65px 15px 0 15px
+	text-align: center
+.paginator > span
+	display: inline-block
+	margin-right: 10px
+	cursor: pointer
+	font-size: 16px
+	font-weight: bold
+	padding-right: 25px
+	transition: .3s
+.paginator > span:hover
+	text-decoration: underline
+.paginator_active
+	color: #CCCCCC
+span.paginator_active
+	cursor: no-drop
+span.paginator_active:hover
+	text-decoration: inherit
+.num
+	display: none
+.product-wrap__bnt-allsrv
+	display: none
 // @media (max-width: 1250px)
 @media (max-width: 1024px)
 	#service-portal
@@ -643,4 +667,4 @@ span.tx-uppercase
 	.tabs-head:not(.product-tabs) .tabs-head-item:after
 		display: none
 	.hide
-   	display: block !important
+		display: block !important
