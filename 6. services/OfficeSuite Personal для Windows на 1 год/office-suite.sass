@@ -69,7 +69,7 @@ span.word-wrap-header
 .suite-header__prod-link-item
    text-align: center
    padding: 10px 20px
-   border: 2px solid #fff
+   border: 2px solid rgba(255, 255, 255, 0)
    transition: .3s
    box-shadow: 0 0 5px 3px #ece9e9
    font-size: 16px
@@ -232,7 +232,6 @@ span.word-wrap-header
          &.suite__color5
             background: #0469BA
 .suite-tabcontent
-   display: block !important
    animation: fadeEffect 1s
    &.tab__bgrd1
       background: #FFF6F2
@@ -258,8 +257,8 @@ span.word-wrap-header
    width: 100%
    height: auto
    padding: 45px 80px
-   &.pdd0
-      padding: 0
+   &.pddzero
+      padding: 45px 0
 .suite-cont-tab__logo-flex
    display: flex
    align-items: center
@@ -353,7 +352,7 @@ span.word-wrap-header
 .suite-cont-tab__img3pos
    position: absolute
    left: 10rem
-   bottom: 10rem
+   top: 10rem
 .suite-cont-tab__img4pos
    position: absolute
    right: 0
@@ -364,6 +363,7 @@ span.word-wrap-header
    bottom: 20rem
 .suite-cont-tab__cont
    position: relative
+   padding: 0 80px
 .suite-cont-tab__drive
    padding: 15px 15px 35px 15px
 .suite-cont-tab__drive-flex
@@ -378,18 +378,204 @@ span.word-wrap-header
    font-size: 24px
 .suite-cont-before
    position: relative
-   padding: 45px 80px
+   padding-bottom: 55px
    &::before
       content: ""
       background: linear-gradient(180deg, rgba(241, 245, 253, 0) 0%, #DCE8FF 100%)
-      width: 1316px
-      height: 1015px
+      max-width: 1316px
+      width: 100%
+      height: 100%
       position: absolute
       left: 0
       top: 0
       border-radius: 475px/105px
 // media
-// @media (max-width: 1250px)
-// @media (max-width: 1024px)
-// @media (max-width: 812px)
-// @media (max-width: 480px)
+@media screen and (min-width: 1025px)
+   .suite-tabcontent
+      display: block !important
+@media (max-width: 1024px)
+   #office-suite-personal-wrap
+      h2
+         font-size: 37px
+   .suite-header__content
+      padding: 25px 15px 35px 30px
+   .suite-tabs__cont-mob
+      display: block
+      overflow: scroll
+   .suite-tabcontent
+      display: none
+   .suite-tabs
+      width: 757px
+      overflow: scroll
+      padding: 25px 15px 15px 15px
+   .suite-header__h2
+      margin-bottom: 25px
+   .suite-headere__list
+      margin-bottom: 25px
+   .suite-header__bgrd-bl::before
+      background-position: right
+   .suite-paket
+      padding: 25px 15px 35px 30px
+   .suite-paket__text
+      margin-bottom: 30px
+   .suite-paket__item
+      flex: 1 1 125px
+      max-width: 125px
+   .suite-paket__item p
+      font-size: 20px
+   .suite-function
+      padding: 25px 15px
+   .suite-function__container
+      overflow: scroll
+   .suite-table
+      width: 1200px
+   .suite-tr td
+      height: 65px
+   .suite-tr:first-child td
+      font-size: 21px
+   .suite-tr:first-child td:nth-child(n+2)
+      font-size: 20px
+   .suite-cont-tab__flex50 .suite-cont-tab__item50 p
+      padding: 0 15px
+   .suite-cont-tab__item33 p
+      padding: 0 5px
+@media (max-width: 812px)
+   #office-suite-personal-wrap h2
+      font-size: 30px
+   .suite-header__bgrd-bl::before
+      background-position: bottom
+   .suite-headere__list p
+      font-size: 20px
+   .suite-paket__prod-flex
+      flex-wrap: nowrap
+   .suite-paket__item
+      flex: 1 1 0
+      max-width: 100%
+   .suite-paket__img
+      width: 75px
+      height: auto
+      margin: 0 auto 5px auto
+   .suite-paket__item p
+      font-size: 15px
+   .suite-paket__text p
+      font-size: 31px
+   .suite-tr:first-child td:nth-child(n+2)
+      font-size: 18px
+   .suite-tr td
+      min-width: 125px
+   .suite-table
+      width: 1090px
+   .suite-cont-tab__logo-flex .suite-cont-tab__item
+      font-size: 30px
+   .suite-cont-tab__logo-flex .suite-cont-tab__item:first-child
+      flex: 1 1 60px
+      max-width: 60px
+   .suite-cont-tab__flex50 .suite-cont-tab__item50.pdd_b p
+      padding-bottom: 25px
+   .suite-cont-tab__flex50 .suite-cont-tab__item50
+      font-size: 18px
+   .padding-t_b
+      padding: 15px 0
+   .suite-cont-tab__item33
+      font-size: 18px
+   .suite-cont-tab
+      padding: 25px 15px
+   .suite-cont-tab__cont
+      padding: 0 15px
+   .suite-cont-tab.pddzero
+      padding: 25px 0
+   .suite-cont-tab__drive-item
+      font-size: 18px
+   .suite-cont-tab_flex100-col__item:last-child
+      padding-top: 5px
+   .suite-cont-tab_flex100-col__height316
+      height: 275px
+   .suite-cont-tab__img3pos,.suite-cont-tab__img4pos,.suite-cont-tab__img5pos
+      display: none
+   .suite-cont-tab__drive__img
+      img
+         margin: 0 auto !important
+      p
+         padding: 0 15px
+   .suite-cont-tab__drive-flex
+      max-width: 575px
+@media (max-width: 480px)
+   #office-suite-personal-wrap
+      h2
+         font-size: 21px
+   .suite-header__prod-link-mob
+      overflow: scroll
+   .suite-header__prod-link
+      width: 382px
+      margin-bottom: 25px
+   .suite-headere__list p
+      font-size: 18px
+   .suite-header__content
+      padding: 25px 15px 35px 15px
+   .suite-header__availablefor-flex
+      flex-direction: column
+   .header__availablefor__item:last-child
+      justify-content: flex-start
+      padding-top: 15px
+   .header__availablefor__item p
+      font-size: 15px
+   .suite-paket__prod-flex
+      flex-wrap: wrap
+   .suite-paket__item
+      flex: 1 1 120px
+      max-width: 120px
+      padding-bottom: 15px
+      &:nth-child(6)
+         flex: 0 0 0
+      &:last-child
+         flex: 1 1 0
+   .suite-paket
+      padding: 25px 15px 15px 15px
+   .suite-tr td:first-child
+      padding-left: 0
+   .suite-table
+      width: 985px
+   .suite-tr td:first-child
+      min-width: 220px
+   .suite-tabs button .suite-tablinks__span
+      font-size: 16px
+   .suite-cont-tab__flex50
+      flex-direction: column
+   .suite-cont-tab__flex50 .suite-cont-tab__item50 p
+      padding: 0
+   .suite-cont-tab__flex50.row-rev
+      flex-direction: column
+   .suite-cont-tab__flex33
+      flex-direction: column
+   .suite-cont-tab_flex100-col__height316
+      height: auto
+   .suite-cont-tab__drive-flex
+      flex-direction: column
+   .suite-cont-tab__flex50 .suite-cont-tab__item50
+      padding-bottom: 15px
+   .suite-cont-tab__item33
+      padding-bottom: 15px
+   .suite-cont-tab__img2pos
+      top: 20rem
+      max-width: 50px
+   .suite-cont-tab__img1pos
+      bottom: 0rem
+      max-width: 70px
+      opacity: 0.5
+   .suite-cont-tab_flex100-col__item p
+      min-height: auto
+   .suite-cont-before
+      padding-bottom: 55px
+   .suite-cont-tab__item p
+      text-align: center
+   .suite-cont-tab__drive-item
+      padding-bottom: 15px
+      &:last-child
+         padding-bottom: 0
+   .suite-cont-tab__item33
+      margin: 0 auto
+   .suite-cont-tab__logo-flex.row-rev
+      flex-direction: column
+@media (max-width: 321px)
+   .suite-paket__item
+      max-width: 105px
