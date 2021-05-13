@@ -34,7 +34,7 @@
 .breadcrumbs
    display: none
 
-span.word-wrap 
+span.word-wrap
    display: block
    word-wrap: break-word
 
@@ -47,7 +47,7 @@ span.fw-bold
    .header-bonus__content
       position: relative
       z-index: 8
-      padding: 15px 0 15px 15px
+      padding: 15px 0 15px 0
       min-height: 425px
       display: flex
       align-items: center
@@ -57,27 +57,31 @@ span.fw-bold
          display: flex
          flex-direction: row
          align-items: center
-         padding: 15px 0 15px 27%
-         max-width: 97%
+         // padding: 15px 0 15px 27%
+         // max-width: 97%
+         padding: 15px 25px 15px 30px
+         max-width: 100%
          color: #43B02A
          width: 100%
-         justify-content: flex-start
+         justify-content: space-between
          margin: 0 0 0 auto
          &::before
             content: ""
-            background-image: url(https://cdn.comfy.ua/media/x/img/Group_6_2.png)
+            background-image: url(https://cdn.comfy.ua/media/x/img2/Group_13.png)
             background-position: center
             background-size: contain
             background-repeat: no-repeat
             width: 385px
             height: 100%
             position: absolute
-            left: 0
+            left: 20%
             top: 0
+            right: 0
+            margin: 0 auto
          .header-bonus__text-item
             &:first-child
                span
-                  font-size: calc(1rem + 6.9vw)
+                  font-size: calc(1rem + 6vw)
                   // font-size: 142px
                   font-weight: bold
                   text-transform: uppercase
@@ -87,8 +91,8 @@ span.fw-bold
                padding: 0px 20px
                line-height: 1
                span
-                  font-size: calc(1rem + 2.5vw)
-                  font-weight: bold                  
+                  font-size: calc(1rem + 3vw)
+                  font-weight: bold
                   // font-size: 56px
                   text-transform: uppercase
                   display: block
@@ -275,17 +279,19 @@ span.fw-bold
          padding: 15px 0 15px 0
          .header-bonus__text-flex
             flex-direction: column
-            padding: 120px 15px 25px 15px
+            padding: 0 15px 25px 15px
             max-width: 285px
             width: 100%
-            margin: 21rem auto 0 auto
+            margin: 0 auto 0 auto
+            height: 480px
             &::before
                content: ""
                width: 325px
                height: 350px
                position: absolute
                left: 0
-               top: 0
+               top: 50%
+               transform: translateY(-50%)
                right: 0
                margin: 0 auto
             .header-bonus__text-item
@@ -348,9 +354,9 @@ span.fw-bold
       .header-bonus__content
          min-height: 255px
          .header-bonus__text-flex
-            max-width: 75%
-            padding: 15px 0 15px 6%
-            justify-content: flex-end
+            // max-width: 75%
+            padding: 15px 0 15px 10px
+            // justify-content: flex-end
             &::before
                content: ""
                width: 235px
@@ -360,7 +366,7 @@ span.fw-bold
                      font-size: calc(1rem + 8vw)
                &:last-child
                   span
-                     font-size: calc(1rem + 2.7vw)
+                     font-size: calc(1rem + 3vw)
 
    .wrap-list
       .wrap-list__content
@@ -400,9 +406,9 @@ span.fw-bold
       .header-bonus__content
          min-height: 295px
          .header-bonus__text-flex
-            max-width: 75%
-            padding: 15px 0 15px 6%
-            justify-content: flex-end
+            // max-width: 75%
+            padding: 15px 0 15px 10px
+            // justify-content: flex-end
             &::before
                content: ""
                width: 325px
@@ -412,7 +418,7 @@ span.fw-bold
                      font-size: calc(1rem + 8vw)
                &:last-child
                   span
-                     font-size: calc(1rem + 2.7vw)
+                     font-size: calc(1rem + 3.7vw)
 
    .wrap-list
       .wrap-list__content
