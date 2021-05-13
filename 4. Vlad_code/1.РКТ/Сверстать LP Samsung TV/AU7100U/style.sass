@@ -1,0 +1,120 @@
+/*default styles*/
+
+#samsung
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: bold
+    padding: 0
+    margin: 0
+    margin-bottom: 1em
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+.features-desc h2
+  padding: 0
+  text-align: unset
+.one-col .features-desc__text p
+  padding: 0
+  text-align: unset
+
+/*end default styles*/
+
+#samsung
+  span.snoska
+    display: block
+    line-height: normal
+    font-size: 0.9em
+    padding: 1em
+    box-sizing: border-box
+    text-align: center
+  .std
+    box-sizing: border-box
+    .std__txt
+      text-align: center
+      padding: 1em
+      box-sizing: border-box
+      p>strong
+        display: block
+        margin-bottom: 0.7em
+  .std__bg
+    background-color: #f0f0e8
+  .std__black__bg
+    background-color: #180f06
+    .std__txt
+      color: #fff
+  .samsung__row,
+  .samsung__row__reverse
+    display: flex
+    flex-direction: row
+    align-items: center
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .samsung__row__txt,
+    .samsung__row__reverse__txt
+      padding: 1em
+  .samsung__row__reverse
+    flex-direction: row-reverse
+  .samsung__abs
+    position: relative
+    box-sizing: border-box
+    .samsung__abs__txt
+      position: absolute
+      padding: 1em
+      box-sizing: border-box
+      max-width: 50%
+      p>strong
+        display: block
+        margin-bottom: 0.7em
+      span.snoska
+        text-align: unset
+        padding-left: 0
+
+//media*************************************************
+
+@media (max-width: 812px)
+  #samsung h2
+    font-size: 24px
+  #samsung .samsung__abs .samsung__abs__txt
+    max-width: 100%
+
+@media (max-width: 480px)
+  #samsung .samsung__row,
+  #samsung .samsung__row__reverse
+    flex-direction: column-reverse !important
+    >div
+      max-width: 100%
+      text-align: center !important
+  #samsung .samsung__abs .samsung__abs__txt
+    position: unset
+    text-align: center
