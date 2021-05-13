@@ -1,0 +1,187 @@
+/*default styles*/
+
+#samsung
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: bold
+    text-align: center
+    padding: 0
+    margin: 0
+    margin-bottom: 1em
+  h3
+    display: block
+    line-height: normal
+    font-size: 24px
+    font-weight: bold
+    text-align: left
+    padding: 0
+    margin: 0
+    margin-bottom: 1em
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    line-height: normal
+    display: block
+    font-size: 0.9em
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#samsung
+  padding-top: 1em
+  span.snoska,
+  span.snoska__left
+    text-align: center
+    padding: 1em
+    box-sizing: border-box
+  span.snoska__left
+    text-align: left
+    padding: 1em 0
+  .show__mob
+    display: none
+
+  .samsung__std
+    box-sizing: border-box
+    .samsung__std__txt
+      padding: 1em
+      p
+        text-align: center
+        >strong
+          display: block
+          margin-bottom: 0.5em
+    .samsung__std__img
+      img
+        margin: 0 auto
+
+  .numberone
+    box-sizing: border-box
+    position: relative
+    .numberone__title
+      position: absolute
+      max-width: 500px
+      bottom: 50%
+      transform: translateY(50%)
+      padding: 1em 3em
+      h2
+        text-align: left
+
+  .samsung__row,
+  .samsung__row__r
+    display: flex
+    flex-direction: row
+    align-items: center
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .samsung__row__txt,
+    .samsung__row__r__txt
+      padding: 3em
+      h2
+        text-align: left
+      p
+        >strong
+          display: block
+          margin-bottom: 0.5em
+  .samsung__row__r
+    flex-direction: row-reverse
+
+  .samsung__title
+    padding: 3em
+
+  .serif
+    box-sizing: border-box
+    position: relative
+    .serif__txt
+      position: absolute
+      bottom: 50%
+      transform: translateY(50%)
+      max-width: 500px
+      padding: 3em
+      box-sizing: border-box
+
+  .samsung__cont
+    display: flex
+    flex-direction: row
+    align-items: center
+    align-items: flex-start
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+      padding: 1em
+      img
+        margin: 0 auto 1em auto
+      p
+        text-align: center
+
+//media*****************************************************
+
+@media (max-width: 812px)
+  #samsung .hide__mob
+    display: none
+  #samsung .show__mob
+    display: block
+  #samsung h2
+    font-size: 24px
+  #samsung h3
+    font-size: 20px
+  #samsung .numberone .numberone__title,
+  #samsung .serif .serif__txt
+    position: unset
+    transform: unset
+    margin: 0 auto
+    max-width: 100%
+    padding: 1em
+    h2, h3
+      text-align: center
+  #samsung .samsung__row .samsung__row__txt, #samsung .samsung__row .samsung__row__r__txt, #samsung .samsung__row__r .samsung__row__txt, #samsung .samsung__row__r .samsung__row__r__txt
+    padding: 1em
+  #samsung .serif .serif__img img
+    margin: 0 auto
+  #samsung .samsung__title
+    padding: 1em
+
+@media (max-width: 480px)
+  #samsung .numberone .numberone__img img
+    min-width: 600px
+    margin-left: -240px
+  #samsung .samsung__row,
+  #samsung .samsung__row__r,
+  #samsung .samsung__cont
+    flex-direction: column
+    >div
+      max-width: 100%
+      p, h2, h3, span
+        text-align: center !important
+
+        

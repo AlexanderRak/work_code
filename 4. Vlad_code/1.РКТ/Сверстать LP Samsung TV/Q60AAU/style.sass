@@ -1,0 +1,301 @@
+
+/*default styles*/
+
+#samsung
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: bold
+    padding: 0
+    margin: 0
+    margin-bottom: 1em
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+.features-desc h2
+  padding: 0
+  text-align: unset
+.one-col .features-desc__text p
+  padding: 0
+  text-align: unset
+
+/*end default styles*/
+
+#samsung
+  span.snoska
+    text-align: center
+    display: block
+    line-height: normal
+    padding: 1em 10em
+    box-sizing: border-box
+    font-size: 0.9em
+  .history
+    padding-top: 1em
+    .history__txt
+      h2
+        text-align: center
+
+  .light
+    position: relative
+    .light__txt
+      position: absolute
+      padding: 2em
+      max-width: 50%
+      top: 50px
+      p
+        >strong
+          display: block
+          margin-bottom: 0.7em
+      span.snoska
+        padding: 1em
+
+  .cpu
+    .cpu__txt
+      text-align: center
+      padding: 0 2em 2em 2em
+      box-sizing: border-box
+      p
+        >strong
+          display: block
+          margin-bottom: 0.7em
+
+  .contrast
+    .contrast__txt
+      text-align: center
+      padding: 2em
+
+  .colors
+    display: flex
+    flex-direction: row
+    // align-items: center
+    padding-top: 2em
+    >div
+      max-width: 50%
+      flex: 1 1 0
+      box-sizing: border-box
+    .colors__txt
+      padding: 5em 1em 1em 1em
+      p
+        >strong
+          margin-bottom: 0.7em
+          display: block
+    span.snoska
+      padding: 1em
+
+  .blicks
+    display: flex
+    flex-direction: row
+    align-items: center
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .blicks__txt
+      padding: 1em
+      p
+        >strong
+          margin-bottom: 0.7em
+          display: block
+
+  .brightness
+    display: flex
+    flex-direction: row
+    align-items: center
+    >div
+      max-width: 50%
+      flex: 1 1 0
+      box-sizing: border-box
+    .brightness__text
+      padding: 1em
+
+  .dynamic
+    position: relative
+    .dynamic__txt
+      position: absolute
+      padding: 2em
+      max-width: 50%
+      color: #fff
+      p
+        >strong
+          display: block
+          margin-bottom: 0.7em
+
+  .soundbar,
+  .optimization,
+  .voice,
+  .panel,
+  .sync,
+  .tap
+    display: flex
+    flex-direction: row
+    align-items: center
+    >div
+      max-width: 50%
+      flex: 1 1 0
+      box-sizing: border-box
+    .soundbar__txt,
+    .optimization__txt,
+    .voice__txt,
+    .panel__txt,
+    .sync__txt,
+    .tap__txt
+      padding: 1em
+      p
+        >strong
+          margin-bottom: 0.7em
+          display: block
+      span.snoska
+        padding: 1em
+  .optimization,
+  .panel
+    flex-direction: row-reverse
+
+  .design,
+  .game,
+  .multi
+    position: relative
+    .design__txt,
+    .game__txt,
+    .multi__txt
+      position: absolute
+      padding: 2em
+      padding-top: 10em
+      max-width: 50%
+      p
+        >strong
+          display: block
+          margin-bottom: 0.7em
+      span.snoska
+        padding: 1em
+    .multi__txt
+      color: #fff
+      padding-top: 2em
+      span.snoska
+        padding: 1em
+
+  .samsung__cont
+    margin-top: 3em
+
+//media******************************************
+
+@media (max-width: 1024px)
+  #samsung .light .light__txt
+    top: 50px
+  #samsung .design .design__txt, #samsung .design .game__txt, #samsung .design .multi__txt, #samsung .game .design__txt, #samsung .game .game__txt, #samsung .game .multi__txt, #samsung .multi .design__txt, #samsung .multi .game__txt, #samsung .multi .multi__txt
+    padding-top: 6em
+
+@media (max-width: 812px)
+  #samsung h2
+    font-size: 24px
+  #samsung .light .light__txt
+    top: 0
+  #samsung .colors .colors__txt
+    padding: 1em
+  #samsung .design .design__txt, #samsung .design .game__txt, #samsung .design .multi__txt, #samsung .game .design__txt, #samsung .game .game__txt, #samsung .game .multi__txt, #samsung .multi .design__txt, #samsung .multi .game__txt, #samsung .multi .multi__txt
+    padding-top: 2em
+
+@media (max-width: 480px)
+  #samsung .history .history__txt
+    padding: 0 1em
+  #samsung .history .history__img img
+    min-width: 600px
+    margin-left: -120px
+  #samsung .light .light__txt,
+  #samsung .dynamic .dynamic__txt
+    position: unset
+    background-color: #000
+    max-width: 100%
+    text-align: center
+    padding: 1em
+  #samsung .light .light__txt
+    background-color: unset
+  #samsung .dynamic .dynamic__txt
+    background-color: #fff
+    color: #000
+  #samsung .cpu .cpu__txt
+    padding: 1em
+  #samsung .cpu .cpu__img img
+    min-width: 600px
+    margin-left: -120px
+  #samsung span.snoska
+    padding: 1em
+  #samsung .contrast .contrast__txt
+    padding: 1em
+  #samsung .colors,
+  #samsung .blicks,
+  #samsung .brightness
+    flex-direction: column
+    >div
+      max-width: 100%
+      text-align: center
+  #samsung .blicks
+    flex-direction: column-reverse
+  #samsung .soundbar,
+  #samsung .optimization,
+  #samsung .voice,
+  #samsung .panel,
+  #samsung .sync,
+  #samsung .tap
+    flex-direction: column !important
+    >div
+      max-width: 100%
+      text-align: center
+  #samsung .design .design__txt,
+  #samsung .design .game__txt,
+  #samsung .design .multi__txt,
+  #samsung .game .design__txt,
+  #samsung .game .game__txt,
+  #samsung .game .multi__txt,
+  #samsung .multi .design__txt,
+  #samsung .multi .game__txt,
+  #samsung .multi .multi__txt
+    position: unset
+    max-width: 100%
+    padding: 1em
+    text-align: center
+
+  #samsung .design .design__img img,
+  #samsung .game .game__img img,
+  #samsung .multi .multi__img img
+    min-width: 600px
+    margin-left: -120px
+  #samsung .game .game__img img
+    margin-left: -170px
+  #samsung .multi .multi__img img
+    margin-top: -120px
+    position: relative
+    z-index: 1
+  #samsung .multi .multi__txt
+    position: relative
+    z-index: 2
+  #samsung .multi .multi__txt
+    background-color: #000
+
