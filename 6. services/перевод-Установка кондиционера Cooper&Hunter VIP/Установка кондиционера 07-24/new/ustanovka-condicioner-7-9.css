@@ -264,9 +264,65 @@
 
 /* END hrd-cndrl */
 
+#container_kondicioner .cont_garantiy { padding: 80px 15px 80px 65px; overflow: auto; }
+#container_kondicioner .cont_garantiy .row_garantiy { max-width: 995px; width: 100%; display: block; margin: 0 auto; }
+
+#container_kondicioner .cont_garantiy .row_garantiy .cont_bg_block_gradient { 
+	position: relative;
+	width: 950px;
+	margin: 0 auto;
+	height: 144px;
+	background: -webkit-linear-gradient(359.62deg, #41B02A 60.17%, rgba(65, 176, 42, 0) 107.6%);
+	background: -o-linear-gradient(359.62deg, #41B02A 60.17%, rgba(65, 176, 42, 0) 107.6%);
+	background: linear-gradient(90.38deg, #41B02A 60.17%, rgba(65, 176, 42, 0) 107.6%);
+
+}
+#container_kondicioner .cont_garantiy .row_garantiy .cont_bg_block_gradient:after {
+	content: "";
+	background-image: url(https://cdn.comfy.ua/media/x/img/b1new.jpg);
+	-webkit-background-size: contain;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 71px;
+	height: 144px;
+}
+#container_kondicioner .cont_garantiy .row_garantiy .cont_bg_block_gradient .img_cont_star {
+	position: absolute;
+	left: -5rem;
+	top: -4rem;
+}
+#container_kondicioner .cont_garantiy .row_garantiy .cont_bg_block_gradient p {
+	font-size: 26px;
+	color: #fff;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 100%;
+	line-height: 1.8;
+	padding-left: 21rem;
+}
+
+
 /* ***** media ***** */
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
+
+   #container_kondicioner .cont_garantiy { padding: 0; }
+	#container_kondicioner .cont_garantiy .row_garantiy { width: 100%; }
+	#container_kondicioner .cont_garantiy .row_garantiy .cont_bg_block_gradient .img_cont_star { position: relative; left: 0; top: 0; margin: 0 auto; text-align: center; }
+	#container_kondicioner .cont_garantiy .row_garantiy .cont_bg_block_gradient p { padding-left: 0; }
+	#container_kondicioner .cont_garantiy .row_garantiy .cont_bg_block_gradient:after { width: 0; height: 0; }
+	#container_kondicioner .cont_garantiy .row_garantiy .cont_bg_block_gradient { width: 100%; height: auto; padding: 15px; background: -webkit-linear-gradient(274.62deg, #41B02A 86.17%, rgba(65, 176, 42, 0) 107.6%); background: -o-linear-gradient(274.62deg, #41B02A 86.17%, rgba(65, 176, 42, 0) 107.6%); background: linear-gradient(175.38deg, #41B02A 86.17%, rgba(65, 176, 42, 0) 107.6%); }
+
+
    #container_kondicioner h2 {
       font-weight: bold;
       font-size: 26px;
