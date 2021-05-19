@@ -5,7 +5,7 @@
    width: 100%
    height: auto
    overflow: hidden
-   background: #fff
+   background: #E5E5E5
    position: relative
    img
       &:hover
@@ -21,7 +21,6 @@
    h2
       font-size: 48px
       line-height: 1.1
-      letter-spacing: 3px
       line-height: 1
    h3
       font-size: 36px
@@ -38,6 +37,50 @@ span.word-wrap-header
    word-wrap: break-word
 // default
 
+.cleaning-header
+   background: #fff
+   position: relative
+   overflow: hidden
+.cleaning-header__text-left
+   position: relative
+   z-index: 5
+   padding: 30px 15px 30px 45px
+   max-width: 655px
+   text-align: left
+   color: #000
+   p
+      font-size: 24px
+      padding: 45px 0 60px 0
+.cleaning-header__flex
+   display: flex
+   align-items: center
+   justify-content: flex-start
+.cleaning-header__item
+   &:first-child
+      flex: 1 1 125px
+      max-width: 125px
+   &:nth-child(2)
+      max-width: 105px
+      padding: 0 15px
+      img
+         margin: 0 auto !important
+   &:last-child
+      margin: 0 0 0 auto
+   p
+      font-size: 18px
+      font-weight: bold
+      padding: 0
+   span
+      display: block
+      font-size: 18px
+.cleaning-header__img-right
+   position: absolute
+   right: 0
+   top: 0
+   z-index: 4
+.cleaning-header__img-right-mob
+   display: none
+   position: relative
 // media
 // @media (max-width: 1024px)
 // @media (max-width: 812px)
