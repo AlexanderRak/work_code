@@ -1,124 +1,150 @@
 #electrolux
-	display: block
-	margin: 0 auto
-	max-width: 1316px
-	width: 100%
-	height: auto
-	overflow: hidden
-	background: #fff
-	position: relative
-	img
-		&:hover
-			opacity: 1
-	&:first-letter
-		padding-left: 0
-	img
-		display: block
-		margin-right: initial
-		margin-left: initial
-	p
-		color: #fff
-		text-align: center
-		margin-bottom: 0
-	h2
-		font-size: 34px
-		font-weight: bold
-		color: #fff
-		padding-bottom: 10px
+   display: block
+   margin: 0 auto
+   max-width: 1316px
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #fff
+   position: relative
+   img
+      &:hover
+         opacity: 1
+   &:first-letter
+      padding-left: 0
+   img
+      display: block
+      margin-right: initial
+      margin-left: initial
+   p
+      color: #fff
+      text-align: center
+      margin-bottom: 0
+   h2
+      font-size: 34px
+      font-weight: bold
+      color: #fff
+      padding-bottom: 10px
 span.word-wrap
-	display: block
-	word-wrap: break-word
+   display: block
+   word-wrap: break-word
 span.fw-bold
-	font-weight: bold
+   font-weight: bold
 span.tx-uppercase
-	text-transform: uppercase
+   text-transform: uppercase
 // default
 
+.electrolux__logo-pos
+   position: absolute
+   right: 3rem
+   bottom: 3rem
+   max-width: 220px
+   width: 100%
+   margin: 0 0 0 auto
 .electrolux__container
-	display: block
-	width: 100%
-	height: auto
+   display: block
+   width: 100%
+   height: auto
 .electrolux__wrap
-	position: relative
-	&.electrolux__wra-bgrd
-		background-image: url(https://cdn.comfy.ua/media/x/img2/electrolux_img_bgrd.png)
-		background-position: right top
-		background-repeat: no-repeat
-		background-size: cover
-		width: 100%
-		height: 500px
+   position: relative
+   &.electrolux__wra-bgrd
+      background-image: url(https://cdn.comfy.ua/media/x/img2/electrolux_img_bgrd.png)
+      background-position: right top
+      background-repeat: no-repeat
+      background-size: cover
+      width: 100%
+      height: 500px
 .electrolux__content
-	max-width: 580px
-	width: 100%
-	height: 100%
-	margin: 0 auto 0 0
-	background: rgba(1, 30, 65, 0.9)
-	padding: 50px 35px 40px 35px
+   max-width: 580px
+   width: 100%
+   height: 100%
+   margin: 0 auto 0 0
+   background: rgba(1, 30, 65, 0.9)
+   padding: 50px 35px 40px 35px
+   position: relative
+   z-index: 5
 .electrolux__flex
-	display: flex
-	flex-wrap: wrap
-	justify-content: space-between
-	align-items: flex-start
+   display: flex
+   flex-wrap: wrap
+   justify-content: space-between
+   align-items: flex-start
 .electrolux__item
-	flex: 1 1 110px
-	max-width: 110px
-	.electrolux__img
-		img
-			margin: 0 auto !important
-		p
-			font-size: 18px
-			text-align: center
-			padding-top: 15px
+   flex: 1 1 110px
+   max-width: 110px
+   .electrolux__img
+      img
+         margin: 0 auto !important
+      p
+         font-size: 18px
+         text-align: center
+         padding-top: 15px
 .electrolux__h2-p
-	text-align: left
-	padding: 50px 0 70px 0
-	p
-		font-size: 20px
-		text-align: left !important
+   text-align: left
+   padding: 50px 0 70px 0
+   p
+      font-size: 20px
+      text-align: left !important
 .electrolux__link a
-	background: #fff
-	border-radius: 8px
-	font-size: 18px
-	font-weight: bold
-	text-align: center
-	display: block
-	color: #011E41
-	padding: 12px 24px
-	max-width: 200px
-	transition: .3s
-	&:hover
-		box-shadow: 1px 1px 5px 0px #fff
+   background: #fff
+   border-radius: 8px
+   font-size: 18px
+   font-weight: bold
+   text-align: center
+   display: block
+   color: #011E41
+   padding: 12px 24px
+   max-width: 200px
+   transition: .3s
+   &:hover
+      box-shadow: 1px 1px 5px 0px #fff
 @media (max-width: 1024px)
-	.electrolux__wrap.electrolux__wra-bgrd
-		background-position: 10% 100%
+   .electrolux__wrap.electrolux__wra-bgrd
+      background-position: 10% 100%
+   .electrolux__logo-pos
+      right: 1rem
+      bottom: 1rem
+      max-width: 190px
+      display: block
 @media (max-width: 812px)
-	.electrolux__wrap.electrolux__wra-bgrd
-		background-position: 45% 100%
+   .electrolux__wrap.electrolux__wra-bgrd
+      background-position: 45% 100%
+   .electrolux__logo-pos
+      display: none
 @media (max-width: 480px)
-	.electrolux__wrap.electrolux__wra-bgrd
-		background-position: 65% 100%
-		height: auto
-	.electrolux__content
-		padding: 25px 15px 35px 15px
-	.electrolux__item
-		flex: 1 1 50%
-		max-width: 50%
-		margin-bottom: 20px
-	.electrolux__h2-p
-		text-align: left
-		padding: 0px 0 45px 0
-	.electrolux__item .electrolux__img p
-		max-width: 135px
-		margin: 0 auto
-	.electrolux__content
-		display: flex
-		flex-direction: column
-	.electrolux__h2-p
-		order: 1
-	.electrolux__flex
-		order: 3
-		margin-top: 25px
-	.electrolux__link
-		order: 2
-	.electrolux__link a
-		max-width: 215px
+   .electrolux__logo-pos
+      display: block
+      position: relative
+      right: 0
+      bottom: 0
+      max-width: 100%
+      width: 100%
+      margin: 0 0 0 auto
+      background: rgba(1, 30, 65, 0.9)
+      padding: 35px 130px 0 15px
+   .electrolux__wrap.electrolux__wra-bgrd
+      background-position: 65% 100%
+      height: auto
+   .electrolux__content
+      padding: 25px 15px 35px 15px
+   .electrolux__item
+      flex: 1 1 50%
+      max-width: 50%
+      margin-bottom: 20px
+   .electrolux__h2-p
+      text-align: left
+      padding: 0px 0 45px 0
+   .electrolux__item .electrolux__img p
+      max-width: 135px
+      margin: 0 auto
+   .electrolux__content
+      display: flex
+      flex-direction: column
+   .electrolux__h2-p
+      order: 1
+   .electrolux__flex
+      order: 3
+      margin-top: 25px
+   .electrolux__link
+      order: 2
+   .electrolux__link a
+      max-width: 215px

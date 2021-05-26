@@ -49,6 +49,15 @@ span.tx-uppercase {
   text-transform: uppercase;
 }
 
+.electrolux__logo-pos {
+  position: absolute;
+  right: 3rem;
+  bottom: 3rem;
+  max-width: 220px;
+  width: 100%;
+  margin: 0 0 0 auto;
+}
+
 .electrolux__container {
   display: block;
   width: 100%;
@@ -78,6 +87,8 @@ span.tx-uppercase {
   margin: 0 auto 0 0;
   background: rgba(1, 30, 65, 0.9);
   padding: 50px 35px 40px 35px;
+  position: relative;
+  z-index: 5;
 }
 
 .electrolux__flex {
@@ -158,15 +169,35 @@ span.tx-uppercase {
   .electrolux__wrap.electrolux__wra-bgrd {
     background-position: 10% 100%;
   }
+  .electrolux__logo-pos {
+    right: 1rem;
+    bottom: 1rem;
+    max-width: 190px;
+    display: block;
+  }
 }
 
 @media (max-width: 812px) {
   .electrolux__wrap.electrolux__wra-bgrd {
     background-position: 45% 100%;
   }
+  .electrolux__logo-pos {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
+  .electrolux__logo-pos {
+    display: block;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 0 0 auto;
+    background: rgba(1, 30, 65, 0.9);
+    padding: 35px 130px 0 15px;
+  }
   .electrolux__wrap.electrolux__wra-bgrd {
     background-position: 65% 100%;
     height: auto;
