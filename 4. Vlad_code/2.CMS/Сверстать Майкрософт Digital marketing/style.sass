@@ -1,0 +1,362 @@
+/*default styles*/
+
+.breadcrumbs
+  display: none
+
+#microsoft
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  background-color: #fff
+  p
+    margin-bottom: 0
+    margin: 0
+    font-size: 20px
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 32px
+    font-weight: bold
+    padding: 0
+    margin: 0
+    margin-bottom: 20px
+  h3
+    display: block
+    line-height: normal
+    font-size: 26px
+    font-weight: bold
+    padding: 0
+    margin: 0
+    margin-bottom: 20px
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#microsoft
+  .microsoft__list
+    li
+      .microsoft__flex
+        display: flex
+        flex-direction: row
+        align-items: center
+        .microsoft__cal
+          flex: 1 1 0
+          max-width: 50%
+          box-sizing: border-box
+          &:nth-of-type(1)
+            padding: 70px 50px 70px 70px
+          .microsoft__logo
+            margin-bottom: 50px
+      &:nth-of-type(odd)
+        background-color: #f1f1f1
+      &:nth-of-type(even)
+        padding: 80px 0
+        .microsoft__flex
+          flex-direction: row-reverse
+      &:last-of-type
+        padding: 80px 0
+        .microsoft__flex
+          .microsoft__cal
+            a
+              display: block
+              margin: 25px 0 0 0
+              margin-top: 25px
+              cursor: pointer
+              text-decoration: none
+              color: #fff
+              font-size: 1.6rem
+              background-color: #ff671f
+              padding: 1rem 2.7rem
+              text-align: center
+              max-width: max-content
+              box-sizing: border-box
+              transition: background-color .3s linear
+              &:hover
+                background-color: #e25c1d
+            img
+              margin: 0 auto
+  .microsoft__row
+    display: flex
+    flex-direction: row
+    padding: 50px 35px 100px 35px
+    box-sizing: border-box
+    li
+      flex: 1 1 0
+      &:nth-of-type(n+2)
+        margin-left: 25px
+      .microsoft__row__txt
+        margin-top: 35px
+
+  .solution
+    padding: 0 130px
+    .solution__title
+      margin-bottom: 80px
+      h2
+        text-align: center
+    .solution__list
+      display: flex
+      flex-direction: row
+      border-bottom: solid 3px #cacaca
+      li
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+        padding-bottom: 40px
+        .solution__list__img
+          img
+            margin: 0 auto
+        .solution__list__cont
+          .solution__list__title
+            border-bottom: solid 7px #0089cf
+            padding-bottom: 25px
+            margin-bottom: 45px
+            h2
+              text-align: center
+          .solution__list__txt
+            display: flex
+            flex-direction: row
+            align-items: flex-start
+            justify-content: space-between
+            p
+              display: block
+        &:nth-of-type(1)
+          padding-right: 70px
+          border-right: solid 3px #cacaca
+          .solution__list__cont
+            .solution__list__txt
+              img
+                max-height: 80px
+        &:nth-of-type(2)
+          padding-left: 70px
+          .solution__list__cont
+            .solution__list__txt
+              img
+                max-height: 35px
+    .solution__cont
+      .solution__cont__row
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        padding: 30px 0
+        border-bottom: solid 3px #cacaca
+        >div
+          flex: 1 1 0
+          max-width: 50%
+          box-sizing: border-box
+        .solution__cont__txt
+          padding-right: 50px
+          display: flex
+          flex-direction: column
+          align-items: flex-end
+          p
+            text-align: center
+        .solution__cont__img
+          padding-left: 50px
+        &:nth-of-type(n+2)
+          padding: 50px 0
+        &:nth-of-type(4)
+          padding: 30px 0
+    .solution__connect
+      display: flex
+      flex-direction: row
+      >div
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+      .solution__connect__cal
+        display: flex
+        flex-direction: row
+        padding: 35px 0
+        &:nth-of-type(1)
+          padding-right: 70px
+          border-right: solid 3px #cacaca
+        &:nth-of-type(2)
+          padding-left: 70px
+        .solution__connect__txt
+          margin-right: 35px
+    .sollution__btn
+      display: flex
+      flex-direction: row
+      margin-top: 50px
+      .sollution__btn__wrap
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+        display: flex
+        justify-content: center
+        a
+          display: block
+          margin: 25px auto 0 auto
+          margin-top: 25px
+          cursor: pointer
+          text-decoration: none
+          color: #fff
+          font-size: 1.6rem
+          background-color: #ff671f
+          padding: 1rem 2.7rem
+          text-align: center
+          max-width: max-content
+          box-sizing: border-box
+          transition: background-color .3s linear
+          &:hover
+            background-color: #e25c1d
+  .snoska
+    padding: 150px 70px 60px 70px
+    box-sizing: border-box
+    .snoska__list
+      li
+        font-size: 13px
+        &:nth-of-type(n+2)
+          margin-top: 5px
+
+//media**************************************************
+
+@media (max-width: 1024px)
+  #microsoft .microsoft__list li .microsoft__flex .microsoft__cal:nth-of-type(1)
+    padding: 2em
+  #microsoft .microsoft__list li:nth-of-type(even),
+  #microsoft .microsoft__list li:last-of-type
+    padding: 2em 0
+  #microsoft .solution
+    padding: 0 4em
+
+@media (max-width: 812px)
+  #microsoft p
+    font-size: unset
+  #microsoft .microsoft__row
+    padding: 1em
+    flex-wrap: wrap
+    li
+      min-width: 40%
+      width: 40%
+      .microsoft__row__img
+  #microsoft .microsoft__row li:nth-of-type(3)
+    margin-left: 0
+    margin-right: 25px
+  #microsoft .microsoft__row li:nth-of-type(4)
+    margin-left: 0
+  #microsoft .microsoft__row li:nth-of-type(n+3)
+    margin-top: 25px
+  #microsoft .solution
+    padding: 0 1em
+  #microsoft .snoska
+    padding: 2em
+
+@media (max-width: 480px)
+  #microsoft .microsoft__list li .microsoft__flex
+    flex-direction: column !important
+  #microsoft .microsoft__list li .microsoft__flex .microsoft__cal
+    max-width: 100%
+  #microsoft h2
+    font-size: 28px
+  #microsoft p
+    font-size: unset
+  #microsoft .microsoft__list li:nth-of-type(even), #microsoft .microsoft__list li:last-of-type
+    padding: 1em 0
+  #microsoft .microsoft__list li .microsoft__flex .microsoft__cal:nth-of-type(1)
+    padding: 1em
+  #microsoft .microsoft__row
+    flex-direction: column
+    li
+      max-width: 100%
+      width: 100%
+      margin-right: 0 !important
+      margin-left: 0 !important
+  #microsoft .microsoft__row li .microsoft__row__img img
+    margin: 0 auto
+  #microsoft .microsoft__row li:nth-of-type(n+2)
+    margin-top: 1em
+  #microsoft .microsoft__row li .microsoft__row__txt
+    h3, p
+      text-align: center
+  #microsoft h3
+    font-size: 22px
+  #microsoft .solution .solution__list
+    flex-direction: column
+  #microsoft .solution .solution__list li
+    max-width: 100%
+    border: none !important
+    padding-right: 0 !important
+    padding-left: 0 !important
+  #microsoft .solution .solution__cont .solution__cont__row .solution__cont__txt
+    padding-right: 0.5em
+  #microsoft .solution .solution__cont .solution__cont__row,
+  #microsoft .solution .solution__cont .solution__cont__row:nth-of-type(n+2)
+    padding: 1em 0
+  #microsoft .solution .solution__cont .solution__cont__row:nth-of-type(4)
+    .solution__cont__txt
+      p
+        br
+          display: none
+  #microsoft .solution .solution__connect
+    flex-direction: column
+  #microsoft .solution .solution__connect .solution__connect__cal
+    max-width: 100%
+    &:nth-of-type(1)
+      padding-right: 0.5em
+  #microsoft .solution .solution__cont .solution__cont__row .solution__cont__img
+    padding-left: 0.5em
+  #microsoft .solution .solution__connect .solution__connect__cal:nth-of-type(1)
+    border-right: none !important
+    border-bottom: solid 3px #cacaca
+  #microsoft .solution .solution__connect .solution__connect__cal:nth-of-type(2)
+    padding-left: 1em
+  #microsoft .solution .solution__connect .solution__connect__cal .solution__connect__txt
+    margin-right: 1em
+    p
+      br
+        display: none
+  #microsoft .solution .solution__connect .solution__connect__cal:nth-of-type(2)
+    padding-left: 0
+  #microsoft .solution .solution__cont .solution__cont__row .solution__cont__img img
+    margin: auto 0 0 0
+    max-height: 50px
+  #microsoft .solution .solution__connect .solution__connect__cal .solution__connect__img img
+    max-height: 50px
+  #microsoft .solution .solution__connect .solution__connect__cal:nth-of-type(2) .solution__connect__img img
+    max-height: 40px
+  #microsoft .solution .solution__connect .solution__connect__cal
+    padding: 1em 0
+    >div
+      flex: 1 1 0
+      max-width: 50%
+  #microsoft .solution .sollution__btn
+    margin-top: 0
+    flex-direction: column
+  #microsoft .solution .sollution__btn .sollution__btn__wrap
+    max-width: 100%
+  #microsoft .snoska
+    padding: 2em 1em 1em 1em
+  #microsoft .solution .solution__cont .solution__cont__row:nth-of-type(4) .solution__cont__img img
+    max-height: 40px
+  #microsoft .solution .solution__list li:nth-of-type(2) .solution__list__cont .solution__list__txt img
+    margin: auto 0 0 0
+  #microsoft .microsoft__list li:last-of-type .microsoft__flex .microsoft__cal a
+    margin: 25px auto 0 auto
