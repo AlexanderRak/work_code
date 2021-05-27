@@ -8,18 +8,33 @@
    img
       display: block
    h2
+      font-size: 55px
+      line-height: 1
+      text-align: inherit
+   h3
       font-size: 35px
+      margin: 0
+      font-weight: 500
+      text-align: inherit
+      line-height: 1
+   i
+      font-size: 15px
+   p
+      font-size: 20px
+      margin-bottom: 0
+      text-align: inherit
+      font-weight: normal
 .samsung__icon-flex
    display: flex
    justify-content: space-between
    align-items: center
-   padding-bottom: 50px
-.samsung__icon-flex__icon
+   padding: 25px 15px
+#samsung-wrap .samsung__icon-flex__icon
    flex: 1 1 0
    padding: 20px
-   border-radius: 1px solid #ccc
+   border-right: 1px solid #ccc
    &:last-child
-      border-radius: 0px solid #ccc
+      border-right: 0px solid #ccc
    p
       font-size: 18px
       text-align: center
@@ -34,7 +49,7 @@
    background-repeat: no-repeat
    background-size: cover
    width: 100%
-   height: 550px
+   height: 750px
    position: relative
    z-index: 5
 .samsung__img-text__p
@@ -43,3 +58,80 @@
    text-align: center
    padding: 50px 15px 15px 15px
    font-weight: bold
+.samsung__wrap-content
+   padding: 20px 0
+   &.last-bl
+      padding: 20px 0 0 0
+   .samsung__wrap-content-text
+      padding: 25px 15px
+      text-align: center
+      h2.pddbl
+         padding: 20px 0 25px 0
+      h3
+         padding: 20px 0 25px 0
+      p
+         max-width: 1000px !important
+         margin: 0 auto
+      i
+         max-width: 1000px
+         margin: 0 auto
+.samsung__wrap-flex
+   display: flex
+   align-items: center
+.samsung__wrap__item
+   flex: 1 1 0
+.samsung__wrap__item-text
+   padding: 15px
+   text-align: left
+   h2
+      padding-bottom: 25px
+   h3
+      padding-bottom: 20px
+   p
+      padding-bottom: 50px
+// @media (max-width: 1250px)
+@media (max-width: 1024px)
+   #samsung-wrap
+      h2
+         font-size: 45px
+      h3
+         font-size: 30px
+         margin: 0
+      i
+         font-size: 15px
+      p
+         font-size: 20px
+@media (max-width: 812px)
+   #samsung-wrap
+      h2
+         font-size: 35px
+      h3
+         font-size: 20px
+         margin: 0
+      i
+         font-size: 15px
+      p
+         font-size: 20px
+   .samsung__img-text
+      height: 470px
+@media (max-width: 480px)
+   #samsung-wrap
+      h2
+         font-size: 23px
+      h3
+         font-size: 19px
+         margin: 0
+      i
+         font-size: 15px
+      p
+         font-size: 18px
+   .samsung__icon-flex
+      flex-wrap: wrap
+      padding: 20px 15px
+   #samsung-wrap .samsung__icon-flex__icon
+      flex: 1 1 50%
+      border-right: 0px solid #ccc
+   .samsung__wrap-flex
+      flex-direction: column
+   .samsung__wrap-content
+      padding: 0px 0
