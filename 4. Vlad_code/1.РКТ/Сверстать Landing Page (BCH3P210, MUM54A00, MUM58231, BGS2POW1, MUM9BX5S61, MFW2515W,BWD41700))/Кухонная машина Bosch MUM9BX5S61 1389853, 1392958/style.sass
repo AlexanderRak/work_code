@@ -1,0 +1,436 @@
+/*default styles*/
+
+#bosch
+  max-width: 1000px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: normal
+    padding: 0
+    margin: 0
+    margin-bottom: 0.5em
+    text-align: unset
+  h3
+    display: block
+    line-height: normal
+    font-size: 24px
+    font-weight: bold
+    padding: 0
+    margin: 0
+    margin-bottom: 0.5em
+    text-align: unset
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#bosch
+  .cook,
+  .motor
+    position: relative
+    box-sizing: border-box
+    .cook__txt,
+    .motor__txt
+      position: absolute
+      top: 0
+      max-width: 50%
+      text-align: center
+      right: 0
+      padding: 1em
+      box-sizing: border-box
+      background-color: rgba(255, 255, 255, 0.51%)
+      span
+        display: block
+        font-size: 22px
+        >strong
+          font-size: 40px
+
+  .timer
+    box-sizing: border-box
+    .timer__flex
+      display: flex
+      flex-direction: row
+      >div
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+        padding: 1em
+        text-align: center
+        img
+          margin: 0 auto
+          margin-bottom: 2em
+
+  .bosch__list
+    margin: 3em 0 1em 0
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      >div
+        max-width: 50%
+        flex: 1 1 0
+        box-sizing: border-box
+      &:nth-of-type(odd)
+        .bosch__list__txt
+          padding-left: 3em
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+        .bosch__list__txt
+          text-align: right
+          padding-right: 3em
+
+  .access
+    text-align: center
+    .access__img
+      display: flex
+      flex-direction: row
+      align-items: center
+      .access__img__elem
+        flex: 1 1 0
+        &:nth-of-type(1)
+          flex: 2
+    .access__txt
+      margin-top: 1em
+
+  .glass
+    position: relative
+    h2
+      text-align: center
+    .glass__img
+      display: flex
+      flex-direction: row
+      align-items: flex-end
+      .glass__img__elem
+        flex: 1
+        &:nth-of-type(1)
+          flex: 1.13
+    .glass__txt
+      position: absolute
+      z-index: 10
+      background-color: rgba(255, 255, 255, 0.51%)
+      padding: 1em
+      max-width: 50%
+      p
+        font-size: 20px
+      &:nth-of-type(2)
+        top: 70px
+        right: 0
+      &:nth-of-type(3)
+        bottom: 0
+        left: 0
+        max-width: 30%
+        text-align: center
+
+  .grinder
+    padding: 3em 0 0 0
+    h2
+      text-align: center
+    .grinder__img
+      display: flex
+      flex-direction: row
+      align-items: flex-end
+      .grinder__img__elem
+        flex: 1 1 0
+        &:nth-of-type(1)
+          flex: 2.2
+    .grinder__txt
+      text-align: center
+      padding: 2em
+
+  .testo
+    padding: 3em 0 0 0
+    position: relative
+    h2
+      text-align: center
+    .testo__img
+      position: relative
+      .testo__abs
+        position: absolute
+        top: 0
+        right: 0
+        -webkit-box-shadow: -8px 12px 8px 0px rgba(34, 60, 80, 0.2)
+        -moz-box-shadow: -8px 12px 8px 0px rgba(34, 60, 80, 0.2)
+        box-shadow: -8px 12px 8px 0px rgba(34, 60, 80, 0.2)
+        img
+          max-width: 300px
+    .testo__txt
+      position: absolute
+      padding: 1em
+      top: 11em
+      left: 0
+      p
+        font-size: 20px
+
+  .venchik
+    .venchik__list
+      display: flex
+      flex-direction: column
+      align-items: center
+      li
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        .venchik__img
+          flex: 2
+          img
+            max-width: 60%
+        .venchik__txt
+          padding: 1em
+          box-sizing: border-box
+          flex: 3
+        &:nth-of-type(2)
+          margin: -3em 0
+          .venchik__img
+            img
+              margin: 0 0 0 auto
+        &:nth-of-type(1)
+          .venchik__img
+            img
+              position: relative
+              z-index: 10
+        &:nth-of-type(2)
+          .venchik__img
+            img
+              position: relative
+              z-index: 9
+
+  .salat
+    padding: 3em 0 0 0
+    position: relative
+    .salat__img
+      position: relative
+      .salat__abs
+        position: absolute
+        bottom: 1em
+        right: 1em
+        -webkit-box-shadow: -8px -8px 8px 0px rgba(34, 60, 80, 0.2)
+        -moz-box-shadow: -8px -8px 8px 0px rgba(34, 60, 80, 0.2)
+        box-shadow: -8px -8px 8px 0px rgba(34, 60, 80, 0.2)
+        img
+          max-width: 300px
+    .salat__txt
+      position: absolute
+      padding: 3em 1em
+      top: 4em
+      right: 1em
+      max-width: 500px
+      background-color: rgba(255, 255, 255, 0.38)
+      box-sizing: border-box
+      p
+        font-size: 20px
+        text-align: center
+
+  .kubik
+    position: relative
+    h3
+      display: block
+      position: absolute
+      background-color: rgba(255, 255, 255, 0.38)
+      top: 1em
+      right: 2em
+      z-index: 10
+      padding: 0.5em 3em
+    .kubik__img
+      position: relative
+      .kubik__abs
+        position: absolute
+        bottom: 0
+        right: 0
+        img
+          max-width: 300px
+    .kubik__txt
+      position: absolute
+      padding: 1em
+      bottom: 1em
+      left: 1em
+      max-width: 500px
+      box-sizing: border-box
+      p
+        font-size: 20px
+        text-align: center
+
+  .chasha
+    .chasha__flex
+      display: flex
+      flex-direction: row
+    .chasha__cont
+      .chasha__txt
+        padding: 3em
+        h3
+          text-align: center
+        p
+          text-align: center
+          font-size: 20px
+      &:nth-of-type(2)
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        .chasha__txt
+          display: flex
+          flex-direction: row
+          align-items: center
+          height: 100%
+
+  .logo
+    .logo__txt
+      padding: 3em
+      h2
+        text-align: center
+      p
+        text-align: center
+        font-size: 20px
+
+//media***************************************************
+
+@media (max-width: 812px)
+  #bosch .venchik .venchik__list li:nth-of-type(2) .venchik__img img
+    z-index: 10
+    position: relative
+  #bosch .venchik .venchik__list li:nth-of-type(1) .venchik__img img
+    position: relative
+    z-index: 11
+  #bosch .kubik .kubik__txt
+    max-width: 370px
+
+@media (max-width: 480px)
+  #bosch .cook .cook__txt, #bosch .cook .motor__txt, #bosch .motor .cook__txt, #bosch .motor .motor__txt
+    position: unset
+    max-width: 100%
+    background-color: #fff
+  #bosch .cook, #bosch .motor
+    display: flex
+    flex-direction: column-reverse
+  #bosch .cook .cook__txt span > strong, #bosch .cook .motor__txt span > strong, #bosch .motor .cook__txt span > strong, #bosch .motor .motor__txt span > strong
+    font-size: 30px
+  #bosch .cook .cook__txt span, #bosch .cook .motor__txt span, #bosch .motor .cook__txt span, #bosch .motor .motor__txt span
+    font-size: 18px
+  #bosch h2
+    font-size: 26px
+  #bosch .timer .timer__flex
+    flex-direction: column
+    >div
+      max-width: 100%
+      padding: 0
+      .timer__txt
+        padding: 1em
+  #bosch .timer .timer__flex > div img
+    width: 100%
+  #bosch .timer .timer__flex .timer__item:nth-of-type(1) .timer__txt
+    margin-bottom: 4em
+  #bosch h3
+    font-size: 22px
+  #bosch .bosch__list li
+    flex-direction: column !important
+    >div
+      max-width: 100%
+    .bosch__list__txt
+      padding: 1em !important
+      h3
+        text-align: center
+      p
+        text-align: center
+    &:nth-of-type(n+2)
+      margin-top: 2em
+  #bosch .access .access__img,
+  #bosch .glass .glass__img,
+  #bosch .grinder .grinder__img
+    flex-direction: column
+  #bosch .glass .glass__txt:nth-of-type(2)
+    top: 100px
+    p
+      text-align: center
+  #bosch .glass .glass__txt
+    max-width: 70%
+  #bosch .glass .glass__txt:nth-of-type(3)
+    max-width: 70%
+  #bosch .grinder .grinder__txt
+    padding: 1em 0
+  #bosch .testo .testo__img .testo__abs img,
+  #bosch .salat .salat__img .salat__abs img,
+  #bosch .kubik .kubik__img .kubik__abs img
+    max-width: 140px
+  #bosch .testo .testo__txt
+    top: 12em
+  #bosch .venchik .venchik__list li
+    flex-direction: column
+    img
+      margin: 0 auto !important
+      position: unset
+  #bosch .venchik .venchik__list li:nth-of-type(2)
+    margin: 1em 0
+  #bosch .venchik .venchik__list li .venchik__txt
+    h3
+      text-align: center
+    p
+      text-align: center
+  #bosch .salat
+    display: flex
+    flex-direction: column-reverse
+    padding-top: 1em
+  #bosch .salat .salat__txt
+    position: unset
+    padding: 1em
+  #bosch .kubik
+    display: flex
+    flex-direction: column
+    h3
+      position: unset
+      text-align: center
+      order: 0
+      padding: 1em 1em 0 1em
+  #bosch .kubik .kubik__txt
+    position: unset
+    order: 1
+    padding-top: 0
+  #bosch .kubik .kubik__img
+    order: 2
+  #bosch .chasha .chasha__flex
+    flex-direction: column
+  #bosch .chasha .chasha__cont .chasha__txt,
+  #bosch .logo .logo__txt
+    padding: 1em
+  #bosch .testo
+    padding-top: 1em
+  #bosch p
+    font-size: unset !important
+  #bosch .glass,
+  #bosch .grinder
+    padding-top: 1em
+
+@media (max-width: 320px)
+  #bosch .testo .testo__txt
+    top: 14em
+  #bosch .testo .testo__img .testo__abs img, #bosch .salat .salat__img .salat__abs img, #bosch .kubik .kubik__img .kubik__abs img
+    max-width: 110px
