@@ -59,7 +59,7 @@ $.ajax({
    }
 });
 
-var priceUrl34 = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id=' + city + '&ids=1248513,1248523,1373683,1373693,1248533,1248543';
+var priceUrl34 = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id=' + city + '&ids=1248513,1248523,1373683,1373693';
 $.ajax({
    url: priceUrl34,
    type: 'get',
@@ -70,15 +70,11 @@ $.ajax({
       var pr40 = resp['1248523']['price'];
       var pr41 = resp['1373683']['price'];
       var pr42 = resp['1373693']['price'];
-      var pr43 = resp['1248533']['price'];
-      var pr44 = resp['1248543']['price'];
       
       document.getElementById("sku-1663203").innerHTML = pr36;
       document.getElementById("sku-1663204").innerHTML = pr40;
       document.getElementById("sku-1663205").innerHTML = pr41;
       document.getElementById("sku-1663206").innerHTML = pr42;
-      document.getElementById("sku-1663207").innerHTML = pr43;
-      document.getElementById("sku-1663210").innerHTML = pr44;
 
    }
 });

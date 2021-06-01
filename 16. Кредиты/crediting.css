@@ -80,6 +80,13 @@
 #crediting_wrap p {
   font-size: 14px;
   margin-bottom: 0;
+  color: #616161;
+}
+
+#crediting_wrap p.color-green {
+  font-size: 16px;
+  color: #379424;
+  font-weight: bold;
 }
 
 #crediting_wrap h1 {
@@ -98,6 +105,12 @@
   padding-top: 0;
   line-height: 1.1;
   text-align: inherit;
+  font-weight: bold;
+}
+
+#crediting_wrap h4 {
+  font-size: 16px;
+  margin: 0;
   font-weight: bold;
 }
 
@@ -131,7 +144,7 @@ span.tx-uppercase {
   position: relative;
   top: 0;
   right: 0;
-  background-color: #f8f8ef;
+  background-color: transparent;
   width: 100%;
   margin-top: 0;
 }
@@ -149,6 +162,18 @@ span.tx-uppercase {
      -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+#crediting_wrap .cms-sidebar_credit img {
+  width: inherit;
+}
+
+.tabs-content {
+  margin-left: 15px;
+}
+
+#crediting_wrap .cms-sidebar_credit p {
+  margin: 0;
 }
 
 .crediting__wrap-flex {
@@ -170,6 +195,7 @@ span.tx-uppercase {
      -moz-box-flex: 1;
       -ms-flex: 1 1 30%;
           flex: 1 1 30%;
+  max-width: 390px;
 }
 
 .crediting__wrap-flex__item:last-child {
@@ -294,6 +320,134 @@ span.tx-uppercase {
   margin: 0 auto 0 0;
 }
 
+.crediting__bank-top-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.crediting__bank-cont-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background: #FFFFFF;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  padding: 8px;
+  min-height: 42px;
+}
+
+.crediting__bank-cont-flex span {
+  display: block;
+  padding-left: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.crediting__benefits-wrap {
+  background: #FFFFFF;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  padding: 15px;
+  margin-top: 8px;
+}
+
+.crediting__benefits-h3 {
+  text-align: left;
+  padding-bottom: 25px;
+}
+
+.crediting__benefits-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px 15px;
+}
+
+.crediting__benefits-content {
+  position: relative;
+  text-align: left;
+}
+
+.crediting__benefits-h4 {
+  padding: 16px 0;
+  text-align: left;
+}
+
+.crediting__benefits-line {
+  background: #43B02A;
+  width: 100px;
+  height: 4px;
+  opacity: 0.2;
+  margin-bottom: 16px;
+}
+
+.crediting__conditions-wrap {
+  background: #FFFFFF;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  padding: 15px;
+  margin-top: 8px;
+}
+
+.crediting__conditions-h3 {
+  text-align: left;
+  padding-bottom: 25px;
+}
+
+.crediting__conditions-grid__wrap {
+  position: relative;
+}
+
+.crediting__conditions-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 284px 1fr;
+      grid-template-columns: 284px 1fr;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.crediting__conditions-grid:last-child {
+  border-bottom: 0;
+}
+
+.crediting__conditions-grid:last-child .crediting__conditions-item {
+  padding: 16px 0 0 0;
+}
+
+.crediting__conditions-item {
+  position: relative;
+  padding: 16px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media (max-width: 1024px) {
   #crediting_wrap-header h1 {
     font-size: 35px;
@@ -303,6 +457,20 @@ span.tx-uppercase {
   }
   #crediting_wrap .tabs-head-item__text:first-child {
     font-size: 20px;
+  }
+  .crediting__bank-top-grid {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+  }
+  .crediting__conditions-grid {
+    -ms-grid-columns: 215px 1fr;
+        grid-template-columns: 215px 1fr;
+  }
+  .crediting__benefits-flex {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 15px 10px;
   }
 }
 
@@ -353,6 +521,9 @@ span.tx-uppercase {
             flex: 1 1 100%;
     width: 100%;
   }
+  .crediting__wrap-flex__item:first-child {
+    max-width: 100%;
+  }
   #crediting_wrap .tabs-head:not(.product-tabs) .tabs-head-item:after {
     display: none;
   }
@@ -364,6 +535,14 @@ span.tx-uppercase {
   #crediting_wrap .tabs-head:not(.product-tabs) {
     position: relative;
     top: 0;
+  }
+  .tabs-content {
+    margin-left: 0;
+  }
+  .crediting__benefits-grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 15px 15px;
   }
 }
 
@@ -404,5 +583,64 @@ span.tx-uppercase {
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
     width: 100%;
+  }
+  .crediting__wrap-flex__item:first-child {
+    max-width: 100%;
+  }
+  .crediting__benefits-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 0 0;
+  }
+  .crediting__benefits-item {
+    padding: 16px 0;
+    border-bottom: 1px solid #E5E5E5;
+  }
+  .crediting__benefits-item:first-child {
+    padding: 0 0 16px 0;
+  }
+  .crediting__benefits-item:last-child {
+    padding: 16px 0 0 0;
+    border-bottom: 0;
+  }
+  .crediting__conditions-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding: 16px 0;
+  }
+  .crediting__conditions-grid:first-child {
+    padding: 0 0 16px 0;
+  }
+  .crediting__conditions-grid:last-child {
+    padding: 16px 0 0 0;
+  }
+  .crediting__conditions-item {
+    padding: 0;
+  }
+  .crediting__conditions-text-left {
+    padding-bottom: 5px;
+  }
+  .crediting__conditions-h3 {
+    padding-bottom: 26px;
+  }
+  .crediting__benefits-h3 {
+    padding-bottom: 26px;
+  }
+  #crediting_wrap .mobile-header__content {
+    font-size: 20px;
+  }
+  .crediting__bank-top-grid {
+    -ms-grid-columns: (135px)[6];
+        grid-template-columns: repeat(6, 135px);
+    grid-gap: 16px;
+  }
+  .crediting__bank-cont.bank-only-mob {
+    width: 890px;
+  }
+  .crediting__bank-wrap {
+    overflow: scroll;
+  }
+  .crediting__conditions-grid:last-child .crediting__conditions-item {
+    padding: 0 0 0 0;
   }
 }
