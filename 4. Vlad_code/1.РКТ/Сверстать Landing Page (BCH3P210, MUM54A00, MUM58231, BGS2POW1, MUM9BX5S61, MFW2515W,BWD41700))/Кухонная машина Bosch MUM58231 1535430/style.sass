@@ -1,0 +1,372 @@
+/*default styles*/
+
+#bosch
+  max-width: 1000px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: normal
+    padding: 0
+    margin: 0
+    margin-bottom: 0.5em
+    text-align: unset
+  h3
+    display: block
+    line-height: normal
+    font-size: 24px
+    font-weight: bold
+    padding: 0
+    margin: 0
+    margin-bottom: 0.5em
+    text-align: unset
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#bosch
+  .cook,
+  .motor
+    position: relative
+    box-sizing: border-box
+    .cook__txt,
+    .motor__txt
+      position: absolute
+      top: 0
+      max-width: 50%
+      text-align: center
+      right: 0
+      padding: 1em
+      box-sizing: border-box
+      background-color: rgba(255, 255, 255, 0.51%)
+      span
+        display: block
+        font-size: 22px
+        >strong
+          font-size: 40px
+    .motor__txt
+      bottom: 1em
+      left: 1em
+      right: unset
+      top: unset
+
+  .bosch__list
+    margin: 3em 0 1em 0
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      >div
+        max-width: 50%
+        flex: 1 1 0
+        box-sizing: border-box
+      &:nth-of-type(odd)
+        .bosch__list__txt
+          padding-left: 3em
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+        .bosch__list__txt
+          text-align: right
+          padding-right: 3em
+
+  .complete
+    padding: 3em 0 0 0
+    .complete__title
+      h2
+        text-align: center
+    .complete__list
+      max-width: 50%
+      margin: 0 0 0 auto
+      li
+        list-style-type: disc
+        font-size: 1em
+        line-height: normal
+    .complete__flex
+      display: flex
+      flex-direction: row
+      .complete__cont
+        margin-left: 2em
+        .complete__icon
+          img
+            margin: 0 auto 2em auto
+        .complete__cont__txt
+          >li
+            list-style-type: disc
+            font-size: 1em
+            line-height: normal
+            .complete__sub__list
+              padding-left: 2em
+              max-width: 60%
+              li
+                font-size: 0.8em
+                line-height: normal
+
+  .access
+    padding: 3em 0 0 0
+    text-align: center
+    .access__img
+      display: flex
+      flex-direction: row
+      align-items: center
+      .access__img__elem
+        flex: 1 1 0
+        &:nth-of-type(1)
+          flex: 2
+    .access__txt
+      margin-top: 1em
+
+  .smuzi
+    position: relative
+    padding: 3em 0 0 0
+    .smuzi__txt
+      position: absolute
+      max-width: 350px
+      padding: 1em
+      box-sizing: border-box
+      background-color: #fff
+      bottom: 5em
+      left: 0
+      z-index: 10
+      p
+        font-size: 20px
+        text-align: center
+    .smuzi__img
+      position: relative
+      .smuzi__abs
+        position: absolute
+        top: 1em
+        left: 1em
+        -webkit-box-shadow: 0px 5px 7px 5px rgba(34, 60, 80, 0.2)
+        -moz-box-shadow: 0px 5px 7px 5px rgba(34, 60, 80, 0.2)
+        box-shadow: 0px 5px 7px 5px rgba(34, 60, 80, 0.2)
+        img
+          max-width: 240px
+
+  .gamburger
+    position: relative
+    .gamburger__txt
+      position: absolute
+      z-index: 10
+      max-width: 500px
+      padding: 1em
+      box-sizing: border-box
+      top: 1em
+      left: 1em
+      background-color: rgba(255, 255, 255, 0.51%)
+      p
+        font-size: 20px
+        text-align: center
+    .gamburger__img
+      position: relative
+      .gamburger__abs
+        position: absolute
+        bottom: 1em
+        right: 1em
+        -webkit-box-shadow: 0px 5px 7px 5px rgba(34, 60, 80, 0.2)
+        -moz-box-shadow: 0px 5px 7px 5px rgba(34, 60, 80, 0.2)
+        box-shadow: 0px 5px 7px 5px rgba(34, 60, 80, 0.2)
+        img
+          max-width: 240px
+
+  .salat
+    position: relative
+    .salat__img
+      position: relative
+      .salat__abs
+        position: absolute
+        bottom: 1em
+        right: 1em
+        -webkit-box-shadow: -8px -8px 8px 0px rgba(34, 60, 80, 0.2)
+        -moz-box-shadow: -8px -8px 8px 0px rgba(34, 60, 80, 0.2)
+        box-shadow: -8px -8px 8px 0px rgba(34, 60, 80, 0.2)
+        img
+          max-width: 240px
+    .salat__title
+      position: absolute
+      padding: 1em
+      top: 4em
+      right: 1em
+      max-width: 800px
+      background-color: rgba(255, 255, 255, 0.38)
+      box-sizing: border-box
+      right: 50%
+      transform: translateX(50%)
+      width: max-content
+      h3
+        text-align: center
+    .salat__txt
+      position: absolute
+      padding: 1em
+      top: 15em
+      right: 1em
+      max-width: 500px
+      background-color: rgba(255, 255, 255, 0.38)
+      box-sizing: border-box
+      p
+        font-size: 20px
+        text-align: center
+  .salat__two
+    .salat__txt
+      top: 2em
+
+  .chasha
+    .chasha__flex
+      display: flex
+      flex-direction: row
+    .chasha__cont
+      .chasha__txt
+        padding: 3em
+        h3
+          text-align: center
+        p
+          text-align: center
+          font-size: 20px
+      &:nth-of-type(2)
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        .chasha__txt
+          display: flex
+          flex-direction: row
+          align-items: center
+          height: 100%
+
+  .logo
+    .logo__txt
+      padding: 3em
+      h2
+        text-align: center
+      p
+        text-align: center
+        font-size: 20px
+
+//media***************************************************
+
+@media (max-width: 812px)
+  #bosch .salat .salat__title
+    max-width: 480px
+  #bosch .salat .salat__txt
+    top: 15em
+    right: 27em
+    max-width: 300px
+  #bosch .gamburger .gamburger__img .gamburger__abs img,
+  #bosch .smuzi .smuzi__img .smuzi__abs img,
+  #bosch .salat .salat__img .salat__abs img
+    max-width: 170px
+
+@media (max-width: 480px)
+  #bosch .cook .cook__txt, #bosch .cook .motor__txt, #bosch .motor .cook__txt, #bosch .motor .motor__txt
+    position: unset
+    max-width: 100%
+    background-color: #fff
+  #bosch .cook, #bosch .motor
+    display: flex
+    flex-direction: column-reverse
+  #bosch .cook .cook__txt span > strong, #bosch .cook .motor__txt span > strong, #bosch .motor .cook__txt span > strong, #bosch .motor .motor__txt span > strong
+    font-size: 30px
+  #bosch .cook .cook__txt span, #bosch .cook .motor__txt span, #bosch .motor .cook__txt span, #bosch .motor .motor__txt span
+    font-size: 18px
+  #bosch h2
+    font-size: 26px
+  #bosch h3
+    font-size: 22px
+  #bosch .bosch__list li
+    flex-direction: column !important
+    >div
+      max-width: 100%
+    .bosch__list__txt
+      padding: 1em !important
+      h3
+        text-align: center
+      p
+        text-align: center
+    &:nth-of-type(n+2)
+      margin-top: 2em
+  #bosch .access .access__img
+    flex-direction: column
+  #bosch .salat .salat__img .salat__abs img
+    max-width: 140px
+  #bosch .salat
+    display: flex
+    flex-direction: column
+    padding-top: 1em
+  #bosch .salat .salat__txt
+    position: unset
+    padding: 1em
+    max-width: 100%
+    order: 1
+    padding-top: 0
+  #bosch .salat .salat__title
+    position: unset
+    transform: unset
+    box-sizing: border-box
+    max-width: 100%
+    order: 0
+    padding-bottom: 0
+  #bosch .salat .salat__img
+    order: 2
+  #bosch .chasha .chasha__flex
+    flex-direction: column
+  #bosch .chasha .chasha__cont .chasha__txt,
+  #bosch .logo .logo__txt
+    padding: 1em
+  #bosch p
+    font-size: unset !important
+  #bosch .complete
+    padding: 0
+  #bosch .complete .complete__list
+    max-width: 100%
+    list-style-position: inside
+    >li
+      text-align: center
+  #bosch .complete .complete__flex
+    flex-direction: column-reverse
+  #bosch .complete .complete__flex .complete__cont
+    margin-left: 0
+    list-style-position: inside
+    padding-left: 1.5em
+  #bosch .complete .complete__flex .complete__cont .complete__icon
+    margin-left: -1.5em
+  #bosch .gamburger .gamburger__img .gamburger__abs img, #bosch .smuzi .smuzi__img .smuzi__abs img
+    max-width: 100px
+  #bosch .gamburger .gamburger__txt
+    position: unset
+    max-width: 100%
+    background-color: #fff
+  #bosch .salat__two .salat__img .salat__abs img
+    max-width: 100px
+
+@media (max-width: 320px)
+  #bosch .salat .salat__img .salat__abs img
+    max-width: 110px

@@ -1,0 +1,405 @@
+/*default styles*/
+
+#bosch
+  max-width: 1000px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#bosch
+  .battery
+    position: relative
+    box-sizing: border-box
+    .battery__logo
+      position: absolute
+      img
+        max-width: 50%
+        margin: 0
+    .battery__txt
+      text-align: center
+      position: absolute
+      left: 20px
+      top: 150px
+
+  .lithium
+    position: relative
+    box-sizing: border-box
+    .lithium__flex
+      position: absolute
+      width: max-content
+      right: 0
+      bottom: 20px
+      display: flex
+      flex-direction: row
+      align-items: center
+      .lithium__txt
+        text-align: center
+        margin-right: 40px
+        h2
+          margin-bottom: 0.5em
+      .lithium__img
+        max-width: 150px
+      >div
+        max-width: max-content
+
+  .twoinone
+    position: relative
+    box-sizing: border-box
+    .twoinone__txt
+      position: absolute
+      right: 20px
+      top: 40px
+      max-width: 40%
+      text-align: center
+      h2
+        margin-bottom: 0.5em
+
+  .modes
+    position: relative
+    box-sizing: border-box
+    .modes__txt
+      position: absolute
+      right: 80px
+      top: 80px
+      text-align: center
+      h2
+        margin-bottom: 0.5em
+
+  .brush
+    position: relative
+    box-sizing: border-box
+    .brush__txt
+      position: absolute
+      left: 20px
+      top: 80px
+      max-width: 35%
+      text-align: center
+      h2
+        margin-bottom: 0.5em
+
+  .air
+    box-sizing: border-box
+    padding: 80px 0
+    .air__title
+      margin-bottom: 1.5em
+      padding: 0 80px
+      text-align: center
+    .air__txt
+      max-width: 40%
+
+  .complete
+    position: relative
+    box-sizing: border-box
+    .complete__title
+      text-align: center
+      position: absolute
+      top: 100px
+      left: 20px
+    .complete__list
+      span
+        display: block
+        line-height: normal
+        position: absolute
+        left: 20px
+        text-align: center
+        font-size: 1.2em
+        &:nth-of-type(1)
+          bottom: 480px
+          &::after
+            content: ""
+            display: block
+            height: 150px
+            width: 2px
+            background-color: #000
+            position: absolute
+            right: 0
+            margin-top: 10px
+        &:nth-of-type(2)
+          bottom: 270px
+          &::after
+            content: ""
+            display: block
+            position: absolute
+            right: 0
+            transform: rotate(-45deg)
+            height: 50px
+            width: 2px
+            background-color: #000
+        &:nth-of-type(3)
+          bottom: 100px
+          &::after
+            content: ""
+            display: block
+            position: absolute
+            right: -105px
+            bottom: -50px
+            height: 180px
+            width: 2px
+            transform: rotate(80deg)
+            background-color: #000
+        &:nth-of-type(4)
+          bottom: 20px
+          left: unset
+          right: 20px
+          &::before
+            content: ""
+            display: block
+            height: 50px
+            width: 2px
+            position: absolute
+            background-color: #000
+            transform: rotate(-45deg)
+            bottom: 43px
+
+  .access
+    position: relative
+    box-sizing: border-box
+    .access__title
+      text-align: center
+      position: absolute
+      top: 20px
+      left: 20px
+    .access__txt
+      position: absolute
+      right: 180px
+      top: 300px
+      max-width: 15%
+      p>strong
+      font-size: 20px
+
+  .saved
+    position: relative
+    box-sizing: border-box
+    .saved__txt
+      position: absolute
+      top: 20px
+      left: 20px
+      right: 20px
+      h2
+        margin-bottom: 0.5em
+        text-align: center
+      p
+        max-width: 40%
+
+  .comfort
+    position: relative
+    box-sizing: border-box
+    .comfort__title
+      position: absolute
+      left: 20px
+      right: 20px
+      top: 20px
+      h2
+        text-align: center
+    .comfort__txt
+      max-width: 30%
+      position: absolute
+      bottom: 40px
+      right: 40px
+      text-align: center
+      p>strong
+      font-size: 20px
+
+  .around
+    position: relative
+    box-sizing: border-box
+    .around__title
+      position: absolute
+      text-align: center
+      top: 20px
+      left: 20px
+      right: 20px
+    .around__txt
+      position: absolute
+      bottom: 40px
+      right: 40px
+      font-size: 20px
+      text-align: center
+
+  .eazy
+    position: relative
+    box-sizing: border-box
+    .eazy__txt
+      position: absolute
+      top: 20px
+      right: 20px
+      left: 20px
+      text-align: center
+      h2
+        margin-bottom: 0.5em
+
+  .practic
+    position: relative
+    box-sizing: border-box
+    .practic__txt
+      position: absolute
+      text-align: center
+      top: 20px
+      max-width: 50%
+      right: 140px
+      h2
+        margin-bottom: 0.5em
+
+//media****************************************************
+
+@media (max-width: 812px)
+  #bosch .lithium
+    display: flex
+    flex-direction: column-reverse
+  #bosch .lithium .lithium__flex
+    position: unset
+    padding: 1em
+    margin: 0 auto
+  #bosch .modes .modes__txt
+    right: 20px
+    top: 45px
+  #bosch .brush .brush__txt
+    top: 40px
+  #bosch .air .air__txt
+    padding: 1em
+  #bosch .complete .complete__list span::after
+    display: none !important
+  #bosch .complete .complete__list span::before
+    display: none !important
+  #bosch .complete .complete__list
+    position: absolute
+    left: 20px
+    top: 350px
+  #bosch .complete .complete__list span
+    position: unset
+    &:nth-of-type(n+2)
+      margin-top: 10px
+      >br
+        content: ""
+        display: none
+
+@media (max-width: 480px)
+  #bosch h2
+    font-size: 24px
+  #bosch .battery .battery__txt
+    left: unset
+    padding: 1em
+    box-sizing: border-box
+  #bosch .lithium .lithium__flex
+    flex-direction: column
+  #bosch .twoinone .twoinone__txt
+    max-width: 50%
+  #bosch .modes
+    display: flex
+    flex-direction: column-reverse
+    .modes__txt
+      position: unset
+      padding: 1em
+  #bosch .brush
+    display: flex
+    flex-direction: column-reverse
+    .brush__txt
+      position: unset
+      max-width: 100%
+      padding: 1em
+  #bosch .air
+    padding: 1em 0
+  #bosch .air .air__title
+    padding: 0 1em
+  #bosch .air .air__txt
+    max-width: 80%
+  #bosch .complete
+    display: flex
+    flex-direction: column
+    .complete__title
+      position: unset
+      order: 0
+      padding: 1em
+    .complete__img
+      order: 1
+    .complete__list
+      position: unset
+      order: 2
+      padding: 1em
+  #bosch .access .access__txt
+    right: unset
+    left: 20px
+    top: 180px
+    max-width: 25%
+    font-size: 20px
+  #bosch .saved .saved__txt p
+    max-width: 80%
+  #bosch .comfort .comfort__txt
+    max-width: 100%
+    padding: 1em
+    transform: translateX(50%)
+    right: 50%
+    width: 100%
+    bottom: 190px
+    padding: 0 1em
+    box-sizing: border-box
+  #bosch .around .around__txt
+    font-size: 15px
+    bottom: 20px
+    right: 10px
+  #bosch .practic
+    display: flex
+    flex-direction: column-reverse
+    .practic__txt
+      position: unset
+      max-width: 100%
+      padding: 1em
+  #bosch .lithium .lithium__flex
+    max-width: 100%
+    box-sizing: border-box
+  #bosch .lithium .lithium__flex .lithium__txt
+    margin-right: 0
+  #bosch .lithium .lithium__img:first-of-type img
+    min-width: 600px
+    margin-left: -60px
+  #bosch .access .access__title
+    right: 20px
+
+@media (max-width: 320px)
+  #bosch h2
+    font-size: 22px
+  #bosch .battery .battery__txt
+    top: 90px
+  #bosch .lithium .lithium__flex .lithium__txt
+    margin-right: 0
+  #bosch .comfort .comfort__txt
+    bottom: 150px
+  #bosch .access .access__txt
+    max-width: 30%
+
+    

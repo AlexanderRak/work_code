@@ -1,0 +1,119 @@
+/*default styles*/
+
+#bosch
+  max-width: 1000px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p  
+    margin-bottom: 0
+    margin: 0
+    &:first-letter
+     padding-left: 0
+  h2 
+    display: block
+    line-height: normal
+    font-size: 24px
+    font-weight: bold
+    padding: 0
+    margin: 0
+    margin-bottom: 0.5em
+  img  
+    opacity: 1 
+    max-width: 100% 
+    display: block 
+    height: auto
+    &:hover  
+      opacity: 1 
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  
+
+.features-desc__text 
+  img
+    margin-bottom: 0rem 
+.one-col .features-desc__text 
+  p:first-letter
+    padding-left: 0rem !important 
+
+/*end default styles*/
+
+#bosch
+  .wash
+    position: relative
+    box-sizing: border-box
+    .wash__txt
+      position: absolute
+      max-width: 30%
+      top: 60px
+      right: 100px
+  
+  .bosch__flex
+    padding: 0.5em 0
+    box-sizing: border-box
+    >li
+      display: flex
+      flex-direction: row
+      align-items: center
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+        .bosch__txt
+          text-align: right
+      >div
+        max-width: 50%
+        flex: 1 1 0
+        box-sizing: border-box
+      .bosch__txt
+        padding: 0.8em
+        box-sizing: border-box
+      .bosch__list
+        padding-left: 2em
+        li
+          list-style-type: disc
+          list-style-position: inside
+      &:nth-of-type(1)
+        p
+          &:nth-of-type(1)
+            padding-left: 2em
+          &:nth-of-type(2)
+            text-align: right
+            margin-top: 20px
+      .bosch__img__abs
+        position: relative
+        img
+          &:nth-of-type(2)
+            position: absolute
+            max-width: 40%
+            top: 0
+            right: 0
+      .bosch__img__wrap
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        img
+          flex: 1 1 0
+          max-width: 50%
+          &:nth-of-type(3)
+            margin: 0 auto
+                        
+//media******************************************************
+
+@media (max-width: 480px)
+  #bosch .bosch__flex > li
+    flex-direction: column-reverse !important
+    >div
+      max-width: 100%
+    .bosch__txt
+      text-align: center !important
+  #bosch .bosch__flex > li .bosch__list
+    text-align: left
+  #bosch .wash .wash__txt
+    position: unset
+    max-width: 100%
+    text-align: center
+    padding: 1em
