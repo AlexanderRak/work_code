@@ -123,6 +123,11 @@ span.word-wrap {
   word-wrap: break-word;
 }
 
+span.word-wrap-mob {
+  display: block;
+  word-wrap: break-word;
+}
+
 span.fw-bold {
   font-weight: bold;
 }
@@ -420,8 +425,8 @@ span.tx-uppercase {
 .crediting__conditions-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 284px 1fr;
-      grid-template-columns: 284px 1fr;
+  -ms-grid-columns: 305px 1fr;
+      grid-template-columns: 305px 1fr;
   border-bottom: 1px solid #E5E5E5;
 }
 
@@ -448,6 +453,88 @@ span.tx-uppercase {
           align-items: center;
 }
 
+.crediting__conditions-text-right {
+  max-width: 500px;
+}
+
+.crediting__bayprod-wrap {
+  background: #FFFFFF;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  padding: 15px;
+  margin-top: 8px;
+}
+
+.crediting__bayprod-h3 {
+  text-align: left;
+  padding-bottom: 25px;
+}
+
+.crediting__bayprod-grid__wrap {
+  position: relative;
+}
+
+.crediting__bayprod-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 305px 1fr;
+      grid-template-columns: 305px 1fr;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.crediting__bayprod-item {
+  position: relative;
+  padding: 25px 0 25px 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.crediting__bayprod-num {
+  color: #43B02A;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.crediting__bayprod-text-left h4 {
+  padding: 8px 0;
+}
+
+.crediting__bayprod-text-left p {
+  max-width: 250px;
+}
+
+.bold-b__bayprod {
+  font-weight: bold;
+  color: #000;
+}
+
+.crediting__bayprod-grid3clmn {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 32px;
+  padding-top: 25px;
+}
+
+.crediting__bayprod-grid3clmn_item p {
+  padding-top: 16px;
+}
+
+.link-credit {
+  color: #43b02a;
+  text-decoration: underline;
+}
+
 @media (max-width: 1024px) {
   #crediting_wrap-header h1 {
     font-size: 35px;
@@ -467,10 +554,18 @@ span.tx-uppercase {
     -ms-grid-columns: 215px 1fr;
         grid-template-columns: 215px 1fr;
   }
+  .crediting__bayprod-grid {
+    -ms-grid-columns: 215px 1fr;
+        grid-template-columns: 215px 1fr;
+  }
   .crediting__benefits-flex {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     grid-gap: 15px 10px;
+  }
+  .crediting__benefits-grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -544,6 +639,14 @@ span.tx-uppercase {
         grid-template-columns: 1fr 1fr;
     grid-gap: 15px 15px;
   }
+  #crediting_wrap .tabs-head-item__link {
+    padding: 16px 16px;
+  }
+  .crediting__bayprod-grid3clmn {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -553,6 +656,9 @@ span.tx-uppercase {
   }
   #crediting_wrap-header h2 {
     font-size: 16px;
+  }
+  #crediting_wrap h3 {
+    font-size: 18px;
   }
   .crediting_wrap-header__flex {
     -webkit-box-orient: vertical;
@@ -642,5 +748,42 @@ span.tx-uppercase {
   }
   .crediting__conditions-grid:last-child .crediting__conditions-item {
     padding: 0 0 0 0;
+  }
+  .crediting__bayprod-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding: 16px 0;
+  }
+  .crediting__bayprod-grid:first-child {
+    padding: 0 0 16px 0;
+  }
+  .crediting__bayprod-grid:last-child {
+    padding: 16px 0 0 0;
+  }
+  .crediting__bayprod-h3 {
+    padding-bottom: 26px;
+  }
+  .crediting__bayprod-grid:last-child .crediting__bayprod-item {
+    padding: 0 0 0 12px;
+  }
+  #crediting_wrap .tabs-head-item__link {
+    padding: 16px 16px;
+  }
+  .crediting__bayprod-item {
+    padding: 0 0 0 12px;
+  }
+  .crediting__bayprod-text-left h4 {
+    padding: 16px 0 8px 0;
+  }
+  .crediting__bayprod-text-left p {
+    padding-bottom: 25px;
+  }
+  .crediting__bayprod-grid3clmn {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 25px;
+  }
+  .crediting__bayprod-grid3clmn_item img {
+    margin: 0 auto !important;
   }
 }
