@@ -11,7 +11,7 @@
    h2
       font-size: 32px
       line-height: 1
-      color: #616161
+      color: #000
 .crediting_wrap-header__flex
    display: flex
    align-items: center
@@ -48,7 +48,7 @@
    p
       font-size: 14px
       margin-bottom: 0
-      color: #616161
+      color: #000
       &.color-green
          font-size: 16px
          color: #379424
@@ -58,7 +58,7 @@
    h2
       font-size: 32px
       line-height: 1
-      color: #616161
+      color: #000
    h3
       font-size: 24px
       margin: 0
@@ -74,7 +74,7 @@
       color: #000
    li
       font-size: 14px
-      color: #616161
+      color: #000
 span.word-wrap
    display: block
    word-wrap: break-word
@@ -639,6 +639,12 @@ span.i_icon_4
       grid-gap: 15px 10px
    .crediting__benefits-grid
       grid-template-columns: 1fr 1fr
+   #crediting_wrap .cms-sidebar_credit input[type=tel]
+      margin-right: 5px
+      margin-bottom: 0
+   #crediting_wrap .cms-sidebar_credit input[type=submit]
+      padding: 0.6rem 0
+      margin-bottom: 0
 @media (max-width: 812px)
    #crediting_wrap-header
       h1
@@ -794,3 +800,5 @@ span.i_icon_4
          padding: 0 0 0 0
    .crediting__general-info-bank__link
       padding: 16px 0 0 0
+   #crediting_wrap .cms-sidebar_credit input[type=submit]
+      font-size: 1.5rem
