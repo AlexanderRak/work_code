@@ -23,6 +23,8 @@ span.fw-bold
 	font-weight: bold
 span.tx-uppercase
 	text-transform: uppercase
+.breadcrumbs
+	display: none
 // default
 .bosch-container
 	position: relative
@@ -68,13 +70,15 @@ span.tx-uppercase
 	display: flex
 	align-items: center
 	justify-content: center
-	min-height: 200px
+	height: 200px
 .bosch__btn-wrap
 	width: 100%
 	padding: 0 10px
 	position: relative
 .bosch__grid__wrap
 	position: relative
+	max-height: 293px
+	overflow: hidden
 // slick
 #bosch
 	.slick-track
@@ -89,7 +93,7 @@ span.tx-uppercase
 		max-width: 1316px !important
 	.slick-slider
 		height: 100%
-		z-index: 7
+		z-index: 1
 		margin-top: 0
 	.slick-slide
 		float: inherit
@@ -101,7 +105,7 @@ span.tx-uppercase
 			width: 33px
 			height: 33px
 			position: absolute
-			z-index: 8
+			z-index: 2
 			display: inline-block !important
 			transition: .3s
 			border-radius: 50%
@@ -147,4 +151,6 @@ span.tx-uppercase
 	#bosch .slick-slide
 		margin: 0 15px
 // @media (max-width: 812px)
-// @media (max-width: 480px)
+@media (max-width: 480px)
+	.bosch__img
+		height: 160px

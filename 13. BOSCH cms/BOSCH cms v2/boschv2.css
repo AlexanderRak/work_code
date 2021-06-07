@@ -36,6 +36,10 @@ span.tx-uppercase {
   text-transform: uppercase;
 }
 
+.breadcrumbs {
+  display: none;
+}
+
 .bosch-container {
   position: relative;
 }
@@ -145,7 +149,7 @@ span.tx-uppercase {
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 200px;
+  height: 200px;
 }
 
 .bosch__btn-wrap {
@@ -156,6 +160,8 @@ span.tx-uppercase {
 
 .bosch__grid__wrap {
   position: relative;
+  max-height: 293px;
+  overflow: hidden;
 }
 
 #bosch .slick-track {
@@ -184,7 +190,6 @@ span.tx-uppercase {
 
 #bosch .slick-slider {
   height: 100%;
-  z-index: 7;
   margin-top: 0;
 }
 
@@ -202,7 +207,7 @@ span.tx-uppercase {
   width: 33px;
   height: 33px;
   position: absolute;
-  z-index: 8;
+  z-index: 2;
   display: inline-block !important;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -287,5 +292,11 @@ span.tx-uppercase {
   }
   #bosch .slick-slide {
     margin: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bosch__img {
+    height: 160px;
   }
 }
