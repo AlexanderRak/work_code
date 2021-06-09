@@ -1,0 +1,137 @@
+/*default styles*/
+
+#asbis
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    font-size: 20px
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: bold
+    padding: 0
+    margin: 0
+    text-align: unset
+    text-transform: uppercase
+    margin-bottom: 0.5em
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+//mixin***********
+
+@mixin styles__one
+  position: absolute
+  color: #fff
+  text-align: center
+  max-width: 1000px
+  width: 100%
+  right: 50%
+  transform: translateX(50%)
+  padding: 2em
+  box-sizing: border-box
+
+@mixin styles__two
+  position: absolute
+  text-align: center
+  max-width: 1000px
+  padding: 2em
+  box-sizing: border-box
+  color: #4f4f4f
+  width: 100%
+  right: 50%
+  transform: translateX(50%)
+
+#asbis
+  .show__mob
+    display: none
+  .charge
+    position: relative
+    .charge__txt
+      @include styles__one
+  .wireless
+    position: relative
+    .wireless__txt
+      @include styles__one
+  .gadjet
+    position: relative
+    .gadjet__txt
+      @include styles__two
+  .design
+    position: relative
+    .design__txt
+      @include styles__one
+  .space
+    position: relative
+    .space__txt
+      @include styles__two
+
+//media***************************************************
+
+@media (max-width: 1024px)
+  #asbis .charge .charge__txt,
+  #asbis .gadjet .gadjet__txt,
+  #asbis .wireless .wireless__txt,
+  #asbis .space .space__txt,
+  #asbis .design .design__txt
+    max-width: 700px
+
+@media (max-width: 812px)
+  #asbis
+    .show__mob
+      display: block
+    .hide__mob
+      display: none
+  #asbis .charge .charge__txt,
+  #asbis .gadjet .gadjet__txt,
+  #asbis .wireless .wireless__txt,
+  #asbis .space .space__txt,
+  #asbis .design .design__txt
+    position: unset
+    transform: unset
+    max-width: 100%
+  #asbis .charge .charge__txt,
+  #asbis .wireless .wireless__txt,
+  #asbis .design .design__txt
+    background-color: #000
+
+@media (max-width: 480px)
+  #asbis h2
+    font-size: 22px
+  #asbis p
+    font-size: unset
+  #asbis .charge .charge__txt, 
+  #asbis .gadjet .gadjet__txt, 
+  #asbis .wireless .wireless__txt, 
+  #asbis .space .space__txt, 
+  #asbis .design .design__txt
+    padding: 1em
+  
