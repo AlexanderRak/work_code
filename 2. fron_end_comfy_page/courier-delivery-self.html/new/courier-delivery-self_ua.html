@@ -333,15 +333,6 @@
       box-shadow: initial;
     }
 
-    /*
-  #item_dost_all .height_tr_ch .tr_ch.tabs-head-item__text:first-child {
-    line-height: 1.7rem;
-  }
-  #item_dost_all .height_tr_ch.tabs-head-item__link {
-      padding: 15px 14px 12px 45px;
-  }
-  */
-
     /* За три часа END */
 
     /* УДОБНАЯ И СВОЕВРЕМЕННАЯ ДОСТАВКА  */
@@ -449,14 +440,6 @@
       box-shadow: initial;
     }
 
-    /* #item_justin .justin .justin.tabs-head-item__text:first-child {
-      line-height: 1.7rem;
-    }
-
-    #item_justin .justin.tabs-head-item__link {
-      padding: 5px 5px 10px 38px;
-    } */
-
     /* Justin END */
 
     /* Почтоматы  */
@@ -487,19 +470,11 @@
       box-shadow: initial;
     }
 
-    /* #item_justin .justin .justin.tabs-head-item__text:first-child {
-      line-height: 1.7rem;
-    }
-
-    #item_justin .justin.tabs-head-item__link {
-      padding: 5px 5px 10px 38px;
-    } */
-
     /* Почтоматы END */
 
-        /* Meest у поштомат  */
+    /* Meest у поштомат  */
 
-        #item_dost_all .meest.tabs-head-item__text:first-child:before {
+    #item_dost_all .meest.tabs-head-item__text:first-child:before {
       content: " ";
       background-image: url(https://cdn.comfy.ua/media/x/img2/meest_pochtomat_o.svg);
       background-size: cover;
@@ -524,14 +499,6 @@
       z-index: 10;
       box-shadow: initial;
     }
-
-    /* #item_justin .justin .justin.tabs-head-item__text:first-child {
-      line-height: 1.7rem;
-    }
-
-    #item_justin .justin.tabs-head-item__link {
-      padding: 5px 5px 10px 38px;
-    } */
 
     /* Meest у поштомат END */
 
@@ -563,15 +530,37 @@
       box-shadow: initial;
     }
 
-    /* #item_justin .justin .justin.tabs-head-item__text:first-child {
-      line-height: 1.7rem;
+    /* Meest  у відділення END */
+
+    /* ipost у відділення  */
+
+    #item_dost_all .ipost.tabs-head-item__text:first-child:before {
+      content: " ";
+      background-image: url(https://cdn.comfy.ua/media/x/img2/ipost_o.svg);
+      background-size: cover;
+      width: 26px;
+      height: 31px;
+      position: absolute;
+      left: 8px;
+      top: 30px;
+      z-index: 10;
+      box-shadow: initial;
     }
 
-    #item_justin .justin.tabs-head-item__link {
-      padding: 5px 5px 10px 38px;
-    } */
+    #item_dost_all ._active .ipost.tabs-head-item__text:first-child:before {
+      content: " ";
+      background-image: url(https://cdn.comfy.ua/media/x/img2/ipost_g.svg);
+      background-size: cover;
+      width: 26px;
+      height: 31px;
+      position: absolute;
+      left: 8px;
+      top: 30px;
+      z-index: 10;
+      box-shadow: initial;
+    }
 
-    /* Meest  у відділення END */
+    /* ipost  у відділення END */
 
   }
 
@@ -938,6 +927,8 @@
 
       <li class="tabs-head-item js-tabs-item" data-tab-id="#meest2"> <a href="#meest2" class="meest2 tabs-head-item__link"> <span class="meest2 tabs-head-item__text">Meest у відділення</span></a></li>
 
+      <li class="tabs-head-item js-tabs-item" data-tab-id="#ipost"> <a href="#ipost" class="ipost tabs-head-item__link"> <span class="ipost tabs-head-item__text">Доставка за 3 часа</span></a></li>
+
       <!--
 <li data-tab-id="#BystrajaDostDenZakaza" class="tabs-head-item js-tabs-item"> <a class="BystrajaDostDenZakaza_a tabs-head-item__link" href="#BystrajaDostDenZakaza" _mce_href="#BystrajaDostDenZakaza"> <span class="BystrajaDostDenZakaza_span tabs-head-item__text">Доставка день у день</span></a> </li>
 -->
@@ -949,7 +940,13 @@
   </div>
 
   <ul class="tabs-content" id="tabsContent">
+    <!-- ipost в почтомат -->
+    <li id="ipost" class="tabs-content-item js-tabs-item">
+      <section class="cms">
 
+      </section>
+    </li>
+    <!-- ipost в почтомат -->
     
     <!-- Meest в почтомат -->
     <li id="meestTab" class="tabs-content-item js-tabs-item">

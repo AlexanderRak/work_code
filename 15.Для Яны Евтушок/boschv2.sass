@@ -1,0 +1,210 @@
+#bosch
+	display: block
+	margin: 0 auto
+	max-width: 1316px
+	width: 100%
+	height: auto
+	overflow: hidden
+	position: relative
+	background: #fff
+	img
+		&:hover
+			opacity: 1
+	&:first-letter
+		padding-left: 0
+	img
+		display: block
+		margin-right: initial
+		margin-left: initial
+span.word-wrap
+	display: block
+	word-wrap: break-word
+span.fw-bold
+	font-weight: bold
+span.tx-uppercase
+	text-transform: uppercase
+.breadcrumbs
+	display: none
+// default
+.bosch-container
+	position: relative
+.pos-img
+	position: absolute
+	right: -10px
+	bottom: -20px
+.bosch__text .txtbl
+	color: #43B02A
+	font-size: 72px
+	text-align: center
+	padding: 15px 15px 15px 15px
+	display: block
+	letter-spacing: -3px
+	font-weight: bold
+.bosch__item
+	overflow: hidden
+	position: relative
+	transition: .3s
+	padding: 0px 0 5px 0
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: flex-end
+	&:hover
+		.bosch__btn
+			background: rgb(255, 103, 31)
+.bosch__btn
+	margin: 18px 0 0 0
+	background: rgba(255, 102, 31, 0)
+	min-height: 40px
+	display: flex
+	align-items: center
+	border-radius: 4px
+	p
+		padding: 0 5px 0 5px
+		text-align: center
+		color: #fff
+		font-size: 15px
+		font-weight: bold
+		border-radius: 4px
+		line-height: 1
+		margin: 0 auto
+.bosch__img
+	display: flex
+	align-items: center
+	justify-content: center
+.bosch__btn-wrap
+	width: 100%
+	padding: 0 10px
+	position: relative
+.bosch__grid__wrap-all
+	position: relative
+	overflow: hidden
+.bosch__grid__wrap
+	background: url(https://cdn.comfy.ua/media/x/img2/yna/img10.png)
+	background-position: center
+	background-repeat: repeat
+	width: 100%
+	height: 303px
+// slick
+#bosch
+	.slick-track
+		position: inherit
+		left: inherit
+		top: inherit
+		height: 100%
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+		overflow: hidden
+		max-width: 1316px !important
+	.slick-slider
+		height: 100%
+		z-index: 1
+		margin-top: 0
+	.slick-slide
+		float: inherit
+		height: auto
+	.your-class-arrow
+		display: block
+		.slick-prev, .slick-next
+			background: #E5E5E5
+			width: 33px
+			height: 33px
+			position: absolute
+			z-index: 2
+			display: inline-block !important
+			transition: .3s
+			border-radius: 50%
+			&::before
+				width: 10px
+				height: 15px
+				border-radius: 50%
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				color: #fff
+				font-size: 13px
+				line-height: 1.2
+				left: 1px
+				right: 0
+				margin: 0 auto
+			&:hover
+				cursor: pointer
+			&.slick-disabled
+				opacity: 0.5
+				&::before
+					background: #E5E5E5
+		.slick-prev
+			left: 5px
+			top: 50%
+			transform: translateY(-50%)
+			&::before
+				content: url(https://cdn.comfy.ua/media/x/img2/str-left.svg)
+		.slick-next
+			right: 5px
+			top: 50%
+			transform: translateY(-50%)
+			&::before
+				content: url(https://cdn.comfy.ua/media/x/img2/str-right.svg)
+	.slick-track:after, .slick-track:before
+		display: none
+.imgbl
+	display: none
+.bosch__text
+	position: relative
+// media
+@media (max-width: 1024px)
+	.bosch__item
+		max-width: inherit
+	#bosch .slick-track
+		max-width: inherit !important
+	#bosch .slick-slide
+		margin: 0 15px
+	.pos-img
+		display: none
+	.bosch__text .txtbl
+		font-size: 55px
+@media (max-width: 812px)
+	.bosch__text .txtbl
+		font-size: 42px
+@media (max-width: 480px)
+	.bosch__grid__wrap
+		background: url(https://cdn.comfy.ua/media/x/img2/yna/img11.png)
+		background-position: center
+		background-repeat: repeat
+		width: 100%
+		height: 324px
+		position: relative
+		&::before
+			content: ""
+			background-image: url(https://cdn.comfy.ua/media/x/img2/yna/img12.png)
+			background-repeat: no-repeat
+			width: 340px
+			height: 264px
+			position: absolute
+			left: 0
+			top: 20px
+	.bosch__btn p
+		font-size: 24px
+	.bosch__btn
+		display: table
+		margin: 18px auto 25px auto
+		border-bottom: 5px solid #FF671F
+	.bosch__item:hover .bosch__btn
+		background: rgba(255, 102, 31, 0)
+	span.word-wrap-mob
+		display: block
+		word-wrap: break-word
+	.imgbl
+		display: block
+		position: absolute
+		right: 0
+		bottom: 0
+	.bosch__text .txtbl
+		font-size: 38px
+		text-align: left
+		padding: 15px 0 0 15px
+		letter-spacing: -2px
+		font-weight: 700
+	.imgbl
+		bottom: -23px
