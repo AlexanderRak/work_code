@@ -329,6 +329,30 @@ span.tx-uppercase
 	padding: 0 15px 70px 15px
 	max-width: 1330px
 	margin: 0 auto
+.sect-germany
+	.sect-germany__list
+		display: flex
+		flex-direction: row
+		align-items: center
+		margin: 32px 0 24px 0
+		justify-content: center
+		li
+			&:nth-of-type(2)
+				margin: 0 24px
+				img
+					margin: 0 auto !important
+			&:nth-of-type(1)
+				flex: 1 1 0
+				span
+					text-align: right
+					display: block
+					line-height: normal
+					font-size: 20px
+					font-weight: 500
+			&:nth-of-type(3)
+				flex: 1 1 0
+				p
+					font-size: 18px
 .sect-move__h4
 	padding-bottom: 60px
 .sect-move__bl-flex
@@ -407,6 +431,14 @@ span.tx-uppercase
 		left: 15px
 		&.txt-right
 			right: 15px
+	.sect-germany .sect-germany__list
+		padding: 0 20px
+		box-sizing: border-box
+	.sect-germany .sect-germany__list li
+		flex: 1 1 0
+	.sect-germany .sect-germany__list li:nth-of-type(3) p
+		>br
+			display: none
 @media (max-width: 480px)
 	#posud-page-wrap
 		h2
@@ -468,3 +500,12 @@ span.tx-uppercase
 		padding: 0 0 30px 0
 	.sect-move__h4
 		padding-bottom: 35px
+	.sect-germany .sect-germany__list
+		flex-direction: column
+		margin: 0
+		padding: 30px 20px
+	.sect-germany .sect-germany__list li:nth-of-type(1) span
+		font-size: 18px
+		text-align: center
+	.sect-germany .sect-germany__list li:nth-of-type(2)
+		margin: 16px 0
