@@ -1,0 +1,221 @@
+#candy-g20cc
+   display: block
+   margin: 0 auto
+   max-width: 1316px
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #fff
+   position: relative
+   img
+      &:hover
+         opacity: 1
+   &:first-letter
+      padding-left: 0
+   img
+      display: block
+      margin-right: initial
+      margin-left: initial
+   p
+      font-size: 23px
+      margin-bottom: 0
+      color: #181818
+      font-weight: 500
+   h2
+      font-size: 50px
+      line-height: 1.1
+      color: #fff
+      font-weight: bold
+      text-transform: uppercase
+      text-shadow: 0px 0px 20px white
+   h3
+      font-size: 48px
+      margin: 0
+      text-transform: uppercase
+      padding-top: 0
+      line-height: 1.1
+      text-align: inherit
+      font-weight: bold
+      color: #00aeef
+      padding-bottom: 20px
+   h4
+      font-size: 35px
+      margin: 0
+      text-transform: uppercase
+      padding-top: 0
+      line-height: 1.1
+      text-align: inherit
+      font-weight: 500
+      padding-bottom: 15px
+      color: #00aeef
+span.word-wrap
+   display: block
+   word-wrap: break-word
+span.color-00aeef
+   color: #00aeef
+// default
+
+.candy-g20cc-header
+   position: relative
+   .candy-g20cc-header__bgrd
+      background-image: url(https://cdn.comfy.ua/media/x/img2/candy_img1.png)
+      background-position: left
+      background-repeat: no-repeat
+      background-size: cover
+      width: 100%
+      height: 648px
+      position: relative
+      .candy-g20cc-header__text
+         position: absolute
+         text-align: left
+         max-width: 750px
+         padding: 0 15px
+         right: 4rem
+         top: 33%
+.candy-g20cc-text
+   max-width: 1230px
+   padding: 15px 15px
+   margin: 0 auto
+   text-align: center
+.candy-g20cc-flex
+   display: flex
+   flex-direction: row
+   align-items: center
+   justify-content: center
+   max-width: 1260px
+   padding: 15px 15px
+   margin: 0 auto
+   &.row-rev
+      flex-direction: row-reverse
+      .candy-g20cc-flex__item
+         &:first-child
+            padding-left: 30px
+            padding-right: 0
+         &:last-child
+            padding-right: 30px
+            padding-left: 0
+   .candy-g20cc-flex__item
+      flex: 1 1 0
+      &:first-child
+         padding-right: 30px
+      &:last-child
+         padding-left: 30px
+      .candy-g20cc-flex__item-content
+         text-align: left
+.candy-g20cc-wrap
+   background-color: #cfd8e1
+   max-width: 1230px
+   padding: 15px 15px
+   margin: 0 auto
+.candy-g20cc-wrap__flex-top
+   display: flex
+   align-items: center
+   flex-wrap: wrap
+.candy-g20cc-wrap__flex-top__item
+   flex: 1 1 0
+   display: flex
+   align-items: flex-start
+   padding-bottom: 25px
+   &.w100bl
+      flex: 1 1 100%
+   .candy-g20cc-wrap__flex-item
+      img
+         max-width: 153px
+         display: block
+      &:last-child
+         flex: 1 1 100%
+.pt15
+   padding-top: 15px
+   padding-bottom: 25px
+.candy-g20cc-wrap__flex-item__text
+   padding-left: 15px
+.candy-g20cc-wrap__h3
+   text-align: center
+// media
+// @media (max-width: 1250px)
+@media (max-width: 1024px)
+   #candy-g20cc
+      h3
+         font-size: 40px
+   .candy-g20cc-header .candy-g20cc-header__bgrd .candy-g20cc-header__text
+      text-align: center
+      max-width: 100%
+      padding: 0 15px
+      right: 0
+      left: 0
+      top: 16rem
+      margin: 0 auto
+   .candy-g20cc-flex
+      &.row-rev
+         .candy-g20cc-flex__item
+            &:first-child
+               padding-left: 15px
+               padding-right: 0
+            &:last-child
+               padding-right: 15px
+               padding-left: 0
+      .candy-g20cc-flex__item
+         flex: 1 1 0
+         &:first-child
+            padding-right: 15px
+         &:last-child
+            padding-left: 15px
+@media (max-width: 812px)
+   #candy-g20cc
+      h3
+         font-size: 31px
+         text-align: center
+   .candy-g20cc-header .candy-g20cc-header__bgrd .candy-g20cc-header__text
+      top: 14rem
+   .candy-g20cc-flex
+      flex-direction: column
+      max-width: 600px
+      &.row-rev
+         flex-direction: column
+         .candy-g20cc-flex__item
+            &:first-child
+               padding-left: 0
+               padding-right: 0
+            &:last-child
+               padding-right: 0
+               padding-left: 0
+      .candy-g20cc-flex__item
+         flex: 1 1 0
+         &:first-child
+            padding-right: 0
+         &:last-child
+            padding-left: 0
+   .candy-g20cc-flex .candy-g20cc-flex__item .candy-g20cc-flex__item-content
+      padding: 15px 0
+   .candy-g20cc-wrap__flex-top
+      flex-direction: column
+   .candy-g20cc-wrap__h3 h3
+      text-align: left !important
+@media (max-width: 480px)
+   #candy-g20cc
+      h2
+         font-size: 30px
+      p
+         font-size: 19px
+      h3
+         text-align: center
+      h4
+         font-size: 25px
+         padding-bottom: 5px
+         padding-top: 10px
+   .candy-g20cc-header .candy-g20cc-header__bgrd
+      height: 385px
+   .candy-g20cc-header .candy-g20cc-header__bgrd .candy-g20cc-header__text
+      top: 8rem
+   .candy-g20cc-wrap__flex-top__item
+      flex-direction: column
+      flex: 1 1 100%
+      align-items: center
+      text-align: center
+   .candy-g20cc-wrap__h3 h3
+      text-align: center !important
+   .candy-g20cc-wrap__flex-item__text
+      padding-left: 0
+   .pt15
+      padding-top: 15px
+      padding-bottom: 0px
