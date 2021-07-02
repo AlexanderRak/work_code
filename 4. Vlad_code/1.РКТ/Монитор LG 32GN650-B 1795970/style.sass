@@ -1,0 +1,228 @@
+
+/*default styles*/
+
+#lg
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    font-size: 20px
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 44px
+    font-weight: bold
+    text-align: unset
+    padding: 0
+    margin: 0
+    margin-bottom: 0.5em
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#lg
+  .show__mob
+    display: none
+
+  .game
+    position: relative
+    .game__txt
+      color: #fff
+      position: absolute
+      padding: 70px 1em
+      text-align: center
+      max-width: 630px
+      right: 50%
+      transform: translateX(50%)
+
+  .lg__list
+    display: flex
+    flex-direction: row
+    padding: 70px
+    box-sizing: border-box
+    justify-content: center
+    li
+      flex: 1 1 0
+      max-width: 25%
+      p
+        font-size: 24px
+        text-align: center
+      span
+        color: #969696
+        margin-top: 1em
+        text-align: center
+        font-size: 0.8em
+
+  .refresh
+    .refresh__txt
+      padding: 3em 1em
+      box-sizing: border-box
+      max-width: 930px
+      margin: 0 auto
+      text-align: center
+
+  .snoska
+    p
+      font-size: unset
+      padding: 1em
+      color: #969696
+
+  .response
+    position: relative
+    .response__txt
+      position: absolute
+      color: #fff
+      bottom: 50%
+      right: 0
+      transform: translateY(50%)
+      max-width: 450px
+      padding: 4em
+      box-sizing: content-box
+
+  .ips
+    position: relative
+    .ips__txt
+      position: absolute
+      color: #fff
+      left: 0
+      top: 0
+      max-width: 450px
+      padding: 4em
+      box-sizing: content-box
+
+  .compatibility
+    display: flex
+    flex-direction: row-reverse
+    align-items: center
+    >div
+      max-width: 50%
+      flex: 1 1 0
+      box-sizing: border-box
+    .compatibility__txt
+      padding: 0em 4em
+
+  .compatibility__reverse
+    flex-direction: row
+
+  .design
+    .design__txt
+      adding: 3em 1em
+      box-sizing: border-box
+      max-width: 930px
+      margin: 0 auto
+      text-align: center
+    .design__icon
+      display: flex
+      flex-direction: row
+      justify-content: center
+      margin: 30px 0
+      li
+        flex: 1 1 0
+        max-width: 10%
+        img
+          margin: 0 auto
+        &:nth-of-type(n+2)
+          border-left: 1px solid #d8d8d8
+
+//media***************************************************
+
+@media (max-width: 1024px)
+  #lg .refresh .refresh__txt
+    padding-top: 0
+  #lg .response .response__txt
+    box-sizing: border-box
+  #lg .compatibility .compatibility__txt
+    padding: 1em 2em
+
+@media (max-width: 812px)
+  #lg
+    .hide__mob
+      display: none
+    .show__mob
+      display: block
+  #lg h2
+    font-size: 32px
+  #lg p
+    font-size: unset
+  #lg .lg__list
+    padding: 1em
+  #lg .lg__list li p
+    font-size: 20px
+  #lg .response .response__txt
+    position: unset
+    background-color: #333333
+    transform: unset
+    max-width: 100%
+    padding: 1em
+  #lg .snoska
+    background-color: #333333
+    p
+      color: #fff
+  #lg .compatibility
+    flex-direction: column
+    >div
+      max-width: 100%
+  #lg .compatibility .compatibility__txt
+    padding: 1em
+  #lg .snoska__white
+    background-color: unset
+    p
+      color: #969696
+  #lg .design .design__icon li
+    max-width: 20%
+  #lg .ips .ips__txt
+    position: unset
+    background-color: #333333
+    transform: unset
+    max-width: 100%
+    padding: 1em
+
+@media (max-width: 480px)
+  #lg .game .game__txt
+    width: 100%
+    padding: 1em
+    box-sizing: border-box
+  #lg 
+    .lg__list 
+      overflow-x: scroll
+      li
+        min-width: 133px
+  #lg .lg__list li span
+    font-size: 11px
+  #lg h2
+    font-size: 24px
+  #lg .lg__list li p
+    font-size: 18px
+  #lg .snoska p
+    font-size: 11px
+  #lg .design .design__icon li
+    max-width: 25%
