@@ -1,0 +1,757 @@
+/*default styles*/
+
+#kenwood
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    font-size: 22px
+    line-height: normal
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 44px
+    font-weight: bold
+    padding: 0
+    margin: 0
+    text-align: unset
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#kenwood
+  .show__tab
+    display: none
+  .shef
+    position: relative
+    box-sizing: border-box
+    background-image: url("https://cdn.comfy.ua/media/x/img/1762880/1bg.jpg")
+    background-size: cover
+    background-position: center
+    display: flex
+    flex-direction: row
+    align-items: center
+    .shef__abs
+      position: absolute
+      left: 108px
+      top: 55px
+      span
+        font-size: 18px
+        text-transform: uppercase
+        color: #fff
+    >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .shef__txt
+      padding-left: 108px
+      span
+        font-size: 58px
+        color: #fff
+        max-width: 420px
+        font-weight: bold
+        >i
+          color: #eeaa07
+    .shef__img
+      padding-right: 30px
+
+  .func
+    box-sizing: border-box
+    background-color: #505050
+    background-image: url("https://cdn.comfy.ua/media/x/img/1762880/2bg.png")
+    background-position: top left
+    background-repeat: no-repeat
+    display: flex
+    flex-direction: row
+    align-items: center
+    .func__list,
+    .func__img
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+    .func__list
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      padding-right: 24px
+      li
+        flex: 1 1 0
+        max-width: 50%
+        min-width: 50%
+        padding: 0 25px
+        box-sizing: border-box
+        .func__txt
+          p
+            font-size: 18px
+            color: #fff
+            line-height: 25.2px
+        .func__title
+          display: flex
+          flex-direction: row
+          align-items: center
+          margin-bottom: 10px
+          p
+            font-size: 24px
+            color: #fff
+          &::before
+            content: ""
+            display: block
+            min-width: 48px
+            height: 48px
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            background-image: url("https://cdn.comfy.ua/media/x/img/1762880/icon1.svg")
+            margin-right: 15px
+        &:nth-of-type(2)
+          .func__title
+            &::before
+              background-image: url("https://cdn.comfy.ua/media/x/img/1762880/icon2.svg")
+        &:nth-of-type(3)
+          .func__title
+            &::before
+              background-image: url("https://cdn.comfy.ua/media/x/img/1762880/icon3.svg")
+        &:nth-of-type(4)
+          .func__title
+            &::before
+              background-image: url("https://cdn.comfy.ua/media/x/img/1762880/icon4.svg")
+        &:nth-of-type(n+3)
+          margin-top: 55px
+
+  .cooking
+    box-sizing: border-box
+    margin: 30px 30px 30px 108px
+    background-image: url("https://cdn.comfy.ua/media/x/img/1762880/3.png")
+    background-position: right
+    background-repeat: no-repeat
+    height: 660px
+    .cooking__txt
+      padding-top: 50px
+      h2
+        margin-bottom: 60px
+      p
+        display: block
+        max-width: 321px !important
+        line-height: 30.8px
+
+  .tech
+    background-color: #EEAA07
+    padding: 60px 70px
+    box-sizing: border-box
+    .tech__title
+      max-width: 828px
+      text-align: center
+      margin: 0 auto
+      margin-bottom: 32px
+      h2
+        >i
+          color: #fff
+    .tech__flex
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      .tech__cont
+        max-width: 314px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &:nth-of-type(1)
+          margin-top: 85px
+          .tech__txt
+            p
+              font-size: 16px
+              line-height: 22.4px
+            .tech__txt__title
+              position: relative
+              margin-bottom: 12px
+              p
+                font-size: 22px
+              &::after
+                content: ""
+                display: block
+                height: 0.5px
+                width: 100%
+                background-color: #000
+                position: absolute
+                bottom: 50%
+                transform: translateY(50%)
+            &:nth-of-type(1)
+              .tech__txt__title
+                &::after
+                  right: -126px
+                  width: 70%
+                  transform: unset
+                  top: 0
+            &:nth-of-type(2)
+              margin: 30px 0
+              .tech__txt__title
+                &::after
+                  right: -85px
+                  width: 40%
+            &:nth-of-type(3)
+              .tech__txt__title
+                &::after
+                  right: -165px
+                  width: 65%
+                  transform: unset
+                  bottom: 0
+        &:nth-of-type(3)
+          margin-top: 20px
+          .tech__txt
+            p
+              font-size: 16px
+            .tech__txt__title
+              margin-bottom: 12px
+              position: relative
+              p
+                font-size: 24px
+              &::before
+                content: ""
+                display: block
+                height: 0.5px
+                background-color: #000
+                width: 100%
+                bottom: 50%
+                transform: translateY(50%)
+                position: absolute
+            &:nth-of-type(1)
+              .tech__txt__title
+                &::before
+                  bottom: 0
+                  left: -41%
+                  width: 30%
+            &:nth-of-type(2)
+              margin: 15px 0 24px 0
+              .tech__txt__title
+                &::before
+                  left: -50%
+                  width: 40%
+            &:nth-of-type(3)
+              .tech__txt__title
+                &::before
+                  left: -50%
+                  width: 40%
+
+  .british
+    box-sizing: border-box
+    margin: 30px 30px 30px 108px
+    background-image: url("https://cdn.comfy.ua/media/x/img/1762880/5.png")
+    background-position: right
+    background-repeat: no-repeat
+    height: 660px
+    .british__txt
+      padding-top: 50px
+      h2
+        margin-bottom: 60px
+      p
+        display: block
+        max-width: 321px !important
+        line-height: 30.8px
+
+  .nasadki
+    background-image: url("https://cdn.comfy.ua/media/x/img/1762880/6bg.jpg")
+    background-position: center
+    background-size: cover
+    padding: 80px 0 80px 108px
+    box-sizing: border-box
+    overflow: hidden
+    .nasadki__flex
+      display: flex
+      flex-direction: row
+      color: #fff
+      >div
+        flex: 1 1 0
+      .nasadki__cont
+        flex: 2
+        margin-right: 20px
+        .nasadki__list
+          margin-top: 75px
+          display: flex
+          flex-direction: row
+          flex-wrap: wrap
+          li
+            min-width: 50%
+            max-width: 50%
+            display: flex
+            flex-direction: row
+            align-items: flex-start
+            &::before
+              content: ""
+              display: block
+              min-width: 160px
+              height: 220px
+              background-image: url("https://cdn.comfy.ua/media/x/img/1762880/icon5.png")
+              margin-right: 15px
+            .nasadki__list__txt
+              p
+                font-size: 18px
+                line-height: 25.2px
+                >strong
+                  font-size: 24px
+                  margin-bottom: 12px
+                  display: block
+            &:nth-of-type(n+3)
+              margin-top: 60px
+            &:nth-of-type(2)
+              &::before
+                background-image: url("https://cdn.comfy.ua/media/x/img/1762880/icon6.png")
+            &:nth-of-type(3)
+              &::before
+                background-image: url("https://cdn.comfy.ua/media/x/img/1762880/icon7.png")
+            &:nth-of-type(4)
+              &::before
+                background-image: url("https://cdn.comfy.ua/media/x/img/1762880/icon8.png")
+
+      .nasadki__img
+        img
+          margin: 0 0 0 auto
+
+  .pribor
+    padding: 80px 0 80px 108px
+    box-sizing: border-box
+    .pribor__flex
+      display: flex
+      flex-direction: row
+      align-items: flex-end
+      .pribor__img
+        min-width: 275px
+        margin-left: 78px
+      .pribor__cont
+        >span
+          margin: 40px 0 30px 0
+          font-size: 28px
+          font-weight: bold
+          &:last-of-type
+            margin: 73px 0 30px 0
+        .pribor__title
+          h2
+            margin-bottom: 30px
+          p
+            line-height: 30.8px
+        .pribor__list
+          display: flex
+          flex-direction: row
+          li
+            flex: 1 1 0
+            box-sizing: border-box
+            .pribor__list__txt
+              span
+                color: #878787
+                font-size: 18px
+                margin: 20px 0 7px 0
+              p
+                font-size: 16px
+                line-height: 22.4px
+                >strong
+                  display: block
+                  margin-bottom: 12px
+              &::before
+                content: ""
+                display: block
+                min-width: 20px
+                height: 10px
+                background-repeat: no-repeat
+                background-size: contain
+                background-position: center
+                background-image: url("https://cdn.comfy.ua/media/x/img/1762880/threeangle.svg")
+                margin-top: 20px
+            &::before
+              content: ""
+              display: block
+              width: 245px
+              height: 190px
+              background-repeat: no-repeat
+              background-position: center
+              background-image: url("https://cdn.comfy.ua/media/x/img/1762880/icon8.jpg")
+            &:nth-of-type(2)
+              margin: 0 60px
+              &::before
+                background-image: url("https://cdn.comfy.ua/media/x/img/1762880/icon9.jpg")
+            &:nth-of-type(3)
+              &::before
+                background-image: url("https://cdn.comfy.ua/media/x/img/1762880/icon10.jpg")
+          &:last-of-type
+            li
+              &:nth-of-type(1)
+                &::before
+                  background-image: url("https://cdn.comfy.ua/media/x/img/1762880/icon11.jpg")
+              &:nth-of-type(2)
+                &::before
+                  background-image: url("https://cdn.comfy.ua/media/x/img/1762880/icon12.jpg")
+              &:nth-of-type(3)
+                &::before
+                  background-image: url("https://cdn.comfy.ua/media/x/img/1762880/icon13.jpg")
+
+//media****************************************************
+
+@media (max-width: 1024px)
+  #kenwood .func .func__list, #kenwood .func .func__img
+    margin-left: -3%
+  #kenwood .func .func__list
+    padding-right: 0
+    flex: 1.5
+    max-width: 65%
+  #kenwood .cooking,
+  #kenwood .british
+    margin: 30px
+  #kenwood .tech .tech__flex .tech__img
+    align-self: center
+  #kenwood .tech .tech__flex .tech__cont
+    max-width: 290px
+  #kenwood .tech
+    padding: 60px 1em
+  #kenwood .nasadki
+    padding: 80px 0 80px 1em
+  #kenwood .nasadki .nasadki__flex .nasadki__cont
+    flex: 3
+  #kenwood .nasadki .nasadki__flex .nasadki__img
+    align-self: center
+  #kenwood .pribor .pribor__flex .pribor__cont .pribor__list li
+    box-sizing: border-box
+  #kenwood .pribor .pribor__flex .pribor__cont .pribor__list li::before
+    width: 100%
+    max-width: 245px
+  #kenwood .pribor
+    padding-left: 1em
+  #kenwood .pribor .pribor__flex .pribor__img
+    min-width: 250px
+    margin-left: 40px
+  #kenwood .func .func__list li
+    padding: 0 24px
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(3) .tech__cont__wrap
+    margin-left: 25px
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(3)
+    margin-top: 78px
+
+@media (max-width: 812px)
+  #kenwood
+    .hide__tab
+      display: none
+    .show__tab
+      display: block
+  #kenwood .shef .shef__txt
+    padding-left: 1em
+  #kenwood .shef .shef__txt span
+    font-size: 32px
+  #kenwood .shef .shef__abs
+    left: 1em
+  #kenwood .func .func__list, #kenwood .func .func__img
+    margin-left: 0
+  #kenwood .func .func__list
+    max-width: 100%
+    flex: 6
+  #kenwood .func
+    background-image: unset
+    background-color: #212121
+  #kenwood .cooking,
+  #kenwood .british
+    background-image: unset
+    height: auto
+    margin: 0
+  #kenwood .cooking .cooking__txt,
+  #kenwood .british .british__txt
+    padding: 1em
+    margin: 0
+    h2
+      font-size: 32px
+    p
+      max-width: 100% !important
+  #kenwood .tech
+    padding: 40px 0 40px 0
+  #kenwood .tech .tech__flex
+    flex-direction: column
+    justify-content: center
+  #kenwood .tech .tech__flex .tech__cont
+    margin-top: 0 !important
+    max-width: 100%
+    display: flex
+    flex-direction: row
+    >div
+      flex: 1 1 0
+    .tech__cont__wrap
+      display: flex
+      flex-direction: column
+      justify-content: center
+    .tech__txt
+      >p
+        display: none
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(1)
+    flex-direction: row-reverse
+    .tech__cont__wrap
+      padding-left: 55px
+    .tech__cont__img
+      img
+        margin: 0 0 0 auto
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(1) .tech__txt:nth-of-type(2)
+    margin: 65px 0
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(1) .tech__txt:nth-of-type(3)
+    margin-bottom: -50px
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(3) .tech__txt:nth-of-type(2)
+    margin: 50px 0 165px 0
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(3) .tech__txt:nth-of-type(3)
+    margin-bottom: -40px
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(3) .tech__txt:nth-of-type(1) .tech__txt__title::before
+    left: -54%
+    width: 45%
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(3) .tech__txt:nth-of-type(2) .tech__txt__title::before
+    left: -58%
+    width: 49%
+  #kenwood h2
+    font-size: 34px
+  #kenwood .nasadki
+    padding: 1em 0 1em 1em
+  #kenwood .nasadki .nasadki__flex
+    flex-direction: column
+  #kenwood .nasadki .nasadki__flex .nasadki__img
+    align-self: unset
+    margin-bottom: -8%
+    img
+      max-width: 40%
+  #kenwood .nasadki .nasadki__flex .nasadki__cont .nasadki__list li::before
+    background-size: contain
+    background-repeat: no-repeat
+    min-width: 130px
+  #kenwood .nasadki .nasadki__flex .nasadki__cont h2
+    text-align: center
+  #kenwood .pribor .pribor__flex .pribor__cont .pribor__list
+    flex-direction: column
+  #kenwood .pribor .pribor__flex .pribor__cont .pribor__list li
+    display: flex
+    flex-direction: row
+    align-items: center
+    &:nth-of-type(even)
+      flex-direction: row-reverse
+      &::before
+        margin-left: 19px
+    &:nth-of-type(odd)
+      &::before
+        margin-right: 19px
+    &:nth-of-type(2)
+      margin: 40px 0
+  #kenwood .pribor .pribor__flex .pribor__cont .pribor__list li .pribor__list__txt span
+    margin-top: 0
+  #kenwood .pribor .pribor__flex .pribor__cont .pribor__list li .pribor__list__txt::before
+    display: none
+  #kenwood .pribor .pribor__flex .pribor__img
+    min-width: 200px
+    margin-left: 15px
+    display: none
+  #kenwood .pribor .pribor__flex .pribor__cont > span
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    margin: -40px 0 !important
+    &::after
+      content: ""
+      display: block
+      width: 124px
+      min-width: 124px
+      height: 248px
+      background-image: url("https://cdn.comfy.ua/media/x/img/1762880/7_1.png")
+      background-size: contain
+      background-repeat: no-repeat
+    &:nth-of-type(2)
+      &::after
+        background-image: url("https://cdn.comfy.ua/media/x/img/1762880/7_2.png")
+  #kenwood .pribor .pribor__flex .pribor__cont .pribor__list li .pribor__list__txt
+    max-width: 45%
+
+@media (max-width: 480px)
+  #kenwood p
+    line-height: 16.9px !important
+  #kenwood .shef
+    flex-direction: column
+    align-items: unset
+  #kenwood .shef .shef__abs
+    position: unset
+    span
+      font-size: 13px
+      padding: 15px 15px 30px 15px
+  #kenwood .shef > div
+    max-width: 100%
+  #kenwood .shef .shef__txt
+    padding: 0 15px
+  #kenwood .shef .shef__img
+    padding: 20px 15px 0 15px
+  #kenwood .shef .shef__txt span
+    max-width: 266px
+  #kenwood .func
+    padding: 22px 0 30px 0
+  #kenwood .func .func__list
+    flex-direction: column
+    flex: 2.2
+    li
+      max-width: 100%
+      &:nth-of-type(n+2)
+        margin-top: 20px
+  #kenwood .func .func__list li .func__title p
+    font-size: 16px
+  #kenwood .func .func__list li .func__title::before
+    min-width: 38px
+    height: 38px
+    margin-right: 10px
+  #kenwood .func .func__list li .func__txt p
+    font-size: 13px
+  #kenwood .func .func__list li
+    padding-right: 15px
+    padding-left: 10px
+  #kenwood .cooking .cooking__txt h2,
+  #kenwood .british .british__txt h2
+    font-size: 22px
+    margin-bottom: 20px
+  #kenwood .cooking .cooking__txt,
+  #kenwood .british .british__txt
+    padding: 40px 15px 0 15px
+  #kenwood .cooking .cooking__txt p,
+  #kenwood .british .british__txt p
+    font-size: 13px
+    max-width: 240px
+  #kenwood h2
+    font-size: 26px
+  #kenwood .tech .tech__title
+    margin-bottom: 37px
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(1) .tech__txt .tech__txt__title p,
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(3) .tech__txt .tech__txt__title p
+    font-size: 16px
+    max-width: 109px
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(1) .tech__cont__wrap
+    padding-left: 15px
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(1) .tech__txt:nth-of-type(2)
+    margin: 33px 0 37px 0
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(1) .tech__txt:nth-of-type(3)
+    margin-bottom: 0
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(1) .tech__txt:nth-of-type(1) .tech__txt__title::after
+    right: -50px
+    width: 70%
+    top: unset
+    bottom: 0
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(1) .tech__txt:nth-of-type(2) .tech__txt__title::after
+    right: -35px
+    width: 40%
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(1) .tech__txt:nth-of-type(3) .tech__txt__title::after
+    right: -60px
+    width: 65%
+    bottom: unset
+    top: 0
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(3)
+    margin-top: 60px !important
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(3) .tech__txt .tech__txt__title
+    margin: 0
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(3) .tech__txt:nth-of-type(1)
+    margin-left: 15px
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(3) .tech__txt:nth-of-type(2)
+    margin: 46px 0 73px 15px
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(3) .tech__txt:nth-of-type(3)
+    margin-bottom: 0
+    margin-left: 15px
+  #kenwood .tech .tech__flex .tech__cont:nth-of-type(3) .tech__txt:nth-of-type(2) .tech__txt__title::before
+    bottom: 40px
+  #kenwood .nasadki .nasadki__flex .nasadki__cont h2
+    font-size: 22px
+    text-align: left
+    >br
+      display: none
+  #kenwood .nasadki
+    padding: 0
+  #kenwood .nasadki .nasadki__flex .nasadki__cont
+    margin-right: 0
+    padding: 40px 15px 10px 15px
+  #kenwood .nasadki .nasadki__flex .nasadki__cont .nasadki__list
+    flex-direction: column
+    li
+      justify-content: unset
+      align-items: unset
+      &:nth-of-type(odd)
+        flex-direction: row-reverse
+  #kenwood .nasadki .nasadki__flex .nasadki__cont .nasadki__list li::before
+    max-width: 115px
+    min-width: 115px
+    max-height: 132px
+  #kenwood .nasadki .nasadki__flex .nasadki__cont .nasadki__list li
+    max-width: 100%
+  #kenwood .nasadki .nasadki__flex .nasadki__cont .nasadki__list li .nasadki__list__txt p
+    font-size: 13px
+  #kenwood .nasadki .nasadki__flex .nasadki__cont .nasadki__list li .nasadki__list__txt p > strong
+    font-size: 16px
+    margin-bottom: 8px
+    >br
+      display: none
+  #kenwood .nasadki .nasadki__flex .nasadki__cont .nasadki__list li:nth-of-type(even)::before
+    margin-right: 10px
+  #kenwood .nasadki .nasadki__flex .nasadki__cont .nasadki__list li:nth-of-type(odd)::before
+    margin-right: 0
+    margin-left: 10px
+  #kenwood .nasadki .nasadki__flex .nasadki__cont .nasadki__list li
+    &:nth-of-type(n+2)
+      margin-top: 60px
+  #kenwood .nasadki
+    background-image: unset
+    background-color: #212121
+  #kenwood .nasadki .nasadki__flex .nasadki__img img
+    max-width: 74%
+  #kenwood .nasadki .nasadki__flex .nasadki__img
+    margin-bottom: -14%
+  #kenwood .pribor
+    padding: 40px 0 40px 15px
+    p
+      font-size: 13px
+  #kenwood .pribor .pribor__flex .pribor__cont .pribor__title
+    padding-right: 15px
+  #kenwood .pribor .pribor__flex .pribor__cont .pribor__title h2
+    font-size: 22px
+    margin-bottom: 20px
+  #kenwood .pribor .pribor__flex .pribor__cont > span
+    font-size: 20px
+    margin: 0 !important
+    margin-bottom: -30px !important
+  #kenwood .pribor .pribor__flex .pribor__cont .pribor__list li .pribor__list__txt span
+    font-size: 11px
+    margin-bottom: 6px
+  #kenwood .pribor .pribor__flex .pribor__cont .pribor__list li .pribor__list__txt p > strong
+    font-size: 16px
+  #kenwood .pribor .pribor__flex .pribor__cont .pribor__list li::before
+    width: 115px
+    height: 130px
+    min-width: 100px
+    max-width: unset
+    background-size: cover
+    max-width: 100%
+  #kenwood .pribor .pribor__flex .pribor__cont .pribor__list li .pribor__list__txt
+    max-width: 100%
+  #kenwood .pribor .pribor__flex .pribor__cont .pribor__list li .pribor__list__txt
+    min-width: 155px
+    max-width: 100%
+    box-sizing: border-box
+  #kenwood .pribor .pribor__flex .pribor__cont .pribor__list li:nth-of-type(odd) .pribor__list__txt
+    padding-right: 15px
+    box-sizing: border-box
