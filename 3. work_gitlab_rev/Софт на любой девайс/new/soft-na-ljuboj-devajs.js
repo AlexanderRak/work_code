@@ -140,5 +140,23 @@ $.ajax({
    }
 });
 
+var priceUrl341megogo = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id=' + city + '&ids=2529353,2529363,2529373';
+$.ajax({
+   url: priceUrl341megogo,
+   type: 'get',
+   success: function (output) {
+      var resp = JSON.parse(output);
+
+      var pr36 = resp['2529353']['price'];
+      var pr40 = resp['2529363']['price'];
+      var pr41 = resp['2529373']['price'];
+      
+      document.getElementById("sku-1815651").innerHTML = pr36;
+      document.getElementById("sku-1815653").innerHTML = pr40;
+      document.getElementById("sku-1815654").innerHTML = pr41;
+
+   }
+});
+
 //
 // ]]></script>
