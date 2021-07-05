@@ -1,0 +1,136 @@
+/*default styles*/
+
+#acer
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    font-size: 15px
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 22px
+    font-weight: bold
+    padding: 0
+    margin: 17px 0 10px 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  sup
+    top: -.7em
+    font-size: 0.7em
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#acer
+  padding: 0 0.5em
+  .char
+    display: flex
+    flex-direction: row
+    .char__cont
+      flex: 3
+      display: flex
+      flex-direction: row
+      .char__cont__img
+        flex: 1
+      .char__cont__txt
+        flex: 2
+        padding: 0 59px 0 20px
+        box-sizing: border-box
+        .char__cont__list
+          margin-top: 10px
+          li
+            list-style-type: disc
+            list-style-position: inside
+            font-size: 15px
+            line-height: normal
+            &:nth-of-type(n+2)
+              margin-top: 5px
+
+    .char__acer
+      flex: 1
+      padding-left: 30px
+      border-left: 1px solid #ddd
+      box-sizing: border-box
+      .char__acer__img
+        img
+          margin: 0 auto 10px auto
+      .char__acer__txt
+        padding-bottom: 10px
+        color: #888
+
+  .plitka
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr
+    gap: 35px 35px
+    grid-template-areas: "..." "..."
+
+  .snoski
+    margin-top: 20px
+    li
+      margin-bottom: 10px
+      list-style-type: decimal
+      list-style-position: inside
+      font-size: 15px
+      line-height: normal
+
+//media******************************************************
+
+@media (max-width: 812px)
+  #acer .char
+    flex-direction: column
+  #acer .char .char__cont .char__cont__txt
+    padding-right: 0
+  #acer .char .char__acer
+    padding-left: 0
+    border-left: unset
+    margin-top: 1em
+  #acer .plitka
+    gap: 10px 10px
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: unset
+    grid-template-areas: ".." ".." ".."
+
+@media (max-width: 480px)
+  #acer h2
+    font-size: 18px
+  #acer p,
+  #acer .snoski li,
+  #acer .char .char__cont .char__cont__txt .char__cont__list li
+    font-size: 13px
+  #acer .char .char__cont
+    flex-direction: column
+  #acer .char .char__cont .char__cont__txt
+    padding-left: 0
+  #acer .plitka
+    grid-template-columns: 1fr
+    grid-template-areas: "." "." "." "." "." "."
+  #acer .char .char__cont .char__cont__img
+    img
+      margin: -50px auto
+  #acer .logo
+    position: relative
