@@ -4141,6 +4141,15 @@
                     </div>
                   </div>
                 </div>
+                <style>
+                  .pddbl {
+                    padding: 0 0 18px 30px;
+                  }
+                </style>
+                <div class="pddbl">
+                  <a target="_blank" class="link_dost_a" href="https://cdn.comfy.ua/media/x/pdf/dogovor_dostavki18_11_2016.pdf">Договор доставки</a>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -4982,7 +4991,7 @@
                       <li class="accordion__item"> <a href="#" class="accordion__link js-accordion-link"> <span class="accordion__link-title" style="font-weight: bold;">Стоимость доставки</span> </a>
                         <div class="accordion__item-content">
                           <div class="container">
-                            <p style="margin-bottom: 15px; list-style-type: disc; display: list-item; margin-left: 20px; font-weight: bold;">Для городов: Киев, Борисполь, Одесса, Львов, Днепр, Ирпень.</p>
+                            <p style="margin-bottom: 15px; list-style-type: disc; display: list-item; margin-left: 20px; font-weight: bold;">Для городов: Киев, Борисполь, Львов, Днепр, Ирпень.</p>
 
                             <div class="table_container">
                               <div class="table_row_flex tabl2 header_bl" style="border-radius: 0px;">
@@ -5076,7 +5085,7 @@
                                     <td class="">20 ₴.</td>
                                   </tr>
                                   <tr>
-                                    <td class="destination">Николаев, Херсон, Мелитополь, Измаил, Черноморск, Сумы, Ахтырка</td>
+                                    <td class="destination">Николаев, Одесса, Херсон, Мелитополь, Измаил, Черноморск, Сумы, Ахтырка</td>
                                     <td class="">149 ₴.</td>
                                     <td class="">79 ₴.</td>
                                     <td class="">20 ₴.</td>
@@ -5105,7 +5114,7 @@
                               text-decoration: none;
                             }
                           </style>
-                          <a alt="Тарифы доставки" href="https://cdn.comfy.ua/media/x/img/_____20022020.pdf" target="_blank" class="link_dost_a">Тарифы доставки</a>
+                          <a alt="Тарифы доставки" href="https://cdn.comfy.ua/media/x/pdf/klientska-dostavka01_07_2021.xlsx.pdf" target="_blank" class="link_dost_a">Тарифы доставки</a>
                         </div>
                       </li>
                     </ul>
@@ -12334,7 +12343,7 @@
                     </div>
                     <div class="bl_text2">
                       <p class="gl_text">Куда доставим</p>
-                      <p>Любая точка г. Харьков, Киев и<br />пригород г. Киев</p>
+                      <p>Любая точка г. Харьков, Киев, Днепр, Одесса и<br />пригород г. Киев</p>
                     </div>
                     <div class="bl_text3">
                       <p class="gl_text">Что доставим</p>
@@ -12539,6 +12548,17 @@
                               flex-direction: column;
                               justify-content: center;
                             }
+                            @media screen and (min-width: 320px) and (max-width: 480px){
+                              .table_row_flex .item:nth-child(2) {
+                                  min-height: 126px;
+                              }
+                              .table_row_flex .item:nth-child(3) {
+                                  min-height: 126px;
+                              }
+                              #container_dost_7day .container_content {
+                                margin-top: 0;
+                              }
+                            }
                           </style>
                           <div class="table_container">
                             <div class="table_row_flex header_bl">
@@ -12629,11 +12649,86 @@
               <div class="footer_head_cont">
                 <div class="footer_head_text_cont">
                   <div class="cont_info_cont">
-                    <ul class="after_poiter_cont">
+                    <!-- <ul class="after_poiter_cont">
                       <li><span class="price_li">1 ₴</span> (для заказов общей стоимостью более 2 500 ₴)</li>
                       <li><span class="price_li">99 ₴</span> (мелкогабаритный товар стоимостью до 2 500 ₴)</li>
                       <li><span class="price_li">199 ₴</span> (крупногабаритный товар стоимостью до 2 500 ₴)</li>
-                    </ul>
+                    </ul> -->
+                    <div class="table_container">
+                      <div class="table_row_flex header_bl">
+                        <div class="item flex-height">
+                          <p>Доставка</p>
+                        </div>
+                        <div class="item flex-height">
+                          <p>Полная стоимость<br />(₴. с НДС)</p>
+                        </div>
+                        <div class="item flex-height">
+                          <p>Акционная стоимость<br />(₴. с НДС)</p>
+                        </div>
+                      </div>
+                      <div class="table_row_flex content_bl">
+                        <div class="item">
+                          <p>Крупногабаритного товара стоимостью от 6999 ₴</p>
+                        </div>
+                        <div class="item">
+                          <p><span class="grey_bl">269 ₴</span></p>
+                        </div>
+                        <div class="item">
+                          <p><b>1 ₴</b></p>
+                        </div>
+                      </div>
+                      <div class="table_row_flex content_bl">
+                        <div class="item">
+                          <p>Мелкогабаритного товара стоимостью от 6999 ₴</p>
+                        </div>
+                        <div class="item">
+                          <p><span class="grey_bl">99 ₴</span></p>
+                        </div>
+                        <div class="item">
+                          <p><b>1 ₴</b></p>
+                        </div>
+                      </div>
+                      <div class="table_row_flex content_bl">
+                        <div class="item">
+                          <p>Крупногабаритного товара стоимостью до 6999 ₴</p>
+                        </div>
+                        <div class="item">
+                          <p><b>269 ₴</b></p>
+                        </div>
+                        <div style="border-bottom: 0;" class="item"></div>
+                      </div>
+                      <div class="table_row_flex content_bl">
+                        <div class="item">
+                          <p>Мелкогабаритного товара стоимостью до 6999 ₴</p>
+                        </div>
+                        <div class="item">
+                          <p><b>99 ₴</b></p>
+                        </div>
+                        <div style="border-bottom: 0;" class="item"></div>
+                      </div>
+
+                      <div class="table_row_flex content_bl" style="align-items: flex-end;">
+                        <div class="item">
+                          <p>Для Одессы, Харькова<br/>Крупногабаритного товара</p>
+                          <p>цена действует до 31.07</p>
+                        </div>
+                        <div class="item">
+                          <p><b>199 ₴</b></p>
+                        </div>
+                        <div style="border-bottom: 0;" class="item"></div>
+                      </div>
+                      <div class="table_row_flex content_bl" style="align-items: flex-end;">
+                        <div class="item">
+                          <p>Для Одессы, Харькова<br/>Мелкогабаритного товара</p>
+                          <p>цена действует до 31.07</p>
+                        </div>
+                        <div class="item">
+                          <p><b>129 ₴</b></p>
+                        </div>
+                        <div style="border-bottom: 0;" class="item"></div>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>
