@@ -1,0 +1,88 @@
+/*default styles*/
+
+#prestigio
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    font-size: 20px
+    &:first-letter
+      padding-left: 0
+  h2
+    display: block
+    line-height: normal
+    font-size: 32px
+    font-weight: bold
+    text-transform: uppercase
+    padding: 0
+    margin: 0
+    text-align: unset
+    color: #2b77fb
+    margin-bottom: 10px
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#prestigio
+  .prestigio__wrap
+    position: relative
+    .prestigio__txt
+      color: #fff
+      text-align: center
+      max-width: 800px
+      position: absolute
+      top: 40px
+      width: 100%
+      right: 50%
+      transform: translateX(50%)
+    .prestigio__txt__black
+      color: #4f4f4f
+
+//media***************************************************
+
+@media (max-width: 812px)
+  #prestigio .prestigio__wrap
+    display: flex
+    flex-direction: column-reverse
+  #prestigio .prestigio__wrap .prestigio__txt
+    position: unset
+    transform: unset  
+    background-color: #000
+    padding: 1em
+    box-sizing: border-box
+  #prestigio .prestigio__wrap .prestigio__img img
+    margin-top: -135px
+  #prestigio .prestigio__wrap .prestigio__txt__black
+    background-color: #fff
+
+@media (max-width: 480px)
+  #prestigio h2
+    font-size: 24px
+  #prestigio p
+    font-size: unset
+  #prestigio .prestigio__wrap .prestigio__img img
+    margin-top: -45px
