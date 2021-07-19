@@ -1,0 +1,90 @@
+<style>
+
+</style>
+
+<div id="vestfrost">
+
+	<div class="vestfrost-wrap only-desk-bl">
+		<div class="vestfrost-wrap__container">
+
+			<div class="vestfrost-wrap__flex">
+				<div class="vestfrost-wrap__item">
+					<div class="vestfrost-wrap__item-content">
+						<div class="vestfrost-wrap__img imgsty1">
+							<img src="https://cdn.comfy.ua/media/x/img2/vestfrost/Vestfrost_BDW4510.svg" alt="">
+						</div>
+						<div class="vestfrost-wrap__img img_style1">
+							<img src="https://cdn.comfy.ua/media/x/img2/vestfrost/prod1.png" alt="">
+						</div>
+						<div class="vestfrost-wrap__img">
+							<img src="https://cdn.comfy.ua/media/x/img2/vestfrost/plus.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="vestfrost-wrap__item">
+					<div class="vestfrost-wrap__item-content">
+						<div class="vestfrost-wrap__img img_style2">
+							<img src="https://cdn.comfy.ua/media/x/img2/vestfrost/prod2.png" alt="">
+							<div class="text">
+								Start MAXIMUM 28 шт + 28 шт
+							</div>
+						</div>
+						<div class="vestfrost-wrap__img">
+							<img src="https://cdn.comfy.ua/media/x/img2/vestfrost/ravno.png" alt="">
+						</div>
+						<a href="https://comfy.ua/checkout/onepage/add/skus/1446527-1655093" class="vestfrost-wrap__img flexbl">
+							<div id="sku-1446527" class="price-bl"></div>
+							<div class="bayprod">Купить</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="vestfrost-wrap only-mob-bl">
+		<div class="vestfrost-wrap__container">
+
+			<div class="vestfrost-wrap__content">
+				<img src="https://cdn.comfy.ua/media/x/img2/Group_20.png" alt="">
+				<div class="vestfrost-wrap__text-mob">
+					<div class="name-text">Vestfrost BDW4510<br>+<br>Start MAXIMUM 28 шт + 28 шт</div>
+					<a href="https://comfy.ua/checkout/onepage/add/skus/1446527-1655093" class="vestfrost-wrap__img flexbl">
+						<div id="sku-1446527_2" class="price-bl"></div>
+						<div class="bayprod">Купить</div>
+					</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript"> // <![CDATA[
+
+	function getCookie(name) {
+		var matches = document.cookie.match(new RegExp(
+			"(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+		));
+		return matches ? decodeURIComponent(matches[1]) : undefined;
+	}
+	var city = getCookie('active_city_id');
+	var priceUrl = 'https://comfy.ua/online_remains/product/ritail_rockets_price.php?city_id=' + city + '&ids=529373,529373';
+	$.ajax({
+		url: priceUrl,
+		type: 'get',
+		success: function (output) {
+			var resp = JSON.parse(output);
+
+			var pr1 = resp['529373']['special_price'];
+			var pr2 = resp['529373']['special_price'];
+
+			document.getElementById("sku-1446527").innerHTML = pr1;
+			document.getElementById("sku-1446527_2").innerHTML = pr2;
+
+		}
+	});
+// ]]>
+</script>
