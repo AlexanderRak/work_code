@@ -5,14 +5,30 @@
 <div id="mac-all">
 
    <div class="mac-all-header">
-      <div class="mac-all__flex">
+      <div class="mac-all__flex mac-all__img-desk">
          <div class="mac-all__item">
-            <div class="mac-all__img-desk">
+            <div class="mac-all__item-img">
                <img src="https://cdn.comfy.ua/media/x/img2/macoll/img1.png" alt="">
             </div>
-            <!-- <div class="mac-all__mob"></div> -->
          </div>
          <div class="mac-all__item">
+            <div class="mac-all__text">
+               <h2>Поддержка Mac All Inclusive</h2>
+               <p>Защитите ваш Mac от любой поломки. Забудьте о рекламе в интернете. Почувствуйте полную безопасность личных данных и наслаждайтесь лицензионным качественным киноконтентом. </p>
+            </div>
+         </div>
+      </div>
+      <div class="mac-all__mob">
+         <div class="mac-all__mob__bgrd">
+            <div class="mac-all__mob__all">All Inclusive</div>
+            <div class="mac-all__mob__img-left">
+               <img src="https://cdn.comfy.ua/media/x/img2/macoll/img1_mob.png" alt="">
+            </div>
+            <div class="mac-all__mob__img-right">
+               <img src="https://cdn.comfy.ua/media/x/img2/macoll/img2_mob.png" alt="">
+            </div>
+         </div>
+         <div class="mac-all__mob__text">
             <div class="mac-all__text">
                <h2>Поддержка Mac All Inclusive</h2>
                <p>Защитите ваш Mac от любой поломки. Забудьте о рекламе в интернете. Почувствуйте полную безопасность личных данных и наслаждайтесь лицензионным качественным киноконтентом. </p>
@@ -27,15 +43,17 @@
 
    <div class="mac-all-tabs">
       <div class="mac-all-tabs__container">
-
-         <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Защита</button>
-            <button class="tablinks" onclick="openCity(event, 'Paris')">Блокировщик<br>рекламы</button>
-            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Онлайн<br>кинотеатр</button>
+         <div class="tab-overflow-mob">
+            <div class="tab">
+               <!-- id="defaultOpen" -->
+               <button class="active-mob tablinks active" onclick="openCity(event, 'London')">Защита</button>
+               <button class="tablinks" onclick="openCity(event, 'Paris')">Блокировщик<br>рекламы</button>
+               <button class="tablinks" onclick="openCity(event, 'Tokyo')">Онлайн<br>кинотеатр</button>
+            </div>
          </div>
 
          <div class="mac-all-tabs__flex">
-            <div id="London" class="tabcontent mac-all-tabs__itemfl">
+            <div id="London" class="active-mob-cont tabcontent mac-all-tabs__itemfl">
                <div class="mac-all-tabs__text margin-r">
                   <div class="mac-all-tabs__line"></div>
                   <div class="mac-all-tabs__text-wrap">
@@ -194,6 +212,5 @@
       document.getElementById(cityName).style.display = "block";
       evt.currentTarget.className += " active";
    }
-
    document.getElementById("defaultOpen").click();
 </script>
