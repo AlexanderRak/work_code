@@ -97,8 +97,20 @@
   margin-left: 15px;
 }
 
+#happy .complete .complete_list li {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+
 #happy .complete .complete_list li .complete_txt h2 {
   margin-bottom: 30px;
+}
+
+#happy .complete .complete_list li .complete_txt .list_content {
+  padding: 0 15px;
 }
 
 #happy .complete .complete_list li .complete_txt .list_content > li {
@@ -722,6 +734,11 @@
   line-height: 1;
 }
 
+.row_download img {
+  margin-right: inherit !important;
+  margin-left: inherit !important;
+}
+
 @media (max-width: 1024px) {
   #happy .complete .complete_list li {
     -webkit-box-flex: 1;
@@ -833,5 +850,8 @@
   }
   #happy .stat #block_accordion .msg {
     padding: 40px 30px 25px 30px;
+  }
+  #happy .complete .complete_list li .complete_txt .list_content {
+    padding: 0 0;
   }
 }
