@@ -321,7 +321,8 @@ html
 									margin: 17px 0 12px 0
 					&:nth-of-type(2)
 						align-self: flex-end
-						transform: translate(-60px, -60px)
+						// transform: translate(-60px, -60px)
+						transform: translate(-60px, -265px)
 						position: relative
 						&::before
 							content: ""
@@ -578,6 +579,16 @@ html
 
 // media*****************************************************************
 
+@media (max-width: 1240px)
+	#cartfree .tabcontent .profile .profile__flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+	#cartfree .tabcontent .profile .profile__flex .profile__cal:nth-of-type(2)
+		transform: unset
+		align-self: unset
+		margin-bottom: 20px
+
 @media (max-width: 1024px)
 	#cartfree .tabcontent
 		overflow: hidden
@@ -593,14 +604,14 @@ html
 		padding: 0 20px
 	#cartfree .tabcontent .complete .complete__list li:nth-of-type(2)
 		margin: 0 40px
-	#cartfree .tabcontent .profile .profile__flex
-		flex-direction: column
-		align-items: center
-		justify-content: center
-	#cartfree .tabcontent .profile .profile__flex .profile__cal:nth-of-type(2)
-		transform: unset
-		align-self: unset
-		margin-bottom: 20px
+	// #cartfree .tabcontent .profile .profile__flex
+	// 	flex-direction: column
+	// 	align-items: center
+	// 	justify-content: center
+	// #cartfree .tabcontent .profile .profile__flex .profile__cal:nth-of-type(2)
+	// 	transform: unset
+	// 	align-self: unset
+	// 	margin-bottom: 20px
 	#cartfree .tablinks:nth-child(1) .tablinks-content__img::before, #cartfree .tablinks:nth-child(2) .tablinks-content__img::before, #cartfree .tablinks:nth-child(3) .tablinks-content__img::before
 		width: 44px
 		height: 30px
@@ -826,6 +837,8 @@ html
 		margin-right: 20px
 	#cartfree .tabcontent .profile .profile__flex .profile__cal .profile__cal__item
 		margin-top: 0
+	#cartfree .tabcontent .profile .profile__flex .profile__cal .profile__cal__item .profile__cal__icon img
+		max-width: 127px
 	#cartfree .tabcontent .profile .profile__flex .profile__cal .profile__cal__item .profile__cal__fio p:nth-of-type(1)
 		margin: 14px 0 4px 0
 	#cartfree .tabcontent .profile .profile__flex .profile__cal .profile__cal__item .profile__cal__fio p
@@ -842,3 +855,7 @@ html
 		flex-direction: column
 	#cartfree .tabcontent .complete .complete__list li:nth-of-type(2)
 		margin: 40px 0
+
+@media (max-width: 320px)
+	#cartfree .cart-header__cart-text-left h2
+		font-size: 44px
