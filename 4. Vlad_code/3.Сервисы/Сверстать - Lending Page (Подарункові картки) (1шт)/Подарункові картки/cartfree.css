@@ -562,11 +562,11 @@ html {
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
           align-self: flex-end;
-  -webkit-transform: translate(-60px, -60px);
-     -moz-transform: translate(-60px, -60px);
-      -ms-transform: translate(-60px, -60px);
-       -o-transform: translate(-60px, -60px);
-          transform: translate(-60px, -60px);
+  -webkit-transform: translate(-60px, -265px);
+     -moz-transform: translate(-60px, -265px);
+      -ms-transform: translate(-60px, -265px);
+       -o-transform: translate(-60px, -265px);
+          transform: translate(-60px, -265px);
   position: relative;
 }
 
@@ -1033,29 +1033,7 @@ html {
   margin-top: -170px;
 }
 
-@media (max-width: 1024px) {
-  #cartfree .tabcontent {
-    overflow: hidden;
-  }
-  #cartfree .tabcontent .detail {
-    overflow-x: scroll;
-  }
-  #cartfree .tabcontent .detail .detail__list__two {
-    min-width: 1278px;
-    padding: 0 20px;
-    -webkit-box-sizing: content-box;
-       -moz-box-sizing: content-box;
-            box-sizing: content-box;
-  }
-  #cartfree .tablinks-content__img {
-    right: 5px;
-  }
-  #cartfree .tabcontent .complete .complete__list {
-    padding: 0 20px;
-  }
-  #cartfree .tabcontent .complete .complete__list li:nth-of-type(2) {
-    margin: 0 40px;
-  }
+@media (max-width: 1240px) {
   #cartfree .tabcontent .profile .profile__flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1086,6 +1064,31 @@ html {
                 -ms-grid-row-align: unset;
             align-self: unset;
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #cartfree .tabcontent {
+    overflow: hidden;
+  }
+  #cartfree .tabcontent .detail {
+    overflow-x: scroll;
+  }
+  #cartfree .tabcontent .detail .detail__list__two {
+    min-width: 1278px;
+    padding: 0 20px;
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+  }
+  #cartfree .tablinks-content__img {
+    right: 5px;
+  }
+  #cartfree .tabcontent .complete .complete__list {
+    padding: 0 20px;
+  }
+  #cartfree .tabcontent .complete .complete__list li:nth-of-type(2) {
+    margin: 0 40px;
   }
   #cartfree .tablinks:nth-child(1) .tablinks-content__img::before, #cartfree .tablinks:nth-child(2) .tablinks-content__img::before, #cartfree .tablinks:nth-child(3) .tablinks-content__img::before {
     width: 44px;
@@ -1450,6 +1453,9 @@ html {
   #cartfree .tabcontent .profile .profile__flex .profile__cal .profile__cal__item {
     margin-top: 0;
   }
+  #cartfree .tabcontent .profile .profile__flex .profile__cal .profile__cal__item .profile__cal__icon img {
+    max-width: 127px;
+  }
   #cartfree .tabcontent .profile .profile__flex .profile__cal .profile__cal__item .profile__cal__fio p:nth-of-type(1) {
     margin: 14px 0 4px 0;
   }
@@ -1477,5 +1483,11 @@ html {
   }
   #cartfree .tabcontent .complete .complete__list li:nth-of-type(2) {
     margin: 40px 0;
+  }
+}
+
+@media (max-width: 320px) {
+  #cartfree .cart-header__cart-text-left h2 {
+    font-size: 44px;
   }
 }
