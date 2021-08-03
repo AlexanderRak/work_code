@@ -1,0 +1,327 @@
+/*default styles*/
+
+#lane
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    font-size: 19px
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  h3
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 24px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#lane
+  .logo
+    .logo__wrap
+      position: relative
+      .logo__txt
+        position: absolute
+        text-align: center
+        color: #fff
+        top: 0
+        right: 50%
+        bottom: 50%
+        transform: translate(50%, 50%)
+        h2
+          margin-top: 20px
+        img
+          margin: 0 auto
+    .logo__img
+      margin-top: -220px
+      position: relative
+      z-index: 10
+      img
+        margin: 0 auto 40px auto
+      span
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 42px
+        color: #cccccc
+        text-align: center
+    .logo__flex__wrap
+      margin-top: 60px
+      padding: 0 70px 120px 70px
+      box-sizing: border-box
+      .logo__flex__txt
+        text-align: center
+        margin-bottom: 40px
+        h3
+          margin-bottom: 10px
+      .logo__flex
+        display: flex
+        flex-direction: row
+        .logo__flex__img
+          flex: 1 1 0
+          max-width: 50%
+          box-sizing: border-box
+          &:nth-of-type(1)
+            margin-right: 40px
+
+  .classic
+    margin: 60px 0
+    padding: 0px 90px
+    box-sizing: border-box
+    background-color: #000
+    display: flex
+    flex-direction: row
+    align-items: center
+    >div
+      max-width: 50%
+      flex: 1 1 0
+      box-sizing: border-box
+    .classic__txt
+      color: #fefefe
+      h3
+        margin-bottom: 10px
+      h3.itallian
+        display: flex
+        flex-direction: row
+        align-items: center
+        &::after
+          content: ""
+          display: block
+          min-width: 30px
+          height: 22px
+          background-image: url("https://cdn.comfy.ua/media/x/img/1653280/icon1.png")
+          background-repeat: no-repeat
+          background-position: center
+          margin-left: 15px
+    .classic__img
+      margin-top: -60px
+      margin-bottom: -60px
+      img
+        margin: 0 auto
+
+  .indication
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 60px 0
+    .indication__img
+      margin-right: 60px
+    .indication__txt
+      .indication__item
+        h3
+          margin-bottom: 15px
+          position: relative
+          &::before
+            content: ""
+            display: block
+            position: absolute
+            min-width: 4px
+            bottom: 0
+            top: 0
+            left: -15px
+            background-color: #84c8da
+        &:nth-of-type(2)
+          margin-top: 40px
+          h3
+            &::before
+              background-color: #f5b2b2
+
+  .size
+    margin: 60px 0
+    padding: 0px 40px 0 90px
+    box-sizing: border-box
+    background-color: #000
+    display: flex
+    flex-direction: row
+    align-items: center
+    >div
+      max-width: 50%
+      flex: 1 1 0
+      box-sizing: border-box
+    .size__txt
+      color: #fefefe
+      h3
+        margin-bottom: 10px
+    .size__img
+      margin-top: -100px
+      margin-bottom: -100px
+      img
+        margin: 0 0 0 auto
+
+  .suction
+    padding: 120px 0
+    .suction__txt
+      text-align: center
+      h3
+        margin-bottom: 10px
+    .suction__row
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      margin-top: 40px
+      span
+        font-size: 16px
+        font-weight: bold
+        >strong
+          font-size: 24px
+      .suction__img
+        margin: 0 20px
+
+  .longlife
+    padding: 120px 0 40px 0
+    .longlife__txt
+      text-align: center
+      h3
+        margin-bottom: 10px
+    .longlife__img
+      img
+        margin: 0 auto
+      span
+        text-align: center
+        font-size: 11px
+
+//media**********************************************************
+
+@media (max-width: 1024px)
+  #lane .classic .classic__txt p br,
+  #lane .indication .indication__txt .indication__item p br,
+  #lane .size .size__txt p br
+    display: none
+
+  #lane .indication .indication__txt .indication__item
+    max-width: 500px
+    padding-right: 1em
+  #lane .logo .logo__img
+    margin-top: -150px
+  #lane .classic .classic__img__otstup
+    margin-top: -30px
+    margin-bottom: -30px
+
+@media (max-width: 812px)
+  #lane p
+    font-size: unset
+  #lane h2
+    font-size: 24px
+  #lane h3
+    font-size: 20px
+  #lane .logo .logo__img
+    margin-top: -90px
+
+  #lane .logo .logo__flex__wrap
+    padding: 0 1em 2em 1em
+
+  #lane .classic,
+  #lane .size
+    padding: 0px 1em
+
+  #lane .suction
+    padding: 4em 0
+
+  #lane .suction .suction__txt p br
+    display: none
+  #lane .suction .suction__row
+    flex-direction: column
+  #lane .suction .suction__row .suction__img
+    margin: 20px 0
+  #lane .classic .classic__img__otstup
+    margin-top: -30px
+    margin-bottom: -30px
+    margin-left: 10px
+
+  #lane .longlife
+    padding: 0 0 1em 0
+
+@media (max-width: 480px)
+  #lane .logo .logo__wrap .logo__txt img
+    max-width: 30%
+  #lane .logo .logo__wrap .logo__txt h2
+    margin-top: 10px
+  #lane .logo .logo__wrap .logo__txt
+    transform: translate(50%, 10%)
+  #lane .logo .logo__img
+    margin-top: 10px
+  #lane .logo .logo__img span
+    font-size: 30px
+  #lane .logo .logo__img img
+    margin-bottom: 20px
+  #lane .logo .logo__flex__wrap
+    margin-top: 20px
+    padding: 0
+  #lane .logo .logo__flex__wrap .logo__flex__txt
+    padding: 1em
+    margin-bottom: 0
+  #lane .logo .logo__flex__wrap .logo__flex
+    flex-direction: column
+    .logo__flex__img
+      max-width: 100%
+  #lane .logo .logo__flex__wrap .logo__flex .logo__flex__img:nth-of-type(1)
+    margin-right: 0
+    margin-bottom: 20px
+  #lane .classic,
+  #lane .size
+    flex-direction: column
+    >div
+      max-width: 100%
+  #lane .classic
+    margin-top: 20px
+  #lane .classic .classic__img
+    margin-top: 20px
+  #lane .classic .classic__txt
+    padding: 1em 0 0 0
+    text-align: center
+  #lane .indication
+    flex-direction: column
+    padding-bottom: 0
+  #lane .indication .indication__img
+    margin-right: 0
+    margin-bottom: 20px
+  #lane .indication .indication__txt
+    margin-left: 20px
+  #lane .size
+    margin-top: 20px
+  #lane .size .size__txt
+    padding: 1em 0 0 0
+    text-align: center
+  #lane .size .size__img
+    margin-top: 20px
+  #lane .suction
+    padding-bottom: 0
