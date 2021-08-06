@@ -299,7 +299,7 @@ html
 				flex-direction: row
 				padding-left: 60px
 				.profile__cal
-					max-width: max-content
+					// max-width: max-content
 					.profile__cal__item
 						display: flex
 						flex-direction: row
@@ -320,10 +320,11 @@ html
 								&:nth-of-type(1)
 									margin: 17px 0 12px 0
 					&:nth-of-type(2)
-						align-self: flex-end
+						// align-self: flex-end
 						// transform: translate(-60px, -60px)
-						transform: translate(-60px, -265px)
+						// transform: translate(-60px, -265px)
 						position: relative
+						top: 70px
 						&::before
 							content: ""
 							display: block
@@ -579,15 +580,24 @@ html
 
 // media*****************************************************************
 
-@media (max-width: 1240px)
-	#cartfree .tabcontent .profile .profile__flex
-		flex-direction: column
-		align-items: center
+// @media (max-width: 1240px)
+// 	#cartfree .tabcontent .profile .profile__flex
+// 		flex-direction: column
+// 		align-items: center
+// 		justify-content: center
+
+@media (max-width: 1300px) and (min-width: 1025px)
+	#cartfree .tabcontent .detail .detail__list__two
+		max-width: 835px
 		justify-content: center
-	#cartfree .tabcontent .profile .profile__flex .profile__cal:nth-of-type(2)
-		transform: unset
-		align-self: unset
-		margin-bottom: 20px
+	#cartfree .tabcontent .detail .detail__list__two li
+		min-width: 35%
+		max-width: 35%
+		flex: 1 1 0
+	#cartfree .tabcontent .detail .detail__list__two li:nth-of-type(n+2)
+		margin: 0px 0 30px 30px !important
+	#cartfree .tabcontent .detail .detail__list__two li:nth-of-type(3)
+		margin-left: 0 !important
 
 @media (max-width: 1024px)
 	#cartfree .tabcontent
@@ -604,14 +614,15 @@ html
 		padding: 0 20px
 	#cartfree .tabcontent .complete .complete__list li:nth-of-type(2)
 		margin: 0 40px
-	// #cartfree .tabcontent .profile .profile__flex
-	// 	flex-direction: column
-	// 	align-items: center
-	// 	justify-content: center
-	// #cartfree .tabcontent .profile .profile__flex .profile__cal:nth-of-type(2)
-	// 	transform: unset
-	// 	align-self: unset
-	// 	margin-bottom: 20px
+	#cartfree .tabcontent .profile .profile__flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+	#cartfree .tabcontent .profile .profile__flex .profile__cal:nth-of-type(2)
+		// transform: unset
+		// align-self: unset
+		top: unset
+		margin-bottom: 20px
 	#cartfree .tablinks:nth-child(1) .tablinks-content__img::before, #cartfree .tablinks:nth-child(2) .tablinks-content__img::before, #cartfree .tablinks:nth-child(3) .tablinks-content__img::before
 		width: 44px
 		height: 30px
