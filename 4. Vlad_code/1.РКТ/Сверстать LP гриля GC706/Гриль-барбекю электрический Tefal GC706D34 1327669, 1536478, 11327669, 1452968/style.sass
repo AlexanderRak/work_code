@@ -1,0 +1,532 @@
+/*default styles*/
+
+#tefal
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    color: #fff
+    font-size: 20px
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: bold
+    text-transform: uppercase
+    color: #fff
+    padding: 0
+    margin: 0 0 10px 0
+  h3
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 28px
+    font-weight: bold
+    text-transform: uppercase
+    color: #fff
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    margin: unset
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+.bc-description__content img
+    margin-bottom: 0 !important
+
+
+/*end default styles*/
+
+#tefal
+  
+  .result
+    .show__mob
+      display: none
+    position: relative
+    .result__title
+      position: absolute
+      text-align: center
+      width: 100%
+      right: 50%
+      transform: translateX(50%)
+      top: 80px
+      max-width: max-content
+      &::before
+        content: ""
+        display: block
+        width: 72px
+        height: 30px
+        margin-left: -20px
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        background-image: url("https://cdn.comfy.ua/media/x/img/1327669/new/bracket.png")
+      &::after
+        content: ""
+        display: block
+        width: 72px
+        height: 30px
+        margin-left: -20px
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        background-image: url("https://cdn.comfy.ua/media/x/img/1327669/new/bracket.png")
+        float: right
+        transform: scale(-1, -1)
+        margin-right: -20px
+    .result__list
+      position: absolute
+      bottom: 41.5%
+      transform: translateY(50%)
+      right: 170px
+      max-width: 135px
+      display: flex
+      flex-direction: column
+      height: 410px
+      justify-content: space-between
+      li
+        text-align: right
+        color: #fff
+        font-size: 20px
+        line-height: normal
+
+  .power
+    background-color: #191919
+    position: relative
+    padding-bottom: 150px
+    .power__head
+      text-align: center
+      padding: 20px
+      background-image: url("https://cdn.comfy.ua/media/x/img/1327669/new/bg1.png")
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+      h2
+        color: #e1000e
+    .power__title
+      text-align: center
+      padding: 40px 0 80px 0
+      h3
+        text-transform: none
+    .power__img
+      img
+        margin: 0 auto
+        max-width: 50%
+      .show__mob
+        display: none
+    .power__list
+      position: absolute
+      left: 80px
+      bottom: 44%
+      transform: translateY(50%)
+      display: flex
+      flex-direction: column
+      height: 530px
+      justify-content: space-between
+      li
+        display: flex
+        flex-direction: row
+        align-items: center
+        &::before
+          content: ""
+          display: block
+          background-repeat: no-repeat
+          background-position: center
+          background-size: cover
+          background-image: url("https://cdn.comfy.ua/media/x/img/1327669/new/galka.png")
+          width: 20px
+          height: 30px
+          margin-right: 10px
+        .power__list__txt
+          max-width: 250px
+        .power__list__img
+          max-width: 30%
+          margin-right: 20px
+        &:nth-of-type(2)
+          margin-top: 195px
+        &:nth-of-type(3)
+          margin-top: 60px
+    .power__list__reverse
+      left: unset
+      right: 80px
+      height: 455px
+      bottom: 46%
+      li
+        text-align: right
+        flex-direction: row-reverse
+        &::before
+          transform: scale(-1, 1)
+          margin-right: 0
+          margin-left: 10px
+
+  .gurman
+    background-color: #191919
+    padding-bottom: 80px
+    .gurman__head
+      text-align: center
+      padding: 20px
+      background-image: url("https://cdn.comfy.ua/media/x/img/1327669/new/bg1.png")
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+      h2
+        color: #e1000e
+    .gurman__title
+      text-align: center
+      padding: 40px 0 80px 0
+      h3
+        text-transform: none
+    .gurman__img
+      margin: 0 80px
+      position: relative
+      .gurman__abs
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding: 40px 20px
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        .gurman__txt
+          display: flex
+          flex-direction: row
+          align-items: center
+          max-width: 380px
+          &::before
+            content: ""
+            display: block
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            background-image: url("https://cdn.comfy.ua/media/x/img/1327669/new/galka.png")
+            min-width: 20px
+            height: 30px
+            margin-right: 10px
+        .gurman__icon
+          display: flex
+          flex-direction: row
+          align-items: center
+          img
+            max-width: 35%
+            &:nth-of-type(1)
+              margin-right: 40px
+
+  .roasting
+    background-color: #191919
+    padding-bottom: 80px
+    .roasting__head
+      text-align: center
+      padding: 20px
+      background-image: url("https://cdn.comfy.ua/media/x/img/1327669/new/bg1.png")
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+      h2
+        color: #e1000e
+    .roasting__title
+      text-align: center
+      padding: 40px 0 80px 0
+      h3
+        text-transform: none
+    .roasting__img
+      margin: 0 80px
+      position: relative
+      .roasting__abs
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding: 40px
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        .roasting__icon
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          li
+            .roasting__icon__txt
+              span
+                color: #fff
+                text-transform: uppercase
+                text-align: center
+                font-size: 24px
+                margin-top: 20px
+                font-weight: bold
+        .roasting__txt
+          display: flex
+          flex-direction: row
+          align-items: center
+          max-width: 380px
+          text-align: right
+          align-self: flex-end
+          &::after
+            content: ""
+            display: block
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            background-image: url("https://cdn.comfy.ua/media/x/img/1327669/new/galka.png")
+            min-width: 20px
+            height: 30px
+            margin-left: 10px
+            transform: scale(-1, 1)
+
+  .temperature
+    background-color: #191919
+    padding-bottom: 80px
+    .temperature__head
+      text-align: center
+      padding: 20px
+      background-image: url("https://cdn.comfy.ua/media/x/img/1327669/new/bg1.png")
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+      h2
+        color: #e1000e
+    .temperature__flex
+      display: flex
+      flex-direction: row
+      align-items: center
+      padding-top: 80px
+      >div
+        max-width: 50%
+        flex: 1 1 0
+        box-sizing: border-box
+      .temperature__txt
+        padding: 0 80px
+        img
+          margin-bottom: 40px !important
+
+//media*****************************************************
+
+@media (max-width: 1024px)
+  #tefal .result .result__list
+    height: 310px
+    right: 140px
+    bottom: 40%
+  #tefal .power .power__img .hide__mob
+    display: none
+  #tefal .power .power__img .show__mob
+    display: block
+  #tefal .power .power__list
+    position: unset
+    transform: unset
+    height: unset
+    flex-direction: row
+    justify-content: center
+    align-items: flex-start
+    margin-bottom: 40px
+    padding: 0 1em
+  #tefal .power .power__list li
+    flex: 1 1 0
+    max-width: 33.33%
+    align-items: flex-start
+    &:before
+      min-width: 20px
+  #tefal .power .power__list li:nth-of-type(2)
+    margin-top: 0
+  #tefal .power .power__list__reverse li:nth-of-type(2)
+    margin-left: 15px
+  #tefal .power .power__list li:nth-of-type(3)
+    margin-top: 0
+  #tefal .power .power__list__reverse
+    margin-bottom: 0
+    margin-top: 40px
+  #tefal .power .power__list__reverse li
+    text-align: left
+    flex-direction: revert
+    &::before
+      transform: unset
+      margin-right: 10px
+      margin-left: 0
+  #tefal .power .power__list li .power__list__img
+    max-width: 100%
+  #tefal .power .power__img img
+    max-width: 100%
+  #tefal .power
+    padding-bottom: 40px
+    display: flex
+    flex-direction: column
+    .power__head
+      order: 0
+    .power__title
+      order: 1
+    .power__list
+      order: 2
+    .power__img
+      order: 3
+    .power__list__reverse
+      order: 4
+  #tefal .roasting .roasting__img .roasting__abs .roasting__icon
+    li
+      flex: 1 1 0
+      box-sizing: border-box
+      .roasting__icon__img
+        img
+          max-width: 117px
+      &:nth-of-type(n+2)
+        margin-left: 10px
+
+@media (max-width: 812px)
+  #tefal
+    .hide__mob
+      display: none
+    .show__mob
+      display: block
+  #tefal h2
+    font-size: 28px
+  #tefal h3
+    font-size: 24px
+  #tefal p
+    font-size: unset
+  #tefal .result
+    background-color: #000
+    .show__mob
+      display: block
+    .result__img
+      img
+        width: 100%
+  #tefal .result .result__title
+    position: unset
+    transform: unset
+    text-align: center
+    margin: 0 auto
+    padding: 1em 0
+  #tefal .result .result__list
+    position: unset
+    transform: unset
+    flex-direction: row
+    max-width: 83%
+    margin: 0 auto
+    height: unset
+    align-items: flex-end
+    li
+      text-align: center
+      flex: 1 1 0
+      font-size: 15px
+  #tefal .power .power__list li:before
+    min-width: 13px
+    height: 23px
+  #tefal .power .power__title,
+  #tefal .gurman .gurman__title,
+  #tefal .roasting .roasting__title
+    padding: 1em 0 3em 0
+  #tefal .gurman .gurman__img,
+  #tefal .roasting .roasting__img
+    margin: 0 1em
+  #tefal .gurman .gurman__img .gurman__abs .gurman__icon img
+    max-width: 25%
+  #tefal .gurman .gurman__img .gurman__abs .gurman__txt::before,
+  #tefal .roasting .roasting__img .roasting__abs .roasting__txt::after
+    min-width: 13px
+    height: 23px
+  #tefal .gurman .gurman__img .gurman__abs,
+  #tefal .roasting .roasting__img .roasting__abs
+    padding: 1em
+  #tefal .roasting .roasting__img .roasting__abs .roasting__icon li .roasting__icon__txt span
+    font-size: 15px
+    margin-top: 10px
+  #tefal .roasting .roasting__img .roasting__abs .roasting__icon li .roasting__icon__img img
+    max-width: 106px
+  #tefal .roasting,
+  #tefal .gurman
+    padding-bottom: 1em
+  #tefal .temperature .temperature__flex
+    padding-top: 1em
+  #tefal .temperature
+    padding-bottom: 1em
+  #tefal .temperature .temperature__flex .temperature__txt
+    padding: 0 1em
+
+@media (max-width: 480px)
+  #tefal h2
+    font-size: 22px
+    margin-bottom: 0
+  #tefal h3
+    font-size: 18px
+  #tefal .result .result__list
+    display: none
+  #tefal .result
+    .result__img
+      &:last-of-type
+        .show__mob
+          display: none
+  #tefal .result .result__title::before
+    background-size: contain
+    margin-left: 0
+    width: 50px
+    height: 24px
+  #tefal .result .result__title::after
+    background-size: contain
+    margin-right: 0
+    width: 50px
+    height: 24px
+  #tefal .power .power__head,
+  #tefal .temperature .temperature__head,
+  #tefal .roasting .roasting__head,
+  #tefal .gurman .gurman__head
+    padding: 5px
+  #tefal .power .power__list
+    flex-direction: column
+    li
+      max-width: 100%
+      &:nth-of-type(n+2)
+        margin-top: 20px
+  #tefal .power .power__list li:before
+    width: 13px
+  #tefal .power .power__title, #tefal .gurman .gurman__title, #tefal .roasting .roasting__title
+    padding: 1em 0.5em
+  #tefal .gurman .gurman__img, #tefal .roasting .roasting__img
+    margin: 0
+  #tefal .gurman .gurman__img .gurman__abs, #tefal .roasting .roasting__img .roasting__abs
+    position: unset
+  #tefal .gurman .gurman__img .gurman__abs .gurman__icon img:nth-of-type(1)
+    margin-right: 10px
+  #tefal .gurman .gurman__img .gurman__abs .gurman__icon img
+    max-width: 50%
+  #tefal .gurman .gurman__img .gurman__abs .gurman__icon
+    margin-top: 1em
+  #tefal .roasting .roasting__img .roasting__abs .roasting__icon
+    overflow-x: scroll
+  #tefal .temperature .temperature__flex
+    flex-direction: column
+    >div
+      max-width: 100%
+  #tefal .temperature .temperature__flex .temperature__txt
+    margin-top: 1em
+    img
+      margin: 0 auto 1em auto
+  #tefal .roasting .roasting__img .roasting__abs .roasting__txt
+    margin-top: 1em
+  #tefal .power .power__list__reverse li:nth-of-type(2)
+    margin-left: 0
