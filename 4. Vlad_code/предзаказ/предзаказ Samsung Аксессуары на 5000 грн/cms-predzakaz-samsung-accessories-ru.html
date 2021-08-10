@@ -1,0 +1,339 @@
+<!-- Smartfon Block Bandl RU -->
+<style type="text/css">
+  .product-card__services {
+    display: none;
+  }
+
+  #bandl_template {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -o-flexbox;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    background-color: #fff;
+  }
+
+  #bandl_template p:first-letter {
+    padding-left: 0;
+  }
+
+  #bandl_template p {
+    margin-bottom: 0;
+  }
+
+  #bandl_template img:hover {
+    opacity: 1;
+  }
+
+  #bandl_template img {
+    opacity: 1;
+  }
+
+  .bndl_container img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .bndl_container {
+    position: relative;
+  }
+
+  .bndl_container.border {
+    border: 2px solid #ff090c;
+    padding: 20px;
+    /* max-width: 560px; */
+    max-width: 100%;
+    margin: 0 2em;
+    width: 100%;
+  }
+
+  .item.center_bl.imgcntr .imgctr img {
+    max-width: 90%;
+  }
+
+  .bndl_row .bndl_top_text h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .bndl_row .bndl_center {
+    margin: 35px 0 5px 20px;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -o-flexbox;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item {}
+
+  .bndl_row .bndl_center .bndl_center_flex .item:nth-child(1) {
+    flex: 1 1 13%;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item:nth-child(2) {
+    flex: 2 2 35%;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item:nth-child(3) {
+    flex: 3 3 55%;
+  }
+
+  .item.left_bl.imgcntr {
+    display: none !important;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item.imgcntr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -o-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item.right_bl .bndl_content_center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -o-flexbox;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    justify-content: flex-start;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item.right_bl .bndl_content_center h2 {
+    font-size: 1.7em;
+    color: #ff671f;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item.right_bl .bndl_content_center h2 a {
+    color: #ff671f;
+    text-decoration: underline;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item.right_bl .bndl_content_center h2 a:hover {
+    text-decoration: none;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item.right_bl .bndl_content_center p.price {
+    position: relative;
+    font-size: 1.7em;
+    opacity: .7;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: -o-max-content;
+    width: max-content;
+    padding: 0 !important;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item.right_bl .bndl_content_center span.grn_ {
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+    top: 3px;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item.right_bl .bndl_content_center p.price:before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    height: .2rem;
+    margin-top: -.2rem;
+    background: #ff090b;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 1;
+  }
+
+  .bndl_row .bndl_footer_text .bndl_ft {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -o-flexbox;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #3f3f3f;
+    font-weight: 700;
+    font-size: 1.7em;
+    display: block;
+    padding-right: 5px;
+  }
+
+  .bndl_row .bndl_footer_text p {
+    font-size: 1.1em;
+    text-align: left;
+  }
+
+  .bndl_row .bndl_footer_text a {
+    position: relative;
+  }
+
+  .bndl_row .bndl_footer_text a:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -1px;
+    border: 0.5px solid #3f3f3f;
+    width: 100%;
+    /* display: block; */
+    display: none;
+  }
+
+  .bndl_row .bndl_footer_text a:hover {
+    color: #ff671f;
+  }
+
+  /* .bndl_row .bndl_footer_text a:hover:before {
+    border: 0px;
+  } */
+
+  span.word-wrap {
+    display: block;
+    word-wrap: break-word;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .bndl_container.border {
+      margin: 0 0.5em;
+    }
+
+    .preorder-cms-block {
+      margin: 0px !important;
+    }
+
+    span.word-wrap {
+      display: inline-block;
+      word-wrap: break-word;
+    }
+
+    .bndl_row .bndl_top_text h2 {
+      font-size: 1.7em;
+    }
+
+    .item.center_bl.imgcntr .imgctr img {
+      max-width: 90%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .bndl_row .bndl_center .bndl_center_flex .item.right_bl .bndl_content_center h2 {
+      font-size: 1.3em;
+    }
+
+    .bndl_row .bndl_center .bndl_center_flex .item.imgcntr {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bndl_row .bndl_footer_text .bndl_ft {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 1.3em;
+    }
+  }
+
+  .txt1god {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 4rem;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {}
+
+  @media (max-width: 1024px) {
+    .bndl_container.border {
+      max-width: 601px;
+    }
+  }
+
+  .link-oneyear {
+    padding-top: 22px;
+    font-size: 1.6em;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item.right_bl .bndl_content_center h2 a.notkclok {
+    pointer-events: none;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .link-oneyear__span {
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-right: 5px;
+    line-height: 1;
+  }
+
+  .plus {
+    width: 100%;
+    padding: 20px 0 10px 0;
+  }
+
+  .plus img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .txt1 {
+    /* padding-left: 40px; */
+    text-align: left !important;
+  }
+
+  .txt1:nth-of-type(2) {
+    margin: 1em 0 !important;
+  }
+
+  .txt2 {
+    text-align: left !important;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 40px;
+    font-size: 25px !important;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .txt1 {
+      padding-left: 0px;
+    }
+
+    .txt2 {
+      padding-left: 0px;
+      font-size: 17px !important;
+    }
+  }
+</style>
+<div id="bandl_template">
+  <div class="bndl_container border">
+    <div class="bndl_row">
+      <div class="bndl_top_text">
+        <h2>ОФОРМИ ПРЕДЗАКАЗ И ПОЛУЧИ</h2>
+      </div>
+      <div class="bndl_footer_text">
+        <p class="txt1">* Сертификат 5 000 грн на аксессуары Samsung</p>
+        <p class="txt1"><a target="_blank" href="#">* Замена экрана на 1 год</a></p>
+        <p class="txt1">Только до 21.09</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ua -->

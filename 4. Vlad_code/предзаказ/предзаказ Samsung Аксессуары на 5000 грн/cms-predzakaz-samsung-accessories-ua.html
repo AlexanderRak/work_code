@@ -193,12 +193,17 @@
     margin-bottom: -1px;
     border: 0.5px solid #3f3f3f;
     width: 100%;
-    display: block;
+    /* display: block; */
+    display: none;
   }
 
-  .bndl_row .bndl_footer_text a:hover:before {
-    border: 0px;
+  .bndl_row .bndl_footer_text a:hover {
+    color: #ff671f;
   }
+
+  /* .bndl_row .bndl_footer_text a:hover:before {
+    border: 0px;
+  } */
 
   span.word-wrap {
     display: block;
@@ -254,7 +259,11 @@
 
   @media screen and (min-width: 481px) and (max-width: 768px) {}
 
-  @media screen and (min-width: 769px) and (max-width: 1024px) {}
+  @media (max-width: 1024px) {
+    .bndl_container.border {
+      max-width: 601px;
+    }
+  }
 
   .link-oneyear {
     padding-top: 22px;
@@ -317,12 +326,12 @@
   <div class="bndl_container border">
     <div class="bndl_row">
       <div class="bndl_top_text">
-        <h2>ОФОРМИ ПРЕДЗАКАЗ И ПОЛУЧИ</h2>
+        <h2>ОФОРМИ ПЕРЕДЗАМОВЛЕННЯ І ОТРИМАЙ</h2>
       </div>
       <div class="bndl_footer_text">
-        <p class="txt1">* Сертификат до 5 000 грн на аксессуары Samsung</p>
-        <p class="txt1">* Замена экрана на 1 год</p>
-        <p class="txt1">Только до 21.09</p>
+        <p class="txt1">* Сертифікат 5 000 грн на аксесуари Samsung</p>
+        <p class="txt1"><a target="_blank" href="#">* Заміна екрана на 1 рік</a></p>
+        <p class="txt1">Тільки до 21.09</p>
       </div>
     </div>
   </div>
