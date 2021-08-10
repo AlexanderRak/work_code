@@ -1,0 +1,297 @@
+<style type="text/css">
+  .product-card__services {
+    display: none;
+  }
+
+  .tabs-head-item[data-for-tab="availability"] {
+    display: none;
+  }
+
+  .tabs-head-item[data-tab-name="availability"] {
+    display: none;
+  }
+
+  #bandl_template {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -o-flexbox;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    background: #fff;
+  }
+
+  #bandl_template p:first-letter {
+    padding-left: 0;
+  }
+
+  #bandl_template p {
+    margin-bottom: 0;
+  }
+
+  #bandl_template img:hover {
+    opacity: 1;
+  }
+
+  #bandl_template img {
+    opacity: 1;
+  }
+
+  .bndl_container img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .bndl_container {
+    position: relative;
+  }
+
+  .bndl_container.border {
+    border: 2px solid #ff090c;
+    padding: 20px;
+    max-width: 560px;
+    width: 100%;
+  }
+
+  .item.center_bl.imgcntr .imgctr img {
+    max-width: 90%;
+  }
+
+  .bndl_row .bndl_top_text h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .bndl_row .bndl_center {
+    margin: 15px 0 5px 0;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -o-flexbox;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item:nth-child(1) {
+    flex: 1 1 13%;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item:nth-child(2) {
+    flex: 2 2 35%;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item:nth-child(3) {
+    flex: 3 3 55%;
+  }
+
+  .item.left_bl.imgcntr {
+    display: none !important;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item.imgcntr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -o-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item.right_bl .bndl_content_center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -o-flexbox;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    justify-content: flex-start;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item.right_bl .bndl_content_center h2 {
+    font-size: 1.7em;
+    color: #ff671f;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item.right_bl .bndl_content_center h2 a {
+    color: #ff671f;
+    text-decoration: underline;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item.right_bl .bndl_content_center h2 a:hover {
+    text-decoration: none;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item.right_bl .bndl_content_center p.price {
+    position: relative;
+    font-size: 1.7em;
+    opacity: .7;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: -o-max-content;
+    width: max-content;
+    padding: 0 !important;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item.right_bl .bndl_content_center span.grn_ {
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+    top: 3px;
+  }
+
+  .bndl_row .bndl_center .bndl_center_flex .item.right_bl .bndl_content_center p.price:before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    height: .2rem;
+    margin-top: -.2rem;
+    background: #ff090b;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 1;
+  }
+
+  .bndl_row .bndl_footer_text .bndl_ft {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -o-flexbox;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #3f3f3f;
+    font-weight: 700;
+    font-size: 1.2em;
+    display: block;
+    padding-right: 5px;
+    text-align: right;
+  }
+
+  .bndl_row .bndl_footer_text p {
+    font-size: 1.1em;
+    text-align: right;
+  }
+
+  /*
+.bndl_row .bndl_footer_text a { display: table; margin-left: 4rem; color: #43b02a; font-weight: 700; border-bottom: 1px solid #43b02a; }
+.bndl_row .bndl_footer_text a:hover { border-bottom: 0px;  }
+*/
+
+  .bndl_row .bndl_footer_text a {
+    position: relative;
+  }
+
+  .bndl_row .bndl_footer_text a:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -1px;
+    border: 0.5px solid #3f3f3f;
+    width: 100%;
+    display: block;
+  }
+
+  .bndl_row .bndl_footer_text a:hover:before {
+    border: 0px;
+  }
+
+  span.word-wrap {
+    display: block;
+    word-wrap: break-word;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .preorder-cms-block {
+      margin: 0px !important;
+    }
+
+    span.word-wrap {
+      display: inline-block;
+      word-wrap: break-word;
+    }
+
+    .bndl_row .bndl_top_text h2 {
+      font-size: 1.7em;
+      text-align: center;
+    }
+
+    .item.center_bl.imgcntr .imgctr img {
+      max-width: 90%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .bndl_row .bndl_center .bndl_center_flex .item.right_bl .bndl_content_center h2 {
+      font-size: 1.3em;
+      /*text-align: justify;*/
+    }
+
+    .bndl_row .bndl_center .bndl_center_flex .item.imgcntr {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bndl_row .bndl_footer_text .bndl_ft {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 1.3em;
+    }
+  }
+
+  .txt1god {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 4rem;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {}
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {}
+</style>
+<div id="bandl_template">
+  <div class="bndl_container border">
+    <div class="bndl_row">
+      <div class="bndl_ft"><a href="#">
+          <div class="bndl_top_text">
+            <h2>Сделай предзаказ до 21 сентября</h2>
+          </div>
+          <div class="bndl_center">
+            <div class="bndl_center_flex">
+              <div class="item left_bl imgcntr">
+                <div class="imgctr"><img src="https://cdn.comfy.ua/media/x/img/plus.png" /></div>
+              </div>
+              <div class="item center_bl imgcntr">
+                <div class="imgctr"><img src="https://cdn.comfy.ua/media/x/img/chehol-dlya-naushnikov.png" /></div>
+              </div>
+              <div class="item right_bl fl_bl_c">
+                <div class="bndl_content_center">
+                  <h2>Получи влагозащитный кейс</h2>
+                  <p class="price">899<sup><span class="grn_">₴</span></sup></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a></div>
+
+      <div class="bndl_footer_text">
+        <p style="text-align: left;" _mce_style="text-align: left;">*25 платежей</p>
+      </div>
+
+    </div>
+  </div>
+</div>
