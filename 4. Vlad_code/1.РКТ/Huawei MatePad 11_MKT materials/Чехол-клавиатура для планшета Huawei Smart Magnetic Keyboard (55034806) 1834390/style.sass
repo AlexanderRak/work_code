@@ -1,0 +1,163 @@
+/*default styles*/
+
+#huawei
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    font-size: 20px
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 44px
+    font-weight: bold
+    padding: 0
+    margin: 0 0 30px 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+    position: unset
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#huawei
+  .logo
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 1em 0 80px 0
+    >div
+      max-width: 50%
+      box-sizing: border-box
+    .logo__txt
+      margin-top: -100px
+      padding: 0 30px
+      span
+        font-size: 26px
+
+  .huawei__row
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 0 80px
+    >div
+      max-width: 50%
+      box-sizing: border-box
+    .huawei__row__txt
+      padding-right: 60px
+
+  .huawei__cont
+    padding-top: 100px
+    .huawei__cont__txt
+      text-align: center
+      padding: 0 150px 60px 150px
+    .huawei__cont__list
+      display: flex
+      flex-direction: row
+      padding: 40px 80px
+      justify-content: space-between
+      li
+        flex: 1 1 0
+        img
+          margin: 0 auto
+        span
+          text-align: center
+          font-size: 18px
+          margin-top: 10px
+
+  .snoski
+    padding: 0 80px 1em 80px
+    font-size: 14px
+    li
+      color: #c2c0c0
+      &:nth-of-type(1)
+        margin-bottom: 10px
+
+//media*****************************************************
+
+@media (max-width: 812px)
+  #huawei h2
+    font-size: 28px
+  #huawei p
+    font-size: unset
+  #huawei .logo
+    padding-bottom: 2em
+  #huawei .huawei__row
+    padding: 1em
+  #huawei .huawei__row .huawei__row__txt
+    padding-right: 1em
+  #huawei .huawei__cont
+    padding-top: 2em
+  #huawei .huawei__cont .huawei__cont__txt
+    padding: 0 3em 2em 3em
+  #huawei .huawei__cont .huawei__cont__list
+    padding: 1em
+  #huawei .huawei__cont .huawei__cont__list li
+    &:nth-of-type(n+2)
+      margin-left: 0.5em
+    img
+      max-height: 48px
+  #huawei .huawei__cont .huawei__cont__list li span
+    font-size: 15px
+  #huawei .snoski
+    padding: 0 2em 1em 2em
+
+@media (max-width: 480px)
+  #huawei h2
+    font-size: 24px
+  #huawei .logo
+    flex-direction: column-reverse
+    >div
+      max-width: 100%
+  #huawei .logo .logo__txt
+    padding: 0 0.5em
+    margin-top: 0
+    span
+      font-size: 18px
+  #huawei .huawei__row
+    flex-direction: column
+    >div
+      max-width: 100%
+  #huawei .huawei__cont .huawei__cont__txt
+    padding: 0 1em 2em 1em
+  #huawei .huawei__cont .huawei__cont__list 
+    overflow-x: scroll
+    li
+      min-width: 155px
+  #huawei .huawei__cont .huawei__cont__list li img
+    max-height: 43px
+  #huawei .snoski
+    padding: 0 1em 1em 1em
+  #huawei .logo .logo__txt span
+    >br
+      display: none
+  #huawei .huawei__row .huawei__row__txt
+    padding-right: 0
