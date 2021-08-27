@@ -1,0 +1,256 @@
+<style>
+	#pushgames-widget {
+		display: none;
+	}
+
+	.popup__head {
+		/*display: none;*/
+	}
+
+	.popup__head .popup-title {
+		display: none;
+	}
+
+	#wrapper-popup-action {
+		/*padding: 10rem;*/
+	}
+
+	.fancybox-lock {
+		overflow: overlay !important;
+		width: auto;
+	}
+
+	.popup[data-v-a06dd506] {
+		position: absolute;
+		overflow: initial !important;
+	}
+
+	div[data-v-a06dd506].popup__content {
+		max-height: 400px !important;
+		overflow: inherit !important;
+		-ms-scroll-chaining: initial !important;
+		overscroll-behavior: initial !important;
+	}
+
+	.popup-wr[data-v-a06dd506] {
+		position: fixed;
+		top: inherit;
+		right: 0rem;
+		bottom: 0rem;
+		left: inherit;
+		width: 515px;
+		height: 370px;
+		overflow: hidden;
+	}
+
+	.cont-popup {
+		position: relative;
+	}
+
+	.cont-popup-action {
+		position: relative;
+		display: inline-block;
+	}
+
+	.linear-gradient-popup {
+		background: linear-gradient(287.34deg, #82DF0B 20.5%, #43B02A 76.3%);
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+
+		border-radius: 10px;
+		width: 352px;
+		height: 177px;
+		z-index: 6;
+		overflow: hidden;
+	}
+
+	.text-wrap {
+		padding: 17px 0 0 25px;
+		text-align: left;
+		position: relative;
+		z-index: 10;
+	}
+
+	.linear-gradient-popup span.big-text {
+		font-weight: bold;
+		font-size: 25px;
+		text-transform: uppercase;
+		max-width: 270px;
+		display: block;
+		color: #fff;
+		padding-bottom: 10px;
+		text-shadow: 0 0 10px black;
+	}
+
+	.linear-gradient-popup span.small-text {
+		font-size: 23px;
+		display: block;
+		color: #fff;
+		text-shadow: 0 0 10px black;
+	}
+
+	.content-text {
+		background-image: url(https://cdn.comfy.ua/media/x/img_popap/pazl-ru.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: absolute;
+		width: 367px;
+		height: 177px;
+		z-index: 8;
+		left: 0;
+		bottom: 0;
+		border-radius: 10px;
+	}
+
+	.images-push {
+		/* background-image: url(https://cdn.comfy.ua/media/x/img/popup/shar-push_1.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: relative;
+		bottom: -8rem;
+		left: -35px;
+		width: 141px;
+		height: 150px;
+		z-index: 4; */
+	}
+
+	/* @-webkit-keyframes rotate360 {
+		to {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes rotate360 {
+		to {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+
+	.images-push {
+		-webkit-animation: 20s rotate360 infinite linear;
+		animation: 20s rotate360 infinite linear;
+	} */
+
+	.qclose-pp {
+		position: absolute;
+		background: #379424;
+		z-index: 99999;
+		line-height: 0.6;
+		cursor: pointer;
+		font-size: 18px;
+		top: -10px;
+		right: inherit;
+		left: -10px;
+		color: #fff;
+		border-radius: 50%;
+		padding: 8px;
+	}
+
+	.qclose-pp:hover {
+		color: #ef5e19;
+	}
+
+	.cont-popup-action {
+		position: relative;
+		display: inline-block;
+		/*float: right;*/
+		/*padding-right: 15px;*/
+	}
+
+	.popup-close[data-v-a06dd506] {
+		z-index: 12;
+		top: -12px;
+		left: -12px;
+		width: 12px;
+		height: 12px;
+		background: #FF090B url(https://cdn.comfy.ua/media/x/img/exit.svg) no-repeat 50%;
+		padding: 14px;
+		border-radius: 50%;
+		background-size: 13px;
+	}
+
+	.popup-close[data-v-a06dd506]:hover {
+		background-color: #de0002;
+	}
+
+	.popup__head[data-v-a06dd506] {
+		border-bottom: 0px solid #e5e5e5;
+	}
+
+	@media (max-width: 1024px) {
+		.content-text {
+			background-image: url(https://cdn.comfy.ua/media/x/img_popap/pazl-ru-m.png);
+			width: 279px;
+			height: 77px;
+			z-index: 8;
+			left: 7px;
+			bottom: -11px;
+		}
+
+		.images-push {
+			display: none;
+		}
+
+		.linear-gradient-popup {
+			width: 280px;
+			height: 55px;
+			background: #43B02A;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+		}
+
+		.fancybox-lock {
+			position: relative;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			top: 0;
+		}
+
+		.popup-wr[data-v-a06dd506] {
+			height: 225px;
+			width: 100%;
+		}
+
+		.popup-close[data-v-a06dd506] {
+			top: -12px;
+			right: -5px;
+			left: inherit;
+		}
+
+		.cont-popup-action {
+			padding-right: 7px;
+		}
+
+		.text-wrap {
+			padding: 10px 0 0 5px;
+		}
+
+		.linear-gradient-popup span.big-text {
+			font-size: 14px;
+			padding-bottom: 0px;
+		}
+
+		.linear-gradient-popup span.small-text {
+			font-size: 14px;
+		}
+	}
+</style>
+<div id="wrapper-popup-action">
+	<div class="cont-popup-action">
+		<a href="https://comfy.ua/product-day/">
+			<div class="cont-popup">
+				<div class="linear-gradient-popup">
+					<!-- <div class="images-push"></div> -->
+					<!-- <div class="text-wrap">
+						<span class="big-text">Смарт-гирлянды Twinkly</span>
+						<span class="small-text">Чудо от 1680 грн</span>
+					</div> -->
+				</div>
+				<div class="content-text"></div>
+			</div>
+		</a>
+	</div>
+</div>
