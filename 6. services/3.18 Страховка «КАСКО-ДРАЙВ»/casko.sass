@@ -68,12 +68,12 @@ span.uppercase-header
    h2
       padding-left: 10px
 #casko .casko-header__item-p
-   padding-bottom: 40px
+   padding-bottom: 50px
    text-align: left
    p
       font-size: 24px
 #casko .casko-header__item-p2
-   padding-bottom: 37px
+   padding-bottom: 42px
    text-align: left
    p.sizeipm
       font-size: 24px
@@ -133,7 +133,7 @@ span.uppercase-header
    display: table
    margin: 0 auto
    position: relative
-   z-index: 2
+   z-index: 1
    left: 3%
 .casko-pusluga__bgrd-imgMob
    display: none
@@ -170,9 +170,174 @@ span.uppercase-header
 .casko-pusluga__bgrd-left-center
    max-width: 235px
    z-index: 2
+.casko-bayuslug
+   padding-top: 30px
+.casko-bayuslug__h2
+   padding-bottom: 30px
+   border-bottom: 2px solid #000
+   display: table
+   margin: 0 auto
+.casko-bayuslug__flex
+   display: flex
+   justify-content: space-between
+   align-items: flex-start
+   max-width: 1000px
+   margin: 0 auto
+   padding: 55px 15px 0 15px
+.casko-bayuslug__item
+   border-radius: 16px
+   border: 1px solid #E5E5E5
+   max-width: 370px
+   width: 100%
+   height: 250px
+   text-align: center
+   padding: 35px 25px 25px 15px
+   a
+      color: #ff671f
+      text-decoration: underline
+.casko-bayuslug__item-img
+   width: 100%
+   padding-bottom: 25px
+   img
+      margin: 0 auto !important
+.casko-worked
+   padding-top: 30px
+.casko-worked__h2
+   padding-bottom: 30px
+   border-bottom: 2px solid #000
+   display: table
+   margin: 0 auto
+.casko-worked__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr
+   grid-gap: 30px
+   padding-top: 55px
+   &.grid2
+      .casko-worked__item
+         border: 0px solid #E5E5E5
+      .casko-worked__item-text
+         background: #E9F5FF
+         margin-top: 0
+         min-height: 120px
+.casko-worked__item
+   border: 1px solid #E5E5E5
+   border-radius: 16px
+   overflow: hidden
+   max-width: 370px
+.casko-worked__item-img
+   position: relative
+   z-index: 1
+.casko-worked__item-text
+   position: relative
+   z-index: 2
+   border-radius: 16px
+   padding: 30px
+   min-height: 155px
+   margin-top: -60px
+   background: #fff
+.casko-header__item-img
+   display: block
+.casko-header__item-img.img-mob
+   display: none
 // media
 // @media (max-width: 1250px)
-// @media (max-width: 1024px)
-// @media (max-width: 812px)
-// @media (max-width: 480px)
+@media (max-width: 1024px)
+   #casko
+      padding: 55px 20px
+   .casko-header__item-dostupnp .casko-header__item-dost-flex
+      flex-direction: column
+   .casko-header__item-dostupnp .casko-header__item-dost-flex .casko-header__item-dost__item
+      margin-right: 0
+      margin-bottom: 5px
+   .casko-header__item-dostupnp .casko-header__item-dost-flex .casko-header__item-dost__item:last-child
+      padding-bottom: 0
+      margin-bottom: 0
+   .casko-pusluga__bgrd-img
+      max-width: 80%
+   .casko-worked__item-text
+      margin-top: -55px
+   .casko-pusluga__bgrd-right-top
+      right: 0
+@media (max-width: 812px)
+   #casko
+      h2
+         font-size: 30px
+   .casko-header__flex
+      flex-direction: column
+   .casko-header__item-content
+      max-width: 100%
+      padding-right: 0
+   .casko-header__item-p, .casko-header__item-p2, .casko-header__item-dostupnp
+      max-width: 100%
+   .casko-pusluga__bgrd-img
+      max-width: 85%
+   .casko-bayuslug
+      padding-top: 0
+   .casko-bayuslug__item
+      max-width: 290px
+   .casko-worked__grid
+      grid-template-columns: 1fr 1fr
+   .casko-header__item
+      width: 100%
+   .casko-header__item-img img
+      margin: 0 auto !important
+@media (max-width: 480px)
+   #casko
+      h2
+         font-size: 20px
+   #casko .casko-header__item-p p
+      font-size: 20px
+   .casko-header__item-h2
+      padding-bottom: 25px
+   #casko .casko-header__item-p
+      padding-bottom: 35px
+   #casko .casko-header__item-p2 p.sizeipm
+      font-size: 20px
+   #casko .casko-header__item-p2 .casko-header__item-line
+      height: 2px
+      width: 100%
+   #casko .casko-header__item-p2
+      padding-bottom: 20px
+   .casko-header__item-img
+      display: none
+   .casko-header__item-img.img-mob
+      display: block
+   #casko .casko-drive__h2 h2,
+   #casko .casko-pusluga__h2 h2,
+   #casko .casko-bayuslug__h2 h2,
+   #casko .casko-worked__h2 h2
+      font-size: 30px
+   .casko-drive__flex
+      flex-direction: column
+      align-items: center
+   .casko-drive__item
+      &:first-child
+         padding-bottom: 50px
+   .casko-pusluga__bgrd-left-top, .casko-pusluga__bgrd-right-top, .casko-pusluga__bgrd-left-center, .casko-pusluga__bgrd-left-bottom,.casko-pusluga__bgrd-right-bottom
+      position: relative
+   .casko-pusluga__bgrd-left-center
+      top: 0
+      transform: translateY(0)
+      padding-bottom: 22px
+      max-width: 100%
+   .casko-pusluga__bgrd
+      padding: 0px 0 0px 0
+   .casko-pusluga__bgrd-img
+      display: none
+   .casko-pusluga__bgrd-imgMob
+      display: block
+   .casko-pusluga__bgrd-left-top, .casko-pusluga__bgrd-right-top, .casko-pusluga__bgrd-left-bottom, .casko-pusluga__bgrd-right-bottom
+      max-width: 100%
+      padding-bottom: 22px
+   .casko-pusluga
+      padding-bottom: 35px
+   .casko-bayuslug__flex
+      flex-direction: column
+      align-items: center
+      padding: 55px 0 0 0
+   .casko-bayuslug__item
+      &:first-child
+         margin-bottom: 30px
+   .casko-worked__grid
+      grid-template-columns: 1fr
 // @media (max-width: 321px)
