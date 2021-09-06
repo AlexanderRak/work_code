@@ -1,0 +1,488 @@
+/*default styles*/
+#samsung
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    font-size: 18px
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 42px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    margin: unset
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+// common styles
+
+#samsung
+  .large
+    font-size: 100px
+    font-weight: bold
+    margin: 40px 0
+    >sup
+      font-size: 32px
+
+  .little
+    font-size: 15px
+    color: #575757
+
+  .abs
+    position: absolute
+    transform: rotate(90deg)
+    -webkit-transform-origin: 0 0
+    left: -10px
+    top: 10px
+    font-size: 14px
+    text-transform: uppercase
+
+// common styles end
+
+#samsung
+  .ipx
+    padding: 120px 120px 120px 0
+    .ipx__cont
+      margin: 0 0 -345px auto
+      max-width: 400px
+      position: relative
+      .ipx__title
+        position: relative
+        margin-bottom: 40px
+      .little
+        margin-top: 40px
+
+  .beautiful
+    .beautiful__flex
+      display: flex
+      flex-direction: row
+      padding: 0 120px 120px 120px
+      >div
+        flex: 1 1 0
+      .beautiful__title
+        position: relative
+      .beautiful__txt
+        .little
+          margin-top: 40px
+
+  .flexible
+    padding: 120px 0 0 0
+    .flexible__cont
+      max-width: 300px
+      padding-right: 120px
+      box-sizing: content-box
+      margin: 0 0 0 auto
+      .flexible__title
+        margin-bottom: 40px
+      .little
+        margin: 40px 0
+
+  .rotate
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin-top: -150px
+    >div
+      flex: 1 1 0
+    .rotate__cont
+      padding-right: 120px
+      max-width: 300px
+      box-sizing: content-box
+      margin: 0 0 -200px 80px
+      .rotate__title
+        margin-bottom: 40px
+
+  .material
+    .material__cont
+      padding-left: 120px
+      max-width: 300px
+      box-sizing: content-box
+      margin-top: -240px
+      .material__title
+        margin-bottom: 40px
+
+  .care
+    padding: 120px
+    display: flex
+    flex-direction: row
+    li
+      flex: 1 1 0
+      .care__icon
+        max-width: 50%
+        margin-top: 40px
+
+  .galaxy
+    position: relative
+    .galaxy__img
+      img
+        margin: 0 auto
+        max-height: 1300px
+    .galaxy__list
+      li
+        position: absolute
+        a
+          text-decoration: none
+          color: #000
+          font-size: 18px
+          line-height: normal
+          padding: 10px 15px
+          border-radius: 200px
+          background-color: #fff
+          box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08)
+          font-weight: bold
+        &:nth-of-type(1)
+          top: 365px
+          right: 420px
+        &:nth-of-type(2)
+          top: 700px
+          left: 470px
+        &:nth-of-type(3)
+          bottom: 345px
+          right: 470px
+        &:nth-of-type(n+2)
+          a
+            display: flex
+            flex-direction: row
+            align-items: center
+            &::after
+              content: ""
+              display: block
+              background-size: contain
+              background-position: center
+              background-repeat: no-repeat
+              min-width: 14px
+              height: 14px
+              background-image: url("https://cdn.comfy.ua/media/x/img/1828119/icon4.svg")
+              margin-left: 10px
+    .little
+      position: absolute
+      bottom: -35px
+      left: 195px
+      max-width: unset
+
+  .accesority
+    .accesority__title
+      padding: 120px 120px 80px 120px
+
+  .more
+    padding: 80px 0 80px 195px
+    .more__list
+      display: flex
+      flex-direction: row
+      overflow-x: scroll
+      padding-bottom: 10px
+      width: 100%
+      &::-webkit-scrollbar
+        background-color: #dbdbdb
+        border-radius: 30px
+      &::-webkit-scrollbar-thumb
+        background-color: #fff
+        background-color: #363636
+        border-radius: 30px
+      li
+        border-radius: 30px
+        background-color: #f5f6f8
+        overflow: hidden
+        width: 485px
+        min-width: 390px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .more__img
+          img
+            margin: 0 auto
+        .more__txt
+          padding: 40px
+          max-width: 630px
+          span
+            font-size: 16px
+          h2
+            margin: 15px 0
+            font-size: 30px
+          p
+            color: #575757
+          .little
+            font-size: 15px
+            margin-top: 20px
+        &:nth-of-type(n+2)
+          margin-left: 30px
+      .big__li
+        min-width: 820px
+        img
+          margin: 0 auto !important
+        .more__cont
+          display: flex
+          flex-direction: row
+          align-items: center
+          margin-top: 40px
+          .more__icon
+            width: 30%
+            margin-right: 20px
+          .more__cont__txt
+            p
+              font-size: 14px
+        &:nth-of-type(1)
+          .more__img
+            img
+              margin: 0 auto
+      .no__marge__img
+        .more__img
+          img
+            margin: 0 auto
+
+  .question__samsung
+    padding: 120px 195px 80px 195px
+    .question__samsung__wrap
+      .tabs
+        overflow: hidden
+        .tab
+          overflow: hidden
+          border-bottom: solid 2px #ccc
+        [type=checkbox], [type=radio]
+          padding: 0
+        input
+          position: absolute
+          opacity: 0
+          z-index: -1
+        .tab-label
+          display: flex
+          justify-content: space-between
+          font-weight: bold
+          cursor: pointer
+          font-size: 28px
+          line-height: normal
+          display: flex
+          flex-direction: row
+          align-items: center
+          padding: 40px 0
+          &::after
+            content: ""
+            width: 20px
+            height: 13px
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center
+            background-image: url("https://cdn.comfy.ua/media/x/img/1828119/arrow.png")
+        .tab-content
+          max-height: 0
+          padding: 0
+          color: #2c3e50
+          background: white
+          transition: all 0.35s
+          p
+            color: #575757
+        input:checked ~ .tab-content
+          max-height: 100vh
+          padding: 1em 0
+        input:checked + .tab-label::after
+          transform: rotate(180deg)
+
+  .notes
+    padding: 0 195px 1em 195px
+    .notes__txt
+      p
+        font-size: 13px
+        color: #666666
+    .notes__list
+      margin-top: 20px
+      li
+        list-style-type: decimal
+        line-height: normal
+        font-size: 13px
+        color: #666666
+        &:nth-of-type(n+2)
+          margin-top: 5px
+
+@media (max-width: 1024px)
+  #samsung .ipx .ipx__cont
+    margin: 0 0 -170px auto
+  #samsung .material .material__cont
+    margin-top: -200px
+  #samsung .galaxy .galaxy__list li:nth-of-type(1)
+    top: 340px
+    right: 255px
+  #samsung .galaxy .galaxy__list li:nth-of-type(2)
+    top: 720px
+    left: 290px
+  #samsung .galaxy .galaxy__list li:nth-of-type(3)
+    right: 315px
+
+@media (max-width: 812px)
+  #samsung h2
+    font-size: 28px
+  #samsung .large
+    font-size: 50px
+  #samsung .ipx
+    padding: 1em 1em 1em 0
+  #samsung .ipx .ipx__cont
+    margin: 0 0 -70px auto
+  #samsung .beautiful .beautiful__flex
+    padding: 0 2em 2em 2em
+  #samsung .rotate
+    margin-top: 0
+  #samsung .flexible .flexible__cont
+    padding-right: 1em
+    max-width: 500px
+  #samsung .rotate .rotate__cont
+    padding-right: 1em
+    margin: 0 0 0 60px
+  #samsung .material .material__cont
+    margin-top: -160px
+    padding-left: 1em
+  #samsung .care
+    padding: 1em
+  #samsung .galaxy .galaxy__list li:nth-of-type(1)
+    right: 130px
+  #samsung .galaxy .galaxy__list li:nth-of-type(2)
+    left: 145px
+  #samsung .galaxy .galaxy__list li:nth-of-type(3)
+    right: 180px
+  #samsung .accesority .accesority__title
+    padding: 5em 1em 1em 1em
+  #samsung .more
+    padding: 1em 0 1em 1em
+  #samsung .more .more__list .big__li
+    min-width: 630px
+  #samsung .question__samsung
+    padding: 1em
+  #samsung .question__samsung .question__samsung__wrap .tabs .tab-label
+    font-size: 20px
+    padding: 20px 0
+  #samsung .notes
+    padding: 0 2em 2em 2em
+
+@media (max-width: 380px) and (min-width: 370px)
+  #samsung .galaxy .galaxy__list li:nth-of-type(2)
+    top: 352px !important
+  #samsung .galaxy .galaxy__list li:nth-of-type(3)
+    right: 53px !important
+    bottom: 260px !important
+
+@media (max-width: 420px) and (min-width: 400px)
+  #samsung .galaxy .galaxy__list li:nth-of-type(2)
+    top: 390px !important
+
+@media (max-width: 480px)
+  #samsung h2
+    font-size: 22px
+  #samsung h2 br
+    display: none
+  #samsung p
+    font-size: unset
+  #samsung .large
+    font-size: 32px
+  #samsung .ipx .ipx__cont
+    margin: 0
+    padding: 2em
+  #samsung .ipx .ipx__cont .ipx__title
+    margin-bottom: 1em
+  #samsung .beautiful .beautiful__flex
+    display: block
+  #samsung .beautiful .beautiful__flex .beautiful__title,
+  #samsung .rotate .rotate__cont .rotate__title,
+  #samsung .material .material__cont .material__title
+    margin-bottom: 1em
+  #samsung .flexible
+    padding-top: 40px
+  #samsung .flexible .flexible__cont
+    padding: 2em
+  #samsung .flexible .flexible__cont .flexible__title
+    margin-bottom: 1em
+  #samsung .rotate
+    display: block
+  #samsung .rotate .rotate__cont
+    margin: 0
+    padding: 1em
+  #samsung .material .material__cont
+    padding: 1em
+    margin-top: 0
+  #samsung .care
+    display: block
+  #samsung .care li:nth-of-type(1)
+    margin-bottom: 1em
+  #samsung .care li .care__icon
+    max-width: 100%
+  #samsung .galaxy .little
+    position: unset
+    padding: 1em
+  #samsung .galaxy .galaxy__list li a
+    font-size: 12px
+    padding: 5px 15px
+  #samsung .galaxy .galaxy__list li:nth-of-type(1)
+    right: 5px
+    top: 120px
+  #samsung .galaxy .galaxy__list li:nth-of-type(2)
+    left: 5px
+    top: 300px
+  #samsung .galaxy .galaxy__list li:nth-of-type(3)
+    right: 10px
+    bottom: 240px
+  #samsung .large>sup
+    font-size: 13px
+  
+
+
+  #samsung .more
+    padding: 1em
+  #samsung .more .more__list
+    flex-direction: column
+  #samsung .more .more__list li
+    width: 100%
+    max-width: 100%
+    min-width: unset
+    border-radius: 20px
+  #samsung .more .more__list .big__li
+    min-width: unset
+    max-width: 100%
+  #samsung .more .more__list li .more__txt
+    padding: 1em
+  #samsung .more .more__list li:nth-of-type(n+2)
+    margin-left: 0
+    margin-top: 30px
+  #samsung .more .more__list .big__li .more__cont
+    flex-direction: column
+    align-items: flex-start
+  #samsung .more .more__list::-webkit-scrollbar
+    display: none
+  #samsung .more .more__list li .more__txt h2
+    font-size: 22px
+  #samsung .question__samsung .question__samsung__wrap .tabs .tab-label
+    font-size: 14px
+  #samsung .question__samsung .question__samsung__wrap .tabs .tab-label::after
+    min-width: 20px
+    max-width: 20px
+  #samsung .notes
+    padding: 0 1em 1em 2em
