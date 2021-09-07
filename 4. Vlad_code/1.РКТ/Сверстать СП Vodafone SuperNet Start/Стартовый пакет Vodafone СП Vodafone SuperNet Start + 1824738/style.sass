@@ -1,0 +1,248 @@
+/*default styles*/
+
+#vodafone
+  padding: 1em 0
+  max-width: 1000px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    font-size: 16px
+    color: #323232
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 24px
+    font-weight: bold
+    color: #323232
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#vodafone
+  .note
+    font-size: 16px
+    padding: 1em
+  .vodafone__list__head
+    display: flex
+    flex-direction: row
+    margin-bottom: 20px
+    align-items: center
+    justify-content: center
+    li
+      max-width: 50%
+      box-sizing: border-box
+      flex: 1 1 0
+      &:nth-of-type(1)
+        background-color: #e60000
+        color: #fff
+        margin-right: 20px
+        padding: 28px 10px
+        span
+          font-size: 40px
+          text-align: center
+      &:nth-of-type(2)
+        border: 1px solid #e60000
+        align-self: stretch
+        display: flex
+        flex-direction: column
+        justify-content: center
+        span
+          font-size: 16px
+          color: #333
+          text-align: center
+          strong
+            font-size: 40px
+            font-weight: normal
+          .tooltip
+            display: inline-block
+
+  .vodafone__table
+    display: flex
+    flex-direction: column
+    flex: 1
+    align-items: stretch
+    height: 435px
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      flex: 1 1 0
+      box-sizing: border-box
+      padding: 20px
+      border: 1px solid #e4e4e4
+      >div
+        flex: 1 1 0
+      .vodafone__table__cont
+        .orcenter
+          text-align: center
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          height: 100%
+          font-size: 18px
+        .orcenter::before,
+        .orcenter::after
+          content: ""
+          display: block
+          width: 2px
+          height: 30px
+          background: #999
+        .orcenter::before
+          margin-bottom: 10px
+        .orcenter::after
+          margin-top: 10px
+
+        .vodafone__table__cont__head
+          display: flex
+          flex-direction: row
+          align-items: center
+          justify-content: center
+          margin-bottom: 12px
+          h2
+            margin: 0 10px
+        .vodafone__table__cont__body
+          text-align: center
+          p
+            em
+              font-style: normal
+              color: #e60000
+      &:nth-of-type(3)
+        background: #f4f4f4
+        .vodafone__table__cont
+          .vodafone__table__cont__head
+            span
+              margin-left: 10px
+
+// ишка
+
+#vodafone
+  .podskazka
+    img
+      filter: invert(100%)
+      max-width: 20px
+  .tooltip
+    position: relative
+    cursor: pointer
+    color: #000
+    max-width: max-content
+
+    &::before
+      content: attr(data-title)
+      width: 200px
+      border-radius: 10px
+      background-color: #ededed
+      box-shadow: 0 1px 5px #afafaf
+      border: 1px solid #ccc
+      text-align: center
+      padding: 20px 5px
+      bottom: 35px
+      width: 100%
+      max-width: 300px
+      min-width: 300px
+      font-size: 18px
+      font-weight: normal
+      box-sizing: border-box
+    &::after
+      content: ""
+      border-top: 10px solid #ededed
+      border-right: 10px solid transparent
+      border-left: 10px solid transparent
+      bottom: 27px
+  .tooltip::before,
+  .tooltip::after
+    display: block
+    position: absolute
+    right: 50%
+    transform: translateX(50%)
+    opacity: 0
+    visibility: hidden
+    transition: opacity .3s
+#vodafone .tooltip:hover
+  &::before,
+  &::after
+    opacity: 1
+    visibility: visible
+
+// ишка
+
+//media******************************************************
+
+@media (max-width: 812px)
+  #vodafone
+    padding: 1em 2em
+
+@media (max-width: 480px)
+  #vodafone
+    padding: 0
+    position: relative
+  #vodafone .vodafone__list__head
+    margin-bottom: 0
+  #vodafone .vodafone__list__head li:nth-of-type(1) span,
+  #vodafone .vodafone__list__head li:nth-of-type(2) span strong
+    font-size: 24px
+  #vodafone .podskazka img
+    max-width: 14px
+  #vodafone .vodafone__list__head li:nth-of-type(1)
+    margin-right: 0
+  #vodafone h2
+    font-size: 18px
+  #vodafone p
+    font-size: 12px
+  #vodafone .vodafone__table li .vodafone__table__cont .vodafone__table__cont__head
+    flex-direction: column
+  #vodafone .vodafone__table li .vodafone__table__cont .vodafone__table__cont__head h2
+    text-align: center
+    margin: 10px 0
+  #vodafone .vodafone__table li .vodafone__table__cont .orcenter
+    font-size: 16px
+  #vodafone .vodafone__table
+    height: unset
+  #vodafone .vodafone__table li:nth-of-type(3) .vodafone__table__cont .vodafone__table__cont__head span
+    margin-left: 0
+    margin-top: 10px
+  #vodafone .note
+    font-size: 12px
+  #vodafone .tooltip::after
+    display: none
+  #vodafone .tooltip
+    position: unset
+  #vodafone .tooltip::before
+    z-index: 100
+    right: 50%
+    bottom: 80%
+    transform: translate(50%, 50%)
+  #vodafone .vodafone__table li:nth-of-type(3) .vodafone__table__cont .vodafone__table__cont__head span:before
+    bottom: 35%
