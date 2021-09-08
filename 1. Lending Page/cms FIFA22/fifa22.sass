@@ -1,0 +1,149 @@
+#fifa22
+   display: block
+   margin: 0 auto
+   max-width: 1316px
+   width: 100%
+   height: auto
+   overflow: hidden
+   background-color: #1c1f26
+   position: relative
+   img
+      &:hover
+         opacity: 1
+      &:first-letter
+         padding-left: 0
+   img
+      display: block
+      margin-right: initial
+      margin-left: initial
+   p
+      font-size: 19px
+      margin-bottom: 0
+      color: #e8f4ea
+   h2
+      font-size: 35px
+      line-height: 1
+      font-weight: bold
+      text-align: center
+      color: #c4f750
+   h3
+      font-size: 28px
+      margin: 0
+      padding-top: 0
+      line-height: 1
+      text-align: inherit
+      font-weight: bold
+      color: #c4f750
+   h4
+      font-size: 23px
+      line-height: 1
+      font-weight: bold
+      margin: 0
+      color: #e8f4ea
+      text-align: center
+      padding: 5px 0 5px 0
+   i
+      font-size: 12px
+      color: #e8f4ea
+   a
+      color: #e8f4ea
+      text-decoration: underline
+.features-desc__text h2
+   text-align: inherit
+.one-col .features-desc__text p
+   text-align: inherit
+span.word-wrap
+   display: block
+   word-wrap: break-word
+span.fw-bold
+   font-weight: bold
+span.tx-uppercase
+   text-transform: uppercase
+// default
+
+.fifa22-wrap__flex
+   display: flex
+   flex-direction: row
+.fifa22-wrap__item
+   &:first-child
+      width: 40%
+   &:last-child
+      width: 60%
+      position: relative
+      &::before, &::after
+         content: ""
+         background-repeat: no-repeat
+         background-size: contain
+         position: absolute
+      &::before
+         background-image: url(https://cdn.comfy.ua/media/x/img2/fifa22/img6.png)
+         left: 0
+         top: 0
+         width: 187px
+         height: 300px
+         z-index: 1
+      &::after
+         background-image: url(https://cdn.comfy.ua/media/x/img2/fifa22/img7.png)
+         right: 0
+         bottom: 0
+         width: 159px
+         height: 169px
+         z-index: 1
+.fifa22-wrap__content
+   position: relative
+   z-index: 2
+   padding: 20px 15px 10px 15px
+.fifa22-wrap__logo
+   display: flex
+   align-items: center
+   justify-content: center
+   h3
+      padding-left: 30px
+.fifa22-wrap__h2
+   padding: 10px 15px
+.fifa22-wrap__playflex
+   display: flex
+   align-items: flex-start
+.fifa22-wrap__playflex__item
+   flex: 1 1 0
+   padding: 0px 15px
+   text-align: center
+   img
+      margin: 0 auto !important
+.fifa22-wrap__i
+   text-align: left
+   padding: 10px
+// media
+@media (max-width: 1250px)
+   .fifa22-wrap__flex
+      flex-direction: column
+   .fifa22-wrap__item:first-child
+      display: none
+   .fifa22-wrap__item:last-child
+      width: 100%
+      position: relative
+// @media (max-width: 1024px)
+// @media (max-width: 812px)
+@media (max-width: 480px)
+   #fifa22
+      h3
+         font-size: 28px
+      h2
+         font-size: 25px
+      h4
+         font-size: 18px
+   span.word-wrap
+      display: initial
+   .fifa22-wrap__logo
+      flex-direction: column
+   .fifa22-wrap__logo h3
+      padding-left: 0
+      margin: 15px 0 5px 0 !important
+   .fifa22-wrap__playflex
+      flex-direction: column
+      align-items: center
+   .fifa22-wrap__item:first-child
+      width: 100%
+      display: block
+   .fifa22-wrap__playflex__item
+      padding: 0px 15px 15px 15px

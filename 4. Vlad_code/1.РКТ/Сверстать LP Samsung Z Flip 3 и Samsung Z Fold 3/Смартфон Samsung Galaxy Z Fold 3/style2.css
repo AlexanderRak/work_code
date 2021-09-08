@@ -85,9 +85,11 @@ html {
   line-height: normal;
   padding: 10px 15px;
   -webkit-border-radius: 200px;
+     -moz-border-radius: 200px;
           border-radius: 200px;
   background-color: #fff;
   -webkit-box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08);
+     -moz-box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08);
           box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08);
   font-weight: bold;
 }
@@ -110,15 +112,19 @@ html {
 #samsung .galaxy .galaxy__list li:nth-of-type(n+2) a {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
   -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -127,6 +133,8 @@ html {
   content: "";
   display: block;
   -webkit-background-size: contain;
+     -moz-background-size: contain;
+       -o-background-size: contain;
           background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -159,11 +167,14 @@ html {
 #samsung .more .more__list {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   overflow-x: scroll;
@@ -186,6 +197,7 @@ html {
 
 #samsung .more .more__list li {
   -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
           border-radius: 30px;
   background-color: #f5f6f8;
   overflow: hidden;
@@ -193,15 +205,19 @@ html {
   min-width: 390px;
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
@@ -243,15 +259,19 @@ html {
 #samsung .more .more__list .big__li .more__cont {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
   -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-top: 40px;
@@ -300,10 +320,12 @@ html {
 #samsung .question__samsung .question__samsung__wrap .tabs .tab-label {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-weight: bold;
@@ -314,10 +336,13 @@ html {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
   -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 40px 0;
@@ -329,6 +354,8 @@ html {
   height: 13px;
   background-repeat: no-repeat;
   -webkit-background-size: contain;
+     -moz-background-size: contain;
+       -o-background-size: contain;
           background-size: contain;
   background-position: center;
   background-image: url("https://cdn.comfy.ua/media/x/img/1828119/arrow.png");
@@ -341,6 +368,7 @@ html {
   background: white;
   -webkit-transition: all 0.35s;
   -o-transition: all 0.35s;
+  -moz-transition: all 0.35s;
   transition: all 0.35s;
 }
 
@@ -355,7 +383,9 @@ html {
 
 #samsung .question__samsung .question__samsung__wrap .tabs input:checked + .tab-label::after {
   -webkit-transform: rotate(180deg);
+     -moz-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
+       -o-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
@@ -482,6 +512,8 @@ html {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -490,6 +522,7 @@ html {
     max-width: 100%;
     min-width: unset;
     -webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
             border-radius: 20px;
   }
   #samsung .more .more__list .big__li {
@@ -507,10 +540,13 @@ html {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
+       -moz-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
   }
