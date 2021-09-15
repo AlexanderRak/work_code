@@ -6,6 +6,7 @@
   height: auto;
   display: block;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
 }
@@ -69,6 +70,7 @@
   margin: 0px auto 20px auto;
   background: -webkit-gradient(linear, left top, right top, color-stop(34.22%, #80FF93), color-stop(33.91%, #FF6767), to(#71EBFF));
   background: -webkit-linear-gradient(left, #80FF93 34.22%, #FF6767 33.91%, #71EBFF);
+  background: -moz-linear-gradient(left, #80FF93 34.22%, #FF6767 33.91%, #71EBFF);
   background: -o-linear-gradient(left, #80FF93 34.22%, #FF6767 33.91%, #71EBFF);
   background: linear-gradient(90deg, #80FF93 34.22%, #FF6767 33.91%, #71EBFF);
   -webkit-background-clip: text;
@@ -81,6 +83,8 @@
   background-repeat: no-repeat;
   background-position: center bottom;
   -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
           background-size: cover;
   color: #fff;
   padding: 0 4em;
@@ -90,15 +94,19 @@
 #realme .realme__head .realme__head__list {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
   -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -106,9 +114,11 @@
 #realme .realme__head .realme__head__list li {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -155,10 +165,12 @@
   justify-items: stretch;
   -webkit-box-align: stretch;
   -webkit-align-items: stretch;
+     -moz-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
@@ -179,16 +191,20 @@
 #realme .realme__grid__wrap .cal1 .realme__grid__txt {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   width: 95%;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
@@ -229,6 +245,7 @@
   justify-items: stretch;
   -webkit-box-align: stretch;
   -webkit-align-items: stretch;
+     -moz-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
       grid-template-areas: "cal4 cal4 cal4" "cal5 cal5 cal5" "cal6 cal6 cal6";
@@ -291,11 +308,14 @@
   color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 60px 0;
@@ -306,10 +326,12 @@
 #realme .cyberpunk .cyberpunk__txt > div {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   max-width: 50%;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -318,11 +340,14 @@
   margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
@@ -354,7 +379,9 @@
   bottom: 0;
   right: 45%;
   -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
       -ms-transform: translateX(50%);
+       -o-transform: translateX(50%);
           transform: translateX(50%);
 }
 
@@ -413,6 +440,7 @@
 #realme .bright .bright__title .colors {
   background: -webkit-gradient(linear, left top, right top, color-stop(24.22%, #80FF93), color-stop(33.91%, #FF6767), to(#71EBFF));
   background: -webkit-linear-gradient(left, #80FF93 24.22%, #FF6767 33.91%, #71EBFF);
+  background: -moz-linear-gradient(left, #80FF93 24.22%, #FF6767 33.91%, #71EBFF);
   background: -o-linear-gradient(left, #80FF93 24.22%, #FF6767 33.91%, #71EBFF);
   background: linear-gradient(90deg, #80FF93 24.22%, #FF6767 33.91%, #71EBFF);
   -webkit-background-clip: text;
@@ -442,17 +470,21 @@
 #realme .bright .bright__list {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   color: #fff;
   max-width: 650px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: -120px auto 0 auto;
@@ -462,6 +494,7 @@
 #realme .bright .bright__list li {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
@@ -494,15 +527,19 @@
 #realme .camera .camera__list {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
   -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   max-width: 650px;
@@ -512,6 +549,7 @@
 #realme .camera .camera__list li {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
@@ -534,6 +572,7 @@
   text-transform: none;
   background: -webkit-gradient(linear, left top, right top, from(#D0FFFB), color-stop(79.23%, #8EB7FF));
   background: -webkit-linear-gradient(left, #D0FFFB 0%, #8EB7FF 79.23%);
+  background: -moz-linear-gradient(left, #D0FFFB 0%, #8EB7FF 79.23%);
   background: -o-linear-gradient(left, #D0FFFB 0%, #8EB7FF 79.23%);
   background: linear-gradient(90deg, #D0FFFB 0%, #8EB7FF 79.23%);
   -webkit-background-clip: text;
@@ -551,11 +590,14 @@
 #realme .tiltshift .tiltshift__wrap .tiltshift__title {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
@@ -563,6 +605,7 @@
 #realme .tiltshift .tiltshift__wrap .tiltshift__title h2 {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
@@ -570,6 +613,7 @@
 #realme .tiltshift .tiltshift__wrap .tiltshift__title p {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
@@ -618,11 +662,14 @@
 #realme .stars .stars__wrap .stars__list {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
@@ -630,6 +677,7 @@
 #realme .stars .stars__wrap .stars__list li {
   -webkit-box-flex: 4;
   -webkit-flex: 4;
+     -moz-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
 }
@@ -638,14 +686,17 @@
   height: 100%;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
+     -moz-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 2em;
@@ -673,6 +724,7 @@
 #realme .portrait .portrait__title .colors {
   background: -webkit-gradient(linear, left top, right top, color-stop(28.24%, #80FF93), color-stop(42.11%, #FF6767), to(#71A5FF));
   background: -webkit-linear-gradient(left, #80FF93 28.24%, #FF6767 42.11%, #71A5FF);
+  background: -moz-linear-gradient(left, #80FF93 28.24%, #FF6767 42.11%, #71A5FF);
   background: -o-linear-gradient(left, #80FF93 28.24%, #FF6767 42.11%, #71A5FF);
   background: linear-gradient(90deg, #80FF93 28.24%, #FF6767 42.11%, #71A5FF);
   -webkit-background-clip: text;
@@ -724,7 +776,9 @@
   text-align: center;
   right: 50%;
   -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
       -ms-transform: translateX(50%);
+       -o-transform: translateX(50%);
           transform: translateX(50%);
   text-transform: uppercase;
   font-size: 24px;
@@ -737,6 +791,7 @@
 #realme .morevideos .morevideos__title .colors {
   background: -webkit-gradient(linear, left top, right top, color-stop(26.76%, #80FF93), color-stop(28.79%, #FF6767), to(#71A5FF));
   background: -webkit-linear-gradient(left, #80FF93 26.76%, #FF6767 28.79%, #71A5FF);
+  background: -moz-linear-gradient(left, #80FF93 26.76%, #FF6767 28.79%, #71A5FF);
   background: -o-linear-gradient(left, #80FF93 26.76%, #FF6767 28.79%, #71A5FF);
   background: linear-gradient(90deg, #80FF93 26.76%, #FF6767 28.79%, #71A5FF);
   -webkit-background-clip: text;
@@ -766,7 +821,9 @@
   max-width: 700px;
   right: 50%;
   -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
       -ms-transform: translateX(50%);
+       -o-transform: translateX(50%);
           transform: translateX(50%);
 }
 
@@ -818,15 +875,19 @@
 #realme .speed .speed__wrap .speed__list {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 40%;
@@ -837,6 +898,7 @@
 #realme .speed .speed__wrap .speed__list li {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
@@ -852,6 +914,7 @@
   text-transform: none;
   background: -webkit-gradient(linear, left top, right top, color-stop(40.51%, #12CFD1), color-stop(52.11%, #6BCE5D), to(#D47003));
   background: -webkit-linear-gradient(left, #12CFD1 40.51%, #6BCE5D 52.11%, #D47003);
+  background: -moz-linear-gradient(left, #12CFD1 40.51%, #6BCE5D 52.11%, #D47003);
   background: -o-linear-gradient(left, #12CFD1 40.51%, #6BCE5D 52.11%, #D47003);
   background: linear-gradient(90deg, #12CFD1 40.51%, #6BCE5D 52.11%, #D47003);
   -webkit-background-clip: text;
@@ -879,11 +942,14 @@
   margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
@@ -891,6 +957,7 @@
 #realme .battery .battery__list li {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   text-align: center;
@@ -932,11 +999,14 @@
 #realme .func .func__wrap .func__list {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-flex-wrap: wrap;
@@ -947,6 +1017,7 @@
 #realme .func .func__wrap .func__list li {
   position: relative;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -958,7 +1029,9 @@
 #realme .func .func__wrap .func__list li:nth-of-type(1) .func__txt {
   bottom: 50%;
   -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
       -ms-transform: translateY(50%);
+       -o-transform: translateY(50%);
           transform: translateY(50%);
   left: 1em;
 }
@@ -978,7 +1051,9 @@
   left: 1em;
   bottom: 50%;
   -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
       -ms-transform: translateY(50%);
+       -o-transform: translateY(50%);
           transform: translateY(50%);
 }
 
@@ -1019,6 +1094,7 @@
 #realme .os .os__wrap .os__title span .colors {
   font-weight: normal;
   background: -webkit-linear-gradient(213.09deg, #1ACAE1 -52.16%, #FFDD26 -30.1%, #E037FF 19.79%, #43D0FF 108.79%, #21EF78 134.29%, #FFF00D 189.25%);
+  background: -moz-linear-gradient(213.09deg, #1ACAE1 -52.16%, #FFDD26 -30.1%, #E037FF 19.79%, #43D0FF 108.79%, #21EF78 134.29%, #FFF00D 189.25%);
   background: -o-linear-gradient(213.09deg, #1ACAE1 -52.16%, #FFDD26 -30.1%, #E037FF 19.79%, #43D0FF 108.79%, #21EF78 134.29%, #FFF00D 189.25%);
   background: linear-gradient(236.91deg, #1ACAE1 -52.16%, #FFDD26 -30.1%, #E037FF 19.79%, #43D0FF 108.79%, #21EF78 134.29%, #FFF00D 189.25%);
   -webkit-background-clip: text;
@@ -1027,19 +1103,24 @@
 #realme .os .os__wrap .os__flex {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: center;
   -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
@@ -1063,11 +1144,14 @@
 #realme .quality .quality__list {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-flex-wrap: wrap;
@@ -1079,33 +1163,41 @@
 #realme .quality .quality__list li {
   width: 33.33%;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 #realme .quality .quality__list li .quality__cont {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-align: center;
   -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-border-radius: 16px;
+     -moz-border-radius: 16px;
           border-radius: 16px;
   width: 100%;
   height: 100%;
   min-height: 110px;
   background: -webkit-linear-gradient(229.66deg, rgba(111, 255, 159, 0.44) -7.82%, rgba(37, 94, 255, 0.44) 100%), #FFFFFF;
+  background: -moz-linear-gradient(229.66deg, rgba(111, 255, 159, 0.44) -7.82%, rgba(37, 94, 255, 0.44) 100%), #FFFFFF;
   background: -o-linear-gradient(229.66deg, rgba(111, 255, 159, 0.44) -7.82%, rgba(37, 94, 255, 0.44) 100%), #FFFFFF;
   background: linear-gradient(220.34deg, rgba(111, 255, 159, 0.44) -7.82%, rgba(37, 94, 255, 0.44) 100%), #FFFFFF;
 }
@@ -1147,6 +1239,7 @@
   padding: 2em 75px;
   background-color: #F5F5F5;
   -webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
           border-radius: 20px;
   margin-top: 1em;
 }
@@ -1215,6 +1308,7 @@
     width: 100%;
     padding: 0 3em;
     -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
             box-sizing: border-box;
   }
   #realme .power .power__wrap .power__title img {
@@ -1236,6 +1330,8 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     padding-top: 1em;
@@ -1331,6 +1427,8 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -1341,15 +1439,20 @@
   #realme .design .design__img .design__cont {
     position: unset;
     -webkit-transform: unset;
+       -moz-transform: unset;
         -ms-transform: unset;
+         -o-transform: unset;
             transform: unset;
     display: -webkit-box;
     display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -webkit-flex-direction: column-reverse;
+       -moz-box-orient: vertical;
+       -moz-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
@@ -1388,6 +1491,8 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -1410,6 +1515,8 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -webkit-flex-direction: column-reverse;
+       -moz-box-orient: vertical;
+       -moz-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     margin-top: 1em;
@@ -1440,6 +1547,8 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -1481,7 +1590,9 @@
     font-size: 16px;
     position: unset;
     -webkit-transform: unset;
+       -moz-transform: unset;
         -ms-transform: unset;
+         -o-transform: unset;
             transform: unset;
     color: #000;
     text-align: right;
@@ -1497,7 +1608,9 @@
   #realme .power .power__wrap {
     position: unset;
     -webkit-transform: unset;
+       -moz-transform: unset;
         -ms-transform: unset;
+         -o-transform: unset;
             transform: unset;
     padding: 0 1em;
   }
