@@ -7,7 +7,6 @@
   overflow: hidden;
   background: #fff;
   position: relative;
-  counter-reset: numitm;
 }
 
 #personal-assistant img:hover {
@@ -46,7 +45,7 @@
   font-weight: bold;
 }
 
-#personal-assistant h3 {
+#personal-assistant h4 {
   font-size: 34px;
   margin: 0;
   padding-top: 0;
@@ -131,7 +130,17 @@ span.tx-uppercase {
   color: #000;
   text-align: left;
   font-weight: 500;
-  padding: 18px 0 85px 0;
+  padding: 18px 0 40px 0;
+}
+
+.personal-assistant-header__item-form {
+  padding: 0px 15px 25px 65px;
+}
+
+.personal-assistant-acordion__form {
+  display: table;
+  margin: 0 auto;
+  padding-top: 36px;
 }
 
 .personal-assistant-ticker {
@@ -291,6 +300,14 @@ span.tx-uppercase {
 
 .personal-assistant-forwhom__h2 {
   padding: 30px 15px 58px 64px;
+}
+
+.personal-assistant-forwhom__h2.nonedesk {
+  display: none;
+}
+
+.personal-assistant-forwhom__h2.visdesk {
+  display: block;
 }
 
 .personal-assistant-forwhom__content {
@@ -484,4 +501,381 @@ span.tx-uppercase {
 
 .personal-assistant-howitworks__num {
   padding-right: 28px;
+}
+
+.personal-assistant-acordion {
+  background: #F7FAFD;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+}
+
+.personal-assistant-acordion__flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.personal-assistant-acordion__item {
+  width: 100%;
+  padding: 53px 64px;
+  border-bottom: 1px solid #0101EF;
+}
+
+.personal-assistant-acordion__item:last-child {
+  border-bottom: 0px solid #0101EF;
+}
+
+.personal-assistant-acordion__item.flex-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+}
+
+.personal-assistant-acordion__img {
+  width: 70px;
+  height: auto;
+  margin-right: 32px;
+}
+
+.accordionbl {
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.active, .accordionbl:hover {
+  cursor: pointer;
+}
+
+.accordionbl.active {
+  padding-bottom: 16px;
+}
+
+.accordionbl:after {
+  content: '\002B';
+  color: #000000;
+  font-weight: bold;
+  float: right;
+  position: absolute;
+  right: 64px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border: 2px solid #000;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
+  -moz-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+  max-width: 620px;
+  line-height: 20px;
+}
+
+.personal-assistant-acordion_footer {
+  background: -webkit-gradient(linear, left top, right top, from(#FFF7EE), to(#EEF5FF));
+  background: -webkit-linear-gradient(left, #FFF7EE 0%, #EEF5FF 100%);
+  background: -moz-linear-gradient(left, #FFF7EE 0%, #EEF5FF 100%);
+  background: -o-linear-gradient(left, #FFF7EE 0%, #EEF5FF 100%);
+  background: linear-gradient(90deg, #FFF7EE 0%, #EEF5FF 100%);
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.personal-assistant-acordion__content {
+  padding: 56px 5px 31px 5px;
+}
+
+.personal-assistant-acordion__img-pos1, .personal-assistant-acordion__img-pos2, .personal-assistant-acordion__img-pos3 {
+  position: absolute;
+}
+
+.personal-assistant-acordion__img-pos1 {
+  left: 12%;
+  top: 12%;
+}
+
+.personal-assistant-acordion__img-pos2 {
+  right: 14%;
+  top: 21%;
+}
+
+.personal-assistant-acordion__img-pos3 {
+  bottom: -5px;
+  right: 25%;
+}
+
+.personal-assistant-acordion__h4 {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  #personal-assistant h2 {
+    font-size: 45px;
+  }
+  .personal-assistant-header__item-content {
+    padding: 35px 15px 25px 25px;
+  }
+  .personal-assistant-forwhom__h2 {
+    padding: 35px 15px 58px 25px;
+  }
+  .personal-assistant-forwhom__li {
+    margin-bottom: 20px;
+  }
+  .personal-assistant-forwhom__content {
+    padding: 42px 20px 42px 15px;
+  }
+  .personal-assistant-forwhom__item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0;
+       -moz-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
+  .personal-assistant-howitworks__item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0;
+       -moz-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
+  .personal-assistant-howitworks__flex {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+       -moz-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .personal-assistant-howitworks__content {
+    padding: 35px 15px 35px 25px;
+  }
+  .personal-assistant-howitworks__ul {
+    margin-top: 35px;
+  }
+  .personal-assistant-acordion__item {
+    padding: 35px 25px;
+  }
+  .personal-assistant-acordion__img-pos1 {
+    left: 0%;
+  }
+  .personal-assistant-acordion__img-pos2 {
+    right: 0%;
+  }
+}
+
+@media (max-width: 812px) {
+  #personal-assistant h2 {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  .personal-assistant-forwhom__h2 {
+    padding: 15px 15px 0 25px;
+  }
+  .personal-assistant-forwhom__h2.nonedesk {
+    display: block;
+  }
+  .personal-assistant-forwhom__h2.visdesk {
+    display: none;
+  }
+  .personal-assistant-forwhom__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+       -moz-box-orient: vertical;
+       -moz-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .personal-assistant-forwhom__ul {
+    max-width: 100%;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+       -moz-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .personal-assistant-forwhom__li {
+    width: 100%;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .personal-assistant-howitworks__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .personal-assistant-howitworks__ul {
+    max-width: 100%;
+  }
+  .panel {
+    padding: 0 80px 0 0;
+  }
+  .personal-assistant-howitworks__content {
+    padding: 15px 15px 35px 25px;
+  }
+  .personal-assistant-header__item-content {
+    padding: 15px 15px 25px 25px;
+  }
+  .personal-assistant-acordion__item {
+    padding: 25px 25px;
+  }
+  .personal-assistant-acordion__content {
+    padding: 25px 5px 31px 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .personal-assistant-header__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #personal-assistant h2 {
+    font-size: 34px;
+    line-height: 34px;
+  }
+  #personal-assistant h3 {
+    font-size: 18px;
+    max-width: 200px;
+  }
+  .personal-assistant-header {
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    margin: 0 0 0 0;
+  }
+  #personal-assistant .marginbtm {
+    margin-bottom: 4px;
+  }
+  .personal-assistant-header__item-content {
+    padding: 32px 20px 25px 20px;
+  }
+  .personal-assistant-forwhom__h2 {
+    padding: 24px 20px 0px 20px;
+  }
+  .personal-assistant-forwhom__content {
+    padding: 24px 20px 34px 20px;
+  }
+  .personal-assistant-forwhom__li {
+    margin-bottom: 8px;
+  }
+  .personal-assistant-howitworks__content {
+    padding: 25px 20px 35px 20px;
+  }
+  .personal-assistant-howitworks__ul {
+    margin-top: 24px;
+  }
+  .personal-assistant-howitworks__li {
+    margin-bottom: 8px;
+  }
+  .personal-assistant-acordion__item {
+    padding: 24px 20px;
+  }
+  .personal-assistant-acordion__item.flex-item .personal-assistant-acordion__item-acordion:first-child {
+    display: none;
+  }
+  .accordionbl {
+    text-align: left;
+  }
+  .accordionbl:after {
+    right: 20px;
+  }
+  .personal-assistant-acordion__h4 {
+    text-align: left;
+  }
+  .personal-assistant-acordion__content {
+    padding: 24px 20px 30px 20px;
+  }
+  .personal-assistant-acordion__img-pos1, .personal-assistant-acordion__img-pos2, .personal-assistant-acordion__img-pos3 {
+    display: none;
+  }
+  .personal-assistant-header__item-form {
+    padding: 0px 20px 25px 20px;
+  }
+  .personal-assistant-header__item-content .numberone {
+    padding: 18px 0 0px 0;
+  }
 }
