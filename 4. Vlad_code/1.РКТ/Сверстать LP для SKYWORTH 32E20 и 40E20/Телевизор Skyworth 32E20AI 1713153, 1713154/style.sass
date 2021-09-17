@@ -1,0 +1,127 @@
+/*default styles*/
+
+#skyworth
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 30px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#skyworth
+  .voice
+    .voice__title
+      text-align: center
+      padding: 1em
+      background-color: #f8f9fc
+    .voice__flex
+      display: flex
+      flex-direction: row
+      background-color: #f8f9fc
+      align-items: center
+      text-align: center
+      padding: 0 80px
+      >div
+        max-width: 50%
+        box-sizing: border-box
+      .voice__txt
+        padding-left: 80px
+  .blue__txt
+    text-transform: uppercase
+    color: #388ddd
+    display: block
+    margin-top: 0.5em
+    font-size: 16px
+
+  .voice__reverse
+    .voice__flex
+      flex-direction: row-reverse
+      .voice__txt
+        padding-left: unset
+        padding-right: 80px
+  .voice__black
+    color: #fff
+    .voice__title
+      background-color: #050f18
+    .voice__flex
+      background-color: #050f18
+  .voice__blue
+    .voice__title
+      background-color: #beebf7
+    .voice__flex
+      background-color: #beebf7
+  .voice__white
+    .voice__title
+      background-color: #fff
+    .voice__flex
+      background-color: #fff
+  .voice__gray
+    .voice__title
+      background-color: #c8c8d3
+    .voice__flex
+      background-color: #c8c8d3
+  .voice__cream
+    .voice__title
+      background-color: #e2e1dd
+    .voice__flex
+      background-color: #e2e1dd
+  .skyworth
+    text-align: center
+    .skyworth__title
+      padding: 1em
+      background-color: #f8f9fc
+
+//media*********************************************
+
+@media (max-width: 812px)
+  #skyworth .voice .voice__flex
+    flex-direction: column
+    padding: 2em
+    >div
+      max-width: 100%
+  #skyworth .voice .voice__flex .voice__txt
+    padding: 2em
+
+@media (max-width: 320px)
+  #skyworth .voice .voice__flex
+    padding: 1em
+  #skyworth .voice .voice__flex .voice__txt
+    padding: 1em 0
