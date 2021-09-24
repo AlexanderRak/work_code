@@ -1,6 +1,30 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
 <style>
 
 </style>
+
+<div id="myModal" class="modal">
+   <div class="modal-content">
+      <div class="modal-headerflex">
+         <div class="modal-headerflex__item">
+            <div class="modal-headerflex__text">
+               <h2>Супер!</h2>
+               <p>Персональный помощник скоро позвонит вам</p>
+            </div>
+         </div>
+         <div class="modal-headerflex__item">
+            <img src="https://cdn.comfy.ua/media/x/img2/Rectangle_248.png" alt="">
+            <div class="posimg">
+               <img src="https://cdn.comfy.ua/media/x/img2/Rectangle.png" alt="">
+            </div>
+         </div>
+
+      </div>
+      <span class="close">&times;</span>
+   </div>
+</div>
 
 <div id="personal-assistant">
 
@@ -12,7 +36,50 @@
                <span class="numberone">#НАМБЕРВАН по ремонтным хлопотам</span>
             </div>
             <div class="personal-assistant-header__item-form">
-               <img src="https://cdn.comfy.ua/media/x/img2/form1.png" alt="">
+               <div id="wrapper-form-corizoid" class="form-corizoid">
+                  <div id="form-submit-none">
+                     <form id="valid_form" method="post" name="valid_form">
+
+                        <div class="container-flex-form">
+                           <div class="row-flex-form">
+
+                              <div class="item_fr item_phone">
+                                 <input type="text" id="number_rw" name="younember" class="item-input-frm" minlength="10" maxlength="12" value="" required />
+                                 <p class="text_label">Номер телефона</p>
+                              </div>
+
+                              <div class="item_fr item_submit">
+                                 <input type="submit" class="submit-posgo item-input-frm item-input-frm__submit" value="Перезвоните мне" name="Submit" />
+                              </div>
+
+                           </div>
+                        </div>
+
+                     </form>
+                  </div>
+                  <div id="text-submit-block" class="text-submit-block-cl">
+                     <p>Супер! Персональный помощник скоро позвонит вам</p>
+                  </div>
+               </div>
+            </div>
+            <div class="personal-assistant-header__mes">
+               <div class="personal-assistant-header__mes-p">
+                  <p>Напишите вашему помощнику</p>
+               </div>
+               <div class="personal-assistant-header__mes-flex">
+                  <a id="chatBtn1" class="personal-assistant-header__mes__item js-siteheart-btn">
+                     <img src="https://cdn.comfy.ua/media/x/img2/1chat.png" alt="">
+                  </a>
+                  <a rel="nofollow" target="_blank" href="viber://pa?chatURI=comfy.ua&context=/purchases" class="personal-assistant-header__mes__item">
+                     <img src="https://cdn.comfy.ua/media/x/img2/2chat.png" alt="">
+                  </a>
+                  <a rel="nofollow" target="_blank" href="https://t.me/ComfyuaBot?start=purchases" class="personal-assistant-header__mes__item">
+                     <img src="https://cdn.comfy.ua/media/x/img2/3chat.png" alt="">
+                  </a>
+                  <a rel="nofollow" target="_blank" href="https://www.messenger.com/t/comfy.ua" class="personal-assistant-header__mes__item">
+                     <img src="https://cdn.comfy.ua/media/x/img2/4chat.png" alt="">
+                  </a>
+               </div>
             </div>
          </div>
          <div class="personal-assistant-header__item">
@@ -156,7 +223,7 @@
                         <div class="personal-assistant-howitworks__num-itm nonbefort">3</div>
                      </div>
                      <div class="personal-assistant-howitworks__p">
-                        <p>У вас становится меньше головной боли</p>
+                        <p>Освобождаетесь от забот</p>
                      </div>
                   </div>
                </div>
@@ -164,7 +231,8 @@
          </div>
          <div class="personal-assistant-howitworks__item">
             <div class="personal-assistant-howitworks__img">
-               <img src="https://cdn.comfy.ua/media/x/img2/persass/img8.png" alt="">
+               <!-- <img src="https://cdn.comfy.ua/media/x/img2/persass/img8.png" alt=""> -->
+               <img src="https://cdn.comfy.ua/media/x/img2/img.png" alt="">
             </div>
          </div>
       </div>
@@ -185,7 +253,7 @@
             </div>
             <div class="personal-assistant-acordion__item-acordion">
                <button class="accordionbl">
-                  <h3>Персонального ассистента</h3>
+                  <h3>Персонального помощника</h3>
                </button>
                <div class="panel">
                   <p>Он помогает вам по всем вопросам: выбрать лучший товар по вашим параметрам, узнает о скидке, брони товара, организует доставку, хранение товара и прочее.</p>
@@ -218,7 +286,7 @@
                   <h3>Контроль доставки</h3>
                </button>
                <div class="panel">
-                  <p>Ваш ассистент согласует время доставки под разные этапы ремонта, чтобы удобно и последовательно заставлять вашу квартиру товарами.</p>
+                  <p>Ваш ассистент согласует время доставки под разные этапы ремонта, чтобы удобно и последовательно обставлять вашу квартиру товарами.</p>
                </div>
             </div>
          </div>
@@ -261,7 +329,50 @@
             <h4>Почувствуйте насколько это удобно </h4>
          </div>
          <div class="personal-assistant-acordion__form">
-            <img src="https://cdn.comfy.ua/media/x/img2/form2.png" alt="">
+            <div id="wrapper-form-corizoid" class="form-corizoid">
+               <div id="form-submit-none2">
+                  <form id="valid_form2" method="post" name="valid_form2">
+
+                     <div class="container-flex-form">
+                        <div class="row-flex-form row-flex-form__footer">
+
+                           <div class="item_fr item_phone">
+                              <input type="text" id="number_rw2" name="younember2" class="item-input-frm frm2footer" minlength="10" maxlength="12" value="" required />
+                           </div>
+
+                           <div class="item_fr item_submit item_submit__footer">
+                              <input type="submit" class="submit-posgo item-input-frm item-input-frm__submit btn2footer" value="Перезвоните мне" name="Submit" />
+                           </div>
+
+                        </div>
+                     </div>
+
+                  </form>
+               </div>
+
+               <div id="text-submit-block2" class="text-submit-block-cl">
+                  <p>Супер! Персональный помощник скоро позвонит вам</p>
+               </div>
+            </div>
+         </div>
+         <div class="personal-assistant-header__mes mes__fooer">
+            <div class="personal-assistant-header__mes-p">
+               <p>Напишите вашему помощнику</p>
+            </div>
+            <div class="personal-assistant-header__mes-flex">
+               <a id="chatBtn1" class="personal-assistant-header__mes__item js-siteheart-btn">
+                  <img src="https://cdn.comfy.ua/media/x/img2/1chat.png" alt="">
+               </a>
+               <a rel="nofollow" target="_blank" href="viber://pa?chatURI=comfy.ua&context=/purchases" class="personal-assistant-header__mes__item">
+                  <img src="https://cdn.comfy.ua/media/x/img2/2chat.png" alt="">
+               </a>
+               <a rel="nofollow" target="_blank" href="https://t.me/ComfyuaBot?start=purchases" class="personal-assistant-header__mes__item">
+                  <img src="https://cdn.comfy.ua/media/x/img2/3chat.png" alt="">
+               </a>
+               <a rel="nofollow" target="_blank" href="https://www.messenger.com/t/comfy.ua" class="personal-assistant-header__mes__item">
+                  <img src="https://cdn.comfy.ua/media/x/img2/4chat.png" alt="">
+               </a>
+            </div>
          </div>
          <div class="personal-assistant-acordion__img-pos1">
             <img src="https://cdn.comfy.ua/media/x/img2/persass/img16.png" alt="">
@@ -276,6 +387,76 @@
    </div>
 
 </div>
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<div id="block-prod">
+   <div class="block-prod__h2">
+      <h2>Просмотренные товары</h2>
+   </div>
+   <div class="block-prod__slider">
+      {{block type="core/template" template="viewed_products/viewed_products.phtml"}}
+   </div>
+   <div class="your-class-arrow"></div>
+</div>
+
+<script type="text/javascript">
+   function funonload() {
+      $(document).ready(function () {
+         $('.viewed-products__list').slick({
+            dots: false,
+            arrows: true,
+            // prevArrow: $('.slick-prev'),
+            // nextArrow: $('.slick-next'),
+            appendArrows: $('.your-class-arrow'),
+            prevArrow: '<button id="prev" type="button" class="slick-prev"></button>',
+            nextArrow: '<button id="next" type="button" class="slick-next"></button>',
+            infinite: false,
+            centerMode: false,
+            centerPadding: '0',
+            slidesToShow: 5,
+            slidesToScroll: 6,
+            responsive: [
+               {
+                  breakpoint: 1025,
+                  settings: {
+                     arrows: true,
+                     centerMode: false,
+                     centerPadding: '0',
+                     slidesToShow: 4,
+                     slidesToScroll: 4,
+                  }
+               },
+               {
+                  breakpoint: 812,
+                  settings: {
+                     arrows: true,
+                     centerMode: false,
+                     centerPadding: '0',
+                     slidesToShow: 3,
+                     slidesToScroll: 3,
+                  }
+               },
+               {
+                  breakpoint: 480,
+                  settings: {
+                     arrows: true,
+                     centerMode: false,
+                     centerPadding: '0',
+                     slidesToShow: 1,
+                     slidesToScroll: 1,
+                  }
+               }
+            ]
+         });
+      });
+   }
+   window.onload = funonload;
+</script>
 
 <script>
    var acc = document.getElementsByClassName("accordionbl");
@@ -293,3 +474,173 @@
       });
    }
 </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script> -->
+
+<script>
+
+   $(document).ready(function () {
+      $("fieldset input").click(function () {
+         $("fieldset label.error").remove()
+      });
+
+      $("#valid_form").validate({
+         rules: {
+            younember: {
+               required: true,
+               // number: true,
+               minlength: 10,
+               maxlength: 17
+            }
+         },
+         messages: {
+            younember: {
+               required: "Обезательное поле.",
+               // number: "Укажите номер.",
+               minlength: "В поле должно быть минимум 10 символов",
+               maxlength: "В поле должно быть максимум 17 символов"
+            }
+         },
+         errorPlacement: function (error, element) {
+            // if (element.attr("name") == "yourname") error.insertAfter($("input[name=yourname]"));
+            // if (element.attr("name") == "yourcity") error.insertAfter($("input[name=yourcity]"));
+            if (element.attr("name") == "younember") error.insertAfter($("input[name=younember]"));
+            // if (element.attr("name") == "yourmail") error.insertAfter($("input[name=yourmail]"));
+         },
+         submitHandler: function (form) {
+            function sendAjaxForm(result_form, ajax_form) {
+               let people = {
+                  numbertel: ''
+                  // email: '',
+                  // sity: '',
+                  // yourname_rw: '',
+                  // log_radio: ''
+               };
+               people.numbertel = $('#number_rw').val();
+               // people.email = $('#email_rw').val();
+               // people.sity = $('#city_rw').val();
+               // people.yourname_rw = $('#yourname_rw').val();
+               // people.log_radio = $('#log_radio_text').text();
+               $.ajax({
+                  url: "https://main.corezoid.comfy.ua/api/1/json/public/9266/cd236be14ac7e8255110259dd2e702cc9cc675bd",
+                  headers: {
+                     'Content-Type': 'application/x-www-form-urlencoded'
+                  },
+                  type: "POST", //метод отправки
+                  dataType: "json", //формат данных
+                  data: JSON.stringify(people), // Сеарилизуем объект
+                  success: console.log('done')
+               });
+               var none_form = document.getElementById("form-submit-none").style.display = "none";
+               var block_text = document.getElementById("text-submit-block").style.display = "block";
+               var none_form2 = document.getElementById("form-submit-none2").style.display = "none";
+               var block_text2 = document.getElementById("text-submit-block2").style.display = "block";
+            }
+            sendAjaxForm();
+            popupmodel();
+         }
+      });
+   })
+
+   $(function () {
+      $("#number_rw").mask("+38(999)999-99-99");
+   });
+
+</script>
+
+<script>
+
+   $(document).ready(function () {
+      $("fieldset input").click(function () {
+         $("fieldset label.error").remove()
+      });
+
+      $("#valid_form2").validate({
+         rules: {
+            younember2: {
+               required: true,
+               // number: true,
+               minlength: 10,
+               maxlength: 17
+            }
+         },
+         messages: {
+            younember2: {
+               required: "Обезательное поле.",
+               // number: "Укажите номер.",
+               minlength: "В поле должно быть минимум 10 символов",
+               maxlength: "В поле должно быть максимум 17 символов"
+            }
+         },
+         errorPlacement: function (error, element) {
+            if (element.attr("name") == "younember2") error.insertAfter($("input[name=younember2]"));
+         },
+         submitHandler: function (form) {
+            function sendAjaxForm(result_form, ajax_form) {
+               let people = {
+                  numbertel: ''
+               };
+               people.numbertel = $('#number_rw2').val();
+               $.ajax({
+                  url: "https://main.corezoid.comfy.ua/api/1/json/public/9266/cd236be14ac7e8255110259dd2e702cc9cc675bd",
+                  headers: {
+                     'Content-Type': 'application/x-www-form-urlencoded'
+                  },
+                  type: "POST",
+                  dataType: "json",
+                  data: JSON.stringify(people),
+                  success: console.log('done')
+               });
+               var none_form = document.getElementById("form-submit-none").style.display = "none";
+               var block_text = document.getElementById("text-submit-block").style.display = "block";
+               var none_form2 = document.getElementById("form-submit-none2").style.display = "none";
+               var block_text2 = document.getElementById("text-submit-block2").style.display = "block";
+            }
+            sendAjaxForm();
+            popupmodel();
+         }
+      });
+   })
+
+   $(function () {
+      $("#number_rw2").mask("+38(999)999-99-99");
+   });
+
+</script>
+
+<script>
+   function popupmodel() {
+      var modal = document.getElementById("myModal");
+      var span = document.getElementsByClassName("close")[0];
+      modal.style.display = "block";
+      span.onclick = function () {
+         modal.style.display = "none";
+      }
+      window.onclick = function (event) {
+         if (event.target == modal) {
+            modal.style.display = "none";
+         }
+      }
+   }
+</script>
+
+<!-- <script>
+   window.senderCallback = function() {
+     SenderWidget.init({
+       companyId: "i421547123",
+       lang: "uk"
+     });
+   }
+ </script>
+ <script>
+   (function(d, s, id) {
+     var js, fjs = d.getElementsByTagName(s)[0];
+     js = d.createElement(s);
+     js.id = id;
+     js.src = "https://widget.corezoid.comfy.ua/build/init.js";
+     fjs.parentNode.insertBefore(js, fjs, 'sender-widget');
+   })(document, 'script');
+ </script> -->
+ 

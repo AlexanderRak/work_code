@@ -24,6 +24,7 @@
       line-height: 1
       font-weight: bold
       line-height: 120px
+      display: block
    h3
       font-size: 32px
       margin: 0
@@ -156,7 +157,6 @@ span.tx-uppercase
    background-attachment: fixed
    background-position: bottom center
    background-repeat: no-repeat
-   // background-size: cover
    height: 800px
    max-width: 1024px
    margin: 0 auto
@@ -178,14 +178,15 @@ span.tx-uppercase
    padding: 100px 15px 75px 15px
 .apple13-text-cont__h2
    text-align: center
-   &.color1bg
-      background: linear-gradient(90deg, #82045F 0%, #FD7EA9 100%)
-      -webkit-background-clip: text
-      -webkit-text-fill-color: transparent
-   &.color2bg
-      background: linear-gradient(90deg, #F5C242 0%, #EA334B 100%)
-      -webkit-background-clip: text
-      -webkit-text-fill-color: transparent
+   h2
+      &.color1bg
+         background: linear-gradient(90deg, #82045F 0%, #FD7EA9 100%)
+         -webkit-background-clip: text
+         -webkit-text-fill-color: transparent
+      &.color2bg
+         background: linear-gradient(90deg, #F5C242 0%, #EA334B 100%)
+         -webkit-background-clip: text
+         -webkit-text-fill-color: transparent
 .apple13-text-cont__p
    text-align: center
    padding: 32px 0
@@ -267,21 +268,11 @@ span.tx-uppercase
    position: relative
    max-width: 1920px
    margin: 0 auto
-   height: 900px
    overflow: hidden
-.apple13-parallax2__container-bgrd
-   background-image: url(https://cdn.comfy.ua/media/x/img2/apple13/img10.png)
-   background-attachment: fixed
-   background-position: bottom center
-   background-repeat: no-repeat
-   // background-size: cover
-   height: 900px
-   max-width: 940px
-   margin: 0 auto
-   bottom: 0
-   position: absolute
-   left: 0
-   right: 0
+.apple13-parallax2__img
+   padding-top: 60px
+   img
+      margin: 0 auto !important
 .apple13-parallax2__h2
    text-align: center
    h2
@@ -352,11 +343,167 @@ span.tx-uppercase
       padding: 0 35px
    .apple13-watch
       padding-bottom: 100px
-   .apple13-parallax2
-      height: 950px
-   .apple13-parallax2__container-bgrd
-      height: 950px
+@media (max-width: 1024px)
+   #apple13
+      h2
+         font-size: 45px
+         line-height: 60px
+      h3
+         font-size: 25px
+   .apple13-advantage__content-h3
+      padding: 20px 0 15px 0
+   .apple13-advantage__content.content__pdd1
+      padding: 25px 20px 25px 25px
+   .apple13-advantage__content.content__pdd2
+      padding: 25px 20px 25px 25px
+   .apple13-advantage
+      padding-bottom: 50px
+   .apple13-parallax__h2
+      padding-top: 100px
+   .apple13-parallax
+      height: 740px
+   .apple13-text-cont__container
+      padding: 50px 25px 50px 25px
+   .apple13-watch__container-gridbl__item
+      padding: 25px 25px 25px 25px
+   .apple13-watch__container-grid
+      grid-template-columns: 1fr
+   .videoblock.videoblock__move2
+      max-width: 350px
+   .videoblock.videoblock__move3
+      max-width: 100%
+   .apple13-ipadbl__container-flex
+      flex-direction: column
+   .apple13-parallax2__content
+      padding-top: 35px
+   .apple13-footer__item.pdditm1
+      padding: 25px 25px 25px 25px
+   .apple13-watch
+      padding-bottom: 50px
+   .apple13-ipadbl
+      margin-bottom: 50px
+   .apple13-parallax__container-bgrd
       background-attachment: inherit
-// @media (max-width: 1024px)
-// @media (max-width: 812px)
-// @media (max-width: 480px)
+      background-size: contain
+   .apple13-watch__container-gridbl__item__img
+      height: auto
+@media (max-width: 812px)
+   #apple13
+      h2
+         font-size: 37px
+         line-height: 50px
+      h3
+         font-size: 25px
+   .apple13-advantage__container-grid
+      grid-gap: 25px
+   .apple13-parallax
+      height: 600px
+   .apple13-parallax__container-bgrd
+      height: 600px
+   .apple13-parallax__h2
+      padding-top: 50px
+   .videoblock.videoblock__move3
+      max-width: 80%
+   .apple13-ipadbl__container-flex__img
+      max-width: 550px
+   .apple13-footer__container-grid
+      grid-template-columns: 1fr
+      grid-gap: 25px
+   .apple13-watch__container-grid
+      grid-gap: 25px
+   .apple13-watch__container-gridbl.gridbl-temp1
+      grid-template-columns: 1fr
+      margin-bottom: 25px
+   .apple13-watch__container-gridbl.gridbl-temp2
+      grid-template-columns: 1fr
+   .apple13-watch__container-gridbl
+      grid-gap: 25px
+   .apple13-watch__container-gridbl__item__img
+      height: auto
+@media (max-width: 480px)
+   #apple13
+      h2
+         font-size: 40px
+         line-height: 56px
+      h3
+         font-size: 24px
+      p
+         font-size: 18px
+      a
+         width: 100%
+         font-size: 18px
+         padding: 14px 0
+   .apple13-header__h2
+      padding-right: 0px
+      max-width: 325px
+   .apple13-header__h2::after
+      width: 30px
+      height: 30px
+      right: 22%
+      top: 79%
+   .apple13-header__flex
+      padding: 0 15px 0 15px
+      flex-direction: column
+   .apple13-header__text
+      padding-top: 100px
+      text-align: center
+   .apple13-header__text .apple13-header__p
+      text-align: center
+      padding: 16px 0 32px 0
+   .apple13-header__text a
+      margin: 0 auto
+   .apple13-advantage__container-grid.grid-temp1
+      grid-template-columns: 1fr
+   .apple13-advantage__container-grid.grid-temp2
+      grid-template-columns: 1fr
+   .apple13-advantage__container-grid
+      grid-gap: 20px
+   .apple13-advantage__content.content__pdd1
+      padding: 32px 15px 40px 15px
+   .apple13-advantage__content span
+      position: absolute
+      top: 40px
+      right: 15px
+   .apple13-advantage__content
+      position: relative
+   .apple13-advantage
+      padding-bottom: 100px
+   .apple13-parallax__container-bgrd
+      height: 400px
+   .apple13-parallax__h2
+      padding-top: 40px
+   .apple13-parallax
+      height: 400px
+   .apple13-text-cont__a
+      display: block
+   .apple13-advantage__container-grid.grid-temp1
+      margin-bottom: 20px
+   .apple13-advantage__content.content__pdd2
+      padding: 32px 15px 40px 15px
+   .apple13-text-cont__container
+      padding: 100px 25px 50px 25px
+   .apple13-text-cont__p.pddbl0text
+      padding: 24px 0 32px 0
+   .videoblock.videoblock__move2
+      max-width: 263px
+   .apple13-watch__container-grid
+      grid-gap: 20px
+   .apple13-watch__container-gridbl__item
+      padding: 32px 15px 40px 15px
+   .apple13-watch__container-gridbl__item__img
+      height: auto
+   .apple13-ipadbl__container-flex
+      padding: 0 15px
+   .videoblock.videoblock__move3
+      max-width: 100%
+   .apple13-ipadbl__container-flex__text
+      padding: 32px 0 16px 0
+      align-items: stretch
+   .apple13-parallax2__content
+      padding: 100px 15px 0 15px
+   .apple13-parallax2__a
+      display: block
+   .apple13-footer__item.pdditm1
+      padding: 32px 15px 40px 15px
+   .apple13-footer__item.pdditm2
+      padding: 32px 15px 40px 15px

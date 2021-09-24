@@ -57,6 +57,8 @@ span.tx-uppercase
    padding-right: 0
 .main-container_gray
    background: #fff
+.breadcrumbs
+   display: none
 // default
 
 .personal-assistant-header
@@ -81,11 +83,11 @@ span.tx-uppercase
       font-weight: 500
       padding: 18px 0 40px 0
 .personal-assistant-header__item-form
-   padding: 0px 15px 25px 65px
+   padding: 0px 15px 55px 65px
 .personal-assistant-acordion__form
    display: table
    margin: 0 auto
-   padding-top: 36px
+   padding-top: 60px
 .personal-assistant-ticker
    background: linear-gradient(90deg, #FFF7EE 0%, #EEF5FF 100%)
    border-radius: 8px
@@ -244,6 +246,36 @@ span.tx-uppercase
    width: 70px
    height: auto
    margin-right: 32px
+.personal-assistant-header__mes
+   padding: 0 15px 0 65px
+   position: relative
+   z-index: 28
+.personal-assistant-header__mes-p
+   padding-bottom: 20px
+.personal-assistant-header__mes-flex
+   display: flex
+   flex-wrap: nowrap
+   flex-direction: row
+   align-items: flex-start
+   justify-content: space-between
+   max-width: 280px
+.personal-assistant-header__mes__item
+   border-radius: 50%
+   transition: .3s
+   &:hover
+      cursor: pointer
+   &:nth-child(1)
+      &:hover
+         box-shadow: 0 0 20px 0px #2a731e
+   &:nth-child(2)
+      &:hover
+         box-shadow: 0 0 20px 0px #680bba
+   &:nth-child(3)
+      &:hover
+         box-shadow: 0 0 20px 0px #0088ab
+   &:nth-child(4)
+      &:hover
+         box-shadow: 0 0 20px 0px #00abff
 // acordion
 .accordionbl
    transition: 0.4s
@@ -299,21 +331,301 @@ span.tx-uppercase
 .personal-assistant-acordion__img-pos3
    bottom: -5px
    right: 25%
+   z-index: 10
 .personal-assistant-acordion__h4
    text-align: center
    position: relative
    z-index: 2
 // acordion END
+/* form default css */
+#wrapper-form-corizoid
+   display: block
+   margin: 0 auto
+   position: relative
+   z-index: 9
+#wrapper-form-corizoid form div.error, #wrapper-form-corizoid form label.error
+   left: 15px
+   display: block
+   position: relative
+   margin: 4px 4px 4px 0px
+#form-submit-none, #form-submit-none2
+   display: block
+#text-submit-block, #text-submit-block2
+   display: none
+   p
+      font-size: 18px !important
+.row-flex-form
+   display: grid
+   grid-template-columns: 215px 1fr
+   grid-gap: 15px
+   width: 100%
+   &.row-flex-form__footer
+      grid-template-columns: 264px 1fr
+      grid-gap: 24px
+.text_label
+   font-weight: normal
+   font-size: 14px !important
+   color: #000
+   position: absolute
+   left: 12px
+   top: -8px
+   background: #f7fafd
+   padding: 0 5px
+.row-flex-form .item_fr.item_phone
+   padding: 0
+   position: relative
+.row-flex-form .item_fr .item-input-frm
+   font-size: 14px
+   margin: 0
+   padding: 1.2rem 1.7rem
+   border-radius: 10px
+   text-align: left
+   background: transparent
+   line-height: 1
+   height: 50px
+   border: 1px solid #000
+   width: 100%
+   font-weight: bold
+   letter-spacing: 0.5px
+.row-flex-form .item_fr .item-input-frm:focus
+   border: 1px solid #43B02A
+.row-flex-form .item_fr .item-input-frm:focus ~ .text_label
+   color: #43B02A
+.row-flex-form .item_fr .item-input-frm.error
+   border: 1px solid #FF090B
+.row-flex-form .item_fr .item-input-frm.error ~ .text_label
+   color: #FF090B
+.row-flex-form .item_fr .item-input-frm.valid
+   border: 1px solid #43B02A
+.row-flex-form .item_fr .item-input-frm.valid ~ .text_label
+   color: #43B02A
+.item-input-frm::-webkit-input-placeholder
+   color: #fff
+.item_fr.item_submit
+   max-width: 154px
+.row-flex-form .item_fr .item-input-frm.item-input-frm__submit
+   transition: .3s
+   color: #fff
+   width: 100%
+   border: 0
+   background: #43B02A
+   border-radius: 10px
+   text-align: center
+   font-weight: bold
+   font-size: 14px
+   box-shadow: 0px 10px 32px rgba(67, 176, 42, 0.24)
+   letter-spacing: 0
+.row-flex-form .item_fr .item-input-frm.item-input-frm__submit:hover
+   background: #58C73E
+   cursor: pointer
+.row-flex-form .item_fr .item-input-frm.item-input-frm__submit:active
+   background: #43B02A
+   cursor: pointer
+#tvij-personalnij-pomichnik .text-submit-block-cl p
+   font-size: 25px
+   color: #fff
+   text-transform: uppercase
+/* form default css END */
+/* form 2 default css */
+.row-flex-form .item_fr .item-input-frm.frm2footer
+   height: 88px
+   background: #FFFFFF
+   border: 1px solid #BDCCDE
+   box-sizing: border-box
+   box-shadow: 0px 10px 32px rgba(96, 125, 139, 0.08)
+   border-radius: 16px
+   font-size: 20px
+   // color: #BDCCDE
+   color: #000
+.row-flex-form .item_fr .item-input-frm.item-input-frm__submit.btn2footer
+   height: 88px
+   background: linear-gradient(113.94deg, #52C538 5.72%, #43B02A 85.56%)
+   box-shadow: 0px 10px 32px rgba(96, 125, 139, 0.16)
+   border-radius: 16px
+   font-size: 20px
+.row-flex-form .item_fr .item-input-frm.item-input-frm__submit.btn2footer:hover
+   box-shadow: 0px 10px 32px rgba(96, 125, 139, 16%)
+.item_fr.item_submit.item_submit__footer
+   max-width: 202px
+/* form 2 default css END*/
+/* pop up */
+.modal
+   display: none
+   position: fixed
+   z-index: 9999
+   left: 0
+   top: 0
+   width: 100%
+   height: 100%
+   overflow: auto
+   background: rgba(0, 0, 0, 0.8)
+.modal-content
+   position: relative
+   margin: auto
+   max-width: 450px
+   background: #fff
+   box-shadow: 0px 8px 24px -10px rgba(0, 0, 0, 0.32)
+   border-radius: 8px
+   animation-name: animatetop
+   animation-duration: 0.4s
+   overflow: hidden
+   top: 50%
+   transform: translateY(-50%)
+@keyframes animatetop
+   from
+      top: -50%
+      opacity: 0
+
+   to
+      top: 50%
+      opacity: 1
+#myModal
+   .modal-headerflex
+      display: flex
+      align-items: center
+   .modal-headerflex__item
+      &:first-child
+         width: 70%
+      &:last-child
+         width: 30%
+         z-index: 4
+         background: radial-gradient(191.83% 102.67% at 101.56% 100%, #1B730A 0%, #43B02A 100%), #C4C4C4
+         .posimg
+            position: absolute
+            right: 0
+            bottom: -4px
+            z-index: 5
+   .modal-headerflex__text
+      padding: 55px 40px
+      h2
+         font-weight: bold
+         font-size: 34px
+         text-align: left
+         padding-bottom: 16px
+      p
+         font-size: 18px
+         font-weight: normal
+         text-align: left
+.close
+   color: #fff
+   font-size: 30px
+   position: absolute
+   right: 15px
+   top: 5px
+   z-index: 22
+   line-height: 1
+   transition: .3s
+   &:hover, &:focus
+      text-decoration: none
+      cursor: pointer
+.chat-popover-btn
+   display: none !important
+/* pop up END */
+.personal-assistant-header__mes.mes__fooer
+   padding: 50px 20px 0 20px
+   .personal-assistant-header__mes-p
+      text-align: center
+   .personal-assistant-header__mes-flex
+      margin: 0 auto
+// slick
+#block-prod
+   max-width: 1366px
+   margin: 0 auto
+#block-prod h2
+   font-size: 26px
+   margin: 0
+   padding-top: 0
+   line-height: 1
+   text-align: inherit
+   font-weight: bold
+#block-prod .block-prod__h2
+   padding-top: 1.2rem
+   border-bottom: 1px solid #e5e5e5
+   padding-bottom: 25px
+#block-prod .viewed-products__list
+   margin: 20px 0 0
+#block-prod .viewed-products__item
+   border-top: 0
+#block-prod .block-prod__slider
+   margin: 0 40px
+#block-prod .viewed-products__left
+   max-width: 20rem
+   max-height: 20rem
+   margin: 0 auto
+#block-prod .viewed-products__center
+   width: 100%
+   margin-right: auto
+   margin-left: 0
+   margin-top: 2.4rem
+#block-prod .viewed-products__right
+   display: none
+#block-prod .viewed-products__item
+   padding: 2.2rem 2rem
+#block-prod .viewed-products__btn
+   margin-left: 5px
+#block-prod .viewed-products__price-btn
+   justify-content: space-between
+// END slick
+// slick
+#block-prod
+   position: relative
+   .your-class-arrow
+      display: block
+      .slick-prev, .slick-next
+         background: #E5E5E5
+         width: 33px
+         height: 33px
+         position: absolute
+         z-index: 8
+         display: inline-block !important
+         transition: .3s
+         border-radius: 50%
+         &::before
+            width: 10px
+            height: 15px
+            border-radius: 50%
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            color: #fff
+            font-size: 13px
+            line-height: 1.2
+            left: 1px
+            right: 0
+            margin: 0 auto
+         &:hover
+            cursor: pointer
+         &.slick-disabled
+            opacity: 0.5
+            &::before
+               background: #E5E5E5
+      .slick-prev
+         left: 5px
+         top: 50%
+         transform: translateY(-50%)
+         &::before
+            content: url(https://cdn.comfy.ua/media/x/img2/str-left.svg)
+      .slick-next
+         right: 5px
+         top: 50%
+         transform: translateY(-50%)
+         &::before
+            content: url(https://cdn.comfy.ua/media/x/img2/str-right.svg)
+// END slick prev next
 // media
 // @media (max-width: 1250px)
 @media (max-width: 1024px)
    #personal-assistant
       h2
          font-size: 45px
+   #block-prod .viewed-products__item
+      padding: 2.2rem 1rem
    .personal-assistant-header__item-content
       padding: 35px 15px 25px 25px
    .personal-assistant-forwhom__h2
       padding: 35px 15px 58px 25px
+   #block-prod .block-prod__h2
+      padding-left: 25px
    .personal-assistant-forwhom__li
       margin-bottom: 20px
    .personal-assistant-forwhom__content
@@ -334,10 +646,18 @@ span.tx-uppercase
       left: 0%
    .personal-assistant-acordion__img-pos2
       right: 0%
+   .personal-assistant-header__item-form
+      padding: 0px 15px 25px 25px
+   .personal-assistant-header__mes
+      padding: 0 15px 25px 25px
+   .personal-assistant-acordion__img-pos3
+      right: 18%
 @media (max-width: 812px)
    #personal-assistant h2
       font-size: 40px
       line-height: 45px
+   #block-prod .viewed-products__price
+      font-size: 2rem
    .personal-assistant-forwhom__h2
       padding: 15px 15px 0 25px
       &.nonedesk
@@ -366,6 +686,17 @@ span.tx-uppercase
       padding: 25px 25px
    .personal-assistant-acordion__content
       padding: 25px 5px 31px 5px
+   .personal-assistant-acordion_footer
+      min-height: 370px
+   .personal-assistant-acordion__img-pos3
+      bottom: -5px
+      right: 7%
+   .personal-assistant-acordion__img-pos1
+      left: 0%
+      top: inherit
+      bottom: 10%
+   .personal-assistant-header__flex
+      align-items: flex-end
 @media (max-width: 480px)
    .personal-assistant-header__flex
       flex-direction: column
@@ -381,7 +712,7 @@ span.tx-uppercase
    #personal-assistant .marginbtm
       margin-bottom: 4px
    .personal-assistant-header__item-content
-      padding: 32px 20px 25px 20px
+      padding: 32px 20px 30px 20px
    .personal-assistant-forwhom__h2
       padding: 24px 20px 0px 20px
    .personal-assistant-forwhom__content
@@ -410,6 +741,65 @@ span.tx-uppercase
    .personal-assistant-acordion__img-pos1,.personal-assistant-acordion__img-pos2,.personal-assistant-acordion__img-pos3
       display: none
    .personal-assistant-header__item-form
-      padding: 0px 20px 25px 20px
+      padding: 0px 20px 32px 20px
    .personal-assistant-header__item-content .numberone
       padding: 18px 0 0px 0
+   .row-flex-form
+      grid-template-columns: 1fr
+      grid-gap: 24px
+      max-width: 215px
+      width: 100%
+      margin: 0 auto
+   .item_fr.item_submit
+      margin: 0 auto
+   .personal-assistant-acordion__form
+      display: block
+      margin: 0 auto
+      padding-top: 40px
+   .row-flex-form.row-flex-form__footer
+      grid-template-columns: 1fr
+      max-width: 280px
+   .modal-content
+      max-width: 290px
+   #myModal .modal-headerflex__item:first-child
+      width: 65%
+   #myModal .modal-headerflex__item:last-child
+      width: 55%
+   #myModal .modal-headerflex__text h2
+      font-size: 25px
+      padding-bottom: 10px
+   #myModal .modal-headerflex__text p
+      font-size: 15px
+   #myModal .modal-headerflex__item:last-child .posimg
+      max-width: 160px
+   #wrapper-form-corizoid form div.error, #wrapper-form-corizoid form label.error
+      top: 0
+   #myModal .modal-headerflex__text
+      padding: 25px 20px
+   .personal-assistant-header__mes
+      padding: 0 20px 25px 20px
+   .personal-assistant-header__mes-p
+      text-align: center
+   .personal-assistant-header__mes-flex
+      max-width: 250px
+      margin: 0 auto
+   .personal-assistant-header__item
+      margin: 0 auto
+   .personal-assistant-header__mes__item
+      max-width: 35px
+   .personal-assistant-header__mes.mes__fooer
+      padding: 45px 0 0 0
+      .personal-assistant-header__mes__item
+         max-width: 100%
+   .personal-assistant-header__mes.mes__fooer .personal-assistant-header__mes-flex
+      max-width: 390px
+   #block-prod .viewed-products-popup
+      display: none !important
+   #block-prod .block-prod__h2
+      padding-left: 20px
+   #block-prod h2
+      font-size: 21px
+   #block-prod .your-class-arrow .slick-prev
+      left: 20px
+   #block-prod .your-class-arrow .slick-next
+      right: 20px
