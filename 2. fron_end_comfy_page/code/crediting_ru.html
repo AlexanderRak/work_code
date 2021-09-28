@@ -90,38 +90,35 @@
 <div class="mobile-header js-mobile-header"><a class="mobile-header__link js-mobile-header__link" href="#"> <span class="mobile-header__content js-mobile-header__content"> </span> <span class="mobile-arrow"> </span> </a></div>
 <ul class="tabs-head js-slider-tabs hide" id="tabsHead">
   <li data-tab-id="#Credit" class="tabs-head-item js-tabs-item">
-    <p class="tabs-head-item__link"><span class="tabs-head-item__text">«Хапай кредит»</span></p>
+    <p class="tabs-head-item__link"><span class="tabs-head-item__text">Хапай кредит</span></p>
   </li>
   <li data-tab-id="#payPartMB" class="tabs-head-item js-tabs-item">
-    <p class="tabs-head-item__link"><span class="tabs-head-item__text">«Покупка частями»</span></p>
+    <p class="tabs-head-item__link"><span class="tabs-head-item__text">Покупка частями</span></p>
   </li>
   <li data-tab-id="#payPart" class="tabs-head-item js-tabs-item">
-    <p class="tabs-head-item__link"><span class="tabs-head-item__text">«Оплата частями»</span></p>
+    <p class="tabs-head-item__link"><span class="tabs-head-item__text">Оплата частями</span></p>
   </li>
   <li data-tab-id="#Akcent-Bank" class="tabs-head-item js-tabs-item">
-    <p class="tabs-head-item__link"><span class="tabs-head-item__text">«Плати частями»</span></p>
+    <p class="tabs-head-item__link"><span class="tabs-head-item__text">Плати частями</span></p>
   </li>
   <li data-tab-id="#instantCredit" class="tabs-head-item js-tabs-item">
     <p class="tabs-head-item__link"><span class="tabs-head-item__text">Мгновенный кредит</span></p>
   </li>
+  <li data-tab-id="#AlfaBank" class="tabs-head-item js-tabs-item">
+    <p class="tabs-head-item__link"><span class="tabs-head-item__text">Плата частями</span></p>
+  </li>
   <li data-tab-id="#General" class="tabs-head-item js-tabs-item">
     <p class="tabs-head-item__link"><span class="tabs-head-item__text">Общая информация</span></p>
   </li>
+
 </ul>
-<div class="control-container hide" id="ctlContainer"><a href="#" id="prev" class="control-btn control-btn__prev"></a>
-  <a href="#" id="next" class="control-btn control-btn__next"></a></div>
+<div class="control-container hide" id="ctlContainer">
+  <a href="#" id="prev" class="control-btn control-btn__prev"></a>
+  <a href="#" id="next" class="control-btn control-btn__next"></a>
+</div>
 <ul class="tabs-content" id="tabsContent">
   <li class="tabs-content-item js-tabs-item" id="payPartMB">
     <div class="cms-sidebar_credit">
-      <!--
-<div class="container form-wrapper">
-<h3>Доступная сумма покупок по сервису</h3>
-<h3>«Оплата частями»</h3>
-<p>Для получения доступной суммы покупок введите номер телефона:</p>
-<form id="phoneNumberForm" data-url="https://paypartslimit.privatbank.ua/pp-limit/limit" class="form_validation-process" novalidate="novalidate"> <input class="form__input-transparent" id="jsPhoneMask" placeholder="+38" type="tel"> <input class="btn btn_round btn_round-white" id="phoneSubmit" value="Узнать" type="submit"> </form>
-<div id="phoneStatusLabel" class="hide phone-status"></div>
-</div>
--->
       <div class="container">
         <h3>Условия</h3>
         <dl>
@@ -1325,4 +1322,64 @@
       </div>
     </section>
   </li>
+
+  <li id="AlfaBank" class="tabs-content-item js-tabs-item">
+    <div class="cms-sidebar_credit">
+      <div class="container">
+        <h3>Условия</h3>
+        <dl>
+          <dt>Первый взнос</dt>
+          <dd>отсутствует</dd>
+          <dt>Срок кредитования</dt>
+          <dd>до 12 платежей</dd>
+          <dt>Ежемесячная комиссия</dt>
+          <dd>0,01% в месяц от первоначальной стоимости товара</dd>
+          <dt>Минимальная сумма покупки</dt>
+          <dd>1000 грн</dd>
+          <dt>Максимальная сумма покупки</dt>
+          <dd>согласно Вашего лимита</dd>
+        </dl>
+      </div>
+    </div>
+    <section class="cms">
+      <div class="cms-content">
+        <style type="text/css">
+          .mono.logo_bank {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+          }
+
+          .mono.logo_bank img {
+            max-width: 100%;
+            height: auto;
+            margin-right: 15px;
+            margin-bottom: 15px;
+          }
+        </style>
+        <!-- <div class="mono logo_bank"><img src="https://comfy.ua/media/x/img/a-bank-plati.png" /></div> -->
+        <h3>«Плата Частями» от АО Альфа-Банка - это кредит под 0,01% годовых на срок до 12 месяцев с ежемесячным погашением равными частями на весь срок кредита.</h3>
+        <p>Для оформления «Платы Частями» от АО Альфа-Банка клиенту необходимо:</p>
+        <ul>
+          <li>быть клиентом и иметь активную кредитную карту Альфа-банка;</li>
+          <li>иметь при себе телефон, который подвязан к карте банка;</li>
+          <li>иметь кредитный лимит на карте Альфа-банка.</li>
+        </ul>
+        <h3>Как получить карту?</h3>
+        <p>Виртуальную карточку можно легко оформить дистанционно в приложении АО «Альфа-банка» «Sense SuperApp», в любой точке кредитования АО «Альфа-Банка» или в отделении банка</p>
+        <p><b>Преимущества:</b></p>
+        <ul>
+          <li>для оформления кредита не нужно иметь при себе кредитную карточку, ИНН, паспорт;</li>
+          <li>простота оформления: выбрал товар от 1000 грн - подтвердил оформления в ответном смс-сообщении на запрос Банка - завершил покупку на кассе;</li>
+          <li>1-й платеж списывается через месяц после оформления кредита!</li>
+        </ul>
+        <p>Актуальные условия сервиса размещены на сайте АО «Альфа-банка» по ссылке (<a rel="nofollow" target="_blank" href="https://alfabank.ua/ru/private-persons/credits/legka-rozstrochka">Альфа-Банк</a>)</p>
+        <p><b>Горячая линия АО «Альфа-банка»:</b></p>
+        <p>0 800 50 20 50 - Для звонков по Украине (бесплатно)</p>
+        <p>3344 - бесплатно с мобильного</p>
+      </div>
+    </section>
+  </li>
+
 </ul>
