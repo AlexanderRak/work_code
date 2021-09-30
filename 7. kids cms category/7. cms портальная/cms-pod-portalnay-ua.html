@@ -1,58 +1,6 @@
-<style>
-   .portal-tile__wrap .portal-tile__title-container {
-      color: #C0E714;
-      background: #8818C4;
-      padding: 20px;
-      border: 4px solid #8818C4;
-   }
-
-   .portal-tile__wrap .portal-tile_5col .portal-tile__item {
-      padding: 2.4rem 0 3rem;
-   }
-
-   .portal-tile__wrap .portal-tile_5col .portal-tile__title {
-      margin-bottom: 0;
-      margin-top: 0;
-      padding: 0;
-      background: transparent;
-      color: #C0E714;
-      font-size: 18px;
-   }
-
-   .portal-tile__wrap .portal-list {
-      padding: 20px;
-   }
-
-   .portal-tile__wrap .portal-list__link {
-      position: relative;
-      padding-left: 15px
-   }
-
-   .portal-tile__wrap .portal-list__link::before {
-      content: "";
-      width: 4px;
-      height: 4px;
-      background: #8818C4;
-      transform: rotate(-45deg) translateY(-50%);
-      position: absolute;
-      left: 0;
-      top: 50%;
-   }
-
-   @media (max-width: 1024px) {
-      .portal-tile__wrap .portal-list__link::before {
-         display: none;
-      }
-
-      .portal-tile__wrap .portal-tile_5col .portal-tile__item {
-         padding: 0 0 3rem 0;
-         overflow: hidden;
-      }
-   }
-</style>
-
-<div class="category-portal portal-tile__wrap">
-   <ul class="portal-tile portal-tile_5col">
+<div class="category-portal">
+   <h1 class="category-portal__title">Іграшки для малюків{{widget type="oggetto_directory/widget_city"}}</h1>
+   <ul class="portal-tile">
 
       <li class="portal-tile__item">
          <a href="#" class="portal-tile__link">
@@ -63,9 +11,6 @@
                <img alt="Іграшки та творчість" src="https://cdn.comfy.ua/media/x/img2/portalimgkids/img1.png" class="portal-tile__img" />
             </div>
          </a>
-         <!-- <ul class="portal-list">
-            <li class="portal-list__item"> <a href="" class="portal-list__link"> тест </a> </li>
-         </ul> -->
       </li>
 
       <li class="portal-tile__item">
@@ -77,9 +22,6 @@
                <img alt="Настільні ігри та пазли" src="https://cdn.comfy.ua/media/x/img2/portalimgkids/img2.png" class="portal-tile__img" />
             </div>
          </a>
-         <!-- <ul class="portal-list">
-            <li class="portal-list__item"> <a href="" class="portal-list__link"> тест </a> </li>
-         </ul> -->
       </li>
 
       <li class="portal-tile__item">
@@ -91,10 +33,6 @@
                <img alt="Ляльки і пупси" src="https://cdn.comfy.ua/media/x/img2/portalimgkids/img3.png" class="portal-tile__img" />
             </div>
          </a>
-
-         <!-- <ul class="portal-list">
-            <li class="portal-list__item"> <a href="" class="portal-list__link"> тест </a> </li>
-         </ul> -->
       </li>
 
       <li class="portal-tile__item">
@@ -106,9 +44,6 @@
                <img alt="Конструктори" src="https://cdn.comfy.ua/media/x/img2/portalimgkids/img4.png" class="portal-tile__img" />
             </div>
          </a>
-         <!-- <ul class="portal-list">
-            <li class="portal-list__item"> <a href="" class="portal-list__link"> тест </a> </li>
-         </ul> -->
       </li>
 
       <li class="portal-tile__item">
@@ -120,9 +55,6 @@
                <img alt="Lego" src="https://cdn.comfy.ua/media/x/img2/portalimgkids/img5.png" class="portal-tile__img" />
             </div>
          </a>
-         <!-- <ul class="portal-list">
-            <li class="portal-list__item"> <a href="" class="portal-list__link"> тест </a> </li>
-         </ul> -->
       </li>
 
       <li class="portal-tile__item">
@@ -134,9 +66,6 @@
                <img alt="Творчість і розвиток" src="https://cdn.comfy.ua/media/x/img2/portalimgkids/img6.png" class="portal-tile__img" />
             </div>
          </a>
-         <!-- <ul class="portal-list">
-            <li class="portal-list__item"> <a href="" class="portal-list__link"> тест </a> </li>
-         </ul> -->
       </li>
 
       <li class="portal-tile__item">
@@ -148,9 +77,6 @@
                <img alt="Іграшковий транспорт" src="https://cdn.comfy.ua/media/x/img2/portalimgkids/img7.png" class="portal-tile__img" />
             </div>
          </a>
-         <!-- <ul class="portal-list">
-            <li class="portal-list__item"> <a href="" class="portal-list__link"> тест </a> </li>
-         </ul> -->
       </li>
 
       <li class="portal-tile__item">
@@ -162,9 +88,6 @@
                <img alt="Інтерактивні іграшки" src="https://cdn.comfy.ua/media/x/img2/portalimgkids/img8.png" class="portal-tile__img" />
             </div>
          </a>
-         <!-- <ul class="portal-list">
-            <li class="portal-list__item"> <a href="" class="portal-list__link"> тест </a> </li>
-         </ul> -->
       </li>
 
       <li class="portal-tile__item">
@@ -176,9 +99,6 @@
                <img alt="Фігурки і роботи" src="https://cdn.comfy.ua/media/x/img2/portalimgkids/img9.png" class="portal-tile__img" />
             </div>
          </a>
-         <!-- <ul class="portal-list">
-            <li class="portal-list__item"> <a href="" class="portal-list__link"> тест </a> </li>
-         </ul> -->
       </li>
 
       <li class="portal-tile__item">
@@ -190,9 +110,6 @@
                <img alt="Іграшкова зброя" src="https://cdn.comfy.ua/media/x/img2/portalimgkids/img10.png" class="portal-tile__img" />
             </div>
          </a>
-         <!-- <ul class="portal-list">
-            <li class="portal-list__item"> <a href="" class="portal-list__link"> тест </a> </li>
-         </ul> -->
       </li>
 
       <li class="portal-tile__item">
@@ -204,9 +121,6 @@
                <img alt="Книги" src="https://cdn.comfy.ua/media/x/img2/portalimgkids/img11.png" class="portal-tile__img" />
             </div>
          </a>
-         <!-- <ul class="portal-list">
-            <li class="portal-list__item"> <a href="" class="portal-list__link"> тест </a> </li>
-         </ul> -->
       </li>
 
       <li class="portal-tile__item">
@@ -218,9 +132,6 @@
                <img alt="Активні ігри" src="https://cdn.comfy.ua/media/x/img2/portalimgkids/img12.png" class="portal-tile__img" />
             </div>
          </a>
-         <!-- <ul class="portal-list">
-            <li class="portal-list__item"> <a href="" class="portal-list__link"> тест </a> </li>
-         </ul> -->
       </li>
 
       <li class="portal-tile__item">
@@ -232,9 +143,6 @@
                <img alt="Радіокеровані іграшки" src="https://cdn.comfy.ua/media/x/img2/portalimgkids/img13.png" class="portal-tile__img" />
             </div>
          </a>
-         <!-- <ul class="portal-list">
-            <li class="portal-list__item"> <a href="" class="portal-list__link"> тест </a> </li>
-         </ul> -->
       </li>
 
       <li class="portal-tile__item">
@@ -246,9 +154,6 @@
                <img alt="М'які іграшки" src="https://cdn.comfy.ua/media/x/img2/portalimgkids/img14.png" class="portal-tile__img" />
             </div>
          </a>
-         <!-- <ul class="portal-list">
-            <li class="portal-list__item"> <a href="" class="portal-list__link"> тест </a> </li>
-         </ul> -->
       </li>
 
       <li class="portal-tile__item">
@@ -260,9 +165,6 @@
                <img alt="Сюжетно-рольові ігри" src="https://cdn.comfy.ua/media/x/img2/portalimgkids/img15.png" class="portal-tile__img" />
             </div>
          </a>
-         <!-- <ul class="portal-list">
-            <li class="portal-list__item"> <a href="" class="portal-list__link"> тест </a> </li>
-         </ul> -->
       </li>
 
       <li class="portal-tile__item">
@@ -274,9 +176,6 @@
                <img alt="Дитячі ігрові комплекси" src="https://cdn.comfy.ua/media/x/img2/portalimgkids/img16.png" class="portal-tile__img" />
             </div>
          </a>
-         <!-- <ul class="portal-list">
-            <li class="portal-list__item"> <a href="" class="portal-list__link"> тест </a> </li>
-         </ul> -->
       </li>
 
    </ul>
