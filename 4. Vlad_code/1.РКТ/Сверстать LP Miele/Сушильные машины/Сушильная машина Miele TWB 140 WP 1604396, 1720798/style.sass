@@ -1,0 +1,86 @@
+/*default styles*/
+
+#miele
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 32px
+    font-weight: normal
+    text-transform: uppercase
+    padding: 0
+    margin: 0 0 0.5em 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    margin: unset
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#miele
+  .miele__list
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      >div
+        max-width: 50%
+        box-sizing: border-box
+      .miele__txt
+        text-align: center
+        padding: 3em
+        width: 100%
+        p
+          display: block
+          margin-top: 0.5em
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+        margin: 1em 0
+
+//media***********************************************
+
+@media (max-width: 812px)
+  #miele .miele__list li
+    display: block
+    >div
+      max-width: 100%
+    .miele__img
+      img
+        margin: 0 auto
+
+@media (max-width: 480px)
+  #miele h2
+    font-size: 24px
+  #miele .miele__list li .miele__txt
+    padding: 1em
