@@ -1,0 +1,112 @@
+/*default styles*/
+
+#apple
+  max-width: 100%
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    font-size: 24px
+    line-height: 40px
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: 40px
+    font-size: 50px
+    font-weight: 700
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.breadcrumbs
+  display: none
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#apple
+  .apple__bg
+    height: 808px
+    background-image: url("https://cdn.comfy.ua/media/x/img/apple-new2021/bg.jpeg")
+    background-position: center
+    background-repeat: no-repeat
+    position: relative
+    .apple__block__button
+      color: #fff
+      background: rgba(0, 0, 0, 0.5)
+      border-radius: 20px
+      text-align: center
+      max-width: max-content
+      width: 100%
+      padding: 32px
+      position: absolute
+      right: 50%
+      transform: translateX(50%)
+      bottom: 122px
+      box-sizing: border-box
+      a
+        line-height: 40px
+        display: block
+        color: #fff
+        text-decoration: none
+        font-size: 24px
+        font-weight: 700
+        padding: 8px 16px
+        background: #43B02A
+        border-radius: 12px
+        max-width: max-content
+        transition: all 0.3s
+        margin: 0 auto
+        &:hover
+          background: #3c9c26
+      p
+        display: block
+        margin: 20px 0
+
+//media***************************
+
+@media (max-width: 480px)
+  #apple .apple__bg
+    height: 676px
+    background-size: cover
+  #apple .apple__bg .apple__block__button
+    bottom: 74px
+    padding: 32px 22px
+    border-radius: unset
+    max-width: 100%
+    a
+      font-size: 18px
+  #apple h2
+    font-size: 30px
+  #apple p
+    font-size: unset
+
+@media (max-width: 320px)
+  #apple h2
+    font-size: 26px
