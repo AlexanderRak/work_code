@@ -26,6 +26,9 @@
    padding: 0
    max-width: 570px
    margin: 0 0 0 auto
+.mobile-header__link
+   width: 100%
+   text-align: center
 // #crediting_wrap-header END
 #crediting_wrap
    display: block
@@ -53,6 +56,12 @@
          font-size: 16px
          color: #379424
          font-weight: bold
+      &.color-orange
+         font-size: 16px
+         color: #FF671F
+         font-weight: bold
+      &.color-orangetxt
+         color: #FF671F
    h1
       font-size: 48px
    h2
@@ -78,9 +87,9 @@
 span.word-wrap
    display: block
    word-wrap: break-word
-span.word-wrap-mob
-   display: block
-   word-wrap: break-word
+// span.word-wrap-mob
+//    display: block
+//    word-wrap: break-word
 span.fw-bold
    font-weight: bold
 span.tx-uppercase
@@ -106,6 +115,8 @@ span.tx-uppercase
    margin-left: 15px
 #crediting_wrap .cms-sidebar_credit p
    margin: 0
+.color-orangetxt
+   color: #FF671F
 // default
 .crediting__wrap-flex
    display: flex
@@ -124,6 +135,12 @@ span.tx-uppercase
       .tabs-head-item__link
          border: 1px solid #c1b6b6
          border-radius: 8px
+#crediting_wrap .tabs-head-item
+   &:hover
+      cursor: pointer
+   &._active
+      &:hover
+         cursor: auto   
 #crediting_wrap .tabs-head-item._active .tabs-head-item__link
    border: 1px solid #43B02A
    border-radius: 8px
@@ -183,17 +200,10 @@ span.tx-uppercase
    display: grid
    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
    grid-gap: 15px
-// .crediting__bank-item
-//    flex: 1 1 135px
-//    max-width: 135px
-//    margin-right: 10px
-//    &:last-child
-//       margin-right: 0
 .crediting__bank-cont-flex
    display: flex
    align-items: center
    justify-content: flex-start
-   background: #FFFFFF
    border-radius: 8px
    padding: 8px
    min-height: 42px
@@ -317,7 +327,7 @@ span.tx-uppercase
    border-radius: 8px
 .crediting__conditions-text-left
    max-width: 270px
-   padding-right: 16px
+   padding-right: 10px
 .crediting__general-info-wrap
    background: #FFFFFF
    border-radius: 8px
@@ -802,3 +812,5 @@ span.i_icon_4
       padding: 16px 0 0 0
    #crediting_wrap .cms-sidebar_credit input[type=submit]
       font-size: 1.5rem
+   body.overfloy-body
+      overflow: inherit
