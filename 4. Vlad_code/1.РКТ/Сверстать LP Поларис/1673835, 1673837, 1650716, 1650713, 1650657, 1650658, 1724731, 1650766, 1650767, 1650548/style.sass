@@ -1,0 +1,777 @@
+/*default styles*/
+
+#polaris
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    margin: unset
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#polaris
+  .show__mob
+    display: none
+  .collection
+    position: relative
+    .collection__wrap
+      position: absolute
+      padding: 55px 80px 70px 80px
+      color: #fff
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 100%
+      box-sizing: border-box
+      .collection__row
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        .collection__icons
+          display: flex
+          flex-direction: row
+          img
+            &:nth-of-type(2)
+              margin-left: 1em
+      .collection__txt
+        p
+          text-transform: uppercase
+          font-size: 20px
+          text-align: justify
+          strong
+            display: block
+            font-size: 23px
+            margin-bottom: 0.5em
+
+  .kit
+    position: relative
+    .kit__logo
+      position: absolute
+      padding: 60px 0 0 80px
+      box-sizing: border-box
+    .kit__txt
+      color: #fff
+      li
+        position: absolute
+        span
+          text-transform: uppercase
+          border-bottom: 2px solid #fff
+          font-size: 18px
+          padding-right: 1em
+        &:nth-of-type(1)
+          top: 220px
+          left: 400px
+        &:nth-of-type(2)
+          top: 200px
+          left: 610px
+        &:nth-of-type(3)
+          top: 150px
+          right: 280px
+          display: flex
+          flex-direction: column
+          align-items: flex-end
+          span
+            padding-right: 0
+            max-width: max-content
+            &:nth-of-type(2)
+              margin: 1em 0
+        &:nth-of-type(4)
+          left: 80px
+          bottom: 60px
+        &:nth-of-type(5)
+          left: 280px
+          bottom: 60px
+          span
+            width: 300%
+  .pan
+    background-image: url("https://cdn.comfy.ua/media/x/img/1673835/bg-all.jpg")
+    background-size: cover
+    background-position: center left
+    .pan__flex
+      display: flex
+      flex-direction: row
+      .pan__img
+        max-width: 590px
+        color: #fff
+        display: flex
+        flex-direction: column
+        img
+          &:nth-of-type(1)
+            padding: 60px 0 30px 80px
+            box-sizing: border-box
+            max-width: max-content
+          &:nth-of-type(2)
+            margin: auto 0 0 0
+        span
+          text-transform: uppercase
+          display: block
+          font-size: 18px
+          padding-left: 80px
+      .pan__txt
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        .pan__list
+          color: #fff
+          margin-right: 3em
+          padding: 20px 0
+          li
+            span
+              display: block
+              text-transform: uppercase
+              font-size: 22px
+              text-align: right
+              &::after
+                content: ""
+                display: block
+                width: 150px
+                height: 2px
+                background: #fff
+                margin: 0.5em 0 0 auto
+            p
+              text-align: right
+              font-size: 21px
+              display: block
+              margin-top: 1em
+            img
+              margin: 0 0 0 auto
+            &:nth-of-type(n+2)
+              margin-top: 1em
+        .pan__txt__img
+          width: 100%
+          max-width: 440px
+
+  .stewpot
+    background-image: url("https://cdn.comfy.ua/media/x/img/1673835/bg-all.jpg")
+    background-size: cover
+    background-position: center left
+    position: relative
+    .stewpot__flex
+      display: flex
+      flex-direction: row
+      .stewpot__col
+        color: #fff
+        max-width: 50%
+        width: 50%
+        span
+          text-transform: uppercase
+          font-size: 22px
+          display: block
+          text-align: right
+        p
+          font-size: 22px
+          display: block
+          text-align: right
+        &:nth-of-type(1)
+          padding-bottom: 2em
+          img
+            &:nth-of-type(1)
+              padding: 60px 0 0 80px
+            &:nth-of-type(2)
+              position: absolute
+              bottom: 0
+          .stewpot__list
+            li
+              img
+                margin: 0 0 1em auto
+              &:nth-of-type(n+2)
+                margin-top: 2em
+        &:nth-of-type(2)
+          margin-left: -2em
+          .stewpot__col__txt
+            margin-top: 2em
+            max-width: max-content
+            float: right
+            padding-right: 2em
+            margin-bottom: -2em
+            p
+              text-transform: uppercase
+              text-align: left
+
+  .scoop
+    background-image: url("https://cdn.comfy.ua/media/x/img/1673835/bg-all.jpg")
+    background-size: cover
+    background-position: center left
+    .scoop__list
+      display: flex
+      flex-direction: row
+      color: #fff
+      li
+        &:nth-of-type(1)
+          img
+            &:nth-of-type(1)
+              padding: 60px 0 40px 80px
+            &:nth-of-type(2)
+              margin-top: -7em
+          span
+            font-size: 22px
+            text-transform: uppercase
+            display: block
+            padding-left: 80px
+            &::after
+              content: ""
+              display: block
+              width: 100px
+              height: 2px
+              background: #fff
+              margin: 0.5em 0 0 0
+            &:nth-of-type(2)
+              margin-top: 1em
+        &:nth-of-type(2)
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          padding-top: 60px
+          .scoop__list__txt
+            align-self: flex-end
+            p
+              text-transform: uppercase
+              display: block
+              font-size: 18px
+        &:nth-of-type(3)
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          padding-top: 60px
+          .scoop__list__txt
+            align-self: flex-end
+            padding-right: 80px
+            margin-bottom: 40px
+            text-align: center
+            span
+              text-transform: uppercase
+              display: block
+              font-size: 22px
+              &::after
+                content: ""
+                display: block
+                width: 100px
+                height: 2px
+                background: #fff
+                margin: 0.5em auto 0 auto
+
+  .kettle
+    background-image: url("https://cdn.comfy.ua/media/x/img/1673835/bg-all.jpg")
+    background-size: cover
+    background-position: center left
+    .kettle__list
+      display: flex
+      flex-direction: row
+      color: #fff
+      justify-content: space-between
+      li
+        .kettle__list__txt
+          position: relative
+          padding-left: 80px
+          padding-bottom: 40px
+          span
+            text-transform: uppercase
+            font-size: 22px
+            &:nth-of-type(n+2)
+              margin-top: 1em
+            &::after
+              content: ""
+              display: block
+              width: 150px
+              height: 2px
+              background: #fff
+              margin: 0.5em 0 0 0
+            &:nth-of-type(3)
+              &::after
+                display: none
+        &:nth-of-type(1)
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          position: relative
+          img
+            &:nth-of-type(1)
+              position: absolute
+            &:nth-of-type(2)
+              position: relative
+              padding: 60px
+              padding-left: 80px
+        &:nth-of-type(3)
+          position: relative
+          padding-top: 60px
+          img
+            position: absolute
+            bottom: 0
+            right: 0
+          .kettle__list__txt
+            position: relative
+            z-index: 10
+            padding-left: 0
+            padding-right: 80px
+            span
+              text-align: right
+              &::after
+                margin: 0.5em 0 0 auto
+              &:nth-of-type(3)
+                &::after
+                  display: block
+
+  .termocup
+    background-image: url("https://cdn.comfy.ua/media/x/img/1673835/bg-all.jpg")
+    background-size: cover
+    background-position: center left
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    color: #fff
+    li
+      &:nth-of-type(1)
+        padding-top: 60px
+        padding-left: 80px
+        display: flex
+        flex-direction: row
+        .termocup__col
+          &:nth-of-type(1)
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            p
+              display: block
+              font-size: 18px
+              text-transform: uppercase
+              padding-bottom: 60px
+          &:nth-of-type(2)
+            text-align: right
+            span
+              display: block
+              text-transform: uppercase
+              font-size: 22px
+              &:nth-of-type(n+2)
+                margin-top: 1em
+              &::after
+                content: ""
+                display: block
+                width: 100px
+                height: 2px
+                background: #fff
+                margin: 0.5em 0 0 auto
+
+  .quality
+    background-image: url("https://cdn.comfy.ua/media/x/img/1673835/bg-all.jpg")
+    background-size: cover
+    background-position: center left
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    color: #fff
+    li
+      p
+        font-size: 15px
+        display: block
+        text-transform: uppercase
+      &:nth-of-type(1)
+        padding: 60px 0 60px 80px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        img
+          &:nth-of-type(2)
+            max-width: max-content
+      &:nth-of-type(2)
+        padding: 60px 0
+        margin-right: -8em
+        span
+          display: block
+          text-transform: uppercase
+          font-size: 22px
+          &:nth-of-type(n+2)
+            margin-top: 1em
+          &::after
+            content: ""
+            display: block
+            width: 100px
+            height: 2px
+            background: #fff
+            margin: 0.5em 0 0 0
+      &:nth-of-type(3)
+        display: flex
+        flex-direction: row
+        justify-content: flex-end
+        align-items: flex-end
+        img
+          &:nth-of-type(1)
+            padding-bottom: 60px
+            margin-right: -2em
+
+//media**********************************************
+
+@media (max-width: 1024px)
+  #polaris .kit .kit__txt li:nth-of-type(1)
+    top: 160px
+  #polaris .kit .kit__txt li:nth-of-type(3)
+    right: 80px
+  #polaris .kit .kit__txt li:nth-of-type(2)
+    top: 160px
+  #polaris .kit .kit__txt li:nth-of-type(4)
+    bottom: 20px
+  #polaris .kit .kit__txt li:nth-of-type(5)
+    bottom: 20px
+  #polaris .kit .kit__txt li:nth-of-type(5) span
+    width: 150%
+  #polaris .pan .pan__flex .pan__img
+    max-width: 30%
+  #polaris .pan .pan__flex .pan__txt .pan__list
+    margin-right: 1em
+    margin-left: 1em
+  #polaris .stewpot .stewpot__flex .stewpot__col:nth-of-type(2) .stewpot__col__txt
+    margin-bottom: 0
+  #polaris .stewpot .stewpot__flex .stewpot__col:nth-of-type(1) .stewpot__list
+    position: relative
+    z-index: 10
+  #polaris .kettle .kettle__list li:nth-of-type(2)
+    display: flex
+    justify-content: center
+    align-items: center
+  #polaris .termocup li:nth-of-type(1) .termocup__col:nth-of-type(1)
+    max-width: 30%
+  #polaris .termocup li:nth-of-type(1)
+    padding-top: 1em
+    padding-left: 2em
+  #polaris .termocup li:nth-of-type(1) .termocup__col:nth-of-type(2) span:nth-of-type(n+2)
+    margin-top: 0.5em
+  #polaris .quality li:nth-of-type(1)
+    margin-right: 1em
+    padding-top: 1em
+    padding-left: 1em
+    padding-bottom: 1em
+    width: 30%
+  #polaris .scoop .scoop__list li:nth-of-type(1)
+    width: 56%
+  #polaris .quality li:nth-of-type(2)
+    margin-right: 1em
+    span
+      font-size: 18px
+  #polaris .quality li:nth-of-type(3) img:nth-of-type(1)
+    margin-right: -7em
+    z-index: 10
+
+@media (max-width: 812px)
+  #polaris .quality li:nth-of-type(3) img:nth-of-type(1)
+    margin-right: -9em
+  #polaris .show__mob
+    display: block
+  #polaris .collection .collection__wrap
+    padding: 1em
+    box-sizing: border-box
+  #polaris .collection .collection__wrap .collection__txt p
+    font-size: 15px
+  #polaris .collection .collection__wrap .collection__txt p strong
+    font-size: 18px
+  #polaris .kit
+    background-image: url("https://cdn.comfy.ua/media/x/img/1673835/bg-all.jpg")
+    background-size: cover
+    background-position: center left
+  #polaris .kit .kit__bg
+    display: none
+  #polaris .kit .kit__txt li
+    position: unset
+  #polaris .kit .kit__logo
+    position: unset
+    padding: 1em
+    img
+      margin: 0 auto
+  #polaris .kit .kit__txt
+    display: flex
+    flex-direction: row
+    overflow-x: scroll
+    padding: 0 1em
+    box-sizing: border-box
+    li
+      min-width: 160px
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      img
+        margin-top: 1em
+      &:nth-of-type(n+2)
+        margin-left: 1em
+      &:nth-of-type(3)
+        justify-content: center
+        align-items: center
+        min-width: 400px
+        margin-left: -5em
+      &:nth-of-type(4)
+        min-width: 300px
+        img
+  #polaris .kit .kit__txt li span
+    text-align: center !important
+    padding: 0 !important
+  #polaris .kit .kit__txt li:nth-of-type(5) span
+    width: unset
+  #polaris .pan .pan__flex
+    display: block
+  #polaris .pan .pan__flex .pan__img
+    max-width: 100%
+  #polaris .pan .pan__flex .pan__img img:nth-of-type(1),
+  #polaris .pan .pan__flex .pan__img span
+    padding: 1em
+    margin: 0 auto
+  #polaris .pan .pan__flex .pan__txt
+    align-items: center
+  #polaris .pan .pan__flex .pan__txt .pan__list
+    max-width: 50%
+    width: 50%
+  #polaris .pan .pan__flex .pan__img img:nth-of-type(2)
+    display: none
+  #polaris .pan .pan__flex .pan__txt .pan__list li span
+    font-size: 18px
+  #polaris .pan .pan__flex .pan__txt .pan__list li p
+    font-size: unset
+  #polaris .stewpot .stewpot__flex
+    display: block
+  #polaris .stewpot .stewpot__flex .stewpot__col
+    width: 100%
+    max-width: 100%
+  #polaris .stewpot .stewpot__flex .stewpot__col:nth-of-type(1) img:nth-of-type(1)
+    padding: 1em
+    margin: 0 auto
+  #polaris .stewpot .stewpot__flex .stewpot__col:nth-of-type(1) .stewpot__list
+    max-width: 100%
+    margin: 0 auto
+  #polaris .stewpot .stewpot__flex .stewpot__col:nth-of-type(1) img:nth-of-type(2)
+    display: none
+  #polaris .stewpot .stewpot__flex .stewpot__col p
+    text-align: center
+    padding: 0 4em
+    font-size: unset
+    br
+      display: none
+  #polaris .stewpot .stewpot__flex .stewpot__col span
+    text-align: center
+    padding: 0 4em
+    font-size: 18px
+    br
+      display: none
+  #polaris .stewpot .stewpot__flex .stewpot__col:nth-of-type(1) .stewpot__list li img
+    margin: 0 auto
+  #polaris .stewpot .stewpot__flex .stewpot__col:nth-of-type(2)
+    margin-left: unset
+    img
+      margin: 0 auto
+  #polaris .scoop .scoop__list
+    flex-wrap: wrap
+  #polaris .scoop .scoop__list li:nth-of-type(1)
+    width: 100%
+  #polaris .scoop .scoop__list li:nth-of-type(1) img:nth-of-type(1)
+    padding: 1em
+    margin: 0 auto
+  #polaris .scoop .scoop__list li:nth-of-type(1) span
+    padding-left: 1em
+    text-align: center
+    font-size: 18px
+    position: relative
+    br
+      display: none
+  #polaris .scoop .scoop__list li:nth-of-type(1) span::after
+    margin: 0.5em auto 0 auto
+  #polaris .scoop .scoop__list li:nth-of-type(2)
+    width: 100%
+    max-width: 50%
+    align-items: center
+    padding-top: 1em
+  #polaris .scoop .scoop__list li:nth-of-type(2) .scoop__list__txt
+    text-align: center
+    margin: 0 auto
+  #polaris .scoop .scoop__list li:nth-of-type(3)
+    width: 100%
+    max-width: 50%
+    padding-top: 1em
+  #polaris .scoop .scoop__list li:nth-of-type(2) .scoop__list__txt p
+    font-size: 15px
+  #polaris .scoop .scoop__list li:nth-of-type(3) .scoop__list__txt span
+    font-size: 18px
+    text-align: center
+    br
+      display: none
+  #polaris .scoop .scoop__list li:nth-of-type(3) .scoop__list__txt
+    padding-right: 0
+  #polaris .scoop .scoop__list li:nth-of-type(1) img:nth-of-type(2)
+    margin-top: -12em
+  #polaris .kettle .kettle__list
+    display: block
+  #polaris .kettle .kettle__list li:nth-of-type(1)
+    display: block
+  #polaris .kettle .kettle__list li:nth-of-type(1) img:nth-of-type(2)
+    padding: 1em
+    margin: 0 auto
+  #polaris .kettle .kettle__list li .kettle__list__txt span
+    font-size: 18px
+    text-align: center
+  #polaris .kettle .kettle__list li .kettle__list__txt span::after
+    margin: 0.5em auto 0 auto
+  #polaris .kettle .kettle__list li .kettle__list__txt
+    padding-left: 0
+    padding-top: 2em
+  #polaris .kettle .kettle__list li:nth-of-type(2)
+    img
+      max-height: 400px
+  #polaris .kettle .kettle__list li:nth-of-type(3) .kettle__list__txt
+    padding: 1em 10em
+  #polaris .kettle .kettle__list li:nth-of-type(3) .kettle__list__txt span
+    text-align: center
+    br
+      display: none
+  #polaris .kettle .kettle__list li:nth-of-type(3) .kettle__list__txt span::after
+    margin: 0.5em auto 0 auto
+  #polaris .kettle .kettle__list li:nth-of-type(3)
+    padding-top: 1em
+  #polaris .termocup li:nth-of-type(1)
+    display: block
+  #polaris .termocup
+    li
+      flex: 1 1 0
+  #polaris .termocup li:nth-of-type(1)
+    padding: 1em
+  #polaris .termocup li:nth-of-type(1) .termocup__col:nth-of-type(1)
+    max-width: max-content
+    margin: 0 auto
+    text-align: center
+    img
+      padding-bottom: 2em
+  #polaris .termocup li:nth-of-type(1) .termocup__col:nth-of-type(2) span
+    font-size: 18px
+    text-align: center
+    br
+      display: none
+  #polaris .termocup li:nth-of-type(1) .termocup__col:nth-of-type(2) span::after
+    margin: 0.5em auto 0 auto
+  #polaris .termocup li:nth-of-type(1) .termocup__col:nth-of-type(1) p
+    padding-bottom: 1em
+  #polaris .termocup li:nth-of-type(2)
+    display: flex
+    align-items: flex-end
+    img
+      margin: 0 auto 0 0
+  #polaris .quality li:nth-of-type(2)
+    position: relative
+    z-index: 100
+  #polaris .collection .collection__bg img
+    min-width: 110%
+
+@media (max-width: 480px)
+  #polaris .collection .collection__wrap
+    position: unset
+    background: #000
+  #polaris .collection .collection__wrap .collection__txt p:nth-of-type(1)
+    text-align: left
+  #polaris .collection .collection__wrap .collection__txt
+    margin-top: 1em
+  #polaris .collection .collection__bg img
+    min-width: 200%
+    margin-left: -70%
+  #polaris .collection .collection__wrap .collection__row
+    flex-direction: column
+    .collection__logo
+      img
+        margin: 0 auto
+  #polaris .collection .collection__wrap .collection__row .collection__icons
+    img
+      flex: 1 1 0
+      max-width: 50%
+      width: 50%
+      margin: 0 !important
+      padding: 1em 0.5em 0.5em 0.5em
+      box-sizing: border-box
+  #polaris .pan .pan__flex .pan__txt
+    flex-direction: column
+  #polaris .pan .pan__flex .pan__txt .pan__list
+    max-width: 100%
+    width: 100%
+    padding: 1em
+    box-sizing: border-box
+  #polaris .pan .pan__flex .pan__txt .pan__list li span
+    text-align: center
+    br
+      display: none
+  #polaris .pan .pan__flex .pan__txt .pan__list li img
+    margin: 0 auto
+  #polaris .pan .pan__flex .pan__txt .pan__list li p
+    text-align: center
+  #polaris .pan .pan__flex .pan__txt .pan__list li span::after
+    margin: 0.5em auto 0 auto
+  #polaris .pan .pan__flex .pan__img img:nth-of-type(1)
+    max-width: 100%
+  #polaris .stewpot .stewpot__flex .stewpot__col:nth-of-type(1) img:nth-of-type(1)
+    max-width: 100%
+    box-sizing: border-box
+  #polaris .stewpot .stewpot__flex .stewpot__col p,
+  #polaris .stewpot .stewpot__flex .stewpot__col span
+    padding: 0 1em
+  #polaris .scoop .scoop__list li:nth-of-type(1) img:nth-of-type(1),
+  #polaris .kettle .kettle__list li:nth-of-type(1) img:nth-of-type(2)
+    box-sizing: border-box
+  #polaris .scoop .scoop__list li:nth-of-type(1) span
+    padding: 0 1em
+  #polaris .scoop .scoop__list li:nth-of-type(n+2)
+    width: 100%
+    max-width: 100%
+  #polaris .kettle .kettle__list li:nth-of-type(3) .kettle__list__txt
+    padding: 1em
+  #polaris .termocup
+    flex-direction: column
+  #polaris .quality
+    flex-direction: column
+  #polaris .quality li:nth-of-type(1)
+    max-width: 100%
+    width: 100%
+    box-sizing: border-box
+    padding: 1em
+    img
+      margin: 0 auto
+  #polaris .quality li:nth-of-type(2)
+    margin-right: 0
+    padding: 1em
+  #polaris .quality li:nth-of-type(2) span
+    text-align: center
+    br
+      display: none
+  #polaris .quality li:nth-of-type(2) span::after
+    margin: 0.5em auto 0 auto
+  #polaris .quality li:nth-of-type(3) img:nth-of-type(1)
+    margin-right: -12em
+  #polaris .kit .kit__txt li
+    min-width: 160px
