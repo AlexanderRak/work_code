@@ -1,0 +1,626 @@
+<style type="text/css">
+  #content_ex p:first-letter {
+    padding-left: 0;
+  }
+
+  #content_ex p {
+    margin-bottom: 0;
+  }
+
+  #content_ex img:hover {
+    opacity: 1;
+  }
+
+  #content_ex img {
+    opacity: 1;
+  }
+
+  #content_ex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  #content_ex .container h2 {
+
+    line-height: 4rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  #content_ex .container img {
+    max-width: 100%;
+    margin-bottom: 0rem;
+    max-height: 700px;
+  }
+
+  #content_ex .container p {
+    text-align: center;
+    margin: 15px 0 25px 0;
+  }
+
+  #content_ex .container .container_li_item {
+    text-align: left;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list {
+    padding-left: 1.4rem;
+    margin: 3rem 0rem 3rem 0rem;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list li {
+    position: relative;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list li:before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -1.3rem;
+    border-radius: 50%;
+    width: .5rem;
+    height: .5rem;
+    background-color: #379424;
+  }
+
+  #content_ex ul {
+    padding-left: 15px;
+  }
+
+  #content_ex ul li {
+    list-style-type: disc;
+  }
+
+  .small {
+    max-width: 350px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small2 {
+    max-width: 600px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small3 {
+    max-width: 350px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small4 {
+    max-width: 390px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small5 {
+    max-width: 700px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .col_fl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    height: auto;
+  }
+
+  .col_fl .item6 {
+    flex: 1 1 0;
+  }
+
+  .col_fl .item6 img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .col_fl .item6 img {
+    max-height: 437px !important;
+    height: auto;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .col_fl {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .col_fl .item6 {
+      flex: 1;
+    }
+  }
+</style>
+
+<div id="content_ex">
+  <div class="container">
+    <style type="text/css">
+      #content_ex p:first-letter {
+        padding-left: 0;
+      }
+
+      #content_ex p {
+        margin-bottom: 0;
+      }
+
+      #content_ex img:hover {
+        opacity: 1;
+      }
+
+      #content_ex img {
+        opacity: 1;
+      }
+
+      #content_ex {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      #content_ex .container h2 {
+
+        line-height: 4rem;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      #content_ex .container img {
+        max-width: 100%;
+        margin-bottom: 0rem;
+        max-height: 700px;
+      }
+
+      #content_ex .container p {
+        text-align: center;
+        margin: 15px 0 25px 0;
+      }
+
+      #content_ex .container .container_li_item {
+        text-align: left;
+      }
+
+      #content_ex .container .container_li_item ul.container_li_item_list {
+        padding-left: 1.4rem;
+        margin: 3rem 0rem 3rem 0rem;
+      }
+
+      #content_ex .container .container_li_item ul.container_li_item_list li {
+        position: relative;
+      }
+
+      #content_ex .container .container_li_item ul.container_li_item_list li:before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: -1.3rem;
+        border-radius: 50%;
+        width: .5rem;
+        height: .5rem;
+        background-color: #379424;
+      }
+
+      #content_ex ul {
+        padding-left: 15px;
+      }
+
+      #content_ex ul li {
+        list-style-type: disc;
+      }
+
+      .small {
+        max-width: 350px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .small2 {
+        max-width: 600px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .small3 {
+        max-width: 350px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .small4 {
+        max-width: 390px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .small5 {
+        max-width: 700px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .col_fl {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        width: 100%;
+        height: auto;
+      }
+
+      .col_fl .item6 {
+        flex: 1 1 0;
+      }
+
+      .col_fl .item6 img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .col_fl .item6 img {
+        max-height: 437px !important;
+        height: auto;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 480px) {
+        .col_fl {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .col_fl .item6 {
+          flex: 1;
+        }
+      }
+    </style>
+
+    <div id="content_ex">
+      <div class="container">
+        <style type="text/css">
+          #content_ex p:first-letter {
+            padding-left: 0;
+          }
+
+          #content_ex p {
+            margin-bottom: 0;
+          }
+
+          #content_ex img:hover {
+            opacity: 1;
+          }
+
+          #content_ex img {
+            opacity: 1;
+          }
+
+          #content_ex {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 15px;
+          }
+
+          #content_ex .container h2 {
+
+            line-height: 4rem;
+            text-align: center;
+            margin-bottom: 15px;
+          }
+
+          #content_ex .container img {
+            max-width: 100%;
+            margin-bottom: 0rem;
+            max-height: 700px;
+          }
+
+          #content_ex .container p {
+            text-align: center;
+            margin: 15px 0 25px 0;
+          }
+
+          #content_ex .container .container_li_item {
+            text-align: left;
+          }
+
+          #content_ex .container .container_li_item ul.container_li_item_list {
+            padding-left: 1.4rem;
+            margin: 3rem 0rem 3rem 0rem;
+          }
+
+          #content_ex .container .container_li_item ul.container_li_item_list li {
+            position: relative;
+          }
+
+          #content_ex .container .container_li_item ul.container_li_item_list li:before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: -1.3rem;
+            border-radius: 50%;
+            width: .5rem;
+            height: .5rem;
+            background-color: #379424;
+          }
+
+          #content_ex ul {
+            padding-left: 15px;
+          }
+
+          #content_ex ul li {
+            list-style-type: disc;
+          }
+
+          .small {
+            max-width: 350px !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+
+          .small2 {
+            max-width: 600px !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+
+          .small3 {
+            max-width: 350px !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+
+          .small4 {
+            max-width: 390px !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+
+          .small5 {
+            max-width: 700px !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+
+          .col_fl {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-end;
+            width: 100%;
+            height: auto;
+          }
+
+          .col_fl .item6 {
+            flex: 1 1 0;
+          }
+
+          .col_fl .item6 img {
+            display: block;
+            margin: 0 auto;
+          }
+
+          .col_fl .item6 img {
+            max-height: 437px !important;
+            height: auto;
+          }
+
+          @media screen and (min-width: 320px) and (max-width: 480px) {
+            .col_fl {
+              flex-direction: column;
+              align-items: center;
+            }
+
+            .col_fl .item6 {
+              flex: 1;
+            }
+          }
+        </style>
+
+        <div id="content_ex">
+          <div class="container">
+            <style type="text/css">
+              #content_ex p:first-letter {
+                padding-left: 0;
+              }
+
+              #content_ex p {
+                margin-bottom: 0;
+              }
+
+              #content_ex img:hover {
+                opacity: 1;
+              }
+
+              #content_ex img {
+                opacity: 1;
+              }
+
+              #content_ex {
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 0 15px;
+              }
+
+              #content_ex .container h2 {
+
+                line-height: 4rem;
+                text-align: center;
+                margin-bottom: 15px;
+              }
+
+              #content_ex .container img {
+                max-width: 100%;
+                margin-bottom: 0rem;
+                max-height: 700px;
+              }
+
+              #content_ex .container p {
+                text-align: center;
+                margin: 15px 0 25px 0;
+              }
+
+              #content_ex .container .container_li_item {
+                text-align: left;
+              }
+
+              #content_ex .container .container_li_item ul.container_li_item_list {
+                padding-left: 1.4rem;
+                margin: 3rem 0rem 3rem 0rem;
+              }
+
+              #content_ex .container .container_li_item ul.container_li_item_list li {
+                position: relative;
+              }
+
+              #content_ex .container .container_li_item ul.container_li_item_list li:before {
+                content: "";
+                position: absolute;
+                top: 8px;
+                left: -1.3rem;
+                border-radius: 50%;
+                width: .5rem;
+                height: .5rem;
+                background-color: #379424;
+              }
+
+              #content_ex ul {
+                padding-left: 15px;
+              }
+
+              #content_ex ul li {
+                list-style-type: disc;
+              }
+
+              .small {
+                max-width: 350px !important;
+                width: 100% !important;
+                height: auto !important;
+              }
+
+              .small2 {
+                max-width: 600px !important;
+                width: 100% !important;
+                height: auto !important;
+              }
+
+              .small3 {
+                max-width: 350px !important;
+                width: 100% !important;
+                height: auto !important;
+              }
+
+              .small4 {
+                max-width: 390px !important;
+                width: 100% !important;
+                height: auto !important;
+              }
+
+              .small5 {
+                max-width: 700px !important;
+                width: 100% !important;
+                height: auto !important;
+              }
+
+              .col_fl {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: flex-end;
+                width: 100%;
+                height: auto;
+              }
+
+              .col_fl .item6 {
+                flex: 1 1 0;
+              }
+
+              .col_fl .item6 img {
+                display: block;
+                margin: 0 auto;
+              }
+
+              .col_fl .item6 img {
+                max-height: 437px !important;
+                height: auto;
+              }
+
+              @media screen and (min-width: 320px) and (max-width: 480px) {
+                .col_fl {
+                  flex-direction: column;
+                  align-items: center;
+                }
+
+                .col_fl .item6 {
+                  flex: 1;
+                }
+              }
+            </style>
+
+            <div id="content_ex">
+              <div class="container">
+                <p>Хочете харчуватися більш різноманітно, але при цьому просто, швидко і здорово? Тоді вам ідеально підійде електричний гриль-барбекю на ніжках CECOTEC PerfectCountry BBQ. Влаштовуйте справжній пікнік у власному домі, насолоджуйтеся смаком овочів або м'яса, але при цьому не витрачайте багато зусиль! Потужності у 2000 Вт вистачить для того, щоб швидко приготувати комплексну вечерю для всієї родини. Спеціальна кришка створить ефект запікання в печі, а технологія рівномірного нагріву забезпечить повноцінне приготування всіх інгредієнтів.</p>
+                <h2>Антипригарне покриття</h2>
+                <p>Вся поверхня, на якій гріється їжа, покрита антипригарним шаром RockStone. Тому на ній можна готувати без масла і не відмивати потім всі деталі від липкого жиру. Більш легке приготування і більш легкий догляд!</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1615280/1.jpg" alt="Фото Гриль-барбекю електричний Cecotec PerfectCountry BBQ - 1" title="Гриль-барбекю електричний Cecotec PerfectCountry BBQ - 1">
+
+                <h2>Зонована поверхня</h2>
+                <p>Барбекю-пластина розбита на дві зони: велика та ребриста призначена для приготування м'яса або овочів, а плоска для яєчні або, наприклад, оладок.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1615280/2.jpg" alt="Фото Гриль-барбекю електричний Cecotec PerfectCountry BBQ - 2" title="Гриль-барбекю електричний Cecotec PerfectCountry BBQ - 2">
+
+                <h2>Конвекція як в печі</h2>
+                <p>Для приготування сніданку на кшталт омлету та сосисок ви можете готувати без кришки. Але коли потрібно добре прожарити великий і товстий шматок м'яса або картоплі, то сміливо закривайте гриль, створюючи тим самим ефект духовий печі.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1615280/3.jpg" alt="Фото Гриль-барбекю електричний Cecotec PerfectCountry BBQ - 3" title="Гриль-барбекю електричний Cecotec PerfectCountry BBQ - 3">
+
+                <h2>Налаштування температури</h2>
+                <p>Бічний регулятор призначений для вибору оптимальної температури в залежності від типу продукту. Щоб все приготувалося саме так, як треба і нічого не пригоріло — вибирайте відповідний температурний режим.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1615280/4.jpg" alt="Фото Гриль-барбекю електричний Cecotec PerfectCountry BBQ - 4" title="Гриль-барбекю електричний Cecotec PerfectCountry BBQ - 4">
+
+                <h2>Кілька страв відразу</h2>
+                <p>Разом з PerfectCountry BBQ ви можете приготувати одночасно і гарнір з овочів, і м'ясо або птицю. Площа пластини 43 * 18 дозволяє розташувати на ній велику кількість продуктів. Тому не переживайте — вистачить навіть на велику сім'ю або компанію друзів.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1615280/5.jpg" alt="Фото Гриль-барбекю електричний Cecotec PerfectCountry BBQ - 5" title="Гриль-барбекю електричний Cecotec PerfectCountry BBQ - 5">
+
+                <h2>Знімний резервуар для жиру</h2>
+                <p>Більше ваша їжа не буде плавати в жирі, адже для цього СЕСОТЕС передбачив спеціальний контейнер. Весь жир від готування різних блюд буде потрапляти саме туди. Резервуар легко знімається і миється, спрощуючи процес прибирання після прийому їжі.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1615280/6.jpg" alt="Фото Гриль-барбекю електричний Cecotec PerfectCountry BBQ - 6" title="Гриль-барбекю електричний Cecotec PerfectCountry BBQ - 6">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

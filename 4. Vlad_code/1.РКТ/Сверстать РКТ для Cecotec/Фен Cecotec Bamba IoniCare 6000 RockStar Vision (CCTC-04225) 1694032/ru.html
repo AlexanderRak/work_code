@@ -1,0 +1,624 @@
+<style type="text/css">
+  #content_ex p:first-letter {
+    padding-left: 0;
+  }
+
+  #content_ex p {
+    margin-bottom: 0;
+  }
+
+  #content_ex img:hover {
+    opacity: 1;
+  }
+
+  #content_ex img {
+    opacity: 1;
+  }
+
+  #content_ex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  #content_ex .container h2 {
+
+    line-height: 4rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  #content_ex .container img {
+    max-width: 100%;
+    margin-bottom: 0rem;
+    max-height: 700px;
+  }
+
+  #content_ex .container p {
+    text-align: center;
+    margin: 15px 0 25px 0;
+  }
+
+  #content_ex .container .container_li_item {
+    text-align: left;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list {
+    padding-left: 1.4rem;
+    margin: 3rem 0rem 3rem 0rem;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list li {
+    position: relative;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list li:before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -1.3rem;
+    border-radius: 50%;
+    width: .5rem;
+    height: .5rem;
+    background-color: #379424;
+  }
+
+  #content_ex ul {
+    padding-left: 15px;
+  }
+
+  #content_ex ul li {
+    list-style-type: disc;
+  }
+
+  .small {
+    max-width: 350px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small2 {
+    max-width: 600px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small3 {
+    max-width: 350px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small4 {
+    max-width: 390px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small5 {
+    max-width: 700px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .col_fl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    height: auto;
+  }
+
+  .col_fl .item6 {
+    flex: 1 1 0;
+  }
+
+  .col_fl .item6 img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .col_fl .item6 img {
+    max-height: 437px !important;
+    height: auto;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .col_fl {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .col_fl .item6 {
+      flex: 1;
+    }
+  }
+</style>
+
+<div id="content_ex">
+  <div class="container">
+    <style type="text/css">
+      #content_ex p:first-letter {
+        padding-left: 0;
+      }
+
+      #content_ex p {
+        margin-bottom: 0;
+      }
+
+      #content_ex img:hover {
+        opacity: 1;
+      }
+
+      #content_ex img {
+        opacity: 1;
+      }
+
+      #content_ex {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      #content_ex .container h2 {
+
+        line-height: 4rem;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      #content_ex .container img {
+        max-width: 100%;
+        margin-bottom: 0rem;
+        max-height: 700px;
+      }
+
+      #content_ex .container p {
+        text-align: center;
+        margin: 15px 0 25px 0;
+      }
+
+      #content_ex .container .container_li_item {
+        text-align: left;
+      }
+
+      #content_ex .container .container_li_item ul.container_li_item_list {
+        padding-left: 1.4rem;
+        margin: 3rem 0rem 3rem 0rem;
+      }
+
+      #content_ex .container .container_li_item ul.container_li_item_list li {
+        position: relative;
+      }
+
+      #content_ex .container .container_li_item ul.container_li_item_list li:before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: -1.3rem;
+        border-radius: 50%;
+        width: .5rem;
+        height: .5rem;
+        background-color: #379424;
+      }
+
+      #content_ex ul {
+        padding-left: 15px;
+      }
+
+      #content_ex ul li {
+        list-style-type: disc;
+      }
+
+      .small {
+        max-width: 350px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .small2 {
+        max-width: 600px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .small3 {
+        max-width: 350px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .small4 {
+        max-width: 390px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .small5 {
+        max-width: 700px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .col_fl {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        width: 100%;
+        height: auto;
+      }
+
+      .col_fl .item6 {
+        flex: 1 1 0;
+      }
+
+      .col_fl .item6 img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .col_fl .item6 img {
+        max-height: 437px !important;
+        height: auto;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 480px) {
+        .col_fl {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .col_fl .item6 {
+          flex: 1;
+        }
+      }
+    </style>
+
+    <div id="content_ex">
+      <div class="container">
+        <style type="text/css">
+          #content_ex p:first-letter {
+            padding-left: 0;
+          }
+
+          #content_ex p {
+            margin-bottom: 0;
+          }
+
+          #content_ex img:hover {
+            opacity: 1;
+          }
+
+          #content_ex img {
+            opacity: 1;
+          }
+
+          #content_ex {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 15px;
+          }
+
+          #content_ex .container h2 {
+
+            line-height: 4rem;
+            text-align: center;
+            margin-bottom: 15px;
+          }
+
+          #content_ex .container img {
+            max-width: 100%;
+            margin-bottom: 0rem;
+            max-height: 700px;
+          }
+
+          #content_ex .container p {
+            text-align: center;
+            margin: 15px 0 25px 0;
+          }
+
+          #content_ex .container .container_li_item {
+            text-align: left;
+          }
+
+          #content_ex .container .container_li_item ul.container_li_item_list {
+            padding-left: 1.4rem;
+            margin: 3rem 0rem 3rem 0rem;
+          }
+
+          #content_ex .container .container_li_item ul.container_li_item_list li {
+            position: relative;
+          }
+
+          #content_ex .container .container_li_item ul.container_li_item_list li:before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: -1.3rem;
+            border-radius: 50%;
+            width: .5rem;
+            height: .5rem;
+            background-color: #379424;
+          }
+
+          #content_ex ul {
+            padding-left: 15px;
+          }
+
+          #content_ex ul li {
+            list-style-type: disc;
+          }
+
+          .small {
+            max-width: 350px !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+
+          .small2 {
+            max-width: 600px !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+
+          .small3 {
+            max-width: 350px !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+
+          .small4 {
+            max-width: 390px !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+
+          .small5 {
+            max-width: 700px !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+
+          .col_fl {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-end;
+            width: 100%;
+            height: auto;
+          }
+
+          .col_fl .item6 {
+            flex: 1 1 0;
+          }
+
+          .col_fl .item6 img {
+            display: block;
+            margin: 0 auto;
+          }
+
+          .col_fl .item6 img {
+            max-height: 437px !important;
+            height: auto;
+          }
+
+          @media screen and (min-width: 320px) and (max-width: 480px) {
+            .col_fl {
+              flex-direction: column;
+              align-items: center;
+            }
+
+            .col_fl .item6 {
+              flex: 1;
+            }
+          }
+        </style>
+
+        <div id="content_ex">
+          <div class="container">
+            <style type="text/css">
+              #content_ex p:first-letter {
+                padding-left: 0;
+              }
+
+              #content_ex p {
+                margin-bottom: 0;
+              }
+
+              #content_ex img:hover {
+                opacity: 1;
+              }
+
+              #content_ex img {
+                opacity: 1;
+              }
+
+              #content_ex {
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 0 15px;
+              }
+
+              #content_ex .container h2 {
+
+                line-height: 4rem;
+                text-align: center;
+                margin-bottom: 15px;
+              }
+
+              #content_ex .container img {
+                max-width: 100%;
+                margin-bottom: 0rem;
+                max-height: 700px;
+              }
+
+              #content_ex .container p {
+                text-align: center;
+                margin: 15px 0 25px 0;
+              }
+
+              #content_ex .container .container_li_item {
+                text-align: left;
+              }
+
+              #content_ex .container .container_li_item ul.container_li_item_list {
+                padding-left: 1.4rem;
+                margin: 3rem 0rem 3rem 0rem;
+              }
+
+              #content_ex .container .container_li_item ul.container_li_item_list li {
+                position: relative;
+              }
+
+              #content_ex .container .container_li_item ul.container_li_item_list li:before {
+                content: "";
+                position: absolute;
+                top: 8px;
+                left: -1.3rem;
+                border-radius: 50%;
+                width: .5rem;
+                height: .5rem;
+                background-color: #379424;
+              }
+
+              #content_ex ul {
+                padding-left: 15px;
+              }
+
+              #content_ex ul li {
+                list-style-type: disc;
+              }
+
+              .small {
+                max-width: 350px !important;
+                width: 100% !important;
+                height: auto !important;
+              }
+
+              .small2 {
+                max-width: 600px !important;
+                width: 100% !important;
+                height: auto !important;
+              }
+
+              .small3 {
+                max-width: 350px !important;
+                width: 100% !important;
+                height: auto !important;
+              }
+
+              .small4 {
+                max-width: 390px !important;
+                width: 100% !important;
+                height: auto !important;
+              }
+
+              .small5 {
+                max-width: 700px !important;
+                width: 100% !important;
+                height: auto !important;
+              }
+
+              .col_fl {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: flex-end;
+                width: 100%;
+                height: auto;
+              }
+
+              .col_fl .item6 {
+                flex: 1 1 0;
+              }
+
+              .col_fl .item6 img {
+                display: block;
+                margin: 0 auto;
+              }
+
+              .col_fl .item6 img {
+                max-height: 437px !important;
+                height: auto;
+              }
+
+              @media screen and (min-width: 320px) and (max-width: 480px) {
+                .col_fl {
+                  flex-direction: column;
+                  align-items: center;
+                }
+
+                .col_fl .item6 {
+                  flex: 1;
+                }
+              }
+            </style>
+
+            <div id="content_ex">
+              <div class="container">
+                <p>Салонная укладка дома своими руками? Вместе с правильно подобранной техникой — возможно! С профессиональной укладкой легко справится фен CECOTEC Bamba IoniCare 6000 RockStar Vision. Модель оснащена инновационным бесщеточным двигателем с цифровым управлением, который эффективно и быстро просушивает волосы. Встроенный ионизатор заботится о состоянии ваших локонов, обеспечивая им здоровый блеск. Также в вашем распоряжении три температурных режима на выбор, которые дают бережный уход волосам любого типа. Эргономичная конструкция и технологии способствуют простоте эксплуатации и долговечности.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1694032/1.jpg" alt="Фото Фен Cecotec Bamba IoniCare 6000 RockStar Vision (CCTC-04225) - 1" title="Фен Cecotec Bamba IoniCare 6000 RockStar Vision (CCTC-04225) - 1">
+
+                <h2>Максимальная мощность</h2>
+                <p>2000 Вт будут работать на вас! Такая интенсивность подачи горячего воздуха значительно ускорит процесс просушивания волос или создания укладки. Для того, чтобы локоны не повреждались от регулярного пользования феном, в Bamba IoniCare 6000 RockStar Vision предусмотрен ионизатор, который будет сохранять их эластичность и шелковистость.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1694032/2.jpg" alt="Фото Фен Cecotec Bamba IoniCare 6000 RockStar Vision (CCTC-04225) - 2" title="Фен Cecotec Bamba IoniCare 6000 RockStar Vision (CCTC-04225) - 2">
+
+                <h2>Цифровое управление двигателем</h2>
+                <p>Инновационный бесщеточный двигатель подает более сильный воздушный поток, чем другие аналоги, но при этом работает значительно тише. Также задняя решетка фена оборудована умным дисплеем, на котором отображаются выбранные настройки.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1694032/3.jpg" alt="Фото Фен Cecotec Bamba IoniCare 6000 RockStar Vision (CCTC-04225) - 3" title="Фен Cecotec Bamba IoniCare 6000 RockStar Vision (CCTC-04225) - 3">
+
+                <h2>Специальные насадки</h2>
+                <p>Укладывайте волосы, как захотите! Две магнитные насадки облегчат этот процесс. Насадка-концентратор позволит сделать волосы прямыми и гладкими, а насадка-диффузор подойдет для создания пышных волн.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1694032/4.jpg" alt="Фото Фен Cecotec Bamba IoniCare 6000 RockStar Vision (CCTC-04225) - 4" title="Фен Cecotec Bamba IoniCare 6000 RockStar Vision (CCTC-04225) - 4">
+
+                <h2>Температурные режимы</h2>
+                <p>Фен Bamba IoniCare 6000 RockStar Vision оборудован регулятором скорости и тремя температурными режимами. Для более густых волос включайте режим турбо, а тонким локонам подойдет щадящий режим, при котором они не пересушиваются. Благодаря функции подачи холодного воздуха вы можете зафиксировать вашу укладку.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1694032/5.jpg" alt="Фото Фен Cecotec Bamba IoniCare 6000 RockStar Vision (CCTC-04225) - 5" title="Фен Cecotec Bamba IoniCare 6000 RockStar Vision (CCTC-04225) - 5">
+
+                <h2>Минимальный износ</h2>
+                <p>Пользуйтесь феном хоть каждый день — он прослужит вам долго! Принцип работы бесщеточного двигателя способствует гораздо меньшему износу деталей и более эффективной подаче тепла.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1694032/6.jpg" alt="Фото Фен Cecotec Bamba IoniCare 6000 RockStar Vision (CCTC-04225) - 6" title="Фен Cecotec Bamba IoniCare 6000 RockStar Vision (CCTC-04225) - 6">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
