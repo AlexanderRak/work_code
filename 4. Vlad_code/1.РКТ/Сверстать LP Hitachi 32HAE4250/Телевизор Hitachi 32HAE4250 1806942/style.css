@@ -1,0 +1,245 @@
+/*default styles*/
+#hitachi {
+  max-width: 1316px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+#hitachi p {
+  margin-bottom: 0;
+  margin: 0;
+  text-align: unset;
+  font-size: 20px;
+}
+
+#hitachi p:first-letter {
+  padding-left: 0;
+}
+
+#hitachi h2 {
+  text-align: unset;
+  display: block;
+  line-height: normal;
+  font-size: 34px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+#hitachi img {
+  opacity: 1;
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
+#hitachi img:hover {
+  opacity: 1;
+}
+
+#hitachi ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#hitachi span {
+  display: block;
+  line-height: normal;
+}
+
+.features-desc__text img {
+  margin-bottom: 0rem;
+}
+
+.one-col .features-desc__text p:first-letter {
+  padding-left: 0rem !important;
+}
+
+/*end default styles*/
+#hitachi .red {
+  color: #fe0000;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+#hitachi .hitachi__head {
+  text-align: center;
+  padding: 2em 0;
+}
+
+#hitachi .program .program__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#hitachi .program .program__list li {
+  padding: 0.5em;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+#hitachi .program .program__list li img {
+  min-width: 220px;
+}
+
+#hitachi .program .program__txt {
+  padding: 2em 12em 2em 12em;
+  display: list-item;
+}
+
+#hitachi .program .program__txt li {
+  list-style-type: disc;
+  list-style-position: inside;
+  font-size: 20px;
+}
+
+#hitachi .program .program__txt li b {
+  text-transform: uppercase;
+}
+
+#hitachi .program .program__txt li:nth-of-type(n+2) {
+  margin-top: 0.5em;
+}
+
+#hitachi .fullhd .fullhd__txt {
+  padding: 1em 1em 2em 1em;
+}
+
+#hitachi .tv .tv__txt {
+  padding: 1em 1em 2em 1em;
+}
+
+#hitachi .assistant .assistant__txt {
+  padding: 1em 1em 2em 1em;
+}
+
+#hitachi .func h2 {
+  text-align: center;
+  font-weight: normal;
+}
+
+#hitachi .func .func__list {
+  padding: 1em;
+}
+
+#hitachi .func .func__list li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hitachi .func .func__list li .func__img img {
+  min-width: 220px;
+}
+
+#hitachi .func .func__list li .func__txt {
+  padding-left: 2em;
+}
+
+#hitachi .func .func__list li .func__txt span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fe0000;
+  margin-bottom: 0.5em;
+}
+
+#hitachi .func .func__list li:nth-of-type(n+2) {
+  margin-top: 2em;
+}
+
+@media (max-width: 1024px) {
+  #hitachi .program .program__txt {
+    padding: 2em 3em;
+  }
+}
+
+@media (max-width: 812px) {
+  #hitachi .program .program__list {
+    width: 100%;
+  }
+  #hitachi .program .program__list li {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    max-width: 25%;
+  }
+  #hitachi .program .program__list li img {
+    min-width: unset;
+    width: 100%;
+  }
+  #hitachi .program .program__txt {
+    padding: 2em 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  #hitachi h2 {
+    font-size: 28px;
+  }
+  #hitachi .program .program__list {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    overflow-x: scroll;
+  }
+  #hitachi .program .program__list li {
+    max-width: unset;
+    min-width: 35%;
+  }
+  #hitachi .program .program__txt li,
+  #hitachi p {
+    font-size: 15px;
+  }
+  #hitachi .func .func__list li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #hitachi .func .func__list li .func__txt {
+    padding-left: 0;
+    padding-top: 1em;
+  }
+  #hitachi .func .func__list li .func__txt span {
+    font-size: 20px;
+  }
+  #hitachi .hitachi__head {
+    padding-top: 0;
+  }
+}
