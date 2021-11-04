@@ -117,6 +117,11 @@ span.tx-uppercase
    margin: 0
 .color-orangetxt
    color: #FF671F
+body.overfloy-body
+   overflow: inherit
+.cms-crediting-html .std, .cms-crediting .std
+   max-width: 100%
+   padding-top: 0
 // default
 .crediting__wrap-flex
    display: flex
@@ -135,12 +140,15 @@ span.tx-uppercase
       .tabs-head-item__link
          border: 1px solid #c1b6b6
          border-radius: 8px
+         &.last-tab-obshhaja-informacija
+            background: #379424
+            border: 1px solid #43B02A
 #crediting_wrap .tabs-head-item
    &:hover
       cursor: pointer
    &._active
       &:hover
-         cursor: auto   
+         cursor: default
 #crediting_wrap .tabs-head-item._active .tabs-head-item__link
    border: 1px solid #43B02A
    border-radius: 8px
@@ -157,6 +165,11 @@ span.tx-uppercase
       width: 12px
       height: 12px
       box-shadow: none
+#crediting_wrap .tabs-head-item._active .tabs-head-item__link.last-tab-obshhaja-informacija
+   background: #379424
+   border: 1px solid #43B02A
+   &::after
+      background-image: url(https://cdn.comfy.ua/media/x/img2/strwhile.svg)
 #crediting_wrap .tabs-head-item__link
    padding: 16px 48px
    text-align: left
@@ -181,6 +194,13 @@ span.tx-uppercase
       box-shadow: none
    &::before
       display: none
+   &.last-tab-obshhaja-informacija
+      background: #43B02A
+      border: 1px solid #43B02A
+      &::after
+         background-image: url(https://cdn.comfy.ua/media/x/img2/strwhile.svg)
+      .tabs-head-item__text
+         color: #fff
 #crediting_wrap .tabs-head-item__text:first-child
    font-size: 24px
    font-weight: bold
@@ -812,5 +832,3 @@ span.i_icon_4
       padding: 16px 0 0 0
    #crediting_wrap .cms-sidebar_credit input[type=submit]
       font-size: 1.5rem
-   body.overfloy-body
-      overflow: inherit

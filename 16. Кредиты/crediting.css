@@ -199,6 +199,15 @@ span.tx-uppercase {
   color: #FF671F;
 }
 
+body.overfloy-body {
+  overflow: inherit;
+}
+
+.cms-crediting-html .std, .cms-crediting .std {
+  max-width: 100%;
+  padding-top: 0;
+}
+
 .crediting__wrap-flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -244,12 +253,17 @@ span.tx-uppercase {
           border-radius: 8px;
 }
 
+#crediting_wrap .tabs-head-item:hover .tabs-head-item__link.last-tab-obshhaja-informacija {
+  background: #379424;
+  border: 1px solid #43B02A;
+}
+
 #crediting_wrap .tabs-head-item:hover {
   cursor: pointer;
 }
 
 #crediting_wrap .tabs-head-item._active:hover {
-  cursor: auto;
+  cursor: default;
 }
 
 #crediting_wrap .tabs-head-item._active .tabs-head-item__link {
@@ -281,6 +295,15 @@ span.tx-uppercase {
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
+}
+
+#crediting_wrap .tabs-head-item._active .tabs-head-item__link.last-tab-obshhaja-informacija {
+  background: #379424;
+  border: 1px solid #43B02A;
+}
+
+#crediting_wrap .tabs-head-item._active .tabs-head-item__link.last-tab-obshhaja-informacija::after {
+  background-image: url(https://cdn.comfy.ua/media/x/img2/strwhile.svg);
 }
 
 #crediting_wrap .tabs-head-item__link {
@@ -323,6 +346,19 @@ span.tx-uppercase {
 
 #crediting_wrap .tabs-head-item__link::before {
   display: none;
+}
+
+#crediting_wrap .tabs-head-item__link.last-tab-obshhaja-informacija {
+  background: #43B02A;
+  border: 1px solid #43B02A;
+}
+
+#crediting_wrap .tabs-head-item__link.last-tab-obshhaja-informacija::after {
+  background-image: url(https://cdn.comfy.ua/media/x/img2/strwhile.svg);
+}
+
+#crediting_wrap .tabs-head-item__link.last-tab-obshhaja-informacija .tabs-head-item__text {
+  color: #fff;
 }
 
 #crediting_wrap .tabs-head-item__text:first-child {
@@ -1446,8 +1482,5 @@ span.i_icon_4 {
   }
   #crediting_wrap .cms-sidebar_credit input[type=submit] {
     font-size: 1.5rem;
-  }
-  body.overfloy-body {
-    overflow: inherit;
   }
 }
