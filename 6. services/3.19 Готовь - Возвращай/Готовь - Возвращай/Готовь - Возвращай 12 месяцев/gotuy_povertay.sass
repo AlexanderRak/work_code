@@ -1,0 +1,458 @@
+#gotuy-povertay
+   display: block
+   margin: 0 auto
+   // max-width: 1316px
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #f2f2f2
+   position: relative
+   counter-reset: numlist
+   img
+      &:hover
+         opacity: 1
+   &:first-letter
+      padding-left: 0
+   img
+      display: block
+      margin-right: initial
+      margin-left: initial
+   p
+      margin-bottom: 0
+      color: #000
+      font-size: 21px
+      line-height: 20px
+   h2
+      font-size: 34px
+      font-weight: bold
+      line-height: 1
+      letter-spacing: -0.015em
+      color: #43B02A
+      padding-bottom: 16px
+   h3
+      font-size: 36px
+      margin: 0
+      padding-top: 0
+      line-height: 1.1
+      text-align: inherit
+      font-weight: bold
+      color: #000
+   h4
+      font-size: 18px
+      margin: 0
+      font-weight: bold
+      color: #43B02A
+      position: relative
+      padding-left: 25px
+      margin-bottom: 25px
+      padding-top: 5px
+span.word-wrap
+   display: block
+   word-wrap: break-word
+// .main-container.page
+//    padding-left: 0
+//    padding-right: 0
+.features-desc__text p
+   max-width: inherit !important
+// default
+.gotuy-header
+   background: #F2F9F0
+   position: relative
+   overflow: hidden
+.gotuy-header__container
+   width: 100%
+   height: 520px
+.gotuy-header__img-posTop
+   position: absolute
+   left: 0
+   top: 0
+   z-index: 2
+.gotuy-header__content-flex
+   display: flex
+   align-items: center
+   justify-content: space-between
+   height: 100%
+   position: relative
+   z-index: 3
+.gotuy-header__text
+   padding: 0 15px 0 67px
+.gotuy-header__img-posBottom
+   position: absolute
+   bottom: -105px
+   left: 206px
+   z-index: 2
+.gotuy-inform
+   background: #43B02A
+   position: relative
+   overflow: hidden
+   &::after
+      content: ""
+      background-image: url(https://cdn.comfy.ua/media/x/img2/path1.png)
+      background-position: center
+      background-repeat: no-repeat
+      width: 1366px
+      height: 17px
+      position: absolute
+      bottom: 0
+.gotuy-inform__container
+   padding: 76px 67px
+.gotuy-inform__grid
+   display: grid
+   grid-template-columns: 1fr 1fr
+.gotuy-inform__item-content-flex
+   display: flex
+   align-items: center
+   padding: 37px 15px 37px 30px
+   height: 100%
+   &.pddbl
+      padding: 37px 15px 37px 73px
+#gotuy-povertay .gotuy-inform__item-fl
+   &:first-child
+      width: 90px
+   &:last-child
+      flex: 1 0
+   p
+      padding-left: 37px
+      max-width: 365px !important
+      font-weight: 500
+      line-height: 24px
+.gotuy-inform__item
+   background-position: left
+   background-repeat: no-repeat
+   background-size: cover
+   max-width: 571px
+   &:first-child
+      background-image: url(https://cdn.comfy.ua/media/x/img2/str_left_bgrd.svg)
+   &:last-child
+      background-image: url(https://cdn.comfy.ua/media/x/img2/str_right_bgrd.svg)
+.gotuy-time
+   padding: 50px 67px
+.gotuy-time__flex
+   display: flex
+   align-items: center
+   background: #fff
+   border-radius: 16px
+   overflow: hidden
+.gotuy-time__item
+   &:first-child
+      width: 420px
+   &:last-child
+      flex: 1 0
+      position: relative
+      background: #43B02A
+      margin-left: 42px
+      &::before
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img2/Frame_982.svg)
+         background-position: center
+         background-repeat: no-repeat
+         background-size: cover
+         width: 42px
+         height: 345px
+         position: absolute
+         left: -42px
+         top: 50%
+         transform: translateY(-50%)
+.gotuy-time__text
+   padding: 0 15px 0 60px
+   h3
+      padding-bottom: 15px
+.gotuy-time__timebl
+   margin: 12px 0 12px 100px
+   position: relative
+   max-width: 198px
+.gotuy-time__num
+   position: absolute
+   left: 0
+   right: 0
+   top: 50%
+   transform: translateY(-50%)
+   margin: 0 auto
+   span
+      display: block
+      &:first-child
+         font-weight: bold
+         font-size: 100px
+         line-height: 0.8
+         color: #fff
+         text-align: center
+      &:last-child
+         font-size: 18px
+         text-align: center
+         color: #fff
+.gotuy-time__img-pos
+   position: absolute
+   right: 20px
+   width: 386px
+   height: auto
+   top: -100px
+.gotuy-footer
+   padding: 24px 67px 67px 67px
+.gotuy-footer__container-grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 1fr
+   grid-gap: 30px
+   counter-reset: list
+.gotuy-footer__item-content-before
+   position: relative
+   width: 100%
+   height: 100px
+   overflow: hidden
+.gotuy-footer__grid-item
+   background: #fff
+   border-radius: 16px
+   min-height: 252px
+   overflow: hidden
+   position: relative
+   &:nth-child(1) .gotuy-footer__item-content-before::before,
+   &:nth-child(2) .gotuy-footer__item-content-before::before,
+   &:nth-child(3) .gotuy-footer__item-content-before::before,
+   &:nth-child(4) .gotuy-footer__item-content-before::before
+      content: ""
+      background-repeat: no-repeat
+      background-size: cover
+      position: absolute
+      margin: 0 auto
+   &:nth-child(1) .gotuy-footer__item-content-before::before
+      background-image: url(https://cdn.comfy.ua/media/x/img2/item1_1.png)
+      width: 387px
+      height: 160px
+      left: -85px
+      top: -61px
+   &:nth-child(2) .gotuy-footer__item-content-before::before
+      background-image: url(https://cdn.comfy.ua/media/x/img2/item2_1.png)
+      width: 480px
+      height: 117px
+      top: -19px
+      left: -108px
+   &:nth-child(3) .gotuy-footer__item-content-before::before
+      background-image: url(https://cdn.comfy.ua/media/x/img2/item3_1.png)
+      width: 387px
+      height: 132px
+      left: -85px
+      top: -47px
+   &:nth-child(4) .gotuy-footer__item-content-before::before
+      background-image: url(https://cdn.comfy.ua/media/x/img2/item4.png)
+      width: 387px
+      height: 160px
+      left: -76px
+      top: -62px
+   &::before
+      counter-increment: list
+      content: counter(list)
+      font-size: 45px
+      color: #fff
+      font-weight: bold
+      position: absolute
+      left: 15px
+      top: 5px
+      z-index: 5
+      line-height: 1
+#gotuy-povertay .gotuy-footer__item-content
+   padding: 5px 25px 25px 25px
+   text-align: left
+   height: 64%
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   p
+      font-weight: 500
+      font-size: 16px !important
+.gotuy-footer__item-content-number
+   padding-top: 21px
+   position: absolute
+   bottom: 25px
+   span
+      display: block
+      color: #43B02A
+      font-size: 25px
+      font-weight: bold
+      position: relative
+      padding-left: 25px
+      line-height: 1
+      &::before
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img2/gonuy/phone.svg)
+         background-repeat: no-repeat
+         background-size: cover
+         width: 20px
+         height: 20px
+         position: absolute
+         left: 0
+         top: 1px
+.gotuy-footer__item-content-txt
+   padding-top: 24px
+   span
+      display: block
+      font-size: 14px
+      line-height: 17px
+.gotuy-footer__container-link
+   padding-top: 27px
+   a
+      color: #43B02A
+      font-size: 18px
+      font-weight: bold
+      text-align: left
+      &:hover
+         text-decoration: underline
+@media (max-width: 1024px)
+   .gotuy-header__text
+      padding: 0 15px 0 25px
+   .gotuy-header__container
+      width: 100%
+      height: 405px
+   .gotuy-header__img-posTop
+      max-width: 14%
+   .gotuy-header__img-posBottom
+      max-width: 20%
+   .gotuy-inform__container
+      padding: 50px 25px
+   .gotuy-inform__grid
+      grid-template-columns: 1fr
+   .gotuy-inform__item
+      background-size: contain
+      max-width: 628px
+      width: 100%
+      height: 187px
+   .gotuy-inform__item:last-child
+      margin: 25px 0 0 auto
+   .gotuy-time
+      padding: 50px 25px
+   .gotuy-time__text
+      padding: 0 15px 0 25px
+   .gotuy-time__timebl
+      margin: 12px 0 12px 15px
+   .gotuy-time__img-pos
+      right: -155px
+   .gotuy-footer
+      padding: 0px 25px 50px 25px
+   .gotuy-footer__container-grid
+      grid-gap: 25px
+   .gotuy-time__item:last-child::before
+      left: -40px
+@media (max-width: 812px)
+   .gotuy-time__item:first-child
+      width: 340px
+   .gotuy-time__img-pos
+      display: none
+   .gotuy-time__timebl
+      margin: 12px auto 12px auto
+   .gotuy-footer__container-grid
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+      justify-content: space-between
+   .gotuy-time__item:last-child::before
+      left: -38px
+// @media (max-width: 768px)
+@media (max-width: 480px)
+   #gotuy-povertay
+      h2
+         font-size: 24px
+         padding-bottom: 20px
+      h3
+         font-size: 28px
+      p
+         font-size: 16px
+   .gotuy-header__container
+      height: auto
+   .gotuy-header__img-posTop
+      position: relative
+      max-width: 115px
+   .gotuy-header__item-img
+      position: relative
+      right: -37px
+      padding-bottom: 15px
+   .gotuy-header__text
+      padding: 20px 15px 25px 25px
+      text-align: center
+      max-width: 290px
+   .gotuy-inform__container
+      padding: 32px 10px 50px 10px
+   .gotuy-inform__item
+      background: #fff
+      border-radius: 16px
+      height: auto
+      max-width: 100%
+   .gotuy-inform__item-content-flex
+      padding: 16px 10px 16px 20px
+   #gotuy-povertay .gotuy-inform__item-fl p
+      padding-left: 20px
+      max-width: 100% !important
+   .gotuy-inform__item-fl:first-child
+      width: 55px
+   .gotuy-inform__item-content-flex.pddbl
+      padding: 16px 20px 16px 10px
+      flex-direction: row-reverse
+      .gotuy-inform__item-fl p
+         padding-left: 0
+         padding-right: 20px
+   .gotuy-header__content-flex
+      flex-direction: column
+   .gotuy-time
+      padding: 50px 15px
+   .gotuy-time__flex
+      flex-direction: column
+   .gotuy-time__item:first-child
+      width: 100%
+   .gotuy-time__text
+      padding: 10px 25px 10px 25px
+   .gotuy-time__timebl
+      display: none
+   .gotuy-time__img-pos
+      display: block
+      position: relative
+      width: 100%
+      max-width: 189px
+      margin: 0 auto
+      top: 0
+      right: 0
+   .gotuy-time__item:last-child
+      margin-left: 0
+      background: transparent
+      height: 160px
+   .gotuy-time__item:last-child::before
+      background-image: url(https://cdn.comfy.ua/media/x/img2/Frame_981.svg)
+      width: 468px
+      height: 160px
+      left: 50%
+      top: 0
+      transform: translateY(0px) translateX(-50%)
+   .gotuy-footer
+      padding: 0px 15px 50px 15px
+   .gotuy-footer__container-grid
+      grid-gap: 16px
+   .gotuy-footer__grid-item::before
+      font-size: 28px
+      left: 10px
+   .gotuy-footer__grid-item
+      min-height: auto
+      &:nth-child(1) .gotuy-footer__item-content-before::before,
+      &:nth-child(2) .gotuy-footer__item-content-before::before,
+      &:nth-child(3) .gotuy-footer__item-content-before::before,
+      &:nth-child(4) .gotuy-footer__item-content-before::before
+         left: 50% !important
+         transform: translateX(-50%)
+   .gotuy-footer__grid-item:nth-child(1) .gotuy-footer__item-content-before::before
+      top: -97px
+   .gotuy-footer__grid-item:nth-child(2) .gotuy-footer__item-content-before::before
+      top: -36px
+   .gotuy-footer__grid-item:nth-child(3) .gotuy-footer__item-content-before::before
+      top: -80px
+   .gotuy-footer__grid-item:nth-child(4) .gotuy-footer__item-content-before::before
+      top: -100px
+   .gotuy-footer__item-content-number
+      padding-top: 21px
+      position: relative
+      bottom: 0
+   .gotuy-footer__grid-item
+      &:nth-child(1)
+         .gotuy-footer__item-content-before
+            height: 65px
+      &:nth-child(2)
+         .gotuy-footer__item-content-before
+            height: 82px
+      &:nth-child(3)
+         .gotuy-footer__item-content-before
+            height: 55px
+      &:nth-child(4)
+         .gotuy-footer__item-content-before
+            height: 65px
