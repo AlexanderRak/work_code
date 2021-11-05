@@ -1,58 +1,79 @@
 <style>
+   .header-links__link.actionstopmenu {
+      width: 5.5rem;
+      border-right: .1rem solid transparent;
+   }
 
+   .header-links__link.bf2021 {
+      background: #000;
+      color: #fff;
+      border-radius: 20px;
+      margin-left: 15px;
+   }
 
-/* 
-.product-card[data-id="2830613"] price-box .start-sales {display: none !important;}
-.product-card[data-product-id="2830573"] .price-box .start-sales {display: none !important;}
-.product-card[data-product-id="2830473"] .price-box .start-sales {display: none !important;}
-.product-card[data-product-id="2830533"] .price-box .start-sales {display: none !important;}
-.product-card[data-product-id="2830463"] .price-box .start-sales {display: none !important;}
-.product-card[data-product-id="2830453"] .price-box .start-sales {display: none !important;}
-.product-card[data-product-id="2830523"] .price-box .start-sales {display: none !important;}
-.product-card[data-product-id="2830233"] .price-box .start-sales {display: none !important;}
-.product-card[data-product-id="2830563"] .price-box .start-sales {display: none !important;}
-.product-card[data-product-id="2830543"] .price-box .start-sales {display: none !important;}
-.product-card[data-product-id="2830603"] .price-box .start-sales {display: none !important;}
-.product-card[data-product-id="2830553"] .price-box .start-sales {display: none !important;}
-.product-card[data-product-id="2830483"] .price-box .start-sales {display: none !important;}
-.product-card[data-product-id="2830593"] .price-box .start-sales {display: none !important;}
-.product-card[data-product-id="2830073"] .price-box .start-sales {display: none !important;}
-.product-card[data-product-id="2830583"] .price-box .start-sales {display: none !important;}
-*/
-
-.product-item[data-id="2830613"] .start-sales {display: none !important;}
-.product-item[data-id="2830573"] .start-sales {display: none !important;}
-.product-item[data-id="2830473"] .start-sales {display: none !important;}
-.product-item[data-id="2830533"] .start-sales {display: none !important;}
-.product-item[data-id="2830463"] .start-sales {display: none !important;}
-.product-item[data-id="2830453"] .start-sales {display: none !important;}
-.product-item[data-id="2830523"] .start-sales {display: none !important;}
-.product-item[data-id="2830233"] .start-sales {display: none !important;}
-.product-item[data-id="2830563"] .start-sales {display: none !important;}
-.product-item[data-id="2830543"] .start-sales {display: none !important;}
-.product-item[data-id="2830603"] .start-sales {display: none !important;}
-.product-item[data-id="2830553"] .start-sales {display: none !important;}
-.product-item[data-id="2830483"] .start-sales {display: none !important;}
-.product-item[data-id="2830593"] .start-sales {display: none !important;}
-.product-item[data-id="2830073"] .start-sales {display: none !important;}
-.product-item[data-id="2830583"] .start-sales {display: none !important;} 
-
-.product-card[data-product-id="2830613"] .start-sales {display: none !important;}
-.product-card[data-product-id="2830573"] .start-sales {display: none !important;}
-.product-card[data-product-id="2830473"] .start-sales {display: none !important;}
-.product-card[data-product-id="2830533"] .start-sales {display: none !important;}
-.product-card[data-product-id="2830463"] .start-sales {display: none !important;}
-.product-card[data-product-id="2830453"] .start-sales {display: none !important;}
-.product-card[data-product-id="2830523"] .start-sales {display: none !important;}
-.product-card[data-product-id="2830233"] .start-sales {display: none !important;}
-.product-card[data-product-id="2830563"] .start-sales {display: none !important;}
-.product-card[data-product-id="2830543"] .start-sales {display: none !important;}
-.product-card[data-product-id="2830603"] .start-sales {display: none !important;}
-.product-card[data-product-id="2830553"] .start-sales {display: none !important;}
-.product-card[data-product-id="2830483"] .start-sales {display: none !important;}
-.product-card[data-product-id="2830593"] .start-sales {display: none !important;}
-.product-card[data-product-id="2830073"] .start-sales {display: none !important;}
-.product-card[data-product-id="2830583"] .start-sales {display: none !important;}
-
-
+   .header-links__link {
+      height: 2.8rem
+   }
 </style>
+<nav class="header-links header-links__list header__item" id="headerLinks">
+   <div class="header-links__link actionstopmenu">
+      <span data-lbl="Акции">Акции</span>
+      <div class="header-links__note">
+         <a class="header-links__note-link" href="{{store url='sale'}}">Скидки до -50%</a>
+         <a class="header-links__note-link" href="{{store url='dva-po-cene-pervogo'}}">Два по цене первого</a>
+         <a class="header-links__note-all-link" href="{{store url='actions'}}">Все акции</a>
+      </div>
+   </div>
+   <a href="{{store url='black-friday.html'}}" _mce_href="{{store url='black-friday.html'}}" class="header-links__link bf2021"> <span data-lbl="Черная пятница">Черная пятница</span> </a>
+   <a href="{{store direct_url='shops.html'}}" class="header-links__link"> <span data-lbl="Магазины">Магазины</span> </a> <a href="{{store direct_url='status-order.html'}}" class="header-links__link statusordertopmenu"><span data-lbl="Найти заказ">Найти заказ</span></a>
+   <div class="header-links__link moremenu"><span data-lbl="Еще">Еще</span>
+      <div class="header-links__note-more"><a href="{{store direct_url='courier-delivery-self.html'}}" class="header-links__link"> <span data-lbl="Доставка">Доставка</span> </a> <a href="{{store direct_url='exchange-and-returns.html'}}" class="header-links__link"> <span data-lbl="Возврат">Возврат</span> </a> <a target="_blank" href="https://blog.comfy.ua/" class="header-links__link"> <span data-lbl="Блог">Блог</span> </a></div>
+   </div>
+</nav>
+<div class="communication-block-wrapper">
+   <div class="communication-block communication-button-wrapper">
+      <a class="communication-button">
+         <span class="hide-on-desktop">0-800-303-505</span>
+         <span class="only-desktop">Связаться</span>
+      </a>
+      {{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="22263"}}
+   </div>
+</div>
+
+<!-- ua -->
+
+<style>
+   .header-links__link.actionstopmenu {
+      width: 5.5rem;
+      border-right: .1rem solid transparent;
+   }
+
+   .header-links__link.bf2021 {
+      background: #000;
+      color: #fff;
+      border-radius: 20px;
+      margin-left: 15px;
+   }
+
+   .header-links__link {
+      height: 2.8rem
+   }
+</style>
+<nav class="header-links header-links__list header__item" id="headerLinks">
+   <div class="header-links__link actionstopmenu"><span data-lbl="Акції">Акції</span>
+      <div class="header-links__note">
+         <a class="header-links__note-link" href="{{store url='sale'}}">Знижки до -50%</a>
+         <a class="header-links__note-link" href="{{store url='dva-po-cene-pervogo'}}">Два за цiною першого</a>
+         <a class="header-links__note-all-link" href="{{store url='actions'}}">Всi акції</a>
+      </div>
+   </div>
+   <a href="{{store url='black-friday.html'}}" _mce_href="{{store url='black-friday.html'}}" class="header-links__link bf2021"> <span data-lbl="Чорна п'ятниця">Чорна п'ятниця</span> </a>
+   <a href="{{store direct_url='shops.html'}}" class="header-links__link"> <span data-lbl="Магазини">Магазини</span> </a>
+   <a href="{{store direct_url='status-order.html'}}" class="header-links__link statusordertopmenu"><span data-lbl="Замовлення">Замовлення</span></a>
+   <div class="header-links__link moremenu"><span data-lbl="Ще">Ще</span>
+      <div class="header-links__note-more"><a href="{{store direct_url='courier-delivery-self.html'}}" class="header-links__link"> <span data-lbl="Доставка">Доставка</span> </a> <a href="{{store direct_url='exchange-and-returns.html'}}" class="header-links__link"> <span data-lbl="Повернення">Повернення</span> </a> <a target="_blank" href="https://blog.comfy.ua/" class="header-links__link"> <span data-lbl="Блог">Блог</span> </a></div>
+   </div>
+</nav>
+<div class="communication-block-wrapper">
+   <div class="communication-block communication-button-wrapper"><a class="communication-button"><span class="hide-on-desktop">0-800-303-505</span><span class="only-desktop">Допомога</span></a> {{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="22273"}}</div>
+</div>
