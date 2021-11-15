@@ -1,0 +1,418 @@
+/*default styles*/
+
+#poove
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#poove
+  .poove__list
+    overflow: hidden
+    display: flex
+    flex-direction: row
+    justify-content: center
+    position: relative
+    padding: 100px 100px 85px 100px
+    justify-content: space-between
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      z-index: 10
+      &:nth-of-type(2)
+        position: relative
+        img
+          z-index: 20
+        &::after
+          content: ""
+          display: block
+          position: absolute
+          right: 50%
+          bottom: 50%
+          transform: translate(50%, 50%)
+          background-image: url("https://cdn.comfy.ua/media/x/img/1800350/bg1.svg")
+          background-position: center
+          background-repeat: no-repeat
+          width: 512px
+          height: 452px
+          z-index: 0
+      &:nth-of-type(1)
+        z-index: 20
+        .poove__list__txt
+          span
+            &:nth-of-type(2)
+              &::before
+                content: ""
+                display: block
+                background-color: #3EB2D3
+                height: 3px
+                width: 218px
+                margin: 1em 0
+      .poove__list__txt
+      &:nth-of-type(3)
+        z-index: 20
+        .poove__list__txt
+          text-align: right
+          span
+            &:nth-of-type(1)
+              margin-bottom: 1em
+      .poove__list__txt
+        max-width: 450px
+        span
+          font-size: 27px
+          strong
+            font-size: 36px
+
+  .compact
+    .compact__cont
+      padding: 55px 100px 110px 100px
+      .compact__cont__txt__row
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        .compact__cont__txt
+          &:nth-of-type(1)
+            span
+              max-width: 335px
+              margin-top: 10px
+          &:nth-of-type(2)
+            max-width: 290px
+            text-align: right
+      .compact__cont__txt
+        h2
+          font-weight: normal
+        span
+          font-size: 26px
+          b
+            color: #3eb2d3
+        &:nth-of-type(1)
+          &::after
+            content: ""
+            display: block
+            width: 133px
+            height: 3px
+            margin: 1em 0 0 0
+            background-color: #3EB2D3
+        &:nth-of-type(3)
+          text-align: right
+          max-width: 210px
+          margin: -24em 0 0 auto
+          &::before
+            content: ""
+            display: block
+            width: 133px
+            height: 3px
+            margin: 3em 0 3em auto
+            background-color: #3EB2D3
+      .compact__cont__img
+        position: relative
+        padding: 3em 0
+        img
+          margin: 0 auto
+          &:nth-of-type(1)
+            position: absolute
+            bottom: 50%
+            right: 50%
+            transform: translate(50%, 50%)
+
+  .rudder
+    .rudder__cont
+      position: relative
+      overflow: hidden
+      .rudder__list
+        position: absolute
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        padding: 55px 140px 40px 100px
+        justify-content: space-between
+        width: 100%
+        box-sizing: border-box
+        li
+          &:nth-of-type(1)
+            span
+              &:nth-of-type(1)
+                &::after
+                  content: ""
+                  display: block
+                  width: 214px
+                  height: 3px
+                  margin: 1em 0
+                  background-color: #3EB2D3
+          span
+            font-size: 30px
+            max-width: 570px
+      .rudder__cont__bg
+        img
+          margin: 0
+
+  .wheel
+    .wheel__list
+      display: flex
+      flex-direction: row
+      li
+        span
+          font-size: 30px
+          b
+            font-weight: normal
+            color: #3eb2d3
+        &:nth-of-type(1)
+          align-self: center
+          padding-left: 100px
+          margin-right: 70px
+          span
+            &:nth-of-type(1)
+              max-width: 440px
+              &::after
+                content: ""
+                display: block
+                width: 214px
+                height: 3px
+                margin: 1em 0
+                background-color: #3EB2D3
+            &:nth-of-type(2)
+              max-width: 500px
+
+  .functionally
+    .functionally__wrap
+      position: relative
+      .functionally__list
+        position: absolute
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        padding: 50px 100px 20px 100px
+        width: 100%
+        box-sizing: border-box
+        li
+          max-width: 420px
+          &:nth-of-type(1)
+            span
+              font-size: 36px
+              &::after
+                content: ""
+                display: block
+                width: 214px
+                height: 3px
+                margin: 1em 0
+                background-color: #3EB2D3
+          &:nth-of-type(2)
+            span
+              font-size: 30px
+              text-align: right
+              strong
+                font-size: 36px
+              &:nth-of-type(1)
+                margin-bottom: 3em
+
+//media*************************************************
+
+@media (max-width: 1024px)
+  #poove .poove__list
+    padding: 1em
+  #poove .poove__list li .poove__list__txt span
+    font-size: 24px
+    strong
+      font-size: 27px
+  #poove .poove__list li:nth-of-type(2) .poove__list__txt
+    width: 80%
+  #poove .rudder .rudder__cont .rudder__list li:nth-of-type(1)
+    margin-right: 0
+  #poove .poove__list li:nth-of-type(2)::after
+    background-size: contain
+    width: 400px
+  #poove .rudder .rudder__cont .rudder__list
+    padding: 1em
+  #poove .wheel .wheel__list li:nth-of-type(1)
+    padding: 1em
+  #poove .compact .compact__cont
+    padding: 1em 1em 6em 1em
+  #poove .functionally .functionally__wrap .functionally__list
+    padding: 1em
+    li
+      max-width: 350px
+
+@media (max-width: 812px)
+  #poove .poove__list::after
+    display: none
+  #poove .poove__list li
+    position: relative
+  #poove .poove__list li:nth-of-type(2) .poove__list__txt
+    width: unset
+  #poove .compact .compact__cont
+    padding: 1em 1em 17em 1em
+  #poove .rudder .rudder__cont .rudder__list
+    padding: 1em
+  #poove .rudder .rudder__cont .rudder__list li:nth-of-type(2) img
+    max-width: 80%
+  #poove .rudder .rudder__cont .rudder__list li span,
+  #poove .wheel .wheel__list li span,
+  #poove .rudder .rudder__cont .rudder__list li:nth-of-type(2) img
+    max-width: 100%
+  #poove .compact .compact__cont .compact__cont__img
+    max-width: 75%
+    margin: 0 auto
+  #poove .compact .compact__cont .compact__cont__txt h2
+    max-width: 375px
+  #poove .rudder .rudder__cont .rudder__list li:nth-of-type(1)
+    max-width: 350px
+  #poove .wheel .wheel__list
+    align-items: flex-end
+  #poove .functionally .functionally__wrap .functionally__list li:nth-of-type(2) span,
+  #poove .rudder .rudder__cont .rudder__list li span,
+  #poove .compact .compact__cont .compact__cont__txt span,
+  #poove .poove__list li .poove__list__txt span,
+  #poove .wheel .wheel__list li span
+    font-size: 18px
+  #poove .functionally .functionally__wrap .functionally__list li:nth-of-type(2) span strong,
+  #poove .poove__list li .poove__list__txt span strong
+    font-size: 26px
+  #poove .functionally .functionally__wrap .functionally__list li
+    max-width: 240px
+  #poove .functionally .functionally__wrap .functionally__list li:nth-of-type(1) span
+    font-size: 28px
+  #poove .compact .compact__cont .compact__cont__txt:nth-of-type(3)::before
+    margin: 0em 0 3em auto
+
+@media (max-width: 480px)
+  #poove .compact .compact__cont .compact__cont__txt__row
+    display: block
+  #poove .compact .compact__cont .compact__cont__txt__row .compact__cont__txt:nth-of-type(2)
+    text-align: left
+    margin-top: 1em
+  #poove .compact .compact__cont .compact__cont__txt:nth-of-type(3)::before
+    margin-bottom: 1em
+  #poove .compact .compact__cont .compact__cont__txt:nth-of-type(3)
+    margin-top: 0
+  #poove .wheel .wheel__list li:nth-of-type(1) span:nth-of-type(2)
+    margin-right: -3em
+  #poove h2
+    font-size: 1.5rem
+  #poove .poove__list
+    display: block
+    width: 100%
+    padding: 1em
+    box-sizing: border-box
+  #poove .poove__list li .poove__list__img img
+    max-width: 60%
+  #poove .poove__list li .poove__list__txt span
+    font-size: 1rem
+    strong
+      font-size: 1.2rem
+  #poove .poove__list li::before
+    max-width: 60%
+    background-size: contain
+  #poove .poove__list li:nth-of-type(1) .poove__list__txt span:nth-of-type(2)::before
+    width: 40px
+    height: 1px
+  #poove .poove__list li
+    flex: 1 1 0
+  #poove .compact .compact__cont .compact__cont__txt:nth-of-type(1)::before,
+  #poove .compact .compact__cont .compact__cont__txt:nth-of-type(3)::after
+    width: 59px
+    height: 1px
+  #poove .compact .compact__cont .compact__cont__txt span
+    font-size: 1rem
+  #poove .compact .compact__cont
+    padding: 1em 1.5em
+  #poove .compact .compact__cont .compact__cont__txt:nth-of-type(1)::after,
+  #poove .compact .compact__cont .compact__cont__txt:nth-of-type(3)::before
+    width: 33px
+    height: 1px
+  #poove .compact .compact__cont .compact__cont__img
+    padding: 2em 0
+    max-width: 100%
+  #poove .rudder .rudder__cont .rudder__list li h2::after
+    width: 52px
+    height: 1px
+  #poove .rudder .rudder__cont .rudder__list
+    padding: 1em 1.5em
+  #poove .rudder .rudder__cont .rudder__list li:nth-of-type(2) img
+    max-width: 55%
+  #poove .poove__list li:nth-of-type(2) .poove__list__txt
+    margin-left: -13em
+  #poove .poove__list li:nth-of-type(3) .poove__list__txt span:nth-of-type(2)::before, #poove .poove__list li:nth-of-type(3) .poove__list__txt span:nth-of-type(2)::after
+    width: 53px
+    height: 1px
+  #poove .rudder .rudder__cont .rudder__list li:nth-of-type(1) span:nth-of-type(1)::after
+    width: 52px
+    height: 1px
+  #poove .wheel .wheel__list li span,
+  #poove .rudder .rudder__cont .rudder__list li span
+    font-size: 1rem
+  #poove .wheel .wheel__list li:nth-of-type(1) span:nth-of-type(1)::after
+    width: 52px
+    height: 1px
+  #poove .poove__list li:nth-of-type(2)::after
+    width: 120%
+  #poove .rudder .rudder__cont .rudder__list li:nth-of-type(2)
+    margin-right: 0
+  #poove .wheel .wheel__list li:nth-of-type(1) span:nth-of-type(1)
+    margin-right: -10em
+  #poove .compact .compact__cont .compact__cont__txt h2
+    font-size: 1rem
+  #poove .rudder .rudder__cont .rudder__list
+    display: block
+    position: unset
+  #poove .rudder .rudder__cont .rudder__cont__bg
+    display: none
+  #poove .functionally .functionally__wrap .functionally__list li:nth-of-type(1) span
+    font-size: 1.2rem
+  #poove .functionally .functionally__wrap .functionally__list li:nth-of-type(1) span::after
+    width: 52px
+    height: 1px
+  #poove .functionally .functionally__wrap .functionally__list li:nth-of-type(2) span
+    font-size: 1rem
+  #poove .functionally .functionally__wrap .functionally__list li:nth-of-type(2) span strong
+    font-size: 1rem
+  #poove .functionally .functionally__wrap .functionally__list
+    position: unset
+    display: block
+  #poove .functionally .functionally__wrap .functionally__list li
+    max-width: 100%
+  #poove .functionally .functionally__wrap .functionally__list li:nth-of-type(2) span
+    text-align: left
+  #poove .functionally .functionally__wrap .functionally__bg img
+    min-width: 140%
+    margin-left: -27%
