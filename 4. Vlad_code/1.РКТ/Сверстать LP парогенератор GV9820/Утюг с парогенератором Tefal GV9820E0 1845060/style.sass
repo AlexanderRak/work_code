@@ -1,0 +1,656 @@
+/*default styles*/
+
+#tefal
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: bold
+    text-transform: uppercase
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    margin: 0
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#tefal
+  .show__mob
+    display: none
+
+  .logo
+    .logo__list
+      display: flex
+      flex-direction: row
+      align-items: center
+      padding: 25px 45px
+      li
+        &:nth-of-type(1)
+          padding-right: 20px
+    .logo__wrap
+      position: relative
+      .logo__abs
+        position: absolute
+        right: 45px
+        top: 100px
+        max-width: 400px
+        color: #fff
+        .logo__txt
+          margin-left: -2em
+          &::before,
+          &::after
+            content: ""
+            display: block
+            width: 100px
+            height: 33px
+            background-repeat: no-repeat
+            background-position: center
+            background-image: url("https://cdn.comfy.ua/media/x/img/1845060/skobka.png")
+            background-size: contain
+            margin-left: -2em
+          &::after
+            transform: scale(-1, -1)
+            margin: 0 0 0 auto
+        .logo__icon
+          img
+            margin: 4em 0 0 auto
+
+  //styles for title (hooks)
+
+  .skobki
+    max-width: max-content
+    margin: 0 auto
+    &::before,
+    &::after
+      content: ""
+      display: block
+      width: 100px
+      height: 33px
+      background-repeat: no-repeat
+      background-position: center
+      background-image: url("https://cdn.comfy.ua/media/x/img/1845060/skobka.png")
+      background-size: contain
+      margin-left: -2em
+    &::after
+      transform: scale(-1, -1)
+      margin: 0 -2em 0 auto
+
+  //end styles for title
+
+  .design
+    background-image: linear-gradient(270deg, #161d2c 0%, #233c66 61%)
+    padding: 75px 60px 0 60px
+    position: relative
+    color: #fff
+    .design__title
+      z-index: 10
+      position: relative
+      text-align: center
+      margin-bottom: 80px
+    .design__wrap
+      .design__list
+        position: absolute
+        z-index: 10
+        padding-left: 6em
+        margin-top: -1em
+        li
+          font-size: 16px
+          line-height: normal
+          text-align: right
+          &:nth-of-type(n+2)
+            margin-top: 3.5em
+      .design__list__right
+        right: 0
+        padding-left: 0
+        padding-right: 5em
+        li
+          text-align: left
+    .design__bg
+      position: absolute
+      top: 0
+      left: 0
+    .design__img
+      img
+        margin: 0 auto
+
+  .smartled
+    color: #fff
+    position: relative
+    .smartled__wrap
+      position: absolute
+      padding: 60px
+      .smartled__icon
+        img
+          margin: 0
+      .smartled__txt
+        margin-top: 50px
+        max-width: 450px
+        div
+          &:nth-of-type(n+2)
+            margin-top: 30px
+          p
+            font-size: 20px
+            strong
+              text-transform: uppercase
+    .smartled__abs
+      font-size: 12px
+      position: absolute
+      bottom: 0
+      right: 0
+      padding: 0 60px 35px 0
+
+  .power
+    padding: 120px 60px 0 0
+    background-image: linear-gradient(270deg, #161d2c 0%, #233c66 61%)
+    position: relative
+    .power__list
+      display: flex
+      flex-direction: row
+      color: #fff
+      li
+        flex: 1 1 0
+        &:nth-of-type(2)
+          .power__txt
+            padding: 4em 0 0 3em
+    .power__bg
+      position: absolute
+      top: 0
+      left: 0
+
+  .steam
+    position: relative
+    .steam__list
+      position: absolute
+      display: flex
+      flex-direction: row
+      color: #fff
+      text-align: center
+      padding: 0 60px 40px 60px
+      bottom: 0
+      li
+        flex: 1 1 0
+        box-sizing: border-box
+        &:nth-of-type(2)
+          margin: 0 70px
+        .steam__icon
+          background-image: linear-gradient(-45deg, #707d80 0%, #eef2f2 50%, #707d80 100%)
+          border: 0.822509021876599px solid #4e5056
+          max-width: 140px
+          margin: 0 auto
+          border-top-right-radius: 20px
+          border-bottom-left-radius: 20px
+          padding: 0.5em 0
+          span
+            color: #4f4f50
+            font-size: 20px
+            font-weight: bold
+            strong
+              font-size: 70px
+              font-weight: normal
+        .steam__txt
+          span
+            font-size: 20px
+            font-weight: bold
+            text-transform: uppercase
+            margin: 30px 0 15px 0
+
+  .norisk
+    position: relative
+    padding: 60px 60px 0 60px
+    overflow: hidden
+    background-image: linear-gradient(90deg, #161d2c 0%, #233c66 82%)
+    color: #fff
+    .norisk__list
+      display: flex
+      flex-direction: row
+      position: relative
+      z-index: 10
+      li
+        flex: 1 1 0
+        img
+          margin: 0 auto
+        .skobki
+          margin: 0 0 100px 2em
+        .norisk__txt
+          li
+            display: flex
+            flex-direction: row
+            align-items: center
+            margin-top: 10px
+            &::before
+              content: "1"
+              font-size: 16px
+              font-weight: bold
+              padding: 0.4em 0.8em
+              border: #fff 1px solid
+              border-top-right-radius: 10px
+              border-bottom-left-radius: 10px
+              margin-right: 15px
+            &:nth-of-type(2)
+              &::before
+                content: "2"
+            &:nth-of-type(3)
+              &::before
+                content: "3"
+            &:nth-of-type(4)
+              &::before
+                content: "4"
+    .norisk__bg
+      position: absolute
+      bottom: 0
+      right: 0
+
+  .warranty
+    position: relative
+    color: #fff
+    .warranty__wrap
+      position: absolute
+      padding: 0 60px 0 0
+      right: 0
+      bottom: 50%
+      transform: translateY(50%)
+      max-width: 450px
+      .skobki
+        margin: 0 0 3em 2em
+
+  .noize
+    position: relative
+    background-image: linear-gradient(90deg, #161d2c 0%, #233c66 66%)
+    color: #fff
+    .noize__wrap
+      position: absolute
+      padding: 100px 0 0 60px
+      left: 0
+      top: 0
+      max-width: 650px
+      .skobki
+        margin: 0 0 2em 2em
+      .noize__txt
+        max-width: 430px
+
+  .potect
+    position: relative
+    color: #fff
+    .potect__wrap
+      position: absolute
+      max-width: 35%
+      bottom: 50%
+      transform: translateY(50%)
+      right: 0
+      padding-right: 60px
+      .skobki
+        margin: 0 2em 4em auto
+      .potect__list
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: flex-end
+        li
+          flex: 1 1 0
+          text-align: right
+          img
+            margin: 0 0 0 auto
+          &:nth-of-type(1)
+            flex: 3
+            margin-right: 2em
+            span
+              font-size: 20px
+              font-weight: bold
+              margin-bottom: 0.5em
+    .potect__abs
+      position: absolute
+      color: #909091
+      font-size: 16px
+      padding: 0 60px 20px 0
+      bottom: 0
+      right: 0
+
+  .transport
+    position: relative
+    color: #fff
+    .transport__wrap
+      position: absolute
+      top: 0
+      left: 0
+      padding: 80px 0 0 60px
+      max-width: 650px
+      .skobki
+        margin: 0 0 4em 2em
+        text-align: center
+      .transport__list
+        display: flex
+        flex-direction: row
+        align-items: center
+        li
+          flex: 1 1 0
+          &:nth-of-type(2)
+            flex: 3
+            margin-left: 2em
+            span
+              font-size: 20px
+              font-weight: bold
+              margin-bottom: 0.5em
+
+  .generator__list
+    display: flex
+    flex-direction: row
+    align-items: center
+    background-color: #756863
+    position: relative
+    color: #fff
+    li
+      position: relative
+      z-index: 10
+      flex: 1 1 0
+      &:nth-of-type(1)
+        flex: 1.5
+        margin-right: 4em
+      .skobki
+        margin: 0 0 2em 2em
+      .generator__txt
+        padding-left: 2em
+        max-width: 300px
+    &::after
+      content: ""
+      display: block
+      position: absolute
+      width: 564px
+      top: 0
+      right: 0
+      bottom: 0
+      background-image: linear-gradient(-90deg, #2b2626 0%, rgba(51,45,45,0) 100%)
+      z-index: 1
+
+//media**************************************************
+
+@media (max-width: 1024px)
+  #tefal h2
+    font-size: 28px
+  #tefal .logo .logo__wrap .logo__abs .logo__txt::before, #tefal .logo .logo__wrap .logo__abs .logo__txt::after,
+  #tefal .skobki::before, #tefal .skobki::after
+    width: 70px
+    height: 20px
+  #tefal .logo .logo__wrap .logo__abs
+    top: 1em
+  #tefal .design .design__wrap .design__list
+    padding-left: 5em
+    left: 1em
+  #tefal .design .design__wrap .design__list__right
+    padding-right: 0
+    right: 1em
+    left: unset
+  #tefal .design .design__img img
+    max-width: 50%
+  #tefal .design .design__wrap .design__list li:nth-of-type(n+2)
+    margin-top: 2em
+  #tefal .smartled .smartled__wrap
+    padding: 1em
+  #tefal .smartled .smartled__wrap .smartled__icon img
+    max-width: 50%
+  #tefal .smartled .smartled__wrap .smartled__txt div:nth-of-type(n+2)
+    margin-top: 1em
+  #tefal .power .power__list li:nth-of-type(2) .power__txt
+    padding-top: 2em
+  #tefal .potect .potect__wrap
+    padding-right: 1em
+  #tefal .potect .potect__wrap .potect__list li:nth-of-type(1)
+    margin-right: 1em
+  #tefal .transport .transport__wrap
+    padding: 1em 0 0 1em
+
+@media (max-width: 812px)
+  #tefal .hide__mob
+    display: none
+  #tefal .show__mob
+    display: block
+  #tefal .logo .logo__wrap .logo__abs .logo__icon img
+    margin-top: 8em
+  #tefal .design
+    padding: 1em
+    display: flex
+    flex-direction: column
+  #tefal .design .design__title
+    order: 0
+  #tefal .design .design__img
+    order: 1
+  #tefal .logo .logo__wrap .logo__img img
+    min-width: 150%
+    margin-left: -50%
+  #tefal .design .design__wrap .design__list
+    position: unset
+    padding-left: 0
+    padding-right: 0
+    max-width: 300px
+  #tefal .design .design__wrap
+    display: flex
+    flex-direction: row
+    width: 100%
+    justify-content: space-between
+    padding: 1em 1em
+    box-sizing: border-box
+    order: 2
+  #tefal .design .design__img img
+    max-width: 100%
+  #tefal .design .design__wrap .design__list li br
+    display: none
+  #tefal .smartled .smartled__bg img
+    min-width: 150%
+    margin-left: -40%
+  #tefal .power
+    padding: 1em 0 0 0
+  #tefal .power .power__list
+    flex-direction: column-reverse
+  #tefal .power .power__list li:nth-of-type(2)
+    z-index: 10
+    .skobki
+      text-align: center
+  #tefal .power .power__list li:nth-of-type(2) .power__txt
+    padding: 1em
+    text-align: center
+  #tefal .steam
+    display: flex
+    flex-direction: column-reverse
+  #tefal .steam .steam__list
+    padding: 1em
+    position: unset
+    background-color: #000
+  #tefal .steam .steam__list li:nth-of-type(2)
+    margin: 0 1em
+  #tefal .steam .steam__list li .steam__txt span
+    font-size: 18px
+  #tefal .norisk
+    padding: 1em 1em 0 1em
+  #tefal .warranty .warranty__wrap
+    padding-right: 1em
+    max-width: 520px
+  #tefal .warranty .warranty__wrap .skobki
+    margin-bottom: 1em
+  #tefal .noize .noize__wrap
+    padding: 1em
+  #tefal .potect .potect__wrap
+    max-width: 60%
+    padding-right: 1em
+  #tefal .potect .potect__bg img
+    min-width: 150%
+    margin-left: -40%
+  #tefal .transport .transport__wrap
+    padding: 1em
+  #tefal .transport .transport__wrap .skobki
+    margin-bottom: 1em
+  #tefal .generator__list
+    flex-direction: column-reverse
+  #tefal .generator__list li .generator__txt
+    max-width: 100%
+    text-align: center
+    margin-top: 1em
+  #tefal .generator__list li .skobki
+    max-width: 80%
+    margin: 0 auto
+    text-align: center
+  #tefal .generator__list li .skobki h2 br
+    display: none
+  #tefal .generator__list li:nth-of-type(2)
+    padding: 1em
+  #tefal .generator__list li .generator__txt
+    padding-left: 0
+
+@media (max-width: 480px)
+  #tefal .logo .logo__wrap .logo__abs .logo__txt
+    margin: 0 auto
+  #tefal .logo .logo__wrap .logo__img img
+    min-width: 200%
+    margin-left: -100%
+    max-height: 280px
+  #tefal .logo .logo__wrap .logo__abs .logo__icon img
+    margin-top: 2em
+    max-width: 130px
+  #tefal h2
+    font-size: 20px
+  #tefal .logo .logo__wrap .logo__abs .logo__txt
+    margin-left: 4em
+  #tefal .logo .logo__wrap .logo__abs .logo__txt::before, #tefal .logo .logo__wrap .logo__abs .logo__txt::after, #tefal .skobki::before, #tefal .skobki::after
+    width: 50px
+    height: 11px
+  #tefal .design .design__wrap
+    padding: 1em 0 0 0
+    flex-direction: column
+  #tefal .design .design__wrap .design__list
+    margin-top: 0
+    max-width: 100%
+    li
+      text-align: center
+  #tefal .design .design__wrap .design__list__right
+    margin-top: 1em
+  #tefal .design .design__wrap .design__list li:nth-of-type(n+2)
+    margin-top: 1em
+  #tefal .smartled .smartled__bg img
+    min-width: 315%
+    max-height: 465px
+  #tefal .smartled .smartled__wrap .smartled__icon img
+    min-width: 55%
+  #tefal .smartled .smartled__wrap .smartled__txt
+    margin-top: 1em
+  #tefal .smartled .smartled__wrap .smartled__txt div p
+    font-size: unset
+  #tefal .smartled .smartled__abs
+    padding: 1em
+  #tefal .skobki
+    padding: 0 1em
+  #tefal .skobki::before
+    margin-left: -1em
+  #tefal .skobki::after
+    margin-right: -1em
+  #tefal .steam .steam__list
+    flex-direction: column
+  #tefal .steam .steam__list li:nth-of-type(2)
+    margin: 2em 0
+  #tefal .steam .steam__bg img
+    min-width: 200%
+    margin-left: -50%
+  #tefal .norisk .norisk__list
+    flex-direction: column
+  #tefal .norisk .norisk__list li .skobki,
+  #tefal .warranty .warranty__wrap .skobki,
+  #tefal .noize .noize__wrap .skobki,
+  #tefal .potect .potect__wrap .skobki,
+  #tefal .transport .transport__wrap .skobki,
+  #tefal .generator__list li .skobki
+    margin: 0 auto 2em auto
+    text-align: center
+  #tefal .norisk .norisk__list li .skobki h2 br,
+  #tefal .warranty .warranty__wrap .skobki h2 br,
+  #tefal .noize .noize__wrap .skobki h2 br,
+  #tefal .potect .potect__wrap .skobki h2 br,
+  #tefal .transport .transport__wrap .skobki h2 br,
+  #tefal .generator__list li .skobki h2 br
+    display: none
+  #tefal .norisk .norisk__list li img
+    max-width: 50%
+  #tefal .warranty .warranty__bg img
+    min-width: 270%
+    margin-left: -100%
+  #tefal .warranty .warranty__wrap
+    padding: 1em
+  #tefal .noize .noize__wrap
+    position: unset
+  #tefal .noize .noize__bg img
+    min-width: 150%
+    margin-left: -50%
+  #tefal .potect .potect__wrap
+    max-width: 100%
+    position: unset
+    transform: unset
+    padding: 1em
+  #tefal .potect
+    background-color: #000
+  #tefal .potect .potect__wrap .potect__list
+    flex-direction: column-reverse
+  #tefal .potect .potect__wrap .potect__list li:nth-of-type(1)
+    margin-right: 0
+    margin-top: 2em
+    text-align: center
+  #tefal .potect .potect__wrap .potect__list li:nth-of-type(1) span
+    font-size: 16px
+  #tefal .potect .potect__bg img
+    min-width: 200%
+    margin-left: -25%
+  #tefal .potect .potect__abs
+    padding: 1em
+    color: #000
+  #tefal .transport
+    background-color: #000
+  #tefal .transport .transport__wrap
+    position: unset
+  #tefal .transport .transport__wrap .transport__list
+    flex-direction: column
+  #tefal .transport .transport__wrap .transport__list li:nth-of-type(2)
+    margin-left: 0
+    margin-top: 2em
+    text-align: center
+  #tefal .transport .transport__wrap .transport__list li:nth-of-type(2) span
+    font-size: 16px
+  #tefal .transport .transport__bg img
+    min-width: 200%
+    margin-left: -100%
+  #tefal .smartled .smartled__wrap .smartled__icon img
+    margin: 0 auto
+  #tefal .smartled .smartled__wrap .smartled__txt
+    max-width: 100%
+    text-align: center
+  #tefal .smartled .smartled__abs
+    text-align: center
+    width: 100%
