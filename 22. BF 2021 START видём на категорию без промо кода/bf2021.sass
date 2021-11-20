@@ -91,12 +91,40 @@ span.word-wrap-txt
    padding-left: 0
    padding-right: 0
 // default
+
+// STAR
+#black-friday21
+   a.goto-category
+      border-radius: 14px
+      text-align: center
+      display: inline-block
+      line-height: 1
+      transition: .3s
+      .bgrd1
+         border-radius: 12px
+         padding: 7px
+         background: #F37BCE
+         .bgrd2
+            padding: 15px 45px
+            border: 2px solid #FFFFFF
+            border-radius: 8px
+            span
+               color: #fff
+               font-weight: bold
+               font-size: 50px
+               text-transform: uppercase
+               line-height: 1
+      &:hover
+         box-shadow: 0 0 15px 3px #f37bce
+.black-friday21-header__content__link
+   text-align: center
+   margin: 15px
+// START END
+
 .black-friday21__wrap
    max-width: 1438px
    width: 100%
    margin: 0 auto
-   position: relative
-   z-index: 999
 .black-friday21-header
    position: relative
 .black-friday21-header__img
@@ -323,7 +351,7 @@ span.word-wrap-txt
             color: #FF671F
 @media (max-width: 1024px)
    .black-friday21-header__content
-      margin-top: -40px
+      margin-top: 0px
    .black-friday21-product__grid
       grid-template-columns: 1fr 1fr 1fr
       grid-gap: 20px
@@ -387,6 +415,8 @@ span.word-wrap-txt
       font-size: 18px
    .black-friday21-seo-text__conteiner
       padding: 45px 20px
+   #black-friday21 a.goto-category .bgrd1 .bgrd2 span
+      font-size: 30px
 @media (max-width: 480px)
    #black-friday21
       p
@@ -396,8 +426,14 @@ span.word-wrap-txt
             font-size: 16px
             word-break: break-word
    .black-friday21-header__content
-      margin-top: -160px
-      padding: 0 15px
+      margin-top: 0
+      padding: 0 0
+   #black-friday21 a.goto-category .bgrd1 .bgrd2 span
+      font-size: 28px
+   #black-friday21 a.goto-category
+      display: block
+      max-width: 320px
+      margin: 0 auto
    .black-friday21-header__app-flex
       padding-bottom: 38px
    .black-friday21-product__grid
@@ -440,8 +476,6 @@ span.word-wrap-txt
       display: initial
    .black-friday21-product__content-flex
       justify-content: flex-end
-   .black-friday21-header__content
-      display: none
    .black-friday21-header__content-mob
       display: block
    .black-friday21-header__content-mob

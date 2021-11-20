@@ -3,21 +3,15 @@
 		display: none;
 	}
 
-	.popup__head {
-		/*display: none;*/
-	}
 
 	.popup__head .popup-title {
 		display: none;
 	}
 
-	#wrapper-popup-action {
-		/*padding: 10rem;*/
-	}
-
 	.fancybox-lock {
 		overflow: overlay !important;
 		width: auto;
+		top: inherit !important;
 	}
 
 	.popup[data-v-a06dd506] {
@@ -38,8 +32,10 @@
 		right: 0rem;
 		bottom: 0rem;
 		left: inherit;
-		width: 515px;
-		height: 370px;
+		/* width: 515px;
+		height: 370px; */
+		width: 430px;
+		height: 265px;
 		overflow: hidden;
 	}
 
@@ -53,11 +49,14 @@
 	}
 
 	.linear-gradient-popup {
-		background: linear-gradient(287.34deg, #82DF0B 20.5%, #43B02A 76.3%);
+		/* background: linear-gradient(287.34deg, #82DF0B 20.5%, #43B02A 76.3%);
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25); */
+
+		background: linear-gradient(284.29deg, #131D24 29.05%, #000000 94.79%);
 		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 
 		border-radius: 10px;
-		width: 340px;
+		width: 352px;
 		height: 177px;
 		z-index: 6;
 		overflow: hidden;
@@ -89,16 +88,16 @@
 	}
 
 	.content-text {
-		background-image: url(https://cdn.comfy.ua/media/x/img_popap/popup_ru.png);
+		background-image: url(https://cdn.comfy.ua/media/x/img2/deskpopup.png);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;
 		position: absolute;
-		width: 354px;
-		height: 179px;
+		width: 338px;
+		height: 163px;
 		z-index: 8;
-		left: -15px;
-    	bottom: -7px;
+		left: 10px;
+		bottom: 5px;
 		border-radius: 10px;
 	}
 
@@ -160,6 +159,18 @@
 		/*padding-right: 15px;*/
 	}
 
+	.popup-close {
+		z-index: 12;
+		top: -12px;
+		left: -12px;
+		width: 12px;
+		height: 12px;
+		background: #FF090B url(https://cdn.comfy.ua/media/x/img/exit.svg) no-repeat 50%;
+		padding: 14px;
+		border-radius: 50%;
+		background-size: 13px;
+	}
+
 	.popup-close[data-v-a06dd506] {
 		z-index: 12;
 		top: -12px;
@@ -172,6 +183,10 @@
 		background-size: 13px;
 	}
 
+	.info-popup__close:hover {
+		background-color: #de0002;
+	}
+
 	.popup-close[data-v-a06dd506]:hover {
 		background-color: #de0002;
 	}
@@ -182,12 +197,12 @@
 
 	@media (max-width: 1024px) {
 		.content-text {
-			background-image: url(https://cdn.comfy.ua/media/x/img_popap/popup_ru_mob.png);
-			width: 270px;
-			height: 73px;
+			background-image: url(https://cdn.comfy.ua/media/x/img2/Group_1098.png);
+			width: 276px;
+			height: 52px;
 			z-index: 8;
-			left: 7px;
-    		bottom: -7px;
+			left: 5px;
+			bottom: -1px;
 		}
 
 		.images-push {
@@ -197,8 +212,6 @@
 		.linear-gradient-popup {
 			width: 285px;
 			height: 55px;
-			background: #43B02A;
-			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 		}
 
 		.fancybox-lock {
@@ -207,17 +220,6 @@
 			width: 100%;
 			left: 0;
 			top: 0;
-		}
-
-		.popup-wr[data-v-a06dd506] {
-			height: 225px;
-			width: 100%;
-		}
-
-		.popup-close[data-v-a06dd506] {
-			top: -12px;
-			right: -5px;
-			left: inherit;
 		}
 
 		.cont-popup-action {
@@ -236,11 +238,22 @@
 		.linear-gradient-popup span.small-text {
 			font-size: 14px;
 		}
+
+		.popup-wr[data-v-a06dd506] {
+			height: 225px;
+			width: 100%;
+		}
+
+		.popup-close[data-v-a06dd506] {
+			top: -12px;
+			right: -5px;
+			left: inherit;
+		}
 	}
 </style>
 <div id="wrapper-popup-action">
 	<div class="cont-popup-action">
-		<a href="https://comfy.ua/product-day/">
+		<a href="https://comfy.ua/black-friday.html">
 			<div class="cont-popup">
 				<div class="linear-gradient-popup">
 					<!-- <div class="images-push"></div> -->

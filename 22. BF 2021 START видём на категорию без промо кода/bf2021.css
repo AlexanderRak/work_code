@@ -138,12 +138,58 @@ span.word-wrap-txt {
   padding-right: 0;
 }
 
+#black-friday21 a.goto-category {
+  -webkit-border-radius: 14px;
+     -moz-border-radius: 14px;
+          border-radius: 14px;
+  text-align: center;
+  display: inline-block;
+  line-height: 1;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+}
+
+#black-friday21 a.goto-category .bgrd1 {
+  -webkit-border-radius: 12px;
+     -moz-border-radius: 12px;
+          border-radius: 12px;
+  padding: 7px;
+  background: #F37BCE;
+}
+
+#black-friday21 a.goto-category .bgrd1 .bgrd2 {
+  padding: 15px 45px;
+  border: 2px solid #FFFFFF;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+}
+
+#black-friday21 a.goto-category .bgrd1 .bgrd2 span {
+  color: #fff;
+  font-weight: bold;
+  font-size: 50px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+#black-friday21 a.goto-category:hover {
+  -webkit-box-shadow: 0 0 15px 3px #f37bce;
+     -moz-box-shadow: 0 0 15px 3px #f37bce;
+          box-shadow: 0 0 15px 3px #f37bce;
+}
+
+.black-friday21-header__content__link {
+  text-align: center;
+  margin: 15px;
+}
+
 .black-friday21__wrap {
   max-width: 1438px;
   width: 100%;
   margin: 0 auto;
-  position: relative;
-  z-index: 999;
 }
 
 .black-friday21-header {
@@ -565,7 +611,7 @@ span.word-wrap-txt {
 
 @media (max-width: 1024px) {
   .black-friday21-header__content {
-    margin-top: -40px;
+    margin-top: 0px;
   }
   .black-friday21-product__grid {
     -ms-grid-columns: 1fr 1fr 1fr;
@@ -665,6 +711,9 @@ span.word-wrap-txt {
   .black-friday21-seo-text__conteiner {
     padding: 45px 20px;
   }
+  #black-friday21 a.goto-category .bgrd1 .bgrd2 span {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -677,8 +726,16 @@ span.word-wrap-txt {
     word-break: break-word;
   }
   .black-friday21-header__content {
-    margin-top: -160px;
-    padding: 0 15px;
+    margin-top: 0;
+    padding: 0 0;
+  }
+  #black-friday21 a.goto-category .bgrd1 .bgrd2 span {
+    font-size: 28px;
+  }
+  #black-friday21 a.goto-category {
+    display: block;
+    max-width: 320px;
+    margin: 0 auto;
   }
   .black-friday21-header__app-flex {
     padding-bottom: 38px;
@@ -760,9 +817,6 @@ span.word-wrap-txt {
        -moz-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-  }
-  .black-friday21-header__content {
-    display: none;
   }
   .black-friday21-header__content-mob {
     display: block;
