@@ -1,0 +1,568 @@
+/*default styles*/
+
+#jvc
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#jvc
+  .quality
+    text-align: center
+    color: #b92b32
+    padding-top: 3em
+    .quality__txt
+      margin-bottom: 1em
+      img
+        margin: 0 auto 2em auto
+
+  .func
+    position: relative
+    .func__list
+      position: absolute
+      display: flex
+      flex-direction: row
+      padding: 3em 4em 0 4em
+      li
+        display: flex
+        flex-direction: row
+        flex: 1 1 0
+        .func__list__icon
+          margin-right: 1em
+          img
+            min-width: 58px
+        .func__list__txt
+          max-width: 100%
+          span
+            font-size: 18px
+            text-transform: uppercase
+            margin-bottom: 0.5em
+            font-weight: bold
+        &:nth-of-type(2)
+          margin: 0 4em
+        &:nth-of-type(odd)
+          .func__list__icon
+            position: relative
+            &::after
+              content: ""
+              display: block
+              width: 2px
+              height: 210px
+              border-right: 2px dotted #fe0a0b
+              position: absolute
+              right: 50%
+              transform: translateX(50%)
+              top: 80px
+        &:nth-of-type(1)
+          .func__list__icon
+            &::before
+              content: ""
+              display: block
+              width: 2px
+              height: 411px
+              border-right: 2px dotted #fe0a0b
+              position: absolute
+              left: 230px
+              transform: rotate(280deg)
+              top: 123px
+
+  .sertificate
+    margin-top: -5em
+    padding: 0 4em 4em 4em
+    .sertificate__list
+      display: flex
+      flex-direction: row
+      align-items: flex-end
+      li
+        flex: 1 1 0
+        .sertificate__icon
+          display: flex
+          flex-direction: row
+          align-items: center
+          justify-content: center
+          margin-top: 2em
+          img
+            max-height: 30px
+            &:nth-of-type(n+2)
+              margin-left: 1em
+        &:nth-of-type(1)
+          .sertificate__icon
+            justify-content: flex-start
+        &:nth-of-type(2)
+          flex: 2
+          margin: 0 4em
+        &:nth-of-type(3)
+          .sertificate__icon
+            justify-content: flex-start
+
+  .contrast
+    padding: 3em 0
+    .contrast__icon
+      img
+        margin: 0 auto
+        max-width: 10%
+    .contrast__wrap
+      position: relative
+      .contrast__list
+        display: flex
+        flex-direction: row
+        position: absolute
+        color: #fff
+        width: 100%
+        max-width: 60%
+        right: 50%
+        transform: translateX(50%)
+        bottom: 55%
+        justify-content: space-between
+        li
+          max-width: 230px
+          span
+            font-size: 20px
+            font-weight: bold
+            text-transform: uppercase
+            margin-bottom: 1em
+
+  .chromecast
+    color: #fff
+    position: relative
+    .chromecast__list
+      display: flex
+      flex-direction: row
+      position: absolute
+      top: 15%
+      left: 15%
+      li
+        span
+          text-transform: uppercase
+          font-weight: bold
+          font-size: 20px
+          margin-bottom: 0.5em
+        &:nth-of-type(2)
+          max-width: 180px
+          margin-left: 1em
+
+  .design
+    position: relative
+    .design__txt
+      position: absolute
+      top: 20%
+      left: 10%
+      max-width: 280px
+      span
+        font-size: 20px
+        text-transform: uppercase
+        font-weight: bold
+        margin-bottom: 0.5em
+
+  .wave
+    position: relative
+    padding-top: 4em
+    .wave__logo
+      img
+        margin: 0 auto
+        max-width: 150px
+    .wave__wrap
+      position: absolute
+      min-width: max-content
+      bottom: 50%
+      right: 50%
+      transform: translate(50%, 50%)
+      .wave__list
+        display: flex
+        flex-direction: row
+        position: absolute
+        bottom: 50%
+        transform: translateY(50%)
+        li
+          display: flex
+          flex-direction: row
+          .wave__list__txt
+            max-width: 200px
+            margin-left: 1em
+          &:nth-of-type(odd)
+            margin-bottom: 16em
+            .wave__list__icon
+              position: relative
+              &::after
+                content: ""
+                display: block
+                width: 2px
+                height: 100px
+                background-color: #fd0000
+                position: absolute
+                right: 50%
+                transform: translateX(50%)
+                top: 60px
+          &:nth-of-type(3)
+            transform: translateX(86px)
+          &:nth-of-type(even)
+            margin-top: 18em
+            .wave__list__icon
+              position: relative
+              &::after
+                content: ""
+                display: block
+                width: 2px
+                height: 100px
+                background-color: #fd0000
+                position: absolute
+                right: 50%
+                transform: translateX(50%)
+                bottom: 100px
+          &:nth-of-type(2)
+            transform: translateX(45px)
+          &:nth-of-type(4)
+            transform: translateX(125px)
+
+  .wawe__two
+    position: relative
+    .wawe__two__title
+      margin-bottom: -7em
+      position: relative
+      z-index: 10
+      span
+        text-transform: uppercase
+        font-size: 22px
+        font-weight: bold
+        color: #fd0000
+        text-align: center
+    .wawe__two__wrap
+      position: absolute
+      min-width: max-content
+      bottom: 50%
+      right: 50%
+      transform: translate(50%, 50%)
+      .wawe__two__list
+        position: absolute
+        bottom: 50%
+        right: 50%
+        transform: translate(50%, 50%)
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        padding: 0 6em
+        box-sizing: border-box
+        li
+          flex: 1 1 0
+          margin-top: -2em
+          max-width: 300px
+          .wawe__two__list__icon
+            img
+              margin: 0 auto
+          .wawe__two__list__txt
+            text-align: center
+            margin-top: 6em
+          &:nth-of-type(1)
+            transform: translateX(36px)
+
+//media*************************************************
+
+@media (max-width: 1024px)
+  #jvc .func .func__list
+    padding: 1em 1em 0 1em
+  #jvc .func .func__list li:nth-of-type(2)
+    margin: 0 1em
+  #jvc .func .func__list li:nth-of-type(odd) .func__list__icon::after
+    height: 165px
+  #jvc .func .func__list li:nth-of-type(1) .func__list__icon::before
+    top: 78px
+  #jvc .wave .wave__wrap .wave__wrap__bg img
+    margin: 0 auto
+    max-width: 78.5%
+  #jvc .wave .wave__wrap .wave__list
+    right: 50%
+    transform: translate(50%, 50%)
+    width: 100%
+    max-width: 80%
+  #jvc .wave .wave__wrap .wave__list li
+    div
+      flex: 0.8
+    .wave__list__txt
+      flex: 3
+  #jvc .wave .wave__wrap .wave__list li:nth-of-type(2)
+    transform: translateX(11px)
+  #jvc .wave .wave__wrap .wave__list li:nth-of-type(3)
+    transform: translateX(19px)
+  #jvc .wave .wave__wrap .wave__list li:nth-of-type(4)
+    transform: translateX(15px)
+  #jvc .wave .wave__wrap .wave__list li:nth-of-type(even) .wave__list__icon::after
+    bottom: 110px
+  #jvc .wave .wave__logo
+    margin-bottom: 8em
+  #jvc .func .func__list li .func__list__txt p
+    font-size: 15px
+
+@media (max-width: 812px)
+  #jvc .quality
+    padding-top: 1em
+  #jvc .sertificate
+    margin-top: -4em
+    padding: 1em
+  #jvc .func .func__list li:nth-of-type(odd) .func__list__icon::after,
+  #jvc .func .func__list li:nth-of-type(1) .func__list__icon::before
+    display: none
+  #jvc .func .func__list
+    padding: 1em
+    position: unset
+  #jvc .func
+    display: flex
+    flex-direction: column-reverse
+  #jvc .func .func__list li
+    flex-direction: column
+    text-align: center
+  #jvc .func .func__list li .func__list__icon img
+    margin: 0 auto 1em auto
+  #jvc .contrast .contrast__wrap .contrast__list
+    position: unset
+    color: #000
+    max-width: 100%
+    transform: unset
+    padding: 1em
+    justify-content: center
+    box-sizing: border-box
+  #jvc .contrast .contrast__wrap .contrast__list li:nth-of-type(1)
+    margin-right: 2em
+  #jvc .contrast .contrast__wrap .contrast__list li
+    max-width: 50%
+    box-sizing: border-box
+  #jvc .chromecast .chromecast__list
+    top: 10%
+    left: 1%
+  #jvc .design .design__txt
+    top: 10%
+    left: 1%
+  #jvc .wave .wave__wrap
+    min-width: unset
+    width: 100%
+    box-sizing: border-box
+    padding: 1em
+    position: unset
+    transform: unset
+    background-image: url("https://cdn.comfy.ua/media/x/img/1863923/7.jpg")
+    background-size: cover
+  #jvc .wave .wave__wrap .wave__wrap__bg,
+  #jvc .wave .wave__wrap .wave__list li:nth-of-type(odd) .wave__list__icon::after,
+  #jvc .wave .wave__wrap .wave__list li:nth-of-type(even) .wave__list__icon::after
+    display: none
+  #jvc .wave .wave__wrap .wave__list
+    position: unset
+    transform: unset
+    max-width: 100%
+    padding: 1em
+    box-sizing: border-box
+  #jvc .wave .wave__wrap .wave__list li:nth-of-type(odd)
+    margin-bottom: 0
+  #jvc .wave .wave__wrap .wave__list li:nth-of-type(even)
+    margin-top: unset
+  #jvc .wave .wave__wrap .wave__list li
+    flex-direction: column
+    &:nth-of-type(n+2)
+      margin-left: 1em
+  #jvc .wave .wave__wrap .wave__list li .wave__list__txt
+    margin-left: 0
+    margin-top: 1em
+    text-align: center
+  #jvc .wave .wave__wrap .wave__list li .wave__list__icon img
+    margin: 0 auto
+  #jvc .wawe__two .wawe__two__wrap .wawe__two__list
+    justify-content: center
+    padding: 1em
+    li
+      min-width: unset
+      max-width: 100%
+  #jvc .wawe__two .wawe__two__wrap .wawe__two__wrap__bg
+    display: none
+  #jvc .wawe__two .wawe__two__wrap
+    width: 100%
+    max-width: 100%
+    box-sizing: border-box
+  #jvc .wawe__two .wawe__two__wrap .wawe__two__list li:nth-of-type(1),
+  #jvc .wawe__two .wawe__two__wrap .wawe__two__list li:nth-of-type(2)
+    transform: unset
+  #jvc .wawe__two .wawe__two__wrap .wawe__two__list li .wawe__two__list__txt
+    margin-top: 2em
+  #jvc .wawe__two .wawe__two__title
+    margin-bottom: 2em
+  #jvc .func .func__list li .func__list__icon
+    margin-right: 0
+  #jvc .wave .wave__wrap .wave__list li:nth-of-type(3),
+  #jvc .wave .wave__wrap .wave__list li:nth-of-type(4),
+  #jvc .wave .wave__wrap .wave__list li:nth-of-type(2)
+    transform: unset
+  #jvc .wave .wave__bg
+    display: none
+  #jvc .wawe__two .wawe__two__bg
+    display: none
+  #jvc .wawe__two .wawe__two__wrap
+    position: unset
+    transform: unset
+    min-width: unset
+    background-image: url("https://cdn.comfy.ua/media/x/img/1863923/8.jpg")
+    background-size: cover
+  #jvc .wawe__two .wawe__two__wrap .wawe__two__list
+    position: unset
+    transform: unset
+  #jvc .wave .wave__logo
+    margin-bottom: 1em
+  #jvc .wawe__two
+    padding-top: 1em
+
+@media (max-width: 480px)
+  #jvc h2
+    font-size: 24px
+  #jvc .quality .quality__txt
+    padding: 1em
+    margin-bottom: 0
+  #jvc .quality .quality__txt img
+    margin-bottom: 1em
+    max-width: 150px
+  #jvc .quality
+    padding-top: 0
+  #jvc .sertificate
+    margin-top: 0
+  #jvc .sertificate .sertificate__list
+    flex-direction: column
+    li
+      text-align: center
+      &:nth-of-type(1)
+        order: 1
+        margin: 2em 0
+      &:nth-of-type(2)
+        order: 0
+        margin: 0
+      &:nth-of-type(3)
+        order: 2
+  #jvc .sertificate .sertificate__list li:nth-of-type(1) .sertificate__icon,
+  #jvc .sertificate .sertificate__list li:nth-of-type(3) .sertificate__icon
+    justify-content: center
+  #jvc .func .func__list
+    flex-direction: column
+  #jvc .func .func__list li:nth-of-type(2)
+    margin: 2em 0
+  #jvc .contrast .contrast__icon img
+    min-width: 30%
+  #jvc .contrast .contrast__wrap .contrast__list
+    flex-direction: column
+    li
+      max-width: 100%
+      text-align: center
+      &:nth-of-type(1)
+        margin-right: 0
+        margin-bottom: 2em
+  #jvc .chromecast .chromecast__list
+    position: unset
+    color: #000
+    align-items: center
+    justify-content: center
+    padding: 1em
+    li 
+      max-width: 100% !important
+  #jvc .chromecast .chromecast__list li:nth-of-type(1)
+    min-width: 50px
+  #jvc .chromecast,
+  #jvc .design
+    display: flex
+    flex-direction: column-reverse
+  #jvc .design .design__txt
+    position: unset
+    padding: 1em
+    text-align: center
+    margin: 0 auto
+  #jvc .design .design__img img
+    min-width: 150%
+    margin-left: -50%
+  #jvc .contrast .contrast__wrap .contrast__list li span,
+  #jvc .func .func__list li .func__list__txt span,
+  #jvc .chromecast .chromecast__list li span,
+  #jvc .design .design__txt span
+    font-size: 17px
+  #jvc .wave
+    padding-top: 1em
+  #jvc .wave .wave__wrap
+    position: unset
+    transform: unset
+    padding: 0
+    background-image: url("https://cdn.comfy.ua/media/x/img/1863923/7.jpg")
+    background-size: cover
+  #jvc .wave .wave__wrap .wave__list
+    padding: 0
+    flex-wrap: wrap
+    li
+      max-width: 50%
+      width: 50%
+      margin: 0 !important
+      padding: 1em
+      box-sizing: border-box
+  #jvc .wawe__two .wawe__two__title
+    margin-bottom: unset
+  #jvc .wawe__two .wawe__two__wrap
+    background-image: url("https://cdn.comfy.ua/media/x/img/1863923/8.jpg")
+    background-size: cover
+  #jvc .wawe__two .wawe__two__wrap,
+  #jvc .wawe__two .wawe__two__wrap .wawe__two__list
+    position: unset
+    transform: unset
+    box-sizing: border-box
+    min-width: unset
+  #jvc .wawe__two .wawe__two__bg
+    display: none
+  #jvc .wawe__two .wawe__two__wrap .wawe__two__list li
+    margin-top: 0
+  #jvc .wawe__two .wawe__two__wrap .wawe__two__list
+    flex-direction: column
+  #jvc .wawe__two .wawe__two__wrap .wawe__two__list li:nth-of-type(1)
+    margin-bottom: 2em
+  #jvc .chromecast .chromecast__img img
+    min-width: 150%
+  #jvc .chromecast .chromecast__list li:nth-of-type(1) img
+    filter: invert(1)
+  #jvc .func .func__img img
+    min-width: 200%
+    margin-left: -50%
+  #jvc .quality .quality__img img
+    min-width: 150%
+    margin-left: -25%
+  #jvc .contrast .contrast__wrap .contrast__img img
+    min-width: 130%
+    margin-left: -15%
