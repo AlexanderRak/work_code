@@ -1,0 +1,283 @@
+#navi-maps
+   display: block
+   margin: 0 auto
+   max-width: 1366px
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #F8F9FA
+   position: relative
+   img
+      &:hover
+         opacity: 1
+   &:first-letter
+      padding-left: 0
+   img
+      display: block
+      margin-right: initial
+      margin-left: initial
+   p
+      font-size: 16px
+      margin-bottom: 0
+      color: #000
+      b
+         font-size: 20px
+   h2
+      font-size: 34px
+      line-height: 1
+      color: #000
+      font-weight: bold
+      text-align: left
+   h3
+      font-size: 28px
+      line-height: 1
+      color: #000
+      font-weight: bold
+      text-align: left
+      margin: 0
+span.word-wrap
+   display: block
+   word-wrap: break-word
+.features-desc__text h2
+   text-align: inherit
+.one-col .features-desc__text p
+   text-align: inherit
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+// default
+.navi-maps-header
+   background: linear-gradient(259.72deg, rgba(114, 209, 92, 0.3) 2.58%, rgba(192, 244, 180, 0.3) 95.46%), #FFFFFF
+.navi-maps-header__container
+   padding: 63px 135px 0 75px
+   &.bgrd1
+      background-image: url(https://cdn.comfy.ua/media/x/img2/navimaps/img3.png)
+      background-position: right
+      background-repeat: no-repeat
+      background-size: cover
+      max-width: 1366px
+      width: 100%
+      height: 600px
+.navi-maps-header__content-flex
+   display: flex
+   flex-direction: row
+   align-items: center
+   justify-content: space-between
+.navi-maps-header__item
+   &:first-child
+      flex: 1 0
+      max-width: 603px
+.navi-maps-header__text h2
+   padding: 33px 0 16px 0
+.navi-maps-header__maps-ukr
+   position: relative
+   margin: -100px 48px 0 48px
+.navi-maps-header__maps-flex
+   display: flex
+   align-items: flex-start
+   justify-content: space-between
+   padding: 48px
+   background: #FFFFFF
+   box-shadow: 15px 15px 30px 2px rgba(201, 201, 201, 0.2)
+   border-radius: 60px 10px 48px
+.navi-maps-header__h2 span
+   display: block
+   color: #FF671F
+   font-size: 48px
+   font-weight: bold
+   padding-bottom: 14px
+   line-height: 1
+.navi-maps-item
+   position: relative
+   padding: 48px
+.navi-maps-item__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr
+   grid-gap: 32px
+.navi-maps-item__grid-item
+   padding: 24px 0
+.navi-maps-item__img
+   display: flex
+   align-items: flex-end
+   padding-bottom: 16px
+   .itembl
+      background: #43B02A
+      box-shadow: 0px 6px 15px 2px rgba(67, 176, 42, 0.6)
+      border-radius: 8px
+      width: 48px
+      height: 48px
+      display: flex
+      align-items: center
+      justify-content: center
+   p
+      padding-left: 15px
+.navi-maps-footer
+   background: linear-gradient(180deg, rgba(114, 209, 92, 0.2) 0%, rgba(192, 244, 180, 0.2) 100%), #FFFFFF
+.navi-maps-footer__container
+   padding: 48px 48px 80px 48px
+.navi-maps-footer__grid
+   counter-reset: itm
+   &:first-child
+      margin-bottom: 48px
+   h3
+      padding-bottom: 24px
+.navi-maps-footer__gridbl
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 1fr
+   grid-gap: 24px
+.navi-maps-footer__gridbl-item
+   background: #FFFFFF
+   box-shadow: 15px 15px 30px 2px rgba(201, 201, 201, 0.2)
+   border-radius: 64px 10px 48px
+   padding: 32px 15px
+   position: relative
+   &::before
+      counter-increment: itm
+      content: counter(itm)
+      background: linear-gradient(180deg, #FF671F 0%, #FDAE55 100%)
+      box-shadow: 4px 4px 10px 2px rgba(255, 103, 31, 0.3)
+      border-radius: 50px
+      width: 32px
+      height: 32px
+      display: flex
+      align-items: center
+      justify-content: center
+      color: #fff
+      font-size: 18px
+      font-weight: bold
+      left: 0
+      top: -5px
+      position: absolute
+.navi-maps-footer__gridbl-p
+   text-align: center
+   padding-bottom: 16px
+.navi-maps-footer__gridbl-img
+   img
+      margin: 0 auto !important
+   &.styleimg
+      position: relative
+      bottom: -12px
+// media
+@media (max-width: 1024px)
+   #navi-maps
+      h2
+         font-size: 30px
+      h3
+         font-size: 25px
+   .navi-maps-header__container
+      padding: 40px 25px 0 25px
+   .navi-maps-header__item:first-child
+      max-width: 550px
+   .navi-maps-header__maps-ukr
+      margin: -70px 25px 0 25px
+   .navi-maps-header__maps-flex
+      padding: 35px 25px
+   .navi-maps-header__h2 span
+      font-size: 30px
+      padding-bottom: 5px
+   .navi-maps-item
+      padding: 25px
+   .navi-maps-item__grid
+      grid-gap: 25px
+   .navi-maps-item__grid-item
+      padding: 15px 0
+   .navi-maps-footer__container
+      padding: 35px 25px 35px 25px
+@media (max-width: 812px)
+   #navi-maps
+      h2
+         font-size: 25px
+      h3
+         font-size: 25px
+   span.word-wrap
+      display: initial
+   .navi-maps-header__item:first-child
+      flex: 1 1 0
+      max-width: 100%
+   .navi-maps-header__item
+      flex: 1 1 0
+   .navi-maps-header__text
+      padding-right: 15px
+   .navi-maps-header__container.bgrd1
+      height: auto
+   .navi-maps-header__maps-ukr
+      margin: 0px 25px 0 25px
+   .navi-maps-header__container
+      padding: 25px 25px 25px 25px
+   .navi-maps-item__img
+      flex-direction: column
+      align-items: inherit
+   .navi-maps-item__img p
+      padding-left: 0
+      padding-top: 10px
+   .navi-maps-header__h2 span
+      font-size: 25px
+   .navi-maps-footer__gridbl
+      grid-template-columns: 1fr 1fr 1fr
+@media (max-width: 480px)
+   #navi-maps
+      h2
+         font-size: 24px
+      h3
+         font-size: 20px
+         text-align: center
+   .navi-maps-header__container
+      padding: 24px 12px 75px 12px
+   .navi-maps-header__content-flex
+      flex-direction: column
+   .navi-maps-header__text h2
+      padding: 16px 0 12px 0
+   .navi-maps-header__text img
+      margin: 0 auto !important
+      max-width: 140px
+   .navi-maps-header__item
+      &:last-child
+         padding-top: 35px
+         img
+            margin: 0 auto
+            max-width: 240px
+   .navi-maps-header__container.bgrd1
+      background-position: 95% 87%
+      background-size: 190%
+   .navi-maps-header__maps-ukr
+      margin: -50px 28px 0 28px
+   .navi-maps-header__h2 span
+      font-size: 36px
+   .navi-maps-header__maps-flex
+      padding: 48px 25px
+      flex-direction: column
+      align-items: center
+   .navi-maps-header__item-maps p
+      text-align: center !important
+   .navi-maps-header__item-maps
+      padding-bottom: 24px
+      &:last-child
+         padding-bottom: 0
+   .navi-maps-item__grid
+      grid-gap: 24px
+      grid-template-columns: 1fr
+   .navi-maps-item__grid-item
+      padding: 0 0
+   .navi-maps-item__img
+      flex-direction: row
+      align-items: flex-end
+   #navi-maps p b
+      font-size: 16px
+   .navi-maps-item__img p
+      padding-left: 18px
+   .navi-maps-item__img .itembl
+      flex: 1 0 48px
+      max-width: 48px
+   .navi-maps-item
+      padding: 48px 12px
+   .navi-maps-footer__gridbl
+      grid-template-columns: 1fr
+@media (max-width: 320px)
+   .navi-maps-item__img p
+      padding-left: 16px
+   .navi-maps-item__img .itembl
+      flex: 1 0 36px
+      max-width: 36px
+      height: 36px
+      img
+         max-width: 21px

@@ -1,0 +1,231 @@
+#portal-sevice
+   display: block
+   margin: 0 auto
+   max-width: 1366px
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #F7FAFD
+   position: relative
+   img
+      &:hover
+         opacity: 1
+   &:first-letter
+      padding-left: 0
+   img
+      display: block
+      margin-right: initial
+      margin-left: initial
+   p
+      font-size: 18px
+      margin-bottom: 0
+      color: #000
+   h2
+      font-size: 34px
+      line-height: 1
+      color: #000
+      font-weight: bold
+      padding-bottom: 12px
+      text-align: left
+span.word-wrap
+   display: block
+   word-wrap: break-word
+.features-desc__text h2
+   text-align: inherit
+.one-col .features-desc__text p
+   text-align: inherit
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+.main-container_gray
+   background: #F7FAFD
+// default
+// slider START
+.mySlides
+   display: none
+.prev, .next
+   cursor: pointer
+   position: absolute
+   top: 50%
+   transform: translateY(-50%)
+   transition: 0.3s ease
+   border-radius: 8px
+   width: 36px
+   height: 64px
+   background: #fff
+   display: flex
+   align-items: center
+   justify-content: center
+   border: 1px solid #E5E5E5
+   margin-left: 24px
+.slideshow-container
+   position: relative
+.next
+   margin-right: 24px
+   margin-left: 0
+   right: 0
+.prev:hover, .next:hover
+   background: #E5E5E5
+.fade
+   animation-name: fade
+   animation-duration: 1.5s
+@keyframes fade
+   from
+      opacity: .4
+   to
+      opacity: 1
+.mySlides-only-desk
+   display: block
+.mySlides-only-mob
+   display: none
+// slider END
+// slider accordion
+.portal-sevice-accordion__container
+   padding: 32px 10px 0 10px
+.portal-sevice-accordion__wrap
+   background: #FFFFFF
+   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.07)
+   border-radius: 8px
+   max-width: 1160px
+   margin: 0 auto 32px auto
+   transition: .3s
+   &:hover
+      box-shadow: 0px 4px 12px 10px rgba(0, 0, 0, 0.07)
+.accordion
+   transition: 0.3s
+   position: relative
+   width: 100%
+   margin: 0
+   padding: 0
+   &:hover
+      cursor: pointer
+   h2
+      &::before
+         content: ''
+         background-image: url(https://cdn.comfy.ua/media/x/img2/lpservice/str_close.png)
+         background-repeat: no-repeat
+         background-size: cover
+         position: absolute
+         left: 48px
+         top: 50%
+         transform: translateY(-50%)
+         width: 32px
+         height: 33px
+   &.active
+      h2
+         &::before
+            background-image: url(https://cdn.comfy.ua/media/x/img2/lpservice/str_open.png)
+.panel
+   overflow: hidden
+   transition: max-height 0.3s ease-out
+   max-height: 0
+.accordion-flex
+   display: flex
+   justify-content: space-between
+   align-items: center
+   padding: 10px 120px 10px 128px
+.accordion-flex__item-txt p
+   text-align: left
+// slider accordion END
+.panel-wrap-grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 1fr
+   grid-gap: 32px
+   padding: 32px 48px
+.panel-wrap-grid__item
+   border: 2px solid #E5E5E5
+   border-radius: 8px
+   padding: 24px 12px 24px 12px
+   transition: .3s
+   &:hover
+      box-shadow: 0 0 10px 2px #e5e5e5
+      border: 2px solid transparent
+.panel-wrap-grid__item-img
+   img
+      margin: 0 auto !important
+.panel-wrap-grid__item-p
+   padding-top: 26px
+   p
+      text-align: center
+      font-weight: bold
+// media
+@media (max-width: 1024px)
+   #portal-sevice
+      h2
+         font-size: 30px
+@media (max-width: 812px)
+   #portal-sevice
+      h2
+         font-size: 23px
+   .portal-sevice-accordion__container
+      padding: 24px 15px 0 15px
+   .portal-sevice-accordion__wrap
+      margin: 0 auto 24px auto
+   .accordion-flex
+      padding: 10px 15px 10px 80px
+   .accordion h2::before
+      left: 25px
+   .accordion-flex__item-txt
+      padding: 0 15px 0 0
+   .panel-wrap-grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-gap: 15px
+      padding: 25px 25px
+   .panel-wrap-grid__item-p
+      padding-top: 12px
+   #portal-sevice .panel-wrap-grid__item-p p
+      font-size: 14px
+   .panel-wrap-grid__item
+      padding: 12px 12px 12px 12px
+@media (max-width: 480px)
+   #portal-sevice
+      h2
+         font-size: 18px
+         position: relative
+         padding-left: 32px
+         padding-bottom: 0px
+         min-height: 25px
+         display: flex
+         align-items: center
+         margin-bottom: 8px
+      p
+         font-size: 15px
+   .accordion-flex
+      flex-direction: column-reverse
+      align-items: initial
+      padding: 16px
+      img
+         margin: 0 auto
+   .portal-sevice-accordion__container
+      padding: 24px 10px 0 10px
+   .accordion h2::before
+      width: 24px
+      height: 25px
+      left: 0
+   .accordion-flex__item-txt
+      padding: 12px 0 0 0
+   .accordion-flex__item img
+      max-width: 130px
+      margin: 0 auto !important
+   .panel-wrap-grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 12px
+      padding: 15px 15px
+   .panel-wrap-grid__item-img img
+      max-height: 80px
+   .mySlides-only-desk
+      display: none
+   .mySlides-only-mob
+      display: block
+@media (max-width: 320px)
+   #portal-sevice
+      h2
+         font-size: 16px
+         min-height: 24px
+      p
+         font-size: 12px
+   .accordion-flex__item img
+      max-width: 110px
+      margin: 0 auto !important
+   #portal-sevice .panel-wrap-grid__item-p p
+      font-size: 12px
