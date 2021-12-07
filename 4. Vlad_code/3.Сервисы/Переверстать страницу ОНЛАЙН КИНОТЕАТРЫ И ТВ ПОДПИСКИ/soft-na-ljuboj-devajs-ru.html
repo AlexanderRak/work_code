@@ -198,6 +198,10 @@
       padding-right: 5px;
    }
 
+   .promo-price__prc2 {
+      font-size: 2.4rem;
+   }
+
    .promo-price__grn {
       font-size: 2rem;
       font-weight: bold;
@@ -208,9 +212,9 @@
       line-height: 1;
    }
 
-   .promo-price__item p {
+   /* .promo-price__item p {
       padding-right: 5px;
-   }
+   } */
 
    .megogo-prod__bnt {
       padding: 25px 0 0 0;
@@ -218,7 +222,9 @@
    }
 
    .pay__add-btn {
-      background: #ff671f;
+      /* background: #ff671f; */
+      background-color: #43b02a;
+      border-radius: 0.8rem;
       color: #fff;
       padding: 1rem 2.7rem;
       text-align: center;
@@ -228,6 +234,22 @@
       display: block;
       font-size: 1.7rem;
       transition: .3s;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .pay__add-btn:hover {
+      background: #e25c1d;
+   }
+
+   .pay__add-btn::before {
+      content: "\E90F";
+      font-family: Comfy-Icons;
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-right: 0.4em;
    }
 
    .img-banner {
@@ -273,8 +295,15 @@
 
       .promo-price__prc {
          font-size: 1rem;
-         padding-right: 5px;
+         /* padding-right: 5px; */
+         padding-right: 0px;
+         padding-left: 5px;
          text-transform: lowercase;
+      }
+
+      .promo-price__prc2 {
+         font-size: 1.3rem;
+         padding-left: 0;
       }
 
       .promo-price__grn {
@@ -283,7 +312,8 @@
 
       .megogo__bodus .visible_block p {
          font-size: 1rem !important;
-         text-align: right !important;
+         /* text-align: right !important; */
+         padding-left: 0;
       }
 
       .promo-price__flex {
@@ -292,6 +322,10 @@
          align-items: center;
          justify-content: space-between;
          height: 100%;
+      }
+
+      .promo-price__flex__reverse {
+         flex-direction: row-reverse;
       }
 
       #wrap-soft-service .soft-menu-tabs h2 {
@@ -304,6 +338,11 @@
          display: flex !important;
          flex-direction: column;
          justify-content: space-between;
+      }
+
+      .pay__add-btn {
+         padding: 0.5rem 2.7rem;
+         font-size: 1.5rem;
       }
    }
 
@@ -529,7 +568,7 @@
                            <div class="promo-price__flex">
                               <div class="promo-price__item">
                                  <div class="promo-price__text-price">
-                                    <span class="promo-price__prc">3 050 ₴</span>
+                                    <span class="promo-price__prc promo-price__prc2">3 050 ₴</span>
                                     <!-- <span class="promo-price__grn">₴</span> -->
                                  </div>
                               </div>
@@ -584,7 +623,7 @@
                            <div class="promo-price__flex">
                               <div class="promo-price__item">
                                  <div class="promo-price__text-price">
-                                    <span class="promo-price__prc">6 100 ₴</span>
+                                    <span class="promo-price__prc promo-price__prc2">6 100 ₴</span>
                                     <!-- <span class="promo-price__grn">₴</span> -->
                                  </div>
                               </div>
@@ -639,7 +678,7 @@
                            <div class="promo-price__flex">
                               <div class="promo-price__item">
                                  <div class="promo-price__text-price">
-                                    <span class="promo-price__prc">806 ₴</span>
+                                    <span class="promo-price__prc promo-price__prc2">806 ₴</span>
                                     <!-- <span class="promo-price__grn">₴</span> -->
                                  </div>
                               </div>
@@ -693,7 +732,7 @@
                            <div class="promo-price__flex">
                               <div class="promo-price__item">
                                  <div class="promo-price__text-price">
-                                    <span class="promo-price__prc">1 612 ₴</span>
+                                    <span class="promo-price__prc promo-price__prc2">1 612 ₴</span>
                                     <!-- <span class="promo-price__grn">₴</span> -->
                                  </div>
                               </div>
