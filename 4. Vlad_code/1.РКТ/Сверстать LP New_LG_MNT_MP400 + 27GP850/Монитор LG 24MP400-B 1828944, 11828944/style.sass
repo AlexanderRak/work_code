@@ -1,0 +1,378 @@
+/*default styles*/
+
+#lg
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 40px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    margin: 0
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#lg
+  .show__mob
+    display: none
+  .logo
+    position: relative
+    .logo__txt
+      position: absolute
+      text-align: center
+      top: 1em
+      width: max-content
+      right: 50%
+      max-width: 800px
+      transform: translateX(50%)
+      h2
+        margin: 0.5em 0
+      span
+        font-weight: bold
+        font-size: 24px
+
+  .lg__slide
+    background-color: #f8f8f8
+    padding: 4em
+    .lg__slide__cont
+      li
+        text-align: center
+        span
+          font-size: 30px
+          font-weight: bold
+          margin-bottom: 0.5em
+    .lg__slide__nav
+      display: flex
+      flex-direction: row
+      justify-content: center
+      margin-top: 3em
+      li
+        width: 20px
+        height: 20px
+        background-color: #767676
+        border-radius: 50%
+        cursor: pointer
+        &:nth-of-type(n+2)
+          margin-left: 1em
+      .active__dot
+        background-color: #a40033
+
+  .lg__snoska
+    color: #fff
+    padding: 1em
+    background-color: #000
+    span
+      font-size: 14px
+
+  .lg__snoska__white
+    color: #000
+    background-color: #fff
+
+  .nano
+    position: relative
+    .nano__txt
+      max-width: 600px
+      text-align: center
+      margin: 0 auto
+      padding: 4em
+      span
+        font-size: 24px
+        font-weight: bold
+      h2
+        margin: 0.5em 0
+    .nano__img
+      position: relative
+      .nano__img__dot
+        display: flex
+        flex-direction: row
+        justify-content: center
+        margin-top: 3em
+        position: absolute
+        bottom: 2em
+        right: 50%
+        transform: translateX(50%)
+        li
+          width: 20px
+          height: 20px
+          background-color: #767676
+          border-radius: 50%
+          cursor: pointer
+          &:nth-of-type(n+2)
+            margin-left: 1em
+        .active__dot
+          background-color: #a40033
+      .nano__img__arrow
+        li
+          cursor: pointer
+          position: absolute
+          bottom: 50%
+          width: auto
+          padding: 16px
+          color: white
+          font-weight: bold
+          font-size: 18px
+          transition: 0.6s ease
+          border-radius: 0 3px 3px 0
+          user-select: none
+          z-index: 10
+          &:nth-of-type(2)
+            right: 0
+          &:hover
+            background-color: #444444cc
+
+  .comfortable
+    position: relative
+    .comfortable__txt
+      position: absolute
+      max-width: 600px
+      margin: 0 auto
+      padding: 4em
+      span
+        font-size: 24px
+        font-weight: bold
+      h2
+        margin: 0.5em 0
+
+  .reader
+    display: flex
+    flex-direction: row
+    li
+      flex: 1 1 0
+      box-sizing: border-box
+      padding: 1em
+      .reader__img
+        img
+          margin: 0 auto
+      .reader__txt
+        text-align: center
+        padding: 4em 2em
+        box-sizing: border-box
+        span
+          font-size: 20px
+          strong
+            font-size: 24px
+            display: block
+            margin: 0.5em 0
+
+  .onscreen
+    display: flex
+    flex-direction: row
+    align-items: center
+    li
+      flex: 1 1 0
+      box-sizing: border-box
+      max-width: 50%
+      width: 100%
+      &:nth-of-type(1)
+        padding: 4em
+        span
+          font-size: 24px
+          font-weight: bold
+        h2
+          margin: 0.5em 0
+
+  .ips
+    padding: 3em 0
+    background-color: #000
+    .ips__txt
+      color: #fff
+      text-align: center
+      max-width: 800px
+      margin: 0 auto 2em auto
+      h2
+        margin: 0.5em 0
+      span
+        font-size: 24px
+        font-weight: bold
+    .ips__img
+      img
+        margin: 0 auto
+
+  .dynamic
+    display: flex
+    flex-direction: row
+    align-items: center
+    background-color: #000
+    color: #fff
+    padding: 2em 4em
+    li
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+      &:nth-of-type(1)
+        display: flex
+        flex-direction: row
+        max-width: 70%
+        flex: 2
+        .dynamic__img
+          position: relative
+          span
+            position: absolute
+            background-color: #000
+            padding: 0.5em
+            font-size: 14px
+            color: #fff
+            top: 1em
+            right: 1em
+          &:nth-of-type(1)
+            margin-right: 0.3em
+      &:nth-of-type(2)
+        padding: 2em 0 2em 2em
+        h2
+          margin: 0.5em 0
+        span
+          font-size: 24px
+          font-weight: bold
+
+  //for slider
+
+  .show
+    display: block
+
+  .hide
+    display: none
+
+  .fade
+    animation-name: fade
+    animation-duration: 1s
+
+  @keyframes fade
+    0%
+      opacity: 0.1
+    100%
+      opacity: 1
+
+  //for slider end
+
+//media********************************************
+
+@media (max-width: 1024px)
+  #lg .logo .logo__txt
+    top: 1em
+  #lg .comfortable .comfortable__txt
+    padding: 1em
+
+@media (max-width: 812px)
+  #lg h2
+    font-size: 28px
+  #lg .hide__mob
+    display: none
+  #lg .show__mob
+    display: block
+  #lg .logo .logo__txt
+    padding: 1em
+    box-sizing: border-box
+    max-width: 100%
+  #lg .lg__slide
+    padding: 1em 4em
+  #lg .ips .ips__txt
+    padding: 1em
+  #lg .lg__slide .lg__slide__cont li span,
+  #lg .ips .ips__txt span,
+  #lg .logo .logo__txt span,
+  #lg .nano .nano__txt span,
+  #lg .comfortable .comfortable__txt span,
+  #lg .onscreen li:nth-of-type(1) span,
+  #lg .dynamic li:nth-of-type(2) span
+    font-size: 20px
+  #lg .nano .nano__txt
+    padding: 1em
+  #lg .comfortable .comfortable__txt
+    position: unset
+    margin: 0
+  #lg .reader,
+  #lg .dynamic
+    flex-direction: column
+  #lg .onscreen
+    flex-direction: column-reverse
+    li
+      max-width: 100%
+  #lg .onscreen li:nth-of-type(1)
+    padding: 1em
+  #lg .dynamic li
+    max-width: 100%
+  #lg .dynamic
+    padding: 1em
+  #lg .dynamic li:nth-of-type(2)
+    padding: 1em 0
+  #lg .dynamic li:nth-of-type(1)
+    max-width: 100%
+
+@media (max-width: 480px)
+  #lg h2
+    font-size: 24px
+  #lg .logo .logo__txt
+    max-width: 100%
+    box-sizing: border-box
+    position: unset
+    transform: unset
+  #lg .logo
+    display: flex
+    flex-direction: column-reverse
+  #lg .lg__slide
+    padding: 1em
+  #lg .lg__snoska span
+    font-size: 12px
+  #lg .lg__slide .lg__slide__nav li
+    width: 15px
+    height: 15px
+  #lg .lg__slide .lg__slide__cont li span,
+  #lg .ips .ips__txt span,
+  #lg .lg__slide .lg__slide__cont li span,
+  #lg .ips .ips__txt span,
+  #lg .logo .logo__txt span,
+  #lg .nano .nano__txt span,
+  #lg .comfortable .comfortable__txt span,
+  #lg .onscreen li:nth-of-type(1) span,
+  #lg .dynamic li:nth-of-type(2) span
+    font-size: 16px
+  #lg .ips
+    padding: 0
+  #lg .nano .nano__img .nano__img__dot
+    bottom: 1em
+  #lg .nano .nano__img .nano__img__dot li
+    width: 15px
+    height: 15px
+  #lg .nano .nano__img .nano__img__arrow li
+    transform: translateY(50%)
+  #lg .reader li .reader__txt
+    padding: 1em 0
+  #lg .dynamic li:nth-of-type(1) .dynamic__img span
+    font-size: 12px
+    top: 0.5em
+    right: 0.5em
