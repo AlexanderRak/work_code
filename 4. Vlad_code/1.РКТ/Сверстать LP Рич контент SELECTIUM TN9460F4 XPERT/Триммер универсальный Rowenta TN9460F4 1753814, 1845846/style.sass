@@ -1,0 +1,399 @@
+/*default styles*/
+
+#rowenta
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 30px
+    font-weight: normal
+    text-transform: uppercase
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    margin: 0
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#rowenta
+  .logo
+    position: relative
+    .logo__wrap
+      position: absolute
+      right: 0
+      top: 0
+      padding-right: 45px
+      .logo__icon
+        img
+          margin: 0 auto
+          &:nth-of-type(1)
+            background-color: #fff
+            padding: 1em 0
+            margin-bottom: 1em
+      .logo__txt
+        span
+          text-transform: uppercase
+          font-size: 24px
+          color: #fff
+          font-weight: bold
+          text-align: center
+          margin-top: 5em
+          text-align: right
+          padding-right: 2em
+
+  .multi
+    padding: 2em 0
+    .multi__head
+      text-align: center
+      span
+        text-transform: uppercase
+        font-weight: bold
+        text-align: center
+        font-size: 60px
+        color: #20272e
+      .multi__head__img
+        img
+          margin: 2em auto
+    .multi__list
+      display: flex
+      flex-direction: row
+      align-items: center
+      padding: 0 2em
+      li
+        max-width: 50%
+        box-sizing: border-box
+        p
+          font-size: 24px
+          color: #20272e
+        &:nth-of-type(2)
+          padding-left: 4em
+
+  .accessories
+    padding: 1em 4em
+    background-color: #212932
+    .accessories__title
+      text-align: center
+      border-bottom: 4px solid #ac9a99
+      margin: 0 2em
+      span
+        margin: 0 auto
+        font-size: 34px
+        font-style: italic
+        color: #212932
+        background-color: #ac9a99
+        width: max-content
+        padding: 0.2em 1.5em
+    .accessories__list
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      flex-wrap: wrap
+      max-width: 800px
+      margin: 0 auto
+      li
+        max-width: 400px
+        padding: 0.5em
+        box-sizing: content-box
+        flex: 1 1 0
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+        &:nth-of-type(6),
+        &:nth-of-type(7)
+          min-width: 400px
+          box-sizing: border-box
+          .accessories__list__txt
+            height: 165px
+        .accessories__list__txt
+          padding: 1em
+          color: #fff
+          background-color: #016db5
+          span
+            text-transform: uppercase
+            font-size: 21px
+            margin-bottom: 0.5em
+          p
+            font-size: 18px
+
+  .detail
+    position: relative
+    .detail__wrap
+      position: absolute
+      padding: 50px 40px
+      box-sizing: border-box
+      .detail__cont
+        .detail__title
+          margin-bottom: 1em
+          h2
+            color: #1b2530
+        .detail__flex
+          display: flex
+          flex-direction: row
+          align-items: center
+          .detail__txt
+            max-width: 650px
+            margin-left: 1em
+            p
+              font-size: 24px
+              color: #1b2530
+        &:nth-of-type(2)
+          margin-top: 2em
+          .detail__flex
+            .detail__txt
+              max-width: 500px
+
+  .razors
+    background-color: #1b242f
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 30px
+    li
+      flex: 1 1 0
+      img
+        margin: 0 auto
+      p
+        font-size: 25px
+        color: #fff
+      span
+        font-style: italic
+        font-size: 15px
+        color: rgba(255, 255, 255, .5)
+        margin-top: 55px
+
+  .func
+    display: flex
+    flex-direction: row
+    li
+      &:nth-of-type(odd)
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+      &:nth-of-type(2)
+        min-width: 245px
+        img
+          &:nth-of-type(n+2)
+            margin-top: 5px
+      .func__item
+        padding: 1em
+        h2
+          font-size: 28px
+          text-align: center
+        p
+          font-size: 20px
+        img
+          margin: 1em auto
+        span
+          font-size: 20px
+          text-align: center
+          text-transform: uppercase
+        span.small
+          color: rgba(27, 36, 47, .5)
+          font-size: 15px
+          font-style: italic
+          text-transform: unset
+          text-align: unset
+          margin-top: 0.5em
+
+  .lifestyle
+    position: relative
+    .lifestyle__title
+      position: absolute
+      bottom: 55%
+      right: 50%
+      transform: translate(50%, 50%)
+      width: max-content
+      padding: 1em
+      border-radius: 20px
+      filter: drop-shadow(0px 4px 12px rgba(0,0,0,0.44))
+      background-color: #fff
+      span
+        text-transform: uppercase
+        font-size: 44px
+        text-align: center
+        font-weight: bold
+
+  .warranty
+    position: relative
+    .warranty__icon
+      position: absolute
+      top: 3em
+      left: 22em
+
+//media***************************************************
+
+@media (max-width: 1024px)
+  #rowenta .multi .multi__head span
+    font-size: 45px
+  #rowenta .detail .detail__bg img
+    min-width: 130%
+  #rowenta .warranty .warranty__icon
+    left: 15em
+  #rowenta .func li:nth-of-type(2)
+    min-width: 245px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+@media (max-width: 812px)
+  #rowenta .logo .logo__wrap
+    position: unset
+    background-color: #000
+    padding: 1em
+  #rowenta .logo .logo__wrap .logo__txt span
+    margin-top: 2em
+    text-align: center
+    padding-right: 0
+  #rowenta .multi .multi__head span
+    font-size: 30px
+  #rowenta .multi .multi__list
+    flex-direction: column
+    li
+      max-width: 100%
+  #rowenta .multi .multi__list li:nth-of-type(2)
+    padding-left: 0
+    margin-top: 1em
+  #rowenta .detail .detail__bg img
+    min-width: 150%
+    margin-left: -50%
+  #rowenta .detail .detail__wrap
+    position: unset
+    padding: 1em
+  #rowenta .detail .detail__wrap .detail__cont .detail__flex
+    flex-direction: column
+  #rowenta .detail .detail__wrap .detail__cont .detail__flex .detail__txt
+    max-width: 100% !important
+    margin-top: 1em
+    margin-left: 0
+  #rowenta .detail .detail__wrap .detail__cont .detail__title h2,
+  #rowenta .detail .detail__wrap .detail__cont .detail__flex .detail__txt p
+    text-align: center
+  #rowenta .razors li:nth-of-type(2)
+    margin-left: 1em
+  #rowenta .func li .func__item p
+    font-size: unset
+  #rowenta h2
+    font-size: 24px !important
+  #rowenta p
+    font-size: unset !important
+  #rowenta .func li:nth-of-type(2)
+    min-width: 200px
+  #rowenta .lifestyle .lifestyle__title span
+    font-size: 30px
+  #rowenta .warranty .warranty__icon
+    left: 10em
+  #rowenta .accessories .accessories__list
+    justify-content: center
+  #rowenta .accessories .accessories__list li .accessories__list__txt
+    height: unset !important
+  #rowenta .accessories .accessories__list li
+    max-width: 50%
+    width: 50%
+    min-width: 50% !important
+    box-sizing: border-box
+    &:nth-of-type(1),
+    &:nth-of-type(2)
+      .accessories__list__txt
+        height: 155px !important
+    &:nth-of-type(5),
+    &:nth-of-type(6)
+      .accessories__list__txt
+        height: 135px !important
+  #rowenta .accessories .accessories__list li .accessories__list__txt span
+    font-size: 16px
+  #rowenta .accessories
+    padding: 1em
+  #rowenta .func li .func__item img
+    max-width: 150px
+
+@media (max-width: 480px)
+  #rowenta h2
+    font-size: 22px !important
+  #rowenta .logo .logo__wrap .logo__txt span
+    margin-top: 1em
+  #rowenta .multi
+    padding: 1em
+  #rowenta .multi .multi__head span
+    font-size: 24px
+    word-break: break-all
+  #rowenta .multi .multi__list
+    padding: 0
+  #rowenta .detail .detail__wrap .detail__cont .detail__title h2
+    word-break: break-all
+  #rowenta .razors
+    flex-direction: column
+    padding: 1em
+  #rowenta .razors li:nth-of-type(2)
+    margin-left: 0
+    margin-top: 1em
+  #rowenta .razors li span
+    margin-top: 1em
+  #rowenta .func
+    flex-direction: column
+  #rowenta .lifestyle .lifestyle__title
+    padding: 0.5em
+    border-radius: 10px
+  #rowenta .lifestyle .lifestyle__title span
+    font-size: 16px
+  #rowenta .lifestyle .lifestyle__bg img
+    min-width: 135%
+    margin-left: -15%
+  #rowenta .warranty .warranty__bg img
+    min-width: 150%
+    margin-left: -15%
+  #rowenta .warranty .warranty__icon
+    top: 1em
+    left: 3.5em
+  #rowenta .warranty .warranty__icon img
+    max-width: 60%
+  #rowenta .func li:nth-of-type(2)
+    max-width: max-content
+    margin: 0 auto
+    img
+      margin: 0 auto
+  #rowenta .accessories
+    padding: 1em
+  #rowenta .accessories .accessories__title span
+    font-size: 20px
+    padding: 0.2em 0.2em
+  #rowenta .accessories .accessories__list
+    flex-direction: column
+  #rowenta .accessories .accessories__list li
+    min-width: unset !important
+    max-width: 100%
+    width: 100%
+  #rowenta .accessories .accessories__list li:nth-of-type(1) .accessories__list__txt, #rowenta .accessories .accessories__list li:nth-of-type(2) .accessories__list__txt,
+  #rowenta .accessories .accessories__list li:nth-of-type(5) .accessories__list__txt, #rowenta .accessories .accessories__list li:nth-of-type(6) .accessories__list__txt
+    height: unset !important
