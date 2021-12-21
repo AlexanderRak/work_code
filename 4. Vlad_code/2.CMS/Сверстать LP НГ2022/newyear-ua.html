@@ -1,0 +1,204 @@
+<style>
+
+</style>
+
+<div id="newyear">
+  <div class="newyear__wrap">
+    <div class="newyear__cont">
+      <div class="slider">
+        <div class="slider__item">
+          <img src="https://cdn.comfy.ua/media/x/img/new2022/1.jpg">
+          <a href="#"></a>
+        </div>
+        <!-- <div class="slider__item">
+          <img src="https://cdn.comfy.ua/media/x/img/new2022/2.jpg">
+          <a target="_blank" href="#"></a>
+        </div> -->
+      </div>
+    </div>
+
+    <div id="wrapper_bf2019_form">
+      <div class="container-timer__img">
+        <img src="https://cdn.comfy.ua/media/x/img/new2022/new-b-ua.png" alt="">
+      </div>
+      <section class="container-timer">
+        <div id="number_time">
+          <div class="bg-gradient"></div>
+          <div class="container">
+            <div id="CDT"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <ul class="newyear__list">
+      <li>
+        <a href="https://comfy.ua/ua/christmas-trees/">
+          <div class="newyear__list__img">
+            <img src="https://cdn.comfy.ua/media/x/img/new2022/3.png">
+          </div>
+          <div class="newyear__list__txt">
+            <span>Ялинки</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://comfy.ua/ua/garlands/">
+          <div class="newyear__list__img">
+            <img src="https://cdn.comfy.ua/media/x/img/new2022/4.png">
+          </div>
+          <div class="newyear__list__txt">
+            <span>Новорічні гірлянди</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://comfy.ua/ua/christmas-decorations/">
+          <div class="newyear__list__img">
+            <img src="https://cdn.comfy.ua/media/x/img/new2022/5.png">
+          </div>
+          <div class="newyear__list__txt">
+            <span>Ялинкові прикраси</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://comfy.ua/ua/christmas-tinsel/">
+          <div class="newyear__list__img">
+            <img src="https://cdn.comfy.ua/media/x/img/new2022/6.png">
+          </div>
+          <div class="newyear__list__txt">
+            <span>Новорічна мішура</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://comfy.ua/ua/carnival-masks/">
+          <div class="newyear__list__img">
+            <img src="https://cdn.comfy.ua/media/x/img/new2022/7.png">
+          </div>
+          <div class="newyear__list__txt">
+            <span>Карнавальні маски <br> та обручі</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://comfy.ua/ua/decor-for-new-years/">
+          <div class="newyear__list__img">
+            <img src="https://cdn.comfy.ua/media/x/img/new2022/8.png">
+          </div>
+          <div class="newyear__list__txt">
+            <span>Новорічний декор</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://comfy.ua/ua/christmas-compositions/">
+          <div class="newyear__list__img">
+            <img src="https://cdn.comfy.ua/media/x/img/new2022/9.png">
+          </div>
+          <div class="newyear__list__txt">
+            <span>Новорічні вінки та <br> композиції</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://comfy.ua/ua/candles/">
+          <div class="newyear__list__img">
+            <img src="https://cdn.comfy.ua/media/x/img/new2022/10.png">
+          </div>
+          <div class="newyear__list__txt">
+            <span>Свічки та підсвічники</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://comfy.ua/ua/kitchen-textiles/tematuka_chachki__novyj-god/">
+          <div class="newyear__list__img">
+            <img src="https://cdn.comfy.ua/media/x/img/new2022/11.png">
+          </div>
+          <div class="newyear__list__txt">
+            <span>Новорічний кухонний <br> текстиль</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://comfy.ua/ua/plaid/tematuka_chachki__novyj-god/">
+          <div class="newyear__list__img">
+            <img src="https://cdn.comfy.ua/media/x/img/new2022/12.png">
+          </div>
+          <div class="newyear__list__txt">
+            <span>Новорічні пледи</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function CountdownTimer(elm, tl, mes) {
+      this.initialize.apply(this, arguments);
+  }
+  CountdownTimer.prototype = {
+      initialize: function (elm, tl, mes) {
+        this.elem = document.getElementById(elm);
+        this.tl = tl;
+        this.mes = mes;
+      },
+      countDown: function () {
+        var timer = '';
+        var today = new Date();
+        var day = Math.floor((this.tl - today) / (24 * 60 * 60 * 1000));
+        var hour = Math.floor(((this.tl - today) % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+        var min = Math.floor(((this.tl - today) % (24 * 60 * 60 * 1000)) / (60 * 1000)) % 60;
+        var sec = Math.floor(((this.tl - today) % (24 * 60 * 60 * 1000)) / 1000) % 60 % 60;
+        var me = this;
+
+        if ((this.tl - today) > 0) {
+            timer += '<span class="number-wrapper"><div class="line"></div><div class="caption">Днів</div><span class="number day">' + this.addZero(day) + '</span></span>';
+            timer += '<span class="number-wrapper"><div class="line"></div><div class="caption">Годин</div><span class="number hour">' + this.addZero(hour) + '</span></span>';
+            timer += '<span class="number-wrapper"><div class="line"></div><div class="caption">Хвилин</div><span class="number min">' + this.addZero(min) + '</span></span><span class="number-wrapper"><div class="line"></div><div class="caption">Секунд</div><span class="number sec">' + this.addZero(sec) + '</span></span>';
+            this.elem.innerHTML = timer;
+            tid = setTimeout(function () {
+              me.countDown();
+            }, 10);
+        } else {
+            this.elem.innerHTML = this.mes;
+            return;
+        }
+      },
+      addZero: function (num) {
+        return ('0' + num).slice(-2);
+      }
+  }
+
+  function CDT() {
+
+      // Set countdown limit
+      var tl = new Date('2022/01/01 00:00:00');
+
+      // You can add time's up message here
+      var timer = new CountdownTimer('CDT', tl, '<span class="number-wrapper"><div class="line"></div><span class="number end">Время вышло!</span></span>');
+      timer.countDown();
+  }
+  document.addEventListener('DOMContentLoaded', CDT);
+</script>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.slider').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      dots: false,
+      // autoplay: true,
+      autoplaySpeed: 5000,
+      cssEase: 'linear'
+    });
+  });
+</script>
