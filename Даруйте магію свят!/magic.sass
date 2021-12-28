@@ -1,0 +1,270 @@
+#magic
+   display: block
+   margin: 0 auto
+   max-width: 1366px
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #fff
+   position: relative
+   img
+      &:hover
+         opacity: 1
+   &:first-letter
+      padding-left: 0
+   img
+      display: block
+      margin-right: initial
+      margin-left: initial
+   h2
+      font-size: 60px
+      line-height: 1
+      font-weight: bold
+      color: #fff
+      text-shadow: 0px 4px 4px #52A2DC
+   h3
+      font-size: 34px
+      margin: 0
+      padding: 0 15px 0 0
+      line-height: 1
+      font-weight: bold
+      color: #000
+   p
+      font-size: 18px
+      margin-bottom: 0
+      font-weight: normal
+      color: #000
+span.word-wrap
+   display: block
+   word-wrap: break-word
+span.fw-bold
+   font-weight: bold
+span.tx-uppercase
+   text-transform: uppercase
+.features-desc__text h2
+   text-align: inherit
+.one-col .features-desc__text p
+   text-align: inherit
+.breadcrumbs
+   display: none
+// default
+
+.magic-header__bgrd
+   background-image: url(https://cdn.comfy.ua/media/x/img2/barbi/img1.png)
+   background-position: center top
+   background-repeat: no-repeat
+   background-size: cover
+   width: 100%
+   height: 500px
+   position: relative
+.magic-header__h2
+   text-align: center
+   padding: 65px 15px 0 15px
+.magic-prod__container
+   padding: 64px 24px
+   &.plusbgrd
+      padding: 0 24px
+.magic-prod
+   &.bgrdbl
+      background-image: url(https://cdn.comfy.ua/media/x/img2/barbi/img11.png)
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+      width: 100%
+      height: auto
+      padding: 70px 0
+.magic-prod__h3
+   padding: 0 10px 0 10px
+   display: flex
+   align-items: center
+   justify-content: center
+   img
+      padding-right: 24px
+.magic-prod__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr
+   grid-gap: 32px
+   padding: 32px 0
+.magic-prod__item-img img
+   margin: 0 auto !important
+.magic-prod__item
+   display: flex
+   align-items: center
+   flex-direction: column
+   background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4))
+   border: 2px solid #F2F2F2
+   border-radius: 20px
+   padding: 24px 20px 48px 20px
+   transition: .3s
+   &:hover
+      .magic-prod__btn
+         background: #FF671F
+         color: #fff
+.magic-prod__item-p
+   text-align: center
+   padding: 32px 15px
+.magic-prod__btn
+   background: #FFFFFF
+   border: 2px solid #FF671F
+   box-sizing: border-box
+   border-radius: 50px
+   text-align: center
+   color: #000
+   padding: 8px 64px
+   margin: 0 auto
+   font-weight: bold
+   font-size: 24px
+   line-height: 1
+   transition: .3s
+.magic-prod__link
+   a
+      background: #FF671F
+      border-radius: 80px
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 12px 64px
+      max-width: 310px
+      margin: 0 auto
+      transition: .3s
+      &:hover
+         box-shadow: 0 0 10px 0px #ff671f
+      span
+         font-weight: bold
+         font-size: 24px
+         color: #fff
+         padding-right: 10px
+         display: block
+
+// media
+// @media (max-width: 1250px)
+@media (max-width: 1024px)
+   #magic
+      h2
+         font-size: 50px
+      h3
+         font-size: 30px
+   .magic-header__bgrd
+      height: 470px
+   .magic-prod__container
+      padding: 64px 15px
+   .magic-prod__grid
+      grid-gap: 15px
+      padding: 25px 0
+   .magic-prod__item-p
+      padding: 25px 0
+   .magic-prod__btn
+      font-size: 20px
+   .magic-prod__link a span
+      font-size: 22px
+   .magic-prod__item
+      padding: 24px 15px 24px 15px
+@media (max-width: 812px)
+   #magic
+      h2
+         font-size: 35px
+      h3
+         font-size: 25px
+   .magic-header__bgrd
+      height: 280px
+   .magic-prod__container
+      padding: 30px 15px
+   .magic-prod__item
+      justify-content: space-between
+   .magic-prod__item-p
+      padding: 15px 0
+   .magic-prod__link a
+      padding: 12px 25px
+      max-width: 260px
+   .magic-prod__btn
+      padding: 8px 45px
+@media (max-width: 480px)
+   #magic
+      h2
+         font-size: 48px
+      h3
+         font-size: 20px
+         padding: 0 0 8px 0
+         text-align: center
+   .magic-header__bgrd
+      background-image: url(https://cdn.comfy.ua/media/x/img2/barbi/img1_mob.png)
+      width: 100%
+      height: 470px
+   .magic-header__h2
+      padding: 115px 5px 0 5px
+   .magic-prod__h3
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 8px 8px
+      padding: 0
+   .magic-prod__grid
+      grid-template-columns: 1fr
+   .magic-prod__container
+      padding: 30px 20px
+   .magic-prod__h3 img
+      padding-right: 0
+   .magic-prod__grid
+      grid-gap: 24px
+      padding: 24px 0
+   .magic-prod__item-p
+      padding: 32px 0
+   .magic-prod__item
+      padding: 24px 15px 48px 15px
+   .magic-prod__btn
+      font-size: 24px
+   .magic-prod__btn
+      padding: 8px 70px
+   .magic-prod__link a span
+      font-size: 24px
+   .magic-prod__link a
+      padding: 12px 15px
+      max-width: 100%
+   .magic-prod.bgrdbl
+      background-image: url(https://cdn.comfy.ua/media/x/img2/barbi/img18.png)
+      position: relative
+      overflow: hidden
+      padding: 45px 0
+      background-position: center top
+      &::before
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img2/barbi/img19.png)
+         background-position: center
+         background-repeat: no-repeat
+         width: 415px
+         height: 17px
+         position: absolute
+         left: 0
+         top: 0
+         right: 0
+      &::after
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img2/barbi/img20.png)
+         background-position: center
+         background-repeat: no-repeat
+         width: 415px
+         height: 17px
+         position: absolute
+         left: 0
+         bottom: 0
+         right: 0
+   .magic-prod__h3__item
+      &:nth-child(1)
+         grid-column-start: 1
+         grid-column-end: 3
+      &:nth-child(2)
+         grid-column-start: 1
+         grid-column-end: 3
+         &.onlimob
+            grid-column-start: 1
+            grid-column-end: 2
+      &:nth-child(3)
+         grid-column-start: 2
+      img
+         margin: 0 auto !important
+   .magic-prod.bgrdbl .magic-prod__item
+      background: #c9def0
+@media (max-width: 320px)
+   .magic-header__bgrd
+      height: 400px
+   .magic-header__h2
+      padding: 86px 5px 0 5px

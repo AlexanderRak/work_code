@@ -1,0 +1,92 @@
+#promo-cms-service
+   display: block
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #fff
+   position: relative
+   padding: 0 0 2.3rem 0
+   img
+      &:hover
+         opacity: 1
+   &:first-letter
+      padding-left: 0
+   img
+      display: block
+      margin-right: initial
+      margin-left: initial
+   h2
+      font-size: 24px
+      line-height: 1
+      font-weight: bold
+      color: #000
+      padding-bottom: 20px
+   p
+      text-align: left
+      color: #000000
+   .promo-cms-service__item-bl.topbl p
+      font-size: 15px
+   .promo-cms-service__item-bl.bottombl p
+      font-size: 14px
+      padding-left: 5px
+span.word-wrap
+   display: block
+   word-wrap: break-word
+span.fw-bold
+   font-weight: bold
+span.tx-uppercase
+   text-transform: uppercase
+.features-desc__text h2
+   text-align: inherit
+.one-col .features-desc__text p
+   text-align: inherit
+// default
+.promo-cms-service__wrap-flex
+   display: flex
+.promo-cms-service__item-flex
+   flex: 1 1 0
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   min-height: 226px
+   padding: 12px
+   border: 1px dashed #43B02A
+   border-radius: 8px
+   &:nth-child(2)
+      margin: 0 8px
+.promo-cms-service__item-bl.topbl
+   display: flex
+   align-items: flex-start
+   .numbers
+      color: #fff
+      font-weight: bold
+      font-size: 14px
+      padding: 8px
+      border-radius: 50%
+      background: #FF671F
+      flex: 1 0 35px
+      width: 35px
+      max-width: 35px
+      text-align: center
+   p
+      padding-left: 10px
+.promo-cms-service__item-bl.bottombl
+   background: #EDF8EA
+   border-radius: 8px
+   margin-top: 10px
+   padding: 8px
+   display: flex
+   align-items: center
+// media
+// @media (max-width: 1250px)
+@media (max-width: 1024px)
+   #promo-cms-service
+      padding: 1.2rem
+   .promo-cms-service__item-flex
+      min-height: auto
+// @media (max-width: 812px)
+@media (max-width: 480px)
+   .promo-cms-service__wrap-flex
+      flex-direction: column
+   .promo-cms-service__item-flex:nth-child(2)
+      margin: 12px 0

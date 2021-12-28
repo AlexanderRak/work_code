@@ -1,0 +1,107 @@
+<style>
+   @charset "UTF-8";
+
+   #wrap-bandl {
+      background: #fff;
+   }
+
+   #wrap-bandl h2.wrap-bandl__price {
+      font-size: 34px;
+      color: #FF090B;
+      font-weight: bold;
+      position: relative;
+      line-height: 1;
+      padding-right: 15px;
+   }
+
+   #wrap-bandl h2.wrap-bandl__price::before {
+      content: "₴";
+      position: absolute;
+      right: 0;
+      bottom: 2px;
+      color: #FF090B;
+      font-size: 1.8rem;
+      font-weight: 700;
+      padding-left: .2rem;
+   }
+
+   #wrap-bandl p.wrap-bandl__text {
+      font-size: 18px;
+      color: #000;
+      font-weight: 700;
+   }
+
+   #wrap-bandl span.wrap-bandl__promoko {
+      font-size: 20px;
+      color: #FF090B;
+      text-transform: uppercase;
+      display: inline-block;
+      font-weight: 700;
+   }
+
+   .wrap-bandl__container {
+      height: 66px;
+      width: 100%;
+      position: relative;
+   }
+
+   .wrap-bandl__flex {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -moz-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      height: 100%;
+      position: relative;
+      z-index: 10;
+   }
+
+   .wrap-bandl__item:last-child {
+      padding-left: 26px;
+   }
+
+   .wrap-bandl__img-pos {
+      position: absolute;
+      right: 0;
+      top: 0;
+      opacity: 1;
+   }
+
+   @media (max-width: 480px) {
+
+      #wrap-bandl span.wrap-bandl__promoko {
+         display: block;
+      }
+
+      #wrap-bandl p.wrap-bandl__text {
+         font-size: 16px;
+      }
+
+      .wrap-bandl__img-pos {
+         opacity: 0.3;
+      }
+   }
+</style>
+<div id="wrap-bandl">
+   <div class="wrap-bandl__container">
+      <div class="wrap-bandl__flex">
+         <div class="wrap-bandl__item">
+            <h2 class="wrap-bandl__price">499</h2>
+         </div>
+         <div class="wrap-bandl__item">
+            <p class="wrap-bandl__text">Цена по промокоду <span class="wrap-bandl__promoko">GAME</span></p>
+         </div>
+      </div>
+      <div class="wrap-bandl__img-pos"><img src="https://cdn.comfy.ua/media/x/img2/badgebndl.png" /></div>
+   </div>
+</div>
