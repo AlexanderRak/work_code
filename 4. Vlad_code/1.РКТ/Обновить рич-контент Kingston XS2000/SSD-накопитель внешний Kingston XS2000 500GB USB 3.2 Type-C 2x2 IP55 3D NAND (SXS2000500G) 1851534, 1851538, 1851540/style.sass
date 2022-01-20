@@ -1,0 +1,301 @@
+/*default styles*/
+
+#kingston
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    font-size: 24px
+    color: #fff
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 38px
+    font-weight: bold
+    text-transform: uppercase
+    color: #F8D9B0
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#kingston
+  .show__mob
+    display: none
+  .logo
+    position: relative
+    .logo__list
+      li
+        position: absolute
+        &:nth-of-type(1)
+          top: 2em
+          left: 2em
+          span
+            text-align: center
+            letter-spacing: 0.3em
+            &:nth-of-type(1)
+              font-size: 16px
+              text-transform: uppercase
+              color: #fff
+            &:nth-of-type(2)
+              font-size: 20px
+              text-transform: uppercase
+              color: #F8D9B0
+          img
+            &:nth-of-type(1)
+              margin-bottom: 170px
+            &:nth-of-type(2)
+              margin: 10px 0 20px 0
+        &:nth-of-type(2)
+          // right: 180px
+          // bottom: 40px
+          right: 6em
+          bottom: 2em
+          max-width: 500px
+          p
+
+            margin: 12px 0 50px 0
+          .logo__list__flex
+            display: flex
+            flex-direction: row
+            align-items: center
+            .logo__list__flex__item
+              &:nth-of-type(1)
+                margin-right: 60px
+
+  .creat
+    position: relative
+    .creat__title
+      position: absolute
+      text-align: center
+      right: 50%
+      transform: translateX(50%)
+      width: max-content
+      bottom: 2em
+      h2
+        margin-bottom: 8px
+    .creat__list
+      position: absolute
+      display: flex
+      flex-direction: row
+      left: 4em
+      top: 18em
+      li
+        &:nth-of-type(1)
+          margin-right: 2em
+
+  .archive
+    background-color: #000
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 4em
+    justify-content: space-between
+    li
+      flex: 1 1 0
+      .archive__row
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin-top: 1em
+        .archive__row__item
+          flex: 1 1 0
+          img
+            margin: 0 auto
+
+  .usb
+    position: relative
+    .usb__list
+      li
+        position: absolute
+        &:nth-of-type(1)
+          right: 175px
+          top: 6em
+          .usb__list__title
+            display: flex
+            flex-direction: row
+            margin-bottom: 35px
+            div
+              &:nth-of-type(1)
+                margin-right: 2em
+          .usb__list__txt
+            max-width: 345px
+            margin: 0 0 0 auto
+        &:nth-of-type(2)
+          width: max-content
+          text-align: center
+          right: 50%
+          transform: translateX(50%)
+          bottom: 150px
+          p
+            margin: 1em 0 2em
+
+//media********************************************
+
+@media (max-width: 1024px)
+  #kingston .logo .logo__list li:nth-of-type(1)
+    max-width: 400px
+  #kingston .logo .logo__list li:nth-of-type(1) img:nth-of-type(1)
+    margin-bottom: 120px
+  #kingston .logo .logo__list li:nth-of-type(1) span:nth-of-type(2)
+    font-size: 15px
+  #kingston .logo .logo__list li:nth-of-type(1) span:nth-of-type(1)
+    font-size: 12px
+  #kingston .logo .logo__list li:nth-of-type(2)
+    max-width: 430px
+  #kingston .creat .creat__list
+    top: 13em
+    max-width: 350px
+  #kingston .usb .usb__list li:nth-of-type(2)
+    bottom: 60px
+
+@media (max-width: 812px)
+  #kingston h2
+    font-size: 32px
+  #kingston p
+    font-size: 18px
+  #kingston .show__mob
+    display: block
+    position: relative
+    &::after
+      content: ""
+      display: block
+      position: absolute
+      top: -1px
+      bottom: -1px
+      right: 0
+      left: -1px
+      -webkit-box-shadow: 0px 0px 69px 70px rgba(0, 0, 0, 1) inset
+      -moz-box-shadow: 0px 0px 69px 70px rgba(0, 0, 0, 1) inset
+      box-shadow: 0px 0px 69px 70px rgba(0, 0, 0, 1) inset
+  #kingston .logo
+    background-color: #000
+    padding: 1em
+  #kingston .logo .logo__list li
+    position: unset
+    max-width: 100% !important
+  #kingston .logo .logo__list li:nth-of-type(1) img:nth-of-type(2)
+    margin: 10px auto 20px auto
+  #kingston .logo .logo__list li:nth-of-type(2)
+    h2
+      text-align: center
+    p
+      text-align: center
+  #kingston .logo .logo__img
+    display: none
+  #kingston .logo .logo__list li:nth-of-type(1) img:nth-of-type(1)
+    margin-bottom: 2em
+  #kingston .logo .logo__list li:nth-of-type(1) span:nth-of-type(2)
+    margin-bottom: 2em
+  #kingston .logo .logo__list li:nth-of-type(2) .logo__list__flex
+    justify-content: center
+  #kingston .creat .creat__list
+    max-width: 290px
+    top: 11em
+    left: 2em
+  #kingston .creat .creat__title
+    bottom: 1em
+  #kingston .archive
+    padding: 1em
+  #kingston .usb .usb__list li:nth-of-type(1)
+    right: 50%
+    transform: translateX(50%)
+  #kingston .usb .usb__list li:nth-of-type(1)
+    top: 2em
+  #kingston .usb .usb__list li:nth-of-type(2) img
+    max-width: 60%
+    margin: 0 auto
+
+@media (max-width: 480px)
+  #kingston h2
+    font-size: 24px
+  #kingston p
+    font-size: unset
+  #kingston .show__mob::after
+    -webkit-box-shadow: 0px 0px 39px 38px black inset
+    box-shadow: 0px 0px 39px 38px black inset
+  #kingston .logo .logo__list li:nth-of-type(2) .logo__list__flex .logo__list__flex__item:nth-of-type(1)
+    margin-right: 1em
+  #kingston .creat .creat__img img
+    min-width: 150%
+    margin-left: -50%
+  #kingston .creat .creat__title
+    box-sizing: border-box
+    max-width: 100%
+    padding: 0 1em
+  #kingston .creat .creat__title,
+  #kingston .creat .creat__list
+    position: unset
+    transform: unset
+  #kingston .creat
+    background-color: #000
+    box-sizing: border-box
+  #kingston .creat .creat__list
+    margin: 1em auto 0 auto
+    padding: 0 1em
+  #kingston .archive
+    display: block
+  #kingston .archive li .archive__row .archive__row__item img
+    max-width: 50px
+  #kingston .archive li
+    &:nth-of-type(1)
+      margin-bottom: 1em
+  #kingston .usb .usb__img img
+    min-width: 230%
+    margin-left: -30%
+  #kingston .usb .usb__list li:nth-of-type(2)
+    max-width: 100%
+    padding: 1em
+    box-sizing: border-box
+  #kingston .usb .usb__list li:nth-of-type(2) img
+    max-width: 90%
+  #kingston .usb .usb__list li:nth-of-type(1) .usb__list__title
+    display: block
+  #kingston .usb .usb__list li:nth-of-type(1) .usb__list__title div:nth-of-type(1)
+    margin-right: 0
+    margin-bottom: 1em
+    img
+      max-width: 20%
+      margin: 0
+  #kingston .usb .usb__list li:nth-of-type(1)
+    max-width: 100%
+    width: 100%
+    padding: 1em
+    top: 0
+    box-sizing: border-box
+  #kingston .usb .usb__list li:nth-of-type(1) .usb__list__title
+    margin-bottom: 1em
+  #kingston .usb .usb__list li:nth-of-type(1) .usb__list__txt
+    margin-left: 0
+      
