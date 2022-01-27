@@ -1,0 +1,1907 @@
+<style>
+
+</style>
+
+<div id="delivery-wrap">
+   <div class="delivery-container">
+
+      <div class="mobile-header js-mobile-header">
+         <a class="mobile-header__link js-mobile-header__link" href="#">
+            <span class="mobile-header__content js-mobile-header__content"></span>
+            <span class="mobile-arrow"></span>
+         </a>
+      </div>
+      <div class="delivery__wrap-flex">
+         <div class="delivery__wrap-flex__item">
+            <ul class="tabs-head js-slider-tabs hide" id="tabsHead">
+               <li data-tab-id="#samovyvoz-iz-magazina" class="tabs-head-item js-tabs-item">
+                  <p class="tabs-head-flex">
+                     <span class="tabs-head-flex__item">Самовывоз из магазина</span>
+                     <span class="tabs-head-flex__item">
+                        <img src="https://cdn.comfy.ua/media/x/img2/delivery/dost_1.svg" alt="">
+                     </span>
+                  </p>
+               </li>
+               <li data-tab-id="#poluche-v-techenie-dnja" class="tabs-head-item js-tabs-item">
+                  <p class="tabs-head-flex">
+                     <span class="tabs-head-flex__item">Получение в течение дня</span>
+                     <span class="tabs-head-flex__item">
+                        <img src="https://cdn.comfy.ua/media/x/img2/delivery/dost_2.svg" alt="">
+                     </span>
+                  </p>
+               </li>
+               <!-- <li data-tab-id="#kredit-s-dostavkoj" class="tabs-head-item js-tabs-item">
+                  <p class="tabs-head-flex">
+                     <span class="tabs-head-flex__item">Кредит с доставкой</span>
+                     <span class="tabs-head-flex__item">
+                        <img src="https://cdn.comfy.ua/media/x/img2/delivery/dost_3.svg" alt="">
+                     </span>
+                  </p>
+               </li> -->
+               <li data-tab-id="#segodnja-v-udobnoe-vremja" class="tabs-head-item js-tabs-item">
+                  <p class="tabs-head-flex">
+                     <span class="tabs-head-flex__item">Сегодня в удобное время</span>
+                     <span class="tabs-head-flex__item">
+                        <img src="https://cdn.comfy.ua/media/x/img2/delivery/dost_4.svg" alt="">
+                     </span>
+                  </p>
+               </li>
+               <li data-tab-id="#vukazannoe-vami-vremja" class="tabs-head-item js-tabs-item">
+                  <p class="tabs-head-flex">
+                     <span class="tabs-head-flex__item">В указанное вами время</span>
+                     <span class="tabs-head-flex__item">
+                        <img src="https://cdn.comfy.ua/media/x/img2/delivery/dost_5.svg" alt="">
+                     </span>
+                  </p>
+               </li>
+               <li data-tab-id="#nova-poshta-kurerom" class="tabs-head-item js-tabs-item">
+                  <p class="tabs-head-flex">
+                     <span class="tabs-head-flex__item">Курьером от "Нова Пошта"</span>
+                     <span class="tabs-head-flex__item">
+                        <img src="https://cdn.comfy.ua/media/x/img2/delivery/dost_6.svg" alt="">
+                     </span>
+                  </p>
+               </li>
+               <li data-tab-id="#nova-poshta-v-otdelenie" class="tabs-head-item js-tabs-item">
+                  <p class="tabs-head-flex">
+                     <span class="tabs-head-flex__item">В отделение "Нова Пошта"</span>
+                     <span class="tabs-head-flex__item">
+                        <img src="https://cdn.comfy.ua/media/x/img2/delivery/dost_6.svg" alt="">
+                     </span>
+                  </p>
+               </li>
+               <li data-tab-id="#nova-poshta-v-pochtomat" class="tabs-head-item js-tabs-item">
+                  <p class="tabs-head-flex">
+                     <span class="tabs-head-flex__item">В почтомат "Нова Пошта"</span>
+                     <span class="tabs-head-flex__item">
+                        <img src="https://cdn.comfy.ua/media/x/img2/delivery/dost_6.svg" alt="">
+                     </span>
+                  </p>
+               </li>
+               <li data-tab-id="#justin-v-otdelenie" class="tabs-head-item js-tabs-item">
+                  <p class="tabs-head-flex">
+                     <span class="tabs-head-flex__item">В отделение JUSTIN</span>
+                     <span class="tabs-head-flex__item">
+                        <img src="https://cdn.comfy.ua/media/x/img2/delivery/dost_7.svg" alt="">
+                     </span>
+                  </p>
+               </li>
+               <li data-tab-id="#meest-v-pochtomat" class="tabs-head-item js-tabs-item">
+                  <p class="tabs-head-flex">
+                     <span class="tabs-head-flex__item">В почтомат Meest</span>
+                     <span class="tabs-head-flex__item">
+                        <img src="https://cdn.comfy.ua/media/x/img2/delivery/dost_8.svg" alt="">
+                     </span>
+                  </p>
+               </li>
+               <li data-tab-id="#meest-v-otdelenie" class="tabs-head-item js-tabs-item">
+                  <p class="tabs-head-flex">
+                     <span class="tabs-head-flex__item">В отделение Meest</span>
+                     <span class="tabs-head-flex__item">
+                        <img src="https://cdn.comfy.ua/media/x/img2/delivery/dost_8.svg" alt="">
+                     </span>
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <div class="delivery__wrap-flex__item">
+            <ul class="tabs-content" id="tabsContent">
+               <!-- Самовывоз из магазина -->
+               <li class="tabs-content-item js-tabs-item" id="samovyvoz-iz-magazina">
+
+                  <div class="sect-content-working">
+                     <div class="sect-content-working__top-text">
+                        <span>Если сделали заказ до 19:00 - можете забрать покупку в тот же день. Заказали после 19:00 - на следующий</span>
+                     </div>
+                     <div class="sect-content-working__grid">
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img1.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Через 1 час после заказа, <span class="word-wrap-working">если товар в наличии</span></p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img2.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Любой товар</p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img3.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>В удобном вам магазине или <span class="word-wrap-working">Comfy точке</span></p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img4.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Бесплатно</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-productbay">
+                     <div class="sect-content-productbay__h2">
+                        <h2>Как купить товар в самовывоз:</h2>
+                     </div>
+                     <div class="sect-content-productbay__grid">
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">01</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>При оформлении указываете: "Самовывоз из магазина или Comfy точки"</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img5.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">02</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Выбираете удобный магазин или Comfy точку из списка</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img6.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">03</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>После оформления вам придёт СМС или Viber-сообщение с информацией о заказе</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img7.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">04</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Получите товар в магазине, в зоне выдачи онлайн-покупок, либо в Comfy точке</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img8.png" alt="">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="sect-content-productbay__txt">
+                        <p>Если в магазине или Comfy точке нет в наличии выбранного товара, укажите удобную вам дату и забирайте заказ в этот день.</p>
+                        <p class="color_43B02A">Заказать доставку можно отдельно в магазинах или Comfy точках.</p>
+                     </div>
+                     <div class="sect-content-accordion-flex">
+                        <div class="sect-content-accordion__item">
+                           <button class="accordion-btn-click">Смотреть договор доставки</button>
+                           <div class="accordion_panel">
+                              <div class="accordion_panel__content">
+                                 <a target="_blank" href="https://cdn.comfy.ua/media/x/pdf/dogovor_dostavki18_11_2016.pdf">Договор доставки</a>
+                                 <ul>
+                                    <li>Товар можете получить в магазине или COMFY точке, которые выбираете при оформлении заказа. Для этого подойдите к зоне выдачи онлайн-покупок, назовите номер заказа и оплатите.</li>
+                                    <li>Прежде, чем прийти в магазин или COMFY точку, убедитесь, что у вас есть номер заказа. Узнать его можете на странице проверки заказа в личном кабинете, либо из SMS-сообщения.</li>
+                                    <li>Ваш заказ будет ждать на протяжении 3-х дней после сообщения о том, что заказ подготовлен выдаче. Если во время оформления вы указали доставку на определенную дату - заказ будет ожидать 3 дня с момента поступления товара в магазин или COMFY точку.</li>
+                                    <li>Если вам будет нужна доставка, всегда можете заказать ее в магазине или COMFY точке после оплаты заказа.</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </li>
+               <!-- Получение в течение дня -->
+               <li class="tabs-content-item js-tabs-item" id="poluche-v-techenie-dnja">
+
+                  <div class="sect-content-working">
+                     <div class="sect-content-working__grid">
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img1.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>В выбранный день</p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img2.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Любой товар</p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img3.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>К вам домой</p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img4.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>От 1 ₴
+                                 <span class="word-wrap-working">
+                                    <button class="myBtnstyle" id="myBtn">Смотреть условия</button>
+                                 </span>
+                              </p>
+                              <div id="myModal" class="modal pop-up">
+                                 <div class="modal-content size-modal1">
+                                    <span class="close">&times;</span>
+                                    <div class="modal-content__header">Стоимость доставки:</div>
+                                    <div class="size-modal3__scroll-mob">
+                                       <div class="size-modal3__scroll-width width2">
+                                          <div class="modal-table">
+                                             <div class="modal-table__h3">
+                                                <h3>Для городов: <b>Киев, Борисполь, Ирпень, Буча.</b></h3>
+                                             </div>
+                                             <div class="modal-table-list">
+                                                <table>
+                                                   <tr>
+                                                      <td class="td_bold">Доставка</td>
+                                                      <td class="td_bold">Полная стоимость<br>(₴. с НДС)</td>
+                                                      <td class="td_bold">Акционная стоимость<br>(₴. с НДС)</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Крупногабаритного товара стоимостью от 6999 ₴</td>
+                                                      <td class="td_bold_green">269 ₴</td>
+                                                      <td class="td_bold_green">59 ₴</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Мелкогабаритного товара стоимостью от 6999 ₴</td>
+                                                      <td class="td_bold_green">99 ₴</td>
+                                                      <td class="td_bold_green">59 ₴</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Крупногабаритного товара стоимостью до 6999 ₴</td>
+                                                      <td class="td_bold_green">269 ₴</td>
+                                                      <td class="td_bold_green"></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Мелкогабаритного товара стоимостью до 6999 ₴</td>
+                                                      <td class="td_bold_green">99 ₴</td>
+                                                      <td class="td_bold_green"></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td class="td_grid_line">Стоимость 1 км доставки от черты города для прилегающих населенных пунктов - 25 ₴ (с НДС)</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td class="td_bold">Для других городов Украины (₴. с учётом НДС)</td>
+                                                      <td class="td_bold">Доставка крупногабаритного товара</td>
+                                                      <td class="td_bold">Доставка мелкогабаритного товара</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Запорожье, Кривой Рог</td>
+                                                      <td class="td_bold_green">269 ₴</td>
+                                                      <td class="td_bold_green">99 ₴</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Луцк, Ровно, Житомир, Ивано-Франковск, Ужгород, Черновцы, Хмельницкий, Винница, Чернигов, Полтава, Черкассы, Кропивницкий</td>
+                                                      <td class="td_bold_green">249 ₴</td>
+                                                      <td class="td_bold_green">99 ₴</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Николаев, Львов, Одесса, Херсон, Мелитополь, Измаил, Черноморск, Сумы, Ахтырка, Днепр, Харьков</td>
+                                                      <td class="td_bold_green">149 ₴</td>
+                                                      <td class="td_bold_green">79 ₴</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Остальные города</td>
+                                                      <td class="td_bold_green">199 ₴</td>
+                                                      <td class="td_bold_green">99 ₴</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td class="td_grid_line">Стоимость 1 км доставки от черты города для прилегающих населенных пунктов - 25 ₴ (с НДС)
+                                                         <a target="_blank" href="https://cdn.comfy.ua/media/x/img2/pdf/dostavka20_01.pdf">Тарифы доставки</a>
+                                                      </td>
+                                                   </tr>
+                                                </table>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-advantages">
+                     <div class="sect-content-advantages__h2">
+                        <h2>Преимущества:</h2>
+                     </div>
+                     <div class="sect-content-advantages__grid">
+                        <div class="sect-content-advantages__item">
+                           <h3>Занесем прямо в квартиру</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Мы не только доставим товар к подъезду, но еще поднимем на этаж и занесем в вашу квартиру</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Напомним о доставке</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>В день доставки за 1-2 часа до приезда обязательно вам позвоним</p>
+                           <p>Если не сможем дозвониться - отправим SMS.</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Готовы вас подождать</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Если нужно, курьер сможет подождать вас до 15 мин</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Безопасность</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Мы всегда в масках. И перед входом в квартиру даже оденем бахилы, если надо</p>
+                        </div>
+                     </div>
+                     <div class="sect-content-advantages__txt">
+                        <p>Привезем заказ в пригороды и близлежащие населенные пункты в радиусе до 80 км от <span class="color_43B02A"> <a target="_blank" href="https://comfy.ua/shops.html">магазина</a></span>.</p>
+                     </div>
+                  </div>
+                  <div class="sect-content-productbay">
+                     <div class="sect-content-productbay__h2">
+                        <h2>Как купить товар с доставкой «Получить в течение дня»</h2>
+                     </div>
+                     <div class="sect-content-productbay__grid">
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">01</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>При оформлении указываете: «Получить в течение дня»</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost2_img0.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">02</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Указываете дату доставки</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost2_img1.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">03</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Заполняете остальные необходимые поля</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost2_img2.png" alt="">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="sect-content-accordion-flex">
+                        <div class="sect-content-accordion__item">
+                           <button class="accordion-btn-click">Условия доставки</button>
+                           <div class="accordion_panel">
+                              <div class="accordion_panel__content">
+                                 <ul>
+                                    <li>Мы доставим ваш товар по адресу, указанному при оформлении заказа. Пожалуйста, проверьте правильность указанного адреса и ваши контакты.</li>
+                                    <li>Наша служба доставки предупреждает клиентов утром в день доставки заказа и за 1 час до приезда. Если не сможем вам дозвониться, отправляем SMS-сообщение.</li>
+                                    <li>Доставка в загородные дома осуществляется при наличии подъездных путей.</li>
+                                    <li>Если обнаруживаем брак, товар возвращается в магазин, а вы бесплатно получаете аналогичный хорошего качества.</li>
+                                    <li>Если нужно, можно легко изменить дату доставки, адрес доставки или получателя в разделе Помощь и консультация.</li>
+                                    <li>Перед доставкой вашего заказа подготовьте условия для беспрепятственного доступа сотрудников службы доставки: освободить проходы, лестничные пролеты и место в квартире.</li>
+                                    <li>Передвижение крупной бытовой техники по квартире и утилизация старой техники сотрудниками службы доставки не осуществляется.</li>
+                                    <li>Товар заносится в квартиру, если расстояние между дверной коробкой и техникой не менее 10 (десяти) сантиметров. В противном случае товар остается на месте, до которого удалось осуществить доставку.</li>
+                                    <li>Перед покупкой товара внимательно ознакомьтесь со свойствами и характеристиками товара, который вы хотите купить: размером, цветом, весом и т. д. В случае возврата крупногабаритного товара, клиент должен доставить его в магазин самостоятельно.</li>
+                                    <li>Сотрудники службы доставки распакуют технику, помогут проверить комплектность и отсутствие внешних повреждений. Также выдадут заполненный гарантийный талон и все сопроводительные документы.</li>
+                                    <li>Если в процессе демонстрации доставленного товара стало понятно, что данный товар вас не устраивает, мы советуем не оплачивать товар, не подписывать Расходную накладную и ТТН.</li>
+                                    <li>При приеме товара внимательно проверьте комплектность и внешний вид товара, отсутствие механических повреждений. Наши сотрудники продемонстрируют вам товар.</li>
+                                    <li>Включение и проверка работоспособности товара производится вами без участия сотрудников службы доставки. Перед включением техники рекомендуем ознакомиться с инструкцией по эксплуатации товара.</li>
+                                    <li>В случае отсутствия гарантийного талона или инструкции по эксплуатации товара на русском/украинском языках вы можете обратиться в <span class="color_43B02Aspan">контактный центр</span>.</li>
+                                    <li>Упаковка товара не убирается и остается у вас.</li>
+                                    <li>Вместе с заказом вы получите:</li>
+                                 </ul>
+                                 <ul class="ul-list-num">
+                                    <li>1. Расходную накладную на полученный товар.</li>
+                                    <li>2. Гарантийный талон с необходимыми отметками.</li>
+                                    <li>3. Инструкцию на русском/украинском языках.</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="sect-content-accordion__item">
+                           <button class="accordion-btn-click">Важные моменты</button>
+                           <div class="accordion_panel">
+                              <div class="accordion_panel__content">
+                                 <ul>
+                                    <li>Своевременность доставки составляет 91%. Мы реально выполняем обещания и доставляем заказ вовремя в день, который вы указали при оформлении заказа.</li>
+                                    <li>При комплектации вашего заказа на складе сотрудники могут вскрывать упаковку для проверки качества товара.</li>
+                                    <li>Вы можете отказаться от приема товара, если не устраивает внешний вид, комплектация товара, указав причину отказа в Бланке доставки товара. Обратите внимание, что любые претензии по внешнему виду, ассортименту, соответствию полученного товара заказанному, его комплектности и количеству принимаются только при получении товара у курьера.</li>
+                                    <li>Ставя подпись на бланке заказа, вы подтверждаете, что не имеете претензий к магазину по всем упомянутым вопросам.</li>
+                                    <li>Работы по переносу товара, мебели и установке в услугу доставки не включены. Вы можете заказать услуги по установке, настройке и обслуживанию товара на сайте comfy.ua, в магазинах Comfy или обратившись в <span class="color_43B02Aspan">Помощь и консультация</span>.</li>
+                                    <li>Сотрудники службы доставки не устанавливают и не подключают технику (если вместе с доставкой отдельно не приобретена соответствующая услуга установки/подключения)! Курьер, который доставит вам заказ, не обладает необходимой квалификацией и не сможет проконсультировать вас по поводу полученной техники.</li>
+                                    <li>Если сотрудник службы доставки просит доплату за подъем на этаж, распаковку товара, установку и подключение товара, а также при любых других нарушениях правил доставки, просим вас не соглашаться на получение данных услуг и сообщить обратившись в Помощь и консультация.</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </li>
+               <!-- Кредит с доставкой -->
+               <li class="tabs-content-item js-tabs-item" id="kredit-s-dostavkoj">
+                  <div class="sect-content-working">
+                     <div class="sect-content-working__grid">
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img1.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>В выбранный день</p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img2.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Любой товар</p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img3.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>К вам домой</p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img4.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Мин. сумма покупки – 300 ₴<br>Макс. сумма кредита – 200 000 ₴</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-advantages">
+                     <div class="sect-content-advantages__h2">
+                        <h2>Преимущества:</h2>
+                     </div>
+                     <div class="sect-content-advantages__grid">
+                        <div class="sect-content-advantages__item">
+                           <h3>Удобно оформлять</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Кредит с доставкой оформляется на сайте, а детали оговариваются с вами по телефону</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Никуда не надо ехать</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>К вам приезжает сотрудник банка → подписываете кредит → вам доставляют заказ</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Нужны только ИНН и паспорт</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Чтобы оформить кредит, нужны только оригиналы вашего паспорта и ИНН</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Занесем прямо в квартиру</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Мы не только доставим товар к подъезду, но еще поднимем на этаж и занесем в вашу квартиру</p>
+                        </div>
+                     </div>
+                     <div class="sect-content-advantages__txt">
+                        <p>* В день доставки и и за час до приезда мы вам позвоним. Если не дозвонимся - отправим SMS</p>
+                     </div>
+                  </div>
+                  <div class="sect-content-conditions">
+                     <div class="sect-content-conditions__h2">
+                        <h2>Условия:</h2>
+                     </div>
+                     <div class="sect-content-conditions__grid conditions__grid-first">
+                        <div class="sect-content-conditions__item">
+                           <p>Банк-кредитор</p>
+                        </div>
+                        <div class="sect-content-conditions__item">
+                           <p class="underlinep">АКЦИОНЕРНОЕ ОБЩЕСТВО "ОТП БАНК".</p>
+                           <p class="fzdefault">Все виды банковских услуг. Лицензия НБУ №191 от 05.10.2011. Свидетельство о регистрации в Государственном реестре банков № 273 от 02.03.1998 г.</p>
+                        </div>
+                     </div>
+                     <div class="sect-content-conditions__grid">
+                        <div class="sect-content-conditions__item">
+                           <p>Первоначальный взнос</p>
+                        </div>
+                        <div class="sect-content-conditions__item">
+                           <p>отсутствует</p>
+                        </div>
+                     </div>
+                     <div class="sect-content-conditions__grid">
+                        <div class="sect-content-conditions__item">
+                           <p>Срок кредитования</p>
+                        </div>
+                        <div class="sect-content-conditions__item">
+                           <p>до 24 месяцев</p>
+                        </div>
+                     </div>
+                     <div class="sect-content-conditions__grid">
+                        <div class="sect-content-conditions__item">
+                           <p>Ежемесячная комиссия</p>
+                        </div>
+                        <div class="sect-content-conditions__item">
+                           <p>3% от стоимости товара<br>после окончания льготного периода</p>
+                        </div>
+                     </div>
+                     <div class="sect-content-conditions__grid">
+                        <div class="sect-content-conditions__item">
+                           <p>Процентная ставка</p>
+                        </div>
+                        <div class="sect-content-conditions__item">
+                           <p>0,01% годовых</p>
+                        </div>
+                     </div>
+                     <div class="sect-content-conditions__grid">
+                        <div class="sect-content-conditions__item">
+                           <p>Минимальная сумма покупки</p>
+                        </div>
+                        <div class="sect-content-conditions__item">
+                           <p>300 ₴</p>
+                        </div>
+                     </div>
+                     <div class="sect-content-conditions__grid">
+                        <div class="sect-content-conditions__item">
+                           <p>Максимальная сумма кредита</p>
+                        </div>
+                        <div class="sect-content-conditions__item">
+                           <p>200 000 ₴</p>
+                        </div>
+                     </div>
+                     <div class="sect-content-conditions__grid conditions__grid-last">
+                        <div class="sect-content-conditions__item conditions-grid-line">
+                           <p class="conditions-last__p">"Кредит с доставкой" работает во всех городах, где есть <a href="https://comfy.ua/shops.html">магазины Comfy</a>.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-bayprod">
+                     <div class="sect-content-bayprod__h2">
+                        <h2>Как купить товар в "Кредит с доставкой"? </h2>
+                     </div>
+                     <div class="sect-content-bayprod__grid bayprod__grid-first">
+                        <div class="sect-content-bayprod__item">
+                           <div class="sect-content-bayprod__item-content">
+                              <div class="sect-content-bayprod__num">01</div>
+                              <div class="sect-content-bayprod__p-bold">
+                                 <p>Выбираете товар и оформляете заказ</p>
+                              </div>
+                              <div class="sect-content-bayprod__p">
+                                 <p>Укажите <b>«Кредит с доставкой»</b> при выборе способа доставки</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="sect-content-bayprod__item">
+                           <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost3_img1.png" alt="">
+                        </div>
+                     </div>
+                     <div class="sect-content-bayprod__grid">
+                        <div class="sect-content-bayprod__item">
+                           <div class="sect-content-bayprod__item-content">
+                              <div class="sect-content-bayprod__num">02</div>
+                              <div class="sect-content-bayprod__p-bold">
+                                 <p>Заполняете остальные поля</p>
+                              </div>
+                              <div class="sect-content-bayprod__p">
+                                 <p>Указываете адрес, по которому хотите получить технику и выбираете удобное количество месяцев кредита</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="sect-content-bayprod__item">
+                           <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost3_img2.png" alt="">
+                        </div>
+                     </div>
+                     <div class="sect-content-bayprod__grid">
+                        <div class="sect-content-bayprod__item">
+                           <div class="sect-content-bayprod__item-content">
+                              <div class="sect-content-bayprod__num">03</div>
+                              <div class="sect-content-bayprod__p-bold">
+                                 <p>Завершаете оформление заказа и говорите с экспертом</p>
+                              </div>
+                              <div class="sect-content-bayprod__p">
+                                 <p>Вам звонит эксперт, чтобы уточнить все недостающие данные и отправляет заявку в банк</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="sect-content-bayprod__item">
+                           <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost3_img3.png" alt="">
+                        </div>
+                     </div>
+                     <div class="sect-content-bayprod__grid">
+                        <div class="sect-content-bayprod__item">
+                           <div class="sect-content-bayprod__item-content">
+                              <div class="sect-content-bayprod__num">04</div>
+                              <div class="sect-content-bayprod__p-bold">
+                                 <p>Загружаете документы</p>
+                              </div>
+                              <div class="sect-content-bayprod__p">
+                                 <p>Если вам согласны дать кредит, загружаете фото своих документов на <a target="_blank" rel="nofollow" href="https://ru.otpbank.com.ua/">сайт банка</a></p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="sect-content-bayprod__item">
+                           <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost3_img4.png" alt="">
+                        </div>
+                     </div>
+                     <div class="sect-content-bayprod__grid-bottom">
+                        <div class="sect-content-bayprod__grid-bottom__item">
+                           <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost3_img5.png" alt="">
+                           <p>В день доставки кредитный специалист ОТП банка, согласовывает с вами удобное время и выезжает для подписания кредитного договора. Подготовьте оригиналы паспорта и ИНН.</p>
+                        </div>
+                        <div class="sect-content-bayprod__grid-bottom__item">
+                           <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost3_img6.png" alt="">
+                           <p>Кредитный эксперт оставляет вам договор и письмо-гарантию, согласно которому служба доставки привозит и выдает технику клиенту.</p>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <!-- Сегодня в удобное время -->
+               <li class="tabs-content-item js-tabs-item" id="segodnja-v-udobnoe-vremja">
+                  <div class="sect-content-working">
+                     <div class="sect-content-working__grid">
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img1.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>3 часа после подтверждения заказа или в удобное вам время сегодня</p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img2.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Стоимость до 15 000 ₴ <span class="word-wrap-working">Вес до 15 кг</span><span class="word-wrap-working">Габариты до 50 х 50 х 30 см</span></p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img3.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Любой адрес <span class="word-wrap-working">в черте города</span></p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img4.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Стоимость <span class="word-wrap-working">149 ₴ с НДС</span></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-advantages">
+                     <div class="sect-content-advantages__h2">
+                        <h2>Преимущества:</h2>
+                     </div>
+                     <div class="sect-content-advantages__grid">
+                        <div class="sect-content-advantages__item">
+                           <h3>Это ваше быстрое решение</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Если срочно нужен подарок на праздник, либо что-то случилось и товар нужен здесь и сейчас. Или просто не хотите ждать обычную доставку</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>В удобное время</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Вы сами выбираете удобный диапазон времени доставки в день заказа</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Знаете, где сейчас заказ</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Отслеживайте, где находится заказ сейчас по специальной ссылке. Также будут приходить сообщения о статусе доставки</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Удобная оплата</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Оплачиваете картой онлайн при оформлении заказа или наличными курьеру, когда получаете товар</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-productbay">
+                     <div class="sect-content-productbay__h2">
+                        <h2>Как купить товар с доставкой «Сегодня в удобное время»</h2>
+                     </div>
+                     <div class="sect-content-productbay__grid">
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">01</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>При оформлении указываете: «Сегодня в удобное время»</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost4_img1.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">02</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Заполняете остальные необходимые поля</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost4_img2.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">03</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Получаете товар сегодня в выбранное время</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost4_img3.png" alt="">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="sect-content-accordion-flex">
+                        <div class="sect-content-accordion__item">
+                           <button class="accordion-btn-click">Условия доставки</button>
+                           <div class="accordion_panel">
+                              <div class="accordion_panel__content">
+                                 <ul>
+                                    <li>Заказ с доставкой «Сегодня в удобное время» можно оформить ежедневно с 08:00 до 18:00.</li>
+                                    <li>Доставка работает, если на товаре есть значок "Доставим сегодня".</li>
+                                    <li>Доставим товар по адресу, который указываете при оформлении заказа. Пожалуйста, проверяйте правильность адреса и контактов.</li>
+                                    <li>После подтверждения заказа мы передаем ваш товар курьеру. Перед его выездом обязательно предупреждаем о доставке: звоним или отправляем SMS, если не дозвонились.</li>
+                                    <li>Перед покупкой товара внимательно ознакомьтесь с его характеристиками: размером, цветом, весом и т.д.</li>
+                                    <li>Включение и проверка работоспособности товара происходит без участия курьера. Перед использованием рекомендуем ознакомиться с инструкциями по эксплуатации.</li>
+                                    <li>Вместе с заказом также получаете:</li>
+                                 </ul>
+                                 <ul class="ul-list-num">
+                                    <li>1. Расходная накладная на полученный товар.</li>
+                                    <li>2. Гарантийный талон с необходимыми отметками.</li>
+                                    <li>3. Инструкция на русском / украинском языках (если она предусмотрена производителем в комплекте).</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="sect-content-accordion__item">
+                           <button class="accordion-btn-click">Важные моменты</button>
+                           <div class="accordion_panel">
+                              <div class="accordion_panel__content">
+                                 <ul>
+                                    <li>Логистический партнер "Доставки за 3 часа" - компания iPOST. Это инновационный украинский курьерский сервис, который работает с начала 2017 года. Он построен на основе собственной мощной курьерской онлайн-платформы, в которой доставки выполняются по принципу краудсорсинга, а также с помощью собственного ресурса надежных и ответственных курьеров.</li>
+                                    <li>По результатам народного голосования iPOST одержал победу в номинации <a target="_blank" rel="nofollow" class="list-link" href="https://www.ukrainian-choice.com/">«Лучшая курьерская доставка»</a> в 2019 г. и в 2020 г.</li>
+                                    <li>Вы можете не принимать товар, если вас не устраивает внешний вид / комплектация.</li>
+                                    <li>Любые претензии к внешнему виду, ассортименту, комплектности, количеству, соответствию полученного товара с заказанным - исключительно при получении товара у курьера.</li>
+                                    <li>Заказ выполнен, когда курьер вводит в своей системе код подтверждения. Этот код передается только вам. Если вы подтверждаете заказ - назовите код курьеру после получения заказа.</li>
+                                    <li>Если вы не получили код подтверждения, курьер может позвонить в контакт-центр Comfy, чтобы узнать код подтверждения. Однако, контакт-центр сначала должен связаться с вами и установить фактическое получение заказа и только после этого сообщить курьеру код подтверждения.</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <!-- В указанное вами время -->
+               <li class="tabs-content-item js-tabs-item" id="vukazannoe-vami-vremja">
+                  <div class="sect-content-working">
+                     <div class="sect-content-working__grid">
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img1.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>
+                                 <span class="word-wrap-working">
+                                    <button class="myBtnstyle" id="myBtn2">Смотреть время доставки</button>
+                                 </span>
+                              </p>
+                              <div id="myModal2" class="modal2 pop-up2">
+                                 <div class="modal-content size-modal2">
+                                    <span class="close2">&times;</span>
+                                    <div class="modal-content__header">Время доставки:</div>
+                                    <div class="modal-table">
+                                       <div class="modal-table__p">
+                                          <p>Выбирайте удобный диапазон при оформлении заказа:<br>7:00-10:00, 10:00-13:00, 13:00-16:00, 16:00-18:00, 18:00-22:00</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img2.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Любой <span class="word-wrap-working">товар</span></p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img3.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Любая точка <span class="word-wrap-working">в указанных городах</span></p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img4.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>От 1 ₴</p>
+                              <p>
+                                 <span class="word-wrap-working">
+                                    <button class="myBtnstyle" id="myBtn3">Смотреть условия</button>
+                                 </span>
+                              </p>
+                              <div id="myModal3" class="modal3 pop-up3">
+                                 <div class="modal-content size-modal3">
+                                    <span class="close3">&times;</span>
+                                    <div class="modal-content__header">Стоимость дополнительных услуг</div>
+                                    <div class="size-modal3__scroll-mob">
+                                       <div class="size-modal3__scroll-width width1">
+                                          <div class="modal-table-grid pcolornew">
+                                             <div class="modal-table-grid__item">
+                                                <p>Город</p>
+                                             </div>
+                                             <div class="modal-table-grid__item">
+                                                <p>Доплата*</p>
+                                             </div>
+                                          </div>
+                                          <div class="modal-table-grid bacolor1">
+                                             <div class="modal-table-grid__item">
+                                                <p>Днепр, Харьков, Одесса, Львов, Сумы, Херсон, Николаев, Мелитополь, Черноморск, Измаил, Ахтырка, Киев, Борисполь, Ирпень, Буча</p>
+                                             </div>
+                                             <div class="modal-table-grid__item">
+                                                <p>50 ₴</p>
+                                             </div>
+                                          </div>
+                                          <div class="modal-table-grid bacolor3">
+                                             <div class="modal-table-grid__item">
+                                                <p>Другие города</p>
+                                             </div>
+                                             <div class="modal-table-grid__item">
+                                                <p>0 ₴</p>
+                                             </div>
+                                          </div>
+                                          <div class="modal-table-grid bacolor2">
+                                             <div class="modal-table-grid__item">
+                                                <p>*Стоимость выбора интервала доставки добавляется к цене стандартной адресной доставки согласно утвержденным тарифам.</p>
+                                                <a target="_blank" href="https://cdn.comfy.ua/media/x/img2/pdf/dostavka20_01.pdf">Тарифы доставки</a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-advantages">
+                     <div class="sect-content-advantages__h2">
+                        <h2>Преимущества:</h2>
+                     </div>
+                     <div class="sect-content-advantages__grid">
+                        <div class="sect-content-advantages__item">
+                           <h3>Выбираете удобное время</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Можете указать удобный промежуток времени доставки во время оформления заказа</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Занесем прямо в квартиру</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Мы не только доставим товар к подъезду, но еще поднимем на этаж и занесем в вашу квартиру</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Напомним о доставке</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>В день доставки за 1-2 часа до приезда обязательно вам позвоним<br>
+                              Если не сможем дозвониться - отправим SMS<br>
+                              Если нужно, курьер сможет подождать вас до 15 мин</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Безопасность</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Мы всегда в масках. И перед входом в квартиру даже оденем бахилы, если надо</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-productbay">
+                     <div class="sect-content-productbay__h2">
+                        <h2>Каккупить товар с доставкой «В указанное вами время»</h2>
+                     </div>
+                     <div class="sect-content-productbay__grid">
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">01</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>При оформлении указываете: «В указанное вами время»</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost5_img1.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">02</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Указываете дату и время доставки</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost5_img2.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">03</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Заполняете остальные необходимые поля</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost5_img3.png" alt="">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="sect-content-accordion-flex">
+                        <div class="sect-content-accordion__item">
+                           <button class="accordion-btn-click">Условия доставки</button>
+                           <div class="accordion_panel" style="">
+                              <div class="accordion_panel__content">
+                                 <ul>
+                                    <li>Мы доставим ваш товар по адресу, указанному при оформлении заказа. Пожалуйста, проверьте правильность указанного адреса и ваши контакты.</li>
+                                    <li>Наша служба доставки предупреждает клиентов утром в день доставки и непосредственно за час до приезда. Если за час до доставки не сможем вам дозвониться, отправляем SMS-сообщение.</li>
+                                    <li>Доставка осуществляется при наличии подъездных путей.</li>
+                                    <li>Перед доставкой вашего заказа подготовьте условия для беспрепятственного доступа сотрудников службы доставки: освободить проходы, лестничные пролеты и место в квартире.</li>
+                                    <li>Передвижение крупной бытовой техники по квартире и утилизация старой техники сотрудниками службы доставки не осуществляется.</li>
+                                    <li>Товар заносится в квартиру, если расстояние между дверной коробкой и техникой не менее 10 (десяти) сантиметров. В противном случае товар остается на месте, до которого удалось осуществить доставку.</li>
+                                    <li>Перед покупкой товара внимательно ознакомьтесь со свойствами и характеристиками товара, который вы хотите купить: размером, цветом, весом и т. д. В случае возврата крупногабаритного товара вы будете вынуждены возместить расходы на доставку.</li>
+                                    <li>Если в процессе демонстрации доставленного товара стало понятно, что данный товар вас не устраивает, мы советуем не оплачивать товар, не подписывать Расходную накладную и ТТН.</li>
+                                    <li>При приеме товара внимательно проверьте комплектность и внешний вид товара, отсутствие механических повреждений. Наши сотрудники продемонстрируют вам товар.</li>
+                                    <li>Включение и проверка работоспособности товара производится вами без участия сотрудников службы доставки. Перед включением техники рекомендуем ознакомиться с инструкцией по эксплуатации товара.</li>
+                                    <li>В случае отсутствия гарантийного талона или инструкции по эксплуатации товара на русском/украинском языках вы можете обратиться в контактный центр.</li>
+                                    <li>Упаковка товара не убирается и остается у вас.</li>
+                                    <li>Вместе с заказом вы получите:</li>
+                                 </ul>
+                                 <ul class="ul-list-num">
+                                    <li>1. ТТН</li>
+                                    <li>2. Гарантийный талон с необходимыми отметками.</li>
+                                    <li>3. Инструкцию на русском/украинском языках.</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="sect-content-accordion__item">
+                           <button class="accordion-btn-click">Важные моменты</button>
+                           <div class="accordion_panel" style="">
+                              <div class="accordion_panel__content">
+                                 <ul>
+                                    <li>При комплектации вашего заказа на складе сотрудники могут вскрывать упаковку для проверки качества товара.</li>
+                                    <li>Вы можете отказаться от приема товара, если не устраивает внешний вид, комплектация товара, указав причину отказа в Бланке доставки товара. Обратите внимание, что любые претензии по внешнему виду, ассортименту, соответствию полученного товара заказанному, его комплектности и количеству принимаются только при получении товара у курьера.</li>
+                                    <li>Ставя подпись на бланке заказа, вы подтверждаете, что не имеете претензий к магазину по всем упомянутым вопросам.</li>
+                                    <li>Работы по переносу товара, мебели и установке в услугу доставки не включены. Вы можете заказать услуги по установке, настройке и обслуживанию товара на сайте comfy.ua, в магазинах Comfy или обратившись в <span class="color_43B02Aspan">Помощь и консультация</span>. Сотрудники службы доставки не устанавливают и не подключают технику (если вместе с доставкой отдельно не приобретена соответствующая услуга установки/подключения)! Курьер, который доставит вам заказ, не обладает необходимой квалификацией и не сможет проконсультировать вас по поводу полученной техники.</li>
+                                    <li>Если сотрудник службы доставки просит доплату за подъем на этаж, распаковку товара, установку и подключение товара, а также при любых других нарушениях правил доставки, просим вас не соглашаться на получение данных услуг и сообщить обратившись в <span class="color_43B02Aspan">Помощь и консультация</span>.</li>
+                                    <li>Своевременность доставки в указанное время - 95%.</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <!-- Курьером от "Нова Пошта" -->
+               <li class="tabs-content-item js-tabs-item" id="nova-poshta-kurerom">
+                  <div class="sect-content-working">
+                     <div class="sect-content-working__grid">
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost6_img1.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <a class="working-link" target="_blank" rel="nofollow" href="https://novaposhta.ua/">Отследить посылку →</a>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img2.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>До 100 кг<br>До 150 х 185 х 170 см</p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img3.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>К вам домой</p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img4.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Мелкогабаритный - 99 ₴ с НДС<br>Крупногабаритный - 399 ₴ с НДС</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-advantages">
+                     <div class="sect-content-advantages__h2">
+                        <h2>Преимущества:</h2>
+                     </div>
+                     <div class="sect-content-advantages__grid">
+                        <div class="sect-content-advantages__item">
+                           <h3>Статус доставки</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Всегда знаете где ваша посылка: из СМС, контакт-центра, личного кабинета или <a target="_blank" rel="nofollow" class="working-link" href="https://novaposhta.ua/ru/mobile_app">мобильного приложения «Новой Почты»</a></p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Приходит вовремя</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>87% всех доставок по адресу выполняются в указанный срок</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Клиенты довольны</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Уровень удовлетворённости клиентов курьерской доставкой «Новой почты» — 8,66 из 9</p>
+                        </div>
+                     </div>
+                     <div class="sect-content-advantages__txt">
+                        <p>* В день доставки и и за час до приезда мы вам позвоним. Если не дозвонимся - отправим SMS</p>
+                     </div>
+                  </div>
+                  <div class="sect-content-productbay">
+                     <div class="sect-content-productbay__h2">
+                        <h2>Как купить товар с доставкой «Получить в течение дня»</h2>
+                     </div>
+                     <div class="sect-content-productbay__grid">
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">01</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Как купить товар с курьерской доставкой «Новой почты»</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost6_img2.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">02</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Указываете дату доставки</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost2_img1.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">03</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Заполняете остальные необходимые поля</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost2_img2.png" alt="">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="sect-content-accordion-flex">
+                        <div class="sect-content-accordion__item">
+                           <button class="accordion-btn-click">Условия доставки</button>
+                           <div class="accordion_panel accordion_panel2">
+                              <div class="accordion_panel__content">
+                                 <a target="_blank" rel="nofollow" href="https://novaposhta.ua/uploads/misc/doc/Terms_of_Service.pdf">Официальные условия предоставления услуг ООО "Новая почта"</a>
+                                 <ul class="ul_panel2">
+                                    <li class="pddbottom">Услуга доступна для заказа на сайте и покупке в магазинах</li>
+                                    <li>Если сумма заказа:</li>
+                                    <ul class="ul_panel2two">
+                                       <li>Если сумма заказа свыше 50 000 ₴, то оплата наличными денежными средствами курьеру невозможна, поэтому адресная доставка может быть осуществлена только после полной оплаты стоимости заказа по безналичному расчету.</li>
+                                       <li>Если сумма заказа свыше 5 000 ₴ и оплачивается наличными при получении, то необходимо предъявить паспорт или другой документ удостоверяющий личность * на имя получателя и его ксерокопию; если копии нет - курьер сделает фото документа.</li>
+                                       <li>до 15 000 ₴, то можно оплатить в мобильном приложении без предъявления документов.</li>
+                                       <li>Любую сумму можно оплатить в отделении Новой почты с предъявлением паспорта или другого документа, удостоверяющего личность * на имя получателя.</li>
+                                    </ul>
+                                 </ul>
+                                 <ul class="ul_panel2">
+                                    <li>Условия и порядок получения заказа:</li>
+                                    <ul class="ul_panel2two">
+                                       <li>- в будние дни - до 21:00, в выходные - по графику, с правилами можно ознакомиться <a target="_blank" class="list-link" href="https://novaposhta.ua/uploads/misc/doc/address_delivery.pdf">здесь</a>.</li>
+                                       <li>- курьер позвонит за 30-60 минут до прибытия по адресу, указанному в заказе.</li>
+                                       <li>- курьер поднимает товар на этаж, если:</li>
+                                       <li>- вес товара меньше 100 кг.</li>
+                                       <li>- габариты до 150х185х170 см.</li>
+                                       <li>- верно указана информация об этажности и наличии лифта.</li>
+                                       <li>В остальных случаях - до подъезда/парадной без понятия на этаж.</li>
+                                    </ul>
+                                 </ul>
+                                 <ul class="ul_panel2">
+                                    <li>Это важно:</li>
+                                    <ul class="ul_panel2two">
+                                       <li>курьер не заносит товар в квартиру и не устанавливает его на штатное место.</li>
+                                       <li>осмотрите товар на отсутствие механических повреждений, с правилами можно ознакомиться <a target="_blank" class="list-link" href="https://novaposhta.ua/uploads/misc/doc/inspection_rules.pdf">здесь</a>.</li>
+                                       <li>получите экземпляр накладной о предоставлении услуг.</li>
+                                    </ul>
+                                 </ul>
+                                 <ul class="ul_panel2 ul_panel2_last">
+                                    <li>Документы, удостоверяющие личность:</li>
+                                    <ul class="ul_panel2two">
+                                       <li>Паспорт гражданина Украины.</li>
+                                       <li>Биометрический паспорт гражданина Украины.</li>
+                                    </ul>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <!-- В отделение "Нова Пошта" -->
+               <li class="tabs-content-item js-tabs-item" id="nova-poshta-v-otdelenie">
+                  <div class="sect-content-working">
+                     <div class="sect-content-working__grid">
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost6_img1.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <a class="working-link" target="_blank" rel="nofollow" href="https://novaposhta.ua/">Отследить посылку →</a>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img2.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>До 100 кг<br>До 150 х 185 х 170 см</p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img3.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Любое удобное вам</p>
+                              <a class="working-link" target="_blank" rel="nofollow" href="https://novaposhta.ua/ru/office/list">отделение</a>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img4.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Мелкогабаритный - 79 ₴ с НДС<br>Крупногабаритный - 299 ₴ с НДС</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-advantages">
+                     <div class="sect-content-advantages__h2">
+                        <h2>Преимущества:</h2>
+                     </div>
+                     <div class="sect-content-advantages__grid">
+                        <div class="sect-content-advantages__item">
+                           <h3>Статус доставки</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Всегда знаете где ваша посылка: из СМС, контакт-центра, личного кабинета или мобильного приложения «Новой Почты»</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Приходит вовремя</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>98% всех посылок доставляются в указанный срок</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Больше 9 000 отделений</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>По всей Украине</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-productbay">
+                     <div class="sect-content-productbay__h2">
+                        <h2>Как купить товар с доставкой в отделение «Новой почты»</h2>
+                     </div>
+                     <div class="sect-content-productbay__grid">
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">01</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>При оформлении указываете: «Нова пошта» в отделение</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost6_img2.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">02</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Указываете дату и номер отделения</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost2_img1.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">03</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Заполняете остальные необходимые поля</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost2_img2.png" alt="">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="sect-content-accordion-flex">
+                        <div class="sect-content-accordion__item">
+                           <button class="accordion-btn-click">Условия доставки</button>
+                           <div class="accordion_panel accordion_panel2" style="">
+                              <div class="accordion_panel__content">
+                                 <a target="_blank" rel="nofollow" href="https://novaposhta.ua/uploads/misc/doc/Terms_of_Service.pdf">Официальные условия предоставления услуг ООО "Новая почта"</a>
+                                 <ul>
+                                    <li>О прибытии заказа в отделение вы будете уведомлены SMS-сообщением «Новая Почта» с указанием номера накладной.</li>
+                                    <li>Получить заказ вы можете в любое время после получения SMS о прибытии посылки согласно графика работы отделения <a target="_blank" class="list-link" href="https://novaposhta.ua/timetable">здесь</a>.</li>
+                                    <li>Ваш заказ будет бесплатно храниться в отделении в течение 5 рабочих дней. Если по истечении данного срока вы не получите заказ, товар вернется в магазин.</li>
+                                    <li>При получении заказа в отделении «Новая Почта» необходимо:</li>
+                                 </ul>
+                                 <ul class="ul-list-num">
+                                    <li>1. Указать номер накладной из SMS-сообщения.</li>
+                                    <li>2. Предъявить паспорт (для всех заказов от 15000 ₴ обязательна копия документа, удостоверяющего личность, согласно Закона Украины - статья 10.).<a target="_blank" class="list-link" href="https://comfy.ua/media/x/pdf/zakona__ukrainy__statja_10.pdf">загрузить</a>.</li>
+                                    <li>3. Инструкция на русском / украинском языках (если она предусмотрена производителем в комплекте).</li>
+                                 </ul>
+                                 <ul>
+                                    <li>Оплата производится исключительно за стоимость товара и доставку. Дополнительная оплата при получении заказа в отделении «Новая Почта» не взимается.</li>
+                                    <li>Обращаем ваше внимание: если вам необходима налоговая накладная, вы можете обратиться на горячую линию в течение 14 дней от даты оформления заказа. После указанного периода налоговая накладная будет зарегистрирована на конечного покупателя. Обращения после указанного срока рассматриваться не будут. <span class="color_43B02Aspan">Помощь и консультация</span>.</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <!-- В почтомат "Нова Пошта" -->
+               <li class="tabs-content-item js-tabs-item" id="nova-poshta-v-pochtomat">
+                  <div class="sect-content-working">
+                     <div class="sect-content-working__grid">
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost6_img1.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <a class="working-link" target="_blank" rel="nofollow" href="https://novaposhta.ua/">Отследить посылку →</a>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img2.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Цена товара до 6000 ₴<br>Вес до 30 кг<br>Объем до 42 х 34 х 58 см</p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img3.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>В почтомат</p>
+                              <a class="working-link" target="_blank" rel="nofollow" href="https://novaposhta.ua/office/list">Список почтоматов</a>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img4.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Стоимость доставки<br>35 ₴ с НДС</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-advantages">
+                     <div class="sect-content-advantages__h2">
+                        <h2>Преимущества:</h2>
+                     </div>
+                     <div class="sect-content-advantages__grid">
+                        <div class="sect-content-advantages__item">
+                           <h3>Без очередей</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Заберёте заказ из почтомата за 10 секунд</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Без документов</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Чтобы забрать заказ, нужно только приложение "Нова Пошта" или код из SMS на ваш телефон</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Безопасно для здоровья</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Не нужно общаться с курьером или оператором отделения</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Больше 11 000 почтоматов</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>По всей Украине</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-productbay">
+                     <div class="sect-content-productbay__h2">
+                        <h2>Как купить товар с доставкой в почтомат «Новой почты»</h2>
+                     </div>
+                     <div class="sect-content-productbay__grid">
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">01</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>При оформлении указываете: «Нова Пошта» в почтомат</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost6_img2.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">02</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Указываете дату и номер / адрес почтомата</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost2_img1.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">03</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Когда заказ доставят, в приложение "Нова Пошта" придет уведомление</p>
+                                 <a class="uppercase-link" target="_blank" rel="nofollow" href="https://youtu.be/3QS8HxLnvGA">Подробнее</a>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost7_img1.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">04</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Подходите к почтомату и забираете товар</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost7_img2.png" alt="">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="sect-content-accordion-flex">
+                        <div class="sect-content-accordion__item">
+                           <button class="accordion-btn-click">Условия доставки</button>
+                           <div class="accordion_panel accordion_panel2" style="">
+                              <div class="accordion_panel__content">
+                                 <a target="_blank" rel="nofollow" href="https://novaposhta.ua/uploads/misc/doc/Terms_of_Service.pdf">Официальные условия предоставления услуг ООО "Новая почта"</a>
+                                 <ul>
+                                    <li>В почтоматах можно получить только полностью предоплаченные заказы. Оплатить заказ можно на нашем сайте банковской картой или с помощью платежной системы Приват24/LiqPay, или воспользовавшись услугой «Оплата частями» от АО КБ «ПриватБанк».</li>
+                                    <li>В одном заказе может быть только один товар. Если планируете заказать с доставкой к почтомату несколько товаров - необходимо оформлять каждую единицу в отдельный заказ.</li>
+                                    <li>Получить заказ можно в любое время после получения SMS о прибытии вашей посылки (согласно <a target="_blank" class="list-link" href="https://novaposhta.ua/office/list/city">графику работы почтомата</a>).</li>
+                                    <li>Ваш заказ будет бесплатно храниться в почтомате в течение 4 дней. Если по истечению этого срока вы не успеете забрать свой заказ, товар будет перемещен в ближайшее к почтомату отделение, и только после этого товар будет возвращен в магазин.</li>
+                                    <li>Если на момент выдачи почтомат не работает - необходимо обратиться в контакт-центр компании «Новая Почта» по номеру 0 800 500 609.</li>
+                                    <li>При всех нестандартных случаях (ячейка не открывается, забыл/потерял код открытия, не успел забрать в течение 4-х дней и т.д.) также необходимо обратиться в контакт-центр компании «Новая Почта» по номеру 0 800 500 609.</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <!-- В отделение JUSTIN -->
+               <li class="tabs-content-item js-tabs-item" id="justin-v-otdelenie">
+                  <div class="sect-content-working">
+                     <div class="sect-content-working__grid">
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost6_img1.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <a class="working-link" target="_blank" rel="nofollow" href="https://justin.ua/tracking">Отследить посылку →</a>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img2.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Вес до 30 кг<br>Длина до 90 см</p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img3.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Отделение «Justin» <br><a class="working-link" target="_blank" rel="nofollow" href="https://justin.ua/departments/map">Карта отделений</a></p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img4.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Мелкогабаритный - 50 ₴ с НДС<br>Крупногабаритный - 199 ₴ с НДС</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-advantages">
+                     <div class="sect-content-advantages__h2">
+                        <h2>Преимущества:</h2>
+                     </div>
+                     <div class="sect-content-advantages__grid">
+                        <div class="sect-content-advantages__item">
+                           <h3>Всегда рядом</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>900+ отделений и почтоматов в магазинах Сильпо, Fozzy, Фора и в большинстве популярных ТЦ</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Бесплатно храним</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Бесплатное хранение посылки 5 дней</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>График работы</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Отделения работают Без выходных</p>
+                           <a class="def_link" target="_blank" rel="nofollow" style="display: block;" href="https://justin.ua/departments">Подробнее о графике работы</a>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Удобная оплата</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Оплачивайте картой при оформлении или в отделении при получении заказа</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-productbay">
+                     <div class="sect-content-productbay__h2">
+                        <h2>Как купить товар с доставкой «Justin»</h2>
+                     </div>
+                     <div class="sect-content-productbay__grid">
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">01</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>При оформлении указываете: «Justin» до отделения</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost8_img1.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">02</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Заполняете остальные необходимые поля</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost5_img3.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">03</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Когда заказ будет доставлен, придёт СМС</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost7_img1.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">04</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Называете номер из СМС оператору отделения</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost8_img2.png" alt="">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="sect-content-accordion-flex">
+                        <div class="sect-content-accordion__item">
+                           <button class="accordion-btn-click">Условия доставки</button>
+                           <div class="accordion_panel accordion_panel2" style="">
+                              <div class="accordion_panel__content">
+                                 <p>Официальные условия предоставления услуг <a target="_blank" rel="nofollow" href="https://justin.ua/">на официальном сайте "ТОВ ДЖАСТ ІН"</a></p>
+
+                                 <ul>
+                                    <li>О прибытии заказа в отделение вы будете уведомлены SMS-сообщением от «Justin» с указанием номера накладной.</li>
+                                    <li>Получить заказ вы можете в любое время после получения SMS о прибытии посылки согласно графика работы отделения <a target="_blank" rel="nofollow" class="list-link" href="https://justin.ua/departments/list">здесь</a>.</li>
+                                    <li>Ваш заказ будет бесплатно храниться в отделении в течение 5 рабочих дней. Если по истечении данного срока вы не получите заказ, товар вернется в магазин.</li>
+                                    <li>При получении заказа в отделении «Justin» необходимо:</li>
+                                 </ul>
+                                 <ul class="ul-list-num">
+                                    <li>1. Указать номер накладной из SMS-сообщения.</li>
+                                    <li>2. Предъявить паспорт (для всех заказов от 15000 ₴ обязательна копия документа, удостоверяющего личность, согласно Закона Украины - статья 10). <a target="_blank" rel="nofollow" class="list-link" href="https://comfy.ua/media/x/pdf/zakona__ukrainy__statja_10.pdf">загрузить</a>.</li>
+                                    <li>3. Инструкция на русском / украинском языках (если она предусмотрена производителем в комплекте).</li>
+                                    <li>Оплата производится исключительно за стоимость товара и доставку. Дополнительная оплата при получении заказа в отделении «Justin» не взимается.</li>
+                                 </ul>
+                                 <ul>
+                                    <li>Обращаем ваше внимание: если вам необходима налоговая накладная, вы можете обратиться на горячую линию в течение 14 дней от даты оформления заказа. После указанного периода налоговая накладная будет зарегистрирована на конечного покупателя. Обращения после указанного срока рассматриваться не будут.</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <!-- В почтомат Meest -->
+               <li class="tabs-content-item js-tabs-item" id="meest-v-pochtomat">
+                  <div class="sect-content-working">
+                     <div class="sect-content-working__grid">
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost9_img1.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>В выбранный день</p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img2.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Цена товара до 6000 грн<br>Вес до 30 кг<br>Объем до 35 х 36 х 59 см</p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img3.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>В почтомат <br><a class="working-link" target="_blank" rel="nofollow" href="https://ua.meest.com/poshtomat#map">Карта почтоматов</a></p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img4.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>50 ₴ с НДС</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-advantages">
+                     <div class="sect-content-advantages__h2">
+                        <h2>Преимущества:</h2>
+                     </div>
+                     <div class="sect-content-advantages__grid">
+                        <div class="sect-content-advantages__item">
+                           <h3>Отслеживайте посылку</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p><a class="def_link" target="_blank" rel="nofollow" href="https://t.meest-group.com/">На сайте</a>, через чат-бот в <a class="def_link" target="_blank" rel="nofollow" href="https://t.me/meestposhtomat_bot">Telegram</a> / <a class="def_link" target="_blank" rel="nofollow" href="https://chats.viber.com/meestposhtomat_bot">Viber</a>, или в мобильном приложении Meest.</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Больше 1200 почтоматов</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Найдите удобный вам. Не забудьте проверить время работы</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Только приложение Meest</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Чтобы получить заказ, нужно только мобильное приложение Meest</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Доедет за 24 часа</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Доставка приедет к вам за 24 часа (кроме г. Ужгород)</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-productbay">
+                     <div class="sect-content-productbay__h2">
+                        <h2>Как купить товар с доставкой «Meest»</h2>
+                     </div>
+                     <div class="sect-content-productbay__grid">
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">01</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>При оформлении указываете: «Meest» в почтомат</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost9_img2.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">02</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Указываете номер / адрес почтомата</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost5_img3.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">03</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Когда заказ доставят в почтомат, вам придет уведомление</p>
+                                 <a class="uppercase-link" target="_blank" rel="nofollow" href="https://ua.meest.com/ru/poshtomat#instructions">Подробнее</a>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost7_img1.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">04</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Подходите к почтомату и забираете товар</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost9_img3.png" alt="">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="sect-content-accordion-flex">
+                        <div class="sect-content-accordion__item">
+                           <button class="accordion-btn-click">Условия доставки</button>
+                           <div class="accordion_panel accordion_panel2" style="">
+                              <div class="accordion_panel__content">
+                                 <p>Официальные условия предоставления услуг <a target="_blank" rel="nofollow" href="https://ua.meest.com/ru">на сайте Meest</a></p>
+                                 <ul>
+                                    <li>Чтобы получить заказ в почтоматах, нужно установить мобильное приложение Meest. <a target="_blank" rel="nofollow" class="list-link" href="https://play.google.com/store/apps/details?id=com.meest.mymeest.app&hl=ru&gl=US">Android</a> або <a target="_blank" rel="nofollow" class="list-link" href="https://apps.apple.com/ua/app/meest/id1521668320?l=ru">iOS</a>.</li>
+                                    <li>В одном заказе может быть только один товар. Чтобы получить через почтомат несколько товаров, оформляйте отдельный заказ для каждого.</li>
+                                    <li>Почтомат выдает заказы с полной предоплатой.</li>
+                                    <li>Оплатить можно на сайте Сomfy банковской картой, в платежной системе Приват24, LiqPay, или в “Оплату частями” от АТ КБ «ПриватБанк».</li>
+                                    <li>Получайте посылку после SMS о прибытии товара в почтомат. <a target="_blank" rel="nofollow" class="list-link" href="https://ua.meest.com/uploads/files/info/work_schedule.html">Учитывайте график работы почтоматов</a>.</li>
+                                    <li>Заказ бесплатно лежит в почтомате 5 дней. Если не забираете - товар возвращается в Comfy.</li>
+                                    <li>Не работает почтомат или возникли проблемы с доставкой? Обращайтесь <a target="_blank" rel="nofollow" class="list-link" href="https://ua.meest.com/ru/contact-center">в контакт-центр Meest</a>.</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <!-- В отделение Meest -->
+               <li class="tabs-content-item js-tabs-item" id="meest-v-otdelenie">
+                  <div class="sect-content-working">
+                     <div class="sect-content-working__grid">
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost9_img1.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>В выбранный день</p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img2.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>Разный вес для разных отделений</p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img3.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>В отделение <br><a class="working-link" target="_blank" rel="nofollow" href="https://ua.meest.com/ru/offices-ua">Карта отделений</a></p>
+                           </div>
+                        </div>
+                        <div class="sect-content-working__item">
+                           <div class="sect-content-working__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost1_img4.png" alt="">
+                           </div>
+                           <div class="sect-content-working__text">
+                              <p>50 ₴ с НДС - Мелкогабаритный<br>199 ₴ с НДС - Крупногабаритный</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-advantages">
+                     <div class="sect-content-advantages__h2">
+                        <h2>Преимущества:</h2>
+                     </div>
+                     <div class="sect-content-advantages__grid">
+                        <div class="sect-content-advantages__item">
+                           <h3>Отслеживайте посылку</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>На сайте, через чат-бот в Telegram / Viber, или в мобильном приложении Meest. Для Android. Для iOS</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Больше 6700 отделений</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Найдите удобное вам. Не забудьте проверить время работы</p>
+                        </div>
+                        <div class="sect-content-advantages__item">
+                           <h3>Доедет за 24 часа</h3>
+                           <div class="sect-content-advantages__line"></div>
+                           <p>Доставка приедет к вам за 24 часа (кроме г. Ужгород)</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sect-content-productbay">
+                     <div class="sect-content-productbay__h2">
+                        <h2>Как купить товар с доставкой «Meest»</h2>
+                     </div>
+                     <div class="sect-content-productbay__grid">
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">01</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>При оформлении указываете: «Meest» до отделения</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost9_img2.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">02</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Указываете дату и номер отделения</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost5_img2.png" alt="">
+                           </div>
+                        </div>
+                        <div class="sect-content-productbay__item">
+                           <div class="sect-content-productbay__wrap">
+                              <div class="sect-content-productbay__num">03</div>
+                              <div class="sect-content-productbay__text">
+                                 <p>Заполняете остальные необходимые поля</p>
+                              </div>
+                           </div>
+                           <div class="sect-content-productbay__img">
+                              <img src="https://cdn.comfy.ua/media/x/img2/delivery/sect_dost5_img3.png" alt="">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="sect-content-accordion-flex">
+                        <div class="sect-content-accordion__item">
+                           <button class="accordion-btn-click">Условия доставки</button>
+                           <div class="accordion_panel accordion_panel2" style="">
+                              <div class="accordion_panel__content">
+                                 <p>Официальные условия предоставления услуг <a target="_blank" rel="nofollow" href="https://ua.meest.com/ru">на сайте Meest</a></p>
+                                 <ul>
+                                    <li>Когда заказ поступит в отделение - вам придет SMS.</li>
+                                    <li>Заказ бесплатно хранится в отделении 5 дней. Не забираете - товар возвращается в Comfy.</li>
+                                    <li>Если нужна налоговая накладная, обратитесь на горячую линию Comfy не позже 14 дней с момента оформления заказа. Документ будет зарегистрирован на конечного покупателя.</li>
+                                    <li>Возникли проблемы с доставкой? Обращайтесь в <a target="_blank" rel="nofollow" class="list-link" href="https://ua.meest.com/contact-center">контакт-центр Meest</a>.</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+
+   </div>
+</div>
+
+<script>
+   var acc = document.getElementsByClassName("accordion-btn-click");
+   var i;
+   for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+         this.classList.toggle("active");
+         var accordion_panel = this.nextElementSibling;
+         if (accordion_panel.style.maxHeight) {
+            accordion_panel.style.maxHeight = null;
+         } else {
+            accordion_panel.style.maxHeight = accordion_panel.scrollHeight + "px";
+         }
+      });
+   }
+</script>
+
+<script>
+   var modal = document.getElementById("myModal");
+   var btn = document.getElementById("myBtn");
+   var span = document.getElementsByClassName("close")[0];
+   btn.onclick = function () {
+      modal.style.display = "block";
+   }
+   span.onclick = function () {
+      modal.style.display = "none";
+   }
+   const popup = document.querySelector('.pop-up');
+</script>
+<script>
+   var modal2 = document.getElementById("myModal2");
+   var btn2 = document.getElementById("myBtn2");
+   var span2 = document.getElementsByClassName("close2")[0];
+   btn2.onclick = function () {
+      modal2.style.display = "block";
+   }
+   span2.onclick = function () {
+      modal2.style.display = "none";
+   }
+   const popup2 = document.querySelector('.pop-up2');
+</script>
+<script>
+   var modal3 = document.getElementById("myModal3");
+   var btn3 = document.getElementById("myBtn3");
+   var span3 = document.getElementsByClassName("close3")[0];
+   btn3.onclick = function () {
+      modal3.style.display = "block";
+   }
+   span3.onclick = function () {
+      modal3.style.display = "none";
+   }
+   const popup3 = document.querySelector('.pop-up3');
+</script>

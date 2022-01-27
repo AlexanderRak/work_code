@@ -1,0 +1,691 @@
+#delivery-wrap
+   max-width: 1366px
+   width: 100%
+   height: auto
+   background: #f2f2f2
+   overflow: hidden
+   position: relative
+   margin: 0 auto
+   padding: 10px 0 0 0
+   img
+      opacity: 1
+      display: block
+      &:hover
+         opacity: 1
+   &:first-letter
+      padding-left: 0
+   p
+      font-size: 14px
+      line-height: 1.5
+   h2
+      font-size: 24px
+      font-weight: bold
+      color: #000
+      text-align: left
+      padding-bottom: 24px
+   h3
+      font-size: 16px
+      font-weight: bold
+      color: #000
+      margin: 0
+span.word-wrap
+   display: block
+   word-wrap: break-word
+span.word-wrap-working
+   display: block
+   word-wrap: break-word
+.breadcrumbs
+   display: none
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+.tabs-head:not(.product-tabs) li
+   display: block
+span.color_43B02Aspan
+   color: #43B02A
+.color_43B02A
+   color: #43B02A
+body.overfloy-body
+   overflow: inherit
+// live sass
+.delivery__wrap-flex
+   display: flex
+   flex-direction: row
+.delivery__wrap-flex__item
+   &:first-child
+      flex: 1 1 30%
+      max-width: 390px
+      margin-bottom: 10px
+   &:last-child
+      flex: 1 1 70%
+.tabs-head-flex__item
+   font-weight: 500
+   font-size: 18px
+   color: #000000
+   &:first-child
+      padding-left: 16px
+.mCSB_container
+   display: flex
+   flex-direction: column
+#delivery-wrap .tabs-head-item
+   border: 1px solid #fff
+   margin-bottom: 5px
+   border-radius: 8px
+   overflow: hidden
+   background: #fff
+   transition: .3s
+   display: block
+   .tabs-head-flex
+      position: relative
+      &::before
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img2/delivery/str_not_active.svg)
+         background-repeat: no-repeat
+         background-size: cover
+         width: 6px
+         height: 12px
+         position: absolute
+         top: 50%
+         transform: translateY(-50%)
+         right: 0
+   &._active
+      border: 1px solid #43B02A
+      .tabs-head-flex
+         &::before
+            background-image: url(https://cdn.comfy.ua/media/x/img2/delivery/str_active.svg)
+      &:hover
+         border: 1px solid #43B02A
+         cursor: default
+   &:last-child
+      margin-bottom: 0
+   &:hover
+      border: 1px solid #c1b6b6
+      cursor: pointer
+.tabs-head-flex
+   display: flex
+   flex-direction: row-reverse
+   align-items: center
+   justify-content: flex-end
+   padding: 16px 25px 16px 24px
+   margin-right: 25px
+.tabs-content
+   margin-left: 15px
+.sect-content-productbay__grid
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   grid-gap: 16px
+.sect-content-productbay__item
+   background: #EDF8EA
+   border-radius: 8px
+   padding: 8px
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   max-width: 220px
+   width: 100%
+.sect-content-productbay__num
+   color: #379424
+   font-weight: bold
+   font-size: 18px
+   padding-bottom: 16px
+   text-align: left
+.sect-content-productbay__text
+   padding-bottom: 16px
+   line-height: 1.5
+   p
+      text-align: left
+   a.uppercase-link
+      font-size: 10px
+      line-height: 1
+      letter-spacing: 1.5px
+      text-decoration: underline
+      text-transform: uppercase
+      color: #379424
+      padding-top: 8px
+      display: inline-block
+   &.def_link
+      font-size: 14px
+      color: #379424
+      display: inline-block
+.sect-content-productbay__img
+   height: 78px
+   display: flex
+   align-items: center
+   justify-content: center
+// Блоки доставок
+.sect-content-working,
+.sect-content-productbay,
+.sect-content-advantages,
+.sect-content-conditions,
+.sect-content-bayprod
+   background: #FFFFFF
+   border-radius: 8px
+   margin-bottom: 5px
+   padding: 16px
+   &.last-sect-content
+      margin-bottom: 0px
+.sect-content-working__top-text span
+   color: #43B02A
+   font-weight: bold
+   font-size: 16px
+   text-align: center
+   padding-bottom: 24px
+   display: block
+.sect-content-working__grid
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   grid-gap: 16px
+.sect-content-working__item
+   display: flex
+   flex-direction: column
+   align-items: center
+.sect-content-working__text
+   text-align: center
+   padding: 16px 0 0 0
+   line-height: 1.5
+.sect-content-productbay__txt
+   padding: 16px 0 0 0
+   p
+      &:first-child
+         padding-bottom: 16px
+.sect-content-accordion-flex
+   display: flex
+   flex-direction: column
+   padding: 16px 0 0 0
+.sect-content-accordion__item
+   padding-bottom: 16px
+   &:last-child
+      padding-bottom: 0
+.sect-content-advantages__grid
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   grid-gap: 16px
+.sect-content-advantages__item
+   max-width: 220px
+   width: 100%
+   height: auto
+.sect-content-advantages__line
+   width: 100%
+   max-width: 120px
+   background: #43B02A
+   height: 4px
+   margin: 16px 0
+   opacity: 0.2
+.sect-content-advantages__txt
+   padding-top: 16px
+.sect-content-conditions__grid
+   display: grid
+   grid-template-columns: 300px 1fr
+   grid-gap: 0 16px
+   align-items: center
+   padding: 16px 0
+   border-bottom: 1px solid #E5E5E5
+   &.conditions__grid-first
+      padding: 0 0 16px 0
+   &.conditions__grid-last
+      padding: 16px 0 0 0
+      border-bottom: 0 solid #E5E5E5
+#delivery-wrap .sect-content-conditions__item
+   &.conditions-grid-line
+      grid-column: 1 / 3
+      grid-row: 1 / 3
+   &:first-child
+      p
+         font-size: 14px
+         color: #000
+   &:last-child
+      p
+         font-size: 16px
+         color: #379424
+         font-weight: bold
+         &.underlinep
+            text-transform: uppercase
+         &.fzdefault
+            font-size: 12px
+            color: #379424
+         &.conditions-last__p
+            font-size: 14px
+            color: #000
+            font-weight: normal
+            a
+               font-size: 14px
+               color: #379424
+               display: inline-block
+               font-weight: normal
+               text-decoration: underline
+.sect-content-bayprod__grid
+   display: grid
+   grid-template-columns: 300px 1fr
+   grid-gap: 0 16px
+   align-items: center
+   border-bottom: 1px solid #E5E5E5
+   padding: 24px 0
+   &.bayprod__grid-first
+      padding: 0 0 24px 0
+.sect-content-bayprod__item-content
+   padding-left: 24px
+.list-link
+   color: #379424
+   display: inline-block
+   padding-bottom: 0 !important
+   &:hover
+      text-decoration: underline
+.sect-content-bayprod__item
+   a
+      color: #379424
+      text-decoration: underline
+      display: inline-block
+   .sect-content-bayprod__num
+      font-size: 18px
+      font-weight: bold
+      color: #43B02A
+      text-align: left
+#delivery-wrap .sect-content-bayprod__p-bold p
+   font-size: 16px
+   color: #000
+   font-weight: bold
+   text-align: left
+   padding: 8px 0
+.sect-content-bayprod__grid-bottom
+   display: grid
+   grid-template-columns: 1fr 1fr
+   grid-gap: 16px
+   padding-top: 16px
+.sect-content-bayprod__grid-bottom__item
+   p
+      text-align: left
+      padding-top: 16px
+// Блоки доставок end
+// accordion
+.accordion-btn-click
+   display: block
+   cursor: pointer
+   font-size: 14px
+   color: #000
+   font-weight: 500
+   outline: none
+   transition: 0.3s
+   text-align: left
+   width: 100%
+   position: relative
+   border: none
+   background: #F2F2F2
+   border-radius: 8px
+   padding: 9px 32px 9px 16px
+   &::before
+      content: ""
+      background-image: url(https://cdn.comfy.ua/media/x/img2/delivery/str_active.svg)
+      background-repeat: no-repeat
+      background-size: cover
+      width: 6px
+      height: 12px
+      position: absolute
+      right: 16px
+      top: 50%
+      transform: translateY(-50%) rotate(90deg)
+      transition: .3s
+   &.active
+      &::before
+         transform: translateY(-50%) rotate(270deg)
+.accordion_panel__content
+   padding: 16px 16px 0 16px
+.working-link
+   color: #43B02A
+   font-size: 14px
+   &:hover
+      text-decoration: underline
+.accordion_panel
+   max-height: 0
+   overflow: hidden
+   transition: max-height 0.3s ease-out
+   a
+      color: #43B02A
+      display: inline-block
+      font-weight: bold
+      font-size: 14px
+      text-align: left
+      padding-bottom: 20px
+      text-decoration: underline
+   ul
+      list-style-type: none
+      padding: 0 0 0 8px
+      li
+         position: relative
+         font-size: 14px
+         text-align: left
+         padding-left: 16px
+         margin-bottom: 20px
+         line-height: 1.5
+         &:last-child
+            margin-bottom: 0
+         &::before
+            content: ""
+            background: #000
+            width: 4px
+            height: 4px
+            border-radius: 50%
+            position: absolute
+            left: 0
+            top: 8px
+      &.ul-list-num
+         padding: 10px 0 0 8px
+         li
+            margin-bottom: 5px
+            &:last-child
+               margin-bottom: 0
+            &::before
+               display: none
+   &.accordion_panel2
+      ul.ul_panel2
+         padding-bottom: 24px
+         &.ul_panel2_last
+            padding-bottom: 0
+         li
+            margin-bottom: 0
+            &.pddbottom
+               padding-bottom: 24px
+         ul.ul_panel2two
+            padding: 0 0 0 20px
+            li
+               margin-bottom: 3px
+// accordion end
+// popup
+.myBtnstyle
+   display: inline-block
+   color: #43B02A
+   cursor: pointer
+   &:hover
+      text-decoration: underline
+.modal, .modal2, .modal3
+   display: none
+   position: fixed
+   z-index: 999999
+   padding-top: 0
+   left: 0
+   top: 0
+   width: 100%
+   height: 100%
+   overflow: auto
+   background-color: rgb(0,0,0)
+   background-color: rgba(0,0,0,0.4)
+.modal-content
+   position: absolute
+   left: 0
+   right: 0
+   top: 50%
+   transform: translateY(-50%)
+   overflow: hidden
+   padding: 0
+   margin: 0 auto
+   width: 100%
+   background: #FFFFFF
+   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.48)
+   border-radius: 8px
+   animation-name: animatetop
+   animation-duration: 0.3s
+   &.size-modal1
+      max-width: 960px
+   &.size-modal2
+      max-width: 440px
+   &.size-modal3
+      max-width: 495px
+@keyframes animatetop
+   from
+      opacity: 0
+   to
+      opacity: 1
+.close, .close2, .close3
+   color: #000
+   float: right
+   font-size: 32px
+   line-height: 1
+   position: absolute
+   right: 0
+   top: 0
+   height: 36px
+   width: 36px
+   display: flex
+   align-items: center
+   justify-content: center
+   transition: .3s
+   &:hover
+      background: #fff
+      text-decoration: none
+      cursor: pointer
+// ----
+#myModal
+   .modal-table__h3 h3
+      font-size: 16px
+      color: #000
+      padding-bottom: 34px
+      font-weight: inherit
+      text-align: left
+.modal-table__p
+   text-align: left
+.modal-content__header
+   font-weight: 500
+   font-size: 14px
+   color: #000
+   padding: 11px 0 11px 16px
+   background: #F2F2F2
+   text-align: left
+   line-height: 1
+.modal-table
+   padding: 16px
+.modal-table-list
+   table
+      border: 0
+      border-spacing: 0px
+      text-indent: initial
+      border-collapse: inherit
+      tr
+         border-bottom: 1px solid #E5E5E5
+         padding: 16px 0
+         display: grid
+         grid-template-columns: 456px 1fr 1fr
+         grid-gap: 0 16px
+         align-items: center
+         &:last-child
+            border-bottom: 0 solid #E5E5E5
+            padding: 16px 0 0 0
+         &:first-child
+            padding: 0 0 16px 0
+         td
+            font-size: 14px
+            color: #000
+            text-align: left
+            line-height: 1
+            &.td_bold
+               font-size: 16px
+               font-weight: bold
+            &.td_bold_green
+               color: #379424
+               font-weight: bold
+               font-size: 16px
+            &.td_grid_line
+               grid-column: 1 / 3
+               grid-row: 1 / 3
+            a
+               color: #43B02A
+               display: block
+               font-size: 14px
+               font-weight: bold
+               padding-top: 16px
+.modal-table-grid
+   display: grid
+   grid-template-columns: 395px 1fr
+   &.pcolornew
+      .modal-table-grid__item p
+         color: #999999
+         font-size: 12px !important
+         padding: 12px 0
+   &.bacolor1
+      background: #F7FAFD
+      p
+         padding: 42px 0
+   &.bacolor2
+      background: #f2f2f2
+      padding-bottom: 16px
+      .modal-table-grid__item
+         padding-left: 16px !important
+         border-right: 0 solid #d8d8d8
+         padding-right: 16px
+         grid-column: 1 / 3
+         grid-row: 1 / 3
+      p
+         padding: 10px 0
+         text-align: left !important
+   &.bacolor3
+      p
+         padding: 22px 0
+.modal-table-grid__item
+   &:first-child
+      border-right: 1px solid #d8d8d8
+      padding-left: 24px
+      padding-right: 23px
+      p
+         text-align: left
+   &:last-child
+      p
+         text-align: center
+   a
+      color: #43B02A
+      display: block
+      font-size: 14px
+      text-align: left
+      text-decoration: underline
+// popup end
+// media
+// @media (max-width: 1250px)
+// @media (max-width: 1024px)
+@media (max-width: 812px)
+   .sect-content-working__grid
+      grid-template-columns: repeat(2, 1fr)
+   .sect-content-productbay__grid
+      grid-template-columns: repeat(2, 1fr)
+   .sect-content-advantages__grid
+      grid-template-columns: repeat(2, 1fr)
+   .sect-content-conditions__grid
+      grid-template-columns: 1fr
+   .sect-content-bayprod__grid
+      grid-template-columns: 1fr
+   .sect-content-bayprod__grid-bottom
+      grid-template-columns: 1fr
+   .sect-content-bayprod__item-content
+      padding-left: 0
+      padding-bottom: 15px
+   .modal-content
+      &.size-modal1,&.size-modal2,&.size-modal3
+         width: initial
+         left: 15px
+         right: 15px
+      &.size-modal3
+         overflow: scroll
+   .size-modal3__scroll-mob
+      overflow: scroll
+   .size-modal3__scroll-width
+      &.width1
+         width: 495px
+      &.width2
+         width: 960px
+         height: 400px
+// @media (max-width: 768px)
+@media (max-width: 480px)
+   #delivery-wrap
+      padding: 0px 0 10px 0
+   .delivery__wrap-flex
+      flex-direction: column
+      padding: 5px 12px
+   .delivery__wrap-flex__item
+      &:first-child
+         flex: 1 1 100%
+         max-width: 100%
+      &:last-child
+         flex: 1 1 100%
+   .tabs-head:not(.product-tabs)
+      position: relative
+      top: 0
+      width: 100%
+      display: block
+      z-index: 10
+      box-shadow: none
+   .mobile-header__link
+      width: 100%
+      text-align: center
+   .mobile-header .mobile-arrow:before
+      bottom: 5px
+   .mobile-header__content
+      font-size: 20px
+   .tabs-head:not(.product-tabs) .tabs-head-item:after
+      display: none
+   .tabs-content
+      margin-left: 0
+   #delivery-wrap
+      h2
+         font-size: 21px
+      h3
+         font-size: 15px
+      p
+         font-size: 13px
+   .sect-content-advantages__grid
+      grid-template-columns: 1fr
+   .sect-content-advantages__item
+      max-width: 100%
+   .sect-content-working__top-text span
+      font-size: 14px
+// @media (max-width: 320px)
+@media (max-width: 767px) and (orientation: landscape)
+   #delivery-wrap
+      padding: 0px 0 10px 0
+   .delivery__wrap-flex
+      flex-direction: column
+      padding: 5px 12px
+   .delivery__wrap-flex__item
+      &:first-child
+         flex: 1 1 100%
+         max-width: 100%
+      &:last-child
+         flex: 1 1 100%
+   .tabs-head:not(.product-tabs)
+      position: relative
+      top: 0
+      width: 100%
+      display: block
+      z-index: 10
+      box-shadow: none
+   .mobile-header__link
+      width: 100%
+      text-align: center
+   .mobile-header .mobile-arrow:before
+      bottom: 5px
+   .mobile-header__content
+      font-size: 20px
+   .tabs-head:not(.product-tabs) .tabs-head-item:after
+      display: none
+   .sect-content-working__grid
+      grid-template-columns: repeat(4, 1fr)
+   .sect-content-productbay__grid
+      grid-template-columns: repeat(4, 1fr)
+   .sect-content-advantages__grid
+      grid-template-columns: repeat(4, 1fr)
+   .sect-content-conditions__grid
+      grid-template-columns: 1fr 1fr
+   .sect-content-bayprod__grid
+      grid-template-columns: 1fr 1fr
+   .sect-content-bayprod__grid-bottom
+      grid-template-columns: 1fr 1fr
+   .sect-content-bayprod__item-content
+      padding-left: 24px
+      padding-bottom: 0
+   .tabs-content
+      margin-left: 0
+   .size-modal3__scroll-width
+      &.width1
+         height: 300px
+      &.width2
+         height: 300px
+@media (max-width: 812px) and (orientation: landscape)
+   .size-modal3__scroll-width.width2
+      height: 300px
+   .size-modal3__scroll-width.width1
+      height: 300px
