@@ -1,0 +1,446 @@
+/*default styles*/
+
+#lego
+  max-width: 1366px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 42px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  h3
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  h4
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 28px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    margin: 0 auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#lego
+  .slick-arrow
+    font-size: 0
+  .slick-prev
+    z-index: 10
+    left: 85px
+    top: 50%
+    position: absolute
+    cursor: pointer
+    opacity: 0.7
+    transition: all .3s
+    &::before
+      display: none
+    &::after
+      content: ""
+      display: block
+      position: absolute
+      left: 20px
+      min-width: 38px
+      height: 38px
+      background-size: contain
+      background-image: url("https://cdn.comfy.ua/media/x/img/lego-2022/arrow.svg")
+      bottom: 50%
+      transform: translateY(50%)
+    &:hover
+      opacity: 1
+  .slick-next
+    z-index: 10
+    right: 85px
+    top: 50%
+    position: absolute
+    cursor: pointer
+    opacity: 0.7
+    transition: all .3s
+    &::before
+      display: none
+    &::after
+      content: ""
+      display: block
+      position: absolute
+      z-index: 10
+      bottom: 50%
+      transform: translateY(50%) scale(-1, 1)
+      display: block
+      right: 20px
+      min-width: 38px
+      height: 38px
+      background-size: contain
+      background-image: url("https://cdn.comfy.ua/media/x/img/lego-2022/arrow.svg")
+    &:hover
+      opacity: 1
+
+  .show__mob
+    display: none
+  .logo
+    position: relative
+    margin-bottom: 36px
+    .slick-track
+      display: flex
+      flex-direction: row
+      justify-content: center
+      max-width: 100%
+    .logo__icon
+      position: absolute
+      top: 50px
+      left: 50px
+    .logo__pink
+      padding: 0 42px 48px 0
+      position: absolute
+      top: 49px
+      right: 36px
+      background: #E3599D
+      border-radius: 0px 80px
+      .logo__pink__wrap
+        display: flex
+        flex-direction: row
+        align-items: flex-end
+        color: #fff
+        margin-top: -13px
+        .logo__pink__heart
+          margin-left: -2em
+        .logo__pink__title
+          h4
+            margin-top: 24px
+            margin-left: -3em
+      .logo__pink__tovar
+        margin-top: 24px
+        .logo__pink__tovar__child
+          max-width: 204px
+          padding: 12px
+          .logo__pink__tovar__wrap
+            text-decoration: none
+            cursor: pointer
+          span
+            margin: 12px 0
+            font-size: 16px
+            color: #fff
+          .logo__pink__tovar__button
+            display: block
+            color: #fff
+            font-size: 20px
+            font-weight: bold
+            text-align: center
+            display: block
+            border: 2px solid #FFFFFF
+            width: max-content
+            padding: 8px 57px
+            cursor: pointer
+            transition: all .3s
+            &:hover
+              background-color: #fff
+              color: #000
+          &:nth-of-type(1)
+            margin-right: 32px
+          .logo__pink__tovar__wrap:hover + .logo__pink__tovar__button
+            background-color: #fff
+            color: #000
+
+  .fan
+    margin-top: 36px
+    position: relative
+    .slick-list
+      max-width: 100%
+      .slick-track
+        display: flex
+        flex-direction: row
+        width: 100% !important
+        max-width: 100%
+        div
+          flex: 1 1 0
+    .fan__wrap
+      position: absolute
+      top: 60px
+      left: 48px
+      color: #fff
+      .fan__list
+        margin-top: 24px
+        .slider__child
+          max-width: 180px
+          min-width: 180px
+          padding: 12px
+          box-sizing: content-box
+          .fan__list__wrap
+            text-decoration: none
+            cursor: pointer
+            display: block
+          span
+            margin: 12px 0
+            font-size: 16px
+            color: #fff
+          .fan__list__button
+            display: block
+            color: #fff
+            font-size: 20px
+            font-weight: bold
+            text-align: center
+            display: block
+            border: 2px solid #FFFFFF
+            width: max-content
+            padding: 8px 57px
+            cursor: pointer
+            transition: all .3s
+            max-width: 180px
+            box-sizing: border-box
+            &:hover
+              background-color: #fff
+              color: #000
+          &:nth-of-type(n+2)
+            margin-left: 32px
+          .fan__list__wrap:hover + .fan__list__button
+            background-color: #fff
+            color: #000
+  .slick-list
+    max-width: 710px
+
+
+//media*************************************
+
+@media (max-width: 1024px)
+  #lego h2
+    font-size: 32px
+  #lego .logo .logo__bg img
+    min-width: 140%
+  #lego .logo .logo__pink .logo__pink__wrap .logo__pink__title h4
+    font-size: 24px
+  #lego .fan .fan__bg img
+    min-width: 135%
+
+@media (max-width: 812px)
+  #lego .fan
+    overflow: hidden
+  #lego .fan .slick-list
+    max-width: 90%
+    margin: 0 auto
+  #lego .fan:last-of-type .slick-list
+    max-width: 100%
+  #lego .fan .slick-list .slick-track
+    justify-content: flex-start
+    width: max-content !important
+    max-width: 100%
+  #lego .fan .fan__bg img
+    min-width: 170%
+  #lego .fan .fan__wrap
+    left: unset
+    right: 50%
+    transform: translateX(50%)
+    max-width: max-content
+    width: 100%
+  #lego .fan .fan__wrap .fan__title
+    margin-left: 48px
+  #lego .logo .logo__bg img
+    min-width: 150%
+  #lego .logo .logo__pink .logo__pink__wrap .logo__pink__title
+    text-align: center
+    margin: 0 auto
+  #lego .logo .logo__pink .logo__pink__wrap
+    position: unset
+    margin-top: 0
+  #lego .logo .logo__pink
+    position: unset
+    border-radius: unset
+    padding: 2em
+  #lego .logo .logo__pink .logo__pink__wrap .logo__pink__title h4
+    margin-left: 0
+  #lego .logo .logo__pink .logo__pink__wrap .logo__pink__heart
+    position: absolute
+    top: 20px
+    right: 2em
+  #lego .fan .fan__wrap .fan__list .slider__child,
+  #lego .logo .logo__pink .logo__pink__tovar .logo__pink__tovar__child
+    height: max-content
+  #lego .fan .fan__wrap .fan__list
+    max-width: 100%
+  #lego .slick-prev
+    left: -10px
+  #lego .slick-next
+    right: -10px
+  #lego .slick-prev::after,
+  #lego .slick-next::after
+    max-width: 25px
+    min-width: 25px
+    height: 25px
+
+@media (max-width: 812px) and (min-width: 800px)
+  #lego .fan .slick-list
+    max-width: 85%
+
+@media (max-width: 736px) and (min-width: 668px)
+  #lego .fan .slick-list
+    max-width: 94%
+
+@media (max-width: 668px) and (min-width: 600px)
+  #lego .fan .slick-list
+    max-width: 94%
+  #lego .fan .fan__bg img
+    min-width: 195%
+  #lego .fan .slick-list,
+  #lego .fan:last-of-type .slick-list
+    max-width: 70%
+
+@media (max-width: 569px) and (min-width: 482px)
+  #lego .fan .fan__wrap
+    top: 10px
+  #lego .fan .slick-list
+    max-width: 94%
+  #lego .fan .fan__bg img
+    min-width: 195%
+  #lego .fan .slick-list,
+  #lego .fan:last-of-type .slick-list
+    max-width: 80%
+
+
+@media (max-width: 480px)
+  #lego h2
+    font-size: 36px
+  #lego h4
+    font-size: 24px
+  #lego h3
+    font-size: 24px
+  #lego
+    .show__mob
+      display: block
+    .hide__mob
+      display: none
+  #lego .logo .logo__bg img
+    min-width: unset
+  #lego .logo .logo__pink
+    background-color: #EC92BA
+    padding: 24px 23px
+  #lego .logo .logo__pink .logo__pink__wrap .logo__pink__heart
+    position: absolute
+    top: 0
+    right: 0
+  #lego .logo .logo__icon
+    max-width: 103px
+    top: 33px
+    left: 12px
+  #lego .logo .logo__pink .logo__pink__wrap .logo__pink__heart
+    max-width: 117px
+    top: 9px
+    right: 12px
+  #lego .logo .logo__pink .logo__pink__tovar
+    margin-top: 0
+  #lego .logo .logo__pink .logo__pink__tovar .logo__pink__tovar__child
+    max-width: 210px
+    min-width: 210px
+    box-sizing: content-box
+  #lego .logo .logo__pink .logo__pink__tovar .logo__pink__tovar__child span,
+  #lego .fan .fan__wrap .fan__list .slider__child span
+    font-size: 18px
+  #lego
+    .slick-list
+      max-width: 234px
+      display: flex
+      margin: 0 auto
+    .slick-track
+      justify-content: flex-start
+      max-width: unset !important
+    .slick-next
+      right: 0
+    .slick-prev
+      left: 0
+  #lego .logo .logo__pink .logo__pink__tovar .logo__pink__tovar__child .logo__pink__tovar__wrap img
+    width: 100%
+  #lego .logo .logo__pink .logo__pink__tovar .logo__pink__tovar__child:nth-of-type(1)
+    margin-right: 0
+  #lego .fan
+    background-color: #E3599D
+    margin-top: 12px
+    padding: 24px 0 33px 0
+  #lego .fan .fan__wrap
+    position: unset
+    transform: unset
+    margin: 0 auto
+    max-width: 100%
+  #lego .fan .fan__wrap .fan__title
+    text-align: center
+  #lego .fan .fan__bg img
+    min-width: unset
+    margin: 0 0 0 auto
+  #lego .fan .fan__wrap .fan__list .slider__child:nth-of-type(n+2)
+    margin-left: 0
+  #lego .fan .fan__wrap .fan__list
+    margin-top: 12px
+  #lego .fan
+    .slick-prev
+      left: 20px
+    .slick-next
+      right: 20px
+  #lego .fan .fan__wrap .fan__list .slider__child
+    max-width: 210px
+  #lego .fan:nth-of-type(odd)
+    background-color: #EC92BA
+  #lego .fan:nth-of-type(3)
+    padding-bottom: 0
+    .fan__bg img
+      margin: 0 auto
+  #lego .fan:nth-of-type(4)
+    .fan__bg img
+      margin: 0 0 0 -17px
+  #lego .slick-prev::after
+    left: -10px
+    // left: -60px
+  #lego .slick-next::after
+    right: -10px
+    // right: -60px
+  #lego .fan .fan__wrap .fan__list .slider__child .fan__list__wrap img
+    width: 100%
+  #lego .fan .fan__wrap .fan__list .slider__child .fan__list__button
+    padding: 10px 65px
+    text-align: center
+    max-width: 210px
+    min-width: 210px
+  #lego .fan .slick-list,
+  #lego .fan:last-of-type .slick-list
+    // max-width: 70%
+    max-width: 234px
+  #lego .fan .fan__wrap .fan__title
+    margin-left: 0
+    
+
