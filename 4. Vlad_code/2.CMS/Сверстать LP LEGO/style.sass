@@ -130,7 +130,7 @@
       top: 50px
       left: 50px
     .logo__pink
-      padding: 0 42px 48px 0
+      padding: 0 42px 36px 0
       position: absolute
       top: 49px
       right: 36px
@@ -172,12 +172,13 @@
             padding: 8px 57px
             cursor: pointer
             transition: all .3s
+            margin-bottom: 0
             &:hover
               background-color: #fff
               color: #000
           &:nth-of-type(1)
             margin-right: 32px
-          .logo__pink__tovar__wrap:hover + .logo__pink__tovar__button
+          .logo__pink__tovar__wrap:hover .logo__pink__tovar__button
             background-color: #fff
             color: #000
 
@@ -232,7 +233,7 @@
               color: #000
           &:nth-of-type(n+2)
             margin-left: 32px
-          .fan__list__wrap:hover + .fan__list__button
+          .fan__list__wrap:hover .fan__list__button
             background-color: #fff
             color: #000
   .slick-list
@@ -442,5 +443,7 @@
     max-width: 234px
   #lego .fan .fan__wrap .fan__title
     margin-left: 0
+  #lego .logo .logo__pink .logo__pink__tovar .logo__pink__tovar__child .logo__pink__tovar__button
+    min-width: 210px
     
 
