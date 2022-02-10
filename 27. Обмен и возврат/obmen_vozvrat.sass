@@ -1,0 +1,615 @@
+#obmen_vozvrat_tovara
+   max-width: 1386px
+   width: 100%
+   height: auto
+   background: #f2f2f2
+   overflow: hidden
+   position: relative
+   margin: 0 auto
+   padding: 0px 10px 20px 10px
+   img
+      opacity: 1
+      display: block
+      &:hover
+         opacity: 1
+   &:first-letter
+      padding-left: 0
+   h2
+      font-size: 34px
+      font-weight: bold
+      color: #000
+      text-align: left
+   h3
+      font-size: 20px
+      font-weight: bold
+      color: #000
+      margin: 0
+   h4
+      font-size: 24px
+      font-weight: bold
+      color: #000
+      margin: 0
+   p
+      font-size: 16px
+      line-height: 1.3
+      font-weight: 500
+span.word-wrap
+   display: block
+   word-wrap: break-word
+// .breadcrumbs
+//    display: none
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+// style
+.obmen-vozvrat__wrap-grid
+   display: grid
+   grid-template-columns: 1fr 340px
+   grid-gap: 20px
+.obmen-vozvrat__chat
+   background: #FFFFFF
+   border-radius: 16px
+   padding: 40px 15px 35px 35px
+.obmen-vozvrat__h4
+   text-align: left
+   padding-bottom: 30px
+.obmen-vozvrat__list
+   .obmen-vozvrat__flex
+      display: flex
+      align-items: center
+      margin-bottom: 24px
+      &:last-child
+         margin-bottom: 0
+      &.flex_number
+         align-items: flex-start
+.obmen-vozvrat__item
+   &:first-child
+      flex: 1 0 46px
+      max-width: 46px
+   &:last-child
+      padding-left: 12px
+   a
+      font-size: 16px
+      color: #000
+      font-weight: bold
+      &.uppercasep
+         text-transform: uppercase
+      &:hover
+         cursor: pointer
+   p
+      span
+         color: #616161
+         font-size: 16px
+         font-weight: normal
+         display: block
+         &:first-child
+            padding-top: 5px
+.obmen-vozvrat__icon
+   width: 46px
+   height: 46px
+   border-radius: 50%
+   display: flex
+   align-items: center
+   justify-content: center
+   &.icon_chat
+      background: #43B02A
+   &.icon_messenger
+      background: #2C98F0
+   &.icon_viber
+      background: #7C42AD
+   &.icon_telegram
+      background: #35A6DE
+   &.icon_number
+      background: #FF671F
+.obmen-vozvrat__header-flex
+   display: flex
+   align-items: center
+   justify-content: space-between
+   background: #FFFFFF
+   border-radius: 16px
+   margin-bottom: 20px
+   padding: 30px 70px 30px 80px
+.obmen-vozvrat__list-sect
+   background: #FFFFFF
+   border-radius: 16px
+   margin-bottom: 20px
+   padding: 24px
+.obmen-vozvrat__list-sect-h3
+   display: flex
+   align-items: center
+   padding-bottom: 16px
+.obmen-vozvrat__list-sect__num
+   width: 42px
+   height: 42px
+   border-radius: 50%
+   background: #43B02A
+   display: flex
+   align-items: center
+   justify-content: center
+   line-height: 1
+   margin-right: 16px
+   font-size: 20px
+   font-weight: bold
+   color: #fff
+.obmen-vozvrat__list-sect-grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr
+   grid-gap: 27px
+.obmen-vozvrat__list-sect__item
+   border: 1px dashed #43B02A
+   border-radius: 16px
+   padding: 16px
+   &.ppd2sect
+      padding: 40px 30px
+.obmen-vozvrat__list-sect__img img
+   margin: 0 auto !important
+.obmen-vozvrat__list-sect__p
+   text-align: left
+   padding-top: 8px
+.colorFF671F
+   color: #FF671F
+   cursor: pointer
+   &:hover
+      text-decoration: underline
+.obmen-vozvrat__list-sect-one
+   border: 1px dashed #43B02A
+   border-radius: 16px
+   padding: 16px
+   display: inline-flex
+   align-items: center
+   p
+      padding-left: 16px
+.accordion
+   background: #FFFFFF
+   border-radius: 16px
+   color: #000
+   cursor: pointer
+   padding: 18px 85px 18px 27px
+   width: 100%
+   font-size: 20px
+   border: none
+   text-align: left
+   outline: none
+   transition: 0.3s
+   position: relative
+   margin-bottom: 20px
+   font-weight: 500
+   &::before
+      content: ""
+      background-image: url(https://cdn.comfy.ua/media/x/img2/obmen_vozvrat/str_close.svg)
+      background-repeat: no-repeat
+      width: 31px
+      height: 15px
+      position: absolute
+      right: 28px
+      top: 50%
+      transform: translateY(-50%)
+      background-size: cover
+   &.active
+      &::before
+         transform: translateY(-50%) rotate(180deg)
+.panel
+   max-height: 0
+   overflow: hidden
+   transition: max-height 0.3s ease-out
+.panel__content
+   background: #EEFDFF
+   border-radius: 16px
+   padding: 27px 29px
+   margin: 0 0 20px 0
+   p
+      font-size: 20px !important
+      padding-bottom: 16px
+      &.nonebottom
+         padding-bottom: 0
+         padding-top: 16px
+      &.nonebottom2
+         padding-bottom: 0
+.list-number
+   list-style-type: decimal
+   padding: 0 0 0 23px
+   li
+      font-size: 20px
+      font-weight: 500
+      color: #000
+      line-height: 1.3
+.obmen-vozvrat-questions__h4
+   padding-bottom: 20px
+.obmen-vozvrat-chatfooter
+   background: #FFFFFF
+   border: 2px solid #43B02A
+   border-radius: 16px
+   padding: 30px 25px
+.obmen-vozvrat-chatfooter-flex
+   display: flex
+   align-items: center
+   justify-content: center
+// chat STAR
+#chat_id
+   max-width: 1316px
+   margin: 0
+   height: auto
+   display: inline-block
+   p
+      &:first-letter
+         padding-left: 0
+         margin-bottom: 0
+   img
+      opacity: 1
+      max-width: 100%
+      display: block
+      &:hover
+         opacity: 1
+   .content a
+      font-weight: 500
+      text-decoration: underline
+      color: #ff671f
+      font-size: 20px
+      cursor: pointer
+      display: flex
+      position: relative
+   .popup ul.communication
+      padding: 0
+      margin: 0
+      li
+         list-style-type: none
+         display: flex
+         flex-direction: row
+         align-items: center
+         margin-bottom: 10px
+         padding-bottom: 0
+         a
+            font-size: 14px
+            text-decoration: none
+            color: black
+            cursor: pointer
+            font-weight: bold
+#chat_id .popup ul.communication li:last-child
+   margin-bottom: 0
+#chat_id .popup ul.communication li::before
+   display: block
+   content: ''
+   min-width: 24px
+   height: 24px
+   background-repeat: no-repeat
+   background-position: center
+   margin-right: 10px
+   position: unset
+#chat_id .popup ul.communication li p
+   font-size: 14px
+   line-height: normal
+   padding-bottom: 0
+#chat_id .popup ul.communication li:nth-child(1)::before
+   background-image: url("https://cdn.comfy.ua/media/x/img/chat/icon2.png")
+#chat_id .popup ul.communication li:nth-child(2)::before
+   background-image: url("https://cdn.comfy.ua/media/x/img/chat/icon3.png")
+#chat_id .popup ul.communication li:nth-child(3)::before
+   background-image: url("https://cdn.comfy.ua/media/x/img/chat/icon4.png")
+#chat_id .popup ul.communication li:nth-child(4)::before
+   background-image: url("https://cdn.comfy.ua/media/x/img/chat/icon5.png")
+#chat_id .popup ul.communication li:nth-child(5)::before, #chat_id .popup ul.communication li:nth-child(6)::before
+   display: none
+#chat_id .popup ul.communication li:nth-child(1),
+#chat_id .popup ul.communication li:nth-child(2),
+#chat_id .popup ul.communication li:nth-child(3),
+#chat_id .popup ul.communication li:nth-child(4)
+   display: flex
+   flex-direction: row
+   align-items: center
+   margin-bottom: 10px
+#chat_id .popup .object ul.communication li .telephone a, #chat_id .popup .object_reverse ul.communication li .telephone a
+   font-size: 14px
+   font-weight: bold
+   text-decoration: none
+   color: #000
+   margin-top: 5px
+   padding: 0 17px 0 0 !important
+#chat_id .popup .object ul.communication li .telephone p
+   color: #999999
+   line-height: normal
+   margin-top: 5px
+#chat_id .popup .object ul.communication li .telephone p span
+   display: block
+   line-height: normal
+   font-size: 12px
+#chat_id .popup .object ul.communication li .telephone p span:first-of-type
+   font-weight: bold
+#chat_id .popup
+   display: none
+   position: absolute
+   z-index: 1000
+   width: max-content
+#chat_id .object
+   padding: 20px 20px 20px 20px
+   width: 196px
+   max-height: max-content
+   height: auto
+   background-color: #fff
+   box-sizing: border-box
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
+   border-radius: 10px
+   position: absolute
+   bottom: 65px
+#chat_id .object_reverse
+   padding: 20px 20px 20px 20px
+   width: 196px
+   max-height: max-content
+   height: auto
+   background-color: #fff
+   box-sizing: border-box
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
+   border-radius: 10px
+   position: absolute
+   top: 8px
+.chat .header-phone__link:after
+   display: none
+.chat .object::after
+   content: ""
+   border: 1.4rem solid transparent
+   position: absolute
+   bottom: -20px
+   left: 50%
+   opacity: 1
+   -webkit-transform: translate(-50%, 0) scale(0.7) rotate(180deg)
+   transform: translate(-50%, 0) scale(0.7) rotate(180deg)
+   z-index: 5
+   border-bottom: 1rem solid #fff
+.chat .object_reverse::after
+   content: ""
+   border: 1.4rem solid transparent
+   position: absolute
+   top: -20px
+   left: 50%
+   opacity: 1
+   -webkit-transform: translate(-50%, 0) scale(0.7)
+   transform: translate(-50%, 0) scale(0.7)
+   z-index: 5
+   border-bottom: 1rem solid #fff
+span.i_icon_4
+   display: block
+   width: 11px
+   height: 11px
+   background-size: 11px 11px
+   background-image: url("data:image/svg+xml;charset=utf-8,&lt;svg width='11' height='11' viewBox='0 0 10 10' fill='%23ff671f' xmlns='http://www.w3.org/2000/svg'&gt;&lt;path fill-rule='evenodd' clip-rule='evenodd' d='M5 10A5 5 0 1 0 5 0a5 5 0 0 0 0 10z'/&gt;&lt;path d='M5 1.667a.556.556 0 1 0 .002 1.112A.556.556 0 0 0 5 1.667zM5 3.889a.556.556 0 0 0-.556.555v3.334a.556.556 0 0 0 1.112 0V4.444A.556.556 0 0 0 5 3.89z' fill='%23fff'/&gt;&lt;/svg&gt;");
+   background-repeat: no-repeat
+   margin-left: 78px
+#chat_id .popup ul.communication li:nth-child(3) .tooltip_3,
+#chat_id .popup ul.communication li:nth-child(3) .tooltip_1,
+#chat_id .popup ul.communication li:nth-child(3) .tooltip_2,
+#chat_id .popup ul.communication li:nth-child(3) .tooltip_4
+   display: block
+   width: 180px
+   max-height: 370px
+   height: auto
+   background-color: rgba(255, 255, 255, 0.9490196078431372)
+   box-sizing: border-box
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)
+   border-radius: 10px
+   position: absolute
+   top: 30px
+   left: 60px
+   padding: 10px 15px
+   z-index: 1
+#chat_id .popup ul.communication li:nth-child(3) .tooltip_3:after,
+#chat_id .popup ul.communication li:nth-child(3) .tooltip_1:after,
+#chat_id .popup ul.communication li:nth-child(3) .tooltip_2:after,
+#chat_id .popup ul.communication li:nth-child(3) .tooltip_4:after
+   content: ""
+   border: 1.4rem solid transparent
+   position: absolute
+   top: -2rem
+   left: 50%
+   opacity: 1
+   -webkit-transform: translate(-50%, 0) scale(0.7)
+   transform: translate(-50%, 0) scale(0.7)
+   z-index: 5
+   border-bottom: 1rem solid #fff
+@media (max-width: 1024px) and (min-width: 768px)
+   .header-phone__link:before
+      content: ""
+      width: 26px
+      height: 26px
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' …-1.249-.83-2.008s.294-1.472.83-2.008a.434.434 0 0 0 0-.613z'/%3E%3C/svg%3E") no-repeat 50% !important;
+      background-size: contain
+      position: absolute
+      top: 50%
+      -webkit-transform: translateY(-50%)
+      transform: translateY(-50%)
+      left: 0
+      border-radius: inherit
+@media (max-width: 480px)
+   #chat_id
+      padding: 0
+   #chat_id .content a
+      position: unset !important
+      -webkit-transform: unset
+      transform: unset
+// chat END
+// popup
+.Btnmodal
+   border: 1px solid #FF090B
+   border-radius: 8px
+   padding: 16px
+   display: inline-flex
+   align-items: center
+   cursor: pointer
+   line-height: 1
+   margin-top: 24px
+   span
+      color: #FF090B
+      font-size: 18px
+      font-weight: 500
+      display: block
+      padding-right: 10px
+.modal
+   display: none
+   position: fixed
+   z-index: 99999
+   padding-top: 50px
+   left: 0
+   top: 0
+   width: 100%
+   height: 100%
+   overflow: auto
+   background-color: rgb(0,0,0)
+   background-color: rgba(0,0,0,0.4)
+.modal-content
+   background: #FFFFFF
+   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3)
+   margin: auto
+   padding: 24px
+   width: 50%
+   position: relative
+#myModal .modal-content__text p
+   font-size: 16px !important
+   color: #000
+   text-align: left
+   padding-bottom: 0
+.close
+   color: #aaaaaa
+   position: absolute
+   right: 15px
+   top: 10px
+   font-size: 28px
+   font-weight: bold
+   line-height: 1
+   cursor: pointer
+.content
+   display: flex
+span.emoji2
+   font-size: 20px
+   line-height: 1
+   padding: 0 3px
+// popup END
+@media (max-width: 1024px)
+   .obmen-vozvrat__wrap-grid
+      grid-template-columns: 1fr
+      grid-gap: 0
+   .obmen-vozvrat__chat
+      display: none
+@media (max-width: 812px)
+   #obmen_vozvrat_tovara
+      h2
+         font-size: 30px
+   .obmen-vozvrat__header-flex
+      padding: 20px
+   .obmen-vozvrat__list-sect
+      padding: 20px
+   .obmen-vozvrat__list-sect-grid
+      grid-gap: 20px
+   .obmen-vozvrat__list-sect__item.ppd2sect
+      padding: 16px 16px
+   .obmen-vozvrat-chatfooter
+      padding: 30px 20px
+// @media (max-width: 768px)
+@media (max-width: 480px)
+   #obmen_vozvrat_tovara
+      h2
+         font-size: 18px
+         padding-top: 16px
+      h3
+         font-size: 16px
+      h4
+         font-size: 18px
+   .obmen-vozvrat__header-flex
+      flex-direction: column-reverse
+   .obmen-vozvrat__header-item img
+      max-width: 250px !important
+      width: 100%
+   .obmen-vozvrat__list-sect-grid
+      grid-template-columns: 1fr
+      grid-gap: 11px
+   .obmen-vozvrat__list-sect__item
+      padding: 16px 16px 24px 16px
+   .obmen-vozvrat__list-sect__num
+      width: 36px
+      height: 36px
+      flex: 1 0 36px
+      max-width: 36px
+   .obmen-vozvrat__list-sect
+      padding: 24px
+   .obmen-vozvrat__list-sect__item.ppd2sect
+      padding: 30px 16px
+   .obmen-vozvrat__list-sect-one img
+      max-width: 48px
+      width: 100%
+      height: auto
+   .accordion
+      font-size: 15px
+      padding: 16px 55px 16px 24px
+      margin-bottom: 10px
+      &::before
+         width: 22px
+         height: 13px
+         background-size: contain
+   .panel__content p
+      font-size: 15px !important
+      padding-bottom: 15px
+   .list-number li
+      font-size: 15px
+   .Btnmodal
+      display: flex
+      width: 100%
+      align-items: center
+      justify-content: center
+   .panel__content
+      margin: 0 0 10px 0
+      padding: 16px 24px
+   .Btnmodal span
+      font-size: 15px
+   .obmen-vozvrat-chatfooter-flex
+      flex-direction: column
+      align-items: flex-start
+   span.emoji2
+      font-size: 16px
+      line-height: 1
+      padding: 0 3px 0 0
+   #chat_id .content a
+      font-weight: bold
+      font-size: 16px
+   .obmen-vozvrat-chatfooter
+      padding: 16px 24px
+   .modal-content
+      width: 90%
+      border-radius: 8px
+   .modal
+      padding-top: 145px
+   .close
+      color: #000000
+      right: 50%
+      transform: translateX(-50%)
+      top: -70px
+      left: 50%
+      font-size: 44px
+      font-weight: normal
+      width: 44px
+      height: 44px
+      background: #fff
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+// @media (max-width: 320px)
+// @media (max-width: 767px) and (orientation: landscape)
+@media (max-width: 812px) and (orientation: landscape)
+   #obmen_vozvrat_tovara
+      h2
+         font-size: 25px
+      h3
+         font-size: 18px
+      h4
+         font-size: 21px
+   .obmen-vozvrat__list-sect__num
+      width: 36px
+      height: 36px
+   .accordion
+      padding: 15px 85px 15px 27px
+      margin-bottom: 15px
+      font-size: 18px
+   .panel__content
+      padding: 16px 15px 16px 27px
+      margin: 0 0 15px 0
+   .panel__content p
+      font-size: 18px !important
+   .list-number li
+      font-size: 18px

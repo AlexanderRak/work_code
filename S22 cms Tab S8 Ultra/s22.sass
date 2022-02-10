@@ -1,0 +1,94 @@
+#cms_s22
+   display: block
+   margin: 0 auto
+   max-width: 100%
+   width: 100%
+   height: auto
+   overflow: hidden
+   position: relative
+   // margin: 0.4rem 0
+   img
+      &:hover
+         opacity: 1
+   &:first-letter
+      padding-left: 0
+   img
+      display: block
+   p
+      font-size: 16px
+      margin-bottom: 6px
+      font-weight: normal
+      color: #000
+// default
+.cms_s22__wrap
+   padding: 22px 15px 23px 17px
+   position: relative
+   background: #fff
+.cms_s22__bgrd
+   background: linear-gradient(90deg, #F2F3FF 72.82%, rgba(242, 243, 255, 0) 97.68%)
+   mix-blend-mode: normal
+   border-radius: 8px
+   width: 100%
+   height: 145px
+   display: flex
+   align-items: center
+   transition: .3s
+   &:hover
+      box-shadow: inset -5px 3px 20px 20px #ffffff
+.cms_s22__flex
+   align-items: center
+   padding-left: 35px
+   width: 100%
+   &.only_desk
+      display: flex
+   &.only_mob
+      display: none
+.cms_s22__item-img
+   margin: 0 23px 0 14px
+
+// media
+// @media (max-width: 1250px)
+// @media (max-width: 1024px)
+// @media (max-width: 812px)
+@media (max-width: 480px)
+   .cms_s22__flex.only_desk
+      display: none
+   .cms_s22__flex.only_mob
+      display: block
+   .cms_s22__wrap
+      padding: 12px
+   .cms_s22__flex
+      padding-left: 14px
+      padding-top: 24px
+      padding-bottom: 24px
+      position: relative
+   .cms_s22__bgrd
+      height: auto
+      &:hover
+         box-shadow: none
+   #cms_s22 p
+      font-size: 16px
+      margin-bottom: 5px
+   .cms_s22__item-txt.ppdmob
+      margin-bottom: 22px
+   .cms_s22__item-img-pos
+      position: absolute
+      right: 0
+      bottom: 0
+   .cms_s22__item-img
+      margin: 0
+   .cms_s22__item-txt.ppdmob img
+      max-width: 150px
+      width: 100%
+   .cms_s22__item-txt.ppdmob2 img
+      max-width: 150px
+      width: 100%
+   #cms_s22
+      padding: 12px
+@media (max-width: 320px)
+   #cms_s22 p
+      font-size: 12px
+   .cms_s22__item-txt.ppdmob img
+      max-width: 131px
+   .cms_s22__item-txt.ppdmob2 img
+      max-width: 115px
