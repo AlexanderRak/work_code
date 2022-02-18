@@ -1,0 +1,229 @@
+//default styles
+
+#nokia
+  max-width: 1366px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    color: #001135
+    font-size: 19px
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 38px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  img
+    margin: 0 auto
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+//end default styles
+
+#nokia
+  .show__mob
+    display: none
+  .small__txt
+    color: #767676
+    font-size: 16px
+    line-height: normal
+    margin-bottom: 20px
+  .large__txt
+    font-size: 55px
+    font-weight: bold
+    line-height: normal
+
+  .things
+    padding: 110px
+
+    .things__flex
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      div
+        flex: 1 1 0
+    .things__list
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      margin-top: 100px
+      li
+        width: 50%
+        .things__list__icon
+          img
+            margin: 0 0 2em 0
+        .things__list__txt
+          max-width: 500px
+          p
+            b
+              font-size: 22px
+        &:nth-of-type(n+3)
+          margin-top: 4em
+
+  .love
+    .love__wrap
+      display: flex
+      flex-direction: row
+      align-items: flex-end
+      padding: 110px
+      div
+        flex: 1 1 0
+
+  .trust
+    .trust__wrap
+      display: flex
+      flex-direction: row
+      align-items: flex-end
+      padding: 110px
+      div
+        flex: 1 1 0
+
+  .keep
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 0 25px
+    li
+      &:nth-of-type(2)
+        margin-left: 75px
+        max-width: 450px
+        .large__txt
+          margin-bottom: 25px
+
+  .camera
+    .camera__wrap
+      display: flex
+      flex-direction: row
+      padding: 110px
+      div
+        flex: 1 1 0
+      .camera__txt
+        margin-top: 40px
+
+//media**************************************************
+
+@media (max-width: 1024px)
+  #nokia .things .things__flex,
+  #nokia .love .love__wrap,
+  #nokia .trust .trust__wrap,
+  #nokia .camera .camera__wrap,
+  #nokia .things
+    padding-right: 1em
+    padding-left: 1em
+
+  #nokia .things .things__flex .things__title,
+  #nokia .love .love__wrap .love__title,
+  #nokia .trust .trust__wrap .trust__title,
+  #nokia .camera .camera__wrap .camera__title
+    margin-right: 2em
+
+  #nokia .things .things__list li
+    padding: 0 1em
+
+@media (max-width: 812px)
+  #nokia p
+    font-size: unset
+
+  #nokia
+    .show__mob
+      display: block
+    .hide__mob
+      display: none
+
+  #nokia .large__txt
+    font-size: 32px
+
+  #nokia .things .things__list
+    margin-top: 2em
+  #nokia .things .things__list li
+    padding: 1em
+    box-sizing: border-box
+  #nokia .things .things__list li .things__list__txt p b
+    font-size: 20px
+
+  #nokia .things .things__flex,
+  #nokia .love .love__wrap,
+  #nokia .trust .trust__wrap,
+  #nokia .camera .camera__wrap,
+  #nokia .things,
+  #nokia .keep
+    padding: 1em
+
+@media (max-width: 812px)
+  #nokia .things .things__flex,
+  #nokia .love .love__wrap,
+  #nokia .trust .trust__wrap,
+  #nokia .camera .camera__wrap,
+  #nokia .things,
+  #nokia .keep
+    display: block
+
+  #nokia .things .things__flex
+    padding: 0
+  #nokia .things .things__flex .things__txt
+    margin-top: 20px
+
+  #nokia .things .things__list
+    display: block
+  #nokia .things .things__list li
+    padding: 0
+    width: unset
+    display: flex
+    flex-direction: row
+    div
+      flex: 1 1 0
+  #nokia .things .things__list li .things__list__icon img
+    margin: 0 auto
+  #nokia .things .things__list li .things__list__txt
+    flex: 4
+    max-width: unset
+  #nokia .things .things__list li:nth-of-type(n+2)
+    margin-top: 40px
+
+  #nokia .things .things__flex .things__title,
+  #nokia .love .love__wrap .love__title,
+  #nokia .trust .trust__wrap .trust__title,
+  #nokia .camera .camera__wrap .camera__title
+    margin-right: unset
+
+  #nokia .love .love__wrap .love__txt,
+  #nokia .trust .trust__wrap .trust__txt
+    margin-top: 20px
+
+  #nokia .keep li:nth-of-type(2)
+    margin-left: 0
+    margin-top: 2em
+    max-width: unset
+
+@media (max-width: 480px)
+  #nokia .things .things__list li .things__list__icon
+    flex: 2
