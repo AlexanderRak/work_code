@@ -1,0 +1,105 @@
+<style>
+
+</style>
+
+<div id="wrap">
+
+   <span id="myspan"></span>
+   <br>
+   <span id="myspan2"></span>
+
+</div>
+
+<script>
+   var userDeviceArray = [
+      { device: 'Android', platform: /Android/ },
+      { device: 'iPhone', platform: /iPhone/ },
+      { device: 'iPad', platform: /iPad/ },
+      { device: 'Symbian', platform: /Symbian/ },
+      { device: 'Windows Phone', platform: /Windows Phone/ },
+      { device: 'Tablet OS', platform: /Tablet OS/ },
+      { device: 'Linux', platform: /Linux/ },
+      { device: 'Windows', platform: /Windows NT/ },
+      { device: 'Macintosh', platform: /Macintosh/ }
+   ];
+
+   var platform = navigator.userAgent;
+
+   function getPlatform() {
+      for (var i in userDeviceArray) {
+         if (userDeviceArray[i].platform.test(platform)) {
+            return userDeviceArray[i].device;
+         }
+      }
+      // return 'Неизвестная платформа!' + platform;
+      return document.getElementById('myspan').innerHTML = 'Неизвестная платформа: ' + platform;
+   }
+
+   document.getElementById('myspan').innerHTML = 'Ваша платформа: ' + getPlatform();
+   // console.log('Ваша платформа: ' + getPlatform());
+
+   let __getPlatform = getPlatform();
+   if (__getPlatform == "iPhone" || __getPlatform == "iPad" || __getPlatform == "Macintosh") {
+      document.getElementById('myspan2').innerHTML = 'показываем кнопку';
+   } else {
+      document.getElementById('myspan2').innerHTML = 'скываем кнопку';
+   }
+
+</script>
+
+<!--
+<script>
+   function iOS() {
+      return [
+         'iPad Simulator',
+         'iPhone Simulator',
+         'iPod Simulator',
+         'Mac Simulator',
+         'iPad',
+         'iPhone',
+         'iPod',
+         'Mac'
+      ].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+   }
+
+   let mess = iOS();
+   // console.log(mess);
+   if (mess == false) {
+      console.log("false");
+      document.getElementById('myspan').innerHTML = 'false';
+   }
+   else {
+      console.log("true");
+      document.getElementById('myspan').innerHTML = 'true';
+   }
+</script>
+-->
+
+<!--
+<script>
+   function iOS() {
+
+      var iDevices = [
+         'iPad Simulator',
+         'iPhone Simulator',
+         'iPod Simulator',
+         'iPad',
+         'iPhone',
+         'iPod'
+      ];
+
+      if (!!navigator.platform) {
+         while (iDevices.length) {
+            if (navigator.platform === iDevices.pop())
+            {
+               // return true;
+               console.log("true");
+            }
+         }
+      }
+
+      // return false;
+      console.log("false");
+   }
+</script> 
+-->

@@ -1,0 +1,110 @@
+#apple-table
+   display: block
+   margin: 0 auto
+   max-width: 100%
+   width: 100%
+   height: auto
+   overflow: hidden
+   position: relative
+   padding: 32px 0
+   background: #fff
+   img
+      &:hover
+         opacity: 1
+   &:first-letter
+      padding-left: 0
+   img
+      display: block
+      margin: 0 auto
+   p
+      margin-bottom: 0
+      color: #000
+      text-align: center
+      line-height: 1
+   h2
+      font-size: 34px
+      font-weight: bold
+      margin: 0
+      padding: 0
+   h3
+      font-size: 16px
+      font-weight: bold
+      margin: 0
+      padding: 10px 0 0 0
+      color: #000
+      text-align: center
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+.apple-table-wrap
+   max-width: 1000px
+   width: 100%
+   margin: 0 auto
+   height: auto
+.apple__h2
+   padding-bottom: 32px
+.apple-wrap__table
+   table, td, tr
+      border: 1px solid #E5E5E5
+.apple-wrap__table
+   table
+      width: 100%
+      display: table
+      border-collapse: collapse
+      tr
+         align-items: flex-end
+         td
+            padding: 12px 15px
+            p
+               font-weight: 500
+               font-size: 12px
+         &.tr_header
+            td
+               padding: 12px 0
+               width: 250px
+               vertical-align: bottom
+               a
+                  display: block
+         &.tr-colspan
+            background: #F2F2F2
+            td
+               p
+                  font-weight: 600
+                  font-size: 14px
+         &.tr-footer
+            td
+               p
+                  font-size: 12px
+                  color: #616161 !important
+                  line-height: 1.4
+// media
+// @media (max-width: 1250px)
+// @media (max-width: 1024px)
+// @media (max-width: 812px)
+@media (max-width: 480px)
+   #apple-table h3
+      font-size: 12px
+   .apple-wrap__container
+      overflow: scroll
+   .apple-wrap__table
+      width: 745px
+   .apple-wrap__table table tr.tr_header td a img
+      max-width: 37%
+   #apple-table h2
+      font-size: 20px
+   .apple__h2
+      padding-bottom: 15px
+      padding-left: 15px
+   .apple-wrap__table table tr.tr-colspan td p
+      position: absolute
+      left: 0
+      right: 0
+      max-width: 320px
+      margin: -8px auto 0px auto
+   .apple-wrap__table table tr.tr-colspan td
+      padding: 18px 0
+   .apple-wrap__table table tr.tr_header td
+      height: 170px
+      width: 170px
+@media (max-width: 320px)
+   .apple-wrap__table
+      width: 640px

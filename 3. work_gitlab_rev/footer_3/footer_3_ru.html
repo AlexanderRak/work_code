@@ -126,3 +126,35 @@
   document.body.appendChild(digiScript);
   // ]]>
 </script>
+
+<script>
+  var userDeviceArray = [
+     { device: 'Android', platform: /Android/ },
+     { device: 'iPhone', platform: /iPhone/ },
+     { device: 'iPad', platform: /iPad/ },
+     { device: 'Symbian', platform: /Symbian/ },
+     { device: 'Windows Phone', platform: /Windows Phone/ },
+     { device: 'Tablet OS', platform: /Tablet OS/ },
+     { device: 'Linux', platform: /Linux/ },
+     { device: 'Windows', platform: /Windows NT/ },
+     { device: 'Macintosh', platform: /Macintosh/ }
+  ];
+
+  var platform = navigator.userAgent;
+
+  function getPlatform2() {
+     for (var i in userDeviceArray) {
+        if (userDeviceArray[i].platform.test(platform)) {
+           return userDeviceArray[i].device;
+        }
+     }
+  }
+  var Ach = document.getElementsByClassName('only_ios');
+  var Ach2 = document.getElementsByClassName('only_ios');
+  var __getPlatform23 = getPlatform2();
+  if (__getPlatform23 == "iPhone" || __getPlatform23 == "iPad" || __getPlatform23 == "Macintosh") {
+    for(var i=0; i<Ach.length; i++)Ach[i].style.display='block';
+  } else {
+    for(var i=0; i<Ach2.length; i++)Ach2[i].style.display='none';
+  }
+</script>

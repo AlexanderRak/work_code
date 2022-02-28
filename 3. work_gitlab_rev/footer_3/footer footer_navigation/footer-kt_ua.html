@@ -3,7 +3,23 @@
       <div class="footer-nav__join">
          <div class="footer-nav__social">
             <p class="footer-nav__title footer-nav__social-title">Приєднуйтесь</p>
-            <div class="row q-mt-sm"><a class="footer-nav__social-link" href="https://www.facebook.com/comfy.ua" target="_blank"> <i class="icon-comfy icon-comfy--footer icon-comfy__facebook"> </i> </a> <a class="footer-nav__social-link" href="https://www.youtube.com/user/comfyua" target="_blank"> <i class="icon-comfy icon-comfy--footer icon-comfy__youtube"> </i> </a> <a class="footer-nav__social-link" href="https://www.instagram.com/comfy_ua" target="_blank"> <i class="icon-comfy icon-comfy--footer icon-comfy__instagram"> </i> </a> <a class="footer-nav__social-link" href="https://t.me/ottakot" target="_blank"> <i class="icon-comfy icon-comfy--footer icon-comfy__telegram"> </i> </a> <a class="footer-nav__social-link" href="viber://pa?chatURI=comfy.ua" target="_blank"><i class="icon-comfy icon-comfy--footer icon-comfy__viber"> </i></a></div>
+            <div class="row q-mt-sm">
+               <a class="footer-nav__social-link" href="https://www.facebook.com/comfy.ua" target="_blank">
+                  <i class="icon-comfy icon-comfy--footer icon-comfy__facebook"> </i>
+               </a>
+               <a class="footer-nav__social-link" href="https://www.youtube.com/user/comfyua" target="_blank">
+                  <i class="icon-comfy icon-comfy--footer icon-comfy__youtube"> </i>
+               </a>
+               <a class="footer-nav__social-link" href="https://www.instagram.com/comfy_ua" target="_blank">
+                  <i class="icon-comfy icon-comfy--footer icon-comfy__instagram"> </i>
+               </a>
+               <a class="footer-nav__social-link" href="https://t.me/ComfyuaBot" target="_blank"> 
+                  <i class="icon-comfy icon-comfy--footer icon-comfy__telegram"> </i>
+               </a>
+               <a class="footer-nav__social-link" href="viber://pa?chatURI=comfy.ua" target="_blank">
+                  <i class="icon-comfy icon-comfy--footer icon-comfy__viber"> </i>
+               </a>
+            </div>
          </div>
          <a class="footer-nav__item footer-nav__find-shop relative-position" href="https://comfy.ua/shops.html">
             <div class="footer-nav__item-icon"><i class="icon-comfy footer-nav__item-store"> </i></div>
@@ -25,10 +41,17 @@
                </a> <a href="https://t.me/ComfyuaBot" target="_blank" class="footer-nav__contact block">
                   <div class="footer-nav__contact-icon"><i class="icon-comfy icon-comfy--contacts icon-comfy__telegram"> </i></div>
                   <span>Telegram</span>
-               </a> <a href="tel:0800303505" class="footer-nav__contact footer-nav__contact-phone block">
+               </a>
+               <a href="https://bcrw.apple.com/sms:open?service=iMessage&recipient=urn:biz:3f2fddfb-2ed7-4417-a94d-63bc90d8de3b" target="_blank" class="footer-nav__contact only_ios">
+                  <div class="footer-nav__contact-icon">
+                     <img src="https://cdn.comfy.ua/media/x/img2/iMessenger.svg" alt="">
+                  </div>
+                  <span>Apple Messages</span>
+               </a>
+               <a href="tel:0800303505" class="footer-nav__contact footer-nav__contact-phone block">
                   <div class="footer-nav__contact-icon"><i class="icon-comfy icon-comfy--contacts icon-comfy__phone"> </i></div>
                   <span>0-800-303-505</span>
-                  <div class="footer-nav__contact-desc">з 8:00 до 22:00 (пн-нд)<br /> Безкоштовно по Україні</div>
+                  <div class="footer-nav__contact-desc">з 8:00 до 20:00 (пн-нд)<br /> Безкоштовно по Україні</div>
                </a> <a href="tel:0443939505" class="footer-nav__contact footer-nav__contact-phone block">
                   <div class="footer-nav__contact-icon"><i class="icon-comfy icon-comfy--contacts icon-comfy__phone"> </i></div>
                   <span>0-44-39-39-505</span>
@@ -69,7 +92,7 @@
                <li class="footer-nav__li"><a href="https://comfy.ua/ua/trade-in-info.html">Знайти замовлення</a></li>
                <li class="footer-nav__li"><a href="https://comfy.ua/ua/courier-delivery-self.html">Умови доставки</a> </li>
                <li class="footer-nav__li"><a href="https://comfy.ua/ua/exchange-and-returns.html">Обмін і повернення товару</a> </li>
-               <li class="footer-nav__li"><a href="https://comfy.ua/ua/garantija.html">Гарантия</a></li>
+               <li class="footer-nav__li"><a href="https://comfy.ua/ua/garantija.html">Гарантія</a></li>
                <li class="footer-nav__li"><a href="https://comfy.ua/ua/repair.html">Статус товару в ремонті</a> </li>
                <li class="footer-nav__li"><a href="https://comfy.ua/ua/question.html">Часто задавані питання</a> </li>
                <li class="footer-nav__li"><a href="https://comfy.ua/ua/pravila-polzovanija-sajtom.html">Правила користування сайтом</a> </li>
@@ -134,3 +157,36 @@
       <p class="footer-nav__copyright">© Всі права захищені ООО «КОМФІ ТРЕЙД», <span>2010–2022</span></p>
    </div>
 </div>
+
+<script>
+   var userDeviceArray = [
+      { device: 'Android', platform: /Android/ },
+      { device: 'iPhone', platform: /iPhone/ },
+      { device: 'iPad', platform: /iPad/ },
+      { device: 'Symbian', platform: /Symbian/ },
+      { device: 'Windows Phone', platform: /Windows Phone/ },
+      { device: 'Tablet OS', platform: /Tablet OS/ },
+      { device: 'Linux', platform: /Linux/ },
+      { device: 'Windows', platform: /Windows NT/ },
+      { device: 'Macintosh', platform: /Macintosh/ }
+   ];
+
+   var platform = navigator.userAgent;
+
+   function getPlatform() {
+      for (var i in userDeviceArray) {
+         if (userDeviceArray[i].platform.test(platform)) {
+            return userDeviceArray[i].device;
+         }
+      }
+   }
+
+   let __getPlatform = getPlatform();
+   if (__getPlatform == "iPhone" || __getPlatform == "iPad" || __getPlatform == "Macintosh") {
+      document.getElementsByClassName('only_ios')[0].style.display = 'block';
+      document.getElementsByClassName('footer-nav__contacts')[0].style.height = '425px';
+   } else {
+      document.getElementsByClassName('only_ios')[0].style.display = 'none';
+   }
+
+</script>
