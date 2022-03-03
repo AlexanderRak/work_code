@@ -1,0 +1,465 @@
+//default styles
+
+#rowenta
+  max-width: 1366px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    font-size: 22px
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 70px
+    font-style: italic
+    font-weight: normal
+    padding: 0
+    margin: 0
+  h3
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 42px
+    font-style: italic
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img
+    margin: 0
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+//end default styles
+
+#rowenta
+  .show__mob
+    display: none
+  @mixin gradient
+    background: rgb(219,147,127)
+    background: linear-gradient(90deg, rgba(219,147,127,1) 0%, rgba(163,101,85,1) 35%, rgba(219,147,127,1) 65%, rgba(163,101,85,1) 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+  h2,
+  h3
+    @include gradient
+  .ultimate
+    position: relative
+    &::after
+      content: ""
+      display: block
+      width: 1366px
+      height: 77px
+      background-image: url("https://cdn.comfy.ua/media/x/img/1541512/new/bg1.png")
+      background-repeat: no-repeat
+      background-position: center top
+      position: absolute
+      bottom: 0
+    .ultimate__icon
+      padding: 35px 80px
+    .ultimate__list
+      background-color: #0f0f0f
+      padding: 40px 0 115px 80px
+      display: flex
+      li
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        &:nth-of-type(1)
+          span
+            font-size: 32px
+            color: #fff
+            text-transform: uppercase
+        &:nth-of-type(2)
+          .ultimate__gradient
+            display: flex
+            align-items: center
+            margin: 0 0 0 auto
+            float: right
+            padding-right: 75px
+            span
+              font-size: 22px
+              @include gradient
+              &:nth-of-type(2)
+                font-size: 50px
+                margin-left: 0.2em
+          .ultimate__img
+            margin-top: 130px
+
+  .styling
+    .styling__title
+      text-align: center
+      padding: 20px 0
+    .styling__wrap
+      position: relative
+      .styling__list
+        position: absolute
+        top: 50px
+        right: 70px
+        background-color: #fff
+        max-width: 480px
+        box-sizing: border-box
+        padding: 40px 40px 40px 80px
+        li
+          color: #d9917d
+          list-style-type: disc
+          &:nth-of-type(n+2)
+            margin-top: 20px
+          p
+            color: #333333
+            margin-left: 12px
+            font-size: 16px
+
+  .yourstyle
+    background-color: #111111
+    padding: 40px 0
+    .yourstyle__title
+      text-align: center
+    .yourstyle__list
+      display: flex
+      justify-content: center
+      max-width: 1190px
+      margin: 55px auto 0 auto
+      li
+        .yourstyle__list__txt
+          margin-top: 30px
+          span
+            text-transform: uppercase
+            color: #fff
+            font-size: 22px
+            text-align: center
+        &:nth-of-type(2)
+          margin: 0 30px
+
+  .homestyle
+    background-color: #eaeaea
+    .homestyle__title
+      text-align: center
+      padding: 40px 40px 115px 40px
+    .homestyle__wrap
+      position: relative
+      padding-bottom: 170px
+      .homestyle__img
+        img
+          margin: 0 auto
+      .homestyle__wrap__abs
+        li
+          position: absolute
+          span
+            text-transform: uppercase
+            font-weight: bold
+            color: #cb8b78
+            font-size: 16px
+            margin-bottom: 12px
+          p
+            font-size: 16px
+            color: #414042
+          &:nth-of-type(1)
+            left: 38%
+            top: -13%
+          &:nth-of-type(2)
+            top: 8%
+            right: 27%
+          &:nth-of-type(3)
+            bottom: 35%
+            left: 34%
+          &:nth-of-type(4)
+            bottom: 12%
+            right: 14%
+
+  .likeyou
+    .likeyou__title
+      text-align: center
+      padding: 20px
+    .likeyou__list
+      background-color: #111111
+      li
+        display: flex
+        align-items: center
+        box-sizing: border-box
+        div
+          max-width: 50%
+          flex: 1 1 0
+          box-sizing: border-box
+        .likeyou__list__txt
+          padding: 80px
+          color: #fff
+          img
+            max-width: 330px
+            margin-bottom: 60px
+          h3
+            margin-bottom: 40px
+          span
+            margin-top: 60px
+            font-size: 16px
+        &:nth-of-type(even)
+          flex-direction: row-reverse
+
+  .nasadki
+    .nasadki__title
+      padding: 20px 10px
+      text-align: center
+    .nasadki__list
+      background-color: #111111
+      color: #fff
+      display: flex
+      padding: 80px 80px 0 80px
+      li
+        flex: 1 1 0
+        display: flex
+        box-sizing: border-box
+        align-items: flex-end
+        div
+          flex: 1 1 0
+          box-sizing: border-box
+        .nasadki__list__img
+          flex: 1.5
+          img
+            min-height: 384px
+        .nasadki__list__txt
+          margin-bottom: 70px
+          margin-left: -4em
+          padding-right: 4em
+
+  .styleassist
+    padding: 10px 0 0 0
+    background: linear-gradient(90deg, #db937f 0%, #a36555 35%, #db937f 65%, #a36555 100%)
+    position: relative
+    .styleassist__txt
+      position: absolute
+      top: 160px
+      right: 70px
+      background-color: #fff
+      padding: 50px 70px
+      max-width: 560px
+      box-sizing: border-box
+      p
+        color: #333333
+        margin-top: 35px
+
+  .rowenta__list
+    display: flex
+    padding: 50px 70px
+    li
+      flex: 1 1 0
+      display: flex
+      align-items: center
+      div
+        flex: 1 1 0
+      .rowenta__list__txt
+        color: #333333
+        margin-left: 1em
+      &:nth-of-type(2)
+        margin: 0 70px
+        
+  .professional
+    padding: 0 0 10px 0
+    background: linear-gradient(90deg, #db937f 0%, #a36555 35%, #db937f 65%, #a36555 100%)
+    position: relative
+    .professional__txt
+      position: absolute
+      top: 165px
+      left: 70px
+      background-color: #fff
+      max-width: 555px
+      padding: 50px 70px
+      box-sizing: border-box
+      h3
+        margin-bottom: 35px
+      p
+        color: #333333
+
+//media***********************************************************
+
+@media (max-width: 1024px)
+  #rowenta
+    .hide__mob
+      display: none
+    .show__mob
+      display: block
+  #rowenta .ultimate .ultimate__list li:nth-of-type(1) span
+    font-size: 28px
+  #rowenta .homestyle .homestyle__wrap .homestyle__wrap__abs
+    display: flex
+    padding: 0 40px
+  #rowenta .homestyle .homestyle__wrap .homestyle__wrap__abs li
+    position: unset
+    flex: 1 1 0
+    &:nth-of-type(n+2)
+      margin-left: 1em
+  #rowenta .homestyle .homestyle__wrap
+    padding-bottom: 40px
+  #rowenta .likeyou .likeyou__list li .likeyou__list__txt
+    padding: 1em
+  #rowenta .nasadki .nasadki__list
+    padding: 1em 1em 0 1em
+  #rowenta .nasadki .nasadki__list li .nasadki__list__txt p
+    font-size: 17px
+  #rowenta .professional .professional__txt
+    top: 30px
+    left: 30px
+  #rowenta .styleassist .styleassist__txt
+    right: 30px
+
+@media (max-width: 812px)
+  #rowenta p
+    font-size: unset
+  #rowenta h2
+    font-size: 42px
+  #rowenta h3
+    font-size: 32px
+  #rowenta .ultimate .ultimate__list
+    padding-top: 1em
+    padding-left: 1em
+  #rowenta .ultimate .ultimate__list li:nth-of-type(2) .ultimate__gradient
+    padding-right: 1em
+  #rowenta .ultimate .ultimate__list li:nth-of-type(1) span
+    font-size: 22px
+  #rowenta .styling .styling__title
+    padding: 1em
+  #rowenta .styling .styling__wrap .styling__list li p
+    font-size: unset
+  #rowenta .styling .styling__wrap .styling__list
+    padding: 1em
+    padding-left: 2em
+    right: 1em
+    top: 1em
+  #rowenta .yourstyle .yourstyle__list
+    padding: 0 1em
+  #rowenta .yourstyle .yourstyle__list li .yourstyle__list__txt span
+    font-size: 18px
+  #rowenta .homestyle .homestyle__title
+    padding: 1em
+    padding-bottom: 3em
+  #rowenta .homestyle .homestyle__wrap .homestyle__wrap__abs
+    padding: 0 1em
+  #rowenta .likeyou .likeyou__list li
+    display: block
+    div
+      max-width: unset
+  #rowenta .likeyou .likeyou__list li .likeyou__list__img img
+    margin: 0 auto
+  #rowenta .likeyou .likeyou__list li .likeyou__list__txt h3 br
+    display: none
+  #rowenta .nasadki .nasadki__list 
+    overflow-x: scroll
+    li
+      min-width: 325px
+  #rowenta .styleassist .styleassist__txt
+    padding: 1em
+    max-width: 400px
+    right: 1em
+    top: 6em
+  #rowenta .rowenta__list
+    padding: 1em
+  #rowenta .rowenta__list li:nth-of-type(2)
+    margin: 0 2em
+  #rowenta .professional .professional__txt
+    padding: 1em
+    max-width: 400px
+  #rowenta .ultimate .ultimate__list li:nth-of-type(2) .ultimate__gradient span:nth-of-type(2)
+    font-size: 32px
+  #rowenta .styling .styling__wrap .styling__list li:nth-of-type(n+2)
+    margin-top: 5px
+
+@media (max-width: 480px)
+  #rowenta h2
+    font-size: 32px
+  #rowenta h3
+    font-size: 24px
+  #rowenta .ultimate .ultimate__list
+    display: block
+  #rowenta .ultimate .ultimate__list li:nth-of-type(1)
+    padding-right: 1em
+    margin-bottom: 2em
+  #rowenta .ultimate .ultimate__list li:nth-of-type(1) span
+    font-size: 18px
+    margin-top: 1em
+  #rowenta .ultimate .ultimate__list li:nth-of-type(2) .ultimate__gradient span
+    font-size: 15px
+  #rowenta .ultimate .ultimate__list li:nth-of-type(2) .ultimate__gradient span:nth-of-type(2)
+    font-size: 20px
+  #rowenta .ultimate .ultimate__list li:nth-of-type(2) .ultimate__img
+    margin-top: 2em
+  #rowenta .styling .styling__wrap .styling__list
+    background-color: unset
+    position: unset
+  #rowenta .yourstyle
+    padding: 1em
+    box-sizing: border-box
+  #rowenta .yourstyle .yourstyle__list
+    margin-top: 2em
+    display: block
+    padding: 0
+  #rowenta .yourstyle .yourstyle__list li:nth-of-type(2)
+    margin: 2em 0
+  #rowenta .homestyle .homestyle__wrap .homestyle__wrap__abs
+    display: block
+    text-align: center
+  #rowenta .homestyle .homestyle__wrap .homestyle__wrap__abs li:nth-of-type(n+2)
+    margin-left: 0
+    margin-bottom: 2em
+  #rowenta .likeyou .likeyou__list li .likeyou__list__txt img
+    max-width: 100%
+  #rowenta .likeyou .likeyou__list li .likeyou__list__txt h3
+    margin-bottom: 1em
+  #rowenta .nasadki .nasadki__list 
+    display: block
+    li
+      min-width: unset
+  #rowenta .nasadki .nasadki__list li:nth-of-type(2)
+    margin: 2em 0
+  #rowenta .nasadki .nasadki__list li .nasadki__list__img img
+    min-height: unset
+  #rowenta .nasadki .nasadki__list li .nasadki__list__txt p
+    font-size: 14px
+  #rowenta .nasadki .nasadki__list li .nasadki__list__txt
+    margin-bottom: 70px
+    padding-right: 1em
+    margin-left: -2em
+  #rowenta .styleassist .styleassist__img img
+    min-width: 150%
+    margin-left: -10%
+  #rowenta .styleassist .styleassist__txt
+    max-width: unset
+    position: unset
+  #rowenta .styleassist .styleassist__txt p
+    margin-top: 1em
+  #rowenta .rowenta__list
+    display: block
+  #rowenta .rowenta__list li:nth-of-type(2)
+    margin: 2em 0
+  #rowenta .professional .professional__txt h3
+    margin-bottom: 1em
+  #rowenta .professional .professional__txt
+    max-width: unset
+    position: unset
+  #rowenta .professional .professional__img img
+    min-width: 150%
+    margin-left: -50%
