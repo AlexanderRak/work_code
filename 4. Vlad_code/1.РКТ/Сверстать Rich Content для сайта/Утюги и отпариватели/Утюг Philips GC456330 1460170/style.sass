@@ -1,0 +1,208 @@
+//default styles
+
+#philips
+  max-width: 1366px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 40px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img
+    margin: 0 auto
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+//end default styles
+
+#philips
+  .logo
+    position: relative
+    .logo__i
+      position: absolute
+      top: 0
+      left: 50px
+      filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.49))
+    .logo__txt
+      max-width: 450px
+      position: absolute
+      left: 50px
+      bottom: 50px
+      color: #fff
+      h2
+        font-weight: bold
+        margin-bottom: 55px
+      span
+        font-size: 30px
+
+  .tech
+    background-color: #dccfe9
+    display: flex
+    align-items: center
+    padding: 80px 70px 60px 70px
+    .tech__img
+      flex: 1
+    .tech__list
+      flex: 1.5
+      li
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .tech__list__txt
+          max-width: 430px
+          span
+            font-weight: bold
+            font-size: 24px
+            color: #631d76
+            margin-bottom: 0.5em
+          p
+            font-size: 24px
+        .tech__list__i
+          min-width: max-content
+        &:nth-of-type(n+2)
+          margin-top: 50px
+
+  .philips__list
+    li
+      position: relative
+      margin-top: 60px
+      .philips__list__txt
+        position: absolute
+        bottom: 50%
+        transform: translateY(50%)
+        right: 50px
+        max-width: 40%
+        color: #fff
+        span
+          font-weight: bold
+          font-size: 24px
+          margin-bottom: 0.5em
+        p
+          font-size: 24px
+      &:nth-of-type(even)
+        .philips__list__txt
+          right: unset
+          left: 50px
+      &:nth-of-type(n+3)
+        .philips__list__txt
+          color: #42145f
+
+  .philips__end
+    margin-top: 60px
+    padding: 75px 0 80px 0
+    background-color: #631d76
+
+//media***************************************
+
+@media (max-width: 1024px)
+  #philips .logo .logo__txt
+    bottom: 1em
+    max-width: 100%
+  #philips .logo .logo__txt h2
+    margin-bottom: 1em
+  #philips .philips__list li .philips__list__txt
+    max-width: 43%
+
+@media (max-width: 812px)
+  #philips p
+    font-size: unset !important
+  #philips h2
+    font-size: 28px
+  #philips .logo .logo__bg img
+    min-width: 150%
+    margin-left: -50%
+  #philips .logo .logo__txt
+    left: 1em
+  #philips .logo .logo__txt span
+    font-size: 24px
+  #philips .logo .logo__i
+    left: 1em
+  #philips .tech
+    padding: 1em
+  #philips .tech .tech__list li .tech__list__txt span
+    font-size: 20px
+  #philips .tech .tech__list li:nth-of-type(n+2)
+    margin-top: 1em
+  #philips .philips__list li .philips__list__txt span
+    font-size: 20px
+  #philips .philips__list li .philips__list__txt
+    right: 1em
+  #philips .philips__list li:nth-of-type(even) .philips__list__txt
+    left: 1em
+  #philips .philips__end
+    padding: 1em 0
+
+@media (max-width: 480px)
+  #philips h2
+    font-size: 24px
+  #philips .logo
+    display: flex
+    flex-direction: column-reverse
+  #philips .logo .logo__i
+    max-width: 100px
+  #philips .logo .logo__txt
+    position: unset
+    color: #000
+    padding: 1em
+  #philips .logo .logo__txt span
+    font-size: 18px
+  #philips .tech
+    display: block
+  #philips .tech .tech__list
+    margin-top: 2em
+  #philips .tech .tech__list li
+    flex-direction: column-reverse
+  #philips .tech .tech__list li .tech__list__i
+    margin-bottom: 1em
+  #philips .philips__list li
+    margin-top: 1em
+    display: flex
+    flex-direction: column-reverse
+  #philips .philips__list li .philips__list__bg img
+    min-width: 150%
+  #philips .philips__list li:nth-of-type(even) .philips__list__bg img
+    margin-left: -50%
+  #philips .philips__list li .philips__list__txt
+    position: unset
+    transform: unset
+    color: #42145f
+    max-width: 100%
+    padding: 1em
+  #philips .philips__list li .philips__list__txt span
+    font-size: 18px
+  #philips .tech .tech__list li .tech__list__txt
+    align-self: flex-start
+  #philips .philips__end
+    margin-top: 1em

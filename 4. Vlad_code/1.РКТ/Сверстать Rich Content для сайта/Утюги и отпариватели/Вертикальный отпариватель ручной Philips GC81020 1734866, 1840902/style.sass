@@ -1,0 +1,344 @@
+//default styles
+
+#philips
+  max-width: 1366px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 42px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img
+    margin: 0 auto
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+//end default styles
+
+#philips
+  .logo
+    position: relative
+    .logo__i
+      position: absolute
+      left: 50px
+      filter: drop-shadow(0 0 3px rgba(0,0,0,0.49))
+    .logo__txt
+      color: #fff
+      position: absolute
+      left: 50px
+      bottom: 25px
+      max-width: 1180px
+      span
+        font-size: 30px
+        b
+          display: block
+          font-size: 50px
+          margin-top: 40px
+
+  .steam
+    background-image: linear-gradient(127deg, #1f0e2b 0%, #622976 64%, #8e3c81 100%)
+    padding: 70px 50px
+    .steam__title
+      color: #fff
+      span
+        font-size: 28px
+        margin-top: 30px
+    .steam__flex
+      display: flex
+      color: #fff
+      .steam__list
+        margin-top: 20px
+        li
+          display: flex
+          align-items: center
+          &::before
+            content: ""
+            display: block
+            min-width: 73px
+            height: 72px
+            background-image: url("https://cdn.comfy.ua/media/x/img/1734866/galka.png")
+            background-repeat: no-repeat
+            background-size: contain
+            margin-right: 30px
+          span
+            font-size: 28px
+          &:nth-of-type(n+2)
+            margin-top: 20px
+          &:nth-of-type(n+5)
+            &::before
+              display: none
+          .snoska
+            font-size: 14px
+            margin-top: 30px
+      .steam__img
+        min-width: max-content
+        margin-top: -3em
+        margin-left: 2em
+
+  .skladki
+    .skladki__txt
+      padding: 70px 50px
+      color: #fff
+      background-image: linear-gradient(105deg, #1f0e2b 0%, #622976 64%, #8e3c81 100%)
+      span
+        font-size: 28px
+        font-weight: bold
+        margin-bottom: 40px
+      p
+        font-size: 24px
+
+  .saved
+    min-height: 628px
+    background-image: url("https://cdn.comfy.ua/media/x/img/1734866/4.jpg")
+    .saved__txt
+      color: #fff
+      padding: 150px 50px
+      max-width: 630px
+      box-sizing: content-box
+      span
+        font-weight: bold
+        font-size: 28px
+        margin-bottom: 45px
+      p
+        font-size: 24px
+
+  .philips__video
+    padding: 70px 50px
+    iframe
+      width: 100%
+      height: 37vw
+
+  .philips__list
+    li
+      display: flex
+      align-items: center
+      justify-content: space-between
+      .philips__list__img
+        min-width: max-content
+      .philips__list__txt
+        padding: 0 50px
+        span
+          font-weight: bold
+          font-size: 28px
+          color: #631d76
+          margin-bottom: 0.5em
+        p
+          color: #5d5d5d
+          font-size: 24px
+        .snoska
+          font-size: 14px
+          color: #5d5d5d
+          font-weight: normal
+          margin-top: 1em
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+
+  .complete
+    background-color: #dccfe9
+    padding: 70px 50px
+    .complete__flex
+      display: flex
+      align-items: center
+      justify-content: space-between
+      .complete__flex__img
+        min-width: max-content
+      .complete__flex__txt
+        max-width: 600px
+        h2
+          color: #631d76
+          margin-bottom: 70px
+        p
+          font-size: 24px
+    .complete__list
+      display: flex
+      margin-top: 80px
+      li
+        flex: 1 1 0
+        box-sizing: border-box
+        &:nth-of-type(2)
+          margin: 0 2em
+        .complete__list__img
+          img
+            min-height: 242px
+        .complete__list__txt
+          margin-top: 40px
+          span
+            font-weight: bold
+            font-size: 28px
+            margin-bottom: 0.5em
+            color: #631d76
+          .snoska
+            color: #000
+            font-weight: normal
+            font-size: 14px
+            margin-top: 1em
+          p
+            font-size: 24px
+
+  .philips__end
+    padding: 75px 0 80px 0
+    background-image: linear-gradient(106deg, #1f0e2b 0%, #622976 64%, #8e3c81 100%)
+
+//media*****************************************
+
+@media (max-width: 1024px)
+  #philips .steam .steam__flex .steam__img
+    margin-top: 1em
+  #philips .philips__video iframe
+    height: 50vw
+  #philips .philips__list li .philips__list__img
+    min-width: unset
+  #philips .philips__list li div
+    flex: 1 1 0
+    max-width: 50%
+    min-width: 50%
+    box-sizing: border-box
+  #philips .philips__list li .philips__list__txt
+    padding: 0 1em
+  #philips .philips__list li .philips__list__txt span
+    font-size: 20px
+  #philips .philips__list li .philips__list__txt p
+    font-size: 17px
+
+@media (max-width: 812px)
+  #philips p
+    font-size: unset !important
+  #philips h2
+    font-size: 24px
+  #philips .logo .logo__i
+    left: 1em
+  #philips .logo .logo__txt
+    left: 1em
+    bottom: 1em
+    max-width: 600px
+  #philips .logo .logo__txt span b
+    font-size: 28px
+  #philips .logo .logo__txt span
+    font-size: 20px
+  #philips .steam
+    padding: 1em
+  #philips .steam .steam__title span
+    font-size: 20px
+  #philips .steam .steam__flex .steam__list li span
+    font-size: 20px
+  #philips .steam .steam__flex .steam__list,
+  #philips .steam .steam__flex .steam__img
+    flex: 1 1 0
+    min-width: 50%
+    max-width: 50%
+    box-sizing: border-box
+  #philips .steam .steam__flex .steam__list li::before
+    margin-right: 1em
+    min-width: 50px
+    height: 49px
+  #philips .skladki .skladki__txt
+    padding: 1em
+  #philips .skladki .skladki__txt span
+    font-size: 20px
+  #philips .saved
+    background-size: cover
+    min-height: unset
+  #philips .saved .saved__txt
+    padding-left: 1em
+    padding-right: 1em
+    max-width: 100%
+  #philips .philips__video
+    padding: 1em
+  #philips .philips__list li
+    display: block
+  #philips .philips__list li div
+    max-width: 100%
+  #philips .philips__list li .philips__list__img img
+    width: 100%
+  #philips .philips__list li .philips__list__txt
+    padding: 1em
+  #philips .complete
+    padding: 1em
+  #philips .complete .complete__flex div
+    flex: 1 1 0
+    min-width: 50%
+    max-width: 50%
+    box-sizing: border-box
+  #philips .complete .complete__list li .complete__list__txt span
+    font-size: 20px
+  #philips .philips__end
+    padding: 1em 0
+
+@media (max-width: 480px)
+  #philips .logo
+    display: flex
+    flex-direction: column-reverse
+  #philips .logo .logo__i
+    max-width: 100px
+    top: 0
+  #philips .logo .logo__txt
+    position: unset
+    color: #000
+    padding: 1em
+  #philips .logo .logo__txt span
+    font-size: 18px
+  #philips .logo .logo__txt span b
+    font-size: 20px
+    margin-top: 1em
+  #philips .steam .steam__title span
+    font-size: 18px
+  #philips .steam .steam__flex
+    flex-direction: column-reverse
+  #philips .steam .steam__flex .steam__img
+    min-width: unset
+    max-width: 100%
+    margin-left: 0
+  #philips .steam .steam__flex .steam__list
+    min-width: unset
+    max-width: 100%
+  #philips .steam .steam__flex .steam__list li span
+    font-size: 18px
+  #philips .skladki .skladki__txt span
+    font-size: 18px
+  #philips .saved .saved__txt
+    padding: 2em 1em
+  #philips .philips__list li .philips__list__txt span
+    font-size: 18px
+  #philips .complete .complete__flex
+    flex-direction: column-reverse
+  #philips .complete .complete__flex div
+    max-width: 100%
+    min-width: unset !important
+  #philips .complete .complete__flex .complete__flex__txt
+    margin-top: 1em
+  #philips .complete .complete__list
+    display: block
+  #philips .complete .complete__list li:nth-of-type(2)
+    margin: 2em 0
