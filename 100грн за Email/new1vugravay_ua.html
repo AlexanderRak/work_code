@@ -1,0 +1,296 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+<style>
+
+</style>
+<!--  -->
+<div id="email100grn">
+
+   <div class="email100grn__bl-img">
+      <div class="email100grn__logo">
+         <img src="https://cdn.comfy.ua/media/x/img2/100grn/img1.png" alt="">
+      </div>
+      <div class="email100grn__img-desk">
+         <img src="https://cdn.comfy.ua/media/x/img2/100grn/img2.png" alt="">
+      </div>
+      <div class="email100grn__img-mob">
+         <img src="https://cdn.comfy.ua/media/x/img2/100grn/img4.png" alt="">
+      </div>
+      <div class="email100grn__img-mobtb">
+         <div class="email100grn__img-mobtb__text2">
+            <img src="https://comfy.ua/media/x/img2/100grn/img7.png" alt="">
+         </div>
+         <div class="email100grn__img-mobtb__text">
+            <img class="imgnonemob" src="https://comfy.ua/media/x/img2/100grn/img8.png" alt="">
+            <img class="imgblmob" src="https://comfy.ua/media/x/img2/100grn/img9.png" alt="">
+         </div>
+      </div>
+   </div>
+
+   <div class="email100grn__wrap-content">
+
+      <div class="email100grn__item item-one">
+         <div class="email100grn__img-text">
+            <img src="https://cdn.comfy.ua/media/x/img2/imglen1.png" alt="">
+         </div>
+      </div>
+      <div class="email100grn__item item-two">
+         <div class="email100grn__form">
+            <div id="wrapper-form-corizoid" class="form-corizoid">
+               <div id="form-submit-none">
+
+                  <div class="email100grn__form-text">
+                     <h2>Залишай свій email</h2>
+                  </div>
+
+                  <form id="valid_form" method="post" name="valid_form">
+                     <div class="container-flex-form">
+                        <div class="row-flex-form">
+                           <!-- <div class="item_fr item_phone">
+                              <input type="tel" id="number_rw" name="younember" class="item-input-frm" placeholder="Номер телефону" minlength="10" maxlength="12" value="" required />
+                           </div> -->
+                           <!-- <div class="item_fr item_sity">
+                              <input type="text" id="city_rw" name="yourcity" class="item-input-frm" placeholder="Город" value="" required />
+                           </div> -->
+                           <div class="item_fr item_email">
+                              <div class="item_fr-test"><span>E-mail*</span></div>
+                              <input type="email" id="email_rw" name="yourmail" class="item-input-frm" placeholder="" value="" required />
+                           </div>
+                           <div class="item_fr item_name">
+                              <div class="item_fr-test"><span>Ім’я*</span></div>
+                              <input type="text" id="yourname_rw" name="yourname" class="item-input-frm yourname_rw" placeholder="" value="" required />
+                           </div>
+                           <div class="item_fr item_submit">
+                              <input type="submit" class="submit-posgo item-input-frm item-input-frm__submit" value="Надіслати" name="Submit" />
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+
+                  <div id="emailfalse">*Вибачте, але цей email вже у нас э.</div>
+
+               </div>
+
+               <div id="text-submit-block" class="text-submit-block-cl">
+                  <p><span class="formgoto">100 грн відправлені на ваш email.</span></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="email100grn__item item-one">
+         <div class="email100grn__p">
+            <p>Отримай 100 ₴, якими можно скористатися як знижкою, але не більше 30% від вартості товару</p>
+            <a class="linkpravila" target="_blank" href="https://cdn.comfy.ua/media/x/pdf/offpravila.pdf">Офіційні правила</a>
+         </div>
+      </div>
+   </div>
+
+</div>
+
+<script>
+   class Esputnik {
+      constructor(login, password) {
+         if (login !== undefined && password !== undefined) {
+            this.login = login;
+            this.password = password;
+         } else {
+            throw new Error('Login or Password not installed');
+         }
+      }
+      sendRequest(url, method, data) {
+         if (method === "GET") {
+            url = url + '?' + new URLSearchParams(data).toString();
+         }
+
+         return fetch(url, {
+            method: method,
+            headers: {
+               "Content-Type": 'application/json',
+               "Authorization": 'Basic ' + btoa(this.login + ':' + this.password)
+            },
+            body: method === "POST" ? JSON.stringify(data) : null,
+         }).then(function (response) {
+            if (!response.ok) {
+               response.json().then(function (data) {
+                  throw new Error(data.error);
+               })
+            } else {
+               return response.json();
+            }
+         }).catch((error) => {
+            console.log(error)
+         });
+      }
+      sendPostRequest(url, data) {
+         return this.sendRequest(url, 'POST', data);
+      }
+      sendGetRequest(url, data) {
+         return this.sendRequest(url, 'GET', data);
+      }
+      searchContacts(searchData) {
+         return this.sendGetRequest('https://esputnik.com/api/v1/contacts', searchData);
+      }
+      getContactIdFromEmail(email) {
+         let searchContactsPromise = this.searchContacts({ 'email': email, 'maxrows': 1 });
+
+         return searchContactsPromise.then(data => {
+            if (data === undefined) {
+               throw new Error('data for promise undefined');
+            }
+
+            if (data[0] !== undefined && data[0]['id'] !== undefined) {
+               return data[0]['id'];
+            }
+
+            return 0;
+         });
+      }
+      sendEvent(eventData) {
+         if (eventData.email == null && eventData.phone == null) {
+            throw 'params email or phone must be filled';
+         }
+
+         let sendData = {
+            "eventTypeKey": eventData.eventTypeKey ?? 'sendEvent',
+            "keyValue": eventData.email ?? eventData.phone,
+            "params": [
+               {
+                  "name": "email",
+                  "value": eventData.email ?? null
+               },
+               {
+                  "name": "phone",
+                  "value": eventData.phone ?? null
+               }
+            ]
+         };
+
+         return this.sendPostRequest('https://esputnik.com/api/v1/event', sendData);
+      }
+      createContactSubscribe(contactData) {
+         if (contactData.email == null && contactData.phone == null) {
+            throw 'params email or phone must be filled';
+         }
+
+         let sendData = {
+            "contact": {
+               "firstName": contactData.firstName ?? null,
+               "lastName": contactData.lastName ?? null,
+               "channels": [],
+            },
+            "formType": contactData.formType ?? null,
+         }
+
+         if (contactData.email) {
+            sendData.contact.channels.push({
+               "type": "email",
+               "value": contactData.email
+            });
+         }
+
+         if (contactData.phone) {
+            sendData.contact.channels.push({
+               "type": "sms",
+               "value": contactData.phone
+            });
+         }
+
+         return this.sendPostRequest('https://esputnik.com/api/v1/contact/subscribe', sendData);
+      }
+   }
+   class Corezoid {
+      static sendRequest(apiLogin, signature, data, gmtUnixTime = 10082) {
+         return fetch('https://main.corezoid.comfy.ua/api/1/json/' + apiLogin + '/' + gmtUnixTime + '/' + signature, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+               "Content-Type": 'application/json',
+            },
+            body: JSON.stringify(data),
+         }).then(function (response) {
+            if (!response.ok) {
+               response.json().then(function (data) {
+                  throw new Error(data.error);
+               })
+            } else {
+               return response.json();
+            }
+         }).catch((error) => {
+            console.log(error)
+         });
+      }
+   }
+</script>
+<script>
+   $(document).ready(function () {
+      $("fieldset input").click(function () {
+         $("fieldset label.error").remove()
+      });
+
+      $("#valid_form").validate({
+         rules: {
+            yourname: {
+               required: true
+            },
+            yourmail: {
+               required: true,
+               email: true
+            }
+         },
+         messages: {
+            yourname: {
+               required: "*Обязательное поле."
+            },
+            yourmail: {
+               required: "*Обязательное поле.",
+               email: "*Обязательные символы @"
+            },
+            yourcity: {
+               required: "*Обязательное поле."
+            }
+         },
+         errorPlacement: function (error, element) {
+            if (element.attr("name") == "yourname") error.insertAfter($("input[name=yourname]"));
+            if (element.attr("name") == "yourmail") error.insertAfter($("input[name=yourmail]"));
+         },
+         submitHandler: function (form) {
+            const esputnik = new Esputnik('esputnikpromodo2018@gmail.com', 'iOdO4s8cgsUEW874h');
+
+            let userEmail = document.querySelector('input[name="yourmail"]').value;
+            let userName = document.querySelector('input[name="yourname"]').value;
+
+            esputnik.getContactIdFromEmail(userEmail).then(contactId => {
+               if (contactId !== 0) {
+                  // alert('Вибачте але цей email вже у нас э');
+                  document.querySelector("#emailfalse").style.display = "block";
+
+                  $(document).mouseup(function (e) {
+                     var container = $("emailfalse");
+                     if (container.has(e.target).length === 0) {
+                        document.querySelector("#emailfalse").style.display = "none";
+                     }
+                  });
+               } else {
+                  Corezoid.sendRequest('public', 'c614c0647e87e1c3ae55d5c7b8e1e6f401d4b981', {
+                     "eventTypeKey": "event",
+                     "keyValue": userEmail,
+                     "params": [
+                        {
+                           "name": "email",
+                           "value": userEmail
+                        },
+                        {
+                           "name": "firstName",
+                           "value": userName
+                        }
+                     ]
+                  });
+
+                  document.querySelector("#form-submit-none").style.display = "none";
+                  document.querySelector("#text-submit-block").style.display = "block";
+               }
+            });
+         }
+      });
+   });
+</script>
