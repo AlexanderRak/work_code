@@ -16,42 +16,779 @@
       display: block
       margin-right: initial
       margin-left: initial
-   p
-      margin: 0
-      padding: 0
    h2
       line-height: 1.3
       margin: 0
       padding: 0
    h3
+      line-height: 1.3
       margin: 0
       padding: 0
-      line-height: 1.3
    h4
+      line-height: 1.3
       margin: 0
       padding: 0
-      line-height: 1.3
-.breadcrumbs
-   display: none
+// .breadcrumbs
+//    display: none
 span.word-wrap
+   display: block
+   word-wrap: break-word
+span.word-wrap2
    display: block
    word-wrap: break-word
 span.fw-bold
    font-weight: bold
 span.tx-uppercase
    text-transform: uppercase
+span.color43B02A
+   color: #43B02A
 .features-desc__text h2
    text-align: inherit
 .one-col .features-desc__text p
    text-align: inherit
-.main-container.page
-   padding-left: 0
-   padding-right: 0
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+.bc-description__content p
+   margin-bottom: 0
+// .main-container.page
+//    padding-left: 0
+//    padding-right: 0
 // default
-
+.xbox__move-bl
+   position: relative
+.xbox__move-text-top
+   position: absolute
+   top: 35px
+   left: 0
+   right: 0
+   margin: 0 auto
+   text-align: center
+   h2
+      font-weight: 500
+      font-size: 34px
+      text-align: center
+      color: #000000
+.xbox__move-wp
+   video
+      display: block
+      width: 100%
+      height: auto
+.xbox__move-text-bottom
+   position: absolute
+   bottom: 0
+   left: 0
+   right: 0
+   margin: 0 auto
+   h3
+      font-weight: 700
+      font-size: 70px
+      text-align: center
+      color: #000000
+   .xbox__move-img
+      padding-top: 13px
+      img
+         margin: 0 auto !important
+.xbox__go-play
+   margin-top: 71px
+   position: relative
+.xbox__go-play-bgrd
+   background-image: url(https://cdn.comfy.ua/media/x/img2/xbox/bgrd1.png)
+   background-position: center top
+   background-repeat: no-repeat
+   background-size: cover
+   width: 100%
+   height: 1302px
+   position: absolute
+   top: 0
+   z-index: 2
+   &::after
+      content: ''
+      background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0.08) 72.61%, rgba(255, 255, 255, 0) 102.51%)
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 289px
+      z-index: 3
+.xbox__go-play-content
+   max-width: 700px
+   margin: 0 auto
+   background: rgba(0, 0, 0, 0.5)
+   z-index: 4
+   position: relative
+   top: -27px
+   padding-bottom: 160px
+.xbox__go-play-h2-p
+   padding: 38px 70px 30px 70px
+   h2
+      font-weight: bold
+      font-size: 42px
+      color: #FFFFFF
+      text-align: left
+      padding-bottom: 12px !important
+   p
+      font-weight: 700
+      font-size: 16px
+      line-height: 20px
+      color: #FFFFFF
+      text-align: left
+.xbox__go-play-flex
+   display: flex
+   flex-direction: row
+   align-items: flex-start
+   max-width: 550px
+   padding-bottom: 40px
+   margin: 0 auto 0 -85px
+   .xbox__go-play__item-text
+      padding: 0 0 0 20px
+   &.row-rev
+      flex-direction: row-reverse
+      margin: 0px -85px 0 auto
+      .xbox__go-play__item-text
+         padding: 0 20px 0 0
+.xbox__go-play__item-text-img
+   padding-bottom: 16px
+.xbox__go-play__item-text-h2
+   padding-bottom: 16px
+   h2
+      font-weight: 700
+      font-size: 20px
+      line-height: 25px
+      color: #FFFFFF
+      text-align: left
+.xbox__go-play__item-text-p
+   p
+      font-weight: 400
+      font-size: 16px
+      line-height: 20px
+      color: #FFFFFF
+.xbox__go-play__item
+   &:last-child
+      flex: 1 1 0
+.xbox__go-bl-img
+   max-width: 739px
+   margin: 0 auto
+   position: relative
+   margin-top: -150px
+   z-index: 5
+   img
+      margin: 0 auto !important
+.xbox__go-standart
+   padding-top: 105px
+.xbox__go-standart__content
+   margin-top: 20px
+   position: relative
+.xbox__go-standart__bgrd
+   background-image: url(https://cdn.comfy.ua/media/x/img2/xbox/bgrd2.png)
+   background-position: center top
+   background-repeat: no-repeat
+   background-size: cover
+   width: 100%
+   height: 1113px
+   z-index: 2
+.xbox__go-standart__h2
+   position: absolute
+   top: 0
+   left: 0
+   right: 0
+   z-index: 5
+   max-width: 875px
+   margin: 0 auto
+   &.mobdis
+      display: none
+   .mobnone
+      display: block
+   h2
+      font-weight: 700
+      font-size: 60px
+      line-height: 76px
+      text-transform: uppercase
+      color: #000000
+.xbox__go-standart__flex
+   display: flex
+   max-width: 875px
+   margin: 0 auto
+   position: absolute
+   top: 0
+   left: 0
+   right: 0
+   z-index: 4
+.xbox__go-standart__item
+   &:nth-child(2)
+      flex: 1 1 0
+.xbox__go-standart__p
+   padding: 175px 40px 0 0
+   p
+      font-weight: 500
+      font-size: 14px
+      line-height: 18px
+      color: #000000
+.xbox__go-standart__text
+   padding: 175px 0 0 15px
+.xbox__go-standart__text-wr
+   padding: 0 0 12px 27px
+.xbox__go-standart__move
+   video
+      max-width: 448px
+      height: auto
+.xbox__go-standart__img
+   max-width: 875px
+   margin: 0 auto
+.xbox__go-standart__text-h2
+   h2
+      font-weight: 700
+      font-size: 16px
+      line-height: 20px
+      color: #000000
+.xbox__go-standart__text-p
+   padding-top: 12px
+   p
+      font-weight: 500
+      font-size: 14px
+      line-height: 18px
+      color: #000000
+.xbox__performance
+   max-width: 875px
+   margin: -130px auto 0 auto
+   z-index: 4
+   position: relative
+.xbox-performance__img img
+   margin: 0 auto !important
+.xbox-performance__text
+   max-width: 716px
+   margin: 0 0 0 auto
+   padding-top: 30px
+.xbox-performance__text-h2
+   padding-bottom: 16px
+   h2
+      font-weight: 700
+      font-size: 20px
+      line-height: 24px
+      color: #000000
+.xbox-performance__text-p p
+   font-weight: 500
+   font-size: 16px
+   line-height: 20px
+   color: #000000
+.xbox-performance__flex
+   display: flex
+   align-items: center
+   justify-content: space-between
+   padding-top: 36px
+.xbox-performance__item-text
+   padding: 10px 21px 10px 0
+   max-width: 295px
+.xbox-performance__item-text-h2
+   padding-bottom: 10px
+   h2
+      font-weight: 700
+      font-size: 20px
+      line-height: 24px
+      color: #000000
+.xbox-performance__item-text-p p
+   font-weight: 500
+   font-size: 16px
+   line-height: 20px
+   color: #000000
+.xbox__sound
+   position: relative
+   margin-top: -35px
+.xbox__sound-text
+   position: absolute
+   top: 50%
+   transform: translateY(-50%)
+   left: 0
+   right: 0
+   margin: 0 auto
+   max-width: 854px
+   margin: 0 auto
+.xbox__sound-text__h2
+   padding-bottom: 36px
+   h2
+      font-weight: 700
+      font-size: 50px
+      line-height: 63px
+      text-align: center
+      color: #000000
+.xbox__sound-text__p p
+   font-weight: 500
+   font-size: 34px
+   line-height: 43px
+   text-align: center
+   color: #000000
+.xbox-dolby__text
+   max-width: 875px
+   margin: 0 auto
+.xbox-dolby__img img
+   margin: 0 auto !important
+.xbox-dolby__p
+   padding: 50px 0 50px 0
+   p
+      font-weight: 500
+      font-size: 24px
+      line-height: 30px
+      text-align: center
+      color: #000000
+.xbox-dolby__h2 h2
+   font-weight: 700
+   font-size: 70px
+   line-height: 70px !important
+   text-align: center
+   color: #000000
+.xbox-dolby__img img
+   margin: 0 auto
+.xbox-dolby__img
+   padding-top: 50px
+.xbox-control
+   max-width: 875px
+   margin: 0 auto
+   position: relative
+   margin-top: -155px
+.xbox-control-text
+   position: absolute
+   right: 0
+   top: 0
+   z-index: 4
+.xbox-control-text__h2
+   padding-bottom: 17px
+   h2
+      font-weight: 700
+      font-size: 70px
+      line-height: 60px !important
+      color: #000000
+      text-transform: uppercase
+.xbox-control__flex
+   display: flex
+   align-items: flex-end
+.xbox-control__item-text
+   max-width: 193px
+   margin-right: 18px
+.xbox-control__item__h2
+   padding-bottom: 16px
+   word-break: break-word
+   h2
+      font-weight: 700
+      font-size: 20px
+      line-height: 24px
+      color: #000000
+.xbox-control__item__p p
+   font-weight: 500
+   font-size: 16px
+   line-height: 20px
+   color: #000000
+   text-align: left
+.xbox-grid
+   padding-top: 60px
+   display: grid
+   grid-template-columns: 1fr 1fr
+   grid-gap: 14px
+   max-width: 875px
+   margin: 0 auto
+.xbox-grid__item
+   max-width: 430px
+   width: 100%
+   video
+      max-width: 430px
+      width: 100%
+   &:first-child
+      margin-top: 40px
+   &:last-child
+      margin-top: -40px
+.xbox-grid__item-cont
+   position: relative
+.xbox-grid__item-text
+   position: absolute
+   bottom: 0
+   left: 0
+   padding: 8px
+   margin: 0 32px 32px 32px
+   background: rgba(255, 255, 255, 0.3)
+   backdrop-filter: blur(10px)
+   border-radius: 8px
+.xbox-grid__item-text-h2
+   padding-bottom: 16px
+   h2
+      font-weight: 700
+      font-size: 20px
+      line-height: 24px
+      color: #000000
+.xbox-grid__item-text-p p
+   font-weight: 500
+   font-size: 16px
+   line-height: 20px
+   color: #000000
+.xbox-textbl
+   max-width: 875px
+   margin: 0 auto
+   padding-top: 60px
+   p
+      font-weight: 700
+      font-size: 25px
+      line-height: 40px
+      color: #000000
+.xbox-games
+   padding-top: 30px
+.xbox-games__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+   grid-gap: 1px
+.xbox-games__item-bgrd
+   position: relative
+   background-repeat: no-repeat
+   background-size: cover
+   max-width: 274px
+   width: 100%
+   height: 800px
+   &.bgrd-img1
+      background-image: url(https://cdn.comfy.ua/media/x/img2/xbox/img22.png)
+   &.bgrd-img2
+      background-image: url(https://cdn.comfy.ua/media/x/img2/xbox/img23new.png)
+   &.bgrd-img3
+      background-image: url(https://cdn.comfy.ua/media/x/img2/xbox/img24new.png)
+   &.bgrd-img4
+      background-image: url(https://cdn.comfy.ua/media/x/img2/xbox/img25new.png)
+   &.bgrd-img5
+      background-image: url(https://cdn.comfy.ua/media/x/img2/xbox/img26new.png)
+.xbox-games__item-logo
+   position: absolute
+   bottom: 0
+   left: 0
+   right: 0
+   margin: 0 auto
+   padding: 0 16px 30px 16px
+   img
+      margin: 0 auto !important
+.VisibilityBlock
+   opacity: 0
+   animation: showDiv .3s forwards
+   animation-delay: 7.7s
+@keyframes showDiv
+   0%
+      opacity: 0
+   25%
+      opacity: 0.3
+   50%
+      opacity: 0.5
+   75%
+      opacity: 0.7
+   100%
+      opacity: 1
 // media
-// @media (max-width: 1024px)
-// @media (max-width: 812px)
-// @media (max-width: 480px)
-// @media (max-width: 320px)
-// @media (max-width: 812px) and (orientation: landscape)
+@media (max-width: 1024px)
+   .xbox__move-text-bottom h3
+      font-size: 50px
+   .xbox__go-play-h2-p h2
+      font-size: 45px
+   .xbox__go-standart__h2 h2
+      font-size: 48px
+   .xbox__go-standart__p
+      padding: 145px 40px 0 0
+   .xbox__go-standart__text
+      padding: 145px 0 0 15px
+   .xbox__sound-move video
+      max-height: 865px
+      height: 100%
+   .xbox__sound-text__h2 h2
+      font-size: 40px
+   .xbox__sound-text__p p
+      font-size: 28px
+   .xbox-dolby__h2 h2
+      font-size: 50px
+      line-height: 50px !important
+   .xbox-control-text__h2 h2
+      font-size: 50px
+      line-height: 50px !important
+   .xbox-textbl p
+      font-size: 28px
+@media (max-width: 812px)
+   .xbox__move-text-top h2
+      font-size: 28px
+      line-height: 1.1 !important
+   .xbox__move-text-bottom h3
+      font-size: 38px
+   .xbox__go-play-h2-p h2
+      font-size: 34px
+   .xbox__go-play-flex
+      margin: 0 auto
+   .xbox__go-play-flex.row-rev
+      margin: 0 auto
+   .xbox__go-standart__item
+      flex: 1 1 0
+   .xbox__go-standart__move video
+      max-width: 100%
+      height: auto
+   .xbox__go-standart__flex
+      padding: 0 20px
+   .xbox__go-standart__h2
+      position: relative
+      &.mobdis
+         display: block
+         padding: 0 20px
+      &.mobnone
+         display: none
+   .xbox__go-standart__img
+      padding: 0 20px
+   .xbox__go-standart__p
+      padding: 0 40px 0 0
+   .xbox__go-standart__text
+      padding: 0 0 0 15px
+   .xbox__go-standart__bgrd
+      height: 910px
+   .xbox-performance__img
+      padding: 0 20px
+   .xbox-performance__text
+      padding: 30px 20px 0 20px
+   .xbox-performance__flex
+      padding: 36px 20px 0 20px
+   .xbox__sound-text__h2 h2
+      font-size: 34px
+   .xbox__sound-text__p
+      padding: 0 20px
+   .xbox__sound-text__p p
+      font-size: 26px
+   .xbox-dolby__text
+      padding: 0 20px
+   .xbox-dolby__h2 h2
+      font-size: 42px
+      line-height: 42px !important
+   .xbox-control-text__h2 h2
+      font-size: 40px
+      line-height: 40px !important
+   .xbox-control__flex
+      padding: 0 20px
+   .xbox-control__item-text
+      max-width: 215px
+   .xbox-control-text__h2
+      padding-right: 20px
+   .xbox-grid
+      padding: 60px 20px 0 20px
+   .xbox-textbl
+      padding: 60px 20px 0 20px
+   .xbox-textbl p
+      font-size: 26px
+   .xbox-games__grid
+      grid-template-columns: 1fr 1fr
+      padding: 0 20px
+   .xbox-games__item-bgrd
+      position: relative
+      background-repeat: no-repeat
+      background-size: cover
+      max-width: 375px
+      width: 100%
+      height: 375px
+      display: flex
+      align-items: center
+      justify-content: center
+      &.bgrd-img1
+         background-image: url(https://cdn.comfy.ua/media/x/img2/xbox/img22mob.png)
+      &.bgrd-img2
+         background-image: url(https://cdn.comfy.ua/media/x/img2/xbox/img23mob.png)
+      &.bgrd-img3
+         background-image: url(https://cdn.comfy.ua/media/x/img2/xbox/img24mob.png)
+      &.bgrd-img4
+         background-image: url(https://cdn.comfy.ua/media/x/img2/xbox/img25mob.png)
+      &.bgrd-img5
+         background-image: url(https://cdn.comfy.ua/media/x/img2/xbox/img26mob.png)
+   .xbox-games__item-logo
+      position: relative
+      padding: 0
+   .xbox__go-play-content
+      margin: 0 20px
+      top: 0
+      max-width: 100%
+@media (max-width: 480px)
+   .xbox__move-text-top
+      position: relative
+      top: 0
+      padding: 40px 20px 10px 20px
+   span.word-wrap
+      display: initial
+      word-wrap: normal
+   .xbox__move-text-top h2
+      font-size: 18px
+      text-align: left
+   .xbox__move-text-bottom .xbox__move-img img
+      margin: 0 !important
+      max-width: 98px
+   .xbox__move-text-bottom .xbox__move-img
+      padding-top: 8px
+   .xbox__move-text-bottom h3
+      font-size: 28px
+   .xbox__move-text-bottom
+      position: absolute
+      bottom: initial
+      left: 20px
+      right: inherit
+      margin: 0 auto
+      top: 85px
+   .VisibilityBlock.noneanim
+      animation: none
+      animation-delay: 0s
+      opacity: 1
+   .xbox__go-play
+      margin-top: 35px
+   .xbox__go-play-h2-p
+      padding: 24px 12px 40px 12px
+   .xbox__go-play-h2-p h2
+      font-size: 40px
+      line-height: 1.2 !important
+   .xbox__go-play-h2-p p
+      font-weight: 600
+      font-size: 16px
+      padding-top: 12px
+   .xbox__go-play-flex
+      flex-direction: column
+      padding: 0 12px 40px 12px
+   .xbox__go-play-flex.row-rev
+      flex-direction: column
+   .xbox__go-play__item img
+      margin: 0 auto !important
+   .xbox__go-play-flex .xbox__go-play__item-text
+      padding: 0
+   .xbox__go-play__item-text-img img
+      margin: 0 auto !important
+   .xbox__go-play__item
+      width: 100%
+   .xbox__go-play__item-text-img
+      padding-top: 20px
+   .xbox__go-bl-img
+      margin-top: -70px
+      padding: 0 20px
+   .xbox__go-play-content
+      padding-bottom: 100px
+   .xbox__go-standart__h2 h2
+      font-size: 35px
+   .xbox__go-standart
+      padding-top: 55px
+   .xbox__go-standart__img
+      padding: 0 20px 26px 20px
+   .xbox__go-standart__flex
+      flex-direction: column
+      position: relative
+   .xbox__go-standart__p
+      padding: 0 0 20px 0
+   .xbox__go-standart__text
+      padding: 0
+   .xbox__go-standart__text-wr
+      padding: 33px 0 12px 0
+      &.wrmob
+         padding: 20px 0 12px 0
+         .xbox__go-standart__text-p
+            padding-top: 0
+   .xbox__go-standart__bgrd
+      height: 100%
+   .xbox-performance__text
+      padding: 20px 20px 0 20px
+   .xbox-performance__flex
+      padding: 20px 20px 0 20px
+      flex-direction: column-reverse
+   .xbox-performance__item-text
+      padding: 12px 0 12px 0
+      max-width: 100%
+   .xbox__sound
+      position: relative
+      margin-top: 0
+   .xbox__sound-move video
+      max-height: 535px
+   .xbox__sound-text__h2 h2
+      font-size: 30px
+   .xbox__sound-text__p p
+      font-size: 18px
+      line-height: 1.3
+   .xbox__sound-text__h2
+      padding: 0 20px 20px 20px
+   .xbox-dolby__img
+      padding-top: 20px
+   .xbox-dolby__p
+      padding: 20px 0 12px 0
+   .xbox-dolby__p p
+      font-size: 18px
+      line-height: 1.3
+   .xbox-dolby__h2 h2
+      font-size: 40px
+      line-height: 40px !important
+      text-align: left
+   .xbox-control
+      margin-top: 0
+   .xbox-control-text
+      position: relative
+      padding: 0 20px
+   .xbox-control-text__h2
+      padding-bottom: 12px
+   .xbox-control__flex
+      padding: 20px 20px 0 20px
+      flex-direction: column-reverse
+   .xbox-control__item-text
+      max-width: 100%
+      margin-right: 0
+      padding: 20px 0 0 0
+   .xbox-grid
+      padding: 50px 20px 0 20px
+      grid-template-columns: 1fr
+   .xbox-grid__item:first-child
+      margin-top: 0
+   .xbox-grid__item-text
+      margin: 0 12px 20px 12px
+   .xbox-grid__item:last-child
+      margin-top: 0
+   .xbox-textbl
+      padding: 30px 20px 40px 20px
+   .xbox-textbl p
+      font-size: 20px
+      line-height: 1.3
+   .xbox-games
+      padding-top: 0
+   .xbox-games__grid
+      grid-template-columns: 1fr
+      grid-gap: 0px
+@media (max-width: 320px)
+   .xbox__move-text-bottom
+      top: 105px
+   .xbox__go-standart__h2 h2
+      font-size: 28px
+   .xbox__sound-text__h2 h2
+      font-size: 26px
+   .xbox__go-play-h2-p h2
+      font-size: 32px
+   .xbox-dolby__h2 h2
+      font-size: 34px
+      line-height: 34px !important
+@media (max-width: 812px) and (orientation: landscape)
+   .xbox__move-text-top
+      top: 20px
+   .xbox__move-text-top h2
+      font-size: 23px
+   .xbox__move-text-bottom h3
+      font-size: 33px
+   .xbox__go-play-flex
+      padding: 0 20px
+   .xbox__go-play-h2-p
+      padding: 38px 20px 30px 20px
+   .xbox__go-play-flex
+      margin: 0 auto
+      padding: 0 20px 30px 20px
+   .xbox__go-bl-img
+      padding: 0 15px
+   .xbox__go-standart__h2 h2
+      font-size: 36px
+   .xbox__sound
+      margin-top: 0
+   .xbox__sound-text__h2 h2
+      font-size: 28px
+   .xbox__sound-text__p p
+      font-size: 18px
+      line-height: 1.3
+   .xbox-dolby__p p
+      font-weight: 500
+      font-size: 18px
+   .xbox-dolby__h2 h2
+      font-size: 33px
+      line-height: 33px !important
+   .xbox-control
+      margin-top: 0
+   .xbox-control-text
+      position: relative
+      padding: 0 20px
+   .xbox-textbl p
+      font-size: 18px
+      line-height: 1.3
