@@ -1,7 +1,7 @@
-#galaxy-a33
+#band7
    display: block
    margin: 0 auto
-   max-width: 1440px
+   max-width: 1198px
    width: 100%
    height: auto
    overflow: hidden
@@ -20,8 +20,8 @@
       font-size: 18px
       margin-bottom: 0
    h2
-      font-size: 48px
-      line-height: 1.3
+      font-size: 40px
+      line-height: 1.1
       margin: 0
       padding: 0
    h3
@@ -60,22 +60,27 @@ span.tx-uppercase
 .bc-description__content p:first-letter
    padding-left: 0
 // default
-.galaxy-a33-header-img img
+
+.band7__bgrdtop
+   background: #F0F9FE
+
+// ----
+.band7-header-img img
    margin: 0 auto !important
-.galaxy-a33__i
+.band7__i
    width: 88%
    margin: 0 auto
    padding: 32px 0 80px
-   &.galaxy-a33__i-bgrd
+   &.band7__i-bgrd
       width: 100%
       margin: 0
       padding: 32px 15px 15px 88px
       i
          text-align: left !important
-.galaxy-a33__content
+.band7__content
    &.bgrdbl
       background: #000
-.galaxy-a33__h2-p
+.band7__h2-p
    padding: 80px 88px
    text-align: center
    &.bgrdcolor000
@@ -84,7 +89,7 @@ span.tx-uppercase
       text-align: left
       padding: 80px 15px 15px 88px
       max-width: 860px
-.galaxy-a33__h2-p-h2
+.band7__h2-p-h2
    &.colorfff
       h2
          color: #fff
@@ -100,7 +105,7 @@ span.tx-uppercase
    &.colorfff
       h2
          color: #fff
-.galaxy-a33__h2-p-p
+.band7__h2-p-p
    margin-top: 32px
    &.colorfff
       p
@@ -117,8 +122,13 @@ span.tx-uppercase
    &.colorfff
       h2
          color: #fff
-.galaxy-a33__img img
-   margin: 0 auto !important
+.band7__img
+   img
+      margin: 0 auto !important
+   &.imgright
+      margin: 0 0 0 auto !important
+   &.imgleft
+      margin: auto 0 0 0 !important
 // slider
 .mySlides
    display: none
@@ -163,7 +173,7 @@ span.tx-uppercase
       content: ">"
 .prev:hover, .next:hover
    background-color: rgba(0,0,0,0.8)
-.galaxy-a33-dot
+.band7-dot
    cursor: pointer
    height: 15px
    width: 15px
@@ -179,7 +189,7 @@ span.tx-uppercase
    text-align: center
    padding-top: 20px
 .slideshow-dot
-   .active, .galaxy-a33-dot:hover
+   .active, .band7-dot:hover
       background-color: #717171
 .fade
    animation-name: fade
@@ -189,11 +199,11 @@ span.tx-uppercase
       opacity: .4
    to
       opacity: 1
-.galaxy-a33__tabs-flex
+.band7__tabs-flex
    display: flex
    flex-direction: row
    align-items: center
-.galaxy-a33__tabs__item
+.band7__tabs__item
    flex: 1 1 0
 .tablinks
    display: block
@@ -239,12 +249,12 @@ span.tx-uppercase
       max-width: 500px
       width: 100%
       height: auto
-.galaxy-a33__tabs
+.band7__tabs
    padding: 0px 88px 0px 88px
-.galaxy-a33__bgrd
+.band7__bgrd
    position: relative
-.galaxy-a33__bgrd-img
-   background-image: url(https://cdn.comfy.ua/media/x/img2/a33/img8.png)
+.band7__bgrd-img
+   background-image: url(https://cdn.comfy.ua/media/x/img2/band7/img8.png)
    background-position: center
    background-repeat: no-repeat
    background-size: cover
@@ -255,33 +265,44 @@ span.tx-uppercase
       background: #fff
    &:hover
       cursor: pointer
-.galaxy-a33__tabs2-wrap
+.band7__tabs2-wrap
    display: flex
    flex-direction: column
    align-items: center
-.galaxy-a33__tabs2-btn
+.band7__tabs2-btn
    padding: 0 35px 40px 35px
-.galaxy-a33__flexbl
+.band7__flexbl
    padding: 0px 88px
-.galaxy-a33__flex
+   &.bgrdbleck
+      background: #000
+   &.bgrdgrd
+      background: linear-gradient(to bottom, #FFFFFF,#f1f1f1)
+.band7__flex
    display: flex
    align-items: center
    flex-direction: row
    &.rowrev
       flex-direction: row-reverse
-      .alaxy-a33__content-text
+      .alaxy-band7__content-text
          padding: 0 0 0 20px
-.galaxy-a33__item
+.band7__item
    flex: 1 1 0
-.alaxy-a33__content-text
+.alaxy-band7__content-text
    padding: 0 20px 0 0
-.alaxy-a33__flex__h2
+.alaxy-band7__flex__h2
    padding-bottom: 20px
    h2
       text-align: left !important
-.alaxy-a33__flex__p p
-   text-align: left !important
-.alaxy-a33__flex__i
+   &.colorffffjh
+      h2
+         color: #fff !important
+.alaxy-band7__flex__p
+   p
+      text-align: left !important
+   &.colorffffjh
+      p
+         color: #fff !important
+.alaxy-band7__flex__i
    padding-top: 30px
    i
       text-align: left !important
@@ -289,15 +310,15 @@ span.tx-uppercase
 // media
 // @media (max-width: 1024px)
 @media (max-width: 812px)
-   #galaxy-a33 h2
+   #band7 h2
       font-size: 35px
-   .galaxy-a33__h2-p
+   .band7__h2-p
       padding: 40px 20px
-   .galaxy-a33__i
+   .band7__i
       width: 88%
       margin: 0 auto
       padding: 30px 20px 40px 20px
-   .galaxy-a33__tabs
+   .band7__tabs
       padding: 0px 20px 0px 20px
    .tablinks span.tab-text
       font-size: 23px
@@ -306,13 +327,13 @@ span.tx-uppercase
    .tablinks span.dot-tab
       width: 35px
       height: 35px
-   .galaxy-a33__h2-p.__h2-p__bgrd
+   .band7__h2-p.__h2-p__bgrd
       padding: 40px 15px 15px 20px
       max-width: 530px
-   .galaxy-a33__flexbl
+   .band7__flexbl
       padding: 0px 20px
 @media (max-width: 480px)
-   #galaxy-a33 h2
+   #band7 h2
       font-size: 30px
       line-height: 1
    .tablinks
@@ -325,14 +346,14 @@ span.tx-uppercase
       font-size: 18px
    .tablinks.active .tab-text
       font-size: 18px
-   .galaxy-a33__i.galaxy-a33__i-bgrd
+   .band7__i.band7__i-bgrd
       padding: 32px 15px 15px 20px
-   .galaxy-a33__flex
+   .band7__flex
       flex-direction: column
-   .alaxy-a33__content-text
-      padding: 0 0px 20px 0px
-   .galaxy-a33__flex.rowrev
+   .alaxy-band7__content-text
+      padding: 20px 0px 20px 0px
+   .band7__flex.rowrev
       flex-direction: column
-   .galaxy-a33__flex.rowrev .alaxy-a33__content-text
-      padding: 0 0 20px 0px
+   .band7__flex.rowrev .alaxy-band7__content-text
+      padding: 20px 0 20px 0px
 // @media (max-width: 320px)
