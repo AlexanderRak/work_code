@@ -10,17 +10,14 @@
           box-sizing: border-box;
   overflow: hidden;
 }
-
 #acer p {
   margin-bottom: 0;
   margin: 0;
   font-size: 15px;
 }
-
 #acer p:first-letter {
   padding-left: 0;
 }
-
 #acer h2 {
   display: block;
   line-height: normal;
@@ -29,26 +26,22 @@
   padding: 0;
   margin: 17px 0 10px 0;
 }
-
 #acer img {
   opacity: 1;
   max-width: 100%;
   display: block;
   height: auto;
 }
-
 #acer img:hover {
   opacity: 1;
 }
-
 #acer ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-
 #acer sup {
-  top: -.7em;
+  top: -0.7em;
   font-size: 0.7em;
 }
 
@@ -64,7 +57,6 @@
 #acer {
   padding: 0 0.5em;
 }
-
 #acer .char {
   display: -webkit-box;
   display: -webkit-flex;
@@ -79,7 +71,6 @@
       -ms-flex-direction: row;
           flex-direction: row;
 }
-
 #acer .char .char__cont {
   -webkit-box-flex: 3;
   -webkit-flex: 3;
@@ -99,7 +90,6 @@
       -ms-flex-direction: row;
           flex-direction: row;
 }
-
 #acer .char .char__cont .char__cont__img {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -107,7 +97,6 @@
       -ms-flex: 1;
           flex: 1;
 }
-
 #acer .char .char__cont .char__cont__txt {
   -webkit-box-flex: 2;
   -webkit-flex: 2;
@@ -119,22 +108,18 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
-
 #acer .char .char__cont .char__cont__txt .char__cont__list {
   margin-top: 10px;
 }
-
 #acer .char .char__cont .char__cont__txt .char__cont__list li {
   list-style-type: disc;
   list-style-position: inside;
   font-size: 15px;
   line-height: normal;
 }
-
 #acer .char .char__cont .char__cont__txt .char__cont__list li:nth-of-type(n+2) {
   margin-top: 5px;
 }
-
 #acer .char .char__acer {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -147,31 +132,23 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
-
 #acer .char .char__acer .char__acer__img img {
   margin: 0 auto 10px auto;
 }
-
 #acer .char .char__acer .char__acer__txt {
   padding-bottom: 10px;
   color: #888;
 }
-
 #acer .plitka {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 35px 35px;
-      grid-template-areas: "..." "...";
+  grid-template-areas: "..." "...";
 }
-
 #acer .snoski {
   margin-top: 20px;
 }
-
 #acer .snoski li {
   margin-bottom: 10px;
   list-style-type: decimal;
@@ -200,21 +177,18 @@
   }
   #acer .plitka {
     gap: 10px 10px;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: unset;
-        grid-template-rows: unset;
-        grid-template-areas: ".." ".." "..";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: unset;
+    grid-template-areas: ".." ".." "..";
   }
 }
-
 @media (max-width: 480px) {
   #acer h2 {
     font-size: 18px;
   }
   #acer p,
-  #acer .snoski li,
-  #acer .char .char__cont .char__cont__txt .char__cont__list li {
+#acer .snoski li,
+#acer .char .char__cont .char__cont__txt .char__cont__list li {
     font-size: 13px;
   }
   #acer .char .char__cont {
@@ -230,9 +204,8 @@
     padding-left: 0;
   }
   #acer .plitka {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        grid-template-areas: "." "." "." "." "." ".";
+    grid-template-columns: 1fr;
+    grid-template-areas: "." "." "." "." "." ".";
   }
   #acer .char .char__cont .char__cont__img img {
     margin: -50px auto;
