@@ -1,0 +1,273 @@
+//default styles
+
+#huawei
+  max-width: 1366px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    font-size: 17px
+    color: #211d1e
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 34px
+    color: #1861c4
+    font-weight: bold
+    padding: 0
+    margin: 0
+  h3
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 24px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  img
+    margin: 0 auto
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+//end default styles
+
+#huawei
+  @mixin gradient
+    font-size: 50px
+    font-weight: bold
+    text-transform: uppercase
+    background: rgb(63,79,165)
+    background: -moz-linear-gradient(180deg, rgba(63,79,165,1) 0%, rgba(29,40,95,1) 100%)
+    background: -webkit-linear-gradient(180deg, rgba(63,79,165,1) 0%, rgba(29,40,95,1) 100%)
+    background: linear-gradient(180deg, rgba(63,79,165,1) 0%, rgba(29,40,95,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f4fa5",endColorstr="#1d285f",GradientType=1)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+  .logo
+    display: flex
+    flex-direction: row
+    align-items: center
+    position: relative
+    justify-content: space-between
+    padding: 50px 125px 0 100px
+    box-sizing: border-box
+    li
+      text-align: center
+      .logo__txt
+        h2
+          margin: 14px 0
+          font-weight: normal
+          color: #000
+        span
+          font-size: 14px
+      .logo__icon
+        position: absolute
+        right: 100px
+        bottom: 3em
+
+  .huawei__title
+    padding: 180px 310px 0 310px
+    span
+      @include gradient
+
+  .huawei__list
+    padding: 135px 310px 130px 310px
+    li
+      .huawei__list__txt
+        margin: 0 auto 55px auto
+        h2
+          margin-bottom: 25px
+      &:nth-of-type(n+2)
+        margin-top: 130px
+      .huawei__list__img
+        position: relative
+        img
+          position: relative
+          z-index: 2
+        .img__abs
+          position: absolute
+          bottom: -50px
+          right: -50px
+          z-index: 1
+
+  .exclusive
+    .exclusive__title
+      max-width: 900px
+      margin: 250px auto 0 auto
+      span
+        @include gradient
+    .exclusive__txt
+      max-width: 900px
+      margin: 130px auto 50px auto
+      h2
+        margin-bottom: 30px
+
+  .kids
+    .kids__txt
+      max-width: 900px
+      margin: 130px auto 50px auto
+      h2
+        margin-bottom: 30px
+    .kids__list
+      display: flex
+      flex-direction: row
+      max-width: 900px
+      justify-content: center
+      align-items: center
+      margin: 0 auto
+      li
+        flex: 1 1 0
+        text-align: center
+        &:nth-of-type(2)
+          flex: 3
+          margin: 0 1em
+        .kids__list__item
+          img
+            margin-bottom: 1em
+          p
+            font-size: 15px
+          span
+            margin-top: 0.5em
+            font-size: 13px
+            color: #7c7c7c
+          &:nth-of-type(n+2)
+            margin-top: 60px
+
+  .snoska
+    padding: 140px 120px
+    li
+      color: #211d1e
+      font-size: 14px
+      line-height: normal
+      &:nth-of-type(n+2)
+        margin-top: 10px
+
+//media*********************************************
+
+@media (max-width: 1024px)
+  #huawei .logo
+    padding: 0 1em
+  #huawei .logo li .logo__icon
+    right: 1em
+  #huawei .huawei__title
+    padding: 80px 100px 0 100px
+  #huawei .huawei__list
+    padding: 80px 100px
+  #huawei .huawei__list li .huawei__list__img .img__abs
+    display: none
+  #huawei .exclusive .exclusive__txt
+    margin: 50px auto 50px auto
+  #huawei .exclusive .exclusive__title
+    margin-top: 80px
+  #huawei .kids .kids__txt
+    margin-top: 50px
+
+@media (max-width: 812px)
+  #huawei .logo
+    padding: 1em
+    display: block
+  #huawei .logo li .logo__icon
+    position: unset
+    img
+      margin: 2em 0 0 auto
+  #huawei .huawei__list li .huawei__list__txt
+    padding: 1em
+    margin-bottom: 30px
+  #huawei .huawei__list li:nth-of-type(n+2)
+    margin-top: 50px
+  #huawei .huawei__list
+    padding: 60px 0
+  #huawei .exclusive
+    margin-top: 3em
+  #huawei .exclusive .exclusive__txt
+    padding: 1em
+  #huawei .snoska
+    padding: 2em
+  #huawei .huawei__title
+    padding: 2em 1em 0 1em
+  #huawei .huawei__title span
+    font-size: 40px
+  #huawei .exclusive .exclusive__title
+    padding: 0 1em
+  #huawei .exclusive .exclusive__title span
+    font-size: 40px
+  #huawei .kids .kids__list li .kids__list__item:nth-of-type(n+2)
+    margin-top: 30px
+  #huawei .kids .kids__txt,
+  #huawei .kids .kids__list
+    padding: 0 1em
+
+@media (max-width: 480px)
+  #huawei .res__mob__two
+    min-width: 150%
+    margin-left: -22%
+  #huawei .res__mob
+    min-width: 170%
+    margin-left: -55%
+  #huawei h2
+    font-size: 24px
+  #huawei h3
+    font-size: 18px
+  #huawei p
+    font-size: unset
+  #huawei .logo li .logo__icon img
+    max-width: 100px
+  #huawei .huawei__list
+    padding: 2em 0
+  #huawei .exclusive
+    margin-top: 0
+  #huawei .exclusive .exclusive__txt
+    margin-bottom: 1em
+  #huawei .snoska
+    padding: 1em
+    li
+      font-size: 12px
+  #huawei .huawei__title span,
+  #huawei .exclusive .exclusive__title span
+    font-size: 28px
+  #huawei .kids .kids__list
+    flex-wrap: wrap
+    li
+      flex: unset
+      &:nth-of-type(1)
+        order: 1
+        width: 100%
+        max-width: 100%
+      &:nth-of-type(2)
+        order: 0
+        max-width: 100%
+        min-width: 100%
+        margin: 0 0 2em 0
+      &:nth-of-type(3)
+        margin-top: 30px
+        order: 2
+        width: 100%
+        max-width: 100%
+        

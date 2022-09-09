@@ -1,0 +1,752 @@
+/*default styles*/
+
+#huawei
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 36px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    margin: 0 auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#huawei
+  .logo
+    position: relative
+    text-align: center
+    padding: 110px 0 0 0
+    .logo__title
+      margin-bottom: 75px
+      span
+        margin-top: 1em
+        color: #231815
+        font-size: 13px
+        sup
+          font-size: 10px
+    .logo__abs
+      position: absolute
+      bottom: 4em
+      right: 8em
+
+  .things
+    .things__title
+      text-align: center
+      span
+        font-size: 40px
+        font-weight: bold
+    .things__list
+      padding: 0 115px
+      margin-top: 60px
+      display: grid
+      grid-template-columns: 291px auto auto 291px
+      grid-template-rows: 260px 260px
+      gap: 10px 10px
+      grid-template-areas: "cal1 cal2 cal2 cal3" "cal4 cal5 cal5 cal6"
+      li
+        border-radius: 12px
+        overflow: hidden
+        .things__list__wrap
+          background-color: #f0f0f0
+          height: 100%
+          display: flex
+          flex-direction: row
+          flex-wrap: wrap
+          align-items: center
+          .things__list__txt
+            padding: 1em
+            align-self: flex-start
+            span
+              font-size: 14px
+              font-weight: bold
+      .cal1
+        grid-area: cal1
+      .cal2
+        grid-area: cal2
+        .things__list__wrap
+          .things__list__img
+            margin: 0 auto
+            width: 100%
+      .cal3
+        grid-area: cal3
+        .things__list__txt
+          color: #fff
+        .things__list__img
+          margin: 0 auto
+          img
+            width: 100%
+        .things__list__txt
+          position: absolute
+      .cal4
+        grid-area: cal4
+        .things__list__img
+          align-self: flex-end
+      .cal5
+        grid-area: cal5
+        .things__list__txt
+          position: absolute
+          color: #fff
+        .things__list__img
+          width: 100%
+          img
+            width: 100%
+      .cal6
+        grid-area: cal6
+        .things__list__img
+          align-self: flex-end
+
+  .coverage
+    .coverage__title
+      padding: 115px 180px 40px 180px
+      text-align: center
+      h2
+        margin-bottom: 30px
+    .coverage__wrap
+      position: relative
+      .coverage__list
+        position: absolute
+        top: 40px
+        display: flex
+        flex-direction: row
+        padding: 0 250px
+        justify-content: center
+        li
+          flex: 1 1 0
+          .coverage__list__txt
+            margin-top: 15px
+            span
+              font-size: 14px
+              color: #fff
+              text-align: center
+
+  .speed
+    padding: 90px 165px 70px 165px
+    .speed__title
+      text-align: center
+      padding: 0 75px
+      h2
+        margin-bottom: 30px
+    .speed__list
+      display: flex
+      flex-direction: row
+      justify-content: center
+      margin: 40px 0 20px 0
+      li
+        .speed__list__title
+          margin-bottom: 30px
+          span
+            text-align: center
+            font-size: 20px
+            text-align: center
+            font-weight: bold
+        &:nth-of-type(2)
+          margin: 0 15px
+    .speed__wrap
+      background-color: #f3f3f3
+      border-radius: 6px
+      padding: 30px 60px
+      box-sizing: border-box
+      .speed__line
+        display: flex
+        flex-direction: row
+        align-items: center
+        .small__txt
+          color: #fff
+          display: flex
+          align-items: center
+          padding: 0 30px
+          width: 406px
+          height: 23px
+          border-radius: 12px
+          background-image: linear-gradient(90deg, #9ce2f9 0%, #4b77e9 100%)
+        .large__txt
+          font-size: 20px
+          color: #4b78e9
+          margin-left: 15px
+          &::after
+            content: ""
+            display: block
+            min-width: 102px
+            height: 4px
+            background-image: url("https://cdn.comfy.ua/media/x/img/1965823/line.png")
+            background-repeat: no-repeat
+          sup
+            font-size: 10px
+        &:nth-of-type(2)
+          margin-top: 25px
+          .small__txt
+            width: max-content
+
+  .choose
+    padding: 80px 115px 140px 115px
+    .choose__title
+      text-align: center
+      margin-bottom: 30px
+      h2
+        margin-bottom: 30px
+    .choose__list
+      display: flex
+      flex-direction: row
+      align-items: center
+      li
+        .choose__list__txt
+          span
+            font-weight: bold
+            font-size: 20px
+            text-align: center
+
+  .signal
+    padding: 115px
+    background-color: #000
+    color: #fff
+    .signal__title
+      text-align: center
+      margin-bottom: 60px
+      padding: 0 10em
+      h2
+        margin-bottom: 30px
+
+  .devices
+    color: #fff
+    background-color: #000
+    padding: 0 115px 115px 115px
+    .devices__title
+      text-align: center
+      h2
+        margin-bottom: 30px
+    .devices__wrap
+      position: relative
+      margin-top: 100px
+      .devices__list
+        li
+          position: absolute
+          span
+            text-align: center
+            color: #5386dd
+            font-size: 12px
+            margin-top: 10px
+          &:nth-of-type(1)
+            top: 0
+            left: 10em
+          &:nth-of-type(2)
+            top: 8em
+            left: 17em
+          &:nth-of-type(3)
+            top: 13em
+            left: 6em
+          &:nth-of-type(4)
+            top: 4em
+            right: 19em
+          &:nth-of-type(5)
+            top: 0em
+            right: 10em
+          &:nth-of-type(6)
+            top: 14em
+            right: 16em
+          &:nth-of-type(7)
+            top: 10em
+            right: 6em
+      .devices__img
+        span
+          font-size: 20px
+          font-weight: bold
+          text-align: center
+          width: max-content
+          margin: 0 auto
+          background: linear-gradient(90deg, rgba(155,225,249,1) 0%, rgba(84,132,235,1) 100%)
+          background-clip: text
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+          display: block
+          strong
+            font-size: 50px
+
+  .os
+    background-color: #000
+    color: #fff
+    padding: 0 115px 115px 115px
+    .os__title
+      text-align: center
+      margin-bottom: 50px
+    .os__icons
+      display: flex
+      flex-direction: row
+      justify-content: center
+      margin-bottom: 80px
+      li
+        display: flex
+        flex-direction: row
+        align-items: center
+        .os__icons__img
+          margin-right: 1em
+        .os__icons__txt
+          span
+            font-size: 16px
+        &:nth-of-type(2)
+          margin-left: 3em
+
+  .dualband
+    padding: 0 115px 115px 115px
+    background-color: #000
+    color: #fff
+    .dualband__title
+      text-align: center
+      margin-bottom: 60px
+      padding: 0 10em
+      h2
+        margin-bottom: 30px
+
+  .connections
+    background-color: #000
+    color: #fff
+    padding: 0 115px 115px 115px
+    .connections__title
+      text-align: center
+      margin-bottom: 60px
+      padding: 0 10em
+      h2
+        margin-bottom: 30px
+    .connections__hotspot
+      padding: 60px 230px
+      .connections__hotspot__title
+        span
+          font-size: 20px
+          font-weight: bold
+      .connections__hotspot__list
+        li
+          span
+            font-size: 16px
+            font-weight: bold
+            // background: linear-gradient(0deg, rgba(59,59,59,1) 0%, rgba(140,140,140,1) 100%)
+            // background-clip: text
+            // -webkit-background-clip: text
+            // -webkit-text-fill-color: transparent
+            color: #3b3b3b
+            display: block
+          &:nth-of-type(1)
+            margin-top: 30px
+            span
+              &:nth-of-type(2)
+                margin-top: 12px
+                display: flex
+                flex-direction: row
+                align-items: center
+                font-size: 20px
+                // background: linear-gradient(45deg, rgba(79,131,221,1) 0%, rgba(131,188,226,1) 100%)
+                color: #4f83dd
+                background-clip: unset
+                -webkit-background-clip: unset
+                -webkit-text-fill-color: unset
+                &::before
+                  content: ""
+                  display: block
+                  width: 119px
+                  height: 12px
+                  border-radius: 6px
+                  background-image: linear-gradient(90deg, #adedf5 0%, #4b77e9 100%)
+                  margin-right: 15px
+          &:nth-of-type(2)
+            margin-top: 30px
+            span
+              &:nth-of-type(2)
+                margin-top: 12px
+                display: flex
+                flex-direction: row
+                align-items: center
+                font-size: 20px
+                color: #3b3b3b
+                background-clip: unset
+                -webkit-background-clip: unset
+                -webkit-text-fill-color: unset
+                &::before
+                  content: ""
+                  display: block
+                  width: 537px
+                  height: 12px
+                  border-radius: 6px
+                  background-image: linear-gradient(90deg, #151414 0%, #e45252 100%)
+                  margin-right: 15px
+          &:nth-of-type(3)
+            margin-top: 50px
+            span
+              font-size: 12px
+              background: unset
+              color: #fff
+              display: block
+              background-clip: unset
+              -webkit-background-clip: unset
+              -webkit-text-fill-color: unset
+
+  .onetap
+    padding: 115px
+    .onetap__title
+      text-align: center
+      margin-bottom: 60px
+      padding: 0 10em
+      h2
+        margin-bottom: 30px
+        sup
+          font-size: 18px
+
+  .trouble
+    padding: 0 115px 115px 115px
+    .trouble__title
+      text-align: center
+      margin-bottom: 60px
+      h2
+        margin-bottom: 30px
+      p
+        padding: 0 10em
+    .trouble__list
+      display: flex
+      flex-direction: row
+      align-items: center
+      max-width: 500px
+      margin: 0 auto
+      li
+        flex: 1 1 0
+        span
+          font-weight: bold
+          font-size: 20px
+          margin-bottom: 15px
+      &:nth-of-type(2)
+        margin: 3em auto
+
+  .steps
+    padding: 0 115px 115px 115px
+    .steps__title
+      text-align: center
+      margin-bottom: 60px
+      h2
+        margin-bottom: 30px
+    .steps__list
+      display: flex
+      flex-direction: row
+      li
+        flex: 1 1 0
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .steps__list__txt
+          text-align: center
+          margin-bottom: 2em
+          span
+            font-weight: bold
+            font-size: 20px
+        &:nth-of-type(2)
+          .steps__list__txt
+            span
+              position: relative
+              max-width: max-content
+              margin: 0 auto
+              &::before,
+              &::after
+                content: ""
+                display: block
+                height: 1px
+                width: 150px
+                background-color: #000
+                position: absolute
+                bottom: 50%
+                transform: translateY(50%)
+                left: -200px
+              &::after
+                left: unset
+                right: -200px
+
+  .manage
+    padding: 0 115px 115px 115px
+    .manage__title
+      text-align: center
+      margin-bottom: 60px
+      h2
+        margin-bottom: 30px
+    .manage__row
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      padding: 0 4em
+      .manage__row__list
+        min-height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .manage__row__list__txt
+          text-align: center
+          margin-top: 15px
+          span
+            font-size: 16px
+
+  .blends
+    .blends__title
+      padding: 0 calc(115px + 10em)
+      text-align: center
+      margin-bottom: 60px
+      h2
+        margin-bottom: 30px
+
+  .snoska
+    padding: 120px 160px
+    li
+      font-size: 14px
+      color: #797979
+      &:nth-of-type(n+2)
+        margin-top: 0.5em
+
+//media**********************************************
+
+@media (max-width: 1024px)
+  #huawei .logo .logo__abs
+    right: 2em
+  #huawei .things .things__list
+    padding: 0 1em
+  #huawei .coverage .coverage__wrap .coverage__list
+    padding: 0 150px
+  #huawei .speed,
+  #huawei .choose,
+  #huawei .signal,
+  #huawei .devices,
+  #huawei .os,
+  #huawei .dualband,
+  #huawei .connections,
+  #huawei .onetap,
+  #huawei .trouble,
+  #huawei .steps,
+  #huawei .manage,
+  #huawei .onetap .onetap__title
+    padding-right: 1em
+    padding-left: 1em
+  #huawei .devices .devices__wrap .devices__list li:nth-of-type(4)
+    right: 17em
+  #huawei .devices .devices__wrap .devices__list li:nth-of-type(5)
+    right: 7em
+  #huawei .devices .devices__wrap .devices__list li:nth-of-type(7)
+    right: 4em
+  #huawei .blends .blends__title
+    padding: 0 11em
+
+@media (max-width: 812px)
+  #huawei .logo
+    padding-top: 1em
+  #huawei .things .things__list
+    padding: 0 14%
+    grid-template-columns: auto auto
+    grid-template-rows: auto 200px 300px auto
+    grid-template-areas: "cal1 cal3" "cal2 cal2" "cal5 cal5" "cal4 cal6"
+    .cal1
+      grid-area: cal1
+    .cal2
+      grid-area: cal2
+    .cal3
+      grid-area: cal3
+    .cal4
+      grid-area: cal4
+    .cal5
+      grid-area: cal5
+    .cal6
+      grid-area: cal6
+  #huawei .coverage .coverage__title
+    padding: 1em
+  #huawei .coverage .coverage__wrap .coverage__list
+    padding-right: 1em
+    padding-left: 1em
+  #huawei .speed, #huawei .choose, #huawei .signal, #huawei .devices, #huawei .os, #huawei .dualband, #huawei .connections, #huawei .onetap, #huawei .trouble, #huawei .steps, #huawei .manage, #huawei .onetap .onetap__title
+    padding: 1em
+  #huawei .signal .signal__title
+    padding-right: 1em
+    padding-left: 1em
+  #huawei .devices .devices__wrap .devices__list
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    margin-bottom: 3em
+  #huawei .devices .devices__wrap .devices__list li
+    position: unset
+    flex: 1 1 0
+    min-width: 25%
+    &:nth-of-type(n+5)
+      margin-top: 2em
+  #huawei .dualband .dualband__title,
+  #huawei .connections .connections__title,
+  #huawei .blends .blends__title
+    padding-right: 1em
+    padding-left: 1em
+  #huawei .connections .connections__hotspot
+    padding: 1em
+  #huawei .trouble .trouble__list
+    max-width: 100%
+  #huawei .steps .steps__list li:nth-of-type(2) .steps__list__txt span::before, #huawei .steps .steps__list li:nth-of-type(2) .steps__list__txt span::after
+    display: none
+  #huawei .manage .manage__row
+    padding-right: 0
+    padding-left: 0
+  #huawei .snoska
+    padding: 2em
+  #huawei .speed .speed__title
+    padding: 0
+
+@media (max-width: 480px)
+  #huawei h2
+    font-size: 28px
+  #huawei .logo .logo__title
+    margin-bottom: 1em
+    padding: 0 1em
+  #huawei .things .things__title span
+    font-size: 32px
+  #huawei .things .things__list
+    margin: 0
+    padding: 1em
+    grid-template-columns: auto
+    grid-template-rows: auto auto auto auto auto auto
+    grid-template-areas: "cal1" "cal2" "cal3" "cal4" "cal5" "cal6"
+    .cal1
+      grid-area: cal1
+    .cal2
+      grid-area: cal2
+    .cal3
+      grid-area: cal3
+    .cal4
+      grid-area: cal4
+    .cal5
+      grid-area: cal5
+    .cal6
+      grid-area: cal6
+  #huawei .things .things__list .cal2 .things__list__wrap
+    justify-content: center
+  #huawei .coverage .coverage__wrap .coverage__bg img
+    min-width: 200%
+    margin-left: -50%
+  #huawei .coverage .coverage__wrap .coverage__list
+    display: block
+    position: unset
+    background-color: #1a2337
+    padding: 1em
+    margin-bottom: -3em
+    position: relative
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      &:nth-of-type(n+2)
+        margin-top: 1em
+      div
+        flex: 1 1 0
+  #huawei .speed .speed__list
+    display: block
+  #huawei .speed .speed__list li:nth-of-type(2)
+    margin: 1em 0
+  #huawei .speed .speed__wrap
+    padding: 1em
+  #huawei .speed .speed__wrap .speed__line .small__txt
+    width: max-content
+  #huawei .choose .choose__list
+    flex-direction: column-reverse
+    li
+      &:nth-of-type(1)
+        margin-top: 1em
+  #huawei .signal .signal__title
+    padding: 0
+  #huawei .devices .devices__wrap .devices__list li
+    min-width: 50%
+    &:nth-of-type(n+3)
+      margin-top: 1em
+  #huawei .devices .devices__wrap
+    margin-top: 1em
+  #huawei .os .os__icons
+    display: block
+    margin-bottom: 1em
+  #huawei .os .os__icons li:nth-of-type(2)
+    margin-left: 0
+    margin-top: 1em
+  #huawei .os .os__icons li .os__icons__img
+    width: max-content
+  #huawei .dualband .dualband__title,
+  #huawei .connections .connections__title,
+  #huawei .blends .blends__title,
+  #huawei .onetap .onetap__title
+    padding: 0
+    margin-bottom: 1em
+  #huawei .connections .connections__hotspot
+    padding: 0
+  #huawei .connections .connections__hotspot .connections__hotspot__list li:nth-of-type(2) span:nth-of-type(2)::before
+    width: 185px
+  #huawei .trouble .trouble__title p
+    padding: 0
+  #huawei .trouble .trouble__list li
+    max-width: 50%
+    box-sizing: border-box
+  #huawei .trouble .trouble__list li:nth-of-type(1)
+    margin-right: 1em
+  #huawei .trouble .trouble__list li span
+    font-size: 16px
+  #huawei .steps .steps__list
+    display: block
+  #huawei .steps .steps__list li
+    &:nth-of-type(2)
+      margin: 1em 0
+  #huawei .manage .manage__row
+    display: block
+  #huawei .manage .manage__row .manage__row__list
+    display: flex
+    flex-direction: row
+    box-sizing: border-box
+    li
+      flex: 1 1 0
+      box-sizing: border-box
+      &:nth-of-type(2)
+        margin: 0 1em
+  #huawei .manage .manage__row .manage__row__list .manage__row__list__txt span
+    font-size: 12px
+  #huawei .manage .manage__row .manage__row__img
+    margin: 1em 0
+  #huawei .blends .blends__title
+    padding: 1em
+  #huawei .snoska
+    padding: 1em
+  #huawei .things .things__list .cal1 .things__list__wrap,
+  #huawei .things .things__list .cal6 .things__list__wrap
+    justify-content: center
+  #huawei .things .things__list .cal3 .things__list__img,
+  #huawei .things .things__list .cal4 .things__list__img,
+  #huawei .things .things__list .cal6 .things__list__img
+    width: 100%
+  #huawei .things .things__list .cal4 .things__list__img img,
+  #huawei .things .things__list .cal6 .things__list__img img
+    width: 100%

@@ -1,0 +1,256 @@
+//default styles
+
+#philips
+  max-width: 1366px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 40px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img
+    margin: 0 auto
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+//end default styles
+
+#philips
+  .logo
+    position: relative
+    .logo__i
+      position: absolute
+      top: 0
+      left: 50px
+    .logo__txt
+      position: absolute
+      color: #fff
+      bottom: 1em
+      left: 50px
+      max-width: 400px
+      h2
+        font-weight: bold
+        margin-bottom: 50px
+      span
+        font-size: 30px
+
+  .tech
+    .tech__title
+      background-color: #631d76
+      padding: 20px 70px
+      color: #fff
+    .tech__flex
+      padding: 60px 70px
+      background-color: #dccfe9
+      display: flex
+      justify-content: space-between
+      align-items: center
+      .tech__img
+        flex: 1
+      .tech__list
+        flex: 1.5
+        li
+          display: flex
+          align-items: center
+          justify-content: space-between
+          .tech__list__txt
+            max-width: 500px
+            span
+              font-weight: bold
+              margin-bottom: 0.5em
+              font-size: 24px
+              color: #631d76
+            p
+              font-size: 24px
+          .tech__list__i
+            min-width: max-content
+          &:nth-of-type(n+2)
+            margin-top: 20px
+
+  .speed
+    .speed__title
+      background-color: #631d76
+      padding: 20px 70px
+      color: #fff
+    .speed__list
+      margin-bottom: 60px
+      li
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 60px
+        .speed__list__img
+          min-width: max-content
+        .speed__list__txt
+          padding: 0 70px
+          span
+            font-size: 24px
+            font-weight: bold
+            color: #631d76
+            margin-bottom: 0.5em
+          p
+            font-size: 24px
+        &:nth-of-type(even)
+          flex-direction: row-reverse
+          background-color: #dccfe9
+
+  .comfort
+    .comfort__title
+      background-color: #631d76
+      padding: 20px 70px
+      color: #fff
+    .comfort__list
+      display: flex
+      background-color: #631d76
+      color: #fff
+      padding: 60px 70px
+      li
+        flex: 1 1 0
+        min-width: 50%
+        max-width: 50%
+        box-sizing: border-box
+        display: flex
+        .comfort__list__i
+          min-width: max-content
+          margin-right: 40px
+        .comfort__list__txt
+          span
+            font-weight: bold
+            font-size: 24px
+            margin-bottom: 0.5em
+          p
+            font-size: 24px
+        &:nth-of-type(1)
+          margin-right: 2em
+          
+//media********************************************
+
+@media (max-width: 1024px)
+  #philips .speed .speed__list li div
+    flex: 1 1 0
+    min-width: 50%
+    max-width: 50%
+    box-sizing: border-box
+  #philips .speed .speed__list li .speed__list__txt
+    padding: 0 1em
+  #philips .comfort .comfort__list li
+    display: block
+  #philips .comfort .comfort__list li .comfort__list__i
+    margin-bottom: 1em
+
+@media (max-width: 812px)
+  #philips p
+    font-size: unset !important
+  #philips h2
+    font-size: 28px
+  #philips .logo .logo__i
+    left: 1em
+  #philips .logo .logo__txt
+    left: 1em
+  #philips .logo .logo__txt h2
+    margin-bottom: 1em
+  #philips .logo .logo__txt span
+    font-size: 20px
+  #philips .tech .tech__flex
+    padding: 1em
+  #philips .tech .tech__flex .tech__list li .tech__list__txt span
+    font-size: 20px
+  #philips .speed .speed__title
+    padding: 1em
+  #philips .speed .speed__list
+    margin-bottom: 1em
+  #philips .speed .speed__list li
+    margin-top: 1em
+    flex-direction: column-reverse !important
+    justify-content: unset
+    align-items: unset
+  #philips .speed .speed__list li .speed__list__img
+    max-width: 100%
+  #philips .speed .speed__list li .speed__list__img img
+    width: 100%
+  #philips .speed .speed__list li .speed__list__txt
+    padding: 1em
+    max-width: 100%
+  #philips .comfort .comfort__title
+    padding: 1em
+  #philips .comfort .comfort__list
+    padding: 1em
+    box-sizing: border-box
+    display: block
+    li
+      min-width: unset
+      max-width: 100%
+  #philips .comfort .comfort__list li:nth-of-type(1)
+    margin-right: 0
+    margin-bottom: 3em
+  #philips .comfort .comfort__list li .comfort__list__i
+    margin-right: 0
+  #philips .comfort .comfort__list li .comfort__list__txt
+    text-align: center
+  #philips .tech .tech__title
+    padding: 1em
+
+@media (max-width: 480px)
+  #philips h2
+    font-size: 24px
+  #philips .logo
+    display: flex
+    flex-direction: column-reverse
+  #philips .logo .logo__i
+    max-width: 100px
+  #philips .logo .logo__txt
+    position: unset
+    color: #000
+    padding: 1em
+  #philips .logo .logo__txt span
+    font-size: 18px
+  #philips .tech .tech__flex
+    display: block
+  #philips .tech .tech__flex .tech__list
+    margin-top: 2em
+  #philips .tech .tech__flex .tech__list li
+    flex-direction: column-reverse
+  #philips .tech .tech__flex .tech__list li .tech__list__txt
+    max-width: 100%
+    margin-top: 1em
+  #philips .speed .speed__list li div
+    max-width: 100%
+    min-width: unset
+  #philips .speed .speed__list li .speed__list__img
+    min-width: unset
+  #philips .speed .speed__list li .speed__list__txt span
+    font-size: 18px
+  #philips .comfort .comfort__list li .comfort__list__txt span
+    font-size: 20px

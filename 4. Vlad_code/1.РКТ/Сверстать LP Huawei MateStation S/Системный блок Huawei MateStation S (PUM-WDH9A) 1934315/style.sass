@@ -1,0 +1,427 @@
+/*default styles*/
+
+#huawei
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 40px
+    font-weight: bold
+    padding: 0
+    margin: 0 0 0.5em 0
+  h3
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 30px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#huawei
+  .show__mob
+    display: none
+  .fade
+    animation-name: fade
+    animation-duration: 1.5s
+
+  @keyframes fade
+    0%
+      opacity: 0.1
+    100%
+      opacity: 1
+
+  .not__active
+    display: none
+
+  .active__slider__btn
+    // overflow: hidden
+    position: relative
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      left: -1px
+      top: -1px
+      bottom: -1px
+      background-color: #aaa8a9
+      border: solid 1px #757575
+      border-radius: 20px
+      width: 70px
+      vertical-align: middle
+
+  .active__huawei__btn
+    overflow: hidden
+    position: relative
+    &::after
+      border-radius: 50%
+      content: ''
+      display: block
+      position: absolute
+      bottom: 50%
+      right: 50%
+      width: 10px
+      height: 10px
+      background-color: #000
+      transform: translate(50%, 50%)
+
+  .giant
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 50px 0 60px 0
+    li
+      flex: 1 1 0
+      box-sizing: border-box
+      text-align: center
+      &:nth-of-type(2)
+        img
+          margin: 0 auto 1em auto
+        span
+          font-size: 14px
+          margin-top: 0.5em
+
+  .trail
+    position: relative
+    .trail__txt
+      position: absolute
+      color: #fff
+      max-width: 450px
+      padding-left: 110px
+      bottom: 50%
+      transform: translateY(50%)
+      box-sizing: content-box
+
+  .nolimits
+    .nolimits__img
+      padding-top: 2em
+      img
+        margin: 0 auto
+    .nolimits__wrap
+      position: relative
+      .nolimits__wrap__txt
+        position: absolute
+        color: #fff
+        text-align: center
+        bottom: 50%
+        transform: translateY(50%)
+        text-align: center
+        padding: 0 180px
+
+  .proc
+    .proc__txt
+      text-align: center
+      padding: 130px 220px 50px 220px
+
+  .fastlane
+    .fastlane__txt
+      text-align: center
+      padding: 130px 220px 50px 220px
+
+  .cooller
+    .cooller__txt
+      text-align: center
+      padding: 130px 220px 50px 220px
+
+  .touch
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 100px
+
+    .active
+      display: block
+    li
+      flex: 1 1 0
+      .touch__nav
+        display: flex
+        flex-direction: row
+        margin-top: 90px
+        max-width: 470px
+        li
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          i
+            display: block
+            border: solid 1px black
+            width: 15px
+            height: 15px
+            border-radius: 50%
+            cursor: pointer
+            margin: 0 auto
+          span
+            font-size: 13px
+            text-align: center
+            margin: 1em 0
+          img
+            max-width: max-content
+            margin: 0 auto
+            max-height: 51px
+          &:nth-of-type(1)
+            margin-right: 2em
+          .touch__txt
+            h2
+              margin-bottom: 45px
+      &:nth-of-type(2)
+        img
+          margin: 0 0 0 auto
+
+  .share
+    position: relative
+    .share__txt
+      position: absolute
+      color: #fff
+      text-align: center
+      bottom: 55%
+      right: 50%
+      transform: translate(50%, 50%)
+
+  .slider
+    background-color: #f3f3f3
+    padding: 70px 110px
+    .slider__img
+      img
+        margin: 0 auto
+    .slider__nav
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      margin: 4em auto 2em auto
+      max-width: 80%
+      li
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        span
+          font-size: 13px
+          text-align: center
+          max-width: 200px
+          min-height: 31px
+          display: flex
+          justify-content: center
+          align-items: center
+        i
+          display: block
+          width: 130px
+          height: 10px
+          border: solid 1px #757575
+          border-radius: 20px
+          cursor: pointer
+          margin: 1em auto
+    .slider__txt
+      max-width: 80%
+      margin: 0 auto
+      min-height: 75px
+
+  .plug
+    padding: 75px 110px
+    .plug__txt
+      text-align: center
+      margin-bottom: 50px
+    .plug__wrap
+      position: relative
+      .plug__img
+        img
+          margin: 0 auto
+      .plug__list
+        position: absolute
+        top: 0
+        li
+          font-size: 13px
+          line-height: normal
+        &:nth-of-type(1)
+          left: 4em
+          text-align: right
+          top: -4px
+          li
+            &:nth-of-type(n+2)
+              margin-top: 0.5em
+            &:nth-of-type(5)
+              margin-top: 2.4em
+            &:nth-of-type(6)
+              margin-top: 1.9em
+            &:nth-of-type(7)
+              margin-top: 1.3em
+        &:nth-of-type(2)
+          right: 0
+          right: 6em
+          top: 1.8em
+          li
+            &:nth-of-type(2)
+              margin-top: 1.8em
+            &:nth-of-type(3)
+              margin-top: 1em
+            &:nth-of-type(4)
+              margin-top: 1.4em
+
+  .snoska
+    padding: 55px 0 60px 0
+    margin: 0 110px
+    border-top: solid 1px #eaeaea
+    li
+      color: #afafaf
+      font-size: 12px
+      &:nth-of-type(n+2)
+        margin-top: 0.5em
+        
+          
+
+//media***********************************************
+
+@media (max-width: 1024px)
+  #huawei .trail .trail__txt
+    padding-left: 1em
+  #huawei .touch li
+    &:nth-of-type(1)
+      margin-right: 2em
+  #huawei .slider .slider__txt
+    min-height: 130px
+  #huawei .hide__mob
+    display: none
+  #huawei .show__mob
+    display: block
+  #huawei .plug .plug__wrap .plug__list
+    position: unset
+  #huawei .plug .plug__wrap
+    display: flex
+    flex-direction: row
+    align-items: center
+    .plug__list
+      li
+        &:nth-of-type(n+2)
+          margin-top: 0.5em !important
+      &:nth-of-type(1)
+        order: 0
+      &:nth-of-type(2)
+        order: 2
+    .plug__img
+      order: 1
+      margin: 0 1em
+      
+@media (max-width: 812px)
+  #huawei h2
+    font-size: 32px
+  #huawei h3
+    font-size: 24px
+  #huawei .trail .trail__img img
+    min-width: 140%
+  #huawei .nolimits .nolimits__wrap .nolimits__wrap__txt
+    padding: 0 1em
+  #huawei .proc .proc__txt,
+  #huawei .fastlane .fastlane__txt,
+  #huawei .cooller .cooller__txt
+    padding: 2em 2em 1em 2em
+  #huawei .touch
+    padding: 1em
+  #huawei .touch li .touch__nav
+    margin-top: 2em
+  #huawei .slider
+    padding: 1em
+  #huawei .slider .slider__txt
+    min-height: 130px
+  #huawei .plug
+    padding: 1em
+  #huawei .snoska
+    padding: 1em 0
+    margin: 0 1em
+  #huawei .giant li:nth-of-type(2)
+    padding-right: 1em
+
+@media (max-width: 480px)
+  #huawei h2
+    font-size: 24px
+  #huawei h3
+    font-size: 20px
+  #huawei .giant
+    padding: 1em
+    display: block
+  #huawei .giant li:nth-of-type(1)
+    margin-bottom: 1em
+  #huawei .trail .trail__txt
+    position: unset
+    transform: unset
+    color: #000
+    padding: 1em
+  #huawei .trail .trail__img img
+    margin-left: -30%
+  #huawei .nolimits .nolimits__wrap .nolimits__wrap__txt
+    position: unset
+    transform: unset
+    padding: 1em
+  #huawei .nolimits .nolimits__wrap
+    background-image: url("https://cdn.comfy.ua/media/x/img/1934315/4.jpg")
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+  #huawei .nolimits .nolimits__wrap .nolimits__wrap__img
+    display: none
+  #huawei .touch
+    display: block
+  #huawei .touch li:nth-of-type(1)
+    margin-right: 0
+    margin-bottom: 2em
+  #huawei .touch li .touch__nav li:nth-of-type(1)
+    margin-bottom: 0
+  #huawei .share .share__txt
+    width: max-content
+    padding: 0 1em
+    box-sizing: border-box
+  #huawei .slider .slider__nav
+    max-width: 100%
+  #huawei .slider .slider__nav li i
+    width: 70px
+  #huawei .active__slider__btn::after
+    width: 45px
+  #huawei .slider .slider__txt
+    max-width: 100%
+    min-height: 260px
+  #huawei .plug .plug__wrap
+    flex-direction: column
+  #huawei .plug .plug__wrap .plug__img
+    order: 0
+    width: 100%
+    margin-bottom: 1em
+  #huawei .plug .plug__wrap .plug__list
+    width: 100%
+    text-align: center !important
+  #huawei .plug .plug__wrap .plug__list:nth-of-type(2) li:nth-of-type(1)
+    margin-top: 0.5em
+  #huawei .giant li:nth-of-type(2)
+    padding-right: 0

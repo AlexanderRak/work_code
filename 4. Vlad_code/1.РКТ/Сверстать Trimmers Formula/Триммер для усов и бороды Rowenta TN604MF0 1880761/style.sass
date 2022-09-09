@@ -1,0 +1,453 @@
+/*default styles*/
+
+#rowenta
+  max-width: 1366px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 42px
+    font-weight: bold
+    text-transform: uppercase
+    padding: 0
+    margin: 0
+  h3
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 24px
+    font-weight: bold
+    text-transform: uppercase
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    margin: 0 auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#rowenta
+  .show__mob
+    display: none
+  .logo
+    position: relative
+    .logo__icon
+      padding: 40px 0 40px 80px
+      img
+        margin: 0
+    .logo__list
+      position: absolute
+      padding: 80px
+      display: flex
+      flex-direction: row
+      align-items: flex-end
+      justify-content: space-between
+      width: 100%
+      box-sizing: border-box
+      max-height: 611px
+      li
+        flex: 1 1 0
+        h2
+          color: #fff
+          margin: 90px 0
+        span
+          color: #f05943
+          font-size: 38px
+        &:nth-of-type(1)
+          img
+            margin: 0
+
+  .gadget
+    position: relative
+    .gadget__list
+      position: absolute
+      display: flex
+      flex-direction: row
+      align-items: center
+      padding: 0 80px
+      box-sizing: border-box
+      max-height: max-content
+      li
+        flex: 1 1 0
+        h2
+          color: #f05943
+          margin-bottom: 40px
+        p
+          color: #fff
+          font-size: 24px
+
+  .rowenta__wrap
+    position: relative
+    .rowenta__list
+      position: absolute
+      padding: 80px
+      box-sizing: border-box
+      display: flex
+      flex-direction: row
+      li
+        position: relative
+        flex: 1 1 0
+        .rowenta__list__cont
+          position: absolute
+          bottom: 0
+          text-align: center
+          .rowenta__list__cont__title
+            padding: 15px 0
+            background-image: linear-gradient(90deg, #acacac 0%, #ffffff 50%, #acacac 100%)
+            span
+              text-transform: uppercase
+              font-size: 20px
+              color: #333333
+              font-weight: bold
+          .rowenta__list__cont__txt
+            background-color: #f05943
+            color: #fff
+            padding: 20px 15px
+            min-height: 190px
+        &:nth-of-type(2)
+          margin: 0 40px
+
+  .func
+    position: relative
+    overflow: hidden
+    .func__wrap
+      display: flex
+      flex-direction: row
+      position: absolute
+      .func__list
+        flex: 1 1 0
+        padding-left: 80px
+        li
+          display: flex
+          flex-direction: row
+          .func__list__icon
+            min-width: max-content
+            margin-right: 3em
+          .func__list__txt
+            h3
+              color: #f05943
+              margin-bottom: 15px
+            p
+              color: #fff
+          &:nth-of-type(2)
+            margin: 3em 0
+      .func__img
+        flex: 1 1 0
+        img
+          margin: 0 0 0 auto
+
+  .things
+    background-color: #f05943
+    color: #fff
+    li
+      display: flex
+      flex-direction: row
+      align-items: center
+      div,
+      .things__list
+        flex: 1 1 0
+        max-width: 50%
+        box-sizing: border-box
+      &:nth-of-type(even)
+        flex-direction: row-reverse
+      .things__list
+        padding: 1em 60px
+        box-sizing: border-box
+        li
+          display: flex
+          flex-direction: row
+          align-items: flex-start
+          div
+            max-width: max-content
+          .things__list__txt
+            margin-left: 2em
+            h3
+              margin-bottom: 15px
+          &:nth-of-type(2)
+            margin: 2em 0 0 0
+
+  .saved
+    background-color: #000
+    display: flex
+    flex-direction: row
+    align-items: center
+    li
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+      img
+        margin: 0
+      h2
+        color: #f05943
+        margin-bottom: 40px
+      p
+        font-size: 24px
+        color: #fff
+      &:nth-of-type(1)
+        margin-bottom: -27em
+      &:nth-of-type(2)
+        padding-right: 80px
+
+  .looks__list
+    color: #f05943
+    display: flex
+    flex-direction: row
+    background-color: #000
+    align-items: center
+    padding: 0 80px 80px 80px
+    li
+      flex: 1 1 0
+      align-items: center
+      h2
+        strong
+          color: #fff
+
+//media**************************************
+
+@media (max-width: 1024px)
+  #rowenta h2
+    font-size: 32px
+  #rowenta h3
+    font-size: 20px
+  #rowenta .gadget .gadget__list li:nth-of-type(2)
+    margin-left: 1em
+  #rowenta .logo .logo__icon
+    padding-left: 1em
+  #rowenta .logo .logo__list
+    padding-left: 1em
+    padding-right: 1em
+    max-height: 500px
+  #rowenta .gadget .gadget__list,
+    padding: 0 1em
+  #rowenta .rowenta__wrap .rowenta__list
+    padding-left: 1em
+    padding-right: 1em
+    padding-top: 1em
+  #rowenta .rowenta__wrap .rowenta__list li .rowenta__list__cont .rowenta__list__cont__title
+    min-height: 45px
+    display: flex
+    justify-content: center
+    align-items: center
+  #rowenta .rowenta__wrap .rowenta__list li .rowenta__list__cont
+    margin-bottom: -5em
+  #rowenta .func .func__wrap .func__list
+    padding-left: 1em
+  #rowenta .func .func__wrap .func__list li .func__list__icon
+    margin-right: 1em
+  #rowenta .func .func__wrap .func__list li:nth-of-type(2)
+    margin: 1em 0
+  #rowenta .func
+    overflow: hidden
+  #rowenta .things li .things__list
+    padding: 1em
+  #rowenta .things li .things__list li:nth-of-type(2)
+    margin: 1em 0
+  #rowenta .saved li:nth-of-type(2)
+    padding-right: 1em
+  #rowenta .saved li:nth-of-type(1)
+    margin-bottom: -15em
+  #rowenta .looks__list
+    padding: 0 1em 1em 1em
+  #rowenta .logo .logo__list li img
+    position: relative
+    z-index: 1
+    max-height: 500px
+  #rowenta .logo .logo__list li h2
+    margin: 50px 0
+  #rowenta .logo .logo__list li span
+    font-size: 24px
+  #rowenta .gadget .gadget__list li p
+    font-size: 20px
+  #rowenta .rowenta__wrap .rowenta__list li .rowenta__list__cont .rowenta__list__cont__title span
+    font-size: 19px
+  #rowenta .rowenta__wrap .rowenta__list li .rowenta__list__cont .rowenta__list__cont__txt p
+    line-height: 19px
+  #rowenta .rowenta__wrap .rowenta__list li .rowenta__list__cont .rowenta__list__cont__txt
+    min-height: 175px
+    margin-bottom: 25px
+  #rowenta .func .func__wrap .func__list li .func__list__txt p
+    line-height: 22px
+  #rowenta .func .func__wrap
+    position: unset
+    background-color: #000
+    padding: 1em
+    display: block
+  #rowenta .func .func__wrap .func__img img
+    max-width: 60%
+    margin-right: -1em
+  #rowenta .func .func__bg
+    display: none
+
+@media (max-width: 812px)
+  #rowenta .logo .logo__list li img
+    max-height: unset
+  #rowenta .logo .logo__list
+    max-height: unset
+    position: unset
+    background-image: url("https://cdn.comfy.ua/media/x/1880763/bg1.png")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    align-items: center
+    padding: 1em
+  #rowenta .logo .logo__bg
+    display: none
+  #rowenta .gadget .gadget__list
+    position: unset
+    background-image: url("https://cdn.comfy.ua/media/x/1880763/bg2.png")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    padding: 1em
+  #rowenta .gadget .gadget__bg
+    display: none
+  #rowenta .rowenta__wrap
+    padding-bottom: 1em
+    background-image: url("https://cdn.comfy.ua/media/x/1880763/bg3.png")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+  #rowenta .rowenta__wrap .rowenta__list
+    overflow-x: scroll
+    padding: 1em
+    position: unset
+    max-height: unset
+    max-width: unset
+    width: 100%
+    padding-bottom: 5em
+  #rowenta .rowenta__wrap .rowenta__wrap__bg
+    display: none
+  #rowenta .rowenta__wrap .rowenta__list li
+    min-width: 300px
+  // #rowenta .func .func__wrap
+  //   position: unset
+  //   background-color: #000
+  //   padding: 1em
+  //   display: block
+  // #rowenta .func .func__wrap .func__img img
+  //   max-width: 60%
+  //   margin-right: -1em
+  // #rowenta .func .func__bg
+  //   display: none
+  #rowenta .things li
+    flex-direction: column !important
+  #rowenta .things li div,
+  #rowenta .things li .things__list
+    max-width: 100%
+  #rowenta .things li .things__list li
+    flex-direction: row !important
+  #rowenta .saved
+    flex-direction: column-reverse
+    padding: 0
+    li
+      max-width: 100%
+  #rowenta .saved li:nth-of-type(1)
+    margin: 0 auto -15em 0
+  #rowenta .saved li:nth-of-type(2)
+    padding: 1em
+  #rowenta .looks__list
+    display: block
+    padding: 1em
+  #rowenta .gadget .gadget__list
+    display: block
+  #rowenta .gadget .gadget__list li:nth-of-type(2)
+    margin-left: 0
+    margin-top: 1em
+
+@media (max-width: 480px)
+  #rowenta
+    .hide__mob
+      display: none
+    .show__mob
+      display: block
+  #rowenta h2
+    font-size: 28px
+  #rowenta .logo .logo__list
+    display: block
+    background-image: unset
+    background-color: #111111
+  #rowenta .logo .logo__list li:nth-of-type(2)
+    transform: rotate(90deg)
+  #rowenta .logo .logo__list li img
+    max-height: 280px
+  #rowenta .logo .logo__list li h2
+    margin: 25px 0
+  #rowenta .logo .logo__icon
+    padding: 1em
+  #rowenta .gadget .gadget__list li h2 br
+    display: none
+  #rowenta .gadget .gadget__list li p
+    font-size: unset
+  #rowenta .rowenta__wrap .rowenta__list li
+    min-width: 260px
+  #rowenta .rowenta__wrap .rowenta__list li:nth-of-type(2)
+    margin: 0 1em
+  #rowenta .rowenta__wrap .rowenta__list li .rowenta__list__cont
+    margin-bottom: -10em
+  #rowenta .rowenta__wrap .rowenta__list
+    padding-bottom: 10em
+  #rowenta .func .func__wrap .func__list
+    padding-left: 0
+  #rowenta .func .func__wrap .func__list li
+    display: block
+  #rowenta .func .func__wrap .func__list li .func__list__icon
+    margin-right: 0
+    margin-bottom: 1em
+  #rowenta .func .func__wrap .func__list li .func__list__txt
+    text-align: center
+  #rowenta .func .func__wrap .func__img img
+    max-width: 75%
+    margin-top: 1em
+  #rowenta .things li .things__list li
+    display: block
+  #rowenta .things li .things__list li .things__list__icon
+    margin: 0 auto 1em auto
+  #rowenta .things li .things__list li .things__list__txt
+    margin-left: 0
+    text-align: center
+  #rowenta .saved li h2
+    word-break: break-all
+    br
+      display: none
+  #rowenta .saved li p
+    font-size: unset
+  #rowenta .saved li:nth-of-type(1)
+    margin-bottom: 0
+  #rowenta .rowenta__wrap .rowenta__list li .rowenta__list__cont .rowenta__list__cont__title
+    min-height: 78px
+  #rowenta .rowenta__wrap .rowenta__list li .rowenta__list__cont .rowenta__list__cont__txt
+    min-height: 230px
+    margin-bottom: 0
+  #rowenta .gadget .gadget__list li h2
+    word-break: break-all

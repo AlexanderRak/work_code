@@ -1,0 +1,572 @@
+/*default styles*/
+
+#tefal
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    font-size: 20px
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: bold
+    text-transform: uppercase
+    padding: 0
+    margin: 0
+    margin-bottom: 0.5em
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    margin: unset
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#tefal
+  .logo
+    position: relative
+    .logo__icons
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      img
+        &:nth-of-type(1)
+          padding: 1em 0 0 3em
+    .logo__title
+      position: absolute
+      top: 350px
+      right: 2em
+      span
+        font-weight: bold
+        text-transform: uppercase
+        font-size: 40px
+        color: #e11621
+        text-align: center
+    .logo__img
+      img
+        width: 100%
+
+  .red
+    background-image: linear-gradient(0deg, #510b0b 0%, #f41938 100%)
+    color: #fff
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 3em
+    .red__txt
+      max-width: 50%
+      width: 50%
+      box-sizing: border-box
+    .red__list
+      display: flex
+      flex-direction: row
+      max-width: 50%
+      width: 50%
+      box-sizing: border-box
+      li
+        text-align: center
+        border: solid 1px #fff
+        padding: 1em
+        border-top-left-radius: 20px
+        border-bottom-right-radius: 20px
+        flex: 1 1 0
+        box-sizing: border-box
+        &:nth-of-type(1)
+          margin-right: 4em
+        .large
+          font-size: 80px
+        .medium
+          font-size: 40px
+          text-transform: uppercase
+          letter-spacing: 0px
+          letter-spacing: -4px
+        .small
+          font-size: 30px
+
+  .flexwhisk
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    padding: 2em 0
+    li
+      .flexwhisk__txt
+        padding: 3em
+        box-sizing: border-box
+        max-width: 600px
+      &:nth-of-type(2)
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: flex-end
+
+  .kit
+    position: relative
+    color: #fff
+    .kit__wrap
+      position: absolute
+      padding: 3em
+      .kit__list
+        display: flex
+        flex-direction: row
+        margin-top: 3em
+        li
+          display: grid
+          align-items: start
+          .kit__list__img
+            background-color: rgba(255, 255, 255, .3)
+            border-top-left-radius: 20px
+            border-bottom-right-radius: 20px
+          .kit__list__txt
+            text-align: center
+            margin-top: 1em
+            span
+              font-size: 22px
+              text-transform: uppercase
+          &:nth-of-type(2)
+            margin: 0 3em
+      .kit__txt
+        max-width: 700px
+        margin-top: 7em
+    .kit__img
+      img
+        width: 100%
+
+  .power
+    display: flex
+    flex-direction: row
+    .power__wrap
+      .power__list
+        display: flex
+        flex-direction: row
+        margin-left: -15em
+        margin-top: 4em
+        li
+          flex: 1 1 0
+          display: flex
+          flex-direction: column
+          justify-content: center
+          .large
+            font-size: 60px
+            color: #fff
+            text-align: center
+            letter-spacing: -4px
+          .small
+            font-size: 40px
+            color: #fff
+            text-align: center
+          h2
+            color: #e11621
+          &:nth-of-type(1)
+            background-color: #cb0009
+          &:nth-of-type(1),
+          &:nth-of-type(2)
+            border-top-left-radius: 20px
+            border-bottom-right-radius: 20px
+            padding: 1em
+            max-width: 240px
+          &:nth-of-type(2)
+            border: solid 1px #cb0009
+            margin: 0 1em 0 3em
+      .power__txt
+        padding: 3em
+        span
+          font-size: 42px
+          font-weight: bold
+          margin-bottom: 0.5em
+
+  .gray__line
+    padding: 0.3em
+    background: linear-gradient(90deg, rgba(226,220,217,1) 0%, rgba(226,220,217,1) 35%, rgba(255,255,255,1) 100%)
+
+  .nasadki
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding: 3em 0 0 3em
+    align-items: center
+    .nasadki__item
+      .nasadki__list
+        display: flex
+        flex-direction: row
+        align-items: center
+        li
+          &:nth-of-type(1)
+            border: solid 1px #cb0009
+            border-top-left-radius: 20px
+            border-bottom-right-radius: 20px
+            padding: 1em 0
+            max-width: 200px
+            margin-right: 1em
+          h2
+            color: #e11621
+      .nasadki__item__txt
+        margin-top: 1em
+        span
+          font-size: 42px
+          font-weight: bold
+          b
+            text-transform: uppercase
+
+  .fruit
+    position: relative
+    .fruit__txt
+      position: absolute
+      top: 2em
+      left: 4em
+      color: #fff
+      p
+        font-size: 24px
+    .fruit__img
+      img
+        width: 100%
+
+  .smuzi
+    display: flex
+    flex-direction: row
+    padding-top: 3em
+    .smuzi__wrap
+      max-width: 50%
+      margin-left: 1em
+      .smuzi__list
+        display: flex
+        flex-direction: row
+        align-items: center
+        padding-top: 3em
+        margin-bottom: 2em
+        li
+          &:nth-of-type(1)
+            border: solid 1px #cb0009
+            border-top-left-radius: 20px
+            border-bottom-right-radius: 20px
+            padding: 1em 0
+            max-width: 200px
+            margin-right: 1em
+          h2
+            color: #e11621
+      .smuzi__txt
+        span
+          font-size: 42px
+          font-weight: bold
+          margin-bottom: 0.5em
+
+  .recipe
+    padding-top: 4em
+    .recipe__list
+      display: flex
+      flex-direction: row
+      padding-right: 3em
+      max-width: 70%
+      margin: -350px 0 0 auto
+      li
+        .recipe__list__icon
+          color: #fff
+          background-color: #cb0009
+          border-top-left-radius: 20px
+          border-bottom-right-radius: 20px
+          max-width: max-content
+          text-align: center
+          padding: 0 1em
+          margin: -7em 0 0 auto
+          .large
+            font-size: 80px
+          .medium
+            font-size: 40px
+            text-transform: uppercase
+          .small
+            font-size: 32px
+        .recipe__list__txt
+          max-width: 500px
+          margin-top: 3em
+          p
+            font-size: 24px
+        &:nth-of-type(1)
+          margin-right: 3em
+
+  .repair
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    padding: 3em 6em 0 6em
+    li
+      &:nth-of-type(1)
+        img
+          max-width: 80%
+
+//media*************************************
+
+@media (max-width: 1024px)
+  #tefal .logo .logo__title
+    top: 320px
+  #tefal .logo .logo__title span
+    font-size: 34px
+  #tefal .red .red__list li .medium
+    font-size: 34px
+    letter-spacing: -2px
+  #tefal .red .red__list li .small
+    font-size: 24px
+  #tefal .red .red__list li:nth-of-type(1)
+    margin-right: 1em
+  #tefal .red .red__list li
+    min-width: 244px
+  #tefal .kit .kit__wrap .kit__list
+    margin-top: 1em
+  #tefal .kit .kit__wrap .kit__txt
+    margin-top: 3%
+  #tefal .power .power__wrap .power__list li:nth-of-type(2)
+    margin: 0 1em 0 1em
+  #tefal .power .power__wrap .power__txt span
+    font-size: 30px
+  #tefal .power .power__wrap .power__list li:nth-of-type(3)
+    min-width: 300px
+  #tefal .power .power__wrap .power__list li .large
+    font-size: 50px
+  #tefal .power .power__wrap .power__list li .small
+    font-size: 34px
+  #tefal .nasadki .nasadki__item
+    &:nth-of-type(2)
+      max-width: 40%
+  #tefal .nasadki .nasadki__item .nasadki__item__txt span
+    font-size: 30px
+  #tefal .smuzi .smuzi__wrap .smuzi__txt span
+    font-size: 30px
+    padding-right: 1em
+  #tefal .logo .logo__icons
+    img
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+  #tefal .logo .logo__icons img:nth-of-type(1)
+    padding: 1em
+
+@media (max-width: 812px)
+  #tefal .logo .logo__title
+    position: unset
+    margin-bottom: -6%
+    top: unset
+    right: unset
+    position: relative
+  #tefal .red
+    display: block
+  #tefal .red .red__list li
+    flex: 1 1 0
+    max-width: 100%
+  #tefal .red .red__list
+    width: 100%
+    max-width: 80%
+    margin: 0 auto
+  #tefal .red .red__txt
+    max-width: 100%
+    width: 100%
+    text-align: center
+  #tefal .flexwhisk
+    display: block
+  #tefal h2
+    font-size: 28px
+  #tefal .kit .kit__wrap
+    padding: 1em
+  #tefal .kit .kit__img img
+    min-width: 120%
+  #tefal .power
+    flex-direction: column-reverse
+  #tefal .power .power__wrap .power__list
+    margin-top: 0
+    margin-left: unset
+    padding: 1em
+  #tefal .power .power__wrap .power__txt
+    padding: 1em
+    text-align: center
+  #tefal .nasadki
+    padding: 1em
+    flex-direction: column
+    .nasadki__item
+      max-width: 100%
+      width: 100%
+  #tefal .nasadki .nasadki__item .nasadki__list
+    justify-content: center
+  #tefal .nasadki .nasadki__item .nasadki__item__txt
+    text-align: center
+    padding: 1em
+  #tefal .nasadki .nasadki__item:nth-of-type(2)
+    max-width: 100%
+  #tefal .smuzi
+    padding-top: 0
+    flex-direction: column-reverse
+  #tefal .smuzi .smuzi__wrap
+    padding: 1em
+    max-width: 100%
+    text-align: center
+    margin-left: 0
+  #tefal .smuzi .smuzi__wrap .smuzi__list
+    justify-content: center
+    padding-top: 0
+  #tefal .recipe .recipe__list li .recipe__list__icon .large
+    font-size: 50px
+  #tefal .recipe .recipe__list li .recipe__list__icon .medium
+    font-size: 30px
+  #tefal .recipe .recipe__list li .recipe__list__icon .small
+    font-size: 24px
+  #tefal .recipe .recipe__list
+    margin: 0
+    max-width: 100%
+    padding: 1em
+  #tefal .recipe .recipe__img img
+    margin: 0 auto
+  #tefal .recipe .recipe__list li .recipe__list__icon
+    margin: 0 0 0 auto
+  #tefal .recipe
+    padding-top: 1em
+  #tefal .repair
+    padding: 1em 1em 0 1em
+  #tefal .repair li:nth-of-type(1) img
+    max-width: 100%
+
+@media (max-width: 480px)
+  #tefal p
+    font-size: unset
+  #tefal h2
+    font-size: 24px
+  #tefal .logo .logo__title span
+    font-size: 24px
+  #tefal .red
+    padding: 1em
+  #tefal .red .red__list li .medium
+    font-size: 24px
+  #tefal .red .red__list li .large
+    font-size: 40px
+  #tefal .red .red__list li .small
+    font-size: 18px
+  #tefal .red .red__list
+    display: block
+  #tefal .red .red__list li:nth-of-type(1)
+    margin-right: 0
+    margin-bottom: 1em
+  #tefal .flexwhisk li .flexwhisk__txt
+    padding: 1em
+  #tefal .flexwhisk li:nth-of-type(2)
+    flex-direction: column-reverse
+    text-align: center
+  #tefal .flexwhisk li:nth-of-type(2) .flexwhisk__img img
+    max-width: 60%
+    margin: 0 auto
+  #tefal .kit .kit__img img
+    min-width: 200%
+    margin-left: -100%
+  #tefal .kit .kit__wrap
+    position: unset
+    color: #000
+  #tefal .kit .kit__wrap .kit__title
+    text-align: center
+  #tefal .kit .kit__wrap .kit__list
+    align-items: center
+    overflow-x: scroll
+    li
+      min-width: 200px
+  #tefal .kit .kit__wrap .kit__list li
+    display: flex
+    flex-direction: column
+    align-items: center
+  #tefal .kit .kit__wrap .kit__list li .kit__list__txt span
+    font-size: 16px
+  #tefal .kit .kit__wrap .kit__list li:nth-of-type(2)
+    margin: 0 1em
+  #tefal .kit .kit__wrap .kit__list li .kit__list__img
+    background-color: rgba(220, 218, 218, .3)
+    img
+      margin: 0 auto
+  #tefal .kit .kit__wrap .kit__list li .kit__list__txt
+    min-height: 37px
+  #tefal .power .power__wrap .power__list
+    flex-direction: column
+    align-items: center
+  #tefal .power .power__wrap .power__list li:nth-of-type(2)
+    margin: 1em 0
+    order: 2
+  #tefal .power .power__wrap .power__list li:nth-of-type(1)
+    min-height: 240px
+    min-width: 240px
+    box-sizing: border-box
+    order: 1
+  #tefal .power .power__wrap .power__list li:nth-of-type(3)
+    text-align: center
+    order: 0
+  #tefal .power .power__wrap .power__txt span
+    font-size: 20px
+  #tefal .nasadki .nasadki__item .nasadki__list
+    display: block
+  #tefal .nasadki .nasadki__item .nasadki__list li:nth-of-type(1)
+    margin: 0 auto 1em auto
+  #tefal .nasadki .nasadki__item .nasadki__list li:nth-of-type(2)
+    text-align: center
+  #tefal .nasadki .nasadki__item .nasadki__item__txt span
+    font-size: 20px
+  #tefal .fruit .fruit__txt p
+    font-size: unset
+  #tefal .fruit .fruit__txt
+    top: 1em
+    left: 1em
+  #tefal .smuzi .smuzi__wrap .smuzi__list
+    flex-direction: column-reverse
+  #tefal .smuzi .smuzi__wrap .smuzi__list li:nth-of-type(1)
+    margin-right: 0
+    margin-top: 1em
+  #tefal .smuzi .smuzi__wrap .smuzi__txt span
+    padding-right: 0
+    font-size: 20px
+  #tefal .recipe .recipe__list
+    display: block
+  #tefal .recipe .recipe__list li:nth-of-type(1)
+    margin-right: 0
+  #tefal .recipe .recipe__list li .recipe__list__icon
+    margin: 0 auto
+  #tefal .recipe .recipe__list li .recipe__list__txt p
+    font-size: unset
+    text-align: center
+  #tefal .recipe .recipe__list li .recipe__list__txt
+    margin: 1em 0
+  #tefal .repair
+    flex-direction: column
+  #tefal .repair li:nth-of-type(1) img
+    max-width: 60%
+    margin: 0 auto
+  #tefal .flexwhisk
+    padding-bottom: 0
+  #tefal .red .red__list
+  #tefal .red .red__list li
+    min-width: unset
+    max-width: 190px
+    margin: 0 auto
+  #tefal .red .red__list li:nth-of-type(1)
+    margin: 0 auto 1em auto
+  #tefal .recipe .recipe__list li:nth-of-type(2) img
+    margin: 0 auto

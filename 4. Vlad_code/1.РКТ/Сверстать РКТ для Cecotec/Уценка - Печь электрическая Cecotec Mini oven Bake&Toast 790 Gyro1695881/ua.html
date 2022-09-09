@@ -1,0 +1,640 @@
+<style type="text/css">
+  #content_ex p:first-letter {
+    padding-left: 0;
+  }
+
+  #content_ex p {
+    margin-bottom: 0;
+  }
+
+  #content_ex img:hover {
+    opacity: 1;
+  }
+
+  #content_ex img {
+    opacity: 1;
+  }
+
+  #content_ex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  #content_ex .container h2 {
+
+    line-height: 4rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  #content_ex .container img {
+    max-width: 100%;
+    margin-bottom: 0rem;
+    max-height: 700px;
+  }
+
+  #content_ex .container p {
+    text-align: center;
+    margin: 15px 0 25px 0;
+  }
+
+  #content_ex .container .container_li_item {
+    text-align: left;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list {
+    padding-left: 1.4rem;
+    margin: 3rem 0rem 3rem 0rem;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list li {
+    position: relative;
+  }
+
+  #content_ex .container .container_li_item ul.container_li_item_list li:before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -1.3rem;
+    border-radius: 50%;
+    width: .5rem;
+    height: .5rem;
+    background-color: #379424;
+  }
+
+  #content_ex ul {
+    padding-left: 15px;
+  }
+
+  #content_ex ul li {
+    list-style-type: disc;
+  }
+
+  .small {
+    max-width: 350px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small2 {
+    max-width: 600px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small3 {
+    max-width: 350px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small4 {
+    max-width: 390px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .small5 {
+    max-width: 700px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .col_fl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    height: auto;
+  }
+
+  .col_fl .item6 {
+    flex: 1 1 0;
+  }
+
+  .col_fl .item6 img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .col_fl .item6 img {
+    max-height: 437px !important;
+    height: auto;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .col_fl {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .col_fl .item6 {
+      flex: 1;
+    }
+  }
+</style>
+
+<div id="content_ex">
+  <div class="container">
+    <style type="text/css">
+      #content_ex p:first-letter {
+        padding-left: 0;
+      }
+
+      #content_ex p {
+        margin-bottom: 0;
+      }
+
+      #content_ex img:hover {
+        opacity: 1;
+      }
+
+      #content_ex img {
+        opacity: 1;
+      }
+
+      #content_ex {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      #content_ex .container h2 {
+
+        line-height: 4rem;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      #content_ex .container img {
+        max-width: 100%;
+        margin-bottom: 0rem;
+        max-height: 700px;
+      }
+
+      #content_ex .container p {
+        text-align: center;
+        margin: 15px 0 25px 0;
+      }
+
+      #content_ex .container .container_li_item {
+        text-align: left;
+      }
+
+      #content_ex .container .container_li_item ul.container_li_item_list {
+        padding-left: 1.4rem;
+        margin: 3rem 0rem 3rem 0rem;
+      }
+
+      #content_ex .container .container_li_item ul.container_li_item_list li {
+        position: relative;
+      }
+
+      #content_ex .container .container_li_item ul.container_li_item_list li:before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: -1.3rem;
+        border-radius: 50%;
+        width: .5rem;
+        height: .5rem;
+        background-color: #379424;
+      }
+
+      #content_ex ul {
+        padding-left: 15px;
+      }
+
+      #content_ex ul li {
+        list-style-type: disc;
+      }
+
+      .small {
+        max-width: 350px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .small2 {
+        max-width: 600px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .small3 {
+        max-width: 350px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .small4 {
+        max-width: 390px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .small5 {
+        max-width: 700px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .col_fl {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        width: 100%;
+        height: auto;
+      }
+
+      .col_fl .item6 {
+        flex: 1 1 0;
+      }
+
+      .col_fl .item6 img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .col_fl .item6 img {
+        max-height: 437px !important;
+        height: auto;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 480px) {
+        .col_fl {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .col_fl .item6 {
+          flex: 1;
+        }
+      }
+    </style>
+
+    <div id="content_ex">
+      <div class="container">
+        <style type="text/css">
+          #content_ex p:first-letter {
+            padding-left: 0;
+          }
+
+          #content_ex p {
+            margin-bottom: 0;
+          }
+
+          #content_ex img:hover {
+            opacity: 1;
+          }
+
+          #content_ex img {
+            opacity: 1;
+          }
+
+          #content_ex {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 15px;
+          }
+
+          #content_ex .container h2 {
+
+            line-height: 4rem;
+            text-align: center;
+            margin-bottom: 15px;
+          }
+
+          #content_ex .container img {
+            max-width: 100%;
+            margin-bottom: 0rem;
+            max-height: 700px;
+          }
+
+          #content_ex .container p {
+            text-align: center;
+            margin: 15px 0 25px 0;
+          }
+
+          #content_ex .container .container_li_item {
+            text-align: left;
+          }
+
+          #content_ex .container .container_li_item ul.container_li_item_list {
+            padding-left: 1.4rem;
+            margin: 3rem 0rem 3rem 0rem;
+          }
+
+          #content_ex .container .container_li_item ul.container_li_item_list li {
+            position: relative;
+          }
+
+          #content_ex .container .container_li_item ul.container_li_item_list li:before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: -1.3rem;
+            border-radius: 50%;
+            width: .5rem;
+            height: .5rem;
+            background-color: #379424;
+          }
+
+          #content_ex ul {
+            padding-left: 15px;
+          }
+
+          #content_ex ul li {
+            list-style-type: disc;
+          }
+
+          .small {
+            max-width: 350px !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+
+          .small2 {
+            max-width: 600px !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+
+          .small3 {
+            max-width: 350px !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+
+          .small4 {
+            max-width: 390px !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+
+          .small5 {
+            max-width: 700px !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+
+          .col_fl {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-end;
+            width: 100%;
+            height: auto;
+          }
+
+          .col_fl .item6 {
+            flex: 1 1 0;
+          }
+
+          .col_fl .item6 img {
+            display: block;
+            margin: 0 auto;
+          }
+
+          .col_fl .item6 img {
+            max-height: 437px !important;
+            height: auto;
+          }
+
+          @media screen and (min-width: 320px) and (max-width: 480px) {
+            .col_fl {
+              flex-direction: column;
+              align-items: center;
+            }
+
+            .col_fl .item6 {
+              flex: 1;
+            }
+          }
+        </style>
+
+        <div id="content_ex">
+          <div class="container">
+            <style type="text/css">
+              #content_ex p:first-letter {
+                padding-left: 0;
+              }
+
+              #content_ex p {
+                margin-bottom: 0;
+              }
+
+              #content_ex img:hover {
+                opacity: 1;
+              }
+
+              #content_ex img {
+                opacity: 1;
+              }
+
+              #content_ex {
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 0 15px;
+              }
+
+              #content_ex .container h2 {
+
+                line-height: 4rem;
+                text-align: center;
+                margin-bottom: 15px;
+              }
+
+              #content_ex .container img {
+                max-width: 100%;
+                margin-bottom: 0rem;
+                max-height: 700px;
+              }
+
+              #content_ex .container p {
+                text-align: center;
+                margin: 15px 0 25px 0;
+              }
+
+              #content_ex .container .container_li_item {
+                text-align: left;
+              }
+
+              #content_ex .container .container_li_item ul.container_li_item_list {
+                padding-left: 1.4rem;
+                margin: 3rem 0rem 3rem 0rem;
+              }
+
+              #content_ex .container .container_li_item ul.container_li_item_list li {
+                position: relative;
+              }
+
+              #content_ex .container .container_li_item ul.container_li_item_list li:before {
+                content: "";
+                position: absolute;
+                top: 8px;
+                left: -1.3rem;
+                border-radius: 50%;
+                width: .5rem;
+                height: .5rem;
+                background-color: #379424;
+              }
+
+              #content_ex ul {
+                padding-left: 15px;
+              }
+
+              #content_ex ul li {
+                list-style-type: disc;
+              }
+
+              .small {
+                max-width: 350px !important;
+                width: 100% !important;
+                height: auto !important;
+              }
+
+              .small2 {
+                max-width: 600px !important;
+                width: 100% !important;
+                height: auto !important;
+              }
+
+              .small3 {
+                max-width: 350px !important;
+                width: 100% !important;
+                height: auto !important;
+              }
+
+              .small4 {
+                max-width: 390px !important;
+                width: 100% !important;
+                height: auto !important;
+              }
+
+              .small5 {
+                max-width: 700px !important;
+                width: 100% !important;
+                height: auto !important;
+              }
+
+              .col_fl {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: flex-end;
+                width: 100%;
+                height: auto;
+              }
+
+              .col_fl .item6 {
+                flex: 1 1 0;
+              }
+
+              .col_fl .item6 img {
+                display: block;
+                margin: 0 auto;
+              }
+
+              .col_fl .item6 img {
+                max-height: 437px !important;
+                height: auto;
+              }
+
+              @media screen and (min-width: 320px) and (max-width: 480px) {
+                .col_fl {
+                  flex-direction: column;
+                  align-items: center;
+                }
+
+                .col_fl .item6 {
+                  flex: 1;
+                }
+              }
+            </style>
+
+            <div id="content_ex">
+              <div class="container">
+                <h2>Час для кулінарних шедеврів</h2>
+                <p>Давайте ставитися до процесу їжі не як до рутини, а як до мистецтва! Нехай кулінарія стане нашою пристрастю, актом творчості і любові до себе. Сучасна техніка покликана зробити так, щоб приготування було легким, в радість та без зайвих проблем. З електропіччю Mini oven Bake & Toast 790 Gyro від іспанського бренду СЕСОТЕС ви згадаєте, що таке дійсно приємна кулінарія. З цим девайсом ви зможете запікати овочі або рибу, готувати м'ясо на вертелі та випікати ароматні булочки.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1695881/1.jpg" alt="Фото Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 1" title="Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 1">
+
+                <h2>Розумна конвекція</h2>
+                <p>За те, щоб нічого ніде не підгоріло і не залишилося сирим всередині відповідає конвекційна система. Вона забезпечує рівномірний прогрів і постійну циркуляцію тепла, щоб страва приготувалась ідеально.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1695881/2.jpg" alt="Фото Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 2" title="Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 2">
+
+                <h2>Ротаційний ростер</h2>
+                <p>Курча-гриль? Легко! У комплекті з електропіччю ви отримуєте ротаційний ростер, з якими ви можете приготувати соковиту курочку із золотистою скоринкою і не тільки.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1695881/3.jpg" alt="Фото Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 3" title="Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 3">
+
+                <h2>Об’єм 46 л</h2>
+                <p>Готуйте вечерю відразу на велику сім'ю або компанію друзів – ємності вистачить. Обсяг Mini oven Bake & Toast 790 Gyro становить 46 л, а це значить, що ви можете не обмежувати себе в розмірі порцій.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1695881/4.jpg" alt="Фото Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 4" title="Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 4">
+
+                <h2>12 функцій</h2>
+                <p>12 програм готування відкривають перед вами простір рецептів, які можна втілити. Грайте з функціями гриля і конвекції, налаштовуйте все самостійно або вибирайте один із заготовлених режимів для досягнення найкращого результату: рум'яної скоринки і добре-пропеченої начинки.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1695881/5.jpg" alt="Фото Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 5" title="Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 5">
+
+                <h2>Подвійне скло</h2>
+                <p>Щоб всі режими працювали дійсно ефективно, СЕСОТЕС передбачили в цій моделі подвійне скло. Воно краще зберігає тепло всередині печі.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1695881/6.jpg" alt="Фото Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 6" title="Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 6">
+
+                <h2>Температурний діапазон</h2>
+                <p>Електропіч здатна розігріватися до 230 градусів, це означає, що можна просмажити навіть товсті шматки м'яса. Зручний регулятор допоможе вам адаптувати температуру під продукт. Також ви можете відрегулювати час випікання: в пристрої встановлений таймер до 60 хвилин.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1695881/7.jpg" alt="Фото Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 7" title="Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 7">
+
+                <h2>Комплектація</h2>
+                <p>Чи можна уявити смарт-девайс (особливо для кухні) без додаткових аксесуарів? Навряд. Ось і з Mini oven Bake & Toast 790 Gyro в комплекті надаються решітка для гриля, піддон для крихт, деко, вертель та ручка для безпечного вилучення гарячого гриля.</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1695881/8.jpg" alt="Фото Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 8" title="Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 8">
+
+                <h2>Легко доглядати</h2>
+                <p>Корпус пристрою виконаний з нержавіючої сталі. Крім того, що цей матеріал завжди доречно і красиво виглядає в інтер'єрах сучасних кухонь, за ним ще і легко доглядати. Досить протерти надлишки жиру і готово!</p>
+
+                <img src="https://cdn.comfy.ua/media/x/img/1695881/9.jpg" alt="Фото Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 9" title="Печь электрическая Cecotec Mini oven Bake&Toast 790 Gyro - 9">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,285 @@
+/*default styles*/
+
+#huawei
+  max-width: 1316px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    font-size: 19px
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 46px
+    font-weight: bold
+    padding: 0
+    margin: 0
+  img
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+/*end default styles*/
+
+#huawei
+  .show__mob
+    display: none
+  .logo
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 2em 6em
+    li
+      flex: 1 1 0
+      &:nth-of-type(2)
+        margin-left: 2em
+        img
+          width: 100%
+
+  .screen
+    padding: 100px 10em
+    .screen__txt
+      text-align: center
+      margin: 0 auto 60px auto
+      max-width: 600px
+      h2
+        margin-bottom: 45px
+
+  .lighter
+    padding: 100px 10em
+    .light__txt
+      max-width: 600px
+      margin-top: -9em
+      h2
+        margin-bottom: 45px
+
+  .power
+    padding-top: 100px
+    .power__txt
+      text-align: center
+      max-width: 600px
+      margin: 0 auto 60px auto
+      h2
+        margin-bottom: 45px
+
+  .share
+    padding: 100px 10em
+    .share__list
+      display: flex
+      flex-direction: row
+      margin-bottom: 60px
+      align-items: center
+      li
+        flex: 1
+        &:nth-of-type(2)
+          flex: 2
+          margin-left: 2em
+
+  .pocket
+    padding: 100px 0
+    .pocket__list
+      padding: 0 10em
+      display: flex
+      flex-direction: row
+      margin-bottom: 60px
+      li
+        flex: 1
+        &:nth-of-type(2)
+          flex: 2
+          margin-left: 2em
+    .pocket__img
+      img
+        margin: 0 0 0 auto
+
+  .response
+    padding-top: 100px
+    background-color: #000
+    color: #fff
+    .response__txt
+      max-width: 600px
+      margin: 0 auto 60px auto
+      text-align: center
+      h2
+        margin-bottom: 45px
+    .response__icon
+      max-width: 200px
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      margin: 0 auto
+      li
+        span
+          text-align: center
+          font-size: 14px
+          margin-top: 1em
+
+  .unlock
+    background: -webkit-linear-gradient(top, #ffffff, #f5f5f5)
+    display: flex
+    flex-direction: row
+    align-items: center
+    li
+      &:nth-of-type(1)
+        max-width: 730px
+      &:nth-of-type(2)
+        max-width: 400px
+        padding: 0 4em
+        box-sizing: content-box
+        h2
+          margin-bottom: 45px
+
+  .possibilities
+    padding-top: 100px
+    .possibilities__list
+      display: flex
+      flex-direction: row
+      align-items: center
+      padding: 0 10em
+      margin-bottom: -4em
+      position: relative
+      z-index: 1
+      li
+        flex: 1.5
+        &:nth-of-type(2)
+          flex: 2
+          margin-left: 2em
+    .possibilities__wrap
+      position: relative
+      .possibilities__abs
+        span
+          position: absolute
+          font-weight: bold
+          &:nth-of-type(1)
+            // top: 11rem
+            // left: 25em
+            top: 25%
+            left: 30%
+          &:nth-of-type(2)
+            top: 33%
+            left: 25%
+          &:nth-of-type(3)
+            top: 40%
+            left: 20%
+          &:nth-of-type(4)
+            bottom: 35%
+            right: 30%
+          &:nth-of-type(5)
+            bottom: 26%
+            right: 34%
+          &:nth-of-type(6)
+            bottom: 17%
+            right: 37%
+
+  .snoska
+    padding: 60px 0
+    margin: 60px 10em 0 10em
+    border-top: solid 1px #f4f4f4
+    li
+      font-size: 12px
+      color: #a3a1a2
+      line-height: normal
+      &:nth-of-type(n+2)
+        margin-top: 0.5em
+        
+//media*******************************************
+
+@media (max-width: 1024px)
+  #huawei .lighter .light__txt
+    margin-top: 0
+
+@media (max-width: 812px)
+  #huawei .hide__mob
+    display: none
+  #huawei .show__mob
+    display: block
+  #huawei h2
+    font-size: 32px
+  #huawei p
+    font-size: unset
+  #huawei .logo
+    padding: 1em
+  #huawei .screen,
+  #huawei .lighter,
+  #huawei .share,
+  #huawei .pocket .pocket__list
+    padding: 1em 2em
+  #huawei .power,
+  #huawei .pocket,
+  #huawei .response,
+  #huawei .possibilities
+    padding-top: 1em
+  #huawei .share .share__list,
+  #huawei .possibilities .possibilities__list
+    align-items: flex-start
+  #huawei .power, #huawei .pocket
+    padding-bottom: 1em
+  #huawei .unlock li:nth-of-type(2),
+  #huawei .possibilities .possibilities__list
+    padding: 0 1em
+    margin-bottom: 0
+  #huawei .possibilities .possibilities__wrap .possibilities__abs span
+    display: none
+  #huawei .snoska
+    margin: 1em 1em 0 1em
+    padding: 2em 0
+
+@media (max-width: 480px)
+  #huawei h2
+    font-size: 28px
+  #huawei .logo
+    flex-direction: column-reverse
+  #huawei .logo li:nth-of-type(2)
+    margin-left: 0
+    margin-bottom: 1em
+  #huawei .screen .screen__txt h2,
+  #huawei .power .power__txt h2,
+  #huawei .response .response__txt h2,
+  #huawei .unlock li:nth-of-type(2) h2
+    margin-bottom: 1em
+  #huawei .screen, #huawei .lighter, #huawei .share, #huawei .pocket .pocket__list
+    padding: 1em
+  #huawei .power .power__txt
+    padding: 1em
+    margin-bottom: 0
+  #huawei .share .share__list, #huawei .possibilities .possibilities__list,
+  #huawei .pocket .pocket__list
+    display: block
+    margin-bottom: 1em
+  #huawei .share .share__list li:nth-of-type(2),
+  #huawei .pocket .pocket__list li:nth-of-type(2),
+  #huawei .possibilities .possibilities__list li:nth-of-type(2)
+    margin-left: 0
+    margin-top: 1em
+  #huawei .response .response__txt
+    padding: 1em
+  #huawei .unlock
+    flex-direction: column-reverse
+  #huawei .unlock li:nth-of-type(2)
+    padding: 1em
+            

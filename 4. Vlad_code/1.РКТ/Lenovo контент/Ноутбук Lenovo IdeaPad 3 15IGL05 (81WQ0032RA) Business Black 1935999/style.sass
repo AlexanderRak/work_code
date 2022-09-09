@@ -1,0 +1,201 @@
+//default styles
+
+#lenovo
+  max-width: 1366px
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    font-size: 20px
+    line-height: normal
+    color: #fff
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 45px
+    font-weight: normal
+    color: #fff
+    padding: 0
+    margin: 0
+  img
+    margin: 0 auto
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+//end default styles
+
+#lenovo
+  .logo__list
+    padding: 70px 0 0 45px
+    background-image: url("https://cdn.comfy.ua/media/x/img/1932221/bg1.jpg")
+    min-height: 720px
+    position: relative
+    display: flex
+    box-sizing: border-box
+    li
+      &:nth-of-type(1)
+        align-self: flex-end
+      &:nth-of-type(2)
+        margin-left: -12em
+        span
+          font-size: 50px
+          color: #fff
+          sup
+            font-size: 14px
+        h2
+          margin-top: 60px
+    .logo__i
+      position: absolute
+      right: 0
+      top: 125px
+
+  .power
+    display: flex
+    min-height: 720px
+    background-image: url("https://cdn.comfy.ua/media/x/img/1932221/bg2.jpg")
+    padding: 150px 50px 50px 130px
+    box-sizing: border-box
+    li
+      flex: 1 1 0
+      &:nth-of-type(1)
+        align-self: flex-end
+        flex: 1.5
+      &:nth-of-type(2)
+        margin-left: -4em
+
+  .lvl
+    min-height: 719px
+    background-image: url("https://cdn.comfy.ua/media/x/img/1932221/bg3.jpg")
+    display: flex
+    align-items: center
+    padding: 0 95px 0 105px
+    box-sizing: border-box
+    li
+      flex: 1 1 0
+      &:nth-of-type(1)
+        max-width: 505px
+        img
+          margin: 70px 0 0 0
+      &:nth-of-type(2)
+        img
+          margin: 0 0 0 auto
+      h2
+        margin-bottom: 40px
+    &:nth-of-type(even)
+      flex-direction: row-reverse
+
+  .lvl__bg__four
+    min-height: 720px
+    background-image: url("https://cdn.comfy.ua/media/x/img/1932221/bg4.jpg")
+    padding-left: 0
+    li
+      &:nth-of-type(2)
+        align-self: flex-end
+
+  .lvl__bg__five
+    min-height: 720px
+    background-image: url("https://cdn.comfy.ua/media/x/img/1932221/bg5.jpg")
+
+  .lvl__bg__six
+    min-height: 720px
+    background-image: url("https://cdn.comfy.ua/media/x/img/1932221/bg6.jpg")
+    li
+      &:nth-of-type(2)
+        align-self: flex-end
+
+  .lvl__bg__seven
+    min-height: 720px
+    background-image: url("https://cdn.comfy.ua/media/x/img/1932221/bg7.jpg")
+    li
+      h2
+        margin-right: -3em
+
+//media************************************************
+
+@media (max-width: 1024px)
+  #lenovo h2
+    font-size: 36px
+  #lenovo .logo__list
+    padding-right: 100px
+  #lenovo .logo__list li:nth-of-type(2) span
+    font-size: 40px
+  #lenovo .logo__list li:nth-of-type(1)
+    flex: 1 1 0
+  
+@media (max-width: 812px)
+  #lenovo .logo__list
+    flex-direction: column-reverse
+    padding: 1em 1em 0 1em
+    // min-height: unset
+    background-size: cover
+  #lenovo .logo__list li:nth-of-type(2)
+    margin-left: 0
+
+  #lenovo .power
+    padding: 1em
+  #lenovo .power li:nth-of-type(2)
+    margin-left: -10em
+
+  #lenovo .lvl
+    padding: 1em 0
+    display: block
+    background-size: cover
+    min-height: unset
+  #lenovo .lvl li:nth-of-type(1)
+    max-width: unset
+    margin-bottom: 1em
+    padding: 1em
+
+@media (max-width: 480px)
+  #lenovo p
+    font-size: unset
+  #lenovo h2
+    font-size: 24px
+  #lenovo .logo__list
+    min-height: unset
+  #lenovo .logo__list .logo__i
+    max-width: 40px
+  #lenovo .logo__list li:nth-of-type(2) span
+    font-size: 28px
+  #lenovo .logo__list li:nth-of-type(2) h2
+    margin-bottom: 1em
+    margin-top: 1em
+  #lenovo .power
+    min-height: unset
+    flex-direction: column-reverse
+  #lenovo .power li:nth-of-type(2)
+    margin-left: 0
+    margin-bottom: 1em
+  #lenovo .lvl li:nth-of-type(1) img
+    max-height: 70px
+  #lenovo .lvl__bg__seven li h2
+    margin-right: 0
+    br
+      display: none
