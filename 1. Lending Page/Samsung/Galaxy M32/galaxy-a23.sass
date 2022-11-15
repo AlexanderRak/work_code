@@ -1,0 +1,317 @@
+#galaxy-a13
+   display: block
+   margin: 0 auto
+   max-width: 1440px
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #fff
+   position: relative
+   img
+      &:hover
+         opacity: 1
+   &:first-letter
+      padding-left: 0
+   img
+      display: block
+      margin-right: initial
+      margin-left: initial
+   p
+      font-size: 18px
+      margin-bottom: 0
+   h2
+      font-size: 48px
+      line-height: 1.3
+      color: #000
+      text-align: center
+   h3
+      font-size: 18px
+      margin: 0
+      padding: 0
+      line-height: 1
+      color: #fff
+   h4
+      font-size: 50px
+      margin: 0
+      padding-top: 0
+      line-height: 1
+      font-weight: bold
+      text-align: center
+      color: #43b02a
+      text-transform: uppercase
+   i
+      color: #313131
+      font-size: 12px
+      text-align: center
+      word-wrap: break-word
+span.word-wrap
+   display: block
+   word-wrap: break-word
+span.fw-bold
+   font-weight: bold
+span.tx-uppercase
+   text-transform: uppercase
+.features-desc__text h2
+   text-align: inherit
+.one-col .features-desc__text p
+   text-align: inherit
+.bc-description__content p:first-letter
+   padding-left: 0
+// .main-container.page
+// 	padding-left: 0
+// 	padding-right: 0
+// default
+.galaxy-a13__icon
+   padding: 24px 24px 0 24px
+.galaxy-a13__icon-grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 1fr
+.galaxy-a13__icon__item
+   position: relative
+   &::after
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      bottom: 0
+      width: 1px
+      background-color: #ccc
+      overflow: hidden
+   &:first-child
+      &::after
+         display: none
+   img
+      margin: 0 auto !important
+      height: 64px
+      width: auto
+   span
+      font-size: 18px
+      color: #000
+      padding: 16px 16px 0 16px
+      display: block
+      text-align: center
+.galaxy-a13__h2p
+   padding: 80px 88px
+   .galaxy-a13__h2p__h2
+      text-align: center
+      padding-bottom: 30px
+   .galaxy-a13__h2p__p
+      text-align: center
+.galaxy-a13__imgi
+   .galaxy-a13__imgi__img img
+      margin: 0 auto !important
+   .galaxy-a13__imgi__i
+      text-align: center
+      padding: 32px 0 80px
+      width: 88%
+      margin: 0 auto
+.galaxy-a13__flex
+   display: flex
+   flex-direction: row
+   align-items: center
+   padding: 80px 88px
+   &.flexrow
+      flex-direction: row-reverse
+      .galaxy-a13__item
+         .galaxy-a13__item-text
+            padding: 20px 0 20px 20px
+   .galaxy-a13__item
+      flex: 1 1 0
+      .galaxy-a13__item-text
+         padding: 20px 20px 20px 0
+         .galaxy-a13__item-text__h2,.galaxy-a13__item-text__p
+            text-align: left
+         .galaxy-a13__item-text__h2
+            max-width: 85%
+            padding-bottom: 35px
+         .galaxy-a13__item-text__i
+            padding-top: 50px
+      .galaxy-a13__item-text__img img
+         margin: 0 auto !important
+.galaxy-a13__slideimg
+   padding: 80px 88px
+   .galaxy-a13__slideimg-btm
+      display: flex
+      align-items: center
+      justify-content: center
+      .slideimg-btn
+         position: relative
+         width: 87px
+         height: 87px
+         transition: .3s
+         border: 0
+         background: transparent
+         &.slideimg-btn1,&.slideimg-btn2
+            &::before
+               content: ''
+               background-repeat: no-repeat
+               position: absolute
+               left: 0
+               top: 0
+               width: 87px
+               height: 87px
+            &:hover
+               cursor: pointer
+               &.slideimg-btn1
+                  margin-right: 130px
+                  &::before
+                     background-image: url(https://cdn.comfy.ua/media/x/img2/m32/icn1.svg)
+               &.slideimg-btn2
+                  &::before
+                     background-image: url(https://cdn.comfy.ua/media/x/img2/samsung/galaxya13/img5hover.svg)
+         &.slideimg-btn1
+            margin-right: 130px
+            &::before
+               background-image: url(https://cdn.comfy.ua/media/x/img2/m32/icn2.svg)
+            &.active
+               &::before
+                  background-image: url(https://cdn.comfy.ua/media/x/img2/m32/icn1.svg)
+            &::after
+               content: "Широкий кут"
+               position: absolute
+               left: 50%
+               transform: translateX(-50%)
+               bottom: -42px
+               color: #000
+               font-size: 16px
+               text-align: center
+               width: 125px
+         &.slideimg-btn2
+            &::before
+               background-image: url(https://cdn.comfy.ua/media/x/img2/samsung/galaxya13/img5.svg)
+            &.active
+               &::before
+                  background-image: url(https://cdn.comfy.ua/media/x/img2/samsung/galaxya13/img5hover.svg)
+            &::after
+               content: "Надширокий кут"
+               position: absolute
+               left: 50%
+               transform: translateX(-50%)
+               bottom: -42px
+               color: #000
+               font-size: 16px
+               text-align: center
+               width: 170px
+   .galaxy-a13__slideimg-img1,.galaxy-a13__slideimg-img2
+      display: none
+      img
+         margin: 0 auto !important
+   .galaxy-a13__slideimg-img1.active
+      display: block
+   .galaxy-a13__slideimg-img2.active
+      display: block
+.galaxy-a13__slideimg-img
+   padding-top: 60px
+.galaxy-a13__ftr
+   padding: 50px 80px
+   .galaxy-a13__ftr-content
+      background: #f7f7f7
+      border: 1px solid #000
+      position: relative
+      border-radius: 35px
+      padding: 80px 50px 315px 50px
+      .galaxy-a13__ftr__h2
+         text-align: left
+         position: relative
+         z-index: 3
+      .galaxy-a13__ftr-imgpos
+         position: absolute
+         right: 0
+         top: 50%
+         transform: translateY(-50%)
+         right: 80px
+         z-index: 2
+// tabs js
+.tab
+   position: relative
+   display: flex
+   width: 100%
+   align-items: flex-start
+   justify-content: center
+   button
+      background-color: inherit
+      border: none
+      outline: none
+      cursor: pointer
+      transition: 0.3s
+      &:first-child
+         margin-right: 80px
+      &.active
+         background: #fff
+         .tablinks__btn-img
+            &.img1bf
+               &::before
+                  background-image: url(https://cdn.comfy.ua/media/x/img2/m32/img10.jpg)
+            &.img2bf
+               &::before
+                  background-image: url(https://cdn.comfy.ua/media/x/img2/m32/img12.jpg)
+      .tablinks__btn-img
+         position: relative
+         width: 87px
+         height: 87px
+         margin: 0 auto
+         margin-bottom: 8px
+         &::before
+            content: ""
+            background-position: center
+            background-repeat: no-repeat
+            width: 87px
+            height: 87px
+            position: absolute
+            left: 0
+            top: 0
+         &.img1bf
+            &::before
+               background-image: url(https://cdn.comfy.ua/media/x/img2/m32/img11.jpg)
+         &.img2bf
+            &::before
+               background-image: url(https://cdn.comfy.ua/media/x/img2/m32/img13.jpg)
+.tabcontent
+   display: none
+   padding-top: 35px
+   img
+      margin: 0 auto !important
+// media
+@media (max-width: 1024px)
+   .galaxy-a13__icon__item span
+      font-size: 16px
+   .galaxy-a13__flex
+      padding: 50px 24px
+   .galaxy-a13__h2p
+      padding: 50px 24px
+   .galaxy-a13__slideimg
+      padding: 50px 25px
+   .galaxy-a13__imgi .galaxy-a13__imgi__i
+      padding: 32px 0 24px
+   .galaxy-a13__h2p
+      padding: 50px 24px
+   .galaxy-a13__ftr
+      padding: 50px 24px
+   .galaxy-a13__ftr .galaxy-a13__ftr-content
+      padding: 50px 24px 50px 24px
+   .galaxy-a13__ftr .galaxy-a13__ftr-content .galaxy-a13__ftr-imgpos
+      position: relative
+      right: 0
+      top: 0
+      transform: translateY(0)
+      img
+         margin: 0 auto !important
+@media (max-width: 812px)
+   #galaxy-a13 h2
+      font-size: 31px
+@media (max-width: 480px)
+   .galaxy-a13__icon-grid
+      grid-template-columns: 1fr 1fr
+   .galaxy-a13__icon__item
+      &:nth-child(3)
+         &::after
+            display: none
+   #galaxy-a13 h2
+      font-size: 28px
+   .galaxy-a13__flex
+      flex-direction: column
+   .galaxy-a13__flex.flexrow
+      flex-direction: column
+   .galaxy-a13__flex.flexrow .galaxy-a13__item .galaxy-a13__item-text
+      padding: 20px 0 20px 0px
+// @media (max-width: 320px)

@@ -1,0 +1,201 @@
+$maxWidth: 1920
+@mixin adaptiv-font($pcSize, $mobSize)
+   $addSize: $pcSize - $mobSize
+   $maxWidth: $maxWidth - 320
+   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+#kerher
+   max-width: 1366px
+   width: 100%
+   height: auto
+   margin: 0 auto
+   position: relative
+   overflow: hidden
+   background: #fff
+.kerher-ukraine
+   position: relative
+.kerher-ukraine__text-top, .kerher-ukraine__text-bottom
+   position: absolute
+.kerher-ukraine__text-top
+   @include adaptiv-font(32, 23)
+   text-transform: uppercase
+   text-align: center
+   padding: 3vw 15px 0 15px
+   font-weight: 300
+   color: #fff
+   line-height: 1.2
+   top: 0
+   left: 0
+   right: 0
+   width: 100%
+   max-width: 865px
+   margin: 0 auto
+.kerher-ukraine__img--only-mob
+   display: none
+.kerher-ukraine__text-bottom
+   font-weight: 700
+   @include adaptiv-font(42, 23)
+   line-height: 1
+   text-align: center
+   text-transform: uppercase
+   color: #000000
+   bottom: 0
+   width: 100%
+   padding: 0 15px 3vw 15px
+.kerher-ukraine__bgrd
+   background-image: url(https://cdn.comfy.ua/media/x/img2/kerher/img1.png)
+   background-position: center
+   background-repeat: no-repeat
+   background-size: cover
+   width: 100%
+   height: 571px
+.kerher-text
+   padding: 40px 15px
+   text-align: center
+   @include adaptiv-font(34, 18)
+   color: #000
+   font-weight: 700
+   line-height: 1
+.kerher-flex
+   background: #8DAAB2
+   padding: 31px 40px
+   display: flex
+   flex-direction: row
+   align-items: center
+.kerher-flex__item
+   flex: 1 1 0
+.kerher-flex__text
+   padding: 0 0 0 24px
+   color: #000
+   @include adaptiv-font(20, 18)
+.kerher-flex__text + .kerher-flex__text
+   padding-top: 24px
+.kerher-slider
+   padding: 40px 37px 32px 37px
+.kerher-slider__text
+   padding: 0 15px 32px 15px
+   color: #000
+   font-weight: 700
+   @include adaptiv-font(34, 18)
+   line-height: 1
+.kerher-slider__wrap
+   position: relative
+.kerher-slider__item
+   border-radius: 8px
+   padding: 8px
+   overflow: hidden
+   position: relative
+   &::before
+      content: ''
+      border: 1px solid #43B02A
+      border-radius: 8px
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+.kerher-slider__item-imgs
+   position: relative
+   overflow: hidden
+   border-radius: 8px
+   display: flex
+   flex-direction: column
+   grid-gap: 4px
+.kerher-slider__item-text
+   padding-top: 8px
+   font-weight: 500
+   font-size: 18px
+   text-align: left
+   line-height: 1.2
+// slick
+#kerher
+   .slick-track
+      position: inherit
+      left: inherit
+      top: inherit
+      height: 100%
+      display: flex
+      align-items: flex-start
+      overflow: hidden
+   .slick-slider
+      height: 100%
+      z-index: 7
+      margin-top: 0
+      display: flex
+   .slick-slide
+      float: inherit
+      height: auto
+      margin: 0 12px 0 0
+   .slick-arrow
+      color: transparent
+      border: 1px solid #e5e5e5
+      width: 36px
+      border-radius: 8px
+      margin: 0
+      padding: 0
+      position: relative
+      cursor: pointer
+      &.slick-prev
+         margin-right: 12px
+      &.slick-next
+         margin-left: 12px
+      &.slick-prev, &.slick-next
+         &::before
+            content: ''
+            width: 16px
+            height: 16px
+            background: #000
+            border-radius: 50%
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+         &::after
+            content: ''
+            width: 5px
+            height: 8px
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-image: url(https://cdn.comfy.ua/media/x/img2/kerher/str.png)
+         &.slick-disabled
+            &::before
+               background: #e5e5e5
+      &.slick-prev
+         &::after
+            transform: rotate(180deg) translate(50%, 50%)
+   .slick-list
+      margin: 0 -12px 0 0
+      max-width: 1212px
+      width: 100%
+      overflow: hidden
+      position: relative
+@media (max-width: 1024px)
+   .kerher-ukraine__bgrd
+      height: 420px
+@media (max-width: 812px)
+   .kerher-ukraine__bgrd
+      height: 340px
+@media (max-width: 480px)
+   .kerher-ukraine__bgrd
+      display: none
+   .kerher-ukraine__img--only-mob
+      display: flex
+   .kerher-flex
+      flex-direction: column
+   .kerher-ukraine__text-top, .kerher-ukraine__text-bottom
+      position: relative
+   .kerher-ukraine__text-top
+      background: #0d88d5
+      padding: 32px 15px 10px 15px
+   .kerher-ukraine__text-bottom
+      background: #fcf218
+      padding: 35px 15px 32px 15px
+   .kerher-flex
+      padding: 31px 15px
+   .kerher-flex__text
+      padding: 20px 0 0 0px
+   .kerher-slider
+      padding: 40px 15px 32px 15px
+   .kerher-slider__text
+      padding: 0 0 20px 0
