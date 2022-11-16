@@ -1,13 +1,3 @@
-@font-face
-   font-family: 'comfy-narrow'
-   src: url('https://cdn.comfy.ua/media/im/fontscomfy/comfy-narrow.ttf') format('truetype')
-   font-weight: normal
-   font-style: normal
-@font-face
-   font-family: 'comfy-nornal'
-   src: url('https://cdn.comfy.ua/media/im/fontscomfy/comfy-nornal.ttf') format('truetype')
-   font-weight: normal
-   font-style: normal
 #black-friday
    display: block
    width: 100%
@@ -25,16 +15,6 @@
 .bf2022-section
    position: relative
    z-index: 10
-.animbgrd
-   background-image: url(https://cdn.comfy.ua/media/bf22/bg_before.svg)
-   width: 100%
-   height: 3040px
-   background-repeat: repeat
-   position: absolute
-   left: 0
-   top: 0
-   z-index: 1
-   opacity: 0.3
 .black-friday__bgrdcolor
    background: #4cc42e
 .seo-text__bgrdcolor
@@ -132,26 +112,9 @@ span.word-wrap-txt
    &::before
       content: ''
       background: linear-gradient(to bottom, #44b02a 0%, rgba(0, 0, 0, 0) 100%)
-.bf2022-date
-   font-family: 'comfy-nornal'
-   font-weight: 700
-   font-size: 68px
-   line-height: 1
-   text-align: center
-   text-transform: uppercase
-   color: #FFFFFF
-   padding: 0 20px
-   margin-top: -150px
 .bf2022-bgrd-app
    position: relative
    margin-top: -90px
-.bf2022-bgrd-app-wrap
-   background-image: url(https://cdn.comfy.ua/media/x/img2/bgrd_bf_ru.svg)
-   background-position: center
-   background-repeat: no-repeat
-   background-size: 110% 100%
-   width: 100%
-   height: 520px
 .bf2022-bgrd-app__mob
    max-width: 684px
    width: 100%
@@ -185,7 +148,7 @@ span.word-wrap-txt
    height: 680px
    margin-top: -12vw
    position: relative
-   z-index: 3
+   z-index: 15
 .bf2022-goaction-flex
    max-width: 1212px
    padding: 20px 12px 40px 12px
@@ -349,39 +312,6 @@ span.word-wrap-txt
    &:hover
       .bf2022-category__subtext
          text-decoration: underline
-.bf2022-category__img-prod-bgrd
-   background-repeat: no-repeat
-   background-size: cover
-   max-width: 256px
-   width: 100%
-   height: 181px
-   position: relative
-   overflow: hidden
-   &.bgrd--img1
-      background-image: url(https://cdn.comfy.ua/media/x/img2/bf2022/ctg_img1.png)
-   &.bgrd--img2
-      background-image: url(https://cdn.comfy.ua/media/x/img2/bf2022/ctg_img2.png)
-   &.bgrd--img3
-      background-image: url(https://cdn.comfy.ua/media/x/img2/bf2022/ctg_img3.png)
-   &.bgrd--img4
-      background-image: url(https://cdn.comfy.ua/media/x/img2/bf2022/ctg_img4.png)
-   &.bgrd--img5
-      background-image: url(https://cdn.comfy.ua/media/x/img2/bf2022/ctg_img5.png)
-   &.bgrd--img6
-      background-image: url(https://cdn.comfy.ua/media/x/img2/bf2022/ctg_img6.png)
-   &.bgrd--img7
-      background-image: url(https://cdn.comfy.ua/media/x/img2/bf2022/ctg_img7.png)
-   &.bgrd--img8
-      background-image: url(https://cdn.comfy.ua/media/x/img2/bf2022/ctg_img8.png)
-   &.bgrd--img9
-      background-image: url(https://cdn.comfy.ua/media/x/img2/bf2022/ctg_img9.png)
-   &.bgrd--img10
-      background-image: url(https://cdn.comfy.ua/media/x/img2/bf2022/ctg_img10.png)
-   &.bgrd--img11
-      background-image: url(https://cdn.comfy.ua/media/x/img2/bf2022/ctg_img11.png)
-   &.bgrd--img12
-      background-image: url(https://cdn.comfy.ua/media/x/img2/ctg_img12new.png)
-      // https://cdn.comfy.ua/media/x/img2/bf2022/ctg_img12.png
 .bf2022-category__text
    position: absolute
    bottom: 0
@@ -427,6 +357,75 @@ span.word-wrap-txt
    max-width: 25px !important
 .bf2022-goaction__text img
    max-width: 25px !important
+// BTN
+.bf2022-btn
+   position: relative
+   z-index: 16
+   a
+      display: block
+      cursor: pointer
+      background: #FBE203
+      box-shadow: 4px 4px 0px #000000
+      color: #000
+      font-weight: 700
+      font-size: 34px
+      line-height: 40px
+      padding: 8px
+      max-width: 360px
+      text-align: center
+      margin: 0 auto
+      text-transform: uppercase
+      position: relative
+      will-change: animation, left, right
+      &::before
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img2/bf2022/str_r2.png)
+         background-repeat: no-repeat
+         background-size: contain
+         width: 30px
+         height: 30px
+         position: absolute
+         left: 25px
+         top: 50%
+         transform: translateY(-50%)
+         animation: ripples 1.3s infinite linear
+         will-change: animation, left, right
+      &::after
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img2/bf2022/str_l2.png)
+         background-repeat: no-repeat
+         background-size: contain
+         width: 30px
+         height: 30px
+         position: absolute
+         right: 25px
+         top: 50%
+         transform: translateY(-50%)
+         animation: ripples2 1.3s infinite linear
+         will-change: animation, left, right
+@keyframes ripples
+   0%
+      left: 25px
+   25%
+      left: 30px
+   50%
+      left: 25px
+   75%
+      left: 20px
+   100%
+      left: 25px
+@keyframes ripples2
+   0%
+      right: 25px
+   25%
+      right: 30px
+   50%
+      right: 25px
+   75%
+      right: 20px
+   100%
+      right: 25px
+// end BTN
 @media (min-width: 1920px)
    .bf2022-bgrd-app-wrap
       background-size: cover
@@ -460,6 +459,9 @@ span.word-wrap-txt
       min-height: 88px
    .bf2022-products__grid
       grid-template-columns: 1fr 1fr 1fr
+   .bf2022-bgrd-sale
+      background-size: 315% 170%
+      background-position: 40% 100%
 @media (max-width: 812px)
    .bf2022-products__img-buy
       font-size: 24px
@@ -492,7 +494,7 @@ span.word-wrap-txt
    .bf2022-category__grid
       grid-template-columns: 1fr 1fr 1fr
    .bf2022-bgrd-sale
-      background-position: 38% 100%
+      background-position: 36% 100%
       background-size: 373% 170%
       height: 300px
    .bf2022-category__img-prod-bgrd
@@ -505,6 +507,11 @@ span.word-wrap-txt
    .bf2022-date
       padding-bottom: 34px
 @media (max-width: 480px)
+   .bf2022-btn a
+      max-width: 315px
+      font-size: 28px
+   .bf2022-btn
+      margin-bottom: 60px
    .black-friday__bgrdcolor, .bf2022-video, .seo-text__bgrdcolor
       background: #44b02a
    .bf2022-bgrd-app__item:first-child
@@ -560,6 +567,9 @@ span.word-wrap-txt
       background-position: 116% 100%
       height: 100%
 @media (max-width: 320px)
+   .bf2022-btn a
+      max-width: 290px
+      font-size: 25px
    .bf2022-goaction__link
       font-size: 21px
    .bf2022-bgrd-sale
@@ -640,3 +650,5 @@ span.word-wrap-txt
       font-size: 28px
       img
          max-width: 28px !important
+   .bf2022-btn
+      margin-top: -100px
