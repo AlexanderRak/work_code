@@ -6,20 +6,18 @@
   height: auto;
   display: block;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
 }
-
 #lg p {
   margin-bottom: 0;
   margin: 0;
   text-align: unset;
 }
-
 #lg p:first-letter {
   padding-left: 0;
 }
-
 #lg h2 {
   text-align: unset;
   display: block;
@@ -29,7 +27,6 @@
   padding: 0;
   margin: 0;
 }
-
 #lg img {
   opacity: 1;
   max-width: 100%;
@@ -37,17 +34,14 @@
   height: auto;
   margin: 0;
 }
-
 #lg img:hover {
   opacity: 1;
 }
-
 #lg ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-
 #lg span {
   display: block;
   line-height: normal;
@@ -65,11 +59,9 @@
 #lg .show__mob {
   display: none;
 }
-
 #lg .logo {
   position: relative;
 }
-
 #lg .logo .logo__txt {
   position: absolute;
   color: #fff;
@@ -80,79 +72,78 @@
   width: max-content;
   right: 50%;
   -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
       -ms-transform: translateX(50%);
+       -o-transform: translateX(50%);
           transform: translateX(50%);
 }
-
 #lg .logo .logo__txt h2 {
   margin-bottom: 0.5em;
 }
-
 #lg .lg__slide {
   background-color: #000;
   padding: 4em;
 }
-
 #lg .lg__slide .lg__slide__cont li {
   color: #fff;
   text-align: center;
 }
-
 #lg .lg__slide .lg__slide__cont li span {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 0.5em;
 }
-
 #lg .lg__slide .lg__slide__nav {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 3em;
 }
-
 #lg .lg__slide .lg__slide__nav li {
   width: 20px;
   height: 20px;
   background-color: #767676;
   -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
           border-radius: 50%;
   cursor: pointer;
 }
-
 #lg .lg__slide .lg__slide__nav li:nth-of-type(n+2) {
   margin-left: 1em;
 }
-
 #lg .lg__slide .lg__slide__nav .active__dot {
   background-color: #a40033;
 }
-
 #lg .show {
   display: block;
 }
-
 #lg .hide {
   display: none;
 }
-
 #lg .fade {
   -webkit-animation-name: fade;
+     -moz-animation-name: fade;
+       -o-animation-name: fade;
           animation-name: fade;
   -webkit-animation-duration: 1s;
+     -moz-animation-duration: 1s;
+       -o-animation-duration: 1s;
           animation-duration: 1s;
 }
-
 @-webkit-keyframes fade {
   0% {
     opacity: 0.1;
@@ -161,7 +152,22 @@
     opacity: 1;
   }
 }
-
+@-moz-keyframes fade {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fade {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes fade {
   0% {
     opacity: 0.1;
@@ -170,26 +176,21 @@
     opacity: 1;
   }
 }
-
 #lg .lg__snoska {
   color: #fff;
   padding: 1em;
   background-color: #000;
 }
-
 #lg .lg__snoska span {
   font-size: 14px;
 }
-
 #lg .lg__snoska__white {
   color: #000;
   background-color: #fff;
 }
-
 #lg .nano {
   position: relative;
 }
-
 #lg .nano .nano__txt {
   position: absolute;
   color: #fff;
@@ -197,45 +198,36 @@
   left: 6em;
   bottom: 4em;
 }
-
 #lg .nano .nano__txt span {
   font-size: 24px;
   font-weight: bold;
 }
-
 #lg .nano .nano__txt h2 {
   margin: 0.5em 0;
 }
-
 #lg .ips {
   padding: 3em 0;
   background-color: #000;
 }
-
 #lg .ips .ips__txt {
   color: #fff;
   text-align: center;
   max-width: 800px;
   margin: 0 auto 2em auto;
 }
-
 #lg .ips .ips__txt h2 {
   margin: 0.5em 0;
 }
-
 #lg .ips .ips__txt span {
   font-size: 24px;
   font-weight: bold;
 }
-
 #lg .ips .ips__img img {
   margin: 0 auto;
 }
-
 #lg .colors {
   position: relative;
 }
-
 #lg .colors .colors__txt {
   position: absolute;
   color: #fff;
@@ -243,31 +235,29 @@
   max-width: 40%;
   bottom: 50%;
   -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
       -ms-transform: translateY(50%);
+       -o-transform: translateY(50%);
           transform: translateY(50%);
   right: 0;
   padding-right: 4em;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
-
 #lg .colors .colors__txt h2 {
   margin: 0.5em 0;
 }
-
 #lg .colors .colors__txt span {
   font-size: 24px;
   font-weight: bold;
 }
-
 #lg .colors .colors__txt .colors__icon {
   margin-top: 4em;
 }
-
 #lg .refresh {
   position: relative;
 }
-
 #lg .refresh .refresh__txt {
   color: #fff;
   position: absolute;
@@ -275,265 +265,236 @@
   top: 5em;
   max-width: 40%;
 }
-
 #lg .refresh .refresh__txt h2 {
   margin: 0.5em 0;
 }
-
 #lg .refresh .refresh__txt span {
   font-size: 24px;
   font-weight: bold;
 }
-
 #lg .nvidia {
   padding: 3em 0;
 }
-
 #lg .nvidia .nvidia__txt {
   text-align: center;
   max-width: 800px;
   margin: 2em auto 0 auto;
 }
-
 #lg .nvidia .nvidia__txt h2 {
   margin: 0.5em 0;
 }
-
 #lg .nvidia .nvidia__txt span {
   font-size: 24px;
   font-weight: bold;
 }
-
 #lg .nvidia .nvidia__img img {
   margin: 0 auto;
 }
-
 #lg .amd {
   padding: 3em 0;
 }
-
 #lg .amd .amd__txt {
   text-align: center;
   max-width: 800px;
   margin: 2em auto 0 auto;
 }
-
 #lg .amd .amd__txt h2 {
   margin: 0.5em 0;
 }
-
 #lg .amd .amd__txt span {
   font-size: 24px;
   font-weight: bold;
 }
-
 #lg .amd .amd__img img {
   margin: 0 auto;
 }
-
 #lg .design {
   padding: 3em 0 0 0;
 }
-
 #lg .design .design__txt {
   text-align: center;
   max-width: 800px;
   margin: 0 auto 2em auto;
 }
-
 #lg .design .design__txt h2 {
   margin: 0.5em 0;
 }
-
 #lg .design .design__txt span {
   font-size: 24px;
   font-weight: bold;
 }
-
 #lg .lg__list {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding: 4em;
 }
-
 #lg .lg__list li {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
-
 #lg .lg__list li .lg__list__img img {
   margin: 0 auto;
   max-width: 40%;
 }
-
 #lg .lg__list li .lg__list__txt {
   text-align: center;
   margin-top: 2em;
 }
-
 #lg .lg__list li .lg__list__txt span {
   font-size: 20px;
   font-weight: bold;
 }
-
 #lg .games {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 2em 4em;
   background-color: #000;
   color: #fff;
 }
-
 #lg .games li {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
-
 #lg .games li:nth-of-type(2) {
   padding: 2em;
 }
-
 #lg .games li:nth-of-type(2) h2 {
   margin: 0.5em 0;
 }
-
 #lg .games li:nth-of-type(2) span {
   font-size: 24px;
   font-weight: bold;
 }
-
 #lg .dynamic {
   padding: 3em 0;
   background-color: #000;
   color: #fff;
 }
-
 #lg .dynamic .dynamic__txt {
   text-align: center;
   max-width: 800px;
   margin: 2em auto 0 auto;
 }
-
 #lg .dynamic .dynamic__txt h2 {
   margin: 0.5em 0;
 }
-
 #lg .dynamic .dynamic__txt span {
   font-size: 24px;
   font-weight: bold;
 }
-
 #lg .dynamic .dynamic__img {
   position: relative;
 }
-
 #lg .dynamic .dynamic__img .dynamic__list {
   position: absolute;
   top: 10px;
   right: 50%;
   -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
       -ms-transform: translateX(50%);
+       -o-transform: translateX(50%);
           transform: translateX(50%);
   max-width: 800px;
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
-
 #lg .dynamic .dynamic__img .dynamic__list li {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   color: #fff;
   background-color: #000;
   padding: 0.5em;
 }
-
 #lg .dynamic .dynamic__img .dynamic__list li:nth-of-type(1) {
   margin-right: 30em;
 }
-
 #lg .dynamic .dynamic__img img {
   margin: 0 auto;
 }
-
 #lg .stab {
   padding: 3em 0;
   background-color: #000;
   color: #fff;
 }
-
 #lg .stab .stab__txt {
   text-align: center;
   max-width: 800px;
   margin: 2em auto 0 auto;
 }
-
 #lg .stab .stab__txt h2 {
   margin: 0.5em 0;
 }
-
 #lg .stab .stab__txt span {
   font-size: 24px;
   font-weight: bold;
 }
-
 #lg .stab .stab__img img {
   margin: 0 auto;
 }
-
 #lg .aim {
   padding: 3em 0;
   background-color: #000;
   color: #fff;
 }
-
 #lg .aim .aim__txt {
   text-align: center;
   max-width: 800px;
   margin: 2em auto 0 auto;
 }
-
 #lg .aim .aim__txt h2 {
   margin: 0.5em 0;
 }
-
 #lg .aim .aim__txt span {
   font-size: 24px;
   font-weight: bold;
 }
-
 #lg .aim .aim__img img {
   margin: 0 auto;
 }
@@ -550,6 +511,7 @@
   #lg .games {
     -webkit-box-align: center;
     -webkit-align-items: center;
+       -moz-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
@@ -560,7 +522,6 @@
     margin-top: 1em;
   }
 }
-
 @media (max-width: 812px) {
   #lg h2 {
     font-size: 28px;
@@ -577,7 +538,9 @@
   #lg .logo .logo__txt {
     position: unset;
     -webkit-transform: unset;
+       -moz-transform: unset;
         -ms-transform: unset;
+         -o-transform: unset;
             transform: unset;
     text-align: center;
     margin: 0 auto;
@@ -590,11 +553,14 @@
     background-color: #000;
     display: -webkit-box;
     display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -webkit-flex-direction: column-reverse;
+       -moz-box-orient: vertical;
+       -moz-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
@@ -617,32 +583,37 @@
     max-width: 100%;
     position: unset;
     -webkit-transform: unset;
+       -moz-transform: unset;
         -ms-transform: unset;
+         -o-transform: unset;
             transform: unset;
     padding: 1em;
   }
   #lg .colors .colors__txt span,
-  #lg .refresh .refresh__txt span,
-  #lg .nvidia .nvidia__txt span,
-  #lg .amd .amd__txt span,
-  #lg .design .design__txt span,
-  #lg .games li:nth-of-type(2) span,
-  #lg .dynamic .dynamic__txt span,
-  #lg .stab .stab__txt span,
-  #lg .aim .aim__txt span,
-  #lg .lg__slide .lg__slide__cont li span,
-  #lg .nano .nano__txt span,
-  #lg .ips .ips__txt span {
+#lg .refresh .refresh__txt span,
+#lg .nvidia .nvidia__txt span,
+#lg .amd .amd__txt span,
+#lg .design .design__txt span,
+#lg .games li:nth-of-type(2) span,
+#lg .dynamic .dynamic__txt span,
+#lg .stab .stab__txt span,
+#lg .aim .aim__txt span,
+#lg .lg__slide .lg__slide__cont li span,
+#lg .nano .nano__txt span,
+#lg .ips .ips__txt span {
     font-size: 20px;
   }
   #lg .refresh {
     display: -webkit-box;
     display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -webkit-flex-direction: column-reverse;
+       -moz-box-orient: vertical;
+       -moz-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     background-color: #000;
@@ -656,11 +627,11 @@
     display: none;
   }
   #lg .nvidia .nvidia__txt,
-  #lg .amd .amd__txt,
-  #lg .design .design__txt,
-  #lg .dynamic .dynamic__txt,
-  #lg .stab .stab__txt,
-  #lg .aim .aim__txt {
+#lg .amd .amd__txt,
+#lg .design .design__txt,
+#lg .dynamic .dynamic__txt,
+#lg .stab .stab__txt,
+#lg .aim .aim__txt {
     padding: 0 1em;
   }
   #lg .nvidia {
@@ -676,6 +647,8 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 0;
@@ -687,7 +660,6 @@
     padding-top: 0;
   }
 }
-
 @media (max-width: 480px) {
   #lg h2 {
     font-size: 24px;
@@ -695,6 +667,7 @@
   #lg .logo .logo__txt {
     max-width: 100%;
     -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
             box-sizing: border-box;
   }
   #lg .lg__slide {
@@ -735,8 +708,8 @@
     font-size: 14px;
   }
   #lg .dynamic,
-  #lg .stab,
-  #lg .aim {
+#lg .stab,
+#lg .aim {
     padding: 0;
   }
 }

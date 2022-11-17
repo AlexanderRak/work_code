@@ -4,6 +4,7 @@
   height: auto;
   display: block;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
 }
@@ -17,7 +18,6 @@ p {
   text-align: unset;
   color: #6e6e73;
 }
-
 p:first-letter {
   padding-left: 0 !important;
 }
@@ -39,7 +39,6 @@ img {
   display: block;
   height: auto;
 }
-
 img:hover {
   opacity: 1 !important;
 }
@@ -125,7 +124,6 @@ span {
 .watch__main {
   padding-bottom: 100px;
 }
-
 .watch__main .one__title {
   text-align: center;
 }
@@ -136,25 +134,33 @@ span {
 
 .watch__wrap__one {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: #fdfaf4;
-  border-radius: 35px;
+  -webkit-border-radius: 35px;
+     -moz-border-radius: 35px;
+          border-radius: 35px;
   overflow: hidden;
 }
-
 .watch__wrap__one div {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
-
 .watch__wrap__one div img {
   margin-left: unset;
 }
@@ -169,67 +175,83 @@ span {
 .watch__wrap__two {
   margin-top: 20px;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .watch__wrap__cal {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background: #fdf2f5;
-  border-radius: 35px;
+  -webkit-border-radius: 35px;
+     -moz-border-radius: 35px;
+          border-radius: 35px;
   -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   overflow: hidden;
 }
-
 .watch__wrap__cal div {
   -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
-
 .watch__wrap__cal .watch__wrap__txt {
   -webkit-box-flex: 0.3;
+  -webkit-flex: 0.3;
+     -moz-box-flex: 0.3;
       -ms-flex: 0.3;
           flex: 0.3;
   padding: 0 40px;
 }
-
 .watch__wrap__cal:first-child {
   -webkit-box-flex: 2;
+  -webkit-flex: 2;
+     -moz-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
   margin-right: 20px;
 }
-
 .watch__wrap__cal:last-child {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   background: #f2fcff;
 }
-
 .watch__wrap__cal:last-child .watch__wrap__txt {
   margin: 0 auto;
   padding-top: 40px;
 }
-
 .watch__wrap__cal:last-child .watch__wrap__img {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
 }
 
 .r__reverse {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
@@ -245,9 +267,12 @@ span {
 
 .r__center div {
   -webkit-box-flex: 1 !important;
+  -webkit-flex: 1 1 0 !important;
+     -moz-box-flex: 1 !important;
       -ms-flex: 1 1 0px !important;
           flex: 1 1 0 !important;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -257,36 +282,48 @@ span {
 
 .t__center {
   text-align: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
   position: absolute;
   bottom: 50%;
   right: 50%;
   -webkit-transform: translate(50%, 50%);
+     -moz-transform: translate(50%, 50%);
+      -ms-transform: translate(50%, 50%);
+       -o-transform: translate(50%, 50%);
           transform: translate(50%, 50%);
   max-width: 100%;
   width: 100%;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 0 !important;
 }
 
 .flex__cal {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
 .flex__cal .watch__wrap__img {
   -webkit-box-flex: 0;
+  -webkit-flex: 0;
+     -moz-box-flex: 0;
       -ms-flex: 0;
           flex: 0;
 }
@@ -301,22 +338,24 @@ span {
     padding: 0 15px;
   }
   .one__title {
-    font-size: calc(40px + (60 - 40) * ((100vw - 320px) / (1201 - 320)));
+    font-size: -webkit-calc(40px + 20 * (100vw - 320px) / 881);
+    font-size: -moz-calc(40px + 20 * (100vw - 320px) / 881);
+    font-size: calc(40px + 20 * (100vw - 320px) / 881);
   }
   .two__title {
-    font-size: calc(24px + (36 - 24) * ((100vw - 320px) / (1201 - 320)));
+    font-size: -webkit-calc(24px + 12 * (100vw - 320px) / 881);
+    font-size: -moz-calc(24px + 12 * (100vw - 320px) / 881);
+    font-size: calc(24px + 12 * (100vw - 320px) / 881);
   }
   .watch__main {
     padding-bottom: 40px;
   }
 }
-
 @media (max-width: 991px) {
   .watch .container {
     width: 720px;
   }
 }
-
 @media (max-width: 767px) {
   .p__top {
     padding-top: 20px !important;
@@ -336,7 +375,7 @@ span {
     margin-bottom: 20px;
   }
   .watch__wrap__cal .watch__wrap__txt,
-  .watch__wrap__txt {
+.watch__wrap__txt {
     padding: 0 20px;
   }
   .watch__wrap__cal:last-child .watch__wrap__txt {
@@ -349,22 +388,28 @@ span {
   .t__center {
     position: unset;
     -webkit-transform: unset;
+       -moz-transform: unset;
+        -ms-transform: unset;
+         -o-transform: unset;
             transform: unset;
     padding: 40px 20px !important;
     -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
             box-sizing: border-box;
   }
 }
-
 @media (max-width: 576px) {
   .watch .container {
     width: 100%;
     -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
             box-sizing: border-box;
   }
   .watch__wrap__cal,
-  .watch__wrap__one {
-    border-radius: 15px;
+.watch__wrap__one {
+    -webkit-border-radius: 15px;
+       -moz-border-radius: 15px;
+            border-radius: 15px;
   }
   .d__block {
     display: block;

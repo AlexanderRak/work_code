@@ -1,0 +1,639 @@
+$maxWidth: 1920
+@mixin adaptiv-font($pcSize, $mobSize)
+   $addSize: $pcSize - $mobSize
+   $maxWidth: $maxWidth - 320
+   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+// @include adaptiv-font(56, 30)
+.class-oppo-a96 img
+   max-width: 100%
+   margin: 0
+   padding: 0
+#id-oppo-a96
+   display: block
+   margin: 0 auto
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #f7f8fa
+   position: relative
+   img
+      opacity: 1
+      display: block
+      &:hover
+         opacity: 1
+   p, h1, h2, h3, h4, h5, h6
+      padding: 0
+      margin: 0
+      text-align: inherit
+   h1, h2, h3, h4, h5, h6
+      font-weight: bold
+      line-height: 1
+span.word-wrap
+   display: block
+   word-wrap: break-word
+span.fw-bold
+   font-weight: bold
+span.tx-uppercase
+   text-transform: uppercase
+.features-desc__text h2
+   text-align: inherit
+.one-col .features-desc__text p
+   text-align: inherit
+.bc-description__content p:first-letter
+   padding-left: 0
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+// default
+// default size text
+.oppo-subtitle_text
+   @include adaptiv-font(48, 21)
+   line-height: 1.1
+.oppo-title_text
+   @include adaptiv-font(48, 21)
+   line-height: 1.1
+.oppo-suptitle_text
+   @include adaptiv-font(18, 16)
+   line-height: 1.3
+.oppo-suptitle_text2
+   @include adaptiv-font(20, 16)
+   line-height: 1.3
+.oppo-color-grey
+   color: #18040499
+.oppo-color-while
+   color: rgba(255,255,255,0.6)
+.feature-title
+   line-height: 4.16667vw
+   font-size: 4.16667vw
+   padding: 6.66667vw 0 6.66667vw
+   text-align: center
+.module-title-text
+   font-size: 4.16667vw
+   line-height: 4.16667vw
+   text-align: center
+   white-space: nowrap
+   color: rgba(255,255,255,0.99)
+// end default size text
+.oppo-a96-header
+   width: 100%
+   max-width: 100%
+   height: 100vh
+   min-height: 100vh
+.oppo-a96-header__bgrd
+   background-image: url(https://cdn.comfy.ua/media/x/img2/oppoa96/img1.png)
+   background-position: center left
+   background-repeat: no-repeat
+   background-size: cover
+   width: 100%
+   height: 100%
+.oppo-a96-header__content
+   max-width: 100%
+   height: auto
+   padding: 100px 150px 15px 15px
+.oppo-a96-header__title
+   @include adaptiv-font(170, 30)
+   color: #000
+   text-align: right
+   font-weight: bold
+   line-height: 1
+   padding-bottom: 190px
+.oppo-a96-header__subtitle + .oppo-a96-header__subtitle
+   padding-top: 40px
+.oppo-a96-header__subtitle-text
+   display: table
+   margin: 0 0 0 auto
+.oppo-a96-header__subtitle
+   span
+      display: block
+.oppo-a96-header__subtitle-top
+   @include adaptiv-font(40, 25)
+   color: #000
+   font-weight: bold
+   line-height: 1
+   padding-bottom: 16px
+.oppo-a96-header__subtitle-bottom
+   @include adaptiv-font(30, 18)
+   color: #000
+   font-weight: normal
+   line-height: 1.1
+.oppo-a96-peculiarities
+   max-width: 1460px
+   margin: 0 auto
+   padding: 0 15px
+.oppo-a96-peculiarities__title
+   @include adaptiv-font(80, 21)
+   text-align: center
+   font-weight: bold
+   padding: 150px 0
+.oppo-a96-peculiarities__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 1fr
+   grid-gap: 23px
+.oppo-a96-peculiarities__grid-item
+   position: relative
+   background-repeat: no-repeat
+   background-size: cover
+   height: 258px
+   display: flex
+   align-items: flex-end
+   justify-content: center
+   &.peculiarities--bgrd1
+      background-image: url(https://cdn.comfy.ua/media/x/img2/oppoa96/img2.png)
+      background-position: center center
+   &.peculiarities--bgrd2
+      background-image: url(https://cdn.comfy.ua/media/x/img2/oppoa96/img3.png)
+      background-position: center center
+   &.peculiarities--bgrd3
+      background-image: url(https://cdn.comfy.ua/media/x/img2/oppoa96/img4.png)
+      background-position: center center
+   &.peculiarities--bgrd4
+      background-image: url(https://cdn.comfy.ua/media/x/img2/oppoa96/img5.png)
+      background-position: center center
+.oppo-a96-peculiarities__grid-title
+   @include adaptiv-font(23, 16)
+   color: #fff
+   text-align: center
+   padding: 0 15px 36px 15px
+   line-height: 1.3
+.oppo-a96-title
+   padding: 150px 0
+.oppo-a96-title__text
+   @include adaptiv-font(80, 21)
+   max-width: 1060px
+   margin: 0 auto
+   padding: 0 15px
+   text-align: center
+   background: #61DBFB
+   background: linear-gradient(to right, #61DBFB 0%, #d5b0f2 100%)
+   -webkit-background-clip: text
+   -webkit-text-fill-color: transparent
+   line-height: 1
+.oppo-a96-flextxt
+   max-width: 1460px
+   margin: 0 auto
+   padding: 0 15px
+.oppo-a96-flextxt__flex
+   display: flex
+   align-items: flex-start
+   padding-bottom: 150px
+.oppo-a96-flextxt__item
+   flex: 1 1 0
+.oppo-a96-flextxt__item-text--left
+   max-width: 600px
+.oppo-a96-flextxt__item-text--right
+   max-width: 590px
+   margin: 0 0 0 auto
+   padding-left: 15px
+.oppo-a96-flextxt__img
+   position: relative
+   img
+      margin: 0 auto
+   &::before
+      content: ""
+      background: linear-gradient(to top, rgba(247, 248, 250, 1) 0%,rgba(255,255,255,0) 100%)
+      width: 100%
+      height: 40px
+      position: absolute
+      bottom: 0
+      left: 0
+.oppo-a96-flextxt-lcmn
+   max-width: 1460px
+   margin: 0 auto
+   padding: 0px 15px
+.oppo-a96-flextxt-lcmn__text-top, .oppo-a96-flextxt-lcmn__text-bottom
+   padding-bottom: 30px
+.oppo-a96-flextxt-lcmn__text-bottom
+   max-width: 900px
+.oppo-a96-bgrd-bl
+   background-position: top center
+   background-repeat: no-repeat
+   background-size: cover
+   width: 100%
+   height: auto
+   overflow: hidden
+   position: relative
+   margin-top: 150px
+   &.oppo-a96-bgrd-bl--bgrd1, &.oppo-a96-bgrd-bl--bgrd3
+      background-image: url(https://cdn.comfy.ua/media/x/img2/oppoa96/img9.png)
+      .oppo-a96-bgrd-bl__content
+         max-width: 1460px
+         margin: 0 auto
+         padding: 140px 15px 140px 15px
+      .oppo-a96-bgrd-bl__flex
+         display: flex
+         align-items: flex-start
+      .oppo-a96-bgrd-bl__item
+         flex: 1 1 0
+      .oppo-a96-bgrd-bl__text-left
+         max-width: 655px
+         color: #fff
+      .oppo-a96-bgrd-bl__text-right
+         max-width: 590px
+         margin: 0 0 0 auto
+         color: #fff
+         padding-left: 15px
+      .oppo-a96-bgrd-bl__img
+         position: relative
+         left: -15px
+         img
+            margin: 0 auto
+   .oppo-a96-bgrd-bl__flex-icon
+      display: flex
+      align-items: flex-start
+      padding: 50px 30px
+   .oppo-a96-bgrd-bl__flex-icon__item
+      flex: 1 1 0
+   .oppo-a96-bgrd-bl__flex-icon__content
+      padding: 7.5px
+   .oppo-a96-bgrd-bl__flex-icon__title
+      @include adaptiv-font(40, 21)
+      color: #fff
+      line-height: 1.1
+      span
+         font-size: 18px
+   .oppo-a96-bgrd-bl__flex-icon__suptitle
+      @include adaptiv-font(18, 16)
+      color: #fff
+      line-height: 1.1
+   &.oppo-a96-bgrd-bl--bgrd2
+      background-image: url(https://cdn.comfy.ua/media/x/img2/oppoa96/img20.png)
+      height: 100vh
+      margin-top: 150px
+      .oppo-a96-bgrd-bl__content
+         max-width: 1460px
+         margin: 0 auto
+         padding: 140px 15px 140px 15px
+      .oppo-a96-bgrd-bl__text
+         color: #fff
+         padding-bottom: 40px
+         max-width: 800px
+      .oppo-a96-bgrd-bl__flex-icon
+         max-width: 900px
+         padding: 0px 30px 50px 0px
+   &.oppo-a96-bgrd-bl--bgrd3
+      background-image: url(https://cdn.comfy.ua/media/x/img2/oppoa96/img21.png)
+      height: 100vh
+      margin-bottom: 150px
+// slider
+.oppoa96-anim-slid
+   animation-name: oppoa96-anim-slid
+   animation-duration: 1.5s
+@keyframes oppoa96-anim-slid
+   from
+      opacity: .4
+   to
+      opacity: 1
+.oppoa96-slid__grid
+   display: grid
+   grid-template-columns: 57.7% 1fr
+   grid-gap: 20px
+.oppoa96-slid__item
+   display: grid
+   grid-gap: 20px
+   grid-template-columns: 1fr
+.oppo-a96-flextxt-lcmn__slider-dots
+   padding: 50px 0 0px 0
+   display: grid
+   grid-template-columns: 57.7% 1fr
+   grid-gap: 20px
+.oppo-a96-flextxt-lcmn__slider-dots__item
+   flex: 1 1 0
+.oppo-a96-flextxt-lcmn__slider-dots__dots
+   display: flex
+.oppoa96-dot
+   width: 38px
+   height: 38px
+   border-radius: 50%
+   position: relative
+   margin-right: 30px
+   cursor: pointer
+   &::before
+      content: ""
+      width: 56px
+      height: 56px
+      border-radius: 50%
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      margin: 0 auto
+   &:nth-child(1)
+      background: linear-gradient(-45deg, #008CFF 0%, #00D2FB 100%)
+      &.active
+         &::before
+            border: 1px solid #008CFF
+   &:nth-child(2)
+      background: linear-gradient(135deg, #A1A1A1 0%, #333640 100%)
+      &.active
+         &::before
+            border: 1px solid #333640
+.oppo-a96-flextxt-lcmn__slider-dots__dots-name
+   @include adaptiv-font(28, 21)
+   color: #000
+   line-height: 1.1
+   padding: 30px 0 0 0
+.oppo-a96-flextxt-lcmn__slider-dots__text
+   @include adaptiv-font(23, 18)
+   color: #000
+   line-height: 1.1
+// end slider
+// anim
+.oppo-a96-flextxt-lcmn__img
+   position: relative
+.oppo-a96-flextxt-lcmn__volum
+   z-index: 10
+   position: absolute
+   transition: opacity 0.6s
+   width: 285px
+   height: 285px
+   &.volum--left
+      left: 40rem
+      top: 0
+      top: 45%
+      transform: translateY(-50%)
+      .oppo-a96-flextxt-lcmn__volum--item
+         background-image: linear-gradient(96deg, rgba(214,173,252,0.6) 2%, rgba(95,215,243,0) 65%)
+   &.volum--right
+      right: 40rem
+      top: 0
+      top: 55%
+      transform: translateY(-50%)
+      .oppo-a96-flextxt-lcmn__volum--item
+         background-image: linear-gradient(-81deg, rgba(214,173,252,0.6) 2%, rgba(95,215,243,0) 65%)
+.oppo-a96-flextxt-lcmn__volum--item
+   animation: ripples 6s infinite linear
+   position: absolute
+   top: 0
+   left: 0
+   width: 100%
+   height: 100%
+   border-radius: 50%
+   will-change: opacity, transform
+   transform: scale(0)
+   &:nth-child(1)
+      animation-delay: -1.2s
+   &:nth-child(2)
+      animation-delay: -2.4s
+   &:nth-child(3)
+      animation-delay: -3.6s
+   &:nth-child(4)
+      animation-delay: -4.8s
+   &:nth-child(5)
+      animation-delay: -6s
+@keyframes ripples
+   0%
+      transform: scale(0)
+      opacity: 0.7
+   80%
+      opacity: 0
+   100%
+      transform: scale(1.5)
+      opacity: 0
+// end anim
+.oppo-a96-camera
+   max-width: 1366px
+   margin: 0 auto
+   padding: 0 15px 0 15px
+.oppo-a96-camera__titile
+   @include adaptiv-font(40, 21)
+   color: #000
+   text-align: center
+   padding-bottom: 50px
+   line-height: 1
+.oppo-a96-camera__flex
+   display: flex
+.oppo-a96-camera__item
+   flex: 1 1 0
+.oppo-a96-camera__content
+   padding: 57px 15px 15px 0
+.oppo-a96-camera__text
+   margin: 0px 0 183px 12rem
+   display: table
+   position: relative
+   &::before
+      content: ""
+      height: 0.1px
+      background: #000
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+   &:nth-child(1)
+      &::before
+         width: 438px
+         left: 170px
+   &:nth-child(2)
+      margin: 0px 0 130px 12rem
+      &::before
+         width: 610px
+         left: 170px
+   &:nth-child(3)
+      margin: 0px 0 0 12rem
+      &::before
+         width: 615px
+         left: 170px
+.oppo-a96-camera__title
+   @include adaptiv-font(38, 18)
+   color: #000
+   line-height: 1
+   padding-bottom: 10px
+   font-weight: bold
+.oppo-a96-camera__suptitle
+   font-size: 16px
+   color: #000
+   line-height: 1
+.oppo-a96-footer
+   max-width: 1460px
+   margin: 0 auto
+   padding: 150px 15px 150px 15px
+.oppo-a96-footer__grid
+   display: grid
+   grid-template-columns: 1fr 1fr
+   grid-gap: 30px
+.oppo-a96-footer__text
+   padding: 50px 15px 50px 0
+   text-align: left
+.oppo-a96-footer__text--title
+   font-size: 21px
+   padding-bottom: 10px
+   color: #000
+   line-height: 1.1
+   font-weight: bold
+.oppo-a96-footer__text--suptitle
+   font-size: 18px
+   color: #000
+   line-height: 1.1
+.oppo-a96-footer-wrap
+   background: #fff
+   padding-top: 150px
+// media
+// @media (min-width: 1902px)
+// @media (max-width: 1366px)
+@media (max-width: 1280px)
+   .oppo-a96-peculiarities__title
+      padding: 75px 0
+   .oppo-a96-title
+      padding: 75px 0
+   .oppo-a96-flextxt__flex
+      padding-bottom: 75px
+   .oppo-a96-bgrd-bl
+      margin-top: 75px
+   .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd2
+      margin-top: 75px
+   .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd3
+      margin-bottom: 75px
+   .oppo-a96-footer-wrap
+      padding-top: 75px
+   .oppo-a96-footer
+      padding: 75px 15px 25px 15px
+   .oppo-a96-camera__text
+      margin: 0px 0 183px 0
+      &::before
+         display: none
+   .oppo-a96-camera__text:nth-child(2)
+      margin: 0px 0 130px 0
+   .oppo-a96-camera__text:nth-child(3)
+      margin: 0px 0 0 0
+@media (max-width: 1024px)
+   .oppo-a96-flextxt-lcmn__volum.volum--left
+      left: 15rem
+   .oppo-a96-flextxt-lcmn__volum.volum--right
+      right: 14rem
+   .oppo-a96-header
+      height: 50vh
+      min-height: 50vh
+   .oppo-a96-header__title
+      padding-bottom: 40px
+   .oppo-a96-header__bgrd
+      background-position: 100% 100%
+   .oppo-a96-header__content
+      padding: 75px 75px 15px 15px
+   .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd1
+      margin-top: 75px
+   .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd2, .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd3
+      height: 50vh
+   .oppo-a96-bgrd-bl
+      margin-top: 0
+@media (max-width: 812px)
+   .oppo-a96-camera__text
+      margin: 0px 0 30px 0
+   .oppo-a96-camera__text:nth-child(2)
+      margin: 0px 0 30px 0
+   .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd2, .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd3
+      height: 700px
+   .oppo-a96-peculiarities__grid-item
+      height: 190px
+   .oppo-a96-peculiarities__grid-title
+      padding: 0 15px 16px 15px
+   .oppo-a96-header__content
+      padding: 35px 35px 0 15px
+   .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd1 .oppo-a96-bgrd-bl__content, .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd3 .oppo-a96-bgrd-bl__content
+      padding: 75px 15px 75px 15px
+   .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd1 .oppo-a96-bgrd-bl__img, .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd3 .oppo-a96-bgrd-bl__img
+      left: 0
+   .oppo-a96-flextxt-lcmn__volum.volum--left
+      left: 9rem
+   .oppo-a96-flextxt-lcmn__volum.volum--right
+      right: 9rem
+@media (max-width: 480px)
+   .oppo-a96-header
+      height: 550px
+      min-height: 550px
+   .oppo-a96-header__bgrd
+      background-position: 55% 100%
+   .oppo-a96-header__content
+      padding: 35px 15px 0 15px
+   .oppo-a96-header__title
+      text-align: right
+   .oppo-a96-header__subtitle + .oppo-a96-header__subtitle
+      padding-top: 25px
+   .oppo-a96-header__subtitle-top, .oppo-a96-header__subtitle-bottom
+      text-align: right
+   .oppo-a96-peculiarities__grid
+      grid-template-columns: 1fr
+   .oppo-a96-peculiarities__grid-item
+      height: 240px
+   .oppo-a96-peculiarities__grid-title
+      font-size: 21px
+   .oppo-a96-flextxt__flex
+      flex-direction: column
+   .oppo-a96-flextxt__item-text--right
+      max-width: 100%
+      margin: 0 0 0 auto
+      padding-left: 0
+      padding-top: 20px
+   .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd1 .oppo-a96-bgrd-bl__flex, .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd3 .oppo-a96-bgrd-bl__flex
+      flex-direction: column
+   .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd1 .oppo-a96-bgrd-bl__text-right, .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd3 .oppo-a96-bgrd-bl__text-right
+      padding-left: 0
+      padding-top: 20px
+   .oppo-a96-bgrd-bl .oppo-a96-bgrd-bl__flex-icon
+      flex-wrap: wrap
+      padding: 50px 0px
+   .oppo-a96-bgrd-bl .oppo-a96-bgrd-bl__flex-icon__item
+      flex: 1 1 50%
+      max-width: 50%
+      padding-bottom: 20px
+   .oppoa96-slid__item
+      &:nth-of-type(2)
+         display: none
+   .oppoa96-slid__grid
+      grid-template-columns: 1fr
+   .oppo-a96-flextxt-lcmn__slider-dots
+      grid-template-columns: 1fr
+   .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd2 .oppo-a96-bgrd-bl__content
+      padding: 35px 15px 35px 15px
+   .oppo-a96-camera__flex
+      flex-direction: column-reverse
+   .oppo-a96-flextxt-lcmn__volum
+      width: 150px
+      height: 150px
+   .oppo-a96-flextxt-lcmn__volum.volum--left
+      left: 3rem
+   .oppo-a96-flextxt-lcmn__volum.volum--right
+      right: 3rem
+   .oppo-a96-footer__grid
+      grid-template-columns: 1fr
+      grid-gap: 0
+// @media (max-width: 320px)
+@media (max-width: 812px) and (orientation: landscape)
+   .oppo-a96-header
+      height: 415px
+      min-height: 415px
+   .oppo-a96-header__content
+      padding: 25px 25px 0 15px
+   .oppo-a96-peculiarities__title
+      padding: 35px 0
+   .oppo-a96-title
+      padding: 35px 0
+   .oppo-a96-flextxt__flex
+      padding-bottom: 35px
+   .oppo-a96-bgrd-bl
+      margin-top: 35px
+   .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd2
+      margin-top: 35px
+   .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd3
+      margin-bottom: 35px
+      margin-top: 0
+   .oppo-a96-footer-wrap
+      padding-top: 35px
+   .oppo-a96-footer
+      padding: 35px 15px 25px 15px
+   .oppo-a96-peculiarities__grid
+      grid-template-columns: 1fr 1fr
+   .oppo-a96-peculiarities__grid-item
+      height: 245px
+   .oppo-a96-bgrd-bl .oppo-a96-bgrd-bl__flex-icon
+      flex-wrap: wrap
+   .oppo-a96-bgrd-bl .oppo-a96-bgrd-bl__flex-icon__item
+      flex: 1 1 50%
+   .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd2 .oppo-a96-bgrd-bl__content
+      padding: 35px 15px 35px 15px
+   .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd2, .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd3
+      height: auto
+   .oppo-a96-bgrd-bl.oppo-a96-bgrd-bl--bgrd2 .oppo-a96-bgrd-bl__flex-icon
+      max-width: 900px
+      padding: 0px 30px 0px 0px
+   .oppo-a96-flextxt-lcmn__volum.volum--left
+      left: 4rem
+   .oppo-a96-flextxt-lcmn__volum.volum--right
+      right: 4rem

@@ -1,64 +1,74 @@
+$maxWidth: 1920
+@mixin adaptiv-font($pcSize, $mobSize)
+   $addSize: $pcSize - $mobSize
+   $maxWidth: $maxWidth - 320
+   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+// @include adaptiv-font(56, 30)
 #def
-	display: block
-	margin: 0 auto
-	max-width: 1920px
-	width: 100%
-	height: auto
-	overflow: hidden
-	background: #fff
-	position: relative
-	img
-		&:hover
-			opacity: 1
-	&:first-letter
-		padding-left: 0
-	img
-		display: block
-		margin-right: initial
-		margin-left: initial
-	p
-		font-size: 40px
-		margin-bottom: 0
-	h2
-		font-size: 192px
-		line-height: 1
-		letter-spacing: 3px
-		text-transform: uppercase
-		color: #43b02a
-	h3
-		font-size: 50px
-		margin: 0
-		padding-top: 0
-		line-height: 1
-		font-weight: bold
-		text-align: center
-		color: #fff
-		text-transform: uppercase
-	h4
-		font-size: 50px
-		margin: 0
-		padding-top: 0
-		line-height: 1
-		font-weight: bold
-		text-align: center
-		color: #43b02a
-		text-transform: uppercase
+   display: block
+   margin: 0 auto
+   max-width: 1920px
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #fff
+   position: relative
+   img
+      &:hover
+         opacity: 1
+      &:first-letter
+         padding-left: 0
+   img
+      display: block
+      margin-right: initial
+      margin-left: initial
+   p, h1 h2, h3, h4, h5, h6
+      padding: 0
+      margin: 0
+   p
+      line-height: 1.1
+      color: #000
+      font-weight: bold
+   h1
+      line-height: 1.1
+      color: #000
+      font-weight: bold
+   h2
+      line-height: 1.1
+      color: #000
+      font-weight: bold
+   h3
+      line-height: 1.1
+      color: #000
+      font-weight: bold
+   h4
+      line-height: 1.1
+      color: #000
+      font-weight: bold
+   h5
+      line-height: 1.1
+      color: #000
+      font-weight: bold
+   h6
+      line-height: 1.1
+      color: #000
+      font-weight: bold
 .breadcrumbs
-	display: none
+   display: none
 span.word-wrap
-	display: block
-	word-wrap: break-word
+   display: block
+   word-wrap: break-word
 span.fw-bold
-	font-weight: bold
+   font-weight: bold
 span.tx-uppercase
-	text-transform: uppercase
+   text-transform: uppercase
 .features-desc__text h2
-	text-align: inherit
+   text-align: inherit
 .one-col .features-desc__text p
-	text-align: inherit
+   text-align: inherit
 .main-container.page
-	padding-left: 0
-	padding-right: 0
+   padding-left: 0
+   padding-right: 0
 // default
 
 // media

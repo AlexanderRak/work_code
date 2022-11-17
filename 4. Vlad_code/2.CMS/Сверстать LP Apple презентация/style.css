@@ -6,10 +6,10 @@
   height: auto;
   display: block;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
 }
-
 #apple p {
   margin-bottom: 0;
   margin: 0;
@@ -17,11 +17,9 @@
   font-size: 24px;
   line-height: 40px;
 }
-
 #apple p:first-letter {
   padding-left: 0;
 }
-
 #apple h2 {
   text-align: unset;
   display: block;
@@ -31,24 +29,20 @@
   padding: 0;
   margin: 0;
 }
-
 #apple img {
   opacity: 1;
   max-width: 100%;
   display: block;
   height: auto;
 }
-
 #apple img:hover {
   opacity: 1;
 }
-
 #apple ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-
 #apple span {
   display: block;
   line-height: normal;
@@ -79,11 +73,11 @@
   background-repeat: no-repeat;
   position: relative;
 }
-
 #apple .apple__bg .apple__block__button {
   color: #fff;
   background: rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
           border-radius: 20px;
   text-align: center;
   max-width: -webkit-max-content;
@@ -94,13 +88,15 @@
   position: absolute;
   right: 50%;
   -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
       -ms-transform: translateX(50%);
+       -o-transform: translateX(50%);
           transform: translateX(50%);
   bottom: 122px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
-
 #apple .apple__bg .apple__block__button a {
   line-height: 40px;
   display: block;
@@ -111,20 +107,20 @@
   padding: 8px 16px;
   background: #43B02A;
   -webkit-border-radius: 12px;
+     -moz-border-radius: 12px;
           border-radius: 12px;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
+  -moz-transition: all 0.3s;
   transition: all 0.3s;
   margin: 0 auto;
 }
-
 #apple .apple__bg .apple__block__button a:hover {
   background: #3c9c26;
 }
-
 #apple .apple__bg .apple__block__button p {
   display: block;
   margin: 20px 0;
@@ -134,12 +130,15 @@
   #apple .apple__bg {
     height: 676px;
     -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
             background-size: cover;
   }
   #apple .apple__bg .apple__block__button {
     bottom: 74px;
     padding: 32px 22px;
     -webkit-border-radius: unset;
+       -moz-border-radius: unset;
             border-radius: unset;
     max-width: 100%;
   }
@@ -153,7 +152,6 @@
     font-size: unset;
   }
 }
-
 @media (max-width: 320px) {
   #apple h2 {
     font-size: 26px;

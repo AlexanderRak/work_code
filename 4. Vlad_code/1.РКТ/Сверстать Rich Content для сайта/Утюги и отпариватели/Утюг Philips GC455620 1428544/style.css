@@ -5,20 +5,18 @@
   height: auto;
   display: block;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
 }
-
 #philips p {
   margin-bottom: 0;
   margin: 0;
   text-align: unset;
 }
-
 #philips p:first-letter {
   padding-left: 0;
 }
-
 #philips h2 {
   text-align: unset;
   display: block;
@@ -28,7 +26,6 @@
   padding: 0;
   margin: 0;
 }
-
 #philips img {
   margin: 0 auto;
   opacity: 1;
@@ -36,17 +33,14 @@
   display: block;
   height: auto;
 }
-
 #philips img:hover {
   opacity: 1;
 }
-
 #philips ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-
 #philips span {
   display: block;
   line-height: normal;
@@ -63,7 +57,6 @@
 #philips .logo {
   position: relative;
 }
-
 #philips .logo .logo__i {
   position: absolute;
   top: 0;
@@ -71,7 +64,6 @@
   -webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.49));
           filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.49));
 }
-
 #philips .logo .logo__txt {
   max-width: 450px;
   position: absolute;
@@ -79,118 +71,109 @@
   bottom: 50px;
   color: #fff;
 }
-
 #philips .logo .logo__txt h2 {
   font-weight: bold;
   margin-bottom: 55px;
 }
-
 #philips .logo .logo__txt span {
   font-size: 30px;
 }
-
 #philips .tech {
   background-color: #dccfe9;
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 80px 70px 60px 70px;
 }
-
 #philips .tech .tech__img {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
+     -moz-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
-
 #philips .tech .tech__list {
   -webkit-box-flex: 1.5;
   -webkit-flex: 1.5;
+     -moz-box-flex: 1.5;
       -ms-flex: 1.5;
           flex: 1.5;
 }
-
 #philips .tech .tech__list li {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
+     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
 #philips .tech .tech__list li .tech__list__txt {
   max-width: 430px;
 }
-
 #philips .tech .tech__list li .tech__list__txt span {
   font-weight: bold;
   font-size: 24px;
   color: #631d76;
   margin-bottom: 0.5em;
 }
-
 #philips .tech .tech__list li .tech__list__txt p {
   font-size: 24px;
 }
-
 #philips .tech .tech__list li .tech__list__i {
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
 }
-
 #philips .tech .tech__list li:nth-of-type(n+2) {
   margin-top: 50px;
 }
-
 #philips .philips__list li {
   position: relative;
   margin-top: 60px;
 }
-
 #philips .philips__list li .philips__list__txt {
   position: absolute;
   bottom: 50%;
   -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
       -ms-transform: translateY(50%);
+       -o-transform: translateY(50%);
           transform: translateY(50%);
   right: 50px;
   max-width: 40%;
   color: #fff;
 }
-
 #philips .philips__list li .philips__list__txt span {
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 0.5em;
 }
-
 #philips .philips__list li .philips__list__txt p {
   font-size: 24px;
 }
-
 #philips .philips__list li:nth-of-type(even) .philips__list__txt {
   right: unset;
   left: 50px;
 }
-
 #philips .philips__list li:nth-of-type(n+3) .philips__list__txt {
   color: #42145f;
 }
-
 #philips .philips__list .philips__list__title {
   color: #fff;
   padding: 20px 70px;
@@ -210,7 +193,6 @@
     max-width: 43%;
   }
 }
-
 @media (max-width: 812px) {
   #philips p {
     font-size: unset !important;
@@ -253,7 +235,6 @@
     padding: 1em;
   }
 }
-
 @media (max-width: 480px) {
   #philips h2 {
     font-size: 24px;
@@ -261,11 +242,14 @@
   #philips .logo {
     display: -webkit-box;
     display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -webkit-flex-direction: column-reverse;
+       -moz-box-orient: vertical;
+       -moz-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
@@ -290,6 +274,8 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -webkit-flex-direction: column-reverse;
+       -moz-box-orient: vertical;
+       -moz-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
@@ -300,11 +286,14 @@
     margin-top: 1em;
     display: -webkit-box;
     display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -webkit-flex-direction: column-reverse;
+       -moz-box-orient: vertical;
+       -moz-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
@@ -317,7 +306,9 @@
   #philips .philips__list li .philips__list__txt {
     position: unset;
     -webkit-transform: unset;
+       -moz-transform: unset;
         -ms-transform: unset;
+         -o-transform: unset;
             transform: unset;
     color: #42145f;
     max-width: 100%;

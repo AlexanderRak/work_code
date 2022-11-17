@@ -6,20 +6,18 @@
   height: auto;
   display: block;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
 }
-
 #lego p {
   margin-bottom: 0;
   margin: 0;
   text-align: unset;
 }
-
 #lego p:first-letter {
   padding-left: 0;
 }
-
 #lego h2 {
   text-align: unset;
   display: block;
@@ -29,7 +27,6 @@
   padding: 0;
   margin: 0;
 }
-
 #lego h3 {
   text-align: unset;
   display: block;
@@ -39,7 +36,6 @@
   padding: 0;
   margin: 0;
 }
-
 #lego h4 {
   text-align: unset;
   display: block;
@@ -49,7 +45,6 @@
   padding: 0;
   margin: 0;
 }
-
 #lego img {
   opacity: 1;
   max-width: 100%;
@@ -57,17 +52,14 @@
   height: auto;
   margin: 0 auto;
 }
-
 #lego img:hover {
   opacity: 1;
 }
-
 #lego ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-
 #lego span {
   display: block;
   line-height: normal;
@@ -85,7 +77,6 @@
 #lego .slick-arrow {
   font-size: 0;
 }
-
 #lego .slick-prev {
   z-index: 10;
   left: 85px;
@@ -93,15 +84,14 @@
   position: absolute;
   cursor: pointer;
   opacity: 0.7;
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
-
 #lego .slick-prev::before {
   display: none;
 }
-
 #lego .slick-prev::after {
   content: "";
   display: block;
@@ -110,18 +100,20 @@
   min-width: 38px;
   height: 38px;
   -webkit-background-size: contain;
+     -moz-background-size: contain;
+       -o-background-size: contain;
           background-size: contain;
   background-image: url("https://cdn.comfy.ua/media/x/img/lego-2022/arrow.svg");
   bottom: 50%;
   -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
       -ms-transform: translateY(50%);
+       -o-transform: translateY(50%);
           transform: translateY(50%);
 }
-
 #lego .slick-prev:hover {
   opacity: 1;
 }
-
 #lego .slick-next {
   z-index: 10;
   right: 85px;
@@ -129,15 +121,14 @@
   position: absolute;
   cursor: pointer;
   opacity: 0.7;
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
-
 #lego .slick-next::before {
   display: none;
 }
-
 #lego .slick-next::after {
   content: "";
   display: block;
@@ -145,53 +136,55 @@
   z-index: 10;
   bottom: 50%;
   -webkit-transform: translateY(50%) scale(-1, 1);
+     -moz-transform: translateY(50%) scale(-1, 1);
       -ms-transform: translateY(50%) scale(-1, 1);
+       -o-transform: translateY(50%) scale(-1, 1);
           transform: translateY(50%) scale(-1, 1);
   display: block;
   right: 20px;
   min-width: 38px;
   height: 38px;
   -webkit-background-size: contain;
+     -moz-background-size: contain;
+       -o-background-size: contain;
           background-size: contain;
   background-image: url("https://cdn.comfy.ua/media/x/img/lego-2022/arrow.svg");
 }
-
 #lego .slick-next:hover {
   opacity: 1;
 }
-
 #lego .show__mob {
   display: none;
 }
-
 #lego .logo {
   position: relative;
   margin-bottom: 36px;
 }
-
 #lego .logo .slick-track {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
+     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 100%;
 }
-
 #lego .logo .logo__icon {
   position: absolute;
   top: 50px;
   left: 50px;
 }
-
 #lego .logo .logo__pink {
   padding: 0 42px 36px 0;
   position: absolute;
@@ -199,56 +192,53 @@
   right: 36px;
   background: #E3599D;
   -webkit-border-radius: 0px 80px;
+     -moz-border-radius: 0px 80px;
           border-radius: 0px 80px;
 }
-
 #lego .logo .logo__pink .logo__pink__wrap {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
+     -moz-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   color: #fff;
   margin-top: -13px;
 }
-
 #lego .logo .logo__pink .logo__pink__wrap .logo__pink__heart {
   margin-left: -2em;
 }
-
 #lego .logo .logo__pink .logo__pink__wrap .logo__pink__title h4 {
   margin-top: 24px;
   margin-left: -3em;
 }
-
 #lego .logo .logo__pink .logo__pink__tovar {
   margin-top: 24px;
 }
-
 #lego .logo .logo__pink .logo__pink__tovar .logo__pink__tovar__child {
   max-width: 204px;
   padding: 12px;
 }
-
 #lego .logo .logo__pink .logo__pink__tovar .logo__pink__tovar__child .logo__pink__tovar__wrap {
   text-decoration: none;
   cursor: pointer;
 }
-
 #lego .logo .logo__pink .logo__pink__tovar .logo__pink__tovar__child span {
   margin: 12px 0;
   font-size: 16px;
   color: #fff;
 }
-
 #lego .logo .logo__pink .logo__pink__tovar .logo__pink__tovar__child .logo__pink__tovar__button {
   display: block;
   color: #fff;
@@ -262,87 +252,80 @@
   width: max-content;
   padding: 8px 57px;
   cursor: pointer;
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
   margin-bottom: 0;
 }
-
 #lego .logo .logo__pink .logo__pink__tovar .logo__pink__tovar__child .logo__pink__tovar__button:hover {
   background-color: #fff;
   color: #000;
 }
-
 #lego .logo .logo__pink .logo__pink__tovar .logo__pink__tovar__child:nth-of-type(1) {
   margin-right: 32px;
 }
-
 #lego .logo .logo__pink .logo__pink__tovar .logo__pink__tovar__child .logo__pink__tovar__wrap:hover .logo__pink__tovar__button {
   background-color: #fff;
   color: #000;
 }
-
 #lego .fan {
   margin-top: 36px;
   position: relative;
 }
-
 #lego .fan .slick-list {
   max-width: 100%;
 }
-
 #lego .fan .slick-list .slick-track {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100% !important;
   max-width: 100%;
 }
-
 #lego .fan .slick-list .slick-track div {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
-
 #lego .fan .fan__wrap {
   position: absolute;
   top: 60px;
   left: 48px;
   color: #fff;
 }
-
 #lego .fan .fan__wrap .fan__list {
   margin-top: 24px;
 }
-
 #lego .fan .fan__wrap .fan__list .slider__child {
   max-width: 180px;
   min-width: 180px;
   padding: 12px;
   -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
           box-sizing: content-box;
 }
-
 #lego .fan .fan__wrap .fan__list .slider__child .fan__list__wrap {
   text-decoration: none;
   cursor: pointer;
   display: block;
 }
-
 #lego .fan .fan__wrap .fan__list .slider__child span {
   margin: 12px 0;
   font-size: 16px;
   color: #fff;
 }
-
 #lego .fan .fan__wrap .fan__list .slider__child .fan__list__button {
   display: block;
   color: #fff;
@@ -356,28 +339,26 @@
   width: max-content;
   padding: 8px 57px;
   cursor: pointer;
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
   max-width: 180px;
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
-
 #lego .fan .fan__wrap .fan__list .slider__child .fan__list__button:hover {
   background-color: #fff;
   color: #000;
 }
-
 #lego .fan .fan__wrap .fan__list .slider__child:nth-of-type(n+2) {
   margin-left: 32px;
 }
-
 #lego .fan .fan__wrap .fan__list .slider__child .fan__list__wrap:hover .fan__list__button {
   background-color: #fff;
   color: #000;
 }
-
 #lego .slick-list {
   max-width: 710px;
 }
@@ -396,7 +377,6 @@
     min-width: 135%;
   }
 }
-
 @media (max-width: 812px) {
   #lego .fan {
     overflow: hidden;
@@ -411,6 +391,7 @@
   #lego .fan .slick-list .slick-track {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
     width: -webkit-max-content !important;
@@ -425,7 +406,9 @@
     left: unset;
     right: 50%;
     -webkit-transform: translateX(50%);
+       -moz-transform: translateX(50%);
         -ms-transform: translateX(50%);
+         -o-transform: translateX(50%);
             transform: translateX(50%);
     max-width: -webkit-max-content;
     max-width: -moz-max-content;
@@ -449,6 +432,7 @@
   #lego .logo .logo__pink {
     position: unset;
     -webkit-border-radius: unset;
+       -moz-border-radius: unset;
             border-radius: unset;
     padding: 2em;
   }
@@ -461,7 +445,7 @@
     right: 2em;
   }
   #lego .fan .fan__wrap .fan__list .slider__child,
-  #lego .logo .logo__pink .logo__pink__tovar .logo__pink__tovar__child {
+#lego .logo .logo__pink .logo__pink__tovar .logo__pink__tovar__child {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
@@ -476,25 +460,22 @@
     right: -10px;
   }
   #lego .slick-prev::after,
-  #lego .slick-next::after {
+#lego .slick-next::after {
     max-width: 25px;
     min-width: 25px;
     height: 25px;
   }
 }
-
 @media (max-width: 812px) and (min-width: 800px) {
   #lego .fan .slick-list {
     max-width: 85%;
   }
 }
-
 @media (max-width: 736px) and (min-width: 668px) {
   #lego .fan .slick-list {
     max-width: 94%;
   }
 }
-
 @media (max-width: 668px) and (min-width: 600px) {
   #lego .fan .slick-list {
     max-width: 94%;
@@ -503,11 +484,10 @@
     min-width: 195%;
   }
   #lego .fan .slick-list,
-  #lego .fan:last-of-type .slick-list {
+#lego .fan:last-of-type .slick-list {
     max-width: 70%;
   }
 }
-
 @media (max-width: 569px) and (min-width: 482px) {
   #lego .fan .fan__wrap {
     top: 10px;
@@ -519,11 +499,10 @@
     min-width: 195%;
   }
   #lego .fan .slick-list,
-  #lego .fan:last-of-type .slick-list {
+#lego .fan:last-of-type .slick-list {
     max-width: 80%;
   }
 }
-
 @media (max-width: 480px) {
   #lego h2 {
     font-size: 36px;
@@ -569,16 +548,18 @@
     max-width: 210px;
     min-width: 210px;
     -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
             box-sizing: content-box;
   }
   #lego .logo .logo__pink .logo__pink__tovar .logo__pink__tovar__child span,
-  #lego .fan .fan__wrap .fan__list .slider__child span {
+#lego .fan .fan__wrap .fan__list .slider__child span {
     font-size: 18px;
   }
   #lego .slick-list {
     max-width: 234px;
     display: -webkit-box;
     display: -webkit-flex;
+    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     margin: 0 auto;
@@ -586,6 +567,7 @@
   #lego .slick-track {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
     max-width: unset !important;
@@ -610,7 +592,9 @@
   #lego .fan .fan__wrap {
     position: unset;
     -webkit-transform: unset;
+       -moz-transform: unset;
         -ms-transform: unset;
+         -o-transform: unset;
             transform: unset;
     margin: 0 auto;
     max-width: 100%;
@@ -665,7 +649,7 @@
     min-width: 210px;
   }
   #lego .fan .slick-list,
-  #lego .fan:last-of-type .slick-list {
+#lego .fan:last-of-type .slick-list {
     max-width: 234px;
   }
   #lego .fan .fan__wrap .fan__title {

@@ -1,0 +1,340 @@
+#kerher {
+  max-width: 1366px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+.kerher-ukraine {
+  position: relative;
+}
+
+.kerher-ukraine__text-top, .kerher-ukraine__text-bottom {
+  position: absolute;
+}
+
+.kerher-ukraine__text-top {
+  font-size: -webkit-calc(23px + 9 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(23px + 9 * ((100vw - 320px) / 1600));
+  font-size: calc(23px + 9 * ((100vw - 320px) / 1600));
+  text-transform: uppercase;
+  text-align: center;
+  padding: 3vw 15px 0 15px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.2;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 865px;
+  margin: 0 auto;
+}
+
+.kerher-ukraine__img--only-mob {
+  display: none;
+}
+
+.kerher-ukraine__text-bottom {
+  font-weight: 700;
+  font-size: -webkit-calc(23px + 19 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(23px + 19 * ((100vw - 320px) / 1600));
+  font-size: calc(23px + 19 * ((100vw - 320px) / 1600));
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  bottom: 0;
+  width: 100%;
+  padding: 0 15px 3vw 15px;
+}
+
+.kerher-ukraine__bgrd {
+  background-image: url(https://cdn.comfy.ua/media/x/img2/kerher/img1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  width: 100%;
+  height: 571px;
+}
+
+.kerher-text {
+  padding: 40px 15px;
+  text-align: center;
+  font-size: -webkit-calc(18px + 16 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(18px + 16 * ((100vw - 320px) / 1600));
+  font-size: calc(18px + 16 * ((100vw - 320px) / 1600));
+  color: #000;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.kerher-flex {
+  background: #8DAAB2;
+  padding: 31px 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.kerher-flex__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+
+.kerher-flex__text {
+  padding: 0 0 0 24px;
+  color: #000;
+  font-size: -webkit-calc(18px + 2 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(18px + 2 * ((100vw - 320px) / 1600));
+  font-size: calc(18px + 2 * ((100vw - 320px) / 1600));
+}
+
+.kerher-flex__text + .kerher-flex__text {
+  padding-top: 24px;
+}
+
+.kerher-slider {
+  padding: 40px 37px 32px 37px;
+}
+
+.kerher-slider__text {
+  padding: 0 15px 32px 15px;
+  color: #000;
+  font-weight: 700;
+  font-size: -webkit-calc(18px + 16 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(18px + 16 * ((100vw - 320px) / 1600));
+  font-size: calc(18px + 16 * ((100vw - 320px) / 1600));
+  line-height: 1;
+}
+
+.kerher-slider__wrap {
+  position: relative;
+}
+
+.kerher-slider__item {
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  padding: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.kerher-slider__item::before {
+  content: "";
+  border: 1px solid #43B02A;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.kerher-slider__item-imgs {
+  position: relative;
+  overflow: hidden;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 4px;
+}
+
+.kerher-slider__item-text {
+  padding-top: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+#kerher .slick-track {
+  position: inherit;
+  left: inherit;
+  top: inherit;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow: hidden;
+}
+#kerher .slick-slider {
+  height: 100%;
+  z-index: 7;
+  margin-top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#kerher .slick-slide {
+  float: inherit;
+  height: auto;
+  margin: 0 12px 0 0;
+}
+#kerher .slick-arrow {
+  color: transparent;
+  border: 1px solid #e5e5e5;
+  width: 36px;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+}
+#kerher .slick-arrow.slick-prev {
+  margin-right: 12px;
+}
+#kerher .slick-arrow.slick-next {
+  margin-left: 12px;
+}
+#kerher .slick-arrow.slick-prev::before, #kerher .slick-arrow.slick-next::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: #000;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+#kerher .slick-arrow.slick-prev::after, #kerher .slick-arrow.slick-next::after {
+  content: "";
+  width: 5px;
+  height: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: url(https://cdn.comfy.ua/media/x/img2/kerher/str.png);
+}
+#kerher .slick-arrow.slick-prev.slick-disabled::before, #kerher .slick-arrow.slick-next.slick-disabled::before {
+  background: #e5e5e5;
+}
+#kerher .slick-arrow.slick-prev::after {
+  -webkit-transform: rotate(180deg) translate(50%, 50%);
+     -moz-transform: rotate(180deg) translate(50%, 50%);
+      -ms-transform: rotate(180deg) translate(50%, 50%);
+       -o-transform: rotate(180deg) translate(50%, 50%);
+          transform: rotate(180deg) translate(50%, 50%);
+}
+#kerher .slick-list {
+  margin: 0 -12px 0 0;
+  max-width: 1212px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .kerher-ukraine__bgrd {
+    height: 420px;
+  }
+}
+@media (max-width: 812px) {
+  .kerher-ukraine__bgrd {
+    height: 340px;
+  }
+}
+@media (max-width: 480px) {
+  .kerher-ukraine__bgrd {
+    display: none;
+  }
+  .kerher-ukraine__img--only-mob {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .kerher-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .kerher-ukraine__text-top, .kerher-ukraine__text-bottom {
+    position: relative;
+  }
+  .kerher-ukraine__text-top {
+    background: #0d88d5;
+    padding: 32px 15px 10px 15px;
+  }
+  .kerher-ukraine__text-bottom {
+    background: #fcf218;
+    padding: 35px 15px 32px 15px;
+  }
+  .kerher-flex {
+    padding: 31px 15px;
+  }
+  .kerher-flex__text {
+    padding: 20px 0 0 0px;
+  }
+  .kerher-slider {
+    padding: 40px 15px 32px 15px;
+  }
+  .kerher-slider__text {
+    padding: 0 0 20px 0;
+  }
+}
