@@ -1,0 +1,450 @@
+<style>
+.ingenio-wrap img {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#ingenio-wrap {
+  display: block;
+  background: #fff;
+  width: 100%;
+  max-width: 100%;
+}
+#ingenio-wrap img {
+  opacity: 1;
+  display: block;
+  max-width: 100%;
+}
+#ingenio-wrap img:hover {
+  opacity: 1;
+}
+#ingenio-wrap p, #ingenio-wrap h1, #ingenio-wrap h2, #ingenio-wrap h3, #ingenio-wrap h4, #ingenio-wrap h5, #ingenio-wrap h6 {
+  padding: 0;
+  margin: 0;
+  text-align: inherit;
+}
+#ingenio-wrap h1, #ingenio-wrap h2, #ingenio-wrap h3, #ingenio-wrap h4, #ingenio-wrap h5, #ingenio-wrap h6 {
+  font-weight: bold;
+  line-height: 1.1;
+}
+#ingenio-wrap p {
+  font-size: -webkit-calc(18px + 17 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(18px + 17 * ((100vw - 320px) / 1600));
+  font-size: calc(18px + 17 * ((100vw - 320px) / 1600));
+  line-height: 1.1;
+}
+#ingenio-wrap h2 {
+  font-size: -webkit-calc(21px + 31 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(21px + 31 * ((100vw - 320px) / 1600));
+  font-size: calc(21px + 31 * ((100vw - 320px) / 1600));
+  color: #e2020f;
+}
+#ingenio-wrap h2.--colorfff {
+  color: #fff;
+}
+#ingenio-wrap h3 {
+  font-size: -webkit-calc(16px + 14 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(16px + 14 * ((100vw - 320px) / 1600));
+  font-size: calc(16px + 14 * ((100vw - 320px) / 1600));
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+span.word-wrap {
+  display: block;
+  word-wrap: break-word;
+}
+
+span.fw-bold {
+  font-weight: bold;
+}
+
+span.tx-uppercase {
+  text-transform: uppercase;
+}
+
+.features-desc__text h2 {
+  text-align: inherit;
+}
+
+.one-col .features-desc__text p {
+  text-align: inherit;
+}
+
+.bc-description__content p:first-letter {
+  padding-left: 0;
+}
+
+.main-container.page {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.ingenio-container {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.ingenio-img img {
+  margin: 0 auto !important;
+}
+
+.ingenio-text {
+  padding: 50px 15px;
+  text-align: center;
+}
+
+.ingenio-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ingenio-flex.rowrev {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.ingenio-flex.rowrev .ingenio__item img {
+  margin: 0 0 0 auto;
+}
+
+.ingenio__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+.ingenio__item img {
+  margin: 0;
+}
+
+.ingenio__content {
+  padding: 15px;
+}
+
+.ingenio__h2 {
+  padding-bottom: 30px;
+  text-align: left;
+}
+
+.ingenio__p {
+  text-align: left;
+}
+
+.ingenio-pan {
+  padding-bottom: 50px;
+}
+
+.ingenio-pan__h2 {
+  text-align: center;
+  padding: 50px 15px;
+}
+
+.ingenio-pan__bgrd-color {
+  background: #e74e39;
+}
+
+.ingenio-pan__flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 35px;
+}
+
+.ingenio-pan__item {
+  padding: 15px;
+}
+
+.ingenio-pan__h3 {
+  background: red;
+  padding: 10px 5px;
+  -webkit-border-radius: 0 0 0 50px;
+     -moz-border-radius: 0 0 0 50px;
+          border-radius: 0 0 0 50px;
+}
+
+@media (max-width: 812px) {
+  .ingenio-pan__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .ingenio-pan__content {
+    max-width: 440px;
+    margin: 0;
+  }
+  .ingenio-pan__item:nth-child(2) .ingenio-pan__content {
+    margin: 0 0 0 auto;
+  }
+}
+@media (max-width: 480px) {
+  .ingenio-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .ingenio-flex.rowrev {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .ingenio-container {
+    padding: 0 0 50px 0;
+  }
+  .ingenio-text {
+    padding: 30px 15px;
+  }
+  .ingenio__content {
+    padding: 30px 15px;
+  }
+  .ingenio-pan__h2 {
+    padding: 30px 15px 15px 15px;
+  }
+  .ingenio-pan {
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 812px) and (orientation: landscape) {
+  .ingenio-container {
+    padding: 0 0 50px 0;
+  }
+  .ingenio-text {
+    padding: 30px 15px;
+  }
+  .ingenio__content {
+    padding: 30px 15px;
+  }
+  .ingenio-pan__h2 {
+    padding: 30px 15px 15px 15px;
+  }
+  .ingenio-pan {
+    padding-bottom: 30px;
+  }
+}
+</style>
+
+<div id="ingenio-wrap">
+   <div class="ingenio-container">
+
+      <div class="ingenio-img">
+         <img src="https://cdn.comfy.ua/media/x/img2/vugotovleno/img1_ru.png" alt="">
+      </div>
+
+      <div class="ingenio-text --text-center_p">
+         <p>Ingenio от Tefal – многофункциональная посуда со съемной ручкой.<br>
+            Благодаря продуманному дизайну посуда адаптируется под различные кулинарные задачи и экономит место на кухне.</p>
+      </div>
+
+      <div class="ingenio-flex">
+         <div class="ingenio__item">
+            <img src="https://cdn.comfy.ua/media/x/img2/vugotovleno/img2.png" alt="">
+         </div>
+         <div class="ingenio__item">
+            <div class="ingenio__content">
+               <div class="ingenio__h2">
+                  <h2>Готовьте на плите</h2>
+               </div>
+               <div class="ingenio__p">
+                  <p>Жарьте и тушите с Ingenio на плите.<br>
+                     Никаких помех для кулинарного вдохновения – со съемной ручкой все удобно и быстро! Затем легко переходите к следующему этапу приготовления.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="ingenio-flex rowrev">
+         <div class="ingenio__item">
+            <img src="https://cdn.comfy.ua/media/x/img2/vugotovleno/img3.png" alt="">
+         </div>
+         <div class="ingenio__item">
+            <div class="ingenio__content">
+               <div class="ingenio__h2">
+                  <h2>Запекайте в духовке</h2>
+               </div>
+               <div class="ingenio__p">
+                  <p>После жарки на плите переместить блюдо прямо в духовку – с посудой Ingenio это не проблема! И не нужно тратить время на перекладывание в другую посуду, ведь ручка легко снимается.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="ingenio-flex">
+         <div class="ingenio__item">
+            <img src="https://cdn.comfy.ua/media/x/img2/vugotovleno/img4.png" alt="">
+         </div>
+         <div class="ingenio__item">
+            <div class="ingenio__content">
+               <div class="ingenio__h2">
+                  <h2>Подавайте на стол</h2>
+               </div>
+               <div class="ingenio__p">
+                  <p>Благодаря съемной ручке Ingenio, ваши ароматные блюда быстро попадают на стол сразу после приготовления.<br>
+                     Можно не отвлекаться на рутину и проводить больше времени в свое удовольствие!</p>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="ingenio-flex rowrev">
+         <div class="ingenio__item">
+            <img src="https://cdn.comfy.ua/media/x/img2/vugotovleno/img5.png" alt="">
+         </div>
+         <div class="ingenio__item">
+            <div class="ingenio__content">
+               <div class="ingenio__h2">
+                  <h2>Храните в холодильнике</h2>
+               </div>
+               <div class="ingenio__p">
+                  <p>Посуда Ingenio займет минимум места в холодильнике и сэкономит время – ведь больше не нужно перекладывать блюдо из посуды в посуду.<br>
+                     Tefal продумал каждую деталь.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="ingenio-flex">
+         <div class="ingenio__item">
+            <img src="https://cdn.comfy.ua/media/x/img2/vugotovleno/img6.png" alt="">
+         </div>
+         <div class="ingenio__item">
+            <div class="ingenio__content">
+               <div class="ingenio__h2">
+                  <h2>Все сложится!</h2>
+               </div>
+               <div class="ingenio__p">
+                  <p>Благодаря съемной ручке посуда легко складывается одна в другую, что позволяет сэкономить до 50% места на кухне.<br>
+                     Ingenio – компактно и просто для комфортной жизни!</p>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="ingenio-pan">
+         <div class="ingenio-pan__h2">
+            <h2>Вся суть в ручке!</h2>
+         </div>
+         <div class="ingenio-pan__bgrd-color">
+            <div class="ingenio-pan__h2">
+               <h2 class="--colorfff">100% надежность и безопасная съемная ручка</h2>
+            </div>
+            <div class="ingenio-pan__flex">
+               <div class="ingenio-pan__item">
+                  <div class="ingenio-pan__content">
+                     <div class="ingenio-pan__img">
+                        <img src="https://cdn.comfy.ua/media/x/img2/vugotovleno/img7_1.png" alt="">
+                     </div>
+                     <div class="ingenio-pan__h3">
+                        <h3>выдерживает до 10 кг</h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="ingenio-pan__item">
+                  <div class="ingenio-pan__content">
+                     <div class="ingenio-pan__img">
+                        <img src="https://cdn.comfy.ua/media/x/img2/vugotovleno/img7_2.png" alt="">
+                     </div>
+                     <div class="ingenio-pan__h3">
+                        <h3>10 лет гарантии</h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="ingenio-pan__item">
+                  <div class="ingenio-pan__content">
+                     <div class="ingenio-pan__img">
+                        <img src="https://cdn.comfy.ua/media/x/img2/vugotovleno/img7_3.png" alt="">
+                     </div>
+                     <div class="ingenio-pan__h3">
+                        <h3>тройная фиксация</h3>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="ingenio-flex">
+         <div class="ingenio__item">
+            <img src="https://cdn.comfy.ua/media/x/img2/vugotovleno/img8_ru.png" alt="">
+         </div>
+         <div class="ingenio__item">
+            <div class="ingenio__content">
+               <div class="ingenio__h2">
+                  <h2>Ловите идеальный момент с Thermo-Signal</h2>
+               </div>
+               <div class="ingenio__p">
+                  <p>Секрет идеального приготовления в правильной температуре начала приготовления.<br>
+                     Посуда Ingenio оснащена Thermo-Signal™ — индикатором, который становится равномерно красным, как только сковорода достигнет идеальной</p>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="ingenio-flex rowrev">
+         <div class="ingenio__item">
+            <img src="https://cdn.comfy.ua/media/x/img2/vugotovleno/img9_ru.png" alt="">
+         </div>
+         <div class="ingenio__item">
+            <div class="ingenio__content">
+               <div class="ingenio__h2">
+                  <h2>Антипригарное покрытие нового поколения</h2>
+               </div>
+               <div class="ingenio__p">
+                  <p>Антипригарное покрытие Ingenio устойчиво и надежно, с ним так легко готовить и так же легко мыть!<br>
+                     Посуда Ingenio от Tefal абсолютно безопасна и отвечает всем мировым стандартам качества – проверено внешними независимыми лабораториями.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="ingenio-flex">
+         <div class="ingenio__item">
+            <img src="https://cdn.comfy.ua/media/x/img2/vugotovleno/img10_ru_1.png" alt="">
+         </div>
+         <div class="ingenio__item">
+            <div class="ingenio__content">
+               <div class="ingenio__h2">
+                  <h2>Разработано во Франции</h2>
+               </div>
+               <div class="ingenio__p">
+                  <p>Европейские стандарты для самых требовательных клиентов! Наслаждайтесь процессом и результатом с французским брендом Ingenio от Tefal.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+</div>

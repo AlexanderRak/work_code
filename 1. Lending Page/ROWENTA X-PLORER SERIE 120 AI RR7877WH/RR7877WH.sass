@@ -1,0 +1,104 @@
+$maxWidth: 1920
+@mixin adaptiv-font($pcSize, $mobSize)
+   $addSize: $pcSize - $mobSize
+   $maxWidth: $maxWidth - 320
+   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+// @include adaptiv-font(56, 30)
+.rowenta-wrap img
+   max-width: 100%
+   margin: 0 auto
+   padding: 0
+#rowenta-wrap
+   display: block
+   margin: 0 auto
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #fff
+   position: relative
+   img
+      opacity: 1
+      display: block
+      &:hover
+         opacity: 1
+   p, h1, h2, h3, h4, h5, h6
+      padding: 0
+      margin: 0
+      text-align: inherit
+   h1, h2, h3, h4, h5, h6
+      font-weight: bold
+      line-height: 1
+span.word-wrap
+   display: block
+   word-wrap: break-word
+span.fw-bold
+   font-weight: bold
+span.tx-uppercase
+   text-transform: uppercase
+.features-desc__text h2
+   text-align: inherit
+.one-col .features-desc__text p
+   text-align: inherit
+.bc-description__content p:first-letter
+   padding-left: 0
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+// default
+.rowenta-container
+   max-width: 1496px
+   margin: 0 auto
+   padding: 0 15px
+.rowenta-img img
+   margin: 0 auto !important
+.rowenta-text
+   padding: 50px 0
+.rowenta-text__subtitle
+   @include adaptiv-font(36, 21)
+   font-weight: bold
+   padding-bottom: 15px
+.rowenta-text__title
+   @include adaptiv-font(23, 18)
+.rowenta-text__subtitle, .rowenta-text__title
+   line-height: 1
+   text-align: center
+.rowenta-img--logo
+   padding: 50px 0
+.rowenta-flex
+   display: flex
+   flex-direction: row
+   align-items: center
+   padding-bottom: 50px
+   &:last-child
+      padding-bottom: 0
+   &.rowrev
+      flex-direction: row-reverse
+.rowenta-flex__item
+   flex: 1 1 0
+.rowenta-flex__text
+   padding: 15px
+   text-align: left
+.rowenta-flex__subtitle
+   @include adaptiv-font(30, 20)
+   padding-bottom: 15px
+   font-weight: bold
+.rowenta-flex__title
+   @include adaptiv-font(23, 16)
+// media
+// @media (min-width: 1902px)
+// @media (max-width: 1366px)
+// @media (max-width: 1280px)
+// @media (max-width: 1024px)
+// @media (max-width: 812px)
+@media (max-width: 480px)
+   .rowenta-flex
+      flex-direction: column
+      padding-bottom: 25px
+   .rowenta-flex__text
+      padding: 15px 0
+   .rowenta-flex.rowrev
+      flex-direction: column
+   .rowenta-text__subtitle, .rowenta-text__title
+      text-align: left
+// @media (max-width: 320px)
+// @media (max-width: 812px) and (orientation: landscape)
