@@ -112,7 +112,7 @@
 	}
 
 	.link-popup {
-		/* background: #43B02A; */
+		background: #43B02A;
 		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 		border-radius: 10px;
 		width: 352px;
@@ -121,7 +121,7 @@
 	}
 
 	.imgbgrd {
-		background-image: url(https://cdn.comfy.ua/media/x/img2/popupbf22.png);
+		background-image: url(https://cdn.comfy.ua/media/x/img2/popup29.png);
 		background-repeat: no-repeat;
 		width: 352px;
 		height: 177px;
@@ -130,6 +130,7 @@
 		right: 0px;
     	top: inherit;
     	bottom: 6px;
+    	border-radius: 10px;
 	}
 
 
@@ -141,11 +142,11 @@
 		}
 
 		.imgbgrd {
-			background-image: url(https://cdn.comfy.ua/media/x/img2/popupbf22_mob.png);
+			background-image: url(https://cdn.comfy.ua/media/x/img2/popup29_mob.png);
 			left: inherit;
 			right: 0;
 			top: inherit;
-			bottom: 7px;
+			bottom: 6px;
 			width: 280px;
 			height: 55px;
 		}
@@ -179,8 +180,130 @@
 </style>
 <div id="wrapper-popup-action">
 	<div class="cont-popup-action">
-		<a class="link-popup" href="https://comfy.ua/ua/black-friday.html">
+		<a class="link-popup" href="https://comfy.ua/ua/page/pidsumki-roku.html">
 			<div class="imgbgrd"></div>
 		</a>
 	</div>
 </div>
+
+
+<style type="text/css">
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 15px 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.cms-wrap-acordion {
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 15px 15px 0 15px;
+}
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 15px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+	#cms-wrap {
+		background: #002B5C;
+		padding-bottom: 15px;
+	}
+	#cms-wrap h2 {
+		margin: 0;
+    	font-size: 18px;
+    	padding: 15px 0;
+    	font-weight: bold;
+    	line-height: 1;
+    	letter-spacing: 0;
+	}
+	#cms-wrap p {
+		margin: 0;
+		font-size: 14px;
+    	padding-bottom: 5px;
+	}
+	#cms-wrap img {
+		margin: 0;
+		max-width: 100%;
+		display: block;
+	}
+	.cms-img-desk {
+		display: block;
+	}
+	.cms-img-mob {
+		display: none;
+	}
+	@media (max-width: 480px) {
+		.cms-img-desk {
+			display: none;
+		}
+		.cms-img-mob {
+			display: block;
+		}
+		#cms-wrap img {
+			margin: 0 auto;
+		}
+	}
+</style>
+
+<div id="cms-wrap">
+	<div class="cms-img-desk">
+		<img src="https://cdn.comfy.ua/media/x/img2/150desk.png" alt="">
+	</div>
+	<div class="cms-img-mob">
+		<img src="https://cdn.comfy.ua/media/x/img2/150mob.png" alt="">
+	</div>
+	<div class="cms-wrap-acordion">
+		<button class="accordion">Правила акції</button>
+		<div class="panel">
+			<h2>Щоб отримати 150 бонусів необхідно:</h2>
+			<p>1. Купити один з акційних товарів Philips з позначкою «150 ₴» на сайті comfy.ua.</p>
+			<p>2. Протягом 7-ми днів після отримання замовлення, залишити відгук.</p>
+			<p>3. Відгук повинен бути 5-6 розгорнутих речень та передавати досвід використання: що сподобалося, на що звернути увагу, чи є особливість у цієї техніки.</p>
+			<p>4. Відгук буде опублікований протягом 3-х діб.</p>
+			<p>5. Потім, протягом доби, будуть нараховані 150 бонусів, на бонусну карту.</p>
+			<p style="padding-bottom: 15px">6. Термін дії бонусів – 14 днів.</p>
+		</div>
+	</div>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
