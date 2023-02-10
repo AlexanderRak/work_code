@@ -1,0 +1,1075 @@
+<style>
+  .eye-zone {
+    display: none;
+  }
+
+  .common-template {
+    /* overflow: hidden; */
+    contain: paint;
+  }
+
+  @media (max-width: 767px) {
+    .common-template {
+      contain: unset;
+    }
+  }
+
+
+  /* .info-main {
+    background: #fff;
+  } */
+
+  /* @media screen and (max-width: 767px) {
+    .info-main {
+      background: #f2f2f2;
+    }
+  } */
+
+  .gen-tab__bottom-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-container {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .features-general {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .common-template__top.page-container {
+    -webkit-box-ordinal-group: -2;
+    -ms-flex-order: -3;
+    order: -3;
+  }
+
+  .common-template__tabs.page-container {
+    -webkit-box-ordinal-group: -1;
+    -ms-flex-order: -2;
+    order: -2;
+  }
+
+  @media (max-width: 1023px) {
+    .common-template__top.page-container {
+      -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+      order: -1;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .gen-tab__name {
+      border-color: #DEE7EB !important;
+      background: #DEE7EB;
+      z-index: 1;
+    }
+
+    .info__block,
+    .i-main__reviews,
+    .i-buy,
+    .i-del--empty,
+    .gen-tab__info,
+    .i-credit,
+    .info-credit .core-cr__item-wr {
+      border-color: #DEE7EB !important;
+      background: #DEE7EB;
+      border-left: none;
+    }
+
+    /* .info__block,
+    .i-main__reviews,
+    .i-buy,
+    .i-del--empty,
+    .gen-tab__info,
+    .i-credit,
+    .info-brand {
+      border-color: #DEE7EB !important;
+      background: #DEE7EB;
+    } */
+  }
+
+  /* HEADER */
+
+  .wmf-page__header svg {
+    overflow: visible !important;
+    height: 100%;
+    max-width: 100%;
+  }
+
+  .wmf-page__header {
+    margin-bottom: 16px;
+    height: 78vh;
+    min-height: 730px;
+    position: relative;
+    padding: 0 12px;
+  }
+
+
+  .wmf-page__header-bg {
+    position: absolute;
+    /* right: 0; */
+    /* right: -52.9vw; */
+    /* left: 0; */
+    top: 0;
+    right: -180%;
+    height: 100%;
+    min-height: 830px;
+    /* width: 78%; */
+    /* width: 265%; */
+    width: 280%;
+    z-index: 0;
+    background-color: #DEE7EB;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 27% 100%);
+  }
+
+  @media (max-width: 1024px) and (min-width: 1022px) {
+    /* .wmf-page__header-bg {
+      width: 175%;
+    } */
+
+    .wmf-page__header-left {
+      height: 60% !important;
+    }
+
+    .wmf-page__header {
+      min-height: 770px;
+    }
+
+    .wmf-page__header-left {
+      height: 60%;
+    }
+  }
+
+  .wmf-page__header-content-wr {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    z-index: 1;
+  }
+
+  .wmf-page__header-left {
+    /* height: 100%; */
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* margin-right: 26px; */
+  }
+
+  .wmf-page__header-left-img-plan-wr {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 41%;
+    width: 60%;
+  }
+
+  .wmf-page__header-left-img-wr {
+    position: relative;
+  }
+
+  .wmf-page__header-left-img-plan-1-wr {
+    position: absolute;
+    top: -58%;
+    left: 12%;
+    z-index: 2;
+    width: 80%;
+  }
+
+  .wmf-page__header-left-img-plan-2 {
+    z-index: 99;
+    position: relative;
+  }
+
+  .wmf-page__header-left-img-plan-back {
+    position: absolute;
+    left: 15%;
+    top: -8%;
+    max-width: 72% !important;
+    z-index: 0;
+  }
+
+  .wmf-page__header-left-img-plan-floating-svg {
+    position: absolute;
+  }
+
+  .wmf-page__header-left-img-plan-3-wr {
+    position: absolute;
+    bottom: -52%;
+    /* bottom: 32%; */
+    left: 25%;
+    max-width: 79%;
+    z-index: 2;
+  }
+
+  .wmf-page__header-left-img-plan-4-wr {
+    position: absolute;
+    max-width: 79%;
+    /* bottom: 52%; */
+    bottom: -32%;
+    left: 6%;
+    z-index: 2;
+  }
+
+  .wmf-page__header-left-img-plan-5-wr {
+    position: absolute;
+    max-width: 79%;
+    left: 10%;
+    z-index: 2;
+  }
+
+  .wmf-page__header-left-img-plan-6-wr {
+    position: absolute;
+    top: 10%;
+    /* top: -70%; */
+    max-width: 100%;
+    left: 23%;
+    z-index: 2;
+  }
+
+  .wmf-page__header-left-img-plan-7-wr {
+    position: absolute;
+    max-width: 79%;
+    z-index: 1;
+  }
+
+  .wmf-page__header-left-img-plan-8-wr {
+    position: absolute;
+    max-width: 39%;
+    /* left: 37%; */
+    left: 27%;
+    z-index: 3;
+    /* top: -20%; */
+    top: 20%;
+  }
+
+  .wmf-page__header-left-img-plan-9-wr {
+    position: absolute;
+    /* top: -32%; */
+    top: 12%;
+    z-index: 3;
+    max-width: 42%;
+    left: 18%;
+  }
+
+  .wmf-page__header-left-img {
+    position: relative;
+    z-index: 10;
+  }
+
+  .wmf-page__content-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12px;
+  }
+
+  .wmf-page__header-right {
+    z-index: 1;
+  }
+
+  .wmf-page__header-right-label-item {
+    margin-right: 13px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: #999;
+    background: #fff;
+    border-radius: 12px;
+  }
+
+  .wmf-page__header-right-label-item img {
+    max-height: 30px;
+  }
+
+  .wmf-page__top-block-prices-price-dash {
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FF5621;
+  }
+
+  .wmf-page__header-bg_mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .wmf-page__content-header-logo-wr {
+      margin: 24px 0;
+    }
+
+    .wmf-page__header-bg {
+      display: none;
+    }
+
+    .wmf-page__header-bg_mobile {
+      display: block;
+      position: absolute;
+      right: -12px;
+      top: -16px;
+      height: 100%;
+      width: calc(100% + 12px);
+      z-index: 0;
+      background-color: #DEE7EB;
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 52% 100%);
+    }
+
+    .wmf-page__header {
+      height: 100%;
+      padding: 16px 0 0 0;
+      min-height: unset;
+    }
+
+    .wmf-page__header-left {
+      display: none;
+    }
+
+    /* .wmf-page__header-right {
+      background-color: #F2F2F2;
+      width: 100%;
+    } */
+  }
+
+  /* .wmf-page__header-right-mobile-bg-wr {
+    position: relative;
+  } */
+
+  /* HEADER END */
+
+
+  /* CONTENT HEADER */
+
+  .wmf-page__content-header-text {
+    text-align: center;
+    padding: 24px 0 48px 0;
+    width: 100%;
+    margin-top: 16px;
+    position: relative;
+  }
+
+  .wmf-page__content-header-text-title {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 58px;
+    color: #000000;
+    z-index: 1;
+    position: relative;
+  }
+
+  .wmf-page__content-header-text-desc {
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+    z-index: 1;
+    position: relative;
+  }
+
+  .wmf-page__content-header-text-separator {
+    height: 2px;
+    max-width: 960px;
+    width: 100%;
+    background-color: #000;
+    margin: 8px auto;
+    z-index: 1;
+    position: relative;
+  }
+
+  .wmf-page__content-header-bg {
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    max-width: 1160px;
+    width: calc(100% + 12px);
+    background-color: #DEE7EB;
+    top: 0;
+    left: -12px;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+  }
+
+  @media screen and (max-width: 768px) {
+    .wmf-page__content-header-text {
+      margin: 0;
+      padding: 40px 0 35px 0;
+    }
+
+    .wmf-page__content-header-text-title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .wmf-page__content-header-text-desc {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    .wmf-page__header-right-mobile-bg-wr {
+      background-color: #FFF;
+      padding: 0 12px;
+    }
+  }
+
+  .wmf-page__header-right-mobile-anim {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .wmf-page__header-right-mobile-anim {
+      display: block;
+      margin-top: 46%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .info>div:not(:last-child) {
+      border-top-right-radius: 12px;
+      border-top-left-radius: 12px;
+    }
+
+    .alternative-recommendations .i-car-wrapper {
+      background: #DEE7EB;
+    }
+
+    .alternative-recommendations {
+      border-bottom: none !important;
+    }
+
+    /* .i-car-wrapper__wr {
+      background: #DEE7EB;
+    } */
+
+    /* .i-car-wrapper__carousel .core-cr__item-wr {
+      background: #DEE7EB !important;
+    } */
+  }
+
+  @media (max-width: 576px) {
+    .page-container {
+      overflow: hidden;
+    }
+  }
+
+  /* CONTENT HEADER END */
+</style>
+
+<section class="wmf-page__header">
+
+  <div class="wmf-page__header-bg">
+  </div>
+
+  <div class="wmf-page__header-content-wr">
+    <div class="wmf-page__header-left">
+      <div class="wmf-page__header-left-img-wr">
+        <div class="wmf-page__header-left-img-plan-wr">
+          <div class="wmf-page__header-left-img-plan-1-wr">
+            <svg width="100%" height="100%" viewBox="0 0 600 500">
+              <path class="wmf-page__header-left-img-plan-1-path" d="M 365.817 428.809 C 368.621 407.717 305.969 144.87 305.969 144.87" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+              </path>
+
+              <image width="100%" height="100%" href="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan1.png" alt="" class="wmf-page__header-left-img-plan-1">
+            </svg>
+          </div>
+
+          <div class="wmf-page__header-left-img-plan-3-wr">
+            <svg width="100%" height="100%" viewBox="0 0 600 500">
+              <path class="wmf-page__header-left-img-plan-3-path" d="M 307.655 467.707 C 310.459 439.405 247.807 86.709 247.807 86.709" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+              </path>
+
+              <image width="100%" height="100%" href="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan3.png" alt="" class="wmf-page__header-left-img-plan-3">
+            </svg>
+          </div>
+
+          <div class="wmf-page__header-left-img-plan-4-wr wmf-page__header-left-img-plan-float">
+            <svg width="100%" height="100%" viewBox="0 0 600 500">
+              <path class="wmf-page__header-left-img-plan-4-path" d="M 308.103 465.8 C 309.718 445.454 351.943 331.539 310.718 174.056 C 296.78 120.81 292.138 119.554 292.138 119.554" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -11.849581, 13.339728)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+              </path>
+
+              <image width="100%" height="100%" href="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan4.png" alt="" class="wmf-page__header-left-img-plan-4">
+            </svg>
+          </div>
+
+          <div class="wmf-page__header-left-img-plan-5-wr">
+            <svg width="100%" height="100%" viewBox="0 0 600 500">
+              <path class="wmf-page__header-left-img-plan-5-path" d="M 301.683 462.533 C 308.843 427.468 296.958 398.939 338.852 220.588 C 360.096 130.151 390.458 99.674 390.458 99.674" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -12.619306, 16.29113)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+              </path>
+
+              <image width="100%" height="100%" href="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan5.png" alt="" class="wmf-page__header-left-img-plan-5">
+            </svg>
+          </div>
+
+          <div class="wmf-page__header-left-img-plan-6-wr">
+            <svg width="100%" height="100%" viewBox="0 0 600 500">
+              <path class="wmf-page__header-left-img-plan-6-path" d="M 301.683 462.533 C 308.843 427.468 253.15 428.611 295.044 250.26 C 316.288 159.823 384.663 125.481 384.663 125.481" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -12.619306, 16.29113)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+              </path>
+
+              <image width="100%" height="100%" href="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan6.png" alt="" class="wmf-page__header-left-img-plan-6">
+            </svg>
+          </div>
+
+          <div class="wmf-page__header-left-img-plan-7-wr ">
+            <svg width="100%" height="100%" viewBox="0 0 600 500">
+              <path class="wmf-page__header-left-img-plan-7-path" d="M 184.569 463.251 C 191.729 428.186 200.945 407.453 295.044 250.26 C 338.467 177.721 393.846 125.906 393.846 125.906" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -12.619306, 16.29113)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+              </path>
+
+              <image width="100%" height="100%" href="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan7.png" alt="" class="wmf-page__header-left-img-plan-7">
+            </svg>
+          </div>
+
+          <div class="wmf-page__header-left-img-plan-8-wr wmf-page__header-left-img-plan-float">
+            <svg width="100%" height="100%" viewBox="0 0 600 500">
+              <path class="wmf-page__header-left-img-plan-8-path" d="M 184.569 463.251 C 191.729 428.186 200.945 407.453 295.044 250.26 C 338.467 177.721 393.846 125.906 393.846 125.906" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -12.619306, 16.29113)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+              </path>
+
+              <image width="100%" height="100%" href="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan8.png" alt="" class="wmf-page__header-left-img-plan-8">
+            </svg>
+          </div>
+
+          <div class="wmf-page__header-left-img-plan-9-wr">
+            <svg width="100%" height="100%" viewBox="0 0 600 500">
+              <path class="wmf-page__header-left-img-plan-9-path" d="M 320.056 485.368 C 321.377 443.897 335.732 427.701 268.647 257.22 C 226.269 149.525 214.316 138.565 214.316 138.565" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -12.619306, 16.29113)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+              </path>
+
+              <image width="100%" height="100%" href="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan9.png" alt="" class="wmf-page__header-left-img-plan-9">
+            </svg>
+          </div>
+
+          <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-back.png" alt="" class="wmf-page__header-left-img-plan-back">
+
+          <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan2-black.png" alt="" class="wmf-page__header-left-img-plan-2">
+        </div>
+
+        <svg class="wmf-page__header-left-img-plan-floating-svg" width="100%" height="100%" viewBox="0 0 600 500">
+          <path class="wmf-page__header-left-img-plan-floating-path-1" d="M 335.363 371.015 C 320.042 382.725 315.86 383.771 307.809 356.094 C 303.904 342.67 280.032 320.264 300.801 316.421 C 315.783 313.649 321.209 334.148 331.078 341.84 C 341.086 349.642 358.353 348.648 364.702 354.206 C 373.887 362.245 335.578 370.847 335.578 370.847" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -15.704336, 15.58574)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+          </path>
+
+          <path class="wmf-page__header-left-img-plan-floating-path-2" d="M 335.363 371.015 C 320.042 382.725 317.864 375.186 324.583 347.156 C 327.844 333.552 316.154 320.126 334.95 329.76 C 343.966 334.381 341.427 339.173 351.296 346.865 C 361.304 354.667 371.352 357.699 364.324 362.369 C 353.612 369.488 335.578 370.847 335.578 370.847" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -15.704336, 15.58574)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+          </path>
+
+          <path class="wmf-page__header-left-img-plan-floating-path-3" d="M 335.363 371.015 C 320.042 382.725 299.261 379.438 305.98 351.408 C 309.241 337.804 304.449 341.057 324.87 348.722 C 334.355 352.282 332.948 326.157 347.167 347.697 C 354.158 358.288 358.503 359.15 351.475 363.82 C 340.763 370.939 335.578 370.847 335.578 370.847" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -15.704336, 15.58574)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+          </path>
+
+          <path class="wmf-page__header-left-img-plan-floating-path-4" d="M 335.363 371.015 C 323.953 364.5 320.539 370.054 319.33 361.228 C 317.4 347.143 310.607 341.055 331.597 346.988 C 342.636 350.109 336.062 347.264 345.126 347.603 C 357.807 348.078 351.871 358.843 344.843 363.513 C 334.131 370.632 335.578 370.847 335.578 370.847" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -15.704336, 15.58574)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+          </path>
+        </svg>
+
+        <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pots-black.png" alt="" class="wmf-page__header-left-img">
+      </div>
+    </div>
+    <div class="wmf-page__header-right">
+      <div class="wmf-page__header-right-mobile-bg-wr">
+        <div class="wmf-page__header-bg_mobile"></div>
+        <div class="wmf-page__header-right-mobile-anim">
+          <div class="wmf-page__header-left-img-wr">
+            <div class="wmf-page__header-left-img-plan-wr">
+              <div class="wmf-page__header-left-img-plan-1-wr">
+                <svg width="100%" height="100%" viewBox="0 0 600 500">
+                  <path class="wmf-page__header-left-img-plan-1-path" d="M 365.817 428.809 C 368.621 407.717 305.969 144.87 305.969 144.87" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+                  </path>
+
+                  <image width="100%" height="100%" href="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan1.png" alt="" class="wmf-page__header-left-img-plan-1">
+                </svg>
+              </div>
+
+              <div class="wmf-page__header-left-img-plan-3-wr">
+                <svg width="100%" height="100%" viewBox="0 0 600 500">
+                  <path class="wmf-page__header-left-img-plan-3-path" d="M 307.655 467.707 C 310.459 439.405 247.807 86.709 247.807 86.709" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+                  </path>
+
+                  <image width="100%" height="100%" href="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan3.png" alt="" class="wmf-page__header-left-img-plan-3">
+                </svg>
+              </div>
+
+              <div class="wmf-page__header-left-img-plan-4-wr wmf-page__header-left-img-plan-float">
+                <svg width="100%" height="100%" viewBox="0 0 600 500">
+                  <path class="wmf-page__header-left-img-plan-4-path" d="M 308.103 465.8 C 309.718 445.454 351.943 331.539 310.718 174.056 C 296.78 120.81 292.138 119.554 292.138 119.554" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -11.849581, 13.339728)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+                  </path>
+
+                  <image width="100%" height="100%" href="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan4.png" alt="" class="wmf-page__header-left-img-plan-4">
+                </svg>
+              </div>
+
+              <div class="wmf-page__header-left-img-plan-5-wr">
+                <svg width="100%" height="100%" viewBox="0 0 600 500">
+                  <path class="wmf-page__header-left-img-plan-5-path" d="M 301.683 462.533 C 308.843 427.468 296.958 398.939 338.852 220.588 C 360.096 130.151 390.458 99.674 390.458 99.674" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -12.619306, 16.29113)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+                  </path>
+
+                  <image width="100%" height="100%" href="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan5.png" alt="" class="wmf-page__header-left-img-plan-5">
+                </svg>
+              </div>
+
+              <div class="wmf-page__header-left-img-plan-6-wr">
+                <svg width="100%" height="100%" viewBox="0 0 600 500">
+                  <path class="wmf-page__header-left-img-plan-6-path" d="M 301.683 462.533 C 308.843 427.468 253.15 428.611 295.044 250.26 C 316.288 159.823 384.663 125.481 384.663 125.481" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -12.619306, 16.29113)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+                  </path>
+
+                  <image width="100%" height="100%" href="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan6.png" alt="" class="wmf-page__header-left-img-plan-6">
+                </svg>
+              </div>
+
+              <div class="wmf-page__header-left-img-plan-7-wr ">
+                <svg width="100%" height="100%" viewBox="0 0 600 500">
+                  <path class="wmf-page__header-left-img-plan-7-path" d="M 184.569 463.251 C 191.729 428.186 200.945 407.453 295.044 250.26 C 338.467 177.721 393.846 125.906 393.846 125.906" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -12.619306, 16.29113)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+                  </path>
+
+                  <image width="100%" height="100%" href="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan7.png" alt="" class="wmf-page__header-left-img-plan-7">
+                </svg>
+              </div>
+
+              <div class="wmf-page__header-left-img-plan-8-wr wmf-page__header-left-img-plan-float">
+                <svg width="100%" height="100%" viewBox="0 0 600 500">
+                  <path class="wmf-page__header-left-img-plan-8-path" d="M 184.569 463.251 C 191.729 428.186 200.945 407.453 295.044 250.26 C 338.467 177.721 393.846 125.906 393.846 125.906" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -12.619306, 16.29113)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+                  </path>
+
+                  <image width="100%" height="100%" href="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan8.png" alt="" class="wmf-page__header-left-img-plan-8">
+                </svg>
+              </div>
+
+              <div class="wmf-page__header-left-img-plan-9-wr">
+                <svg width="100%" height="100%" viewBox="0 0 600 500">
+                  <path class="wmf-page__header-left-img-plan-9-path" d="M 320.056 485.368 C 321.377 443.897 335.732 427.701 268.647 257.22 C 226.269 149.525 214.316 138.565 214.316 138.565" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -12.619306, 16.29113)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+                  </path>
+
+                  <image width="100%" height="100%" href="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan9.png" alt="" class="wmf-page__header-left-img-plan-9">
+                </svg>
+              </div>
+
+              <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-back.png" alt="" class="wmf-page__header-left-img-plan-back">
+
+              <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pot-plan2-black.png" alt="" class="wmf-page__header-left-img-plan-2">
+            </div>
+
+            <svg class="wmf-page__header-left-img-plan-floating-svg" width="100%" height="100%" viewBox="0 0 600 500">
+              <path class="wmf-page__header-left-img-plan-floating-path-1" d="M 335.363 371.015 C 320.042 382.725 315.86 383.771 307.809 356.094 C 303.904 342.67 280.032 320.264 300.801 316.421 C 315.783 313.649 321.209 334.148 331.078 341.84 C 341.086 349.642 358.353 348.648 364.702 354.206 C 373.887 362.245 335.578 370.847 335.578 370.847" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -15.704336, 15.58574)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+              </path>
+
+              <path class="wmf-page__header-left-img-plan-floating-path-2" d="M 335.363 371.015 C 320.042 382.725 317.864 375.186 324.583 347.156 C 327.844 333.552 316.154 320.126 334.95 329.76 C 343.966 334.381 341.427 339.173 351.296 346.865 C 361.304 354.667 371.352 357.699 364.324 362.369 C 353.612 369.488 335.578 370.847 335.578 370.847" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -15.704336, 15.58574)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+              </path>
+
+              <path class="wmf-page__header-left-img-plan-floating-path-3" d="M 335.363 371.015 C 320.042 382.725 299.261 379.438 305.98 351.408 C 309.241 337.804 304.449 341.057 324.87 348.722 C 334.355 352.282 332.948 326.157 347.167 347.697 C 354.158 358.288 358.503 359.15 351.475 363.82 C 340.763 370.939 335.578 370.847 335.578 370.847" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -15.704336, 15.58574)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+              </path>
+
+              <path class="wmf-page__header-left-img-plan-floating-path-4" d="M 335.363 371.015 C 323.953 364.5 320.539 370.054 319.33 361.228 C 317.4 347.143 310.607 341.055 331.597 346.988 C 342.636 350.109 336.062 347.264 345.126 347.603 C 357.807 348.078 351.871 358.843 344.843 363.513 C 334.131 370.632 335.578 370.847 335.578 370.847" transform="matrix(0.998932, -0.046207, 0.046207, 0.998932, -15.704336, 15.58574)" fill="none" stroke="none" stroke-width="2" vector-effect="non-scaling-stroke">
+              </path>
+            </svg>
+
+
+            <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-pans/header-pots-black.png" alt="" class="wmf-page__header-left-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/MotionPathPlugin.min.js"></script>
+
+<script type="text/javascript">
+  var vm = new Vue({
+    el: '#wmf-page',
+    data: {
+      baseUrl: 'https://comfy.ua',
+      sku: '1682030',
+      productId: '1377073',
+      cityId: window.currentCityId ? window.currentCityId.toString() : '506',
+      cityName: '',
+      storeId: document.location.href.includes('/ua/') ? '5' : '4',
+      loading: false,
+      reviews: {
+        count: 0,
+        ratingPercent: 0,
+      },
+      product: {
+        attributeGroups: [],
+        breadcrumbs: [],
+        images: [],
+        urlKey: ''
+      },
+
+
+      fromCityName: '',
+      formCityId: '',
+      popupRequestSended: false,
+      accessoriesGroups: [],
+      accessories: {
+        items: []
+      },
+      warehouses: {
+        items: []
+      },
+    },
+    mounted() {
+      $(document).ready(() => {
+        this.initGsapAnimation();
+      })
+    },
+
+    methods: {
+      initGsapAnimation() {
+        gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+
+        // HEADER MAIN INFO ANIM
+        let headerMainInfoAnim = gsap.timeline({
+          scrollTrigger: {
+            trigger: '.wmf-page__header',
+            delay: '0.3',
+            smoothChildTiming: true,
+          }
+        })
+
+        headerMainInfoAnim.from('.wmf-page__header-bg, .wmf-page__header-bg_mobile', {
+          duration: 2,
+          x: 2000
+          // y: -450
+        }, 'headerAnimStart')
+
+        headerMainInfoAnim.from('.wmf-page__header-right', {
+          duration: 1.5,
+          y: 150
+        }, '>-1')
+
+        headerMainInfoAnim.to('.wmf-page__header-right', {
+          duration: 1.5,
+          opacity: 1,
+        }, '>-1.2')
+
+        // HEADER MAIN INFO ANIM END 
+
+
+        // POT ANIM
+
+        window.addEventListener('load', () => {
+          let potAnim = gsap.timeline({
+            scrollTrigger: {
+              trigger: '.wmf-page__header',
+              delay: '0.3',
+              smoothChildTiming: true,
+            }
+          })
+
+          potAnim.to(".wmf-page__header-left-img-plan-1", {
+            delay: 0.3,
+            duration: 1.4,
+            motionPath: {
+              path: '.wmf-page__header-left-img-plan-1-path',
+              align: 'self',
+              autoRotate: 90
+            }
+          }, '<0.6')
+
+          potAnim.to(".wmf-page__header-left-img-plan-3", {
+            duration: 1.4,
+            motionPath: {
+              path: '.wmf-page__header-left-img-plan-3-path',
+              align: 'self',
+              autoRotate: 90
+            }
+          }, '<')
+
+          potAnim.to(".wmf-page__header-left-img-plan-4", {
+            duration: 1.2,
+            motionPath: {
+              path: '.wmf-page__header-left-img-plan-4-path',
+              align: 'self',
+              autoRotate: false
+            }
+          }, '<')
+
+          potAnim.to(".wmf-page__header-left-img-plan-5", {
+            duration: 1.2,
+            motionPath: {
+              path: '.wmf-page__header-left-img-plan-5-path',
+              align: 'self',
+              autoRotate: false
+            }
+          }, '<')
+
+          potAnim.to(".wmf-page__header-left-img-plan-6", {
+            duration: 1.2,
+            motionPath: {
+              path: '.wmf-page__header-left-img-plan-6-path',
+              align: 'self',
+              autoRotate: false
+            }
+          }, '<')
+
+          potAnim.to(".wmf-page__header-left-img-plan-7", {
+            duration: 1.5,
+            motionPath: {
+              path: '.wmf-page__header-left-img-plan-7-path',
+              align: 'self',
+              autoRotate: false
+            }
+          }, '<')
+
+          potAnim.to(".wmf-page__header-left-img-plan-8", {
+            duration: 1.5,
+            motionPath: {
+              path: '.wmf-page__header-left-img-plan-8-path',
+              align: 'self',
+              autoRotate: false
+            }
+          }, '<')
+
+          potAnim.to(".wmf-page__header-left-img-plan-9", {
+            duration: 1.5,
+            motionPath: {
+              path: '.wmf-page__header-left-img-plan-9-path',
+              align: 'self',
+              autoRotate: false
+            },
+            onComplete: this.initHeaderFloatAnim
+          }, '<')
+
+        })
+
+
+        // POT ANIM END
+
+        // HOT POT ANIM
+        TweenMax.fromTo(".wmf-page__content-section-2-right-img-plan", { autoAlpha: 0, delay: 1.5, duration: 1.5 }, { autoAlpha: 1, repeat: -1, yoyo: true, repeatDelay: 1.5, duration: 1.5 });
+        TweenMax.fromTo(".wmf-page__content-section-2-right-img", { autoAlpha: 1, delay: 1.5, duration: 1.5 }, { autoAlpha: 0, repeat: -1, yoyo: true, repeatDelay: 1.5, duration: 1.5 });
+        // HOT POT ANIM END
+
+        // TEXT ANIM
+        let textAnim1 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '.wmf-page__content-header',
+            delay: '0.3',
+            start: "top center",
+          }
+        })
+
+        textAnim1.from('.wmf-page__content-header-bg', {
+          duration: 1.5,
+          x: -2000
+        })
+
+        textAnim1.from('.wmf-page__content-header-text-title', {
+          duration: 0.8,
+          autoAlpha: 0,
+          y: 50
+        }, '<1')
+
+        textAnim1.from('.wmf-page__content-header-text-desc', {
+          duration: 0.8,
+          autoAlpha: 0,
+          y: 50
+        }, '<0.4')
+
+
+        let textAnim2 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '.wmf-page__content-section-1',
+            delay: '0.3',
+            start: "center center",
+          }
+        })
+
+        textAnim2.from('.wmf-page__content-section-1-video-title', {
+          duration: 0.8,
+          autoAlpha: 0,
+          y: 50
+        })
+
+        textAnim2.from('.wmf-page__content-section-1-desc', {
+          duration: 0.8,
+          autoAlpha: 0,
+          y: 50
+        }, '<0.4')
+
+
+
+        let textAnim3 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '.wmf-page__content-section-2',
+            delay: '0.3',
+            start: "top center",
+          }
+        })
+
+        textAnim3.from('.wmf-page__content-section-2-left', {
+          duration: 1.2,
+          x: -1000
+        })
+
+        textAnim3.from('.wmf-page__content-section-2-right', {
+          duration: 1.2,
+          x: 1500
+        }, '-=1')
+
+        textAnim3.from('.wmf-page__content-section-2-right-text', {
+          duration: 0.8,
+          autoAlpha: 0,
+          y: 50
+        }, '-=1')
+
+
+        let textAnim4 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '.wmf-page__content-section-3',
+            delay: '0.3',
+            start: "top center",
+          }
+        })
+
+        textAnim1.from('.wmf-page__content-section-3-header-title', {
+          duration: 0.8,
+          autoAlpha: 0,
+          y: 50
+        })
+
+        textAnim1.from('.wmf-page__content-section-3-header-desc', {
+          duration: 0.8,
+          autoAlpha: 0,
+          y: 50
+        }, '<0.4')
+
+
+
+        let textAnim5 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '.wmf-page__content-section-5',
+            delay: '0.3',
+            start: "top center",
+          }
+        })
+
+        textAnim1.from('.wmf-page__content-section-5-content-header-text', {
+          duration: 0.8,
+          autoAlpha: 0,
+          y: 50
+        })
+        // TEXT ANIM END
+
+        // COMMON FLYING ANIMATION
+        const randomX = random(1, 10);
+        const randomY = random(1, 10);
+
+        const plans = gsap.utils.toArray('.wmf-page__content-section-3-video-plan');
+        plans.forEach(plans => {
+          moveX(plans, 1);
+          moveY(plans, -1);
+        });
+
+        function moveX(target, direction) {
+          gsap.to(target, gsap.utils.random(3, 5), {
+            x: randomX(direction),
+            ease: Sine.easeInOut,
+            onComplete: moveX,
+            onCompleteParams: [target, direction * -1]
+          });
+        }
+
+        function moveY(target, direction) {
+          gsap.to(target, gsap.utils.random(3, 5), {
+            y: randomY(direction),
+            ease: Sine.easeInOut,
+            onComplete: moveY,
+            onCompleteParams: [target, direction * -1]
+          });
+        }
+
+        function random(min, max) {
+          const delta = max - min;
+          return (direction = 1) => (min + delta * Math.random()) * direction;
+        }
+        // COMMON FLYING ANIMATION END
+
+      },
+      initHeaderFloatAnim() {
+        gsap.to(".wmf-page__header-left-img-plan-8", {
+          duration: 25,
+          repeat: -1,
+          motionPath: {
+            path: '.wmf-page__header-left-img-plan-floating-path-1',
+            align: 'self',
+            autoRotate: false
+          }
+        })
+
+        gsap.to(".wmf-page__header-left-img-plan-6", {
+          duration: 25,
+          repeat: -1,
+          motionPath: {
+            path: '.wmf-page__header-left-img-plan-floating-path-3',
+            align: 'self',
+            autoRotate: false
+          }
+        })
+
+        gsap.to(".wmf-page__header-left-img-plan-3", {
+          duration: 25,
+          repeat: -1,
+          motionPath: {
+            path: '.wmf-page__header-left-img-plan-floating-path-2',
+            align: 'self',
+            autoRotate: false
+          }
+        })
+
+        gsap.to(".wmf-page__header-left-img-plan-9", {
+          duration: 25,
+          repeat: -1,
+          motionPath: {
+            path: '.wmf-page__header-left-img-plan-floating-path-3',
+            align: 'self',
+            autoRotate: false
+          }
+        })
+
+        gsap.to(".wmf-page__header-left-img-plan-4", {
+          duration: 25,
+          repeat: -1,
+          motionPath: {
+            path: '.wmf-page__header-left-img-plan-floating-path-4',
+            align: 'self',
+            autoRotate: false
+          }
+        })
+      },
+    }
+  })
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      let gInfo = document.querySelector('.gen-tab__info'),
+        gName = document.querySelector('.gen-tab__name');
+
+      let tlG = gsap.timeline();
+
+      tlG.fromTo(gName, { y: 50, opacity: 0 }, { y: 0, opacity: 1, delay: 2 }, 0)
+        .fromTo(gInfo, { y: 50, opacity: 0 }, { y: 0, opacity: 1, delay: 2 }, 0)
+
+      ScrollTrigger.create({
+        animation: tlG,
+        trigger: ".gen-tab__name"
+      });
+    }
+  });
+</script>
+
+<script>
+  $(document).on('general-tab-open', () => {
+    document.querySelectorAll('.autoplay-video').forEach((element) => {
+      element.play();
+    })
+  })
+</script>
