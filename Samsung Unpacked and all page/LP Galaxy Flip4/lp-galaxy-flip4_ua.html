@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="./galaxy-buds2pro.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+   <div id="galaxy-buds2-pro" class="container">
+
+      <div class="buds2-pro-header">
+         <div class="buds2-pro-header__bgrd">
+            <div class="buds2-pro-header__text">
+               <span>Galaxy Buds2 Pro</span>
+            </div>
+         </div>
+      </div>
+
+      <div class="buds2-pro-ultimate-sound">
+         <div class="buds2-pro-ultimate-sound__bgrd">
+            <div class="buds2-pro-ultimate-sound__text">
+               <span class="text__item">Неперевершений звук Hi-Fi</span>
+               <span class="text__item">Бездоганне поєднання</span>
+               <span class="text__item">Зручна посадка</span>
+               <span class="text__item">Вражаючий звук Hi-Fi по бездротовому каналу</span>
+            </div>
+         </div>
+
+         <div class="buds2-pro-ultimate-sound__clear-choice">
+            <div class="buds2-pro-ultimate-sound__clear-choice-text1">
+               <span>Вражаючий звук</span>
+            </div>
+            <div class="buds2-pro-ultimate-sound__clear-choice-text2">
+               <span>Спеціально для шанувальників якісного звуку</span>
+            </div>
+         </div>
+         <div class="buds2-pro-ultimate-sound__wrap">
+            <div class="buds2-pro-ultimate-sound__img">
+               <!-- <img src="https://cdn.comfy.ua/media/x/img2/galaxy-buds2-pro/img3.png" alt=""> -->
+            </div>
+         </div>
+      </div>
+
+      <div class="buds2-pro-ultimate-sound__text">
+         <div class="buds2-pro-ultimate-sound__text-span1">
+            <span>24-бітний Hi-Fi звук</span>
+         </div>
+         <div class="buds2-pro-ultimate-sound__text-span2">
+            <span>Почуйте звук таким, <br>яким його створив митець,<br>без жодних дротів</span>
+         </div>
+      </div>
+
+      <div class="buds2-pro-ultimate-sound__img-bl">
+         <img src="https://cdn.comfy.ua/media/x/img2/galaxy-buds2-pro/img4.png" alt="">
+      </div>
+
+      <div style="width: 100%; height: 1000px; background: #f2f2f2;"></div>
+
+   </div>
+
+   <script>
+
+      // gsap.registerPlugin(ScrollTrigger);
+      // let mobile = gsap.matchMedia();
+      // ScrollTrigger.defaults({
+      //    toggleActions: "restart pause restart pause",
+      //    markers: true,
+      //    start: '20px 100%',
+      //    scrub: true,
+      // });
+
+      // var fadeInRight = gsap.utils.toArray('.text__item');
+      // fadeInRight.forEach((fadeInRight) => {
+
+      //    gsap.fromTo(fadeInRight, {
+      //       scrollTrigger: {
+      //          toggleActions: "restart pause restart pause",
+      //          trigger: fadeInRight,
+      //          markers: true,
+      //          removeClass: "active",
+      //          start: "center center",
+      //          end: "+=900",
+      //       },
+      //       opacity: 0,
+      //       duration: 3,
+      //    }, {
+      //       scrollTrigger: {
+      //          toggleActions: "restart pause restart pause",
+      //          trigger: fadeInRight,
+      //          markers: true,
+      //          toggleClass: "active",
+      //          start: "center center",
+      //       },
+      //       opacity: 1,
+      //       duration: 3,
+      //    });
+      // });
+
+      // mobile.add("max-width: 1024px", () => {
+      // });
+
+      // ScrollTrigger.saveStyles(".mobile, .desktop");
+
+      // let tl = gsap.timeline({
+      //    scrollTrigger: {
+      //       trigger: ".gray",
+      //       scrub: 1,
+      //       end: "200%",
+      //       pin: true
+      //    }
+      // });
+      // tl.to(".desktop", { scale: 2, rotation: 360 })
+      //    .to(".desktop", { scale: 1 });
+
+      gsap.registerPlugin(ScrollTrigger);
+      const headings = gsap.utils.toArray(".text__item");
+
+      ScrollTrigger.matchMedia({
+         // desktop
+         "(min-width: 1025px)": function () {
+
+            headings.forEach((title) => {
+               gsap.to(title, {
+                  scrollTrigger: {
+                     trigger: title,
+                     start: "top center",
+                     end: "+=150",
+                     scrub: true,
+                     markers: true,
+                     toggleClass: "title-selected",
+                  },
+                  duration: 3
+               })
+            });
+
+            gsap.fromTo(".buds2-pro-ultimate-sound__img", {
+               scrollTrigger: {
+                  toggleActions: "restart pause restart pause",
+                  trigger: ".buds2-pro-ultimate-sound__img",
+                  start: '20px 100%',
+                  scrub: true,
+                  markers: true,
+               },
+               y: 0,
+               duration: 3,
+            }, {
+               scrollTrigger: {
+                  toggleActions: "restart pause restart pause",
+                  trigger: ".buds2-pro-ultimate-sound__img",
+                  start: '20px 100%',
+                  scrub: true,
+                  markers: true,
+               },
+               y: "-20%",
+               duration: 3,
+            });
+
+         },
+         // mobile
+         "(max-width: 1024px)": function () {
+
+            headings.forEach((title) => {
+               gsap.to(title, {
+                  scrollTrigger: {
+                     trigger: title,
+                     start: "top center",
+                     end: "+=100",
+                     scrub: true,
+                     markers: true,
+                     toggleClass: "title-selected",
+                  },
+                  duration: 3
+               })
+            });
+
+            gsap.fromTo(".buds2-pro-ultimate-sound__img", {
+               scrollTrigger: {
+                  toggleActions: "restart pause restart pause",
+                  trigger: ".buds2-pro-ultimate-sound__img",
+                  start: '20px 100%',
+                  scrub: true,
+                  markers: true,
+               },
+               y: 0,
+               duration: 3,
+            }, {
+               scrollTrigger: {
+                  toggleActions: "restart pause restart pause",
+                  trigger: ".buds2-pro-ultimate-sound__img",
+                  start: '20px 100%',
+                  scrub: true,
+                  markers: true,
+               },
+               y: "-20%",
+               duration: 3,
+            });
+
+         },
+         // all 
+         "all": function () {
+         }
+      });
+
+
+
+
+
+      // gsap.to(".buds2-pro-ultimate-sound__img", { y: 200 });
+
+      // gsap.registerPlugin(ScrollTrigger);
+      // gsap.to(".buds2-pro-ultimate-sound__img", {
+      //    scrollTrigger: {
+      //       trigger: ".buds2-pro-ultimate-sound__img",
+      //       start: "center bottom",
+      //       end: "center top",
+      //       scrub: true,
+      //       markers: true
+      //    },
+      //    y: -300,
+      //    duration: 3
+      // });
+
+      // const tl = gsap.timeline({
+      //    scrollTrigger: {
+      //       trigger: ".buds2-pro-ultimate-sound__wrap",
+      //       start: "center bottom",
+      //       end: "center top",
+      //       scrub: true,
+      //       markers: true
+      //    }
+      // });
+      // tl.to(".buds2-pro-ultimate-sound__img", { y: -300, duration: 3 })
+      // tl.to(".buds2-pro-ultimate-sound__img", { y: -200, duration: 3 })
+      // tl.to(".buds2-pro-ultimate-sound__img", { y: -300, duration: 3 })
+
+   </script>
+
+</body>
+
+</html>

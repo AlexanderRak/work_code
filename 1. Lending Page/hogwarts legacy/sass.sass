@@ -1,0 +1,286 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+// body
+//    margin: 0
+//    padding: 0
+//    font-family: 'Roboto', sans-serif
+//    width: 100%
+// $maxWidth: 1920
+// @mixin adaptiv-font($pcSize, $mobSize)
+//    $addSize: $pcSize - $mobSize
+//    $maxWidth: $maxWidth - 320
+//    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+#hogwarts-legacy
+   box-sizing: border-box
+   display: block
+   background: #121314
+   .hogwarts-legacy-wrap
+      max-width: 1366px
+      height: auto
+      margin: 0 auto
+      position: relative
+      overflow: hidden
+   img
+      display: block
+      max-width: 100%
+      margin: 0
+      padding: 0
+//end default styles
+.pdd-bottom1
+   padding-bottom: 10px
+.pdd-bottom2
+   padding-bottom: 40px
+.hogwarts-legacy__h4
+   font-size: 30px
+   font-weight: 400
+.hogwarts-legacy__h3
+   font-size: 16px
+   text-transform: uppercase
+   font-weight: 400
+.hogwarts-legacy__h2
+   font-size: 36px
+   font-weight: 400
+   line-height: 1.3
+.hogwarts-legacy__p
+   font-size: 16px
+   font-weight: 400
+   line-height: 1.3
+.hogwarts-legacy-take-part
+   margin: 40px 0
+.hogwarts-legacy-take-part__bgrd
+   background-image: url(https://cdn.comfy.ua/media/x/img2/hogwarts/img2.png)
+   background-position: center
+   background-repeat: no-repeat
+   background-size: cover
+   width: 100%
+   height: auto
+.hogwarts-legacy-take-part__flex
+   padding: 15px 12px 165px 12px
+   max-width: 1100px
+   margin: 0 auto
+   display: flex
+   flex-direction: row
+.hogwarts-legacy-take-part__item
+   color: #fff
+   &:first-child
+      .hogwarts-legacy-take-part__content
+         max-width: 464px
+         margin-right: 90px
+   &:last-child
+      .hogwarts-legacy-take-part__content
+         max-width: 520px
+.hogwarts-legacy-hogwarts-cup__bgrd
+   background-image: url(https://cdn.comfy.ua/media/x/img2/hogwarts/img3.png)
+   background-position: center
+   background-repeat: no-repeat
+   background-size: cover
+   width: 100%
+   height: auto
+.hogwarts-legacy-hogwarts-cup__content
+   max-width: 600px
+   margin: 0 0 0 auto
+   padding: 50px 150px 265px 15px
+   color: #fff
+.hogwarts-legacy-hogwarts-cup__img
+   &.only_desk
+      display: block
+   &.only_mob
+      display: none
+.hogwarts-legacy-hogwarts-cup__h2
+   padding: 15px 0 25px 0
+.hogwarts-legacy-key-features__bgrd
+   background-image: url(https://cdn.comfy.ua/media/x/img2/hogwarts/img11.png)
+   background-position: center
+   background-repeat: no-repeat
+   background-size: cover
+   width: 100%
+   height: auto
+   padding: 48px 0
+.hogwarts-legacy-key-features__h2
+   color: #000
+   text-align: center
+   padding-bottom: 56px
+.hogwarts-legacy-key-features__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr
+   grid-gap: 30px
+   padding: 0 15px
+   max-width: 1290px
+   margin: 0 auto
+.hogwarts-legacy-key-features__h4
+   padding: 36px 0
+.hogwarts-legacy-hogwarts-cup
+   margin: 0 0 40px 0
+.hogwarts-legacy-key-rooms
+   padding: 90px 0
+.hogwarts-legacy-key-rooms__h2
+   text-align: center
+   color: #fff
+   padding-bottom: 40px
+.hogwarts-legacy-key-rooms__move
+   position: relative
+   width: 100%
+.hogwarts-legacy-key-rooms__move-wrap
+   max-width: 1000px
+   margin: 0 auto
+   overflow: hidden
+   border-radius: 20px
+   padding: 0 15px
+   position: relative
+   z-index: 3
+.hogwarts-legacy-key-rooms__move__item video
+   display: block
+   max-width: 100%
+   height: auto
+// slider
+#hogwarts-legacy
+   .slick-track
+      display: flex
+      flex-direction: row
+   .slick-list.draggable
+      overflow: hidden
+      border-radius: 20px
+   .slick-dots
+      display: flex
+      list-style-type: none
+      align-items: center
+      justify-content: center
+      padding: 30px 0 0 0
+      position: relative
+      left: 0
+      transform: translateX(0%)
+      bottom: 0
+      font-size: 0
+      li
+         width: 37px !important
+         height: 5px !important
+         background: #CCCCCC
+         border-radius: 4px
+         margin: 0 7px 0 0
+         cursor: pointer
+         border: 0 !important
+         opacity: 1
+         &:last-child
+            margin-right: 0
+         &.slick-active
+            background: #fff
+         button
+            display: none
+.hogwarts-legacy-key-rooms__move__item
+   overflow: hidden
+   border-radius: 20px
+   cursor: grab
+.hogwarts-legacy-key-rooms-info
+   display: none
+   margin: 0 auto
+   padding: 32px 15px 20px 15px
+   max-width: 645px
+   &.--grіfіndor
+      display: table
+.hogwarts-legacy-key-rooms-info_txt1
+   font-weight: 400
+   font-size: 30px
+   line-height: 38px
+   text-align: center
+   text-transform: uppercase
+   color: #FFFFFF
+.hogwarts-legacy-key-rooms-info-wrap
+   max-width: 1000px
+   margin: 0 auto
+.hogwarts-legacy-key-rooms-info_txt2
+   color: #fff
+   line-height: 1.4
+   padding-top: 20px
+   font-size: 16px
+.hogwarts-legacy-key-rooms__logo img
+   margin: 0 auto !important
+.hogwarts-legacy-key-rooms__img-left
+   position: absolute
+   left: 0
+   top: 47%
+   transform: translateY(-50%)
+.hogwarts-legacy-key-rooms__img-right
+   position: absolute
+   right: 0
+   top: 47%
+   transform: translateY(-50%)
+// end slider
+
+//media*******************
+// @media (min-width: 1920px)
+// @media (max-width: 1200px)
+@media (max-width: 1024px)
+   .hogwarts-legacy-hogwarts-cup__content
+      padding: 50px 15px 160px 15px
+@media (max-width: 812px)
+   .hogwarts-legacy__h2
+      font-size: 30px
+   .hogwarts-legacy-key-features__grid
+      grid-gap: 15px
+   .hogwarts-legacy__h4
+      font-size: 23px
+   .hogwarts-legacy-key-features__h4
+      padding: 20px 0
+   .hogwarts-legacy-key-rooms__img-left, .hogwarts-legacy-key-rooms__img-right
+      max-width: 40%
+@media (max-width: 480px)
+   .hogwarts-legacy-key-rooms__img-left, .hogwarts-legacy-key-rooms__img-right
+      max-width: 35%
+      top: 43%
+   .hogwarts-legacy-take-part__bgrd
+      background-image: url(https://cdn.comfy.ua/media/x/img2/hogwarts/img2_mob.png)
+   .hogwarts-legacy-take-part__flex
+      flex-direction: column
+      padding: 80px 20px 300px 20px
+   .hogwarts-legacy-take-part__item:first-child .hogwarts-legacy-take-part__content
+      max-width: 100%
+      margin-right: 0
+   .hogwarts-legacy__h3
+      font-size: 24px
+   .hogwarts-legacy__h2
+      font-size: 36px
+   .hogwarts-legacy__p
+      font-size: 20px
+   .pdd-bottom2
+      padding-bottom: 10px
+      padding-top: 35px
+   .hogwarts-legacy__p+.hogwarts-legacy__p
+      padding-bottom: 0
+   .hogwarts-legacy-take-part
+      margin: 0
+   .hogwarts-legacy-hogwarts-cup__bgrd
+      background-image: url(https://cdn.comfy.ua/media/x/img2/hogwarts/img3_mob.png)
+      background-size: 155%
+      background-position: top center
+   .hogwarts-legacy-hogwarts-cup__content
+      padding: 465px 20px 100px 20px
+   .hogwarts-legacy-hogwarts-cup__img.only_desk
+      display: none
+   .hogwarts-legacy-hogwarts-cup__img.only_mob
+      display: block
+   .hogwarts-legacy-hogwarts-cup
+      margin: 0
+   .hogwarts-legacy-key-features__grid
+      grid-template-columns: 1fr
+   .hogwarts-legacy__h4
+      font-size: 32px
+   .hogwarts-legacy-key-features__h4
+      padding: 20px 0 55px 0
+   .hogwarts-legacy-key-rooms__h2 .hogwarts-legacy__h2
+      font-size: 40px
+      text-transform: uppercase
+      padding: 0 15px
+   .hogwarts-legacy-key-rooms
+      padding: 65px 0
+      background: #000000
+   .hogwarts-legacy-key-rooms-info_txt2
+      text-align: center
+   .hogwarts-legacy-key-rooms-info
+      padding: 30px 15px 30px 15px
+   .slick-dots
+      padding: 40px 0 10px 0
+   .hogwarts-legacy-key-rooms-info
+      padding: 10px 15px 30px 15px
+   .hogwarts-legacy-key-features__h2 .hogwarts-legacy__h2
+      font-size: 40px
+// @media (max-width: 320px)
+// @media (max-width: 812px) and (orientation: landscape)

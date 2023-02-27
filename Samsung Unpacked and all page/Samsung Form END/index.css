@@ -1,0 +1,54 @@
+#samsung-one-day {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  background: #000000;
+}
+#samsung-one-day img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main-container.page {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.breadcrumbs {
+  display: none;
+}
+
+.samsung-container {
+  padding: 60px 0 100px 0;
+  width: 100%;
+}
+
+.samsung-container__img {
+  position: relative;
+}
+
+.samsung-container__img-pos {
+  position: absolute;
+  left: 50%;
+  bottom: -50px;
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+/* form END */
+@media (max-width: 480px) {
+  .samsung-container__img-pos {
+    bottom: -75px;
+    width: 250px;
+  }
+}

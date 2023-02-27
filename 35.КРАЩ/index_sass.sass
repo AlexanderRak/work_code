@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+$maxWidth: 1920
+@mixin adaptiv-font($pcSize, $mobSize)
+   $addSize: $pcSize - $mobSize
+   $maxWidth: $maxWidth - 320
+   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+#krasch-wrap
+   width: 100%
+   height: 100%
+   position: relative
+   overflow: hidden
+   box-sizing: border-box
+   background: #43B02A
+   display: flex
+   flex-direction: column
+   align-items: center
+   font-family: 'Roboto', sans-serif
+   img
+      display: block
+      max-width: 100%
+      margin: 0
+      padding: 0
+   h2, h3, p
+      display: block
+      padding: 0
+      margin: 0
+      position: relative
+      z-index: 3
+   h2
+      @include adaptiv-font(34, 28)
+      font-weight: bold
+      color: #fff
+      line-height: 1
+      text-align: center
+      padding-bottom: 45px
+   p
+      @include adaptiv-font(24, 16)
+      font-weight: 700
+      color: #fff
+      line-height: 1.3
+   a
+      @include adaptiv-font(34, 18)
+      text-align: center
+      font-weight: bold
+      color: #fff
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+.breadcrumbs
+   display: none
+//end default styles
+.krasch-bay
+   padding: 0 15px 115px 15px
+.krasch-bay-grid
+   max-width: 1366px
+   margin: 0 auto
+   display: grid
+   grid-template-columns: 1fr 1fr
+   grid-gap: 24px
+.krasch-bay__item
+   border: 3px solid #662D91
+   border-radius: 24px
+   position: relative
+   overflow: hidden
+.krasch-bay__p
+   padding: 48px 48px 0 48px
+.krasch-bay__p + .krasch-bay__p
+   padding: 24px 48px 24px 48px
+.krasch-bay__content
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   height: 100%
+.krasch-img
+   padding: 0 15px
+   img
+      margin: 0 auto !important
+.krasch-live
+   padding: 0 0 0 0
+   max-width: 1366px
+   margin: 0 15px
+   border-radius: 24px
+   position: relative
+   &::before
+      content: ""
+      box-shadow: 0 0 0px 3px #662d91
+      width: 100%
+      height: 100%
+      position: absolute
+      border-radius: 24px
+      left: 0
+      top: 0
+.krasch-live__grid
+   position: relative
+   z-index: 3
+   overflow: hidden
+   background: #43b02a
+   border-radius: 24px
+   box-shadow: 0 0 0px 3px #662d91
+   padding: 48px 70px 70px 48px
+   display: grid
+   grid-template-columns: auto auto
+   position: relative
+.krasch-live__result
+   background: #FF671F
+   position: relative
+   border-radius: 0 0 24px 24px
+   &::before
+      content: ""
+      width: 100%
+      height: 20px
+      background: #FF671F
+      position: absolute
+      top: -18px
+      left: 0
+.krasch-live__result-wrap
+   padding: 28px 48px
+   display: flex
+   align-items: center
+.krasch-live__result-item
+   &:first-child
+      max-width: 560px
+.krasch-live__result-txt1
+   @include adaptiv-font(82, 44)
+   font-weight: 700
+   color: #FFFFFF
+   text-align: left
+   line-height: 1.1
+   span
+      padding-left: 10px
+      font-size: 32px
+.krasch-live__result-txt2
+   @include adaptiv-font(24, 14)
+   font-weight: 700
+   line-height: 1.1
+   color: #FFFFFF
+   text-align: left
+   padding-top: 88px
+.krasch-live__result-img
+   &.--onlydesk-img
+      display: block
+   &.--onlymob-img
+      display: none
+.krasch-live__content
+   &.--onlydesk
+      display: flex
+   &.--onlymob
+      display: none
+.krasch-live__item
+   &:first-child
+      max-width: 470px
+.krasch-live__p
+   padding-top: 15px
+.krasch-live__content
+   display: flex
+   flex-direction: column
+   justify-content: flex-end
+   height: 100%
+.krasch-link
+   padding: 40px 15px 90px 15px
+   a
+      display: table
+      max-width: 425px
+      width: 100%
+      padding: 24px 35px
+      margin: 0 auto
+      background: #FF671F
+      border: 3px solid #662D91
+      border-radius: 12px
+      text-decoration: none
+      transition: .3s
+      cursor: pointer
+      &:hover
+         box-shadow: 4px 4px 0px 0 #662d91
+.krasch-imgbl
+   padding: 0 15px
+   max-width: 1366px
+   margin: 0 auto
+   display: flex
+   justify-content: space-between
+   align-items: flex-end
+   width: 100%
+.krasch-imgbl__leftimg-mob, .krasch-imgbl__rightimg_mob
+   display: none
+.krasch-video video
+   display: block
+   max-width: 100%
+.krasch-live__flex
+   display: flex
+   flex-direction: column
+   align-items: center
+   position: relative
+   &::before
+      content: ""
+      width: 1px
+      height: 100%
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      margin: 0 auto
+      border-left: 2px dashed #fff
+.krasch-live__flex-item
+   border: 1.55px solid #FFFFFF
+   border-radius: 1000px
+   width: 100%
+   padding: 11px 0
+   display: flex
+   flex-direction: column
+   align-items: center
+   margin-bottom: 24px
+   position: relative
+   background: #43B02A
+   z-index: 5
+   &:last-child
+      margin-bottom: 0
+      .krasch-live__flex-p
+         padding: 8px 0
+.krasch-live__flex-p
+   padding-top: 8px
+.krasch-bay__item.--item-onlymob
+   display: none
+.krasch-video__desktop
+   display: block
+   video
+      margin: 0 auto
+      max-width: 100%
+.krasch-img__mobile
+   display: none
+//media*******************
+// @media (min-width: 1920px)
+// @media (max-width: 1200px)
+@media (max-width: 1024px)
+   .krasch-bay__p
+      padding: 25px 18px 0 20px
+   .krasch-bay__p + .krasch-bay__p
+      padding: 15px 20px 24px 20px
+   .krasch-bay__item
+      &:first-child
+         .krasch-bay__img
+            padding: 0 0 0 15px
+      &:last-child
+         .krasch-bay__img
+            padding: 0 15px 0 0
+   .krasch-live__grid
+      padding: 25px 20px 35px 20px
+   .krasch-live__result-item:first-child
+      max-width: 420px
+   .krasch-live__result-wrap
+      padding: 25px 20px
+@media (max-width: 812px)
+   .krasch-live__result-item:first-child
+      max-width: 330px
+   .krasch-live__grid
+      grid-template-columns: 1fr
+   .krasch-live__item:first-child
+      max-width: 100%
+      .krasch-live__content
+         display: flex
+         flex-direction: row
+      .krasch-live__img
+         padding-right: 15px
+      .krasch-live__p
+         max-width: 490px
+   .krasch-imgbl__leftimg
+      max-width: 200px
+   .krasch-imgbl__rightimg
+      max-width: 200px
+@media (max-width: 480px)
+   .krasch-live__result-item:first-child
+      max-width: 100%
+      display: flex
+      flex-direction: column-reverse
+   .krasch-live__result-txt2
+      padding-top: 0
+      padding-bottom: 20px
+   .krasch-live__result-wrap
+      flex-direction: column
+      padding: 25px 12px
+   .krasch-bay-grid
+      grid-template-columns: 1fr
+      grid-gap: 0
+   .krasch-live__result-img.--onlymob-img
+      display: block
+      position: absolute
+      right: 0
+      bottom: 0
+   .krasch-imgbl__leftimg, .krasch-imgbl__rightimg
+      display: none
+   .krasch-imgbl__leftimg-mob, .krasch-imgbl__rightimg_mob
+      display: block
+   .krasch-live__result-img.--onlydesk-img
+      display: none
+   .krasch-bay__p
+      padding: 24px 20px 24px 20px
+   .krasch-bay__p + .krasch-bay__p
+      padding: 0px 20px 0px 20px
+   .krasch-live__item:first-child .krasch-live__content
+      flex-direction: column
+   .krasch-live__grid
+      padding: 24px 20px 24px 20px
+   .krasch-live__item:first-child .krasch-live__img
+      padding-right: 0
+      max-width: 160px
+      margin: 0 auto
+   .krasch-live__content.--onlydesk
+      display: none
+   .krasch-live__content.--onlymob
+      display: block
+      padding-top: 24px
+   .krasch-bay
+      padding: 0 15px 64px 15px
+   .krasch-bay__item.--item-onlymob
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+      border: 0
+      padding-top: 64px
+   .krasch-video__desktop
+      display: none
+   .krasch-img__mobile
+      display: block
+      img
+         margin: 0 auto !important
+// @media (max-width: 320px)
+// @media (max-width: 812px) and (orientation: landscape)
