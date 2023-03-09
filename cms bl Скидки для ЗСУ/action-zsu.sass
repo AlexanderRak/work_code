@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+body
+   padding: 0
+   margin: 0
+#bonusy-zsu
+   max-width: 1366px
+   margin: 0 auto
+   height: auto
+   position: relative
+   overflow: hidden
+   box-sizing: border-box
+   display: block
+   background: #43B02A
+   img
+      display: block
+      max-width: 100%
+      padding: 0
+      margin: 0 auto
+   p
+      font-family: 'Roboto', sans-serif
+      display: block
+      padding: 24px 0 0 0
+      margin: 0
+      line-height: 1.3
+      font-weight: 700
+      font-size: 22px
+      color: #FFFFFF
+      word-break: break-word
+   a
+      display: block
+//end default styles
+.bonusy-zsu-container
+   position: relative
+   &::before
+      content: ""
+      background-image: url(https://cdn.comfy.ua/media/x/img2/actionzsu/top-bgrd.png)
+      width: 616px
+      height: 28px
+      position: absolute
+      left: 0
+      top: 0
+.bonusy-zsu-content
+   &::before
+      content: ""
+      background-image: url(https://cdn.comfy.ua/media/x/img2/actionzsu/left-bgrd.png)
+      width: 56px
+      height: 1080px
+      position: absolute
+      left: 0
+      top: 0
+   &::after
+      content: ""
+      background-image: url(https://cdn.comfy.ua/media/x/img2/actionzsu/right-bgrd.png)
+      width: 57px
+      height: 1120px
+      position: absolute
+      right: -1px
+      top: 0
+.bonusy-zsu__img
+   padding: 30px 30px 0 30px
+   .bonusy-zsu__img-onlydesk
+      display: block
+   .bonusy-zsu__img-onlymob
+      display: none
+.bonusy-zsu__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr
+   grid-gap: 24px
+   padding: 15px 75px
+   box-sizing: border-box
+.bonusy-zsu__logo
+   padding: 24px
+.category-info__name
+   display: none
+.contbl-banner h2
+   padding-bottom: 10px
+.contbl-banner p
+   padding-bottom: 3px
+   font-size: 25px
+.contbl-banner-text
+   padding: 1.7rem 2.8rem 0 0
+//media*******************
+// @media (min-width: 1920px)
+@media (max-width: 1200px)
+   #bonusy-zsu p
+      font-size: 18px
+   .bonusy-zsu__logo
+      padding: 24px
+      max-width: 600px
+      margin: 0 auto
+// @media (max-width: 1024px)
+@media (max-width: 812px)
+   .bonusy-zsu-container::before
+      top: -10px
+      left: -10px
+   .bonusy-zsu-content::before
+      left: -10px
+      top: 18px
+   .bonusy-zsu-content::after
+      right: -10px
+   .bonusy-zsu__grid
+      grid-gap: 18px
+      padding: 15px 52px
+@media (max-width: 480px)
+   .bonusy-zsu-content::before
+      display: none
+   .bonusy-zsu-content::after
+      display: none
+   .bonusy-zsu__img
+      padding: 8px 0 0 0
+      .bonusy-zsu__img-onlydesk
+         display: none
+      .bonusy-zsu__img-onlymob
+         display: block
+   .bonusy-zsu__grid
+      grid-template-columns: 1fr
+      grid-gap: 40px
+      padding: 15px 24px
+   .bonusy-zsu-container::before
+      top: -8px
+      left: -365px
+   #bonusy-zsu p
+      font-size: 18px
+      font-weight: 500
+   .contbl-banner-text
+      padding: 12px 12px 0 12px
+   .contbl-banner p
+      padding-bottom: 5px
+      font-size: 18px
+      text-align: left
+// @media (max-width: 320px)
+// @media (max-width: 812px) and (orientation: landscape)
