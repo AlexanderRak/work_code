@@ -1,0 +1,1077 @@
+<style>
+  #switch {
+    max-width: 1316px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+  }
+
+  #switch img {
+    opacity: 1;
+    max-width: 100%;
+    display: block;
+    margin: 0
+  }
+
+  #switch img:hover {
+    opacity: 1
+  }
+
+  #switch p:first-letter {
+    padding-left: 0
+  }
+
+  #switch h2 {
+    font-size: 48px;
+    line-height: 120.83333%;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    color: #ffffff
+  }
+
+  #switch h3 {
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    text-align: left
+  }
+
+  #switch p {
+    font-size: 24px;
+    line-height: 30px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    color: #ffffff
+  }
+
+  #switch ul {
+    padding: 0;
+    margin: 0
+  }
+
+  #switch li {
+    padding: 0;
+    margin: 0
+  }
+
+  .bc-description__content p:first-letter {
+    padding-left: 0
+  }
+
+  #switch .switch-header {
+    background-color: #E60012;
+    min-height: 612px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 5px 10px 40px;
+    margin-bottom: 4px
+  }
+
+  #switch .switch-header__left {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: -1px
+  }
+
+  #switch .switch-header__right {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: -1px
+  }
+
+  #switch .switch-header__box {
+    position: relative;
+    z-index: 3;
+    max-width: 385px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+  }
+
+  #switch .switch-header__logo {
+    margin: 0 auto 41px
+  }
+
+  #switch .switch-header__title {
+    text-align: center;
+    margin-bottom: 20px
+  }
+
+  #switch .switch-header__btn {
+    display: inline-block;
+    background-color: #ffffff !important;
+    border: 3.06217px solid #ffffff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-size: 24px;
+    padding: 14px 27px;
+    color: #E60012;
+    text-decoration: none;
+    cursor: pointer
+  }
+
+  #switch .switch-header__btn:hover {
+    -webkit-box-shadow: 3px 1px 10px 3px rgba(0, 0, 0, 0.23);
+    box-shadow: 3px 1px 10px 3px rgba(0, 0, 0, 0.23)
+  }
+
+  #switch .switch-header__center {
+    display: none
+  }
+
+  #switch .switch-modes {
+    margin-bottom: 23px
+  }
+
+  #switch .switch-modes__bg {
+    background-color: #3B48A2;
+    padding-bottom: 40px;
+    margin-bottom: 4px
+  }
+
+  #switch .switch-modes__inner {
+    padding: 0 26px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly
+  }
+
+  #switch .switch-modes__info {
+    padding-left: 15px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+  }
+
+  #switch .switch-modes__col-inner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: (1fr)[3];
+    grid-template: 1fr/repeat(3, 1fr);
+    grid-gap: 4px
+  }
+
+  #switch .switch-modes__col-item {
+    background-color: #3B48A2;
+    padding: 34px
+  }
+
+  #switch .switch-modes__col-item p {
+    font-size: 18px;
+    line-height: 24px
+  }
+
+  #switch .switch-modes__col-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+  }
+
+  #switch .switch-modes__col-img {
+    padding-right: 24px;
+    min-height: 65px;
+    margin-bottom: 15px
+  }
+
+  #switch .switch-joy__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+  }
+
+  #switch .switch-joy__box {
+    max-width: 473px;
+    width: 100%;
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+  }
+
+  #switch .switch-joy__title {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 24px
+  }
+
+  #switch .switch-joy__text {
+    color: #000000;
+    text-align: center
+  }
+
+  #switch .switch-joy__mobile {
+    display: none
+  }
+
+  #switch .switch-color {
+    background-color: #3B48A2;
+    padding: 40px 0
+  }
+
+  #switch .switch-color__title {
+    padding: 0 10px;
+    text-align: center;
+    margin-bottom: 40px
+  }
+
+  #switch .switch-color__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+  }
+
+  #switch .switch-color__item {
+    margin-left: -25px;
+    margin-right: -25px
+  }
+
+  #switch .switch-together__title {
+    color: #000000;
+    text-align: center;
+    padding: 47px 10px
+  }
+
+  #switch .switch-together__bg {
+    border: 5px solid #E60012
+  }
+
+  #switch .switch-together__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+  }
+
+  #switch .switch-together__item-img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    max-width: 50%
+  }
+
+  #switch .switch-together__col {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    max-width: 50%;
+    padding: 10px 10px 10px 38px
+  }
+
+  #switch .switch-together__col-item {
+    padding-bottom: 40px;
+    padding-left: 32px;
+    position: relative
+  }
+
+  #switch .switch-together__col-item:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 8px;
+    height: 58px;
+    background-color: #E60012;
+    top: 20%;
+    -webkit-transform: translateY(-20%);
+    transform: translateY(-20%);
+    left: 0
+  }
+
+  #switch .switch-together__col-item:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 8px;
+    height: 80px;
+    background-color: #E60012;
+    top: 20%;
+    -webkit-transform: translateY(-20%);
+    transform: translateY(-20%);
+    left: 0
+  }
+
+  #switch .switch-together__col-item:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 8px;
+    height: 128px;
+    background-color: #E60012;
+    top: 20%;
+    -webkit-transform: translateY(-20%);
+    transform: translateY(-20%);
+    left: 0
+  }
+
+  #switch .switch-together__col-item:last-child {
+    padding-bottom: 0
+  }
+
+  #switch .switch-together__col-item h3 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 8px;
+    font-weight: bold
+  }
+
+  #switch .switch-together__col-item p {
+    font-size: 18px;
+    line-height: 24px
+  }
+
+  #switch .switch-together__col-item h3,
+  #switch .switch-together__col-item p {
+    color: #000000
+  }
+
+  #switch .switch-game {
+    margin-bottom: 40px
+  }
+
+  #switch .switch-game__title {
+    padding: 47px 10px;
+    color: #000000;
+    text-align: center
+  }
+
+  #switch .switch-game__inner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template: 1fr 1fr/1fr 1fr 1fr;
+    grid-gap: 49px 10px;
+    padding: 0 10px
+  }
+
+  #switch .switch-game__item h3 {
+    color: #000000;
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px
+  }
+
+  #switch .switch-game__item img {
+    margin: 0 auto 15px;
+    border-radius: 24px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease
+  }
+
+  #switch .switch-game__item img:hover {
+    -webkit-box-shadow: 3px 1px 10px 1px rgba(0, 0, 0, 0.23);
+    box-shadow: 3px 1px 10px 1px rgba(0, 0, 0, 0.23)
+  }
+
+  #switch .switch-game__link {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease
+  }
+
+  #switch .switch-game__link:hover {
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    color: #000000
+  }
+
+  #switch .switch-console__title {
+    font-size: 48px;
+    line-height: 60px;
+    color: #000000;
+    text-align: center;
+    padding: 20px 10px 20px
+  }
+
+  #switch .switch-console__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-bottom: 25px
+  }
+
+  #switch .switch-console__col {
+    max-width: 420px;
+    width: 100%;
+    padding-left: 15px
+  }
+
+  #switch .switch-console__col-title {
+    color: #000000;
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 20px 10px;
+    display: none
+  }
+
+  #switch .switch-console__col-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 49px
+  }
+
+  #switch .switch-console__col-item:last-child {
+    padding-bottom: 0
+  }
+
+  #switch .switch-console__col-img {
+    max-width: 88px;
+    width: 100%;
+    padding-right: 24px
+  }
+
+  #switch .switch-console__col-info p {
+    color: #000000;
+    font-size: 18px;
+    line-height: 24px
+  }
+
+  #switch .switch-console__color {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 8px;
+    font-weight: bold
+  }
+
+  #switch .switch-console__color--red {
+    color: #FE3C32
+  }
+
+  #switch .switch-console__color--yellow {
+    color: #FF9F00
+  }
+
+  #switch .switch-console__color--blue {
+    color: #1372FF
+  }
+
+  @media screen and (max-width: 1316px) {
+    #switch .switch-modes__col-item {
+      padding-left: calc(15px + (34 - 15) * (100vw - 320px) / (1316 - 320));
+      padding-right: calc(15px + (34 - 15) * (100vw - 320px) / (1316 - 320))
+    }
+
+    #switch .switch-header__right {
+      right: calc(-296px + (296 - 1) * (100vw - 784px) / (1316 - 784))
+    }
+
+    #switch .switch-header__left {
+      left: calc(-281px + (281 - 1) * (100vw - 784px) / (1316 - 784))
+    }
+  }
+
+  @media screen and (max-width: 737px) {
+    #switch .switch-console__item-img img {
+      margin-left: auto
+    }
+
+    #switch .switch-console__inner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column
+    }
+
+    #switch .switch-game__inner {
+      -ms-grid-rows: 1fr;
+      -ms-grid-columns: 1fr 1fr;
+      grid-template: 1fr/1fr 1fr
+    }
+
+    #switch .switch-together__col-item:nth-child(1)::before,
+    #switch .switch-together__col-item:nth-child(2)::before,
+    #switch .switch-together__col-item:nth-child(3)::before {
+      display: none
+    }
+
+    #switch .switch-together__col-item {
+      padding-left: 0
+    }
+
+    #switch .switch-together__col {
+      max-width: 100%;
+      padding: 10px
+    }
+
+    #switch .switch-together__item-img {
+      max-width: 100%
+    }
+
+    #switch .switch-together__inner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column
+    }
+
+    #switch .switch-color__inner {
+      overflow-x: scroll
+    }
+
+    #switch .switch-joy__mobile {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between
+    }
+
+    #switch .switch-joy__box {
+      margin: 0 auto
+    }
+
+    #switch .switch-joy__inner {
+      display: block
+    }
+
+    #switch .switch-joy__item {
+      display: none
+    }
+
+    #switch .switch-modes__col-inner {
+      -ms-grid-rows: 1fr;
+      -ms-grid-columns: 1fr 1fr;
+      grid-template: 1fr/1fr 1fr
+    }
+
+    #switch .switch-modes__title {
+      text-align: center
+    }
+
+    #switch .switch-modes__inner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column
+    }
+
+    #switch .switch-header {
+      min-height: auto
+    }
+
+    #switch .switch-header__logo {
+      margin: 0 auto
+    }
+
+    #switch .switch-header__center {
+      display: block
+    }
+
+    #switch .switch-header__box {
+      max-width: 100%
+    }
+
+    #switch .switch-header__right,
+    #switch .switch-header__left {
+      display: none
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    #switch .switch-console__inner {
+      -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch
+    }
+
+    #switch .switch-console__col {
+      padding: 0 10px
+    }
+
+    #switch .switch-console__col-item {
+      padding-bottom: 35px
+    }
+
+    #switch .switch-console__color--online {
+      position: relative;
+      padding-left: 60px
+    }
+
+    #switch .switch-console__color--online::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 0;
+      background-image: url(https://cdn.comfy.ua/media/x/img/1866883/9-1.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto;
+      width: 44px;
+      height: 44px
+    }
+
+    #switch .switch-console__color--eshop {
+      position: relative;
+      padding-left: 60px
+    }
+
+    #switch .switch-console__color--eshop::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 0;
+      background-image: url(https://cdn.comfy.ua/media/x/img/1866883/9-2.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto;
+      width: 44px;
+      height: 44px
+    }
+
+    #switch .switch-console__color--album {
+      position: relative;
+      padding-left: 60px
+    }
+
+    #switch .switch-console__color--album::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 0;
+      background-image: url(https://cdn.comfy.ua/media/x/img/1866883/9-3.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto;
+      width: 44px;
+      height: 44px
+    }
+
+    #switch .switch-console__color--news {
+      position: relative;
+      padding-left: 60px
+    }
+
+    #switch .switch-console__color--news::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 0;
+      background-image: url(https://cdn.comfy.ua/media/x/img/1866883/9-4.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto;
+      width: 44px;
+      height: 44px
+    }
+
+    #switch .switch-console__col-img {
+      display: none;
+      padding: 0
+    }
+
+    #switch .switch-console__col-info p {
+      font-size: 14px;
+      line-height: 20px
+    }
+
+    #switch .switch-console__color {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 17px
+    }
+
+    #switch .switch-console__title {
+      display: none
+    }
+
+    #switch .switch-console__col-title {
+      display: block
+    }
+
+    #switch .switch-game__title {
+      padding: 20px 10px 10px
+    }
+
+    #switch .switch-game__item h3,
+    #switch .switch-game__title {
+      font-size: 18px;
+      line-height: 24px
+    }
+
+    #switch .switch-together__col-item {
+      padding-bottom: 15px
+    }
+
+    #switch .switch-together__col-item h3 {
+      font-size: 18px;
+      line-height: 24px
+    }
+
+    #switch .switch-together__col-item p {
+      font-size: 14px;
+      line-height: 20px
+    }
+
+    #switch .switch-together__title {
+      font-size: 18px;
+      line-height: 24px;
+      padding: 20px 10px 10px
+    }
+
+    #switch .switch-color {
+      padding: 20px 0
+    }
+
+    #switch .switch-color__title {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 12px
+    }
+
+    #switch .switch-color__item:nth-child(1),
+    #switch .switch-color__item:nth-child(6) {
+      display: none
+    }
+
+    #switch .switch-joy__text {
+      font-size: 14px;
+      line-height: 20px
+    }
+
+    #switch .switch-joy__title {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 15px
+    }
+
+    #switch .switch-modes__col-inner {
+      -ms-grid-rows: 1fr;
+      -ms-grid-columns: 1fr;
+      grid-template: 1fr/1fr
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    #switch .switch-game__inner {
+      -ms-grid-rows: 1fr;
+      -ms-grid-columns: 1fr;
+      grid-template: 1fr/1fr;
+      grid-gap: 20px 0
+    }
+
+    #switch .switch-modes__title {
+      font-size: 18px
+    }
+
+    #switch .switch-header__btn {
+      font-size: 14px;
+      padding: 4px 10px
+    }
+
+    #switch .switch-header__logo {
+      max-width: 73px
+    }
+
+    #switch .switch-header__title {
+      font-size: 24px
+    }
+  }
+</style>
+
+<div id="switch">
+  <div class="switch-header">
+    <img src="https://cdn.comfy.ua/media/x/img/1866883/01.png" alt="Фото Игровая приставка портативная Nintendo Switch (gray) - 1" title="Игровая приставка портативная Nintendo Switch (gray) - 1" class="switch-header__left">
+    <img src="https://cdn.comfy.ua/media/x/img/1866883/02.png" alt="Фото Игровая приставка портативная Nintendo Switch (gray) - 2" title="Игровая приставка портативная Nintendo Switch (gray) - 2" class="switch-header__right">
+    <div class="switch-header__box">
+      <img src="https://cdn.comfy.ua/media/x/img/1866883/logo.png" alt="logo nintendo" class="switch-header__logo">
+      <img src="https://cdn.comfy.ua/media/x/img/1866883/03mob.png" alt="Фото Игровая приставка портативная Nintendo Switch (gray) - 3" title="Игровая приставка портативная Nintendo Switch (gray) - 3" class="switch-header__center">
+      <h2 class="switch-header__title">Играть всегда</h2>
+      <!-- <a href="/igrovye-konsoli/brand__nintendo/" class="switch-header__btn">Купить</a> -->
+    </div>
+  </div>
+
+  <div class="switch-modes">
+    <div class="switch-modes__bg">
+      <div class="switch-modes__inner">
+        <div class="switch-modes__item">
+          <img src="https://cdn.comfy.ua/media/x/img/1866883/1.png" alt="Фото Игровая приставка портативная Nintendo Switch (gray) - 4" title="Игровая приставка портативная Nintendo Switch (gray) - 4" class="switch-modes__item-img">
+        </div>
+        <div class="switch-modes__info">
+          <h2 class="switch-modes__title">3 режима в одном</h2>
+        </div>
+      </div>
+    </div>
+    <div class="switch-modes__col">
+      <div class="switch-modes__col-inner">
+        <div class="switch-modes__col-item">
+          <div class="switch-modes__col-title">
+            <div class="switch-modes__col-img">
+              <img src="https://cdn.comfy.ua/media/x/img/1866883/2-1.png" alt="">
+            </div>
+            <h3>Режим ТВ</h3>
+          </div>
+          <p>Зовите семью и друзей, подключайте консоль к ТВ и наслаждайтесь играми в HD-качестве.</p>
+        </div>
+        <div class="switch-modes__col-item">
+          <div class="switch-modes__col-title">
+            <div class="switch-modes__col-img">
+              <img src="https://cdn.comfy.ua/media/x/img/1866883/2-2.png" alt="">
+            </div>
+            <h3>Настольный режим</h3>
+          </div>
+          <p>Как только найдете возможность с кем-то поиграть – отставляйте заднюю подставку и начинайте!
+          </p>
+        </div>
+        <div class="switch-modes__col-item">
+          <div class="switch-modes__col-title">
+            <div class="switch-modes__col-img">
+              <img src="https://cdn.comfy.ua/media/x/img/1866883/2-3.png" alt="">
+            </div>
+            <h3>Портативный режим</h3>
+          </div>
+          <p>Подключайте к экрану контроллеры Joy‑Con и берите Nintendo Switch всегда с собой.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="switch-joy">
+    <div class="switch-joy__inner">
+      <div class="switch-joy__item">
+        <img src="https://cdn.comfy.ua/media/x/img/1866883/3.png" alt="" class="switch-joy__left">
+      </div>
+      <div class="switch-joy__box">
+        <h2 class="switch-joy__title">Ваши Joy Con</h2>
+        <p class="switch-joy__text">В комплект включены эти удобные контроллеры. Они простые, поэтому
+          разобраться с управлением очень легко.</p>
+      </div>
+      <div class="switch-joy__item">
+        <img src="https://cdn.comfy.ua/media/x/img/1866883/4.png" alt="" class="switch-joy__right">
+      </div>
+    </div>
+    <div class="switch-joy__mobile">
+      <div class="switch-joy__mobile-img">
+        <img src="https://cdn.comfy.ua/media/x/img/1866883/3mob.png" alt="">
+      </div>
+      <div class="switch-joy__mobile-img">
+        <img src="https://cdn.comfy.ua/media/x/img/1866883/4mob.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="switch-color">
+    <h2 class="switch-color__title">Выбирайте цвет вашего настроения</h2>
+    <div class="switch-color__inner">
+      <div class="switch-color__item">
+        <img src="https://cdn.comfy.ua/media/x/img/1866883/5-1.png" alt="">
+      </div>
+      <div class="switch-color__item">
+        <img src="https://cdn.comfy.ua/media/x/img/1866883/5-2.png" alt="">
+      </div>
+      <div class="switch-color__item">
+        <img src="https://cdn.comfy.ua/media/x/img/1866883/5-3.png" alt="">
+      </div>
+      <div class="switch-color__item">
+        <img src="https://cdn.comfy.ua/media/x/img/1866883/5-4.png" alt="">
+      </div>
+      <div class="switch-color__item">
+        <img src="https://cdn.comfy.ua/media/x/img/1866883/5-5.png" alt="">
+      </div>
+      <div class="switch-color__item">
+        <img src="https://cdn.comfy.ua/media/x/img/1866883/5-6.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="switch-together">
+    <h2 class="switch-together__title">Вместе веселее</h2>
+    <div class="switch-together__bg">
+      <div class="switch-together__inner">
+        <div class="switch-together__item-img">
+          <img src="https://cdn.comfy.ua/media/x/img/1866883/6.png" alt="" class="switch-together__img">
+        </div>
+        <div class="switch-together__col">
+          <div class="switch-together__col-item">
+            <h3>Мультиплеер</h3>
+            <p>Играйте дома с друзьями на большом экране.</p>
+          </div>
+          <div class="switch-together__col-item">
+            <h3>Онлайн-мультиплеер</h3>
+            <p>С подпиской Nintendo Switch Online можете объединяться и соперничать с игроками со всего
+              мира.</p>
+          </div>
+          <div class="switch-together__col-item">
+            <h3>Локальный беспроводной режим</h3>
+            <p>Приглашайте друзей и вместе играйте в многопользовательские игры. Можете подключить до 8
+              контроллеров одновременно. Например, контроллер Nintendo Switch Pro, Nintendo Switch
+              Lite и Nintendo Switch (OLED-модель).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="switch-game">
+    <h2 class="switch-game__title">Во что поиграть?</h2>
+    <div class="switch-game__inner">
+      <div class="switch-game__item">
+        <a class="switch-game__link" href="https://comfy.ua/igrovoj-kartridzh-nintendo-fifa22-legacy-edition-nintendo-switch-russian-version.html">
+          <img src="https://cdn.comfy.ua/media/x/img/1866883/7-1.png" alt="">
+          <h3>FIFA22 Legacy Edition</h3>
+        </a>
+      </div>
+      <div class="switch-game__item">
+        <a class="switch-game__link" href="https://comfy.ua/igrovoj-kartridzh-nintendo-immortals-fenyx-rising-nintendo-switch-1.html">
+          <img src="https://cdn.comfy.ua/media/x/img/1866883/7-2.png" alt="">
+          <h3>Immortals Fenyx Rising</h3>
+        </a>
+      </div>
+      <div class="switch-game__item">
+        <a class="switch-game__link" href="https://comfy.ua/igrovoj-kartridzh-nintendo-super-smash-bros-ultimate-nintendo-switch-1.html">
+          <img src="https://cdn.comfy.ua/media/x/img/1866883/7-3.png" alt="">
+          <h3>Super Smash Bros. Ultimate</h3>
+        </a>
+      </div>
+      <div class="switch-game__item">
+        <a class="switch-game__link" href="https://comfy.ua/igrovoj-kartridzh-nintendo-animal-crossing-new-horizons-nintendo-switch-1.html">
+          <img src="https://cdn.comfy.ua/media/x/img/1866883/7-4.png" alt="">
+          <h3>Animal Crossing: New Horizons</h3>
+        </a>
+      </div>
+      <div class="switch-game__item">
+        <a class="switch-game__link" href="https://comfy.ua/igrovoj-kartridzh-nintendo-2new-super-mario-bros-u-deluxe-nintendo-switch.html">
+          <img src="https://cdn.comfy.ua/media/x/img/1866883/7-5.png" alt="">
+          <h3>Super Mario 3D All-Stars </h3>
+        </a>
+      </div>
+      <div class="switch-game__item">
+        <a class="switch-game__link" href="https://comfy.ua/igrovoj-kartridzh-nintendo-the-legend-of-zelda-skyward-sword-hd-nintendo-switch-1.html">
+          <img src="https://cdn.comfy.ua/media/x/img/1866883/7-6.png" alt="">
+          <h3>The Legend of Zelda:
+            Breath of the Wild</h3>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="switch-console">
+    <h2 class="switch-console__title">Еще у консоли есть</h2>
+    <div class="switch-console__inner">
+      <div class="switch-console__item-img">
+        <picture>
+          <source media="(min-width: 481px)" srcset="https://cdn.comfy.ua/media/x/img/1866883/10.png">
+          <source media="(min-width: 320px)" srcset="https://cdn.comfy.ua/media/x/img/1866883/10mob.png">
+          <img src="https://cdn.comfy.ua/media/x/img/1866883/10.png" alt="" class="switch-console__img">
+        </picture>
+      </div>
+      <div class="switch-console__col">
+        <h2 class="switch-console__col-title">Еще у консоли есть</h2>
+        <div class="switch-console__col-item">
+          <div class="switch-console__col-img">
+            <img src="https://cdn.comfy.ua/media/x/img/1866883/8-1.png" alt="">
+          </div>
+          <div class="switch-console__col-info">
+            <h3 class="switch-console__color switch-console__color--online switch-console__color--red">
+              Nintendo Switch Online</h3>
+            <p>Получите особые игры и эксклюзивные предложения с подпиской Nintendo Switch Online.</p>
+          </div>
+        </div>
+        <div class="switch-console__col-item">
+          <div class="switch-console__col-img">
+            <img src="https://cdn.comfy.ua/media/x/img/1866883/8-2.png" alt="">
+          </div>
+          <div class="switch-console__col-info">
+            <h3 class="switch-console__color switch-console__color--yellow switch-console__color--eshop">
+              Nintendo eShop</h3>
+            <p>Находите и покупайте цифровые версии игр, а также официальные дополнения к ним (DLC).</p>
+          </div>
+        </div>
+        <div class="switch-console__col-item">
+          <div class="switch-console__col-img">
+            <img src="https://cdn.comfy.ua/media/x/img/1866883/8-3.png" alt="">
+          </div>
+          <div class="switch-console__col-info">
+            <h3 class="switch-console__color switch-console__color--blue switch-console__color--album">
+              Альбом</h3>
+            <p>С помощью кнопки захвата можете удобно делать скриншоты, затем просматривать их в
+              альбоме, добавлять текст и делиться в соцсетях.</p>
+          </div>
+        </div>
+        <div class="switch-console__col-item">
+          <div class="switch-console__col-img">
+            <img src="https://cdn.comfy.ua/media/x/img/1866883/8-4.png" alt="">
+          </div>
+          <div class="switch-console__col-info">
+            <h3 class="switch-console__color switch-console__color--red switch-console__color--news">
+              Новости</h3>
+            <p>Всегда будете знать последние игровые новости, информацию об обновлениях системы и
+              прочее.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
