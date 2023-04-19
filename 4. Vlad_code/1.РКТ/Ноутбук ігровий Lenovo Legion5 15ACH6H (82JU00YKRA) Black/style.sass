@@ -1,0 +1,270 @@
+//default styles
+
+// body
+//   margin: 0
+
+.lenovo
+  width: 100%
+  max-width: 1920px
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    font-size: 20px
+    line-height: 30px
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img
+    margin: 0 auto
+    opacity: 1 !important
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1 !important
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+//end default styles
+
+.lenovo
+  color: #fff
+
+.lenovo__title
+  font-weight: bold
+  font-size: 70px
+  margin-bottom: 40px
+  line-height: normal
+
+.lenovo__txt
+  font-size: 24px
+
+.lenovo .container
+  width: 100%
+  max-width: 100%
+  margin: 0 auto
+
+.power
+  position: relative
+
+.power__abs
+  position: absolute
+  top: 150px
+  left: 130px
+  width: 100%
+  max-width: 740px
+
+.power__icon
+  margin-bottom: 125px
+  img
+    margin: 0
+
+.power__logo
+  position: absolute
+  right: 0
+  top: 100px
+
+//section 2
+
+.level
+  position: relative
+
+.level__abs
+  position: absolute
+  width: 100%
+  max-width: 650px
+  left: 130px
+  bottom: 50%
+  transform: translateY(50%)
+
+.level__icon
+  margin-bottom: 40px
+  img
+    margin: 0
+
+//section 3
+
+.graphics,
+.quality
+  position: relative
+  background-image: url("https://cdn.comfy.ua/media/x/img/1969792/3bg.jpg")
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+.quality
+  background-image: url("https://cdn.comfy.ua/media/x/img/1969792/4bg.jpg")
+
+.graphics__flex,
+.quality__flex
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 80px 130px 0px 130px
+
+.quality__flex
+  flex-direction: row-reverse
+
+.graphics__cont,
+.quality__cont
+  max-width: 630px
+
+.graphics__img
+  img
+    margin: 0 0 0 auto
+
+.quality__img
+  img
+    margin: 0
+
+.graphics__icon,
+.quality__icon
+  margin-top: 20px
+  img
+    margin: 0
+
+//section
+
+.memory
+  position: relative
+
+.memory__abs
+  position: absolute
+  right: 130px
+  bottom: 50%
+  transform: translateY(50%)
+  width: 100%
+  max-width: 770px
+
+.memory__icon
+  margin-top: 30px
+  img
+    margin: 0
+
+//section
+
+.cooling
+  position: relative
+
+.cooling__abs
+  position: absolute
+  width: 100%
+  max-width: 620px
+  right: 130px
+  bottom: 50%
+  transform: translateY(50%)
+
+//media*****************************************************
+
+@media (max-width: 1540px)
+  .lenovo__title
+    font-size: calc(32px + (50 - 32) * ((100vw - 320px) / (1540 - 320)))
+  .lenovo__txt
+    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1540 - 320)))
+  .power__abs,
+  .level__abs
+    left: 2em
+  .graphics__flex,
+  .quality__flex
+    padding-right: 2em
+    padding-left: 2em
+  .memory__abs,
+  .cooling__abs
+    right: 2em
+
+@media (max-width: 1201px)
+  .lenovo .container
+    width: 960px
+    padding: 0 15px
+  .graphics
+    background-position: center right
+  .graphics__flex,
+  .quality__flex
+    flex-direction: column-reverse
+    padding: 2em 0
+  .graphics__cont,
+  .quality__cont
+    max-width: 100%
+  .graphics__img img,
+  .quality__img img
+    max-height: 700px
+  .quality__img
+    margin-bottom: 2em
+  .memory__abs
+    max-width: 570px
+  .cooling__abs
+    max-width: 400px
+
+@media (max-width: 991px)
+  .lenovo .container
+    width: 720px
+
+@media (max-width: 767px)
+  .lenovo .container
+    width: 540px
+
+@media (max-width: 576px)
+  .lenovo .container
+    width: 100%
+    box-sizing: border-box
+  .lenovo__title
+    margin-bottom: 1em
+  .power,
+  .level,
+  .memory,
+  .cooling
+    background: #000
+  .power__abs,
+  .level__abs,
+  .memory__abs,
+  .cooling__abs
+    position: unset
+    padding: 2em 0
+    transform: unset
+  .power__icon
+    margin-bottom: 1em
+  .power__logo
+    top: unset
+    bottom: 3em
+    img
+      max-width: 50px
+  .level__bg
+    img
+      min-width: 140%
+      margin-left: -35%
+  .level__icon img,
+  .graphics__icon img,
+  .quality__icon img,
+  .memory__icon img
+    max-width: 50%
+  .graphics
+    background-position: top right 42%
+  .memory__bg img,
+  .cooling__bg img
+    min-width: 200%
