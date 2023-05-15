@@ -1,0 +1,829 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+$maxWidth: 1920
+@mixin adaptiv-font($pcSize, $mobSize)
+   $addSize: $pcSize - $mobSize
+   $maxWidth: $maxWidth - 320
+   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+body
+   background: #F2F2F2
+   padding: 0
+   margin: 0
+#container-page
+   max-width: 1390px
+   margin: 0 auto
+   height: auto
+   position: relative
+   overflow: hidden
+   box-sizing: border-box
+   display: block
+   font-family: 'Roboto', sans-serif
+   padding: 0 12px 130px 12px
+   h2
+      font-size: 24px
+      text-align: left
+      font-weight: 700
+      color: #000
+      display: block
+      padding: 0
+      margin: 0
+      line-height: 1.3
+   p
+      font-size: 16px
+      text-align: left
+      color: #000
+      font-weight: 400
+      display: block
+      padding: 0
+      margin: 0
+      line-height: 20px
+   h3
+      font-size: 18px
+      font-weight: bold
+      text-align: left
+      color: #000
+      padding: 0 0 0 36px
+      margin: 0
+      line-height: 24px
+   img
+      max-width: 100%
+      display: block
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+//end default styles
+.wrap-flex
+   display: flex
+   flex-direction: row
+.wrap-flex__item
+   &.--tabs-left
+      background: #fff
+      width: 100%
+      margin-right: 16px
+      height: max-content
+   &.--tabs-right
+      min-width: 215px
+      width: 215px
+.wrap-flex__content
+   position: relative
+   padding: 56px 32px
+   overflow: hidden
+.wrap-flex__content-two
+   position: relative
+   padding: 56px 0 56px 32px
+   overflow: hidden
+.block-h2
+   padding-bottom: 40px
+   &.ppdb0
+      padding-bottom: 0
+.linkbl
+   color: #43B02A
+   text-decoration: underline
+   cursor: pointer
+.block-p
+   @include adaptiv-font(16, 14)
+   color: #000
+   text-align: left
+   line-height: 1.3
+   display: block
+   a
+      cursor: pointer
+      color: #379424
+      text-decoration: underline
+      display: inline-block
+.block_ul
+   list-style-type: none
+   margin: 0
+   padding: 5px 0 0 10px
+   li
+      @include adaptiv-font(16, 14)
+      color: #000
+      text-align: left
+      line-height: 1.3
+      display: block
+      position: relative
+      padding-left: 20px
+      &::before
+         content: ""
+         position: absolute
+         left: 0
+         top: 7px
+         width: 5px
+         height: 5px
+         background: #000
+         border-radius: 50%
+.block-h3
+   @include adaptiv-font(20, 18)
+   color: #000
+   text-align: center
+   line-height: 1.3
+   display: block
+   font-weight: bold
+.padding-bottom1
+   padding-bottom: 32px
+.padding-bottom2
+   padding-top: 32px
+.block-list
+   padding-bottom: 24px
+.block-list-ul
+   list-style-type: disc
+   margin: 0
+   padding: 5px 0 0 8px
+   li
+      @include adaptiv-font(16, 14)
+      color: #000
+      text-align: left
+      line-height: 1.3
+      display: block
+      position: relative
+      padding-left: 20px
+      &::before
+         content: ""
+         width: 6px
+         height: 6px
+         border-radius: 50%
+         background: #000
+         position: absolute
+         left: 0
+         top: 7px
+.block-img-pos
+   position: absolute
+   right: 0
+   top: 0
+   &.--vidznaki-ta-nagorodi-img
+      top: 32px
+.wrap-flex__tabs
+   background: #fff
+   list-style-type: none
+   padding: 0
+   margin: 0
+   .wrap-flex__tabs-item
+      background: #fff
+      cursor: pointer
+      position: relative
+      border-bottom: 1px solid #fff
+      &:last-child
+         border-bottom: 0px solid #fff
+      &.active-tab
+         background: #43B02A
+         a
+            color: #fff
+            font-weight: bold
+            &:hover
+               background: #43B02A
+               color: #fff
+      &.pdd-leftcstm a
+         padding: 13px 0 13px 40px
+      a
+         color: #000
+         font-weight: normal
+         font-size: 16px
+         padding: 13px 0 13px 32px
+         line-height: 20px
+         display: block
+         transition: .1s
+         text-decoration: none
+         &:hover
+            background: #379424
+            color: #fff
+.btnpopup
+   display: none
+.btnpopup-close
+   display: none
+.plk-accordion__item
+   margin-bottom: 0.5rem
+   position: relative
+.plk-accordion__link
+   background-color: #f2f2f2
+   padding: 1rem 6rem 1rem 2rem
+   position: relative
+   display: block
+   cursor: pointer
+   font-size: 1.5rem
+   font-weight: 400
+   line-height: 2.5rem
+   position: relative
+   &::after
+      position: absolute
+      content: ""
+      background: url(https://cdn.comfy.ua/media/x/img2/icon_close.svg) no-repeat 50%
+      top: 35%
+      right: 2%
+      width: 2.1rem
+      height: 1.3rem
+.plk-accordion__link_active
+   &::after
+      transform: rotate(180deg)
+.plk-accordion__item-content
+   display: none
+   padding: 2rem 2rem 0
+.plk-accordion__link_active + .plk-accordion__item-content
+   display: block
+.plk-accordion__link-title
+   color: #000
+   border-bottom: 0.1rem dotted #000
+   font-weight: 400
+// Про компанію
+.pro-kompaniju__content
+   max-width: 758px
+   position: relative
+.pro-kompaniju__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 1fr
+   grid-gap: 32px
+.pro-kompaniju__fl
+   display: flex
+   align-items: center
+.pro-kompaniju__fl-txt1
+   @include adaptiv-font(48, 32)
+   color: #000
+   font-weight: bold
+   line-height: 1
+   sub
+      @include adaptiv-font(25, 18)
+      bottom: 0
+      vertical-align: baseline
+.pro-kompaniju__fl-img
+   padding-left: 8px
+.pro-kompaniju__txtbold
+   padding: 8px 0 0 0
+   @include adaptiv-font(18, 16)
+   font-weight: 500
+   color: #000
+.pro-kompaniju-info
+   border-top: 1px solid #D9D9D9
+   padding-top: 20px
+   margin-top: 30px
+   .block-p
+      padding-bottom: 20px
+      &:last-child
+         padding-bottom: 0
+.block-psmall
+   color: #999999
+   @include adaptiv-font(16, 14)
+   padding-top: 8px
+.pro-kompaniju-grid-txt
+   padding-bottom: 25px
+//end Про компанію
+
+// Історія COMFY
+.pro-istoriy__flex
+   display: flex
+   align-items: flex-start
+   margin-bottom: 56px
+   &:last-child
+      margin-bottom: 0
+.pro-istoriy__year
+   @include adaptiv-font(48, 32)
+   font-weight: 700
+   line-height: 1
+   text-transform: uppercase
+   color: #43B02A
+   padding-right: 16px
+.pro-istoriy__title
+   @include adaptiv-font(20, 16)
+   font-weight: 500
+   line-height: 1.3
+   color: #000000
+   max-width: 690px
+//end Історія COMFY
+// Керівництво COMFY
+.kerivnictvo_list
+   padding-bottom: 32px
+   &:last-child
+      padding-bottom: 0
+.kerivnictvo__name
+   font-weight: 500
+   font-size: 24px
+   line-height: 1.3
+   color: #000000
+.kerivnictvo__jobtitle
+   font-weight: 400
+   font-size: 16px
+   line-height: 1
+   color: #000000
+   padding-top: 5px
+//end Керівництво COMFY
+// Відзнаки та нагороди
+.vidznaki-ta-nagorodi__wrap
+   padding-bottom: 48px
+   &:last-child
+      padding-bottom: 0
+.vidznaki-ta-nagorodi__txt
+   font-weight: 700
+   @include adaptiv-font(48, 32)
+   line-height: 1.3
+   color: #43B02A
+   padding-bottom: 10px
+.vidznaki-ta-nagorodi
+   list-style-type: none
+   padding-left: 12px
+   li
+      position: relative
+      padding-left: 30px
+      margin-bottom: 15px
+      font-weight: 400
+      font-size: 16px
+      color: #000
+      line-height: 1.3
+      &::before
+         content: ""
+         width: 6px
+         height: 6px
+         border-radius: 50%
+         background: #000
+         position: absolute
+         left: 0
+         top: 7px
+//end Відзнаки та нагороди
+// Контакти
+.contact__client
+   margin: 20px 0px
+   padding: 20px
+   border: 1px solid #FF671F
+.contact__client-grid
+   display: inline-grid
+   grid-template-columns: 1fr 1fr
+   grid-gap: 20px
+   padding-top: 18px
+//end Контакти
+//Прес-центр
+.vidznaki-ta-nagorodi__content
+   max-width: 735px
+.clgetAttribute
+   width: 20px
+   height: 20px
+   background: #F2F2F2
+   border-radius: 50%
+   display: inline-flex
+   align-items: center
+   justify-content: center
+   cursor: pointer
+   position: relative
+.tooltiptext
+   visibility: hidden
+   width: 140px
+   background-color: #555
+   color: #fff
+   text-align: center
+   border-radius: 6px
+   padding: 3px 5px
+   position: absolute
+   z-index: 1
+   bottom: -155%
+   left: 50%
+   margin-left: -75px
+   opacity: 0
+   transition: opacity 0.3s
+   font-size: 14px
+   &::after
+      content: ""
+      position: absolute
+      top: -40%
+      left: 50%
+      margin-left: -5px
+      border-width: 5px
+      border-style: solid
+      transform: rotate(180deg)
+      border-color: #555 transparent transparent transparent
+.clgetAttribute:hover .tooltiptext
+   visibility: visible
+   opacity: 1
+.vidznaki__flex
+   display: flex
+   padding: 15px 0
+.vidznaki__item
+   border: 1px solid #E5E5E5
+   border-radius: 8px
+   height: 134px
+   max-width: 265px
+   width: 100%
+   display: flex
+   align-items: center
+   justify-content: center
+   &:last-child
+      background: #43B02A
+      margin-left: 16px
+.linkdownload
+   border: 1px solid #43B02A
+   border-radius: 8px
+   display: block
+   width: 100%
+   max-width: 145px
+   padding: 10px 16px
+   color: #43B02A
+   font-weight: 700
+   font-size: 16px
+   text-align: center
+   text-decoration: none
+   display: flex
+   align-items: center
+   justify-content: center
+   margin: 10px 0 35px 0
+   span
+      padding: 0 0 0 8px
+   &.linktwo
+      max-width: 155px
+      span
+         padding: 0 8px 0 0
+//end Прес-центр
+// popup
+.overplaybgrd
+   background: rgba(0, 0, 0, 0.4)
+   display: none
+   position: fixed
+   z-index: 999
+   left: 0
+   top: 0
+   width: 100%
+   height: 100%
+   overflow: hidden
+   &.active-modal
+      display: block
+.swiper-slide__img
+   display: table
+   margin: 0 auto
+.modalBox
+   display: none
+   background: #FFFFFF
+   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3)
+   border-radius: 8px
+   margin: 15px
+   max-width: 940px
+   margin: 0 auto
+   position: fixed
+   z-index: 9999
+   left: 0
+   top: 10%
+   right: 0
+   overflow-x: hidden
+   // height: 65vh
+   &.active-modal
+      display: block
+.modalBox-top
+   display: flex
+   justify-content: space-between
+   align-items: center
+   padding: 16px 24px
+   margin-bottom: 16px
+.modalBox-top__close
+   display: flex
+   align-items: center
+   justify-content: center
+// end popup
+// swiper
+.swiper
+   width: 100%
+   height: 100%
+   .swiper-slide
+      width: 100%
+      max-width: 432px
+      cursor: pointer
+      border-radius: 8px
+      border: 1px solid #E5E5E5
+      overflow: hidden
+      &:hover
+         .swiper-slide__hover-text
+            opacity: 1
+      &:nth-child(2n)
+         width: 100%
+         max-width: 432px
+      img
+         max-width: 100%
+         display: block
+   &.mySwiper2
+      max-width: 828px
+      margin: 0 auto
+      border-radius: 8px
+      .swiper-slide
+         width: 100%
+         max-width: inherit
+         cursor: pointer
+         border: 0px solid #E5E5E5
+         border-radius: 0px
+         &:hover
+            .swiper-slide__hover-text
+               opacity: 1
+         &:nth-child(2n)
+            width: 100%
+            max-width: inherit
+         img
+            max-width: 100%
+            display: block
+         .swiper-slide__img
+            display: table
+            margin: 0 auto
+            border: 1px solid #E5E5E5
+            border-radius: 8px
+            overflow: hidden
+.modalBox__slider-wrap
+   position: relative
+.swiper-pagination__wrap
+   display: flex
+   align-items: center
+   justify-content: flex-end
+   padding: 18px 32px 0 0
+   .swiper-button-next, .swiper-button-prev, .swiper-pagination
+      position: relative
+      top: 0
+      width: auto
+      height: auto
+   .swiper-pagination-cst
+      display: flex
+      align-items: center
+      width: auto !important
+      padding: 0 12px
+   .swiper-pagination-bullet
+      width: 6px
+      height: 6px
+      background: #CCCCCC
+      margin: 0 5px 0 0 !important
+      opacity: 1
+      &:last-child
+         margin: 0 0 0 0 !important
+   .swiper-pagination-bullet-active
+      width: 8px
+      height: 8px
+      background: #43B02A
+.swiper-pagination-cst2
+   display: flex
+   align-items: center
+   justify-content: center
+   width: auto !important
+   padding: 0 10px 16px 10px
+   .swiper-pagination-bullet
+      width: 8px
+      height: 8px
+      background: #CCCCCC
+      margin: 0 5px 0 0 !important
+      opacity: 1
+      &:last-child
+         margin: 0 0 0 0 !important
+   .swiper-pagination-bullet-active
+      width: 10px
+      height: 10px
+      background: #43B02A
+.swiper-button-prev-cst, .swiper-button-next-cst
+   background: #43B02A
+   width: 18px
+   height: 18px
+   display: flex
+   align-items: center
+   justify-content: center
+   border-radius: 50%
+   cursor: pointer
+   &.swiper-button-disabled
+      background: #CCCCCC
+.swiper-button-prev-cst2, .swiper-button-next-cst2
+   position: absolute
+   top: 50%
+   transform: translateY(-50%)
+   z-index: 99999
+   cursor: pointer
+.pagination_progress
+   bottom: inherit !important
+   right: inherit !important
+   width: auto !important
+   background: #E5E5E5
+   border-radius: 4px
+   padding: 4px 6px
+   font-size: 14px
+   line-height: 1
+   letter-spacing: -1.5px
+   font-weight: 500
+.swiper-button-prev-cst2
+   left: 2%
+.swiper-button-next-cst2
+   right: 2%
+.swiper-slide__hover-text
+   position: absolute
+   bottom: 0
+   left: 0
+   width: 100%
+   height: 100px
+   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%)
+   color: #fff
+   font-weight: 500
+   font-size: 16px
+   padding: 0 0 16px 18px
+   display: flex
+   align-items: flex-end
+   opacity: 0
+   transition: .3s
+.modalBox__slider-text
+   padding: 16px 0
+.swiper-slide__hover-text2
+   color: #000
+   font-size: 18px
+   text-align: center
+   display: none
+   &.active-text
+      display: block
+.modalBox__slider-textmob
+   padding: 16px 0
+   display: none
+.swiper-slide__hover-textmob
+   color: #000
+   font-size: 16px
+   text-align: left
+   display: none
+   &.active-textmob
+      display: block
+// end swiper
+.vidznaki-ta-nagorodi__move-flex
+   display: flex
+   flex-direction: row
+.vidznaki-ta-nagorodi__text
+   padding: 0 15px 0 24px
+.vidznaki-ta-nagorodi__txt1
+   font-weight: 700
+   font-size: 18px
+   line-height: 24px
+   color: #000000
+   padding-bottom: 8px
+.vidznaki-ta-nagorodi__link
+   display: flex
+   flex-direction: column
+   a
+      display: flex
+      align-items: center
+      border: 1px solid #E5E5E5
+      border-radius: 8px
+      padding: 12px
+      text-decoration: none
+      margin-bottom: 8px
+      transition: .3s
+      position: relative
+      &:hover
+         background: #F2F2F2
+      &::before
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img2/prescenter/img_goto_blk.svg)
+         position: absolute
+         right: 12px
+         top: 50%
+         transform: translateY(-50%)
+         width: 20px
+         height: 20px
+      div
+         padding: 0 50px 0 8px
+         span
+            display: block
+            &:first-child
+               font-weight: 500
+               font-size: 16px
+               line-height: 20px
+               color: #000000
+            &:last-child
+               font-weight: 700
+               font-size: 10px
+               line-height: 14px
+               color: #616161
+//media*******************
+// @media (min-width: 1920px)
+@media (max-width: 1100px)
+   .vidznaki-ta-nagorodi__link a::before
+      display: none
+@media (max-width: 1200px)
+   .block-img-pos
+      max-width: 175px
+@media (max-width: 1024px)
+   .pro-kompaniju__grid
+      grid-template-columns: 1fr 1fr 1fr
+   .vidznaki-ta-nagorodi__text
+      padding: 24px 0 0 0
+   .vidznaki-ta-nagorodi__move-flex
+      flex-direction: column
+   .vidznaki-ta-nagorodi__link a::before
+      display: block
+   .swiper.mySwiper2
+      max-width: 85%
+   .modalBox
+      max-width: 95%
+   .vidznaki-ta-nagorodi__move
+      padding: 0 15px 0 0
+   .vidznaki-ta-nagorodi__content
+      padding: 0 15px 0 0
+@media (max-width: 812px)
+   .pro-kompaniju__grid
+      grid-template-columns: 1fr 1fr
+   .block-img-pos
+      display: none
+@media (max-width: 480px)
+   #container-page
+      padding: 25px 12px 50px 12px
+   .vidznaki-ta-nagorodi li
+      padding-left: 20px
+   .vidznaki-ta-nagorodi__wrap
+      padding-bottom: 24px
+   .swiper .swiper-slide
+      border: 0px
+   .swiper-pagination__wrap
+      padding: 18px 0 0 0
+   .vidznaki-ta-nagorodi
+      padding-left: 8px
+   .wrap-flex__item.--tabs-right
+      min-width: 100%
+      width: 100%
+   .wrap-flex__tabs-wrap
+      background: #fff
+      position: fixed
+      width: 100%
+      height: 100vh
+      left: 0
+      top: 0
+      z-index: 9999
+      overflow: scroll
+      display: none
+      &.activepopup
+         display: block
+   .wrap-flex__content
+      padding: 24px 12px
+   .wrap-flex__content-two
+      padding: 24px 0 24px 12px
+   .block-img-pos
+      display: none
+   .block-h2
+      padding-bottom: 24px
+   .padding-bottom1
+      padding-bottom: 16px
+   #container-page h2
+      font-size: 18px
+   .block-psmall
+      padding-top: 5px
+   .pro-kompaniju__grid
+      grid-gap: 32px 15px
+   .pro-kompaniju__fl-txt1
+      font-size: 36px
+   .pro-kompaniju__fl-img
+      padding-left: 5px
+   .pro-kompaniju__fl-txt1 sub
+      font-size: 15px
+   .wrap-flex
+      flex-direction: column-reverse
+      border-radius: 8px
+      overflow: hidden
+   .pro-kompaniju__txtbold
+      font-size: 15px
+   .btnpopup
+      display: block
+      background: #43B02A
+      text-align: center
+      color: #fff
+      padding: 13px 0
+      border-radius: 8px
+      margin-bottom: 24px
+      font-size: 16px
+   .modalBox__slider-textmob
+      display: block
+   .swiper .swiper-slide:hover .swiper-slide__hover-text
+      opacity: 0
+      display: none
+   .btnpopup-close
+      display: block
+      width: 45px
+      height: 45px
+      border: 1px solid #E5E5E5
+      border-radius: 50%
+      margin: 20px auto 20px auto
+      position: relative
+      cursor: pointer
+      img
+         position: absolute
+         left: 50%
+         top: 50%
+         transform: translate(-50%, -50%)
+   .pro-istoriy__flex
+      flex-direction: column
+      margin-bottom: 24px
+   .pro-istoriy__title
+      max-width: 100%
+      padding-top: 5px
+   .kerivnictvo__name
+      font-size: 20px
+   .kerivnictvo__jobtitle
+      font-size: 14px
+   .vidznaki__item
+      height: 85px
+      padding: 0 15px
+   .vidznaki__slider
+      padding: 0 12px 15px 0
+   .swiper .swiper-slide
+      max-width: 100%
+// @media (max-width: 320px)
+@media (max-width: 812px) and (orientation: landscape)
+   .modalBox
+      top: 0
+      max-width: 100%
+      height: 100vh
+      border-radius: 0
+   .vidznaki-ta-nagorodi__content
+      padding: 0 15px 0 0
+   .vidznaki-ta-nagorodi__move
+      padding: 0 15px 0 0
+   .vidznaki-ta-nagorodi__text
+      padding: 24px 0 0 0
+   .modalBox__slider-textmob
+      display: block
+   .swiper .swiper-slide:hover .swiper-slide__hover-text
+      opacity: 0
+      display: none

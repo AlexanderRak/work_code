@@ -1,0 +1,231 @@
+<style>
+
+</style>
+
+<div id="samsung-one-day">
+   <div class="samsung-one-day__wrap">
+      <div class="samsung-one-day__img-desk">
+         <img src="https://cdn.comfy.ua/media/x/img2/smsnglp2_img1.png">
+      </div>
+      <div class="samsung-one-day__img-mob">
+         <img src="https://cdn.comfy.ua/media/x/img2/smsnglp2_img1_mob2.svg">
+      </div>
+      <div class="samsung-one-day__content">
+
+         <div class="samsung-one-day__content-form">
+            <div class="form-corizoid" id="wrapper-form-corizoid">
+               <div id="form-submit-none">
+                  <div class="samsung-one-day__content-text">
+                     <h2>Залиште свої дані</h2>
+                     <h3>Ми нарахуємо вам 200 бонусів та надішлемо промо-код на кредит</h3>
+                  </div>
+                  <form name="valid_form" method="post" id="valid_form" novalidate="novalidate">
+                     <div class="container-flex-form">
+                        <div class="row-flex-form">
+                           <div class="item_fr item_phone">
+                              <span class="item_fr_text-pos">Номер телефону*</span>
+                              <lt-highlighter contenteditable="false" data-lt-linked="1" style="display: none;">
+                                 <lt-div spellcheck="false" class="lt-highlighter__wrapper" style="width: 344px !important; height: 40px !important; transform: none !important; transform-origin: 173px 21px !important; zoom: 1 !important; margin-top: 1.01813px !important; margin-left: 1px !important;">
+                                    <lt-div class="lt-highlighter__scroll-element" style="top: 0px !important; left: 0px !important; width: 344px !important; height: 40px !important;"></lt-div>
+                                 </lt-div>
+                              </lt-highlighter>
+                              <input placeholder="+38(___)___-__-__" class="item-input-frm" name="younember" id="number_rw" type="tel" data-lt-tmp-id="lt-270020" spellcheck="false" data-gramm="false"> <!--minlength="10" maxlength="12"-->
+                           </div>
+                           <div class="item_fr item_email">
+                              <span class="item_fr_text-pos">Email</span>
+                              <input class="item-input-frm" name="yourmail" id="email_rw" type="email">
+                           </div>
+                           <div class="item_fr item_submit">
+                              <!-- <input type="submit" class="submit-posgo item-input-frm item-input-frm__submit" value="Оформити" name="Submit" /> -->
+                              <button class="submit-posgo item-input-frm item-input-frm__submit" type="submit">
+                                 <span>Надіслати</span>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <div class="text-submit-block-cl" id="text-submit-block">
+
+                  <!-- <img src="https://cdn.comfy.ua/media/x/img2/samsung_done.png">
+                  <p>Дякуємо! Ми отримали ваші дані. Чекайте повідомлення на вказаний номер телефону</p> -->
+
+                  <!-- Унікальний -->
+                  <div class="answer-marker answer-marker__one">
+
+                     <div class="answer-marker__result"></div>
+                  </div>
+
+                  <!-- Не унікальний -->
+                  <div class="answer-marker answer-marker__two">
+
+                     <div class="answer-marker__result"></div>
+                  </div>
+
+                  <!-- Ошибка сервера -->
+                  <div class="answer-marker answer-marker__three">
+
+                     <div class="answer-marker__result"></div>
+                  </div>
+
+                  <div class="" id="gettext-submit-block"></div>
+
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="samsung-one-day__grid">
+         <div class="samsung-one-day__grid-item">
+            <div class="samsung-one-day__grid-item-p">
+               <p>Як отримати кредит:</p>
+            </div>
+            <ul class="samsung-one-day__ul">
+               <li>- покажіть унікальний код з повідомлення продавцю або введіть його в спеціальне поле при оформленні замовлення на comfy.ua або в додатку СOMFY;</li>
+               <li>- оформлюйте будь-який товар ціною від 500 грн в кредит на 10 платежів в своєму банку або оплачуйте його частинами.</li>
+            </ul>
+         </div>
+         <div class="samsung-one-day__grid-item">
+            <div class="samsung-one-day__grid-item-p">
+               <p>Як отримати і використати бонуси:</p>
+            </div>
+            <ul class="samsung-one-day__ul">
+               <li>- 200 бонусів будуть нараховані новим клієнтам автоматично;</li>
+               <li>- витрачайте бонуси на будь-який товар вартістю від 500 грн;</li>
+               <li>- 1 бонус = 1 гривня;</li>
+               <li>- бонуси можна використати при оплаті готівкою, карткою або сплатити ними перший внесок в Кредит.</li>
+            </ul>
+         </div>
+      </div>
+      <div class="samsung-one-day__footer-img">
+         <a style="padding-top: 0;" href="https://comfy.ua/ua/krash/">
+            <img src="https://cdn.comfy.ua/media/x/img2/smsnglp2_img2.png">
+         </a>
+         <a href="https://cdn.comfy.ua/media/x/pdf/pdf/posilannya.pdf" target="_blank">Деталі по Кредитам</a>
+         <a href="https://cdn.comfy.ua/media/x/pdf/pdf/pravilaaction.pdf" target="_blank" style="padding-top: 5px;">Правила Акції</a>
+      </div>
+   </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+
+<script>
+
+   $(document).ready(function () {
+
+      $("fieldset input").click(function () {
+         $("fieldset label.error").remove()
+      });
+
+      $("#valid_form").validate({
+         rules: {
+            yourmail: {
+               email: true
+            },
+            younember: {
+               required: true
+            }
+         },
+         messages: {
+            younember: {
+               required: "Обов'язкове поле"
+            },
+            yourmail: {
+               email: "Обов'язковий символ @"
+            }
+         },
+         errorPlacement: function (error, element) {
+            if (element.attr("name") == "younember") error.insertAfter($("input[name=younember]"));
+            if (element.attr("name") == "yourmail") error.insertAfter($("input[name=yourmail]"));
+         },
+         submitHandler: function (form) {
+            function sendAjaxForm(result_form, ajax_form) {
+               var people = {
+                  number: '',
+                  email: '',
+                  name_action: 'Тільки для вас! унікальна комбо-пропозиція'
+               };
+
+               let people_email = $('#email_rw').val();
+               if (people_email.trim() == "") {
+                  people.email = "Клієнт не ввів поле Email";
+               } else {
+                  people.email = $('#email_rw').val();
+               }
+               people.number = $('#number_rw').val();
+
+
+               const url = 'https://tag-api.comfy.ua/api/comfywork/landings';
+               const authorization = 'Basic dGVzdDoxMjNxd2U='; // ваш Authorization ключ
+               const error = "error";
+               const postData = {
+                  people
+               };
+               console.log(people);
+
+               $.ajax({
+                  url: url,
+                  type: 'POST',
+                  headers: {
+                     'Authorization': authorization,
+                     'Content-Type': 'application/json'
+                  },
+                  data: JSON.stringify(postData),
+                  success: function (data) {
+                     console.log(data);
+
+                     let parsedData = data.answer;
+                     let parsedDataMarker = data.marker;
+                     let none_form = document.getElementById("form-submit-none").style.display = "none";
+                     let block_text = document.getElementById("text-submit-block").style.display = "block";
+
+                     let answerOne = document.querySelector(".answer-marker__one");
+                     let answerTwo = document.querySelector(".answer-marker__two");
+                     let answerThree = document.querySelector(".answer-marker__three");
+                     let answerRes = document.querySelectorAll(".answer-marker__result");
+
+                     function getDate() {
+                        return dataLayer.push({
+                           "event": "OWOX",
+                           "eventCategory": "Conversions",
+                           "eventAction": "click",
+                           "eventLabel": "Greeting_bonuses",
+                           "eventContent": people.number,
+                           "eventContext": people.email
+                        });
+                     }
+                     
+                     function addAnswerBlock() {
+                        answerRes.forEach(function (elem) {
+                           elem.innerHTML = parsedData;
+                        });
+                     }
+
+                     if (parsedDataMarker == 1) {
+                        answerOne.style.display = "block";
+                        addAnswerBlock();
+                        getDate();
+                     } else if (parsedDataMarker == 2) {
+                        answerTwo.style.display = "block";
+                        addAnswerBlock();
+                     } else {
+                        answerThree.style.display = "block";
+                        addAnswerBlock();
+                     }
+
+                  },
+                  error: function (error) {
+                     console.error(error);
+                  }
+               });
+            }
+            sendAjaxForm();
+         }
+      });
+   })
+
+   $(function () {
+      $("#number_rw").mask("+38(999)999-99-99");
+   });
+
+</script>
