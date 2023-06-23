@@ -1,0 +1,229 @@
+//default styles
+
+// body
+//    margin: 0
+
+.kenwood
+   width: 100%
+   max-width: 1520px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   color: #010101
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   ul
+      list-style-type: none
+      padding: 0
+      margin: 0
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.kenwood .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+.kenwood__txt
+   font-size: clamp(16px, 4vw, 20px)
+.kenwood__title
+   font-size: clamp(24px, 4vw, 32px)
+   text-transform: uppercase
+.kenwood__small
+   font-size: clamp(12px, 4vw, 16px)
+   color: #9f5e9a
+
+.kenwood__row
+   display: flex
+   align-items: center
+   padding: 0 200px 0 100px
+   .kenwood__row__img
+      margin-right: 130px
+
+.kenwood__row__cont
+   max-width: 450px
+   .kenwood__title
+      margin: 10px 0 50px
+
+.kenwood__reverse
+   flex-direction: row-reverse
+   padding: 0 100px 0 200px
+   margin: 150px 0
+   .kenwood__row__img
+      margin-left: 130px
+      margin-right: 0
+
+.kenwood__icon
+   img
+      margin: 40px 0 0 0
+
+//section other
+
+.other
+   position: relative
+   &::after
+      content: ""
+      position: absolute
+      right: 0
+      top: 0
+      bottom: 0
+      left: 60%
+      background: url("https://cdn.comfy.ua/media/x/img/2427116/bg1.png") no-repeat right / cover
+      z-index: -1
+
+.other__cont
+   .kenwood__small
+      text-transform: uppercase
+      color: inherit
+
+.other__flex
+   display: flex
+   align-items: center
+   padding: 60px 0 60px 100px
+
+.other__title
+   font-size: clamp(32px, 4vw, 54px)
+   b
+      font-weight: normal
+      text-transform: uppercase
+      color: #9f5e9a
+
+//section recipe
+
+.recipe
+   margin-top: 150px
+
+//section multi
+
+.multi .kenwood__reverse
+   margin-bottom: 0
+
+//section pack
+
+.pack
+   padding: 50px 0 100px 100px
+   background-image: linear-gradient(90deg, #F4A71E 45%, #f4a61e58 100%)
+
+.pack__head
+   padding-left: 100px
+   .kenwood__small
+      color: inherit
+      margin-bottom: 10px
+
+.pack__flex
+   display: flex
+   align-items: center
+   justify-content: space-between
+
+.pack__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 1fr
+   grid-template-rows: 1fr 1fr
+   gap: 50px 20px
+   grid-template-areas: "...." "...."
+   .kenwood__txt
+      text-align: center
+      margin-top: 20px
+
+//media*****************************************************
+
+@media (max-width: 1201px)
+   .kenwood .container
+      width: 960px
+      padding: 0 15px
+
+   .other__flex
+      padding-left: 0
+
+   .kenwood__row
+      padding-left: 0
+      padding-right: 0
+
+   .kenwood__row .kenwood__row__img
+      margin-right: 2em
+
+   .recipe
+      margin-top: 3em
+
+   .kenwood__reverse
+      margin: 3em 0
+
+   .kenwood__reverse .kenwood__row__img
+      margin-left: 2em
+      margin-right: 0
+
+   .multi .kenwood__reverse
+      margin-bottom: 0
+
+   .pack
+      padding: 2em 0
+
+   .pack__img
+      margin-right: -32px
+
+@media (max-width: 991px)
+   .kenwood .container
+      width: 720px
+
+@media (max-width: 767px)
+   .kenwood .container
+      width: 540px
+
+@media (max-width: 576px)
+   .kenwood .container
+      width: 100%
+      box-sizing: border-box
+
+   .other__flex
+      display: block
+      padding: 2em 0
+
+   .other__img
+      margin-top: 2em
+
+   .other::after
+      left: 4%
+      top: 30%
+      bottom: 0%
+
+   .kenwood__row
+      display: block !important
+
+   .kenwood__row__img
+      margin: 0 0 1em 0 !important
+
+   .kenwood__row__cont .kenwood__title
+      margin-bottom: 1em
+
+   .kenwood__icon img
+      margin-top: 1em
+
+   .multi
+      margin-bottom: 3em
+
+   .pack__head
+      padding-left: 0
+
+   .pack__flex
+      display: block
+      margin-top: 2em
+
+   .pack__grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-template-rows: 1fr 1fr 1fr
+      gap: 20px 10px
+      grid-template-areas: "..." "..." "..."
