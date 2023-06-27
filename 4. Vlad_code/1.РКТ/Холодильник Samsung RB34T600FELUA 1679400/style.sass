@@ -1,0 +1,110 @@
+//default styles
+
+// body
+//    margin: 0
+
+.samsung
+   width: 100%
+   max-width: 1440px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   ul
+      list-style-type: none
+      padding: 0
+      margin: 0
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.samsung .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+.samsung__title
+   font-weight: bold
+   font-size: clamp(26px, 4vw, 48px)
+   margin-bottom: 32px
+.samsung__subtitle
+   font-size: clamp(18px, 4vw, 28px)
+   margin: 0 0 32px
+   padding-top: 16px
+.samsung__txt
+   font-size: clamp(15px, 4vw, 18px)
+.samsung__cont
+   padding: 80px 88px
+
+.samsung__row
+   display: flex
+   align-items: center
+   >div
+      flex: 1 1 0
+      max-width: 50%
+      box-sizing: border-box
+.samsung__row__cont
+   padding: 80px 88px 80px 48px
+.samsung__reverse
+   flex-direction: row-reverse
+   .samsung__row__cont
+      padding: 80px 48px 80px 88px
+
+//section spacemax, cooling
+
+.spacemax,
+.cooling
+   text-align: center
+
+//media*****************************************************
+
+@media (max-width: 1201px)
+   .samsung .container
+      width: 960px
+      padding: 0 15px
+
+   .samsung__cont,
+   .samsung__row__cont
+      padding: 2em !important
+
+@media (max-width: 991px)
+   .samsung .container
+      width: 720px
+
+   .samsung__cont, 
+   .samsung__row__cont
+      padding: 2em 0 !important
+   
+   .samsung__title
+      margin-bottom: 1em
+   .samsung__subtitle
+      margin-bottom: 1em
+      padding-top: 0
+
+   .samsung__row
+      flex-direction: column-reverse !important
+      >div
+         max-width: 100% !important
+
+@media (max-width: 767px)
+   .samsung .container
+      width: 540px
+
+@media (max-width: 576px)
+   .samsung .container
+      width: 100%
+      box-sizing: border-box
