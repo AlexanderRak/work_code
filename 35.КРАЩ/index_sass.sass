@@ -118,6 +118,7 @@ $maxWidth: 1920
    padding: 28px 48px
    display: flex
    align-items: center
+   justify-content: space-between
 .krasch-live__result-item
    &:first-child
       max-width: 560px
@@ -136,7 +137,7 @@ $maxWidth: 1920
    line-height: 1.1
    color: #FFFFFF
    text-align: left
-   padding-top: 88px
+   padding-top: 5px
 .krasch-live__result-img
    &.--onlydesk-img
       display: block
@@ -229,6 +230,69 @@ $maxWidth: 1920
       max-width: 100%
 .krasch-img__mobile
    display: none
+.krasch-live__collected-money__btn-wrap
+   overflow: auto
+.krasch-live__collected-money
+   border-radius: 16px
+   background: #662D91
+   padding: 16px
+   overflow: hidden
+   margin-top: 24px
+   max-width: 558px
+.krasch-live__collected-money__content
+   padding-bottom: 32px
+.krasch-live__collected-money__content-item
+   &.hide-content
+      display: none
+      animation: fadeIn ease 1s
+   &.active-content
+      display: block
+      animation: fadeIn ease 1s
+.krasch-live__collected-money__content-text-top
+   @include adaptiv-font(42, 26)
+   font-weight: 700
+   line-height: 1.1
+   color: #FFFFFF
+   text-align: left
+   span
+      font-size: 26px
+      padding-left: 10px
+.krasch-live__collected-money__content-text-bottom
+   @include adaptiv-font(24, 16)
+   font-weight: 700
+   text-align: left
+   color: #FFFFFF
+.krasch-live__collected-money__btn
+   display: flex
+   align-items: center
+   width: 465px
+   flex-wrap: nowrap
+.krasch-live__collected-money__btn-item
+   @include adaptiv-font(24, 18)
+   border-radius: 52px
+   border: 3px solid #FFF
+   padding: 16px
+   text-align: center
+   margin-right: 12px
+   cursor: pointer
+   transition: .3s
+   white-space: nowrap
+   &:last-child
+      margin-right: 0px
+   &.active-btn
+      background: #fff
+      color: #662D91
+      pointer-events: none
+   &.notactive-btn
+      color: #fff
+   &:hover
+      background: #fff
+      color: #662D91
+@keyframes fadeIn
+   0%
+      opacity: 0
+   100%
+      opacity: 1
 //media*******************
 // @media (min-width: 1920px)
 // @media (max-width: 1200px)
@@ -250,6 +314,8 @@ $maxWidth: 1920
       max-width: 420px
    .krasch-live__result-wrap
       padding: 25px 20px
+   .krasch-live__collected-money__btn-item
+      padding: 5px 10px
 @media (max-width: 812px)
    .krasch-live__result-item:first-child
       max-width: 330px
@@ -272,7 +338,7 @@ $maxWidth: 1920
    .krasch-live__result-item:first-child
       max-width: 100%
       display: flex
-      flex-direction: column-reverse
+      flex-direction: column
    .krasch-live__result-txt2
       padding-top: 0
       padding-bottom: 20px
@@ -324,5 +390,18 @@ $maxWidth: 1920
       display: block
       img
          margin: 0 auto !important
+   .krasch-live__collected-money__btn
+      width: 1px
+   .krasch-live__collected-money__btn-item
+      padding: 8px 16px
+      margin-bottom: 12px
+   .krasch-live__collected-money__content
+      padding-bottom: 16px
+   .krasch-live__collected-money
+      padding: 8px
+   .krasch-live__collected-money
+      margin-top: 0
+   .krasch-live__collected-money__content-text-top span
+      font-size: 16px
 // @media (max-width: 320px)
 // @media (max-width: 812px) and (orientation: landscape)
