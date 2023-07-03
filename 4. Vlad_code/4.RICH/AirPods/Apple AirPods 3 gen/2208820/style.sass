@@ -1,0 +1,478 @@
+//default styles
+// body
+//    margin: 0
+
+.apple
+   width: 100%
+   max-width: 1920px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   background-color: #fff
+   color: #000
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+   video
+      display: block
+      margin: 0 auto
+      max-width: 100%
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.apple .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+.apple__title
+   font-size: 50px
+   font-weight: bold
+.apple__txt
+   font-size: 24px
+   font-weight: bold
+   margin-top: 25px
+.apple__row
+   display: flex
+   >div
+      border-radius: 50px
+      overflow: hidden
+      box-sizing: border-box
+      &:nth-of-type(1)
+        // max-width: 830px
+         max-width: 47%
+         width: 100%
+      &:nth-of-type(2)
+         max-width: 53%
+         background: #EBEBEC
+         align-self: stretch
+         margin-left: 45px
+         padding: 55px 40px
+
+//section audio
+
+.audio
+   padding-top: 40px
+   position: relative
+.audio__title
+   text-align: center
+   position: relative
+   max-width: 1200px
+   margin: 0 auto -5%
+.audio__txt
+   max-width: 520px
+   position: absolute
+   right: 5%
+   bottom: 10%
+
+//section playback
+
+.playback
+   position: relative
+   padding: 0 50px
+.playback__video
+   border-radius: 50px
+   overflow: hidden
+.playback__txt
+   position: absolute
+   color: #fff
+   position: absolute
+   right: 90px
+   bottom: 5%
+   max-width: 760px
+
+//section adapt
+
+.adapt
+   padding: 40px 50px
+.adapt__video
+   background-color: #000
+   display: flex
+
+//section wind
+
+.wind
+   position: relative
+   // padding-bottom: 887px
+.wind__txt
+   position: absolute
+   color: #fff
+   max-width: 745px
+   right: 55px
+   bottom: 70px
+
+// video__scroll
+
+.video-apple
+   height: 100vh
+   position: relative
+   z-index: 2
+
+.charge
+   padding: 135px 200px 0px 200px
+.charge__flex
+   display: flex
+   align-items: center
+   justify-content: center
+.charge__video
+   margin: 0 -40% 0 -40%
+   position: relative
+   z-index: 2
+   video
+      max-width: 40%
+
+// .charge__pulse
+//    margin: 0 30px
+//    padding-top: 60px
+//    position: relative
+//    &::before,
+//    &::after
+//       content: ""
+//       display: block
+//       position: absolute
+//       border: 1px solid #1FE453
+//       border-radius: 50%
+//       top: 0px
+//       bottom: 0px
+//       left: 5px
+//       right: 0px
+//       width: 405px
+//       height: 405px
+//       box-sizing: border-box
+//       animation: pulse 1.8s linear infinite
+//    &::after
+//       animation-delay: .5s
+
+// @keyframes pulse
+//    0%
+//       transform: scale(1)
+//       opacity: 0
+//    50%
+//       opacity: 1
+//    100%
+//       transform: scale(2)
+//       opacity: 0
+
+// .charge__img
+//    position: relative
+//    &::after
+//       content: ""
+//       display: block
+//       position: absolute
+//       border: 1px solid #1FE453
+//       border-radius: 50%
+//       top: -60px
+//       bottom: 0px
+//       left: 5px
+//       right: 0px
+//       width: 405px
+//       height: 405px
+//       box-sizing: border-box
+//       animation: pulse 1.8s linear infinite
+//       animation-delay: 1s
+//    &::before
+//       content: ""
+//       display: block
+//       position: absolute
+//       width: 405px
+//       height: 405px
+//       border-radius: 50%
+//       background-color: #1FE453
+//       z-index: -1
+//       right: 50%
+//       bottom: 0
+//       transform: translateX(50%)
+.charge__item
+   position: relative
+   z-index: 3
+
+.charge__title
+   font-size: 95px
+   font-weight: bold
+   b
+      color: #1fe453
+.charge__txt
+   color: #929292
+   font-size: 30px
+   font-weight: bold
+
+//section controll
+
+.controll
+   padding: 100px 50px 105px 50px
+   .controll__txt
+      display: flex
+      align-items: center
+      .apple__txt
+         margin-top: 0
+
+//section longtime
+
+.longtime
+   padding: 0 30px 30px 30px
+.longtime__wrap
+   background: #EBEBEC
+   border-radius: 50px
+   padding: 90px 115px 90px 200px
+.longtime__row
+   display: flex
+   align-items: center
+.longtime__video
+   overflow: hidden
+   min-width: 260px
+   video
+      margin-top: -2px
+      margin-bottom: -2px
+.longtime__txt
+   // margin-left: 46px
+   margin-left: 66px
+   max-width: 990px
+   .apple__title
+      font-size: 96px
+   .apple__txt
+      color: #929292
+
+//section connect
+
+.connect
+   padding: 42px 46px 86px 46px
+.connect__row
+   display: flex
+.connect__item
+   flex: 1 1 0
+   max-width: 50%
+   padding: 100px
+   padding-bottom: 200px
+   box-sizing: border-box
+   &:nth-of-type(1)
+      background-color: #EBEBEC
+      border-radius: 50px
+.connect__img
+   margin-bottom: 26px
+   img
+      max-height: 700px
+.connect__cont
+   max-width: 600px
+.connect__txt
+   font-size: 24px
+   font-weight: bold
+   margin-top: 25px
+.connect__video
+   max-width: 400px !important
+   width: 100%
+
+//media*****************************************************
+
+@media (max-width: 1800px)
+   .charge
+      padding-right: 70px
+      padding-left: 70px
+@media (max-width: 1440px)
+   .apple__title
+      font-size: calc(30px + (50 - 30) * ((100vw - 320px) / (1440 - 320)))
+   .apple__txt
+      font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)))
+   .charge__title
+      font-size: calc(50px + (70 - 50) * ((100vw - 320px) / (1440 - 320)))
+   .charge__txt
+      font-size: calc(16px + (30 - 16) * ((100vw - 320px) / (1440 - 320)))
+   .apple__transparent__txt
+      font-size: calc(58px + (80 - 58) * ((100vw - 320px) / (1440 - 320)))
+   .connect__txt
+      font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)))
+   .audio .apple__txt
+      right: 3%
+   .longtime__txt .apple__title
+      font-size: calc(30px + (70 - 30) * ((100vw - 320px) / (1440 - 320)))
+   .audio__video video
+      max-width: 900px
+   .audio__txt
+      max-width: 450px
+      right: 0 !important
+      padding-right: 1em
+      bottom: 4%
+   .video__scroll
+      overflow: hidden
+   .video__scroll .container
+      margin-top: -15vh
+   .video-apple
+      height: 115vh
+
+@media (max-width: 1341px)
+   .charge__txt
+      font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 - 320)))
+   .charge__title
+      font-size: calc(45px + (60 - 45) * ((100vw - 320px) / (1440 - 320)))
+   .charge__video
+      max-width: 40vw
+      margin: 0
+      video
+         max-width: 100%
+
+@media (max-width: 1201px)
+   .apple .container
+      width: 960px
+      padding: 0 15px
+   .audio .apple__txt
+      right: 0%
+      bottom: 3%
+   .charge__flex
+      flex-direction: column
+   .charge__video
+      order: 0
+   .charge__item
+      order: 0
+      &:first-of-type
+         margin-bottom: 32px
+      &:last-of-type
+         order: 2
+         margin-top: 2em
+   .charge,
+   .playback,
+   .longtime
+      padding: 0
+   .adapt,
+   .connect
+      padding-right: 0
+      padding-left: 0
+   .controll
+      padding: 2em 0
+   .longtime__wrap,
+   .connect__item
+      padding: 2em
+   .longtime
+      padding-bottom: 2em
+   .connect
+      padding: 2em 0
+   .controll__img
+      img
+         height: 100%
+   .longtime__video video
+      margin-top: -4px
+      margin-bottom: -4px
+
+@media (max-width: 991px)
+   .apple .container
+      width: 720px
+
+@media (max-width: 767px)
+   .apple .container
+      width: 540px
+
+@media (max-width: 576px)
+   .apple .container
+      width: 100%
+      box-sizing: border-box
+
+   .audio__title
+      font-size: calc(24px + (50 - 30) * ((100vw - 320px) / (1440 - 320)))
+
+   .apple__txt
+      margin-top: 10px
+   .audio__video video
+      max-width: 200%
+      margin-left: -50%
+   .audio .apple__txt
+      position: unset
+      margin-top: 50px
+
+   .playback
+      margin-top: 2em
+   .playback__video
+      border-radius: unset
+      margin-right: -15px
+      margin-left: -15px
+      video
+         max-width: 200%
+         margin-left: -50%
+   .playback__txt
+      position: unset
+      color: #000
+      margin-top: 70px
+
+   .apple__row
+      display: block
+   .adapt__video
+      border-radius: unset !important
+      margin: 0 -15px
+      video
+         max-width: 150%
+         margin-left: -25%
+   .apple__row>div:nth-of-type(2)
+      padding: 50px 25px
+      border-radius: 20px
+      margin-left: 0
+      margin-right: 0
+      max-width: 100%
+      margin-top: 2em
+
+   .wind__bg
+      img
+         max-width: 200%
+         margin-left: -50%
+   .wind__txt
+      padding: 0 15px
+      bottom: 1em
+      right: unset
+      left: 0
+      max-width: 100%
+
+   .video-apple
+      min-width: 150%
+      margin-left: -25% !important
+      height: 100vh
+   .charge__video
+      max-width: 100vw
+   .charge
+      margin-top: -11vh
+
+   .controll__img
+      border-radius: unset !important
+      margin: 0 -15px
+      img
+         max-width: 130%
+         margin-left: -15%
+         height: unset
+   .controll__txt
+      border-radius: 20px
+      padding: 50px 20px 30px 20px
+      margin-top: -5% !important
+      position: relative
+
+   .longtime__wrap
+      border-radius: unset
+      padding: 2em 0
+      margin: 0 -15px
+   .longtime__row
+      display: block
+   .longtime__video
+      min-width: unset
+      video
+         margin-top: -4px
+         margin-bottom: -4px
+   .longtime__txt
+      margin: 2em 0 0 0
+      padding: 0 15px
+
+   .connect__row
+      display: block
+   .connect__item
+      max-width: 100%
+   .connect__item:nth-of-type(1)
+      border-radius: 20px
+
+   .video__scroll .container
+      margin-top: -14vh
