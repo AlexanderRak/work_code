@@ -1,0 +1,114 @@
+//default styles
+
+// body
+//    margin: 0
+
+.aeno
+   width: 100%
+   max-width: 1366px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   padding: 60px
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.aeno .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+.aeno__title
+   font-weight: bold
+   font-size: clamp(28px, 3vw, 40px)
+   margin-bottom: 30px
+
+.aeno__txt
+   font-size: clamp(16px, 3vw, 20px)
+
+.aeno__row
+   display: flex
+   align-items: center
+   justify-content: space-between
+   >div
+      width: 50%
+      box-sizing: border-box
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+      .aeno__cont
+         margin: 0 auto 0 0
+         padding: 0 45px 0 90px
+         max-width: 600px !important
+      .aeno__img
+         padding-left: 0
+         padding-right: 45px
+
+.aeno__img
+   padding-left: 45px
+.aeno__cont
+   padding: 0 90px 0 45px
+   max-width: 600px !important
+
+//media*****************************************************
+
+@media (max-width: 1201px)
+   .aeno .container
+      width: 960px
+      padding: 0 15px
+
+   .aeno
+      padding: 0
+
+   .aeno__cont
+      padding: 0 40px 0 20px
+   .aeno__img
+      padding-left: 20px
+   .aeno__row:nth-of-type(even) .aeno__img
+      padding-left: 0
+      padding-right: 20px
+   .aeno__row:nth-of-type(even) .aeno__cont
+      padding: 0 20px 0 40px
+
+@media (max-width: 991px)
+   .aeno .container
+      width: 720px
+   
+   .aeno__row
+      display: block !important
+      >div
+         min-width: unset
+         width: 100% !important
+         max-width: 100% !important
+
+   .aeno__cont
+      padding: 2em 0 1em 0 !important
+   .aeno__img
+      padding: 0 !important
+
+   .aeno__title
+      margin-bottom: 15px
+
+@media (max-width: 767px)
+   .aeno .container
+      width: 540px
+
+@media (max-width: 576px)
+   .aeno .container
+      width: 100%
+      box-sizing: border-box
