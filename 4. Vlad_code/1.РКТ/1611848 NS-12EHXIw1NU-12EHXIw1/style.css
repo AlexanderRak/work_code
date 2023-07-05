@@ -1,0 +1,307 @@
+.neoclima {
+  padding: 0 1em;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.neoclima img {
+  margin: 0 auto;
+  opacity: 1 !important;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.neoclima img:hover {
+  opacity: 1 !important;
+}
+
+.neoclima div {
+  line-height: normal;
+}
+
+.features-desc__text img {
+  margin-bottom: 0rem;
+}
+
+.one-col .features-desc__text p:first-letter {
+  padding-left: 0rem !important;
+}
+
+.neoclima .container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.neoclima__txt {
+  font-size: 16px;
+}
+
+.neoclima__title {
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0;
+}
+
+.neoclima__subtitle {
+  font-weight: bold;
+  color: #333;
+  margin: 15px 0;
+  font-size: clamp(18px, 3vw, 20px);
+  text-transform: uppercase;
+}
+
+.model {
+  padding-top: 2em;
+}
+
+.model .neoclima__txt {
+  margin-bottom: 20px;
+}
+
+.features .neoclima__title {
+  text-align: center;
+}
+
+.features .neoclima__subtitle {
+  text-align: center;
+}
+
+.features .neoclima__txt {
+  text-align: justify;
+}
+
+.features__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: "...." "....";
+  gap: 10px;
+}
+
+.features__i {
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+.features__i:nth-of-type(n+2) {
+  margin-left: -10px;
+  padding-left: 10px;
+}
+
+.features__two {
+  margin-top: 20px;
+}
+
+.func {
+  padding-bottom: 1em;
+}
+
+.func .neoclima__subtitle {
+  text-align: center;
+}
+
+.func__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding-top: 30px;
+  margin-top: 30px;
+}
+
+.func__row > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  width: 50%;
+  min-width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.func__txt {
+  padding-left: 20px;
+}
+
+.func__reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.func__reverse .func__txt {
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+@media (max-width: 1440px) {
+  .model .neoclima__txt {
+    padding: 0 2em;
+  }
+}
+
+@media (max-width: 1201px) {
+  .neoclima {
+    padding: 0;
+  }
+  .neoclima .container {
+    width: 960px;
+    padding: 0 15px;
+  }
+  .features__grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (auto)[4];
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "cal1 cal2" "cal5 cal6" "cal3 cal4" "cal7 cal8";
+    gap: 10px 20px;
+  }
+  .features__grid .cal1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: cal1;
+  }
+  .features__grid .cal2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: cal2;
+  }
+  .features__grid .cal3 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: cal3;
+  }
+  .features__grid .cal4 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: cal4;
+  }
+  .features__grid .cal5 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: cal5;
+  }
+  .features__grid .cal6 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: cal6;
+  }
+  .features__grid .cal7 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: cal7;
+  }
+  .features__grid .cal8 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: cal8;
+  }
+  .features__i img {
+    width: 100%;
+  }
+  .features__i:nth-of-type(n+2) {
+    margin-left: -20px;
+    padding-left: 20px;
+  }
+  .model .neoclima__txt {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .neoclima .container {
+    width: 720px;
+  }
+  .model {
+    padding-top: 1em;
+  }
+  .features__grid {
+    -ms-grid-columns: (auto)[1];
+        grid-template-columns: repeat(1, auto);
+    -ms-grid-rows: (auto)[8];
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas: "cal1" "cal5" "cal2" "cal6" "cal3" "cal7" "cal4" "cal8";
+    gap: 10px 20px;
+  }
+  .features__grid .cal1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: cal1;
+  }
+  .features__grid .cal2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: cal2;
+  }
+  .features__grid .cal3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: cal3;
+  }
+  .features__grid .cal4 {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    grid-area: cal4;
+  }
+  .features__grid .cal5 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: cal5;
+  }
+  .features__grid .cal6 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: cal6;
+  }
+  .features__grid .cal7 {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: cal7;
+  }
+  .features__grid .cal8 {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+    grid-area: cal8;
+  }
+  .func__row {
+    display: block !important;
+  }
+  .func__row > div {
+    max-width: 100%;
+    width: 100%;
+  }
+  .func__txt {
+    padding: 1em 0 0 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .neoclima .container {
+    width: 540px;
+  }
+}
+
+@media (max-width: 576px) {
+  .neoclima .container {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
