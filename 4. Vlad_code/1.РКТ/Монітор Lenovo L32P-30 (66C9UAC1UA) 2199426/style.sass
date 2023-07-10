@@ -1,0 +1,212 @@
+//default styles
+
+// body
+//    margin: 0
+
+.lenovo
+   width: 100%
+   max-width: 1920px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   color: #212121
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.lenovo .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+.lenovo__title
+   font-size: clamp(28px, 3vw, 76px)
+   font-weight: bold
+   margin-bottom: 50px
+.lenovo__txt
+   font-size: clamp(17px, 2vw, 34px)
+.center
+   text-align: center
+
+//quality
+
+.quality
+   position: relative
+
+.quality__abs
+   position: absolute
+   right: 50%
+   transform: translateX(50%)
+   color: #fff
+
+.quality__txt
+   padding: 130px 0 210px
+   margin: 0 auto
+   max-width: max-content
+
+.quality__subtitle
+   margin-bottom: 40px
+   font-size: clamp(24px, 3vw, 58px)
+
+.quality__title
+   font-weight: bold
+   font-size: clamp(28px, 3vw, 95px)
+   b
+      color: #ff0003
+
+.logo
+   position: absolute
+   right: 0
+   top: 100px
+
+//creative
+
+.creative
+   padding: 300px 0 75px 120px
+
+.creative__head
+   padding-right: 145px
+
+.creative__row
+   display: flex
+   margin-top: 50px
+
+.creative__img
+   min-width: 1000px
+   margin-right: -15%
+   margin-left: 25px
+
+//image
+
+.image
+   padding: 0 120px 140px 120px
+
+.image__txt
+   padding-top: 70px
+
+//comfort
+
+.comfort
+   padding: 0 120px 110px 120px
+
+.comfort__txt
+   padding-top: 80px
+
+//design
+
+.design
+   padding: 0 120px 90px 120px
+
+.design__img
+   display: flex
+   padding-bottom: 100px
+   justify-content: center
+   div
+      &:nth-of-type(1)
+         margin-right: 100px
+
+//media*****************************************************
+
+@media (max-width: 1440px)
+   .creative__img
+      min-width: 800px
+
+@media (max-width: 1201px)
+   .lenovo .container
+      width: 960px
+      padding: 0 15px
+
+   .quality__txt
+      padding-bottom: 45px
+
+   .creative
+      padding-top: 10em
+      padding-left: 0
+
+   .creative__head
+      padding-right: 0
+
+   .creative__img
+      min-width: unset
+
+   .image
+      padding: 0
+
+   .creative__row
+      flex-direction: column-reverse
+
+   .creative__img
+      min-width: unset
+      margin-right: 0
+      padding-bottom: 2em
+
+   .comfort
+      padding: 2em 0
+
+   .lenovo__title
+      margin-bottom: 1em
+
+   .comfort__txt
+      padding-top: 2em
+
+   .design
+      padding: 0 0 1em 0
+
+   .design__img
+      padding-bottom: 2em
+
+   .logo img
+      max-width: 50%
+      margin: 0 0 0 auto
+
+@media (max-width: 991px)
+   .lenovo .container
+      width: 720px
+
+   .quality__txt
+      padding: 2em 0
+      margin-right: -10%
+
+   .quality__subtitle
+      margin-bottom: 1em
+
+   .quality__abs
+      width: 60%
+
+   .logo
+      top: 1em
+      img
+         width: 35%
+
+   .creative
+      padding-bottom: 2em
+
+   .image__txt
+      padding-top: 1em
+
+   .design__img div:nth-of-type(1)
+      margin-right: 1em
+
+@media (max-width: 767px)
+   .lenovo .container
+      width: 540px
+
+@media (max-width: 576px)
+   .lenovo .container
+      width: 100%
+      box-sizing: border-box
