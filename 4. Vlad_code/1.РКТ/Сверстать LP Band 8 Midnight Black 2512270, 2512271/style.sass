@@ -1,0 +1,723 @@
+//default styles
+
+// body
+//    margin: 0
+
+.huawei
+   width: 100%
+   max-width: 1920px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+.one-col .features-desc__text
+   p:first-letter
+      padding-left: 0rem !important
+
+//end default styles
+
+.huawei .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+.huawei__title
+   font-size: clamp(20px, 3vw, 48px)
+   font-weight: bold
+   color: #1e2022
+
+.huawei__subtitle
+   font-weight: bold
+   font-size: clamp(16px, 2vw, 30px)
+   color: #5d5d5d
+
+.huawei__txt
+   font-size: clamp(14px, 1.5vw, 22px)
+   color: #5d5d5d
+
+.huawei__note
+   color: #86868b
+   font-size: 16px
+   text-align: center
+
+.show__mob
+   display: none !important
+
+//band
+
+.band__row
+   display: flex
+   align-items: center
+   justify-content: space-between
+
+.band__logo
+   padding-right: 110px
+
+.band__logo__txt
+   margin-top: 35px
+   font-size: clamp(12px, 1.5vw, 24px)
+   text-align: center
+
+//level
+
+.level
+   background-color: #f4f5f4
+   padding: 230px 16% 160px 16%
+
+.level__title
+   text-align: center
+   font-weight: bold
+   font-size: clamp(26px, 4vw, 80px)
+   color: #4F6742
+   margin-bottom: 110px
+
+.level__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+   grid-template-rows: auto auto auto
+   gap: 30px 30px
+   grid-auto-flow: row
+   grid-template-areas: "cal1 cal1 cal2 cal2 cal2 cal2" "cal1 cal1 cal3 cal3 cal4 cal4" "cal5 cal5 cal5 cal6 cal6 cal6"
+   >div
+      background-color: #fff
+      border-radius: 20px
+      overflow: hidden
+      padding: 40px
+   .cal1
+      grid-area: cal1
+      padding: 50px 50px 0 50px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      .level__cont
+         margin-bottom: 0
+      .level__img
+         margin: 0 -50px 0 0
+         img
+            margin: 0 0 0 auto
+   .cal2
+      grid-area: cal2
+      .slider-nav
+         min-width: 60%
+      .swiper-wrapper .level__txt:nth-of-type(n+2)
+         margin-top: 20px
+   .cal3
+      grid-area: cal3
+   .cal4
+      grid-area: cal4
+   .cal5
+      grid-area: cal5
+   .cal6
+      grid-area: cal6
+   .slider
+      display: flex
+      align-items: center
+   .slider-nav
+      min-width: 40%
+      max-height: 200px
+      .swiper-wrapper
+         display: block
+   .slider-main
+      overflow: hidden
+   .swiper-wrapper
+      .level__txt
+         max-height: 20px
+         opacity: .5
+         cursor: pointer
+         &:nth-of-type(n+2)
+            margin-top: 30px
+            height: 200px
+   .swiper-slide-thumb-active
+      opacity: 1
+   .swiper-slide-thumb-active
+      opacity: 1 !important
+   .slider-main
+      .swiper-slide
+         opacity: 0 !important
+      .swiper-slide.swiper-slide-active
+         opacity: 1 !important
+
+.level__cont
+   margin-bottom: 20px
+
+.__green
+   color: #48573C
+
+.__blue
+   color: #1fb4b9
+
+.__orange
+   color: #ff8c55
+
+.__black
+   color: #363A40
+
+.__pink
+   color: #FED4D4
+
+.level__cont__title
+   font-weight: bold
+   font-size: 20px
+   margin-bottom: 25px
+
+.level__txt__wrap
+   display: flex
+   .level__txt
+      &:nth-of-type(2)
+         margin: 0 20px
+.level__txt
+   color: #4b4b4b
+   font-size: 16px
+
+//amoled
+
+.amoled
+   padding: 200px 16% 0 16%
+
+.amoled__row
+   display: flex
+   align-items: flex-end
+
+.amoled__cont
+   max-width: 480px
+   margin-bottom: 240px
+   margin-left: -300px
+
+.amoled__cont__row
+   display: flex
+   margin-top: 60px
+
+.amoled__cont__cal
+   &:nth-of-type(2)
+      margin: 0 50px
+
+.amoled__cont__txt
+   font-size: 18px
+   font-size: clamp(12px, 1.5vw, 18px)
+   color: #7f9176
+   margin-bottom: 18px
+
+.amoled__cont__title
+   font-weight: bold
+   font-size: clamp(14px, 2vw, 30px)
+   color: #1d3c02
+
+//color__bands
+
+.color__bands
+   padding: 200px 16% 265px 16%
+
+   .slider-container
+      position: relative
+      box-sizing: border-box
+   .slider-top
+      margin-bottom: 70px
+
+.slider-main-bands
+   overflow: hidden
+   .swiper-slide
+      display: grid !important
+      grid-template-columns: auto auto
+      grid-template-rows: auto auto
+      grid-template-areas: "cal1 cal1" "cal2 cal3"
+      gap: 17px 17px
+      >div
+         background-color: #eef2ec
+         border-radius: 20px
+         overflow: hidden
+      .cal1
+         grid-area: cal1
+         display: flex
+         justify-content: center
+         align-items: center
+         padding: 15px
+         .slider-main-bands__txt
+            max-width: 400px
+            margin-left: 160px
+            margin-top: 150px
+      .cal2
+         grid-area: cal2
+         padding-top: 3em
+         display: flex
+         align-items: flex-end
+         justify-content: center
+      .cal3
+         grid-area: cal3
+         padding-top: 3em
+         display: flex
+         align-items: flex-end
+         justify-content: center
+         .bands__img
+            min-width: 100%
+            img
+               min-width: 100%
+      &:nth-of-type(2)
+         >div
+            background-color: #fcf6f5
+      &:nth-of-type(3)
+         >div
+            background-color: #f7f7f7
+
+.slider-nav-bands
+   position: absolute
+   right: 0px
+   padding: 0 2em 2em 0
+   top: 20px
+   .swiper-slide
+      max-width: max-content
+      padding-bottom: 40px
+      &:nth-of-type(n+2)
+         margin-left: 40px
+      &:nth-of-type(2)
+         i
+            background-color: #FED4D4
+      &:nth-of-type(3)
+         i
+            background-color: #363A40
+
+   .swiper-slide.swiper-slide-thumb-active
+      &:nth-of-type(2)
+         i
+            &::before
+               border-color: #FED4D4
+      &:nth-of-type(3)
+         i
+            &::before
+               border-color: #363A40
+      .level__txt__bands
+         opacity: 1
+
+   i
+      display: block
+      position: relative
+      width: 23px
+      height: 23px
+      border-radius: 50%
+      background-color: #77896E
+      box-sizing: border-box
+      margin: 0 auto 12px auto
+      cursor: pointer
+
+   .swiper-slide-thumb-active
+      i
+         &::before
+            content: ""
+            display: block
+            position: absolute
+            border-radius: 50%
+            top: -5px
+            bottom: -5px
+            left: -5px
+            right: -5px
+            border: 2px solid #77896E
+
+.level__txt__bands
+   font-weight: bold
+   font-size: 20px
+   opacity: 0
+   position: absolute
+   right: 50%
+   transform: translateX(50%)
+   width: max-content
+
+//huawei__block
+
+.huawei__block
+   padding: 0 16% 100px 16%
+
+.huawei__head
+   display: flex
+   align-items: center
+   justify-content: space-between
+   margin-bottom: 65px
+   .huawei__title
+      max-width: 420px
+   .huawei__txt
+      max-width: 620px
+
+//sleep
+
+.sleep
+   .huawei__title
+      max-width: 700px
+
+//health
+
+.health
+   padding: 0 16% 75px 16%
+   .huawei__subtitle
+      margin-bottom: 20px
+
+.health__row
+   display: flex
+   align-items: center
+   >div
+      flex: 1
+      box-sizing: border-box
+      &:nth-of-type(2)
+         margin: 0 100px
+
+//fitness
+
+.fitness
+   .huawei__head
+      align-items: flex-start
+   .huawei__subtitle
+      margin-bottom: 15px
+   .huawei__title
+      max-width: unset
+   .huawei__img
+      img
+         &:nth-of-type(3)
+            margin-top: 80px
+
+.fitness__cont
+   max-width: 50%
+
+//relax
+
+.relax
+   .fitness__cont
+      max-width: 420px
+
+//woman
+
+.woman
+   padding: 0 16%
+   .huawei__title
+      margin-bottom: 50px
+
+.woman__row
+   border-radius: 20px
+   background-color: #f7f9fb
+   padding: 60px 130px
+   display: flex
+   align-items: center
+   justify-content: space-between
+
+.woman__txt
+   max-width: 580px
+
+.woman__img
+   width: 580px
+   max-width: 100%
+
+//charge
+
+.charge
+   padding: 250px 16% 165px 16%
+
+.charge__head
+   max-width: 50%
+   margin-bottom: 18px
+   .huawei__title
+      margin-bottom: 30px
+
+.charge__row
+   display: flex
+   max-width: 650px
+   margin: 60px auto 0 auto
+   >div
+      flex: 1
+
+.charge__line
+   flex: unset
+   max-width: 2px
+   min-width: 2px
+   background-color: #a29f9f
+   margin: 0 40px
+
+.charge__title
+   background-image: linear-gradient(173deg, #3DDCC9 50%, #48BEC6 100%)
+   -webkit-background-clip: text
+   -webkit-text-fill-color: transparent
+   font-size: clamp(17px, 3vw, 60px)
+   font-weight: bold
+
+//chapter
+
+.chapter
+   padding-top: 90px
+   .woman__txt
+      padding-left: 130px
+      box-sizing: border-box
+   .woman__row
+      padding-bottom: 0
+
+//huawei__buy
+
+.huawei__buy
+   padding: 2em 16%
+
+//media*****************************************************
+
+@media (max-width: 1641px)
+   .level,
+   .amoled,
+   .color__bands,
+   .huawei__block,
+   .health,
+   .woman,
+   .charge
+      padding-right: 4em
+      padding-left: 4em
+
+   .level,
+   .color__bands,
+   .charge
+      padding-top: 4em
+      padding-bottom: 4em
+   .level__title
+      margin-bottom: 1em
+
+   .amoled
+      padding-top: 4em
+
+   .huawei__block
+      padding-bottom: 4em
+
+@media (max-width: 1441px)
+   .huawei img
+      max-height: 700px
+
+   .amoled__cont
+      max-width: 530px
+      margin-bottom: 140px
+      margin-left: -100px
+
+@media (max-width: 1201px)
+   .huawei .container
+      width: 960px
+      padding: 0 15px
+
+   .level,
+   .amoled,
+   .color__bands,
+   .huawei__block,
+   .health,
+   .woman,
+   .charge
+      padding-right: 0
+      padding-left: 0
+
+   .level,
+   .color__bands,
+   .charge
+      padding-top: 2em
+      padding-bottom: 2em
+
+   .amoled
+      padding-top: 2em
+
+   .huawei__block
+      padding-bottom: 2em
+
+   .level__grid
+      gap: 15px 15px
+   .level__grid>div
+      padding: 20px !important
+      border-radius: 15px
+   .level__grid .cal1
+      padding-bottom: 0 !important
+   .level__cont__title
+      margin-bottom: 15px
+   .level__grid .slider-nav
+      min-width: 50%
+   .level__grid .cal2 .slider-nav
+      min-width: 75%
+   .level__grid .swiper-wrapper .level__txt:nth-of-type(n+2)
+      margin-top: 15px
+   .level__grid .cal2 .swiper-wrapper .level__txt:nth-of-type(n+2)
+      margin-top: 15px
+   .level__grid .cal5 .level__img img
+      max-width: 200px
+
+   .huawei__head
+      margin-bottom: 1em
+
+   .fitness__cont
+      min-width: 45%
+
+   .woman__row
+      padding: 1em 2em
+
+   .charge__row
+      max-width: 490px
+
+   .huawei__buy
+      padding-right: 0
+      padding-left: 0
+
+   .chapter .woman__txt
+      padding-left: 4em
+
+@media (max-width: 991px)
+   .huawei .container
+      width: 720px
+
+   .hide__mob
+      display: none !important
+   .show__mob
+      display: block !important
+      max-width: calc(100% + 30px) !important
+      margin-right: -15px !important
+      margin-left: -15px !important
+      max-height: unset !important
+
+   .band__row
+      display: block
+   .band__logo
+      padding: 2em 15px
+   .band__logo__txt
+      margin-top: 1em
+
+   .level__grid
+      grid-template-areas: "cal1 cal1 cal1 cal1 cal1 cal1" "cal2 cal2 cal2 cal2 cal2 cal2" "cal3 cal3 cal3 cal3 cal3 cal3" "cal4 cal4 cal4 cal4 cal4 cal4" "cal5 cal5 cal5 cal5 cal5 cal5" "cal6 cal6 cal6 cal6 cal6 cal6"
+      .cal1
+         grid-area: cal1
+      .cal2
+         grid-area: cal2
+      .cal3
+         grid-area: cal3
+      .cal4
+         grid-area: cal4
+      .cal5
+         grid-area: cal5
+      .cal6
+         grid-area: cal6
+   .level__grid .slider
+      display: block
+   .level__grid .cal2 .slider-nav
+      min-width: unset
+   .level__grid .slider-nav
+      max-height: unset
+   .small__mob
+      margin-top: 1em
+      img
+         max-width: 50% !important
+   .level__grid .cal2 .swiper-wrapper .level__txt
+      max-height: 40px
+   .level__grid .cal6 .swiper-wrapper
+      margin-top: 1em
+   .level__grid>div
+      border-radius: 8px
+   .level__grid .cal1 .level__img img
+      max-height: 300px
+
+   .amoled__row
+      flex-direction: column-reverse
+   .amoled__cont
+      margin: 0 0 2em 0
+   .amoled__cont__row
+      margin-bottom: 2em
+      margin-top: 2em
+
+   .slider-nav-bands
+      position: unset
+      padding: 0
+      margin: 0 auto
+      max-width: max-content
+   .color__bands .slider-top
+      margin-bottom: 2em
+
+   .slider-main-bands .swiper-slide>div
+      border-radius: 8px
+   .slider-main-bands .swiper-slide
+      gap: 10px 10px
+   .slider-main-bands .swiper-slide .cal1 .slider-main-bands__img img
+      max-width: 60% !important
+   .level__txt__bands
+      font-size: 16px
+   .slider-main-bands .swiper-slide .cal1
+      display: block
+   .slider-main-bands .swiper-slide .cal1 .slider-main-bands__txt
+      max-width: unset
+      margin: 2em 0 0 0
+
+   .huawei__head
+      display: block
+   .huawei__head .huawei__title
+      max-width: unset
+      margin-bottom: 1em
+
+   .health__row
+      flex-direction: column
+      align-items: unset
+      .health__cal
+         &:nth-of-type(1)
+            order: 0
+         &:nth-of-type(2)
+            order: 2
+            margin: 2em 2em 0 2em
+         &:nth-of-type(3)
+            order: 1
+   .health .huawei__subtitle
+      margin-bottom: .5em
+   .health .huawei__title
+      margin-bottom: 1em
+
+   .fitness__cont
+      max-width: unset
+
+   .huawei__head .huawei__title br
+      display: none
+
+   .woman__row
+      display: block
+      border-radius: 8px
+      padding: 1em
+   .woman__txt
+      margin-bottom: 2em
+   .woman__img img
+      max-height: 300px
+   .woman .huawei__title
+      margin-bottom: 1em
+
+   .charge__row
+      max-width: 75%
+      margin-top: 1em
+   .charge__head
+      max-width: unset
+   .charge__head .huawei__title
+      margin-bottom: 1em
+   .charge__line
+      margin: 0 1em
+
+   .compatible,
+   .chapter
+      .woman__row
+         display: flex
+         flex-direction: column-reverse
+      
+   .chapter
+      padding-top: 2em
+   .chapter .woman__txt
+      padding-left: 0
+
+   .huawei__note
+      font-size: 12px
+
+@media (max-width: 767px)
+   .huawei .container
+      width: 540px
+
+@media (max-width: 576px)
+   .huawei .container
+      width: 100%
+      box-sizing: border-box
