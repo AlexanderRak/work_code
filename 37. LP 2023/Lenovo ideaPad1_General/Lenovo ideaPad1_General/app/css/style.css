@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+#layout-template {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+}
+#layout-template h2, #layout-template h3, #layout-template h4, #layout-template h5, #layout-template h6, #layout-template p, #layout-template img {
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+#layout-template img {
+  max-width: 100%;
+}
+#layout-template p {
+  color: #fff;
+}
+
+.main-container.page {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.bc-description__content p:first-letter {
+  padding-left: 0 !important;
+}
+
+.lenovo-container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.lenovo-container__bg {
+  position: relative;
+  background-image: url("../img/img_1.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  padding-top: 250px;
+}
+
+.lenovo-container__bg::before {
+  position: absolute;
+  right: 0;
+  top: 5%;
+  z-index: 3;
+  content: "";
+  width: 100px;
+  height: 290px;
+  background-image: url("../img/img_13.png");
+}
+
+.lenovo-container__bg::after {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  z-index: 3;
+  content: "";
+  width: 362px;
+  height: 65px;
+  background-image: url("../img/img_12.png");
+}
+
+.lenovo-container__bg__block-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 100px;
+}
+
+.lenovo-container__bg__block-flex__flex-item {
+  padding-bottom: 70px;
+  position: relative;
+}
+
+.lenovo-container__bg__block-flex__flex-item:last-child::after {
+  position: absolute;
+  right: 0;
+  top: 25%;
+  z-index: 3;
+  content: "";
+  width: 130px;
+  height: 150px;
+  background-image: url("../img/img_5.png");
+}
+
+.lenovo-container__bg__block-flex__flex-item p {
+  font-size: 85px;
+  text-align: center;
+}
+
+#layout-template .lenovo-container__bg__block-flex__flex-item p:first-child {
+  color: #e1251b;
+}
+
+.lenovo-container__bg.bg__down {
+  background-image: url("../img/img_2.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  padding-top: 250px;
+}
+
+.lenovo-container__bg__content-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: row;
+  -webkit-flex: row;
+     -moz-box-flex: row;
+      -ms-flex: row;
+          flex: row;
+  position: relative;
+  padding: 40px 100px;
+}
+
+.lenovo-container__bg__content-flex__flex-item:first-child {
+  max-width: 62%;
+}
+
+#layout-template .lenovo-container__bg__content-flex__flex-item p:first-child {
+  font-size: 34px;
+  padding-bottom: 60px;
+}
+
+#layout-template .lenovo-container__bg__content-flex__flex-item p:last-child {
+  font-size: 28px;
+  padding-bottom: 100px;
+}
+
+.lenovo-container__bg__content-flex__flex-item:last-child {
+  position: absolute;
+  z-index: 3;
+  top: 18%;
+  right: 0;
+}

@@ -468,6 +468,57 @@ body {
   padding-top: 10px;
 }
 
+.numberone-btn {
+  padding: 0 12px;
+  margin-top: 48px;
+}
+
+.numberone-btn__link {
+  display: block;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  background: #43B02A;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  padding: 12px 0;
+  max-width: 255px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+.numberone-btn__link:hover {
+  -webkit-box-shadow: -1px 3px 3px 0px #43b02a;
+          box-shadow: -1px 3px 3px 0px #43b02a;
+}
+.numberone-btn__link::after {
+  content: "";
+  background-image: url(https://cdn.comfy.ua/media/x/img3/copyimgbf.png);
+  background-repeat: no-repeat;
+  width: 76px;
+  height: 58px;
+  position: absolute;
+  right: -19px;
+  top: -28px;
+}
+.numberone-btn__link::before {
+  content: "";
+  -webkit-box-shadow: 0 0 0 2px #43b02a;
+          box-shadow: 0 0 0 2px #43b02a;
+  position: absolute;
+  right: 0px;
+  top: 2px;
+  width: 10px;
+  height: 38px;
+  -webkit-border-radius: 0 8px 8px 0;
+          border-radius: 0 8px 8px 0;
+  z-index: 5;
+  background: #43b02a;
+}
+
 @media (max-width: 1200px) {
   .numberone-answers__item::before {
     left: -10px;
@@ -605,9 +656,6 @@ body {
   }
   .numberone-conditions__item:last-child {
     margin: 0;
-  }
-  .numberone-conditions {
-    padding: 0 0 0 0;
   }
   .numberone-messengers__list.numberone-messengers__list-btn {
     width: 100%;
