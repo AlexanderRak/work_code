@@ -1,0 +1,268 @@
+.app-wrapcl img
+   max-width: 100%
+#app-wrap
+   display: block
+   margin: 0 auto
+   // max-width: 1920px
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #43b02a
+   position: relative
+   img
+      &:hover
+         opacity: 1
+      &:first-letter
+         padding-left: 0
+   img
+      display: block
+      margin-right: initial
+      margin-left: initial
+   p, h1, h2, h3, h4, h5, h6
+      padding: 0
+      margin: 0
+      text-align: inherit
+   h1, h2, h3, h4, h5, h6
+      font-weight: bold
+      line-height: 1
+.breadcrumbs
+   display: none
+span.word-wrap
+   display: block
+   word-wrap: break-word
+span.fw-bold
+   font-weight: bold
+span.tx-uppercase
+   text-transform: uppercase
+.features-desc__text h2
+   text-align: inherit
+.one-col .features-desc__text p
+   text-align: inherit
+.bc-description__content p:first-letter
+   padding-left: 0
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+// default
+.app-wrapcl-wrap
+   margin: 0 auto
+   background: #43B02A
+.app-header
+   position: relative
+   overflow: hidden
+.app-header__desk
+   display: block
+   img
+      margin: 0 auto !important
+.app-header__mob
+   display: none
+.app-content-text
+   max-width: 1010px
+   margin: 100px auto 67px auto
+   padding: 0 16px
+.app-content-text__item-text
+   font-weight: 700
+   font-size: 29px
+   line-height: 37px
+   color: #FFFFFF
+   a
+      color: #fff
+      text-decoration: underline
+.app-content-text__item-text2
+   border: 1px dashed #FFFFFF
+   border-radius: 16px
+   font-weight: 400
+   font-size: 24px
+   line-height: 30px
+   color: #FFFFFF
+   padding: 12px
+   margin-top: 12px
+   margin-bottom: 60px
+.app-content-text__item-flex
+   position: relative
+   display: flex
+   &:first-child
+      .app-content-text__item-flex__item
+         &:last-child
+            .app-content-text__item-text
+               padding-bottom: 0
+   &:nth-child(4)
+      .app-content-text__item-flex__item
+         &:last-child
+            .app-content-text__item-text
+               padding-bottom: 0
+   &:last-child
+      .app-content-text__item-flex__item
+         &:last-child
+            .app-content-text__item-text
+               padding-bottom: 0
+.app-content-text__item-flex__item
+   &:last-child
+      .app-content-text__item-text
+         padding-bottom: 60px
+.app-content-text__item-img
+   padding-top: 20px
+   padding-bottom: 40px
+.app-content-text__str
+   width: 40px
+   height: 40px
+   background: #fff
+   border-radius: 53px
+   display: flex
+   align-items: center
+   justify-content: center
+   z-index: 2
+   &::before
+      content: ""
+      width: 4px
+      height: 100%
+      background: #fff
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      margin: 0 auto
+      z-index: 2
+   img
+      position: relative
+      z-index: 3
+   &.str-none
+      &::before
+         display: none
+.app-content-text__item-flex__item
+   &:first-child
+      position: relative
+   &:last-child
+      padding-left: 20px
+.app-linkfooter
+   a
+      font-weight: 400
+      font-size: 20px
+      line-height: 25px
+      text-decoration-line: underline
+      display: block
+      color: #FFFFFF
+      text-align: center
+      padding-bottom: 16px
+// media
+@media (max-width: 1366px)
+@media (max-width: 1280px)
+@media (max-width: 1024px)
+@media (max-width: 812px)
+   .app-content-text__item-text
+      font-size: 26px
+@media (max-width: 480px)
+   .app-header__desk
+      display: none
+   .app-header__mob
+      display: block
+   .app-header__bgrd
+      background-image: url(https://cdn.comfy.ua/media/x/img2/apppage/bgrd1.png)
+      background-position: center top
+      background-repeat: no-repeat
+      background-size: cover
+      height: 980px
+      position: relative
+      &::before
+         content: ""
+         background: linear-gradient(180deg, #165562 0%, rgba(207, 217, 219, 0) 100%)
+         position: absolute
+         left: 0
+         top: 0
+         width: 100%
+         height: 587px
+         z-index: 3
+      &::after
+         content: ""
+         background: linear-gradient(180deg, rgba(67, 176, 42, 0) 0%, #43B02A 100%)
+         position: absolute
+         left: 0
+         bottom: 0
+         width: 100%
+         height: 45px
+         z-index: 5
+   .app-header__img1, .app-header__img2, .app-header__img3, .app-header__img4, .app-header__img5, .app-header__img6, .app-header__link
+      position: relative
+      z-index: 5
+   .margimcenter img
+      margin: 0 auto !important
+   .app-header__img3
+      padding: 10px 0
+      &::before
+         content: ""
+         background: #009900
+         width: 100%
+         height: 100%
+         z-index: -1
+         position: absolute
+         left: 0
+         top: 0
+      &::after
+         content: ""
+         background: #009900
+         width: 700px
+         height: 100%
+         z-index: -1
+         position: absolute
+         left: -27px
+         top: -10px
+         transform: rotate(1deg)
+   .app-header__img4
+      padding-top: 30px
+   .app-header__link
+      display: flex
+      flex-direction: row
+      justify-content: center
+      align-items: flex-start
+      padding-top: 22px
+      a
+         display: block
+         background: #FFFFFF
+         border: 1px solid #3E3E3E
+         box-shadow: -2px -1px 0px #3E3E3E
+         border-radius: 16px
+         padding: 12px
+         &:first-child
+            margin-right: 15px
+         &:last-child
+            margin-left: 15px
+   .app-header__img5
+      position: absolute
+      left: 0
+      bottom: 0
+   .app-header__img6
+      position: absolute
+      right: 0
+      bottom: 0
+   .app-content-text__item-text
+      font-size: 18px
+      text-align: left
+      line-height: 27px
+      &.textcntr
+         text-align: center
+   .app-content-text__item-text2
+      font-size: 16px
+      margin-bottom: 0
+      line-height: 24px
+   .app-content-text__item-flex
+      flex-direction: column
+      padding-bottom: 32px
+   .app-content-text__str::before
+      display: none
+   .app-content-text__str
+      margin: 0 auto 12px auto
+      width: 24px
+      height: 24px
+   .app-content-text__item-flex__item:last-child
+      padding-left: 0
+   .app-content-text__item-flex__item:last-child .app-content-text__item-text
+      padding-bottom: 0
+   .app-content-text__item-img
+      display: none
+   .app-content-text
+      max-width: 100%
+      margin: 40px auto 12px auto
+   .app-linkfooter a
+      font-size: 16px
+// @media (max-width: 320px)
+// @media (max-width: 812px) and (orientation: landscape)

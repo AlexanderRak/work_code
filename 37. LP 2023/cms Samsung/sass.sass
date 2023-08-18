@@ -1,0 +1,90 @@
+@import url('https://fonts.cdnfonts.com/css/samsung-sharp-sans-regular')
+// font-family: 'Samsung Sharp Sans Regular', sans-serif
+#samsung-cmsblock
+   width: 100%
+   position: relative
+   padding: 8px 24px
+   h2
+      font-family: 'Samsung Sharp Sans Bold', sans-serif
+      font-size: 22px
+      text-align: center
+      line-height: 1.1
+      font-weight: bold
+      color: #fff
+      padding-bottom: 10px
+      margin: 0
+   .samsung-cmsblock__content-left
+      p
+         font-size: 20px
+         text-align: center
+         line-height: 1.3
+         font-weight: 500
+         color: #fff
+   .samsung-cmsblock__content-right
+      .samsung-cmsblock__profit-flex__item
+         p
+            font-size: 20px
+            text-align: left
+            line-height: 1.1
+            &:first-child
+               font-weight: bold
+               padding-bottom: 5px
+            &:last-child
+               font-weight: 500
+               font-size: 17px
+.samsung-cmsblock__container
+   border-radius: 8px
+   border: 2px solid #FF671F
+.samsung-cmsblock__flex
+   display: flex
+   flex-direction: row
+   background: #fff
+   border-radius: 8px
+.samsung-cmsblock__item
+   flex: 1 1 0
+   &:first-child
+      background: #FF671F
+.samsung-cmsblock__content-left
+   padding: 20px 12px
+   display: flex
+   flex-direction: column
+   height: 100%
+   justify-content: center
+.samsung-cmsblock__content-right
+   padding: 10px 24px
+   height: 100%
+   overflow: hidden
+.samsung-cmsblock__profit-flex
+   display: flex
+   flex-direction: column
+   align-items: flex-start
+   justify-content: space-around
+   height: 100%
+.samsung-cmsblock__profit-flex__item
+   &:last-child
+      padding-top: 12px
+@media (max-width: 480px)
+   #samsung-cmsblock
+      padding: 16px 12px
+   #samsung-cmsblock h2
+      font-size: 20px
+   .samsung-cmsblock__flex
+      flex-direction: column
+   .samsung-cmsblock__content-left
+      padding: 20px 18px
+   .samsung-cmsblock__content-right
+      padding: 0 30px
+   .samsung-cmsblock__profit-flex__item:last-child
+      position: relative
+      &::before
+         content: ""
+         position: absolute
+         left: -50%
+         top: 0
+         width: 1000px
+         height: 2px
+         background: #FF671F
+   #samsung-cmsblock .samsung-cmsblock__content-right .samsung-cmsblock__profit-flex__item p:last-child
+      font-size: 16px
+   .samsung-cmsblock__profit-flex__item
+      padding: 12px 0

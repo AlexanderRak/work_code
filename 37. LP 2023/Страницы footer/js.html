@@ -1,0 +1,63 @@
+<script>
+   const popup = document.getElementById("btnpopup"),
+      close = document.getElementById("btnpopup-close"),
+      popupcont = document.querySelector(".wrap-flex__tabs-wrap");
+
+   popup.addEventListener('click', function () {
+      popupcont.classList.add("activepopup");
+   });
+   close.addEventListener('click', function () {
+      popupcont.classList.remove("activepopup");
+   });
+</script>
+
+<script>
+   const itemAccordion = document.querySelectorAll(".plk-accordion__item"),
+      linkAccordion = document.querySelectorAll(".plk-js-accordion-link"),
+      contentAccordion = document.querySelectorAll(".plk-accordion__item-content");
+
+   itemAccordion.forEach(function (val, index) {
+      val.addEventListener('click', function () {
+         if (linkAccordion[index].classList.contains("plk-accordion__link_active")) {
+            linkAccordion[index].classList.remove("plk-accordion__link_active");
+            val.classList.remove("plk-active-item");
+         } else {
+            linkAccordion[index].classList.add("plk-accordion__link_active");
+            val.classList.add("plk-active-item");
+         }
+      });
+   });
+</script>
+
+<!--
+   window.location.href - получить текущий url адресс
+   window.location.origin - https://comfy.ua
+   window.location.pathname - '/ua/123tstpage.html'
+   0: ""
+   1: "123tstpage.html"
+-->
+<script>
+   const getOrigin = window.location.origin;
+   const getPuth = window.location.pathname;
+   const resultUrl = getOrigin + getPuth;
+   const getLang = document.querySelector("html").getAttribute("lang");
+
+   const getUrlLink = document.querySelectorAll('.wrap-flex__tabs-item a');
+   const getTabsItem = document.querySelectorAll('.wrap-flex__tabs-item');
+
+   getUrlLink.forEach(function (val, index) {
+
+      if (getLang === "uk") {
+         if (resultUrl === val.getAttribute('href')) {
+            // console.log(`done ${getLang} ` + resultUrl + " " + val.getAttribute('href'));
+            val.parentNode.classList.add("active-tab")
+         }
+      } else {
+         if (resultUrl === val.getAttribute('href').replace("/ua", "")) {
+            // console.log(`done ${getLang} ` + resultUrl + " " + val.getAttribute('href').replace("/ua", ""));
+            val.parentNode.classList.add("active-tab")
+         }
+      }
+   });
+
+</script>

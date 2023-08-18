@@ -1,0 +1,198 @@
+<style>
+
+</style>
+
+<div id="questions-wrap">
+   <div class="questions-container">
+
+      <div id="questions-subtext" class="questions-subtext">
+         <h2>Оцініть отримання товару</h2>
+         <p>Вітаємо з покупкою! Оцініть швидкозручніть!</p>
+      </div>
+
+      <div class="questions-form">
+
+         <div id="wrapper-form-corizoid" class="form-corizoid">
+            <div id="form-submit-none">
+               <form id="questions_form" method="post" name="questions_form">
+
+                  <div class="questions-form__answer --answer1">
+                     <div class="questions-form__answer-h3">
+                        <h3>Як багато зусиль ви доклали для отримання придбаної техніки?</h3>
+                     </div>
+                     <div class="questions-form__answer-content">
+                        <div class="questions-form__answer-flex">
+                           <label class="questions-label">
+                              Дуже багато
+                              <input class="questions-input" type="radio" name="answer1" value="Дуже багато" checked="checked">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+                        <div class="questions-form__answer-flex">
+                           <label class="questions-label">
+                              Скоріше багато
+                              <input class="questions-input" type="radio" name="answer1" value="Скоріше багато">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+                        <div class="questions-form__answer-flex">
+                           <label class="questions-label">
+                              Не багато і не мало
+                              <input class="questions-input" type="radio" name="answer1" value="Не багато і не мало">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+                        <div class="questions-form__answer-flex">
+                           <label class="questions-label">
+                              Скоріше мало
+                              <input class="questions-input" type="radio" name="answer1" value="Скоріше мало">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+                        <div class="questions-form__answer-flex">
+                           <label class="questions-label">
+                              Зовсім мало
+                              <input class="questions-input" type="radio" name="answer1" value="Зовсім мало">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="questions-form__answer --answer2">
+                     <div class="questions-form__answer-h3">
+                        <h3>Чи було отримання придбаної техніки швидкозручним?</h3>
+                     </div>
+                     <div class="questions-form__answer-content">
+                        <div class="questions-form__answer-flex">
+                           <label class="questions-label">
+                              Так, на 100%
+                              <input class="questions-input" type="radio" name="answer2" value="Так, на 100%" checked="checked">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+                        <div class="questions-form__answer-flex">
+                           <label class="questions-label">
+                              В цілому так
+                              <input class="questions-input" type="radio" name="answer2" value="В цілому так">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+
+                        <div class="questions-form__answer-flex">
+                           <label class="questions-label">
+                              Ну таке
+                              <input class="questions-input" type="radio" name="answer2" value="Ну таке">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+                        <div class="questions-form__answer-flex">
+                           <label class="questions-label">
+                              Скоріше ні
+                              <input class="questions-input" type="radio" name="answer2" value="Скоріше ні">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+                        <div class="questions-form__answer-flex">
+                           <label class="questions-label">
+                              Зовсім ні
+                              <input class="questions-input" type="radio" name="answer2" value="Зовсім ні">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="questions-form__answer --answer3">
+                     <div class="questions-form__answer-h3">
+                        <h3>Якщо вам є що сказати, напишіть нам!</h3>
+                     </div>
+                     <div class="questions-form__answer-content">
+                        <div class="questions-form__answer-textarea">
+                           <textarea id="questions-textarea" name="textarea" placeholder="Розкажіть нам про свій досвід"></textarea>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="questions-form__submit">
+                     <button type="submit" form="questions_form" value="Submit"><b>Відправити</b></button>
+                  </div>
+
+               </form>
+            </div>
+
+            <div id="text-submit-block" class="questions-form-done">
+               <div class="questions-form-done__txt1">
+                  Дякуємо за вашу відповідь!
+               </div>
+               <div class="questions-form-done__img">
+                  <img src="https://cdn.comfy.ua/media/x/img2/questions_done.png" alt="">
+               </div>
+               <a class="questions-form-done__a" href="https://comfy.ua/ua/">На головну</a>
+            </div>
+         </div>
+
+      </div>
+
+   </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+
+<script>
+
+   let value_params = new URLSearchParams(document.location.search);
+   let value_params_number = value_params.get("poolid");
+
+   $(document).ready(function () {
+      $("fieldset input").click(function () {
+         $("fieldset label.error").remove()
+      });
+
+      $("#questions_form").validate({
+         submitHandler: function (form) {
+            function sendAjaxForm(result_form, ajax_form) {
+               let questions = {
+                  answer1: '',
+                  answer2: '',
+                  answer3: '',
+                  number: ''
+               };
+
+               let value_answer1 = document.querySelector('input[type=radio][name=answer1]:checked');
+               let value_answer2 = document.querySelector('input[type=radio][name=answer2]:checked');
+               let value_answer3 = document.getElementById('questions-textarea');
+               let getTrim = value_answer3.value.trim();
+               let getReplace = getTrim.replace(/^ +| +$|( ) +/g, "$1");
+
+               questions.answer1 = value_answer1.value;
+               questions.answer2 = value_answer2.value;
+               if (!getReplace == "") {
+                  questions.answer3 = getReplace;
+               } else {
+                  questions.answer3 = "Клієнт не заповнив поле: answer3";
+               }
+               questions.number = value_params_number;
+               console.log(questions);
+
+               $.ajax({
+                  url: "",
+                  headers: {
+                     'Content-Type': 'application/x-www-form-urlencoded'
+                  },
+                  type: "POST",
+                  dataType: "json",
+                  data: JSON.stringify(questions),
+                  success: console.log('done')
+               });
+               let none_form = document.getElementById("form-submit-none").style.display = "none";
+               let none_questions_subtext = document.getElementById("questions-subtext").style.display = "none";
+               let block_text = document.getElementById("text-submit-block").style.display = "block";
+            }
+            sendAjaxForm();
+         }
+      });
+   })
+
+</script>

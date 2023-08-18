@@ -1,0 +1,114 @@
+body
+   padding: 0
+   margin: 0
+#app-link
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   box-sizing: border-box
+   display: block
+   background: #43B02A
+   img
+      display: block
+      max-width: 100%
+      margin: 0
+      padding: 0
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+.breadcrumbs
+   display: none
+//end default styles
+
+.app-link__flex
+   display: flex
+   align-items: center
+   max-width: 1440px
+   margin: 0 auto
+   position: relative
+   padding: 0 15px
+.app-link__flex-item
+   flex: 1 1 0
+.app-link__text-img-desk
+   display: block
+   position: relative
+.app-link__text-img-mob
+   display: none
+.app-link__href-flex
+   display: flex
+   align-items: center
+   padding-top: 56px
+   a
+      display: block
+      background: #000000
+      border-radius: 14.517px
+      padding: 27px 30px
+      transition: .3s
+      &:first-child
+         margin-right: 32px
+      &:hover
+         box-shadow: 0 0 6px 0 #000
+.app-link__img
+   padding-top: 48px
+   img
+      margin: 0 auto !important
+.app-link__img-mob
+   display: none
+.img-pos-abs
+   position: absolute
+.app-link__img-pos1
+   top: 0
+   left: 8%
+.app-link__img-pos2
+   right: 44%
+   top: 29%
+.app-link__img-pos3
+   left: -2%
+   bottom: 0
+.app-link__img-pos4
+   right: 42%
+   bottom: 0
+// media
+@media (max-width: 1024px)
+   .app-link__img-pos4, .app-link__img-pos2
+      display: none
+   .app-link__img-pos1
+      max-width: 200px
+@media (max-width: 812px)
+   .app-link__href-flex a
+      padding: 16px 16px
+@media (max-width: 480px)
+   .app-link__flex
+      flex-direction: column-reverse
+      padding: 10px 0 0 0
+   .app-link__img-pos3, .app-link__img-pos1
+      display: none
+   .app-link__content
+      display: flex
+      flex-direction: column-reverse
+      margin-top: -50px
+      padding: 0 15px 20px 15px
+   .app-link__img
+      display: none
+   .app-link__img-mob
+      display: block
+   .app-link__text-img-desk
+      display: none
+   .app-link__text-img-mob
+      display: block
+      padding-top: 32px
+      img
+         margin: 0 auto !important
+   .app-link__href-flex
+      padding-top: 0
+   .app-link__href-flex a:first-child
+      margin-right: 10px
+// @media (max-width: 320px)
+@media (max-width: 812px) and (orientation: landscape)
+   .app-link__img-pos1
+      max-width: 150px
+   .app-link__img-pos3
+      max-width: 140px
+   .app-link__href-flex a:first-child
+      margin-right: 10px

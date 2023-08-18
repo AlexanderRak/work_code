@@ -1,0 +1,146 @@
+$maxWidth: 1920
+@mixin adaptiv-font($pcSize, $mobSize)
+   $addSize: $pcSize - $mobSize
+   $maxWidth: $maxWidth - 320
+   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+// @include adaptiv-font(56, 30)
+.ingenio-wrap img
+   max-width: 100%
+   margin: 0 auto
+   padding: 0
+#ingenio-wrap
+   display: block
+   background: #fff
+   width: 100%
+   max-width: 100%
+   img
+      opacity: 1
+      display: block
+      max-width: 100%
+      &:hover
+         opacity: 1
+   p, h1, h2, h3, h4, h5, h6
+      padding: 0
+      margin: 0
+      text-align: inherit
+   h1, h2, h3, h4, h5, h6
+      font-weight: bold
+      line-height: 1.1
+   p
+      @include adaptiv-font(35, 18)
+      line-height: 1.1
+   h2
+      @include adaptiv-font(52, 21)
+      color: #e2020f
+      &.--colorfff
+         color: #fff
+   h3
+      @include adaptiv-font(30, 16)
+      color: #fff
+      text-align: center
+      text-transform: uppercase
+span.word-wrap
+   display: block
+   word-wrap: break-word
+span.fw-bold
+   font-weight: bold
+span.tx-uppercase
+   text-transform: uppercase
+.features-desc__text h2
+   text-align: inherit
+.one-col .features-desc__text p
+   text-align: inherit
+.bc-description__content p:first-letter
+   padding-left: 0
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+// default
+.ingenio-container
+   max-width: 1520px
+   margin: 0 auto
+   padding: 50px 0
+.ingenio-img
+   img
+      margin: 0 auto !important
+.ingenio-text
+   padding: 50px 15px
+   text-align: center
+.ingenio-flex
+   display: flex
+   align-items: center
+   &.rowrev
+      flex-direction: row-reverse
+      .ingenio__item
+         img
+            margin: 0 0 0 auto
+.ingenio__item
+   flex: 1 1 0
+   img
+      margin: 0
+.ingenio__content
+   padding: 15px
+.ingenio__h2
+   padding-bottom: 30px
+   text-align: left
+.ingenio__p
+   text-align: left
+.ingenio-pan
+   padding-bottom: 50px
+.ingenio-pan__h2
+   text-align: center
+   padding: 50px 15px
+.ingenio-pan__bgrd-color
+   background: #e74e39
+.ingenio-pan__flex
+   display: flex
+   justify-content: space-between
+   padding-bottom: 35px
+.ingenio-pan__item
+   padding: 15px
+.ingenio-pan__h3
+   background: red
+   padding: 10px 5px
+   border-radius: 0 0 0 50px
+// media
+// @media (min-width: 1902px)
+// @media (max-width: 1366px)
+// @media (max-width: 1280px)
+// @media (max-width: 1024px)
+@media (max-width: 812px)
+   .ingenio-pan__flex
+      flex-direction: column
+   .ingenio-pan__content
+      max-width: 440px
+      margin: 0
+   .ingenio-pan__item
+      &:nth-child(2)
+         .ingenio-pan__content
+            margin: 0 0 0 auto
+@media (max-width: 480px)
+   .ingenio-flex
+      flex-direction: column
+      &.rowrev
+         flex-direction: column
+   .ingenio-container
+      padding: 0 0 50px 0
+   .ingenio-text
+      padding: 30px 15px
+   .ingenio__content
+      padding: 30px 15px
+   .ingenio-pan__h2
+      padding: 30px 15px 15px 15px
+   .ingenio-pan
+      padding-bottom: 30px
+// @media (max-width: 320px)
+@media (max-width: 812px) and (orientation: landscape)
+   .ingenio-container
+      padding: 0 0 50px 0
+   .ingenio-text
+      padding: 30px 15px
+   .ingenio__content
+      padding: 30px 15px
+   .ingenio-pan__h2
+      padding: 30px 15px 15px 15px
+   .ingenio-pan
+      padding-bottom: 30px

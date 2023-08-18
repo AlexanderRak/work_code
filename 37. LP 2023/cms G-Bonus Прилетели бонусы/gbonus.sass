@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+$maxWidth: 1920
+@mixin adaptiv-font($pcSize, $mobSize)
+   $addSize: $pcSize - $mobSize
+   $maxWidth: $maxWidth - 320
+   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+#cms-gbonus
+   display: block
+   margin: 0 auto
+   max-width: 1366px
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #43B02A
+   position: relative
+   img
+      display: block
+      max-width: 100%
+      margin-right: initial
+      margin-left: initial
+   p
+      font-size: 19px
+      font-weight: 500
+      color: #fff
+      margin-bottom: 0
+      line-height: 1.1
+      position: relative
+      text-align: left
+   h2
+      @include adaptiv-font(65, 24)
+      line-height: 1
+      text-align: center
+      color: #fff
+      font-weight: bold
+      position: relative
+      font-family: 'Roboto', sans-serif
+.features-desc__text h2
+   text-align: inherit
+.one-col .features-desc__text p
+   text-align: inherit
+// default
+.cms-gbonus__banner
+   position: relative
+.cms-gbonus__banner-pos-img1
+   position: absolute
+   left: 33px
+   top: 22px
+.cms-gbonus__banner-pos-img2
+   position: absolute
+   right: 0
+   top: 0
+.cms-gbonus__banner-h2
+   padding: 28px 15px 42px 15px
+.cms-gbonus__banner-flex
+   display: flex
+   flex-direction: row
+   max-width: 1273px
+   margin: 0 auto
+   padding: 0 15px 30px 15px
+.cms-gbonus__banner-item
+   flex: 1 1 0
+   display: flex
+   align-items: center
+.cms-gbonus__banner-p
+   padding: 0 15px 0 18px
+   max-width: 295px
+.cms-gbonus__banner-login span
+   display: block
+   color: #fff
+   font-size: 18px
+   line-height: 1
+   text-align: left
+.cms-gbonus__banner-login
+   max-width: 1273px
+   margin: 0 auto
+   padding: 0 15px 24px 15px
+.activelink
+   display: block !important
+// media
+// @media (max-width: 1250px)
+@media (max-width: 1024px)
+   .cms-gbonus__banner-pos-img1
+      left: -50px
+      top: -15px
+   .cms-gbonus__banner-pos-img2
+      max-width: 100px
+@media (max-width: 812px)
+   .cms-gbonus__banner-flex
+      flex-wrap: wrap
+   .cms-gbonus__banner-item
+      flex: 1 1 50%
+      margin-bottom: 20px
+@media (max-width: 480px)
+   .cms-gbonus__banner-flex
+      flex-direction: column
+      padding: 0 15px 10px 15px
+   .cms-gbonus__banner-h2
+      padding: 100px 15px 30px 15px

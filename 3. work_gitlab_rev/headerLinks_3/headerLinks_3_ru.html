@@ -1,50 +1,92 @@
+<!-- ru -->
 <style>
 	.header-links__link.actionstopmenu {
 		width: 5.5rem;
-		border-right: .1rem solid #e5e5e5;
+		border-right: .1rem solid transparent;
+	}
+
+	.header-links__link {
+		position: relative;
+	}
+
+	.header-links__link .before_itog {
+		position: relative;
+		padding-left: 35px;
+	}
+
+	.header-links__link .before_itog::before {
+		content: "";
+		background-image: url(https://cdn.comfy.ua/media/x/img2/imgel.svg);
+		width: 2rem;
+		height: 2rem;
+		position: absolute;
+		margin-left: -2.5rem;
+		margin-top: 0;
+		background-size: contain;
+		background-repeat: no-repeat;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.header .header-city {
+		width: 35%;
+	}
+
+	.header-links {
+		width: 65%;
+	}
+
+	@media (max-width: 1024px) {
+		.header-links__link .before_itog {
+			padding-left: 23px;
+		}
+
+		.header-links {
+			width: 100%;
+		}
 	}
 </style>
 <nav class="header-links header-links__list header__item" id="headerLinks">
 	<div class="header-links__link actionstopmenu"><span data-lbl="Акции">Акции</span>
 		<div class="header-links__note">
-			<a class="header-links__note-link" href="{{store url='sale'}}">Скидки до -40%</a>
-			<a class="header-links__note-link" href="{{store url='dva-po-cene-pervogo'}}">Два по цене первого</a>
-			<a class="header-links__note-all-link" href="{{store url='actions'}}">Все акции</a>
+			<a class="header-links__note-link" href="{{store url='sale2022/'}}">Скидки до -40%</a>
+			<!-- <a href="{{store url='dva-po-cene-pervogo/'}}" _mce_href="{{store url='dva-po-cene-pervogo/'}}" class="header-links__note-link">Два по цене первого</a> -->
+			<a class="header-links__note-all-link" href="{{store url='actions/'}}">Все акции</a>
 		</div>
 	</div>
-	<!-- <a href="{{store url='black-friday.html'}}" class="header-links__link discountedtopmenu"> <span data-lbl="Черная пятница">Черная пятница</span> </a> -->
-	<a class="header-links__link" href="https://comfy.ua/wow-uslugi.html"> <span data-lbl="Услуги">Услуги</span> </a>
-	<a href="{{store direct_url='shops.html'}}" class="header-links__link"> <span data-lbl="Магазины">Магазины</span> </a>
-	<a href="{{store direct_url='status-order.html'}}" class="header-links__link statusordertopmenu"><span data-lbl="Найти заказ">Найти заказ</span></a>
-	<div class="header-links__link moremenu"><span data-lbl="Еще">Еще</span>
+	<a href="{{store url='page/pidsumki-roku.html'}}" class="header-links__link">
+		<span class="before_itog" data-lbl="Итоги 2022">Итоги 2022</span>
+	</a>
+	<a href="{{store url='gift-cards/'}}" class="header-links__link">
+		<span data-lbl="Подарочные карты">Подарочные карты</span>
+	</a>
+	<a href="{{store direct_url='shops.html'}}" class="header-links__link">
+		<span data-lbl="Магазины">Магазины</span>
+	</a>
+	<a href="{{store direct_url='status-order.html'}}" class="header-links__link statusordertopmenu">
+		<span data-lbl="Найти заказ">Найти заказ</span>
+	</a>
+	<div class="header-links__link moremenu">
+		<span data-lbl="Еще">Еще</span>
 		<div class="header-links__note-more">
-			<a href="{{store direct_url='courier-delivery-self.html'}}" class="header-links__link"><span data-lbl="Доставка">Доставка</span></a>
-			<a href="{{store direct_url='exchange-and-returns.html'}}" class="header-links__link"><span data-lbl="Возврат">Возврат</span></a>
-			<a target="_blank" href="https://blog.comfy.ua/" class="header-links__link"><span data-lbl="Блог">Блог</span></a>
+			<a href="{{store direct_url='courier-delivery-self.html'}}" class="header-links__link">
+				<span data-lbl="Доставка">Доставка</span>
+			</a>
+			<a href="{{store direct_url='exchange-and-returns.html'}}" class="header-links__link">
+				<span data-lbl="Возврат">Возврат</span>
+			</a>
+			<a target="_blank" href="https://blog.comfy.ua/" class="header-links__link">
+				<span data-lbl="Блог">Блог</span>
+			</a>
 		</div>
 	</div>
 </nav>
-<div class="chat_header header-phone header__item js-header-phone" id="chat_id_header">
-	<div class="header-phone__i popup_wrap"><a class="show_popup" id="show_popup20"><span class="hide-on-desktop">0-800-303-505</span><span class="only-desktop">Связаться</span></a>
-		<div class="header-phone-popup popup" id="popup20">
-			<div class="object-reverse">
-				<ul class="communication">
-					<li> <a target="_blank" id="chatBtn1" class="js-siteheart-btn">Чат на сайте</a> </li>
-					<li> <a target="_blank" href="https://www.messenger.com/t/comfy.ua">Messenger</a> </li>
-					<li> <a target="_blank" href="viber://pa?chatURI=comfy.ua&context=/startChat">Viber</a> <span class="i_icon20"> </span> </li>
-					<li> <a target="_blank" href="https://t.me/ComfyuaBot?start=startChat">Telegram</a> </li>
-					<li>
-						<div class="header-phone-popup__item"><a class="header-phone__link" id="phone_icon" href="tel:0800303505">0-800-303-505</a>
-							<p class="header-phone-popup__note"><span class="header-phone-popup__note-item header-phone-popup__note_bold"> с 8:00 до 21:00 (пн-вс) </span> <span class="header-phone-popup__note-item">Бесплатно по Украине</span></p>
-						</div>
-					</li>
-					<li>
-						<div class="header-phone-popup__item"><a class="header-phone__link header-phone__link_call" id="phone_icon" href="tel:0443939505">044-39-39-505</a>
-							<p class="header-phone-popup__note"><span class="header-phone-popup__note-item header-phone-popup__note_bold">Бесплатно по Киеву </span> <span class="header-phone-popup__note-item">со стационарных</span></p>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
+<div class="communication-block-wrapper">
+	<div class="communication-block communication-button-wrapper">
+		<a class="communication-button">
+			<span class="hide-on-desktop">0-800-303-505</span>
+			<span class="only-desktop">Связаться</span>
+		</a>
+		{{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="22263"}}
 	</div>
 </div>

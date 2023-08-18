@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+body
+   margin: 0
+   padding: 0
+   font-family: 'Roboto', sans-serif
+// $maxWidth: 1920
+// @mixin adaptiv-font($pcSize, $mobSize)
+//    $addSize: $pcSize - $mobSize
+//    $maxWidth: $maxWidth - 320
+//    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+// @include adaptiv-font(20, 14)
+#samsung-one-day
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   box-sizing: border-box
+   display: block
+   background: #43B02A
+   img
+      display: block
+      max-width: 100%
+      margin: 0 auto
+      padding: 0
+   h2, h3, p
+      display: block
+      padding: 0
+      margin: 0
+      position: relative
+   h2
+      font-size: 24px
+      font-weight: bold
+      color: #000
+      line-height: 30px
+      text-align: center
+   h3
+      font-size: 21px
+      font-weight: 500
+      color: #000
+      line-height: 1.3
+      text-align: center
+      padding-top: 10px
+   p
+      font-size: 16px
+      font-weight: 700
+      color: #fff
+      line-height: 1
+      text-align: left
+      padding: 0
+      &::first-letter
+         padding-left: 0 !important
+   a
+      color: #FFFFFF
+      display: block
+      font-size: 18px
+      font-weight: 500
+      margin: 0
+      text-decoration: underline
+      padding-top: 60px
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+.breadcrumbs
+   display: none
+.active_block
+   display: flex !important
+.not-active_block
+   display: none !important
+//end default styles
+.samsung-one-day__img-desk
+   display: block
+.samsung-one-day__img-mob
+   display: none
+.samsung-one-day__content
+   background: #FFFFFF
+   border-radius: 8px
+   padding: 30px 25px
+   max-width: 840px
+   margin: 0 auto
+   position: relative
+   height: 220px
+.samsung-one-day__content-form
+   padding-top: 50px
+.samsung-one-day__wrap
+   padding: 60px 12px
+.samsung-one-day__grid
+   margin-top: 30px
+   max-width: 840px
+   margin: 30px auto 40px auto
+   display: grid
+   grid-template-columns: 1fr 1fr
+   grid-gap: 30px
+.samsung-one-day__grid-item
+   background: #3BA724
+   border: 2px solid #FFFFFF
+   border-radius: 8px
+   padding: 20px
+.samsung-one-day__grid-item-p
+   padding-bottom: 10px
+.samsung-one-day__ul
+   list-style-type: none
+   li
+      font-weight: 500
+      font-size: 14px
+      line-height: 20px
+      color: #FFFFFF
+.samsung-one-day__footer-img
+   max-width: 840px
+   margin: 0 auto
+/* form */
+#wrapper-form-corizoid
+   width: 100%
+   form
+      div.error, label.error
+         color: #ff090b
+         left: 0
+         padding-left: 15px
+         display: block
+         position: absolute
+         margin: 4px 4px 4px 0px
+         bottom: -22px
+#form-submit-none
+   display: block
+#text-submit-block
+   display: none
+   align-items: flex-start
+   justify-content: flex-start
+   img
+      margin: 0
+.row-flex-form
+   display: grid
+   grid-template-columns: 1fr 1fr 160px
+   grid-gap: 20px
+   .item_fr
+      display: block
+      position: relative
+      &:last-child
+         padding: 0 0 0 0
+      .item-input-frm
+         font-size: 16px
+         margin: 0
+         padding: 0 12px
+         text-align: left
+         line-height: 1
+         height: 40px
+         color: #000
+         border: 1px solid #E5E5E5
+         border-radius: 4px
+         width: 100%
+         &:focus
+            box-shadow: inset 0px 0px 10px 0px #e5e5e5
+.item-input-frm::placeholder
+   color: #000
+.row-flex-form
+   .item_fr
+      .item-input-frm
+         &.item-input-frm__submit
+            background: #43b02a
+            transition: .3s
+            color: #fff
+            width: 100%
+            text-align: center
+            font-weight: 500
+            border-radius: 8px
+            &:hover
+               cursor: pointer
+.text-submit-block-cl p
+   font-size: 18px !important
+   font-weight: bold !important
+   padding-left: 12px !important
+   text-align: left !important
+   color: #000 !important
+.item_fr_text-pos
+   position: absolute
+   top: -20px
+   left: 0
+   color: #616161
+   font-weight: 300
+   display: block
+/* form END */
+//media*******************
+// @media (min-width: 1920px)
+// @media (max-width: 1200px)
+// @media (max-width: 1024px)
+@media (max-width: 812px)
+   .samsung-one-day__content
+      height: auto
+@media (max-width: 480px)
+   .samsung-one-day__img-desk
+      display: none
+   .samsung-one-day__img-mob
+      display: block
+   .samsung-one-day__wrap
+      padding: 30px 12px
+   .samsung-one-day__wrap
+      padding: 30px 0
+   .samsung-one-day__content
+      border-radius: 0
+      height: 370px
+      padding: 30px 30px
+   #samsung-one-day h2
+      font-size: 22px
+   #samsung-one-day h3
+      font-size: 16px
+      padding-top: 3px
+   .samsung-one-day__content-form
+      padding-top: 40px
+   .row-flex-form
+      grid-template-columns: 1fr
+      grid-gap: 0
+   .row-flex-form .item_fr
+      margin-bottom: 45px
+   .row-flex-form .item_fr:last-child
+      padding: 0 0 0 0
+      margin: 0
+   .item_fr.item_email
+      margin-bottom: 30px
+   .samsung-one-day__grid
+      margin: 0
+      grid-template-columns: 1fr
+      grid-gap: 16px
+      padding: 20px 12px
+   #text-submit-block
+      flex-direction: column
+      align-items: center
+      padding-top: 30px
+   .text-submit-block-cl p
+      font-size: 18px !important
+      padding-left: 0 !important
+      text-align: center !important
+      padding-top: 10px !important
+   .samsung-one-day__img-mob img
+      width: 90%
+   .samsung-one-day__footer-img
+      padding: 25px 12px 0 12px
+   #samsung-one-day a
+      padding-top: 40px
+// @media (max-width: 320px)
+// @media (max-width: 812px) and (orientation: landscape)

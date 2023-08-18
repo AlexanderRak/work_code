@@ -1,0 +1,553 @@
+<style>
+#apple2023 {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  background: #fff;
+}
+#apple2023 img {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#apple2023 h2, #apple2023 h3, #apple2023 p {
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 3;
+}
+#apple2023 h2 {
+  font-size: -webkit-calc(24px + 26 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(24px + 26 * ((100vw - 320px) / 1600));
+  font-size: calc(24px + 26 * ((100vw - 320px) / 1600));
+  font-weight: bold;
+  color: #000;
+  line-height: 1;
+  text-align: center;
+}
+#apple2023 h3 {
+  font-size: -webkit-calc(24px + 26 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(24px + 26 * ((100vw - 320px) / 1600));
+  font-size: calc(24px + 26 * ((100vw - 320px) / 1600));
+  font-weight: bold;
+  color: #000;
+  line-height: 1;
+  text-align: center;
+}
+#apple2023 p {
+  font-size: -webkit-calc(14px + 10 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(14px + 10 * ((100vw - 320px) / 1600));
+  font-size: calc(14px + 10 * ((100vw - 320px) / 1600));
+  font-weight: 500;
+  color: #151B1F;
+  line-height: 1.3;
+}
+
+.bc-description__content p:first-letter {
+  padding-left: 0;
+}
+
+.apple__img img {
+  margin: 0 auto !important;
+}
+
+.apple-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 15px;
+}
+
+.pdd-bottom1 {
+  padding-bottom: 80px;
+}
+
+.pdd-content1 {
+  padding: 100px 15px;
+}
+
+.pdd-content2 {
+  padding: 100px 15px 0 15px;
+}
+
+.pdd-content3 {
+  padding: 100px 0 0 0;
+  margin-top: 15px;
+}
+
+.pdd-content4 {
+  padding: 100px 0 100px 0;
+  margin-top: 15px;
+}
+
+.pdd-bottom5 {
+  padding: 100px 15px 100px 15px;
+  background: #fafafa;
+  margin: 15px 0;
+}
+
+.apple-content {
+  background: #fafafa;
+}
+
+.apple-content-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #fafafa;
+  margin: 15px 0;
+  padding: 100px 0;
+}
+.apple-content-flex h3 {
+  padding-right: 10px !important;
+}
+
+.apple-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  margin-top: 15px;
+}
+
+.apple-content-grid__item {
+  background: #fafafa;
+  padding: 50px 15px;
+}
+
+.apple-content-grid__img img {
+  margin: 0 auto !important;
+}
+
+.apple-content-grid__p {
+  text-align: center;
+  padding-top: 25px;
+}
+
+.apple-content-imgR img {
+  margin: 0 0 0 auto !important;
+}
+.apple-content-imgR p {
+  text-align: right;
+  padding: 15px !important;
+}
+
+.apple-content-imgL p {
+  text-align: left;
+  padding: 15px !important;
+}
+
+.apple-content-imgRL {
+  background: #fafafa;
+  margin-top: 15px;
+}
+
+.apple-table-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.apple-table-flex__item:first-child {
+  margin-right: 100px;
+}
+
+.apple-table__p p {
+  text-align: left;
+  font-size: 21px !important;
+}
+.apple-table__p span {
+  display: block;
+  width: 100px;
+  background: #000;
+  margin: 25px 0;
+  height: 2px;
+}
+
+.apple-table__p {
+  max-width: 370px;
+}
+
+.apple-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  margin-top: 15px;
+}
+
+.apple-grid__item {
+  background: #fafafa;
+  padding: 80px 15px 0 15px;
+}
+.apple-grid__item span {
+  font-size: 21px;
+  text-align: center;
+  padding: 0 0 50px 0;
+  display: block;
+  font-weight: bold;
+}
+.apple-grid__item .apple-grid__img img {
+  margin: 0 auto !important;
+}
+
+@media (max-width: 1024px) {
+  .apple-table__p p {
+    font-size: 18px !important;
+  }
+  .pdd-bottom1 {
+    padding-bottom: 50px;
+  }
+  .pdd-content1 {
+    padding: 50px 15px;
+  }
+  .apple-content-flex {
+    padding: 50px 0;
+  }
+  .pdd-content3 {
+    padding: 60px 0 0 0;
+  }
+  .pdd-bottom5 {
+    padding: 50px 15px 50px 15px;
+  }
+  .apple-wrap {
+    padding: 100px 15px 50px 15px;
+  }
+  #apple2023 p {
+    font-size: 18px;
+  }
+  .apple-content-flex img {
+    max-width: 115px !important;
+  }
+  .apple-content-imgR img {
+    max-width: 500px !important;
+  }
+  .apple-content-imgL img {
+    max-width: 360px !important;
+  }
+}
+@media (max-width: 480px) {
+  .apple-wrap {
+    padding: 50px 15px 50px 15px;
+  }
+  #apple2023 h3 {
+    font-size: 24px;
+  }
+  .pdd-content2 {
+    padding: 50px 15px 0 15px;
+  }
+  .apple-content-grid {
+    grid-template-columns: 1fr;
+  }
+  .apple-content-grid__item {
+    padding: 35px 15px;
+  }
+  .apple-content-imgR img {
+    max-width: 250px !important;
+  }
+  .apple-content-imgL img {
+    max-width: 250px !important;
+  }
+  .apple-table-flex__item:first-child {
+    margin-right: 0;
+  }
+  .apple-table-flex__item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0;
+       -moz-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+  }
+  .apple-table__p {
+    max-width: 370px;
+    padding: 0 5px;
+  }
+  .apple-grid {
+    grid-template-columns: 1fr;
+  }
+  .apple-grid__item {
+    padding: 50px 15px 0 15px;
+  }
+  .pdd-content3 {
+    padding: 50px 0 0 0;
+  }
+  .pdd-content4 {
+    padding: 50px 0 50px 0;
+  }
+  .apple-content-imgL {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+       -moz-box-orient: vertical;
+       -moz-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+</style>
+
+<div id="apple2023">
+
+   <div class="apple-wrap">
+
+      <div class="apple__h2 pdd-bottom1">
+         <h2>MacBook Air.<br>Новый дизайн.<br>Новые возможности.</h2>
+      </div>
+
+      <div class="apple__img">
+         <img src="https://cdn.comfy.ua/media/x/img2/2052719/img1.png" alt="">
+      </div>
+
+      <div class="apple-content pdd-content1">
+         <div class="apple__h3 pdd-bottom1">
+            <h3>С суперсилой</h3>
+         </div>
+
+         <div class="apple__img">
+            <img src="https://cdn.comfy.ua/media/x/img2/2052719/img3.png" alt="">
+         </div>
+      </div>
+
+      <div class="apple-content-flex">
+         <h3>До 18 часов без подзарядке</h3>
+         <img src="https://cdn.comfy.ua/media/x/img2/2052719/img2.png" alt="">
+      </div>
+
+      <div class="apple__h2 pdd-content1">
+         <h2>Дисплей Liquid Retina<br>13,6 дюйма</h2>
+      </div>
+
+      <div class="apple__img">
+         <img src="https://cdn.comfy.ua/media/x/img2/2052719/img4.png" alt="">
+      </div>
+
+      <div class="apple-content pdd-content2">
+         <div class="apple__h3 pdd-bottom1">
+            <h3>Камера FaceTime HD 1080p</h3>
+         </div>
+
+         <div class="apple__img">
+            <img src="https://cdn.comfy.ua/media/x/img2/2052719/img5.png" alt="">
+         </div>
+      </div>
+
+      <div class="apple-content-grid">
+         <div class="apple-content-grid__item">
+            <div class="apple-content-grid__img">
+               <img src="https://cdn.comfy.ua/media/x/img2/2052719/img7.png" alt="">
+            </div>
+            <div class="apple-content-grid__p">
+               <p>Система из трёх микрофонов</p>
+            </div>
+         </div>
+         <div class="apple-content-grid__item">
+            <div class="apple-content-grid__img">
+               <img src="https://cdn.comfy.ua/media/x/img2/2052719/img6.png" alt="">
+            </div>
+            <div class="apple-content-grid__p">
+               <p>Аудио система с четырьмя динамиками и технологией пространственного аудио</p>
+            </div>
+         </div>
+      </div>
+
+      <div class="apple-content pdd-content3">
+         <div class="apple__h3 pdd-bottom1">
+            <h3>Зарядка по технологии MagSafe</h3>
+         </div>
+
+         <div class="apple__img">
+            <img src="https://cdn.comfy.ua/media/x/img2/2052719/img8.png" alt="">
+         </div>
+      </div>
+
+      <div class="apple-content-imgRL pdd-content4">
+         <div class="apple-content-imgR">
+            <img src="https://cdn.comfy.ua/media/x/img2/2052719/img9.png" alt="">
+            <p>Порты Thunderbolt</p>
+         </div>
+
+         <div class="apple-content-imgL">
+            <p>Выход для наушников</p>
+            <img src="https://cdn.comfy.ua/media/x/img2/2052719/img10.png" alt="">
+         </div>
+      </div>
+
+      <div class="apple__h2 pdd-bottom5">
+         <h2>Сочетает невероятную производительность и удивительно долгую работу.</h2>
+      </div>
+
+      <div class="apple__img">
+         <img src="https://cdn.comfy.ua/media/x/img2/2052719/img11.png" alt="">
+      </div>
+
+      <div class="apple__h2 pdd-bottom5">
+         <h2>Мгновенно переносите контент между iPhone и Mac</h2>
+      </div>
+
+      <div class="apple__img">
+         <img src="https://cdn.comfy.ua/media/x/img2/2052719/img12.png" alt="">
+      </div>
+
+      <div class="apple__h2 pdd-bottom5">
+         <h2>Все приложения работают ещё быстрей<br>Microsoft 365, Zoom и другие</h2>
+      </div>
+
+      <div class="apple__img">
+         <img src="https://cdn.comfy.ua/media/x/img2/2052719/img13.png" alt="">
+      </div>
+
+      <div class="apple__h2 pdd-bottom5">
+         <h2>Основные характеристики</h2>
+      </div>
+
+      <div class="apple-table-flex">
+         <div class="apple-table-flex__item">
+            <div class="apple-table__p">
+               <p>Чип M2: процессор, графический процессор и технологии машинного обучения нового поколения</p>
+               <span></span>
+            </div>
+            <div class="apple-table__p">
+               <p>Более быстрый 8-ядерный центральный и 10-ядерный графический процессор (в максимальной комплектации) для решения самых сложных задач</p>
+               <span></span>
+            </div>
+            <div class="apple-table__p">
+               <p>16-ядерная система Neural Engine для продвинутого машинного обучения</p>
+               <span></span>
+            </div>
+            <div class="apple-table__p">
+               <p>До 24 ГБ объединённой памяти, чтобы всё работало быстро и плавно</p>
+               <span></span>
+            </div>
+            <div class="apple-table__p">
+               <p>До 20 процентов быстрее применяются фильтры и эффекты к изображениям</p>
+               <span></span>
+            </div>
+            <div class="apple-table__p">
+               <p>До 40 процентов быстрее редактирование сложных видео</p>
+               <span></span>
+            </div>
+            <div class="apple-table__p">
+               <p>Целый день работы: до 18 часов без подзарядки</p>
+               <span></span>
+            </div>
+            <div class="apple-table__p">
+               <p>Конструкция без вентилятора для бесшумной работы</p>
+               <span></span>
+            </div>
+            <div class="apple-table__p">
+               <p>Дисплей Retina 13,6 дюйма с яркостью 500 кд/м² и широким цветовым охватом P3 для потрясающей цветопередачи и невероятной детализации</p>
+               <span></span>
+            </div>
+            <div class="apple-table__p">
+               <p>Камера FaceTime HD 1080p: разрешение и возможности съёмки при низкой освещённости улучшены вдвое по сравнению с моделями предыдущего поколения</p>
+            </div>
+         </div>
+         <div class="apple-table-flex__item">
+            <div class="apple-table__p">
+               <p>Система из трёх микрофонов: улавливает ваш голос, а не окружающие вас звуки</p>
+               <span></span>
+            </div>
+            <div class="apple-table__p">
+               <p>Аудиосистема с четырьмя динамиками и поддержкой пространственного аудио для иммерсивного звука</p>
+               <span></span>
+            </div>
+            <div class="apple-table__p">
+               <p>Мгновенно переносите контент между iPhone и Mac</p>
+               <span></span>
+            </div>
+            <div class="apple-table__p">
+               <p>Порт MagSafe для зарядки, два порта Thunderbolt и разъём для наушников</p>
+               <span></span>
+            </div>
+            <div class="apple-table__p">
+               <p>Клавиатура Magic Keyboard с подсветкой, а также Touch ID для безопасной разблокировки и оплаты покупок</p>
+               <span></span>
+            </div>
+            <div class="apple-table__p">
+               <p>Быстрое подключение по сетям Wi-Fi 6</p>
+               <span></span>
+            </div>
+            <div class="apple-table__p">
+               <p>Сверхбыстрый SSD-накопитель для мгновенного доступа к приложениям и файлам</p>
+               <span></span>
+            </div>
+            <div class="apple-table__p">
+               <p>С macOS Monterey легко оставаться на связи, делиться существующим контентом и создавать новый — на всех ваших устройствах Apple</p>
+               <span></span>
+            </div>
+            <div class="apple-table__p">
+               <p>Четыре цвета: «тёмная ночь», «сияющая звезда», «серый космос» и серебристый</p>
+            </div>
+         </div>
+      </div>
+
+      <div class="apple-content pdd-content3">
+         <div class="apple__h3 pdd-bottom1">
+            <h3>Комплект поставки</h3>
+         </div>
+
+         <div class="apple__img">
+            <img src="https://cdn.comfy.ua/media/x/img2/2052719/img14.png" alt="">
+         </div>
+      </div>
+
+      <div class="apple-grid">
+         <div class="apple-grid__item">
+            <span>Адаптер питания USB-C</span>
+            <div class="apple-grid__img">
+               <img src="https://cdn.comfy.ua/media/x/img2/2052719/img15.png" alt="">
+            </div>
+         </div>
+         <div class="apple-grid__item">
+            <span>Кабель USB-C/ MagSafe 3 (2м)</span>
+            <div class="apple-grid__img">
+               <img src="https://cdn.comfy.ua/media/x/img2/2052719/img16.png" alt="">
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+</div>

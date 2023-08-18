@@ -1,0 +1,167 @@
+<style>
+
+</style>
+
+<div id="samsung">
+
+   <div class="samsung__wrap">
+      <!-- <div class="samsung__wrap__img">
+         <div class="samsung__wrap__img-desk">
+            <img src="https://cdn.comfy.ua/media/x/img2/samsung_unpacked2023_desk.png" alt="">
+         </div>
+         <div class="samsung__wrap__img-mob">
+            <img src="https://cdn.comfy.ua/media/x/img2/samsung_unpacked2023_mob_1.png" alt="">
+         </div>
+      </div> -->
+      <div class="samsung-video">
+         <video preload="metadata" muted="muted" autoplay playsinline loop>
+            <source src="https://cdn.comfy.ua/media/video/samsung2023/Samsung_goriz.mp4" type="video/mp4">
+         </video>
+      </div>
+      <div class="samsung__wrap__h2">
+         <h2>Не пропусти презентацію новинок від Samsung</h2>
+      </div>
+      <div class="samsung__wrap__link">
+         <a rel="nofollow" target="_blank" href="https://www.youtube.com/watch?v=c0mjTbOK7tw">Дивитися</a>
+      </div>
+      <div class="samsung__wrap__h2two">
+         <h2>Залиш свої контакти і ми тобі нагадаємо</h2>
+      </div>
+      <div class="samsung__wrap__form">
+
+         <div id="wrapper-form-corizoid" class="form-corizoid">
+            <div id="form-submit-none">
+               <form id="valid_form" method="post" name="valid_form">
+
+                  <div class="container-flex-form">
+                     <div class="row-flex-form">
+                        <div class="item_fr item_name">
+                           <div class="item_fr__text">
+                              <p>Iм'я</p>
+                           </div>
+                           <input type="text" id="yourname_rw" name="yourname" class="item-input-frm yourname_rw" value="" required />
+                        </div>
+                        <div class="item_fr item_phone">
+                           <div class="item_fr__text">
+                              <p>Телефон</p>
+                           </div>
+                           <input type="tel" id="number_rw" name="younember" class="item-input-frm" minlength="10" maxlength="12" value="" required />
+                        </div>
+                        <div class="item_fr item_email">
+                           <div class="item_fr__text">
+                              <p>Email</p>
+                           </div>
+                           <input type="email" id="email_rw" name="yourmail" class="item-input-frm" value="" required />
+                        </div>
+                        <!-- <div class="item_fr item_sity">
+                           <input type="text" id="city_rw" name="yourcity" class="item-input-frm" placeholder="Город" value="" required />
+                        </div> -->
+                        <div class="item_fr item_submit">
+                           <input type="submit" class="submit-posgo item-input-frm item-input-frm__submit" value="Нагадати" name="Submit" />
+                        </div>
+                     </div>
+                  </div>
+
+               </form>
+            </div>
+
+            <div id="text-submit-block" class="text-submit-block-cl">
+               <p>Дякую, форма відправлена!</p>
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+
+<script>
+
+   $(document).ready(function () {
+      $("fieldset input").click(function () {
+         $("fieldset label.error").remove()
+      });
+
+      $("#valid_form").validate({
+         rules: {
+            yourname: {
+               required: true
+            },
+            yourcity: {
+               required: true
+            },
+            yourmail: {
+               required: true,
+               email: true
+            },
+            younember: {
+               required: true,
+               number: true,
+               minlength: 10,
+               maxlength: 12
+            }
+         },
+         messages: {
+            yourname: {
+               required: "*Обов'язкове поле."
+            },
+            younember: {
+               required: "*Обов'язкове поле.",
+               number: "Введіть номер телефону.",
+               minlength: "У полі має бути щонайменше 10 символів",
+               maxlength: "У полі має бути максимум 12 символів"
+            },
+            yourmail: {
+               required: "*Обов'язкове поле.",
+               email: "*Обов'язкові символи @"
+            },
+            yourcity: {
+               required: "*Обов'язкове поле."
+            }
+         },
+         errorPlacement: function (error, element) {
+            if (element.attr("name") == "yourname") error.insertAfter($("input[name=yourname]"));
+            // if (element.attr("name") == "yourcity") error.insertAfter($("input[name=yourcity]"));
+            if (element.attr("name") == "younember") error.insertAfter($("input[name=younember]"));
+            if (element.attr("name") == "yourmail") error.insertAfter($("input[name=yourmail]"));
+         },
+         submitHandler: function (form) {
+            function sendAjaxForm(result_form, ajax_form) {
+               let people = {
+                  numbertel: '',
+                  email: '',
+                  // sity: '',
+                  yourname_rw: '',
+                  nameAction: ''
+               };
+               people.numbertel = $('#number_rw').val();
+               people.email = $('#email_rw').val();
+               // people.sity = $('#city_rw').val();
+               people.yourname_rw = $('#yourname_rw').val();
+               people.nameAction = "SamsungGalaxy2022Unpacked";
+               $.ajax({
+                  url: "https://main.corezoid.comfy.ua/api/1/json/public/11039/ae8ee808eb668bebca081a7278762b41b9686aa8",
+                  headers: {
+                     'Content-Type': 'application/x-www-form-urlencoded'
+                  },
+                  type: "POST", //метод отправки
+                  dataType: "json", //формат данных
+                  data: JSON.stringify(people), // Сеарилизуем объект
+                  success: console.log('done')
+               });
+               var none_form = document.getElementById("form-submit-none").style.display = "none";
+               var block_text = document.getElementById("text-submit-block").style.display = "block";
+            }
+            sendAjaxForm();
+         }
+      });
+   })
+
+   $(function () {
+      $("#number_rw").mask("380999999999");
+   });
+
+</script>

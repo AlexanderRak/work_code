@@ -55,7 +55,7 @@
 			<div class="cart-sentence__content">
 				<div id="tab1" class="tabcontent active">
 					<h3>Надати вибір - значить <span>цінувати</span></h3>
-					<span class="blue">Переваги подарункової картки:</span>
+					<span class="blue">Переваги подарункового СЕРТИФІКАТА:</span>
 					<ul class="tabcontent__list">
 						<li>
 							<p>Мотивація працівників (за продажі / досягнення / інші здобутки)</p>
@@ -117,7 +117,7 @@
 									<img src="https://cdn.comfy.ua/media/x/img/giftcard/1tab-img5.png">
 								</div>
 								<div class="detail__txt">
-									<p>Подарункові картки НЕ іменні та можуть використовуватися <br> будь-ким</p>
+									<p>Подарункові сертифікати НЕ іменні можуть використовуватися <br> будь-ким</p>
 								</div>
 							</li>
 							<li>
@@ -129,6 +129,9 @@
 								</div>
 							</li>
 						</ul>
+						<div class="detail-gift-cards-link">
+							<a href="https://comfy.ua/ua/gift-cards/">Купити подарунковий сертифікат</a>
+						</div>
 					</div>
 
 					<h3>Як замовити подарункові картки?</h3>
@@ -143,11 +146,11 @@
 									</div>
 									<div class="profile__cal__fio">
 										<span>Григорій Чайка</span>
-										<p>+380 97 309 42 42</p>
+										<p>+380 96 003 63 69</p>
 										<p>ChaykaGM@comfy.ua</p>
 									</div>
 								</div>
-								<div class="profile__cal__item">
+								<!-- <div class="profile__cal__item">
 									<div class="profile__cal__icon">
 										<img src="https://cdn.comfy.ua/media/x/img/giftcard/illia.png">
 									</div>
@@ -156,7 +159,7 @@
 										<p>+380 67 230 49 59</p>
 										<p>HavrylenkoIH@comfy.ua</p>
 									</div>
-								</div>
+								</div> -->
 								<img src="https://cdn.comfy.ua/media/x/img/cartfree/2profile.png">
 							</div>
 
@@ -362,6 +365,9 @@
 								</div>
 							</li>
 						</ul>
+						<div class="detail-gift-cards-link">
+							<a href="https://comfy.ua/ua/gift-cards/">Купити подарунковий сертифікат</a>
+						</div>
 					</div>
 
 					<div class="complete">
@@ -523,6 +529,9 @@
 								</div>
 							</li>
 						</ul>
+						<div class="detail-gift-cards-link">
+							<a href="https://comfy.ua/ua/gift-cards/">Купити подарунковий сертифікат</a>
+						</div>
 					</div>
 
 					<div class="complete complete__two">
@@ -704,18 +713,32 @@
 			maxW[1].classList.remove('scroll__for__maxW');
 		}
 
-		if (window.matchMedia("(max-width: 481px)").matches) {
+		// if (window.matchMedia("(max-width: 481px)").matches) {
 
-			if (window.scrollY > 600 && window.scrollY < 2000) {
+		// 	if (window.scrollY > 600 && window.scrollY < 2000) {
+		// 		tabs.forEach(element => {
+		// 			element.classList.add('fixed');
+		// 		});
+		// 	}
+		// 	else {
+		// 		tabs.forEach(element => {
+		// 			element.classList.remove('fixed');
+		// 		});
+		// 	}
+		// }
+
+		if (window.matchMedia("(max-width: 481px)").matches) {
+			// 
+			if (window.scrollY > 600) {
 				tabs.forEach(element => {
 					element.classList.add('fixed');
 				});
-			}
-			else {
+			} else {
 				tabs.forEach(element => {
 					element.classList.remove('fixed');
 				});
 			}
+
 		}
 	};
 </script>

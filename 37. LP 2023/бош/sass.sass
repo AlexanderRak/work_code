@@ -1,0 +1,184 @@
+.category-info.content
+   display: none
+.breadcrumbs
+   display: none
+#bosch
+   display: block
+   margin: 0 auto
+   max-width: 1366px
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #fff
+   position: relative
+   padding: 15px 0 15px 0
+   img
+      opacity: 1
+      &:hover
+         opacity: 1
+   img
+      display: block
+      margin: 0 auto
+      padding: 0
+      transition: .3s
+   p
+      font-size: 16px
+      color: #fff
+      text-align: left
+      margin: 0
+      padding: 0
+      position: relative
+      transition: .3s
+      z-index: 3
+      line-height: 1.1
+span.word-wrap
+   display: block
+   word-wrap: break-word
+// default
+
+.bosch-header__logo
+   border: 2px solid #e1e1e1
+   border-radius: 24px
+   padding: 16px 0
+   margin-bottom: 8px
+.bosch-content__prod
+   border-radius: 24px
+   overflow: hidden
+.bosch-row__item
+   &:hover
+      .bosch-content__prod img
+         transform: scale(1.03)
+      p
+         text-decoration: underline
+.bosch-content__text
+   position: relative
+   padding: 16px 24px
+   background: #43B02A
+   border-radius: 24px
+   display: flex
+   align-items: center
+   height: 70px
+   margin-top: 8px
+   overflow: hidden
+   &::before
+      content: ""
+      background-image: url(https://cdn.comfy.ua/media/x/img3/bosch/str.png)
+      background-repeat: no-repeat
+      width: 17px
+      height: 16px
+      position: absolute
+      right: 24px
+      top: 50%
+      transform: translateY(-50%)
+.bosch-img-pos
+   position: absolute
+   &.img-pos1
+      left: 54px
+      top: 0
+   &.img-pos2
+      right: 84px
+      top: 0
+   &.img-pos3
+      right: 54px
+      top: 0
+   &.img-pos4
+      left: 0
+      bottom: 0
+   &.img-pos5
+      left: 54px
+      top: 0
+   &.img-pos6
+      right: 0
+      bottom: 0
+   &.img-pos7
+      right: 0
+      top: 0
+   &.img-pos8
+      left: 0
+      bottom: 0
+// slick
+.disabled_swiper_button
+   opacity: 0
+   cursor: auto
+   pointer-events: none
+.your-class-arrow
+   display: block
+#bosch
+   .swiper-wrapper
+      box-sizing: border-box !important
+   .slick-prev, .slick-next
+      background: #efefef
+      width: 33px
+      height: 33px
+      position: absolute
+      z-index: 8
+      display: inline-block !important
+      transition: .3s
+      border-radius: 50%
+      border: 1px solid #c3c3c3
+      &::before
+         width: 10px
+         height: 15px
+         border-radius: 50%
+         position: absolute
+         top: 50%
+         transform: translateY(-50%)
+         color: #fff
+         font-size: 13px
+         line-height: 1.2
+         left: 1px
+         right: 0
+         margin: 0 auto
+      &:hover
+         cursor: pointer
+      &.slick-disabled
+         opacity: 1
+         &::before
+            background: #fff
+   .slick-prev
+      left: 5px
+      top: 50%
+      transform: translateY(-50%)
+      &::before
+         content: url(https://cdn.comfy.ua/media/x/img3/bosch/str_l.png)
+   .slick-next
+      right: 5px
+      top: 50%
+      transform: translateY(-50%)
+      &::before
+         content: url(https://cdn.comfy.ua/media/x/img3/bosch/str_r.png)
+
+// media
+@media (max-width: 1024px)
+   #bosch
+      padding: 0 12px 15px 12px
+   #bosch .your-class-arrow .slick-prev
+      left: 8px
+      top: 43%
+   #bosch .your-class-arrow .slick-next
+      right: 8px
+      top: 43%
+// @media (max-width: 812px)
+@media (max-width: 480px)
+   #bosch
+      padding: 0 0 15px 0
+   #bosch .slick-slide
+      margin: 0 0 0 0
+   #bosch .slick-list
+      margin: 0 0 0 0
+   .bosch-content
+      max-width: 267px
+      margin: 0 auto
+   .bosch-header__logo
+      margin: 12px
+   #bosch .your-class-arrow .slick-prev
+      left: 8px
+      top: 40%
+   #bosch .your-class-arrow .slick-next
+      right: 8px
+      top: 40%
+@media (max-width: 812px) and (orientation: landscape)
+   .bosch-content__text
+      padding: 16px 24px 16px 12px
+   .bosch-content__text::before
+      right: 8px

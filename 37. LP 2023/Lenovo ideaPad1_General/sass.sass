@@ -1,0 +1,266 @@
+$maxWidth: 1600
+@mixin adaptiv-font($pcSize, $mobSize)
+   $addSize: $pcSize - $mobSize
+   $maxWidth: $maxWidth - 320
+   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+#ideapad-wrapper
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   font-family: 'Roboto', sans-serif
+   h2, h3, h4, h5, p
+      padding: 0
+      margin: 0
+      display: block
+   img
+      display: block
+      max-width: 100%
+      margin: 0
+      padding: 0
+      margin: 0 auto
+   h2
+      @include adaptiv-font(84, 28)
+      letter-spacing: -3px
+      font-weight: bold
+      color: #fff
+      line-height: 1
+      text-align: center
+      span
+         color: #e1251b
+      &.text-align-left
+         text-align: left
+   h3
+      display: block
+      font-size: 21px
+      font-weight: 400
+      color: #000
+      line-height: 1
+      text-align: center
+      max-width: 500px
+      margin: 0 auto
+   p
+      @include adaptiv-font(26, 18)
+      font-weight: 400
+      color: #fff
+      line-height: 1.3
+      span
+         @include adaptiv-font(18, 14)
+         text-align: center
+         display: block
+         padding-top: 12px
+   i
+      @include adaptiv-font(18, 14)
+      font-weight: 400
+      color: #fff
+      line-height: 1.3
+      display: block
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+//end default styles
+.ideapad-container
+   max-width: 1600px
+   height: auto
+   margin: 0 auto
+   position: relative
+   background-image: url(https://cdn.comfy.ua/media/x/img3/ideapad/bgrd.png)
+   background-position: top center
+   background-size: cover
+   background-repeat: no-repeat
+.ideapad-efficiency
+   position: relative
+.ideapad-efficiency__logo
+   position: absolute
+   left: 55px
+   top: 130px
+   z-index: 3
+.ideapad-efficiency__logo2
+   position: absolute
+   right: 0
+   top: 130px
+   z-index: 3
+.ideapad-efficiency__content
+   position: relative
+   z-index: 4
+.ideapad-efficiency__h2
+   padding: 270px 12px 70px 12px
+.ideapad-efficiency__img
+   position: relative
+   max-width: 1430px
+   margin: 0 auto
+   padding: 0 12px
+.ideapad-efficiency__icon
+   max-width: 175px
+   text-align: center
+   position: absolute
+   right: 0
+   top: 50%
+   transform: translateY(-50%)
+.ideapad-efficiency__flex
+   display: flex
+   justify-content: flex-end
+   padding-top: 75px
+.ideapad-efficiency__item
+   &:first-child
+      max-width: 1045px
+.ideapad-efficiency__content-p
+   padding: 0 15px 65px 12px
+.ideapad-efficiency__content-i
+   max-width: 770px
+.ideapad-entertainment__h2
+   padding: 80px 12px 80px 12px
+.ideapad-entertainment__img
+   position: relative
+   max-width: 1465px
+   margin: 0 auto
+   .ideapad-entertainment__img-pos
+      position: absolute
+      left: 0
+      bottom: 0
+      left: -9px
+      bottom: 220px
+.ideapad-entertainment__flex
+   display: flex
+   align-items: center
+   max-width: 1465px
+   margin: 0 auto
+   padding: 78px 12px 70px 12px
+   justify-content: space-around
+   &.twoblock
+      align-items: flex-start
+.ideapad-entertainment__item
+   &:first-child
+      max-width: 1021px
+.ideapad-safety
+   padding: 140px 45px 110px 0
+.ideapad-safety__flex
+   align-items: center
+   display: flex
+   position: relative
+.ideapad-safety__item
+   &:last-child
+      max-width: 605px
+      position: absolute
+      right: 0
+      top: 65%
+      transform: translateY(-50%)
+.ideapad-safety__p
+   padding: 80px 0 45px 0
+.ideapad-safety__icon
+   max-width: 180px
+.ideapad-entertainment__i
+   padding-top: 50px
+   max-width: 800px
+//media*******************
+// @media (min-width: 1920px)
+// @media (max-width: 1200px)
+@media (max-width: 1024px)
+   .ideapad-efficiency__icon
+      position: relative
+      margin: 0 auto
+      max-width: 175px
+      top: 0
+      transform: translateY(0%)
+      padding-top: 12px
+   .ideapad-efficiency__item
+      flex: 1 1 0
+   .ideapad-efficiency__img-r img
+      margin: 0 0 0 auto !important
+   .ideapad-efficiency__content-i
+      padding: 0 12px
+   .ideapad-entertainment__item:first-child
+      max-width: 600px
+   .ideapad-safety__flex
+      flex-direction: column
+      align-items: flex-start
+   .ideapad-safety__item:first-child
+      max-width: 100%
+   .ideapad-safety__item:last-child
+      max-width: 100%
+      padding: 0 0 0 12px
+      position: relative
+      right: 0
+      top: 0
+      transform: translateY(0%)
+   .ideapad-safety
+      padding: 20px 12px 20px 0px
+   .ideapad-entertainment__flex
+      justify-content: space-between
+      align-items: flex-start
+   #ideapad-wrapper h2.text-align-left
+      text-align: center
+   .ideapad-efficiency__logo2
+      max-width: 55px
+      top: 55px
+   .ideapad-efficiency__logo
+      left: 55px
+      top: 55px
+      max-width: 230px
+   .ideapad-efficiency__h2
+      padding: 145px 12px 70px 12px
+   .ideapad-safety__p
+      padding: 40px 0 25px 0
+   .ideapad-safety__h2
+      padding-top: 40px
+// @media (max-width: 812px)
+@media (max-width: 480px)
+   #ideapad-wrapper h2
+      letter-spacing: 1px
+   .ideapad-efficiency__logo
+      left: 15px
+      top: 15px
+      max-width: 150px
+   .ideapad-efficiency__logo2
+      max-width: 35px
+      top: 0px
+   .ideapad-efficiency__h2
+      padding: 78px 12px 40px 12px
+   .ideapad-efficiency__flex
+      padding-top: 50px
+      flex-direction: column
+   .ideapad-efficiency__content-p
+      padding: 0px 15px 25px 12px
+   .ideapad-efficiency__content-i
+      padding: 0 12px 30px 12px
+   .ideapad-entertainment__h2
+      padding: 60px 12px 40px 12px
+   .ideapad-entertainment__img .ideapad-entertainment__img-pos
+      display: none
+   .ideapad-entertainment__flex
+      flex-direction: column
+      align-items: center
+      padding: 40px 12px 40px 12px
+   .ideapad-safety__icon
+      margin: 0 auto
+   .ideapad-entertainment__h2
+      padding: 40px 12px 40px 12px
+   .ideapad-entertainment__flex.twoblock
+      flex-direction: column
+      align-items: center
+   .ideapad-entertainment__i
+      padding-top: 40px
+   .ideapad-entertainment__icon
+      padding-top: 20px
+@media (max-width: 320px)
+   #ideapad-wrapper h2
+      font-size: 25px
+@media (max-width: 812px) and (orientation: landscape)
+   #ideapad-wrapper h2
+      font-size: 33px
+   .ideapad-efficiency__flex
+      padding-top: 40px
+   .ideapad-efficiency__content-p
+      padding: 0 15px 40px 12px
+   .ideapad-efficiency__content-i
+      padding: 0 12px 40px 12px
+   .ideapad-entertainment__h2
+      padding: 30px 12px 40px 12px
+   .ideapad-entertainment__flex
+      padding: 40px 12px 40px 12px
+   .ideapad-safety__icon
+      margin: 0 auto

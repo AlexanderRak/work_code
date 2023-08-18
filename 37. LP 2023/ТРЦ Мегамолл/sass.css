@@ -1,0 +1,163 @@
+.breadcrumbs {
+  display: none;
+}
+
+.main-container.page {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#open-megamoll {
+  background: #43B02A;
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+#open-megamoll::before {
+  content: "";
+  background-image: url(https://cdn.comfy.ua/media/x/img3/mgzn/bgrd.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  width: 100%;
+  height: 910px;
+  position: absolute;
+  left: 0;
+  bottom: 45rem;
+}
+#open-megamoll img {
+  display: block;
+  max-width: 100%;
+  opacity: 1;
+}
+#open-megamoll i {
+  color: #fff;
+  display: block;
+  text-align: left;
+  line-height: 20px;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.open-megamoll-container {
+  max-width: 1330px;
+  margin: 0 auto;
+  padding: 70px 15px 130px 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.--mob {
+  display: none;
+}
+
+.--desk {
+  display: block;
+}
+
+.open-megamoll__flex-content {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 70px;
+  padding: 80px 0;
+}
+
+.open-megamoll__krazh {
+  padding: 80px 0;
+}
+
+@media (max-width: 1024px) {
+  #open-megamoll::before {
+    bottom: 34rem;
+  }
+}
+@media (max-width: 768px) {
+  #open-megamoll::before {
+    bottom: 28rem;
+  }
+  .open-megamoll__flex-content {
+    grid-template-columns: 275px 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .--mob {
+    display: block;
+  }
+  .--desk {
+    display: none;
+  }
+  .open-megamoll-container {
+    padding: 30px 15px 30px 15px;
+  }
+  .open-megamoll__logo {
+    max-width: 170px;
+    margin: 0 auto;
+  }
+  .open-megamoll__flex-content {
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    padding: 50px 0;
+  }
+  .open-megamoll__flex-content .open-megamoll__item:first-child {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+       -moz-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .open-megamoll__flex-content .open-megamoll__item:first-child .open-megamoll__item-img {
+    max-width: 275px;
+    margin: 0 auto;
+  }
+  .open-megamoll__text-img .open-megamoll__text-img:first-child {
+    padding-bottom: 30px;
+  }
+  .open-megamoll__krazh {
+    padding: 30px 0;
+  }
+  #open-megamoll::before {
+    display: none;
+  }
+  .open-megamoll__text-img.-rel {
+    position: relative;
+  }
+  .open-megamoll__text-img.-rel::before {
+    content: "";
+    background-image: url(https://cdn.comfy.ua/media/x/img3/mgzn/bgrd.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    width: 480px;
+    height: 200px;
+    position: absolute;
+    left: -86px;
+    bottom: -110px;
+    z-index: -1;
+  }
+}

@@ -1,0 +1,276 @@
+<style>
+
+</style>
+<!-- idpopupform100grnposud -->
+<div id="wrapper-form-corizoid" class="form-corizoid">
+   <div id="form-submit-none">
+
+      <form id="valid_form" method="post" name="valid_form">
+         <div class="container-flex-form">
+            <div class="row-flex-form">
+               <div class="item_fr item_email">
+                  <input type="email" id="email_rw" name="yourmail" class="item-input-frm" placeholder="Введи свій E-mail" value="" required />
+               </div>
+               <div class="item_fr item_submit">
+                  <input type="submit" class="submit-posgo item-input-frm item-input-frm__submit" value="Відправити" name="Submit" />
+               </div>
+            </div>
+            <div id="emailfalse">*Вибачте, але 100 грн ми вам вже відправляли.</div>
+         </div>
+      </form>
+
+   </div>
+
+   <div id="text-submit-block" class="text-submit-block">
+      <div class="text-submit-block__wrap">
+         <div class="text-submit-block__p">
+            <p><span style="color: #FF671F;">100 грн</span> відправлені на ваш email. Перевірте швидше пошту</p>
+         </div>
+      </div>
+   </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+
+<script>
+   class Esputnik {
+      constructor(login, password) {
+         if (login !== undefined && password !== undefined) {
+            this.login = login;
+            this.password = password;
+         } else {
+            throw new Error('Login or Password not installed');
+         }
+      }
+      sendRequest(url, method, data) {
+         if (method === "GET" && data !== undefined) {
+            url = url + '?' + new URLSearchParams(data).toString();
+         }
+
+         return fetch(url, {
+            method: method,
+            headers: {
+               "Content-Type": 'application/json',
+               "Authorization": 'Basic ' + btoa(this.login + ':' + this.password)
+            },
+            body: method === "POST" ? JSON.stringify(data) : null,
+         }).then(function (response) {
+            if (!response.ok) {
+               response.json().then(function (data) {
+                  throw new Error(data.error);
+               })
+            } else {
+               return response.json();
+            }
+         }).catch((error) => {
+            console.log(error)
+         });
+      }
+      sendPostRequest(url, data) {
+         return this.sendRequest(url, 'POST', data);
+      }
+      sendGetRequest(url, data) {
+         return this.sendRequest(url, 'GET', data);
+      }
+      searchContacts(searchData) {
+         return this.sendGetRequest('https://esputnik.com/api/v1/contacts', searchData);
+      }
+      searchContactByID(contactId) {
+         return this.sendGetRequest('https://esputnik.com/api/v1/contact/' + contactId);
+      }
+      getContactIdFromEmail(email) {
+         let searchContactsPromise = this.searchContacts({ 'email': email, 'maxrows': 1 });
+
+         return searchContactsPromise.then(data => {
+            if (data === undefined) {
+               throw new Error('data for promise undefined');
+            }
+
+            if (data[0] !== undefined && data[0]['id'] !== undefined) {
+               return data[0]['id'];
+            }
+
+            return 0;
+         });
+      }
+      getContactGroupsFromID(contactId) {
+         let searchContactByIDPromise = this.searchContactByID(contactId)
+         return searchContactByIDPromise.then(data => {
+            if (data === undefined) {
+               throw new Error('data for promise undefined');
+            }
+            if (data !== undefined && data['groups'] !== undefined) {
+               return data['groups'];
+            }
+            return 0;
+         });
+      }
+      sendEvent(eventData) {
+         if (eventData.email == null && eventData.phone == null) {
+            throw 'params email or phone must be filled';
+         }
+
+         let sendData = {
+            "eventTypeKey": eventData.eventTypeKey ?? 'sendEvent',
+            "keyValue": eventData.email ?? eventData.phone,
+            "params": [
+               {
+                  "name": "email",
+                  "value": eventData.email ?? null
+               },
+               {
+                  "name": "phone",
+                  "value": eventData.phone ?? null
+               }
+            ]
+         };
+
+         return this.sendPostRequest('https://esputnik.com/api/v1/event', sendData);
+      }
+      createContactSubscribe(contactData) {
+         if (contactData.email == null && contactData.phone == null) {
+            throw 'params email or phone must be filled';
+         }
+
+         let sendData = {
+            "contact": {
+               "firstName": contactData.firstName ?? null,
+               "lastName": contactData.lastName ?? null,
+               "channels": [],
+            },
+            "formType": contactData.formType ?? null,
+         }
+
+         if (contactData.email) {
+            sendData.contact.channels.push({
+               "type": "email",
+               "value": contactData.email
+            });
+         }
+
+         if (contactData.phone) {
+            sendData.contact.channels.push({
+               "type": "sms",
+               "value": contactData.phone
+            });
+         }
+
+         return this.sendPostRequest('https://esputnik.com/api/v1/contact/subscribe', sendData);
+      }
+   }
+   class Corezoid {
+      static sendRequest(apiLogin, signature, data, gmtUnixTime = 10082) {
+         return fetch('https://main.corezoid.comfy.ua/api/1/json/' + apiLogin + '/' + gmtUnixTime + '/' + signature, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+               "Content-Type": 'application/json',
+            },
+            body: JSON.stringify(data),
+         }).then(function (response) {
+            if (!response.ok) {
+               response.json().then(function (data) {
+                  throw new Error(data.error);
+               })
+            } else {
+               return response.json();
+            }
+         }).catch((error) => {
+            console.log(error)
+         });
+      }
+   }
+</script>
+
+
+<script>
+   $(document).ready(function () {
+      $("fieldset input").click(function () {
+         $("fieldset label.error").remove()
+      });
+
+      $("#valid_form").validate({
+         rules: {
+            yourmail: {
+               required: true,
+               email: true
+            }
+         },
+         messages: {
+            yourmail: {
+               required: "*Обов'язкове поле.",
+               email: "*Обов'язкові символи @"
+            }
+         },
+         errorPlacement: function (error, element) {
+            if (element.attr("name") == "yourmail") error.insertAfter($("input[name=yourmail]"));
+         },
+         submitHandler: function (form) {
+            const esputnik = new Esputnik('esputnikpromodo2018@gmail.com', 'iOdO4s8cgsUEW874h');
+
+            let userEmail = document.querySelector('input[name="yourmail"]').value;
+
+            let groupsId = ['178396244'];
+
+            var contactStatus = '';
+
+            esputnik.getContactIdFromEmail(userEmail).then(contactId => {
+               if (contactId !== 0) {
+                  esputnik.getContactGroupsFromID(contactId).then(contactGroups => {
+                     // console.log('contactGroups: ' + contactGroups);
+                     if (contactGroups !== 0) {
+                        contactGroups.forEach(function (contGroupElem) {
+                           // console.log('contactGroups: ' + contGroupElem['id']);
+                           groupsId.forEach(function (groupsIdElem) {
+                              if (contGroupElem['id'] == groupsIdElem) {
+                                 contactStatus = 'already_subscribed';
+                              }
+                           });
+                        });
+                        if (contactStatus == 'already_subscribed') {
+                           console.log('The contact already added in the specified groups');
+                           document.querySelector("#emailfalse").style.display = "block";
+                           $(document).mouseup(function (e) {
+                              var container = $("emailfalse");
+                              if (container.has(e.target).length === 0) {
+                                 document.querySelector("#emailfalse").style.display = "none";
+                              }
+                           });
+
+                        } else {
+                           subscribeContact(userEmail);
+                           console.log('The contact is not in the specified groups');
+                        }
+                     } else {
+                        subscribeContact(userEmail);
+                        console.log('New contact');
+
+                     }
+                  });
+               } else {
+                  subscribeContact(userEmail);
+                  console.log('New contact');
+               }
+            });
+         }
+      });
+
+      function subscribeContact(userEmail) {
+         Corezoid.sendRequest('public', 'cfab7ce7ddd962a166b3351f62d9f8a543117dc6', {
+            "eventTypeKey": "event",
+            "keyValue": userEmail,
+            "params": [
+               {
+                  "name": "email",
+                  "value": userEmail
+               }
+            ]
+         }, 10653);
+
+         document.querySelector("#form-submit-none").style.display = "none";
+         document.querySelector("#text-submit-block").style.display = "block";
+      }
+
+   });
+</script>
