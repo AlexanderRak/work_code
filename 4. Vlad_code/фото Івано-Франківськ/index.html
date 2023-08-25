@@ -1,0 +1,466 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-the-mask@0.11.1/dist/vue-the-mask.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+#lp-form {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  background: #43B02A;
+  font-family: "Roboto", sans-serif;
+  padding: 65px 12px 30px 12px;
+}
+#lp-form img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+#lp-form h2, #lp-form h3, #lp-form p {
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+#lp-form h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.1;
+  text-align: center;
+  padding-bottom: 17px;
+}
+#lp-form p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.3;
+  padding: 0 0 0 12px;
+}
+#lp-form a {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.3;
+  text-decoration: underline;
+}
+#lp-form input, #lp-form button {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main-container.page {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.breadcrumbs {
+  display: none;
+}
+
+.lp-form-container {
+  max-width: 912px;
+  margin: 0 auto;
+}
+
+.lp-app-form {
+  -webkit-border-radius: 16px;
+          border-radius: 16px;
+  background: var(--grayscale-white, #FFF);
+  -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+  padding: 32px 24px;
+}
+
+.lp-app-form__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 170px;
+  grid-gap: 12px;
+}
+
+.lp-app-input {
+  display: block;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  border: 1px solid #E5E5E5;
+  background: #FFF;
+  padding: 10px 10px;
+  margin: 0;
+  font-size: 16px;
+  width: 100%;
+}
+.lp-app-input:focus-visible {
+  outline: 1px solid #43b02a;
+  outline-offset: 0px;
+}
+
+.lp-app-form__grid-item {
+  position: relative;
+  display: grid;
+}
+
+.lp-app-btn {
+  display: block;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  background: #FF671F;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.lp-app-btn[disabled=disabled] {
+  background: #E5E5E5;
+  cursor: default;
+}
+
+.lp-app-checkbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 40px;
+}
+
+.lp-app-checkbox__none {
+  display: none;
+}
+
+.lp-app-checkbox-custom-label {
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  border: 1px solid #379424;
+  background: #FFF;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 20px;
+     -moz-box-flex: 1;
+      -ms-flex: 1 0 20px;
+          flex: 1 0 20px;
+  margin: 0;
+  position: relative;
+  display: block;
+}
+.lp-app-checkbox-custom-label.lp-app-checkbox-custom-label__active::before {
+  content: "";
+  background-image: url(https://cdn.comfy.ua/media/x/img3/foto-vidkrittja/checkmark.png);
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.lp-app-input-error {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  bottom: -18px;
+}
+
+.form-submitted__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.form-submitted__wrapper img {
+  margin: 0 !important;
+}
+
+.form-submitted__mess {
+  padding-left: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.lp-app-form__wrapper {
+  height: 40px;
+}
+
+.form-submitted {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+@media (max-width: 812px) {
+  #lp-form h2 {
+    font-size: 21px;
+  }
+}
+@media (max-width: 730px) {
+  .lp-app-form__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px 12px;
+  }
+  .lp-app-form__wrapper {
+    height: 105px;
+  }
+}
+@media (max-width: 480px) {
+  #lp-form h2 {
+    font-size: 16px;
+  }
+  #lp-form {
+    padding: 15px 12px 30px 12px;
+  }
+  .lp-app-form {
+    padding: 16px 12px;
+  }
+  .lp-app-form__wrapper {
+    height: 235px;
+  }
+  .lp-app-form__grid {
+    grid-template-columns: 1fr;
+  }
+  .form-submitted__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .form-submitted__mess {
+    padding-left: 0;
+    padding-top: 15px;
+    max-width: 265px;
+  }
+}
+@media (max-width: 812px) and (orientation: landscape) {
+  .lp-app-form__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px 12px;
+  }
+  .lp-app-form__wrapper {
+    height: 105px;
+  }
+}
+</style>
+
+<div id="lp-form">
+   <div class="lp-form-container">
+      <div class="lp-banner">
+         <picture>
+            <source srcset="https://cdn.comfy.ua/media/x/img3/photo-ivano-frankivsk/2.png" media="(max-width: 480px)" />
+            <img src="https://cdn.comfy.ua/media/x/img3/photo-ivano-frankivsk/1.png" alt="MDN Web Docs" />
+         </picture>
+      </div>
+
+      <div id="appform">
+         <div class="lp-app-form">
+            <h2>Залиште свої контакти, щоб ми надіслали вам посилання на фото</h2>
+            <div class="lp-app-form__wrapper">
+               <form @submit.prevent="submitForm" v-if="formSubmitted" novalidate class="lp-app-form__grid">
+                  <div class="lp-app-form__grid-item">
+                     <input class="lp-app-input" type="text" id="name" v-model="name" placeholder="Ім'я" @input="handleNameInput" />
+                     <span v-if="errors.name" class="lp-app-input-error">Обов'язкове поле</span>
+                  </div>
+                  <div class="lp-app-form__grid-item">
+                     <input class="lp-app-input" type="email" id="email" v-model="email" @input="clearError('email')" placeholder="Email" />
+                     <span v-if="errors.email" class="lp-app-input-error">{{ errors.email }}</span>
+                  </div>
+                  <div class="lp-app-form__grid-item">
+                     <input class="lp-app-input" type="tel" id="phone" v-model="phone" @input="clearError('phone')" placeholder="Телефон" v-mask="'+38 (###) ###-##-##'" />
+                     <span v-if="errors.phone" class="lp-app-input-error">{{ phoneErrorMessage }}</span>
+                  </div>
+                  <div class="lp-app-form__grid-item">
+                     <button class="lp-app-btn" type="submit" :disabled="!isChecked">
+                        Надіслати</button>
+                  </div>
+               </form>
+               <div v-else class="form-submitted">
+                  <div class="form-submitted__wrapper">
+                     <img src="https://cdn.comfy.ua/media/x/img3/foto-vidkrittja/done.svg" alt="">
+                     <div class="form-submitted__mess">
+                        Дякуємо! Ми отримали ваші дані. Чекайте лист на вказаний Email
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="lp-app-checkbox">
+            <input type="checkbox" class="lp-app-checkbox__none" id="checkbox" v-model="isChecked" />
+            <label for="checkbox" class="lp-app-checkbox-custom-label" v-bind:class="{ 'lp-app-checkbox-custom-label__active': isChecked }"></label>
+            <p>
+               Я надаю свою згоду на обробку моїх персональних даних ТОВ «КОМФІ ТРЕЙД» будь-яким способом, включаючи, але не обмежуючись, згоду на збирання, реєстрацію, накопичення, зберігання, адаптування, зміну, поновлення, використання, знеособлення та знищення моїх персональних даних в базі даних ТОВ «КОМФІ ТРЕЙД», з метою формування та підтримання обізнаності про діяльність та проведення рекламних, маркетингових та інших заходів ТОВ «КОМФІ ТРЕЙД», отримання повідомлень рекламного характеру та/або будь-якою іншою метою, що не суперечить законодавству України. Вказана згода надана з врахуванням вимог ст.7, ст. 8 та ст. 11 Закону України «Про захист персональних даних» та діє безстроково та без обмеження території дії. Я засвідчую свою обізнаність про включення моїх персональних даних до бази даних ТОВ «КОМФІ ТРЕЙД», <a target="_blank" rel="nofollow" href="https://zakon.rada.gov.ua/laws/show/2297-17#n65">зміст моїх прав, як суб’єкта персональних даних згідно Закону України «Про захист персональних даних»</a>, мені повідомлено та зрозуміло.
+            </p>
+         </div>
+      </div>
+   </div>
+</div>
+
+<script>
+   new Vue({
+      el: '#appform',
+      data: {
+         name: '',
+         email: '',
+         phone: '',
+         isChecked: false,
+         errors: {
+            name: false,
+            email: '',
+            phone: false,
+         },
+         formSubmitted: true,
+         phoneErrorMessage: '',
+      },
+      watch: {
+         isChecked(newVal) {
+            if (!newVal) {
+               this.clearAllErrors();
+            }
+         },
+      },
+      methods: {
+         submitForm() {
+            this.errors = {
+               name: !this.name,
+               email: '',
+               phone: false,
+            };
+
+            if (this.isChecked) {
+               if (!this.name) {
+                  this.errors.name = true;
+               }
+               if (!this.email) {
+                  this.errors.email = 'Обов\'язкове поле';
+               } else if (!this.validateEmail(this.email)) {
+                  this.errors.email = 'Некоректна адреса пошти';
+               }
+
+               const lengthPhone = !this.phone || this.phone.replace(/\D/g, '').length;
+               if (lengthPhone == true) {
+                  this.phoneErrorMessage = 'Обов\'язкове поле';
+                  this.errors.phone = true;
+               } else if (lengthPhone < 12) {
+                  this.phoneErrorMessage = 'Введіть повний номер';
+                  this.errors.phone = true;
+               } else {
+                  this.errors.phone = false;
+                  this.phoneErrorMessage = '';
+               }
+
+               if (!this.errors.name && !this.errors.email && !this.errors.phone) {
+                  const data = {
+                     name: this.name.trim(),
+                     email: this.email.trim(),
+                     phone: this.phone.trim(),
+                     // .replace(/\s/g, '')
+                  };
+                  console.log(data);
+
+                  $.ajax({
+                     url: "https://main.corezoid.comfy.ua/api/2/json/public/13579/1ab4cd64b6dcd1e53a0d314bf9a349f1abfdafd2",
+                     headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                     },
+                     type: "POST",
+                     dataType: "json",
+                     data: JSON.stringify(data),
+                     success: console.log('done')
+                  });
+                  this.formSubmitted = false;
+               }
+            }
+         },
+         validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+         },
+         clearError(field) {
+            this.errors[field] = false;
+         },
+         clearAllErrors() {
+            this.errors.name = false;
+            this.errors.email = '';
+            this.errors.phone = false;
+         },
+         handleNameInput(event) {
+            this.clearError('name');
+
+            const regex = /^[a-zA-Zа-яА-ЯёЁґҐєЄіІїЇ]*$/;
+            if (!regex.test(event.target.value)) {
+               this.name = this.name.replace(/[^a-zA-Zа-яА-ЯёЁґҐєЄіІїЇ]/g, '');
+            }
+         },
+      },
+   });
+</script>
