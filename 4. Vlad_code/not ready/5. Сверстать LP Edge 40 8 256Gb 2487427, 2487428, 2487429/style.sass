@@ -1,0 +1,210 @@
+//default styles
+
+body
+    margin: 0
+
+.motorola
+    width: 100%
+    max-width: 1920px
+    margin: 0 auto
+    height: auto
+    display: block
+    box-sizing: border-box
+    overflow: hidden
+    img
+        margin: 0 auto
+        opacity: 1
+        max-width: 100%
+        display: block
+        height: auto
+        &:hover
+            opacity: 1 !important
+    video
+        display: block
+        max-width: 100%
+        margin: 0 auto
+    div
+        line-height: normal
+
+.features-desc__text
+    img
+        margin-bottom: 0rem
+
+//end default styles
+
+.motorola .container
+    width: 100%
+    max-width: 100%
+    margin: 0 auto
+
+.motorola__title
+    font-weight: bold
+    font-size: clamp(22px, 3vw, 48px)
+    margin-bottom: 1rem
+
+.motorola__subtitle
+    font-weight: bold
+    font-size: clamp(18px, 3vw, 38px)
+    margin-bottom: 1rem
+
+.motorola__txt
+    font-size: clamp(14px, 1.5vw, 16px)
+
+//design
+
+.design__cont
+    padding: 2em 1em
+
+//faster
+
+.faster
+    background-color: #000
+    padding-bottom: 4em
+    .container
+        position: relative
+
+.faster__row
+    display: flex
+
+.faster__abs
+    margin-top: -10%
+    color: #fff
+    width: 100%
+    max-width: 900px
+    right: 50%
+    transform: translateX(50%)
+    bottom: 100px
+    >.motorola__title
+        text-align: center
+
+.faster__abs__row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-top: solid 2px #8a8a8a
+    padding-top: 1em
+    >div
+        flex: 1
+        max-width: 45%
+        box-sizing: border-box
+    &:nth-of-type(3)
+        align-items: flex-start
+        border-bottom: solid 2px #8a8a8a
+        padding-bottom: 1em
+        position: relative
+        &::before
+            content: ""
+            display: block
+            min-width: 2px
+            height: 100%
+            background-color: #8a8a8a
+            position: absolute
+            top: 0
+            right: 50%
+            transform: translateX(50%)
+
+.faster__title
+    font-weight: bold
+    font-size: clamp(18px, 2vw, 24px)
+    margin-bottom: 1rem
+
+//creative
+
+.creative__row
+    display: flex
+    align-items: center
+    >div
+        max-width: 50%
+        flex: 1
+        box-sizing: border-box
+
+.creative__cont
+    padding: 0 4em 0 6em
+
+//motorola__block
+
+.motorola__block
+    padding: 2em 8em
+
+.motorola__row
+    display: flex
+    align-items: center
+    >div
+        box-sizing: border-box
+
+.motorola__cont
+    max-width: 600px
+    padding: 0 4em
+
+.motorola__reverse
+    flex-direction: row-reverse !important
+
+//history
+
+.history
+    .motorola__txt
+        text-align: center
+
+.history__title
+    font-weight: bold
+    font-size: clamp(32px, 3vw, 60px)
+    margin-bottom: 1rem
+
+.history__subtitle
+    font-weight: bold
+    font-size: clamp(18px, 2vw, 28px)
+    margin-bottom: 1rem
+    text-align: center
+
+.history__cont
+    max-width: max-content
+    margin: 0 auto
+    text-align: center
+    margin-bottom: 2em
+
+.history__slider__cont
+    max-width: 800px
+    padding: 0 1.5em
+    box-sizing: border-box
+    margin: 2em auto 0 auto
+
+.history__slider
+    position: relative
+
+.arrows
+    position: absolute
+    display: block
+    width: 40px
+    height: 40px
+    background-color: #000
+    bottom: 50%
+    transform: translateY(50%)
+    font-size: 30px
+    color: #fff
+    font-weight: bold
+    z-index: 10
+.next__arrow
+    right: 10%
+.prev__arrow
+    left: 10%
+
+
+//media*****************************************************
+
+@media (max-width: 1201px)
+    .motorola .container
+        width: 960px
+        padding: 0 15px
+
+@media (max-width: 991px)
+    .motorola .container
+        width: 720px
+
+@media (max-width: 767px)
+    .motorola .container
+        width: 540px
+
+@media (max-width: 576px)
+    .motorola .container
+        width: 100%
+        box-sizing: border-box
