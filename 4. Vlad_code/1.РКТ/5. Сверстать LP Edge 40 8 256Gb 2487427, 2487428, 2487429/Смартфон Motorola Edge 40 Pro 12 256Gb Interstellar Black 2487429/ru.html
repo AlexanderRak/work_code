@@ -5,8 +5,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Document</title>
       <link rel="stylesheet" href="style.min.css" />
-      <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
-      <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" /> -->
    </head>
    <body>
       <div class="motorola">
@@ -142,10 +140,10 @@
          <section>
             <div class="history">
                <div class="container">
-                  <div class="history__cont">
+                  <!-- <div class="history__cont">
                      <div class="history__title">Насыщенные цвета</div>
                      <div class="motorola__txt">Снимайте видео в разрешении 4K и получайте непревзойденный результат с яркими, естественными цветами и глубокой контрастностью.</div>
-                  </div>
+                  </div> -->
                   <div class="history__slider__wrap">
                      <div class="history__slider">
                         <div class="history__slide">
@@ -306,16 +304,14 @@
                   <div class="potential__head show__mob">
                      <img src="https://cdn.comfy.ua/media/x/img3/2487429/txt1.svg" alt="" />
                      <div class="motorola__title">Расширьте границы</div>
-                     <div class="motorola__txt">Перейдите на большой</div>
-                     экран телевизора, ноутбука или компьютера с помощью беспроводного подключения.
+                     <div class="motorola__txt">Перейдите на большой экран телевизора, ноутбука или компьютера с помощью беспроводного подключения.</div>
                   </div>
                   <div class="potential__row">
                      <div class="potential__cont">
                         <div class="potential__head hide__mob">
                            <img src="https://cdn.comfy.ua/media/x/img3/2487429/txt1.svg" alt="" />
                            <div class="motorola__title">Расширьте границы</div>
-                           <div class="motorola__txt">Перейдите на большой</div>
-                           экран телевизора, ноутбука или компьютера с помощью беспроводного подключения.
+                           <div class="motorola__txt">Перейдите на большой экран телевизора, ноутбука или компьютера с помощью беспроводного подключения.</div>
                         </div>
                         <div class="potential__accordion">
                            <div class="accordion__item">
@@ -401,99 +397,99 @@
             </div>
          </section>
       </div>
-   </body>
 
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-   <script>
-      $(document).on("general-tab-open", () => {
-         document.querySelectorAll(".autoplay-video").forEach((element) => {
-            element.play();
-         });
-      });
-   </script>
-
-   <script>
-      (function ($) {
-         $(document).ready(function () {
-            $(".history__slider").slick({
-               prevArrow: false,
-               nextArrow: false,
-               slidesToShow: 5,
-               slidesToScroll: 1,
-               infinite: true,
-               centerMode: true,
-               nextArrow: $(".next__arrow"),
-               prevArrow: $(".prev__arrow"),
-               responsive: [
-                  {
-                     breakpoint: 1441,
-                     settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                     },
-                  },
-                  {
-                     breakpoint: 991,
-                     settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        centerPadding: "30px",
-                        autoplay: true,
-                        autoplaySpeed: 3500,
-                     },
-                  },
-               ],
+      <script>
+         $(document).on("general-tab-open", () => {
+            document.querySelectorAll(".autoplay-video").forEach((element) => {
+               element.play();
             });
          });
-      })(jQuery);
-   </script>
+      </script>
 
-   <script>
-      document.addEventListener("DOMContentLoaded", () => {
-         const accBtn = document.querySelectorAll(".accordion__btn");
-         const accImages = document.querySelectorAll(".potential__img img");
-         const accCont = document.querySelectorAll(".accordion__cont");
-
-         hideAll(accImages, accCont);
-         showElem(accImages);
-         showElem(accCont);
-         eventBtn(accBtn);
-
-         function hideAll(...elem) {
-            elem.forEach((itemList) => {
-               for (let i = 0; i < itemList.length; i++) {
-                  const item = itemList[i];
-                  item.style.display = "none";
-               }
+      <script>
+         (function ($) {
+            $(document).ready(function () {
+               $(".history__slider").slick({
+                  prevArrow: false,
+                  nextArrow: false,
+                  slidesToShow: 5,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  centerMode: true,
+                  nextArrow: $(".next__arrow"),
+                  prevArrow: $(".prev__arrow"),
+                  responsive: [
+                     {
+                        breakpoint: 1441,
+                        settings: {
+                           slidesToShow: 3,
+                           slidesToScroll: 1,
+                        },
+                     },
+                     {
+                        breakpoint: 991,
+                        settings: {
+                           slidesToShow: 1,
+                           slidesToScroll: 1,
+                           centerPadding: "30px",
+                           autoplay: true,
+                           autoplaySpeed: 3500,
+                        },
+                     },
+                  ],
+               });
             });
-         }
+         })(jQuery);
+      </script>
 
-         function showElem(elem, i = 0) {
-            elem[i].style.display = "block";
-         }
+      <script>
+         document.addEventListener("DOMContentLoaded", () => {
+            const accBtn = document.querySelectorAll(".accordion__btn");
+            const accImages = document.querySelectorAll(".potential__img img");
+            const accCont = document.querySelectorAll(".accordion__cont");
 
-         function eventBtn(btns, j = 0) {
-            btns[j].classList.add("accordion__active");
-            for (let i = 0; i < btns.length; i++) {
-               btns[i].addEventListener("click", function () {
-                  if (!this.classList.contains("accordion__active")) {
-                     btns.forEach((otherBtn) => {
-                        if (otherBtn !== this) {
-                           otherBtn.classList.remove("accordion__active");
-                        }
-                     });
+            hideAll(accImages, accCont);
+            showElem(accImages);
+            showElem(accCont);
+            eventBtn(accBtn);
 
-                     this.classList.add("accordion__active");
-                     hideAll(accImages, accCont);
-                     showElem(accImages, i);
-                     showElem(accCont, i);
+            function hideAll(...elem) {
+               elem.forEach((itemList) => {
+                  for (let i = 0; i < itemList.length; i++) {
+                     const item = itemList[i];
+                     item.style.display = "none";
                   }
                });
             }
-         }
-      });
-   </script>
+
+            function showElem(elem, i = 0) {
+               elem[i].style.display = "block";
+            }
+
+            function eventBtn(btns, j = 0) {
+               btns[j].classList.add("accordion__active");
+               for (let i = 0; i < btns.length; i++) {
+                  btns[i].addEventListener("click", function () {
+                     if (!this.classList.contains("accordion__active")) {
+                        btns.forEach((otherBtn) => {
+                           if (otherBtn !== this) {
+                              otherBtn.classList.remove("accordion__active");
+                           }
+                        });
+
+                        this.classList.add("accordion__active");
+                        hideAll(accImages, accCont);
+                        showElem(accImages, i);
+                        showElem(accCont, i);
+                     }
+                  });
+               }
+            }
+         });
+      </script>
+   </body>
 </html>
