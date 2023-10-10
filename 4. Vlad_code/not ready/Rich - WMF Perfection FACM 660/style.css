@@ -353,7 +353,6 @@
   stroke-dasharray: 360;
   stroke-dashoffset: 360;
   stroke-width: 5;
-  animation-delay: 1s;
 }
 .case__svg path:nth-of-type(11) {
   stroke-dasharray: 51;
@@ -460,6 +459,7 @@
 .display__slider .swiper-button-next-one {
   position: unset;
   cursor: pointer;
+  pointer-events: auto;
 }
 .display__slider .swiper-button-prev-one::after,
 .display__slider .swiper-button-next-one::after {
@@ -480,6 +480,8 @@
   right: 50%;
   top: 18%;
   transform: translateX(50%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .swiper__txt {
@@ -494,7 +496,7 @@
   position: relative;
 }
 .display__img video {
-  max-width: 45%;
+  max-width: 864px;
   position: absolute;
   right: 50%;
   bottom: 45%;
@@ -698,6 +700,8 @@
   z-index: 1;
   max-width: -moz-max-content;
   max-width: max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
 }
 .wmf__slider .swiper-pagination-bullet {
   width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 14px));
@@ -824,7 +828,14 @@
     top: 30%;
   }
   .clean__abs {
-    bottom: -20%;
+    bottom: 11%;
+  }
+  .wmf__slider .swiper-pagination-two {
+    left: 35% !important;
+  }
+  .clean__img img,
+  .clean__img svg {
+    max-height: 380px;
   }
 }
 @media (max-width: 1201px) {
@@ -869,12 +880,11 @@
   .display {
     padding: 4em 0;
   }
+  .display__img video {
+    max-width: 80%;
+  }
   .wmf__slider .swiper-pagination {
     display: none !important;
-  }
-  .clean__img img,
-  .clean__img svg {
-    max-height: 380px;
   }
   .clean__img svg {
     margin-bottom: 4em;
@@ -882,6 +892,15 @@
   .clean__abs {
     right: 25%;
     bottom: -11%;
+  }
+  .design__abs {
+    max-width: 390px;
+  }
+  .wmf__slider .arrows__two {
+    top: 2%;
+  }
+  .wmf__slider .swiper-pagination-two {
+    left: 30% !important;
   }
 }
 @media (max-width: 991px) {
@@ -1108,6 +1127,9 @@
   .design__abs .wmf__opacity {
     display: none;
   }
+  .display__img video {
+    max-width: 90%;
+  }
   .complete__grid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(7, 1fr);
@@ -1133,6 +1155,9 @@
     transform: unset;
     justify-content: center;
     margin-top: 30px;
+  }
+  .wmf__slider .swiper-pagination-two {
+    display: none !important;
   }
   .slider-nav {
     display: none;

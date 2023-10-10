@@ -1,6 +1,4 @@
-<style>
-   
-</style>
+<style></style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
@@ -112,7 +110,7 @@
             </div>
             <div class="display__img">
                <img src="https://cdn.comfy.ua/media/x/img3/wmf660/border.svg" alt="" />
-               <video muted="true" autoplay loop playsinline="true" class="autoplay-video clg__video lazyload autoplay-video" src="https://cdn.comfy.ua/media/video/WMFPerfectionFACM660/2.mp4"></video>
+               <video muted="true" autoplay loop playsinline="true" class="autoplay-video lazyload autoplay-video" src="https://cdn.comfy.ua/media/video/WMFPerfectionFACM660/2.mp4"></video>
             </div>
          </div>
          <div class="display__slider">
@@ -245,7 +243,7 @@
       <div class="clean">
          <div class="clean__bg">
             <img src="https://cdn.comfy.ua/media/x/img3/wmf660/10.png" alt="" />
-            <video muted="true" autoplay loop playsinline="true" class="autoplay-video clg__video lazyload autoplay-video" src="https://cdn.comfy.ua/media/video/WMFPerfectionFACM660/3.mp4"></video>
+            <video muted="true" autoplay loop playsinline="true" class="autoplay-video lazyload autoplay-video" src="https://cdn.comfy.ua/media/video/WMFPerfectionFACM660/3.mp4"></video>
          </div>
          <div class="container">
             <div class="clean__abs">
@@ -261,8 +259,8 @@
                      <div class="wmf__title">Для насиченого смаку та аромату</div>
                      <div class="wmf__txt">
                         <b
-                           >Як ця автоматична кавомашина готує такі незрівнянні напої, прямо як у вашій улюбленій кав’ярні? Металевий заварювальний блок гарантує стабільну температуру, оптимальні умови для екстракції кави та створення насиченого аромату, а технологія тонкого помелу зерен — легке 4-ступінчасте налаштування. Якщо є настрій на експерименти, можна увімкнути експертний режим з
-                           трьома різними періодами попередньої інфузії до 10 секунд.
+                           >Як ця автоматична кавомашина готує такі незрівнянні напої, прямо як у вашій улюбленій кав’ярні? Металевий заварювальний блок гарантує стабільну температуру, оптимальні умови для екстракції кави та створення насиченого аромату, а технологія тонкого помелу зерен — легке 4-ступінчасте налаштування. Якщо є настрій на експерименти, можна увімкнути експертний режим з трьома
+                           різними періодами попередньої інфузії до 10 секунд.
                         </b>
                      </div>
                   </div>
@@ -299,7 +297,7 @@
    <section>
       <div class="wmf__block__video">
          <!-- <img src="https://cdn.comfy.ua/media/x/img3/wmf660/12.jpg" alt="" /> -->
-         <video muted="true" autoplay loop playsinline="true" class="autoplay-video clg__video lazyload autoplay-video" src="https://cdn.comfy.ua/media/video/WMFPerfectionFACM660/4.mp4"></video>
+         <video muted="true" autoplay loop playsinline="true" class="autoplay-video lazyload autoplay-video" src="https://cdn.comfy.ua/media/video/WMFPerfectionFACM660/4.mp4"></video>
       </div>
    </section>
 
@@ -626,6 +624,7 @@
          trigger: ".case__svg",
          start: "top center",
          end: "+=50%",
+         id: "svg-one",
          onToggle: ({isActive}) => {
             if (isActive) {
                addAnimation(svgPaths, "animation: draw 4s forwards");
@@ -647,6 +646,7 @@
          trigger: ".clean__abs",
          start: "top center",
          end: "bottom",
+         id: "svg-two",
          onToggle: ({isActive}) => {
             if (isActive) {
                addAnimation(svgTwo, "animation: draw-three 3s linear forwards");
@@ -662,30 +662,45 @@
       const cleanOne = document.querySelector(".clean__abs__one");
       const cleanTwo = document.querySelector(".clean__abs__two");
       let tl = gsap.timeline();
-      tl.fromTo(cleanOne, {opacity: 1}, {opacity: 0}, 0).fromTo(cleanTwo, {opacity: 0}, {opacity: 1}, 0);
+
+      if (window.innerWidth >= 991) {
+         tl.fromTo(cleanOne, {opacity: 1}, {opacity: 0}, 0).fromTo(cleanTwo, {opacity: 0}, {opacity: 1}, 0);
+      }
 
       const triggerOptions = {
          animation: tl,
          trigger: ".clean",
          scrub: true,
          id: "clean",
+         pin: true,
       };
 
-      if (window.innerWidth >= 1341) {
-         triggerOptions.start = "top 20%";
-         triggerOptions.end = "+=50%";
-      } else if (window.innerWidth <= 1340 && window.innerWidth >= 1025) {
-         triggerOptions.start = "top -20%";
-         triggerOptions.end = "+=50%";
-      } else if (window.innerWidth >= 991 && window.innerWidth <= 1024) {
-         triggerOptions.start = "top 10%";
-         triggerOptions.end = "+=50%";
-      }
+      // if (window.innerWidth >= 1441) {
+      //    triggerOptions.start = "top";
+      //    triggerOptions.end = "+=50%";
+      // }
+      // else if (window.innerWidth <= 1440) {
+      //    triggerOptions.start = "top -10%";
+      //    triggerOptions.end = "+=50%";
+      // } else if (window.innerWidth >= 991 && window.innerWidth <= 1024) {
+      //    triggerOptions.start = "top 10%";
+      //    triggerOptions.end = "+=50%";
+      // }
+      // if (window.innerWidth >= 1341) {
+      //    triggerOptions.start = "top -20%";
+      //    triggerOptions.end = "+=50%";
+      // } else if (window.innerWidth <= 1340 && window.innerWidth >= 1025) {
+      //    triggerOptions.start = "top -20%";
+      //    triggerOptions.end = "+=50%";
+      // } else if (window.innerWidth >= 991 && window.innerWidth <= 1024) {
+      //    triggerOptions.start = "top 10%";
+      //    triggerOptions.end = "+=50%";
+      // }
 
       ScrollTrigger.create(triggerOptions);
 
-      window.onload = function () {
-         ScrollTrigger.refresh(true);
-      };
+      document.addEventListener("lazyloaded", function (e) {
+         ScrollTrigger.refresh();
+      });
    });
 </script>

@@ -294,7 +294,6 @@
             stroke-dasharray: 360
             stroke-dashoffset: 360
             stroke-width: 5
-            animation-delay: 1s
         &:nth-of-type(11)
             stroke-dasharray: 51
             stroke-dashoffset: 51
@@ -386,6 +385,7 @@
     .swiper-button-next-one
         position: unset
         cursor: pointer
+        pointer-events: auto
         &::after
             display: none
     .swiper-button-prev-one
@@ -401,6 +401,8 @@
     right: 50%
     top: 18%
     transform: translateX(50%)
+    z-index: 2
+    pointer-events: none
 
 .swiper__txt
     text-align: center
@@ -412,7 +414,8 @@
 .display__img
     position: relative
     video
-        max-width: 45%
+        // max-width: 45%
+        max-width: 864px
         position: absolute
         right: 50%
         bottom: 45%
@@ -590,6 +593,7 @@
         left: 40% !important
         z-index: 1
         max-width: max-content
+        max-height: max-content
     .swiper-pagination-bullet
         width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,14px))
         height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,14px))
@@ -696,7 +700,14 @@
         top: 30%
 
     .clean__abs
-        bottom: -20%
+        bottom: 11%
+
+    .wmf__slider .swiper-pagination-two
+        left: 35% !important
+
+    .clean__img img,
+    .clean__img svg
+        max-height: 380px
 
 @media (max-width: 1201px)
     .wmf .container
@@ -730,18 +741,28 @@
 
     .display
         padding: 4em 0
+    .display__img video
+        max-width: 80%
 
     .wmf__slider .swiper-pagination
         display: none !important
 
-    .clean__img img,
-    .clean__img svg
-        max-height: 380px
+    // .clean__img img,
+    // .clean__img svg
+    //     max-height: 380px
     .clean__img svg
         margin-bottom: 4em
     .clean__abs
         right: 25%
         bottom: -11%
+
+    .design__abs
+        max-width: 390px
+
+    .wmf__slider .arrows__two
+        top: 2%
+    .wmf__slider .swiper-pagination-two
+        left: 30% !important
 
 @media (max-width: 991px)
     .wmf .container
@@ -934,6 +955,8 @@
         // mix-blend-mode: difference
         // color: #000
         // opacity: .8
+    .display__img video
+        max-width: 90%
 
     .complete__grid
         grid-template-columns: 1fr
@@ -957,6 +980,8 @@
             transform: unset
             justify-content: center
             margin-top: 30px
+        .swiper-pagination-two
+            display: none !important
     .slider-nav
         display: none
     .slider-top .wmf__title
