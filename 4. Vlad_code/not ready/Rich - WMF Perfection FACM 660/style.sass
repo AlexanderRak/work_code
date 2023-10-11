@@ -699,15 +699,27 @@
     .display__slider__abs
         top: 30%
 
-    .clean__abs
-        bottom: 11%
-
     .wmf__slider .swiper-pagination-two
         left: 35% !important
 
+    .clean__abs__one,
+    .clean__abs__two
+        display: flex
+        flex-direction: row-reverse
+        align-items: flex-end
+    .clean__abs__one
+        margin-top: 4em
+    .clean__txt
+        max-width: 900px
+        margin-right: 2em
+    .clean__abs
+        bottom: 16%
+        right: 20%
+        left: 7%
     .clean__img img,
     .clean__img svg
         max-height: 380px
+        min-width: 300px
 
 @media (max-width: 1201px)
     .wmf .container
@@ -754,7 +766,12 @@
         margin-bottom: 4em
     .clean__abs
         right: 25%
-        bottom: -11%
+        bottom: -18%
+    .clean__abs__one
+        margin-top: 0
+    .clean__abs__one,
+    .clean__abs__two
+        display: block
 
     .design__abs
         max-width: 390px
@@ -928,6 +945,7 @@
         display: block
         margin: 0 auto
         max-width: 100%
+        max-height: 500px
     .clean__abs__two .clean__txt
         margin-bottom: 0
 
@@ -1067,6 +1085,10 @@
                         &:nth-of-type(22)
                             stroke-dasharray: 82
                             stroke-dashoffset: 82
+
+    .wmf__block__video video
+        min-width: 200%
+        margin-left: -50%
 
     @keyframes draw-three
         100%

@@ -600,7 +600,7 @@
       gsap.config({trialWarn: false});
 
       ScrollTrigger.defaults({
-         markers: true,
+         markers: false,
       });
 
       const caseSvg = document.querySelector(".case");
@@ -672,30 +672,8 @@
          trigger: ".clean",
          scrub: true,
          id: "clean",
-         pin: true,
+         pin: window.innerWidth > 991 ? true : false,
       };
-
-      // if (window.innerWidth >= 1441) {
-      //    triggerOptions.start = "top";
-      //    triggerOptions.end = "+=50%";
-      // }
-      // else if (window.innerWidth <= 1440) {
-      //    triggerOptions.start = "top -10%";
-      //    triggerOptions.end = "+=50%";
-      // } else if (window.innerWidth >= 991 && window.innerWidth <= 1024) {
-      //    triggerOptions.start = "top 10%";
-      //    triggerOptions.end = "+=50%";
-      // }
-      // if (window.innerWidth >= 1341) {
-      //    triggerOptions.start = "top -20%";
-      //    triggerOptions.end = "+=50%";
-      // } else if (window.innerWidth <= 1340 && window.innerWidth >= 1025) {
-      //    triggerOptions.start = "top -20%";
-      //    triggerOptions.end = "+=50%";
-      // } else if (window.innerWidth >= 991 && window.innerWidth <= 1024) {
-      //    triggerOptions.start = "top 10%";
-      //    triggerOptions.end = "+=50%";
-      // }
 
       ScrollTrigger.create(triggerOptions);
 
