@@ -1,0 +1,1361 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+
+</style>
+
+<script>
+   !function (a) { "function" == typeof define && define.amd ? define(["jquery"], a) : a("object" == typeof exports ? require("jquery") : jQuery) }(function (a) { var b, c = navigator.userAgent, d = /iphone/i.test(c), e = /chrome/i.test(c), f = /android/i.test(c); a.mask = { definitions: { 9: "[0-9]", a: "[A-Za-z]", "*": "[A-Za-z0-9]" }, autoclear: !0, dataName: "rawMaskFn", placeholder: "_" }, a.fn.extend({ caret: function (a, b) { var c; if (0 !== this.length && !this.is(":hidden")) return "number" == typeof a ? (b = "number" == typeof b ? b : a, this.each(function () { this.setSelectionRange ? this.setSelectionRange(a, b) : this.createTextRange && (c = this.createTextRange(), c.collapse(!0), c.moveEnd("character", b), c.moveStart("character", a), c.select()) })) : (this[0].setSelectionRange ? (a = this[0].selectionStart, b = this[0].selectionEnd) : document.selection && document.selection.createRange && (c = document.selection.createRange(), a = 0 - c.duplicate().moveStart("character", -1e5), b = a + c.text.length), { begin: a, end: b }) }, unmask: function () { return this.trigger("unmask") }, mask: function (c, g) { var h, i, j, k, l, m, n, o; if (!c && this.length > 0) { h = a(this[0]); var p = h.data(a.mask.dataName); return p ? p() : void 0 } return g = a.extend({ autoclear: a.mask.autoclear, placeholder: a.mask.placeholder, completed: null }, g), i = a.mask.definitions, j = [], k = n = c.length, l = null, a.each(c.split(""), function (a, b) { "?" == b ? (n--, k = a) : i[b] ? (j.push(new RegExp(i[b])), null === l && (l = j.length - 1), k > a && (m = j.length - 1)) : j.push(null) }), this.trigger("unmask").each(function () { function h() { if (g.completed) { for (var a = l; m >= a; a++)if (j[a] && C[a] === p(a)) return; g.completed.call(B) } } function p(a) { return g.placeholder.charAt(a < g.placeholder.length ? a : 0) } function q(a) { for (; ++a < n && !j[a];); return a } function r(a) { for (; --a >= 0 && !j[a];); return a } function s(a, b) { var c, d; if (!(0 > a)) { for (c = a, d = q(b); n > c; c++)if (j[c]) { if (!(n > d && j[c].test(C[d]))) break; C[c] = C[d], C[d] = p(d), d = q(d) } z(), B.caret(Math.max(l, a)) } } function t(a) { var b, c, d, e; for (b = a, c = p(a); n > b; b++)if (j[b]) { if (d = q(b), e = C[b], C[b] = c, !(n > d && j[d].test(e))) break; c = e } } function u() { var a = B.val(), b = B.caret(); if (o && o.length && o.length > a.length) { for (A(!0); b.begin > 0 && !j[b.begin - 1];)b.begin--; if (0 === b.begin) for (; b.begin < l && !j[b.begin];)b.begin++; B.caret(b.begin, b.begin) } else { for (A(!0); b.begin < n && !j[b.begin];)b.begin++; B.caret(b.begin, b.begin) } h() } function v() { A(), B.val() != E && B.change() } function w(a) { if (!B.prop("readonly")) { var b, c, e, f = a.which || a.keyCode; o = B.val(), 8 === f || 46 === f || d && 127 === f ? (b = B.caret(), c = b.begin, e = b.end, e - c === 0 && (c = 46 !== f ? r(c) : e = q(c - 1), e = 46 === f ? q(e) : e), y(c, e), s(c, e - 1), a.preventDefault()) : 13 === f ? v.call(this, a) : 27 === f && (B.val(E), B.caret(0, A()), a.preventDefault()) } } function x(b) { if (!B.prop("readonly")) { var c, d, e, g = b.which || b.keyCode, i = B.caret(); if (!(b.ctrlKey || b.altKey || b.metaKey || 32 > g) && g && 13 !== g) { if (i.end - i.begin !== 0 && (y(i.begin, i.end), s(i.begin, i.end - 1)), c = q(i.begin - 1), n > c && (d = String.fromCharCode(g), j[c].test(d))) { if (t(c), C[c] = d, z(), e = q(c), f) { var k = function () { a.proxy(a.fn.caret, B, e)() }; setTimeout(k, 0) } else B.caret(e); i.begin <= m && h() } b.preventDefault() } } } function y(a, b) { var c; for (c = a; b > c && n > c; c++)j[c] && (C[c] = p(c)) } function z() { B.val(C.join("")) } function A(a) { var b, c, d, e = B.val(), f = -1; for (b = 0, d = 0; n > b; b++)if (j[b]) { for (C[b] = p(b); d++ < e.length;)if (c = e.charAt(d - 1), j[b].test(c)) { C[b] = c, f = b; break } if (d > e.length) { y(b + 1, n); break } } else C[b] === e.charAt(d) && d++, k > b && (f = b); return a ? z() : k > f + 1 ? g.autoclear || C.join("") === D ? (B.val() && B.val(""), y(0, n)) : z() : (z(), B.val(B.val().substring(0, f + 1))), k ? b : l } var B = a(this), C = a.map(c.split(""), function (a, b) { return "?" != a ? i[a] ? p(b) : a : void 0 }), D = C.join(""), E = B.val(); B.data(a.mask.dataName, function () { return a.map(C, function (a, b) { return j[b] && a != p(b) ? a : null }).join("") }), B.one("unmask", function () { B.off(".mask").removeData(a.mask.dataName) }).on("focus.mask", function () { if (!B.prop("readonly")) { clearTimeout(b); var a; E = B.val(), a = A(), b = setTimeout(function () { B.get(0) === document.activeElement && (z(), a == c.replace("?", "").length ? B.caret(0, a) : B.caret(a)) }, 10) } }).on("blur.mask", v).on("keydown.mask", w).on("keypress.mask", x).on("input.mask paste.mask", function () { B.prop("readonly") || setTimeout(function () { var a = A(!0); B.caret(a), h() }, 0) }), e && f && B.off("input.mask").on("input.mask", u), A() }) } }) });
+</script>
+
+<script>
+
+   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+   function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+   function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+   var purePajinate = /*#__PURE__*/function () {
+      "use strict";
+
+      function purePajinate(options) {
+         _classCallCheck(this, purePajinate);
+
+         this.config = {
+            containerSelector: '.items',
+            itemSelector: '.item',
+            navigationSelector: '.page_navigation',
+            itemsPerPage: 10,
+            pageLinksToDisplay: 10,
+            startPage: 0,
+            wrapAround: false,
+            navLabelFirst: 'First',
+            navLabelPrev: 'Prev',
+            navLabelNext: 'Next',
+            navLabelLast: 'Last',
+            navAriaLabelFirst: 'First',
+            navAriaLabelPrev: 'Prev',
+            navAriaLabelNext: 'Next',
+            navAriaLabelLast: 'Last',
+            navOrder: ["first", "prev", "num", "next", "last"],
+            showFirstLast: false,
+            showPrevNext: true,
+            hideOnSmall: false,
+            defaultClass: '',
+            activeClass: "active",
+            disabledClass: "disabled",
+            onInit: function onInit() { },
+            onPageDisplayed: function onPageDisplayed() { }
+         };
+
+         if (typeof options !== "undefined") {
+            var userSettings = options;
+
+            for (var attrname in userSettings) {
+               if (userSettings[attrname] != undefined) {
+                  this.config[attrname] = userSettings[attrname];
+               }
+            }
+         }
+
+         this.init();
+      }
+
+      _createClass(purePajinate, [{
+         key: "init",
+         value: function init() {
+            this.config.item_container = document.querySelector(this.config.containerSelector);
+            this.config.pagination_containers = document.querySelectorAll(this.config.navigationSelector);
+            /* Get all the items that are paginated */
+
+            var items = this.config.item_container.querySelectorAll(this.config.itemSelector);
+
+            if (this.config.hideOnSmall && this.config.itemsPerPage >= items.length) {
+               return;
+            }
+
+            this.current_page = this.config.startPage;
+
+            for (var i = 0; i < items.length; i++) {
+               items[i].style.display = 'none';
+               items[i].classList.add('hidden');
+            }
+            /* Calculate the number of pages needed */
+
+
+            var number_of_pages = Math.ceil(items.length / this.config.itemsPerPage);
+            /* Construct the navigation bar */
+
+            var more = '<li class="ellipse more"><span>...</span></li>';
+            var less = '<li class="ellipse less"><span>...</span></li>';
+            var first = !this.config.showFirstLast ? '' : '<li class="first_link ' + this.config.defaultClass + '"><a href="#goto" aria-label="' + this.config.navAriaLabelFirst + '" onclick="return false;">' + this.config.navLabelFirst + '</a></li>';
+            var last = !this.config.showFirstLast ? '' : '<li class="last_link ' + this.config.defaultClass + '"><a href="#goto" aria-label="' + this.config.navAriaLabelLast + '" onclick="return false;">' + this.config.navLabelLast + '</a></li>';
+            var previous = !this.config.showPrevNext ? '' : '<li class="previous_link ' + this.config.defaultClass + '"><a href="#goto" aria-label="' + this.config.navAriaLabelPrev + '" onclick="return false;">' + this.config.navLabelPrev + '</a></li>';
+            var next = !this.config.showPrevNext ? '' : '<li class="next_link ' + this.config.defaultClass + '"><a href="#goto" aria-label="' + this.config.navAriaLabelNext + '" onclick="return false;">' + this.config.navLabelNext + '</a></li>';
+            var navigation_html = '<ul>';
+
+            for (var _i = 0; _i < this.config.navOrder.length; _i++) {
+               switch (this.config.navOrder[_i]) {
+                  case "first":
+                     navigation_html += first;
+                     break;
+
+                  case "last":
+                     navigation_html += last;
+                     break;
+
+                  case "next":
+                     navigation_html += next;
+                     break;
+
+                  case "prev":
+                     navigation_html += previous;
+                     break;
+
+                  case "num":
+                     if (this.config.showPrevNext) {
+                        navigation_html += less;
+                     }
+
+                     var current_link = 0;
+
+                     while (number_of_pages > current_link) {
+                        var extra_class = '';
+
+                        if (current_link == 0) {
+                           extra_class = ' first';
+                        }
+
+                        if (current_link == number_of_pages - 1) {
+                           extra_class = ' last';
+                        }
+
+                        navigation_html += '<li class="page_link' + extra_class + ' ' + this.config.defaultClass + '" longdesc="' + current_link + '"><a href="#goto" aria-label="' + (current_link + 1) + '" onclick="return false;"><span>' + (current_link + 1) + '</span></a></li>';
+                        current_link++;
+                     }
+
+                     if (this.config.showPrevNext) {
+                        navigation_html += more;
+                     }
+
+                     break;
+               }
+            }
+
+            navigation_html += '</ul>';
+            /* Iterate through all pagination blocks */
+
+            this.config.pagination_containers.forEach(function (el) {
+               el.innerHTML = navigation_html;
+               /* Show a subset of page links */
+
+               var page_links = el.querySelectorAll('.page_link');
+
+               for (var _i2 = 0; _i2 < page_links.length; _i2++) {
+                  if (_i2 >= this.config.pageLinksToDisplay + this.config.startPage || _i2 < this.config.startPage) {
+                     page_links[_i2].style.display = 'none';
+                  }
+               }
+               /* Hide the more/less indicators */
+
+
+               el.querySelectorAll('.ellipse').forEach(function (ellipses) {
+                  ellipses.style.display = 'none';
+               });
+               /* Set the active page link styling */
+
+               if (page_links.length > 0) {
+                  var first_page = page_links[0];
+                  first_page.classList.add('active_page');
+                  first_page.classList.add(this.config.activeClass);
+               }
+
+               this.total_page_no_links = page_links.length;
+               this.config.pageLinksToDisplay = Math.min(this.config.pageLinksToDisplay, this.total_page_no_links);
+               var that = this;
+               /* avoids bind(this) in function(e) { }.bind(this) */
+
+               if (this.config.showFirstLast) {
+                  /* Event handler for 'First' link */
+                  el.querySelector('.first_link').addEventListener('click', function (e) {
+                     e.preventDefault();
+                     that.showFirstPage(el);
+                  });
+                  /* Event handler for 'Last' link */
+
+                  el.querySelector('.last_link').addEventListener('click', function (e) {
+                     e.preventDefault();
+                     that.showLastPage(el);
+                  });
+               }
+
+               if (this.config.showPrevNext) {
+                  /* Event handler for 'Prev' link */
+                  el.querySelector('.previous_link').addEventListener('click', function (e) {
+                     e.preventDefault();
+                     that.showPrevPage(el);
+                  });
+                  el.querySelector('.previous_link').addEventListener('keydown', function (e) {
+                     if (e.keyCode == 37) {
+                        this.click();
+                     }
+                  });
+                  /* Event handler for 'Next' link */
+
+                  el.querySelector('.next_link').addEventListener('click', function (e) {
+                     e.preventDefault();
+                     that.showNextPage(el);
+                  });
+                  el.querySelector('.next_link').addEventListener('keydown', function (e) {
+                     if (e.keyCode == 39) {
+                        this.click();
+                     }
+                  });
+               }
+               /* Event handler for each 'Page' link */
+
+
+               el.querySelectorAll('.page_link').forEach(function (page) {
+                  page.addEventListener('click', function (e) {
+                     e.preventDefault();
+                     that.gotopage(page.getAttribute('longdesc'));
+                  });
+               }, that);
+            }, this);
+            this.gotopage(parseInt(this.config.startPage));
+            /* Set the pagination as ready */
+
+            this.config.item_container.classList.add('loaded');
+            /* Call user onInit */
+
+            this.config.onInit.call(this);
+         }
+      }, {
+         key: "showFirstPage",
+         value: function showFirstPage(el) {
+            this.movePageNumbersRight(el.querySelector('.first_link'), 0);
+            this.gotopage(0);
+         }
+      }, {
+         key: "showLastPage",
+         value: function showLastPage(el) {
+            var lastPage = this.total_page_no_links - 1;
+            this.movePageNumbersLeft(el.querySelector('.last_link'), lastPage);
+            this.gotopage(lastPage);
+         }
+      }, {
+         key: "showPrevPage",
+         value: function showPrevPage(el) {
+            var new_page = parseInt(this.current_page) - 1;
+            var before_active = el.querySelector('.previous_link').parentNode.querySelector('.active_page').previousElementSibling;
+
+            if (before_active != null && before_active.classList.contains('page_link')) {
+               this.movePageNumbersRight(el.querySelector('.previous_link'), new_page);
+               this.gotopage(new_page);
+            } else if (this.config.wrapAround) {
+               this.movePageNumbersLeft(el.querySelector('.previous_link'), this.total_page_no_links - 1);
+               this.gotopage(this.total_page_no_links - 1);
+            }
+         }
+      }, {
+         key: "showNextPage",
+         value: function showNextPage(el) {
+            var new_page = parseInt(this.current_page) + 1;
+            var after_active = el.querySelector('.next_link').parentNode.querySelector('.active_page').nextElementSibling;
+
+            if (after_active != null && after_active.classList.contains('page_link')) {
+               this.movePageNumbersLeft(el.querySelector('.next_link'), new_page);
+               this.gotopage(new_page);
+            } else if (this.config.wrapAround) {
+               this.movePageNumbersRight(el.querySelector('.next_link'), 0);
+               this.gotopage(0);
+            }
+         }
+      }, {
+         key: "gotopage",
+         value: function gotopage(page_num) {
+            page_num = parseInt(page_num, 10);
+            var ipp = parseInt(this.config.itemsPerPage);
+            /* Find the start of the next slice */
+
+            var start_from = page_num * ipp;
+            /* Find the end of the next slice */
+
+            var end_on = start_from + ipp;
+            /* Hide the current page */
+
+            var items = this.config.item_container.querySelectorAll(this.config.itemSelector);
+
+            var _loop = function _loop(i) {
+               if (i >= end_on || i < start_from) {
+                  items[i].style.display = 'none';
+                  items[i].classList.remove('visible');
+                  items[i].classList.add('hidden');
+               } else {
+                  items[i].style.display = 'grid';
+                  setTimeout(function () {
+                     items[i].classList.remove('hidden');
+                     items[i].classList.add('visible');
+                  }, 20);
+               }
+            };
+
+            for (var i = 0; i < items.length; i++) {
+               _loop(i);
+            }
+            /* Reassign the active class */
+
+
+            this.config.pagination_containers.forEach(function (el) {
+               var page_links = el.querySelectorAll('.page_link');
+
+               for (var _i3 = 0; _i3 < page_links.length; _i3++) {
+                  if (page_links[_i3].getAttribute('longdesc') == page_num) {
+                     page_links[_i3].classList.add('active_page');
+
+                     page_links[_i3].classList.add(this.config.activeClass);
+                  } else {
+                     page_links[_i3].classList.remove('active_page');
+
+                     page_links[_i3].classList.remove(this.config.activeClass);
+                  }
+               }
+            }, this);
+            /* Set the current page */
+
+            this.current_page = page_num;
+            /* Hide the more and/or less indicators */
+
+            this.toggleMoreLess();
+            /* Add a class to the next or prev links if there are no more pages next or previous to the active page */
+
+            if (!this.config.wrapAround) {
+               this.tagNextPrev();
+            }
+
+            this.config.onPageDisplayed.call(this, page_num + 1);
+         }
+      }, {
+         key: "movePageNumbersLeft",
+         value: function movePageNumbersLeft(e, new_p) {
+            var new_page = new_p;
+            e.parentNode.querySelectorAll('.page_link').forEach(function (el) {
+               if (el.getAttribute('longdesc') == new_page && !el.classList.contains('active_page') && el.style.display == 'none') {
+                  this.config.pagination_containers.forEach(function (el) {
+                     var page_links = el.querySelectorAll('.page_link');
+
+                     for (var i = 0; i < page_links.length; i++) {
+                        if (i < new_page + 1 && i >= parseInt(new_page - this.config.pageLinksToDisplay + 1)) {
+                           page_links[i].style.display = 'flex';
+                        } else {
+                           page_links[i].style.display = 'none';
+                        }
+                     }
+                  }, this);
+               }
+            }, this);
+         }
+      }, {
+         key: "movePageNumbersRight",
+         value: function movePageNumbersRight(e, new_p) {
+            var new_page = new_p;
+            e.parentNode.querySelectorAll('.page_link').forEach(function (el) {
+               if (el.getAttribute('longdesc') == new_page && !el.classList.contains('active_page') && el.style.display == 'none') {
+                  this.config.pagination_containers.forEach(function (el) {
+                     var page_links = el.querySelectorAll('.page_link');
+
+                     for (var i = 0; i < page_links.length; i++) {
+                        if (i < new_page + parseInt(this.config.pageLinksToDisplay) && i >= new_page) {
+                           page_links[i].style.display = 'flex';
+                        } else {
+                           page_links[i].style.display = 'none';
+                        }
+                     }
+                  }, this);
+               }
+            }, this);
+         }
+      }, {
+         key: "toggleMoreLess",
+         value: function toggleMoreLess() {
+            this.config.pagination_containers.forEach(function (container) {
+               var more = container.querySelector('.more');
+
+               if (more != null) {
+                  more.style.display = 'none';
+
+                  if (container.querySelector('.page_link.last') && this.isHidden(container.querySelector('.page_link.last'))) {
+                     more.style.display = 'flex';
+                  }
+               }
+
+               var less = container.querySelector('.less');
+
+               if (less != null) {
+                  less.style.display = 'none';
+
+                  if (container.querySelector('.page_link.first') && this.isHidden(container.querySelector('.page_link.first'))) {
+                     less.style.display = 'flex';
+                  }
+               }
+            }, this);
+         }
+      }, {
+         key: "tagNextPrev",
+         value: function tagNextPrev() {
+            this.config.pagination_containers.forEach(function (container) {
+               var next = container.querySelector('.next_link');
+               var previous = container.querySelector('.previous_link');
+               var first = container.querySelector('.first_link');
+               var last = container.querySelector('.last_link');
+
+               if (container.querySelector('.page_link.last') && container.querySelector('.page_link.last').classList.contains('active_page')) {
+                  if (next != null) {
+                     next.classList.add('no_more');
+                     next.classList.add(this.config.disabledClass);
+                  }
+
+                  if (last != null) {
+                     last.classList.add('no_more');
+                     last.classList.add(this.config.disabledClass);
+                  }
+               } else {
+                  if (next != null) {
+                     next.classList.remove('no_more');
+                     next.classList.remove(this.config.disabledClass);
+                  }
+
+                  if (last != null) {
+                     last.classList.remove('no_more');
+                     last.classList.remove(this.config.disabledClass);
+                  }
+               }
+
+               if (container.querySelector('.page_link.first') && container.querySelector('.page_link.first').classList.contains('active_page')) {
+                  if (previous != null) {
+                     previous.classList.add('no_more');
+                     previous.classList.add(this.config.disabledClass);
+                  }
+
+                  if (first != null) {
+                     first.classList.add('no_more');
+                     first.classList.add(this.config.disabledClass);
+                  }
+               } else {
+                  if (previous != null) {
+                     previous.classList.remove('no_more');
+                     previous.classList.remove(this.config.disabledClass);
+                  }
+
+                  if (first != null) {
+                     first.classList.remove('no_more');
+                     first.classList.remove(this.config.disabledClass);
+                  }
+               }
+            }, this);
+         }
+      }, {
+         key: "isHidden",
+         value: function isHidden(el) {
+            var style = window.getComputedStyle(el);
+            return style.display === 'none' || style.visibility === 'hidden';
+         }
+      }]);
+
+      return purePajinate;
+   }();
+
+</script>
+
+<div id="comfybooks">
+   <!-- cmsbl-comfybooks -->
+   <div class="comfybooks-wrapper">
+
+      <div class="comfybooks-header">
+         <div class="comfybooks-header__h2">
+            <h2 class="h2only_deck">Це ваша книжкова полиця COMFY!</h2>
+            <h2 class="h2only_mob">Вітаємо в бібліотеці COMFY!</h2>
+         </div>
+         <div class="comfybooks-header__h3">
+            <h3>Тут на вас чекатимуть книжки, які ми видали спеціально для наших покупців.<br>Ми поповнюватимемо цю поличку, щоб вам завжди було що почитати <span>&#128521;</span></h3>
+         </div>
+      </div>
+
+      <div class="comfybooks-content">
+         <div class="comfybooks-content__bgrd"></div>
+         <div class="comfybooks-content__goto"></div>
+         <div class="comfybooks-content__form">
+            <div id="upload-date" class="comfybooks-content__form-wp --upload-date">
+               <div class="infoblock">
+                  <span>Ці книжки ви можете придбати в офлайн-магазинах COMFY в рамках акції «Бібліотека COMFY»</span>
+               </div>
+               <form id="valid_form" method="post" name="valid_form" class="comfybooks-content__form-wp-flex">
+                  <div class="comfybooks-content__form-wp__item --item-textp">
+                     <div class="comfybooks-content__form-wp__item-p">
+                        <p>В мене є код для отримання книги</p>
+                     </div>
+                     <div class="open_modal">
+                        <img src="https://cdn.comfy.ua/media/x/img2/lpbooks/nw_img3_question.svg" alt="">
+                        <span class="open_text" id="OpenModalAlert">Код на отримання книжки вказано у вашому чеку за умови виграшу в спеціальній книжковій акції від COMFY.</span>
+                     </div>
+                  </div>
+                  <div class="comfybooks-content__form-wp__item --item-input --item-input-one">
+                     <div class="comfybooks-content__form-wp__item-number">
+                        <input type="tel" id="item_number" name="name_number" class="item_number-cl art-stranger" placeholder="Номер телефону" value="" required />
+                     </div>
+                  </div>
+                  <div class="comfybooks-content__form-wp__item --item-input --item-input-two">
+                     <div class="comfybooks-content__form-wp__item-key">
+                        <input type="text" id="item_key" name="name_key" placeholder="Введіть код сюди" value="" required />
+                     </div>
+                  </div>
+                  <div class="comfybooks-content__form-wp__item --item-submit">
+                     <div class="comfybooks-content__form-wp__item-submit">
+                        <input type="submit" value="Завантажити" name="Submit" />
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <div id="upload-error" class="comfybooks-content__form-wp --upload-error">
+               <div class="comfybooks-content__form-wp-text">
+                  <b style="text-align: left; font-size: 16px; line-height: 1;" class="p_only_mob">Помилка</b>
+                  <p>Щось пішло не так. Перевірте правильність введених даних</p>
+                  <span id="getForm">Спробувати ще раз</span>
+               </div>
+            </div>
+            <div id="upload-done" class="comfybooks-content__form-wp --upload-done">
+               <div class="comfybooks-content__form-wp-text --upload-done">
+                  <none></none>
+                  <p>Ваш код успішно опрацьовано! Насолоджуйтеся книгами від COMFY</p>
+                  <none></none>
+                  <!-- <div>Зверніть увагу, посилання на завантаження книжок буде активним лише протягом <span>15 хвилин.</span></div> -->
+               </div>
+            </div>
+         </div>
+         <div class="comfybooks-accordion">
+            <div class="comfybooks-accordion-wrap">
+               <div class="comfybooks-accordion__btn">Який вибрати формат та де читати?</div>
+               <div class="comfybooks-accordion__content-grid">
+                  <div class="comfybooks-accordion__content-grid__item">
+                     <div class="comfybooks-accordion__content-subtitle">Який вибрати формат?</div>
+                     <div class="comfybooks-accordion__content-format-flex">
+                        <img src="https://cdn.comfy.ua/media/x/img2/booksimg/img1.png" alt="">
+                        <div class="comfybooks-accordion__content-format-text">
+                           <div class="comfybooks-accordion__content-format-subtitle">EPUB</div>
+                           <div class="comfybooks-accordion__content-format-title">Книги в цьому форматі можна читати майже з усіх пристроїв, які працюють як на iOS, так і на Android.</div>
+                        </div>
+                     </div>
+                     <div class="comfybooks-accordion__content-format-flex">
+                        <img src="https://cdn.comfy.ua/media/x/img2/booksimg/img2.png" alt="">
+                        <div class="comfybooks-accordion__content-format-text">
+                           <div class="comfybooks-accordion__content-format-subtitle">PDF</div>
+                           <div class="comfybooks-accordion__content-format-title">Зазвичай містить ілюстрації та підходить для читання з комп’ютера, планшета та телефона</div>
+                        </div>
+                     </div>
+                     <div class="comfybooks-accordion__content-format-flex">
+                        <img src="https://cdn.comfy.ua/media/x/img2/booksimg/img3.png" alt="">
+                        <div class="comfybooks-accordion__content-format-text">
+                           <div class="comfybooks-accordion__content-format-subtitle">MOBI</div>
+                           <div class="comfybooks-accordion__content-format-title">Це спеціалізований формат, створений Amazon спеціально для рідера Kindle.</div>
+                        </div>
+                     </div>
+                     <div class="comfybooks-accordion__content-format-flex">
+                        <img src="https://cdn.comfy.ua/media/x/img2/booksimg/img4.png" alt="">
+                        <div class="comfybooks-accordion__content-format-text">
+                           <div class="comfybooks-accordion__content-format-subtitle">RTF</div>
+                           <div class="comfybooks-accordion__content-format-title">Є більше «комп'ютерним». На інших електронних пристроях переглядати RTF не дуже зручно.</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="comfybooks-accordion__content-grid__item">
+                     <div class="comfybooks-accordion__content-subtitle">Де читати?</div>
+                     <div class="comfybooks-accordion__content-link-flex">
+                        <img src="https://cdn.comfy.ua/media/x/img2/booksimg/img5.png" alt="">
+                        <div class="comfybooks-accordion__content-link-flex-text">
+                           <div class="comfybooks-accordion__content-link-flex-subtitle">Якщо у вас телефон або пристрій на операційній системі iOS, скористайтеся вбудованою програмою «Книги».</div>
+                           <a rel="nofollow" target="_blank" href="https://apps.apple.com/ru/app/apple-books/id364709193"><span>Книги</span></a>
+                        </div>
+                     </div>
+                     <div class="comfybooks-accordion__content-link-flex">
+                        <img src="https://cdn.comfy.ua/media/x/img2/booksimg/img6.png" alt="">
+                        <div class="comfybooks-accordion__content-link-flex-text">
+                           <div class="comfybooks-accordion__content-link-flex-subtitle">Для інших операційних систем ми рекомендуємо такі програми:</div>
+                           <a rel="nofollow" target="_blank" href="https://play.google.com/store/apps/details?id=com.google.android.apps.books"><span>Google Play Книги</span></a>
+                           <a rel="nofollow" target="_blank" href="https://play.google.com/store/apps/details?id=org.readera"><span>ReadEra</span></a>
+                           <a rel="nofollow" target="_blank" href="https://play.google.com/store/apps/details?id=org.geometerplus.zlibrary.ui.android"><span>FBReader</span></a>
+                           <a rel="nofollow" target="_blank" href="https://play.google.com/store/apps/details?id=com.foobnix.pdf.reader"><span>Librera</span></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="content-books" class="content-books">
+            <div class="content-books__wrap"></div>
+         </div>
+
+         <div class="paginator-wrap2">
+            <div class="paginator2">
+
+            </div>
+         </div>
+
+         <div id="content-books-preload" class="content-books-preload">
+            <div class="content-books-preload__wrap"></div>
+         </div>
+         <!--<div class="btn-books-preload">Показати ще</div>-->
+         <div class="paginator-wrap">
+            <div class="paginator">
+
+            </div>
+         </div>
+
+      </div>
+
+   </div>
+
+   <div class="comfybooks-content-text">
+      <div class="comfybooks-content-text__wrap">
+         <div class="comfybooks-content-text__subtitle">
+            COMFY — не лише про гаджети. А й про домашній затишок та щасливі родини.
+         </div>
+         <div class="comfybooks-content-text__grid">
+            <div class="comfybooks-content-text__item">
+               <div class="comfybooks-content-text__txt">
+                  Відтепер COMFY — ще й джерело якісної української літератури. Ми хочемо, щоб кількість читачів українською зростала, тому запускаємо власну електронну бібліотеку.
+               </div>
+               <div class="comfybooks-content-text__img">
+                  <img src="https://cdn.comfy.ua/media/x/img2/lpbooks/lpbooks_item1.svg" alt="">
+               </div>
+            </div>
+            <div class="comfybooks-content-text__item">
+               <div class="comfybooks-content-text__txt">
+                  Відтепер у COMFY є книжки для дорослих та дітей! Скористайтеся додатковими можливостями для розвитку та читайте українською.
+               </div>
+               <div class="comfybooks-content-text__img --imgbtn">
+                  <div class="comfybooks-content-text__btn"><span>Дорослі</span></div>
+                  <div class="comfybooks-content-text__btn"><span>Діти</span></div>
+               </div>
+            </div>
+            <div class="comfybooks-content-text__item">
+               <div class="comfybooks-content-text__txt">
+                  Кращі кулінарні рецепти та побутові поради, дитячі вірші та оповідання тепер завжди можуть бути у вашому телефоні або в електронній книжці.
+               </div>
+               <div class="comfybooks-content-text__img">
+                  <img src="https://cdn.comfy.ua/media/x/img2/lpbooks/lpbooks_item2.svg" alt="">
+               </div>
+            </div>
+         </div>
+         <div class="comfybooks-accordion-questions">
+            <div class="comfybooks-accordion-questions-row">
+               <div class="comfybooks-accordion-questions-title">Чи потрібна наявність особистого кабінету на сайті щоб скористатися пропозицію?</div>
+               <div class="comfybooks-accordion-questions-content">Ні, це необовʼязково. Потрібен лише ваш номер телефону та код з чеку.</div>
+            </div>
+            <div class="comfybooks-accordion-questions-row">
+               <div class="comfybooks-accordion-questions-title">Навіщо потрібно вводити номер телефона?</div>
+               <div class="comfybooks-accordion-questions-content">Бо кожен код на отримання книжок привʼязаний до конкретного номеру телефона.</div>
+            </div>
+            <div class="comfybooks-accordion-questions-row">
+               <div class="comfybooks-accordion-questions-title">Як буде проходити повернення товару якщо я активував книги, з мене цю суму вирахують?</div>
+               <div class="comfybooks-accordion-questions-content">Ми проведемо повернення акційних товарів і видамо вам усі товари без участі акції. Ціна для вас не зміниться. Крім того, ви завжди можете його повернути, якщо не буде використано свій ідентифікатору.</div>
+            </div>
+            <div class="comfybooks-accordion-questions-row">
+               <div class="comfybooks-accordion-questions-title">Чи можливо замінити книжку на іншу, мені не потрібні казки, краще була б книга рецептів.</div>
+               <div class="comfybooks-accordion-questions-content">Ні. Наразі такої можливості не передбачено.</div>
+            </div>
+            <div class="comfybooks-accordion-questions-row">
+               <div class="comfybooks-accordion-questions-title">Чому я купую смартфон, а в мене книга про те, як користуватися НВЧ?</div>
+               <div class="comfybooks-accordion-questions-content">Наразі для нас це пілотний проєкт, тому вам могла дістатися книга про НВЧ при купівлі смартфона. Але ми постійно працюємо над удосконаленням сервісу. Тому нам дуже важливі ваші відгуки, щоб в майбутньому ми покращили цю акцію.</div>
+            </div>
+            <div class="comfybooks-accordion-questions-row">
+               <div class="comfybooks-accordion-questions-title">Що робити, якщо загубився код доступу?</div>
+               <div class="comfybooks-accordion-questions-content">Звернутися на нашу «Гарячу лінію» — 0-800-303-505, ми допоможемо відновити код.</div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+</div>
+
+<div class="wrap-modalbox"></div>
+<div class="overlay hiddenblock"></div>
+
+<script>
+
+   (function ($) {
+      $(document).ready(function () {
+
+         $('.art-stranger').mask('380999999999');
+         $.fn.setCursorPosition = function (pos) {
+            if ($(this).get(0).setSelectionRange) {
+               $(this).get(0).setSelectionRange(pos, pos);
+            } else if ($(this).get(0).createTextRange) {
+               var range = $(this).get(0).createTextRange();
+               range.collapse(true);
+               range.moveEnd('character', pos);
+               range.moveStart('character', pos);
+               range.select();
+            }
+         };
+
+         $('input[type="tel"]').click(function () {
+            $(this).setCursorPosition(3);
+         });
+
+      });
+   })(jQuery)
+
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+
+<script>
+
+      (function ($) {
+         $(document).ready(function () {
+
+
+            let searchUrlParameter = new URLSearchParams(document.location.search);
+            let getUrlParameterKey = searchUrlParameter.get("listbooks");
+
+            let infoBlock = document.querySelector(".infoblock");
+            let valid_form = document.getElementById("upload-date");
+            let upload_error = document.getElementById("upload-error");
+            let upload_done = document.getElementById("upload-done");
+            let content_books = document.getElementById("content-books");
+            let mobHeightBl = document.querySelectorAll(".comfybooks-content__form-wp");
+            let openModal = document.querySelector(".open_modal");
+            let openModalText = document.querySelector(".open_text");
+            let removePagin = document.querySelector(".paginator-wrap");
+            let requestURL;
+
+            function requestUrlQr(requestUrl, __getNumber) {
+               requestURL = `https://comfy.ua/api/customers/books/${__getNumber}/activate?key=${getUrlParameterKey}`;
+               return requestURL
+            }
+
+            function requestUrl(requestUrl, __getNumber, __getKey) {
+               requestURL = `https://comfy.ua/api/customers/books/${__getNumber}/activate?key=${__getKey}`;
+               return requestURL
+            }
+
+            function getFetchBooks(getRequestURLAll) {
+               fetch(getRequestURLAll)
+                  .then((response) => {
+                     return response.json();
+                  })
+                  .then((data) => {
+                     getListBooksQrCode(data, showListBooksClick);
+                  });
+            }
+
+            function addStyleHeightBl(mobHeightBlNumList, classAdd) {
+               mobHeightBlNumList.forEach(function (elem) {
+                  elem.classList.add(classAdd);
+               });
+            }
+
+            if (getUrlParameterKey == null || getUrlParameterKey == "") {
+               // Старая версия
+               console.log("previous version");
+
+               infoBlock.classList.add("infoblock__active");
+               addStyleHeightBl(mobHeightBl, "--form-wp__old-version");
+
+               let getRequestURLvl = `https://comfy.ua/api/customers/books/all`;
+               getFetchBooks(getRequestURLvl);
+               openModalClick();
+
+            } else {
+               // Новая версия qr
+               console.log("new version qr");
+
+               let getKey = document.getElementById('item_key').value = getUrlParameterKey;
+               let inputTwoNone = document.querySelector(".--item-input-two").classList.add("--item-input__none");
+               let inputOneNewStyle = document.querySelector(".--item-textp").classList.add("--item-textp__style");
+               let newTextForm = document.querySelector(".comfybooks-content__form-wp__item-p p").textContent = "Щоб завантажити книжки, введіть свій номер телефону";
+               let newTextFormDone = document.querySelector(".comfybooks-content__form-wp-text.--upload-done p").textContent = "Номер телефону успішно опрацьовано! Насолоджуйтесь книгами від Comfy";
+               let newSizeBlockFormDone = document.querySelector(".comfybooks-content__form-wp.--upload-error p").textContent = "Йой! Переконайтеся, що ввели правильний номер телефону.";
+               let noneInfoKey = document.querySelector(".open_modal").remove();
+               addStyleHeightBl(mobHeightBl, "--form-wp__qr-version");
+
+               let getRequestURLQr = `https://comfy.ua/api/customers/books/check/${getUrlParameterKey}`;
+               getFetchBooks(getRequestURLQr);
+
+            }
+
+            $(document).ready(function () {
+
+               $("fieldset input").click(function () {
+                  $("fieldset label.error").remove()
+               });
+
+               $("#valid_form").validate({
+                  rules: {
+                     name_key: {
+                        required: true
+                     },
+                     name_number: {
+                        required: true,
+                        number: true
+                     }
+                  },
+                  messages: {
+                     name_key: {
+                        required: "*Обов'язкове поле"
+                     },
+                     name_number: {
+                        required: "*Обов'язкове поле",
+                        number: "Введіть номер телефону"
+                     }
+                  },
+                  errorPlacement: function (error, element) {
+                     if (element.attr("name") == "name_number") error.insertAfter($("input[name=name_number]"));
+                     if (element.attr("name") == "name_key") error.insertAfter($("input[name=name_key]"));
+                  },
+                  submitHandler: function (form) {
+
+                     let getNumber = document.getElementById('item_number').value;
+                     let __getNumber = getNumber;
+
+                     if (getUrlParameterKey == null || getUrlParameterKey == "") {
+                        // Старая версия
+                        let getKey = document.getElementById('item_key').value;
+                        let __getKey = getKey.trim();
+                        requestUrl(requestURL, __getNumber, __getKey);
+                     } else {
+                        // Новая версия qr
+                        requestUrlQr(requestURL, __getNumber);
+                     }
+
+                     function sendRequest(method, url) {
+                        const headers = {
+                           'Content-Type': 'application/json'
+                        }
+
+                        return fetch(url, {
+                           method: method,
+                           headers: headers
+                        })
+                           .then(response => {
+                              if (response.ok) {
+                                 valid_form.classList.remove("active_block");
+                                 upload_error.classList.remove("not-active_block");
+                                 upload_done.classList.remove("not-active_block");
+
+                                 valid_form.classList.add("not-active_block");
+                                 upload_error.classList.add("not-active_block");
+                                 upload_done.classList.add("active_block");
+                                 content_books.classList.add("active_block");
+                                 let contentBooksPreload = document.querySelector(".content-books-preload").remove();
+                                 let paginatorWrap = document.querySelector(".paginator-wrap").remove();
+
+                                 dataLayer.push({
+                                    "event": "OWOX",
+                                    "eventCategory": "Interactions",
+                                    "eventAction": "click",
+                                    "eventLabel": "comfybook_dwnld"
+                                 });
+
+                                 return response.json();
+
+                              }
+
+                              return response.json().then(error => {
+                                 console.log(error);
+                                 console.log(response.status);
+
+                                 valid_form.classList.remove("active_block");
+                                 upload_error.classList.remove("not-active_block");
+                                 upload_done.classList.remove("not-active_block");
+
+                                 valid_form.classList.add("not-active_block");
+                                 upload_error.classList.add("active_block");
+                                 upload_done.classList.add("not-active_block");
+
+                                 document.getElementById("getForm").onclick = function (e) {
+                                    document.getElementById("item_number").value = "";
+                                    document.getElementById("item_key").value = "";
+                                    valid_form.classList.remove("not-active_block");
+                                    upload_error.classList.remove("active_block");
+                                    upload_done.classList.remove("not-active_block");
+
+                                    valid_form.classList.add("active_block");
+                                    upload_error.classList.add("not-active_block");
+                                    upload_done.classList.add("not-active_block");
+                                 }
+
+                              })
+                           })
+                     }
+
+                     sendRequest('GET', requestURL)
+                        .then(data => {
+                           console.log(data);
+                           let mass = data.books;
+
+                           // Создаём modalBox
+                           document.querySelector('.wrap-modalbox').innerHTML = `<div class="wrap-modalbox__wrap"></div>`;
+                           for (let key in mass) {
+                              let mass_length = data.books.length;
+                              let mass_img_length = mass[key].images.length;
+
+                              async function generateModalBox() {
+                                 await generateModalBoxHtml();
+                                 await generateModalBoximg();
+                                 await generateModalSwiper();
+                              }
+                              generateModalBox();
+
+                              function generateModalBoxHtml() {
+                                 let row = document.createElement('div');
+                                 row.classList.add(`wrap-modalbox__item${key}`);
+                                 row.innerHTML = `
+                                 <div id="popup" class="modal modal-item-${key} hiddenblock">
+                                    <div class="modal__wrap">
+                                       <button class="btn-close"><img src="https://cdn.comfy.ua/media/x/img2/close_popup_new.svg" alt=""></button>
+                                       <div class="swiper-container gallery-top-${key}">
+                                          <div class="swiper-wrapper-${key} swiper-wrapper"></div>
+                                          <div class="swiper-button-nextcstom"></div>
+                                          <div class="swiper-button-prevcstom"></div>
+                                          <div class="swiper-paginationcstom pagination_bullet"></div>
+                                          <div class="swiper-paginationcstom pagination_progress"></div>
+                                       </div>
+                                    </div>
+                                 </div>`;
+                                 document.querySelector('.wrap-modalbox__wrap').appendChild(row);
+                              }
+                              function generateModalBoximg() {
+                                 for (let i = 0; i < mass_img_length; i++) {
+                                    let row2 = document.createElement('div');
+                                    row2.classList.add("swiper-slide");
+                                    row2.innerHTML = `
+                                       <div class="swiper-slide-img">
+                                          <img src="https://cdn.comfy.ua/${mass[key].images[i]}" alt="">
+                                       </div>
+                                    `;
+                                    if (mass_img_length === 1) {
+                                       row2.classList.add("swiper-slide", "defult_cursor");
+                                    }
+                                    document.querySelector(`.swiper-wrapper-${key}`).appendChild(row2);
+                                 }
+                              }
+
+                              function generateModalSwiper() {
+                                 var swiper = new Swiper(`.gallery-top-${key}`, {
+                                    slidesPerView: 1,
+                                    spaceBetween: 0,
+                                    loop: false,
+                                    grabCursor: true,
+                                    pagination: {
+                                       el: `.pagination_bullet`,
+                                       clickable: true,
+                                       renderBullet: function (index, className) {
+                                          return '<span class="' + className + '">' + (index + 1) + "</span>";
+                                       },
+                                    },
+                                    navigation: {
+                                       nextEl: ".swiper-button-nextcstom",
+                                       prevEl: ".swiper-button-prevcstom",
+                                    },
+                                 });
+                                 var pagingSwiper = new Swiper(`.gallery-top-${key}`, {
+                                    pagination: {
+                                       el: ".pagination_progress",
+                                       type: "fraction",
+                                    },
+                                 });
+                                 swiper.controller.control = pagingSwiper;
+                              }
+                           }
+
+                           // Создаём ContentBooks
+                           document.querySelector('.content-books').innerHTML = `<div class="content-books__wrap"></div>`;
+                           for (let key in mass) {
+                              let mass_books_length = mass[key].files.length;
+                              function generateContentBooks() {
+                                 generateContentBooksLR();
+                                 generateContentBooksinput();
+                              }
+                              generateContentBooks();
+
+                              function generateContentBooksLR() {
+
+                                 let imgPushSrc = "";
+                                 if (mass[key].images === null) {
+                                    imgPushSrc = "https://cdn.comfy.ua/media/x/img2/nullimg.png";
+                                 } else {
+                                    imgPushSrc = `https://cdn.comfy.ua/${mass[key].images[0]}`;
+                                 }
+
+                                 let row = document.createElement('div');
+                                 row.classList.add('content-books__item-grid');
+                                 row.innerHTML = `
+                                    <div class="content-books__item-left">
+                                       <div class="content-books__item-left-slider">
+                                          <button class="btn-open btn-open-item-${key}"><img src="${imgPushSrc}" alt=""></button>
+                                       </div>
+                                    </div>
+                                    <div class="content-books__item-right">
+                                       <div class="content-books__item-right-row">
+                                          <div class="content-books__item-right-title">${mass[key].title}</div>
+                                          <div class="content-books__item-right-language">${mass[key].language}, ${mass[key].year}</div>
+                                          <div class="content-books__item-right-description">${mass[key].description}</div>
+                                       </div>
+                                       <div class="content-books__item-right-row">
+                                          <div class="content-books__item-right-books-${key}">
+                                             <div class="content-books__grid content-books__item-right-books-item-${key}"></div>
+                                          </div>
+                                       </div>
+                                    </div>`;
+                                 document.querySelector('.content-books__wrap').appendChild(row);
+                              }
+
+                              function generateContentBooksinput() {
+                                 for (let i = 0; i < mass_books_length; i++) {
+                                    let row3 = document.createElement('div');
+                                    row3.classList.add("content-books__items");
+                                    if (i == 0) {
+                                       let row3 = document.createElement('div');
+                                       row3.classList.add("content-books__items");
+                                       row3.innerHTML = `
+                                       <div class="content-books__items-format">
+                                          <input class="input__item-${key}" type="radio" data-nameformat="${mass[key].files[i].format}" id="${mass[key].files[i].format}-${key}" name="radiogp-${key}" value="https://comfy.ua/${mass[key].files[i].url}" checked>
+                                          <label for="${mass[key].files[i].format}-${key}">${mass[key].files[i].format}</label>
+                                       </div>`;
+                                       document.querySelector(`.content-books__item-right-books-item-${key}`).append(row3);
+
+                                       let row4 = document.createElement('div');
+                                       row4.classList.add(`content-books__items-wrap-btn-${key}`);
+                                       row4.innerHTML = `<button class="download-btn-${key} submit">Завантажити</button>`;
+                                       document.querySelector(`.content-books__item-right-books-${key}`).appendChild(row4);
+
+                                    } else {
+                                       row3.innerHTML = `
+                                       <div class="content-books__items-format">
+                                          <input class="input__item-${key}" type="radio" data-nameformat="${mass[key].files[i].format}" id="${mass[key].files[i].format}-${key}" name="radiogp-${key}" value="https://comfy.ua/${mass[key].files[i].url}">
+                                          <label for="${mass[key].files[i].format}-${key}">${mass[key].files[i].format}</label>
+                                       </div>`;
+                                       document.querySelector(`.content-books__item-right-books-item-${key}`).append(row3);
+                                    }
+                                 }
+                              }
+
+                              let contentBooksPreloadWrap = "content-books__wrap";
+                              let contentBooksPaginWrap = "paginator2";
+                              showListBooksClick(contentBooksPreloadWrap, contentBooksPaginWrap);
+
+                              // При клике открываем окно и скачиваем активую книгу
+                              const openFileBtn = document.querySelectorAll(`.download-btn-${key}`);
+                              openFileBtn.forEach(function (e, i) {
+                                 e.addEventListener('click', function () {
+                                    let selected = document.querySelector(`input[name=radiogp-${key}]:checked`);
+                                    let selected2 = selected.getAttributeNode("data-nameformat").value;
+
+                                    dataLayer.push({
+                                       "event": "OWOX",
+                                       "eventCategory": "Interactions",
+                                       "eventAction": "click",
+                                       "eventLabel": "comfybook_dwnld_succes",
+                                       "eventContent": mass[key].title,
+                                       "eventContext": selected2
+                                    });
+
+                                    open(selected.value);
+                                 });
+                              });
+
+                              // При клике переключаем активный input format
+                              $(`input[name=radiogp-${key}]`).on("click", function (e) {
+                                 e.preventDefault();
+                                 setTimeout(() => {
+                                    let downloadBtns = document.querySelectorAll(`.download-btn-${key}`);
+                                    $(this).prop("checked", !this.checked).trigger("change");
+                                    //console.log($(this).prop("checked") + ` ${key}`);
+                                    if ($(this).prop("checked") == true) {
+                                       $(`.download-btn-${key}`).addClass('submit-active');
+                                       $(`.download-btn-${key}`).removeClass('submit-not-active');
+                                    } else if ($(this).prop("checked") == false) {
+                                       $(`.download-btn-${key}`).removeClass('submit-active');
+                                       $(`.download-btn-${key}`).addClass('submit-not-active');
+                                    }
+                                 });
+                              });
+
+                           }
+
+                           const modal = document.querySelectorAll(".modal");
+                           const overlay = document.querySelector(".overlay");
+                           const openModalBtn = document.querySelectorAll(".btn-open");
+                           const closeModalBtn = document.querySelectorAll(".btn-close");
+                           let flag = false;
+
+                           overlay.addEventListener("click", function () {
+                              openModalBtn.forEach(function (e, i) {
+                                 modal[i].classList.add("hiddenblock");
+                                 overlay.classList.add("hiddenblock");
+
+                                 fadeOut(modal[i], 300);
+                                 flag = false;
+
+                              });
+                           });
+
+                           openModalBtn.forEach(function (e, i) {
+                              e.addEventListener('click', function () {
+                                 modal[i].classList.remove("hiddenblock");
+                                 overlay.classList.remove("hiddenblock");
+
+                                 dataLayer.push({
+                                    "event": "OWOX",
+                                    "eventCategory": "Conversions",
+                                    "eventAction": "click",
+                                    "eventLabel": "comfybook_show",
+                                    "eventContent": mass[i].title,
+                                    "eventContext": i
+                                 });
+
+
+                                 fadeIn(modal[i], 300, 'block');
+                                 flag = true;
+
+                              });
+                              closeModalBtn[i].addEventListener('click', function () {
+                                 modal[i].classList.add("hiddenblock");
+                                 overlay.classList.add("hiddenblock");
+
+                                 fadeOut(modal[i], 300);
+                                 flag = false;
+
+                              });
+                           });
+
+                           const fadeIn = (el, timeout, display) => {
+                              el.style.opacity = 0;
+                              el.style.display = display || 'block';
+                              el.style.transition = `opacity ${timeout}ms`;
+                              setTimeout(() => {
+                                 el.style.opacity = 1;
+                              }, 10);
+                           };
+
+                           const fadeOut = (el, timeout) => {
+                              el.style.opacity = 1;
+                              el.style.transition = `opacity ${timeout}ms`;
+                              el.style.opacity = 0;
+
+                              setTimeout(() => {
+                                 el.style.display = 'none';
+                              }, timeout);
+                           };
+
+                        })
+                        .catch(err => console.log(err));
+                  }
+               });
+            });
+
+            // Функция вывода книг на главной
+            function getListBooksQrCode(getDateBooks) {
+
+               let mass = getDateBooks.books;
+
+               document.querySelector('.content-books-preload').innerHTML = `<div class="content-books-preload__wrap"></div>`;
+               for (let key in mass) {
+                  let mass_books_length = mass[key].files.length;
+
+                  function getBlockBook() {
+                     pushBlockBook1();
+                     pushBlockBook2();
+                  }
+                  getBlockBook();
+
+                  function pushBlockBook1() {
+
+                     let imgPushSrc = "";
+                     if (mass[key].images === null) {
+                        imgPushSrc = "https://cdn.comfy.ua/media/x/img2/nullimg.png";
+                     } else {
+                        imgPushSrc = `https://cdn.comfy.ua/${mass[key].images[0]}`;
+                     }
+
+                     let row = document.createElement('div');
+                     row.classList.add('content-books__item-grid');
+                     row.setAttribute("data-num", `${key}`);
+                     row.innerHTML = `
+                     <div class="content-books__item-left">
+                        <div class="content-books__item-left-slider hover-noactive">
+                           <button class="btn-open btn-open-item-${key}"><img src="${imgPushSrc}" alt=""></button>
+                        </div>
+                     </div>
+                     <div class="content-books__item-right">
+                        <div class="content-books__item-right-row">
+                           <div class="content-books__item-right-title">${mass[key].title}</div>
+                           <div class="content-books__item-right-language">${mass[key].language}, ${mass[key].year}</div>
+                           <div class="content-books__item-right-description">${mass[key].description}</div>
+                        </div>
+                        <div class="content-books__item-right-row">
+                           <div class="content-books__item-right-books-${key}">
+                              <div class="content-books__grid content-books__item-right-books-item-${key}"></div>
+                           </div>
+                        </div>
+                     </div>`;
+                     document.querySelector('.content-books-preload__wrap').appendChild(row);
+                  }
+
+                  function pushBlockBook2() {
+                     for (let i = 0; i < mass_books_length; i++) {
+                        let row3 = document.createElement('div');
+                        row3.classList.add("content-books__items");
+                        if (i == 0) {
+                           let row3 = document.createElement('div');
+                           row3.classList.add("content-books__items");
+                           row3.innerHTML = `
+                           <div class="content-books__items-format">
+                              <input class="input__item-${key}" type="radio" id="${mass[key].files[i].format}-${key}" name="radiogp-${key}" checked>
+                              <label for="${mass[key].files[i].format}-${key}">${mass[key].files[i].format}</label>
+                           </div>`;
+                           document.querySelector(`.content-books__item-right-books-item-${key}`).append(row3);
+
+                           let row4 = document.createElement('div');
+                           row4.classList.add(`content-books__items-wrap-btn-${key}`);
+                           row4.innerHTML = `
+                           <button class="download-btn-${key} submit submit-not-active open-modal-boxhover">
+                              Завантажити
+                              <div class="modal-boxhover">
+                                 <span>Переконайтеся, що ви ввели номер телефона та код в поле згори</span>
+                              </div>
+                           </button>`;
+                           document.querySelector(`.content-books__item-right-books-${key}`).appendChild(row4);
+
+                        } else {
+                           row3.innerHTML = `
+                           <div class="content-books__items-format">
+                              <input class="input__item-${key}" type="radio" id="${mass[key].files[i].format}-${key}" name="radiogp-${key}">
+                              <label for="${mass[key].files[i].format}-${key}">${mass[key].files[i].format}</label>
+                           </div>`;
+                           document.querySelector(`.content-books__item-right-books-item-${key}`).append(row3);
+
+                        }
+                     }
+                  }
+               }
+
+               let contentBooksPreloadWrap = "content-books-preload__wrap";
+               let contentBooksPaginWrap = "paginator";
+               showListBooksClick(contentBooksPreloadWrap, contentBooksPaginWrap);
+
+            }
+
+            function showListBooksClick(contentBooks, contentBooksPagin) {
+               let maxLenItemsOnPage = 8;     // Максимальное количество книг на старнице.
+               let maxLetNumberingOnPage = 5; // Максимальное количество нумерации на странице.
+               let maxStartOnPage = 0;        // С какой старницы начинаем показывать книги.
+
+               let paginationSettingOne = new purePajinate({
+                  containerSelector: `.${contentBooks}`,
+                  itemSelector: '.content-books__item-grid',
+                  navigationSelector: `.${contentBooksPagin}`,
+                  itemsPerPage: maxLenItemsOnPage,
+                  wrapAround: false,
+                  pageLinksToDisplay: maxLetNumberingOnPage,
+                  startPage: maxStartOnPage,
+                  showPrevNext: true,
+                  showFirstLast: false,
+                  navLabelPrev: "← Назад",
+                  navLabelNext: "Вперед →",
+                  navLabelFirst: "1",
+                  navLabelLast: "",
+                  navOrder: ["prev", "num", "next"],
+                  //navOrder: ["prev", "first", "num", "last", "next"],
+                  hideOnSmall: true,
+                  onInit: function onInit() { },
+                  onPageDisplayed: function onPageDisplayed() {
+
+                     // Плавный скрол при клике на пагинацию
+                     var hiddenElement = document.querySelector('.comfybooks-content__goto');
+                     var btn = document.querySelectorAll(`.${contentBooksPagin} ul li`);;
+
+                     function handleButtonClick() {
+                        hiddenElement.scrollIntoView({
+                           block: "start",
+                           inline: "nearest",
+                           behavior: "smooth"
+                        });
+                     }
+
+
+                     btn.forEach(function (elem) {
+                        elem.addEventListener('click', handleButtonClick);
+                     });
+
+                  }
+               });
+
+            }
+
+            function openModalClick() {
+               openModal.addEventListener("click", () => {
+                  openModalText.classList.toggle("OpenModalShow");
+               });
+            }
+
+         });
+      })(jQuery)
+
+</script>
+
+<script>
+
+   document.addEventListener("DOMContentLoaded", function () {
+
+      const accordionBtnQuestions = document.querySelectorAll('.comfybooks-accordion-questions-title');
+      const accordionBtnQuestionsContent = document.querySelectorAll('.comfybooks-accordion-questions-content');
+
+      accordionBtnQuestions.forEach(function (elem, iter) {
+         elem.addEventListener('click', () => {
+            if (elem.classList.contains('accordion-questions-active')) {
+               elem.classList.remove('accordion-questions-active');
+
+               accordionBtnQuestionsContent.forEach(function (elemC, iterC) {
+                  if (iter == iterC) {
+                     elemC.classList.remove('accordion-questions-content-active');
+                  }
+               });
+
+            } else {
+               elem.classList.add('accordion-questions-active');
+
+               accordionBtnQuestionsContent.forEach(function (elemC, iterC) {
+                  if (iter == iterC) {
+                     elemC.classList.add('accordion-questions-content-active');
+                  }
+               });
+            }
+         });
+      });
+
+   });
+</script>
+
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+
+      const accordionBtn = document.querySelector('.comfybooks-accordion__btn');
+      const accordionContent = document.querySelector('.comfybooks-accordion__content-grid');
+
+      accordionBtn.addEventListener('click', (e) => {
+         if (accordionBtn.classList.contains('accordion-active')) {
+            accordionBtn.classList.remove('accordion-active');
+            accordionContent.classList.remove('content-accordion-active');
+         } else {
+            accordionBtn.classList.add('accordion-active');
+            accordionContent.classList.add('content-accordion-active');
+         }
+      });
+
+   });
+</script>

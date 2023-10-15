@@ -1,0 +1,128 @@
+<style>
+
+</style>
+
+<div id="birthday">
+   <div class="birthday-container">
+      <div class="birthday-bgrd"></div>
+      <div class="birthday-img">
+         <div class="birthday-img__desk">
+            <img src="https://cdn.comfy.ua/media/x/img2/hp/img1.png" alt="">
+         </div>
+         <div class="birthday-img__mob">
+            <img src="https://cdn.comfy.ua/media/x/img2/hp/img1_mob.png" alt="">
+         </div>
+      </div>
+      <div class="birthday-form">
+
+         <div id="wrapper-form-corizoid" class="form-corizoid">
+
+            <div class="bonusy-vijskovim__form-text">
+               <p class="prgrf2">Будемо вдячні, якщо залишите нам дату свого народження</p>
+            </div>
+
+            <div id="form-submit-none" class="text-submit-block-cl">
+
+               <form id="valid_form" method="post" name="valid_form">
+                  <div class="container-flex-form">
+                     <div class="row-flex-form">
+                        <div class="item_fr item_phone">
+                           <input type="tel" id="number_rw" name="youdate" class="item-input-frm item-input-frm-input" placeholder="дд.мм.рррр" value="" required />
+                        </div>
+                        <div class="item_fr item_email">
+                           <input type="email" id="email_rw" name="yourmail" class="item-input-frm" placeholder="Email" value="" required />
+                        </div>
+                        <div class="item_fr item_submit">
+                           <input type="submit" class="submit-posgo item-input-frm item-input-frm__submit" value="Відправити" name="Submit" />
+                        </div>
+                     </div>
+                  </div>
+               </form>
+
+            </div>
+
+            <div id="text-submit-block" class="text-submit-block-cl --doneform">
+               <div class="doneform-flex">
+                  <img style="margin: 0;" src="https://cdn.comfy.ua/media/x/img2/zsu/img8.png" alt="">
+                  <div>Дякуємо за відгук!</div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+
+<script>
+
+   let value_params = new URLSearchParams(document.location.search);
+   let value_params_number = value_params.get("poolid");
+
+   $(document).ready(function () {
+      $("fieldset input").click(function () {
+         $("fieldset label.error").remove()
+      });
+
+      $("#valid_form").validate({
+         rules: {
+            youdate: {
+               required: true,
+               number: false
+            },
+            yourmail: {
+               required: false,
+               email: true
+            }
+         },
+         messages: {
+            youdate: {
+               required: "Обов'язкове поле"
+            },
+            yourmail: {
+               required: "Обезательное поле.",
+               email: "Обезательные символы @"
+            }
+         },
+         errorPlacement: function (error, element) {
+            if (element.attr("name") == "youdate") error.insertAfter($("input[name=youdate]"));
+            if (element.attr("name") == "yourmail") error.insertAfter($("input[name=yourmail]"));
+         },
+         submitHandler: function (form) {
+            function sendAjaxForm(result_form, ajax_form) {
+               let people = {
+                  date: '',
+                  action: '',
+                  poolid: '',
+                  email: ''
+               };
+               people.date = $('#number_rw').val();
+               people.email = $('#email_rw').val();
+               people.action = "LP - А коли у вас день народження";
+               people.poolid = value_params_number;
+               console.log(people);
+               $.ajax({
+                  url: "https://main.corezoid.comfy.ua/api/1/json/public/12168/69d1a94aeaa62f90d55fc633a057d9fa1b5f297e",
+                  headers: {
+                     'Content-Type': 'application/x-www-form-urlencoded'
+                  },
+                  type: "POST",
+                  dataType: "json",
+                  data: JSON.stringify(people),
+                  success: console.log('done')
+               });
+               var none_form = document.getElementById("form-submit-none").style.display = "none";
+               var block_text = document.getElementById("text-submit-block").style.display = "block";
+            }
+            sendAjaxForm();
+         }
+      });
+   })
+
+   $(function () {
+      $("#number_rw").mask("99.99.9999");
+   });
+
+</script>

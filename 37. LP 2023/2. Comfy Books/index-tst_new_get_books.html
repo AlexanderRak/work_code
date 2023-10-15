@@ -1,0 +1,711 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+</style>
+
+<div id="comfybooks">
+   <div class="comfybooks-wrapper">
+
+      <div class="comfybooks-header">
+         <div class="comfybooks-header__h2">
+            <h2 class="h2only_deck">Це ваша книжкова полиця COMFY!</h2>
+            <h2 class="h2only_mob">Вітаємо в бібліотеці COMFY!</h2>
+         </div>
+         <div class="comfybooks-header__h3">
+            <h3>Тут на вас чекатимуть книжки, які ми видали спеціально для наших покупців.<br>Ми поповнюватимемо цю поличку, щоб вам завжди було що почитати <span>&#128521;</span></h3>
+         </div>
+      </div>
+
+      <div class="comfybooks-content">
+         <div class="comfybooks-content__bgrd"></div>
+         <div class="comfybooks-content__form">
+            <div id="upload-date" class="comfybooks-content__form-wp --upload-date">
+               <form id="valid_form" method="post" name="valid_form" class="comfybooks-content__form-wp-flex">
+                  <div class="comfybooks-content__form-wp__item --item-textp">
+                     <div class="comfybooks-content__form-wp__item-p">
+                        <p>В мене є код для отримання книги</p>
+                     </div>
+                     <div class="open_modal" onclick="OpenModalAlert()">
+                        <img src="https://cdn.comfy.ua/media/x/img2/lpbooks/nw_img3_question.svg" alt="">
+                        <span class="open_text" id="OpenModalAlert">Код на отримання книжки вказано у вашому чеку за умови виграшу в спеціальній книжковій акції від COMFY.</span>
+                     </div>
+                  </div>
+                  <div class="comfybooks-content__form-wp__item --item-input">
+                     <div class="comfybooks-content__form-wp__item-number">
+                        <input type="tel" id="item_number" name="name_number" placeholder="Номер телефону" value="" required />
+                     </div>
+                  </div>
+                  <div class="comfybooks-content__form-wp__item --item-input">
+                     <div class="comfybooks-content__form-wp__item-key">
+                        <input type="text" id="item_key" name="name_key" placeholder="Введіть код сюди" value="" required />
+                     </div>
+                  </div>
+                  <div class="comfybooks-content__form-wp__item --item-submit">
+                     <div class="comfybooks-content__form-wp__item-submit">
+                        <input type="submit" value="Скачати" name="Submit" />
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <div id="upload-error" class="comfybooks-content__form-wp --upload-error">
+               <div class="comfybooks-content__form-wp-text">
+                  <b style="text-align: left; font-size: 16px; line-height: 1;" class="p_only_mob">Помилка</b>
+                  <p>Щось пішло не так. Перевірте правильність введених даних</p>
+                  <span id="getForm">Спробувати ще раз</span>
+               </div>
+            </div>
+            <div id="upload-done" class="comfybooks-content__form-wp --upload-done">
+               <div class="comfybooks-content__form-wp-text">
+                  <p>Ваш код успішно опрацьовано! Насолоджуйтесь книгами від Comfy</p>
+                  <div>Зверніть увагу, посилання на завантаження книжок буде активним лише протягом <span>15 хвилин.</span></div>
+               </div>
+            </div>
+         </div>
+         <div class="comfybooks-accordion">
+            <div class="comfybooks-accordion-wrap">
+               <div class="comfybooks-accordion__btn">Який вибрати формат та де читати?</div>
+               <div class="comfybooks-accordion__content-grid">
+                  <div class="comfybooks-accordion__content-grid__item">
+                     <div class="comfybooks-accordion__content-subtitle">Який вибрати формат?</div>
+                     <div class="comfybooks-accordion__content-format-flex">
+                        <img src="https://cdn.comfy.ua/media/x/img2/booksimg/img1.png" alt="">
+                        <div class="comfybooks-accordion__content-format-text">
+                           <div class="comfybooks-accordion__content-format-subtitle">EPUB</div>
+                           <div class="comfybooks-accordion__content-format-title">Книги в цьому форматі можна читати майже з усіх пристроїв, які працюють як на iOS, так і на Android.</div>
+                        </div>
+                     </div>
+                     <div class="comfybooks-accordion__content-format-flex">
+                        <img src="https://cdn.comfy.ua/media/x/img2/booksimg/img2.png" alt="">
+                        <div class="comfybooks-accordion__content-format-text">
+                           <div class="comfybooks-accordion__content-format-subtitle">PDF</div>
+                           <div class="comfybooks-accordion__content-format-title">Зазвичай містить ілюстрації та підходить для читання з комп’ютера, планшета та телефона</div>
+                        </div>
+                     </div>
+                     <div class="comfybooks-accordion__content-format-flex">
+                        <img src="https://cdn.comfy.ua/media/x/img2/booksimg/img3.png" alt="">
+                        <div class="comfybooks-accordion__content-format-text">
+                           <div class="comfybooks-accordion__content-format-subtitle">MOBI</div>
+                           <div class="comfybooks-accordion__content-format-title">Це спеціалізований формат, створений Amazon спеціально для рідера Kindle.</div>
+                        </div>
+                     </div>
+                     <div class="comfybooks-accordion__content-format-flex">
+                        <img src="https://cdn.comfy.ua/media/x/img2/booksimg/img4.png" alt="">
+                        <div class="comfybooks-accordion__content-format-text">
+                           <div class="comfybooks-accordion__content-format-subtitle">RTF</div>
+                           <div class="comfybooks-accordion__content-format-title">Є більше «комп'ютерним». На інших електронних пристроях переглядати RTF не дуже зручно.</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="comfybooks-accordion__content-grid__item">
+                     <div class="comfybooks-accordion__content-subtitle">Де читати?</div>
+                     <div class="comfybooks-accordion__content-link-flex">
+                        <img src="https://cdn.comfy.ua/media/x/img2/booksimg/img5.png" alt="">
+                        <div class="comfybooks-accordion__content-link-flex-text">
+                           <div class="comfybooks-accordion__content-link-flex-subtitle">Якщо у вас телефон або пристрій на операційній системі iOS, скористайтеся вбудованою програмою «Книги».</div>
+                           <a href=""><span>Книги</span></a>
+                        </div>
+                     </div>
+                     <div class="comfybooks-accordion__content-link-flex">
+                        <img src="https://cdn.comfy.ua/media/x/img2/booksimg/img6.png" alt="">
+                        <div class="comfybooks-accordion__content-link-flex-text">
+                           <div class="comfybooks-accordion__content-link-flex-subtitle">Для інших операційних систем ми рекомендуємо такі програми:</div>
+                           <a href=""><span>Google Play Книги</span></a>
+                           <a href=""><span>ReadEra</span></a>
+                           <a href=""><span>FBReader</span></a>
+                           <a href=""><span>Librera</span></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="content-books" class="content-books">
+            <div class="content-books__wrap"></div>
+         </div>
+      </div>
+
+   </div>
+
+   <div class="comfybooks-content-text">
+      <div class="comfybooks-content-text__wrap">
+         <div class="comfybooks-content-text__subtitle">
+            COMFY — не лише про гаджети. А й про домашній затишок та щасливі родини.
+         </div>
+         <div class="comfybooks-content-text__grid">
+            <div class="comfybooks-content-text__item">
+               <div class="comfybooks-content-text__txt">
+                  Відтепер COMFY — ще й джерело якісної української літератури. Ми хочемо, щоб кількість читачів українською зростала, тому запускаємо власну електронну бібліотеку.
+               </div>
+               <div class="comfybooks-content-text__img">
+                  <img src="https://cdn.comfy.ua/media/x/img2/lpbooks/lpbooks_item1.svg" alt="">
+               </div>
+            </div>
+            <div class="comfybooks-content-text__item">
+               <div class="comfybooks-content-text__txt">
+                  Відтепер у COMFY є книжки для дорослих та дітей! Скористайтеся додатковими можливостями для розвитку та читайте українською.
+               </div>
+               <div class="comfybooks-content-text__img --imgbtn">
+                  <div class="comfybooks-content-text__btn"><span>Дорослі</span></div>
+                  <div class="comfybooks-content-text__btn"><span>Діти</span></div>
+               </div>
+            </div>
+            <div class="comfybooks-content-text__item">
+               <div class="comfybooks-content-text__txt">
+                  Кращі кулінарні рецепти та побутові поради, дитячі вірші та оповідання тепер завжди можуть бути у вашому телефоні або в електронній книжці.
+               </div>
+               <div class="comfybooks-content-text__img">
+                  <img src="https://cdn.comfy.ua/media/x/img2/lpbooks/lpbooks_item2.svg" alt="">
+               </div>
+            </div>
+         </div>
+         <div class="comfybooks-accordion-questions">
+            <div class="comfybooks-accordion-questions-row">
+               <div class="comfybooks-accordion-questions-title">Чи потрібна наявність особистого кабінету на сайті щоб скористатися пропозицію?</div>
+               <div class="comfybooks-accordion-questions-content">Ні, це необовʼязково. Потрібен лише ваш номер телефону та код з чеку.</div>
+            </div>
+            <div class="comfybooks-accordion-questions-row">
+               <div class="comfybooks-accordion-questions-title">Навіщо потрібно вводити номер телефона?</div>
+               <div class="comfybooks-accordion-questions-content">Бо кожен код на отримання книжок привʼязаний до конкретного номеру телефона.</div>
+            </div>
+            <div class="comfybooks-accordion-questions-row">
+               <div class="comfybooks-accordion-questions-title">Як буде проходити повернення товару якщо я активував книги, з мене цю суму вирахують?</div>
+               <div class="comfybooks-accordion-questions-content">Ми проведемо повернення акційних товарів і видамо вам усі товари без участі акції. Ціна для вас не зміниться. Крім того, ви завжди можете його повернути, якщо не буде використано свій ідентифікатору.</div>
+            </div>
+            <div class="comfybooks-accordion-questions-row">
+               <div class="comfybooks-accordion-questions-title">Чи можливо замінити книжку на іншу, мені не потрібні казки, краще була б книга рецептів.</div>
+               <div class="comfybooks-accordion-questions-content">Ні. Наразі такої можливості не передбачено.</div>
+            </div>
+            <div class="comfybooks-accordion-questions-row">
+               <div class="comfybooks-accordion-questions-title">Чому я купую смартфон, а в мене книга про те, як користуватися НВЧ?</div>
+               <div class="comfybooks-accordion-questions-content">Наразі для нас це пілотний проєкт, тому вам могла дістатися книга про НВЧ при купівлі смартфона. Але ми постійно працюємо над удосконаленням сервісу. Тому нам дуже важливі ваші відгуки, щоб в майбутньому ми покращили цю акцію.</div>
+            </div>
+            <div class="comfybooks-accordion-questions-row">
+               <div class="comfybooks-accordion-questions-title">Що робити, якщо загубився код доступу?</div>
+               <div class="comfybooks-accordion-questions-content">Звернутися на нашу «Гарячу лінію» — 0-800-303-505, ми допоможемо відновити код.</div>
+            </div>
+         </div>
+         <!-- <div class="comfybooks-content-text__title">
+            А ще COMFY — українська компанія з активною патріотичною позицією.<br>
+            Ми вирішили поєднати любов до України та української мови з піклуванням про комфорт наших клієнтів. Так зʼявилася ідея запуску власного видавництва книжок.<br>
+            Перші наші видання засновані на популярних темах блогу COMFY — ми зібрали кращі кулінарні рецепти та корисні побутові поради у декілька різних книжок, щоб ви завжди мали до них доступ у своєму телефоні або в електронній книжці.<br>
+            Що буде далі? Ми поповнюватимемо бібліотеку корисними цікавинками, співпрацюватимемо з молодими авторами та популяризуватимемо українську.<br>
+         </div> -->
+      </div>
+   </div>
+
+</div>
+
+<div class="wrap-modalbox"></div>
+<div class="overlay hidden"></div>
+
+<script>
+   function OpenModalAlert() {
+      var OpenModalAlert = document.getElementById("OpenModalAlert");
+      OpenModalAlert.classList.toggle("OpenModalShow");
+   }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+
+<script>
+   $(document).ready(function () {
+      $("fieldset input").click(function () {
+         $("fieldset label.error").remove()
+      });
+
+      $("#valid_form").validate({
+         rules: {
+            name_key: {
+               required: true
+            },
+            name_number: {
+               required: true,
+               number: true
+               // minlength: 10,
+               // maxlength: 13
+            }
+         },
+         messages: {
+            name_key: {
+               required: "*Обов'язкове поле"
+            },
+            name_number: {
+               required: "*Обов'язкове поле",
+               number: "Введіть номер телефону"
+               // minlength: "У полі має бути щонайменше 10 символів",
+               // maxlength: "У полі має бути максимум 12 символів"
+            }
+         },
+         errorPlacement: function (error, element) {
+            if (element.attr("name") == "name_number") error.insertAfter($("input[name=name_number]"));
+            if (element.attr("name") == "name_key") error.insertAfter($("input[name=name_key]"));
+            console.log("errror");
+
+         },
+         submitHandler: function (form) {
+
+            let getNumber = document.getElementById('item_number').value;
+            let getKey = document.getElementById('item_key').value;
+            let valid_form = document.getElementById("upload-date");
+            let upload_error = document.getElementById("upload-error");
+            let upload_done = document.getElementById("upload-done");
+            let content_books = document.getElementById("content-books");
+            let __getNumber = getNumber;
+            let __getKey = getKey;
+            let requestURL = `https://tst.comfy.ua/api/customers/books/${__getNumber}/activate?key=${__getKey}`;
+            // https://tst.comfy.ua/api/customers/books/380631158878/activate?key=12321
+
+
+            const accordionBtn = document.querySelector('.comfybooks-accordion__btn');
+            const accordionContent = document.querySelector('.comfybooks-accordion__content-grid');
+            const comfybooksAccordion = document.querySelector('.comfybooks-accordion');
+
+
+
+            const responseMock = {
+               "ok": true,
+               "userPhone": "380660000000",
+               "activationKey": "bopyj4km4n9b",
+               "books": [
+                  {
+                     "id": 1,
+                     "title": "Книга рецептів COMFY",
+                     "author": "COMFY",
+                     "year": "2023",
+                     "language": "Українська",
+                     "description": "В цій книжці ми зібрали найпопулярніші рецепти блогу COMFY, які найбільше зацікавили наших читачів. Готуйте із задоволенням!",
+                     "images": [
+                        "media/books/COMFY-book-no-emoji.png",
+                        "media/books/COMFY-book-no-emoji2.png",
+                        "media/books/COMFY-book-no-emoji3.png",
+                        "media/books/COMFY-book-no-emoji4.png",
+                        "media/books/COMFY-book-no-emoji5.png",
+                        "media/books/COMFY-book-no-emoji5.png",
+                        "media/books/COMFY-book-no-emoji5.png"
+                     ],
+                     "files": [
+                        {
+                           "format": "pdf",
+                           "url": "api/downloads/book/1pdf"
+                        },
+                        {
+                           "format": "epub",
+                           "url": "api/downloads/book/1epub"
+                        },
+                        {
+                           "format": "mobi",
+                           "url": "api/downloads/book/1mobi"
+                        },
+                        {
+                           "format": "fb2",
+                           "url": "api/downloads/book/1fb2"
+                        }
+                     ]
+                  },
+                  {
+                     "id": 2,
+                     "title": "Книга рецептів COMFY",
+                     "author": "COMFY",
+                     "year": "2023",
+                     "language": "Українська",
+                     "description": "В цій книжці ми зібрали найпопулярніші рецепти блогу COMFY, які найбільше зацікавили наших читачів. Готуйте із задоволенням!",
+                     "images": [
+                        "media/books/COMFY-book-no-emoji.png",
+                        "media/books/COMFY-book-no-emoji2.png",
+                        "media/books/COMFY-book-no-emoji3.png"
+                     ],
+                     "files": [
+                        {
+                           "format": "pdf",
+                           "url": "api/downloads/book/2pdf"
+                        },
+                        {
+                           "format": "epub",
+                           "url": "api/downloads/book/2epub"
+                        }
+                     ]
+                  },
+                  {
+                     "id": 3,
+                     "title": "Книга рецептів COMFY",
+                     "author": "COMFY",
+                     "year": "2023",
+                     "language": "Українська",
+                     "description": "В цій книжці ми зібрали найпопулярніші рецепти блогу COMFY, які найбільше зацікавили наших читачів. Готуйте із задоволенням!",
+                     "images": [
+                        "media/books/COMFY-book-no-emoji.png"
+                     ],
+                     "files": [
+                        {
+                           "format": "pdf",
+                           "url": "api/downloads/book/3pdf"
+                        },
+                        {
+                           "format": "epub",
+                           "url": "api/downloads/book/3epub"
+                        }
+                     ]
+                  }
+               ]
+            }
+
+            function sendRequest(method, url) {
+               const headers = {
+                  'Content-Type': 'application/json'
+               }
+
+               // return fetch(url, {
+               //    method: method,
+               //    headers: headers
+               // })
+               return new Promise((resolve, reject) => {
+                  setTimeout(() => resolve(responseMock), 1000);
+               })
+                  .then(response => {
+                     if (response.ok) {
+                        valid_form.classList.remove("active_block");
+                        upload_error.classList.remove("not-active_block");
+                        upload_done.classList.remove("not-active_block");
+
+                        valid_form.classList.add("not-active_block");
+                        upload_error.classList.add("not-active_block");
+                        upload_done.classList.add("active_block");
+                        content_books.classList.add("active_block");
+
+                        comfybooksAccordion.classList.add('comfybooks-accordion__active');
+
+                        // return response.json()
+                        return response
+                     }
+
+                     return response.json().then(error => {
+                        console.log(error);
+                        console.log(response.status);
+
+                        valid_form.classList.remove("active_block");
+                        upload_error.classList.remove("not-active_block");
+                        upload_done.classList.remove("not-active_block");
+
+                        valid_form.classList.add("not-active_block");
+                        upload_error.classList.add("active_block");
+                        upload_done.classList.add("not-active_block");
+
+                        comfybooksAccordion.classList.remove('comfybooks-accordion__active');
+
+                        document.getElementById("getForm").onclick = function (e) {
+                           document.getElementById("item_number").value = "";
+                           document.getElementById("item_key").value = "";
+                           valid_form.classList.remove("not-active_block");
+                           upload_error.classList.remove("active_block");
+                           upload_done.classList.remove("not-active_block");
+
+                           valid_form.classList.add("active_block");
+                           upload_error.classList.add("not-active_block");
+                           upload_done.classList.add("not-active_block");
+                        }
+
+                     })
+                  })
+            }
+
+            sendRequest('GET', requestURL)
+               .then(data => {
+                  console.log(data);
+                  let mass = data.books;
+
+                  // modalBox
+                  document.querySelector('.wrap-modalbox').innerHTML = `<div class="wrap-modalbox__wrap"></div>`;
+                  for (let key in mass) {
+                     let mass_length = data.books.length;
+                     let mass_img_length = mass[key].images.length;
+
+                     async function getModalBox() {
+                        await getModalBoxHtml();
+                        await getModalBoximg();
+                        await getModalSwiper();
+                     }
+                     getModalBox();
+
+                     function getModalBoxHtml() {
+                        let row = document.createElement('div')
+                        row.classList.add(`wrap-modalbox__item${key}`);
+                        row.innerHTML = `
+                           <div id="popup" class="modal modal-item-${key} hidden">
+                              <div class="modal__wrap">
+                                 <button class="btn-close"><img src="https://cdn.comfy.ua/media/x/img2/close_popup_new.svg" alt=""></button>
+
+                                 <div class="swiper-container gallery-top-${key}">
+
+                                    <div class="swiper-wrapper-${key} swiper-wrapper">
+            
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-pagination pagination_bullet"></div>
+                                    <div class="swiper-pagination pagination_progress"></div>
+                                 </div>
+                              </div>
+                           </div>
+                           `
+                        document.querySelector('.wrap-modalbox__wrap').appendChild(row)
+                     }
+                     function getModalBoximg() {
+                        for (let i = 0; i < mass_img_length; i++) {
+                           let row2 = document.createElement('div');
+                           row2.classList.add("swiper-slide");
+                           row2.innerHTML = `
+                                 <div class="swiper-slide-img">
+                                    <img src="https://cdn.comfy.ua/${mass[key].images[i]}" alt="">
+                                 </div>
+                              `
+                           if (mass_img_length === 1) {
+                              row2.classList.add("swiper-slide", "defult_cursor");
+                           }
+                           document.querySelector(`.swiper-wrapper-${key}`).appendChild(row2)
+                        }
+                     }
+
+                     function getModalSwiper() {
+                        var swiper = new Swiper(`.gallery-top-${key}`, {
+                           slidesPerView: 1,
+                           spaceBetween: 0,
+                           loop: false,
+                           grabCursor: true,
+                           pagination: {
+                              el: `.pagination_bullet`,
+                              clickable: true,
+                              renderBullet: function (index, className) {
+                                 return '<span class="' + className + '">' + (index + 1) + "</span>";
+                              },
+                           },
+                           navigation: {
+                              nextEl: ".swiper-button-next",
+                              prevEl: ".swiper-button-prev",
+                           },
+                        });
+                        var pagingSwiper = new Swiper(`.gallery-top-${key}`, {
+                           pagination: {
+                              el: ".pagination_progress",
+                              type: "fraction",
+                           },
+                        });
+                        swiper.controller.control = pagingSwiper;
+                     }
+                  }
+
+                  document.querySelector('.content-books').innerHTML = `<div class="content-books__wrap"></div>`
+                  for (let key in mass) {
+                     let mass_books_length = mass[key].files.length;
+                     function gettst() {
+                        gettst1();
+                        gettst2();
+                     }
+                     gettst();
+
+                     function gettst1() {
+                        let row = document.createElement('div')
+                        row.classList.add('content-books__item-grid');
+                        row.innerHTML = `
+                        <div class="content-books__item-left">
+                           <div class="content-books__item-left-slider">
+                              <button class="btn-open btn-open-item-${key}"><img src="https://cdn.comfy.ua/${mass[key].images[0]}" alt=""></button>
+                           </div>
+                        </div>
+                        <div class="content-books__item-right">
+                           <div class="content-books__item-right-row">
+                              <div class="content-books__item-right-title">${key + " " + mass[key].title}</div>
+                              <div class="content-books__item-right-language">${key + " " + mass[key].language}, ${key + " " + mass[key].year}</div>
+                              <div class="content-books__item-right-description">${key + " " + mass[key].description}</div>
+                           </div>
+                           <div class="content-books__item-right-row">
+                              <div class="content-books__item-right-books-${key}">
+                                 
+                                 <div class="content-books__grid content-books__item-right-books-item-${key}">
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        `
+                        document.querySelector('.content-books__wrap').appendChild(row)
+                     }
+
+                     function gettst2() {
+                        for (let i = 0; i < mass_books_length; i++) {
+                           let row3 = document.createElement('div');
+                           row3.classList.add("content-books__items");
+                           if (i == 0) {
+                              let row3 = document.createElement('div');
+                              row3.classList.add("content-books__items");
+                              row3.innerHTML = `
+                              <div class="content-books__items-format">
+                                 <input class="input__item-${key}" type="radio" id="${mass[key].files[i].format}-${key}" name="radiogp-${key}" value="https://comfy.ua/${mass[key].files[i].url}" checked>
+                                 <label for="${mass[key].files[i].format}-${key}">${mass[key].files[i].format}</label>
+                              </div>
+                              `
+                              document.querySelector(`.content-books__item-right-books-item-${key}`).append(row3)
+
+                              let row4 = document.createElement('div');
+                              row4.classList.add(`content-books__items-wrap-btn-${key}`);
+                              row4.innerHTML = `
+                                 <button class="download-btn-${key} submit">Завантажити</button>
+                              `
+                              document.querySelector(`.content-books__item-right-books-${key}`).appendChild(row4)
+
+                           } else {
+                              row3.innerHTML = `
+                              <div class="content-books__items-format">
+                                 <input class="input__item-${key}" type="radio" id="${mass[key].files[i].format}-${key}" name="radiogp-${key}" value="https://comfy.ua/${mass[key].files[i].url}">
+                                 <label for="${mass[key].files[i].format}-${key}">${mass[key].files[i].format}</label>
+                              </div>
+                              `
+                              document.querySelector(`.content-books__item-right-books-item-${key}`).append(row3)
+                           }
+
+                        }
+
+                     }
+
+                     const openFileBtn = document.querySelectorAll(`.download-btn-${key}`);
+                     openFileBtn.forEach(function (e, i) {
+                        e.addEventListener('click', function () {
+                           var selected = document.querySelector(`input[name=radiogp-${key}]:checked`);
+                           open(selected.value);
+                           // $(`input:checked`).prop('checked', false);
+                        })
+                     })
+
+                     $(`input[name=radiogp-${key}]`).on("click", function (e) {
+                        e.preventDefault();
+                        // setTimeout(
+                        //    () => $(this).prop("checked", !this.checked).trigger("change")
+                        // );
+
+                        setTimeout(() => {
+                           let downloadBtns = document.querySelectorAll(`.download-btn-${key}`)
+                           $(this).prop("checked", !this.checked).trigger("change");
+                           console.log($(this).prop("checked") + ` ${key}`);
+                           if ($(this).prop("checked") == true) {
+                              $(`.download-btn-${key}`).addClass('submit-active');
+                              $(`.download-btn-${key}`).removeClass('submit-not-active');
+                           } else if ($(this).prop("checked") == false) {
+                              $(`.download-btn-${key}`).removeClass('submit-active');
+                              $(`.download-btn-${key}`).addClass('submit-not-active');
+                           }
+
+                        });
+
+                     });
+
+                  }
+
+                  // function addClickEvent() {
+                  //    let items = document.querySelectorAll(".content-books__items-format")
+
+                  //    if (items && items.length) {
+                  //       items.forEach(function (e, i) {
+                  //          e.addEventListener('click', function () {
+                  //             let downloadBtns = document.querySelectorAll(".download-btn")
+                  //             $(downloadBtns).css({ 'background-color': '#E5E5E5', 'pointer-events': 'none', 'cursor': 'inherit' });
+                  //             let itemsWrapEl = $(this).closest(".content-books__item-right-row")
+                  //             let submitEl = $(itemsWrapEl[0]).find(".download-btn")
+                  //             $(submitEl[0]).css({ 'background-color': '#43B02A', 'pointer-events': 'inherit', 'cursor': 'pointer' });
+                  //          })
+                  //       })
+                  //    }
+                  // }
+
+                  // addClickEvent();
+
+                  const modal = document.querySelectorAll(".modal");
+                  const overlay = document.querySelector(".overlay");
+                  const openModalBtn = document.querySelectorAll(".btn-open");
+                  const closeModalBtn = document.querySelectorAll(".btn-close");
+
+
+                  overlay.addEventListener("click", function () {
+                     openModalBtn.forEach(function (e, i) {
+                        modal[i].classList.add("hidden");
+                        overlay.classList.add("hidden");
+
+                     })
+                  });
+
+                  openModalBtn.forEach(function (e, i) {
+                     e.addEventListener('click', function () {
+                        modal[i].classList.remove("hidden");
+                        overlay.classList.remove("hidden");
+
+                     })
+                     closeModalBtn[i].addEventListener('click', function () {
+                        modal[i].classList.add("hidden");
+                        overlay.classList.add("hidden");
+
+                     })
+                  })
+
+                  // window.addEventListener('scroll', () => {
+                  //    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+                  // });
+
+                  accordionBtn.addEventListener('click', (e) => {
+                     if (accordionBtn.classList.contains('accordion-active')) {
+                        accordionBtn.classList.remove('accordion-active');
+                        accordionContent.classList.remove('content-accordion-active');
+                     } else {
+                        accordionBtn.classList.add('accordion-active');
+                        accordionContent.classList.add('content-accordion-active');
+                     }
+                  });
+
+               })
+               .catch(err => console.log(err))
+
+         }
+      });
+      $(function () {
+         $("#item_number").mask("380999999999");
+      });
+
+   });
+
+</script>
+
+<script>
+   const accordionBtnQuestions = document.querySelectorAll('.comfybooks-accordion-questions-title');
+   const accordionBtnQuestionsContent = document.querySelectorAll('.comfybooks-accordion-questions-content');
+
+   accordionBtnQuestions.forEach(function (elem, iter) {
+      elem.addEventListener('click', () => {
+         if (elem.classList.contains('accordion-questions-active')) {
+            elem.classList.remove('accordion-questions-active');
+
+            accordionBtnQuestionsContent.forEach(function (elemC, iterC) {
+               if (iter == iterC) {
+                  elemC.classList.remove('accordion-questions-content-active');
+               }
+            });
+
+         } else {
+            elem.classList.add('accordion-questions-active');
+
+            accordionBtnQuestionsContent.forEach(function (elemC, iterC) {
+               if (iter == iterC) {
+                  elemC.classList.add('accordion-questions-content-active');
+               }
+            });
+         }
+      });
+   });
+</script>
+
+<!-- 
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+   });
+</script>
+-->
