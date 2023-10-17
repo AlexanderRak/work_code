@@ -72,6 +72,7 @@
   width: max-content;
   right: 50%;
   -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
       -ms-transform: translateX(50%);
        -o-transform: translateX(50%);
           transform: translateX(50%);
@@ -117,6 +118,7 @@
   height: 20px;
   background-color: #767676;
   -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
           border-radius: 50%;
   cursor: pointer;
 }
@@ -134,13 +136,23 @@
 }
 #lg .fade {
   -webkit-animation-name: fade;
+     -moz-animation-name: fade;
        -o-animation-name: fade;
           animation-name: fade;
   -webkit-animation-duration: 1s;
+     -moz-animation-duration: 1s;
        -o-animation-duration: 1s;
           animation-duration: 1s;
 }
 @-webkit-keyframes fade {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade {
   0% {
     opacity: 0.1;
   }
@@ -223,6 +235,7 @@
   max-width: 40%;
   bottom: 50%;
   -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
       -ms-transform: translateY(50%);
        -o-transform: translateY(50%);
           transform: translateY(50%);
@@ -411,6 +424,7 @@
   top: 10px;
   right: 50%;
   -webkit-transform: translateX(50%);
+     -moz-transform: translateX(50%);
       -ms-transform: translateX(50%);
        -o-transform: translateX(50%);
           transform: translateX(50%);
@@ -524,6 +538,7 @@
   #lg .logo .logo__txt {
     position: unset;
     -webkit-transform: unset;
+       -moz-transform: unset;
         -ms-transform: unset;
          -o-transform: unset;
             transform: unset;
@@ -568,23 +583,24 @@
     max-width: 100%;
     position: unset;
     -webkit-transform: unset;
+       -moz-transform: unset;
         -ms-transform: unset;
          -o-transform: unset;
             transform: unset;
     padding: 1em;
   }
   #lg .colors .colors__txt span,
-  #lg .refresh .refresh__txt span,
-  #lg .nvidia .nvidia__txt span,
-  #lg .amd .amd__txt span,
-  #lg .design .design__txt span,
-  #lg .games li:nth-of-type(2) span,
-  #lg .dynamic .dynamic__txt span,
-  #lg .stab .stab__txt span,
-  #lg .aim .aim__txt span,
-  #lg .lg__slide .lg__slide__cont li span,
-  #lg .nano .nano__txt span,
-  #lg .ips .ips__txt span {
+#lg .refresh .refresh__txt span,
+#lg .nvidia .nvidia__txt span,
+#lg .amd .amd__txt span,
+#lg .design .design__txt span,
+#lg .games li:nth-of-type(2) span,
+#lg .dynamic .dynamic__txt span,
+#lg .stab .stab__txt span,
+#lg .aim .aim__txt span,
+#lg .lg__slide .lg__slide__cont li span,
+#lg .nano .nano__txt span,
+#lg .ips .ips__txt span {
     font-size: 20px;
   }
   #lg .refresh {
@@ -611,11 +627,11 @@
     display: none;
   }
   #lg .nvidia .nvidia__txt,
-  #lg .amd .amd__txt,
-  #lg .design .design__txt,
-  #lg .dynamic .dynamic__txt,
-  #lg .stab .stab__txt,
-  #lg .aim .aim__txt {
+#lg .amd .amd__txt,
+#lg .design .design__txt,
+#lg .dynamic .dynamic__txt,
+#lg .stab .stab__txt,
+#lg .aim .aim__txt {
     padding: 0 1em;
   }
   #lg .nvidia {
@@ -692,8 +708,8 @@
     font-size: 14px;
   }
   #lg .dynamic,
-  #lg .stab,
-  #lg .aim {
+#lg .stab,
+#lg .aim {
     padding: 0;
   }
 }

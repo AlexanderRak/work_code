@@ -112,6 +112,7 @@
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: contain;
+     -moz-background-size: contain;
        -o-background-size: contain;
           background-size: contain;
   margin-left: 20px;
@@ -129,10 +130,12 @@
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: contain;
+     -moz-background-size: contain;
        -o-background-size: contain;
           background-size: contain;
   margin-right: 20px;
   -webkit-transform: rotate(180deg);
+     -moz-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
        -o-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -202,6 +205,7 @@
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: contain;
+     -moz-background-size: contain;
        -o-background-size: contain;
           background-size: contain;
   margin-left: 20px;
@@ -219,10 +223,12 @@
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: contain;
+     -moz-background-size: contain;
        -o-background-size: contain;
           background-size: contain;
   margin-right: 20px;
   -webkit-transform: rotate(180deg);
+     -moz-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
        -o-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -395,21 +401,21 @@
     font-size: 28px;
   }
   #jvc .ultra .ultra_title,
-  #jvc .matrix .matrix_title,
-  #jvc .sound .sound_list li .sound_txt,
-  #jvc .eco .eco_title,
-  #jvc .design .design_txt,
-  #jvc .history {
+#jvc .matrix .matrix_title,
+#jvc .sound .sound_list li .sound_txt,
+#jvc .eco .eco_title,
+#jvc .design .design_txt,
+#jvc .history {
     padding: 20px;
   }
   #jvc .ultra .ultra_list li span,
-  #jvc .matrix .matrix_list li span {
+#jvc .matrix .matrix_list li span {
     font-size: 20px;
   }
   #jvc .ultra .ultra_list li:nth-of-type(1) span:after,
-  #jvc .ultra .ultra_list li:nth-of-type(2) span:before,
-  #jvc .matrix .matrix_list li:nth-of-type(1) span:after,
-  #jvc .matrix .matrix_list li:nth-of-type(2) span:before {
+#jvc .ultra .ultra_list li:nth-of-type(2) span:before,
+#jvc .matrix .matrix_list li:nth-of-type(1) span:after,
+#jvc .matrix .matrix_list li:nth-of-type(2) span:before {
     width: 30px;
     height: 36px;
   }
@@ -423,7 +429,7 @@
     padding-right: 0;
   }
   #jvc .ultra .ultra_list,
-  #jvc .matrix .matrix_list {
+#jvc .matrix .matrix_list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -433,11 +439,12 @@
             flex-direction: column;
   }
   #jvc .ultra .ultra_list li:nth-of-type(1) span,
-  #jvc .matrix .matrix_list li:nth-of-type(1) span {
+#jvc .matrix .matrix_list li:nth-of-type(1) span {
     top: unset;
     bottom: 0;
     right: 50%;
     -webkit-transform: translateX(50%);
+       -moz-transform: translateX(50%);
         -ms-transform: translateX(50%);
          -o-transform: translateX(50%);
             transform: translateX(50%);
@@ -451,15 +458,16 @@
     height: auto;
   }
   #jvc .ultra .ultra_list li:nth-of-type(1) span::after,
-  #jvc .matrix .matrix_list li:nth-of-type(1) span::after {
+#jvc .matrix .matrix_list li:nth-of-type(1) span::after {
     margin-left: 0;
     -webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
          -o-transform: rotate(90deg);
             transform: rotate(90deg);
   }
   #jvc .ultra .ultra_list li:nth-of-type(2) span,
-  #jvc .matrix .matrix_list li:nth-of-type(2) span {
+#jvc .matrix .matrix_list li:nth-of-type(2) span {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -470,14 +478,16 @@
     left: unset;
     right: 50%;
     -webkit-transform: translateX(50%);
+       -moz-transform: translateX(50%);
         -ms-transform: translateX(50%);
          -o-transform: translateX(50%);
             transform: translateX(50%);
     top: 0;
   }
   #jvc .ultra .ultra_list li:nth-of-type(2) span::before,
-  #jvc .matrix .matrix_list li:nth-of-type(2) span::before {
+#jvc .matrix .matrix_list li:nth-of-type(2) span::before {
     -webkit-transform: rotate(-90deg);
+       -moz-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
          -o-transform: rotate(-90deg);
             transform: rotate(-90deg);
@@ -514,7 +524,7 @@
     min-width: 230px;
   }
   #jvc .design,
-  #jvc .history {
+#jvc .history {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -524,7 +534,7 @@
             flex-direction: column;
   }
   #jvc .design > div,
-  #jvc .history > div {
+#jvc .history > div {
     max-width: 100%;
     text-align: center;
   }

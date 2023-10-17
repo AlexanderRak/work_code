@@ -60,6 +60,7 @@ span.word-wrap {
 .header-s21 {
   background: #F4F4F4;
   -webkit-border-radius: 16px;
+     -moz-border-radius: 16px;
           border-radius: 16px;
 }
 
@@ -128,6 +129,7 @@ span.word-wrap {
 .s21__link {
   background: #FF671F;
   -webkit-border-radius: 28px;
+     -moz-border-radius: 28px;
           border-radius: 28px;
   width: 100%;
   max-width: 275px;
@@ -150,6 +152,7 @@ span.word-wrap {
 .zoom-s21 {
   background: #F4F4F4;
   -webkit-border-radius: 16px;
+     -moz-border-radius: 16px;
           border-radius: 16px;
   margin-top: 20px;
 }
@@ -304,6 +307,7 @@ span.word-wrap {
           flex: 1 1 0;
   background: #F4F4F4;
   -webkit-border-radius: 16px;
+     -moz-border-radius: 16px;
           border-radius: 16px;
   padding: 35px 15px 27px 15px;
 }
@@ -400,8 +404,10 @@ span.word-wrap {
   font-size: 18px;
   -webkit-transition: 0.6s ease;
   -o-transition: 0.6s ease;
+  -moz-transition: 0.6s ease;
   transition: 0.6s ease;
   -webkit-border-radius: 0 3px 3px 0;
+     -moz-border-radius: 0 3px 3px 0;
           border-radius: 0 3px 3px 0;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -421,8 +427,10 @@ span.word-wrap {
   font-size: 18px;
   -webkit-transition: 0.6s ease;
   -o-transition: 0.6s ease;
+  -moz-transition: 0.6s ease;
   transition: 0.6s ease;
   -webkit-border-radius: 0 3px 3px 0;
+     -moz-border-radius: 0 3px 3px 0;
           border-radius: 0 3px 3px 0;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -430,16 +438,27 @@ span.word-wrap {
           user-select: none;
   right: 0;
   -webkit-border-radius: 3px 0 0 3px;
+     -moz-border-radius: 3px 0 0 3px;
           border-radius: 3px 0 0 3px;
 }
 
 .fade {
   -webkit-animation-duration: 1.5s;
+     -moz-animation-duration: 1.5s;
        -o-animation-duration: 1.5s;
           animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade {
   from {
     opacity: 0.4;
   }
@@ -766,6 +785,7 @@ span.word-wrap {
   }
   .footer-s21__item {
     -webkit-border-radius: 0;
+       -moz-border-radius: 0;
             border-radius: 0;
   }
   .footer-s21__item:first-child {
@@ -809,10 +829,12 @@ span.word-wrap {
   }
   .header-s21 {
     -webkit-border-radius: 0;
+       -moz-border-radius: 0;
             border-radius: 0;
   }
   .zoom-s21 {
     -webkit-border-radius: 0;
+       -moz-border-radius: 0;
             border-radius: 0;
   }
   .action-blok__container-flex {

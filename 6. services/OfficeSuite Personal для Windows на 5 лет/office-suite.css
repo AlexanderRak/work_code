@@ -63,6 +63,7 @@ span.word-wrap-header {
   background-position: left;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
+     -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
   position: absolute;
@@ -98,11 +99,14 @@ span.word-wrap-header {
   border: 2px solid rgba(255, 255, 255, 0);
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
+  -moz-transition: 0.3s;
   transition: 0.3s;
   -webkit-box-shadow: 0 0 5px 3px #ece9e9;
+     -moz-box-shadow: 0 0 5px 3px #ece9e9;
           box-shadow: 0 0 5px 3px #ece9e9;
   font-size: 16px;
   -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
           border-radius: 5px;
   margin-right: 15px;
 }
@@ -358,10 +362,12 @@ span.word-wrap-header {
   cursor: pointer;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
+  -moz-transition: 0.3s;
   transition: 0.3s;
   margin: 0;
   padding: 0;
   -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
           border-radius: 10px;
   overflow: hidden;
   margin-right: 10px;
@@ -375,6 +381,7 @@ span.word-wrap-header {
 .suite-tabs button.active {
   font-weight: bold;
   -webkit-box-shadow: 4px 4px 10px 0px #a2a2a2;
+     -moz-box-shadow: 4px 4px 10px 0px #a2a2a2;
           box-shadow: 4px 4px 10px 0px #a2a2a2;
 }
 .suite-tabs button .suite-tablinks__span {
@@ -401,6 +408,7 @@ span.word-wrap-header {
 
 .suite-tabcontent {
   -webkit-animation: fadeEffect 1s;
+     -moz-animation: fadeEffect 1s;
        -o-animation: fadeEffect 1s;
           animation: fadeEffect 1s;
 }
@@ -421,6 +429,15 @@ span.word-wrap-header {
 }
 
 @-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeEffect {
   from {
     opacity: 0;
   }
@@ -737,6 +754,7 @@ span.word-wrap-header {
   content: "";
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(241, 245, 253, 0)), to(#DCE8FF));
   background: -webkit-linear-gradient(top, rgba(241, 245, 253, 0) 0%, #DCE8FF 100%);
+  background: -moz-linear-gradient(top, rgba(241, 245, 253, 0) 0%, #DCE8FF 100%);
   background: -o-linear-gradient(top, rgba(241, 245, 253, 0) 0%, #DCE8FF 100%);
   background: linear-gradient(180deg, rgba(241, 245, 253, 0) 0%, #DCE8FF 100%);
   max-width: 1316px;
@@ -746,6 +764,7 @@ span.word-wrap-header {
   left: 0;
   top: 0;
   -webkit-border-radius: 475px/105px;
+     -moz-border-radius: 475px/105px;
           border-radius: 475px/105px;
 }
 

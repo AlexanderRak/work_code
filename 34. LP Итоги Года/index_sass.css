@@ -23,6 +23,7 @@
 }
 #newyear2023 h2 {
   font-size: -webkit-calc(28px + 38 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(28px + 38 * ((100vw - 320px) / 1600));
   font-size: calc(28px + 38 * ((100vw - 320px) / 1600));
   font-weight: bold;
   color: #151B1F;
@@ -30,10 +31,12 @@
 }
 #newyear2023 h2.h2sz {
   font-size: -webkit-calc(28px + 86 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(28px + 86 * ((100vw - 320px) / 1600));
   font-size: calc(28px + 86 * ((100vw - 320px) / 1600));
 }
 #newyear2023 p {
   font-size: -webkit-calc(14px + 10 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(14px + 10 * ((100vw - 320px) / 1600));
   font-size: calc(14px + 10 * ((100vw - 320px) / 1600));
   font-weight: 500;
   color: #151B1F;
@@ -41,6 +44,7 @@
 }
 #newyear2023 p.--tabs-fz {
   font-size: -webkit-calc(12px + 8 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(12px + 8 * ((100vw - 320px) / 1600));
   font-size: calc(12px + 8 * ((100vw - 320px) / 1600));
   font-weight: bold;
 }
@@ -89,6 +93,7 @@
 
 .container-string-line {
   -webkit-box-shadow: 4px 4px 0px #000000;
+     -moz-box-shadow: 4px 4px 0px #000000;
           box-shadow: 4px 4px 0px #000000;
   position: relative;
   padding: 16px 0;
@@ -99,6 +104,7 @@
 .container-string-line.--line-one {
   background: #FAFF00;
   -webkit-transform: rotate(-2.19deg);
+     -moz-transform: rotate(-2.19deg);
       -ms-transform: rotate(-2.19deg);
        -o-transform: rotate(-2.19deg);
           transform: rotate(-2.19deg);
@@ -107,6 +113,7 @@
 .container-string-line.--line-two {
   background: #F4C8FF;
   -webkit-transform: rotate(3.28deg);
+     -moz-transform: rotate(3.28deg);
       -ms-transform: rotate(3.28deg);
        -o-transform: rotate(3.28deg);
           transform: rotate(3.28deg);
@@ -119,6 +126,7 @@
   width: 100%;
   height: 100%;
   -webkit-animation: animMarquee 30s linear infinite;
+     -moz-animation: animMarquee 30s linear infinite;
        -o-animation: animMarquee 30s linear infinite;
           animation: animMarquee 30s linear infinite;
   display: -webkit-box;
@@ -163,11 +171,13 @@
   height: 8px;
   background: #000;
   -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
           border-radius: 50%;
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
        -o-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -181,6 +191,19 @@
   100% {
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
+  }
+}
+
+@-moz-keyframes animMarquee {
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+         transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+         transform: translateX(100%);
   }
 }
 
@@ -200,13 +223,15 @@
 @keyframes animMarquee {
   0% {
     -webkit-transform: translateX(0);
-    -o-transform: translateX(0);
-       transform: translateX(0);
+    -moz-transform: translateX(0);
+      -o-transform: translateX(0);
+         transform: translateX(0);
   }
   100% {
     -webkit-transform: translateX(100%);
-    -o-transform: translateX(100%);
-       transform: translateX(100%);
+    -moz-transform: translateX(100%);
+      -o-transform: translateX(100%);
+         transform: translateX(100%);
   }
 }
 .container-move video {
@@ -239,8 +264,10 @@
   background: #FFE602;
   border: 4px solid #000000;
   -webkit-box-shadow: inset 8px 8px 0px #000000;
+     -moz-box-shadow: inset 8px 8px 0px #000000;
           box-shadow: inset 8px 8px 0px #000000;
   -webkit-border-radius: 24px;
+     -moz-border-radius: 24px;
           border-radius: 24px;
   padding: 0 12px;
 }
@@ -258,8 +285,10 @@
 .container-lk-login.--not-in-login .container-lk-login__content__item {
   border: 4px solid #000000;
   -webkit-box-shadow: 4px 4px 0px #000000;
+     -moz-box-shadow: 4px 4px 0px #000000;
           box-shadow: 4px 4px 0px #000000;
   -webkit-border-radius: 24px;
+     -moz-border-radius: 24px;
           border-radius: 24px;
   overflow: hidden;
   position: relative;
@@ -291,6 +320,7 @@
 }
 .container-lk-login.--not-in-login .container-lk-login__content__item .container-lk-login__content-p p {
   font-size: -webkit-calc(12px + 8 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(12px + 8 * ((100vw - 320px) / 1600));
   font-size: calc(12px + 8 * ((100vw - 320px) / 1600));
 }
 .container-lk-login.--not-in-login .container-lk-login__content__item::before {
@@ -333,8 +363,10 @@
   background: #43B02A;
   border: 4px solid #000000;
   -webkit-box-shadow: 4px 4px 0px #000000;
+     -moz-box-shadow: 4px 4px 0px #000000;
           box-shadow: 4px 4px 0px #000000;
   -webkit-border-radius: 75px;
+     -moz-border-radius: 75px;
           border-radius: 75px;
   color: #FFFFFF;
   font-weight: bold;
@@ -346,16 +378,19 @@
   text-decoration: none;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
+  -moz-transition: 0.3s;
   transition: 0.3s;
 }
 .container-lk-login.--not-in-login .container-lk-login__content-link:hover {
   -webkit-box-shadow: 0px 0px 0px #000000;
+     -moz-box-shadow: 0px 0px 0px #000000;
           box-shadow: 0px 0px 0px #000000;
 }
 
 .header-profile__link_login {
   top: 0;
   -webkit-transform: none;
+     -moz-transform: none;
       -ms-transform: none;
        -o-transform: none;
           transform: none;
@@ -381,8 +416,10 @@
 .container-statistics__item {
   border: 4px solid #000000;
   -webkit-box-shadow: 4px 4px 0px #000000;
+     -moz-box-shadow: 4px 4px 0px #000000;
           box-shadow: 4px 4px 0px #000000;
   -webkit-border-radius: 32px;
+     -moz-border-radius: 32px;
           border-radius: 32px;
   padding: 40px;
   position: relative;
@@ -495,6 +532,7 @@
 .container-lk-login__daycomfy-txt1 {
   font-weight: 700;
   font-size: -webkit-calc(23px + 119 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(23px + 119 * ((100vw - 320px) / 1600));
   font-size: calc(23px + 119 * ((100vw - 320px) / 1600));
   line-height: 1;
   text-transform: uppercase;
@@ -506,6 +544,7 @@
 .container-lk-login__daycomfy-txt2 {
   font-weight: 700;
   font-size: -webkit-calc(18px + 28 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(18px + 28 * ((100vw - 320px) / 1600));
   font-size: calc(18px + 28 * ((100vw - 320px) / 1600));
   line-height: 58px;
   text-transform: uppercase;
@@ -518,8 +557,10 @@
   background: #F9FFB5;
   border: 4px solid #000000;
   -webkit-box-shadow: 4px 4px 0px #000000;
+     -moz-box-shadow: 4px 4px 0px #000000;
           box-shadow: 4px 4px 0px #000000;
   -webkit-border-radius: 161px;
+     -moz-border-radius: 161px;
           border-radius: 161px;
   margin: 96px 0;
 }
@@ -549,6 +590,7 @@
 
 .container-lk-login__active-buyers__txt1 {
   font-size: -webkit-calc(18px + 12 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(18px + 12 * ((100vw - 320px) / 1600));
   font-size: calc(18px + 12 * ((100vw - 320px) / 1600));
   color: #000;
   position: absolute;
@@ -556,6 +598,7 @@
   right: 0;
   top: 40%;
   -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
        -o-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -566,6 +609,7 @@
 
 .container-lk-login__active-buyers__txt2 {
   font-size: -webkit-calc(14px + 28 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(14px + 28 * ((100vw - 320px) / 1600));
   font-size: calc(14px + 28 * ((100vw - 320px) / 1600));
   font-weight: 700;
   color: #000;
@@ -583,9 +627,11 @@
 .container-lk-login__grid-item {
   border: 4px solid #000000;
   -webkit-box-shadow: 4px 4px 0px #000000;
+     -moz-box-shadow: 4px 4px 0px #000000;
           box-shadow: 4px 4px 0px #000000;
   padding: 40px 40px;
   -webkit-border-radius: 32px;
+     -moz-border-radius: 32px;
           border-radius: 32px;
   position: relative;
 }
@@ -736,6 +782,7 @@
 .container-lk-login__cont-flex__h2 .cont-flex__h2 {
   font-weight: 700;
   font-size: -webkit-calc(16px + 90 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(16px + 90 * ((100vw - 320px) / 1600));
   font-size: calc(16px + 90 * ((100vw - 320px) / 1600));
   color: #000;
 }
@@ -762,8 +809,10 @@
 .container-lk-login__cont-flex__text {
   border: 4px solid #000000;
   -webkit-box-shadow: 4px 4px 0px #000000;
+     -moz-box-shadow: 4px 4px 0px #000000;
           box-shadow: 4px 4px 0px #000000;
   -webkit-border-radius: 24px;
+     -moz-border-radius: 24px;
           border-radius: 24px;
   padding: 16px 5px;
   text-align: center;
@@ -843,8 +892,10 @@
   background: #FFE602;
   border: 4px solid #000000;
   -webkit-box-shadow: 4px 4px 0px #000000;
+     -moz-box-shadow: 4px 4px 0px #000000;
           box-shadow: 4px 4px 0px #000000;
   -webkit-transform: rotate(-3deg);
+     -moz-transform: rotate(-3deg);
       -ms-transform: rotate(-3deg);
        -o-transform: rotate(-3deg);
           transform: rotate(-3deg);
@@ -854,6 +905,7 @@
 
 .container-history-comfy__text {
   font-size: -webkit-calc(14px + 28 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(14px + 28 * ((100vw - 320px) / 1600));
   font-size: calc(14px + 28 * ((100vw - 320px) / 1600));
   font-weight: 700;
   color: #000;
@@ -864,12 +916,15 @@
 
 .container-history-comfy_link {
   font-size: -webkit-calc(14px + 20 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(14px + 20 * ((100vw - 320px) / 1600));
   font-size: calc(14px + 20 * ((100vw - 320px) / 1600));
   background: #43B02A;
   border: 4px solid #000000;
   -webkit-box-shadow: 4px 4px 0px #000000;
+     -moz-box-shadow: 4px 4px 0px #000000;
           box-shadow: 4px 4px 0px #000000;
   -webkit-border-radius: 75px;
+     -moz-border-radius: 75px;
           border-radius: 75px;
   color: #fff;
   padding: 24px 0px;
@@ -881,10 +936,12 @@
   width: 100%;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
+  -moz-transition: 0.3s;
   transition: 0.3s;
 }
 .container-history-comfy_link:hover {
   -webkit-box-shadow: 0px 0px 0px #000000;
+     -moz-box-shadow: 0px 0px 0px #000000;
           box-shadow: 0px 0px 0px #000000;
 }
 
@@ -925,8 +982,10 @@
   background: #FFE602;
   border: 4px solid #000000;
   -webkit-box-shadow: 8px 8px 0px #000000;
+     -moz-box-shadow: 8px 8px 0px #000000;
           box-shadow: 8px 8px 0px #000000;
   -webkit-border-radius: 24px;
+     -moz-border-radius: 24px;
           border-radius: 24px;
   padding: 40px 64px;
   position: relative;
@@ -934,6 +993,7 @@
 
 .container-new-account__text {
   font-size: -webkit-calc(16px + 26 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(16px + 26 * ((100vw - 320px) / 1600));
   font-size: calc(16px + 26 * ((100vw - 320px) / 1600));
   font-weight: 700;
   color: #000;
@@ -951,6 +1011,7 @@
 
 .container-new-account_link a {
   font-size: -webkit-calc(16px + 18 * ((100vw - 320px) / 1600));
+  font-size: -moz-calc(16px + 18 * ((100vw - 320px) / 1600));
   font-size: calc(16px + 18 * ((100vw - 320px) / 1600));
   display: table;
   margin: 0 auto;
@@ -959,11 +1020,14 @@
   background: #FFE602;
   border: 4px solid #000000;
   -webkit-box-shadow: 4px 4px 0px #000000;
+     -moz-box-shadow: 4px 4px 0px #000000;
           box-shadow: 4px 4px 0px #000000;
   -webkit-border-radius: 75px;
+     -moz-border-radius: 75px;
           border-radius: 75px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
+  -moz-transition: 0.3s;
   transition: 0.3s;
   padding: 24px 15px;
   max-width: 430px;
@@ -972,6 +1036,7 @@
 }
 .container-new-account_link a:hover {
   -webkit-box-shadow: 0px 0px 0px #000000;
+     -moz-box-shadow: 0px 0px 0px #000000;
           box-shadow: 0px 0px 0px #000000;
 }
 
@@ -1332,6 +1397,7 @@
     background: #F1FF54;
     margin: 22px 0 16px 0;
     -webkit-border-radius: 24px;
+       -moz-border-radius: 24px;
             border-radius: 24px;
   }
   .container-lk-login__active-buyers__flex {
@@ -1434,10 +1500,12 @@
     min-height: auto;
     border: none;
     -webkit-box-shadow: none;
+       -moz-box-shadow: none;
             box-shadow: none;
     padding: 0;
     background: transparent !important;
     -webkit-border-radius: 0px;
+       -moz-border-radius: 0px;
             border-radius: 0px;
     margin-top: 0;
     padding-left: 20px;

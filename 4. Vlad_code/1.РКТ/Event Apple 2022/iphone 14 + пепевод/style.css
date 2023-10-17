@@ -182,6 +182,7 @@
 
 .iphone__grid__item {
   -webkit-border-radius: 18px;
+     -moz-border-radius: 18px;
           border-radius: 18px;
   background-color: #f5f5f7;
   display: -webkit-box;
@@ -261,12 +262,14 @@
     max-height: 400px;
   }
   .iphone__grid__item__txt span,
-  .portrait__cont__item__title span {
+.portrait__cont__item__title span {
     font-size: -webkit-calc(24px + 8 * (100vw - 320px) / 448) !important;
+    font-size: -moz-calc(24px + 8 * (100vw - 320px) / 448) !important;
     font-size: calc(24px + 8 * (100vw - 320px) / 448) !important;
   }
   .iphone__grid__item__txt p {
     font-size: -webkit-calc(16px + 4 * (100vw - 320px) / 448);
+    font-size: -moz-calc(16px + 4 * (100vw - 320px) / 448);
     font-size: calc(16px + 4 * (100vw - 320px) / 448);
   }
   .iphone__grid__item__txt p br {
@@ -310,10 +313,12 @@
   }
   .iphone__title {
     font-size: -webkit-calc(30px + 20 * (100vw - 320px) / 704);
+    font-size: -moz-calc(30px + 20 * (100vw - 320px) / 704);
     font-size: calc(30px + 20 * (100vw - 320px) / 704);
   }
   .iphone__txt {
     font-size: -webkit-calc(20px + 8 * (100vw - 320px) / 704);
+    font-size: -moz-calc(20px + 8 * (100vw - 320px) / 704);
     font-size: calc(20px + 8 * (100vw - 320px) / 704);
   }
   .sos .iphone__title {
@@ -496,10 +501,12 @@
 @media (max-width: 1024px) {
   .battery__title span {
     font-size: -webkit-calc(40px + 20 * (100vw - 320px) / 704);
+    font-size: -moz-calc(40px + 20 * (100vw - 320px) / 704);
     font-size: calc(40px + 20 * (100vw - 320px) / 704);
   }
   .battery__title span strong {
     font-size: -webkit-calc(60px + 40 * (100vw - 320px) / 704);
+    font-size: -moz-calc(60px + 40 * (100vw - 320px) / 704);
     font-size: calc(60px + 40 * (100vw - 320px) / 704);
   }
   .battery__title__flex img {
@@ -512,13 +519,15 @@
     text-align: center;
   }
   .battery__txt,
-  .bionic__title span,
-  .bionic__txt span {
+.bionic__title span,
+.bionic__txt span {
     font-size: -webkit-calc(28px + 8 * (100vw - 320px) / 704) !important;
+    font-size: -moz-calc(28px + 8 * (100vw - 320px) / 704) !important;
     font-size: calc(28px + 8 * (100vw - 320px) / 704) !important;
   }
   .battery__flex__item span {
     font-size: -webkit-calc(28px + 12 * (100vw - 320px) / 704);
+    font-size: -moz-calc(28px + 12 * (100vw - 320px) / 704);
     font-size: calc(28px + 12 * (100vw - 320px) / 704);
   }
 }
@@ -537,7 +546,7 @@
             flex-direction: column;
   }
   .battery__flex__item span br,
-  .battery__flex__item p br {
+.battery__flex__item p br {
     display: none;
   }
   .battery__flex__item {
@@ -572,6 +581,7 @@
 .morescreen__title__grad {
   background-image: -webkit-gradient(linear, left top, right top, from(#2ca2b4), color-stop(24%, #5598de), color-stop(45%, #7f87ff), color-stop(76%, #f65aad), to(#ec3d43));
   background-image: -webkit-linear-gradient(left, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
+  background-image: -moz-linear-gradient(left, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
   background-image: -o-linear-gradient(left, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
   background-image: linear-gradient(90deg, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
   -webkit-background-clip: text;
@@ -593,12 +603,14 @@
 
 @media (max-width: 1024px) {
   .morescreen__title,
-  .bionic__title .i__grad {
+.bionic__title .i__grad {
     font-size: -webkit-calc(40px + 40 * (100vw - 320px) / 704) !important;
+    font-size: -moz-calc(40px + 40 * (100vw - 320px) / 704) !important;
     font-size: calc(40px + 40 * (100vw - 320px) / 704) !important;
   }
   .morescreen__txt {
     font-size: -webkit-calc(24px + 12 * (100vw - 320px) / 704);
+    font-size: -moz-calc(24px + 12 * (100vw - 320px) / 704);
     font-size: calc(24px + 12 * (100vw - 320px) / 704);
   }
 }
@@ -646,8 +658,9 @@
     padding: 50px 0 !important;
   }
   .oled__cont span,
-  .bionic__txt p {
+.bionic__txt p {
     font-size: -webkit-calc(24px + 4 * (100vw - 320px) / 704) !important;
+    font-size: -moz-calc(24px + 4 * (100vw - 320px) / 704) !important;
     font-size: calc(24px + 4 * (100vw - 320px) / 704) !important;
   }
   .epic__flex__txt__item {
@@ -688,11 +701,13 @@
   font-size: 90px;
   font-weight: bold;
   -webkit-transform: translate3d(-12px, 48px, -300px) rotateY(37deg) rotate(13deg) skewX(13deg) scale(1.8);
+     -moz-transform: translate3d(-12px, 48px, -300px) rotateY(37deg) rotate(13deg) skewX(13deg) scale(1.8);
           transform: translate3d(-12px, 48px, -300px) rotateY(37deg) rotate(13deg) skewX(13deg) scale(1.8);
 }
 .campacked__title span strong {
   background-image: -webkit-gradient(linear, left top, right top, from(#2ca2b4), color-stop(24%, #5598de), color-stop(45%, #7f87ff), color-stop(76%, #f65aad), to(#ec3d43));
   background-image: -webkit-linear-gradient(left, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
+  background-image: -moz-linear-gradient(left, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
   background-image: -o-linear-gradient(left, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
   background-image: linear-gradient(90deg, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
   -webkit-background-clip: text;
@@ -707,8 +722,9 @@
     margin-bottom: 50px;
   }
   .campacked__title span,
-  .epic__title {
+.epic__title {
     font-size: -webkit-calc(32px + 48 * (100vw - 320px) / 704) !important;
+    font-size: -moz-calc(32px + 48 * (100vw - 320px) / 704) !important;
     font-size: calc(32px + 48 * (100vw - 320px) / 704) !important;
   }
 }
@@ -792,6 +808,7 @@
   font-size: 24px;
   background-image: -webkit-gradient(linear, left top, right top, from(#2ca2b4), color-stop(24%, #5598de), color-stop(45%, #7f87ff), color-stop(76%, #f65aad), to(#ec3d43));
   background-image: -webkit-linear-gradient(left, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
+  background-image: -moz-linear-gradient(left, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
   background-image: -o-linear-gradient(left, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
   background-image: linear-gradient(90deg, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
   -webkit-background-clip: text;
@@ -881,20 +898,22 @@
 
 @media (max-width: 1024px) {
   .maincamera,
-  .maincamera__txt,
-  .ultrawide {
+.maincamera__txt,
+.ultrawide {
     padding-top: 50px;
   }
   .epic__flex__txt__item span {
     font-size: -webkit-calc(24px + 4 * (100vw - 320px) / 704);
+    font-size: -moz-calc(24px + 4 * (100vw - 320px) / 704);
     font-size: calc(24px + 4 * (100vw - 320px) / 704);
   }
   .maincamera__flex__txt {
     padding-right: 20px;
   }
   .maincamera p,
-  .ultrawide p {
+.ultrawide p {
     font-size: -webkit-calc(24px + 4 * (100vw - 320px) / 704);
+    font-size: -moz-calc(24px + 4 * (100vw - 320px) / 704);
     font-size: calc(24px + 4 * (100vw - 320px) / 704);
   }
 }
@@ -981,12 +1000,13 @@
 
 @media (max-width: 1024px) {
   .trutone,
-  .faster {
+.faster {
     padding-top: 50px !important;
   }
   .trutone__abs span,
-  .faster__txt span {
+.faster__txt span {
     font-size: -webkit-calc(32px + 8 * (100vw - 320px) / 704) !important;
+    font-size: -moz-calc(32px + 8 * (100vw - 320px) / 704) !important;
     font-size: calc(32px + 8 * (100vw - 320px) / 704) !important;
   }
 }
@@ -1040,6 +1060,7 @@
 .faster__txt span {
   background-image: -webkit-gradient(linear, left top, right top, from(#2ca2b4), color-stop(24%, #5598de), color-stop(45%, #7f87ff), color-stop(76%, #f65aad), to(#ec3d43));
   background-image: -webkit-linear-gradient(left, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
+  background-image: -moz-linear-gradient(left, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
   background-image: -o-linear-gradient(left, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
   background-image: linear-gradient(90deg, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
   -webkit-background-clip: text;
@@ -1137,6 +1158,7 @@
 .i__grad {
   background-image: -webkit-gradient(linear, left top, right top, from(#2ca2b4), color-stop(24%, #5598de), color-stop(45%, #7f87ff), color-stop(76%, #f65aad), to(#ec3d43));
   background-image: -webkit-linear-gradient(left, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
+  background-image: -moz-linear-gradient(left, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
   background-image: -o-linear-gradient(left, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
   background-image: linear-gradient(90deg, #2ca2b4, #5598de 24%, #7f87ff 45%, #f65aad 76%, #ec3d43);
   -webkit-background-clip: text;

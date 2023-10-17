@@ -271,6 +271,7 @@
   text-align: center;
   color: #fff;
   -webkit-transform: translateX(12%);
+     -moz-transform: translateX(12%);
       -ms-transform: translateX(12%);
        -o-transform: translateX(12%);
           transform: translateX(12%);
@@ -311,9 +312,9 @@
 }
 @media (max-width: 812px) {
   #mirta .result .result__logo,
-  #mirta .hot .hot__logo,
-  #mirta .hair .hair__logo,
-  #mirta .design .design__logo {
+#mirta .hot .hot__logo,
+#mirta .hair .hair__logo,
+#mirta .design .design__logo {
     max-width: 17%;
   }
   #mirta .result {
@@ -391,16 +392,17 @@
   }
   #mirta .design .design__txt {
     -webkit-transform: unset;
+       -moz-transform: unset;
         -ms-transform: unset;
          -o-transform: unset;
             transform: unset;
   }
   #mirta .design .design__txt h2::after,
-  #mirta .result .result__cont .result__txt h2::after {
+#mirta .result .result__cont .result__txt h2::after {
     display: none;
   }
   #mirta .hair .hair__img,
-  #mirta .design .design__img {
+#mirta .design .design__img {
     padding-right: 0;
   }
 }

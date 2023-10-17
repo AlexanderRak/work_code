@@ -272,6 +272,7 @@ span.tx-uppercase {
   margin: 0 auto;
   background: #fff;
   -webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
           border-radius: 20px;
   margin-bottom: 100px;
   overflow: hidden;
@@ -322,10 +323,12 @@ span.tx-uppercase {
   height: 24px;
   margin: 0 auto;
   -webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
           border-radius: 20px;
   overflow: hidden;
   background: -webkit-gradient(linear, left top, right top, from(#FF671F), color-stop(5%, rgb(255, 255, 255)));
   background: -webkit-linear-gradient(left, #FF671F 0%, rgb(255, 255, 255) 5%);
+  background: -moz-linear-gradient(left, #FF671F 0%, rgb(255, 255, 255) 5%);
   background: -o-linear-gradient(left, #FF671F 0%, rgb(255, 255, 255) 5%);
   background: linear-gradient(to right, #FF671F 0%, rgb(255, 255, 255) 5%);
 }
@@ -333,6 +336,7 @@ span.tx-uppercase {
 .birthday-comfy-section2__collectedintotal-line-progress-done {
   background: #FF671F;
   -webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
           border-radius: 20px;
   height: 100%;
   position: absolute;
@@ -366,17 +370,21 @@ span.tx-uppercase {
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
        -o-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background: #000000;
   -webkit-border-radius: 40px;
+     -moz-border-radius: 40px;
           border-radius: 40px;
   padding: 60px 48px;
   -webkit-animation-name: animatetop;
+     -moz-animation-name: animatetop;
        -o-animation-name: animatetop;
           animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
+     -moz-animation-duration: 0.4s;
        -o-animation-duration: 0.4s;
           animation-duration: 0.4s;
   width: 100%;
@@ -385,6 +393,17 @@ span.tx-uppercase {
 }
 
 @-webkit-keyframes animatetop {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes animatetop {
   from {
     top: 0;
     opacity: 0;
@@ -432,6 +451,7 @@ span.tx-uppercase {
 .myBtn1 {
   background: #000000;
   -webkit-border-radius: 70px;
+     -moz-border-radius: 70px;
           border-radius: 70px;
   color: #fff;
   max-width: 573px;
@@ -446,6 +466,7 @@ span.tx-uppercase {
   cursor: pointer;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
+  -moz-transition: 0.3s;
   transition: 0.3s;
   line-height: 1;
   position: relative;
@@ -453,6 +474,7 @@ span.tx-uppercase {
 }
 .myBtn1:hover {
   -webkit-box-shadow: 0 0 5px 0px #000;
+     -moz-box-shadow: 0 0 5px 0px #000;
           box-shadow: 0 0 5px 0px #000;
 }
 
@@ -475,6 +497,7 @@ span.tx-uppercase {
   height: auto;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
+  -moz-transition: 0.3s;
   transition: 0.3s;
   color: #000;
   text-align: center;
@@ -482,6 +505,7 @@ span.tx-uppercase {
   background: #FFFFFF;
   border: 2px solid #FFFFFF;
   -webkit-border-radius: 34px;
+     -moz-border-radius: 34px;
           border-radius: 34px;
   margin-bottom: 16px;
   font-size: 20px;
@@ -492,6 +516,7 @@ span.tx-uppercase {
 }
 .modal-content__link a:hover {
   -webkit-box-shadow: 0 0 9px 0px #fff;
+     -moz-box-shadow: 0 0 9px 0px #fff;
           box-shadow: 0 0 9px 0px #fff;
 }
 
@@ -504,6 +529,7 @@ span.tx-uppercase {
   background-image: url(https://cdn.comfy.ua/media/x/img2/birthday_comfy/nwviber.png);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
+     -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
   width: 25px;
@@ -534,17 +560,21 @@ span.tx-uppercase {
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
        -o-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background: #fff;
   -webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
           border-radius: 20px;
   padding: 68px 62px;
   -webkit-animation-name: animatetop;
+     -moz-animation-name: animatetop;
        -o-animation-name: animatetop;
           animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
+     -moz-animation-duration: 0.4s;
        -o-animation-duration: 0.4s;
           animation-duration: 0.4s;
   width: 100%;
@@ -576,6 +606,7 @@ span.tx-uppercase {
 .myBtn2 {
   background: #000000;
   -webkit-border-radius: 70px;
+     -moz-border-radius: 70px;
           border-radius: 70px;
   color: #fff;
   max-width: 414px;
@@ -586,6 +617,7 @@ span.tx-uppercase {
   cursor: pointer;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
+  -moz-transition: 0.3s;
   transition: 0.3s;
   line-height: 1;
   border: 0;
@@ -603,6 +635,7 @@ span.tx-uppercase {
   background-image: url(https://cdn.comfy.ua/media/x/img2/birthday_comfy/img8.svg);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
+     -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
   width: 32px;
@@ -613,6 +646,7 @@ span.tx-uppercase {
 }
 .myBtn2:hover {
   -webkit-box-shadow: 0 0 5px 0px #000;
+     -moz-box-shadow: 0 0 5px 0px #000;
           box-shadow: 0 0 5px 0px #000;
 }
 
@@ -656,6 +690,7 @@ span.tx-uppercase {
   cursor: pointer;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
+  -moz-transition: 0.3s;
   transition: 0.3s;
   margin: 0;
   padding: 0;
@@ -665,10 +700,12 @@ span.tx-uppercase {
 .modal-content__link2 a img, .modal-content__link2 button img {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
+  -moz-transition: 0.3s;
   transition: 0.3s;
 }
 .modal-content__link2 a:hover img, .modal-content__link2 button:hover img {
   -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
       -ms-transform: scale(1.1);
        -o-transform: scale(1.1);
           transform: scale(1.1);
@@ -692,17 +729,21 @@ span.tx-uppercase {
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
        -o-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background: #000000;
   -webkit-border-radius: 40px;
+     -moz-border-radius: 40px;
           border-radius: 40px;
   padding: 60px 48px;
   -webkit-animation-name: animatetop;
+     -moz-animation-name: animatetop;
        -o-animation-name: animatetop;
           animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
+     -moz-animation-duration: 0.4s;
        -o-animation-duration: 0.4s;
           animation-duration: 0.4s;
   width: 100%;
@@ -741,8 +782,10 @@ span.tx-uppercase {
   text-align: center;
   background: #FF671F;
   -webkit-box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+     -moz-box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
   -webkit-border-radius: 70px;
+     -moz-border-radius: 70px;
           border-radius: 70px;
   font-weight: 700;
   font-size: 24px;
@@ -756,12 +799,14 @@ span.tx-uppercase {
   cursor: pointer;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
+  -moz-transition: 0.3s;
   transition: 0.3s;
   line-height: 1;
   border: 0;
 }
 .myBtn3:hover {
   -webkit-box-shadow: 0px 4px 14px rgb(235, 88, 19);
+     -moz-box-shadow: 0px 4px 14px rgb(235, 88, 19);
           box-shadow: 0px 4px 14px rgb(235, 88, 19);
 }
 
@@ -784,6 +829,7 @@ span.tx-uppercase {
   height: auto;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
+  -moz-transition: 0.3s;
   transition: 0.3s;
   color: #000;
   text-align: center;
@@ -791,6 +837,7 @@ span.tx-uppercase {
   background: #FFFFFF;
   border: 2px solid #FFFFFF;
   -webkit-border-radius: 34px;
+     -moz-border-radius: 34px;
           border-radius: 34px;
   margin-bottom: 16px;
   font-size: 20px;
@@ -801,6 +848,7 @@ span.tx-uppercase {
 }
 .modal-content__link a:hover {
   -webkit-box-shadow: 0 0 9px 0px #fff;
+     -moz-box-shadow: 0 0 9px 0px #fff;
           box-shadow: 0 0 9px 0px #fff;
 }
 
@@ -813,6 +861,7 @@ span.tx-uppercase {
   background-image: url(https://cdn.comfy.ua/media/x/img2/birthday_comfy/nwviber.png);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
+     -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
   width: 25px;
@@ -886,6 +935,7 @@ span.tx-uppercase {
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: contain;
+     -moz-background-size: contain;
        -o-background-size: contain;
           background-size: contain;
   max-width: 812px;
@@ -913,15 +963,18 @@ span.tx-uppercase {
   background: #FFFFFF;
   border: 2px solid #FFFFFF;
   -webkit-border-radius: 34px;
+     -moz-border-radius: 34px;
           border-radius: 34px;
   margin-bottom: 16px;
   overflow: hidden;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
+  -moz-transition: 0.3s;
   transition: 0.3s;
 }
 .accordion-wrap:hover {
   -webkit-box-shadow: 0 0 9px 0px #fff;
+     -moz-box-shadow: 0 0 9px 0px #fff;
           box-shadow: 0 0 9px 0px #fff;
 }
 
@@ -958,6 +1011,7 @@ span.tx-uppercase {
   background-image: url(https://cdn.comfy.ua/media/x/img2/birthday_comfy/line1.svg);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
+     -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
   width: 19px;
@@ -978,6 +1032,7 @@ span.tx-uppercase {
   overflow: hidden;
   -webkit-transition: max-height 0.2s ease-out;
   -o-transition: max-height 0.2s ease-out;
+  -moz-transition: max-height 0.2s ease-out;
   transition: max-height 0.2s ease-out;
 }
 .panel p {
@@ -1056,15 +1111,19 @@ span.tx-uppercase {
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
        -o-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
           border-radius: 8px;
   -webkit-animation-name: animatetop;
+     -moz-animation-name: animatetop;
        -o-animation-name: animatetop;
           animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
+     -moz-animation-duration: 0.4s;
        -o-animation-duration: 0.4s;
           animation-duration: 0.4s;
   -webkit-box-sizing: border-box;
@@ -1152,6 +1211,7 @@ span.tx-uppercase {
 .enter-phone-popup__input {
   border: 1px solid #E5E5E5;
   -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
           border-radius: 4px;
   margin-top: 8px;
   width: 100%;
@@ -1241,6 +1301,7 @@ span.tx-uppercase {
 .enter-bonus-sum-popup__input {
   border: 1px solid #E5E5E5;
   -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
           border-radius: 4px;
   margin-top: 8px;
   padding: 10px 12px;
@@ -1310,8 +1371,10 @@ span.tx-uppercase {
   /* border-color: rgb(55, 148, 36); */
   border-color: "#E5E5E5";
   -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
           border-radius: 2px;
   -webkit-box-shadow: none;
+     -moz-box-shadow: none;
           box-shadow: none;
 }
 
@@ -1320,6 +1383,7 @@ span.tx-uppercase {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTczLjg5OCA0MzkuNDA0bC0xNjYuNC0xNjYuNGMtOS45OTctOS45OTctOS45OTctMjYuMjA2IDAtMzYuMjA0bDM2LjIwMy0zNi4yMDRjOS45OTctOS45OTggMjYuMjA3LTkuOTk4IDM2LjIwNCAwTDE5MiAzMTIuNjkgNDMyLjA5NSA3Mi41OTZjOS45OTctOS45OTcgMjYuMjA3LTkuOTk3IDM2LjIwNCAwbDM2LjIwMyAzNi4yMDRjOS45OTcgOS45OTcgOS45OTcgMjYuMjA2IDAgMzYuMjA0bC0yOTQuNCAyOTQuNDAxYy05Ljk5OCA5Ljk5Ny0yNi4yMDcgOS45OTctMzYuMjA0LS4wMDF6Ii8+PC9zdmc+");
   background-repeat: no-repeat;
   -webkit-background-size: 10px 10px;
+     -moz-background-size: 10px 10px;
        -o-background-size: 10px 10px;
           background-size: 10px 10px;
   background-position: center center;
@@ -1358,6 +1422,7 @@ span.tx-uppercase {
   line-height: 18px;
   background-color: #43B02A;
   -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
           border-radius: 8px;
   line-height: 40px;
   color: #FFFFFF;
@@ -1591,6 +1656,7 @@ span.tx-uppercase {
     background-position: 4% 100%;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
+       -moz-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
     width: 100%;
@@ -1669,12 +1735,14 @@ span.tx-uppercase {
   .modal-content {
     top: initial;
     -webkit-transform: translate(-50%, 0);
+       -moz-transform: translate(-50%, 0);
         -ms-transform: translate(-50%, 0);
          -o-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
     bottom: 0;
     height: auto;
     -webkit-border-radius: 40px 40px 0 0;
+       -moz-border-radius: 40px 40px 0 0;
             border-radius: 40px 40px 0 0;
     padding: 24px 24px 38px 24px;
     max-width: 100%;
@@ -1682,12 +1750,14 @@ span.tx-uppercase {
   .modal-content2 {
     top: initial;
     -webkit-transform: translate(-50%, 0);
+       -moz-transform: translate(-50%, 0);
         -ms-transform: translate(-50%, 0);
          -o-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
     bottom: 0;
     height: auto;
     -webkit-border-radius: 20px 20px 0 0;
+       -moz-border-radius: 20px 20px 0 0;
             border-radius: 20px 20px 0 0;
     padding: 24px 24px 38px 24px;
     max-width: 100%;
@@ -1695,12 +1765,14 @@ span.tx-uppercase {
   .modal-content3 {
     top: initial;
     -webkit-transform: translate(-50%, 0);
+       -moz-transform: translate(-50%, 0);
         -ms-transform: translate(-50%, 0);
          -o-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
     bottom: 0;
     height: auto;
     -webkit-border-radius: 40px 40px 0 0;
+       -moz-border-radius: 40px 40px 0 0;
             border-radius: 40px 40px 0 0;
     padding: 24px 24px 38px 24px;
     max-width: 100%;
@@ -1711,12 +1783,14 @@ span.tx-uppercase {
     top: -19px;
     left: 50%;
     -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
          -o-transform: translateX(-50%);
             transform: translateX(-50%);
     background: #000;
     padding: 5px;
     -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
             border-radius: 50%;
   }
   .close3 {
@@ -1725,12 +1799,14 @@ span.tx-uppercase {
     top: -19px;
     left: 50%;
     -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
          -o-transform: translateX(-50%);
             transform: translateX(-50%);
     background: #000;
     padding: 5px;
     -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
             border-radius: 50%;
   }
   .modal-content__span span {
@@ -1747,6 +1823,16 @@ span.tx-uppercase {
     font-size: 20px;
   }
   @-webkit-keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes animatetop {
     from {
       bottom: -300px;
       opacity: 0;
@@ -1838,12 +1924,14 @@ span.tx-uppercase {
     left: 50%;
     top: -19px;
     -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
          -o-transform: translateX(-50%);
             transform: translateX(-50%);
     background: #fff;
     padding: 5px;
     -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
             border-radius: 50%;
     right: initial;
   }
@@ -1962,6 +2050,7 @@ span.tx-uppercase {
     top: 0;
     left: 0;
     -webkit-transform: translate(0%, 0);
+       -moz-transform: translate(0%, 0);
         -ms-transform: translate(0%, 0);
          -o-transform: translate(0%, 0);
             transform: translate(0%, 0);
@@ -1972,6 +2061,7 @@ span.tx-uppercase {
     top: 0;
     left: 0;
     -webkit-transform: translate(0%, 0);
+       -moz-transform: translate(0%, 0);
         -ms-transform: translate(0%, 0);
          -o-transform: translate(0%, 0);
             transform: translate(0%, 0);
@@ -1982,6 +2072,7 @@ span.tx-uppercase {
     top: 0;
     left: 0;
     -webkit-transform: translate(0%, 0);
+       -moz-transform: translate(0%, 0);
         -ms-transform: translate(0%, 0);
          -o-transform: translate(0%, 0);
             transform: translate(0%, 0);
@@ -1989,6 +2080,16 @@ span.tx-uppercase {
     margin: 0 auto;
   }
   @-webkit-keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes animatetop {
     from {
       bottom: -300px;
       opacity: 0;

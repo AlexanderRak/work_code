@@ -35,6 +35,7 @@ html {
   top: unset !important;
   bottom: 50%;
   -webkit-transform: translateY(50%);
+     -moz-transform: translateY(50%);
       -ms-transform: translateY(50%);
        -o-transform: translateY(50%);
           transform: translateY(50%);
@@ -73,13 +74,16 @@ html {
 #form_container_one .cms-content_pearl, #form_container_two .cms-content_pearl, #form_container_three .cms-content_pearl {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
           border-radius: 10px;
 }
 #form_container_one .cms-content_pearl .btn_green, #form_container_two .cms-content_pearl .btn_green, #form_container_three .cms-content_pearl .btn_green {
   background: #43B02A;
   -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
           border-radius: 30px;
 }
 #form_container_one .cms-content_pearl .cms-content, #form_container_two .cms-content_pearl .cms-content, #form_container_three .cms-content_pearl .cms-content {
@@ -190,6 +194,7 @@ html {
   background-image: url(https://cdn.comfy.ua/media/x/img/cartfree/str.svg);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
+     -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
   width: 93px;
@@ -198,6 +203,7 @@ html {
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
        -o-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -220,6 +226,7 @@ html {
 #cartfree .tabcontent {
   padding-top: 40px;
   -webkit-animation: fadeEffect 1s;
+     -moz-animation: fadeEffect 1s;
        -o-animation: fadeEffect 1s;
           animation: fadeEffect 1s;
   color: #fff;
@@ -496,6 +503,7 @@ html {
 #cartfree .tabcontent .profile .profile__flex .profile__cal:nth-of-type(2) .profile__table {
   width: 763px;
   -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
           border-radius: 4px;
   background-color: #E4ECF7;
   -webkit-box-sizing: border-box;
@@ -691,6 +699,14 @@ html {
     opacity: 1;
   }
 }
+@-moz-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @-o-keyframes fadeEffect {
   from {
     opacity: 0;
@@ -728,6 +744,7 @@ html {
   display: block;
   background: #E4ECF7;
   -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
           border-radius: 4px;
   width: 100%;
   min-height: 140px;
@@ -735,6 +752,7 @@ html {
   padding: 0;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
+  -moz-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -768,6 +786,7 @@ html {
   cursor: default;
   position: relative;
   -webkit-animation: blueeffect 0.5s;
+     -moz-animation: blueeffect 0.5s;
        -o-animation: blueeffect 0.5s;
           animation: blueeffect 0.5s;
 }
@@ -778,19 +797,30 @@ html {
   height: 30px;
   background-color: #4C6FFF;
   -webkit-border-bottom-left-radius: 5px;
+     -moz-border-radius-bottomleft: 5px;
           border-bottom-left-radius: 5px;
   position: absolute;
   bottom: 10px;
   right: 50%;
   -webkit-transform: translate(0, 50%) rotate(-45deg);
+     -moz-transform: translate(0, 50%) rotate(-45deg);
       -ms-transform: translate(0, 50%) rotate(-45deg);
        -o-transform: translate(0, 50%) rotate(-45deg);
           transform: translate(0, 50%) rotate(-45deg);
   -webkit-animation: blueeffect 0.5s;
+     -moz-animation: blueeffect 0.5s;
        -o-animation: blueeffect 0.5s;
           animation: blueeffect 0.5s;
 }
 @-webkit-keyframes blueeffect {
+  from {
+    background-color: #fff;
+  }
+  to {
+    background-color: #4C6FFF;
+  }
+}
+@-moz-keyframes blueeffect {
   from {
     background-color: #fff;
   }
@@ -819,6 +849,7 @@ html {
 }
 #cartfree .tablinks.active:hover {
   -webkit-box-shadow: inherit;
+     -moz-box-shadow: inherit;
           box-shadow: inherit;
 }
 #cartfree .tablinks.active:nth-child(1) .tablinks-content__img::before {
@@ -832,6 +863,7 @@ html {
 }
 #cartfree .tablinks:hover {
   -webkit-box-shadow: inset 0 0 3px 0px #605e5e;
+     -moz-box-shadow: inset 0 0 3px 0px #605e5e;
           box-shadow: inset 0 0 3px 0px #605e5e;
 }
 #cartfree .tablinks-content {
@@ -933,6 +965,7 @@ html {
     width: 44px;
     height: 30px;
     -webkit-background-size: contain;
+       -moz-background-size: contain;
          -o-background-size: contain;
             background-size: contain;
     background-repeat: no-repeat;
@@ -1009,7 +1042,7 @@ html {
     padding-left: 0;
   }
   #cartfree .tabcontent h3,
-  #cartfree .tabcontent span.blue {
+#cartfree .tabcontent span.blue {
     padding: 20px;
   }
   #cartfree .tabcontent {
@@ -1122,12 +1155,13 @@ html {
     width: 148px;
     height: 175.69px;
     -webkit-background-size: contain;
+       -moz-background-size: contain;
          -o-background-size: contain;
             background-size: contain;
     padding: 8px 12px 5px 12px;
   }
   #cartfree .tabcontent .detail .detail__list li:nth-of-type(2),
-  #cartfree .tabcontent .detail .detail__list li:nth-of-type(5) {
+#cartfree .tabcontent .detail .detail__list li:nth-of-type(5) {
     margin: 0;
   }
   #cartfree .tabcontent .detail .detail__list li:nth-of-type(n+4) {
@@ -1216,6 +1250,7 @@ html {
   #cartfree .tablinks.active::after {
     right: 50%;
     -webkit-transform: translateX(50%) rotate(-45deg);
+       -moz-transform: translateX(50%) rotate(-45deg);
         -ms-transform: translateX(50%) rotate(-45deg);
          -o-transform: translateX(50%) rotate(-45deg);
             transform: translateX(50%) rotate(-45deg);

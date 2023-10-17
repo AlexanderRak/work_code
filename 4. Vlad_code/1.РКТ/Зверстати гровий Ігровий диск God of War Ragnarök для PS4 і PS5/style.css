@@ -169,6 +169,7 @@
   right: 0;
   left: 0;
   background: -webkit-linear-gradient(22deg, rgba(0, 0, 0, 0.4) 25%, rgba(255, 255, 255, 0) 100%);
+  background: -moz-linear-gradient(22deg, rgba(0, 0, 0, 0.4) 25%, rgba(255, 255, 255, 0) 100%);
   background: -o-linear-gradient(22deg, rgba(0, 0, 0, 0.4) 25%, rgba(255, 255, 255, 0) 100%);
   background: linear-gradient(68deg, rgba(0, 0, 0, 0.4) 25%, rgba(255, 255, 255, 0) 100%);
   z-index: 4;
@@ -286,6 +287,7 @@
   .war__wrap {
     height: 92vw;
     -webkit-background-size: cover;
+       -moz-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
   }
@@ -358,6 +360,7 @@
 
 .travel__cal__img {
   -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
           border-radius: 10px;
   overflow: hidden;
 }
@@ -411,6 +414,7 @@
   right: 50%;
   bottom: 45%;
   -webkit-transform: translate(50%, 50%);
+     -moz-transform: translate(50%, 50%);
       -ms-transform: translate(50%, 50%);
        -o-transform: translate(50%, 50%);
           transform: translate(50%, 50%);
@@ -433,23 +437,28 @@
   }
   .war__title {
     font-size: -webkit-calc(24px + 20 * (100vw - 320px) / 881);
+    font-size: -moz-calc(24px + 20 * (100vw - 320px) / 881);
     font-size: calc(24px + 20 * (100vw - 320px) / 881);
   }
   .travel__title {
     font-size: -webkit-calc(26px + 22 * (100vw - 320px) / 881);
+    font-size: -moz-calc(26px + 22 * (100vw - 320px) / 881);
     font-size: calc(26px + 22 * (100vw - 320px) / 881);
   }
   .travel__cal__txt {
     font-size: -webkit-calc(14px + 2 * (100vw - 320px) / 881);
+    font-size: -moz-calc(14px + 2 * (100vw - 320px) / 881);
     font-size: calc(14px + 2 * (100vw - 320px) / 881);
   }
   .travel__cal__txt strong {
     font-size: -webkit-calc(24px + 2 * (100vw - 320px) / 881);
+    font-size: -moz-calc(24px + 2 * (100vw - 320px) / 881);
     font-size: calc(24px + 2 * (100vw - 320px) / 881);
   }
   .wolf__txt,
-  .fight__txt {
+.fight__txt {
     font-size: -webkit-calc(14px + 12 * (100vw - 320px) / 881);
+    font-size: -moz-calc(14px + 12 * (100vw - 320px) / 881);
     font-size: calc(14px + 12 * (100vw - 320px) / 881);
   }
 }
@@ -531,6 +540,7 @@
   }
   .travel__cal__img {
     -webkit-border-radius: unset;
+       -moz-border-radius: unset;
             border-radius: unset;
     margin: 0 -20px;
   }
