@@ -18,7 +18,7 @@
                   </div>
                   <div class="modern__cont">
                      <div class="modern__img">
-                        <img src="https://cdn.comfy.ua/media/x/img3/wmf660/1new.png" alt="" />
+                        <img src="https://cdn.comfy.ua/media/x/img3/wmf660/1.png" alt="" />
                      </div>
                      <div class="modern__abs">
                         <ul class="modern__list">
@@ -956,7 +956,7 @@
             window.addEventListener("scroll", () => {
                let isOpacity = Number(cleanAbsTwo.style.opacity);
 
-               if (isOpacity === 1 && !isTriggerCreated) {
+               if (isOpacity >= 0.6 && !isTriggerCreated) {
                   ScrollTrigger.create(animatedSvgTwo);
                   isTriggerCreated = true;
                } else {
