@@ -18,7 +18,7 @@
                   </div>
                   <div class="modern__cont">
                      <div class="modern__img">
-                        <img src="https://cdn.comfy.ua/media/x/img3/wmf660/1.png" alt="" />
+                        <img src="https://cdn.comfy.ua/media/x/img3/wmf660/1new.png" alt="" />
                      </div>
                      <div class="modern__abs">
                         <ul class="modern__list">
@@ -937,7 +937,7 @@
 
             const animatedSvgTwo = {
                trigger: ".clean__abs",
-               start: "top center",
+               start: "top top",
                end: "bottom -100%",
                id: "svg-two",
                onToggle: ({isActive}) => {
@@ -947,16 +947,16 @@
                      removeAnimation(svgTwo);
                   }
                },
-               scrub: true,
+               // scrub: true,
             };
 
-            ScrollTrigger.create(animatedSvgTwo);
             let isTriggerCreated = false;
+            ScrollTrigger.create(animatedSvgTwo);
 
             window.addEventListener("scroll", () => {
                let isOpacity = Number(cleanAbsTwo.style.opacity);
 
-               if (isOpacity >= 0.6 && !isTriggerCreated) {
+               if (isOpacity >= 0.7 && !isTriggerCreated) {
                   ScrollTrigger.create(animatedSvgTwo);
                   isTriggerCreated = true;
                } else {
