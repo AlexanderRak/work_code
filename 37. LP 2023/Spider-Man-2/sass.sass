@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+body
+   padding: 0
+   margin: 0
+#spiderman
+   display: block
+   margin: 0 auto
+   max-width: 1366px
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #220002
+   position: relative
+   font-family: 'Roboto', sans-serif
+   img
+      max-width: 100%
+      display: block
+      margin: 0 auto
+   h2
+      color: #FFF
+      font-family: 'Roboto', sans-serif
+      font-size: 36px
+      font-weight: 700
+      line-height: 1.3
+      text-align: left
+      margin: 0
+      padding: 0
+   h3
+      color: #FFF
+      font-family: 'Roboto', sans-serif
+      font-size: 26px
+      font-weight: 700
+      line-height: normal
+      text-align: left
+      margin: 0
+      padding: 0
+   p
+      font-size: 18px
+      color: #fff
+      text-align: left
+      line-height: 1.3
+      margin: 0
+      padding: 0
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+.breadcrumbs
+   display: none
+span.word-wrap
+   display: block
+   word-wrap: break-word
+span.fw-bold
+   font-weight: bold
+span.tx-uppercase
+   text-transform: uppercase
+// default
+.spiderman-header
+   position: relative
+   margin-bottom: 100px
+.spiderman-header__bgrd
+   background-image: url(https://cdn.comfy.ua/media/x/img3/spdm/img1.png)
+   background-position: left center
+   background-repeat: no-repeat
+   background-size: cover
+   height: 581px
+   width: 100%
+   max-width: 1366px
+.spiderman-header__text
+   position: absolute
+   top: 50%
+   transform: translateY(-50%)
+   right: 60px
+   max-width: 582px
+.spiderman-header__h2
+   padding-bottom: 34px
+.spiderman-row
+   padding-bottom: 50px
+.spiderman-flex
+   display: flex
+   flex-direction: row
+   align-items: center
+   &.flexrev
+      flex-direction: row-reverse
+      .spiderman-row__text
+         padding: 0 60px 0 80px
+.spiderman-row__item
+   &:last-child
+      flex: 1 0 auto
+.spiderman-row__text
+   padding: 0 80px 0 60px
+.spiderman-row__line
+   width: 250px
+   height: 2px
+   background: #fff
+.spiderman-row__h3
+   padding: 20px 0
+.swiper-slide
+   display: block
+   max-width: 678px
+.spiderman-slider
+   margin-bottom: 50px
+#spiderman
+   .swiper-button-prev, .swiper-button-next
+      background: #FFF
+      width: 100px
+      height: 100px
+      border-radius: 50%
+   .swiper-button-prev
+      left: 60px
+      top: 50%
+      transform: translateY(-50%)
+      margin-top: 0
+      &::after
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img3/spdm/left_str.svg)
+         background-size: cover
+         background-repeat: no-repeat
+         width: 38px
+         height: 64px
+   .swiper-button-next
+      right: 60px
+      top: 50%
+      transform: translateY(-50%)
+      margin-top: 0
+      &::after
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img3/spdm/right_str.svg)
+         background-size: cover
+         background-repeat: no-repeat
+         width: 38px
+         height: 64px
+.swiper-slide.swiper-slide-prev,
+.swiper-slide.swiper-slide-next
+   opacity: 0.8
+// media
+@media (max-width: 1024px)
+   .spiderman-header__bgrd
+      background-position: 60% 100%
+   .spiderman-row__item
+      flex: 1 1 0
+   .spiderman-row__item:last-child
+      flex: 1
+   .spiderman-row__text
+      padding: 0 30px 0 20px
+   .spiderman-flex.flexrev .spiderman-row__text
+      padding: 0 20px 0 30px
+   .swiper-slide
+      max-width: 590px
+   #spiderman .swiper-button-prev, #spiderman .swiper-button-next
+      width: 60px
+      height: 60px
+   #spiderman .swiper-button-next::after, #spiderman .swiper-button-prev::after
+      width: 18px
+      height: 30px
+@media (max-width: 812px)
+   .spiderman-header__text
+      max-width: 490px
+@media (max-width: 480px)
+   #spiderman h2
+      font-size: 24px
+   #spiderman p
+      font-size: 16px
+   .spiderman-header__bgrd
+      background-position: 15% 100%
+      height: 418px
+   .spiderman-header__text
+      position: relative
+      top: 0%
+      transform: translateY(0)
+      right: 0px
+      max-width: 490px
+      padding: 0 20px
+   .spiderman-header__h2
+      padding-bottom: 20px
+   .spiderman-flex
+      flex-direction: column-reverse
+   .spiderman-flex.flexrev
+      flex-direction: column-reverse
+   .spiderman-row__text
+      padding: 0 20px 0 20px
+   .spiderman-flex.flexrev .spiderman-row__text
+      padding: 0 20px 0 20px
+   .spiderman-row__item:last-child
+      padding-left: 20px
+      padding-right: 0
+      padding-bottom: 30px
+   .spiderman-flex.flexrev  .spiderman-row__item:last-child
+      padding-left: 0
+      padding-right: 20px
+      padding-bottom: 30px
+   .spiderman-header
+      margin-bottom: 50px
+   .swiper-slide
+      max-width: 85%
+   #spiderman .swiper-button-prev, #spiderman .swiper-button-next
+      display: none

@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#lpopen {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  background: #43B02A;
+  font-family: "Roboto", sans-serif;
+}
+#lpopen p {
+  font-size: 14px;
+  text-align: left;
+  color: #fff;
+  font-weight: 400;
+  display: block;
+  padding: 0;
+  margin: 0;
+  line-height: 20px;
+}
+#lpopen img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.main-container.page {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.breadcrumbs {
+  display: none;
+}
+
+.lpopen-container {
+  max-width: 1295px;
+  margin: 0 auto;
+  position: relative;
+  padding: 70px 20px 130px 20px;
+  z-index: 5;
+}
+
+.lpopen__img1 {
+  padding: 80px 0;
+}
+
+.lpopen__img3 {
+  padding: 45px 0;
+}
+
+.lpopen-bgrd {
+  background-image: url(https://cdn.comfy.ua/media/x/img3/oazis/bgrd.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  width: 100%;
+  height: 900px;
+  position: absolute;
+  top: 56%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 4;
+}
+
+@media (max-width: 812px) {
+  .lpopen-bgrd {
+    top: 55%;
+  }
+  .lpopen-container {
+    padding: 40px 20px 45px 20px;
+  }
+  .lpopen__logo {
+    max-width: 335px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 480px) {
+  .lpopen__logo {
+    max-width: 230px;
+    margin: 0 auto;
+  }
+  .lpopen__img1 {
+    padding: 48px 0 50px 0;
+  }
+  .lpopen__img3 {
+    padding: 15px 0;
+  }
+  .lpopen-bgrd {
+    top: 48%;
+    height: 523px;
+  }
+  #lpopen p {
+    max-width: 284px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,687 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@3.2.31/dist/vue.global.prod.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style>
+
+</style>
+
+<div id="appQuestionnaire">
+
+   <div class="appQuestionnaire__img-pos1">
+      <img src="https://cdn.comfy.ua/media/x/img3/asset2.png" alt="">
+   </div>
+   <div class="appQuestionnaire__img-pos2">
+      <img src="https://cdn.comfy.ua/media/x/img3/asset3.png" alt="">
+   </div>
+
+   <div class="appQuestionnaire-wrap">
+
+      <div class="appQuestionnaire-container">
+
+         <div class="appQuestionnaire-loader" v-if="isLoading">
+            <div class="loader"></div>
+         </div>
+
+         <div class="appQuestionnaire-content" v-else>
+
+            <div class="appQuestionnaire-content__status" v-if="chekStatus">
+               <div class="appQuestionnaire-working" v-if="!doneSubmite">
+                  <div class="heading">
+                     <div class="heading-surveyname">
+                        <div class="heading-surveyname__name">
+                           <h2> {{ rezultFetch.touchpoint_name }} </h2>
+                        </div>
+                        <div class="heading-surveyname__description">
+                           <p> {{ rezultFetch.touchpoint_text }} </p>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- touchpoint: 1 - "radio" "checkbox" "checkbox" "textarea" -->
+                  <div class="questions-contant touchpoint1" v-if="rezultFetch.question_1_type == 'radio' &&
+                           rezultFetch.question_2_1_type == 'checkbox' &&
+                           rezultFetch.question_2_2_type == 'checkbox' &&
+                           rezultFetch.question_3_type == 'textarea'
+                        ">
+
+                     <transition-group name="fade" tag="div" class="questions-container">
+                        <div :key="currentQuestion" class="questions-contant__item question-1" v-if="currentQuestion === 1">
+                           <div class="questions-contant__name">
+                              <div class="questions-contant__coutn">1</div>
+                              <div class="questions-contant__text">
+                                 {{ rezultFetch.question_1 }}
+                              </div>
+                           </div>
+                           <div class="questions-contant__answers-item custom-radio" v-for="(answers_1, index) in rezultFetch.answers_1">
+                              <input type="radio" :id="'radio1-' + index" :value="answers_1.value" :name="'question1'" v-model="selectedAnswers.question1">
+                              <label :for="'radio1-' + index">
+                                 <span class="radio-text"> {{ answers_1.text }} </span>
+                              </label>
+                           </div>
+                        </div>
+
+                        <div :key="currentQuestion" class="questions-contant__item question-2-1" v-if="showQuestion2_1 && currentQuestion === 2">
+                           <div class="questions-contant__name">
+                              <div class="questions-contant__coutn">2</div>
+                              <div class="questions-contant__text">
+                                 {{ rezultFetch.question_2_1 }}
+                              </div>
+                           </div>
+                           <div class="questions-contant__answers-item custom-checkbox" v-for="(answers_2_1, index) in rezultFetch.answers_2_1">
+                              <input type="checkbox" :id="'checkbox2-1-' + index" :name="'question2_1'" :value="answers_2_1.value" v-model="selectedAnswers.question2_1">
+                              <label :for="'checkbox2-1-' + index" :class="{ checked: selectedAnswers.question2_1.includes(answers_2_1.text) }">
+                                 <span class="checkbox-text"> {{ answers_2_1.text }} </span>
+                              </label>
+                           </div>
+                        </div>
+                        <div :key="currentQuestion" class="questions-contant__item question-2-2" v-if="showQuestion2_2 && currentQuestion === 2">
+                           <div class="questions-contant__name">
+                              <div class="questions-contant__coutn">2</div>
+                              <div class="questions-contant__text">
+                                 {{ rezultFetch.question_2_2 }}
+                              </div>
+                           </div>
+                           <div class="questions-contant__answers-item custom-checkbox" v-for="(answers_2_2, index) in rezultFetch.answers_2_2">
+                              <input type="checkbox" :id="'checkbox2-2-' + index" :name="'question2_2'" :value="answers_2_2.value" v-model="selectedAnswers.question2_2">
+                              <label :for="'checkbox2-2-' + index" :class="{ checked: selectedAnswers.question2_2.includes(answers_2_2.text) }">
+                                 <span class="checkbox-text"> {{ answers_2_2.text }} </span>
+                              </label>
+                           </div>
+                        </div>
+
+                        <div :key="currentQuestion" class="questions-contant__item question-3 question-3__textarea" v-if="isChekedQuestions && currentQuestion === 3">
+                           <div class="questions-contant__name">
+                              <div class="questions-contant__coutn">3</div>
+                              <div class="questions-contant__text">
+                                 {{ rezultFetch.question_3 }}
+                              </div>
+                           </div>
+                           <div class="questions-contant__answers-item">
+                              <textarea class="questions-contant__answers-item__textarea" placeholder="Ваше повідомлення..." v-model="selectedAnswers.question3"></textarea>
+                           </div>
+                        </div>
+                        <div class="text-error-checkbox" v-if="showTextError">*Оберіть від 1 до 3 відповідей найважливіших для вас.</div>
+                     </transition-group>
+                  </div>
+                  <!-- touchpoint: 2 - "radio" "checkbox" "checkbox" "radio" "textarea" -->
+                  <div class="questions-contant touchpoint2" v-else-if="rezultFetch.question_1_type == 'radio' &&
+                           rezultFetch.question_2_1_type == 'checkbox' &&
+                           rezultFetch.question_2_2_type == 'checkbox' &&
+                           rezultFetch.question_3_type == 'radio' &&
+                           rezultFetch.question_4_type == 'textarea'
+                        ">
+                     <transition-group name="fade" tag="div" class="questions-container">
+                        <div :key="currentQuestion" class="questions-contant__item question-1" v-if="currentQuestion === 1">
+                           <div class="questions-contant__name">
+                              <div class="questions-contant__coutn">1</div>
+                              <div class="questions-contant__text">
+                                 {{ rezultFetch.question_1 }}
+                              </div>
+                           </div>
+                           <div class="questions-contant__answers-item custom-radio" v-for="(answers_1, index) in rezultFetch.answers_1">
+                              <input type="radio" :id="'radio1-' + index" :value="answers_1.value" :name="'question1'" v-model="selectedAnswers.question1">
+                              <label :for="'radio1-' + index">
+                                 <span class="radio-text"> {{ answers_1.text }} </span>
+                              </label>
+                           </div>
+                        </div>
+
+                        <div :key="currentQuestion" class="questions-contant__item question-2-1" v-if="showQuestion2_1 && currentQuestion === 2">
+                           <div class="questions-contant__name">
+                              <div class="questions-contant__coutn">2</div>
+                              <div class="questions-contant__text">
+                                 {{ rezultFetch.question_2_1 }}
+                              </div>
+                           </div>
+                           <div class="questions-contant__answers-item custom-checkbox" v-for="(answers_2_1, index) in rezultFetch.answers_2_1">
+                              <input type="checkbox" :id="'checkbox2-1-' + index" :name="'question2_1'" :value="answers_2_1.value" v-model="selectedAnswers.question2_1">
+                              <label :for="'checkbox2-1-' + index" :class="{ checked: selectedAnswers.question2_1.includes(answers_2_1.text) }">
+                                 <span class="checkbox-text"> {{ answers_2_1.text }} </span>
+                              </label>
+                           </div>
+                        </div>
+                        <div :key="currentQuestion" class="questions-contant__item question-2-2" v-if="showQuestion2_2 && currentQuestion === 2">
+                           <div class="questions-contant__name">
+                              <div class="questions-contant__coutn">2</div>
+                              <div class="questions-contant__text">
+                                 {{ rezultFetch.question_2_2 }}
+                              </div>
+                           </div>
+                           <div class="questions-contant__answers-item custom-checkbox" v-for="(answers_2_2, index) in rezultFetch.answers_2_2">
+                              <input type="checkbox" :id="'checkbox2-2-' + index" :name="'question2_2'" :value="answers_2_2.value" v-model="selectedAnswers.question2_2">
+                              <label :for="'checkbox2-2-' + index" :class="{ checked: selectedAnswers.question2_2.includes(answers_2_2.text) }">
+                                 <span class="checkbox-text"> {{ answers_2_2.text }} </span>
+                              </label>
+                           </div>
+                        </div>
+
+                        <div :key="currentQuestion" class="questions-contant__item question-3" v-if="isChekedQuestions && currentQuestion === 3">
+                           <div class="questions-contant__name">
+                              <div class="questions-contant__coutn">3</div>
+                              <div class="questions-contant__text">
+                                 {{ rezultFetch.question_3 }}
+                              </div>
+                           </div>
+                           <div class="questions-contant__answers-item custom-radio" v-for="(answers_3, index) in rezultFetch.answers_3">
+                              <input type="radio" :id="'radio3-' + index" :value="answers_3.value" :name="'question3'" v-model="selectedAnswers.question3">
+                              <label :for="'radio3-' + index">
+                                 <span class="radio-text"> {{ answers_3.text }} </span>
+                              </label>
+                           </div>
+                        </div>
+
+                        <div :key="currentQuestion" class="questions-contant__item question-4" v-if="isChekedQuestions && currentQuestion === 4">
+                           <div class="questions-contant__name">
+                              <div class="questions-contant__coutn">4</div>
+                              <div class="questions-contant__text">
+                                 {{ rezultFetch.question_4 }}
+                              </div>
+                           </div>
+                           <div class="questions-contant__answers-item">
+                              <textarea class="questions-contant__answers-item__textarea" placeholder="Ваше повідомлення..." v-model="selectedAnswers.question4"></textarea>
+                           </div>
+                        </div>
+                        <div class="text-error-checkbox" v-if="showTextError">*Оберіть від 1 до 3 відповідей найважливіших для вас.</div>
+                     </transition-group>
+                  </div>
+                  <!-- touchpoint: 3 - "radio" "checkbox" "checkbox" "radio" "checkbox" "checkbox" "textarea" -->
+                  <div class="questions-contant touchpoint3" v-else-if="rezultFetch.question_1_type == 'radio' &&
+                           rezultFetch.question_2_1_type == 'checkbox' &&
+                           rezultFetch.question_2_2_type == 'checkbox' &&
+                           rezultFetch.question_3_type == 'radio' &&
+                           rezultFetch.question_4_1_type == 'checkbox' && 
+                           rezultFetch.question_4_2_type == 'checkbox' && 
+                           rezultFetch.question_5_type == 'textarea'
+                        ">
+                     <transition-group name="fade" tag="div" class="questions-container">
+                        <div :key="currentQuestion" class="questions-contant__item question-1" v-if="currentQuestion === 1">
+                           <div class="questions-contant__name">
+                              <div class="questions-contant__coutn">1</div>
+                              <div class="questions-contant__text">
+                                 {{ rezultFetch.question_1 }}
+                              </div>
+                           </div>
+                           <div class="questions-contant__answers-item custom-radio" v-for="(answers_1, index) in rezultFetch.answers_1">
+                              <input type="radio" :id="'radio1-' + index" :value="answers_1.value" :name="'question1'" v-model="selectedAnswers.question1">
+                              <label :for="'radio1-' + index">
+                                 <span class="radio-text"> {{ answers_1.text }} </span>
+                              </label>
+                           </div>
+                        </div>
+
+                        <div :key="currentQuestion" class="questions-contant__item question-2-1" v-if="showQuestion2_1 && currentQuestion === 2">
+                           <div class="questions-contant__name">
+                              <div class="questions-contant__coutn">2</div>
+                              <div class="questions-contant__text">
+                                 {{ rezultFetch.question_2_1 }}
+                              </div>
+                           </div>
+                           <div class="questions-contant__answers-item custom-checkbox" v-for="(answers_2_1, index) in rezultFetch.answers_2_1">
+                              <input type="checkbox" :id="'checkbox2-1-' + index" :name="'question2_1'" :value="answers_2_1.value" v-model="selectedAnswers.question2_1">
+                              <label :for="'checkbox2-1-' + index" :class="{ checked: selectedAnswers.question2_1.includes(answers_2_1.text) }">
+                                 <span class="checkbox-text"> {{ answers_2_1.text }} </span>
+                              </label>
+                           </div>
+                        </div>
+                        <div :key="currentQuestion" class="questions-contant__item question-2-2" v-if="showQuestion2_2 && currentQuestion === 2">
+                           <div class="questions-contant__name">
+                              <div class="questions-contant__coutn">2</div>
+                              <div class="questions-contant__text">
+                                 {{ rezultFetch.question_2_2 }}
+                              </div>
+                           </div>
+                           <div class="questions-contant__answers-item custom-checkbox" v-for="(answers_2_2, index) in rezultFetch.answers_2_2">
+                              <input type="checkbox" :id="'checkbox2-2-' + index" :name="'question2_2'" :value="answers_2_2.value" v-model="selectedAnswers.question2_2">
+                              <label :for="'checkbox2-2-' + index" :class="{ checked: selectedAnswers.question2_2.includes(answers_2_2.text) }">
+                                 <span class="checkbox-text"> {{ answers_2_2.text }} </span>
+                              </label>
+                           </div>
+                        </div>
+
+                        <div :key="currentQuestion" class="questions-contant__item question-3" v-if="isChekedQuestions && currentQuestion === 3">
+                           <div class="questions-contant__name">
+                              <div class="questions-contant__coutn">3</div>
+                              <div class="questions-contant__text">
+                                 {{ rezultFetch.question_3 }}
+                              </div>
+                           </div>
+                           <div class="questions-contant__answers-item custom-radio" v-for="(answers_3, index) in rezultFetch.answers_3">
+                              <input type="radio" :id="'radio3-' + index" :value="answers_3.value" :name="'question3'" v-model="selectedAnswers.question3">
+                              <label :for="'radio3-' + index">
+                                 <span class="radio-text"> {{ answers_3.text }} </span>
+                              </label>
+                           </div>
+                        </div>
+
+                        <div :key="currentQuestion" class="questions-contant__item question-4-1" v-if="showQuestion4_1 && currentQuestion === 4">
+                           <div class="questions-contant__name">
+                              <div class="questions-contant__coutn">4</div>
+                              <div class="questions-contant__text">
+                                 {{ rezultFetch.question_4_1 }}
+                              </div>
+                           </div>
+                           <div class="questions-contant__answers-item custom-checkbox" v-for="(answers_4_1, index) in rezultFetch.answers_4_1">
+                              <input type="checkbox" :id="'checkbox4-1-' + index" :name="'question4_1'" :value="answers_4_1.value" v-model="selectedAnswers.question4_1">
+                              <label :for="'checkbox4-1-' + index" :class="{ checked: selectedAnswers.question4_1.includes(answers_4_1.text) }">
+                                 <span class="checkbox-text"> {{ answers_4_1.text }} </span>
+                              </label>
+                           </div>
+                        </div>
+                        <div :key="currentQuestion" class="questions-contant__item question-4-2" v-if="showQuestion4_2 && currentQuestion === 4">
+                           <div class="questions-contant__name">
+                              <div class="questions-contant__coutn">4</div>
+                              <div class="questions-contant__text">
+                                 {{ rezultFetch.question_4_2 }}
+                              </div>
+                           </div>
+                           <div class="questions-contant__answers-item custom-checkbox" v-for="(answers_4_2, index) in rezultFetch.answers_4_2">
+                              <input type="checkbox" :id="'checkbox4-2-' + index" :name="'question4_2'" :value="answers_4_2.value" v-model="selectedAnswers.question4_2">
+                              <label :for="'checkbox4-2-' + index" :class="{ checked: selectedAnswers.question4_2.includes(answers_4_2.text) }">
+                                 <span class="checkbox-text"> {{ answers_4_2.text }} </span>
+                              </label>
+                           </div>
+                        </div>
+
+                        <div :key="currentQuestion" class="questions-contant__item question-5" v-if="isChekedQuestions && currentQuestion === 5">
+                           <div class="questions-contant__name">
+                              <div class="questions-contant__coutn">5</div>
+                              <div class="questions-contant__text">
+                                 {{ rezultFetch.question_5 }}
+                              </div>
+                           </div>
+                           <div class="questions-contant__answers-item">
+                              <textarea class="questions-contant__answers-item__textarea" placeholder="Ваше повідомлення..." v-model="selectedAnswers.question5"></textarea>
+                           </div>
+                        </div>
+                        <div class="text-error-checkbox" v-if="showTextError">*Оберіть від 1 до 3 відповідей найважливіших для вас.</div>
+                     </transition-group>
+                  </div>
+
+                  <div class="questions-pagination">
+                     <button class="custom-button" v-if="buttonNextQuestion" :class="{ 'disabled-button': !answeredQuestions[currentQuestion - 1] }" @click="nextQuestion">
+                        Далі
+                     </button>
+                     <button class="custom-button" v-if="buttonSubmite" @click="saveAnswers">
+                        Відправити
+                     </button>
+                  </div>
+               </div>
+
+               <div class="appQuestionnaire-done" v-else>
+                  <div class="questions-form-done__txt1">
+                     Дякуємо за вашу відповідь!
+                  </div>
+                  <div class="questions-form-done__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/questions_done.png" alt="">
+                  </div>
+                  <a class="questions-form-done__a" href="https://comfy.ua/ua/">На головну</a>
+               </div>
+            </div>
+
+            <div class="appQuestionnaire-passed" v-if="chekPassed">
+               <div class="questions-form-done__txt1">
+                  Дані вже отримано!
+               </div>
+               <div class="questions-form-done__img">
+                  <img src="https://cdn.comfy.ua/media/x/img2/questions_done.png" alt="">
+               </div>
+               <a class="questions-form-done__a" href="https://comfy.ua/ua/">На головну</a>
+            </div>
+
+            <div class="appQuestionnaire-nofound" v-if="chekNofound">
+               <div class="questions-form-done__txt1">
+                  Анкету не знайдено
+               </div>
+               <div class="questions-form-done__img">
+                  <img src="https://cdn.comfy.ua/media/x/img2/questions_done.png" alt="">
+               </div>
+               <a class="questions-form-done__a" href="https://comfy.ua/ua/">На головну</a>
+            </div>
+
+            <div class="appQuestionnaire-nofound" v-if="chekServerError">
+               <div class="questions-form-done__txt1">
+                  Помилка при отриманні даних
+               </div>
+               <div class="questions-form-done__img">
+                  <img src="https://cdn.comfy.ua/media/x/img2/questions_done.png" alt="">
+               </div>
+               <a class="questions-form-done__a" href="https://comfy.ua/ua/">На головну</a>
+            </div>
+
+         </div>
+      </div>
+   </div>
+</div>
+
+<script>
+   const appQuestionnaire = Vue.createApp({
+      data() {
+         return {
+            question_1: '',
+            question_2_1: '',
+            question_2_2: '',
+            question_3: '',
+            question_4: '',
+            question_4_1: '',
+            question_4_2: '',
+            question_5: '',
+            rezultFetch: '',
+            isChekedQuestions: true,
+            currentQuestion: 1,
+            buttonNextQuestion: false,
+            buttonSubmite: false,
+            doneSubmite: false,
+            currentQuestionCheker: true,
+            selectedAnswers: {
+               question1: null,
+               question3: null,
+               question4: null,
+               question5: null,
+               question2_1: [],
+               question2_2: [],
+               question4_1: [],
+               question4_2: [],
+            },
+            apiUrl: 'https://tag-api.comfy.ua/api/comfywork/csi_touchpoint',
+            answeredQuestions: [false, false, false, false, false],
+            originalQuestion1Answer: null,
+            isLoading: true,
+            poolidValue: null,
+            chekStatus: true,
+            chekPassed: false,
+            chekNofound: false,
+            chekServerError: false,
+            showTextError: false,
+            numTouchPoint: "",
+         };
+      },
+      mounted() {
+         const searchUrlParameter = new URLSearchParams(document.location.search);
+         this.poolidValue = searchUrlParameter.get("poolid");
+
+         this.fetchData();
+      },
+      computed: {
+         showQuestion2_1() {
+            return this.selectedAnswers.question1 == 4 || this.selectedAnswers.question1 == 5;
+         },
+         showQuestion2_2() {
+            return this.selectedAnswers.question1 >= 1 && this.selectedAnswers.question1 <= 3;
+         },
+         showQuestion4_1() {
+            return this.selectedAnswers.question1 == 4 || this.selectedAnswers.question1 == 5;
+         },
+         showQuestion4_2() {
+            return this.selectedAnswers.question1 >= 1 && this.selectedAnswers.question1 <= 3;
+         }
+      },
+      watch: {
+         currentQuestion: {
+            handler(newValue) {
+
+               /*
+                  touchpoint: 1 - "radio" "checkbox" "checkbox" "textarea"
+                  touchpoint: 2 - "radio" "checkbox" "checkbox" "radio" "textarea"
+                  touchpoint: 3 - "radio" "checkbox" "checkbox" "radio" "checkbox" "textarea"
+               */
+
+               if (newValue == 1) {
+                  this.buttonNextQuestion = true;
+                  this.buttonSubmite = false;
+               }
+
+               /* touchpoint: 1 - "radio" "checkbox" "checkbox" "textarea" */
+               if (this.rezultFetch.question_1_type == 'radio' &&
+                  this.rezultFetch.question_2_1_type == 'checkbox' &&
+                  this.rezultFetch.question_2_2_type == 'checkbox' &&
+                  this.rezultFetch.question_3_type == 'textarea') {
+                  console.log("touchpoint1");
+                  this.numTouchPoint = "touchpoint1";
+
+                  if (newValue == 2) {
+                     this.buttonNextQuestion = true;
+                     this.buttonSubmite = false;
+                  } else if (this.isChekedQuestions && this.currentQuestion === 3) {
+                     this.buttonNextQuestion = false;
+                     this.buttonSubmite = true;
+                  }
+               }
+
+               /* touchpoint: 2 - "radio" "checkbox" "checkbox" "radio" "textarea" */
+               if (this.rezultFetch.question_1_type == 'radio' &&
+                  this.rezultFetch.question_2_1_type == 'checkbox' &&
+                  this.rezultFetch.question_2_2_type == 'checkbox' &&
+                  this.rezultFetch.question_3_type == 'radio' &&
+                  this.rezultFetch.question_4_type == 'textarea') {
+                  console.log("touchpoint2");
+                  this.numTouchPoint = "touchpoint2";
+
+                  if (newValue == 2) {
+                     this.buttonNextQuestion = true;
+                     this.buttonSubmite = false;
+                  } else if (this.isChekedQuestions && this.currentQuestion === 3) {
+                     this.buttonNextQuestion = true;
+                     this.buttonSubmite = false;
+                  } else if (newValue == 4) {
+                     this.buttonNextQuestion = false;
+                     this.buttonSubmite = true;
+                  }
+               }
+
+               /* touchpoint: 3 - "radio" "checkbox" "checkbox" "radio" "checkbox" "checkbox" "textarea" */
+               if (this.rezultFetch.question_1_type == 'radio' &&
+                  this.rezultFetch.question_2_1_type == 'checkbox' &&
+                  this.rezultFetch.question_2_2_type == 'checkbox' &&
+                  this.rezultFetch.question_3_type == 'radio' &&
+                  this.rezultFetch.question_4_1_type == 'checkbox' &&
+                  this.rezultFetch.question_4_2_type == 'checkbox' &&
+                  this.rezultFetch.question_5_type == 'textarea') {
+                  console.log("touchpoint3");
+                  currentQuestionCheker = false;
+                  this.numTouchPoint = "touchpoint3";
+
+                  if (newValue == 2) {
+                     this.buttonNextQuestion = true;
+                     this.buttonSubmite = false;
+                  } else if (this.isChekedQuestions && this.currentQuestion === 3) {
+                     this.buttonNextQuestion = true;
+                     this.buttonSubmite = false;
+                  } else if (newValue == 4) {
+                     this.buttonNextQuestion = true;
+                     this.buttonSubmite = false;
+                  } else if (newValue == 5) {
+                     this.buttonNextQuestion = false;
+                     this.buttonSubmite = true;
+                     this.showTextError = false;
+                  }
+               }
+
+            },
+            immediate: true
+         },
+         'selectedAnswers.question1': {
+            handler(newValue) {
+               this.checkNextButtonStatus(1, newValue);
+            },
+         },
+         'selectedAnswers.question2_1': {
+            handler(newValue) {
+               this.checkNextButtonStatus(2, newValue);
+            },
+         },
+         'selectedAnswers.question2_2': {
+            handler(newValue) {
+               this.checkNextButtonStatus(2, newValue);
+            },
+         },
+         'selectedAnswers.question3': {
+            handler(newValue) {
+               this.checkNextButtonStatus(3, newValue);
+            },
+         },
+         'selectedAnswers.question4': {
+            handler(newValue) {
+               this.checkNextButtonStatus(4, newValue);
+            },
+         },
+         'selectedAnswers.question4_1': {
+            handler(newValue) {
+               this.checkNextButtonStatus(4, newValue);
+            },
+         },
+         'selectedAnswers.question4_2': {
+            handler(newValue) {
+               this.checkNextButtonStatus(4, newValue);
+            },
+         },
+         'selectedAnswers.question5': {
+            handler(newValue) {
+               this.checkNextButtonStatus(5, newValue);
+            },
+         },
+      },
+      methods: {
+         async fetchData() {
+            //this.isLoading = true;
+
+            const dataToSend = {
+               touchpoint: this.poolidValue
+            };
+
+            const headers = new Headers({
+               'Authorization': `Basic dGVzdDoxMjNxd2U=`,
+               'Content-Type': 'application/json'
+            });
+
+            try {
+               const response = await fetch(this.apiUrl, {
+                  method: 'POST',
+                  headers,
+                  body: JSON.stringify(dataToSend)
+               });
+
+               const data = await response.json();
+               this.rezultFetch = data.questionnaire;
+               console.log(this.rezultFetch);
+
+
+               if (this.rezultFetch.error == "passed" || this.rezultFetch.error == "no found") {
+                  this.isLoading = false;
+                  this.chekStatus = false;
+
+                  if (this.rezultFetch.error == "passed") {
+                     this.chekPassed = true;
+                  }
+
+                  if (this.rezultFetch.error == "no found") {
+                     this.chekNofound = true;
+                  }
+
+               } else {
+                  this.originalQuestion1Answer = data.questionnaire.answers_1[0].value;
+                  this.isLoading = false;
+               }
+
+            } catch (error) {
+               console.error('Ошибка при получении данных:', error);
+
+               this.isLoading = false;
+               this.chekStatus = false;
+               this.chekServerError = true;
+            }
+         },
+         isEmptyProxyArray(value) {
+            return Array.isArray(value) && value.__v_isProxy && value.length === 0;
+         },
+         cloneProxyArray(proxyArray) {
+            if (this.isEmptyProxyArray(proxyArray)) {
+               return [];
+            }
+            return JSON.parse(JSON.stringify(proxyArray));
+         },
+         saveAnswers() {
+
+            const answersOnQuestions = {
+               Answer1: this.selectedAnswers.question1,
+               Answer2_1: this.cloneProxyArray(this.selectedAnswers.question2_1),
+               Answer2_2: this.cloneProxyArray(this.selectedAnswers.question2_2),
+               Answer3: this.selectedAnswers.question3,
+               Answer4: this.selectedAnswers.question4,
+               Answer4_1: this.cloneProxyArray(this.selectedAnswers.question4_1),
+               Answer4_2: this.cloneProxyArray(this.selectedAnswers.question4_2),
+               Answer5: this.selectedAnswers.question5,
+            };
+
+            const answersOnQuestionsFilter = {};
+            for (const key in answersOnQuestions) {
+               if (answersOnQuestions[key] && answersOnQuestions[key].length != 0) {
+                  answersOnQuestionsFilter[key] = answersOnQuestions[key];
+               }
+            }
+            answersOnQuestionsFilter.phone = this.poolidValue;
+
+            console.log(answersOnQuestionsFilter);
+            this.doneSubmite = true;
+
+            this.pushSaveAnswers(answersOnQuestionsFilter);
+         },
+         pushSaveAnswers(data) {
+            $.ajax({
+               url: "https://main.corezoid.comfy.ua/api/2/json/public/13776/8f81c93e12b76ec5b5ed31f8add35abc71250083",
+               headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded'
+               },
+               type: "POST",
+               dataType: "json",
+               data: JSON.stringify(data),
+               success: console.log('done')
+            });
+         },
+         nextQuestion() {
+            if (this.currentQuestion === 1 && this.selectedAnswers.question1 === null) {
+               return;
+            }
+            if (this.currentQuestion === 2 && this.selectedAnswers.question2_1.length === 0 && this.selectedAnswers.question2_2.length === 0) {
+               return;
+            }
+            if (this.currentQuestion === 3 && this.selectedAnswers.question3 === null) {
+               return;
+            }
+            if (this.currentQuestion === 4 && this.selectedAnswers.question4_1.length === 0 && this.selectedAnswers.question4_2.length === 0) {
+               return;
+            }
+            if (this.currentQuestion === 4 && this.selectedAnswers.question4 === null && currentQuestionCheker) {
+               return;
+            }
+
+            this.currentQuestion++;
+         },
+         checkNextButtonStatus(questionNumber, newValue) {
+            if (newValue !== null && ((Array.isArray(newValue) && newValue.length > 0 && newValue.length <= 3) || !Array.isArray(newValue))) {
+               this.answeredQuestions[questionNumber - 1] = true;
+               this.showTextError = false;
+            } else {
+               this.answeredQuestions[questionNumber - 1] = false;
+
+               if (this.numTouchPoint = "touchpoint1" && questionNumber != 3) {
+                  this.showTextError = true;
+               } else {
+                  this.showTextError = false;
+               }
+
+               if (this.numTouchPoint = "touchpoint2" && questionNumber != 4) {
+                  this.showTextError = true;
+               } else {
+                  this.showTextError = false;
+               }
+
+               if (this.numTouchPoint = "touchpoint3" && questionNumber != 5) {
+                  this.showTextError = true;
+               } else {
+                  this.showTextError = false;
+               }
+            }
+         },
+      }
+   });
+   appQuestionnaire.mount('#appQuestionnaire');
+</script>

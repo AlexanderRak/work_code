@@ -12,11 +12,15 @@
 
 <body>
 
-   <style>
-
-   </style>
-
    <div id="appQuestionnaire">
+
+      <div class="appQuestionnaire__img-pos1">
+         <img src="https://cdn.comfy.ua/media/x/img3/asset2.png" alt="">
+      </div>
+      <div class="appQuestionnaire__img-pos2">
+         <img src="https://cdn.comfy.ua/media/x/img3/asset3.png" alt="">
+      </div>
+
       <div class="appQuestionnaire-wrap">
 
          <div class="appQuestionnaire-container">
@@ -102,6 +106,7 @@
                                  <textarea class="questions-contant__answers-item__textarea" placeholder="Ваше повідомлення..." v-model="selectedAnswers.question3"></textarea>
                               </div>
                            </div>
+                           <div class="text-error-checkbox" v-if="showTextError">*Оберіть від 1 до 3 відповідей найважливіших для вас.</div>
                         </transition-group>
                      </div>
                      <!-- touchpoint: 2 - "radio" "checkbox" "checkbox" "radio" "textarea" -->
@@ -182,6 +187,7 @@
                                  <textarea class="questions-contant__answers-item__textarea" placeholder="Ваше повідомлення..." v-model="selectedAnswers.question4"></textarea>
                               </div>
                            </div>
+                           <div class="text-error-checkbox" v-if="showTextError">*Оберіть від 1 до 3 відповідей найважливіших для вас.</div>
                         </transition-group>
                      </div>
                      <!-- touchpoint: 3 - "radio" "checkbox" "checkbox" "radio" "checkbox" "checkbox" "textarea" -->
@@ -293,6 +299,7 @@
                                  <textarea class="questions-contant__answers-item__textarea" placeholder="Ваше повідомлення..." v-model="selectedAnswers.question5"></textarea>
                               </div>
                            </div>
+                           <div class="text-error-checkbox" v-if="showTextError">*Оберіть від 1 до 3 відповідей найважливіших для вас.</div>
                         </transition-group>
                      </div>
 
@@ -390,6 +397,8 @@
                chekPassed: false,
                chekNofound: false,
                chekServerError: false,
+               showTextError: false,
+               numTouchPoint: "",
             };
          },
          mounted() {
@@ -410,7 +419,7 @@
             },
             showQuestion4_2() {
                return this.selectedAnswers.question1 >= 1 && this.selectedAnswers.question1 <= 3;
-            },
+            }
          },
          watch: {
             currentQuestion: {
@@ -423,8 +432,8 @@
                   */
 
                   if (newValue == 1) {
-                     this.buttonNextQuestion = true
-                     this.buttonSubmite = false
+                     this.buttonNextQuestion = true;
+                     this.buttonSubmite = false;
                   }
 
                   /* touchpoint: 1 - "radio" "checkbox" "checkbox" "textarea" */
@@ -433,13 +442,14 @@
                      this.rezultFetch.question_2_2_type == 'checkbox' &&
                      this.rezultFetch.question_3_type == 'textarea') {
                      console.log("touchpoint1");
+                     this.numTouchPoint = "touchpoint1";
 
                      if (newValue == 2) {
-                        this.buttonNextQuestion = true
-                        this.buttonSubmite = false
+                        this.buttonNextQuestion = true;
+                        this.buttonSubmite = false;
                      } else if (this.isChekedQuestions && this.currentQuestion === 3) {
-                        this.buttonNextQuestion = false
-                        this.buttonSubmite = true
+                        this.buttonNextQuestion = false;
+                        this.buttonSubmite = true;
                      }
                   }
 
@@ -450,16 +460,17 @@
                      this.rezultFetch.question_3_type == 'radio' &&
                      this.rezultFetch.question_4_type == 'textarea') {
                      console.log("touchpoint2");
+                     this.numTouchPoint = "touchpoint2";
 
                      if (newValue == 2) {
-                        this.buttonNextQuestion = true
-                        this.buttonSubmite = false
+                        this.buttonNextQuestion = true;
+                        this.buttonSubmite = false;
                      } else if (this.isChekedQuestions && this.currentQuestion === 3) {
-                        this.buttonNextQuestion = true
-                        this.buttonSubmite = false
+                        this.buttonNextQuestion = true;
+                        this.buttonSubmite = false;
                      } else if (newValue == 4) {
-                        this.buttonNextQuestion = false
-                        this.buttonSubmite = true
+                        this.buttonNextQuestion = false;
+                        this.buttonSubmite = true;
                      }
                   }
 
@@ -473,19 +484,21 @@
                      this.rezultFetch.question_5_type == 'textarea') {
                      console.log("touchpoint3");
                      currentQuestionCheker = false;
+                     this.numTouchPoint = "touchpoint3";
 
                      if (newValue == 2) {
-                        this.buttonNextQuestion = true
-                        this.buttonSubmite = false
+                        this.buttonNextQuestion = true;
+                        this.buttonSubmite = false;
                      } else if (this.isChekedQuestions && this.currentQuestion === 3) {
-                        this.buttonNextQuestion = true
-                        this.buttonSubmite = false
+                        this.buttonNextQuestion = true;
+                        this.buttonSubmite = false;
                      } else if (newValue == 4) {
-                        this.buttonNextQuestion = true
-                        this.buttonSubmite = false
+                        this.buttonNextQuestion = true;
+                        this.buttonSubmite = false;
                      } else if (newValue == 5) {
-                        this.buttonNextQuestion = false
-                        this.buttonSubmite = true
+                        this.buttonNextQuestion = false;
+                        this.buttonSubmite = true;
+                        this.showTextError = false;
                      }
                   }
 
@@ -500,7 +513,26 @@
             'selectedAnswers.question2_1': {
                handler(newValue) {
                   this.checkNextButtonStatus(2, newValue);
+
+                  // const activeCheckboxes = newValue;
+                  // const inactiveCheckboxes = this.rezultFetch.answers_2_1.filter(answer => !activeCheckboxes.includes(answer.value));
+                  // console.log('Активные чекбоксы:', activeCheckboxes);
+                  // console.log('Неактивные чекбоксы:', inactiveCheckboxes);
+
+                  // if (activeCheckboxes.length == 3) {
+                  //    for (const checkbox of inactiveCheckboxes) {
+                  //       const checkboxIndex = this.rezultFetch.answers_2_1.findIndex(answer => answer.value === checkbox.value);
+                  //       this.rezultFetch.answers_2_1[checkboxIndex].isDisabled = true;
+                  //    }
+
+                  //    this.$nextTick(() => {
+                  //       this.$forceUpdate();
+                  //    });
+                  // } else {
+
+                  // }
                },
+               //deep: true,
             },
             'selectedAnswers.question2_2': {
                handler(newValue) {
@@ -538,7 +570,7 @@
                //this.isLoading = true;
 
                const dataToSend = {
-                  touchpoint: this.poolidValue // this.poolidValue
+                  touchpoint: this.poolidValue
                };
 
                const headers = new Headers({
@@ -650,10 +682,29 @@
                this.currentQuestion++;
             },
             checkNextButtonStatus(questionNumber, newValue) {
-               if (newValue !== null && ((Array.isArray(newValue) && newValue.length > 0) || !Array.isArray(newValue))) {
+               if (newValue !== null && ((Array.isArray(newValue) && newValue.length > 0 && newValue.length <= 3) || !Array.isArray(newValue))) {
                   this.answeredQuestions[questionNumber - 1] = true;
+                  this.showTextError = false;
                } else {
                   this.answeredQuestions[questionNumber - 1] = false;
+
+                  if(this.numTouchPoint = "touchpoint1" && questionNumber != 3) {
+                     this.showTextError = true;
+                  } else {
+                     this.showTextError = false;
+                  }
+
+                  if(this.numTouchPoint = "touchpoint2" && questionNumber != 4) {
+                     this.showTextError = true;
+                  } else {
+                     this.showTextError = false;
+                  }
+
+                  if(this.numTouchPoint = "touchpoint3" && questionNumber != 5) {
+                     this.showTextError = true;
+                  } else {
+                     this.showTextError = false;
+                  }
                }
             },
          }
