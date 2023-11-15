@@ -1,0 +1,264 @@
+.braun {
+  width: 100%;
+  max-width: 1520px;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #010101;
+}
+.braun img {
+  margin: 0 auto;
+  opacity: 1 !important;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+.braun img:hover {
+  opacity: 1 !important;
+}
+.braun div {
+  line-height: normal;
+}
+
+.features-desc__text img {
+  margin-bottom: 0rem;
+}
+
+.braun .container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.braun__title {
+  text-transform: uppercase;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.braun__txt {
+  font-size: 20px;
+}
+
+.power {
+  padding: 150px 100px 0;
+}
+
+.power__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 130px;
+  padding-right: 100px;
+}
+
+.power__img {
+  border-radius: 20px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(224, 224, 224, 0) 5%, #E0E0E0 100%);
+}
+.power__img > img {
+  min-width: calc(100% + 45px);
+  margin-left: -45px;
+}
+
+.power__cont {
+  max-width: 540px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.power__cont .braun__txt {
+  max-width: 430px;
+}
+
+.power__i img {
+  margin: 0;
+}
+
+.freeglide {
+  padding: 150px 100px 0;
+}
+
+.freeglide__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 20px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(224, 224, 224, 0) 5%, #E0E0E0 100%);
+  padding-left: 110px;
+}
+.freeglide__row .power__cont {
+  padding-top: 0;
+}
+
+.freeglide__img {
+  position: relative;
+}
+
+.freeglide__i {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.ceramic .power__row {
+  flex-direction: row-reverse;
+  padding-left: 110px;
+  padding-right: 0;
+}
+.ceramic .power__img {
+  position: relative;
+}
+.ceramic .power__img img {
+  min-width: unset;
+  margin-left: 0;
+  margin-top: -33px;
+}
+
+.ceramic__i {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+.func {
+  padding: 150px 100px 100px;
+}
+.func .braun__title {
+  margin-bottom: 60px;
+  padding-left: 110px;
+}
+
+.func__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 130px;
+}
+.func__grid > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.func__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.func__txt {
+  font-size: 18px;
+}
+
+.func__i {
+  min-width: 91px;
+}
+
+@media (max-width: 1441px) {
+  .power,
+  .freeglide {
+    padding: 4em 2em 0;
+  }
+  .func {
+    padding: 4em 2em 2em;
+  }
+}
+@media (max-width: 1201px) {
+  .braun .container {
+    width: 960px;
+    padding: 0 15px;
+  }
+  .power,
+  .freeglide {
+    padding: 2em 0 0;
+  }
+  .power__row {
+    gap: 4em;
+    padding-right: 2em;
+  }
+  .freeglide__row {
+    padding-left: 2em;
+  }
+  .ceramic .power__row {
+    padding-left: 2em;
+  }
+  .func {
+    padding: 2em 0 1em;
+  }
+  .func__grid {
+    gap: 2em 4em;
+  }
+  .func .braun__title {
+    padding-left: 1em;
+  }
+}
+@media (max-width: 991px) {
+  .braun .container {
+    width: 720px;
+  }
+  .braun__img img {
+    min-width: 170%;
+  }
+  .power__row {
+    display: block;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .power__img > img {
+    min-width: unset;
+    margin-left: unset;
+  }
+  .power__cont {
+    padding-top: 1em;
+  }
+  .braun__title {
+    font-size: 24px;
+    margin-bottom: 1rem;
+  }
+  .braun__txt {
+    font-size: 16px;
+  }
+  .freeglide__row {
+    border-radius: 8px;
+    padding: 0 1em 1em 1em;
+    flex-direction: column-reverse;
+    gap: 1em;
+  }
+  .freeglide__i {
+    max-width: 25%;
+    right: 0;
+    bottom: 0;
+  }
+  .ceramic {
+    margin-top: 2em;
+  }
+  .ceramic .power__row {
+    padding-left: 0;
+  }
+  .func .braun__title {
+    margin-bottom: 1rem;
+  }
+  .func__title {
+    font-size: 18px;
+  }
+  .func__txt {
+    font-size: 15px;
+  }
+  .func__grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .braun .container {
+    width: 540px;
+  }
+}
+@media (max-width: 576px) {
+  .braun .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
