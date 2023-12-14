@@ -1,0 +1,140 @@
+.cecotec {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.cecotec img {
+  margin: 0 auto;
+  opacity: 1 !important;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+.cecotec img:hover {
+  opacity: 1 !important;
+}
+.cecotec div {
+  line-height: normal;
+}
+
+.features-desc__text img {
+  margin-bottom: 0rem;
+}
+
+.cecotec .container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.cecotec__title {
+  font-size: clamp(28px, 3vw, 36px);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.cecotec__subtitle {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.cecotec__txt {
+  font-size: clamp(16px, 1.5vw, 20px);
+}
+
+.cecotec__list {
+  list-style-type: disc;
+  margin: 1em 0;
+  padding: 0 0 0 25px;
+  text-align: left;
+}
+.cecotec__list li {
+  font-size: clamp(15px, 1.5vw, 18px);
+}
+.cecotec__list li:nth-of-type(n+2) {
+  margin-top: 5px;
+}
+
+.cecotec__head {
+  padding: 2em 2em 0 2em;
+}
+
+.cecotec__cont {
+  padding: 0 2em;
+}
+
+.cecotec__row {
+  display: flex;
+  align-items: center;
+}
+.cecotec__row > div {
+  flex: 1;
+  max-width: 50%;
+  min-width: 50%;
+  box-sizing: border-box;
+}
+
+.cecotec__reverse {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 1201px) {
+  .cecotec .container {
+    width: 960px;
+    padding: 0 15px;
+  }
+  .cecotec__head {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .cecotec__row .cecotec__cont {
+    padding-left: 0;
+    padding-right: 2em;
+  }
+  .cecotec__reverse .cecotec__cont {
+    padding-left: 2em;
+    padding-right: 0;
+  }
+}
+@media (max-width: 991px) {
+  .cecotec .container {
+    width: 720px;
+  }
+  .cecotec {
+    padding-bottom: 1em;
+  }
+  .cecotec__head {
+    padding-bottom: 2em;
+    padding-top: 0;
+  }
+  .cecotec__row {
+    display: block;
+  }
+  .cecotec__row > div {
+    max-width: 100%;
+  }
+  .cecotec__cont {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-bottom: 1em;
+  }
+  .cecotec__block {
+    margin-top: 2em;
+  }
+}
+@media (max-width: 767px) {
+  .cecotec .container {
+    width: 540px;
+  }
+}
+@media (max-width: 576px) {
+  .cecotec .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
