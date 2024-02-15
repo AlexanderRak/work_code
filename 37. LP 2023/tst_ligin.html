@@ -1,0 +1,40 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<div id="appapp">
+  <div v-if="statActive">
+    <!-- Контент, который должен отображаться, когда statActive === true -->
+    Content to display when statActive is true
+  </div>
+  <div v-else>
+    <!-- Контент, который должен отображаться, когда statActive === false -->
+    Content to display when statActive is false
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    new Vue({
+      el: '#appapp',
+      data: {
+        statActive: window.__INITIAL_STATE__.auth.authInfo.user.verified,
+        intervalId: null // Добавляем переменную для хранения идентификатора setInterval
+      },
+      methods: {
+        checkVerifiedStatus() {
+          // Проверяем значение переменной
+          const newValueFromServer = window.__INITIAL_STATE__.auth.authInfo.user.verified;
+
+          // Если значение переменной стало true, обновляем statActive и останавливаем интервал
+          if (newValueFromServer === true) {
+            this.statActive = true;
+            clearInterval(this.intervalId);
+          }
+        }
+      },
+      created() {
+        // Устанавливаем интервал для периодической проверки переменной
+        this.intervalId = setInterval(this.checkVerifiedStatus, 5000); // каждые 5 секунд (5000 миллисекунд)
+      }
+    });
+  });
+</script>

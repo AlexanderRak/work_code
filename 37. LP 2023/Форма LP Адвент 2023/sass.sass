@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+body
+   padding: 0
+   margin: 0
+.category-info
+   display: none
+.category-cms-template__description
+   display: none
+.category-cms-template__content
+   display: none
+.category-cms-template__content.category-cms-template__content--top
+   display: block
+   .breadcrumbs
+      display: none
+.category-cms-template__content
+   display: none
+.category-cms-template__bottom-content
+   display: none
+#wrap-advent
+   display: block
+   width: 100%
+   height: auto
+   overflow: hidden
+   position: relative
+   font-family: 'Roboto', sans-serif
+.form-container
+   display: flex
+   flex-direction: column
+   max-width: 500px
+   margin: 20px
+.form-container__label
+   label
+      box-sizing: border-box
+      display: block
+      margin-bottom: 0.8rem
+      font-size: 16px
+      color: #616161
+.form-container__input
+   margin-bottom: 20px
+   input
+      box-sizing: border-box
+      appearance: none
+      width: 100%
+      height: 36px
+      padding-left: 8px
+      padding-right: 8px
+      font-size: 16px
+      color: #000
+      border: 0.1rem solid #e5e5e5
+      border-radius: 0.4rem
+      &:focus
+         outline: none
+      &.__input-error
+         border: 0.1rem solid red
+   .error-message
+      display: block
+      margin-top: 0.2rem
+      font-size: 12px
+      line-height: 1.4
+      color: red
+.form-container__button
+   button
+      box-sizing: border-box
+      width: 100%
+      height: 48px
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      border-radius: 8px
+      cursor: pointer
+      transition: background-color 0.3s linear,color 0.3s linear
+      user-select: none
+      outline: none
+      border: none
+      background: #43b02a
+      &._disabled
+         pointer-events: none
+         cursor: not-allowed
+         background-color: #e5e5e5
+      &:hover
+         background-color: #379424
+.form-container__sms-send-again
+   margin-top: 40px
+   cursor: pointer
+   font-size: 14px
+   text-align: center
+   color: #616161
+   display: block
+   &._disabled
+      pointer-events: none
+      cursor: not-allowed
+.form-container__change-phone
+   margin-top: 20px
+   cursor: pointer
+   font-size: 14px
+   text-align: center
+   color: #616161
+   display: block
+.form-container__button__text
+   font-size: 16px
+   font-weight: 700
+   color: #fff
+.form-container__button__loading-dot
+   width: 6px
+   height: 6px
+   border-radius: 50%
+   display: inline-block
+   animation: load-spinner 1s infinite
+   background-color: #fff
+.form-container__button__loading-dot:not(:last-child)
+   margin-right: 6px
+.form-container__button__loading-dot:nth-child(2)
+   animation-delay: 0.2s
+.form-container__button__loading-dot:nth-child(3)
+   animation-delay: 0.4s
+@keyframes load-spinner
+   50%
+      opacity: 0.3
+   100%
+      opacity: 1
+.fade-enter-active, .fade-leave-active
+   transition: opacity 0.5s
+.fade-enter, .fade-leave-to
+   opacity: 0

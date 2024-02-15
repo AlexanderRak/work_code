@@ -1,0 +1,148 @@
+#cms-numberone
+   max-width: 742px
+   margin: 0 auto
+   img
+      display: block
+      max-width: 100%
+.numberone-body
+   background: #ff671f
+   padding: 24px 0 24px 32px
+   position: relative
+   overflow: hidden
+.numberone-body__content
+   position: relative
+   z-index: 3
+.numberone-table-size__txt1
+   color: #F6F6D1
+   font-size: 24px
+   font-style: normal
+   font-weight: 500
+   line-height: 1.1
+   text-transform: uppercase
+   position: absolute
+.numberone-body__txt1
+   color: #2C2C2C
+   font-size: 24px
+   font-style: normal
+   font-weight: 500
+   line-height: 1.1
+   text-transform: uppercase
+.numberone-body__txt2
+   color: #2C2C2C
+   font-size: 16px
+   font-style: normal
+   font-weight: 400
+   line-height: 20px
+   max-width: 345px
+   position: relative
+   margin: 12px 0px 16px 0px
+   padding: 5px 0
+   &::before
+      content: ""
+      background: #2C2C2C
+      width: 346px
+      height: 1px
+      position: absolute
+      top: 0
+      left: 0
+   &::after
+      content: ""
+      background: #2C2C2C
+      width: 320px
+      height: 1px
+      position: absolute
+      bottom: 0
+      left: 0
+.numberone-body__txt3
+   color: #2C2C2C
+   font-size: 16px
+   font-style: normal
+   font-weight: 400
+   line-height: 20px
+   padding-bottom: 18px
+.numberone-link
+   color: #F6F6D1
+   font-size: 20px
+   font-style: normal
+   font-weight: 400
+   line-height: 1
+   text-decoration-line: underline
+   cursor: pointer
+   &.active-link
+      span
+         &::before
+            transform: translateY(-50%) rotate(180deg)
+   span
+      position: relative
+      padding-right: 15px
+      &::before
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img3/cmszsu/cms_dropdown.svg)
+         position: absolute
+         right: 0
+         top: 50%
+         transform: translateY(-50%)
+         width: 12px
+         height: 12px
+.numberone-body__img-pos
+   position: absolute
+   right: 0
+   top: 0
+   z-index: 1
+.numberone-table__size1
+   max-width: 450px
+   margin-right: 24px
+   padding-top: 30px
+.numberone-table-size
+   background: #2C2C2C
+   padding: 20px 32px 27px 32px
+   position: relative
+   display: none
+   &.active-tab
+      display: block
+.numberone-table-size__flex
+   display: flex
+   align-items: center
+@media (max-width: 1024px)
+@media (max-width: 768px)
+   .numberone-body__img-pos
+      max-width: 345px
+   .numberone-table-size__flex
+      align-items: flex-end
+   .numberone-table__size1
+      margin-right: 24px
+@media (max-width: 480px)
+   .numberone-body__img-pos
+      right: -103px
+      top: inherit
+      max-width: 224px
+      bottom: 0
+   .numberone-body
+      padding: 24px 0 24px 15px
+   .numberone-body__txt2::before
+      content: ""
+      width: 170px
+   .numberone-body__txt2::after
+      content: ""
+      width: 150px
+   .numberone-table-size
+      padding: 24px 15px 24px 15px
+   .numberone-table-size__flex
+      padding-bottom: 15px
+   .numberone-table-size__overflow
+      overflow: scroll
+   .numberone-body__txt2
+      max-width: 195px
+   .numberone-body__txt1
+      max-width: 250px
+   .numberone-table-size__flex
+      width: 550px
+   .numberone-table__size1
+      margin-right: 24px
+      padding-top: 45px
+   .numberone-table-size__img2
+      max-width: 135px
+   #cms-numberone
+      margin: 0 1.2rem 0 1.2rem
+      border-radius: 0.8rem
+      overflow: hidden

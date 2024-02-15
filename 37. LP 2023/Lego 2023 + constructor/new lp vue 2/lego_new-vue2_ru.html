@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+   <link rel="stylesheet" href="lego_new-vue2.min.css">
+
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/vue-slider-component@latest/dist/vue-slider-component.umd.min.js"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vue-slider-component@latest/theme/default.css">
+</head>
+
+<body>
+
+   <div id="lego-wrap">
+
+      <div class="lego-header">
+         <div class="lego-header__banner"></div>
+         <div class="lego-header__banner-mob">
+            <img src="https://cdn.comfy.ua/media/x/img2/lego/banner-desk_ru_mob.jpg" alt="">
+         </div>
+      </div>
+
+      <div class="lego-search">
+         <div class="lego-search__bgrd">
+            <div class="lego-search__btn">ПОИСК ПОДАРКОВ</div>
+         </div>
+      </div>
+
+      <div id="legoapp">
+
+         <div class="lego-tooltip-wrap">
+            <div class="lego-tooltip__grid">
+               <div class="lego-tooltip__grid-item --color1">
+                  <div class="lego-tooltip__item-content --content-name">
+                     Возраст
+                  </div>
+                  <div class="lego-tooltip__item-content ----content-tooltip">
+
+                     <vue-slider class="slider__one" ref="slider" v-model="value1" v-bind="options" :tooltip="'always'" :tooltip-placement="'top'">
+                     </vue-slider>
+
+                  </div>
+               </div>
+               <div class="lego-tooltip__grid-item --color2">
+                  <div class="lego-tooltip__item-content --content-name">
+                     Цена
+                  </div>
+                  <div class="lego-tooltip__item-content ----content-tooltip">
+
+                     <vue-slider class="slider__two" ref="slider" v-model="value2" v-bind="options2" :tooltip="'always'" :tooltip-placement="'top'">
+                     </vue-slider>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="lego-tabs-wrap">
+            <div class="tab-content">
+
+               <div class="tabs">
+                  <div v-for="(tab, index) in tabs" :key="index" @click="selectTab(index)" :class="[ 'tab-button', 'tab-bgrd-' + index, { activetabs: activeTab === index } ]">
+                     <h2>{{ tab.title }}</h2>
+                  </div>
+               </div>
+
+               <div class="tab-content">
+                  <div v-for="(tab, index) in tabs" :key="index" :class="['tab-bgrd-' + index, { 'tab': true, 'active': activeTab === index }]">
+                     <slot :name="tab.id">
+                        <div class="tab-content__container" v-if="tab.id === 'tab1'">
+
+                           <div class="lego-category-prod">
+                              <div class="lego-category-prod__flex lego-wrap2 single-slide">
+
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue" value="igry">
+                                    <div class="radiolist-label">
+                                       <div class="lego-category-prod__text">Игры</div>
+                                       <div class="lego-category-prod__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img3/interest_1game.png" alt="">
+                                       </div>
+                                    </div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue" value="garri-potter">
+                                    <div class="radiolist-label">
+                                       <div class="lego-category-prod__text">Гарри Поттер</div>
+                                       <div class="lego-category-prod__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img3/interest_2gpotter.png" alt="">
+                                       </div>
+                                    </div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue" value="princessy">
+                                    <div class="radiolist-label">
+                                       <div class="lego-category-prod__text">Принцессы</div>
+                                       <div class="lego-category-prod__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img3/interest_3princesses.png" alt="">
+                                       </div>
+                                    </div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue" value="geroi-iz-realnoj-zhizni">
+                                    <div class="radiolist-label">
+                                       <div class="lego-category-prod__text">Настоящие Супергерои</div>
+                                       <div class="lego-category-prod__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img3/interest_4superheroes.png" alt="">
+                                       </div>
+                                    </div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue" value="dinozavry--zhivotnye">
+                                    <div class="radiolist-label">
+                                       <div class="lego-category-prod__text">звери</div>
+                                       <div class="lego-category-prod__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_slide-1.png" alt="">
+                                       </div>
+                                    </div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue" value="avtomobili--transportnye-sredstva">
+                                    <div class="radiolist-label">
+                                       <div class="lego-category-prod__text">ТРАНСПОРТ</div>
+                                       <div class="lego-category-prod__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_slide-2.png" alt="">
+                                       </div>
+                                    </div>
+                                    </input>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue" value="iskusstvo/">
+                                    <div class="radiolist-label">
+                                       <div class="lego-category-prod__text">творчество</div>
+                                       <div class="lego-category-prod__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_slide-4.png" alt="">
+                                       </div>
+                                    </div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue" value="roboty-dlja-detej">
+                                    <div class="radiolist-label">
+                                       <div class="lego-category-prod__text">РОБОТы</div>
+                                       <div class="lego-category-prod__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_slide-5.png" alt="">
+                                       </div>
+                                    </div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue" value="kosmos">
+                                    <div class="radiolist-label">
+                                       <div class="lego-category-prod__text">КОСМОС</div>
+                                       <div class="lego-category-prod__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_slide-6.png" alt="">
+                                       </div>
+                                    </div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue" value="drakony--nindzja">
+                                    <div class="radiolist-label">
+                                       <div class="lego-category-prod__text">Ниндзя и драконы</div>
+                                       <div class="lego-category-prod__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_slide-7.png" alt="">
+                                       </div>
+                                    </div>
+                                 </label>
+
+                              </div>
+                              <div class="your-class-arrow3 single-slide-arrow"></div>
+                           </div>
+
+                        </div>
+                        <div class="tab-content__container" v-else-if="tab.id === 'tab2'">
+
+                           <div class="lego-category-prod">
+                              <div class="lego-category-prod__flex lego-wrap3 single-slide">
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-city">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_2.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> City</div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-friends">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/fr.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Friends</div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-duplo">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/dp.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> DUPLO<sup>®</sup></div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-technic">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_4.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Technic</div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-ninjago">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_10.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> NINJAGO<sup>®</sup></div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-super-mario">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_7.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Super Mario<sup>™</sup></div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-minecraft">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_6.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Minecraft<sup>™</sup></div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-creator">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_8.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Creator</div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-classic">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_9.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Classic</div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-star-wars">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_14.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Star Wars<sup>™</sup></div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-super-heroes">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_11.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Super Heroes</div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-harry-potter">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_12.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Harry Potter<sup>™</sup></div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-architecture">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_15.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Architecture</div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-icons">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img3/lego_icons.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Icons</div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-art">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_21.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Art</div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-speed-champions">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_18.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Speed Champions</div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-disney-princess--lego-disney--lego-frozen-2">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_13.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Disney<sup>™</sup></div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-jurassic-world">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_26.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Jurassic World<sup>™</sup></div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-dots">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_17.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> DOTS</div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-ideas">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_23.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Ideas</div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-gabbys-dollhouse">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img3/lego_gabbvdollhouse.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Gabby's Dollhouse</div>
+                                 </label>
+                                 <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="lego-sonic-the-hedgehog">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img3/lego_sonic.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Sonic</div>
+                                 </label>
+                                 <!-- <label class="lego-category-prod__item radiolist">
+                                    <input type="radio" v-model="selectedValue2" value="LEGO-Minifigures">
+                                    <div class="radiolist-label">
+                                       <div class="lego-themed-toys__img">
+                                          <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_19.png" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="lego-themed-toys__text">LEGO<sup>®</sup> Minifigures 404</div>
+                                 </label> -->
+
+                              </div>
+                              <div class="your-class-arrow4 single-slide-arrow"></div>
+                           </div>
+
+                        </div>
+                     </slot>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         <div class="lego-search-link">
+            <div class="lego-search-link__btn" @click="createUrl()" :class="{ btnNotActive: isActiveBtn }">
+               поиск
+            </div>
+         </div>
+
+      </div>
+
+      <div class="lego-age">
+         <div class="lego-age__container">
+            <div class="lego-age__btn btn_style">Игрушки по возрастам</div>
+            <div class="lego-age__grid">
+               <a href="https://comfy.ua/lego/vozrast_igrushek__1,3/" class="lego-age__grid-item">
+                  <div class="lego-age__elips-hover"></div>
+                  <div class="lego-age__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_1.png" alt="">
+                  </div>
+               </a>
+               <a href="https://comfy.ua/lego/vozrast_igrushek__4,6/" class="lego-age__grid-item">
+                  <div class="lego-age__elips-hover"></div>
+                  <div class="lego-age__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_2.png" alt="">
+                  </div>
+               </a>
+               <a href="https://comfy.ua/lego/vozrast_igrushek__6,9/" class="lego-age__grid-item">
+                  <div class="lego-age__elips-hover"></div>
+                  <div class="lego-age__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_3.png" alt="">
+                  </div>
+               </a>
+               <a href="https://comfy.ua/lego/vozrast_igrushek__9,13/" class="lego-age__grid-item">
+                  <div class="lego-age__elips-hover"></div>
+                  <div class="lego-age__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_4.png" alt="">
+                  </div>
+               </a>
+               <a href="https://comfy.ua/lego/vozrast_igrushek__13,18/" class="lego-age__grid-item">
+                  <div class="lego-age__elips-hover"></div>
+                  <div class="lego-age__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_5.png" alt="">
+                  </div>
+               </a>
+               <a href="https://comfy.ua/lego-adults/" class="lego-age__grid-item">
+                  <div class="lego-age__elips-hover"></div>
+                  <div class="lego-age__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_6.png" alt="">
+                  </div>
+               </a>
+            </div>
+         </div>
+      </div>
+
+      <div class="lego-category-sale">
+         <div class="lego-category-sale__grid">
+            <a href="https://comfy.ua/new-lego/" class="lego-category-sale__grid-item">
+               <div class="lego-category-sale__img bgrd1">
+                  <img src="https://cdn.comfy.ua/media/x/img2/lego/newimglego.png" alt="">
+               </div>
+               <div class="lego-category-sale__text bgrd1">
+                  <h2>НОВИНКИ</h2>
+               </div>
+            </a>
+            <a href="https://comfy.ua/lego-adults/" class="lego-category-sale__grid-item">
+               <div class="lego-category-sale__img bgrd2">
+                  <img src="https://cdn.comfy.ua/media/x/img2/lego/img10.svg" alt="">
+               </div>
+               <div class="lego-category-sale__text bgrd2">
+                  <h2>Для взрослых фанатов</h2>
+               </div>
+            </a>
+            <a href="https://comfy.ua/lego/label_actions__9/" class="lego-category-sale__grid-item">
+               <div class="lego-category-sale__img bgrd3">
+                  <img src="https://cdn.comfy.ua/media/x/img2/lego/img11.svg" alt="">
+               </div>
+               <div class="lego-category-sale__text bgrd3">
+                  <h2>АКЦИИ</h2>
+               </div>
+            </a>
+            <a href="https://comfy.ua/lego/" class="lego-category-sale__grid-item">
+               <div class="lego-category-sale__img bgrd1">
+                  <img src="https://cdn.comfy.ua/media/x/img2/lego/img12.svg" alt="">
+               </div>
+               <div class="lego-category-sale__text bgrd1">
+                  <h2>Все наборы ЛЕГО</h2>
+               </div>
+            </a>
+         </div>
+      </div>
+
+      <div class="lego-slider-banners">
+         <div class="lego-slider-banners__wrap">
+            <div class="lego-slider-banners__flex lego-wrap1">
+               <div class="lego-slider-banners__item">
+                  <a href="https://comfy.ua/lego/" class="lego-slider-banners__img-desk">
+                     <img src="https://cdn.comfy.ua/media/x/brending-bannera/1366x384_13.jpg" alt="">
+                  </a>
+                  <a href="https://comfy.ua/lego/" class="lego-slider-banners__img-mob">
+                     <img src="https://cdn.comfy.ua/media/x/brending-bannera/768x945_14.jpg" alt="">
+                  </a>
+               </div>
+               <div class="lego-slider-banners__item">
+                  <a href="https://comfy.ua/lego/vozrast_igrushek__9,18/" class="lego-slider-banners__img-desk">
+                     <img src="https://cdn.comfy.ua/media/x/brending-bannera/1366x384_11.jpg" alt="">
+                  </a>
+                  <a href="https://comfy.ua/lego/vozrast_igrushek__9,18/" class="lego-slider-banners__img-mob">
+                     <img src="https://cdn.comfy.ua/media/x/brending-bannera/768x945_12.jpg" alt="">
+                  </a>
+               </div>
+               <div class="lego-slider-banners__item">
+                  <a href="https://comfy.ua/lego/serija_lego__lego-star-wars/" class="lego-slider-banners__img-desk">
+                     <img src="https://cdn.comfy.ua/media/x/brending-bannera/1366x384_1_.jpg" alt="">
+                  </a>
+                  <a href="https://comfy.ua/lego/serija_lego__lego-star-wars/" class="lego-slider-banners__img-mob">
+                     <img src="https://cdn.comfy.ua/media/x/brending-bannera/768x945_1_.jpg" alt="">
+                  </a>
+               </div>
+               <div class="lego-slider-banners__item">
+                  <a href="https://comfy.ua/lego/serija_lego__lego-duplo/" class="lego-slider-banners__img-desk">
+                     <img src="https://cdn.comfy.ua/media/x/brending-bannera/1366x384_14.jpg" alt="">
+                  </a>
+                  <a href="https://comfy.ua/lego/serija_lego__lego-duplo/" class="lego-slider-banners__img-mob">
+                     <img src="https://cdn.comfy.ua/media/x/brending-bannera/768x945_15.jpg" alt="">
+                  </a>
+               </div>
+               <div class="lego-slider-banners__item">
+                  <a href="https://comfy.ua/lego/serija_lego__lego-city/" class="lego-slider-banners__img-desk" tabindex="0">
+                     <img src="https://cdn.comfy.ua/media/x/brending-bannera/1366x384_15.jpg" alt="">
+                  </a>
+                  <a href="https://comfy.ua/lego/serija_lego__lego-city/" class="lego-slider-banners__img-mob" tabindex="0">
+                     <img src="https://cdn.comfy.ua/media/x/brending-bannera/768x945_16.jpg" alt="">
+                  </a>
+               </div>
+            </div>
+            <div class="your-class-arrow"></div>
+         </div>
+      </div>
+
+      <div class="lego-themed-toys">
+         <div class="lego-themed-toys__container">
+            <div class="lego-themed-toys__btn btn_style">Тематические игрушки</div>
+            <div class="lego-themed-toys__grid">
+               <a href="https://comfy.ua/lego/serija_lego__lego-city/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_2.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> City</div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-friends/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/fr.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Friends</div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-duplo/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/dp.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> DUPLO<sup>®</sup></div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-technic/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_4.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Technic</div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-ninjago/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_10.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> NINJAGO<sup>®</sup></div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-super-mario/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_7.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Super Mario<sup>™</sup></div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-minecraft/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_6.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Minecraft<sup>™</sup></div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-creator/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_8.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Creator</div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-classic/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_9.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Classic</div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-star-wars/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_14.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Star Wars<sup>™</sup></div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-super-heroes/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_11.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Super Heroes</div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-harry-potter/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_12.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Harry Potter<sup>™</sup></div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-architecture/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_15.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Architecture</div>
+               </a>
+               <a href="https://comfy.ua/ua/lego/serija_lego__lego-icons/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img3/lego_icons.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Icons</div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-art/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_21.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Art</div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-speed-champions/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_18.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Speed Champions</div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-disney--lego-disney-princess--lego-frozen-2/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_13.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Disney<sup>™</sup></div>
+               </a>
+               <!-- <a href="https://comfy.ua/lego/serija_lego__lego-minifigures/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_19.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Minifigures 404</div>
+               </a> -->
+               <a href="https://comfy.ua/lego/serija_lego__lego-jurassic-world/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_26.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Jurassic World<sup>™</sup></div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-dots/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_17.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> DOTS</div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-ideas/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img2/lego/img15_23.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Ideas</div>
+               </a>
+               <a href="https://comfy.ua/ua/lego/serija_lego__lego-gabbys-dollhouse/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img3/lego_gabbvdollhouse.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Gabby's Dollhouse</div>
+               </a>
+               <a href="https://comfy.ua/lego/serija_lego__lego-sonic-the-hedgehog/" class="lego-themed-toys__item">
+                  <div class="lego-themed-toys__img">
+                     <img src="https://cdn.comfy.ua/media/x/img3/lego_sonic.png" alt="">
+                  </div>
+                  <div class="lego-themed-toys__text">LEGO<sup>®</sup> Sonic</div>
+               </a>
+            </div>
+            <div id="showMoreButton" class="btn-clik btn_style">Показать ещё <span class="btn-clik__str"></span></div>
+         </div>
+      </div>
+
+      <div class="lego-category-prod">
+         <div class="lego-category-prod__flex lego-wrap2 double-slide">
+            <a href="https://comfy.ua/lego/interesi_lego__igry/" class="lego-category-prod__item">
+               <div class="lego-category-prod__text">Игры</div>
+               <div class="lego-category-prod__img">
+                  <img src="https://cdn.comfy.ua/media/x/img3/interest_1game.png" alt="">
+               </div>
+            </a>
+            <a href="https://comfy.ua/lego/serija_lego__lego-harry-potter/" class="lego-category-prod__item">
+               <div class="lego-category-prod__text">Гарри Поттер</div>
+               <div class="lego-category-prod__img">
+                  <img src="https://cdn.comfy.ua/media/x/img3/interest_2gpotter.png" alt="">
+               </div>
+            </a>
+            <a href="https://comfy.ua/lego/interesi_lego__princessy/" class="lego-category-prod__item">
+               <div class="lego-category-prod__text">Принцессы</div>
+               <div class="lego-category-prod__img">
+                  <img src="https://cdn.comfy.ua/media/x/img3/interest_3princesses.png" alt="">
+               </div>
+            </a>
+            <a href="https://comfy.ua/lego/interesi_lego__geroi-iz-realnoj-zhizni/" class="lego-category-prod__item">
+               <div class="lego-category-prod__text">Настоящие Супергерои</div>
+               <div class="lego-category-prod__img">
+                  <img src="https://cdn.comfy.ua/media/x/img3/interest_4superheroes.png" alt="">
+               </div>
+            </a>
+            <a href="https://comfy.ua/lego/interesi_lego__dinozavry--zhivotnye/" class="lego-category-prod__item">
+               <div class="lego-category-prod__text">звери</div>
+               <div class="lego-category-prod__img">
+                  <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_slide-1.png" alt="">
+               </div>
+            </a>
+            <a href="https://comfy.ua/lego/interesi_lego__avtomobili--transportnye-sredstva/" class="lego-category-prod__item">
+               <div class="lego-category-prod__text">ТРАНСПОРТ</div>
+               <div class="lego-category-prod__img">
+                  <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_slide-2.png" alt="">
+               </div>
+            </a>
+            <a href="https://comfy.ua/lego/serija_lego__lego-super-heroes/" class="lego-category-prod__item">
+               <div class="lego-category-prod__text">СУПЕРГЕРОи</div>
+               <div class="lego-category-prod__img">
+                  <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_slide-3.png" alt="">
+               </div>
+            </a>
+            <a href="https://comfy.ua/lego/interesi_lego__iskusstvo/" class="lego-category-prod__item">
+               <div class="lego-category-prod__text">творчество</div>
+               <div class="lego-category-prod__img">
+                  <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_slide-4.png" alt="">
+               </div>
+            </a>
+            <a href="https://comfy.ua/lego/interesi_lego__roboty-dlja-detej/" class="lego-category-prod__item">
+               <div class="lego-category-prod__text">РОБОТы</div>
+               <div class="lego-category-prod__img">
+                  <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_slide-5.png" alt="">
+               </div>
+            </a>
+            <a href="https://comfy.ua/lego/interesi_lego__kosmos/" class="lego-category-prod__item">
+               <div class="lego-category-prod__text">КОСМОС</div>
+               <div class="lego-category-prod__img">
+                  <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_slide-6.png" alt="">
+               </div>
+            </a>
+            <a href="https://comfy.ua/lego/interesi_lego__drakony--nindzja/" class="lego-category-prod__item">
+               <div class="lego-category-prod__text">Ниндзя и драконы</div>
+               <div class="lego-category-prod__img">
+                  <img src="https://cdn.comfy.ua/media/x/img2/lego/prod_slide-7.png" alt="">
+               </div>
+            </a>
+         </div>
+         <div class="your-class-arrow2"></div>
+      </div>
+
+      <div class="lego-footer">
+         <div class="lego-footer__grid">
+            <a href="https://comfy.ua/lego-adults/" class="lego-footer__item">
+               <div class="lego-footer__img">
+                  <img src="https://cdn.comfy.ua/media/x/brending-bannera/675x337.png" alt="">
+               </div>
+            </a>
+            <a href="https://catalogs.lego.com/BrandCatalog/ua/" rel="nofollow" target="_blank" class="lego-footer__item">
+               <div class="lego-footer__img">
+                  <img src="https://cdn.comfy.ua/media/x/brending-bannera/675x337_2.jpg" alt="">
+               </div>
+            </a>
+         </div>
+      </div>
+
+      <!-- <div class="lego-footer-banner">
+         <div class="lego-footer-banner__bgrd">
+            <div class="lego-footer-banner__text">
+               <h3>Каталог 2021</h3>
+               <h2 style="color: #000; margin: 8px 0 0 0;">січень-ТРАВЕНЬ</h2>
+            </div>
+         </div>
+      </div> -->
+
+      <div class="lego-footer-text">
+         <div class="lego-footer-text__container">
+            <div>LEGO, логотип LEGO, Міні-фігурка, DUPLO, логотип DUPLO, NINJAGO, логотип NINJAGO, логотип FRIENDS, логотип HIDDEN SIDE, логотип MINIFIGURES, MINDSTORMS та логотип MINDSTORMS є торговими марками the LEGO Group.</div>
+            <div>©2020 The LEGO Group. Усі права захищені. </div>
+         </div>
+      </div>
+
+   </div>
+
+   <script>
+      const formatNumber = (value) => {
+         return value.toLocaleString('en-GB').replace(/,/g, ' ')
+      }
+
+      new Vue({
+         el: '#legoapp',
+         data() {
+            return {
+               activeTab: 0,
+               tabs: [
+                  { id: 'tab1', title: 'Интересы' },
+                  { id: 'tab2', title: 'Серия' },
+               ],
+               value1: [0, 0],
+               value2: [0, 0],
+               getPriceFrom: 0,
+               getPriceTo: 50000,
+               getYearFrom: 1,
+               getYearTo: 18,
+               selectedValue: null,
+               selectedValue2: null,
+               isActiveBtn: true,
+               isSlickInitialized: false,
+               baseUrlCity: null,
+               options: {
+                  dotSize: 50,
+                  width: 'auto',
+                  height: 20,
+                  contained: true,
+                  direction: 'ltr',
+                  data: null,
+                  dataLabel: 'label',
+                  dataValue: 'value',
+                  min: 1,
+                  max: 18,
+                  interval: 1,
+                  disabled: false,
+                  clickable: true,
+                  duration: 0.5,
+                  adsorb: false,
+                  lazy: false,
+                  tooltip: 'active',
+                  tooltipPlacement: 'center',
+                  tooltipFormatter: void 0,
+                  useKeyboard: false,
+                  keydownHook: null,
+                  dragOnClick: false,
+                  enableCross: true, // false
+                  fixed: false,
+                  minRange: void 0, // void 0 2
+                  maxRange: void 0,
+                  order: true,
+                  marks: false,
+                  dotOptions: void 0,
+                  dotAttrs: void 0,
+                  process: true,
+                  dotStyle: void 0,
+                  railStyle: void 0,
+                  processStyle: void 0,
+                  tooltipStyle: void 0,
+                  stepStyle: void 0,
+                  stepActiveStyle: void 0,
+                  labelStyle: void 0,
+                  labelActiveStyle: void 0,
+               },
+               options2: {
+                  dotSize: 50,
+                  width: 'auto',
+                  height: 20,
+                  contained: true,
+                  direction: 'ltr',
+                  data: null,
+                  dataLabel: 'label',
+                  dataValue: 'value',
+                  min: 0,
+                  max: 50000,
+                  interval: 100,
+                  disabled: false,
+                  clickable: true,
+                  duration: 0.5,
+                  adsorb: false,
+                  lazy: false,
+                  tooltip: 'active',
+                  tooltipPlacement: 'center',
+                  tooltipFormatter: formatNumber,
+                  useKeyboard: false,
+                  keydownHook: null,
+                  dragOnClick: false,
+                  enableCross: true,
+                  fixed: false,
+                  minRange: void 0, // void 0 6000
+                  maxRange: void 0,
+                  order: true,
+                  marks: false,
+                  dotOptions: void 0,
+                  dotAttrs: void 0,
+                  process: true,
+                  dotStyle: void 0,
+                  railStyle: void 0,
+                  processStyle: void 0,
+                  tooltipStyle: void 0,
+                  stepStyle: void 0,
+                  stepActiveStyle: void 0,
+                  labelStyle: void 0,
+                  labelActiveStyle: void 0,
+               }
+            }
+         },
+         methods: {
+            openShowMore() {
+               const itemsPerPage = 12;
+               const items = document.querySelectorAll(".lego-themed-toys__item");
+               const showMoreButton = document.getElementById("showMoreButton");
+               let isShowingMore = false;
+
+               for (let i = itemsPerPage; i < items.length; i++) {
+                  items[i].style.display = "none";
+               }
+
+               showMoreButton.addEventListener("click", function () {
+                  if (isShowingMore) {
+                     for (let i = itemsPerPage; i < items.length; i++) {
+                        items[i].style.display = "none";
+                     }
+                     showMoreButton.innerHTML = `Показать ещё <span class="btn-clik__str"></span>`;
+                  } else {
+                     for (let i = itemsPerPage; i < items.length; i++) {
+                        items[i].style.display = "block";
+                     }
+                     showMoreButton.innerHTML = `Показать меньше <span class="btn-clik__str active-btn"></span>`;
+                  }
+                  isShowingMore = !isShowingMore;
+               });
+            },
+            selectTab(index) {
+               this.activeTab = index;
+               if (index == 1) this.slickOne();
+            },
+            loadSlickSlider() {
+               let commonSettings = {
+                  arrows: true,
+                  prevArrow: '<button id="prev" type="button" class="slick-prev"></button>',
+                  nextArrow: '<button id="next" type="button" class="slick-next"></button>',
+                  infinite: true,
+                  centerMode: false,
+                  centerPadding: '0',
+                  responsive: [
+                     {
+                        breakpoint: 812,
+                        settings: {
+                           arrows: false,
+                           centerMode: false,
+                           centerPadding: '0',
+                           slidesToShow: 3,
+                           slidesToScroll: 3,
+                        }
+                     },
+                     {
+                        breakpoint: 480,
+                        settings: {
+                           arrows: false,
+                           centerMode: false,
+                           centerPadding: '0',
+                           slidesToShow: 2,
+                           slidesToScroll: 2,
+                        }
+                     }
+                  ]
+               };
+
+               $('.lego-wrap2.single-slide').slick({
+                  dots: false,
+                  slidesToShow: 4,
+                  slidesToScroll: 4,
+                  appendArrows: $('.your-class-arrow3'),
+                  ...commonSettings,
+               });
+
+               $('.lego-wrap2.double-slide').slick({
+                  dots: true,
+                  slidesToShow: 4,
+                  slidesToScroll: 4,
+                  appendArrows: $('.your-class-arrow2'),
+                  ...commonSettings,
+               });
+
+               $('.lego-wrap1').slick({
+                  dots: true,
+                  arrows: true,
+                  appendArrows: $('.your-class-arrow'),
+                  prevArrow: '<button id="prev" type="button" class="slick-prev"></button>',
+                  nextArrow: '<button id="next" type="button" class="slick-next"></button>',
+                  infinite: true,
+                  centerMode: false,
+                  centerPadding: '0',
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  responsive: [
+                     {
+                        breakpoint: 812,
+                        settings: {
+                           arrows: true,
+                           centerMode: false,
+                           centerPadding: '0',
+                           slidesToShow: 1,
+                           slidesToScroll: 1,
+                        }
+                     },
+                     {
+                        breakpoint: 480,
+                        settings: {
+                           arrows: false,
+                           centerMode: false,
+                           centerPadding: '0',
+                           slidesToShow: 1,
+                           slidesToScroll: 1,
+                        }
+                     }
+                  ]
+               });
+
+               $('.lego-wrap3.single-slide').slick({
+                  dots: false,
+                  arrows: true,
+                  appendArrows: $('.your-class-arrow4'),
+                  prevArrow: '<button id="prev" type="button" class="slick-prev"></button>',
+                  nextArrow: '<button id="next" type="button" class="slick-next"></button>',
+                  infinite: true,
+                  centerMode: false,
+                  centerPadding: '0',
+                  slidesToShow: 6,
+                  slidesToScroll: 6,
+                  responsive: [
+                     {
+                        breakpoint: 812,
+                        settings: {
+                           arrows: false,
+                           centerMode: false,
+                           centerPadding: '0',
+                           slidesToShow: 4,
+                           slidesToScroll: 4,
+                        }
+                     },
+                     {
+                        breakpoint: 480,
+                        settings: {
+                           arrows: false,
+                           centerMode: false,
+                           centerPadding: '0',
+                           slidesToShow: 2,
+                           slidesToScroll: 2,
+                        }
+                     }
+                  ]
+               });
+
+            },
+            createUrl() {
+
+               const activeTabValue = this.activeTab; // активная таба 0 или 1
+               const priceFrom = this.value2[0]; // значение цены ОТ
+               const priceTo = this.value2[1]; // значение цены ДО
+               const yearFrom = this.value1[0]; // возраст ОТ
+               const yearTo = this.value1[1]; // возраст ДО
+               const interests = this.selectedValue; // активный фильтра url(Интересы)
+               const seria = this.selectedValue2; // активный фильтра url(Серия)
+
+               // this.baseUrlCity - выводиться название города для url
+               //let starUrl = `https://comfy.ua/${this.baseUrlCity}/lego/`; 
+               let starUrl = "https://comfy.ua/lego/";
+               let priceFromToUrl = `price_from__${priceFrom}__price_to__${priceTo}`;
+               let yearFromToUrl = `vozrast_igrushek__${yearFrom},${yearTo}`;
+               let interestsUrl = `interesi_lego__${interests}`;
+               let seriaUrl = `serija_lego__${seria}`;
+               let goToUrl = ``;
+
+               if (activeTabValue === 0) {
+                  checkFilter(activeTabValue, this.getPriceFrom, this.getPriceTo, this.getYearFrom, this.getYearTo);
+               }
+
+               if (activeTabValue === 1) {
+                  checkFilter(activeTabValue, this.getPriceFrom, this.getPriceTo, this.getYearFrom, this.getYearTo);
+               }
+
+               function checkFilter(activeTabValue, getPriceFrom, getPriceTo, getYearFrom, getYearTo) {
+
+                  if ((priceFrom == getPriceFrom && priceTo == getPriceTo) && (yearFrom == getYearFrom && yearTo == getYearTo)) {
+                     console.log("oбa не выбраны");
+
+                     if (activeTabValue == 0) {
+                        goToUrl = `${starUrl}${interestsUrl}/`;
+                     } else {
+                        goToUrl = `${starUrl}${seriaUrl}/`;
+                     }
+                     openNewBrowserTab(goToUrl);
+                     console.log(goToUrl);
+                  }
+
+                  if ((priceFrom != getPriceFrom || priceTo != getPriceTo) && (yearFrom != getYearFrom || yearTo != getYearTo)) {
+                     console.log("oбa выбраны");
+
+                     if (activeTabValue == 0) {
+                        goToUrl = `${starUrl}${priceFromToUrl}__${interestsUrl}__${yearFromToUrl}/`;
+                     } else {
+                        goToUrl = `${starUrl}${priceFromToUrl}__${seriaUrl}__${yearFromToUrl}/`;
+                     }
+                     openNewBrowserTab(goToUrl);
+                     console.log(goToUrl);
+                  }
+
+                  if ((priceFrom != getPriceFrom || priceTo != getPriceTo) && (yearFrom == getYearFrom && yearTo == getYearTo)) {
+                     console.log("выбрана цена");
+
+                     if (activeTabValue == 0) {
+                        goToUrl = `${starUrl}${priceFromToUrl}__${interestsUrl}/`;
+                     } else {
+                        goToUrl = `${starUrl}${priceFromToUrl}__${seriaUrl}/`;
+                     }
+                     openNewBrowserTab(goToUrl);
+                     console.log(goToUrl);
+                  }
+
+                  if ((priceFrom == getPriceFrom || priceTo == getPriceTo) && (yearFrom != getYearFrom || yearTo != getYearTo)) {
+                     console.log("выбран возраст");
+
+                     if (activeTabValue == 0) {
+                        goToUrl = `${starUrl}${interestsUrl}__${yearFromToUrl}/`;
+                     } else {
+                        goToUrl = `${starUrl}${seriaUrl}__${yearFromToUrl}/`;
+                     }
+                     openNewBrowserTab(goToUrl);
+                     console.log(goToUrl);
+                  }
+               }
+
+               function openNewBrowserTab(goToUrl) {
+                  window.open(goToUrl, '_blank');
+               }
+
+            },
+            slickOne() {
+               if (!this.isSlickInitialized) {
+
+                  this.isSlickInitialized = true;
+               }
+            }
+         },
+         created() {
+            this.value2[0] = this.getPriceFrom;
+            this.value2[1] = this.getPriceTo;
+            this.value1[0] = this.getYearFrom;
+            this.value1[1] = this.getYearTo;
+         },
+         mounted() {
+            //this.baseUrlCity = window.__INITIAL_STATE__.base.urlData.city;
+
+            this.openShowMore();
+            this.loadSlickSlider();
+         },
+         components: {
+            'vueSlider': window['vue-slider-component'],
+         },
+         watch: {
+            selectedValue: function (event) {
+               this.isActiveBtn = false;
+               if (event == null) this.isActiveBtn = true;
+            },
+            selectedValue2: function (event) {
+               this.isActiveBtn = false;
+               if (event == null) this.isActiveBtn = true;
+            },
+            activeTab: function (event) {
+               this.selectedValue2 = null;
+               this.selectedValue = null;
+            }
+         }
+      })
+   </script>
+
+</body>
+
+</html>

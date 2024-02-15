@@ -1,0 +1,140 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<style>
+
+</style>
+
+<div id="bosch">
+
+   <div class="bosch-header__logo">
+      <img src="https://cdn.comfy.ua/media/x/img3/bosch/logo.png" alt="Лого Bosch">
+   </div>
+
+   <div class="bosch-container swiper">
+      <div class="bosch-row bosch-row-flex swiper-wrapper">
+         <a href="https://comfy.ua/ua/kitchen-machine/brand__bosch/" class="bosch-row__item swiper-slide">
+            <div class="bosch-content">
+               <div class="bosch-content__prod">
+                  <picture>
+                     <source srcset="https://cdn.comfy.ua/media/x/img5/bosch_img1_mob.png" media="(max-width: 480px)" />
+                     <img src="https://cdn.comfy.ua/media/x/img5/bosch_img1.png" alt="Кухонні машини" />
+                  </picture>
+               </div>
+               <div class="bosch-content__text">
+                  <p>Кухонні машини</p>
+                  <div class="bosch-img-pos img-pos1">
+                     <img src="https://cdn.comfy.ua/media/x/img3/bosch/img1_1.png" alt="">
+                  </div>
+               </div>
+            </div>
+         </a>
+         <a href="https://comfy.ua/ua/blender/brand__bosch/" class="bosch-row__item swiper-slide">
+            <div class="bosch-content">
+               <div class="bosch-content__prod">
+                  <picture>
+                     <source srcset="https://cdn.comfy.ua/media/x/img5/bosch_img2_mob.png" media="(max-width: 480px)" />
+                     <img src="https://cdn.comfy.ua/media/x/img5/bosch_img2.png" alt="Блендери" />
+                  </picture>
+               </div>
+               <div class="bosch-content__text">
+                  <p>Блендери</span></p>
+                  <div class="bosch-img-pos img-pos2">
+                     <img src="https://cdn.comfy.ua/media/x/img3/bosch/img2_2.png" alt="">
+                  </div>
+               </div>
+            </div>
+         </a>
+         <a href="https://comfy.ua/ua/meat-grinder/brand__bosch/" class="bosch-row__item swiper-slide">
+            <div class="bosch-content">
+               <div class="bosch-content__prod">
+                  <picture>
+                     <source srcset="https://cdn.comfy.ua/media/x/img5/bosch_img3_mob.png" media="(max-width: 480px)" />
+                     <img src="https://cdn.comfy.ua/media/x/img5/bosch_img3.png" alt="М'ясорубки" />
+                  </picture>
+               </div>
+               <div class="bosch-content__text">
+                  <p>М'ясорубки</p>
+                  <div class="bosch-img-pos img-pos3">
+                     <img src="https://cdn.comfy.ua/media/x/img3/bosch/img3_1.png" alt="">
+                  </div>
+                  <div class="bosch-img-pos img-pos4">
+                     <img src="https://cdn.comfy.ua/media/x/img3/bosch/img3_2.png" alt="">
+                  </div>
+               </div>
+            </div>
+         </a>
+         <a href="https://comfy.ua/ua/vacuum-cleaner/brand__bosch/" class="bosch-row__item swiper-slide">
+            <div class="bosch-content">
+               <div class="bosch-content__prod">
+                  <picture>
+                     <source srcset="https://cdn.comfy.ua/media/x/img5/bosch_img4_mob.png" media="(max-width: 480px)" />
+                     <img src="https://cdn.comfy.ua/media/x/img5/bosch_img4.png" alt="Пилососи" />
+                  </picture>
+               </div>
+               <div class="bosch-content__text">
+                  <p>Пилососи</p>
+                  <div class="bosch-img-pos img-pos5">
+                     <img src="https://cdn.comfy.ua/media/x/img3/bosch/img4_1.png" alt="">
+                  </div>
+                  <div class="bosch-img-pos img-pos6">
+                     <img src="https://cdn.comfy.ua/media/x/img3/bosch/img4_2.png" alt="">
+                  </div>
+               </div>
+            </div>
+         </a>
+      </div>
+      <div class="bosch-row bosch-row__slick-prev your-class-arrow">
+         <button id="prev" type="button" class="slick-prev"></button>
+      </div>
+      <div class="bosch-row bosch-row__slick-next your-class-arrow">
+         <button id="next" type="button" class="slick-next"></button>
+      </div>
+   </div>
+
+</div>
+
+<script>
+
+   (function ($) {
+      $(document).ready(function () {
+
+         var swiper2 = new Swiper('.swiper', {
+            spaceBetween: 8,
+            breakpoints: {
+               320: {
+                  slidesPerView: 1,
+                  spaceBetween: 0,
+                  navigation: {
+                     nextEl: ".bosch-row__slick-next",
+                     prevEl: ".bosch-row__slick-prev",
+                     disabledClass: ''
+                  },
+                  loop: true,
+               },
+               481: {
+                  slidesPerView: 2,
+                  navigation: {
+                     nextEl: ".bosch-row__slick-next",
+                     prevEl: ".bosch-row__slick-prev",
+                     disabledClass: ''
+                  },
+                  loop: true,
+               },
+               1024: {
+                  slidesPerView: 4,
+                  loop: false,
+                  navigation: {
+                     nextEl: ".bosch-row__slick-next",
+                     prevEl: ".bosch-row__slick-prev",
+                     disabledClass: 'disabled_swiper_button'
+                  }
+               },
+            },
+         });
+
+      });
+   })(jQuery)
+
+</script>

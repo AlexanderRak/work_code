@@ -1,0 +1,472 @@
+#lego-wrap
+   display: block
+   margin: 0 auto
+   max-width: 1366px
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #fff
+   position: relative
+   img
+      &:hover
+         opacity: 1
+   &:first-letter
+      padding-left: 0
+   img
+      display: block
+      margin-right: initial
+      margin-left: initial
+   p
+      font-size: 24px
+      margin-bottom: 0
+      color: #000000
+   h2
+      font-size: 20px
+      line-height: 1
+      color: #fff
+      font-weight: bold
+      text-transform: uppercase
+   h3
+      font-size: 34px
+      margin: 0
+      padding-top: 0
+      line-height: 1.1
+   a
+      color: #0071BC
+      font-size: 16px
+      display: block
+span.word-wrap
+   display: block
+   word-wrap: break-word
+.breadcrumbs
+   display: none
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+   background: #fff
+.btn_style
+   background: #FFFFFF
+   border: 4px solid #000000
+   color: #000
+   text-align: center
+   padding: 6px 0
+   text-transform: uppercase
+   letter-spacing: 0.2em
+   font-weight: bold
+   font-size: 24px
+   max-width: 432px
+   position: relative
+   z-index: 3
+// default
+
+.lego-header
+   position: relative
+   .lego-header__banner
+      background-image: url(https://cdn.comfy.ua/media/x/img2/lego/banner-desk_ua.jpg)
+      background-position: left
+      background-repeat: no-repeat
+      background-size: cover
+      width: 100%
+      height: 288px
+.lego-age
+   margin-top: 17px
+   background: #FFD400
+.lego-age__container
+   position: relative
+   &::after
+      content: ""
+      background-image: url(https://cdn.comfy.ua/media/x/img2/lego/img2.png)
+      background-position: right
+      background-repeat: no-repeat
+      background-size: cover
+      max-width: 934px
+      width: 100%
+      height: 48px
+      position: absolute
+      right: 0
+      top: 0
+      z-index: 2
+.lego-age__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+   grid-gap: 32px
+   margin: 0 27px
+   padding-top: 15px
+.lego-age__grid-item
+   position: relative
+   transition: .3s
+   &:hover
+      .lego-age__elips-hover
+         background: #FF671F
+.lego-age__elips-hover
+   background: #fff
+   width: 100%
+   height: 100px
+   border-radius: 50% 50% 0 0 / 100% 100% 0 0
+   position: absolute
+   bottom: 21%
+   left: 0
+   right: 0
+   z-index: 2
+   transition: .3s
+.lego-age__img
+   position: relative
+   z-index: 3
+.lego-category-sale
+   margin-top: 16px
+.lego-category-sale__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 1fr
+   grid-gap: 16px
+.lego-category-sale__grid-item
+   transition: .3s
+   &:hover
+      .lego-category-sale__img
+         &.bgrd1
+            &::before
+               border: 5px solid #DD1A22
+         &.bgrd2
+            &::before
+               border: 5px solid #00311E
+         &.bgrd3
+            &::before
+               border: 5px solid #00395D
+   .lego-category-sale__text
+      text-align: center
+      padding: 18px 0 14px 0
+      &.bgrd1
+         background: #DD1A22
+      &.bgrd2
+         background: #00311E
+      &.bgrd3
+         background: #00395D
+.lego-category-sale__img
+   position: relative
+   &::before
+      content: ""
+      border: 5px solid rgba(255, 255, 255, 0)
+      border-bottom: 0 !important
+      width: 100%
+      height: 100%
+      position: absolute
+      left: 0
+      top: 0
+      transition: .3s
+// slick
+#lego-wrap
+   .slick-track
+      position: inherit
+      left: inherit
+      top: inherit
+      height: 100%
+      display: flex
+      align-items: flex-start
+      overflow: hidden
+   .lego-wrap2
+      .slick-list
+         // margin-left: -16px
+         margin-right: -16px
+      .slick-slide
+         margin: 0 16px 0 0
+   .slick-slider
+      height: 100%
+      z-index: 7
+      margin-top: 0
+   .slick-slide
+      float: inherit
+      height: auto
+   .your-class-arrow,.your-class-arrow2
+      display: block
+      .slick-prev, .slick-next
+         background: rgba(255, 255, 255, 0.5)
+         border: 1px solid #E5E5E5
+         border-radius: 8px
+         width: 36px
+         height: 65px
+         position: absolute
+         z-index: 8
+         display: inline-block !important
+         transition: .3s
+         &::before
+            width: 20px
+            height: 20px
+            border-radius: 50%
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            color: #fff
+            font-size: 13px
+            line-height: 1.2
+            left: 1px
+            right: 0
+            margin: 0 auto
+         &:hover
+            cursor: pointer
+            background: rgba(255, 255, 255, 0.8)
+         &.slick-disabled
+            opacity: 0.5
+            cursor: default
+            &::before
+               background: #E5E5E5
+            &:hover
+               background: rgba(255, 255, 255, 0.5)
+      .slick-prev
+         left: 5px
+         top: 50%
+         transform: translateY(-50%)
+         &::before
+            content: url(https://cdn.comfy.ua/media/x/img2/lego/str_left.svg)
+      .slick-next
+         right: 5px
+         top: 50%
+         transform: translateY(-50%)
+         &::before
+            content: url(https://cdn.comfy.ua/media/x/img2/lego/str_right.svg)
+   .slick-dots
+      bottom: -45px
+      li
+         width: 24px !important
+         height: 24px !important
+         border-radius: 0
+         border: 0
+         background: #C4C4C4
+         opacity: 1
+         &.slick-active
+            background: #FFD500
+            &:hover
+               background: #FFD500
+         &:hover
+            opacity: 1
+            background: #bdbdbd
+// slick END
+.lego-slider-banners
+   margin-top: 16px
+.lego-slider-banners__wrap
+   position: relative
+.lego-themed-toys
+   margin-top: 45px
+   padding-bottom: 16px
+#lego-wrap .lego-themed-toys__item
+   &:nth-child(n+13)
+      display: none
+   &.active-content:nth-child(n+13)
+      display: block
+.lego-themed-toys__item
+   &:hover
+      .lego-themed-toys__text
+         transition: .3s
+         border-bottom: 1px solid #0071BC
+.lego-themed-toys__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+   grid-gap: 30px
+   padding-top: 25px
+.btn-clik
+   max-width: 380px
+   width: 100%
+   margin: 25px auto 0 auto
+   transition: .3s
+   display: flex
+   align-items: center
+   justify-content: center
+   line-height: 1
+   position: relative
+   padding: 8px 0
+   &:hover
+      cursor: pointer
+      border-left: 4px solid #ffd400
+      border-top: 4px solid #ffd400
+      border-right: 4px solid #59a1e3
+      border-bottom: 4px solid #59a1e3
+   &.active-btn
+      .btn-clik__str
+         &::after
+            display: none
+   &::before, &::after
+      content: ""
+      background-repeat: no-repeat
+      background-size: cover
+      position: absolute
+      width: 48px
+      height: 48px
+   &::before
+      background-image: url(https://cdn.comfy.ua/media/x/img2/lego/bf_left.svg)
+      left: -52px
+   &::after
+      background-image: url(https://cdn.comfy.ua/media/x/img2/lego/bf_right.svg)
+      right: -52px
+.btn-clik__str
+   width: 16px
+   height: 16px
+   background: #000000
+   border-radius: 50%
+   position: relative
+   display: inline-block
+   margin-left: 10px
+   &::before, &::after
+      content: ""
+      background-position: center
+      background-repeat: no-repeat
+      background-size: contain
+      width: 8px
+      height: 2px
+      background-color: #fff
+      border-radius: 1px
+      position: absolute
+      left: 0
+      right: 0
+      margin: 0 auto
+      top: 50%
+      transform: translateY(-50%)
+   &::after
+      width: 2px
+      height: 8px
+.lego-themed-toys__text
+   padding-top: 5px
+   border-bottom: 1px solid rgba(255, 255, 255, 0)
+   display: table
+   margin: 0 auto
+   position: relative
+   color: #0071BC
+.lego-category-prod
+   position: relative
+.lego-category-prod__item
+   position: relative
+   transition: .3s
+   &:hover
+      .lego-category-prod__text
+         text-decoration: underline
+.lego-category-prod__text
+   text-transform: uppercase
+   color: #fff
+   font-size: 20px
+   text-align: center
+   position: absolute
+   display: block
+   margin: 0 auto
+   top: 32px
+   left: 0
+   right: 0
+.lego-footer
+   padding-top: 90px
+.lego-footer__grid
+   display: grid
+   grid-template-columns: 1fr 1fr
+   grid-gap: 16px
+.lego-footer__item
+   position: relative
+.lego-footer__text-pos
+   position: absolute
+   left: 0
+   padding: 0 24px
+   top: 50%
+   transform: translateY(-50%)
+   width: 44%
+   margin: 0 auto 0 0
+   color: #fff
+   font-size: 18px
+   font-weight: bold
+.lego-header__banner-mob
+   display: none
+#lego-wrap .lego-slider-banners__img-mob
+   display: none
+// media
+// @media (max-width: 1250px)
+@media (max-width: 1024px)
+   #lego-wrap h2
+      font-size: 15px
+   .lego-age__grid
+      grid-gap: 16px
+      margin: 0 16px
+   .lego-age__elips-hover
+      height: 70px
+   .lego-category-sale
+      padding: 0 15px
+   .lego-themed-toys
+      padding: 0 16px 16px 16px
+      margin-top: 70px
+   .btn_style
+      font-size: 21px
+   .lego-themed-toys__grid
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+   #lego-wrap .lego-themed-toys__item
+      &:nth-child(n+11)
+         display: none
+      &.active-content:nth-child(n+11)
+         display: block
+   .lego-category-prod__text
+      top: 16px
+@media (max-width: 812px)
+   #lego-wrap h2
+      font-size: 13px
+   .lego-themed-toys__grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-gap: 16px
+   #lego-wrap .lego-themed-toys__item
+      &:nth-child(n+9)
+         display: none
+      &.active-content:nth-child(n+9)
+         display: block
+   .lego-age__elips-hover
+      height: 55px
+   .lego-themed-toys__text
+      margin: 0 auto 0 0
+   .lego-footer__text-pos
+      font-size: 16px
+      padding: 0 5px 0px 25px
+   .btn-clik::before, .btn-clik::after
+      height: 45px
+@media (max-width: 480px)
+   .btn_style
+      margin: 0 0
+   .lego-header__banner-mob
+      display: block
+   .lego-header__banner
+      display: none
+   .lego-age__grid
+      grid-template-columns: 1fr 1fr
+      padding-top: 33px
+      grid-gap: 5px
+   .lego-age__container::after
+      display: none
+   .lego-category-sale__grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 5px
+   .lego-category-sale__grid-item .lego-category-sale__text
+      padding: 10px 0 10px 0
+   #lego-wrap .lego-slider-banners__img-desk
+      display: none
+   #lego-wrap .lego-slider-banners__img-mob
+      display: block
+   .lego-themed-toys__grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 10px 5px
+   #lego-wrap .lego-themed-toys__item
+      &:nth-child(n+13)
+         display: none
+      &.active-content:nth-child(n+13)
+         display: block
+   .btn-clik.btn_style
+      max-width: 77%
+      margin: 0 auto
+      font-size: 16px
+      margin-top: 20px
+   .btn-clik::before, .btn-clik::after
+      height: 40px
+      width: 40px
+   .btn-clik::before
+      left: -44px
+   .btn-clik::after
+      right: -44px
+   .lego-category-prod
+      padding: 0 15px
+   .lego-age__btn.btn_style
+      margin: 0 15px
+   .lego-category-prod__text
+      top: 12px
+      font-size: 16px
+   .lego-footer__grid
+      grid-template-columns: 1fr
+      grid-gap: 8px
+   .lego-age__elips-hover
+      height: 80px

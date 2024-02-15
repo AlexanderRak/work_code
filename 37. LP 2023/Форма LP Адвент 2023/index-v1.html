@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/vue-the-mask@0.11.1/dist/vue-the-mask.min.js"></script>
+   <link rel="stylesheet" href="sass.css">
+</head>
+
+<style>
+
+</style>
+
+<body>
+   <div id="wrap-advent">
+
+      <div id="app2">
+
+         <div class="container-checklogin">
+            <form class="form-container" @submit.prevent="getKeyFromSms" v-show="showHideKeyFromSms">
+               <div class="form-container__label">
+                  <label for="phone">Номер телефона:</label>
+               </div>
+               <div class="form-container__input">
+                  <input type="text" id="phone" v-model="phone" placeholder="+38(___)___-__-__" v-mask="'+38(###)###-##-##'" :class="{ '__input-error': showErrorMessage }">
+                  <div class="error-message" v-if="showErrorMessage">{{ errorMessage }}</div>
+               </div>
+               <div class="form-container__button">
+                  <button type="submit" :class="{ '_disabled': disabledBtn }" :disabled="disabledBtn">
+                     <div class="form-container__button__text" v-if="!loading">
+                        Отправить
+                     </div>
+                     <span class="form-container__button__loading" v-else>
+                        <span class="form-container__button__loading-dot"></span>
+                        <span class="form-container__button__loading-dot"></span>
+                        <span class="form-container__button__loading-dot"></span>
+                     </span>
+                  </button>
+               </div>
+            </form>
+            <form class="form-container" @submit.prevent="checkKeyFromSms" v-show="showHideCheckKeyFromSms">
+               <div class="form-container__label">
+                  <label for="smskey">Код з SMS присланий на <br> {{ phone }}</label>
+               </div>
+               <div class="form-container__input">
+                  <input type="text" id="smskey" v-model="smskey" placeholder="Код" :class="{ '__input-error': showErrorMessage2 }" @input="smskey = smskey.replace(/\D/g, '')">
+                  <div class="error-message" v-if="showErrorMessage2">{{ errorMessage }}</div>
+               </div>
+               <div class="form-container__button">
+                  <button type="submit" :class="{ '_disabled': disabledBtn2}" :disabled="disabledBtn2">
+                     <div class="form-container__button__text" v-if="!loading">
+                        Войти
+                     </div>
+                     <span class="form-container__button__loading" v-else>
+                        <span class="form-container__button__loading-dot"></span>
+                        <span class="form-container__button__loading-dot"></span>
+                        <span class="form-container__button__loading-dot"></span>
+                     </span>
+                  </button>
+               </div>
+               <div class="form-container__sms-send-again" v-on:click="smsSendAgain" :class="{ '_disabled': isResendButtonDisabled }">
+                  {{ smsSendAgainText }}
+               </div>
+               <div class="form-container__change-phone" v-on:click="changePhone">
+                  Змінити номер телефону
+               </div>
+            </form>
+         </div>
+
+      </div>
+   </div>
+
+   <script>
+      /*
+         1. Если логин то нужно обновлять старницу без перезагрузки,
+            -  сейчас с перезагрузкой через window.location.reload();
+
+         Дальше делаем другой фунционал.
+      */
+      document.addEventListener("DOMContentLoaded", (event) => {
+
+         new Vue({
+            el: '#app2',
+            data: {
+               phone: '',
+               smskey: '',
+               response: null,
+               response2: null,
+               showErrorMessage: false,
+               showErrorMessage2: false,
+               disabledBtn: true,
+               disabledBtn2: true,
+               errorMessage: '',
+               loading: false,
+               showHideKeyFromSms: true,
+               showHideCheckKeyFromSms: false,
+               checklogin: null, // при заходе на старницу проверка в Логине/ не влогине true или false
+               errorMessageText: {
+                  errorMessage1: "Необхiдно вiрно вказати код країни +380. Приклад: +380 12 345 6789",
+                  errorMessage2: "Обовязкове поле",
+                  errorMessage3: "Не вірний ключ"
+               },
+               wasChangePhoneClicked: false,
+               wasChangeKeyClicked: false,
+               smsSendAgainText: 'Вислати код ще раз',
+               isResendButtonDisabled: false,
+               countdown: 5,
+            },
+            mounted() {
+
+               setTimeout(function () {
+                  if (window.__INITIAL_STATE__.auth.authInfo.user.verified && window.__INITIAL_STATE__.auth.authInfo.user.ucpId) {
+                     this.checklogin = true;
+                     console.log("true __INITIAL_STATE__");
+                  } else {
+                     this.checklogin = false;
+                     console.log("false __INITIAL_STATE__");
+                  }
+               }, 1000);
+
+            },
+            computed: {
+               phonePattern() {
+                  return /^\+38\(0\d{2}\)\d{3}-\d{2}-\d{2}$/;
+               },
+               isValidPhone() {
+                  return this.phonePattern.test(this.phone) && this.phone.length > 0;
+               },
+               isValidKeyLeng() {
+                  return this.smskey.length > 0;
+               },
+            },
+            watch: {
+               phone: 'validatePhone',
+               smskey: 'validateSmsKey',
+            },
+            methods: {
+               getKeyFromSms() {
+                  this.loading = true;
+
+                  fetch('https://comfy.ua/api/auth/v3/otp/send', {
+                     method: 'POST',
+                     headers: {
+                        'Content-Type': 'application/json'
+                     },
+                     body: JSON.stringify({ phone: this.phone })
+                  })
+                     .then(response => response.json())
+                     .then(data => {
+                        this.response = data;
+                        this.loading = false;
+                        this.showHideKeyFromSms = false;
+                        this.showHideCheckKeyFromSms = true;
+                        console.log(this.response);
+                     })
+                     .catch(error => {
+                        console.error('Ошибка при выполнении запроса:', error);
+                     });
+               },
+               checkKeyFromSms() {
+                  this.loading = true;
+
+                  fetch('https://comfy.ua/api/auth/v3/otp/check', {
+                     method: 'POST',
+                     headers: {
+                        'Content-Type': 'application/json'
+                     },
+                     body: JSON.stringify({ code: this.smskey, remember_me: true })
+                  })
+                     .then(response => response.json())
+                     .then(data => {
+                        this.response2 = data;
+                        console.log(this.response2);
+
+                        if (this.response2.hasOwnProperty('error')) {
+                           this.errorMessage = this.errorMessageText.errorMessage3;
+                           this.showErrorMessage2 = true;
+                           console.log("не верный ключ");
+                           this.loading = false;
+                        }
+                        if (this.response2.hasOwnProperty('requiredActualization')) {
+                           this.loading = false;
+                           console.log("в логине");
+                           //window.location.reload();
+                        }
+                     })
+                     .catch(error => {
+                        console.error('Ошибка при выполнении запроса:', error);
+                     });
+               },
+               smsSendAgain() {
+
+                  fetch('https://comfy.ua/api/auth/v3/otp/send', {
+                     method: 'POST',
+                     headers: {
+                        'Content-Type': 'application/json'
+                     },
+                     body: JSON.stringify({ phone: this.phone })
+                  })
+                     .then(response => response.json())
+                     .then(data => {
+                        this.response = data;
+                        this.loading = false;
+                        this.showHideKeyFromSms = false;
+                        this.showHideCheckKeyFromSms = true;
+                        console.log(this.response);
+                     })
+                     .catch(error => {
+                        console.error('Ошибка при выполнении запроса:', error);
+                     });
+
+                  this.disabledBtn2 = true;
+                  this.smskey = '';
+                  this.showErrorMessage2 = false;
+
+                  this.isResendButtonDisabled = true;
+                  const intervalId = setInterval(() => {
+                     this.countdown -= 1;
+                     if (this.countdown <= 0) {
+                        // Таймер истек
+                        clearInterval(intervalId);
+                        this.countdown = 5;
+                        this.isResendButtonDisabled = false;
+                        this.smsSendAgainText = "Вислати код ще раз";
+                     } else {
+                        this.smsSendAgainText = `Запросити код ще раз через ${this.countdown} с`;
+                     }
+                  }, 1000);
+               },
+               changePhone() {
+                  this.showHideKeyFromSms = true;
+                  this.showHideCheckKeyFromSms = false;
+
+                  this.wasChangePhoneClicked = true;
+                  this.wasChangeKeyClicked = true;
+                  this.phone = '';
+                  this.smskey = '';
+                  this.disabledBtn = true;
+                  this.disabledBtn2 = true;
+                  this.showErrorMessage = false;
+                  this.showErrorMessage2 = false;
+               },
+               validatePhone(newVal) {
+                  if (!this.isValidPhone) {
+                     if (!this.wasChangePhoneClicked) {
+
+                        if (this.phone.length === 0) {
+                           this.errorMessage = this.errorMessageText.errorMessage2;
+                        } else {
+                           this.errorMessage = this.errorMessageText.errorMessage1;
+                        }
+                        this.showErrorMessage = true;
+                        this.disabledBtn = true;
+                     }
+                     this.wasChangePhoneClicked = false;
+
+                  } else {
+                     this.showErrorMessage = false;
+                     this.disabledBtn = false;
+                  }
+               },
+               validateSmsKey(newVal) {
+                  if (!this.isValidKeyLeng) {
+                     if (this.wasChangeKeyClicked) {
+                        this.wasChangeKeyClicked = false;
+                     } else {
+                        // if (this.smskey.length === 0) {
+                        this.errorMessage = this.errorMessageText.errorMessage2;
+                        this.showErrorMessage2 = true;
+                        this.disabledBtn2 = true;
+                        // }
+                     }
+                  } else {
+                     this.disabledBtn2 = false;
+                     this.showErrorMessage2 = false;
+                  }
+               },
+            }
+         });
+      });
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,1817 @@
+$maxWidth: 1920
+=adaptive-font($pcSize, $mobSize)
+   $addSize: $pcSize - $mobSize
+   font-size: #{$mobSize}px
+   @media only screen and (min-width: 320px) and (max-width: #{$maxWidth}px)
+      font-size: calc(#{$mobSize}px + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+   @media only screen and (min-width: 1902px)
+      font-size: #{$pcSize}px
+body
+   padding: 0
+   margin: 0
+   box-sizing: border-box
+   height: 100%
+#app-results-year
+   display: block
+   margin: 0 auto
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #fff
+   position: relative
+   img
+      display: block
+      max-width: 100%
+      margin-right: initial
+      margin-left: initial
+      opacity: 1
+   a
+      display: block
+      text-decoration: none
+span.word-wrap
+   display: block
+   word-wrap: break-word
+.content
+   width: 100%
+   max-width: 100%
+.category-cms-template__content
+   order: 0
+   padding-left: 0
+   padding-right: 0
+   padding-bottom: 0
+   margin-bottom: 0
+.category-info
+   display: none
+.category-cms-template .category-cms-template__content .category__main
+   display: none
+.bottom-content-recommendations
+   display: none
+.breadcrumbs
+   display: none
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+   background: #fff
+.bottom-content-tags .b-sec, .bottom-content-description .b-sec
+   border: 0
+   padding: 0
+::-webkit-scrollbar
+   width: 12px
+::-webkit-scrollbar-thumb
+   background-color: #ff671f // Цвет ползунка
+   //border-radius: 6px
+::-webkit-scrollbar-track
+   background-color: #fff // Цвет трека (фона)
+*
+   scrollbar-color: #ff671f #fff !important
+   scrollbar-face-color: #ff671f
+// default
+.results-year-header
+   position: relative
+   overflow: hidden
+.results-year-header__bgrd
+   background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/h_bgrd.svg)
+   background-position: bottom center
+   background-repeat: repeat-x
+   background-size: cover
+   width: 100%
+   height: 100vh
+   position: relative
+   max-height: 800px
+.results-year-header__anim-snow
+   position: relative
+   z-index: 1
+.results-year-header__logo
+   position: relative
+   z-index: 2
+   padding-top: 4vw
+   width: 22vw
+   height: 11vh
+   display: block
+   margin: 0 auto
+   filter: drop-shadow(0px 0px 4px #fff)
+   img
+      width: 100%
+.results-year-header__img
+   background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/h_bgrd2.svg)
+   background-position: center
+   background-repeat: repeat-x
+   background-size: contain
+   max-height: 418px
+   width: 100%
+   height: 45vh
+   position: relative
+   z-index: 2
+   filter: drop-shadow(2px 3px 4px #871912)
+.results-year-snowflake
+   position: absolute
+   animation: fall linear infinite
+@keyframes fall
+   to
+      top: 100vh
+.results-year-lk
+   &.--notinlogin
+      padding: 80px 15px 48px 15px
+   &.--inlogin
+      padding: 60px 15px
+.results-year-lk__conatiner
+   max-width: 1792px
+   margin: 0 auto
+.results-year-newgeneral-statistics__container
+   margin-bottom: 115px
+.results-year-lk__user-activity
+   border-radius: 16px
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15)
+   background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/ntl_img_bgrd.svg)
+   background-position: right bottom
+   background-repeat: repeat-x
+   background-size: cover
+   overflow: hidden
+   background-color: #fff
+   position: relative
+   &.ctg--onlyone
+      background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/christmass_bgrd.svg)
+      height: 448px
+      &::before
+         content: ""
+         width: 100%
+         height: 488px
+         border-radius: 50%
+         background: #1A2C1A
+         position: absolute
+         left: 50%
+         transform: translateX(-50%)
+         top: -58%
+         z-index: 1
+.results-year-lk__user-activity-ctg__txt1
+   text-align: center
+   +adaptive-font(64, 34)
+   font-style: normal
+   font-weight: 700
+   line-height: 1
+   color: #fff
+   position: relative
+   z-index: 3
+   padding: 48px 15px 15px 15px
+   span
+      font-size: 32px
+      text-align: center
+      display: block
+      padding-top: 24px
+.results-year-lk__user-activity-ctg__txt2
+   display: flex
+   flex-direction: column
+   align-items: center
+   text-align: center
+   font-size: 34px
+   font-style: normal
+   font-weight: 700
+   line-height: 1.1
+   color: #000
+   z-index: 3
+   position: absolute
+   left: 50%
+   transform: translateX(-50%)
+   bottom: 60px
+   gap: 14px
+.results-year-lk__user-activity-ctg__img-left, .results-year-lk__user-activity-ctg__img-right
+   position: absolute
+   z-index: 2
+.results-year-lk__user-activity-ctg__img-left
+   left: 0
+   bottom: 0
+.results-year-lk__user-activity-ctg__img-right
+   right: 0
+   top: 0
+.results-year-lk__user-activity__grid
+   display: grid
+   grid-template-columns: 570px 1fr 1fr 1fr
+   grid-gap: 15px
+   &.grid-inlogin
+      grid-template-columns: minmax(0, 570px) minmax(0, 200px) minmax(0, 200px) minmax(0, 200px)
+      grid-gap: 128px
+.results-year-lk__user-activity__item
+   position: relative
+   &:first-child
+      display: flex
+      align-items: center
+      &::before
+         content: ""
+         width: 800px
+         height: 800px
+         border-radius: 50%
+         background: #1A2C1A
+         position: absolute
+         right: 0
+         top: 50%
+         transform: translateY(-50%)
+         z-index: 2
+.results-year-lk__user-activity__txt0
+   color: #fff
+   +adaptive-font(120, 34)
+   font-weight: bold
+   line-height: 1.2
+   position: relative
+.results-year-lk__user-activity__txt1
+   color: #fff
+   +adaptive-font(31, 16)
+   font-weight: 500
+   line-height: 1.2
+   position: relative
+   padding: 35px 80px
+   z-index: 3
+.results-year-lk__user-activity__link
+   +adaptive-font(28, 16)
+   font-style: normal
+   font-weight: 700
+   border-radius: 8px
+   background: #43B02A
+   color: #fff
+   text-align: center
+   padding: 10px 0
+   max-width: 360px
+   margin: 15px 0 0 0
+.results-year-lk__user-activity__txt2
+   +adaptive-font(22, 14)
+   font-weight: 700
+   line-height: 1.2
+   color: #000
+   text-align: center
+   padding-top: 15px
+   max-width: 200px
+.results-year-lk__user-activity__inform
+   padding: 5px 0 24px 0
+   display: flex
+   flex-direction: column
+   align-items: center
+.--flex-end
+   display: flex
+   align-items: center
+   justify-content: flex-end
+   flex-direction: column
+.--flex-start
+   display: flex
+   align-items: center
+   justify-content: flex-start
+   flex-direction: column
+   .results-year-lk__user-activity__inform
+      padding: 0 0 24px 0
+.results-year-lk__user-activity__img
+   position: relative
+.results-year-lk__user-activity__nums
+   color: #fff
+   +adaptive-font(120, 50)
+   font-weight: bold
+   line-height: 1
+   position: absolute
+   top: 67%
+   left: 50%
+   transform: translate(-50%, -50%)
+.results-year-lk__best-seller
+   display: flex
+   flex-direction: column
+   align-items: center
+   position: relative
+   padding-bottom: 48px
+.results-year-lk__best-seller__txt1
+   color: #000
+   text-align: center
+   +adaptive-font(48, 20)
+   font-weight: 700
+   max-width: 760px
+   margin: 0 auto
+   padding: 24px 0
+   position: relative
+   z-index: 1
+   line-height: 1.3
+.results-year-lk__best-seller__img-pos
+   position: absolute
+   right: 90px
+   bottom: -120px
+.results-year-lk__user-statistics
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 1fr
+   grid-gap: 32px
+   margin-top: 32px
+.results-year-lk__user-statistics__item
+   position: relative
+   overflow: hidden
+   height: 400px
+   border-radius: 24px
+   background: #FFF
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15)
+   &::before
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      width: 576px
+      height: 400px
+      z-index: 1
+      background-position: bottom right
+      background-size: cover
+   &.statistics__bgrd1
+      &::before
+         background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_bgrd1.svg)
+   &.statistics__bgrd2
+      &::before
+         background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_bgrd2.svg)
+   &.statistics__bgrd3
+      &::before
+         background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_bgrd3.svg)
+   &.statistics__bgrd4
+      &::before
+         background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_bgrd1.svg)
+.results-year-lk__user-statistics__text
+   height: 100%
+.results-year-lk__user-statistics__img-pos
+   position: absolute
+   right: 0
+   bottom: 0
+   z-index: 3
+   &.img-pos-nstl
+      right: 24px
+.results-year-lk__user-statistics__text
+   position: relative
+   height: 100%
+   &::before
+      content: ""
+      position: absolute
+      bottom: 38%
+      left: 50%
+      transform: translateX(-50%)
+      width: 600px
+      height: 600px
+      z-index: 2
+      border-radius: 50%
+   &.statistics__elips1
+      &::before
+         background: #E84B27
+   &.statistics__elips2
+      &::before
+         background: #871912
+   &.statistics__elips3
+      &::before
+         background: #EE899C
+   &.statistics__elips4
+      &::before
+         background: #451287
+.results-year-lk__user-statistics__txt1
+   +adaptive-font(80, 34)
+   text-align: center
+   font-weight: 700
+   line-height: 1
+   position: relative
+   z-index: 4
+   color: #fff
+   padding: 20px 0 16px 0
+   span
+      font-size: 45px
+      font-weight: bold
+      padding-left: 5px
+.results-year-lk__user-statistics__txt2
+   +adaptive-font(24, 14)
+   text-align: center
+   font-weight: 500
+   line-height: 1.2
+   position: relative
+   z-index: 4
+   color: #fff
+   max-width: 360px
+   margin: 0 auto
+   padding: 0 5px
+.results-year-lk__user-statistics__txt3
+   +adaptive-font(30, 14)
+   text-align: center
+   font-weight: bold
+   line-height: 1.2
+   position: relative
+   z-index: 4
+   color: #fff
+   max-width: 360px
+   margin: 0 auto
+   padding: 20px 0 16px 0
+.results-year-lk__user-statistics__item-only-mob
+   display: none
+.results-year-general-statistics__grid
+   display: grid
+   grid-template-areas: "g-statis__item1 g-statis__item2" "g-statis__item1 g-statis__item3"
+   min-height: 466px
+   grid-template-columns: 1fr 1fr
+   grid-gap: 16px 32px
+   margin-bottom: 80px
+.g-statis__item1
+   grid-area: g-statis__item1
+.g-statis__item2
+   grid-area: g-statis__item2
+.g-statis__item3
+   grid-area: g-statis__item3
+.g-statis__item4
+   grid-area: g-statis__item4
+.results-year-general-statistics__item
+   position: relative
+   overflow: hidden
+   border-radius: 40px
+   background: #FFF
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15)
+.g-statis__item1.g-statis__bgrd
+   background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/img1_bgrd1.svg)
+   background-size: 100% 100%
+.g-statis__item2.g-statis__bgrd
+   background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/img1_bgrd2.svg)
+   background-size: 100% 100%
+.g-statis__item3.g-statis__bgrd
+   background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/img1_bgrd3.svg)
+   background-size: 100% 100%
+.g-statis__item1
+   &::before
+      content: ""
+      position: absolute
+      bottom: 8rem
+      left: -7rem
+      background: #22A2FF
+      width: 576px
+      height: 576px
+      z-index: 1
+      border-radius: 50%
+.results-year-general-statistics__content
+   position: relative
+   z-index: 3
+   padding: 64px 0 0 56px
+.esults-year-general-statistics__content2
+   padding: 0 15px 0 40px
+   height: 100%
+   display: flex
+   flex-direction: column
+   justify-content: center
+.results-year-general-statistics__txt1
+   +adaptive-font(80, 34)
+   font-weight: bold
+   line-height: 1.2
+   color: #fff
+   padding-bottom: 16px
+   position: relative
+   z-index: 3
+.results-year-general-statistics
+   padding: 0 15px
+.results-year-general-statistics__txt2
+   +adaptive-font(20, 14)
+   font-weight: 500
+   line-height: 1.2
+   color: #fff
+   position: relative
+   z-index: 3
+.results-year-general-statistics__pos-img1
+   position: absolute
+   bottom: 0
+   left: 0
+   z-index: 2
+.results-year-general-statistics__pos-img2
+   position: absolute
+   right: 0
+   top: 0
+   z-index: 2
+.results-year-lk__best-seller__img-pos2
+   position: absolute
+   left: 8rem
+.g-statis__item2, .g-statis__item3
+   display: flex
+   flex-direction: row
+   min-height: 224px
+.results-year-general-statistics__flex-item
+   flex: 1 0 auto
+   position: relative
+   &:first-child
+      flex: 0 0 415px
+.general-statistics__elips1, .general-statistics__elips2
+   &::before
+      content: ""
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      width: 435px
+      height: 435px
+      z-index: 1
+      border-radius: 50%
+.general-statistics__elips1
+   &::before
+      background: #48AC33
+.general-statistics__elips2
+   &::before
+      background: #FFB522
+.results-year-general-statistics__txt3
+   +adaptive-font(80, 34)
+   font-weight: bold
+   line-height: 1.2
+   color: #fff
+   padding-bottom: 8px
+   position: relative
+   z-index: 3
+.results-year-general-statistics__txt4
+   +adaptive-font(24, 14)
+   font-weight: 500
+   line-height: 1.2
+   color: #fff
+   position: relative
+   z-index: 3
+   max-width: 320px
+.results-year-general-statistics__pos-img3
+   position: absolute
+   right: 0
+   top: 0
+.results-year-general-statistics__pos-img4
+   position: absolute
+   left: 20px
+   top: 0
+.results-year-general-statistics__pos-img5
+   position: absolute
+   right: 0
+   bottom: 0
+.results-year-general-statistics__mob
+   display: none
+.results-year-lk__best-seller-footer
+   display: flex
+   flex-direction: column
+   align-items: center
+   position: relative
+   padding-bottom: 60px
+.results-year-lk__best-seller-footer__txt1
+   +adaptive-font(45, 24)
+   font-style: normal
+   font-weight: 700
+   line-height: 1.2
+   text-align: center
+   padding-top: 40px
+   max-width: 1850px
+   margin: 0 auto
+.results-year-lk__best-seller-footer__link
+   color: #fff
+   +adaptive-font(34, 24)
+   font-style: normal
+   font-weight: 700
+   line-height: 1.1
+   border-radius: 12px
+   background: #43B02A
+   text-align: center
+   padding: 20px 30px
+   margin-top: 20px
+   margin-bottom: 40px
+   position: relative
+   z-index: 2
+   transition: .3s
+   &:hover
+      box-shadow: 3px 3px 14px 0px #43b02a
+   &::before
+      content: ""
+      position: absolute
+      left: -1px
+      top: -4px
+      background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/btn_bgrd.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      width: 100%
+      height: 88px
+.results-year-lk__best-seller-footer__img-pos
+   position: absolute
+   right: 0
+   bottom: 0
+   z-index: 1
+.results-year-lk-notavailable
+   padding: 0 0 40px 0
+.results-year-lk-notavailable__container
+   max-width: 1792px
+   margin: 0 auto
+   background-image: url(https://cdn.comfy.ua/media/x/img3/zg3.svg)
+   background-position: center
+   background-size: cover
+   width: 100%
+   height: 355px
+   display: flex
+   flex-direction: row
+   border-radius: 16px
+   background-color: #FFF
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15)
+   overflow: hidden
+.results-year-lk-notavailable__item
+   flex: 1 1 0
+   position: relative
+   &:first-child
+      &::before
+         content: ""
+         width: 1190px
+         height: 1190px
+         top: 50%
+         right: 0
+         transform: translateY(-50%)
+         position: absolute
+         z-index: 1
+         background: #1A2C1A
+         border-radius: 50%
+.results-year-lk-notavailable__content
+   position: relative
+   z-index: 2
+   padding: 40px 50px 30px 48px
+   max-width: 825px
+   height: 100%
+   display: flex
+   flex-direction: column
+   justify-content: center
+.results-year-lk-notavailable__txt1
+   +adaptive-font(37, 20)
+   font-style: normal
+   font-weight: 700
+   line-height: 1.2
+   text-align: left
+   padding-bottom: 28px
+   color: #fff
+.results-year-lk-notavailable__link
+   +adaptive-font(34, 16)
+   border-radius: 8px
+   background: #43B02A
+   text-align: center
+   padding: 15px 0
+   color: #fff
+   transition: .3s
+   &:hover
+      box-shadow: 0px 0px 14px 0px #43b02a
+.results-year-lk-notavailable__img-pos1
+   position: absolute
+   left: 70px
+   top: 0
+.results-year-lk-notavailable__img-pos2
+   position: absolute
+   right: 0
+   bottom: 0
+.results-year-newgeneral-statistics__flex-block1
+   display: flex
+   flex-direction: row
+   gap: 32px
+.results-year-newgeneral-statistics__left
+   flex: 0 1 100%
+.results-year-newgeneral-statistics__flex
+   display: flex
+   flex-direction: row
+   gap: 32px
+   width: 100%
+   &:first-child
+      margin-bottom: 30px
+   &.flexlast
+      margin-bottom: 0
+      margin-top: 30px
+.results-year-newgeneral-statistics__right
+   flex: 1 0 272px
+.results-year-newgeneral-statistics__item
+   height: 280px
+   border-radius: 16px
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15)
+   overflow: hidden
+   position: relative
+   background: #fff
+   &::before
+      content: ""
+      position: absolute
+      bottom: 15%
+      left: 50%
+      transform: translateX(-50%)
+      z-index: 1
+      border-radius: 50%
+   &.itm1, &.itm3, &.itm5, &.itm6, &.itm8, &.itm10
+      flex: 1 0 auto
+   &.itm2, &.itm4
+      width: 38%
+   &.itm9
+      width: 40%
+   &.itm7
+      height: 100%
+      &.only-mobile
+         display: none
+.elips1
+   &::before
+      width: 548px
+      height: 548px
+      bottom: 10%
+.elips2
+   &::before
+      width: 612px
+      height: 548px
+      bottom: 5%
+.elips3
+   &::before
+      width: 728px
+      height: 728px
+      bottom: 5%
+.results-year-newgeneral-statistics__item.itm1
+   background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/nwb_img1_bgrd.svg)
+   background-size: cover
+   &::before
+      background: #EE899C
+.results-year-newgeneral-statistics__item.itm2
+   background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/nwb_img2_bgrd.svg)
+   background-size: cover
+   &::before
+      background: #22A2FF
+.results-year-newgeneral-statistics__item.itm3
+   background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/nwb_img3_bgrd.svg)
+   background-size: cover
+   &::before
+      background: #48AC33
+.results-year-newgeneral-statistics__item.itm4
+   background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/nwb_img5_bgrd.svg)
+   background-size: cover
+   &::before
+      background: #871912
+.results-year-newgeneral-statistics__item.itm5
+   background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/nwb_img6_bgrd.svg)
+   background-size: cover
+   &::before
+      background: #E84B27
+.results-year-newgeneral-statistics__item.itm6
+   background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/nwb_img7_bgrd.svg)
+   background-size: cover
+   &::before
+      background: #1A2C1A
+.results-year-newgeneral-statistics__item.itm7
+   background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/nwb_img4_bgrd.svg)
+   background-size: cover
+   &::before
+      background: #FFB522
+      bottom: 50%
+.results-year-newgeneral-statistics__item.itm8
+   background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/nwb_img8_bgrd.svg)
+   background-size: cover
+   &::before
+      background: #451287
+.results-year-newgeneral-statistics__item.itm9
+   background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/nwb_img9lr_bgrd.svg)
+   background-size: cover
+   &::before
+      background: #F04679
+.results-year-newgeneral-statistics__item.itm10
+   background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/nwb_img10_bgrd.svg)
+   background-size: cover
+   &::before
+      background: #128780
+.newgeneral-contant
+   z-index: 5
+   padding: 32px 15px 0 15px
+   max-width: 360px
+   margin: 0 auto
+   position: absolute
+   left: 0
+   right: 0
+.newgeneral__txt1
+   +adaptive-font(80, 22)
+   text-align: center
+   font-weight: bold
+   line-height: 1
+   padding-bottom: 16px
+   color: #fff
+.newgeneral__txt2
+   +adaptive-font(24, 16)
+   text-align: center
+   line-height: 1.3
+   color: #fff
+.newgeneral-pos
+   position: absolute
+   z-index: 3
+.pos__img1
+   left: 0
+   bottom: 0
+.pos__img2
+   right: 0
+   bottom: 0
+.pos__img3
+   left: 0
+   bottom: 0
+.pos__img4
+   right: 0
+   bottom: 0
+.pos__img5
+   right: 0
+   bottom: 0
+.pos__img6
+   right: 0
+   bottom: 0
+.pos__img7
+   right: 0
+   bottom: 0
+.pos__img8
+   right: 0
+   bottom: 0
+.pos__img9
+   left: 0
+   top: 0
+.pos__img10
+   right: 0
+   top: 0
+.pos__img11
+   right: 0
+   bottom: 0
+.results-year-header__mouse
+   position: absolute
+   left: 50%
+   transform: translateX(-50%)
+   bottom: 80px
+   z-index: 3
+   animation: moveUpDown 2s ease-in-out infinite
+   filter: drop-shadow(0px 3px 2px #fff)
+@keyframes moveUpDown
+   0%, 100%
+      transform: translateY(0) translateX(-50%)
+   50%
+      transform: translateY(30px) translateX(-50%)
+.results-year__item
+   border-radius: 16px
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15)
+   overflow: hidden
+   position: relative
+.results-year__item-wp
+   position: relative
+   height: 480px
+   &::before
+      content: ""
+      width: 880px
+      height: 880px
+      border-radius: 50%
+      position: absolute
+      z-index: 2
+      bottom: 2rem
+      left: 50%
+      transform: translateX(-50%)
+   &.results-year--bgrd1
+      background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/itg_bgrd1.svg)
+      background-repeat: no-repeat
+      background-size: cover
+      &::before
+         background: #871912
+   &.results-year--bgrd2
+      background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/itg_bgrd2.svg)
+      background-repeat: no-repeat
+      background-size: cover
+      &::before
+         background: #E84B27
+   &.results-year--bgrd3
+      background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/itg_bgrd1.svg)
+      background-repeat: no-repeat
+      background-size: cover
+      &::before
+         background: #FFB522
+   &.results-year--bgrd4
+      background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/itg_bgrd2.svg)
+      background-repeat: no-repeat
+      background-size: cover
+      &::before
+         background: #22A2FF
+   &.results-year--bgrd5
+      background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/itg_bgrd1.svg)
+      background-repeat: no-repeat
+      background-size: cover
+      &::before
+         background: #F04679
+.results-year__content
+   max-width: 635px
+   margin: 0 auto
+   padding: 32px 15px 0 15px
+   position: relative
+   z-index: 5
+.results-year__flex
+   display: flex
+   flex-direction: row
+   padding-top: 24px
+.results-year__flex-item
+   flex: 1 1 0
+   padding: 0 5px
+.results-year__txt1
+   +adaptive-font(64, 24)
+   color: #fff
+   text-align: center
+   font-weight: 700
+   line-height: 1.1
+.results-year__txt2
+   +adaptive-font(48, 20)
+   color: #fff
+   text-align: center
+   font-weight: 700
+   line-height: 1.3
+.results-year__txt3
+   +adaptive-font(18, 16)
+   color: #fff
+   text-align: center
+   font-weight: 500
+   line-height: 1.3
+.results-year__img-pos
+   position: absolute
+   z-index: 4
+   &.img-pos--right
+      right: 25px
+      bottom: 0
+   &.img-pos--left
+      left: 5px
+      bottom: 0
+   &.img-pos--left-top
+      top: 0
+      left: 0
+   &.img-pos--right-top
+      top: 0
+      right: 0
+.results-year-slider__arrow
+   position: relative
+   display: flex
+   align-items: center
+   justify-content: center
+   padding: 40px 0 75px 0
+   .swiper-pagination, .swiper-button-next, .swiper-button-prev
+      position: relative
+   .swiper-pagination
+      position: relative
+      bottom: 0
+      top: 0
+      left: 0
+      width: auto
+      display: block
+      line-height: 1
+   .swiper-button-next, .swiper-button-prev
+      position: relative
+      bottom: 0
+      top: 0
+      left: 0
+      right: 0
+      width: auto
+      height: auto
+      margin-top: 0
+      display: block
+      transition: .3s
+      &::after
+         display: none
+      &:hover
+         filter: drop-shadow(0 0 2px #871912)
+   .swiper-pagination-bullet
+      width: 16px
+      height: 16px
+      border-radius: 50%
+      border: 4px solid #000
+      background: transparent
+      opacity: 1
+      transition: .3s
+      &:hover
+         box-shadow: 0 0 3px 0px #000
+      &.swiper-pagination-bullet-active
+         width: 36px
+         border-radius: 8px
+         background: transparent
+         opacity: 1
+         border: 5px solid #000
+         &:hover
+            box-shadow: 0 0 0px 0px #fff
+   .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+      margin: 0 4px
+// media
+@media (min-width: 1930px)
+   .results-year-header__bgrd
+      height: 72vh
+@media (max-width: 1600px)
+   .results-year-lk__user-activity__grid.grid-inlogin
+      grid-gap: 80px
+      padding-right: 80px
+   .results-year-lk__best-seller__img-pos
+      right: -15px
+   .results-year-lk__user-statistics__text::before
+      bottom: 50%
+      height: 400px
+   .results-year-lk__user-statistics__item
+      height: 355px
+   .results-year-general-statistics__flex-item:first-child
+      flex: 0 0 360px
+   .g-statis__item1::before
+      bottom: 10rem
+      left: -10rem
+@media (max-width: 1440px)
+   .results-year-header__img
+      height: 40vh
+   .results-year-header__bgrd
+      height: 70vh
+   .results-year-lk__best-seller__img-pos
+      right: -20px
+      max-width: 380px
+   .pos__img9
+      display: none
+   .pos__img10
+      display: none
+   .elips1::before
+      bottom: 20%
+   .elips2::before
+      bottom: 12%
+   .results-year-newgeneral-statistics__item.itm7::before
+      bottom: 64%
+   .elips3::before
+      bottom: 15%
+   .results-year-newgeneral-statistics__item
+      height: 270px
+   .results-year-lk__user-statistics__txt1 span
+      font-size: 34px
+@media (max-width: 1366px)
+   .results-year-lk__best-seller__img-pos
+      display: none
+   .results-year-header__bgrd
+      height: calc(100vh - 126px)
+   .results-year-lk__user-activity__grid
+      display: grid
+      grid-template-columns: 400px 1fr 1fr 1fr
+   .results-year-lk__user-activity__txt1
+      padding: 15px 50px 15px 40px
+   .results-year-lk__user-activity__img
+      max-width: 85%
+      margin: 0 auto
+   .results-year-lk.--notinlogin
+      padding: 40px 15px 40px 15px
+   .results-year-lk__user-activity__grid.grid-inlogin
+      grid-template-columns: minmax(370px, 400px) minmax(0, 200px) minmax(0, 200px) minmax(0, 200px)
+      grid-gap: 65px
+      padding-right: 65px
+      justify-content: space-between
+   .results-year-lk__user-activity__grid.grid-inlogin .results-year-lk__user-activity__img
+      max-width: 100%
+   .results-year-lk__user-statistics__item
+      height: 315px
+   .results-year-lk__user-statistics__item.statistics__bgrd1 .results-year-lk__user-statistics__img-pos
+      max-width: 200px
+   .results-year-lk__user-statistics__item.statistics__bgrd2 .results-year-lk__user-statistics__img-pos
+      max-width: 165px
+   .results-year-lk__user-statistics__item.statistics__bgrd3 .results-year-lk__user-statistics__img-pos
+      max-width: 165px
+   .results-year-lk__user-activity__grid.grid-inlogin .results-year-lk__user-activity__img
+      max-width: 180px
+   .results-year-general-statistics__flex-item:first-child
+      flex: 0 0 335px
+   .results-year-general-statistics__pos-img5
+      max-width: 200px
+   .results-year-general-statistics__pos-img4
+      max-width: 100px
+   .results-year-general-statistics__content
+      padding: 60px 0 0 40px
+   .results-year-general-statistics__pos-img2
+      max-width: 380px
+   .results-year-lk__best-seller-footer__img-pos
+      position: absolute
+      right: -60px
+      bottom: -18px
+   .results-year__item-wp
+      height: 400px
+   .img-pos--img1maxw
+      max-width: 225px
+   .img-pos--img2maxw
+      max-width: 155px
+   .img-pos--img3maxw
+      max-width: 300px
+   .img-pos--img4maxw
+      max-width: 350px
+   .img-pos--img5maxw
+      max-width: 135px
+   .img-pos--img6maxw
+      max-width: 235px
+   .img-pos--img7maxw
+      max-width: 240px
+   .results-year-lk__user-activity.ctg--onlyone
+      height: 400px
+   .results-year-lk__user-activity.ctg--onlyone::before
+      top: -75%
+      width: 110%
+   .results-year-lk__user-activity-ctg__img-left
+      max-width: 255px
+   .results-year-lk__user-activity-ctg__txt1
+      padding: 25px 15px 15px 15px
+   .results-year-lk__user-statistics__text::before
+      bottom: 30%
+@media (max-width: 1024px)
+   .results-year-lk__best-seller-footer__img-pos
+      display: none
+   .results-year-general-statistics__flex-item:first-child, .results-year-general-statistics__flex-item
+      flex: 1 0 0
+   .results-year-lk__user-statistics
+      grid-gap: 15px
+   .results-year-lk__user-statistics__item.statistics__bgrd1 .results-year-lk__user-statistics__img-pos
+      max-width: 160px
+   .results-year-lk__user-statistics__item.statistics__bgrd2 .results-year-lk__user-statistics__img-pos
+      max-width: 125px
+   .results-year-lk__user-statistics__item.statistics__bgrd3 .results-year-lk__user-statistics__img-pos
+      max-width: 140px
+   .results-year-lk__user-statistics__item.statistics__bgrd4 .results-year-lk__user-statistics__img-pos
+      max-width: 175px
+   .results-year-lk__best-seller__txt1
+      max-width: 525px
+   .results-year-lk__user-statistics__item
+      height: 290px
+   .results-year-lk.--inlogin
+      padding: 20px 15px 40px 15px
+   .results-year-header__bgrd
+      height: 55vh
+   .results-year-header__img
+      background-size: 120% 100%
+      height: 30vh
+   .results-year-header__logo
+      padding-top: 6vw
+      width: 27vw
+      height: auto
+   .results-year-header__anim-snow img
+      width: 28px
+      height: 28px
+   .results-year-lk__user-activity__grid.grid-inlogin
+      display: grid
+      grid-template-columns: 400px 1fr 1fr 1fr
+      grid-gap: 15px
+      padding-right: 0
+   .results-year-lk__user-activity__grid.grid-inlogin .results-year-lk__user-activity__img
+      max-width: 85%
+   .results-year-lk__user-statistics__text::before
+      bottom: 30%
+      height: 230px
+      width: 415px
+   .results-year-lk__best-seller__img-pos2
+      position: absolute
+      left: 2rem
+      max-width: 220px
+      top: 3rem
+   .g-statis__item1::before
+      bottom: 12rem
+      left: -14rem
+   .results-year-general-statistics__pos-img1
+      max-width: 290px
+   .g-statis__item2.g-statis__bgrd, .g-statis__item3.g-statis__bgrd
+      flex-direction: column
+   .general-statistics__elips1::before, .general-statistics__elips2::before
+      content: ""
+      position: absolute
+      right: 0
+      left: 50%
+      transform: translateX(-50%)
+      top: -70px
+      width: 571px
+      height: 235px
+      z-index: 1
+      border-radius: 40%
+   .esults-year-general-statistics__content2
+      padding: 20px 15px 0 15px
+      align-items: center
+      height: auto
+   .results-year-general-statistics__txt4
+      text-align: center
+   .g-statis__item2.g-statis__bgrd, .g-statis__item3.g-statis__bgrd, .g-statis__item1.g-statis__bgrd
+      background-size: contain
+      background-repeat: repeat
+   .results-year-general-statistics__pos-img3
+      top: inherit
+      bottom: 0
+      right: -45px
+      top: inherit
+      bottom: 0
+      transform: rotate(180deg)
+      max-width: 220px
+      z-index: 2
+   .results-year-general-statistics__pos-img5
+      max-width: 155px
+      z-index: 2
+      right: -58px
+      bottom: -15px
+   .results-year-lk__user-statistics__item
+      &::before
+         content: ""
+         width: 224px
+         height: 158px
+      &.statistics__bgrd1, &.statistics__bgrd2, &.statistics__bgrd3
+         &::before
+            background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_bgrd1_mob.svg)
+   .results-year-general-statistics__pos-img2
+      max-width: 350px
+      top: -40px
+      z-index: 1
+      right: -139px
+   .results-year-lk__best-seller-footer__txt1
+      padding-top: 30px
+   .results-year-lk__best-seller-footer__link
+      padding-top: 30px
+   .results-year-lk__best-seller-footer__link
+      padding: 16px 30px
+   .results-year-general-statistics__grid
+      margin-bottom: 50px
+   .results-year-lk-notavailable__img-pos2
+      max-width: 300px
+   .results-year-lk-notavailable__img-pos1
+      left: 20px
+      max-width: 130px
+   .results-year-newgeneral-statistics__right
+      display: none
+   .results-year-newgeneral-statistics__item.itm7
+      height: auto
+      flex: 1 0 auto
+      &.only-mobile
+         display: block
+   .results-year-newgeneral-statistics__item.itm2, .results-year-newgeneral-statistics__item.itm4
+      width: auto
+      flex: 1 0 auto
+   .results-year-newgeneral-statistics__flex:first-child
+      margin-bottom: 15px
+   .results-year-newgeneral-statistics__flex
+      gap: 15px
+   .results-year-newgeneral-statistics__flex.flexlast
+      margin-top: 15px
+   .results-year-newgeneral-statistics__item
+      height: 250px
+   .pos__img4
+      max-width: 85px
+   .results-year-newgeneral-statistics__item.itm7::before
+      bottom: 30%
+   .pos__img7
+      max-width: 115px
+   .results-year-newgeneral-statistics__item.itm2::before
+      bottom: 24%
+   .results-year-newgeneral-statistics__container
+      margin-bottom: 50px
+   .results-year-lk__user-activity-ctg__txt1
+      font-size: 34px
+   .results-year-lk__user-activity-ctg__txt1 span
+      font-size: 24px
+      padding-top: 16px
+   .results-year-lk__user-activity.ctg--onlyone::before
+      top: -105%
+      width: 135%
+   .results-year-lk__user-activity.ctg--onlyone
+      height: 340px
+   .results-year-lk__user-activity-ctg__img-left
+      max-width: 170px
+   .results-year-lk__user-activity-ctg__img-right
+      max-width: 260px
+@media (max-width: 812px)
+   .results-year-newgeneral-statistics__item::before
+      z-index: 5
+   .results-year-lk__user-statistics
+      grid-template-columns: 1fr 1fr
+   .g-statis__item1::before
+      bottom: inherit
+      left: 50%
+      transform: translateX(-50%)
+      width: 571px
+      height: 235px
+      border-radius: 40%
+      top: -70px
+   .results-year-general-statistics__pos-img2
+      top: 0
+   .results-year-general-statistics__content
+      padding: 20px 15px 0 15px
+      display: flex
+      flex-direction: column
+      align-items: center
+   .results-year-lk__best-seller__img-pos2
+      display: none
+   .results-year-lk__user-statistics__item::before
+      width: 400px
+      height: 290px
+   .results-year-lk__user-statistics__item.statistics__bgrd1 .results-year-lk__user-statistics__img-pos
+      max-width: 130px
+   .results-year-lk__user-statistics__item.statistics__bgrd2 .results-year-lk__user-statistics__img-pos
+      max-width: 105px
+   .results-year-lk__user-statistics__item.statistics__bgrd3 .results-year-lk__user-statistics__img-pos
+      max-width: 110px
+   .results-year-lk__user-statistics__item.statistics__bgrd4 .results-year-lk__user-statistics__img-pos
+      max-width: 130px
+   .results-year-lk.--inlogin
+      padding: 40px 15px
+   .results-year-lk__user-statistics__item
+      height: 260px
+   .results-year-lk__user-statistics__text::before
+      bottom: 38%
+      height: 220px
+      width: 384px
+   .results-year-lk__best-seller__txt1
+      max-width: 485px
+   .results-year-lk__best-seller
+      padding-bottom: 30px
+   .results-year-lk__best-seller__txt1
+      padding: 10px 0
+   .results-year-lk__user-activity__grid.grid-inlogin .results-year-lk__user-activity__img
+      max-width: 65%
+   .results-year-lk__user-activity__grid.grid-inlogin
+      grid-template-columns: 1fr 1fr 1fr
+   .results-year-lk__user-activity__img
+      max-width: 65%
+   .results-year-header__img
+      height: 20vh
+   .results-year-header__bgrd
+      height: 40vh
+   .results-year-lk__user-activity__grid
+      grid-template-columns: 1fr 1fr 1fr
+   .results-year-lk__user-activity__item:first-child
+      grid-column: span 3
+   .results-year-lk__user-activity__item:first-child::before
+      content: ""
+      width: 780px
+      height: 600px
+      border-radius: 20%
+      right: 0
+      left: 50%
+      top: inherit
+      bottom: 0
+      transform: translateX(-50%)
+   .results-year-lk__user-activity__txt1
+      padding: 20px 15px 40px 15px
+      text-align: center
+      max-width: 645px
+      margin: 0 auto
+   .results-year-lk__user-activity__link
+      padding: 10px 0
+      max-width: 280px
+      margin: 15px auto 0 auto
+   .results-year-lk-notavailable__content
+      padding: 24px 30px 24px 24px
+   .results-year-lk-notavailable__container
+      height: auto
+   .results-year-newgeneral-statistics__item
+      height: 190px
+   .results-year-newgeneral-statistics__item.itm9
+      width: 100%
+   .results-year-newgeneral-statistics__flex
+      flex-direction: column
+   .results-year-newgeneral-statistics__item.itm7
+      height: 190px
+   .elips1::before, .elips2::before, .elips3::before
+      width: 548px
+      height: 548px
+   .itm1.elips1, .itm3.elips1, .itm5.elips1, .itm7.elips2, .itm9.elips3
+      .newgeneral-contant
+         margin: 0 0 0 auto
+         max-width: 335px
+         top: 50%
+         transform: translateY(-50%)
+         padding: 0 24px 0 0
+         .newgeneral__txt1, .newgeneral__txt2
+            text-align: left
+      &::before
+         bottom: inherit
+         left: inherit
+         right: -22%
+         top: 50%
+         transform: translateY(-50%)
+   .itm2.elips2, .itm4.elips2, .itm6.elips1, .itm8.elips1, .itm10.elips1
+      .newgeneral-contant
+         margin: 0
+         max-width: 335px
+         top: 50%
+         transform: translateY(-50%)
+         padding: 0 0 0 24px
+         .newgeneral__txt1, .newgeneral__txt2
+            text-align: left
+      &::before
+         bottom: inherit
+         left: -22%
+         top: 50%
+         transform: translateY(-50%)
+   .pos__img1
+      bottom: inherit
+      top: 0
+      img
+         width: 365px
+   .pos__img2
+      right: 49px
+      bottom: -134px
+      max-width: 195px
+   .pos__img3
+      left: 45px
+      img
+         width: 180px
+   .pos__img4
+      max-width: 100%
+      right: 45px
+   .pos__img5
+      left: 0
+      right: inherit
+      bottom: 0
+      img
+         width: 165px
+   .pos__img6
+      transform: scaleX(-1)
+      img
+         width: 245px
+   .pos__img7
+      max-width: 100%
+      left: 0
+      right: inherit
+      img
+         width: 240px
+   .pos__img8
+      right: 45px
+      bottom: inherit
+      top: 0
+      img
+         width: 180px
+   .pos__img9
+      display: block
+      top: inherit
+      bottom: 0
+      left: 45px
+      img
+         width: 155px
+   .pos__img11
+      right: 15px
+      img
+         width: 200px
+   .results-year__item-wp
+      height: 350px
+   .results-year__content
+      max-width: 415px
+   .results-year-lk__user-statistics__txt1 span
+      font-size: 34px
+@media (max-width: 480px)
+   .results-year-lk__user-statistics__txt1 span
+      font-size: 24px
+   .itm2.elips2::before, .itm4.elips2::before, .itm6.elips1::before, .itm8.elips1::before, .itm10.elips1::before
+      left: -190px
+   .itm1.elips1::before, .itm3.elips1::before, .itm5.elips1::before, .itm7.elips2::before, .itm9.elips3::before
+      right: -190px
+   .results-year-newgeneral-statistics__item
+      height: 160px
+   .itm1.elips1 .newgeneral-contant, .itm3.elips1 .newgeneral-contant, .itm5.elips1 .newgeneral-contant, .itm7.elips2 .newgeneral-contant, .itm9.elips3 .newgeneral-contant
+      max-width: 200px
+      padding: 0 10px 0 24px
+   .itm2.elips2 .newgeneral-contant, .itm4.elips2 .newgeneral-contant, .itm6.elips1 .newgeneral-contant, .itm8.elips1 .newgeneral-contant, .itm10.elips1 .newgeneral-contant
+      max-width: 200px
+      padding: 0 10px 0 24px
+   .elips1::before, .elips2::before, .elips3::before
+      width: 400px
+      height: 400px
+   .results-year-newgeneral-statistics__item.itm7
+      height: 160px
+   .pos__img1 img
+      width: auto
+   .pos__img2
+      right: 10px
+      bottom: -71px
+      max-width: 136px
+   .pos__img3
+      left: 10px
+      img
+         width: auto
+   .pos__img4
+      right: 5px
+   .pos__img5 img
+      width: auto
+   .pos__img6 img
+      width: auto
+   .pos__img7 img
+      width: 200px
+   .pos__img8
+      right: 10px
+      img
+         width: auto
+   .pos__img9
+      left: 10px
+      img
+         width: auto
+   .pos__img11
+      right: -15px
+      img
+         width: auto
+   .newgeneral__txt1
+      padding-bottom: 8px
+   .results-year-lk-notavailable__container
+      flex-direction: column
+   .results-year-lk-notavailable
+      padding: 0 0 0px 0
+   .results-year-lk-notavailable__img-pos1
+      left: 15px
+      max-width: 95px
+      position: relative
+   .results-year-lk-notavailable__item:first-child::before
+      top: inherit
+      bottom: -20px
+      right: inherit
+      left: 50%
+      transform: translateX(-50%)
+   .results-year-header__bgrd
+      background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/h_bgrd_mob.svg)
+      height: 100vh
+   .results-year-lk-notavailable__img-pos2
+      max-width: 250px
+      position: relative
+      margin: 0 0 0 auto
+   .results-year-header__logo
+      padding-top: 80px
+      width: 262px
+   .results-year-header__img
+      background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/h_bgrd2_mob.svg)
+      height: 465px
+      background-size: contain
+      background-position: center
+      background-repeat: no-repeat
+      max-height: initial
+   .results-year-lk__user-activity__item:first-child::before
+      width: 480px
+      height: 220px
+      border-radius: 0 0 80% 80%
+   .results-year-lk__user-activity__txt1
+      padding: 12px 0 40px 0
+   span.word-wrap
+      display: inline
+   .results-year-lk__user-activity__grid
+      grid-gap: 15px
+      padding: 0px 15px 24px 15px
+   .results-year-lk__user-activity__grid.grid-inlogin .results-year-lk__user-activity__img
+      max-width: 100px
+   .results-year-lk__user-activity__grid.grid-inlogin
+      grid-gap: 0 15px
+      padding: 0px 15px 24px 15px
+   .--flex-start .results-year-lk__user-activity__inform
+      padding: 0
+   .--flex-start
+      margin-top: -33px
+   .results-year-lk__user-activity__nums
+      top: 74%
+   .results-year-lk__user-activity__inform
+      padding: 0
+   .results-year-lk__user-activity__txt2
+      padding-top: 8px
+   .results-year-lk__user-activity__img
+      max-width: 100%
+   .results-year-lk__best-seller__img1
+      max-width: 315px
+   .results-year-lk__best-seller__img2
+      max-width: 240px
+   .results-year-lk__best-seller__txt1
+      padding: 12px 0
+      max-width: 415px
+   .results-year-lk__best-seller
+      padding-bottom: 24px
+   .results-year-lk.--inlogin
+      padding: 20px 15px 30px 15px
+   .results-year-lk__user-activity
+      background-image: url(https://cdn.comfy.ua/media/x/img3/resultsyear2023/ntl_img_bgrd_mob.svg)
+   .results-year-lk__user-statistics
+      grid-template-columns: 1fr
+      grid-gap: 16px
+   .results-year-lk__user-statistics__item-only-mob
+      display: block
+      height: 190px
+      position: relative
+   .results-year-lk__user-statistics__item
+      border-radius: 16px
+      height: 160px
+   .results-year-lk__user-statistics__item.statistics__bgrd1 .results-year-lk__user-statistics__img-pos
+      max-width: 100%
+      left: 0
+   .results-year-lk__user-statistics__item.statistics__bgrd2 .results-year-lk__user-statistics__img-pos
+      max-width: 150px
+      right: 0
+   .results-year-lk__user-statistics__item.statistics__bgrd3 .results-year-lk__user-statistics__img-pos
+      max-width: 140px
+      left: 0
+   .results-year-lk__user-statistics__item.statistics__bgrd4 .results-year-lk__user-statistics__img-pos
+      max-width: 200px
+      right: 0
+   .results-year-lk__user-statistics__txt1, .results-year-lk__user-statistics__txt3
+      padding: 15px 0 8px 0
+   .results-year-lk__user-statistics__text::before
+      bottom: 40%
+      height: 400px
+      width: 400px
+   .results-year-lk__user-statistics__img-pos
+      z-index: 1
+   .results-year-lk__user-statistics__text.statistics__elips1::before,
+   .results-year-lk__user-statistics__text.statistics__elips3::before
+      right: -190px
+      top: 50%
+      transform: translateY(-50%)
+      bottom: inherit
+      left: inherit
+   .results-year-lk__user-statistics__text.statistics__elips2::before,
+   .results-year-lk__user-statistics__text.statistics__elips4::before
+      left: -190px
+      top: 50%
+      transform: translateY(-50%)
+      bottom: inherit
+   .results-year-lk__user-statistics__txt2
+      padding: 0 5px
+   .results-year-lk__user-statistics__item-imgpos-mob
+      position: absolute
+      bottom: -58px
+      width: 220px
+      left: 50%
+      transform: translateX(-50%)
+      .statistics__elips1, .statistics__elips3
+         text-align: right
+   .contant__right
+      max-width: 200px
+      margin: 0 0 0 auto
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: 0
+      z-index: 2
+      padding: 0 10px 0 24px
+      .results-year-lk__user-statistics__txt1, .results-year-lk__user-statistics__txt3
+         padding: 0 0 8px 0
+         text-align: left
+      .results-year-lk__user-statistics__txt2
+         padding: 0 0
+         text-align: left
+   .statistics__elips2, .statistics__elips4
+      text-align: left
+      .contant__left
+         max-width: 200px
+         margin: 0
+         position: absolute
+         top: 50%
+         transform: translateY(-50%)
+         left: 0
+         z-index: 2
+         padding: 0 10px 0 24px
+      .results-year-lk__user-statistics__txt1, .results-year-lk__user-statistics__txt3
+         padding: 0 0 8px 0
+         text-align: left
+      .results-year-lk__user-statistics__txt2
+         padding: 0 0 0 0
+         text-align: left
+   .results-year-general-statistics__mob
+      display: block
+      position: relative
+   .results-year-general-statistics__grid
+      display: grid
+      grid-template-areas: "g-statis__item1 g-statis__item1""g-statis__item4 g-statis__item2""g-statis__item3 g-statis__item3"
+      grid-gap: 16px 8px
+      margin-bottom: 40px
+   .results-year-general-statistics__item.g-statis__item1.g-statis__bgrd,
+   .results-year-general-statistics__item.g-statis__item3.g-statis__bgrd,
+   .results-year-general-statistics__item.g-statis__item2.g-statis__bgrd
+      height: 200px
+   .results-year-general-statistics__item
+      border-radius: 8px
+   .g-statis__item1::before
+      width: 480px
+      height: 200px
+      border-radius: 50%
+      top: -95px
+   .general-statistics__elips2::before
+      width: 480px
+      height: 200px
+      border-radius: 50%
+      top: -75px
+   .general-statistics__elips1::before
+      width: 480px
+      height: 200px
+      border-radius: 50%
+      top: -75px
+   .results-year-general-statistics__content, .esults-year-general-statistics__content2
+      padding: 8px 12px 0 12px
+   .results-year-general-statistics__txt1
+      padding-bottom: 8px
+   .results-year-general-statistics__pos-img2
+      top: inherit
+      bottom: 10px
+      max-width: 250px
+      right: -20px
+      z-index: 0
+   .results-year-general-statistics__pos-img1
+      max-width: 145px
+   .results-year-general-statistics__pos-img5
+      max-width: 190px
+      right: 0
+      bottom: 0
+   .results-year-general-statistics__pos-img4
+      max-width: 75px
+   .results-year-general-statistics__pos-img6
+      position: absolute
+      width: 169px
+      left: 50%
+      transform: translateX(-50%)
+      top: 5px
+   .results-year-general-statistics__pos-img3
+      transform: rotate(0)
+      right: 0
+      bottom: 0
+   .results-year-lk__best-seller-footer__txt1
+      padding-top: 20px
+      font-size: 20px
+   .results-year-lk__best-seller-footer__link
+      padding: 11px 0px
+      font-size: 18px
+      width: 100%
+      margin-top: 16px
+      margin-bottom: 20px
+   .results-year-lk__best-seller-footer__link::before
+      left: -2px
+   .results-year-lk__best-seller-footer
+      padding-bottom: 40px
+   .results-year-lk__best-seller-footer__img1
+      max-width: 300px
+   .results-year-lk__best-seller-footer__img2
+      max-width: 200px
+   .results-year__content
+      padding: 24px 10px 0 10px
+   .results-year__flex
+      padding-top: 18px
+   .results-year__txt2
+      font-size: 23px !important
+   .results-year__txt3
+      padding-top: 8px
+   .results-year__img-pos.img-pos--right
+      right: 8px
+   .img-pos--img2maxw
+      max-width: 131px
+   .img-pos--img3maxw
+      max-width: 270px
+   .img-pos--img6maxw
+      max-width: 130px
+   .img-pos--img7maxw
+      max-width: 145px
+   .img-pos--img5maxw
+      max-width: 115px
+   .results-year-lk__user-activity.ctg--onlyone::before
+      top: -340px
+      width: 160%
+   .results-year-lk__user-activity-ctg__txt1
+      font-size: 30px
+      line-height: 1.1
+   .results-year-lk__user-activity-ctg__txt1 span
+      font-size: 18px
+      padding-top: 16px
+   .results-year-lk__user-activity-ctg__img-left
+      max-width: 175px
+      left: -58px
+      bottom: -35px
+   .results-year-lk__user-activity-ctg__img-right
+      max-width: 175px
+      top: inherit
+      bottom: 0
+      right: -7px
+   .results-year-lk__user-activity-ctg__txt2
+      font-size: 23px
+      gap: 6px
+   .results-year-lk__user-activity.ctg--onlyone
+      height: 280px
+@media (max-width: 375px)
+   .results-year-header__img
+      height: 365px
+   .results-year-lk__user-statistics__item-imgpos-mob
+      bottom: -60px
+      width: 205px
+@media (max-width: 320px)
+   .results-year-slider__arrow .swiper-button-next, .results-year-slider__arrow .swiper-button-prev
+      max-width: 65px
+   .results-year-lk__user-statistics__item-imgpos-mob
+      bottom: -70px
+      width: 170px
+   .results-year-lk__user-activity__txt1
+      font-size: 15px
+   .results-year-header__logo
+      padding-top: 10vw
+      height: 15vh
+   .results-year-header__img
+      height: 70vh
+   .results-year-lk__user-activity__grid.grid-inlogin
+      grid-gap: 0 5px
+      padding: 0px 10px 16px 10px
+   .results-year-lk__user-activity__grid
+      grid-gap: 5px
+      padding: 0px 10px 20px 10px
+   .results-year-general-statistics__pos-img6
+      width: 140px
+   .results-year-general-statistics__txt3
+      font-size: 26px
+   .results-year-lk__best-seller-footer__link
+      font-size: 16px
+   .results-year-lk__best-seller-footer__link
+      padding: 10px 0px
+   .results-year-lk__user-activity-ctg__txt1
+      font-size: 23px
+@media (max-width: 812px) and (orientation: landscape)
+   .results-year-header__bgrd
+      height: 100vh
+   .results-year-header__img
+      height: 50vh
+      background-size: 115% 100%
+   .general-statistics__elips1::before, .general-statistics__elips2::before, .g-statis__item1::before
+      top: -100px
+   .results-year-general-statistics__pos-img2
+      max-width: 100%
+   .results-year-general-statistics__pos-img1
+      max-width: 190px
+   .results-year-lk__user-statistics__txt2
+      padding: 0 15px
+   .itm2.elips2::before, .itm4.elips2::before, .itm6.elips1::before, .itm8.elips1::before, .itm10.elips1::before
+      left: -175px
+   .itm1.elips1::before, .itm3.elips1::before, .itm5.elips1::before, .itm7.elips2::before, .itm9.elips3::before
+      right: -175px
+   .results-year-lk__user-activity-ctg__txt1
+      font-size: 28px
+   .results-year-lk__user-activity.ctg--onlyone
+      height: 300px
+   .results-year-lk__user-activity.ctg--onlyone::before
+      top: -362px
+      width: 167%
+   .results-year-lk__user-statistics__text::before
+      width: 430px
+   .results-year-lk__user-activity-ctg__txt2
+      font-size: 27px
+      bottom: 30px
+      gap: 8px
+   .results-year-lk__user-statistics__txt1 span
+      font-size: 24px

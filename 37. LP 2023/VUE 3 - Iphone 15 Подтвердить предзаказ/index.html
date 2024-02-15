@@ -1,0 +1,272 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style>
+
+</style>
+
+<div id="confirm-preorder">
+   <div class="confirm-preorder-wrap">
+
+      <div class="confirm-preorder__img">
+         <img src="https://cdn.comfy.ua/media/x/img3/ophimg1.png" alt="">
+      </div>
+
+      <div class="confirm-preorder__text">
+         <div class="confirm-preorder__text-h2">
+            <h2>Доступно в оплату частинами на 15 платежів та в Trade-in</h2>
+         </div>
+         <div class="confirm-preorder__text-h2">
+            <h2>При покупці iPhone 15 серії - знижка 50% на оригінальні чохли</h2>
+         </div>
+      </div>
+
+      <div class="confirm-preorder__form">
+
+         <div class="confirm-preorder__form-preloader">
+            <div class="form-preloader"></div>
+         </div>
+
+         <div class="confirm-preorder__form-submit">
+            <div class="confirm-preorder__form-h3">
+               <h3>Підтведження передзамовлення</h3>
+            </div>
+            <div class="confirm-preorder__form-grid">
+               <div class="confirm-preorder__form-input --form-input__phone">
+
+               </div>
+               <div class="confirm-preorder__form-input --form-input__model">
+
+               </div>
+            </div>
+            <div class="confirm-preorder__form-bdn-done">
+               Підтвердити
+            </div>
+            <div class="confirm-preorder__form-list">
+               <div class="confirm-preorder__form-list-item --list-item-delete">
+                  <span>Скасувати передзамовлення</span>
+               </div>
+               <!-- <div class="confirm-preorder__form-list-item --list-item-questions">
+                     <span>Є питання ?</span>
+                  </div> -->
+            </div>
+         </div>
+
+         <div class="confirm-preorder__form-error">
+            <div class="form-error__text">Упс... Щось пішло не так, спробуйте пізніше.</div>
+         </div>
+
+         <div class="confirm-preorder__form-done">
+            <div class="confirm-preorder__form-done-wrap">
+               <div class="confirm-preorder__form-h3">
+                  <h3>Підтведження передзамовлення</h3>
+               </div>
+               <div class="form-done__img">
+                  <img src="https://cdn.comfy.ua/media/x/img3/iph/icondone.svg" alt="">
+               </div>
+               <div class="form-done__text">Дякуємо!<br>Передзамовлення підтверджене</div>
+            </div>
+         </div>
+
+      </div>
+
+      <div class="confirm-preorder__link">
+         <a href="https://comfy.ua/ua/apple-new/">Всі новинки тут</a>
+      </div>
+
+   </div>
+
+   <div class="modal-overlay">
+      <div class="modal-content">
+         <div class="modal-content__top">
+            <div class="modal-content__top-txt1">Скасування передзамовлення</div>
+            <div class="modal-close --modal-close__mob"><img src="https://cdn.comfy.ua/media/x/img3/iph/1px.png" alt=""></div>
+         </div>
+         <div class="modal-content-wrap --modal-submit">
+            <div class="modal-content__center-txt2">
+               Ви дійсно хочете скасувати передзамовлення?
+            </div>
+            <div class="modal-content__bottom-grid">
+               <div class="modal-content__bottom-grid-item">
+                  <div class="btn-cancel">Скасувати</div>
+               </div>
+               <div class="modal-content__bottom-grid-item">
+                  <div class="btn-keep modal-close">Залишити</div>
+               </div>
+            </div>
+         </div>
+         <div class="modal-content-wrap --modal-delete">
+            <div class="form-done__img">
+               <img src="https://cdn.comfy.ua/media/x/img3/iph/error.png" alt="">
+            </div>
+            <div class="form-done__text">Ваше передзамовлення скасовано</div>
+         </div>
+      </div>
+   </div>
+
+</div>
+
+<script>
+
+   document.addEventListener("DOMContentLoaded", (event) => {
+
+      function showPreloader() {
+         document.querySelector(".confirm-preorder__form-preloader").style.display = "block";
+         document.querySelector(".confirm-preorder__form-submit").style.display = "none";
+         document.querySelector(".confirm-preorder__form-error").style.display = "none";
+      }
+
+      function hidePreloader() {
+         document.querySelector(".confirm-preorder__form-preloader").style.display = "none";
+         document.querySelector(".confirm-preorder__form-submit").style.display = "block";
+         document.querySelector(".confirm-preorder__form-error").style.display = "none";
+      }
+
+      function showErrorGetPromise() {
+         document.querySelector(".confirm-preorder__form-preloader").style.display = "none";
+         document.querySelector(".confirm-preorder__form-submit").style.display = "none";
+         document.querySelector(".confirm-preorder__form-error").style.display = "flex";
+      }
+
+      function sendDataToCorezoid(number, model, status, statusDone) {
+
+         const data = {
+            clientNumber: number,
+            clientModel: model,
+            clientStatus: status
+         }
+
+         if (statusDone === true) {
+            sendDataToCorezoidPush(data);
+
+            document.querySelector(".confirm-preorder__form-submit").style.display = "none";
+            document.querySelector(".confirm-preorder__form-done").style.display = "block";
+         }
+
+         if (statusDone === false) {
+            sendDataToCorezoidPush(data);
+
+            document.querySelector(".--modal-submit").style.display = "none";
+            document.querySelector(".--modal-delete").style.display = "block";
+            document.querySelector(".confirm-preorder__form-bdn-done").classList.add("not-active");
+         }
+
+         function sendDataToCorezoidPush(data) {
+            $.ajax({
+               url: "https://main.corezoid.comfy.ua/api/2/json/public/13786/fbab4b805e5a38b5bb42063f7a6bd7f01d2bbf6e",
+               headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded'
+               },
+               type: "POST",
+               dataType: "json",
+               data: JSON.stringify(data),
+               success: console.log('done')
+            });
+         }
+
+      }
+
+      function getPromise() {
+         return new Promise(function (resolve) {
+            let searchUrlParameter = new URLSearchParams(document.location.search);
+            let getUrlParameterKey = searchUrlParameter.get("poolid");
+            resolve(getUrlParameterKey);
+         });
+      }
+
+      function getPromisePhone(getUrlParameterKey) {
+         return new Promise(async function (resolve, reject) {
+            let rezultFetch;
+            let apiUrl = "https://tag-api.comfy.ua/api/comfywork/landings";
+
+            const dataToSend = {
+               source: "iphone",
+               codedPhone: getUrlParameterKey
+            };
+
+            const headers = new Headers({
+               'Authorization': `Basic dGVzdDoxMjNxd2U=`,
+               'Content-Type': 'application/json'
+            });
+
+            try {
+               const response = await fetch(apiUrl, {
+                  method: 'POST',
+                  headers,
+                  body: JSON.stringify(dataToSend)
+               });
+
+               const data = await response.json();
+               rezultFetch = data;
+               resolve(rezultFetch);
+            } catch (error) {
+               console.error('Ошибка при получении данных:', error);
+               reject(error);
+            }
+         });
+      }
+
+      showPreloader();
+
+      getPromise()
+         .then(function (getUrlParameterKey) {
+            return getPromisePhone(getUrlParameterKey);
+         })
+         .then(function (rezultFetch) {
+            if (rezultFetch.error !== 'timeout') {
+               console.log('Результат выполнения: ', rezultFetch);
+               hidePreloader();
+
+               let numberPhone = document.querySelector(".--form-input__phone").textContent = rezultFetch.phone;
+               let modelPhone = document.querySelector(".--form-input__model").textContent = rezultFetch.model;
+
+               let pushDateDone = document.querySelector(".confirm-preorder__form-bdn-done");
+               let pushDateDelete = document.querySelector(".--list-item-delete");
+               const modalOverlay = document.querySelector('.modal-overlay');
+
+               pushDateDone.addEventListener("click", function (event) {
+                  let statusDone = true;
+                  sendDataToCorezoid(rezultFetch.phone, rezultFetch.model, "Підтверджено", statusDone);
+               });
+
+               pushDateDelete.addEventListener("click", function (event) {
+                  modalOverlay.style.display = 'flex';
+               });
+
+               modalOverlay.addEventListener('click', function (event) {
+                  if (event.target === modalOverlay) {
+                     modalOverlay.style.display = 'none';
+                  }
+               });
+
+               const modalContent = document.querySelector('.modal-content');
+               modalContent.addEventListener('click', function (event) {
+                  event.stopPropagation();
+               });
+
+               const modalClose = document.querySelectorAll('.modal-close');
+               modalClose.forEach((elem) => {
+                  elem.addEventListener('click', function () {
+                     modalOverlay.style.display = 'none';
+                  });
+               });
+
+               const btnCancel = document.querySelector('.btn-cancel');
+               btnCancel.addEventListener("click", function () {
+                  modalOverlay.style.display = 'flex';
+                  let statusDone = false;
+                  sendDataToCorezoid(rezultFetch.phone, rezultFetch.model, "Скасований", statusDone);
+               })
+
+
+            } else {
+               showErrorGetPromise();
+            }
+         })
+         .catch(function (error) {
+            console.error('Ошибка:', error);
+
+            showErrorGetPromise();
+         });
+
+   });
+</script>

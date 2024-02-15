@@ -1,0 +1,656 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<style>
+
+</style>
+
+<div id="app-results-year">
+
+  <div class="results-year-header">
+    <div class="results-year-header__container results-year-header__bgrd">
+      <div class="results-year-header__anim-snow"></div>
+      <div class="results-year-header__logo">
+        <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/h_logo.svg" alt="">
+      </div>
+      <div class="results-year-header__img"></div>
+      <div class="results-year-header__mouse">
+        <img src="https://cdn.comfy.ua/media/x/img3/ndr_mouse.svg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div v-if="statActive == true" class="results-year-lk --inlogin">
+    <div class="results-year-lk__conatiner">
+
+      <div v-if="prod_salesCheck > 0" class="results-year-lk__datais data__available">
+
+        <div class="results-year-lk__best-seller">
+          <div class="results-year-lk__best-seller__img1">
+            <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img1.svg" alt="">
+          </div>
+          <div class="results-year-lk__best-seller__txt1">
+            Ви увійшли у {{ segmentNumber }}% найактивніших покупців в історії COMFY
+          </div>
+          <div class="results-year-lk__best-seller__img2">
+            <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img2.svg" alt="">
+          </div>
+          <div class="results-year-lk__best-seller__img-pos">
+            <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img3.png" alt="">
+          </div>
+        </div>
+        <div v-if="prod_arr_topCategories.length == 1" class="results-year-lk__user-activity ctg--onlyone">
+          <div class="results-year-lk__user-activity-ctg__txt1">
+            Ваша найулюбленіша категорія
+            <span>цього року</span>
+          </div>
+          <div class="results-year-lk__user-activity-ctg__txt2">
+            <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/christmass_t.svg" alt="">
+            {{ prod_arr_topCategories[0] }}
+            <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/christmass_b.svg" alt="">
+          </div>
+          <div class="results-year-lk__user-activity-ctg__img-left">
+            <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/christmass_l.png" alt="">
+          </div>
+          <div class="results-year-lk__user-activity-ctg__img-right">
+            <picture>
+              <source srcset="https://cdn.comfy.ua/media/x/img3/christmass_r_mob.svg" media="(max-width: 480px)" />
+              <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/christmass_r.svg" alt="" />
+            </picture>
+          </div>
+        </div>
+        <div v-else class="results-year-lk__user-activity">
+          <div class="results-year-lk__user-activity__grid grid-inlogin">
+            <div class="results-year-lk__user-activity__item">
+              <div class="results-year-lk__user-activity__txt1">
+                <div class="results-year-lk__user-activity__txt0">
+                  ТОП 3
+                </div>
+                В COMFY є безліч категорій, але 3 з них були вашими найулюбленішими
+              </div>
+            </div>
+            <div class="results-year-lk__user-activity__item --flex-start">
+              <div class="results-year-lk__user-activity__inform">
+                <div class="results-year-lk__user-activity__img">
+                  <div class="results-year-lk__user-activity__nums">1</div>
+                  <picture>
+                    <source srcset="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_top1_mob.svg" media="(max-width: 480px)" />
+                    <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_top1.svg" alt="" />
+                  </picture>
+                </div>
+                <div class="results-year-lk__user-activity__txt2">
+                  {{ prod_arr_topCategories[0] }}
+                </div>
+              </div>
+            </div>
+            <div class="results-year-lk__user-activity__item --flex-start">
+              <div class="results-year-lk__user-activity__inform">
+                <div class="results-year-lk__user-activity__img">
+                  <div class="results-year-lk__user-activity__nums">2</div>
+                  <picture>
+                    <source srcset="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_top2_mob.svg" media="(max-width: 480px)" />
+                    <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_top2.svg" alt="" />
+                  </picture>
+                </div>
+                <div class="results-year-lk__user-activity__txt2">
+                  {{ prod_arr_topCategories[1] }}
+                </div>
+              </div>
+            </div>
+            <div v-if="prod_arr_topCategories.length == 3" class="results-year-lk__user-activity__item --flex-start">
+              <div class="results-year-lk__user-activity__inform">
+                <div class="results-year-lk__user-activity__img">
+                  <div class="results-year-lk__user-activity__nums">3</div>
+                  <picture>
+                    <source srcset="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_top3_mob.svg" media="(max-width: 480px)" />
+                    <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_top3.svg" alt="" />
+                  </picture>
+                </div>
+                <div class="results-year-lk__user-activity__txt2">
+                  {{ prod_arr_topCategories[2] }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-year-lk__user-statistics">
+          <div class="results-year-lk__user-statistics__item statistics__bgrd1">
+            <div class="results-year-lk__user-statistics__text statistics__elips1">
+              <div class="results-year-lk__user-statistics-contant contant__right">
+
+                <div v-show="prod_lifetime_ > 0" class="user-statistics__v-data-is-available">
+                  <div class="results-year-lk__user-statistics__txt1">
+                    {{ prod_lifetime_ }}
+                  </div>
+                  <div class="results-year-lk__user-statistics__txt2">
+                    стільки днів ви вже у родині лідера з продажів побутової техніки та електроніки
+                  </div>
+                </div>
+                <div v-show="prod_lifetime_ == 0" class="user-statistics__v-data-is-not-available">
+                  <div class="results-year-lk__user-statistics__txt3">
+                    Ласкаво просимо до родини COMFY!
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="results-year-lk__user-statistics__img-pos">
+              <picture>
+                <source srcset="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_ctg1_mob1.svg" media="(max-width: 480px)" />
+                <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_ctg1.svg" alt="" />
+              </picture>
+            </div>
+          </div>
+          <div class="results-year-lk__user-statistics__item statistics__bgrd2">
+            <div class="results-year-lk__user-statistics__text statistics__elips2">
+              <div class="results-year-lk__user-statistics-contant contant__left">
+
+                <div class="user-statistics__v-data-is-available">
+                  <div class="results-year-lk__user-statistics__txt1">
+                    {{ prod_visits_ }}
+                  </div>
+                  <div class="results-year-lk__user-statistics__txt2">
+                    стільки покупок у COMFY ви здійснили протягом 2023 року
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="results-year-lk__user-statistics__img-pos img-pos-nstl">
+              <picture>
+                <source srcset="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_ctg1_mob2.svg" media="(max-width: 480px)" />
+                <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_ctg2.svg" alt="" />
+              </picture>
+            </div>
+          </div>
+          <div class="results-year-lk__user-statistics__item statistics__bgrd3">
+            <div class="results-year-lk__user-statistics__text statistics__elips3">
+              <div class="results-year-lk__user-statistics-contant contant__right">
+
+                <div v-show="prod_bonusCharge > 0" class="user-statistics__v-data-is-available">
+                  <div class="results-year-lk__user-statistics__txt1">
+                    {{ prod_bonusCharge }}
+                  </div>
+                  <div class="results-year-lk__user-statistics__txt2">
+                    за це ми нарахували вам от стільки бонусів
+                  </div>
+                </div>
+                <div v-show="prod_bonusCharge == 0" class="user-statistics__v-data-is-not-available">
+                  <div class="results-year-lk__user-statistics__txt3">
+                    Що більше покупок ви робитимете, то більше бонусів отримаєте!
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="results-year-lk__user-statistics__img-pos">
+              <picture>
+                <source srcset="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_ctg1_mob3.svg" media="(max-width: 480px)" />
+                <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_ctg3.svg" alt="">
+              </picture>
+            </div>
+          </div>
+          <div class="results-year-lk__user-statistics__item statistics__bgrd4">
+            <div class="results-year-lk__user-statistics__text statistics__elips4">
+              <div class="results-year-lk__user-statistics-contant contant__left">
+
+                <div v-show="prod_zsuWithdraw > 0" class="user-statistics__v-data-is-available">
+                  <div class="results-year-lk__user-statistics__txt1">
+                    {{ prod_zsuWithdraw }}<span>грн</span>
+                  </div>
+                  <div class="results-year-lk__user-statistics__txt2">
+                    стільки ви зекономили з COMFY завдяки знижкам та бонусам
+                  </div>
+                </div>
+                <div v-show="prod_zsuWithdraw == 0" class="user-statistics__v-data-is-not-available">
+                  <div class="results-year-lk__user-statistics__txt3">
+                    Звертайте увагу на акції та списуйте бонуси, щоб купувати ще вигідніше!
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="results-year-lk__user-statistics__img-pos">
+              <picture>
+                <source srcset="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_ctg1_mob4.svg" media="(max-width: 480px)" />
+                <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img_ctg4.svg" alt="">
+              </picture>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div v-if="prod_salesCheck === 0" class="results-year-lk__datais data__notavailable">
+
+        <div class="results-year-lk-notavailable">
+          <div class="results-year-lk-notavailable__container">
+            <div class="results-year-lk-notavailable__item">
+              <div class="results-year-lk-notavailable__content">
+                <div class="results-year-lk-notavailable__txt1">
+                  Нажаль на даний момент нема статистики по вашому особистому кабінету, але ніколи не запізно додати щось до неї
+                </div>
+                <a href="https://comfy.ua/ua/sale/" class="results-year-lk-notavailable__link">
+                  Почати свою історію COMFY
+                </a>
+              </div>
+            </div>
+            <div class="results-year-lk-notavailable__item">
+              <div class="results-year-lk-notavailable__img-pos1">
+                <img src="https://cdn.comfy.ua/media/x/img3/zg1nw.svg" alt="">
+              </div>
+              <div class="results-year-lk-notavailable__img-pos2">
+                <img src="https://cdn.comfy.ua/media/x/img3/zg2.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div v-else class="results-year-lk --notinlogin">
+    <div class="results-year-lk__conatiner">
+
+      <div class="results-year-lk__user-activity">
+        <div class="results-year-lk__user-activity__grid">
+          <div class="results-year-lk__user-activity__item">
+            <div class="results-year-lk__user-activity__txt1">
+              Увійдіть до особистого кабінету та подивіться власну історію COMFY за 2023-й. Ми зібрали вашу власну аналітику року з підсумками вашої активності.
+            </div>
+          </div>
+          <div class="results-year-lk__user-activity__item --flex-end">
+            <div class="results-year-lk__user-activity__inform">
+              <div class="results-year-lk__user-activity__img">
+                <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/ntl_img1.svg" alt="">
+              </div>
+              <div class="results-year-lk__user-activity__txt2">
+                Скільки покупок <span class="word-wrap">зробили</span>
+              </div>
+            </div>
+          </div>
+          <div class="results-year-lk__user-activity__item --flex-end">
+            <div class="results-year-lk__user-activity__inform">
+              <div class="results-year-lk__user-activity__img">
+                <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/ntl_img2.svg" alt="">
+              </div>
+              <div class="results-year-lk__user-activity__txt2">
+                Скільки разів ви <span class="word-wrap">завітали у COMFY</span>
+              </div>
+            </div>
+          </div>
+          <div class="results-year-lk__user-activity__item --flex-end">
+            <div class="results-year-lk__user-activity__inform">
+              <div class="results-year-lk__user-activity__img">
+                <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/ntl_img3.svg" alt="">
+              </div>
+              <div class="results-year-lk__user-activity__txt2">
+                Скільки бонусів <span class="word-wrap">отримали</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="results-year-general-statistics">
+    <div class="results-year-lk__conatiner">
+
+      <div class="results-year-lk__best-seller">
+        <div class="results-year-lk__best-seller__img1">
+          <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img1.svg" alt="">
+        </div>
+        <div class="results-year-lk__best-seller__txt1">
+          <span style="text-transform: uppercase;">comfy</span> цього року
+        </div>
+        <div class="results-year-lk__best-seller__img2">
+          <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/l_img2.svg" alt="">
+        </div>
+        <div class="results-year-lk__best-seller__img-pos2">
+          <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/al_img_2bl1.png" alt="">
+        </div>
+      </div>
+
+      <div class="results-year-wrap">
+        <div class="results-year__cont">
+          <div class="results-year__slider swiper-container">
+
+            <div class="swiper-wrapper">
+              <div class="results-year__item swiper-slide">
+                <div class="results-year__item-wp results-year--bgrd1">
+                  <div class="results-year__content">
+                    <div class="results-year__txt1">
+                      Економія <br>з COMFY
+                    </div>
+                    <div class="results-year__flex">
+                      <div class="results-year__flex-item">
+                        <div class="results-year__txt2">843</div>
+                        <div class="results-year__txt3">стільки акцій ми провели<br>для вас у 2023-му</div>
+                      </div>
+                      <div class="results-year__flex-item">
+                        <div class="results-year__txt2">433 млн</div>
+                        <div class="results-year__txt3">бонусів отримали<br>наші клієнти</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="results-year__img-pos img-pos--img1maxw img-pos--right">
+                    <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/itg_img1.svg" alt="">
+                  </div>
+                </div>
+              </div>
+
+              <div class="results-year__item swiper-slide">
+                <div class="results-year__item-wp results-year--bgrd2">
+                  <div class="results-year__content">
+                    <div class="results-year__txt1">
+                      COMFY — лідер<br>з продажу техніки
+                    </div>
+                    <div class="results-year__flex">
+                      <div class="results-year__flex-item">
+                        <div class="results-year__txt2">39</div>
+                        <div class="results-year__txt3">товарів ми продавали<br>щохвилини</div>
+                      </div>
+                      <div class="results-year__flex-item">
+                        <div class="results-year__txt2">1 676 633</div>
+                        <div class="results-year__txt3">КРАЩів ви купили в цьому році, бо КРАЩ — справжній топ за свої гроші</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="results-year__img-pos img-pos--img2maxw img-pos--left">
+                    <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/itg_img2.svg" alt="">
+                  </div>
+                </div>
+              </div>
+
+              <div class="results-year__item swiper-slide">
+                <div class="results-year__item-wp results-year--bgrd3">
+                  <div class="results-year__content">
+                    <div class="results-year__txt1">
+                      Давайте до нас!
+                    </div>
+                    <div class="results-year__flex">
+                      <div class="results-year__flex-item">
+                        <div class="results-year__txt2">+50%</div>
+                        <div class="results-year__txt3">українських родин цього року купували у COMFY</div>
+                      </div>
+                      <div class="results-year__flex-item">
+                        <div class="results-year__txt2">2 200</div>
+                        <div class="results-year__txt3">вакансій було відкрито в COMFY цього року</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="results-year__img-pos img-pos--img3maxw img-pos--right">
+                    <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/itg_img3.svg" alt="">
+                  </div>
+                </div>
+              </div>
+
+              <div class="results-year__item swiper-slide">
+                <div class="results-year__item-wp results-year--bgrd4">
+                  <div class="results-year__content">
+                    <div class="results-year__txt1">
+                      Доставка COMFY
+                    </div>
+                    <div class="results-year__flex">
+                      <div class="results-year__flex-item">
+                        <div class="results-year__txt2">25 000</div>
+                        <div class="results-year__txt3">у стільки населених пунктів ми доставляли ваші замовлення</div>
+                      </div>
+                      <div class="results-year__flex-item">
+                        <div class="results-year__txt2">74 0874</div>
+                        <div class="results-year__txt3">стільки доставок<br>ми зробили</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="results-year__img-pos img-pos--img4maxw img-pos--left">
+                    <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/itg_img4.svg" alt="">
+                  </div>
+                </div>
+              </div>
+
+              <div class="results-year__item swiper-slide">
+                <div class="results-year__item-wp results-year--bgrd5">
+                  <div class="results-year__content">
+                    <div class="results-year__txt1">
+                      Працюємо<br>для вас
+                    </div>
+                    <div class="results-year__flex">
+                      <div class="results-year__flex-item">
+                        <div class="results-year__txt2">5</div>
+                        <div class="results-year__txt3">ваших дзвінків та звернень в чат підтримки ми обробляли кожної хвилини</div>
+                      </div>
+                      <div class="results-year__flex-item">
+                        <div class="results-year__txt2">23</div>
+                        <div class="results-year__txt3">магазинів ми відкрили лише впродовж цього року</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="results-year__img-pos img-pos--img5maxw img-pos--right">
+                    <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/itg_img5_b.svg" alt="">
+                  </div>
+                  <div class="results-year__img-pos img-pos--img6maxw img-pos--left-top">
+                    <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/itg_img5_l.svg" alt="">
+                  </div>
+                  <div class="results-year__img-pos img-pos--img7maxw img-pos--right-top">
+                    <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/itg_img5_r.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="results-year-slider__arrow">
+            <div class="swiper-button-prev">
+              <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/itg_prev.svg" alt="">
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">
+              <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/itg_next.svg" alt="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="results-year-lk__best-seller-footer">
+      <div class="results-year-lk__best-seller-footer__img1">
+        <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/img1_big1.svg" alt="">
+      </div>
+      <div class="results-year-lk__best-seller-footer__txt1">
+        COMFY — #намберван по домашнім гаджетам, а ви — намберван наших сердець. Дякуємо, що були з нами впродовж 2023-го, попереду ще багато цікавого<br>З новим роком. Бережіть себе і близьких та заходьте в гості з приводом і просто подивитися :)
+      </div>
+      <a href="https://comfy.ua/ua/sale/" class="results-year-lk__best-seller-footer__link">
+        Продовжити свою історію COMFY
+      </a>
+      <div class="results-year-lk__best-seller-footer__img2">
+        <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/img1_big2.svg" alt="">
+      </div>
+      <div class="results-year-lk__best-seller-footer__img-pos">
+        <img src="https://cdn.comfy.ua/media/x/img3/resultsyear2023/al_img_4.png" alt="">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    new Vue({
+      el: '#app-results-year',
+      data: {
+        snowflakeImages: [
+          'https://cdn.comfy.ua/media/x/img3/resultsyear2023/snow1.png',
+          'https://cdn.comfy.ua/media/x/img3/resultsyear2023/snow2.png',
+          'https://cdn.comfy.ua/media/x/img3/resultsyear2023/snow3.png',
+          'https://cdn.comfy.ua/media/x/img3/resultsyear2023/snow4.png',
+        ],
+        stitchСount: 25,
+        statActive: window.__INITIAL_STATE__.auth.authInfo.user.verified,
+        intervalId: null,
+        message: "",
+        prod_salesCheck: null,
+        segmentNumber: 0,
+        prod_arr_topCategories: [],
+        prod_lifetime_: 0,
+        prod_visits_: 0,
+        prod_zsuWithdraw: 0,
+        prod_bonusCharge: 0
+      },
+      mounted() {
+        this.generateSnowflakes();
+
+        new Swiper('.swiper-container', {
+          slidesPerView: 1,
+          spaceBetween: 32,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          loop: true,
+          breakpoints: {
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+          }
+        });
+
+        if (window.innerWidth >= 1366) {
+          window.addEventListener('resize', this.handleResize);
+        }
+        window.addEventListener('orientationchange', this.handleResize);
+      },
+      created() {
+        this.intervalId = setInterval(this.checkVerifiedStatus, 0);
+      },
+      destroyed() {
+        window.removeEventListener('resize', this.handleResize);
+        window.removeEventListener('orientationchange', this.handleResize);
+      },
+      methods: {
+        checkVerifiedStatus() {
+          const newValueFromServer = window.__INITIAL_STATE__.auth.authInfo.user.verified;
+
+          if (newValueFromServer === true) {
+            this.statActive = true;
+            clearInterval(this.intervalId);
+            console.log("true");
+            //window.location.reload();
+
+            const userPhone = window.__INITIAL_STATE__.auth.authInfo.user.phone;
+            this.getInfoUser(userPhone);
+          }
+          // else {
+          //   console.log("false");
+          // }
+        },
+        getInfoUser(userPhone) {
+          let requestURL = `https://comfy.ua/api/customers/${userPhone}/results`;
+          // https://comfy.ua/api/customers/380631158878/results
+          function sendRequest(method, url) {
+
+            return fetch(url, {
+              method: 'GET',
+              headers: {
+                "Context-type": "application/json"
+              }
+            }).then(Response => {
+              return Response.json();
+            })
+          }
+
+          sendRequest('GET', requestURL)
+            .then(Date => {
+              // this.prod_salesCheck = Date.salesCheck; // Покупок ви зробили у COMFY ???
+              this.prod_salesCheck = Date.visits;
+
+              if (Date.visits !== 0) {
+                this.prod_lifetime_ = Date.lifetime; // дата реєстрації
+                this.prod_visits_ = Date.visits; // кількість покупок у 2023
+                this.prod_zsuWithdraw = Date.zsuWithdraw; // економія
+                this.prod_bonusCharge = Date.bonusCharge; // бонуси за рік
+                let prod_segmentNumber = Date.segmentNumber; // відсоток активності
+                this.prod_arr_topCategories = Date.topCategories; // TOP категории Date.topCategories
+
+                if (prod_segmentNumber === 1) {
+                  this.segmentNumber = 5;
+                } else if (prod_segmentNumber === 2) {
+                  this.segmentNumber = 35;
+                } else if (prod_segmentNumber === 3) {
+                  this.segmentNumber = 55;
+                }
+
+              } else {
+                this.prod_salesCheck = 0;
+              }
+
+            });
+
+        },
+        createSnowflake(src) {
+          const animShow = document.querySelector('.results-year-header__anim-snow');
+          const img = new Image();
+          img.src = src;
+          img.className = 'results-year-snowflake';
+
+          const x = Math.random() * window.innerWidth;
+          const y = Math.random() * (window.innerHeight - 2500);
+
+          img.style.left = `${x}px`;
+          img.style.top = `${y}px`;
+          img.style.animationDuration = `${Math.random() * 6 + 7}s`;
+
+          animShow.appendChild(img);
+        },
+        generateSnowflakes() {
+          const animShow = document.querySelector('.results-year-header__anim-snow');
+
+          // Удаление текущих снежинок
+          const existingSnowflakes = document.querySelectorAll('.results-year-snowflake');
+          existingSnowflakes.forEach(snowflake => snowflake.remove());
+
+          // Создание новых снежинок
+          for (let i = 0; i < this.stitchСount; i++) {
+            const randomSnowflake = this.snowflakeImages[Math.floor(Math.random() * this.snowflakeImages.length)];
+            this.createSnowflake(randomSnowflake);
+          }
+
+        },
+        handleResize() {
+          const snowflakes = document.querySelectorAll('.results-year-snowflake');
+
+          if (window.innerWidth <= 480) {
+            this.stitchСount = 10;
+          }
+
+          this.generateSnowflakes();
+
+          snowflakes.forEach((snowflake) => {
+            const x = Math.random() * window.innerWidth;
+
+            let y;
+            if (window.innerWidth <= 480) {
+              y = Math.random() * (window.innerHeight - 100);
+            }
+
+            snowflake.style.left = `${x}px`;
+            snowflake.style.top = `${y}px`;
+          });
+        }
+      }
+    });
+  });
+</script>

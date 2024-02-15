@@ -1,0 +1,49 @@
+<style>
+
+</style>
+
+<div id="cms-numberone">
+
+   <div class="numberone-body">
+      <div class="numberone-body__content">
+         <div class="numberone-body__txt1">хто донатить — намберван</div>
+         <div class="numberone-body__txt2">100% прибутку з цього мерча COMFY перерахує на допомогу ЗСУ</div>
+         <div class="numberone-body__txt3">Зроблено в Україні</div>
+         <div class="numberone-link">
+            <span>Розмірна сітка</span>
+         </div>
+      </div>
+      <div class="numberone-body__img-pos">
+         <img src="https://cdn.comfy.ua/media/x/img3/cmszsu/cms_hudy.png" alt="">
+      </div>
+   </div>
+   <div class="numberone-table-size">
+      <div class="numberone-table-size__txt1">
+         Розмірна сітка
+      </div>
+      <div class="numberone-table-size__overflow">
+         <div class="numberone-table-size__flex">
+            <div class="numberone-table-size__img1 numberone-table__size1">
+               <img src="https://cdn.comfy.ua/media/x/img3/kft.svg" alt="">
+            </div>
+            <div class="numberone-table-size__img2">
+               <img src="https://cdn.comfy.ua/media/x/img3/cmszsu/cms_tshirt_size.svg" alt="">
+            </div>
+         </div>
+      </div>
+   </div>
+
+</div>
+
+<script>
+   document.addEventListener("DOMContentLoaded", (event) => {
+
+      const linkBtn = document.querySelector('.numberone-link');
+      const linkContent = document.querySelector('.numberone-table-size');
+      linkBtn.addEventListener('click', function (event) {
+         linkBtn.classList.toggle("active-link");
+         linkContent.classList.toggle("active-tab");
+      });
+
+   });
+</script>

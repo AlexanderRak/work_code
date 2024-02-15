@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+body
+   padding: 0
+   margin: 0
+ul
+   padding: 0
+   margin: 0
+.branding-wrapper, .header-container, .footer
+   display: none
+@font-face
+   font-family: 'comfy-narrow'
+   src: url('https://cdn.comfy.ua/media/im/fontscomfy/comfy-narrow.ttf') format('truetype')
+   font-weight: normal
+   font-style: normal
+@font-face
+   font-family: 'comfy-nornal'
+   src: url('https://cdn.comfy.ua/media/im/fontscomfy/comfy-nornal.ttf') format('truetype')
+   font-weight: normal
+   font-style: normal
+$maxWidth: 1920
+@mixin adaptiv-font($pcSize, $mobSize)
+   $addSize: $pcSize - $mobSize
+   $maxWidth: $maxWidth - 320
+   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+#lp-letov
+   width: 100%
+   height: 100%
+   position: relative
+   overflow: hidden
+   display: block
+   background: #43B02A
+   img
+      display: block
+      max-width: 100%
+      padding: 0
+      margin: 0
+   ul
+      list-style-type: none
+      display: block
+      li
+         font-family: 'Roboto', sans-serif
+         @include adaptiv-font(20, 16)
+         line-height: 1.3
+         margin-bottom: 8px
+         color: #fff
+         position: relative
+         padding-left: 20px
+         font-size: 16px
+         &:last-child
+            margin-bottom: 0
+         &::before
+            content: ""
+            position: absolute
+            left: 0
+            top: 6px
+            width: 8px
+            height: 8px
+            background: #FF671F
+            border-radius: 50%
+   a
+      color: #fff
+      display: inline-block
+      text-decoration: underline
+.lp-fz-def-bold
+   font-weight: bold
+   display: block
+   padding: 0
+   margin: 0
+   line-height: 1.3
+   color: #fff
+.lp-fz-def-normal
+   font-weight: normal
+   display: block
+   padding: 0
+   margin: 0
+   line-height: 1.3
+   color: #fff
+.lp-align-left
+   text-align: left
+.lp-align-right
+   text-align: right
+.lp-align-center
+   text-align: center
+.lp-fz94
+   font-family: 'comfy-nornal'
+   @include adaptiv-font(94, 48)
+.lp-fz80
+   font-family: 'comfy-nornal'
+   @include adaptiv-font(80, 48)
+.lp-fz64
+   font-family: 'comfy-nornal'
+   @include adaptiv-font(64, 40)
+.lp-fz40
+   font-family: 'Roboto', sans-serif
+   @include adaptiv-font(40, 24)
+.lp-fz34
+   font-family: 'Roboto', sans-serif
+   @include adaptiv-font(34, 20)
+.lp-fz26
+   font-family: 'comfy-nornal'
+   font-size: 26px
+.lp-fz24
+   font-family: 'Roboto', sans-serif
+   @include adaptiv-font(24, 20)
+.lp-fz18
+   font-family: 'Roboto', sans-serif
+   @include adaptiv-font(18, 16)
+.lp-fz16
+   font-family: 'Roboto', sans-serif
+   font-size: 16px
+.content-maxw
+   max-width: 1216px
+   margin: 0 auto
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+.breadcrumbs
+   display: none
+//end default styles
+.lp-wrap
+   padding: 0 12px 30px 12px
+   max-width: 1440px
+   margin: 0 auto
+   position: relative
+.cont-letov-header__content
+   padding-top: 50px
+   position: relative
+   z-index: 3
+.cont-letov-header__img-pos
+   position: absolute
+   right: 0
+   top: 20px
+.cont-letov-header__flex
+   display: flex
+   flex-direction: row
+   align-items: center
+   padding: 20px 0 0 20px
+.cont-letov-header__txt5
+   padding-left: 15px
+.cont-letov-header__txt5
+   line-height: 1
+.cont-letov-header__list
+   padding: 8px 0 0 20px
+.cont-letov-header__link
+   font-family: 'Roboto', sans-serif
+   font-size: 16px
+   width: 127px
+   text-align: center
+   background: #FF671F
+   padding: 10px 0
+   border-radius: 8px
+   text-decoration: none
+   color: #fff
+   margin-top: 24px
+   text-decoration: none !important
+.cont-letov-choice__txt1
+   padding: 80px 0 20px 0
+   max-width: 625px
+   line-height: 1
+.cont-letov-choice__img img
+   margin: 0 auto !important
+.cont-letov-choice__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 1fr
+   grid-gap: 15px
+   padding-top: 24px
+.cont-letov-choice__txt3
+   padding-top: 16px
+.cont-letov-info
+   background: #FF671F
+   margin: 0 0 80px 0
+.cont-letov-info__flex
+   display: flex
+   align-items: center
+.cont-letov-info__item
+   flex: 1 1 0
+.cont-letov-info__wrap
+   padding: 32px 12px
+.cont-letov-info__txt2
+   padding-top: 16px
+.cont-letov-work__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr
+   grid-gap: 15px
+   margin-top: 40px
+.cont-letov-work__item img
+   margin: 0 auto !important
+.cont-letov-work__txt2, .cont-letov-work__txt3, .cont-letov-work__txt4
+   padding-bottom: 10px
+   padding-left: 35px
+   max-width: 345px
+   position: relative
+   &::before
+      content: ""
+      position: absolute
+      left: 0
+      top: 0
+      width: 24px
+      height: 24px
+      background: #FF671F
+      font-size: 16px
+      color: #fff
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      line-height: 1
+.cont-letov-work__txt2
+   &::before
+      content: "1"
+.cont-letov-work__txt3
+   &::before
+      content: "2"
+.cont-letov-work__txt4
+   &::before
+      content: "3"
+.cont-letov-work__txt5
+   max-width: 600px
+   margin: 0 auto
+   padding-top: 25px
+.cont-letov-footer
+   padding-bottom: 40px
+   padding-top: 80px
+   img
+      margin: 0 auto !important
+.cont-letov-footer-bgrd
+   background: #FF671F
+   display: flex
+   align-items: center
+   justify-content: center
+   padding: 16px 12px
+.cont-letov-footer__mob-wp
+   padding-bottom: 20px
+.cont-letov-footer__mob-txt1
+   padding-bottom: 10px
+.cont-letov-footer__mob
+   display: none
+.cont-letov-menu
+   background: #fff
+   padding: 16px 12px
+.cont-letov-menu-wp
+   display: flex
+   align-items: center
+   justify-content: space-between
+.cont-letov-menu-wp__txt
+   padding-left: 24px
+.cont-letov-header__img-pos-mob
+   display: none
+.cont-letov-work__txt1 span
+   display: inline-block
+//media*******************
+// @media (min-width: 1920px)
+// @media (max-width: 1200px)
+@media (max-width: 1024px)
+   .cont-letov-header__img-pos
+      max-width: 640px
+   .cont-letov-choice__txt3
+      font-size: 18px
+@media (max-width: 812px)
+   .cont-letov-header__img-pos
+      max-width: 500px
+      right: -41px
+      top: 80px
+   .cont-letov-choice__grid
+      grid-template-columns: 1fr 1fr
+@media (max-width: 480px)
+   .cont-letov-header__img-pos-mob
+      display: block
+      img
+         margin: 0 auto !important
+   .cont-letov-header__img-pos
+      display: none
+   .cont-letov-header__content
+      padding-top: 24px
+   .cont-letov-header__txt2
+      max-width: 220px
+   .cont-letov-header__flex
+      padding: 20px 0 0 0px
+   .cont-letov-header__list
+      padding: 8px 0 0 10px
+   .cont-letov-header__link
+      width: 100%
+   .cont-letov-choice__txt1
+      padding: 48px 0 15px 0
+   .cont-letov-choice__grid
+      grid-template-columns: 1fr
+   .cont-letov-info__flex
+      flex-direction: column
+   .cont-letov-info__txt1, .cont-letov-info__txt2, .cont-letov-info__txt3, .cont-letov-info__txt4, .cont-letov-info__txt5
+      text-align: center
+   .cont-letov-info__txt6
+      padding-top: 24px
+   .cont-letov-info
+      margin: 0 0 48px 0
+   .cont-letov-work__txt1
+      line-height: 1.1
+      padding-bottom: 15px
+   .cont-letov-work__grid
+      grid-template-columns: 1fr
+      grid-gap: 24px
+      margin-top: 20px
+   .cont-letov-footer__desk
+      display: none
+   .cont-letov-footer__mob
+      display: block
+   .cont-letov-footer
+      padding-top: 24px
+   .cont-letov-footer__mob-txt1
+      padding: 10px 12px 0 12px
+   .content-maxw__item
+      &:nth-child(2)
+         text-align: right
+   .lp-fz-def-bold
+      font-weight: normal
+// @media (max-width: 320px)
+@media (max-width: 812px) and (orientation: landscape)
+   .cont-letov-footer__desk-txt1
+      padding: 0 12px

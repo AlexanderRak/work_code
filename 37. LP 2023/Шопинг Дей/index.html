@@ -1,0 +1,122 @@
+<style>
+   @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+   .main-container.page {
+      padding-left: 0;
+      padding-right: 0;
+   }
+
+   .breadcrumbs {
+      display: none;
+   }
+
+   #wrap-shopday {
+      background: #43B02A;
+      width: 100%;
+      height: auto;
+   }
+
+   .wrap-shopday__bgrd {
+      position: relative;
+      z-index: 2;
+      background-image: url(https://cdn.comfy.ua/media/x/img3/kr_bgrd.png);
+      background-repeat: no-repeat;
+      background-position: top;
+      max-width: 1334px;
+      height: auto;
+      margin: 0 auto;
+   }
+
+   .wrap-shopday__text {
+      position: relative;
+      z-index: 3;
+      margin: 0 auto;
+      padding-top: 40px;
+      max-width: 270px;
+   }
+
+   .wrap-shopday__btn {
+      padding-bottom: 80px;
+   }
+
+   .wrap-shopday__btn-link {
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+      border-radius: 16px;
+      background: #FF671F;
+      padding: 16px 24px;
+      margin: 30px auto 0 auto;
+      display: table;
+      position: relative;
+      color: #fff;
+      text-align: center;
+      font-size: 34px;
+      transition: .3s;
+   }
+
+   .wrap-shopday__btn-link:hover {
+      box-shadow: 0 0 5px 0px #FF671F;
+   }
+
+   .wrap-shopday__btn-link::before {
+      content: "";
+      background-image: url(https://cdn.comfy.ua/media/x/img3/kr_icon.png);
+      width: 87px;
+      height: 97px;
+      position: absolute;
+      right: -43px;
+      top: -60px;
+   }
+
+   @media (max-width: 480px) {
+      .wrap-shopday__text {
+         padding-top: 20px;
+         max-width: 220px;
+      }
+
+      .wrap-shopday__btn {
+         padding: 8px 12px 50px 12px;
+      }
+
+      .wrap-shopday__btn-link {
+         padding: 16px 24px;
+         margin: 20px auto 0 auto;
+         font-size: 21px;
+      }
+
+      .wrap-shopday__btn-link::before {
+         content: "";
+         width: 41px;
+         height: 41px;
+         background-size: contain;
+         background-repeat: no-repeat;
+         right: -13px;
+         top: -13px;
+      }
+   }
+
+   @media (max-width: 320px) {
+      .wrap-shopday__text {
+         padding-top: 10px;
+         max-width: 160px;
+      }
+
+      .wrap-shopday__btn-link {
+         margin: 0 auto 0 auto;
+         font-size: 18px;
+      }
+   }
+</style>
+
+<div id="wrap-shopday">
+   <div class="wrap-shopday__bgrd">
+      <div class="wrap-shopday__text">
+         <img src="https://cdn.comfy.ua/media/x/img3/kr_text2.svg" alt="">
+      </div>
+      <div class="wrap-shopday__btn">
+         <a href="https://comfy.ua/ua/krash/" class="wrap-shopday__btn-link">
+            тут зібрали товари КРАЩ
+         </a>
+      </div>
+   </div>
+</div>
