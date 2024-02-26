@@ -1,0 +1,70 @@
+<style>
+   #checking-order .header-profile__link {
+      display: table;
+      top: 0;
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+      transform: translateY(0);
+   }
+
+   .default-visibility-none {
+      display: none;
+   }
+</style>
+
+<div id="checking-order">
+   <div class="cms-content">
+
+      <div class="checking-order__content">
+         <h2>Перевірка статусу замовлення</h2>
+         <p id="checking-order--text">Для перевірки статусу замовлення необхідно авторизуватись</p>
+      </div>
+
+      <div id="checking-order--notlogin" class="default-visibility-none">
+         <a class="header-profile__link header-profile__link_login js-header-login-link" href="#headerLogin" data-gtm="Interactions-open-authorizationForm">
+            <span>Увійти до кабінету</span>
+         </a>
+      </div>
+
+      <div id="checking-order--login" class="default-visibility-none">
+         <a class="header-profile__link header-profile__link_login" href="https://comfy.ua/ua/customer/account/repair/">
+            <span>Увійти до кабінету</span>
+         </a>
+      </div>
+
+
+   </div>
+</div>
+
+<script>
+   document.addEventListener("DOMContentLoaded", (event) => {
+
+      const btnLogin = document.getElementById("checking-order--login"),
+            btnNotLogin = document.getElementById("checking-order--notlogin"),
+            textNotLogin = document.getElementById("checking-order--text");
+
+      fetch('https://comfy.ua/api/auth/v3/info/5')
+         .then(function (response) {
+            if (!response.ok) {
+               throw new Error('Ошибка при выполнении запроса: ' + response.statusText);
+            }
+            return response.json();
+         })
+         .then(function (data) {
+            const statusLogin = data.user.verified;
+
+            if(statusLogin) {
+               btnLogin.classList.remove("default-visibility-none");
+               textNotLogin.classList.add("default-visibility-none");
+            } else {
+               btnNotLogin.classList.remove("default-visibility-none");
+            }
+         })
+         .catch(function (error) {
+            console.error('Ошибка:', error);
+         });
+
+   });
+</script>

@@ -1,0 +1,21 @@
+{{block type="oggetto_catalog/repair" name="oggetto_catalog_repair" template="repair/repair.phtml"}}
+
+
+2 columns with right bar
+
+<reference name="right">
+    <block type="cms/block" name="cms_sidebar" as="cms_sidebar">
+        <action method="setBlockId"><block_id>cms_sidebar</block_id></action>
+    </block>
+</reference>
+
+<reference name="head">
+    <action method="addRevisionItem"><type>css</type><name>repair</name></action>
+</reference>
+
+<reference name="js_loader">
+    <action method="addRevisionItem"><type>js</type><name>repair</name><params>defer</params></action>
+</reference>
+
+
+Logged redirect url customer/account/repair

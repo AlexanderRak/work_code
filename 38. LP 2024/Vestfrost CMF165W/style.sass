@@ -1,0 +1,259 @@
+#vestfrost
+   display: block
+   margin: 0 auto
+   max-width: 1440px
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #fff
+   position: relative
+   font-family: 'Roboto', sans-serif
+   img
+      max-width: 100%
+      display: block
+      margin: 0
+      padding: 0
+      opacity: 1
+span.fw-bold
+   font-weight: bold
+   color: #000
+span.tx-uppercase
+   text-transform: uppercase
+.features-desc__text h2
+   text-align: inherit
+.one-col .features-desc__text p
+   text-align: inherit
+.vestfrost-text-bold
+   font-weight: bold
+.vestfrost-text-uppercase
+   text-transform: uppercase
+.vestfrost-color
+   color: #6D6D6D
+.vestfrost-colorfff
+   color: #fff
+.vestfrost-fs18
+   font-size: 18px
+   line-height: 1
+.vestfrost-fs24
+   font-size: 24px
+   line-height: 1
+.vestfrost-fs26
+   font-size: 26px
+   line-height: 1
+.vestfrost-fs50
+   font-size: 50px
+   line-height: 1.3
+.vestfrost-fs40
+   font-size: 40px
+   line-height: 1.3
+.vestfrost-text-alg-l
+   text-align: left
+.vestfrost-text-alg-r
+   text-align: right
+.vestfrost-text-alg-c
+   text-align: center
+// default
+.vestfrost-container
+   position: relative
+   &.bgrd1
+      background-image: url(https://cdn.comfy.ua/media/x/img5/vsfr/img1.png)
+      background-position: center
+      background-size: cover
+      height: 898px
+      &::before
+         content: ""
+         background: linear-gradient(180deg, #FFFFFF 13.47%, rgba(255, 255, 255, 0) 82.09%)
+         width: 100%
+         height: 138px
+         position: absolute
+         top: 0
+         left: 0
+      &::after
+         content: ""
+         background: linear-gradient(360deg, #FFFFFF 13.47%, rgba(255, 255, 255, 0) 82.09%)
+         width: 100%
+         height: 138px
+         position: absolute
+         bottom: 0
+         left: 0
+   &.bgrd2
+      background-image: url(https://cdn.comfy.ua/media/x/img5/vsfr/img5.png)
+      background-position: center
+      background-size: cover
+      height: 500px
+   &.bgrd3
+      background-image: url(https://cdn.comfy.ua/media/x/img5/vsfr/img11.png)
+      background-position: center
+      background-size: cover
+      height: 748px
+      &::before
+         content: ""
+         background: linear-gradient(180deg, #FFFFFF 13.47%, rgba(255, 255, 255, 0) 82.09%)
+         width: 100%
+         height: 138px
+         position: absolute
+         top: 0
+         left: 0
+.vestfrost-content
+   &.text-pos1
+      position: absolute
+      bottom: 130px
+      left: 26rem
+      max-width: 626px
+      margin: 0 auto
+   &.text-pos2
+      position: absolute
+      bottom: 120px
+      left: 90px
+      max-width: 663px
+      margin: 0 auto
+   .text-rel1
+      padding-bottom: 24px
+   .text-rel3
+      padding-bottom: 24px
+   .text-rel4
+      padding-bottom: 24px
+.vestfrost-img
+   &.img-pos
+      position: absolute
+      &.img-pos1
+         right: 95px
+         bottom: 80px
+      &.img-pos2
+         left: 0
+         top: 0
+         opacity: 0.4
+      &.img-pos3
+         left: 0
+         top: 0
+.vestfrost-logo
+   display: flex
+   flex-direction: column
+   align-items: center
+   padding-top: 34px
+.vestfrost-logo-text
+   padding: 24px 12px 0 12px
+.vestfrost__flex
+   display: flex
+   align-items: center
+.flexpdd
+   padding: 4rem 0
+.vestfrost__item
+   flex: 1 1 0
+.vestfrost-content
+   &.sect1
+      max-width: 615px
+      margin: 0 auto
+      padding: 15px
+   &.sect2
+      max-width: 685px
+      margin: 0 auto
+      height: 100%
+      display: flex
+      align-items: center
+   &.sect3
+      padding: 15px
+.vestfrost__flex-clmn
+   display: flex
+   flex-direction: column
+   position: relative
+   padding: 3rem 0 3rem 0
+.vestfrost__clmn-item
+   display: flex
+   align-items: center
+   max-width: 857px
+   margin: 0 0 3rem auto
+.vestfrost__clmn-img
+   flex: 1 0 350px
+.vestfrost__clmn-content
+   padding: 15px
+// media
+@media (max-width: 1225px)
+   .vestfrost-content.text-pos1
+      left: 18rem
+@media (max-width: 1024px)
+   .vestfrost-fs50
+      font-size: 38px
+   .vestfrost-fs24
+      font-size: 18px
+   .vestfrost-container.bgrd1
+      height: 765px
+   .vestfrost-content.text-pos1
+      left: 3rem
+      max-width: 545px
+   .vestfrost-img.img-pos.img-pos1
+      right: 3rem
+   .vestfrost-container.bgrd3
+      height: 650px
+   .vestfrost-content.text-pos2
+      bottom: 70px
+      left: 15px
+   .vestfrost-img.img-pos.img-pos3
+      display: none
+   .vestfrost__clmn-item
+      max-width: 100%
+      margin: 0 0 3rem auto
+      padding: 15px
+      &:last-child
+         margin: 0 0 0 auto
+   .vestfrost__clmn-img
+      flex: 1 0 250px
+@media (max-width: 812px)
+   .vestfrost-fs50
+      font-size: 30px
+   .vestfrost-fs40
+      font-size: 30px
+   .vestfrost-fs26
+      font-size: 18px
+   .vestfrost-content.text-pos1
+      max-width: 428px
+@media (max-width: 480px)
+   .vestfrost-container.bgrd1
+      height: 750px
+      background-position: right
+   .vestfrost-content.text-pos1
+      max-width: 201px
+      bottom: 10rem
+      left: 15px
+   .vestfrost-img.img-pos.img-pos1
+      right: 15px
+   .vestfrost__flex
+      flex-direction: column
+   .vestfrost-img.img-pos.img-pos2
+      display: none
+   .vestfrost-container.bgrd2
+      background-position: left
+   .vestfrost-content .text-rel3
+      padding: 16px
+   .vestfrost__flex-clmn
+      padding: 3rem 0 0rem 0
+   .vestfrost__clmn-item
+      max-width: 100%
+      margin: 0 auto
+      padding: 15px
+      flex-direction: column
+   .vestfrost__clmn-img
+      flex: auto
+      max-width: 200px
+      margin: 0 auto
+   .vestfrost__clmn-content
+      padding: 20px 0
+   .vestfrost-fs40
+      font-size: 24px
+   .vestfrost-img.img-rel
+      padding: 15px
+   .vestfrost-fs50
+      font-size: 26px
+   .vestfrost-content.text-pos2
+      right: 15px
+   .vestfrost-fs50
+      padding-bottom: 12px
+   .vestfrost-fs40
+      padding-bottom: 12px
+@media (max-width: 320px)
+   .vestfrost-content.text-pos1
+      max-width: 78%
+      bottom: 6rem
+   .vestfrost-img.img-pos.img-pos1
+      display: none
+// @media (max-width: 812px) and (orientation: landscape)
