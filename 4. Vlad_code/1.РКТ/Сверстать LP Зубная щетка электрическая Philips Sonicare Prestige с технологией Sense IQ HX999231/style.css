@@ -1,0 +1,279 @@
+.philips {
+  max-width: 1536px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.philips img {
+  margin: 0 auto;
+  opacity: 1 !important;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+.philips img:hover {
+  opacity: 1 !important;
+}
+.philips div {
+  line-height: normal;
+}
+.philips video,
+.philips iframe {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.philips ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-desc__text img {
+  margin-bottom: 0rem;
+}
+
+.philips .container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo__cont {
+  padding: 55px 160px 45px;
+}
+
+.philips__title {
+  font-size: clamp(20px, 2vw, 36px);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.logo__txt {
+  font-size: clamp(20px, 2vw, 32px);
+}
+
+.care {
+  padding: 50px 60px 0;
+  box-sizing: border-box;
+}
+.care .philips__title {
+  margin: 0;
+}
+
+.care__items {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.care__item {
+  padding-right: 100px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.care__i {
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+.howwork {
+  padding: 50px 10px 0;
+}
+
+.philips__txt {
+  font-size: clamp(16px, 1.3vw, 24px);
+}
+
+.txt__center {
+  text-align: center;
+}
+
+.howwork__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 50px;
+}
+
+.howwork__cont {
+  margin-top: 14px;
+}
+
+.philips__video {
+  padding: 50px 130px 0;
+}
+.philips__video iframe {
+  height: 720px;
+  width: 100%;
+}
+
+.func {
+  padding: 50px 60px 0;
+}
+
+.func__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.func__row {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  justify-content: space-between;
+}
+.func__row:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+.func__cont {
+  max-width: 670px;
+}
+
+.sonicare {
+  text-align: center;
+}
+
+.sonicare__cont {
+  padding: 50px 130px;
+}
+
+.care__two {
+  padding-top: 0;
+}
+
+.complete {
+  padding: 50px 60px 0;
+}
+
+.complete__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.complete__cont {
+  max-width: 670px;
+}
+
+.philips .complete__list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.philips .complete__list li {
+  font-size: clamp(16px, 1.3vw, 24px);
+}
+
+@media (max-width: 1441px) {
+  .func__cont {
+    max-width: 42vw;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 1201px) {
+  .philips .container {
+    width: 960px;
+    padding: 0 15px;
+  }
+  .logo__cont,
+  .sonicare__cont {
+    padding: 2em 0;
+  }
+  .care,
+  .howwork,
+  .philips__video,
+  .complete,
+  .func {
+    padding: 2em 0 0;
+  }
+  .care__items {
+    margin-top: 1em;
+    gap: 2em;
+  }
+  .care__item {
+    padding-right: 0;
+    gap: 2em;
+  }
+  .care__i {
+    min-width: 14vw;
+    max-width: 14vw;
+  }
+  .howwork__grid {
+    margin-top: 0;
+  }
+  .philips__video iframe {
+    height: 60vw;
+  }
+  .func__row {
+    gap: 2em;
+  }
+  .func__cont,
+  .complete__cont {
+    max-width: 45vw;
+  }
+  .func__wrap {
+    gap: 2em;
+  }
+}
+@media (max-width: 991px) {
+  .philips .container {
+    width: 720px;
+  }
+  .logo__cont, .sonicare__cont {
+    padding: 1em 0;
+  }
+  .logo__img img {
+    min-width: 140%;
+    margin-left: -5%;
+  }
+  .care__i {
+    min-width: 25vw;
+    max-width: 25vw;
+  }
+  .care__item {
+    gap: 1em;
+  }
+  .care__item .philips__title {
+    font-size: clamp(16px, 2vw, 36px);
+  }
+  .howwork__grid {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
+  .func__row {
+    flex-direction: column !important;
+    gap: 1em;
+  }
+  .func__cont, .complete__cont {
+    max-width: 100%;
+  }
+  .philips__video iframe {
+    height: 53vw;
+  }
+  .complete__row {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .philips .container {
+    width: 540px;
+  }
+}
+@media (max-width: 576px) {
+  .philips .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
