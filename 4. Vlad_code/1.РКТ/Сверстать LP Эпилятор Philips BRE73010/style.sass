@@ -1,0 +1,578 @@
+//default styles
+
+// body
+//    margin: 0
+
+.philips
+   // font-family: sans-serif
+   max-width: 1520px
+   width: 100%
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   color: #252525
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.philips .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//logo
+
+.logo
+   position: relative
+   color: #91024b
+
+.logo__i
+   position: absolute
+   left: 80px
+   top: -8px
+
+.logo__abs
+   left: 80px
+   bottom: 75px
+   position: absolute
+   max-width: 520px
+
+.logo__txt
+   margin-bottom: 75px
+   font-size: clamp(20px, 3vw, 34px)
+
+.logo__title
+   font-weight: bold
+   font-size: clamp(24px, 3vw, 54px)
+
+//advantages
+
+.philips__pink
+   color: #fff
+   padding: 20px 80px
+   font-size: clamp(24px, 3vw, 48px)
+   background-color: #ed4370
+
+.advantages
+   background-image: linear-gradient(90deg, #f9ede3 0%, #ffffff 100%)
+   padding: 100px
+
+.advantages__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr
+   grid-template-rows: 1fr 1fr 1fr
+   grid-template-areas: "cal1 cal2 cal3" "cal4 cal2 cal5" "cal6 cal2 cal7"
+   >div
+      text-align: right
+      display: flex
+      align-items: center
+      gap: 35px
+      &:nth-of-type(n+5)
+         text-align: left
+         flex-direction: row-reverse
+
+.cal1
+   grid-area: cal1
+.advantages__img
+   grid-area: cal2
+   display: block
+   margin: 0 -100px
+.cal3
+   grid-area: cal3
+.cal4
+   grid-area: cal4
+.cal5
+   grid-area: cal5
+.cal6
+   grid-area: cal6
+.cal7
+   grid-area: cal7
+
+.philips__txt
+   font-size: clamp(16px, 2vw, 24px)
+
+.advantages__i
+   min-width: max-content
+
+.philips__note
+   margin-top: 1rem
+   font-size: clamp(12px, 1.2vw, 16px)
+
+//skin
+
+.skin
+   background-image: linear-gradient(90deg, #f9ede3 0%, #ffffff 100%)
+   position: relative
+   .philips__title
+      margin-bottom: 50px
+
+.skin__img img
+   margin: 0
+
+.philips__title
+   font-weight: bold
+   color: #ed4370
+   font-size: clamp(24px, 3vw, 34px)
+   margin-bottom: 1rem
+
+.skin__abs
+   position: absolute
+   max-width: 1060px
+   top: 65px
+   right: 100px
+
+.skin__item
+   &:nth-of-type(2)
+      padding-left: 300px
+      margin-top: 40px
+
+//disks
+
+.disks
+   background-image: linear-gradient(90deg, #f9ede3 0%, #ffffff 100%)
+
+.disks__row
+   display: flex
+   align-items: center
+   padding-left: 80px
+
+.disks__cont
+   max-width: 580px
+
+.disks__img
+   margin-left: -400px
+
+//alldays
+
+.alldays
+   padding: 70px 80px 75px
+   background-image: linear-gradient(90deg, #f9ede3 0%, #ffffff 100%)
+
+.alldays__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   gap: 80px
+
+.alldays__cont
+   margin-top: 35px
+
+.philips__sub
+   margin-bottom: 50px
+   font-weight: bold
+   color: #ed4370
+   margin-bottom: 50px
+   font-size: clamp(16px, 2vw, 24px)
+
+//design
+
+.design
+   position: relative
+
+.design__abs
+   position: absolute
+   left: 80px
+   bottom: 100px
+   max-width: 400px
+
+//philips__slider__wrap
+
+.philips__slider__wrap
+   padding: 100px 80px
+   background-image: linear-gradient(90deg, #f9ede3 0%, #ffffff 100%)
+
+.philips__slider
+   .swiper-button-next,
+   .swiper-button-prev
+      min-width: max-content
+      min-height: max-content
+      &::after
+         display: none
+   .swiper-button-prev
+      transform: scale(-1, 1)
+   .swiper-slide
+      display: flex !important
+      align-items: center
+      justify-content: center
+      &:last-of-type
+         gap: 80px
+
+.slide__cont
+   max-width: 530px
+   .philips__sub
+      margin-bottom: 0
+
+//complete
+
+.complete
+   background-image: linear-gradient(90deg, #f9ede3 0%, #ffffff 100%)
+   padding-bottom: 100px
+
+.complete__grid
+   display: grid
+   grid-template-columns: 380px 360px 340px 349px
+   grid-template-rows: 380px 413px
+   grid-template-areas: "cal1 cal2 cal3 cal4" "cal1 cal5 cal6 cal7"
+   text-align: center
+   align-items: end
+   >div
+      position: relative
+   .cal1
+      grid-area: cal1
+      .philips__txt
+         bottom: -20px
+         left: -15px
+   .cal2
+      grid-area: cal2
+      .philips__txt
+         bottom: 30px
+   .cal3
+      grid-area: cal3
+      .philips__txt
+         bottom: 30px
+         left: -26px
+   .cal4
+      grid-area: cal4
+      .philips__txt
+         bottom: 0px
+         left: 10px
+   .cal5
+      grid-area: cal5
+      .philips__txt
+         bottom: 30px
+   .cal6
+      grid-area: cal6
+      .philips__txt
+         bottom: 30px
+   .cal7
+      grid-area: cal7
+      .philips__txt
+         bottom: 50px
+
+   .philips__txt
+      position: absolute
+      bottom: 0
+      right: 50%
+      transform: translateX(50%)
+      width: max-content
+
+//philips__video
+
+.philips__video
+   padding: 65px 80px 70px
+   iframe
+      max-width: 100%
+      width: 100%
+      height: 845px
+
+//philips__table
+
+.philips__table
+   padding: 70px 80px
+
+.table__wrap
+   min-width: 960px
+
+.table__grid__two
+   display: grid
+   grid-template-columns: repeat(7, 1fr)
+   text-align: center
+   >div
+      padding: 40px 20px
+      background-color: #fff5f7
+      &:nth-of-type(even)
+         background-color: #ffdee3
+   .philips__txt
+      margin-bottom: 35px
+
+.table__grid
+   display: grid
+   grid-template-columns: repeat(7, 1fr)
+   grid-template-areas: "cal1 cal1 cal1 cal1 cal1 cal1 cal1"
+   >div
+      padding: 20px 10px
+      display: flex
+      justify-content: center
+      align-items: center
+      text-align: center
+      background-color: #fff5f7
+      &:nth-of-type(odd)
+         background-color: #ffdee3
+   .philips__title
+      margin-bottom: 0
+      grid-area: cal1
+      display: block !important
+      text-align: left
+      background-color: unset !important
+
+.table__txt
+   font-size: clamp(14px, 1.2vw, 20px)
+
+//philips__logo
+
+.philips__logo
+   padding: 90px 0
+   background-image: linear-gradient(106deg, #91004b 0%, #ec4371 100%)
+
+//media*****************************************************
+
+@media (max-width: 1441px)
+   .skin__abs
+      max-width: 65vw
+
+   .philips__slider
+      .swiper-button-next
+         right: var(--swiper-navigation-sides-offset, 0px)
+      .swiper-button-prev
+         left: var(--swiper-navigation-sides-offset, 0px)
+
+   .complete__grid
+      grid-template-columns: 0.2666fr 0.2523fr 0.2379fr 0.2432fr
+      grid-template-rows: 0.4798fr 0.5202fr
+   .complete__grid .cal1 .philips__txt
+      left: -2.5vw
+   .complete__grid .cal8 .philips__txt
+      left: -3vw
+      bottom: 13vw
+   .complete__grid .cal3 .philips__txt
+      left: -3vw
+   .complete__grid .cal4 .philips__txt
+      left: 0
+
+@media (max-width: 1201px)
+   .philips .container
+      width: 960px
+      padding: 0 15px
+
+   .logo__i
+      left: 2em
+      max-width: 20vw
+   .logo__abs
+      left: 2em
+      max-width: 35vw
+   .philips__pink
+      padding: .5em 2em
+
+   .advantages
+      padding: 2em 0
+   .advantages__i
+      min-width: 10vw
+      max-width: 10vw
+   .advantages__grid>div
+      gap: 1em
+
+   .skin__abs
+      right: 2em
+      max-width: 70vw
+   .skin .philips__title
+      margin-bottom: 1rem
+
+   .disks__row
+      padding: 0
+   .disks__cont
+      max-width: 40vw
+
+   .alldays
+      padding: 2em 0
+   .alldays__grid
+      gap: 2em
+   .alldays__cont
+      margin-top: 1em
+
+   .philips__sub
+      margin-bottom: 1rem
+
+   .design__abs
+      left: 2em
+      bottom: 2em
+      max-width: 30vw
+
+   .philips__slider__wrap
+      padding: 2em 0
+
+   .philips__slider .swiper .swiper-slide
+      padding: 0 4em
+      box-sizing: border-box
+   .slide__cont
+      max-width: 40vw
+
+   .complete
+      padding-bottom: 6vw
+   .complete__grid .cal1 .philips__txt
+      left: -5vw
+   .complete__grid .cal3 .philips__txt
+      left: -4vw
+   .complete__grid .cal4 .philips__txt
+      left: -3vw
+   .complete__grid .cal5 .philips__txt
+      bottom: 3vw
+   .complete__grid .cal5 .philips__txt
+      bottom: 0
+   .complete__grid .cal6 .philips__txt
+      bottom: 0
+   .complete__grid .cal7 .philips__txt
+      bottom: 2vw
+   .complete__grid .philips__txt
+      font-size: clamp(16px, 1.8vw, 24px)
+
+   .philips__video
+      padding: 2em 0
+      iframe
+         height: 50vw
+
+   .philips__table
+      padding: 2em 0
+   .table__grid__two .philips__txt
+      font-size: 16px
+      margin-bottom: 20px
+   .table__grid__two>div
+      padding: 20px 10px
+
+   .philips__logo
+      padding: 2em 0
+      img
+         max-width: 15vw
+
+@media (max-width: 991px)
+   .philips .container
+      width: 720px
+
+   .logo
+      display: flex
+      flex-direction: column-reverse
+   .logo__abs
+      position: unset
+      padding: 1em 0
+      max-width: 100%
+   .logo__txt
+      margin-bottom: 1rem
+   .logo__i
+      max-width: 35vw
+      left: 1em
+   .logo__img img
+      min-width: 150%
+      margin-left: -50%
+
+   .advantages__img
+      margin: 0
+   .advantages__grid
+      grid-template-columns: 1fr
+      grid-template-areas: "cal1" "cal3" "cal4" "cal5" "cal6" "cal7" "cal2"
+      gap: 1em
+   .advantages__grid>div
+      flex-direction: row !important
+      text-align: right !important
+      justify-content: space-between
+   .advantages__i
+      min-width: 20vw
+      max-width: 20vw
+
+   .philips__pink
+      padding: 0.5em
+
+   .skin
+      display: flex
+      flex-direction: column-reverse
+   .skin__abs
+      position: unset
+      max-width: 100%
+      padding: 1em 0
+   .skin__item:nth-of-type(2)
+      padding: 0
+
+   .disks__row
+      flex-direction: column-reverse
+   .disks__cont
+      max-width: 100%
+      padding: 1em 0
+   .disks__img
+      margin: 0
+      img
+         min-width: 130%
+         margin-left: -30%
+
+   .alldays__grid
+      grid-template-columns: 1fr
+      gap: 2em
+
+   .design
+      display: flex
+      flex-direction: column-reverse
+   .design__abs
+      position: unset
+      max-width: 100%
+      padding: 1em 0
+   .design__img img
+      min-width: 150%
+      margin-left: -50%
+
+   .philips__slider__wrap
+      padding-bottom: 1em
+   .philips__slider .swiper .swiper-slide
+      padding: 0 1em
+   .philips__slider .swiper-slide
+      flex-direction: column
+      gap: 1em !important
+   .slide__cont
+      max-width: 100%
+      padding: 0 2em
+   .philips__slider .swiper-button-next, .philips__slider .swiper-button-prev
+      min-width: unset
+      min-height: unset
+      color: #ed4370
+      top: 20vw
+      img
+         display: none
+      &::after
+         display: block
+   .philips__slider .swiper-button-prev
+      transform: unset
+
+   .complete__grid
+      grid-template-columns: 1fr
+      grid-template-rows: auto
+      grid-template-areas: "cal1" "cal2" "cal3" "cal4" "cal5" "cal6" "cal7"
+   .complete__img img
+      max-height: 100vw
+   .complete__grid .philips__txt
+      position: unset
+      transform: unset
+      margin: 0 auto
+   .complete__grid .cal2 .philips__txt,
+   .complete__grid .cal4 .philips__txt,
+   .complete__grid .cal7 .philips__txt
+      margin-top: -15vw
+   .complete__grid .cal3 .philips__txt,
+   .complete__grid .cal6 .philips__txt
+      margin-top: -25vw
+   .complete__grid .cal5 .philips__txt
+      margin-top: -25vw
+
+   .table__scroll
+      overflow-x: scroll
+
+   .philips__logo img
+      max-width: 27vw
+
+@media (max-width: 767px)
+   .philips .container
+      width: 540px
+
+@media (max-width: 576px)
+   .philips .container
+      width: 100%
+      box-sizing: border-box
