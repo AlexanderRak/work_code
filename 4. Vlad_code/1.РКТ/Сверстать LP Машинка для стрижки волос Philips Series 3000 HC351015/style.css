@@ -1,0 +1,269 @@
+.philips {
+  width: 100%;
+  max-width: 1464px;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.philips img {
+  margin: 0 auto;
+  opacity: 1 !important;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+.philips img:hover {
+  opacity: 1 !important;
+}
+.philips div {
+  line-height: normal;
+}
+
+.features-desc__text img {
+  margin-bottom: 0rem;
+}
+
+.philips .container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.logo {
+  position: relative;
+  color: #fff;
+}
+
+.logo__i {
+  position: absolute;
+  top: -18px;
+  left: 65px;
+}
+
+.logo__abs {
+  position: absolute;
+  left: 80px;
+  bottom: 45px;
+  max-width: 470px;
+}
+
+.logo__title {
+  margin-bottom: 90px;
+  font-weight: bold;
+  font-size: clamp(28px, 3vw, 42px);
+}
+
+.logo__txt {
+  font-size: clamp(16px, 1.3vw, 20px);
+}
+
+.func {
+  padding: 50px 80px;
+}
+.func .philips__title {
+  margin-bottom: 30px;
+}
+
+.philips__title {
+  font-weight: bold;
+  font-size: clamp(24px, 3vw, 35px);
+  margin-bottom: 1rem;
+}
+.philips__title i {
+  font-style: normal;
+  font-weight: normal;
+}
+
+.func__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 75px 90px;
+}
+
+.func__cont {
+  margin-top: 20px;
+}
+
+.philips__sub {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 20px;
+}
+
+.philips__txt {
+  font-size: 16px;
+}
+
+.func__img img {
+  width: 100%;
+}
+
+.warranty {
+  background-color: #0066a1;
+  color: #fff;
+  padding: 45px 100px 70px 85px;
+  background-image: url("https://cdn.comfy.ua/media/x/img3/1346281/i2.png");
+  background-repeat: no-repeat;
+  background-position: left 70px bottom;
+}
+.warranty .philips__title {
+  margin: 0;
+  color: #fff;
+}
+
+.warranty__row {
+  display: flex;
+  align-items: center;
+  gap: 165px;
+}
+
+.philips__video {
+  padding: 85px 255px;
+  background-color: #f0f4fa;
+}
+.philips__video video {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.philips__table {
+  color: #3c3c3c;
+  padding: 50px 75px 60px;
+  font-size: 14px;
+}
+
+.table__sub {
+  font-weight: bold;
+  margin-top: 14px;
+  text-align: center;
+}
+
+.table__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 40px;
+  min-width: 930px;
+}
+.table__grid > div {
+  padding: 15px 0 10px;
+  border-bottom: solid 1px #cccccc;
+}
+.table__grid > div:nth-of-type(n+5) {
+  padding: 12px 0;
+  text-align: left;
+  margin: 0;
+}
+
+.bg__gray {
+  background-color: #f7f9fd;
+}
+
+.table__txt {
+  text-align: center !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px !important;
+}
+
+.table__mark {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 20px !important;
+}
+
+@media (max-width: 1441px) {
+  .logo__abs {
+    max-width: 33vw;
+  }
+  .warranty {
+    padding-right: 5vw;
+    padding-left: 4vw;
+  }
+}
+@media (max-width: 1201px) {
+  .philips .container {
+    width: 960px;
+    padding: 0 15px;
+  }
+  .logo__abs {
+    left: 2em;
+  }
+  .logo__title {
+    margin-bottom: 1em;
+  }
+  .logo__i {
+    left: 1.4em;
+  }
+  .func {
+    padding: 2em 0;
+  }
+  .func__grid {
+    gap: 2em;
+  }
+  .warranty {
+    padding: 5em 0 2em;
+  }
+  .warranty__row {
+    gap: 4em;
+  }
+  .philips__video {
+    padding: 2em 0;
+  }
+  .philips__table {
+    padding: 2em 0;
+  }
+}
+@media (max-width: 991px) {
+  .philips .container {
+    width: 720px;
+  }
+  .logo {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .logo__i {
+    max-width: 35vw;
+    left: 0.5em;
+  }
+  .logo__abs {
+    position: unset;
+    max-width: 100%;
+    padding: 1em 0 0;
+    color: #000;
+  }
+  .func__grid {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
+  .warranty {
+    padding: 2em 0;
+    background-size: contain;
+    background-position: right bottom;
+  }
+  .warranty__row {
+    flex-direction: column;
+    gap: 2em;
+  }
+  .warranty__i {
+    max-width: 30vw;
+  }
+  .table__scroll {
+    overflow-x: scroll;
+  }
+}
+@media (max-width: 767px) {
+  .philips .container {
+    width: 540px;
+  }
+}
+@media (max-width: 576px) {
+  .philips .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
