@@ -8,6 +8,7 @@
 
 .apple__wrap
    width: 100vw
+   max-width: 100%
    background: #F5F5F7
 
 .apple
@@ -20,6 +21,7 @@
    box-sizing: border-box
    overflow: hidden
    background: #F5F5F7
+   padding: 2em 0
    img
       margin: 0 auto
       opacity: 1 !important
@@ -43,23 +45,22 @@
    margin: 0 auto
 
 .apple__grid
-   display: grid
-   grid-template-columns: 450px 587px
-   grid-template-areas: "cal1 cal3" "cal2 cal3"
-   gap: 56px 84px
+   display: flex
+   flex-direction: column
    justify-content: center
+   align-items: center
+   gap: 56px
+   text-align: center
 
 .cal1
    grid-area: cal1
    display: flex
    align-items: flex-end
    gap: 11px
+   text-align: left
 
 .cal2
    grid-area: cal2
-
-.cal3
-   grid-area: cal3
 
 .apple__i__txt
    font-size: 14px
@@ -97,7 +98,7 @@
       width: 720px
 
    .apple
-      padding: 30px 0 80px
+      padding: 30px 0 40px
 
    .apple__grid
       grid-template-columns: 1fr
