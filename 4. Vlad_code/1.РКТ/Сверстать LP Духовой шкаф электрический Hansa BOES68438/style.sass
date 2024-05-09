@@ -1,0 +1,122 @@
+//default styles
+
+// body
+//    margin: 0
+
+.hansa
+   // font-family: sans-serif
+   max-width: 1316px
+   width: 100%
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.hansa .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//logo
+
+.logo
+   text-align: center
+
+.logo__title
+   padding: 30px
+   font-weight: bold
+   font-size: clamp(24px, 2vw, 36px)
+
+.logo__img
+   position: relative
+
+.logo__i
+   position: absolute
+   top: 20px
+   left: 20px
+   img
+      margin: 0
+
+//hansa__block
+
+.hansa__block .container
+   display: flex
+   flex-direction: column
+   gap: 20px
+
+.hansa__row
+   display: flex
+   align-items: center
+   >div
+      flex: 50%
+      box-sizing: border-box
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+
+.hansa__cont
+   padding: 40px
+
+.hansa__title
+   font-size: clamp(22px, 2vw, 30px)
+   font-weight: bold
+   margin-bottom: 1rem
+
+.hansa__txt
+   font-size: clamp(16px, 1.8vw, 24px)
+
+//media*****************************************************
+
+@media (max-width: 1201px)
+   .hansa .container
+      width: 960px
+      padding: 0 15px
+
+@media (max-width: 991px)
+   .hansa .container
+      width: 720px
+
+   .hansa
+      padding-bottom: 1em
+
+   .hansa__block .container
+      gap: 2em
+   .hansa__row
+      flex-direction: column !important
+      gap: 1em
+   .hansa__cont
+      padding: 0
+
+   .logo__title
+      padding: 1em 0
+   .logo__i
+      max-width: 30vw
+      left: 3em
+   .logo__img
+      img
+         min-width: 150%
+         margin-left: -30%
+
+@media (max-width: 767px)
+   .hansa .container
+      width: 540px
+
+@media (max-width: 576px)
+   .hansa .container
+      width: 100%
+      box-sizing: border-box
