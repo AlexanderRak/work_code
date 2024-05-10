@@ -47,8 +47,8 @@
 
 .logo__i {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 20px;
+  left: 20px;
 }
 .logo__i img {
   margin: 0;
@@ -97,11 +97,14 @@
   .hansa {
     padding-bottom: 1em;
   }
+  .hansa__block {
+    padding-top: 1em;
+  }
   .hansa__block .container {
     gap: 2em;
   }
   .hansa__row {
-    flex-direction: column !important;
+    flex-direction: column-reverse !important;
     gap: 1em;
   }
   .hansa__cont {
@@ -112,6 +115,11 @@
   }
   .logo__i {
     max-width: 10vw;
+    left: 3em;
+  }
+  .logo__img img {
+    min-width: 150%;
+    margin-left: -30%;
   }
 }
 @media (max-width: 991px) {
