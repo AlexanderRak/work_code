@@ -1,0 +1,334 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-product
+   // font-family: 'Roboto', sans-serif
+   width: 100%
+   max-width: 1023px
+   margin: 0 auto
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 48, 23)
+      font-weight: 500
+      text-align: left
+   h3
+      @include adaptiv-value("font-size", 32, 20)
+      font-weight: 900
+      text-align: center
+      color: #0A7896
+   h4
+      @include adaptiv-value("font-size", 20, 16)
+      font-weight: 900
+      text-align: center
+      color: #fff
+   p
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 400
+      text-align: left
+
+//logo
+
+.logo
+   position: relative
+   color: #fff
+
+.logo__abs
+   position: absolute
+   top: 0
+   left: 0
+   right: 0
+   bottom: 0
+
+.logo__cont
+   display: flex
+   flex-direction: column
+   justify-content: flex-end
+   position: relative
+   z-index: 2
+   height: 100%
+   text-shadow: 4px 1px 14px rgba(0, 0, 0, 0.76)
+   box-sizing: border-box
+
+.logo__img
+   position: relative
+
+.logo__i
+   position: absolute
+   top: 0
+   left: 2em
+   max-width: 20%
+
+//advantages
+
+.advantages__title
+   padding: 20px 0
+
+.advantages__wrap
+   position: relative
+
+.advantages__abs
+   position: absolute
+   top: 0
+   bottom: 0
+   right: 0
+   left: 0
+
+.advantages__flex
+   display: flex
+   justify-content: space-between
+   align-items: center
+   height: 100%
+
+.advantages__col
+   display: flex
+   flex-direction: column
+
+.advantages__col__item
+   display: flex
+   align-items: center
+   gap: 10px
+   p
+      font-weight: bold
+
+//air
+
+.air
+   h3
+      margin-bottom: 1rem !important
+   p
+      text-align: center !important
+
+.air__cont
+   padding: 20px
+
+//motor
+
+.motor
+   margin-top: 20px
+
+.motor__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   >div
+      background: linear-gradient(160.44deg, #0A7896 0%, #91C2D0 100%)
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      &:nth-of-type(1)
+         .motor__img
+            margin: 0 auto
+
+//philips__table
+
+.philips__table
+   padding: 20px 8px 8px 8px
+
+.table__grid
+   display: grid
+   grid-template-columns: 143px 1fr 1fr 1fr
+   gap: 4px
+   >div
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      padding: 0 20px
+
+.table__row
+   display: flex
+   align-items: center
+   justify-content: space-between
+   padding: 1em
+
+.table__grid__two
+   display: grid
+   grid-template-columns: 143px 1fr 1fr 1fr
+   gap: 4px
+   margin-bottom: 4px
+   >div
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 10px
+   p
+      color: #fff
+      text-align: center !important
+      font-size: 12px !important
+   .col1, .col4
+      background-color: #0A7896
+   .col2
+      background-color: #6CAEC0
+   .col3
+      background-color: #0A7896CF
+
+.table__grid__three
+   grid-template-columns: 143px 0.5fr 1.5fr 1fr
+
+.table__grid__four
+   grid-template-columns: 143px 1.5fr 0.5fr 1fr
+
+.table__grid__five
+   grid-template-columns: 143px 3fr
+
+.table__grid__six
+   grid-template-columns: 143px 0.5fr 0.5fr 1fr 1fr
+
+// *********************************media******************************
+
+@media (min-width: $bp-mobile)
+   .logo__cont
+      padding-bottom: 1em
+      gap: 1em
+      padding-left: 1em
+   .logo__i
+      left: 1em
+
+   #rkt-philips-product h2
+      @include adaptiv-value("font-size", 32, 22)
+
+   .advantages__flex
+      padding: 1em
+   .advantages__col
+      gap: 15px
+   .advantages__i img
+      width: 40px
+      height: 40px
+   .advantages__abs
+      position: unset
+   .advantages__col__item p
+      color: #000
+      text-shadow: unset
+   .advantages__flex
+      flex-wrap: wrap
+      gap: 15px
+
+   .motor__grid h4
+      padding: 0 10px 10px !important
+   .motor__grid > div
+      padding: 20px 0 0
+   .motor__grid > div:nth-of-type(1) .motor__img
+      max-width: 65%
+
+   #rkt-philips-product h4
+      @include adaptiv-value("font-size", 20, 8)
+
+   .philips__table h3
+      margin-bottom: 20px !important
+      padding: 0 10px !important
+
+   .philips__table__scroll
+      overflow-x: scroll
+
+   .philips__table__wrap
+      min-width: 990px !important
+      box-sizing: border-box
+
+@media (min-width: $bp-tablet)
+   .logo__cont
+      padding-bottom: 3em
+
+@media (min-width: $bp-hd-desktop)
+   // #rkt-philips-product
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+   //    max-width: 1406px
+   //    width: 100%
+   // .rkt-philips-product__container
+   //    overflow: hidden
+
+   #rkt-philips-product h2
+      @include adaptiv-value("font-size", 42, 23)
+
+   .logo__cont
+      padding-bottom: 3em
+      gap: 4em
+      padding-left: 2em
+   .logo__i
+      left: 2em
+
+   .advantages__flex
+      padding: 2em
+      flex-wrap: nowrap
+      gap: 11em
+   .advantages__col
+      gap: 40px
+   .advantages__i img
+      width: 80px
+      height: 80px
+   .advantages__abs
+      position: absolute
+   .advantages__col__item p
+      color: #fff
+      text-shadow: 4px 1px 14px rgba(0, 0, 0, 0.76)
+
+   .motor__grid > div
+      padding: 40px 0 0
+   .motor__grid h4
+      padding: 0 40px !important
+   .motor__grid > div:nth-of-type(1) .motor__img
+      max-width: 198px
+
+   #rkt-philips-product h4
+      @include adaptiv-value("font-size", 20, 16)
+
+   .philips__table h3
+      margin-bottom: 30px !important
+      padding: 0 60px !important
+
+   .philips__table__scroll
+      overflow-x: hidden
+   .philips__table__wrap
+      min-width: 990px !important
+      box-sizing: border-box
+
+@media (max-width: 1024px) and (min-width: $bp-hd-desktop)
+   .advantages__i img
+      min-width: 40px
+      width: 40px
+      height: 40px
+   .advantages__col__item p
+      font-size: 14px !important
+   .advantages__col
+      gap: 20px
+
+   .motor__grid > div:nth-of-type(1) .motor__img
+      max-width: 150px
+   #rkt-philips-product h4
+      font-size: 16px !important
+      padding: 0 20px !important
+
+@media (max-width: 1341px) and (min-width: $bp-hd-desktop)
+   .philips__table__scroll
+      overflow-x: scroll
