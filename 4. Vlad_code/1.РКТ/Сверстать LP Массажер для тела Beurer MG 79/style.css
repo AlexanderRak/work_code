@@ -1,0 +1,81 @@
+.bc-description__content p:first-letter {
+  padding-left: 0 !important;
+}
+
+#rkt-beurer-product {
+  max-width: 1023px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+#rkt-beurer-product h2, #rkt-beurer-product h3, #rkt-beurer-product h4, #rkt-beurer-product h5, #rkt-beurer-product h6, #rkt-beurer-product p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+#rkt-beurer-product ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+#rkt-beurer-product img {
+  display: block;
+  max-width: 100%;
+  opacity: 1;
+  margin: 0 auto;
+}
+#rkt-beurer-product img:hover {
+  opacity: 1;
+}
+#rkt-beurer-product h2 {
+  font-size: 32px;
+  font-weight: 900;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1023px) {
+  #rkt-beurer-product h2 {
+    font-size: calc(22px + 10 * (100vw - 320px) / 703);
+  }
+}
+#rkt-beurer-product p, #rkt-beurer-product li {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+}
+@media (max-width: 1023px) {
+  #rkt-beurer-product p, #rkt-beurer-product li {
+    font-size: calc(16px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-beurer-product li {
+  line-height: 1.2;
+}
+
+.txt__center p {
+  text-align: center !important;
+}
+
+@media (min-width: 320px) {
+  .beurer__block {
+    padding: 1em 0 0 0;
+  }
+  .beurer__cont {
+    padding: 0 1em 1em 1em;
+  }
+}
+@media (min-width: 1024px) {
+  .beurer__block {
+    padding: 1em 0;
+  }
+  .beurer__cont {
+    padding: 1em;
+  }
+}
