@@ -5,7 +5,7 @@
 
 .philips
    // font-family: sans-serif
-   max-width: 1520px
+   max-width: 1023px
    width: 100%
    margin: 0 auto
    height: auto
@@ -47,32 +47,32 @@
 .logo__i
    position: absolute
    top: -10px
-   left: 80px
+   left: 1.5em
 
 .logo__abs
    position: absolute
-   left: 80px
+   left: 2em
    bottom: 100px
-   max-width: 550px
+   max-width: 40%
 
 .logo__title
    font-weight: bold
-   font-size: clamp(32px, 3vw, 52px)
+   font-size: clamp(20px, 2vw, 30px)
    margin-bottom: 1rem
 
 .logo__txt
-   font-size: clamp(20px, 2vw, 32px)
+   font-size: clamp(18px, 2vw, 24px)
 
 //advantsges
 
 .philips__violet
-   font-size: clamp(22px, 3vw, 48px)
+   font-size: clamp(20px, 2vw, 30px)
    color: #fff
    background-color: #8a0a5e
-   padding: 20px 80px
+   padding: 1em 1.5em
 
 .advantsges
-   padding: 60px 80px 0
+   padding: 2em 2em 0
 
 .advantsges__row
    display: flex
@@ -81,18 +81,19 @@
    gap: 60px
 
 .advantsges__list
-   max-width: 750px
+   // max-width: 750px
+   flex-basis: 50%
    display: flex
    flex-direction: column
-   gap: 55px
+   gap: 2em
    li
-      font-size: clamp(16px, 2vw, 32px)
+      font-size: clamp(16px, 2vw, 18px)
 
 .advantsges__cont
-   max-width: 750px
+   flex-basis: 50%
 
 .philips__txt
-   font-size: clamp(16px, 2vw, 32px)
+   font-size: clamp(16px, 2vw, 18px)
 
 //ion
 
@@ -102,23 +103,23 @@
 
 .ion__abs
    position: absolute
-   top: 80px
-   right: 80px
-   max-width: 410px
+   top: 2em
+   right: 2em
+   max-width: 40%
 
 //thermo
 
 .thermo
    .ion__abs
       right: unset
-      left: 80px
+      left: 2em
 
 .styling
    .ion__abs
       top: unset
-      left: 80px
-      bottom: 80px
-      max-width: 870px
+      left: 2em
+      bottom: 2em
+      max-width: 50%
 
 //warranty
 
@@ -135,9 +136,9 @@
    border-radius: 50%
    overflow: hidden
    background-color: #d10077
-   max-width: 304px
-   min-width: 304px
-   height: 304px
+   max-width: 204px
+   min-width: 204px
+   height: 204px
    color: #fff
    position: relative
    margin-right: -100px
@@ -152,12 +153,12 @@
 
 .warranty__title
    font-weight: bold
-   font-size: clamp(32px, 3vw, 62px)
+   font-size: clamp(32px, 2vw, 42px)
    b
-      font-size: clamp(42px, 5vw, 100px)
+      font-size: clamp(42px, 4vw, 70px)
 
 .warranty__txt
-   font-size: clamp(22px, 3vw, 52px)
+   font-size: clamp(22px, 2vw, 32px)
    text-align: center
 
 //prof
@@ -168,16 +169,16 @@
 
 .prof__abs
    position: absolute
-   left: 80px
-   bottom: 235px
+   left: 2em
+   bottom: 50%
 
 .prof__title
-   font-size: clamp(24px, 3vw, 50px)
+   font-size: clamp(24px, 3vw, 30px)
    font-weight: bold
    margin-bottom: 1rem
 
 .prof__txt
-   font-size: clamp(18px, 2.6vw, 30px)
+   font-size: clamp(18px, 2.6vw, 24px)
 
 //media*****************************************************
 
@@ -190,8 +191,9 @@
 
 @media (max-width: 1201px)
    .philips .container
-      width: 960px
-      padding: 0 15px
+      // width: 960px
+      padding: 0 12px
+      box-sizing: border-box
 
    .logo__i
       max-width: 20vw
@@ -206,14 +208,14 @@
       padding: 2em 0
 
    .ion__abs
+      top: 1em
       right: 1em
-      max-width: 35vw
+   //    max-width: 35vw
 
    .thermo .ion__abs
       left: 1em
 
    .styling .ion__abs
-      max-width: 60vw
       left: 1em
       bottom: 2em
 
@@ -228,8 +230,8 @@
       left: 1em
 
 @media (max-width: 991px)
-   .philips .container
-      width: 720px
+   // .philips .container
+   //    width: 720px
 
    .logo
       display: flex
@@ -265,8 +267,6 @@
    .warranty__row
       flex-direction: column
    .warranty__i
-      min-width: 38vw
-      min-height: 38vw
       margin: 0 0 -18vw auto
 
    .prof
@@ -287,3 +287,36 @@
    .philips .container
       width: 100%
       box-sizing: border-box
+
+// *****************************************
+
+@media (min-width: 320px)
+   .warranty__i
+      min-width: 40vw
+      min-height: 40vw
+
+@media (min-width: 768px)
+   .logo__i img
+      max-width: 70%
+      margin: 0
+
+   .warranty__i
+      min-width: 20vw
+      min-height: 20vw
+
+@media (min-width: 1024px)
+   .logo__i img
+      max-width: 70%
+      margin: 0
+
+   .warranty__i
+      min-width: 15vw
+      min-height: 15vw
+
+@media (min-width: 1024px) and (max-width: 1024px)
+   .advantsges__row
+      gap: 2em
+   .advantsges__img
+      flex-basis: 50%
+   .advantsges__list
+      gap: 1em
