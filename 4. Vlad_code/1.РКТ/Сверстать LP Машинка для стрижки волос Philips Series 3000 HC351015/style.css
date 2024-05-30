@@ -1,6 +1,6 @@
 .philips {
+  max-width: 1023px;
   width: 100%;
-  max-width: 1464px;
   margin: 0 auto;
   height: auto;
   display: block;
@@ -39,20 +39,20 @@
 .logo__i {
   position: absolute;
   top: -18px;
-  left: 65px;
+  left: 1.5em;
 }
 
 .logo__abs {
   position: absolute;
-  left: 80px;
+  left: 2em;
   bottom: 45px;
-  max-width: 470px;
+  max-width: 35%;
 }
 
 .logo__title {
-  margin-bottom: 90px;
+  margin-bottom: 5%;
   font-weight: bold;
-  font-size: clamp(28px, 3vw, 42px);
+  font-size: clamp(20px, 2vw, 30px);
 }
 
 .logo__txt {
@@ -60,7 +60,7 @@
 }
 
 .func {
-  padding: 50px 80px;
+  padding: 2em;
 }
 .func .philips__title {
   margin-bottom: 30px;
@@ -68,7 +68,7 @@
 
 .philips__title {
   font-weight: bold;
-  font-size: clamp(24px, 3vw, 35px);
+  font-size: clamp(20px, 2vw, 30px);
   margin-bottom: 1rem;
 }
 .philips__title i {
@@ -79,7 +79,7 @@
 .func__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 75px 90px;
+  gap: 1em 1em;
 }
 
 .func__cont {
@@ -89,7 +89,7 @@
 .philips__sub {
   font-weight: bold;
   margin-bottom: 1rem;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .philips__txt {
@@ -104,6 +104,7 @@
   background-color: #0066a1;
   color: #fff;
   padding: 45px 100px 70px 85px;
+  padding: 5em;
   background-image: url("https://cdn.comfy.ua/media/x/img3/1346281/i2.png");
   background-repeat: no-repeat;
   background-position: left 70px bottom;
@@ -116,11 +117,18 @@
 .warranty__row {
   display: flex;
   align-items: center;
-  gap: 165px;
+  gap: 4em;
+}
+.warranty__row .philips__title {
+  flex-basis: 70%;
+}
+
+.warranty__i {
+  flex-basis: 30%;
 }
 
 .philips__video {
-  padding: 85px 255px;
+  padding: 2em;
   background-color: #f0f4fa;
 }
 .philips__video video {
@@ -132,7 +140,7 @@
 
 .philips__table {
   color: #3c3c3c;
-  padding: 50px 75px 60px;
+  padding: 2em;
   font-size: 14px;
 }
 
@@ -176,19 +184,10 @@
   line-height: 20px !important;
 }
 
-@media (max-width: 1441px) {
-  .logo__abs {
-    max-width: 33vw;
-  }
-  .warranty {
-    padding-right: 5vw;
-    padding-left: 4vw;
-  }
-}
 @media (max-width: 1201px) {
   .philips .container {
-    width: 960px;
-    padding: 0 15px;
+    padding: 0 12px;
+    box-sizing: border-box;
   }
   .logo__abs {
     left: 2em;
@@ -201,9 +200,6 @@
   }
   .func {
     padding: 2em 0;
-  }
-  .func__grid {
-    gap: 2em;
   }
   .warranty {
     padding: 5em 0 2em;
@@ -219,9 +215,6 @@
   }
 }
 @media (max-width: 991px) {
-  .philips .container {
-    width: 720px;
-  }
   .logo {
     display: flex;
     flex-direction: column-reverse;
@@ -237,8 +230,8 @@
     color: #000;
   }
   .func__grid {
-    grid-template-columns: 1fr;
-    gap: 2em;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
   }
   .warranty {
     padding: 2em 0;
@@ -265,5 +258,54 @@
   .philips .container {
     width: 100%;
     box-sizing: border-box;
+  }
+}
+@media (min-width: 320px) {
+  .philips {
+    display: block;
+  }
+  .func__grid {
+    gap: 2em;
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .func__grid {
+    gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .table__grid {
+    min-width: 100vw;
+  }
+  .table__scroll {
+    overflow-x: scroll;
+  }
+  .logo__i {
+    left: 0.5em;
+  }
+  .logo__i img {
+    max-width: 70%;
+    margin: 0;
+  }
+  .func__grid {
+    gap: 1em;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1025px) {
+  .table__grid {
+    min-width: 70vw;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1024px) {
+  .func__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .logo__abs {
+    left: 1em;
+    bottom: 1em;
+    max-width: 40%;
   }
 }
