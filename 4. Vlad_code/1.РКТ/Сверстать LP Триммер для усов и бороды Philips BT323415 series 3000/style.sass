@@ -5,7 +5,7 @@
 
 .philips
    // font-family: sans-serif
-   max-width: 1536px
+   max-width: 1023px
    width: 100%
    margin: 0 auto
    height: auto
@@ -38,10 +38,10 @@
 
 .logo__cont
    text-align: center
-   padding: 55px 165px 60px
+   padding: 2em 4em
 
 .logo__txt
-   font-size: clamp(24px, 2vw, 36px)
+   font-size: clamp(20px, 2vw, 30px)
 
 .logo__wrap
    position: relative
@@ -60,24 +60,24 @@
       margin-bottom: 0
 
 .advantages__head
-   padding: 40px 165px
+   padding: 2em 4em
 
 .philips__title
-   font-size: clamp(24px, 2vw, 36px)
+   font-size: clamp(20px, 2vw, 30px)
    margin-bottom: 1rem
    font-weight: bold
 
 .advantages__txt
-   font-size: clamp(18px, 1.4vw, 26px)
+   font-size: clamp(16px, 1.4vw, 20px)
    color: #fff
 
 .advantages__row
    display: flex
    align-items: center
    justify-content: space-between
-   gap: 120px
+   gap: 4em
    background-color: #142437
-   padding: 10px 94px 15px 50px
+   padding: 2em
 
 .advantages__img
    position: relative
@@ -98,11 +98,14 @@
       z-index: 0
 
 .advantages__cont
-   max-width: 540px
+   flex-basis: 50%
    .container
       display: flex
       flex-direction: column
       gap: 33px
+
+.advantages__img
+   flex-basis: 50%
 
 .advantages__item
    display: flex
@@ -110,32 +113,34 @@
    gap: 30px
 
 .advantages__i
-   min-width: max-content
+   min-width: 30%
+   max-width: 30%
 
 //func
 
 .func
-   padding: 50px 60px
+   padding: 2em
 
 .func__wrap
    display: flex
    flex-direction: column
-   gap: 50px
+   gap: 2em
 
 .func__row
    display: flex
    align-items: center
    justify-content: space-between
-   gap: 130px
+   gap: 2em
    &:nth-of-type(even)
       flex-direction: row-reverse
 
-.func__cont
-   min-width: 630px
-   max-width: 630px
+.func__cont,
+.func__img
+   flex-basis: 50%
+   box-sizing: border-box
 
 .philips__txt
-   font-size: clamp(16px, 1.2vw, 24px)
+   font-size: clamp(16px, 1.2vw, 18px)
 
 //options
 
@@ -152,8 +157,8 @@
 
 .philips__sub
    font-weight: bold
-   margin-bottom: 1rem
-   font-size: clamp(18px, 2vw, 32px)
+   margin-bottom: .5rem
+   font-size: clamp(18px, 2vw, 24px)
 
 //philips__table
 
@@ -164,8 +169,8 @@
    text-align: center
    margin-bottom: 50px
 
-.table__wrap
-   min-width: 960px
+// .table__wrap
+//    min-width: 960px
 
 .table__grid__two
    display: grid
@@ -189,7 +194,7 @@
 
 .table__title
    font-weight: bold
-   font-size: clamp(18px, 1.6vw, 28px)
+   font-size: clamp(18px, 1.6vw, 20px)
    background: #D9D9D9
    grid-area: cal1
    display: block !important
@@ -202,15 +207,11 @@
 
 //media*****************************************************
 
-@media (max-width: 1441px)
-   .func__cont
-      max-width: 40vw
-      min-width: 40vw
-
 @media (max-width: 1201px)
    .philips .container
-      width: 960px
-      padding: 0 15px
+      // width: 960px
+      padding: 0 12px
+      box-sizing: border-box
 
    .logo__cont,
    .advantages__head
@@ -234,9 +235,9 @@
       padding: 2em 0
    .func__row
       gap: 2em
-   .func__cont
-      min-width: 45vw
-      max-width: 45vw
+   // .func__cont
+   //    min-width: 45vw
+   //    max-width: 45vw
 
    .options
       padding: 0
@@ -244,7 +245,7 @@
    .philips__table
       padding: 2em 0
 
-@media (max-width: 991px)
+@media (max-width: 767px)
    .philips .container
       width: 720px
 
@@ -295,3 +296,13 @@
    .philips .container
       width: 100%
       box-sizing: border-box
+
+//*********************************************************
+
+@media (min-width: 320px)
+   .table__wrap
+      min-width: 700px
+
+@media (min-width: 1024px)
+   .table__wrap
+      min-width: unset
