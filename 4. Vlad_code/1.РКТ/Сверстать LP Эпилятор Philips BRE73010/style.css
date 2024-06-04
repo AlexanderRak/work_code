@@ -1,5 +1,5 @@
 .philips {
-  max-width: 1520px;
+  max-width: 1023px;
   width: 100%;
   margin: 0 auto;
   height: auto;
@@ -39,37 +39,41 @@
 
 .logo__i {
   position: absolute;
-  left: 80px;
+  left: 2em;
   top: -8px;
+}
+.logo__i img {
+  max-width: 70%;
+  margin: 0;
 }
 
 .logo__abs {
-  left: 80px;
-  bottom: 75px;
+  left: 2em;
+  bottom: 2em;
   position: absolute;
-  max-width: 520px;
+  max-width: 30%;
 }
 
 .logo__txt {
-  margin-bottom: 75px;
-  font-size: clamp(20px, 3vw, 34px);
+  margin-bottom: 2rem;
+  font-size: clamp(18px, 2vw, 24px);
 }
 
 .logo__title {
   font-weight: bold;
-  font-size: clamp(24px, 3vw, 54px);
+  font-size: clamp(20px, 2vw, 30px);
 }
 
 .philips__pink {
   color: #fff;
-  padding: 20px 80px;
-  font-size: clamp(24px, 3vw, 48px);
+  padding: 1em 1.5em;
+  font-size: clamp(20px, 2vw, 30px);
   background-color: #ed4370;
 }
 
 .advantages {
   background-image: linear-gradient(90deg, #f9ede3 0%, #ffffff 100%);
-  padding: 100px;
+  padding: 2em;
 }
 
 .advantages__grid {
@@ -82,7 +86,7 @@
   text-align: right;
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 1em;
 }
 .advantages__grid > div:nth-of-type(n+5) {
   text-align: left;
@@ -96,7 +100,10 @@
 .advantages__img {
   grid-area: cal2;
   display: block;
-  margin: 0 -100px;
+  margin: 0;
+}
+.advantages__img img {
+  max-height: 500px;
 }
 
 .cal3 {
@@ -120,12 +127,12 @@
 }
 
 .philips__txt {
-  font-size: clamp(16px, 2vw, 24px);
+  font-size: clamp(16px, 2vw, 16px);
 }
 
 .advantages__i {
-  min-width: -moz-max-content;
-  min-width: max-content;
+  min-width: 30%;
+  max-width: 30%;
 }
 
 .philips__note {
@@ -137,9 +144,6 @@
   background-image: linear-gradient(90deg, #f9ede3 0%, #ffffff 100%);
   position: relative;
 }
-.skin .philips__title {
-  margin-bottom: 50px;
-}
 
 .skin__img img {
   margin: 0;
@@ -148,20 +152,20 @@
 .philips__title {
   font-weight: bold;
   color: #ed4370;
-  font-size: clamp(24px, 3vw, 34px);
+  font-size: clamp(20px, 2vw, 30px);
   margin-bottom: 1rem;
 }
 
 .skin__abs {
   position: absolute;
-  max-width: 1060px;
-  top: 65px;
-  right: 100px;
+  max-width: 70%;
+  top: 2em;
+  right: 2em;
 }
 
 .skin__item:nth-of-type(2) {
-  padding-left: 300px;
-  margin-top: 40px;
+  padding-left: 35%;
+  margin-top: 2em;
 }
 
 .disks {
@@ -171,11 +175,12 @@
 .disks__row {
   display: flex;
   align-items: center;
-  padding-left: 80px;
+  padding-left: 2em;
 }
 
 .disks__cont {
-  max-width: 580px;
+  max-width: 45%;
+  position: relative;
 }
 
 .disks__img {
@@ -183,26 +188,25 @@
 }
 
 .alldays {
-  padding: 70px 80px 75px;
+  padding: 2em;
   background-image: linear-gradient(90deg, #f9ede3 0%, #ffffff 100%);
 }
 
 .alldays__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 80px;
+  gap: 1em;
 }
 
 .alldays__cont {
-  margin-top: 35px;
+  margin-top: 1em;
 }
 
 .philips__sub {
-  margin-bottom: 50px;
+  margin-bottom: 0.5rem;
   font-weight: bold;
   color: #ed4370;
-  margin-bottom: 50px;
-  font-size: clamp(16px, 2vw, 24px);
+  font-size: clamp(16px, 2vw, 20px);
 }
 
 .design {
@@ -211,16 +215,19 @@
 
 .design__abs {
   position: absolute;
-  left: 80px;
-  bottom: 100px;
-  max-width: 400px;
+  left: 2em;
+  bottom: 2em;
+  max-width: 35%;
 }
 
 .philips__slider__wrap {
-  padding: 100px 80px;
+  padding: 2em;
   background-image: linear-gradient(90deg, #f9ede3 0%, #ffffff 100%);
 }
 
+.philips__slider {
+  display: flex;
+}
 .philips__slider .swiper-button-next,
 .philips__slider .swiper-button-prev {
   min-width: -moz-max-content;
@@ -241,25 +248,29 @@
   justify-content: center;
 }
 .philips__slider .swiper-slide:last-of-type {
-  gap: 80px;
+  gap: 1em;
 }
 
 .slide__cont {
-  max-width: 530px;
+  max-width: 40%;
 }
 .slide__cont .philips__sub {
   margin-bottom: 0;
 }
 
+.slide__img {
+  max-width: 40%;
+}
+
 .complete {
   background-image: linear-gradient(90deg, #f9ede3 0%, #ffffff 100%);
-  padding-bottom: 100px;
+  padding-bottom: 4em;
 }
 
 .complete__grid {
   display: grid;
-  grid-template-columns: 380px 360px 340px 349px;
-  grid-template-rows: 380px 413px;
+  grid-template-columns: 0.2666fr 0.2523fr 0.2379fr 0.2432fr;
+  grid-template-rows: 0.4798fr 0.5202fr;
   grid-template-areas: "cal1 cal2 cal3 cal4" "cal1 cal5 cal6 cal7";
   text-align: center;
   align-items: end;
@@ -272,27 +283,28 @@
 }
 .complete__grid .cal1 .philips__txt {
   bottom: -20px;
-  left: -15px;
+  left: 0;
 }
 .complete__grid .cal2 {
   grid-area: cal2;
 }
 .complete__grid .cal2 .philips__txt {
   bottom: 30px;
+  left: -6%;
 }
 .complete__grid .cal3 {
   grid-area: cal3;
 }
 .complete__grid .cal3 .philips__txt {
   bottom: 30px;
-  left: -26px;
+  left: -6%;
 }
 .complete__grid .cal4 {
   grid-area: cal4;
 }
 .complete__grid .cal4 .philips__txt {
   bottom: 0px;
-  left: 10px;
+  left: 0;
 }
 .complete__grid .cal5 {
   grid-area: cal5;
@@ -310,7 +322,7 @@
   grid-area: cal7;
 }
 .complete__grid .cal7 .philips__txt {
-  bottom: 50px;
+  bottom: 10%;
 }
 .complete__grid .philips__txt {
   position: absolute;
@@ -322,20 +334,16 @@
 }
 
 .philips__video {
-  padding: 65px 80px 70px;
+  padding: 2em;
 }
 .philips__video iframe {
   max-width: 100%;
   width: 100%;
-  height: 845px;
+  height: 30vw;
 }
 
 .philips__table {
-  padding: 70px 80px;
-}
-
-.table__wrap {
-  min-width: 960px;
+  padding: 2em;
 }
 
 .table__grid__two {
@@ -344,14 +352,14 @@
   text-align: center;
 }
 .table__grid__two > div {
-  padding: 40px 20px;
+  padding: 1em 0.5em;
   background-color: #fff5f7;
 }
 .table__grid__two > div:nth-of-type(even) {
   background-color: #ffdee3;
 }
 .table__grid__two .philips__txt {
-  margin-bottom: 35px;
+  margin-bottom: 1rem;
 }
 
 .table__grid {
@@ -360,7 +368,7 @@
   grid-template-areas: "cal1 cal1 cal1 cal1 cal1 cal1 cal1";
 }
 .table__grid > div {
-  padding: 20px 10px;
+  padding: 0.7em 0.5em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -376,49 +384,25 @@
   display: block !important;
   text-align: left;
   background-color: unset !important;
+  font-size: clamp(18px, 2vw, 22px);
 }
 
 .table__txt {
-  font-size: clamp(14px, 1.2vw, 20px);
+  font-size: clamp(14px, 1.2vw, 16px);
 }
 
 .philips__logo {
-  padding: 90px 0;
+  padding: 2em 0;
   background-image: linear-gradient(106deg, #91004b 0%, #ec4371 100%);
 }
-
-@media (max-width: 1441px) {
-  .skin__abs {
-    max-width: 65vw;
-  }
-  .philips__slider .swiper-button-next {
-    right: var(--swiper-navigation-sides-offset, 0px);
-  }
-  .philips__slider .swiper-button-prev {
-    left: var(--swiper-navigation-sides-offset, 0px);
-  }
-  .complete__grid {
-    grid-template-columns: 0.2666fr 0.2523fr 0.2379fr 0.2432fr;
-    grid-template-rows: 0.4798fr 0.5202fr;
-  }
-  .complete__grid .cal1 .philips__txt {
-    left: -2.5vw;
-  }
-  .complete__grid .cal8 .philips__txt {
-    left: -3vw;
-    bottom: 13vw;
-  }
-  .complete__grid .cal3 .philips__txt {
-    left: -3vw;
-  }
-  .complete__grid .cal4 .philips__txt {
-    left: 0;
-  }
+.philips__logo img {
+  max-width: 15%;
 }
+
 @media (max-width: 1201px) {
   .philips .container {
-    width: 960px;
-    padding: 0 15px;
+    padding: 0 12px;
+    box-sizing: border-box;
   }
   .logo__i {
     left: 2em;
@@ -426,7 +410,6 @@
   }
   .logo__abs {
     left: 2em;
-    max-width: 35vw;
   }
   .philips__pink {
     padding: 0.5em 2em;
@@ -434,12 +417,17 @@
   .advantages {
     padding: 2em 0;
   }
-  .advantages__i {
-    min-width: 10vw;
-    max-width: 10vw;
-  }
   .advantages__grid > div {
     gap: 1em;
+    justify-content: center !important;
+  }
+  .advantages__grid > div .philips__txt {
+    flex-basis: 50%;
+    box-sizing: border-box;
+  }
+  .advantages__grid .cal6 > div {
+    flex-basis: 50%;
+    box-sizing: border-box;
   }
   .skin__abs {
     right: 2em;
@@ -451,14 +439,8 @@
   .disks__row {
     padding: 0;
   }
-  .disks__cont {
-    max-width: 40vw;
-  }
   .alldays {
     padding: 2em 0;
-  }
-  .alldays__grid {
-    gap: 2em;
   }
   .alldays__cont {
     margin-top: 1em;
@@ -467,9 +449,9 @@
     margin-bottom: 1rem;
   }
   .design__abs {
-    left: 2em;
-    bottom: 2em;
-    max-width: 30vw;
+    left: 1em;
+    bottom: 1em;
+    max-width: 40%;
   }
   .philips__slider__wrap {
     padding: 2em 0;
@@ -484,35 +466,20 @@
   .complete {
     padding-bottom: 6vw;
   }
-  .complete__grid .cal1 .philips__txt {
-    left: -5vw;
-  }
-  .complete__grid .cal3 .philips__txt {
-    left: -4vw;
-  }
   .complete__grid .cal4 .philips__txt {
-    left: -3vw;
+    bottom: 15vw;
   }
   .complete__grid .cal5 .philips__txt {
-    bottom: 3vw;
-  }
-  .complete__grid .cal5 .philips__txt {
-    bottom: 0;
+    bottom: 2vw;
   }
   .complete__grid .cal6 .philips__txt {
     bottom: 0;
   }
   .complete__grid .cal7 .philips__txt {
-    bottom: 2vw;
-  }
-  .complete__grid .philips__txt {
-    font-size: clamp(16px, 1.8vw, 24px);
+    bottom: 0;
   }
   .philips__video {
     padding: 2em 0;
-  }
-  .philips__video iframe {
-    height: 50vw;
   }
   .philips__table {
     padding: 2em 0;
@@ -528,13 +495,10 @@
     padding: 2em 0;
   }
   .philips__logo img {
-    max-width: 15vw;
+    max-width: 12vw;
   }
 }
 @media (max-width: 991px) {
-  .philips .container {
-    width: 720px;
-  }
   .logo {
     display: flex;
     flex-direction: column-reverse;
@@ -567,10 +531,6 @@
     flex-direction: row !important;
     text-align: right !important;
     justify-content: space-between;
-  }
-  .advantages__i {
-    min-width: 20vw;
-    max-width: 20vw;
   }
   .philips__pink {
     padding: 0.5em;
@@ -663,11 +623,11 @@
   .complete__grid .cal2 .philips__txt,
   .complete__grid .cal4 .philips__txt,
   .complete__grid .cal7 .philips__txt {
-    margin-top: -15vw;
+    margin-top: -10vw;
   }
   .complete__grid .cal3 .philips__txt,
   .complete__grid .cal6 .philips__txt {
-    margin-top: -25vw;
+    margin-top: -15vw;
   }
   .complete__grid .cal5 .philips__txt {
     margin-top: -25vw;
@@ -688,5 +648,141 @@
   .philips .container {
     width: 100%;
     box-sizing: border-box;
+  }
+}
+@media (min-width: 320px) {
+  .philips__video iframe {
+    height: 50vw;
+  }
+  .slide__img {
+    max-width: unset;
+  }
+  .table__wrap {
+    min-width: 900px;
+  }
+  .philips__slider {
+    display: block;
+  }
+  .alldays__grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .complete__img img {
+    max-height: 500px;
+  }
+  .complete__grid .cal4 .philips__txt,
+  .complete__grid .cal5 .philips__txt,
+  .complete__grid .cal6 .philips__txt,
+  .complete__grid .cal7 .philips__txt,
+  .complete__grid .cal8 .philips__txt {
+    margin-top: -10vw;
+  }
+  .alldays__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .philips__video iframe {
+    height: 30vw;
+  }
+  .slide__img {
+    max-width: 40%;
+  }
+  .table__wrap {
+    min-width: unset;
+  }
+  .philips__slider {
+    display: flex;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1024px) {
+  .advantages__grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "cal1" "cal3" "cal4" "cal5" "cal6" "cal7" "cal2";
+    gap: 1em;
+  }
+  .advantages__grid > div {
+    flex-direction: row !important;
+    text-align: right !important;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  .skin {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .skin__abs {
+    position: unset;
+    max-width: 100%;
+    padding: 1em 0;
+  }
+  .skin__item:nth-of-type(2) {
+    padding: 0;
+  }
+  .philips__slider__wrap {
+    padding-bottom: 1em;
+  }
+  .philips__slider .swiper .swiper-slide {
+    padding: 0 1em;
+  }
+  .philips__slider .swiper-slide {
+    flex-direction: column;
+    gap: 1em !important;
+  }
+  .slide__cont {
+    max-width: 100%;
+    padding: 0 2em;
+  }
+  .philips__slider .swiper-button-next, .philips__slider .swiper-button-prev {
+    min-width: unset;
+    min-height: unset;
+    color: #ed4370;
+    top: 20vw;
+  }
+  .philips__slider .swiper-button-next img, .philips__slider .swiper-button-prev img {
+    display: none;
+  }
+  .philips__slider .swiper-button-next::after, .philips__slider .swiper-button-prev::after {
+    display: block;
+  }
+  .philips__slider .swiper-button-prev {
+    transform: unset;
+  }
+  .complete__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "cal1 cal2" "cal3 cal4" "cal5 cal6" "cal7 cal7";
+    align-items: unset;
+  }
+  .complete__img img {
+    max-height: 300px !important;
+  }
+  .complete__grid .cal1 .philips__txt {
+    left: 15px;
+  }
+  .complete__grid .cal2 .philips__txt {
+    left: 3%;
+  }
+  .complete__grid .cal3 .philips__txt {
+    left: 6%;
+  }
+  .complete__grid .cal4 .complete__img img {
+    max-height: 300px;
+  }
+  .complete__grid .cal4 .philips__txt {
+    bottom: 2vw;
+    left: 11%;
+  }
+  .complete {
+    padding-bottom: 2em;
+  }
+  .table__wrap {
+    min-width: 90vw;
+  }
+  .table__scroll {
+    overflow-x: scroll;
+  }
+  .philips__slider {
+    display: block !important;
   }
 }
