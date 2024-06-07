@@ -1,0 +1,1010 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+// .rkt-kivi-product__container
+//    overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-kivi-product
+   // grid-template-columns: calc(100% - 400px) 400px
+   margin: 0 auto
+   max-width: 1023px
+   // font-family: 'Roboto', sans-serif
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 30, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      text-transform: uppercase
+   h3
+      @include adaptiv-value("font-size", 24, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//logo
+
+.logo
+   background-image: linear-gradient(180deg, #060714 39%, #252639 65%)
+   padding: 4em 0
+   color: #fff
+
+.logo__wrap
+   position: relative
+
+.logo__abs
+   position: absolute
+   top: 0
+   bottom: 0
+   right: 0
+   left: 0
+
+.logo__cont
+   display: flex
+   flex-direction: column
+   justify-content: center
+   align-items: center
+   text-align: center
+   height: 100%
+
+.logo__title
+   font-size: clamp(30px, 3vw, 70px)
+   font-weight: bold
+   line-height: normal
+   background-image: linear-gradient(90deg, #0579e6, #23e7f1)
+   -webkit-background-clip: text
+   -webkit-text-fill-color: transparent
+
+.logo__txt
+   color: #b7c1ea
+   font-size: clamp(20px, 2vw, 24px)
+   line-height: normal
+   padding: 2em 0
+
+.logo__img
+   padding: 0 8em
+
+.logo__i
+   padding-left: 4em
+   padding-bottom: 2em
+   img
+      max-width: 30% !important
+      margin: 0 !important
+
+//kivi__size
+
+.kivi__size
+   background-color: #46475c
+   border-radius: 12px 12px 0 0
+   margin-top: -3%
+   padding: 4em 4em
+   position: relative
+   &::after
+      content: ""
+      display: block
+      position: absolute
+      height: 8.5em
+      bottom: 0
+      left: 0
+      right: 0
+      background-color: #53546b
+      z-index: 0
+   img
+      position: relative
+      z-index: 1
+
+//why
+
+.why
+   margin-top: -3%
+   padding: 4em
+   background-color: #fff
+   border-radius: 12px 12px 0 0
+   position: relative
+
+.why__row
+   display: flex
+   flex-direction: row
+   gap: 2em
+
+.why__cel
+   flex-basis: 45%
+   box-sizing: border-box
+   display: flex
+   flex-direction: column
+   gap: 2em
+   &:nth-of-type(2)
+      flex-basis: 55%
+
+.why__item
+   display: flex
+   align-items: center
+   gap: 1em
+   p
+      font-size: 12px !important
+      padding-left: 1em !important
+      border-left: 1px solid #000
+
+.why__i
+   min-width: 60px
+   max-width: 60px
+
+.why__flex
+   display: flex
+   flex-direction: row
+   flex-wrap: wrap
+   justify-content: space-between
+   gap: 0.5em 0.5em
+   max-width: 80%
+   margin-top: .5rem
+   >div
+      flex-basis: 20%
+      box-sizing: border-box
+      display: flex
+      align-items: center
+      justify-content: center
+      img
+         max-height: 20px
+         margin: 0 !important
+         display: block
+
+.why__cont p
+   font-size: 12px !important
+
+//design
+
+.design
+   position: relative
+
+.design__abs
+   position: absolute
+   top: 0
+   bottom: 0
+   right: 0
+   left: 0
+
+.design__cont
+   height: 100%
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   padding: 15% 0 7% 20%
+   box-sizing: border-box
+
+//inch
+
+.inch
+   padding: 4em 0
+
+//space
+
+.space__wrap
+   position: relative
+
+.space__title
+   position: absolute
+   top: 15%
+   right: 20%
+   h2
+      text-align: right !important
+      margin-bottom: 0 !important
+
+.space__cont
+   padding: 4em
+
+.space__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   gap: 2em
+   margin-top: 2em
+
+//optimage
+
+.optimage__wrap
+   position: relative
+   color: #fff
+
+.optimage__abs
+   position: absolute
+   right: 0
+   top: 0
+   left: 0
+   bottom: 0
+
+.optimage__cont
+   display: flex
+   flex-direction: column
+   justify-content: center
+   height: 100%
+   max-width: 40%
+   margin: 0 0 0 auto
+   padding-right: 2em
+
+.optimage__note
+   max-width: max-content
+   margin: 0 auto
+   padding: 4em 0
+   display: flex
+   gap: 2em
+   h3
+      text-transform: uppercase
+      border-left: solid 1px black
+      padding-left: .5em !important
+
+.optimage__title
+   h2
+      strong
+         display: none
+
+//comfort
+
+.comfort
+   color: #fff
+   padding-bottom: 0 !important
+   .game__wrap
+      background-color: #45475b
+      padding: 4em 4em 0 0
+      margin-right: 0
+      margin-left: 4em
+      border-radius: 12px 0 0 12px
+      &::after
+         background-color: #8b95b9
+         right: unset
+         left: 0
+         border-radius: 12px 0 0 12px
+   .game__row
+      flex-direction: row-reverse
+   .game__img
+      transform: translateX(-4em)
+   .game__title
+      flex-basis: 60%
+      h2
+         text-align: left !important
+         margin-bottom: 1rem !important
+   .optimage__note
+      color: #000
+
+//sound
+
+.sound
+   padding-bottom: 10%
+
+.sound__wrap
+   position: relative
+   border-radius: 12px 12px 0 0
+   background-color: #c0c6dd
+   // padding: 0 20% 0
+   padding-top: 10%
+   padding-bottom: 10%
+   color: #fff
+   &::after
+      content: ""
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      min-width: 50%
+      width: 50%
+      z-index: 0
+      background-color: #8c96ba
+      border-radius: 0 12px 0 0
+
+.sound__img
+   // transform: translateY(14%)
+   margin: -24% 0
+   position: relative
+   z-index: 1
+   padding-top: 5%
+
+.sound__abs
+   position: absolute
+   top: 0
+   right: 0
+   left: 0
+   bottom: 0
+   z-index: 1
+
+.sound__title
+   display: flex
+   height: 80%
+   justify-content: center
+   align-items: center
+
+.sound__row
+   display: flex
+   // align-items: center
+   gap: 4em
+   padding: 4em 4em 0
+   >div
+      flex: 1
+      box-sizing: border-box
+   h3
+      margin-bottom: 1rem !important
+      border-left: 1px solid black
+      padding-left: .5em !important
+      text-transform: uppercase
+
+//game
+
+.game
+   padding-bottom: 4em
+
+.game__wrap
+   padding: 4em 0 0 4em
+   margin-right: 4em
+   position: relative
+   background-color: #c0c6dd
+   border-radius: 0 12px 12px 0
+   &::after
+      content: ""
+      display: block
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      min-width: 10%
+      background-color: #8c96ba
+      border-radius: 0 12px 12px 0
+      z-index: 0
+
+.game__row
+   display: flex
+   align-items: center
+   padding-bottom: 4em
+
+.game__title
+   h2
+      margin-bottom: 0 !important
+      text-align: right !important
+
+.game__img
+   transform: translateX(4em)
+   position: relative
+   z-index: 1
+
+.game__flex
+   display: flex
+   align-items: center
+   gap: 1em
+   max-width: 70%
+   margin: 0 auto
+   padding-top: 2em
+   h3
+      margin-bottom: 0 !important
+      padding-left: 0.5em !important
+      border-left: 1px solid black
+   p
+      text-align: right !important
+
+//assistant
+
+.assistant__cont
+   padding: 4em 15%
+
+.assistant__row
+   display: flex
+   gap: 8em
+
+.assistant__cel
+   flex: 1
+   box-sizing: border-box
+
+.assistant__flex
+   display: flex
+   align-items: center
+   margin-bottom: 1rem
+   gap: 1em
+   margin-left: -45%
+   h3
+      margin-bottom: 0 !important
+
+.assistant__i
+   border-right: 1px solid black
+   padding-right: 1em
+   max-width: max-content
+   img
+      max-width: 60% !important
+      max-height: 60% !important
+      margin: 0 0 0 auto !important
+
+//kivi-media
+
+.kivi-media
+   color: #fff
+
+.kivi-media__wrap
+   background-color: #46475c
+   border-radius: 12px 12px 0 0
+   margin-top: -3%
+   padding: 4em 20%
+   position: relative
+   &::after
+      content: ""
+      display: block
+      position: absolute
+      bottom: 0
+      right: 0
+      left: 0
+      min-height: 27%
+      height: 27%
+      background-color: #252639
+      z-index: 0
+
+.kivi-media__row
+   display: flex
+   align-items: center
+   gap: 0.5em
+   max-width: 80%
+   padding-bottom: 2em
+   h3
+      margin-bottom: 0 !important
+      flex-basis: 26%
+      min-width: max-content
+   p
+      flex-basis: 70%
+      border-left: 1px solid white
+      padding-left: .5em !important
+
+.kivi-media__img
+   position: relative
+   z-index: 1
+
+.kivi-media__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   gap: 2em
+   padding: 4em 4em
+   color: #000
+
+.kivi-media__flex
+   display: flex
+   align-items: center
+   gap: 1em
+   h3
+      margin-bottom: 0 !important
+
+.kivi-media__txt
+   padding-left: 35%
+   margin-top: 1rem
+   margin-right: -10%
+
+.kivi-media__i
+   padding-right: 1em
+   position: relative
+   &::after
+      content: ""
+      display: block
+      min-width: 1px
+      height: 40px
+      position: absolute
+      right: 0
+      bottom: 50%
+      transform: translateY(50%)
+      background-color: #000
+   img
+      max-width: 60px !important
+
+//kivi-discount
+
+.kivi-discount
+   .kivi-media__wrap
+      background-color: #8b95b9
+      &::after
+         background-color: #717998
+   .kivi-media__img__row
+      display: flex
+      align-items: center
+      gap: 1em
+      padding-top: 2em
+   .kivi-media__row
+      display: block
+      max-width: unset
+      h2
+         text-align: center !important
+   .kivi-media__i img
+      min-width: 40px
+      max-width: 40px !important
+      max-height: 40px !important
+
+//du
+
+.du
+   padding: 4em
+   background-color: #c0c6dd
+   border-radius: 12px 12px 0 0
+
+.du__row
+   display: flex
+   gap: 4em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+//warranty
+
+.warranty
+   background-color: #000326
+   border-radius: 12px 12px 0 0
+   margin-top: -3%
+   padding: 4em
+   color: #fff
+   h2
+      text-align: center !important
+
+.warranty__grid
+   display: grid
+   grid-template-columns: 1fr 1.5fr 1fr
+   gap: 3em
+   margin-top: 4em
+
+.warranty__flex
+   display: flex
+   gap: 1em
+
+.warranty__row
+   display: flex
+   gap: 1em
+   align-items: center
+
+.warranty__title
+   text-transform: uppercase
+   font-size: clamp(18px, 2vw, 22px)
+   min-width: max-content
+
+.warranty__txt
+   font-size: clamp(16px, 2vw, 24px)
+   margin: .5rem 0
+
+.warranty__note
+   font-size: clamp(14px, 2vw, 16px)
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-kivi-product
+   //    display: block
+   .show__mob
+      display: block !important
+
+   .hide__mob
+      display: none !important
+
+   .logo
+      padding: 2em 0 4em
+   .logo__img
+      padding: 0 2em
+   .logo__txt
+      padding: 3em 1em 1em
+   .logo__cont img
+      max-width: 50% !important
+   .logo__abs
+      position: unset
+   .logo__i
+      padding-left: 2em
+      padding-bottom: 1em
+      img
+         max-width: 50% !important
+   .logo__title
+      position: absolute
+      top: 12%
+      max-width: 90vw
+
+   .kivi__size
+      padding: 0 2em
+      background: unset
+      border-radius: unset
+      padding: 0
+      margin-top: -8%
+   .kivi__size::after
+      display: none
+
+   .why
+      padding: 2em
+   .why__row
+      flex-direction: column
+      gap: 1em
+   .why__item p
+      padding-left: 0 !important
+      border: none
+   .why__cel
+      gap: 1em
+   .why__flex
+      max-width: 100%
+      justify-content: center
+   .why__flex > div
+      flex-basis: 48%
+      &:last-of-type
+         flex-basis: 100%
+         img
+            max-height: unset !important
+   .why__flex > div img
+      max-height: 50px
+
+   .design
+      padding-bottom: 5em
+      background-color: #c5cadb
+   .design__cont
+      padding: 3% 6% 5% 6%
+
+   .inch
+      padding: 2em
+
+   .optimage__title
+      color: #000
+      padding: 0 2em
+      h2
+         text-align: center !important
+   .optimage__abs
+      position: unset
+      color: #000
+   .optimage__cont
+      max-width: 100%
+      padding: 1em 2em
+   .optimage__note
+      padding: 0
+      gap: .5em
+      margin: 0
+      padding: 0 1em
+      flex-direction: column
+
+   .sound__wrap
+      padding: 10% 0
+   .sound__row
+      padding: 1em
+      max-width: 100%
+      flex-direction: column
+      gap: 2em
+   .sound__img img
+      margin: 0 -20% !important
+      min-width: 140%
+
+   .game
+      padding-bottom: 1em !important
+   .game__row
+      flex-direction: column !important
+      padding-bottom: 1em !important
+   .game__wrap
+      margin: 0 !important
+      padding: 2em 1em 1em !important
+      border-radius: 12px 12px 0 0 !important
+   .game__wrap::after
+      display: none
+   .game__img
+      transform: unset !important
+   .game__title h2
+      text-align: center !important
+      margin-bottom: 1rem !important
+   .game__flex
+      flex-direction: column-reverse
+      align-items: flex-start
+      max-width: 100%
+      padding: 1em 1em
+      p
+         text-align: left !important
+
+   .du
+      padding: 2em
+   .du__row
+      flex-direction: column
+      gap: 1em
+   .du__title h2
+      text-align: right !important
+
+   .warranty
+      padding: 2em
+   .warranty__grid
+      grid-template-columns: auto
+      gap: 1em
+      >div
+         &:first-of-type
+            display: flex
+            flex-direction: column
+            img
+               max-width: 60% !important
+               margin: 0 !important
+   .warranty__row
+      >div
+         &:first-of-type
+            max-width: 20%
+      img
+         margin: 0 0 0 auto !important
+         width: max-content
+   .warranty__flex
+      flex-direction: column
+      gap: 2em
+
+   .space__title
+      top: 28%
+      right: unset
+      left: 7%
+      h2
+         text-align: left !important
+   .space__cont
+      padding: 2em
+   .space__grid
+      grid-template-columns: 1fr
+
+   .comfort .game__title
+      color: #000
+      position: relative
+      z-index: 1
+   .comfort .game__wrap:after
+      display: block
+      min-width: 50%
+      border-radius: 12px 0 0 0
+   .game__title__mob
+      padding: 1em
+      color: #000
+
+   .assistant__cont
+      padding: 2em
+   .assistant__row
+      flex-direction: column
+      gap: 2em
+   .assistant__flex
+      margin-left: -14%
+   .assistant__i
+      padding-right: unset
+      border: none
+
+   .kivi-media__wrap
+      padding: 2em 1em
+   .kivi-media__row
+      padding-bottom: 1em
+      flex-direction: column
+      align-items: unset
+      h3
+         border-left: solid 1px white
+         padding-left: 0.5rem !important
+      p
+         padding-left: 0 !important
+         border: none
+   .kivi-media__grid
+      padding: 2em
+      grid-template-columns: auto
+      gap: 2em
+   .kivi-media__txt
+      padding-left: 0
+      margin-right: unset
+   .kivi-media__i img
+      max-width: 40px !important
+
+   .kivi-discount .kivi-media__img__row
+      flex-direction: column
+      align-items: flex-end
+      padding-top: 1em
+   .kivi-discount .kivi-media__wrap::after
+      min-height: 45%
+      height: 45%
+
+@media (min-width: $bp-tablet) and (max-width: 800px)
+   // #rkt-kivi-product
+   //    display: block
+   .logo
+      padding: 2em 0
+   .logo__i
+      padding-left: 1em
+   .logo__txt
+      padding: 1em 0
+
+   .kivi__size
+      padding: 2em 10em
+   .kivi__size::after
+      display: none
+
+   .why
+      padding: 2em
+
+   .inch
+      padding: 2em 10em
+
+   .show__mob
+      display: none !important
+   .hide__mob
+      display: block !important
+
+   .optimage__note
+      padding: 2em 0
+
+   .sound
+      padding-bottom: 2em
+   .sound__row
+      padding-top: 2em
+
+   .game
+      padding-bottom: 2em
+   .game__wrap
+      padding: 2em 0 0 2em
+   .game__row
+      padding-bottom: 2em
+   .game__img
+      transform: translateX(2em)
+
+   .du
+      padding: 2em
+
+   .warranty
+      padding: 2em
+
+   .optimage__cont
+      max-width: 50%
+
+   .space__title
+      top: 35%
+      right: 14%
+
+   .kivi-media__grid
+      grid-template-columns: 1fr
+   .kivi-media__txt
+      padding-left: 6em
+      margin-right: 0
+
+   .optimage__title.hide__mob h2 >div
+      display: flex
+
+@media (min-width: $bp-hd-desktop)
+   // #rkt-kivi-product
+   //    display: grid
+   .show__mob
+      display: none !important
+
+   .hide__mob
+      display: block !important
+
+@media (max-width: 1024px) and (min-width: $bp-hd-desktop)
+   .logo
+      padding: 2em 0
+   .logo__img
+      padding: 0 4em
+   .logo__txt
+      padding: 1em 0
+   .logo__cont img
+      max-width: 40% !important
+
+   .kivi__size
+      padding: 2em 2em 4em
+   .kivi__size::after
+      height: 7em
+
+   .why
+      padding: 2em
+
+   .design__cont
+      padding: 7% 0 5% 7%
+
+   .inch
+      padding: 2em 0
+      img
+         min-width: 130%
+         margin-left: -15% !important
+
+   .optimage__note
+      padding: 2em 0
+
+   .sound
+      padding-bottom: 0
+   // .sound__wrap
+   //    padding: 0 10%
+   .sound__row
+      // max-width: 50%
+      padding: 2em 1em
+      gap: 1em
+      // align-items: unset
+
+   .game
+      padding-bottom: 2em
+   .game__wrap
+      padding: 2em 0 0 2em
+   .game__row
+      padding-bottom: 2em
+   .game__img
+      transform: translateX(4em)
+
+   .du
+      padding: 2em
+
+   .warranty
+      padding: 2em
+   .warranty__grid
+      margin-top: 2em
+      grid-template-columns: 1fr
+      justify-items: center
+      >div
+         max-width: max-content
+         margin: 0 auto
+         >img
+            max-width: 40% !important
+            margin: 0 !important
+         &:nth-of-type(1)
+            display: flex
+            flex-direction: column
+            align-items: center
+   .warranty__row img
+      max-width: 60% !important
+      margin: 0 0 0 auto !important
+
+   .optimage__cont
+      max-width: 50%
+
+   .space__title
+      top: 10%
+   .space__cont
+      padding: 2em 1em
+
+   .comfort .game__title
+      flex-basis: unset
+
+   .assistant__cont
+      padding: 2em 2em 4em
+   .assistant__row
+      gap: 2em
+   .assistant__flex
+      margin-left: -14%
+
+   .kivi-media__wrap
+      padding: 2em 4em
+   .kivi-media__grid
+      grid-template-columns: 1fr
+      padding: 2em 2em 4em
+   .kivi-media__txt
+      padding-left: 6em
+      margin-right: 0
+
+   .optimage__title h2 strong
+      display: inline-block
