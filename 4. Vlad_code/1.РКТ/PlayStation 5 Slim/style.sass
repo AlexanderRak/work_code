@@ -1,0 +1,604 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+// .rkt-sony-product__container
+//    overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+.rkt-sony-product__container
+   overflow: hidden
+   background: linear-gradient(169.97deg, #D8DCE7 -1.17%, #E3E4E8 24.41%, #CED0DD 44.5%, #E3E4E8 56.77%, #C8CCDE 68.67%, #D7DCE8 93.92%, #D8DCE7 101.14%)
+   border-radius: 24px
+
+#rkt-sony-product
+   margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   // background: linear-gradient(169.97deg, #D8DCE7 -1.17%, #E3E4E8 24.41%, #CED0DD 44.5%, #E3E4E8 56.77%, #C8CCDE 68.67%, #D7DCE8 93.92%, #D8DCE7 101.14%)
+   // border-radius: 24px
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+   iframe
+      display: block
+      max-width: 100%
+      height: auto
+      margin: 0 auto
+
+//logo
+
+.logo
+   padding: 2% 15%
+
+.logo__i
+   margin-bottom: 2em
+   img
+      filter: invert(1)
+      max-width: 70% !important
+
+.logo__cont
+   margin-top: 4em
+   h2, p
+      text-align: center !important
+
+.logo__row
+   display: flex
+   justify-content: space-between
+   gap: 2em
+   margin-top: 1em
+
+.logo__item__i
+   margin-bottom: 8px
+   img
+      filter: invert(1)
+      max-height: 60px !important
+
+//feelit
+
+.feelit
+   padding: 4em
+
+.feelit__modal
+   cursor: pointer
+
+.feelit__modal__cont
+   position: fixed
+   top: 0
+   right: 0
+   left: 0
+   bottom: 0
+   background: #3e3e3ead
+   cursor: default
+   z-index: 2
+
+.feelit__modal__video
+   position: absolute
+   right: 50%
+   bottom: 50%
+   transform: translate(50%, 50%)
+   padding: 1em
+   box-sizing: border-box
+   background-color: #f2f2f2
+   border-radius: 8px
+   cursor: default
+   iframe
+      min-height: 30em
+      min-width: 47em
+
+.close__modal
+   padding-bottom: 1em
+   cursor: pointer
+   max-width: max-content
+   margin: 0 0 0 auto
+   img
+      margin: 0 0 0 auto !important
+
+.feelit__btn__rev
+   position: relative
+
+.feelit__abs
+   position: absolute
+   right: 0
+   left: 0
+   bottom: 50%
+   transform: translateY(50%)
+   width: 100%
+   box-sizing: border-box
+   background: #070B1DB0
+   padding: 2em 0
+
+.feelit__title
+   color: #fff
+   font-size: clamp(18px, 3vw, 32px)
+   font-weight: bold
+   text-align: center
+
+.feelit__i
+   margin-top: 1em
+   img
+      max-width: 6% !important
+
+//estimate
+
+.estimate
+   position: relative
+   .close__modal
+      position: absolute
+      z-index: 2
+      right: 0
+      top: -10%
+      padding: 0 !important
+      img
+         // filter: invert(1)
+         margin: 0 !important
+
+.estimate__title
+   padding-bottom: 2em
+   h3, p
+      text-align: center !important
+
+.estimate__nav
+   margin: 0 -30%
+   .swiper-slide
+      opacity: .5
+      cursor: pointer
+   .swiper-slide-active
+      opacity: 1
+      img
+         transform: scale(1.1)
+         box-shadow: 0px 8px 16px #00000063
+         border-radius: 40px
+         transition: transform .3s, box-shadow .3s
+   .swiper-slide-next
+      z-index: -1
+   .swiper-pagination
+      position: unset
+      margin-top: 1.5em
+   .swiper-pagination-bullet
+      border-radius: 80px
+      height: 4px
+      width: 32px
+   .swiper-pagination-bullet-active
+      background-color: #000
+
+.estimate__cont
+   position: fixed
+   top: 0
+   right: 0
+   bottom: 0
+   left: 0
+   background-color: #4140405c
+   z-index: 10
+
+.estimate__modal
+   position: absolute
+   bottom: 50%
+   right: 50%
+   transform: translate(50%, 50%)
+   width: 100vw
+   .swiper-slide
+      opacity: .5
+      iframe
+         display: block
+         height: 75vh !important
+         width: 90vw
+   .swiper-slide-active
+      opacity: 1
+   .swiper-slide-next
+      z-index: -1
+   .swiper-button-next, .swiper-rtl .swiper-button-prev
+      right: var(--swiper-navigation-sides-offset, 3em)
+   .swiper-button-prev, .swiper-rtl .swiper-button-next
+      left: var(--swiper-navigation-sides-offset, 3em)
+   .swiper-button-next:after, .swiper-button-prev:after
+      display: none
+   .swiper-button-next, .swiper-button-prev
+      background-color: #fff
+      padding: 1em
+      border-radius: 50%
+      max-width: 50px
+      min-width: 50px
+      max-height: 50px
+      min-height: 50px
+      box-sizing: border-box
+      display: flex
+      align-items: center
+      justify-content: center
+   .swiper-button-prev img
+      transform: scale(-1, 1)
+
+//dualsense
+
+.dualsense
+   padding: 4em 0
+
+.dualsense__wrap
+   padding: 0 15%
+   margin-bottom: -20%
+
+.dualsense__title
+   h2, p
+      text-align: center !important
+
+.dualsense__row
+   display: flex
+   flex-direction: row
+   align-items: center
+   padding-left: 2em
+   >div
+      flex: 50%
+      box-sizing: border-box
+   &:nth-of-type(odd)
+      flex-direction: row-reverse
+      padding-left: 0
+      padding-right: 2em
+      margin-top: -20%
+
+//talking
+
+.talking
+   padding: 4em 0
+
+.talking__wrap
+   padding: 0 15%
+
+.talking__title
+   margin-bottom: 10px
+   h2,p
+      text-align: center !important
+
+.talking__row
+   display: flex
+   flex-direction: row
+   align-items: center
+   gap: 4em
+   padding: 0 4em
+   margin-top: -10%
+
+.talking__cont
+   flex-basis: 70%
+
+//power
+
+.power
+   padding: 0 0 4em
+
+.power__wrap
+   padding: 0 15%
+
+.power__title
+   h2,p
+      text-align: center !important
+
+.power__row
+   margin-top: 2em
+   padding: 0 4em
+   display: flex
+   flex-direction: row
+   align-items: center
+   justify-content: center
+
+.power__cel
+   flex: 1
+
+.power__line
+   flex: .4
+
+//effects
+
+.effects
+   padding: 0 4em 4em
+
+.effects__title
+   padding: 0 30%
+   h2
+      text-align: center !important
+
+.effects__row
+   display: flex
+   flex-direction: row
+   align-items: center
+   gap: 4em
+   &:nth-of-type(odd)
+      flex-direction: row-reverse
+
+.effects__cont
+   flex-basis: 70%
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-sony-product
+   //    display: block
+
+   .rkt-sony-product__container
+      border-radius: unset
+
+   .logo
+      padding: 40px 20px
+   .logo__i
+      margin-bottom: 10px
+      img
+         max-width: 150% !important
+         margin-left: -25% !important
+   .logo__row
+      flex-direction: column
+      gap: 0.5em
+      p
+         text-align: center !important
+
+   .dualsense
+      padding: 60px 0
+   .dualsense__wrap
+      padding: 0 20px
+   .dualsense__row
+      padding-left: 20px
+      align-items: flex-end
+   .dualsense__row:nth-of-type(even)
+      .dualsense__img
+         padding-bottom: 15%
+      .dualsense__cont
+         margin-right: -8%
+         position: relative
+   .dualsense__row:nth-of-type(odd)
+      padding-left: 0
+      padding-right: 20px
+      margin-top: 40px
+      .dualsense__cont
+         padding-bottom: 25%
+         margin-left: -10%
+
+   .talking
+      padding: 0
+   .talking__wrap
+      padding: 0 20px
+   .talking__row
+      padding: 0 20px
+      flex-direction: column
+      gap: 16px
+      h3, p
+         text-align: center !important
+
+   .power
+      padding: 60px 0
+   .power__wrap
+      padding: 0 20px
+   .power__row
+      flex-direction: column
+      padding: 0 20px
+      h3, p
+         text-align: center !important
+   .power__cel
+      flex: unset
+   .power__line
+      transform: rotate(90deg)
+      flex: unset
+      margin: -14vh 0
+
+   .effects
+      padding: 0 20px 35px
+      h2
+         margin-bottom: 32px !important
+   .effects__title
+      padding: 0
+   .effects__row
+      flex-direction: column !important
+      gap: 12px
+      h3
+         margin-bottom: 0 !important
+      h3, p
+         text-align: center !important
+   .effects__img img
+      max-width: 60% !important
+   .effects__cal
+      display: flex
+      flex-direction: column
+      gap: 24px
+
+   .show__mob
+      display: block !important
+   .hide__mob
+      display: none !important
+
+   .estimate__nav .swiper-slide-active img
+      border-radius: 30px
+   .estimate__nav .swiper-pagination-bullet
+      width: 25px
+
+   .feelit
+      padding: 1em 20px 2em
+   .feelit__i img
+      max-width: 12% !important
+   .feelit__modal__video iframe
+      min-height: 60vw
+      min-width: 90vw
+   .feelit__modal__video
+      padding: .5em
+      border-radius: 4px
+   .feelit .close__modal
+      padding-bottom: .5em
+
+   .estimate__modal .swiper-slide iframe
+      height: 35vh !important
+      width: 100vw
+   .estimate__modal .swiper-button-next, .estimate__modal .swiper-button-prev
+      background-color: #fff
+      padding: 3vw
+      border-radius: 50%
+      max-width: 10vw
+      min-width: 10vw
+      max-height: 10vw
+      min-height: 10vw
+      box-sizing: border-box
+      display: flex
+      align-items: center
+      justify-content: center
+      top: unset
+      bottom: -26%
+   .estimate__modal .swiper-button-next, .estimate__modal .swiper-rtl .swiper-button-prev
+      right: 30vw
+   .estimate__modal .swiper-button-prev, .estimate__modal .swiper-rtl .swiper-button-next
+      left: 30vw
+   .estimate .close__modal img
+      filter: invert(1)
+
+   .estimate .close__modal
+      top: -20%
+      right: 3%
+      width: 10%
+
+   .estimate__modal .swiper-slide iframe
+      height: 24vh !important
+      width: 90vw
+
+   .feelit__modal__video iframe
+      min-height: 60vw !important
+      min-width: 90vw !important
+
+   .estimate__modal
+      bottom: 50% !important
+      width: 100vw !important
+
+@media (min-width: $bp-tablet) and (max-width: $bp-tablet)
+   // #rkt-sony-product
+   //    display: block
+   .show__mob
+      display: none !important
+   .hide__mob
+      display: block !important
+
+   .estimate__nav .swiper-slide-active img
+      border-radius: 30px
+
+   .estimate .close__modal
+      top: -12%
+   .estimate__modal .swiper-slide iframe
+      height: 55vh !important
+
+   .feelit__modal__video
+      bottom: 50%
+   .feelit__modal__video iframe
+      min-height: 54vh !important
+      min-width: 90vw !important
+   .estimate__modal
+      bottom: 44% !important
+      width: 100vw !important
+
+@media (min-width: $bp-hd-desktop)
+   // #rkt-sony-product
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .show__mob
+      display: none !important
+   .hide__mob
+      display: block !important
+
+@media (max-width: 1024px) and (min-width: $bp-hd-desktop)
+   .logo,
+   .dualsense__wrap,
+   .talking__wrap,
+   .talking__row,
+   .power__wrap,
+   .power__row,
+   .effects
+      padding-right: 5%
+      padding-left: 5%
+   .talking
+      padding-top: 0
+
+   .effects__title
+      padding: 0 5%
+   .effects__cal
+      display: flex
+      flex-direction: column
+      gap: 2em
+
+   .estimate__nav .swiper-slide-active img
+      border-radius: 22px
+
+   .estimate__modal .swiper-slide iframe
+      height: 60vh !important
+
+   .estimate__modal
+      width: 100vw !important
+
+@media (min-width: 768px) and (max-height: 800px)
+   .feelit__modal__video
+      bottom: 40% !important
+      iframe
+         min-height: 65vh !important
+         min-width: 57vw !important
+
+   .estimate__modal
+      bottom: 36% !important
+      width: 70vw !important
+   .estimate__modal .swiper-slide iframe
+      height: 60vh !important
+   .estimate .close__modal
+      top: -16% !important
