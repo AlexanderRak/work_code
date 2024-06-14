@@ -1,0 +1,579 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+.rkt-sony-product__container
+   overflow: hidden
+   border-radius: 24px
+   background: linear-gradient(169.97deg, #D8DCE7 -1.17%, #E3E4E8 24.41%, #CED0DD 44.5%, #E3E4E8 56.77%, #D7DCE8 68.67%, #D7DCE8 93.92%, #D8DCE7 101.14%)
+
+#rkt-sony-product
+   margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h4
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 900
+      text-align: left
+      margin-bottom: .5rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+   iframe
+      display: block
+      max-width: 100%
+      height: auto
+      margin: 0 auto
+
+//real
+
+.real
+   color: #fff
+   padding-top: 4em
+   h2
+      text-align: center !important
+
+.real__wrap
+   position: relative
+   &::after
+      content: ""
+      display: block
+      position: absolute
+      top: -100%
+      right: -40%
+      left: -40%
+      bottom: 0
+      background: #00032B
+      border-radius: 50%
+      filter: blur(200px)
+
+.real__head
+   position: relative
+   z-index: 1
+   .real__img
+      position: relative
+      z-index: 1
+      margin-top: 2em
+      img
+         max-width: 70% !important
+
+.logo
+   padding-top: 10%
+   position: relative
+   margin-top: -5%
+   img
+      position: relative
+      z-index: 1
+      max-width: 35% !important
+   &::after
+      content: ""
+      display: block
+      position: absolute
+      background: #2351DD
+      filter: blur(80px)
+      top: -4%
+      left: -4%
+      right: -4%
+      bottom: -4%
+
+.real__row
+   display: flex
+   align-items: center
+   position: relative
+   z-index: 1
+   padding: 1em 4em 0
+
+.real__cont
+   flex-basis: 60%
+
+.real__img
+   flex-basis: 40%
+
+.real__flex
+   display: flex
+   align-items: center
+   gap: 2em
+   margin-top: 1.5em
+
+.real__item
+   position: relative
+   &::after
+      content: ""
+      display: block
+      position: absolute
+      top: -10%
+      bottom: -10%
+      right: -1em
+      width: 4px
+      background: url("https://cdn.comfy.ua/media/x/img3/2257470/line.svg") no-repeat center / contain
+   &:last-of-type
+      &::after
+         display: none
+
+.real__item__txt p
+   font-weight: bold !important
+   color: #2351DD
+
+//feelit
+
+.feelit
+   padding: 4em
+
+.feelit__modal
+   cursor: pointer
+
+.feelit__modal__cont
+   position: fixed
+   top: 0
+   right: 0
+   left: 0
+   bottom: 0
+   background: #3e3e3ead
+   cursor: default
+   z-index: 2
+
+.feelit__modal__video
+   position: absolute
+   right: 50%
+   bottom: 50%
+   transform: translate(50%, 50%)
+   padding: 1em
+   box-sizing: border-box
+   background-color: #f2f2f2
+   border-radius: 8px
+   cursor: default
+   iframe
+      min-height: 30em
+      min-width: 47em
+
+.close__modal
+   padding-bottom: 1em
+   cursor: pointer
+   max-width: max-content
+   margin: 0 0 0 auto
+   img
+      margin: 0 0 0 auto !important
+
+.feelit__btn__rev
+   position: relative
+
+.feelit__abs
+   position: absolute
+   right: 0
+   left: 0
+   bottom: 50%
+   transform: translateY(50%)
+   width: 100%
+   box-sizing: border-box
+   background: #070B1DB0
+   padding: 2em 0
+
+.feelit__title
+   color: #fff
+   font-size: clamp(18px, 3vw, 32px)
+   font-weight: bold
+   text-align: center
+
+.feelit__i
+   margin-top: 1em
+   img
+      max-width: 6% !important
+
+//vrgame
+
+.vrgame
+   padding: 2em 4em
+
+.vrgame__row
+   display: flex
+   align-items: center
+   gap: 0.5em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.vrgame__grid
+   display: grid
+   grid-template-columns: repeat(2, 1fr)
+   gap: 2em 1em
+
+.vrgame__i
+   margin-bottom: 1em
+   img
+      margin: 0 !important
+
+//sound
+
+.sound
+   margin-top: -10%
+
+.sound__row
+   display: flex
+   justify-content: space-between
+
+.sound__cont__wrap
+   flex-basis: 50%
+   background: url("https://cdn.comfy.ua/media/x/img3/2257470/bg1.png") no-repeat center / contain
+   display: flex
+   align-items: center
+   padding-right: 10%
+
+.sound__cont
+   padding-left: 4em
+
+.sound__img
+   flex-basis: 50%
+
+//gameworld
+
+.gameworld__head
+   max-width: 50%
+   margin: 0 auto
+   h3, p
+      text-align: center !important
+
+.gameworld__row
+   display: flex
+   align-items: center
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+   &:nth-of-type(odd)
+      flex-direction: row-reverse
+      margin: -10% 0
+      .gameworld__cont
+         padding-left: 0
+         padding-right: 4em
+
+.gameworld__cont
+   padding-left: 4em
+
+.triggers
+   .gameworld__img img
+      max-width: 120% !important
+      margin-right: -30% !important
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-sony-product
+   //    display: block
+
+   .feelit
+      padding: 1em 20px 2em
+   .feelit__i img
+      max-width: 12% !important
+   .feelit__modal__video iframe
+      min-height: 60vw
+      min-width: 90vw
+   .feelit__modal__video
+      padding: .5em
+      border-radius: 4px
+   .feelit .close__modal
+      padding-bottom: .5em
+
+   .rkt-sony-product__container
+      border-radius: unset
+
+   .real
+      padding-top: 2em
+   .real__head .real__img img
+      max-width: 96% !important
+   .real__wrap::after
+      top: -500%
+      right: -100%
+      left: -100%
+      bottom: -140%
+   .logo img
+      max-width: 90% !important
+   .logo::after
+      top: -90%
+      bottom: -80%
+   .real__row
+      flex-direction: column
+      padding-top: 64px
+      padding-right: 20px
+      padding-left: 20px
+      br
+         display: none
+   .real__flex
+      grid-template-columns: 1fr .5fr .5fr
+      grid-template-areas: "cal1 cal2 cal4" "cal3 .cal4"
+      gap: 0.2em 0.2em
+      margin-top: 0
+   .real__item
+      &:nth-of-type(1)
+         grid-area: cal1
+      &:nth-of-type(2)
+         grid-area: cal2
+      &:nth-of-type(3)
+         grid-area: cal3
+      &:nth-of-type(4)
+         grid-area: cal4
+      &:nth-of-type(n+2)
+         &::after
+            display: none
+   .real__item::after
+      right: 0.2em
+   .real__img img
+      max-width: 80% !important
+
+   .hide__mob
+      display: none !important
+   .show__mob
+      display: block !important
+   .show__mob__grid
+      display: grid !important
+   .hide__mob__flex
+      display: none !important
+
+   .feelit
+      padding-bottom: 64px
+
+   .vrgame
+      padding: 0 20px
+   .vrgame__row
+      flex-direction: column-reverse !important
+   .vrgame__grid
+      grid-template-columns: 1fr
+      gap: 1em
+
+   .sound__row
+      flex-direction: column-reverse
+   .sound
+      margin-top: 0
+   .sound >h3
+      padding: 30% 20px !important
+      background: url("https://cdn.comfy.ua/media/x/img3/2257470/bg2.png") no-repeat right top / cover
+   .sound__cont
+      padding-left: 0
+   .sound__cont__wrap
+      padding: 0 20px
+      position: relative
+      background: unset
+      &::after
+         content: ""
+         display: block
+         position: absolute
+         width: 150px
+         height: 90px
+         right: 0
+         bottom: -40%
+         background: url("https://cdn.comfy.ua/media/x/img3/2257470/bg3.png") no-repeat top right / contain
+         z-index: 0
+   .sound__cont
+      z-index: 1
+   .sound__img
+      margin: -35% 0 -10%
+
+   .gameworld
+      padding-top: 7vh
+      padding-right: 20px
+      padding-left: 20px
+      padding-bottom: 50px
+   .gameworld__head
+      max-width: 100%
+      padding: 0 20px
+   .gameworld__cont
+      padding: 0 !important
+   .gameworld__row
+      flex-direction: column !important
+      align-items: unset
+      padding-top: 2em
+      &:nth-of-type(2)
+         .gameworld__img
+            margin: -15% -5% -30% 0
+   .gameworld__row >h4
+      order: 0
+   .gameworld__img
+      order: 1
+   .gameworld__cont
+      order: 2
+   .gameworld__row:nth-of-type(odd)
+      margin: 0 !important
+   .triggers .gameworld__img img
+      max-width: 100% !important
+      margin-right: auto !important
+   #rkt-sony-product .gameworld__cont h3
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 900
+      text-align: left
+      margin-bottom: .5rem
+
+@media (min-width: $bp-tablet) and (max-width: $bp-tablet)
+   // #rkt-sony-product
+   //    display: block
+   .feelit__modal__video
+      bottom: 50%
+   .feelit__modal__video iframe
+      min-height: 54vh !important
+      min-width: 90vw !important
+
+   .real__wrap::after
+      top: -200%
+      right: -80%
+      left: -80%
+      bottom: -30%
+   .logo img
+      max-width: 60% !important
+   .real__row
+      padding-top: 2em
+      padding-right: 1em
+      padding-left: 1em
+      br
+         display: none
+
+   .feelit
+      padding: 2em 1em 0
+
+   .vrgame
+      padding: 2em 1em
+
+   .sound__cont
+      padding-left: 1em
+
+   .gameworld__cont
+      padding-left: 1em
+   .gameworld__row:nth-of-type(odd)
+      margin: -3% 0 !important
+   .gameworld__row:nth-of-type(odd) .gameworld__cont
+      padding-right: 1em
+
+   .hide__mob
+      display: block !important
+   .show__mob
+      display: none !important
+   .hide__mob__flex
+      display: flex !important
+   .show__mob__grid
+      display: none !important
+
+@media (min-width: $bp-hd-desktop)
+   // #rkt-sony-product
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .hide__mob
+      display: block !important
+   .hide__mob__flex
+      display: flex !important
+   .show__mob
+      display: none !important
+   .show__mob__grid
+      display: none !important
+
+@media (max-width: 1024px) and (min-width: $bp-hd-desktop)
+   .real__wrap::after
+      top: -200%
+      right: -80%
+      left: -80%
+   .logo::after
+      top: -70%
+      bottom: -60%
+   .logo img
+      max-width: 60% !important
+   .real__row
+      flex-direction: column
+      padding-right: 1em
+      padding-left: 1em
+   .real__cont br
+      display: none
+   .real__img img
+      max-width: 70% !important
+
+   .feelit
+      padding: 2em 1em
+
+   .vrgame
+      padding: 2em 1em
+
+   .sound
+      margin-top: 0
+   .sound__cont
+      padding-left: 1em
+
+   .gameworld__cont
+      padding-left: 1em
+   .gameworld__row:nth-of-type(odd) .gameworld__cont
+      padding-right: 1em
+   .gameworld__row:nth-of-type(odd)
+      margin: 0 !important
+
+@media (min-width: 768px) and (max-height: 800px)
+   .feelit__modal__video
+      bottom: 40% !important
+      iframe
+         min-height: 65vh !important
+         min-width: 57vw !important
+
+@media (max-width: 1390px) and (min-width: 767px)
+   .gameworld__row:nth-of-type(odd)
+      margin: -7% 0
+
+   .triggers .gameworld__img img
+      margin-right: -24% !important
