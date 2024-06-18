@@ -1,5 +1,5 @@
 .philips {
-  max-width: 1520px;
+  max-width: 1023px;
   width: 100%;
   margin: 0 auto;
   height: auto;
@@ -38,49 +38,54 @@
 
 .logo__i {
   position: absolute;
-  left: 60px;
+  left: 2em;
   top: -7px;
+}
+.logo__i img {
+  margin: 0;
+  max-width: 70%;
 }
 
 .logo__abs {
   position: absolute;
-  left: 60px;
+  left: 2em;
   bottom: 70px;
+  max-width: 35%;
 }
 
 .logo__txt {
-  font-size: clamp(20px, 2vw, 28px);
+  font-size: clamp(18px, 2vw, 22px);
   margin-bottom: 1rem;
 }
 
 .logo__title {
   font-weight: bold;
-  font-size: clamp(24px, 2vw, 42px);
+  font-size: clamp(20px, 2vw, 30px);
 }
 
 .philips__title,
 .philips__blue {
-  font-size: clamp(24px, 2vw, 36px);
+  font-size: clamp(20px, 2vw, 30px);
 }
 
 .philips__blue {
   color: #fff;
   margin: 0;
-  padding: 20px 60px;
+  padding: 1em 2em;
   background-color: #005a8c;
 }
 .philips__blue i {
   display: block;
   font-style: normal;
-  font-size: clamp(16px, 2vw, 26px);
+  font-size: clamp(16px, 1.4vw, 18px);
   margin-top: 1rem;
 }
 
 .tools__wrap {
-  padding: 80px 60px;
+  padding: 2em;
 }
 .tools__wrap .philips__title {
-  padding-left: 90px;
+  padding-left: 15%;
 }
 
 .tools__row {
@@ -94,25 +99,25 @@
 .tools__cont .philips__txt {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 1em;
 }
 .tools__cont .philips__txt::before {
   content: "";
   display: block;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background: url("https://cdn.comfy.ua/media/x/img3/1788234/i1.png") no-repeat center/contain;
 }
 
 .tools__items {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  margin-top: 80px;
+  gap: 1em;
+  margin-top: 2em;
 }
 
 .philips__txt {
-  font-size: clamp(16px, 1.3vw, 24px);
+  font-size: clamp(16px, 1.4vw, 18px);
 }
 
 .advantages {
@@ -121,7 +126,7 @@
 }
 
 .advantages__wrap {
-  padding: 80px 60px;
+  padding: 2em;
 }
 
 .advantages__grid {
@@ -135,17 +140,13 @@
 }
 
 .philips__sub {
-  font-size: clamp(18px, 2vw, 28px);
+  font-size: clamp(18px, 2vw, 20px);
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .table__scroll {
-  padding: 75px 60px;
-}
-
-.table__wrap {
-  min-width: 960px;
+  padding: 2em;
 }
 
 .table__grid__two {
@@ -157,16 +158,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 35px;
+  gap: 1em;
   background-color: #e4eefb;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 .table__grid__two > div:nth-of-type(even) {
   background-color: #b2c8e6;
 }
 
 .table__sub {
-  font-size: clamp(18px, 1.2vw, 24px);
+  font-size: clamp(18px, 1.2vw, 20px);
 }
 
 .table__grid {
@@ -175,7 +176,7 @@
   grid-template-areas: "cal1 cal1 cal1 cal1";
 }
 .table__grid > div {
-  padding: 20px;
+  padding: 10px;
   background-color: #e4eefb;
 }
 .table__grid > div:nth-of-type(odd) {
@@ -184,7 +185,7 @@
 
 .table__title {
   grid-area: cal1;
-  font-size: clamp(20px, 2vw, 28px);
+  font-size: clamp(18px, 1.4vw, 20px);
   font-weight: bold;
   color: #005a8c;
   padding-left: 0 !important;
@@ -192,18 +193,21 @@
 }
 
 .table__txt {
-  font-size: clamp(16px, 1.2vw, 20px);
+  font-size: clamp(16px, 1.4vw, 18px);
 }
 
 .lastlogo {
-  padding: 85px 0 95px;
+  padding: 2em;
   background-image: linear-gradient(106deg, #0f204b 0%, #0066a1 100%);
+}
+.lastlogo img {
+  max-width: 150px;
 }
 
 @media (max-width: 1201px) {
   .philips .container {
-    width: 960px;
-    padding: 0 15px;
+    padding: 0 12px;
+    box-sizing: border-box;
   }
   .tools__wrap,
   .advantages__wrap,
@@ -216,11 +220,20 @@
   .lastlogo img {
     max-width: 14vw;
   }
-}
-@media (max-width: 991px) {
-  .philips .container {
-    width: 720px;
+  .tools__row {
+    gap: 2em;
   }
+  .advantages__grid {
+    gap: 2em 2em;
+  }
+  .table__scroll {
+    overflow-x: scroll;
+  }
+  .table__wrap {
+    min-width: 100vw;
+  }
+}
+@media (max-width: 767.9px) {
   .logo {
     display: flex;
     flex-direction: column-reverse;
@@ -276,14 +289,25 @@
     max-width: 24vw;
   }
 }
-@media (max-width: 767px) {
-  .philips .container {
-    width: 540px;
+@media (min-width: 320px) and (max-width: 767.9px) {
+  .table__wrap {
+    min-width: 960px;
   }
 }
-@media (max-width: 576px) {
-  .philips .container {
-    width: 100%;
-    box-sizing: border-box;
+@media (min-width: 768px) and (max-width: 768px) {
+  .tools__cont .philips__txt::before {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+  }
+  .table__wrap {
+    min-width: unset;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1024px) {
+  .tools__cont .philips__txt::before {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
   }
 }
