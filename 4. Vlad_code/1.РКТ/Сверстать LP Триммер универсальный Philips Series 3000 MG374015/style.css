@@ -1,5 +1,6 @@
 .philips {
-  max-width: 1464px;
+  font-family: sans-serif;
+  max-width: 1023px;
   width: 100%;
   margin: 0 auto;
   height: auto;
@@ -43,24 +44,29 @@
 
 .logo__i {
   position: absolute;
-  left: 80px;
+  left: 2em;
   top: -7px;
+}
+.logo__i img {
+  max-width: 70%;
+  margin: 0;
 }
 
 .logo__abs {
   position: absolute;
-  left: 80px;
+  left: 2em;
   bottom: 50px;
+  max-width: 35%;
 }
 
 .logo__txt {
-  font-size: clamp(16px, 2vw, 18px);
-  margin-top: 130px;
+  font-size: clamp(16px, 1.4vw, 18px);
+  margin-top: 30%;
 }
 
 .logo__title {
   font-weight: bold;
-  font-size: clamp(24px, 2vw, 38px);
+  font-size: clamp(20px, 2vw, 30px);
 }
 
 .philips__title {
@@ -75,7 +81,7 @@
 .philips__blue {
   color: #fff;
   margin: 0;
-  padding: 20px 80px;
+  padding: 1em 2em;
   background-color: #0066a1;
 }
 .philips__blue i {
@@ -86,7 +92,7 @@
 }
 
 .tools__wrap {
-  padding: 80px 60px;
+  padding: 2em;
 }
 
 .tools__row {
@@ -130,7 +136,7 @@
 }
 
 .advantages__wrap {
-  padding: 0 80px 80px;
+  padding: 0 2em 2em;
 }
 
 .advantages__grid {
@@ -150,12 +156,8 @@
 }
 
 .philips__table {
-  padding: 55px 80px 60px;
+  padding: 2em;
   color: #3c3c3c;
-}
-
-.table__wrap {
-  min-width: 960px;
 }
 
 .table__title {
@@ -189,8 +191,8 @@
 
 @media (max-width: 1201px) {
   .philips .container {
-    width: 960px;
-    padding: 0 15px;
+    padding: 0 12px;
+    box-sizing: border-box;
   }
   .tools__wrap,
   .advantages__wrap,
@@ -201,10 +203,7 @@
     margin-top: 2em;
   }
 }
-@media (max-width: 991px) {
-  .philips .container {
-    width: 720px;
-  }
+@media (max-width: 767.9px) {
   .logo {
     display: flex;
     flex-direction: column-reverse;
@@ -257,14 +256,19 @@
     margin-top: 1rem;
   }
 }
-@media (max-width: 767px) {
-  .philips .container {
-    width: 540px;
+@media (min-width: 768px) and (max-width: 768px) {
+  .table__wrap {
+    min-width: 120vw !important;
   }
 }
-@media (max-width: 576px) {
-  .philips .container {
-    width: 100%;
-    box-sizing: border-box;
+@media (max-width: 1025px) {
+  .table__wrap {
+    min-width: 100vw;
+  }
+  .table__scroll {
+    overflow-x: scroll;
+  }
+  .logo__abs {
+    bottom: 1em;
   }
 }
