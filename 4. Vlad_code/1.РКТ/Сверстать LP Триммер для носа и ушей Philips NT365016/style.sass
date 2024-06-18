@@ -3,13 +3,19 @@
 // body
 //    margin: 0
 
+// .philips__container
+//    overflow: hidden
+
 .philips
    // font-family: sans-serif
-   max-width: 1520px
+   // max-width: 1406px
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   max-width: 1023px
    width: 100%
    margin: 0 auto
    height: auto
-   display: block
+   // display: block
    box-sizing: border-box
    overflow: hidden
    color: #5d5d5d
@@ -34,6 +40,7 @@
    width: 100%
    max-width: 100%
    margin: 0 auto
+   box-sizing: border-box
 
 //logo
 
@@ -44,65 +51,69 @@
 .logo__i
    position: absolute
    top: -8px
-   left: 80px
+   left: 2em
+   img
+      max-width: 70%
+      margin: 0
 
 .logo__abs
    position: absolute
    bottom: 85px
-   right: 80px
-   max-width: 400px
+   right: 2em
+   max-width: 30%
+   // max-width: 400px
 
 .logo__txt
-   font-size: clamp(22px, 2vw, 34px)
+   font-size: clamp(18px, 1.4vw, 22px)
 
 .logo__title
-   font-size: clamp(28px, 2.8vw, 44px)
+   font-size: clamp(20px, 2vw, 32px)
    margin-top: 85px
 
 //charact
 
 .philips__blue
    background-color: #013378
-   padding: 20px 80px
+   padding: 1em 2em
    color: #fff
-   font-size: clamp(24px, 3vw, 48px)
+   font-size: clamp(20px, 2vw, 32px)
 
 .charact
-   padding: 70px 80px 0
+   padding: 2em 2em 0
 
 .charact__row
    display: flex
    align-items: center
-   gap: 75px
+   gap: 4em
 
 .charact__cont
-   max-width: 630px
+   max-width: 45%
    display: flex
    flex-direction: column
    justify-content: space-between
-   gap: 55px
+   gap: 2em
 
 .charact__txt
-   font-size: clamp(18px, 2vw, 28px)
+   font-size: clamp(16px, 1.4vw, 18px)
 
 //hair
 
 .hair
-   padding: 80px 80px 0
+   padding: 2em 2em 0
 
 .philips__sub
    font-size: clamp(16px, 1.5vw, 24px)
    font-weight: bold
    color: #013378
-   margin-bottom: 2rem
+   margin-bottom: 1rem
 
 .philips__txt
-   font-size: clamp(16px, 1.5vw, 24px)
+   font-size: clamp(16px, 1.4vw, 18px)
 
 .hair__grid
    display: grid
    grid-template-columns: repeat(3, 1fr)
-   gap: 80px
+   gap: 2em
 
 .hair__cont
    margin-top: 35px
@@ -110,15 +121,15 @@
 //tech
 
 .tech
-   padding: 100px 80px 80px
+   padding: 2em
 
 .tech__grid
    display: grid
    grid-template-columns: 1fr 1fr
-   gap: 75px 80px
+   gap: 2em 2em
 
 .tech__cont
-   margin-top: 40px
+   margin-top: 1em
 
 //comfort
 
@@ -128,17 +139,17 @@
 
 .comfort__abs
    position: absolute
-   left: 80px
+   left: 2em
    bottom: 145px
-   max-width: 500px
+   max-width: 40%
 
 .comfort__title
    font-weight: bold
-   margin-bottom: 95px
-   font-size: clamp(24px, 3vw, 48px)
+   margin-bottom: 15%
+   font-size: clamp(20px, 2vw, 32px)
 
 .comfort__txt
-   font-size: clamp(18px, 3vw, 28px)
+   font-size: clamp(18px, 2vw, 20px)
 
 //media*****************************************************
 
@@ -148,8 +159,9 @@
 
 @media (max-width: 1201px)
    .philips .container
-      width: 960px
-      padding: 0 15px
+      // width: 960px
+      padding: 0 12px
+      box-sizing: border-box
 
    .logo__i
       left: 1em
@@ -166,13 +178,13 @@
    .tech
       padding: 2em 0
 
-   .comfort__abs
-      left: 2em
-      max-width: 40vw
+   // .comfort__abs
+   //    left: 2em
+   //    max-width: 40vw
 
-@media (max-width: 991px)
-   .philips .container
-      width: 720px
+@media (max-width: 768px)
+   // .philips .container
+   //    width: 720px
 
    .logo
       display: flex
@@ -185,22 +197,22 @@
       margin-top: 1rem
    .logo__i
       max-width: 35vw
-   .logo__img img
-      min-width: 150%
+   // .logo__img img
+   //    min-width: 150%
 
    .philips__blue
       padding: 0.5em
 
    .charact__row
-      flex-direction: column
+      // flex-direction: column
       gap: 1em
    .charact__cont
       gap: 1em
 
-   .hair__grid,
-   .tech__grid
-      grid-template-columns: 1fr
-      gap: 2em
+   // .hair__grid,
+   // .tech__grid
+   //    grid-template-columns: 1fr
+   //    gap: 2em
    .hair__cont,
    .tech__cont
       margin-top: 1em
@@ -218,11 +230,20 @@
       min-width: 150%
       margin-left: -50%
 
-@media (max-width: 767px)
-   .philips .container
-      width: 540px
+// *****************************************************
 
-@media (max-width: 576px)
-   .philips .container
-      width: 100%
-      box-sizing: border-box
+@media (min-width: 320px) and (max-width: 767.9px)
+   .charact__row
+      flex-direction: column
+      gap: 1em
+   .charact__cont
+      max-width: 100%
+
+   .hair__grid,
+   .tech__grid
+      grid-template-columns: auto
+
+@media (min-width: 1024px) and (max-width: 1024px)
+   .logo__img img
+      min-width: 150%
+      margin-left: -50%
