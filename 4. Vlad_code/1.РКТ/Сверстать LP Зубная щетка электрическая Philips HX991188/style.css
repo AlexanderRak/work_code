@@ -1,5 +1,5 @@
 .philips {
-  max-width: 1536px;
+  max-width: 1023px;
   width: 100%;
   margin: 0 auto;
   height: auto;
@@ -47,7 +47,7 @@
 
 .philips__title,
 .logo__txt {
-  font-size: clamp(24px, 2vw, 36px);
+  font-size: clamp(20px, 2vw, 30px);
 }
 
 .logo__cont {
@@ -61,23 +61,27 @@
 .logo__i {
   position: absolute;
   top: 0;
-  left: 50px;
+  left: 2em;
+}
+.logo__i img {
+  max-width: 70%;
+  margin: 0;
 }
 
 .logo__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
-  margin-top: 130px;
+  gap: 2em;
+  margin-top: 8%;
   padding: 0 40px;
 }
 .logo__grid .philips__title {
-  font-size: clamp(16px, 2vw, 36px);
+  font-size: clamp(20px, 2vw, 30px);
   margin-bottom: 0;
 }
 
 .logo__g__i {
-  margin-bottom: 120px;
+  margin-bottom: 5%;
 }
 
 .func {
@@ -126,7 +130,7 @@
   padding-left: 20px;
 }
 .philips .twominutes__list li {
-  font-size: clamp(16px, 1.3vw, 24px);
+  font-size: clamp(16px, 1.3vw, 18px);
 }
 
 .twominutes__row {
@@ -146,11 +150,11 @@
 }
 
 .tech {
-  padding: 60px 60px 0;
+  padding: 2em 2em 0;
 }
 
 .philips__txt {
-  font-size: clamp(16px, 1.3vw, 24px);
+  font-size: clamp(16px, 1.3vw, 18px);
 }
 
 .philips__note {
@@ -168,16 +172,19 @@
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  gap: 80px;
+  gap: 4em;
   justify-content: space-between;
 }
 .tech__row:nth-of-type(even) {
   flex-direction: row;
 }
 
+.tech__img {
+  flex-basis: 45%;
+}
+
 .tech__cont {
-  max-width: 670px;
-  min-width: 670px;
+  flex-basis: 55%;
 }
 
 .tech__two .tech__row {
@@ -188,10 +195,6 @@
 }
 
 @media (max-width: 1441px) {
-  .tech__cont {
-    max-width: 40vw;
-    min-width: 40vw;
-  }
   .logo__grid {
     margin-top: 4vw;
   }
@@ -201,8 +204,8 @@
 }
 @media (max-width: 1201px) {
   .philips .container {
-    width: 960px;
-    padding: 0 15px;
+    padding: 0 12px;
+    box-sizing: border-box;
   }
   .logo__cont {
     padding: 1em 0;
@@ -212,28 +215,15 @@
   .tech {
     padding: 2em 0 0;
   }
-  .tech__row {
-    gap: 4em;
-  }
-  .tech__cont {
-    max-width: 45vw;
-    min-width: 45vw;
-  }
   .logo__grid {
     padding: 0;
-    gap: 4em;
-  }
-  .logo__g__i img {
-    max-width: 25vw;
+    gap: 1em;
   }
   .func__head {
     padding: 0;
   }
 }
-@media (max-width: 991px) {
-  .philips .container {
-    width: 720px;
-  }
+@media (max-width: 767px) {
   .logo__i {
     max-width: 30vw;
     left: 0.5em;
@@ -290,14 +280,13 @@
     padding-top: 4em;
   }
 }
-@media (max-width: 767px) {
-  .philips .container {
-    width: 540px;
+@media (min-width: 320px) and (max-width: 767.9px) {
+  .func__head {
+    margin-bottom: 0;
   }
 }
-@media (max-width: 576px) {
-  .philips .container {
-    width: 100%;
-    box-sizing: border-box;
+@media (min-width: 768px) and (max-width: 768px) {
+  .philips {
+    display: block;
   }
 }
