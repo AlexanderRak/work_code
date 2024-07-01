@@ -3,13 +3,18 @@
 // body
 //    margin: 0
 
+// .philips__container
+//    overflow: hidden
+
 .philips
    // font-family: sans-serif
-   max-width: 1536px
+   // max-width: 1406px
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   max-width: 1023px
    width: 100%
    margin: 0 auto
    height: auto
-   display: block
    box-sizing: border-box
    overflow: hidden
    img
@@ -49,7 +54,7 @@
 
 .philips__title,
 .logo__txt
-   font-size: clamp(24px, 2vw, 36px)
+   font-size: clamp(20px, 2vw, 30px)
 
 .logo__cont
    padding: 15px 20px 24px
@@ -60,25 +65,28 @@
 .logo__i
    position: absolute
    top: 0
-   left: 50px
+   left: 1.5em
+   img
+      margin: 0
+      max-width: 70%
 
 .logo__grid
    display: grid
    grid-template-columns: repeat(3, 1fr)
-   gap: 10px
-   margin-top: 130px
-   padding: 0 40px
+   gap: 4em
+   margin-top: 2em
+   padding: 0 2em
    .philips__title
-      font-size: clamp(16px, 2vw, 36px)
+      font-size: clamp(16px, 2vw, 24px)
       margin-bottom: 0
 
 .logo__g__i
-   margin-bottom: 120px
+   margin-bottom: 2em
 
 //func
 
 .func
-   padding: 50px 0 0
+   padding: 2em 0 0
 
 .func__head
    text-align: center
@@ -89,12 +97,12 @@
    display: flex
    flex-direction: column
    gap: 50px
-   padding: 50px 150px 0 70px
+   padding: 2em
 
 .func__item
    display: flex
    align-items: center
-   gap: 50px
+   gap: 2em
    .philips__title
       margin-bottom: 0
 
@@ -104,7 +112,7 @@
 //twominutes
 
 .twominutes
-   padding: 50px 50px 0
+   padding: 2em
    .philips__title
       text-align: center
 
@@ -112,7 +120,7 @@
    list-style-type: disc
    padding-left: 20px
    li
-      font-size: clamp(16px, 1.3vw, 24px)
+      font-size: clamp(16px, 1.4vw, 18px)
 
 .twominutes__row
    display: flex
@@ -129,14 +137,14 @@
 //tech
 
 .tech
-   padding: 60px 130px 0
+   padding: 2em
 
 .philips__txt
-   font-size: clamp(16px, 1.3vw, 24px)
+   font-size: clamp(16px, 1.3vw, 18px)
 
 .philips__note
    font-size: clamp(12px, 1.2vw, 16px)
-   padding-top: 60px
+   padding-top: 2em
 
 .tech__wrap
    display: flex
@@ -147,26 +155,28 @@
    display: flex
    flex-direction: row-reverse
    align-items: center
-   gap: 45px
+   gap: 2em
    justify-content: space-between
    &:nth-of-type(even)
       flex-direction: row
    &:last-child
-      margin-top: 50px
+      margin-top: 2em
 
 .tech__cont
-   max-width: 630px
+   flex-basis: 60%
+.tech__img
+   flex-basis: 40%
 
 //philips__table
 
 .philips__table
-   padding: 50px 0
+   padding: 2em 0
    .philips__title
       text-align: center
       margin-bottom: 30px
 
 .table__sub
-   font-size: clamp(15px, 1.3vw, 21px)
+   font-size: clamp(15px, 1.3vw, 18px)
    text-align: center
 
 .table__grid
@@ -187,37 +197,38 @@
 .table__title
    grid-area: cal1
    background: #269A9126
-   font-size: clamp(18px, 1.3vw, 24px)
+   font-size: clamp(18px, 1.3vw, 20px)
    font-weight: bold
    display: block !important
 
 .table__txt
-   font-size: clamp(15px, 1.3vw, 20px)
+   font-size: clamp(15px, 1.3vw, 18px)
 
 .table__mark
    font-weight: bold
    font-size: clamp(20px, 1.3vw, 34px)
    line-height: 20px !important
 
-.table__wrap
-   min-width: 960px
+// .table__wrap
+//    min-width: 960px
 
 //media*****************************************************
 
-@media (max-width: 1441px)
-   .tech__cont
-      max-width: 40vw
-      min-width: 40vw
+// @media (max-width: 1441px)
+//    .tech__cont
+//       max-width: 40vw
+//       min-width: 40vw
 
-   .logo__grid
-      margin-top: 4vw
-   .logo__g__i
-      margin-bottom: 4vw
+//    .logo__grid
+//       margin-top: 4vw
+//    .logo__g__i
+//       margin-bottom: 4vw
 
 @media (max-width: 1201px)
    .philips .container
-      width: 960px
+      // width: 960px
       padding: 0 15px
+      box-sizing: border-box
 
    .logo__cont
       padding: 1em 0
@@ -227,21 +238,29 @@
    .tech
       padding: 2em 0 0
 
-   .tech__row
-      gap: 4em
-   .tech__cont
-      max-width: 45vw
-      min-width: 45vw
+   // .tech__row
+   //    gap: 4em
+   // .tech__cont
+   //    max-width: 45vw
+   //    min-width: 45vw
+
+   .tech__wrap
+      gap: 2em
 
    .logo__grid
       padding: 0
-      gap: 4em
+      grid-template-columns: 1fr
+      gap: 2em
    .logo__g__i img
       max-width: 25vw
 
-@media (max-width: 991px)
-   .philips .container
-      width: 720px
+   .twominutes__row
+      flex-direction: column
+      gap: 2em
+
+@media (max-width: 767.9px)
+   // .philips .container
+   //    width: 720px
 
    .logo__i
       max-width: 30vw
@@ -285,14 +304,8 @@
    .philips__note
       padding-top: 4em
 
+   .table__wrap
+      min-width: 960px
+
    .table__scroll
       overflow-x: scroll
-
-@media (max-width: 767px)
-   .philips .container
-      width: 540px
-
-@media (max-width: 576px)
-   .philips .container
-      width: 100%
-      box-sizing: border-box
