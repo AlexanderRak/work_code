@@ -1,0 +1,417 @@
+.rkt-name-product__container {
+  overflow: hidden;
+  background: #0E0B07;
+  border-radius: 14px;
+}
+
+.bc-description__content p:first-letter {
+  padding-left: 0 !important;
+}
+
+#rkt-name-product {
+  margin: 0 auto;
+  max-width: 1023px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+#rkt-name-product h2, #rkt-name-product h3 {
+  background: url("https://cdn.comfy.ua/media/x/img3/1818094/txt.png") no-repeat center 85%/cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #EE991A;
+}
+#rkt-name-product h2, #rkt-name-product h3, #rkt-name-product h4, #rkt-name-product h5, #rkt-name-product h6, #rkt-name-product p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+#rkt-name-product ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+#rkt-name-product img {
+  display: block;
+  max-width: 100%;
+  opacity: 1;
+  margin: 0 auto;
+}
+#rkt-name-product img:hover {
+  opacity: 1;
+}
+#rkt-name-product h2 {
+  font-size: 52px;
+  font-weight: 900;
+  text-align: left;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (max-width: 1023px) {
+  #rkt-name-product h2 {
+    font-size: calc(24px + 28 * (100vw - 320px) / 703);
+  }
+}
+#rkt-name-product h3 {
+  font-size: 32px;
+  font-weight: 900;
+  text-align: left;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+@media (max-width: 1023px) {
+  #rkt-name-product h3 {
+    font-size: calc(20px + 12 * (100vw - 320px) / 703);
+  }
+}
+#rkt-name-product p {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+}
+@media (max-width: 1023px) {
+  #rkt-name-product p {
+    font-size: calc(12px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-name-product li {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.2;
+}
+@media (max-width: 1023px) {
+  #rkt-name-product li {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-name-product i {
+  line-height: 1.2;
+  font-size: 16px;
+  margin-top: 0.5rem;
+  display: block;
+  font-style: italic;
+}
+@media (max-width: 1023px) {
+  #rkt-name-product i {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+
+.stalker {
+  position: relative;
+}
+
+.stalker__abs {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.stalker__grid {
+  height: 100%;
+  padding: 2em 4em 1em;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1em 1em;
+  grid-template-areas: "cal1 cal1 cal1 cal1 cal1 cal1" "cal2 cal2 cal3 cal3 cal4 cal4" "cal5 cal5 cal5 cal6 cal6 cal6";
+}
+.stalker__grid > div p {
+  text-align: center !important;
+}
+.stalker__grid > div:nth-of-type(1) {
+  grid-area: cal1;
+  padding: 0 5em;
+}
+.stalker__grid > div:nth-of-type(2) {
+  grid-area: cal2;
+}
+.stalker__grid > div:nth-of-type(3) {
+  grid-area: cal3;
+}
+.stalker__grid > div:nth-of-type(4) {
+  grid-area: cal4;
+}
+.stalker__grid > div:nth-of-type(5) {
+  grid-area: cal5;
+}
+.stalker__grid > div:nth-of-type(6) {
+  grid-area: cal6;
+}
+.stalker__grid > div:nth-of-type(n+2) {
+  display: flex;
+  gap: 0.2em;
+}
+.stalker__grid > div:nth-of-type(n+2) p {
+  font-size: 12px !important;
+  color: #EE991A;
+}
+.stalker__grid > div:nth-of-type(n+2)::before {
+  content: "";
+  display: block;
+  background: url("https://cdn.comfy.ua/media/x/img3/1818094/circle.svg") no-repeat center/contain;
+  min-width: 8px;
+  width: 8px;
+  height: 8px;
+}
+.stalker__grid > div:nth-of-type(n+5) p {
+  max-width: 86%;
+}
+
+.heart {
+  padding-left: 2em;
+}
+
+.heart__row {
+  display: flex;
+  align-items: center;
+}
+
+.heart__cont {
+  flex-basis: 52%;
+}
+.heart__cont p:nth-of-type(n+2) {
+  margin-top: 0.3em !important;
+}
+
+.heart__img {
+  flex-basis: 48%;
+}
+
+.edition {
+  padding: 2em 0;
+}
+
+.edition__row,
+.edition__flex {
+  display: flex;
+  align-items: center;
+}
+.edition__row > div,
+.edition__flex > div {
+  flex-basis: 50%;
+}
+
+.edition__row {
+  align-items: flex-end;
+}
+
+.edition__flex {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1em;
+  border-radius: 12px;
+  gap: 1em;
+}
+
+.edition__cal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.edition__cal:last-of-type .edition__item:nth-of-type(2) {
+  align-items: unset;
+}
+.edition__cal:last-of-type .edition__item:nth-of-type(2) .edition__i {
+  margin-top: 0.3em;
+}
+
+.edition__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.edition__i {
+  flex-basis: 13px;
+  align-items: center;
+}
+.edition__i img {
+  max-width: 80% !important;
+}
+
+.edition__cont {
+  padding-right: 2em;
+}
+
+.edition__none p {
+  opacity: 60%;
+}
+
+.edition__row:nth-of-type(even) {
+  flex-direction: row-reverse;
+  padding: 2em 0;
+}
+.edition__row:nth-of-type(even) .edition__cont {
+  padding-right: 0;
+  padding-left: 2em;
+}
+
+.hide__tab {
+  display: block;
+}
+
+.show__tab {
+  display: none;
+}
+
+@media (min-width: 320px) and (max-width: 767.9px) {
+  #rkt-name-product p {
+    font-size: clamp(12px, 4vw, 16px) !important;
+  }
+  .stalker__grid {
+    padding: 1em;
+    gap: clamp(1em, 6vw, 4em);
+  }
+  .stalker__abs {
+    bottom: unset;
+    top: 25%;
+  }
+  .stalker__grid > div:nth-of-type(n+2)::before {
+    min-width: 12px;
+    width: 12px;
+    height: 12px;
+  }
+  .stalker__grid > div:nth-of-type(n+2) {
+    gap: 8px;
+  }
+  #rkt-name-product .heart__cont h3 {
+    font-size: 42px !important;
+  }
+  .heart {
+    padding: 2em 1em !important;
+  }
+  .heart__img {
+    margin-bottom: 1rem;
+  }
+  .edition {
+    padding: 0 1em 0 !important;
+  }
+  #rkt-name-product h2 {
+    font-size: 52px !important;
+  }
+  #rkt-name-product .edition__cont h3 {
+    font-size: 32px !important;
+  }
+  #rkt-name-product .edition__cont h3 br {
+    display: none;
+  }
+  .edition__flex {
+    border-radius: 16px;
+    flex-direction: column;
+    align-items: unset;
+    gap: 0.5em;
+  }
+  #rkt-name-product .edition__item p {
+    font-size: clamp(16px, 5vw, 20px) !important;
+  }
+  .edition__i img {
+    max-width: 100% !important;
+  }
+}
+@media (min-width: 320px) and (max-width: 1201px) {
+  .rkt-name-product__container {
+    border-radius: unset;
+  }
+  .stalker__grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "cal1" "cal2" "cal3" "cal4" "cal5" "cal6";
+  }
+  .stalker__grid > div:nth-of-type(1) {
+    padding: 0;
+  }
+  .stalker__grid > div p {
+    text-align: left !important;
+  }
+  .stalker__grid > div:first-of-type p {
+    text-align: center !important;
+  }
+  .hide__tab {
+    display: none;
+  }
+  .show__tab {
+    display: block;
+  }
+  .heart {
+    padding: 2em;
+  }
+  .heart__row {
+    flex-direction: column;
+  }
+  .edition {
+    padding: 2em 2em 0;
+  }
+  .edition__row {
+    flex-direction: column !important;
+  }
+  .edition__cont {
+    padding: 0 !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #rkt-name-product .heart__cont h3 {
+    font-size: 42px !important;
+  }
+  #rkt-name-product h2 {
+    font-size: 52px !important;
+  }
+  #rkt-name-product .edition__cont h3 {
+    font-size: 32px !important;
+  }
+  #rkt-name-product .edition__cont h3 br {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1201px) {
+  #rkt-name-product p {
+    font-size: 20px !important;
+  }
+  #rkt-name-product .edition__item p {
+    font-size: 16px !important;
+  }
+  .edition__i img {
+    max-width: 95% !important;
+  }
+  .stalker__grid {
+    gap: 8em;
+  }
+  .heart__img {
+    margin-bottom: 1em;
+  }
+  .heart__img img {
+    width: 70%;
+  }
+  .stalker__abs {
+    bottom: 5%;
+  }
+  .stalker__grid > div:nth-of-type(n+2)::before {
+    min-width: 15px;
+    width: 15px;
+    height: 15px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1201px) {
+  .stalker__grid {
+    gap: 4em;
+  }
+  .stalker__abs {
+    bottom: 5%;
+  }
+}
+@media (min-width: 1202px) and (max-width: 1341px) {
+  .stalker__grid {
+    padding: 1em 4em;
+  }
+  #rkt-name-product p {
+    font-size: 12px !important;
+  }
+}
