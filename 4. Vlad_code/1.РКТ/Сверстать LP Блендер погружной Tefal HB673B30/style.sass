@@ -1,0 +1,563 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-name-product__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-name-product
+   margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   color: #00304C
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 42, 24)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      text-transform: uppercase
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      text-transform: uppercase
+   h4
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 900
+      text-align: left
+      text-transform: uppercase
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+   div
+      line-height: normal
+
+//logo
+
+.logo
+   padding-bottom: 2em
+
+.logo__wrap
+   background: url("https://cdn.comfy.ua/media/x/img3/3032218/bg1.jpg") no-repeat center / cover
+   color: #fff
+
+.logo__row
+   display: flex
+   align-items: flex-start
+
+.logo__cont
+   position: relative
+   max-height: max-content
+   padding-left: 20em
+   padding-top: 2em
+   &::before
+      content: ""
+      display: block
+      width: 150px
+      height: 150px
+      background: url("https://cdn.comfy.ua/media/x/img3/3032218/x.png") no-repeat center / contain
+      position: absolute
+      bottom: 50%
+      transform: translateY(50%)
+      left: 7.8em
+
+.logo__img
+   img
+      width: 70%
+      margin-bottom: -8em !important
+
+.logo__i
+   width: 100%
+   margin-bottom: 1em
+   img
+      width: 60%
+      margin: 0 !important
+
+.logo__flex
+   display: flex
+   justify-content: flex-end
+   align-items: center
+   gap: 2em
+   max-width: 80%
+   margin: 0 0 0 auto
+   padding: 0 2em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.logo__txt__row
+   display: flex
+   align-items: center
+   gap: 0.5em
+   color: #00304C
+
+.logo__title
+   font-size: 24px
+   strong
+      font-size: 50px
+
+.logo__txt
+   text-transform: uppercase
+   font-size: 16px
+   strong
+      font-size: 24px
+
+.logo__note
+   font-size: 14px
+   color: #00304C99
+
+//blender
+
+.blender
+   padding: 4em
+   h2
+      text-align: center !important
+   p
+      &:nth-of-type(1)
+         text-align: center !important
+         margin-bottom: 2em !important
+
+//power
+
+.power
+   display: flex
+   align-items: center
+   gap: 4em
+
+.power__img
+   flex-basis: 30%
+
+.power__cont
+   flex-basis: 70%
+   padding-right: 4em
+
+.power__flex
+   display: flex
+   align-items: center
+   gap: 2em
+   box-shadow: 0px 4px 14px 0px #00000026
+   max-width: max-content
+   margin-top: 2em
+   border-radius: 20px
+   // overflow: hidden
+
+.power__i
+   width: 15%
+   margin: -4.5px 0 -4.5px -4.5px
+
+//design
+
+.design
+   display: flex
+   align-items: stretch
+   padding: 4em
+   gap: 4em
+
+.design__cal
+   flex-basis: 40%
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   padding: 4em 0
+   h3
+      position: relative
+      &::after
+         content: ""
+         display: block
+         background-color: #00304CB2
+         height: 1px
+         width: 60px
+         position: absolute
+         right: -30%
+   &:nth-of-type(3)
+      h3
+         &::after
+            right: unset
+            left: -30%
+
+.design__img
+   flex-basis: 20%
+
+//options
+
+.options__row
+   display: flex
+   align-items: center
+   gap: 4em
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+      .options__cont
+         padding-left: unset
+         padding-right: 4em
+
+.options__cont
+   flex-basis: 55%
+   padding-left: 4em
+
+.options__note
+   text-align: center
+   margin-bottom: 0
+   margin-top: 1em
+   font-size: 10px
+   color: #00304C99
+
+.options__img
+   flex-basis: 45%
+   position: relative
+   img
+      max-height: 600px
+   h4
+      position: absolute
+      bottom: 23%
+      right: 5%
+
+.options__item
+   display: flex
+   align-items: center
+   gap: 1em
+   width: 65%
+   margin: 2em auto 0
+
+.options__i
+   width: 30%
+   min-width: 30%
+
+.options__img__icon img
+   margin-left: -15% !important
+   min-width: 115%
+
+//accessories
+
+.accessories
+   padding: 4em
+   padding-bottom: 0
+   h2
+      text-align: center !important
+
+.accessories__row
+   display: flex
+   margin-top: 2em
+
+.accessories__i
+   width: 30%
+   margin-bottom: 1rem
+
+.accessories__cal
+   display: flex
+   flex-direction: column
+   gap: 2em
+   h4
+      margin-bottom: 0.5em !important
+   &:last-of-type
+      gap: 8em
+      .accessories__item
+         &:last-of-type
+            h4
+               position: relative
+               &:before
+                  content: ""
+                  display: block
+                  position: absolute
+                  height: 2px
+                  width: 50px
+                  background-color: #000
+                  bottom: 0
+                  left: -70px
+
+//warranty
+
+.warranty__row
+   display: flex
+   align-items: center
+
+.warranty__cont
+   flex-basis: 40%
+
+.warranty__img
+   flex-basis: 60%
+
+.warranty__title
+   text-align: right
+   font-weight: bold
+   font-size: clamp(42px, 4vw, 62px)
+   text-transform: uppercase
+
+.warranty__cont
+   padding-left: 4em
+
+.warranty__note
+   padding: 0 4em 4em 4em
+   font-size: 10px
+   color: #6E6E6E
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-name-product
+   //    display: block
+
+   .logo
+      padding-bottom: 0
+   .logo__cont
+      padding: 1em
+   .logo__cont::before
+      display: none
+   .logo__row
+      flex-direction: column-reverse
+   .logo__img
+      margin: -62% -10% 0 auto
+      img
+         max-height: 500px
+         margin-bottom: -6em !important
+   .logo__flex
+      flex-direction: column
+      padding: 0 1em
+      max-width: 100%
+   .logo__flex__i img
+      margin-left: -30% !important
+
+   .blender
+      padding: 2em 1em 1em
+
+   .power
+      flex-direction: column-reverse
+      gap: 1em
+      .logo__txt__row
+         flex-direction: column
+   .power__cont
+      padding: 1em
+   .power__flex
+      flex-direction: column
+   .power__i
+      width: 30%
+   .power__flex
+      max-width: 100%
+      padding: 1em
+   .power__img
+      margin-right: 2em
+
+   .design
+      padding: 1em
+      flex-direction: column
+      gap: 1em
+   .design__cal h3::after
+      display: none
+   .design__cal
+      padding: 0
+      order: 0
+   .design__img
+      order: 1
+      img
+         max-height: 500px
+
+   .options__row
+      flex-direction: column !important
+      gap: 1em
+   .options__cont
+      padding: 1em !important
+      padding-top: 2em !important
+   .options__item
+      width: 80%
+      margin-top: 1em
+   .options__img
+      margin-left: 2em
+   .options__row:nth-of-type(even) .options__img
+      margin-left: 0
+      margin-right: 2em
+   .options__img img
+      max-height: 500px
+   .options__img h4
+      right: -35%
+   .options__img__icon img
+      margin-left: unset !important
+      min-width: unset
+
+   .accessories
+      padding: 1em
+   .accessories__row
+      flex-direction: column
+      gap: 1em
+   .accessories__cal
+      order: 0
+      display: flex
+      flex-direction: column
+      gap: 1em !important
+   .accessories__img
+      order: 1
+   .accessories__cal:last-of-type .accessories__item:last-of-type h4:before
+      display: none
+
+   .warranty__row
+      flex-direction: column
+   .warranty__cont
+      padding: 1em
+   .warranty__note
+      padding: 0 1em 1em 1em
+
+@media (min-width: $bp-tablet) and (max-width: 1023px)
+   // #rkt-name-product
+   //    display: block
+
+   .logo__cont
+      padding-left: 14em
+      padding-top: 1em
+      padding-bottom: 1em
+   .logo__cont::before
+      width: 100px
+      height: 100px
+      left: 6em
+
+   .blender
+      padding: 2em 1em
+
+   .power
+      gap: 2em
+   .power__i
+      width: 20%
+
+   .design
+      padding: 1em
+   .design__cal
+      padding: 1em 0
+
+   .options__cont
+      padding-left: 1em
+   .options__row:nth-of-type(even) .options__cont
+      padding-right: 1em
+   .options__row
+      gap: 2em
+
+   .accessories
+      padding: 2em 1em 0
+   .accessories__cal:last-of-type .accessories__item:last-of-type h4:before
+      left: -55px
+   .accessories__cal:last-of-type
+      gap: 5em
+
+   .warranty__cont
+      padding-left: 1em
+   .warranty__note
+      padding: 0 1em 1em
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   // #rkt-name-product
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   #rkt-name-product h2
+      font-size: 22px
+
+   .logo__cont
+      padding-left: 10em
+      padding-top: 1em
+      padding-bottom: 1em
+   .logo__cont::before
+      width: 80px
+      height: 80px
+      left: 4.5em
+   .logo__flex
+      max-width: 100%
+      padding: 0 1em
+   .logo
+      padding-bottom: 0
+   .logo__title strong
+      font-size: 40px
+
+   .blender
+      padding: 2em 1em
+
+   .power
+      gap: 2em
+   .power__cont
+      padding-right: 1em
+   .power__i
+      width: 20%
+
+   .design
+      padding: 1em
+      gap: 2em
+   .design__cal
+      padding: 0
+      gap: 1em
+   .design__cal h3::after
+      display: none
+   .design__img
+      display: flex
+      align-items: center
+
+   .options__row
+      gap: 2em
+   .options__cont
+      padding-left: 1em
+   .options__row:nth-of-type(even) .options__cont
+      padding-right: 1em
+   .options__item
+      margin-top: 1em
+
+   .accessories
+      padding: 2em 1em
+   .accessories__cal:last-of-type
+      gap: 1em
+   .accessories__cal:last-of-type .accessories__item:last-of-type h4:before
+      left: -55px
+
+   .warranty__cont
+      padding-left: 1em
+   .warranty__note
+      padding: 0 1em 1em 1em
