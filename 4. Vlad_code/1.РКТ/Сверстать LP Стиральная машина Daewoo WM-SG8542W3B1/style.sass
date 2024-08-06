@@ -123,6 +123,14 @@ $maxWidthContainer: 1023
       flex-basis: 50%
       box-sizing: border-box
 
+.effective__img__abs
+   position: relative
+
+.effective__i
+   position: absolute
+   top: 1em
+   right: 1em
+
 //fastprog
 
 .fastprog
@@ -201,12 +209,18 @@ $maxWidthContainer: 1023
    .intensteam .effective__row
       flex-direction: column !important
 
+   .effective__i
+      width: 70%
+
 @media (min-width: $bp-tablet) and (max-width: 1023px)
    // #rkt-name-product
    //    display: block
 
    .daewoo
       padding: 1em
+
+   .effective__i
+      width: 60%
 
 @media (min-width: $bp-hd-desktop) and (max-width: 1201px)
    // #rkt-name-product
@@ -236,4 +250,6 @@ $maxWidthContainer: 1023
 
    .intensteam
       gap: 2em
-      padding-bottom: 1em
+
+   .effective__i
+      width: 70%
