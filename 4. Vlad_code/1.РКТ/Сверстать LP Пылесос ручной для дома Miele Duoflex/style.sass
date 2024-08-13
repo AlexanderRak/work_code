@@ -1,0 +1,216 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+// .rkt-name-product__container
+//    overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-name-product
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #f1f1f2
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      // margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: .5em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: center
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: center
+      margin-bottom: 1rem
+   h4
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 900
+      text-align: center
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   video
+      display: block
+      height: auto
+      width: 100%
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+      font-weight: bold
+
+//power
+
+.power
+   padding: 4em 4em 0
+
+.power__title
+   margin-top: 2em
+
+.power__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   gap: 1em
+   >div
+      display: grid
+      grid-template-rows: .29fr 1fr .7fr
+      background-color: #fff
+      border-radius: 20px
+
+.power__grid__title
+   display: flex
+   align-items: center
+   justify-content: center
+   padding: 1em 1em 0
+
+.power__txt
+   padding: 1em
+
+//hygiene
+
+.hygiene
+   padding: 2em 4em
+
+.hygiene__row
+   display: flex
+   justify-content: space-between
+   &:nth-of-type(3)
+      padding-top: 2em
+
+.hygiene__cal
+   flex-basis: 42%
+   img
+      margin-bottom: 1em !important
+
+//fast
+
+.fast
+   padding: 0 4em
+
+.fast__wrap
+   background-color: #fff
+   border-radius: 20px 20px 0 0
+
+.fast__title
+   padding: 1em
+
+//tech
+
+.tech
+   padding: 2em 4em
+
+.tech__grid
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   gap: 1em
+   >div
+      padding: 0.5em 0
+      p, li
+         color: #484848
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-name-product
+   //    display: block
+
+   .power
+      padding: 1em
+   .power__title
+      margin-top: 1em
+   .power__grid
+      grid-template-columns: 1fr
+      >div
+         display: block
+
+   .hygiene
+      padding: 1em
+   .hygiene__row
+      flex-direction: column
+      gap: 2em
+   .hygiene__cal
+      flex-basis: unset
+
+   .fast
+      padding: 0 1em
+
+   .tech
+      padding: 1em
+   .tech__wrap
+      min-width: 960px
+   .tech__scroll
+      overflow-x: scroll
+
+@media (min-width: $bp-tablet) and (max-width: 1023.9px)
+   // #rkt-name-product
+   //    display: block
+
+   .power
+      padding: 2em
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   // #rkt-name-product
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .power
+      padding: 1em
+   .power__grid > div
+      grid-template-rows: .32fr .5fr 1fr
+
+   .hygiene
+      padding: 1em
+   .hygiene__cal
+      flex-basis: 47%
+
+   .fast
+      padding: 0 1em
+
+   .tech
+      padding: 1em
+   .tech__wrap
+      min-width: 960px
+   .tech__scroll
+      overflow-x: scroll
