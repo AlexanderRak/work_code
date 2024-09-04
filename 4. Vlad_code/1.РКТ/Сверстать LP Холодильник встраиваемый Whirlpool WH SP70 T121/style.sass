@@ -3,12 +3,17 @@
 // body
 //   margin: 0
 
+// .whirpool__container
+//   overflow: hidden
+
 .whirpool
   width: 100%
-  max-width: 1366px
+  // display: grid
+  // grid-template-columns: calc(100% - 400px) 400px
+  // max-width: 1406px
+  max-width: 1023px
   margin: 0 auto
   height: auto
-  display: block
   box-sizing: border-box
   overflow: hidden
   img
@@ -74,15 +79,12 @@
   position: relative
 .fresh__txt
   font-size: 32px
+  // text-transform: uppercase
   background-color: #c2c5c6
   align-self: stretch
   display: flex
-  flex-direction: column
-  justify-content: center
-  padding: 0 2em
-  .whirpool__txt
-    margin-top: 1rem
-    // padding: 0 28px
+  align-items: center
+  padding: 0 28px
 .fresh__row
   position: relative
 .fresh__yellow
@@ -115,8 +117,8 @@
   margin-top: 20px
   margin-bottom: 2%
   display: flex
-  justify-content: center
   flex-wrap: wrap
+  justify-content: center
 .func__item
   padding: 0 10px
   box-sizing: border-box
@@ -140,12 +142,12 @@
     text-decoration: underline 2px solid #efb300
     margin-bottom: 8px
 
-.sense__img img
-  max-height: 300px
-
 .sense__txt
   margin: 15px auto
   max-width: 750px
+
+.sense__img img
+  max-height: 300px
 
 //section washer
 
@@ -192,17 +194,11 @@
     text-underline-offset: 10px
     line-height: 40px !important
 
-.design__txt
-  font-size: clamp(16px, 1.2vw, 20px)
-  margin-top: 10px
-
 //other
 
 .other
   background-color: #e4e4e4
   padding-bottom: 30px
-  .func__item
-    max-width: 25%
 
 //tech
 
@@ -240,25 +236,25 @@
     &:first-of-type
       margin-right: 20px
 
-//additionally
+.gif img
+  width: 800px
+  max-width: 100%
 
-.additionally
-  padding: 36px 40px 22px
-  background-color: #e4e4e4
-  .whirpool__title
-    margin-bottom: 30px
+//changes
 
-//whirlpool__note
+.changes
+  padding: 20px
 
-.whirlpool__note
-  padding: 2em
+.tech__row
+  align-items: unset
 
 //media*****************************************************
 
 @media (max-width: 1201px)
   .whirpool .container
-    width: 960px
     padding: 0 15px
+    width: unset
+    box-sizing: border-box
   .fresh__txt,
   .whirpool__title
     font-size: 28px
@@ -266,27 +262,45 @@
     font-size: 24px
   .whirpool__subtitle__little
     font-size: 18px
-  .fresh
-    .whirpool__txt
-      padding: 0
+  .changes
+    padding-right: 0
+    padding-left: 0
+
+@media (max-width: 1201px) and (min-width: 769px)
+  .func__item
+    width: 50%
+
+  .whirpool__row
+    flex-direction: column-reverse
+  .whirpool__row__txt,
+  .whirpool__row__img
+    width: 100%
+
+  .tech__row
+    flex-direction: column
+    .whirpool__row
+      flex-direction: row
+  .whirpool__cal
+    width: 100%
+
   .fresh__txt
-    padding: 0 1em
+    padding-top: 1em
+    padding-bottom: 1em
+  .fresh__yellow,
+  .fresh__icon
+    width: 100%
+  .fresh__icon img
+    margin: 0 auto
 
-@media (max-width: 991px)
-  .whirpool .container
-    width: 720px
-  
-  .other .func__item
-    max-width: unset
+// @media (max-width: 1023.9px)
+//   .whirpool
+//     display: block
 
-@media (max-width: 767px)
-  .whirpool .container
-    width: 540px
-
-@media (max-width: 576px)
+@media (max-width: 767.9px)
   .whirpool .container
     width: 100%
     box-sizing: border-box
+
   .fresh
     margin-top: 15px
     .whirpool__row
@@ -337,9 +351,3 @@
       display: block
   .whirpool__cal>.whirpool__row:nth-of-type(n+1)
     padding: 0
-
-  .additionally
-    padding: 1em 0
-
-  .whirlpool__note
-    padding: 1em 0
