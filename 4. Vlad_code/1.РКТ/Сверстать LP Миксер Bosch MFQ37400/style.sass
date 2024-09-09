@@ -1,0 +1,323 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-bosch-mfq37400__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-bosch-mfq37400
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: normal
+      text-align: left
+      // margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+   div
+      line-height: normal
+
+//bosch__block
+
+.bosch__block
+   position: relative
+
+.bosch__title
+   position: absolute
+   width: 100%
+   max-width: 500px
+   top: 2em
+   right: 2em
+   font-size: clamp(24px, 3vw, 42px)
+   font-weight: bold
+   text-align: center
+
+//bosch__time
+
+.bosch__time
+   position: relative
+
+.bosch__time__title,
+.bosch__time__txt,
+.bosch__time__txt__two
+   position: absolute
+
+.bosch__time__title
+   padding: 1em 2em
+   box-sizing: border-box
+   h2
+      text-align: center !important
+
+.bosch__time__txt
+   max-width: 300px
+   width: 100%
+   padding: 2em
+   right: 0
+   top: 20%
+   h3
+      text-align: right !important
+
+.bosch__time__txt__two
+   max-width: max-content
+   width: 100%
+   right: 50%
+   transform: translateX(50%)
+   padding: 2em
+   box-sizing: border-box
+   bottom: 0
+   h3
+      text-align: center !important
+
+//bosch__modes
+
+.bosch__modes
+   position: relative
+
+.bosch__modes__title,
+.bosch__modes__txt,
+.bosch__modes__txt__two,
+.bosch__modes__note
+   position: absolute
+
+.bosch__modes__title
+   right: 50%
+   transform: translateX(50%)
+   max-width: max-content
+   width: 100%
+   padding: 1em 2em
+   box-sizing: border-box
+   top: 0
+   h2
+      text-align: center !important
+
+.bosch__modes__txt
+   color: #fff
+   max-width: 270px
+   width: 100%
+   padding: 2em
+   right: 0
+   top: 0
+   h3
+      text-align: right !important
+
+.bosch__modes__txt__two
+   width: 100%
+   max-width: 400px
+   padding: 2em
+   box-sizing: border-box
+   bottom: 0
+   left: 9%
+   h3
+      margin-bottom: 0.5rem !important
+   h3,p
+      text-align: center !important
+
+.bosch__modes__note
+   padding: 1em 2em
+   box-sizing: border-box
+   left: 0
+   bottom: 0
+   p
+      font-size: 12px !important
+
+//bosch__accesorios
+
+.bosch__accesorios__title
+   padding: 1em 2em 0
+   h2
+      text-align: center !important
+
+//bosch__nozzles
+
+.bosch__nozzles
+   position: relative
+
+.bosch__nozzles__title,
+.bosch__nozzles__one,
+.bosch__nozzles__two
+   position: absolute
+
+.bosch__nozzles__title
+   padding: 1em 2em
+   box-sizing: border-box
+   right: 50%
+   transform: translateX(50%)
+   max-width: max-content
+   width: 100%
+   top: 0
+   background-color: #ffffffcc
+   h2
+      text-align: center !important
+      margin-bottom: 0 !important
+
+.bosch__nozzles__one h3,
+.bosch__nozzles__two h3
+   font-weight: bold !important
+   text-align: center !important
+
+.bosch__nozzles__one,
+.bosch__nozzles__two
+   max-width: 300px
+   width: 100%
+   padding: 2em
+   box-sizing: border-box
+
+.bosch__nozzles__one
+   right: 0
+   bottom: 10%
+
+.bosch__nozzles__two
+   left: 4em
+   bottom: 0
+
+//bosch__row
+
+.bosch__row
+   display: flex
+   align-items: center
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.bosch__row__txt
+   padding: 2em
+   h2,p
+      text-align: center !important
+
+//bosch__logo
+
+.bosch__logo__txt
+   padding: 0 2em 1em
+   h2,p
+      text-align: center !important
+
+//*********************************media*************************
+
+// @media (min-width: $bp-mobile) and (max-width: 767.9px)
+//    #rkt-bosch-mfq37400
+//       display: block !important
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-bosch-mfq37400
+//       display: block !important
+
+@media (min-width: $bp-mobile) and (max-width: 1201px)
+   // #rkt-bosch-mfq37400
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .bosch__title
+      max-width: max-content
+      width: 100%
+      right: 50%
+      transform: translateX(50%)
+      padding: 0 1em
+      top: 1em
+
+   .bosch__time__title,
+   .bosch__time__txt,
+   .bosch__time__txt__two
+      position: unset
+      transform: unset
+      max-width: 100%
+      box-sizing: border-box
+      padding: 1em
+      h2,h3,p
+         text-align: center !important
+
+   .bosch__modes__title,
+   .bosch__modes__txt,
+   .bosch__modes__txt__two
+      position: unset
+      transform: unset
+      max-width: 100%
+      box-sizing: border-box
+      color: #000
+      padding: 1em
+      h2,h3,p
+         text-align: center !important
+
+   .bosch__nozzles__row
+      display: flex
+      >div
+         flex-basis: 50%
+
+   .bosch__nozzles__title,
+   .bosch__nozzles__one,
+   .bosch__nozzles__two
+      position: unset
+      transform: unset
+      max-width: 100%
+      padding: 1em
+
+   .bosch__row
+      flex-direction: column-reverse
+   .bosch__row__txt
+      padding: 1em
+
+   .bosch__logo__txt
+      padding-right: 1em
+      padding-left: 1em
