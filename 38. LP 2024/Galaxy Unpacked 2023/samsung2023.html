@@ -1,438 +1,26 @@
 <style>
-   @import url("https://fonts.googleapis.com/css2?family=Roboto&amp;amp;display=swap");
 
-   #samsung {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-      width: 100%;
-      height: auto;
-      overflow: hidden;
-      background: #000;
-      position: relative;
-      padding-bottom: 70px;
-      font-family: 'Roboto', sans-serif;
-   }
-
-   #samsung img:hover {
-      opacity: 1;
-   }
-
-   #samsung:first-letter {
-      padding-left: 0;
-   }
-
-   #samsung img {
-      display: block;
-      margin: 0 auto;
-   }
-
-   #samsung p {
-      font-size: 15px;
-      margin-bottom: 0;
-   }
-
-   #samsung h2 {
-      font-size: 34px;
-      color: #fff;
-      line-height: 1.3;
-      font-weight: bold;
-      text-align: center;
-   }
-
-   #samsung h3 {
-      font-size: 24px;
-      color: #fff;
-      margin: 0;
-      padding-top: 0;
-      line-height: 1.1;
-      text-align: center;
-      font-weight: bold;
-   }
-
-   #samsung a {
-      display: block;
-      font-size: 18px;
-      color: #fff;
-      text-align: center;
-      font-weight: bold;
-      background: #FF671F;
-      -webkit-border-radius: 8px;
-      -moz-border-radius: 8px;
-      border-radius: 8px;
-      margin: 0 auto;
-      max-width: 210px;
-      width: 100%;
-      height: auto;
-      padding: 12px;
-   }
-
-
-
-   span.fw-bold {
-      font-weight: bold;
-   }
-
-   span.tx-uppercase {
-      text-transform: uppercase;
-   }
-
-   .features-desc__text h2 {
-      text-align: inherit;
-   }
-
-   .one-col .features-desc__text p {
-      text-align: inherit;
-   }
-
-   .main-container.page {
-      padding-left: 0;
-      padding-right: 0;
-   }
-
-   .breadcrumbs {
-      display: none;
-   }
-
-   .samsung-img {
-      background-image: url(https://cdn.comfy.ua/media/x/img3/samsung_unpacked24.png);
-      background-position: center;
-      background-size: cover;
-      max-width: 615px;
-      height: 486px;
-      position: relative;
-      margin: 0 auto;
-   }
-
-   .samsung-img__content {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-   }
-
-   .samsung__wrap__form {
-      max-width: 906px;
-      margin: 0 auto;
-      background: #fff;
-      border-radius: 16px;
-      padding: 32px 24px;
-      box-shadow: 0px 0px 5px 0px #fff;
-      position: relative;
-      height: 153px;
-   }
-
-   /* .samsung__wrap__h2-link {
-      padding: 27px 12px 45px 12px;
-   } */
-
-   .samsung__wrap {
-      max-width: 1280px;
-      margin: 0 auto;
-      background: #000;
-   }
-
-   .samsung__wrap__img-desk {
-      display: block;
-   }
-
-   .samsung__wrap__img-mob {
-      display: none;
-   }
-
-   /* form */
-   #wrapper-form-corizoid {
-      max-width: 100%;
-      width: 100%;
-      margin: 0 0 0 auto;
-      height: 100%;
-   }
-
-   #wrapper-form-corizoid form div.error,
-   #wrapper-form-corizoid form label.error {
-      color: #ff090b;
-      left: 0;
-      padding-left: 0;
-      display: block;
-      position: absolute;
-      margin: 4px 4px 4px 0px;
-      bottom: -21px;
-   }
-
-   #wrapper-form-corizoid .item_fr__text {
-      padding-bottom: 8px;
-   }
-
-   #wrapper-form-corizoid .item_fr__text p {
-      font-size: 16px;
-      color: #fff;
-      line-height: 1;
-      font-weight: 300;
-   }
-
-   #form-submit-none {
-      display: block;
-   }
-
-   #text-submit-block {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-   }
-
-   .row-flex-form {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-      -moz-box-orient: horizontal;
-      -moz-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      -webkit-box-align: end;
-      -webkit-align-items: flex-end;
-      -moz-box-align: end;
-      -ms-flex-align: end;
-      align-items: flex-end;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -moz-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      width: 100%;
-   }
-
-   .row-flex-form .item_fr {
-      padding: 0 12px 0 0;
-      width: 100%;
-      display: grid;
-      position: relative;
-   }
-
-   .row-flex-form .item_fr:last-child {
-      padding: 0 0 0 0;
-   }
-
-   .txt1 {
-      color: #000;
-      text-align: center;
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 700;
-      padding-bottom: 17px;
-   }
-
-   .row-flex-form .item_fr .item-input-frm {
-      font-size: 16px;
-      margin: 0;
-      padding: 1.2rem 10px;
-      text-align: left;
-      background: #fff;
-      line-height: 1;
-      height: 40px;
-      border: 1px solid #E5E5E5;
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      border-radius: 4px;
-      color: #000;
-   }
-
-   .row-flex-form .item_fr .item-input-frm:focus {
-      -webkit-box-shadow: inset 0px 0px 2px 0px #ff671f;
-      -moz-box-shadow: inset 0px 0px 2px 0px #ff671f;
-      box-shadow: inset 0px 0px 2px 0px #ff671f;
-      border: 1px solid #ff671f;
-   }
-
-   .item-input-frm::-webkit-input-placeholder {
-      color: #000;
-   }
-
-   .item-input-frm:-moz-placeholder {
-      color: #000;
-   }
-
-   .item-input-frm::-moz-placeholder {
-      color: #000;
-   }
-
-   .item-input-frm:-ms-input-placeholder {
-      color: #000;
-   }
-
-   .item-input-frm::-ms-input-placeholder {
-      color: #000;
-   }
-
-   .item-input-frm::placeholder {
-      color: #000;
-   }
-
-   .row-flex-form .item_fr .item-input-frm.item-input-frm__submit {
-      background: #FF671F;
-      -webkit-transition: 0.3s;
-      -o-transition: 0.3s;
-      -moz-transition: 0.3s;
-      transition: 0.3s;
-      color: #fff;
-      width: 100%;
-      text-align: center;
-      font-weight: bold;
-      border: 1px solid #FF671F;
-      font-family: 'Roboto', sans-serif;
-   }
-
-   .row-flex-form .item_fr .item-input-frm.item-input-frm__submit:hover {
-      cursor: pointer;
-   }
-
-   #wrapper-form-corizoid .text-submit-block-cl p {
-      font-size: 21px;
-      color: #000;
-      text-align: center;
-   }
-
-   /* form END */
-
-   .samsung__content {
-      position: relative;
-      top: -45px;
-   }
-
-   .samsung__wrap__h3 {
-      padding: 27px 12px 45px 12px;
-   }
-
-   @media (max-width: 812px) {
-      .row-flex-form {
-         -webkit-box-orient: vertical;
-         -webkit-box-direction: normal;
-         -webkit-flex-direction: column;
-         -moz-box-orient: vertical;
-         -moz-box-direction: normal;
-         -ms-flex-direction: column;
-         flex-direction: column;
-      }
-
-      .row-flex-form .item_fr {
-         padding: 0 0 24px 0;
-      }
-
-      #wrapper-form-corizoid form div.error,
-      #wrapper-form-corizoid form label.error {
-         position: relative;
-         bottom: 0;
-         padding-top: 5px;
-         top: 0;
-      }
-
-      #wrapper-form-corizoid {
-         max-width: 500px;
-         width: 100%;
-         margin: 0 auto;
-      }
-
-
-      #samsung h2 {
-         font-size: 28px;
-      }
-
-      .txt1 {
-         font-size: 23px;
-      }
-
-      .samsung__wrap__form {
-         height: auto;
-         border-radius: 0px 0px 16px 16px;
-      }
-   }
-
-   @media (max-width: 480px) {
-      .row-flex-form .item_fr:last-child {
-         padding: 0 0 0 0;
-      }
-
-      .samsung__wrap__img-desk {
-         display: none;
-      }
-
-      .samsung__wrap__img-mob {
-         display: block;
-      }
-
-      #samsung h2 {
-         font-size: 21px;
-      }
-
-      #samsung h3 {
-         font-size: 17px;
-      }
-
-      span.word-wrap {
-         display: block;
-         word-wrap: break-word;
-      }
-
-      #samsung a {
-         font-size: 16px;
-         padding: 10px;
-      }
-
-      .txt1 {
-         font-size: 18px;
-      }
-
-      .samsung-img {
-         height: 375px;
-      }
-
-      /* .samsung__wrap__h2-link {
-         padding: 15px 12px 18px 12px;
-      } */
-
-      #wrapper-form-corizoid form div.error,
-      #wrapper-form-corizoid form label.error {
-         color: #ff090b;
-         left: 0;
-         padding-left: 0;
-         display: block;
-         position: absolute;
-         margin: 0;
-         bottom: 6px;
-         top: inherit;
-         padding-top: 0;
-      }
-
-      .samsung__wrap__form {
-         height: 355px;
-      }
-
-      #wrapper-form-corizoid .text-submit-block-cl p {
-         font-size: 18px;
-      }
-   }
 </style>
 <div id="samsung">
    <div class="samsung__wrap">
-      <!-- <div class="samsung-img">
+      <div class="samsung-img">
          <div class="samsung-img__content">
-            <div class="samsung__wrap__h2">
-               <h2>Не пропусти презентацію <span class="word-wrap">новинок від Samsung</span></h2>
+            <div class="samsung-img__logo">
+               <img src="https://cdn.comfy.ua/media/x/img5/Layer_1.svg" alt="">
             </div>
             <div class="samsung__wrap__h3">
-               <h3>17 січня 2024 року о 20:00</h3>
+               <h3>10 липня 2024 року о 16:00<br>Дивись разом з COMFY</h3>
             </div>
-            <div class="samsung__wrap__h2-link"><a target="_blank" rel="nofollow" href="https://www.youtube.com/watch?v=QEPDm-DpofU">Дивитися</a></div>
+            <div class="samsung__wrap__h2">
+               <h2>Не пропусти презентацію новинок від Samsung</h2>
+            </div>
+            <div class="samsung__wrap__h2-link">
+               <a target="_blank" rel="nofollow" href="https://www.youtube.com/live/bT7SM6MLO58?si=aJxyDPBMa4tR0zy8">Дивитися</a>
+            </div>
          </div>
-      </div> -->
-      <div class="samsung__img">
-         <img src="https://cdn.comfy.ua/media/x/img3/samsung_unpacked24.png" alt="">
+      </div>
+      <!-- <div class="samsung__img">
+         <img src="https://cdn.comfy.ua/media/x/img5/star_shadow.png" alt="">
       </div>
       <div class="samsung__content">
          <div class="samsung__wrap__h2">
@@ -442,11 +30,11 @@
             <h3>17 січня 2024 року о 20:00</h3>
          </div>
          <div class="samsung__wrap__h2-link"><a target="_blank" rel="nofollow" href="https://www.youtube.com/watch?v=QEPDm-DpofU">Дивитися</a></div>
-      </div>
+      </div> -->
       <div class="samsung__wrap__form">
          <div class="form-corizoid" id="wrapper-form-corizoid">
             <div id="form-submit-none">
-               <div class="txt1">Залиш свої контакти і ми тобі <span class="word-wrap">нагадаємо</span></div>
+               <div class="txt1">Залиш свої контакти і ми тобі нагадаємо</div>
                <form name="valid_form" method="post" id="valid_form">
                   <div class="container-flex-form">
                      <div class="row-flex-form">
@@ -457,6 +45,7 @@
                      </div>
                   </div>
                </form>
+               <div class="txt2">А ще отримай додаткову вигоду 1 000₴ з передзамовленням новинки від Samsung</div>
             </div>
             <div class="text-submit-block-cl" id="text-submit-block">
                <p>Дякуємо! Ми отримали ваші дані. Чекайте повідомлення.</p>
@@ -529,19 +118,19 @@
                people.email = $('#email_rw').val();
                // people.sity = $('#city_rw').val();
                people.yourname_rw = $('#yourname_rw').val();
-               people.nameAction = "Samsung2024Unpacked";
+               people.nameAction = "Samsung2024Unpacked_2606";
                $.ajax({
                   url: "https://main.corezoid.comfy.ua/api/2/json/public/13319/e4b20cf0d45cf8057fc011ac20850ee1cc0b289f",
                   headers: {
                      'Content-Type': 'application/x-www-form-urlencoded'
                   },
-                  type: "POST", //метод отправки
-                  dataType: "json", //формат данных
-                  data: JSON.stringify(people), // Сеарилизуем объект
+                  type: "POST",
+                  dataType: "json",
+                  data: JSON.stringify(people),
                   success: console.log('done')
                });
                var none_form = document.getElementById("form-submit-none").style.display = "none";
-               var block_text = document.getElementById("text-submit-block").style.display = "flex";
+               var block_text = document.getElementById("text-submit-block").style.display = "block ";
             }
             sendAjaxForm();
          }
@@ -551,4 +140,5 @@
    $(function () {
       $("#number_rw").mask("380999999999");
    });
-   // ]]></script>
+   // ]]>
+</script>

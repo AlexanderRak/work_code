@@ -30,6 +30,29 @@
    .dis-flex-nav__li .footer-nav__link {
       color: #43b02a;
    }
+   .footer-nav__custom-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+   }
+   .footer-nav__custom-item {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      color: #000;
+      border-radius: 20px;
+      border: 1px solid #CCC;
+      padding: 8px 16px;
+      transition: .3s;
+      text-decoration: none;
+   }
+   .footer-nav__custom-item:hover {
+      border: 1px solid #000;
+   }
+   @media (min-width: 1024px) {
+      .footer-nav__salecategory {
+         display: none;
+      }
+   }
 </style>
 <div class="footer-nav">
    <nav class="footer-nav__comfy footer-nav__column"><input name="expander" type="checkbox" id="comfy-expander" class="footer-nav__expander" /> <label for="comfy-expander" class="footer-nav__title"> Comfy <span class="footer-nav__expander-lbl"> </span> </label>
@@ -45,7 +68,7 @@
          <li class="footer-nav__li"> <a href="https://comfy.ua/sitemap.html" class="footer-nav__link">Каталог товаров</a> </li>
          <li class="footer-nav__li"> <a href="https://help.comfy.ua" class="footer-nav__link">COMFY помогает</a> </li>
       </ul>
-    </nav>
+   </nav>
    <nav class="footer-nav__services footer-nav__column"><input name="expander" id="services-expander" type="checkbox" class="footer-nav__expander" /> <label for="services-expander" class="footer-nav__title"> Услуги и сервисы <span class="footer-nav__expander-lbl"> </span> </label>
       <ul class="footer-nav__list">
          <li class="footer-nav__li"> <a href="https://comfy.ua/page/welcome.html" class="footer-nav__link">Бонусная программа</a> </li>
@@ -105,6 +128,15 @@
          </li>
       </ul>
    </div>
+   <nav class="footer-nav__salecategory footer-nav__column">
+      <input class="footer-nav__expander" type="checkbox" id="salecategory-expander" name="expander">
+      <label class="footer-nav__title" for="salecategory-expander">Категории
+         <span class="footer-nav__expander-lbl"></span>
+      </label>
+      <ul class="footer-nav__list">
+         <div id="footer-nav__custom" class="footer-nav__custom-flex"></div>
+      </ul>
+   </nav>
    <div class="footer-nav__contact footer-nav__column"><span class="footer-nav__title"> Консультация </span>
       <div class="footer-nav__phone-details"><a href="tel:0800303505" class="footer-nav__phone-link">0-800-303-505</a> <a style="display: block; margin-top: 0;" href="tel:0800600506" class="footer-nav__phone-link">0-800-600-506</a>
          <div class="footer-nav__phone-txt">Бесплатно по Украине<br /> 08:00-21:00 Пн-Нд</div>
@@ -148,4 +180,46 @@
    } else {
       document.getElementsByClassName('only_ios')[0].style.display = 'none';
    }
+</script>
+<script>
+   const baseUrl = 'https://comfy.ua/'
+   const baseLengUa = 'ua/'
+   const category = [
+      { categoryName: 'Смартфоны', categoryUrl: 'smartfon/brand__apple__seriya_smartphone__apple-iphone-15/' },
+      { categoryName: 'Iphone 15', categoryUrl: 'smartfon/brand__apple__seriya_smartphone__apple-iphone-15/' },
+      { categoryName: 'Iphone 15 plus', categoryUrl: 'smartfon/brand__apple__seriya_smartphone__apple-iphone-15-plus/' },
+      { categoryName: 'Iphone 15 pro', categoryUrl: 'smartfon/brand__apple__seriya_smartphone__apple-iphone-15-pro/' },
+      { categoryName: 'Iphone 15 pro max', categoryUrl: 'smartfon/brand__apple__seriya_smartphone__apple-iphone-15-pro-max/' },
+      { categoryName: 'Samsung S24', categoryUrl: 'smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-s24/' },
+      { categoryName: 'Samsung S24+', categoryUrl: 'smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-s24plus/' },
+      { categoryName: 'Samsung S24 Ultra', categoryUrl: 'smartfon/brand__samsung__seriya_smartphone__samsung-galaxy-s24-ultra/' },
+      { categoryName: 'Ноутбуки', categoryUrl: 'notebook/' },
+      { categoryName: 'Телевизоры', categoryUrl: 'flat-tvs/' },
+      { categoryName: 'Стиральные машины', categoryUrl: 'wash-machines/' },
+      { categoryName: 'Холодильники', categoryUrl: 'refrigerator/' },
+      { categoryName: 'Мониторы', categoryUrl: 'monitor/' },
+      { categoryName: 'Планшеты', categoryUrl: 'plane-table-computer/' },
+      { categoryName: 'Наушники', categoryUrl: 'nayshniki/' },
+      { categoryName: 'Смарт-часы', categoryUrl: 'smart-watches/' },
+      { categoryName: 'Пылесосы', categoryUrl: 'vacuum-cleaner/' },
+      { categoryName: 'Ручные пылесосы', categoryUrl: 'hand-vacuum-cleaners/' },
+      { categoryName: 'Роботы-пылесосы', categoryUrl: 'vacuum-cleaning-robots/' },
+      { categoryName: 'Кофемашины', categoryUrl: 'coffi-mash/' },
+      { categoryName: 'Утюги', categoryUrl: 'iron/' },
+      { categoryName: 'Блендеры', categoryUrl: 'blender/' },
+      { categoryName: 'LEGO', categoryUrl: 'lego/' },
+   ];
+
+   const container = document.getElementById('footer-nav__custom');
+   const fragment = document.createDocumentFragment();
+
+   category.forEach(item => {
+      const link = document.createElement('a');
+      link.textContent = item.categoryName;
+      link.href = baseUrl + item.categoryUrl;
+      link.classList.add('footer-nav__custom-item');
+      fragment.appendChild(link);
+   });
+
+   container.appendChild(fragment);
 </script>

@@ -1,0 +1,86 @@
+<!-- ru -->
+<style>
+	.header-links__link.actionstopmenu {
+		width: 5.5rem;
+		border-right: .1rem solid transparent;
+	}
+
+	.header-links__link {
+		position: relative;
+	}
+
+	.header-links__link .before_itog {
+		position: relative;
+		padding-left: 35px;
+	}
+
+	.header-links__link .before_itog::before {
+		content: "";
+		background-image: url(https://cdn.comfy.ua/media/x/img2/imgel.svg);
+		width: 2rem;
+		height: 2rem;
+		position: absolute;
+		margin-left: -2.5rem;
+		margin-top: 0;
+		background-size: contain;
+		background-repeat: no-repeat;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.header .header-city {
+		width: 35%;
+	}
+
+	.header-links {
+		width: 65%;
+	}
+
+	.header-links__link._allaction span {
+		background-color: #ff090b;
+    	padding: .5rem 1.2rem;
+    	border-radius: 1.5rem;
+    	color: #fff;
+	}
+
+	@media (max-width: 1024px) {
+		.header-links__link .before_itog {
+			padding-left: 23px;
+		}
+
+		.header-links {
+			width: 100%;
+		}
+	}
+</style>
+<nav id="headerLinks" class="header-links header-links__list header__item">
+	<!-- <div class="header-links__link actionstopmenu">
+		<span data-lbl="Акции">Акции</span>
+		<div class="header-links__note">
+			<a href="{{store url='sale/'}}" class="header-links__note-link">Скидки до -50%</a>
+			<a href="{{store url='actions/'}}" class="header-links__note-all-link">Все акции</a>
+		</div>
+	</div> -->
+	<a class="header-links__link _allaction" href="{{store url='actions/'}}"> <span data-lbl="Акции">Акции</span> </a>
+	<a class="header-links__link _gift" href="{{store url='gift-cards/'}}"> <span data-lbl="Подарочные карты">Подарочные карты</span> </a>
+	<a class="header-links__link" href="{{store direct_url='shops.html'}}"> <span data-lbl="Магазины">Магазины</span> </a>
+	<!-- <a href="{{store direct_url='status-order.html'}}" _mce_href="{{store direct_url='status-order.html'}}" class="header-links__link statusordertopmenu"> <span data-lbl="Найти заказ">Найти заказ</span> </a> -->
+	<div class="header-links__link moremenu">
+		<span data-lbl="Еще">Еще</span>
+		<div class="header-links__note-more">
+			<a class="header-links__link" href="{{store direct_url='courier-delivery-self.html'}}"> <span data-lbl="Доставка">Доставка</span> </a>
+			<a class="header-links__link" href="{{store direct_url='exchange-and-returns.html'}}"> <span data-lbl="Возврат">Возврат</span> </a>
+			<a class="header-links__link" href="https://trade-in.comfy.ua/" target="_blank"> <span data-lbl="Trade In">Trade In</span> </a>
+			<a class="header-links__link" href="https://blog.comfy.ua/" target="_blank"> <span data-lbl="Блог">Блог</span> </a>
+		</div>
+	</div>
+</nav>
+<div class="communication-block-wrapper">
+	<div class="communication-block communication-button-wrapper">
+		<a class="communication-button">
+			<span class="hide-on-desktop">0-800-303-505</span>
+			<span class="only-desktop">Связаться</span>
+		</a>
+		{{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="22263"}}
+	</div>
+</div>

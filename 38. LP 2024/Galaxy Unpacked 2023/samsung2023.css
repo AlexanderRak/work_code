@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 #samsung {
   display: block;
   margin: 0 auto;
@@ -7,6 +8,7 @@
   overflow: hidden;
   background: #000;
   position: relative;
+  font-family: "Roboto", sans-serif;
 }
 #samsung img:hover {
   opacity: 1;
@@ -23,29 +25,28 @@
   margin-bottom: 0;
 }
 #samsung h2 {
-  font-size: 24px;
-  color: #fff;
+  font-size: 34px;
+  color: #000;
   line-height: 1;
   font-weight: bold;
   text-align: center;
 }
 #samsung h3 {
-  font-size: 15px;
+  font-size: 25px;
   margin: 0;
   padding-top: 0;
   line-height: 1.1;
-  text-align: inherit;
-  font-weight: bold;
+  text-align: center;
+  font-weight: 500;
 }
 #samsung a {
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
   text-align: center;
-  font-weight: bold;
+  font-weight: 500;
   background: #FF671F;
   -webkit-border-radius: 8px;
-     -moz-border-radius: 8px;
           border-radius: 8px;
   margin: 0 auto;
   max-width: 280px;
@@ -84,6 +85,57 @@ span.tx-uppercase {
   display: none;
 }
 
+.samsung__wrap__form {
+  background: #fff;
+  margin: 0 auto;
+  -webkit-border-radius: 16px;
+          border-radius: 16px;
+  overflow: hidden;
+  margin-top: 16px;
+  padding: 30px 24px 30px 24px;
+}
+
+.txt1 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.2;
+  padding-bottom: 17px;
+}
+
+.txt2 {
+  font-size: 21px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.2;
+  padding-bottom: 17px;
+  max-width: 678px;
+  margin: 0 auto;
+  padding-top: 18px;
+}
+
+.samsung-img {
+  background-image: url(https://cdn.comfy.ua/media/x/img5/star_shadow.png);
+  background-position: center;
+  -webkit-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  max-width: 906px;
+  height: 609px;
+  position: relative;
+  margin: 0 auto;
+  -webkit-border-radius: 0 0 16px 16px;
+          border-radius: 0 0 16px 16px;
+  overflow: hidden;
+}
+.samsung-img__content {
+  padding: 0 15px 24px 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .samsung-video video {
   display: block;
   max-width: 100%;
@@ -91,13 +143,17 @@ span.tx-uppercase {
 }
 
 .samsung__wrap {
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 906px;
   background: #000;
+  margin: 0 auto 16px auto;
 }
 
 .samsung__wrap__h2 {
-  padding: 24px 15px;
+  padding: 34px 15px 24px 15px;
+}
+
+.samsung-img__logo {
+  padding-bottom: 15px;
 }
 
 .samsung__wrap__h2two {
@@ -169,10 +225,9 @@ span.tx-uppercase {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  padding: 0 24px 24px 24px;
 }
 .row-flex-form .item_fr {
-  padding: 0 35px 0 0;
+  padding: 0 15px 0 0;
   width: 100%;
   display: grid;
   position: relative;
@@ -190,45 +245,36 @@ span.tx-uppercase {
   height: 40px;
   border: 1px solid #E5E5E5;
   -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
           border-radius: 4px;
 }
 .row-flex-form .item_fr .item-input-frm:focus {
-  -webkit-box-shadow: inset 0px 0px 3px 0px #ff671f;
-     -moz-box-shadow: inset 0px 0px 3px 0px #ff671f;
-          box-shadow: inset 0px 0px 3px 0px #ff671f;
-  border: 1px solid #ff671f;
+  border: 1px solid #FF671F;
 }
 
 .item-input-frm::-webkit-input-placeholder {
-  color: #379424;
-}
-
-.item-input-frm:-moz-placeholder {
-  color: #379424;
+  color: #616161;
 }
 
 .item-input-frm::-moz-placeholder {
-  color: #379424;
+  color: #616161;
 }
 
 .item-input-frm:-ms-input-placeholder {
-  color: #379424;
+  color: #616161;
 }
 
 .item-input-frm::-ms-input-placeholder {
-  color: #379424;
+  color: #616161;
 }
 
 .item-input-frm::placeholder {
-  color: #379424;
+  color: #616161;
 }
 
 .row-flex-form .item_fr .item-input-frm.item-input-frm__submit {
   background: #FF671F;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
-  -moz-transition: 0.3s;
   transition: 0.3s;
   color: #fff;
   width: 100%;
@@ -241,11 +287,9 @@ span.tx-uppercase {
 }
 
 #wrapper-form-corizoid .text-submit-block-cl p {
-  font-size: 23px;
-  color: #6e8065;
+  font-size: 18px;
+  color: #000;
   text-align: center;
-  padding: 0 15px 24px 15px;
-  text-shadow: 3px 3px 5px #708266;
 }
 
 /* form END */
@@ -262,19 +306,32 @@ span.tx-uppercase {
   .row-flex-form .item_fr {
     padding: 0 0 24px 0;
   }
-  #wrapper-form-corizoid form div.error, #wrapper-form-corizoid form label.error {
-    position: relative;
-    bottom: 0;
-    padding-top: 5px;
-    top: 0;
-  }
   #wrapper-form-corizoid {
     max-width: 500px;
     width: 100%;
     margin: 0 auto;
   }
+  #samsung h2 {
+    font-size: 24px;
+  }
+  #wrapper-form-corizoid form div.error, #wrapper-form-corizoid form label.error {
+    bottom: 2px;
+  }
 }
 @media (max-width: 480px) {
+  .samsung-img {
+    -webkit-border-radius: 0;
+            border-radius: 0;
+  }
+  .samsung__wrap__form {
+    -webkit-border-radius: 0;
+            border-radius: 0;
+    margin-top: 0;
+    padding: 26px 16px 26px 16px;
+  }
+  .samsung__wrap {
+    margin: 0;
+  }
   .row-flex-form .item_fr:last-child {
     padding: 15px 0 0 0;
   }
@@ -286,5 +343,14 @@ span.tx-uppercase {
   }
   #samsung h2 {
     font-size: 20px;
+  }
+  #wrapper-form-corizoid form div.error, #wrapper-form-corizoid form label.error {
+    bottom: 2px;
+  }
+  .txt2 {
+    font-size: 16px;
+  }
+  .txt1 {
+    font-size: 18px;
   }
 }

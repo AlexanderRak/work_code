@@ -1,0 +1,167 @@
+#maslynice
+   box-sizing: border-box
+   display: block
+   background: #43B02A
+   border-radius: 8px
+   overflow: hidden
+   position: relative
+   max-width: 1366px
+   margin: 0 auto
+   img
+      display: block
+      max-width: 100%
+      margin: 0
+      padding: 0
+//end default styles
+.maslynice__content
+   position: relative
+   z-index: 4
+.maslynice__text
+   padding: 70px 0 20px 0
+   margin: 0 auto
+   display: table
+.maslynice__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+   grid-gap: 44px
+   padding: 55px 15px 48px 15px
+   max-width: 1270px
+   margin: 0 auto
+.maslynice__item
+   display: block
+   cursor: pointer
+   background: #fff
+   border-radius: 8px
+   transition: .3s
+   height: 260px
+   border: 1px solid #379424
+   &:hover
+      background: #FF671F
+      border: 1px solid #FF671F
+      .maslynice__item-text
+         color: #fff
+         text-decoration: underline
+.maslynice__item-img
+   display: flex
+   flex-direction: column
+   align-items: center
+   justify-content: center
+   height: 80%
+.maslynice__item-text
+   display: flex
+   align-items: center
+   justify-content: center
+   height: 20%
+   font-weight: 500
+   font-size: 18px
+.maslynice__img-pos
+   position: absolute
+   z-index: 2
+   &.img-pos1
+      left: 0
+      top: 45px
+   &.img-pos2
+      right: -8px
+      top: 40px
+   &.img-pos3
+      left: 18rem
+      top: 27rem
+   &.img-pos4
+      right: 18rem
+      top: 15rem
+   &.img-pos5
+      left: 0
+      bottom: 0
+   &.img-pos6
+      right: 37rem
+      bottom: 0
+.maslynice-logo
+   position: relative
+   &::before
+      content: ""
+      background-image: url(https://cdn.comfy.ua/media/x/img2/maslynica/ms_boll.png)
+      background-repeat: no-repeat
+      width: 152px
+      height: 151px
+      position: absolute
+      left: -137px
+      top: -45px
+//media*******************
+// @media (min-width: 1920px)
+@media (max-width: 1200px)
+   .maslynice__grid
+      grid-gap: 15px
+   .maslynice__img-pos.img-pos3
+      left: 0rem
+   .maslynice__img-pos.img-pos4
+      right: -4rem
+@media (max-width: 1024px)
+   .maslynice__img-pos.img-pos3, .maslynice__img-pos.img-pos4
+      display: none
+   .maslynice__grid
+      padding: 10px 15px 48px 15px
+   .maslynice__img-pos.img-pos6
+      right: -75px
+   .maslynice__img-pos.img-pos2
+      top: 10rem
+   .maslynice__img-pos.img-pos1
+      left: -65px
+      top: 15rem
+@media (max-width: 812px)
+   .maslynice__grid
+      grid-template-columns: 1fr 1fr 1fr
+   .maslynice__img-pos.img-pos1
+      left: -115px
+   .maslynice__img-pos.img-pos2
+      right: -118px
+   .maslynice__img-pos.img-pos6
+      right: -10rem
+   .maslynice__img-pos.img-pos5
+      left: -15px
+@media (max-width: 480px)
+   #maslynice
+      border-radius: 0px
+   .maslynice__grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 24px
+      padding: 10px 15px 95px 15px
+   .maslynice__item
+      height: 190px
+   .maslynice__item-img
+      max-width: 95px
+      margin: 0 auto
+   .maslynice-logo::before
+      background-image: url(https://cdn.comfy.ua/media/x/img2/maslynica/ms_boll_mob.png)
+      width: 69px
+      height: 69px
+      left: -60px
+      top: -12px
+   .maslynice__text
+      padding: 35px 0 20px 0
+   .maslynice__img-pos.img-pos1
+      left: 0
+      bottom: 6px
+      top: inherit
+   .maslynice__img-pos.img-pos2
+      right: 0
+      bottom: 6px
+      top: inherit
+   .maslynice__img-pos.img-pos3, .maslynice__img-pos.img-pos4
+      display: block
+   .maslynice__img-pos.img-pos3
+      left: inherit
+      right: 0
+      top: 16rem
+   .maslynice__img-pos.img-pos4
+      right: inherit
+      left: 0
+      top: 39rem
+   .maslynice__img-pos.img-pos5
+      left: inherit
+      right: 0
+      top: 43rem
+   .maslynice__img-pos.img-pos6
+      right: 102px
+      bottom: 22rem
+// @media (max-width: 320px)
+// @media (max-width: 812px) and (orientation: landscape)
