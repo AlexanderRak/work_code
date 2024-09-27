@@ -1,0 +1,169 @@
+//default styles
+
+// body
+//    margin: 0
+
+.tcl
+   // font-family: sans-serif
+   width: 100%
+   max-width: 1512px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.tcl .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//air
+
+.air__cont
+   padding: 50px 80px 25px
+   text-align: center
+
+.tcl__title
+   margin-bottom: 1rem
+   font-size: clamp(24px, 3vw, 36px)
+
+.tcl__txt
+   font-size: clamp(16px, 1.8vw, 28px)
+
+//flow
+
+.flow
+   padding-top: 30px
+
+.flow__row
+   display: flex
+   align-items: center
+   gap: 60px
+
+.flow__cont
+   max-width: 760px
+   padding-right: 40px
+
+.tcl__small__txt
+   font-size: clamp(16px, 1.8vw, 26px)
+
+//temperature
+
+.temperature__row
+   display: flex
+   align-items: center
+   gap: 70px
+   &:nth-of-type(odd)
+      justify-content: space-between
+      flex-direction: row-reverse
+      gap: 190px
+      padding-right: 0px
+      padding-left: 30px
+
+.temperature__cont
+   max-width: 690px
+   padding-right: 30px
+
+//func
+
+.func__row
+   display: flex
+   align-items: center
+   gap: 70px
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+      .func__cont
+         padding-right: 0
+         padding-left: 55px
+
+.func__cont
+   max-width: 730px
+   padding-right: 55px
+   // padding-left: 55px
+
+//media*****************************************************
+
+@media (max-width: 1441px)
+   .temperature__row:nth-of-type(odd)
+      gap: 70px
+
+   .func__cont
+      max-width: 50vw
+
+@media (max-width: 1201px)
+   .tcl .container
+      width: 960px
+      padding: 0 15px
+
+   .air__cont
+      padding: 1em 0
+
+   .flow__cont
+      padding: 0
+      max-width: 50vw
+
+   .temperature__row
+      gap: 4em !important
+   .temperature__row,
+   .temperature__cont
+      padding: 0 !important
+   .temperature__cont
+      max-width: 50vw
+
+   .func__row
+      gap: 4em
+   .func__cont
+      padding: 0 !important
+      max-width: 45vw
+      min-width: 45vw
+
+@media (max-width: 991px)
+   .tcl .container
+      width: 720px
+
+   .flow__row
+      flex-direction: column
+      gap: 1em
+   .flow__cont
+      max-width: 100%
+
+   .temperature .container,
+   .func .container
+      display: flex
+      flex-direction: column
+      gap: 2em
+   .temperature__row,
+   .func__row
+      flex-direction: column !important
+      gap: 1em !important
+   .temperature__cont,
+   .func__cont
+      max-width: 100%
+
+   .func
+      padding-bottom: 1em
+
+@media (max-width: 767px)
+   .tcl .container
+      width: 540px
+
+@media (max-width: 576px)
+   .tcl .container
+      width: 100%
+      box-sizing: border-box

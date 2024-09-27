@@ -1,0 +1,644 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+// .rkt-name-product__container
+//    overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   // #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-name-product
+   margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 30, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      text-transform: uppercase
+   h3
+      // @include adaptiv-value("font-size", 20, 18)
+      font-size: clamp(18px, 2vw, 20px) !important
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      text-transform: uppercase
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//logo
+
+.logo
+   background-color: #F1F0F1
+
+.logo__i
+   max-width: 40%
+   padding: 1em
+   margin: 0 auto
+
+.logo__wrap
+   position: relative
+   color: #F4F5F7
+
+.logo__abs
+   position: absolute
+   width: 50%
+   top: 0
+   right: 0
+   bottom: 0
+
+.logo__cont
+   display: flex
+   flex-direction: column
+   justify-content: center
+   height: 100%
+
+.logo__cont__i
+   max-width: 30%
+   margin: 0 auto
+
+.tefal__title
+   text-align: center !important
+   padding: 0 5% !important
+   box-sizing: border-box
+   width: max-content
+   margin: 0 auto !important
+   &::before,
+   &::after
+      content: ""
+      display: block
+      background: url("https://cdn.comfy.ua/media/x/img3/1726996/snoska.svg") no-repeat center / contain
+      width: 80px
+      height: 17px
+      margin-left: -5%
+   &::after
+      transform: scale(-1, -1)
+      margin: 0 -5% 0 auto
+
+.tefal__txt
+   text-transform: uppercase !important
+   text-align: center !important
+   margin: 1em 0 3em !important
+
+.tefal__note
+   font-size: 12px !important
+   text-align: center !important
+
+//simple
+
+.simple
+   background-color: #F1F0F1
+   padding-top: 1em
+
+.tefal__blue
+   color: #F0F0F1
+   padding: 2em 4em
+   text-transform: uppercase
+   background: linear-gradient(90deg, #323C6A 0%, #262945 100%)
+   h2
+      margin-bottom: 0 !important
+
+.simple__txt
+   padding: 4em
+   display: flex
+   flex-direction: column
+   gap: 1em
+
+//effective
+
+.effective
+   position: relative
+   color: #F0F0F1
+
+.effective__abs
+   position: absolute
+   top: 0
+   right: 0
+   bottom: 0
+   width: 60%
+   h2,p
+      text-align: center !important
+
+.effective__cont
+   height: 100%
+   display: flex
+   flex-direction: column
+   justify-content: center
+   padding-right: 2em
+
+.effective__title
+   margin: 0 2em 0 auto
+
+.effective__grid
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   gap: 1em
+   margin-top: 3em
+   margin-bottom: -6em
+
+.effective__txt
+   text-transform: uppercase
+   font-weight: bold !important
+
+.effective__i
+   max-width: 80%
+   margin: 0 auto
+   margin-bottom: 1rem
+
+//easy
+
+.easy
+   color: #F0F0F1
+   background: linear-gradient(90deg, #323C6A 0%, #262945 100%)
+
+.easy__row
+   padding: 2em 4em
+   display: flex
+   >div
+      flex-basis: 50%
+   h2
+      margin-bottom: 0 !important
+
+//steam
+
+.steam
+   color: #F0F0F1
+   background: url("https://cdn.comfy.ua/media/x/img3/1726996/bg1.jpg") no-repeat center bottom / cover
+   // background: linear-gradient(90deg, #143761 0%, #282D41 100%)
+   padding: 2em 4em 4em
+   margin-bottom: -1px
+
+.steam__row
+   display: flex
+   align-items: center
+   gap: 4em
+   >div
+      flex-basis: 50%
+
+.steam__cont
+   display: flex
+   flex-direction: column
+   gap: 2em
+
+//gliding
+
+.gliding
+   color: #F0F0F1
+   position: relative
+
+.gliding__abs
+   position: absolute
+   top: 0
+   right: 0
+   left: 0
+   box-sizing: border-box
+
+//protect
+
+.protect
+   color: #F0F0F1
+   background: url("https://cdn.comfy.ua/media/x/img3/1726996/bg2.jpg") no-repeat center bottom / cover
+   padding: 4em 4em 0
+
+.protect__row
+   display: flex
+   align-items: center
+   gap: 4em
+
+.protect__img
+   flex-basis: 45%
+
+.protect__cont
+   flex-basis: 55%
+
+.protect__i
+   max-width: 40%
+   margin-bottom: 2em
+
+//func
+
+.func
+   color: #F0F0F1
+   background: url("https://cdn.comfy.ua/media/x/img3/1726996/bg3.jpg") no-repeat center top / cover
+   padding: 4em
+
+.func__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   gap: 4em
+   h3,p
+      text-align: center !important
+
+.func__i
+   margin-bottom: 1rem
+   // max-width: 235px
+   // margin: 0 auto 1rem
+
+//water
+
+.water
+   color: #F0F0F1
+   background: url("https://cdn.comfy.ua/media/x/img3/1726996/bg2.jpg") no-repeat center bottom / cover
+   .easy__row
+      padding-top: 0
+
+.water__img
+   max-width: 80%
+   margin: 0 auto
+   margin-bottom: -8%
+
+//durability
+
+.durability
+   color: #F0F0F1
+   background: url("https://cdn.comfy.ua/media/x/img3/1726996/bg3.jpg") no-repeat center top / cover
+   padding: 2em 4em 4em 0
+
+.durability__row
+   display: flex
+   align-items: center
+   gap: 4em
+
+.durability__img
+   flex-basis: 55%
+
+.durability__cont
+   flex-basis: 45%
+
+//energy
+
+.energy
+   position: relative
+   color: #F0F0F1
+
+.energy__abs
+   position: absolute
+   top: 2em
+   right: 0
+   width: 50%
+
+.energy__cont
+   background: linear-gradient(0deg, #323C6A 0%, #282D41 100%)
+   padding: 4em
+   border-radius: 50px 0 0 50px
+
+.energy__row
+   display: flex
+   align-items: center
+   gap: 2em
+   margin-bottom: 1rem
+   h2
+      margin-bottom: 0 !important
+
+//warranty
+
+.warranty
+   background-color: #1B2140
+   color: #fff
+   padding-right: 4em
+
+.warranty__row
+   display: flex
+   align-items: center
+
+.warranty__img
+   flex-basis: 60%
+
+.warranty__cont
+   flex-basis: 40%
+   h3
+      font-weight: normal !important
+
+.show__mob
+   display: none
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-name-product
+   //    display: block
+
+   .logo__abs
+      width: 100%
+      position: unset
+   .logo__cont
+      padding-top: 1em
+      height: unset
+   .logo__txt
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      padding: 2em 1em 0 1em
+      box-sizing: border-box
+   .logo__cont__i
+      max-width: 60%
+      position: absolute
+      bottom: 1em
+      right: 1em
+      display: flex
+      align-items: flex-end
+      color: #000
+      gap: 1em
+      img
+         max-width: 40% !important
+   .hide__mob
+      display: none
+   .show__mob
+      display: block
+   .logo__img img
+      min-width: 150%
+   .logo__i
+      max-width: 70%
+
+   .tefal__blue
+      padding: 1em
+      br
+         display: none
+   .simple__txt
+      padding: 1em
+
+   .effective
+      background-color: #253d67
+   .effective__abs
+      position: unset
+      width: 100%
+   .effective__cont
+      padding: 1em
+      height: unset
+      box-sizing: border-box
+      position: relative
+   .effective__grid
+      margin-top: 2em
+      grid-template-columns: 1fr 1fr
+   .effective__img
+      overflow: hidden
+      img
+         margin-top: -15% !important
+   .effective__i
+      width: 70%
+   .effective__title
+      margin-right: auto
+      margin-left: auto
+
+   .easy__row
+      padding: 1em
+      flex-direction: column
+      gap: 1rem
+   .easy__img img
+      min-width: 150%
+      margin-left: -25% !important
+
+   .steam
+      padding: 1em
+   .steam__row
+      flex-direction: column
+      gap: 1em
+   .steam__img
+      max-width: 80%
+
+   .gliding
+      background-color: #1a375b
+   .gliding__abs
+      position: unset
+   .gliding__img
+      overflow: hidden
+      img
+         min-width: 120%
+         margin: 0 -10% !important
+         margin-top: -15% !important
+
+   .protect
+      padding: 1em 1em 0 1em
+   .protect__row
+      flex-direction: column-reverse
+      gap: 2em
+   .protect__img
+      max-width: 70%
+
+   .func
+      padding: 2em 1em
+   .func__grid
+      grid-template-columns: 1fr
+      gap: 2em
+   .func__i
+      max-width: 70%
+      margin: 0 auto 1rem
+
+   .durability
+      padding: 2em 1em
+   .durability__row
+      flex-direction: column-reverse
+      gap: 1em
+
+   .energy__abs
+      position: unset
+      width: 100%
+   .energy__cont
+      border-radius: unset
+      padding: 1em
+   .energy__img img
+      min-width: 150%
+
+   .warranty
+      padding: 0
+   .warranty__row
+      flex-direction: column
+   .warranty__cont
+      padding: 1em
+   .warranty__img
+      img
+         min-width: 115%
+
+@media (min-width: $bp-tablet) and (max-width: 1023px)
+   // #rkt-name-product
+   //    display: block
+
+   .logo__i
+      max-width: 50%
+   .logo__abs
+      width: 100%
+      position: unset
+   .logo__cont
+      padding-top: 1em
+      height: unset
+   .logo__txt
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      padding: 4em 1em 0 1em
+      box-sizing: border-box
+   .logo__cont__i
+      max-width: 60%
+      position: absolute
+      bottom: 1em
+      right: 1em
+      display: flex
+      align-items: flex-end
+      color: #000
+      gap: 1em
+      img
+         max-width: 40% !important
+   .hide__mob
+      display: none
+   .show__mob
+      display: block
+
+   .effective__abs
+      bottom: unset
+      left: 0
+      width: 100%
+      padding: 2em
+      box-sizing: border-box
+   .effective__title
+      margin-right: auto
+      margin-left: auto
+
+   .energy__abs
+      width: 62%
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   // #rkt-name-product
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .logo__i
+      max-width: 50%
+   .logo__abs
+      width: 100%
+      position: unset
+   .logo__cont
+      padding-top: 1em
+      height: unset
+   .logo__txt
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      padding: 2em 1em 0 1em
+      box-sizing: border-box
+   .logo__cont__i
+      max-width: 60%
+      position: absolute
+      bottom: 1em
+      right: 1em
+      display: flex
+      align-items: flex-end
+      color: #000
+      gap: 1em
+      img
+         max-width: 40% !important
+
+   .hide__mob
+      display: none
+   .show__mob
+      display: block
+
+   .tefal__blue
+      padding: 1em
+      br
+         display: none
+   .simple__txt
+      padding: 1em
+
+   .effective__abs
+      bottom: unset
+      left: 0
+      width: 100%
+   .effective__cont
+      padding: 1em
+   .effective__title
+      margin-right: auto
+      margin-left: auto
+   .effective__grid
+      margin-top: 1em
+   .effective__i
+      max-width: 70%
+
+   .easy__row
+      padding: 1em
+
+   .steam
+      padding: 1em
+   .steam__row
+      gap: 2em
+
+   .protect
+      padding: 1em
+   .protect__row
+      gap: 2em
+
+   .func
+      padding: 1em
+   .func__grid
+      gap: 1em
+
+   .durability
+      padding: 1em 1em 1em 0
+   .durability__row
+      gap: 2em
+
+   .energy__abs
+      width: 65%
+   .energy__cont
+      padding: 2em 1em 2em 2em
+      border-radius: 30px 0 0 30px
+
+   .warranty
+      padding: 1em 1em 1em 0

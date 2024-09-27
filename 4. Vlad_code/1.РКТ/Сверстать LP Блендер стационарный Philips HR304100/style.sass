@@ -1,0 +1,348 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-name-product__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-name-product
+   margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      color: #327896
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+   div
+      line-height: normal
+
+//philips__logo
+
+.philips__logo
+   position: relative
+
+.logo__i
+   position: absolute
+   left: 2em
+   top: 0
+   img
+      width: 60%
+      margin: 0 !important
+
+.logo__title
+   position: absolute
+   left: 2rem
+   bottom: 50%
+   transform: translateY(50%)
+   font-size: clamp(20px, 2vw, 32px)
+   color: #fff
+
+.logo__note
+   position: absolute
+   left: 2rem
+   bottom: 4em
+   color: #fff
+   font-size: 12px
+
+//func
+
+.func
+   padding: 2em
+   background-color: #E1EBF0
+   position: relative
+
+.func__img img
+   width: 60%
+
+.func__row
+   display: flex
+   justify-content: space-between
+   position: absolute
+   top: 0
+   bottom: 0
+   left: 0
+   right: 0
+   width: 100%
+   padding: 2em
+   box-sizing: border-box
+
+.func__cal
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   flex-basis: 25%
+   p
+      font-weight: bold !important
+   >div
+      display: flex
+      align-items: center
+      gap: 1em
+
+.func__i img
+   width: 60px
+   min-width: 60px
+
+//philips__block
+
+.philips__block
+   h2, p
+      text-align: center !important
+
+.philips__cont
+   padding: 2em 2em 1em
+
+//accessories
+
+.accessories
+   padding: 2em
+   h2
+      text-align: center !important
+
+.accessories__wrap
+   position: relative
+
+.accessories__item
+   position: absolute
+   color: #327896
+   font-size: clamp(14px, 1.2vw, 16px)
+   &:nth-of-type(1)
+      top: 22%
+      left: 15%
+   &:nth-of-type(2)
+      bottom: 38%
+      right: 24%
+
+.accessories__img img
+   width: 70%
+
+//philips__table
+
+.philips__table
+   padding-top: 2em
+   h2
+      text-align: center !important
+      padding: 0 2em !important
+
+.table__grid__one
+   display: grid
+   grid-template-columns: repeat(7, 1fr)
+   margin-bottom: 0.5em
+   p
+      text-align: center !important
+      font-weight: bold !important
+   >div
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+
+.table__grid__two,
+.table__grid__three,
+.table__grid__four,
+.table__grid__five,
+.table__grid__six,
+.table__grid__seven,
+.table__grid__eight,
+.table__grid__nine,
+.table__grid__ten
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 3fr 1fr
+   color: #fff
+   border-bottom: solid 2px white
+   >div
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: .5em
+      background-color: #0A7896
+      &:nth-of-type(1)
+         border-right: solid 2px white
+      &:nth-of-type(3)
+         background-color: #29829B
+      &:nth-of-type(4)
+         background-color: #6CAEC0
+      &:nth-of-type(5)
+         background-color: #91C2D0
+      &:nth-of-type(6)
+         background-color: #6CAEC0
+   p
+      text-align: center !important
+
+.table__grid__three
+   grid-template-columns: 1fr 2fr 2fr 1fr 1fr
+
+.table__grid__four
+   grid-template-columns: 1fr 1fr 1fr 4fr
+
+.table__grid__five
+   grid-template-columns: 1fr 2fr 1fr 2fr 1fr
+
+.table__grid__six
+   grid-template-columns: 1fr 1fr 3fr 2fr
+
+.table__grid__seven
+   grid-template-columns: 1fr 1fr 4fr 1fr
+
+.table__grid__eight
+   grid-template-columns: 1fr 2fr 3fr 1fr
+
+.table__grid__nine
+   grid-template-columns: 1fr 5fr 1fr
+
+.table__grid__ten
+   grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-name-product
+   //    display: block
+
+   .logo__i
+      left: 1rem
+      img
+         width: 30%
+   .logo__title,
+   .logo__note
+      left: 1rem
+   .logo__img img
+      min-width: 120%
+      margin-left: -10% !important
+
+   .func
+      padding: 1em
+   .func__row
+      position: unset
+      padding: 0
+      gap: 1em
+   .func__cal
+      gap: 1em
+      flex-basis: 50%
+   .func__cal > div
+      flex-direction: column
+      gap: 0.5em
+   .func__cal p
+      text-align: center !important
+   .func__img
+      margin-top: 1em
+      img
+         width: 100%
+
+   .philips__cont
+      padding: 2em 1em 1em
+
+   .accessories
+      padding: 1em
+   .accessories__item:nth-of-type(1)
+      top: 15%
+      left: 0%
+   .accessories__item:nth-of-type(2)
+      right: 16%
+
+   .table__scroll
+      overflow-x: scroll
+   .table__wrap
+      min-width: 960px
+
+@media (min-width: $bp-tablet) and (max-width: 1023px)
+   // #rkt-name-product
+   //    display: block
+
+   .func__cal p
+      font-size: 14px !important
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   // #rkt-name-product
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .logo__i
+      left: 1em
+   .logo__i img
+      width: 50%
+   .logo__title,
+   .logo__note
+      left: 1rem
+
+   .func
+      padding: 1em
+   .func__row
+      padding: 1em
+   .func__i img
+      width: 40px
+      min-width: 40px
+   .func__cal
+      flex-basis: 30%
+      p
+         font-size: 12px !important
+   .func__img img
+      width: 50%
+
+   .table__scroll
+      overflow-x: scroll
+   .table__wrap
+      min-width: 960px

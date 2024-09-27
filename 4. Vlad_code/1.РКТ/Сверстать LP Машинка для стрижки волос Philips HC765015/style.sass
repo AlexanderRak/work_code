@@ -1,0 +1,377 @@
+//default styles
+
+// body
+//    margin: 0
+
+.philips
+   width: 100%
+   max-width: 1520px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   color: #005a8c
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.philips .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//logo
+
+.logo
+   position: relative
+
+.logo__i
+   position: absolute
+   top: 0
+   left: 60px
+
+.logo__abs
+   position: absolute
+   bottom: 70px
+   left: 80px
+   color: #fff
+   max-width: 520px
+
+.logo__txt
+   font-size: 34px
+
+.logo__title
+   font-weight: bold
+   margin-top: 70px
+   font-size: 44px
+
+//features
+
+.features__blue
+   font-size: 48px
+   color: #fff
+   padding: 20px 80px
+   background-color: #013378
+
+.features__row
+   display: flex
+   align-items: center
+   gap: 40px
+   padding: 70px 80px
+
+.features__cont
+   max-width: 600px
+   display: flex
+   flex-direction: column
+   gap: 40px
+
+.features__txt
+   font-size: 24px
+   color: #005a8c
+
+//trimflow
+
+.trimflow
+   position: relative
+   color: #fff
+
+.philips__title
+   font-size: 28px
+   margin-bottom: 1rem
+   font-weight: bold
+
+.philips__txt
+   font-size: 28px
+
+.trimflow__abs
+   max-width: 480px
+   position: absolute
+   right: 80px
+   top: 70px
+
+//dualcut
+
+.dualcut
+   .trimflow__abs
+      right: unset
+      top: unset
+      left: 80px
+      bottom: 100px
+
+//turbo
+
+.clr__blue
+   color: #005a8c
+
+.turbo
+   padding: 0 80px
+
+.turbo__row
+   display: flex
+   gap: 110px
+   justify-content: space-between
+
+.turbo__cont
+   max-width: 490px
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   padding: 20% 0 5%
+
+.turbo__i
+   align-self: flex-end
+
+//func
+
+.func
+   background-color: #e4eefb
+
+.func__item
+   display: flex
+   align-items: center
+   gap: 40px
+   >div
+      max-width: 50%
+      min-width: 50%
+      box-sizing: border-box
+   &:nth-of-type(odd)
+      .func__cont
+         padding-right: 80px
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+      .func__cont
+         padding-left: 80px
+
+//philips__table
+.philips__table
+   .features__blue
+      margin-bottom: 70px
+
+.philips__table
+   color: #000
+
+.philips__table__txt
+   font-size: 18px
+   text-align: center
+   margin-bottom: 60px
+   margin-top: 15px
+
+.philips__table__title
+   font-size: 32px
+   font-weight: bold
+   color: #023278
+
+.philips__grid
+   display: grid
+   padding: 0 80px
+   grid-template-columns: repeat(4, 1fr)
+   grid-template-rows: auto
+   grid-template-areas: "cal5 cal5 cal5 cal5" "cal1 cal2 cal3 cal4"
+   >div
+      padding: 20px
+   .cal1
+      grid-area: cal1
+   .cal2
+      grid-area: cal2
+   .cal3
+      grid-area: cal3
+   .cal4
+      grid-area: cal4
+   .cal5
+      grid-area: cal5
+   .philips__txt
+      font-size: 20px
+
+.cal1,
+.cal3
+   background-color: #b2c8e6
+.cal2,
+.cal4
+   background-color: #e4eefb
+
+//philips__video
+
+.philips__video
+   padding: 70px 80px
+   video
+      display: block
+      max-width: 100%
+      height: auto
+
+//philips__footer
+
+.philips__footer
+   background-image: linear-gradient(180deg, #0f204b 0%, #0066a1 100%)
+   padding: 90px 0
+   width: 100%
+
+//complete
+
+.complete
+   color: #000
+   .trimflow__abs
+      top: 200px
+      max-width: 400px
+
+//media*****************************************************
+
+@media (max-width: 1441px)
+   .logo__abs
+      max-width: 470px
+
+@media (max-width: 1201px)
+   .philips .container
+      width: 960px
+      padding: 0 15px
+
+   .logo__i
+      left: 1em
+   .logo__abs
+      left: 1em
+      max-width: 400px
+   .logo__title
+      font-size: 28px
+   .logo__txt
+      font-size: 24px
+
+   .features__blue
+      padding-right: 1em
+      padding-left: 1em
+      font-size: 32px
+      br
+         display: none
+   .features__row
+      padding: 1em 0
+      gap: 2em
+   .features__cont
+      gap: 1em
+   .features__txt
+      font-size: 16px
+
+   .trimflow__abs
+      right: 32px
+      max-width: 400px
+   .philips__title
+      font-size: 24px
+   .philips__txt
+      font-size: 16px !important
+
+   .turbo
+      padding-right: 0
+      padding-left: 0
+
+   .philips__table .features__blue
+      margin-bottom: 2em
+   .philips__grid
+      padding-right: 0
+      padding-left: 0
+
+   .philips__table__title
+      font-size: 24px
+
+   .philips__video
+      padding: 2em 0
+
+   .complete .trimflow__abs
+      max-width: 280px
+
+@media (max-width: 991px)
+   .philips .container
+      width: 720px
+
+   .logo
+      display: flex
+      flex-direction: column-reverse
+   .logo__i
+      max-width: 35%
+   .logo__img img
+      min-width: 150%
+      margin-left: -50%
+   .logo__abs
+      position: unset
+      text-align: center
+      padding: 1em 0
+   .logo__txt,
+   .logo__title
+      color: #005a8c
+   .logo__title
+      margin-top: 1rem
+
+   .features__blue
+      padding-right: 15px
+      padding-left: 15px
+      font-size: 20px
+   .features__row
+      flex-direction: column !important
+
+   .trimflow
+      display: flex
+      flex-direction: column-reverse
+   .trimflow__abs
+      position: unset
+      color: #005a8c
+      padding: 1em 0
+   .trimflow__img img
+      min-width: 150%
+      margin-left: -25%
+
+   .turbo__row
+      flex-direction: column-reverse
+      gap: 1em
+   .turbo__cont
+      padding: 0 0 1em 0
+   .turbo__i
+      max-width: 40%
+
+   .func__item
+      flex-direction: column !important
+      gap: 1em
+   .func__item>div
+      min-width: unset
+      max-width: unset
+   .func__item:nth-of-type(odd) .func__cont
+      padding-right: unset
+   .func__item:nth-of-type(even) .func__cont
+      padding-left: unset
+   .func__flex
+      display: flex
+      flex-direction: column
+      gap: 2em
+      padding-bottom: 2em
+
+   .philips__table__wrap
+      overflow-x: scroll
+   .philips__grid
+      width: 800px
+   .philips__grid>div
+      padding: .5em
+   .philips__table__txt
+      margin-bottom: 1em
+
+   .philips__footer
+      padding: 2em 0
+   .philips__footer__img img
+      max-width: 40%
+
+@media (max-width: 767px)
+   .philips .container
+      width: 540px
+
+@media (max-width: 576px)
+   .philips .container
+      width: 100%
+      box-sizing: border-box

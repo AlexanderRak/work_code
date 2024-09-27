@@ -1,0 +1,176 @@
+//default styles
+
+// body
+//    margin: 0
+
+.philips
+   width: 100%
+   max-width: 1536px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.philips .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+.philips__title
+   font-weight: bold
+   font-size: clamp(20px, 3vw, 36px)
+
+.philips__txt
+   font-size: clamp(16px, 3vw, 24px)
+
+//lowtemp
+
+.lowtemp__cont
+   text-align: center
+   margin-bottom: 55px
+   padding: 55px 165px 0 165px
+
+.lowtemp__txt
+   font-size: clamp(18px, 3vw, 32px)
+   margin-top: 14px
+
+.lowtemp__img
+   position: relative
+   overflow: hidden
+
+.lowtemp__logo
+   position: absolute
+   top: 0
+   left: 50px
+
+//spec
+
+.spec
+   padding: 50px 60px
+
+.spec__row
+   display: flex
+   align-items: center
+   &:nth-of-type(n+2)
+      margin-top: 50px
+
+.spec__img
+   margin-right: 48px
+
+//func
+
+.func
+   padding: 0 60px 60px 60px
+
+.func__row
+   display: flex
+   align-items: center
+   justify-content: space-between
+   >div
+      flex: 1 1 0
+      min-width: 50%
+      width: 50%
+      box-sizing: border-box
+   &:nth-of-type(n+2)
+      margin-top: 50px
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+      .func__txt
+         padding: 0 120px 0 0
+      .func__img img
+         margin: 0 0 0 auto
+
+.func__txt
+   padding: 0 120px 0 70px
+   .philips__title
+      margin-bottom: 20px
+
+.func__img img
+   margin: 0
+
+//media*****************************************************
+
+@media (max-width: 1440px)
+   .lowtemp__cont
+      margin-bottom: 30px
+      padding: 30px 100px 0 100px
+
+@media (max-width: 1201px)
+   .philips .container
+      width: 960px
+      padding: 0 15px
+
+   .lowtemp__cont,
+   .spec,
+   .func
+      padding-right: 0
+      padding-left: 0
+
+   .func
+      padding-bottom: 1em
+
+   .func__txt
+      padding: 0 0 0 3em
+
+   .func__row:nth-of-type(even) .func__txt
+      padding: 0 3em 0 0
+
+   .lowtemp__logo
+      left: 0
+
+@media (max-width: 991px)
+   .philips .container
+      width: 720px
+
+   .lowtemp__logo
+      max-width: 35%
+
+   .spec
+      padding: 2em 0
+      
+   .spec__row
+      display: block
+      .philips__title
+         text-align: center
+
+   .spec__img
+      margin-right: 0
+      margin-bottom: 1em
+
+   .spec__row:nth-of-type(n+2)
+      margin-top: 2em
+
+   .func__row
+      display: block
+      >div
+         width: 100%
+
+   .func__txt
+      padding: 0 !important
+      margin-top: 1em
+
+@media (max-width: 767px)
+   .philips .container
+      width: 540px
+
+@media (max-width: 576px)
+   .philips .container
+      width: 100%
+      box-sizing: border-box

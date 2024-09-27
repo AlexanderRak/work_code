@@ -1,0 +1,637 @@
+//default styles
+
+// body
+//    margin: 0
+
+.kivi
+   width: 100%
+   max-width: 1920px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   color: #202020
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.kivi .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+.kivi__title
+   font-weight: bold
+   font-size: clamp(34px, 3vw, 60px)
+
+.kivi__subtitle
+   font-weight: bold
+   font-size: clamp(20px, 3vw, 32px)
+
+.kivi__txt
+   font-size: clamp(20px, 2vw, 26px)
+
+.show__mob
+   display: none !important
+
+//fun
+
+.fun
+   padding: 130px 60px 200px 60px
+
+.fun__head
+   display: flex
+   max-width: 1275px
+   justify-content: space-between
+   text-align: center
+   margin-bottom: 40px
+   .kivi__txt
+      color: #494949
+      font-size: clamp(20px, 3vw, 26px)
+      margin-top: 35px
+
+.fun__grid
+   margin-top: 150px
+   display: grid
+   grid-template-columns: 230px 1fr 1fr
+   grid-template-areas: "..."
+   gap: 0 100px
+
+//display
+
+.display
+   position: relative
+   color: #fff
+
+.display__abs
+   position: absolute
+   left: 100px
+   bottom: 50%
+   transform: translateY(50%)
+   max-width: 500px
+
+.display__list
+   margin-top: 30px !important
+   li
+      list-style-type: disc
+      margin-left: 25px
+      &:nth-of-type(n+2)
+         margin-top: 15px
+
+//func
+
+.func__row
+   display: flex
+   align-items: center
+   justify-content: space-between
+   .kivi__subtitle
+      margin-top: 30px
+   .kivi__txt
+      margin-top: 35px
+
+.func__row
+   &:nth-of-type(1)
+      .func__img img
+         margin-left: -10px
+   &:nth-of-type(n+2)
+      padding-top: 180px
+      .func__txt
+         margin-left: 140px
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+      .func__txt
+         margin-right: 140px
+         margin-left: 0
+         padding-left: 100px
+         padding-right: 0px
+      .func__img img
+         margin: 0 0 0 auto
+
+.func__txt
+   max-width: 620px
+   padding-right: 100px
+   box-sizing: content-box
+
+.gallery__kivi
+   position: relative
+   overflow: hidden
+   width: 100%
+   max-width: 930px
+   img
+      &:nth-of-type(1)
+         position: absolute
+
+.dragger
+   position: absolute
+   bottom: 50%
+   right: 50%
+   transform: translate(50%, 50%)
+   z-index: 3
+   img
+      min-width: 156px
+      position: absolute
+      z-index: 10
+      right: 50%
+      bottom: 50%
+      transform: translate(50%, 50%)
+   &::before,
+   &::after
+      content: ""
+      display: block
+      position: absolute
+      width: 2px
+      height: 9999px
+      box-shadow: 0 3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5)
+      right: 50%
+      bottom: 50%
+      z-index: 2
+      background: white
+   &::after
+      top: 50%
+
+.clipped
+   clip-path: inset(0px 50% 0px 0px)
+
+.func__list
+   li
+      list-style-type: disc
+      margin-left: 25px
+
+.func__flex
+   display: flex
+   align-items: flex-end
+   margin-top: 40px
+
+.func__subtitle
+   font-weight: bold
+   font-size: clamp(20px, 3vw, 32px)
+   margin-right: 20px
+
+.func__i
+   img
+      margin: 0
+
+//android
+
+.android
+   background-color: #202020
+   padding: 160px 100px 150px 100px
+
+.android__head
+   text-align: center
+   max-width: 1400px
+   margin: 0 auto 65px auto
+   .kivi__title
+      color: #fff
+      margin-bottom: 35px
+   .kivi__txt
+      color: #b9b9b9
+
+.android__grid
+   display: grid
+   grid-template-columns: 340px auto 340px
+   align-items: center
+   grid-template-areas: "..."
+   gap: 0 40px
+
+.android__list
+   .kivi__txt
+      font-weight: bold
+      color: #fff
+      position: relative
+      padding-left: 25px
+      &::before
+         content: ''
+         display: block
+         position: absolute
+         top: 0
+         left: 0
+         height: 100%
+         width: 4px
+         background: linear-gradient(180deg, #E3713F 0%, #E93A47 100%)
+      &:nth-of-type(2)
+         margin: 65px 0
+
+//service
+
+.service__head
+   padding: 190px 100px
+   text-align: center
+   max-width: 1130px
+   margin: 0 auto
+   .kivi__title
+      margin-bottom: 40px
+
+.service__wrap
+   background-color: #f4f4f4
+   padding: 60px 0px 60px 100px
+   display: flex
+   align-items: center
+
+.service__txt
+   max-width: 520px
+   margin-right: 150px
+   .kivi__title
+      margin-bottom: 40px
+
+.service__img img
+   margin-right: -10%
+
+//fitnes
+
+.fitnes
+   padding: 180px 100px
+
+.fitnes__head
+   text-align: center
+   max-width: 1290px
+   margin: 0 auto
+   .kivi__title
+      margin-bottom: 40px
+
+.fitnes__img
+   margin-top: 35px
+   position: relative
+
+.fitnes__abs
+   position: absolute
+   left: 80px
+   top: 80px
+   max-width: 540px
+
+.fitnes__title
+   color: #ea4700
+   font-weight: bold
+   font-size: clamp(30px, 4vw, 110px)
+   margin-bottom: 40px
+   text-transform: uppercase
+
+.fitnes__subtitle
+   font-size: clamp(20px, 2vw, 44px)
+   padding-bottom: 40px
+   color: #ea4700
+
+.fitnes__txt
+   font-weight: bold
+   font-size: clamp(16px, 2vw, 36px)
+   color: #FFF
+
+//du
+
+.du
+   position: relative
+   padding: 50px 0 0 0
+   background: url("https://cdn.comfy.ua/media/x/img/2242932/bg1.png") no-repeat center / cover
+.du__row
+   display: flex
+   align-items: center
+   justify-content: space-between
+   color: #fff
+   width: 100%
+   padding: 60px 100px 0 100px
+   box-sizing: border-box
+.du__txt
+   max-width: 670px
+   .kivi__title
+      margin-bottom: 40px
+
+.du__img
+   img
+      margin: 0 0 0 auto
+
+//quality
+
+.quality
+   padding: 190px 0 0 0
+   .kivi__title
+      margin-bottom: 40px
+
+.quality__row
+   padding: 0 100px
+   display: flex
+   align-items: center
+   justify-content: space-between
+   &:nth-of-type(n+2)
+      flex-direction: row-reverse
+      margin-top: 50px
+      .quality__img
+         img
+            margin: 0 0 0 -35px
+
+      .func__txt
+         max-width: 630px
+
+.quality__img
+   img
+      margin: 0 0 0 auto
+
+.quality__grid
+   display: grid
+   grid-template-columns: 1fr 1fr
+   grid-template-areas: ".."
+   gap: 0 45px
+   padding: 15px 0 40px
+   >div
+      display: flex
+      // align-items: center
+
+.quality__grid__txt
+   color: #5b5b5b
+   font-size: clamp(16px, 2vw, 20px)
+   margin-left: 30px
+   b
+      font-size: clamp(20px, 2vw, 32px)
+      color: #202020
+
+//media*****************************************************
+
+@media (max-width: 1441px)
+   .fun
+      padding: 2em
+      position: relative
+   .fun__head
+      // max-width: 75%
+      max-width: max-content
+      margin: 0 auto
+   .fun__logo
+      position: absolute
+      left: 2em
+   .fun__grid
+      margin-top: 4em
+      gap: 0 30px
+
+   .display__abs
+      left: 2em
+
+   .func__txt
+      max-width: 40%
+      margin: 0 !important
+      padding: 0 2em !important
+      box-sizing: content-box
+   .func__row:nth-of-type(n+2)
+      padding-top: 4em
+
+   .android
+      padding: 2em
+
+   .service__head
+      padding: 2em
+   .service__wrap
+      padding: 2em 0 2em 2em
+   .service__txt
+      margin-right: 2em
+
+   .fitnes
+      padding: 2em
+
+   .du__row
+      padding: 0 2em
+
+   .quality
+      padding-top: 4em
+   .quality__row
+      padding: 0 2em
+
+@media (max-width: 1201px)
+   .kivi .container
+      width: 960px
+      padding: 0 15px
+
+   .fun,
+   .android,
+   .service__head,
+   .fitnes
+      padding: 2em 0
+   .fun__logo
+      left: 0
+      img
+         max-width: 70%
+   .fun__grid
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: auto auto
+      grid-template-areas: "cal1 cal1" "cal2 cal3"
+      gap: 30px 30px
+      .kivi__title
+         grid-area: cal1
+      .kivi__txt
+         &:nth-of-type(1)
+            grid-area: cal2
+         &:nth-of-type(2)
+            grid-area: cal3
+
+   .func__row
+      &:nth-of-type(odd)
+         .func__img img
+            margin-left: -35px
+         .func__txt
+            padding: 0 !important
+         .gallery__kivi
+            margin-left: -35px
+            margin-right: 2em
+            img
+               margin: 0 !important
+      &:nth-of-type(even)
+         .func__img img
+            margin-right: -35px
+         .func__txt
+            padding: 0 !important
+         .gallery__kivi
+            margin-right: -35px
+            margin-left: 2em
+            img
+               margin: 0 !important
+   .func__row:nth-of-type(n+2)
+      padding-top: 2em
+
+   .android__grid
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: auto auto
+      grid-template-areas: "cal3 cal3" "cal1 cal2"
+      gap: 30px 130px
+      justify-items: center
+      .android__img
+         grid-area: cal3
+      .android__list
+         &:nth-of-type(1)
+            grid-area: cal1
+         &:nth-of-type(2)
+            grid-area: cal2
+
+   .gaming
+      padding-bottom: 2em
+
+   .du__row
+      padding: 0
+
+   .quality__row
+      padding: 0
+      &:nth-of-type(odd)
+         .func__txt
+            padding-left: 0 !important
+      &:nth-of-type(even)
+         .func__txt
+            padding-right: 0 !important
+         .quality__img
+            min-width: 50%
+   .quality__grid
+      grid-template-columns: auto
+      grid-template-rows: auto auto
+      gap: 30px 0
+
+@media (max-width: 991px)
+   .kivi .container
+      width: 720px
+
+   .fun__head
+      display: block
+   .fun__logo
+      position: unset
+      margin-bottom: 50px
+      img
+         max-width: 40%
+   .fun__grid
+      grid-template-columns: auto
+      grid-template-rows: auto auto auto
+      grid-template-areas: "cal1" "cal2" "cal3"
+      gap: 30px
+
+   .display__bg img
+      min-width: 200%
+   .display__abs
+      padding-right: 15px
+      left: 15px
+
+   .func__row
+      display: block !important
+   .func__txt
+      max-width: 100%
+      margin-top: 20px !important
+   .func__row:nth-of-type(n+2)
+      padding-top: 4em
+   .func__row:nth-of-type(even) .func__img img
+      margin: 0 auto !important
+   .func__row .kivi__txt
+      margin-top: 15px
+   .func__row .gallery__kivi
+      margin: 0 auto !important
+   .dragger img
+      min-width: 120px
+   .dragger::before,
+   .dragger::after
+      width: 1px
+   .func__row:nth-of-type(odd) .func__img img
+      margin: 0 auto !important
+   .func__row:nth-of-type(1) .func__img img
+      margin-left: -35px !important
+      margin-top: -15% !important
+   .func
+      padding-bottom: 2em
+   .func__flex >.func__i img
+      max-width: 50%
+
+   .android__grid
+      grid-template-columns: auto
+      grid-template-rows: auto auto auto
+      grid-template-areas: "cal3" "cal1" "cal2"
+      gap: 20px
+      justify-items: unset
+   .android__list .kivi__txt:nth-of-type(2)
+      margin: 20px 0
+   .android__list .kivi__txt
+      padding-left: 15px
+      min-height: 50px
+      display: flex
+      align-items: center
+      br
+         display: none
+
+   .service__wrap
+      padding-left: 15px
+      display: block
+
+   .fitnes__img
+      overflow: hidden
+      border-radius: 8px
+      img
+         min-width: 200%
+         margin-left: -100%
+      &::after
+         content: ""
+         position: absolute
+         top: 0
+         right: 0
+         left: 0
+         bottom: 0
+         background: #00000061
+   .fitnes__abs
+      z-index: 2
+      left: 15px
+      right: 30px
+   .fitnes__title
+      margin-bottom: 20px
+      text-shadow: 0px 0px 15px black
+   .fitnes__subtitle
+      text-shadow: 0px 0px 15px black
+
+   .gaming
+      .func__img
+         &:nth-of-type(1)
+            img
+               margin: 0 auto !important
+
+   .du__row
+      display: block
+   .du__img
+      margin-top: 2em
+      img
+         max-height: 400px
+         margin: 0 auto
+
+   .quality__row
+      display: block
+   .quality__row:nth-of-type(odd) .func__txt
+      padding: 0 !important
+   .quality .kivi__title
+      margin-bottom: 20px
+   .quality .kivi__txt
+      margin-top: 20px
+   .quality__row:nth-of-type(even) .func__txt
+      padding: 0 !important
+   .quality__row:nth-of-type(even) .kivi__txt
+      margin-bottom: 20px
+   .quality__grid
+      padding-bottom: 1em
+   .quality__grid>div
+      align-items: center
+
+   .hide__mob
+      display: none !important
+   .show__mob
+      display: block !important
+
+@media (max-width: 767px)
+   .kivi .container
+      width: 540px
+
+@media (max-width: 576px)
+   .kivi .container
+      width: 100%
+      box-sizing: border-box

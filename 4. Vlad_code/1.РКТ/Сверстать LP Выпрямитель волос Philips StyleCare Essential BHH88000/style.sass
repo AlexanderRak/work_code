@@ -1,0 +1,342 @@
+//default styles
+
+// body
+//    margin: 0
+
+.philips
+   // font-family: sans-serif
+   width: 100%
+   max-width: 1520px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.philips .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//logo
+
+.logo
+   position: relative
+   color: #fff
+
+.logo__abs
+   position: absolute
+   left: 80px
+   bottom: 115px
+
+.logo__txt
+   font-size: clamp(20px, 3vw, 34px)
+   margin-bottom: 70px
+
+.logo__title
+   font-size: clamp(24px, 3vw, 44px)
+   font-weight: bold
+
+//hair
+
+.philips__line
+   padding: 30px 80px
+   color: #fff
+   background-color: #7e1363
+   font-size: clamp(18px, 3vw, 48px)
+
+.hair
+   position: relative
+   color: #fff
+   .philips__note
+      position: absolute
+      font-size: clamp(12px, 1.2vw, 18px)
+      right: 80px
+      bottom: 40px
+      max-width: 400px
+
+.philips__title
+   font-size: clamp(28px, 3vw, 65px)
+   font-weight: bold
+
+.hair__cont
+   .philips__title
+      position: absolute
+      top: 80px
+      left: 80px
+
+//advantage
+
+.advantage
+   padding: 70px 80px
+
+.advantage__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   gap: 70px 80px
+   >div
+      display: flex
+      flex-direction: column
+      gap: 55px
+
+.philips__txt
+   font-size: clamp(16px, 1.3vw, 28px)
+   b
+      color: #7e1363
+
+//brush
+
+.brush
+   position: relative
+
+.brush__item
+   position: absolute
+   max-width: 480px
+   &:nth-of-type(1)
+      top: 145px
+      left: 80px
+   &:nth-of-type(2)
+      bottom: 120px
+      left: 80px
+   &:nth-of-type(3)
+      right: 80px
+      bottom: 45px
+
+//fast
+
+.fast
+   position: relative
+   color: #fff
+   .philips__title
+      min-width: max-content
+
+.fast__row
+   position: absolute
+   display: flex
+   align-items: center
+   gap: 125px
+   top: 110px
+   width: max-content
+   max-width: 100%
+   padding: 0 80px
+   box-sizing: border-box
+   right: 50%
+   transform: translateX(50%)
+
+//fiveminute
+
+.fiveminute
+   padding: 0 80px 0 0
+   .philips__note
+      padding-top: 120px
+
+.fiveminute__row
+   display: flex
+   align-items: center
+
+.fiveminute__cont
+   display: flex
+   flex-direction: column
+   gap: 60px
+   max-width: 720px
+
+//temperature
+
+.temperature
+   position: relative
+
+.temperature__abs
+   position: absolute
+   top: 130px
+   left: 80px
+
+.temperature__txt
+   font-size: clamp(24px, 3vw, 42px)
+   color: #7e1363
+
+//nature
+
+.nature
+   position: relative
+   .philips__note
+      position: absolute
+      max-width: 480px
+      right: 80px
+      bottom: 90px
+
+.nature__abs
+   position: absolute
+   right: 80px
+   top: 240px
+   max-width: 480px
+
+.nature__title
+   font-size: clamp(24px, 3vw, 50px)
+   color: #7e1363
+
+//philips__footer
+
+.philips__footer
+   background-color: #7e1363
+   padding: 90px 0
+
+//media*****************************************************
+
+@media (max-width: 1341px)
+   .nature__abs,
+   .nature .philips__note
+      right: 50px
+
+@media (max-width: 1201px)
+   .philips .container
+      width: 960px
+      padding: 0 15px
+
+   .logo__abs
+      left: 1em
+
+   .philips__line
+      padding: 1em 2em
+
+   .hair__cont .philips__title
+      left: 1em
+
+   .advantage
+      padding: 2em 0
+   .advantage__grid
+      gap: 2em 2em
+   .advantage__grid>div
+      gap: 1em
+      text-align: center
+
+   .brush__item
+      max-width: 30vw
+      &:nth-of-type(1),
+      &:nth-of-type(2)
+         left: 1em
+      &:nth-of-type(3)
+         right: 1em
+
+   .fast__row
+      padding: 0
+      top: 2em
+
+   .fiveminute
+      padding: 0
+   .fiveminute__img img
+      min-width: 120%
+      margin-left: -20%
+
+   .temperature__abs
+      left: 1em
+
+   .nature__abs, .nature .philips__note
+      right: 1em
+      max-width: 38vw
+
+@media (max-width: 991px)
+   .philips .container
+      width: 720px
+
+   .logo
+      display: flex
+      flex-direction: column-reverse
+      color: #000
+   .logo__abs
+      position: unset
+      padding: 1em 0
+   .logo__txt
+      margin-bottom: 1rem
+
+   .philips__line
+      padding: 1em
+
+   .hair
+      background-color: #dd9fa9
+      padding: 1em 0
+   .hair__cont .philips__title,
+   .hair .philips__note
+      position: unset
+      br
+         display: none
+
+   .advantage__grid
+      grid-template-columns: repeat(2, 1fr)
+
+   .brush
+      padding-top: 1em
+      background-color: #c9c7cd
+   .brush__cont
+      display: flex
+      flex-direction: column
+      gap: 1em
+   .brush__item
+      position: unset
+      max-width: 100%
+   .brush__img img
+      min-width: 150%
+      margin-left: -50%
+
+   .fast
+      color: #000
+   .fast__row
+      position: unset
+      transform: unset
+      gap: 1rem
+      flex-direction: column
+      align-items: unset
+      padding-bottom: 1em
+      .philips__title
+         min-width: unset
+      .philips__txt br
+         display: none
+
+   .fiveminute__row
+      flex-direction: column-reverse
+   .fiveminute .philips__note
+      padding-top: 2em
+   .fiveminute__cont
+      padding-top: 1em
+      gap: 1em
+
+   .temperature__abs
+      position: unset
+      padding: 1em 0
+
+   .nature__abs, .nature .philips__note
+      position: unset
+      max-width: 100%
+      padding: 1em 0
+
+   .philips__footer
+      padding: 2em 0
+      img
+         max-width: 25vw
+
+   .howtouse .advantage__grid
+      grid-template-columns: 1fr
+
+@media (max-width: 767px)
+   .philips .container
+      width: 540px
+
+@media (max-width: 576px)
+   .philips .container
+      width: 100%
+      box-sizing: border-box

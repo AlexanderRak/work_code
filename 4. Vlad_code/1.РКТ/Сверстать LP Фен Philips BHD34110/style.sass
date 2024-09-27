@@ -1,0 +1,449 @@
+//default styles
+
+// body
+//    margin: 0
+
+.philips
+   // font-family: sans-serif
+   width: 100%
+   max-width: 1500px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.philips .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//logo
+
+.logo
+   position: relative
+   color: #fff
+
+.logo__i
+   position: absolute
+   top: -20px
+   left: 20px
+
+.logo__txt
+   font-size: clamp(18px, 2vw, 32px)
+   background-color: rgba(209, 120, 120, .8)
+   padding: 35px 30px
+   position: absolute
+   bottom: 0
+   width: 100%
+   b
+      display: block
+      margin-top: 1rem
+
+//func
+
+.func
+   position: relative
+
+.func__abs
+   position: absolute
+   bottom: 50%
+   transform: translateY(50%)
+   left: 150px
+   max-width: 450px
+   display: flex
+   flex-direction: column
+   gap: 65px
+
+.func__item
+   display: flex
+   align-items: center
+   gap: 40px
+
+.func__i
+   min-width: max-content
+
+.func__txt
+   font-size: clamp(16px, 1.2vw, 20px)
+
+//fast
+
+.fast
+   background-color: #f9e2d9
+   padding-top: 40px
+
+.fast__cont
+   text-align: center
+   padding: 0 164px 60px
+
+.philips__title
+   font-size: clamp(24px, 2vw, 40px)
+   color: #c15c6f
+   font-weight: bold
+   margin-bottom: 1rem
+
+.philips__txt
+   font-size: 16px
+
+//options
+
+.options
+   background-color: #f9e2d9
+   margin-top: -10%
+
+.philips__sub
+   font-size: clamp(18px, 2vw, 22px)
+   font-weight: bold
+   margin-bottom: 1rem
+   color: #c15c6f
+
+.philips__note
+   margin-top: 1rem
+   font-size: 13px
+
+.options__row
+   display: flex
+   align-items: center
+   gap: 200px
+   padding: 0 30px 0 150px
+
+.options__cont
+   max-width: 420px
+
+.options__reverse
+   flex-direction: row-reverse
+   padding: 0 150px 0 30px
+
+//results
+
+// .results
+//    background-color: #f9e2d9
+//    padding-top: 60px
+//    // position: relative
+//    color: #fff
+.results
+   background-color: #f9e2d9
+   padding-top: 60px
+   color: #fff
+   .results__title
+      text-align: center
+
+.results__wrap
+   background-color: #d17878
+   padding-top: 312px
+   border-radius: 747px
+   overflow: hidden
+
+.results__cont
+   max-width: 1090px
+   margin: 0 auto
+   position: relative
+
+.results__items
+   display: flex
+   justify-content: space-between
+
+.results__item
+   &:nth-of-type(2)
+      max-width: 460px
+   &:nth-of-type(3)
+      bottom: 0px
+      right: 50%
+      transform: translateX(50%)
+      max-width: 660px
+      position: absolute
+
+.results__txt
+   font-weight: bold
+   font-size: 20px
+   margin-bottom: 1rem
+
+.results__cont__img
+   margin-top: 20px
+   padding-bottom: 130px
+
+.results__img
+   .results__item
+      text-align: center
+      max-width: 680px
+      margin: 70px auto -120px auto
+      position: relative
+
+.results__title
+   font-weight: bold
+   font-size: clamp(24px, 2vw, 40px)
+   margin-bottom: 80px
+
+//complete
+
+.complete
+   background-color: #f9e2d9
+   padding-top: 95px
+   .philips__title
+      text-align: center
+
+.complete__row
+   display: flex
+   gap: 2em
+   justify-content: center
+   margin-top: 60px
+
+.complete__txt
+   font-size: 16px
+
+//changeyour
+
+.changeyour
+   padding: 85px 300px 120px
+   background-color: #f9e2d9
+   .philips__title
+      text-align: center
+
+.changeyour__sub
+   font-weight: bold
+   font-size: 12px
+   text-align: center
+   color: #c15c6f
+
+.changeyour__img
+   margin-bottom: 20px
+
+.changeyour__grid
+   display: grid
+   grid-template-columns: repeat(7, 1fr)
+   grid-template-areas: "cal0 cal1 cal2 cal3 cal4 cal5 cal6"
+   >div
+      padding: 20px
+      text-align: center
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+
+.cal0
+   grid-area: cal0
+
+.cal1
+   grid-area: cal1
+   color: #fff
+   background-color: #d17878
+   .changeyour__sub
+      color: #fff
+
+.cal2
+   grid-area: cal2
+
+.cal3
+   grid-area: cal3
+   background-color: #f5d5c8
+
+.cal4
+   grid-area: cal4
+
+.cal5
+   grid-area: cal5
+   background-color: #f5d5c8
+
+.cal6
+   grid-area: cal6
+
+.cal7
+   grid-area: cal7
+   padding-left: 0 !important
+   text-align: left !important
+   display: block !important
+
+.changeyour__title
+   font-weight: bold
+   font-size: 14px
+   color: #c15c6f
+
+.changeyour__txt
+   font-size: 14px
+
+.changeyour__grid__two
+   display: grid
+   grid-template-columns: repeat(7, 1fr)
+   grid-template-areas: "cal7 cal1 cal2 cal3 cal4 cal5 cal6"
+   border-top: solid 1px white
+   >div
+      padding: 20px
+      text-align: center
+      display: flex
+      align-items: center
+      justify-content: center
+
+.changeyour__table
+   margin-top: 70px
+
+//philips__block
+
+.philips__block
+   padding: 110px 0
+   background-color: #d17878
+
+.show__mob
+   display: none !important
+
+//media*****************************************************
+
+@media (max-width: 1540px)
+   .changeyour
+      padding-right: 10vw
+      padding-left: 10vw
+
+@media (max-width: 1201px)
+   .philips .container
+      width: 960px
+      padding: 0 15px
+
+   .logo__txt
+      left: 0
+      padding: 1em
+
+   .func__abs
+      left: 1em
+      gap: 1em
+   .func__item
+      gap: 1em
+   .func__i
+      min-width: 8vw
+      max-width: 8vw
+
+   .options__row
+      padding: 0
+      gap: 4em
+
+   .results__wrap
+      padding-top: 110px
+      .container
+         max-width: 70vw
+   .results__cont__img
+      max-width: 50vw
+      margin: 1em auto 0
+   .results__item:nth-of-type(2)
+      max-width: 25vw
+   .results__item:nth-of-type(3)
+      width: 50vw
+
+   .complete
+      padding-top: 2em
+   .complete__row
+      margin-top: 2em
+
+   .changeyour
+      padding: 2em 0
+
+   .philips__block
+      padding: 4em 0
+
+@media (max-width: 991px)
+   .philips .container
+      width: 720px
+
+   .logo
+      background-color: rgba(209, 120, 120, .8)
+   .logo__i
+      max-width: 30vw
+      left: 0
+      top: -2vw
+   .logo__txt
+      position: unset
+      background: unset
+      padding: 1em 0
+
+   .changeyour__table__wrap
+      overflow-x: scroll
+   .changeyour__table
+      min-width: 960px
+
+   .func
+      display: flex
+      flex-direction: column-reverse
+      background-color: #f9e2d9
+   .func__abs
+      transform: unset
+      position: unset
+      padding: 1em 0
+   .func__i
+      min-width: 20vw
+      max-width: 20vw
+   .func__img img
+      min-width: 150%
+      margin-left: -50%
+
+   .fast__cont
+      padding: 0 0 2em 0
+
+   .options
+      margin-top: unset
+   .options__row
+      flex-direction: column
+      gap: 1em
+   .options__reverse
+      margin-top: 2em
+
+   .hide__mob
+      display: none !important
+   .show__mob
+      display: block !important
+
+   .results__wrap
+      padding-top: 2em
+      border-radius: 0
+   .results__wrap .container
+      max-width: unset
+   .results__item:nth-of-type(3)
+      position: unset
+   .results__cont
+      display: flex
+      flex-direction: column-reverse
+   .results__cont__img
+      max-width: unset
+      margin: 0
+      padding-bottom: 1em
+   .results__items
+      flex-direction: column
+      gap: 2em
+      >div
+         max-width: 100% !important
+         width: 100% !important
+         transform: unset !important
+   .results .results__title
+      margin-bottom: 2em
+   .results__img .results__item
+      margin-top: 2em
+      margin-bottom: 0
+
+   .complete__row
+      gap: 1em
+
+   .changeyour__table
+      margin-top: 2em
+
+   .philips__block
+      padding: 2em 0
+
+@media (max-width: 767px)
+   .philips .container
+      width: 540px
+
+@media (max-width: 576px)
+   .philips .container
+      width: 100%
+      box-sizing: border-box

@@ -1,0 +1,1407 @@
+//default styles
+
+// body
+//     margin: 0
+
+.wmf
+    width: 100%
+    max-width: 1920px
+    margin: 0 auto
+    height: auto
+    display: block
+    box-sizing: border-box
+    overflow: hidden
+    background-color: #000
+    color: #fff
+    img
+        margin: 0 auto
+        opacity: 1 !important
+        max-width: 100%
+        display: block
+        height: auto
+        &:hover
+            opacity: 1 !important
+    div
+        line-height: normal
+    ul
+        list-style-type: none
+        margin: 0
+        padding: 0
+    video
+        max-width: 100%
+        display: block
+        margin: 0 auto
+
+.features-desc__text
+    img
+        margin-bottom: 0rem
+
+//end default styles
+
+.wmf .container
+    width: 100%
+    max-width: 100%
+    margin: 0 auto
+
+.wmf__title
+    font-weight: bold
+    text-transform: uppercase
+    font-size: clamp(18px, 3vw, 80px)
+    color: #D9D9D9
+    position: relative
+    b
+        font-size: clamp(36px, 4vw, 80px)
+
+.wmf__title__small
+    font-weight: bold
+    text-transform: uppercase
+    font-size: clamp(18px, 3vw, 50px)
+    color: #D9D9D9
+
+.wmf__txt
+    font-size: clamp(12px, 1.2vw, 20px)
+.wmf__small__txt
+    font-size: clamp(12px, 1.2vw, 15px)
+
+.wmf__opacity
+    font-size: clamp(40px, 4vw, 80px)
+    // font-size: clamp(40px, 7vw, 80px)
+    font-weight: bold
+    background-image: linear-gradient(180deg, #ffffff 60%, #ffffff00)
+    background-clip: text
+    // -webkit-background-clip: text
+    -webkit-text-stroke: 1px #ffffff00
+    mix-blend-mode: difference
+    color: #000
+    opacity: .8
+    line-height: 96px !important
+
+//modern
+
+.modern
+    padding: 95px 0 10em 0
+    // .wmf__opacity
+    //     position: absolute
+    //     bottom: 70%
+    //     right: 50%
+    //     transform: translate(50%, 50%)
+    //     width: max-content
+
+.modern__txt
+    text-align: center
+    position: relative
+    margin-bottom: 4em
+    .wmf__title
+        position: relative
+        z-index: 2
+        margin-top: -15px
+
+.modern__cont
+    position: relative
+
+.modern__img
+    padding-left: 8em
+
+.modern__list
+    li
+        width: 25px
+        height: 25px
+        background-color: #fff
+        border-radius: 50%
+        position: absolute
+        cursor: pointer
+        z-index: 2
+        &::before,
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            border: 1px solid #ffffff
+            border-radius: 50%
+            width: 80px
+            height: 80px
+            box-sizing: border-box
+            animation: pulse 2s linear infinite
+            position: absolute
+            right: -27px
+            top: -27px
+        &::after
+            animation-delay: 1s
+        &:nth-of-type(1)
+            top: 1%
+            right: 40%
+        // &:nth-of-type(2)
+        //     top: 34%
+        //     left: 32%
+        // &:nth-of-type(3)
+        //     top: 37%
+        //     left: 42%
+        &:nth-of-type(2)
+            top: 47%
+            right: 37%
+        &:nth-of-type(3)
+            top: 87%
+            right: 42%
+        &:nth-of-type(4)
+            top: 70%
+            left: 32%
+
+.modern__tabs__cont
+    max-width: max-content
+    position: absolute
+    &:nth-of-type(1)
+        top: -2%
+        right: 24%
+        .modern__tabs__cont__txt
+            margin-left: 20%
+            margin-right: -20%
+    // &:nth-of-type(2)
+    //     top: 15%
+    //     left: 15%
+    //     .modern__tabs__cont__txt
+    //         text-align: right
+    //         margin-left: -15%
+    // &:nth-of-type(3)
+    //     top: -2%
+    //     left: 15%
+    //     .modern__tabs__cont__txt
+    //         text-align: right
+    //         margin-right: 30px
+    &:nth-of-type(2)
+        top: 30%
+        right: 7%
+        display: flex
+        align-items: center
+        .modern__tabs__cont__txt
+            margin-left: 30px
+    &:nth-of-type(3)
+        top: 82%
+        left: 45%
+        display: flex
+        flex-direction: row-reverse
+        align-items: center
+        .modern__tabs__cont__txt
+            text-align: right
+            margin-right: 30px
+    &:nth-of-type(4)
+        top: 58%
+        left: 18%
+        .modern__tabs__cont__txt
+            text-align: right
+            margin-right: 215px
+
+.modern__tabs__cont__row
+    display: flex
+    align-items: center
+
+.modern__tabs__cont__reverse
+    flex-direction: row-reverse
+
+.modern__tabs__cont__txt
+    font-size: clamp(12px, 1.2vw, 15px)
+    max-width: 230px
+    box-sizing: border-box
+    margin-top: 25px
+
+@keyframes pulse
+    0%
+        opacity: 0
+    50%
+        opacity: 1
+    100%
+        transform: scale(2)
+        opacity: 0
+
+.hide__cont
+    display: none !important
+
+.show__cont
+    display: block !important
+
+.fade
+    animation-name: fade
+    animation-duration: 1.5s
+
+@keyframes fade
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+//case
+
+.case
+    max-width: 1300px
+    margin: 0 auto
+    box-sizing: border-box
+
+.case__head
+    margin-bottom: 60px
+    .wmf__title
+        text-align: center
+        margin-top: -1%
+    .wmf__opacity
+        text-align: center
+
+.case__row
+    display: flex
+    // align-items: center
+
+.case__txt
+    font-size: clamp(18px, 1.2vw, 25px)
+    margin: 15px 0 30px
+
+.case__cal
+    position: relative
+    flex: 1
+    .wmf__txt
+        margin-bottom: 20px
+    &:nth-of-type(odd)
+        margin-top: 10%
+    &:nth-of-type(2)
+        margin: 0 2em
+        position: relative
+        flex: 1.6
+    .wmf__opacity
+        position: absolute
+        text-transform: uppercase
+        bottom: 25%
+        right: 120%
+        transform: translate(50%, 50%)
+        z-index: 0
+
+.case__i
+    position: absolute
+    top: -4em
+    img
+        margin: 0
+
+.case__svg
+    position: relative
+    z-index: 2
+    path
+        stroke: white
+        stroke-width: 1
+        opacity: 0
+        fill: #fff
+        &:nth-of-type(1)
+            stroke-dasharray: 2450
+            stroke-dashoffset: 2450
+        &:nth-of-type(2)
+            stroke-dasharray: 1325
+            stroke-dashoffset: 1325
+        &:nth-of-type(3)
+            stroke-dasharray: 695
+            stroke-dashoffset: 695
+        &:nth-of-type(4)
+            stroke-dasharray: 1390
+            stroke-dashoffset: 1390
+        &:nth-of-type(5)
+            stroke-dasharray: 210
+            stroke-dashoffset: 210
+        &:nth-of-type(6)
+            stroke-dasharray: 200
+            stroke-dashoffset: 200
+        &:nth-of-type(7)
+            stroke-dasharray: 1220
+            stroke-dashoffset: 1220
+        &:nth-of-type(8)
+            stroke-dasharray: 680
+            stroke-dashoffset: 680
+        &:nth-of-type(9)
+            stroke-dasharray: 630
+            stroke-dashoffset: 630
+        &:nth-of-type(10)
+            stroke-dasharray: 360
+            stroke-dashoffset: 360
+            stroke-width: 5
+            fill: #000
+        &:nth-of-type(11)
+            stroke-dasharray: 52
+            stroke-dashoffset: 52
+            stroke-width: 5
+            fill: #000
+
+.cm
+    li
+        position: absolute
+        font-size: 18px
+        z-index: 2
+        &:nth-of-type(1)
+            right: 50%
+            transform: translateX(50%)
+            top: -25px
+        &:nth-last-of-type(2)
+            left: -25px
+            bottom: 50%
+            transform: translateY(50%) rotate(-90deg)
+        &:nth-of-type(3)
+            right: -30px
+            bottom: 9%
+            transform: rotate(65deg)
+
+@keyframes draw
+    0%
+        fill: black
+        opacity: 1
+    100%
+        stroke-dashoffset: 0
+        opacity: 1
+
+//display
+
+.display
+    padding-top: 190px
+    padding-bottom: 170px
+
+.display__mob
+    display: none !important
+
+.display__head
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    max-width: 1040px
+    // max-width: 900px
+    box-sizing: border-box
+    margin: 0 auto 60px
+    margin-left: 16%
+    .wmf__opacity
+        margin-right: -41%
+        text-transform: uppercase
+
+.display__title
+    font-size: clamp(18px, 4vw, 80px)
+    font-weight: bold
+    opacity: .8
+    text-transform: uppercase
+    position: relative
+    z-index: 2
+    line-height: 96px !important
+
+.display__slider
+    padding-top: 100px
+    position: relative
+    .swiper
+        overflow: visible
+    .swiper-slide-active
+        position: relative
+        background-color: rgba(217, 217, 217, .15)
+        &::after,
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            width: 45px
+            height: 45px
+            background: url("https://cdn.comfy.ua/media/x/img3/wmf660/angle.svg") no-repeat center / contain
+        &::before
+            top: -8px
+            right: -8px
+        &::after
+            bottom: -8px
+            left: -8px
+            transform: scale(-1, -1)
+    .arrows
+        display: flex
+        justify-content: center
+        margin-bottom: 40px
+    .swiper-button-prev-one,
+    .swiper-button-next-one
+        position: unset
+        cursor: pointer
+        pointer-events: auto
+        &::after
+            display: none
+    .swiper-button-prev-one
+        margin-right: 30px
+        img
+            transform: scale(-1, 1)
+            max-width: 75px
+    .swiper-slide
+        padding: 0 .5em
+        box-sizing: border-box
+        // padding: 1.5em 0 0 0
+
+.display__slider__abs
+    position: absolute
+    width: 100%
+    max-width: 970px
+    // max-width: 860px
+    right: 50%
+    top: 14%
+    transform: translateX(50%)
+    z-index: 2
+    pointer-events: none
+    .wmf__title__small
+        font-size: clamp(18px,3vw,45px)
+        text-transform: unset
+        opacity: .8
+    .wmf__opacity
+        -webkit-text-stroke: 2px rgba(255,255,255,0)
+        font-size: clamp(40px, 6vw, 111px)
+        margin-bottom: 0
+        // font-size: clamp(40px, 7vw, 111px)
+
+.swiper__txt
+    text-align: center
+    // margin-top: -5%
+    margin-bottom: 5%
+    font-weight: bold
+    font-size: clamp(10px, 1.2vw, 16px)
+
+.display__img
+    position: relative
+    video
+        // max-width: 45%
+        max-width: 864px
+        position: absolute
+        right: 50%
+        bottom: 45%
+        transform: translate(50%, 50%)
+
+//clean
+
+.clean
+    position: relative
+    margin-bottom: 160px
+
+.clean__abs
+    position: absolute
+    right: 35%
+    bottom: 3%
+
+.some__two svg
+    margin: 0 0 2em auto
+    display: block
+    max-width: 20%
+
+.some__three svg
+    max-width: 45%
+    display: block
+    margin: 0 0 0 auto
+
+.clean__txt
+    margin-top: -25%
+    width: 100%
+    max-width: 750px
+    // max-width: 700px
+    box-sizing: border-box
+
+.clean__abs__one
+    position: absolute
+
+.clean__bg
+    max-width: max-content
+    position: relative
+    img
+        margin: 0
+    video
+        position: absolute
+        top: -1%
+        right: -1%
+        max-width: 26%
+
+.some__two
+    svg
+        path
+            stroke: white
+            stroke-width: 1
+        >g
+            path
+                stroke-dasharray: 268
+                stroke-dashoffset: 268
+            >g
+                path
+                    &:nth-of-type(1)
+                        stroke-dasharray: 1335
+                        stroke-dashoffset: 1335
+                    &:nth-of-type(2)
+                        stroke-dasharray: 1102
+                        stroke-dashoffset: 1102
+                    &:nth-of-type(3)
+                        stroke-dasharray: 705
+                        stroke-dashoffset: 705
+                    &:nth-of-type(4)
+                        stroke-dasharray: 290
+                        stroke-dashoffset: 290
+                    &:nth-of-type(5)
+                        stroke-dasharray: 155
+                        stroke-dashoffset: 155
+                    &:nth-of-type(6)
+                        stroke-dasharray: 670
+                        stroke-dashoffset: 670
+                    &:nth-of-type(7)
+                        stroke-dasharray: 605
+                        stroke-dashoffset: 605
+                    &:nth-of-type(8)
+                        stroke-dasharray: 165
+                        stroke-dashoffset: 165
+                    &:nth-of-type(9)
+                        stroke-dasharray: 375
+                        stroke-dashoffset: 375
+                    &:nth-of-type(10),
+                    &:nth-of-type(11)
+                        stroke-dasharray: 100
+                        stroke-dashoffset: 100
+                    &:nth-of-type(12)
+                        stroke-dasharray: 659
+                        stroke-dashoffset: 659
+                    &:nth-of-type(13)
+                        stroke-dasharray: 506
+                        stroke-dashoffset: 506
+                    &:nth-of-type(14)
+                        stroke-dasharray: 125
+                        stroke-dashoffset: 125
+                    &:nth-of-type(15)
+                        stroke-dasharray: 20
+                        stroke-dashoffset: 20
+                    &:nth-of-type(16)
+                        stroke-dasharray: 208
+                        stroke-dashoffset: 208
+                    &:nth-of-type(19)
+                        stroke-dasharray: 600
+                        stroke-dashoffset: 600
+                    &:nth-of-type(17),
+                    &:nth-of-type(18),
+                    &:nth-of-type(21),
+                    &:nth-of-type(20),
+                    &:nth-of-type(22)
+                        stroke-dasharray: 82
+                        stroke-dashoffset: 82
+
+.some__three
+    svg
+        path
+            stroke: white
+            stroke-width: 1
+            &:nth-of-type(1)
+                stroke-dasharray: 640
+                stroke-dashoffset: 640
+            &:nth-of-type(2)
+                stroke-dasharray: 750
+                stroke-dashoffset: 750
+            &:nth-of-type(3)
+                stroke-dasharray: 410
+                stroke-dashoffset: 410
+            &:nth-of-type(4)
+                stroke-dasharray: 340
+                stroke-dashoffset: 340
+            &:nth-of-type(5)
+                stroke-dasharray: 200
+                stroke-dashoffset: 200
+            &:nth-of-type(6)
+                stroke-dasharray: 200
+                stroke-dashoffset: 200
+            &:nth-of-type(7)
+                stroke-dasharray: 130
+                stroke-dashoffset: 130
+            &:nth-of-type(8)
+                stroke-dasharray: 120
+                stroke-dashoffset: 120
+            &:nth-of-type(9)
+                stroke-dasharray: 100
+                stroke-dashoffset: 100
+            &:nth-of-type(10)
+                stroke-dasharray: 70
+                stroke-dashoffset: 70
+            &:nth-of-type(11)
+                stroke-dasharray: 50
+                stroke-dashoffset: 50
+            &:nth-of-type(12)
+                stroke-dasharray: 60
+                stroke-dashoffset: 60
+            &:nth-of-type(13)
+                stroke-dasharray: 60
+                stroke-dashoffset: 60
+            &:nth-of-type(14)
+                stroke-dasharray: 390
+                stroke-dashoffset: 390
+            &:nth-of-type(15)
+                stroke-dasharray: 390
+                stroke-dashoffset: 390
+            &:nth-of-type(16)
+                stroke-dasharray: 385
+                stroke-dashoffset: 385
+            &:nth-of-type(17)
+                stroke-dasharray: 240
+                stroke-dashoffset: 240
+            &:nth-of-type(18)
+                stroke-dasharray: 260
+                stroke-dashoffset: 260
+            &:nth-of-type(19)
+                stroke-dasharray: 225
+                stroke-dashoffset: 225
+            &:nth-of-type(20)
+                stroke-dasharray: 25
+                stroke-dashoffset: 25
+            &:nth-of-type(21)
+                stroke-dasharray: 470
+                stroke-dashoffset: 470
+            &:nth-of-type(22)
+                stroke-dasharray: 195
+                stroke-dashoffset: 195
+            &:nth-of-type(23)
+                stroke-dasharray: 200
+                stroke-dashoffset: 200
+            &:nth-of-type(24)
+                stroke-dasharray: 30
+                stroke-dashoffset: 30
+            &:nth-of-type(25)
+                stroke-dasharray: 280
+                stroke-dashoffset: 280
+            &:nth-of-type(26)
+                stroke-dasharray: 305
+                stroke-dashoffset: 305
+            &:nth-of-type(27)
+                stroke-dasharray: 925
+                stroke-dashoffset: 925
+            &:nth-of-type(28)
+                stroke-dasharray: 145
+                stroke-dashoffset: 145
+            &:nth-of-type(29)
+                stroke-dasharray: 270
+                stroke-dashoffset: 270
+            &:nth-of-type(30)
+                stroke-dasharray: 250
+                stroke-dashoffset: 250
+            &:nth-of-type(31)
+                stroke-dasharray: 55
+                stroke-dashoffset: 55
+            &:nth-of-type(32)
+                stroke-dasharray: 60
+                stroke-dashoffset: 60
+            &:nth-of-type(33)
+                stroke-dasharray: 45
+                stroke-dashoffset: 45
+            &:nth-of-type(34)
+                stroke-dasharray: 290
+                stroke-dashoffset: 290
+            &:nth-of-type(35)
+                stroke-dasharray: 90
+                stroke-dashoffset: 90
+            &:nth-of-type(36)
+                stroke-dasharray: 45
+                stroke-dashoffset: 45
+            &:nth-of-type(37)
+                stroke-dasharray: 45
+                stroke-dashoffset: 45
+            &:nth-of-type(38)
+                stroke-dasharray: 60
+                stroke-dashoffset: 60
+            &:nth-of-type(39)
+                stroke-dasharray: 80
+                stroke-dashoffset: 80
+            &:nth-of-type(40)
+                stroke-dasharray: 35
+                stroke-dashoffset: 35
+            &:nth-of-type(41)
+                stroke-dasharray: 370
+                stroke-dashoffset: 370
+            &:nth-of-type(42)
+                stroke-dasharray: 130
+                stroke-dashoffset: 130
+            &:nth-of-type(43)
+                stroke-dasharray: 45
+                stroke-dashoffset: 45
+            &:nth-of-type(44)
+                stroke-dasharray: 55
+                stroke-dashoffset: 55
+            &:nth-of-type(45)
+                stroke-dasharray: 70
+                stroke-dashoffset: 70
+            &:nth-of-type(46)
+                stroke-dasharray: 105
+                stroke-dashoffset: 105
+            &:nth-of-type(47)
+                stroke-dasharray: 95
+                stroke-dashoffset: 95
+            &:nth-of-type(48)
+                stroke-dasharray: 70
+                stroke-dashoffset: 70
+            &:nth-of-type(49)
+                stroke-dasharray: 35
+                stroke-dashoffset: 35
+            &:nth-of-type(50)
+                stroke-dasharray: 140
+                stroke-dashoffset: 140
+            &:nth-of-type(51)
+                stroke-dasharray: 130
+                stroke-dashoffset: 130
+            &:nth-of-type(52)
+                stroke-dasharray: 105
+                stroke-dashoffset: 105
+            &:nth-of-type(53)
+                stroke-dasharray: 40
+                stroke-dashoffset: 40
+            &:nth-of-type(54)
+                stroke-dasharray: 55
+                stroke-dashoffset: 55
+            &:nth-of-type(55)
+                stroke-dasharray: 55
+                stroke-dashoffset: 55
+            &:nth-of-type(56)
+                stroke-dasharray: 145
+                stroke-dashoffset: 145
+            &:nth-of-type(57)
+                stroke-dasharray: 35
+                stroke-dashoffset: 35
+
+@keyframes draw-three
+    100%
+        stroke-dashoffset: 0
+
+//milk
+
+.milk
+    .milk__txt
+        opacity: .8
+    .wmf__txt
+        font-size: clamp(12px,1.2vw,30px)
+
+.milk__row
+    display: flex
+    max-width: 1000px
+    width: 100%
+    box-sizing: border-box
+    margin: 0 auto
+    >div
+        flex: 1
+        box-sizing: border-box
+
+.milk__txt
+    padding-top: 8em
+    padding-right: 2em
+
+//wmf__block__video
+
+// .wmf__block__video
+//     video
+//         min-width: 110%
+//         margin-left: -5%
+
+//design
+
+.design__wrap
+    position: relative
+    max-width: 1440px
+    width: 100%
+    margin: 0 auto
+
+.design__abs
+    margin: 0 auto
+    box-sizing: border-box
+    position: absolute
+    top: 2em
+    max-width: 580px
+    box-sizing: border-box
+    right: 0
+    .wmf__opacity
+        mix-blend-mode: unset
+        color: transparent
+        background-image: unset
+        -webkit-text-stroke: 1px #ffffff
+    .wmf__title__small
+        margin-bottom: 1rem
+
+//complete
+
+.complete
+    width: 100%
+    max-width: 1020px
+    box-sizing: border-box
+    padding: 100px 0 70px 0
+    margin: 0 auto
+
+.complete__head
+    text-align: center
+    margin-bottom: 25px
+
+.complete__grid
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr 1fr
+    gap: 20px 20px
+
+.complete__cal
+    background-color: rgba(217, 217, 217, .15)
+    padding: 20px 3em 30px
+    box-sizing: border-box
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    &::after,
+    &::before
+        content: ""
+        display: block
+        position: absolute
+        width: 45px
+        height: 45px
+        background: url("https://cdn.comfy.ua/media/x/img3/wmf660/angle.svg") no-repeat center / contain
+    &::before
+        top: -8px
+        right: -8px
+    &::after
+        bottom: -8px
+        left: -8px
+        transform: scale(-1, -1)
+
+.complete__txt
+    margin-top: 20px
+    display: flex
+    &::before
+        content: ""
+        display: block
+        min-width: 4px
+        height: 4px
+        border-radius: 50%
+        background-color: #fff
+        margin-top: .5em
+        margin-right: 1em
+
+.complete__img img
+    max-height: 205px
+
+//wmf__block
+
+.wmf__block
+    position: relative
+
+.wmf__slider
+    .arrows__two
+        position: absolute
+        display: flex
+        justify-content: space-between
+        bottom: 50%
+        right: 50%
+        width: 90vw
+        transform: translate(50%, 50%)
+        z-index: 2
+        >div
+            position: unset
+    .swiper-button-next-two,
+    .swiper-button-prev-two
+        width: 55px
+        cursor: pointer
+        &::after
+            display: none
+    .swiper-button-prev-two
+        margin-right: 30px
+        img
+            transform: scale(-1, 1)
+    .swiper-pagination-two
+        // top: 4% !important
+        // left: 40% !important
+        // max-width: max-content
+        position: absolute
+        right: 50%
+        transform: translateX(50%)
+        max-height: max-content
+        z-index: 1
+        margin-bottom: 2.5em
+    .swiper-pagination-bullet
+        width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,14px))
+        height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,14px))
+        background-color: unset
+        border: solid 4px white
+        box-sizing: border-box
+        opacity: 1
+    .swiper-pagination-bullet-active
+        background-color: #fff
+
+//wmf__video
+
+.wmf__video
+    padding: 115px 0
+
+.slider-container
+    max-width: 850px
+    margin: 0 auto
+
+.slider-container
+    max-width: 850px
+    position: relative
+    margin: 0 auto
+
+.wmf__video
+    .swiper-button-prev-three,
+    .swiper-button-next-three
+        background: unset
+        border: none
+        cursor: pointer
+        &::after
+            display: none
+    .swiper-button-prev-three
+        margin-right: 20px
+        img
+            transform: scale(-1, 1)
+
+    .slider-top
+        width: 100%
+        margin-bottom: 30px
+        position: relative
+        .wmf__title__small
+            text-align: center
+
+    .slider-buttons
+        display: flex
+        position: absolute
+        bottom: 25%
+        transform: translateY(50%)
+        right: 0
+        >div
+            position: unset
+            width: 55px
+
+    .swiper-slide
+        cursor: pointer
+        iframe
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+.slider
+    display: flex
+    flex-direction: column-reverse
+
+.slider-nav
+    overflow: hidden
+    width: 100%
+    max-width: 850px
+    margin-right: 10px
+    margin-top: 20px
+
+.slider-main
+    overflow: hidden
+    height: 500px
+    // iframe
+    //     pointer-events: none
+
+.wmf__video__mob
+    display: none !important
+
+//media*************************************************************************
+
+@media (max-width: 1441px)
+    .modern__tabs__cont__img img
+        max-width: 200px
+    .modern__tabs__cont:nth-of-type(1)
+        top: -3%
+        right: 20%
+    .modern__tabs__cont:nth-of-type(1) .modern__tabs__cont__txt
+        margin-left: 45%
+        margin-right: -45%
+    // .modern__tabs__cont:nth-of-type(2)
+    //     top: 20%
+    //     left: 15%
+    // .modern__tabs__cont:nth-of-type(2) .modern__tabs__cont__txt
+    //     margin-left: -55%
+    // .modern__tabs__cont:nth-of-type(3)
+    //     top: 19%
+    //     left: 6%
+    .modern__tabs__cont:nth-of-type(3)
+        top: 90%
+        left: 40%
+    .modern__tabs__cont:nth-of-type(4)
+        left: 5%
+    .modern__list li:nth-of-type(4)
+        left: 26%
+
+    .display__slider__abs
+        top: 22%
+        max-width: 61vw
+    .display__slider__abs .wmf__opacity
+        margin-bottom: -2%
+    .display__slider__abs .wmf__title__small
+        line-height: 95%
+
+    .clean__abs__one,
+    .clean__abs__two
+        display: flex
+        flex-direction: row-reverse
+        align-items: flex-end
+    .clean__abs__one
+        margin-top: 4em
+    .clean__txt
+        max-width: 900px
+        margin-right: 2em
+    .clean__abs
+        bottom: 16%
+        right: 20%
+        left: 7%
+    .clean__img svg
+        max-height: 380px
+        min-width: 300px
+
+    .case__cal:nth-of-type(2)
+        flex: 1
+
+    .display__head .wmf__opacity
+        margin-right: -2%
+
+    .design__abs
+        padding-right: 1em
+
+    .display__title,
+    .wmf__opacity
+        line-height: normal !important
+
+@media (max-width: 1201px)
+    .wmf .container
+        width: 960px
+        padding: 0 15px
+
+    .modern
+        padding: 4em 0
+    .modern__img img
+        max-width: 600px
+    .modern__tabs__cont:nth-of-type(1)
+        right: 0%
+    .modern__tabs__cont:nth-of-type(1) .modern__tabs__cont__txt
+        margin-left: 20px
+        margin-right: 0
+    .modern__tabs__cont__row
+        display: block
+    .modern__tabs__cont:nth-of-type(2)
+        top: 3%
+        right: 0%
+    .modern__tabs__cont:nth-of-type(3)
+        left: 30%
+        .modern__tabs__cont__row
+            display: flex
+    .modern__tabs__cont:nth-of-type(4) .modern__tabs__cont__txt
+        margin-right: 25%
+    // .modern__tabs__cont:nth-of-type(2)
+    //     top: 20%
+    //     left: 15%
+    // .modern__tabs__cont:nth-of-type(3)
+    //     top: 33%
+    //     left: 0%
+    //     .modern__tabs__cont__row
+    //         display: flex
+    .modern__list li:nth-of-type(4)
+        left: 27%
+
+    .display
+        padding: 4em 0
+    .display__img video
+        max-width: 80%
+
+    .wmf__slider .swiper-pagination
+        display: none !important
+
+    .clean__img svg
+        margin-bottom: 6em
+    .clean__abs
+        right: 25%
+        bottom: -8%
+    .clean__abs__one
+        margin-top: 0
+    .clean__abs__one,
+    .clean__abs__two
+        display: block
+
+    .design__abs
+        max-width: 390px
+
+    .display__head
+        margin-left: 0
+    .display__head .wmf__opacity
+        margin-right: 0
+
+    .display__slider__abs
+        top: 30%
+
+    .cm li
+        font-size: 12px
+
+    .wmf__slider .arrows__two
+        width: 84vw
+
+    .case
+        padding-top: 5em
+
+@media (max-width: 991px)
+    .wmf .container
+        width: 720px
+
+    .show__cont
+        display: flex !important
+        align-items: center
+
+    .modern
+        padding-bottom: 0
+    .modern__img img
+        max-width: 100%
+    .modern__list li
+        width: 20px
+        height: 20px
+    .modern__list li::before,
+    .modern__list li::after
+        width: 60px
+        height: 60px
+        right: -20px
+        top: -20px
+    .modern__list li:nth-of-type(1)
+        top: 28%
+        right: 32%
+    // .modern__list li:nth-of-type(2)
+    //     top: 52%
+    //     left: 12%
+    // .modern__list li:nth-of-type(3)
+    //     top: 55%
+    //     left: 32%
+    .modern__list li:nth-of-type(2)
+        top: 61%
+        right: 24%
+    .modern__list li:nth-of-type(3)
+        top: 89%
+        right: 37%
+    .modern__list li:nth-of-type(4)
+        left: 14%
+    .modern__img
+        padding-left: 2em
+        padding-top: 120px
+    .modern__tabs__cont__img img
+        max-width: 130px
+    // .modern__tabs__cont:nth-of-type(5)
+    // .modern__tabs__cont:nth-of-type(2),
+    .modern__tabs__cont:nth-of-type(2),
+    .modern__tabs__cont:nth-of-type(3),
+    .modern__tabs__cont:nth-of-type(4)
+        right: 0
+        left: unset
+        top: -3%
+    .modern__tabs__cont__row
+        display: flex
+    // .modern__tabs__cont:nth-of-type(5) .modern__tabs__cont__txt
+    // .modern__tabs__cont:nth-of-type(4) .modern__tabs__cont__txt,
+    .modern__tabs__cont:nth-of-type(2) .modern__tabs__cont__txt,
+    .modern__tabs__cont:nth-of-type(3) .modern__tabs__cont__txt,
+    .modern__tabs__cont:nth-of-type(4) .modern__tabs__cont__txt
+        margin-top: 0
+        margin-left: 20px
+        margin-left: 20px
+        text-align: left
+        margin-right: unset
+    .modern__tabs__cont__reverse
+        flex-direction: row
+        margin-right: unset
+
+    .case
+        padding-top: 0
+    .case__row
+        flex-direction: column-reverse
+    .case__txt
+        margin-bottom: 20px
+    .case__i
+        position: unset
+        img
+            max-width: 20%
+    .case__cal
+        &:nth-of-type(1)
+            display: flex
+            margin-top: 30px
+            >div
+                flex: 1
+                &:nth-of-type(1)
+                    margin-right: 20px
+    .case__svg
+        max-width: 400px
+        // width: 86vw
+        height: auto
+    .cm li
+        font-size: 12px
+    .cm li:nth-of-type(1)
+        top: -20px
+    .cm li:nth-of-type(3)
+        right: -25px
+        transform: rotate(62deg)
+    .case__cal .wmf__opacity
+        display: none
+
+    .display__mob
+        display: block !important
+        .wmf__opacity
+            text-transform: uppercase
+            font-size: clamp(30px,7vw,80px)
+    .display__head
+        display: block
+        margin-bottom: 1em
+        .wmf__opacity
+            font-size: clamp(24px,7vw,80px)
+            margin-left: 0
+    .display__img img
+        min-width: 114%
+        margin-left: -7%
+    .display__slider
+        padding: 3em 0 2em
+    .display__slider .swiper-slide-active::after,
+    .display__slider .swiper-slide-active::before
+        width: 26px
+        height: 26px
+    .display__slider .swiper-slide-active::before
+        top: -4px
+        right: -4px
+    .display__slider .swiper-slide-active::after
+        bottom: -4px
+        left: -4px
+    .display__slider .swiper-slide
+        padding: 1.5em 1em 1em
+        box-sizing: border-box
+    .arrows div img
+        max-width: 24px !important
+    .display__slider .swiper-button-prev-one
+        margin-right: 10px
+    .display__slider__abs
+        .wmf__title__small
+            font-size: clamp(14px,3vw,35px)
+    .display__slider .arrows
+        position: absolute
+        margin-bottom: unset
+        right: 50%
+        transform: translateX(50%)
+        top: 10px
+        z-index: 2
+
+    .clean
+        overflow: hidden
+        margin-bottom: 0
+    .clean__abs,
+    .clean__abs__one
+        position: unset
+    .clean__txt .wmf__opacity
+        display: none
+    .clean__txt
+        margin-top: 70px
+        margin-bottom: 60px
+    .clean__img svg
+        display: block
+        margin: 0 auto
+        max-width: 100%
+        max-height: 500px
+    .clean__abs__two .clean__txt
+        margin-bottom: 0
+
+    .milk__row
+        flex-direction: column-reverse
+    .milk__img img
+        min-width: 120%
+        margin-left: -40%
+    .milk .milk__txt
+        padding: 50px 0 30px 0
+
+    .design
+        display: flex
+        flex-direction: column-reverse
+    .design__abs
+        position: unset
+        padding-top: 60px
+    .design__abs .wmf__opacity
+        display: none
+    .design__img img
+        min-width: 250%
+        margin-left: -75%
+
+    .display__img video
+        max-width: 90%
+
+    .complete__grid
+        grid-template-columns: 1fr
+        grid-template-rows: repeat(7, 1fr)
+    .complete__cal
+        padding: 25px 30px 15px 30px
+    .complete__cal::after,
+    .complete__cal::before
+        width: 39px
+        height: 39px
+    .complete__cal::before
+        top: -6px
+        right: -6px
+    .complete__cal::after
+        bottom: -6px
+        left: -6px
+
+    .wmf__slider
+        .arrows__two
+            position: unset
+            transform: unset
+            justify-content: center
+            margin-top: 30px
+        .swiper-pagination-two
+            display: none !important
+    .slider-nav
+        display: none
+    .slider-top .wmf__title__small
+        display: none
+    .wmf__video .slider-buttons
+        position: unset
+        transform: unset
+        justify-content: center
+        margin-top: 30px
+    .slider-container
+        display: flex
+        flex-direction: column-reverse
+    .wmf__video__mob
+        display: block !important
+        text-align: center
+        margin-bottom: 1rem
+    .wmf__video
+        padding-top: 100px
+        padding-bottom: 0
+
+    .wmf__block__video video
+        min-width: 150%
+        margin-left: -25%
+
+    .clean__bg
+        img
+            display: none
+        video
+            position: unset
+            max-width: 100%
+    .some__three
+        display: none
+
+    .modern__txt .wmf__title
+        margin-top: 0
+
+    .display
+        padding-bottom: 0
+    .display__slider__abs .wmf__opacity
+        color: transparent
+        background-image: unset
+        -webkit-text-stroke: 1px #ffffff
+        font-size: clamp(35px,6vw,111px)
+    .display__slider__abs
+        max-width: 80vw
+        top: 12%
+    .display__slider__abs .wmf__title__small
+        margin-top: -5px
+
+    .wmf__slider .arrows__two
+        width: 100%
+
+    .case__head
+        margin-bottom: 0
+        margin-top: 1em
+
+    @keyframes pulse
+        0%
+            opacity: 0
+        50%
+            opacity: .5
+        100%
+            transform: scale(2)
+            opacity: 0
+
+@media (max-width: 767px)
+    .wmf .container
+        width: 540px
+
+@media (max-width: 576px)
+    .wmf .container
+        width: 100%
+        box-sizing: border-box

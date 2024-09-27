@@ -1,0 +1,670 @@
+//default styles
+
+// body
+//    margin: 0
+
+.tefal
+   // font-family: sans-serif
+   max-width: 1920px
+   width: 100%
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   color: #0d0d0d
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.tefal .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//logo
+
+.logo
+   position: relative
+   text-align: center
+
+.logo__abs
+   position: absolute
+   top: 60px
+   right: 50%
+   transform: translateX(50%)
+   width: max-content
+   max-width: 100%
+
+.logo__cont
+   margin-top: 50px
+
+.logo__title
+   text-transform: uppercase
+   font-size: clamp(16px, 4vw, 64px)
+   margin: 0 auto 40px
+   max-width: max-content
+   font-weight: bold
+   letter-spacing: -2px
+
+.logo__txt
+   font-size: clamp(15px, 3vw, 40px)
+
+.snoska
+   &::before,
+   &::after
+      content: ""
+      display: block
+      width: 137px
+      height: 26px
+      background: url("https://cdn.comfy.ua/media/x/img3/2874805/snoska.svg") no-repeat center / contain
+      margin-left: -60px
+
+   &::after
+      margin-left: unset
+      margin: 0 -60px 0 auto
+      transform: scale(-1, -1)
+
+//tefal__txtblock
+
+.tefal__txtblock
+   text-align: center
+   background-color: #f0f0f2
+
+.tefal__txtblock__wrap
+   max-width: 1070px
+   margin: 0 auto
+   padding: 250px 0 175px
+
+.tefal__sub
+   font-size: clamp(20px, 3vw, 42px)
+   color: #1d316c
+   margin-bottom: 85px
+
+.tefal__txt
+   font-size: clamp(16px, 1.6vw, 32px)
+
+//iron
+
+.tefal__line,
+.tefal__line__two,
+.tefal__line__three
+   width: 100%
+   background: radial-gradient(circle, rgba(38,65,142,1) 0%, rgba(20,36,79,1) 100%)
+   padding-bottom: 90px
+
+.tefal__line__two
+   margin: 0 0 0 auto
+   max-width: 70vw
+
+.tefal__line__three
+   padding-bottom: 70px
+
+.tefal__title
+   text-transform: uppercase
+   font-size: clamp(24px, 3vw, 48px)
+   margin: 0 auto 80px
+   max-width: max-content
+   padding: 0 60px
+   font-weight: bold
+   letter-spacing: -2px
+
+.iron
+   background-color: #f0f0f2
+
+.iron__row
+   padding: 40px 240px 0 160px
+   display: flex
+   justify-content: space-between
+   gap: 260px
+   margin-bottom: -90px
+
+.iron__cont
+   max-width: 760px
+
+.iron__i
+   margin-bottom: 70px
+
+//modes
+
+.modes
+   padding: 130px 190px
+   background-color: #f0f0f2
+   text-align: center
+
+.modes__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   >div
+      padding: 0 60px
+      display: grid
+      grid-template-rows: auto 1fr auto
+      &:nth-of-type(2)
+         border-right: solid 2px #8f8f8f
+         border-left: solid 2px #8f8f8f
+
+.modes__title
+   text-transform: uppercase
+   font-weight: bold
+   font-size: clamp(24px, 2vw, 42px)
+   color: #f0f0f2
+   padding: 30px 0
+   width: 300px
+   height: max-content
+   border-radius: 80px
+   background-color: #53434d
+   margin: 0 auto 65px
+   letter-spacing: -2px
+
+.modes__sub
+   margin-bottom: 34px
+   font-size: clamp(18px, 1.8vw, 32px)
+
+.modes__txt
+   font-size: clamp(16px, 1.3vw, 26px)
+
+//func
+
+.func
+   background-color: #f0f0f2
+
+.func__row
+   display: flex
+   align-items: center
+   margin-bottom: -70px
+   &:nth-of-type(1)
+      .func__cont
+         max-width: 660px
+
+.func__reverse
+   margin-bottom: 0
+   flex-direction: row-reverse
+
+.func__cont
+   max-width: 880px
+   margin: 0 auto
+
+.func__i
+   margin-bottom: 90px
+
+.tefal__title__two
+   font-weight: normal
+   font-size: clamp(16px, 3vw, 34px)
+   text-align: center
+   padding: 0
+
+//glide
+
+.tefal__note
+   font-size: clamp(12px, 1.2vw, 19px)
+
+.glide
+   padding: 80px 155px 0
+   background-color: #f0f0f2
+   .tefal__note
+      margin-top: 100px
+
+.glide__row,
+.glide__item
+   display: flex
+   // align-items: center
+
+.glide__item
+   gap: 70px
+   margin-bottom: 80px
+
+.glide__title
+   text-transform: uppercase
+   font-weight: bold
+   font-size: clamp(16px, 2vw, 28px)
+   margin-bottom: 1rem
+   min-width: max-content
+   letter-spacing: -2px
+
+.glide__small
+   font-size: clamp(14px, 1.3vw, 19px)
+
+.tefal__small
+   font-size: clamp(16px, 1.3vw, 24px)
+
+.glide__i img
+   margin: 0
+
+.cal:last-of-type .glide__cont
+   margin-top: 80px
+
+.cal:nth-of-type(1)
+   flex: 1
+   margin-right: -300px
+   padding-top: 10em
+.cal:nth-of-type(2)
+   flex: 2
+   margin-bottom: -100px
+.cal:nth-of-type(3)
+   flex: 1
+   padding-top: 10em
+
+//safety
+
+.safety
+   padding: 100px 220px
+   background-color: #f0f0f2
+
+.safety__row
+   display: grid
+   grid-template-columns: 1fr 1fr
+   gap: 125px
+
+.safety__cal
+   display: flex
+   flex-direction: column
+   gap: 75px
+   &:nth-of-type(even)
+      flex-direction: column-reverse
+
+.safety__title
+   text-transform: uppercase
+   font-weight: bold
+   font-size: clamp(24px, 3vw, 62px)
+   margin-bottom: 2rem
+   letter-spacing: -2px
+
+//protect
+
+.protect
+   position: relative
+   .tefal__note
+      margin-top: 90px
+
+.protect__abs
+   position: absolute
+   max-width: 800px
+   left: 110px
+   bottom: 50%
+   transform: translateY(50%)
+
+.protect__i
+   margin-bottom: 80px
+
+//protect__right
+
+.protect__right
+   .protect__abs
+      left: unset
+      right: 110px
+
+//allinone
+
+.allinone
+   position: relative
+   text-align: center
+   .tefal__txt
+      max-width: 800px
+      margin: 0 auto
+
+.allinone__abs
+   position: absolute
+   top: 110px
+   right: 50%
+   transform: translateX(50%)
+   width: 100%
+   max-width: 1170px
+
+//warranty
+
+.warranty
+   background-color: #f0f0f2
+   padding: 200px
+   .tefal__note
+      margin-top: 130px
+
+.warranty__row
+   display: flex
+   gap: 200px
+
+.warranty__cont
+   max-width: 750px
+
+.warranty__title
+   text-transform: uppercase
+   font-weight: bold
+   letter-spacing: -2px
+   font-size: clamp(50px, 7vw, 130px)
+   margin: 40px 0 0
+
+.txt__r
+   text-align: right
+
+//numone
+
+.numone
+   text-align: center
+
+//media*****************************************************
+
+@media (max-width: 1541px)
+   .logo__abs
+      top: 1vw
+   .logo__i
+      max-width: 50vw
+      margin: 0 auto
+   .logo__cont
+      margin-top: 2em
+
+   .iron__img
+      min-width: max-content
+   .iron__row
+      gap: 4em
+
+   .modes
+      padding: 4em
+
+   .func__cont
+      max-width: 660px
+   .func__img
+      max-width: 50vw
+
+   .cal:nth-of-type(1)
+      margin-right: -150px
+   .glide__item .glide__i
+      min-width: 10vw
+   .cal:nth-of-type(1),
+   .cal:nth-of-type(3)
+      padding-top: 5em
+   .glide .tefal__note
+      margin-top: 50px
+
+   .protect__abs
+      max-width: 700px
+      left: 2em
+   .protect__i
+      margin-bottom: 2em
+   .protect .tefal__note
+      margin-top: 2em
+   .protect__right .protect__abs
+      right: 2em
+
+   .warranty__img
+      min-width: max-content
+
+   .allinone__abs
+      top: 3vw
+
+@media (max-width: 1441px)
+   .tefal__txtblock__wrap
+      padding: 6em 0
+
+   .iron__img
+      min-width: 400px
+   .iron__i img
+      max-width: 16vw
+   .iron__row
+      padding: 2em 4em 0
+   .iron__cont
+      max-width: 50vw
+
+   .snoska::before, .snoska::after
+      width: 8vw
+   .snoska::before
+      margin-left: -2vw
+   .snoska::after
+      margin-right: -2vw
+
+   .tefal__title
+      margin-bottom: 2vw
+      padding: 0 2vw
+
+   .modes__sub
+      margin-bottom: 1em
+   .modes__title
+      width: 16vw
+      padding: 2vw 0
+      margin-bottom: 3vw
+   .modes__grid>div
+      padding: 0 2vw
+
+   .func__i
+      margin-bottom: 2em
+   .func__i img
+      max-width: 15vw
+   .func__cont
+      max-width: 40vw !important
+
+   .glide
+      padding: 2em 4em 0
+   .glide__item
+      gap: 2em
+      margin-bottom: 2em
+   .cal:last-of-type .glide__cont
+      margin-top: 2em
+   .cal:nth-of-type(1)
+      margin-right: -20vw
+   .cal:nth-of-type(1), .cal:nth-of-type(3)
+      padding-top: 15vw
+
+   .safety
+      padding: 2em 4em
+
+   .protect__i img
+      max-width: 25vw
+   .protect__abs
+      max-width: 45vw
+
+   .warranty
+      padding: 4em
+   .warranty .tefal__note
+      margin-top: 4em
+
+@media (max-width: 1201px)
+   .tefal .container
+      width: 960px
+      padding: 0 15px
+
+   .logo__title
+      margin-bottom: 1rem
+
+   .tefal__txtblock__wrap
+      padding: 2em 0
+
+   .tefal__line
+      padding-bottom: 5vw
+   .tefal__line__two
+      padding-bottom: 5vw
+   .tefal__line__three
+      padding-bottom: 4vw
+
+   .iron__row
+      padding-right: 0
+      padding-left: 0
+      margin-bottom: -5vw
+   .iron__i
+      margin-bottom: 1rem
+
+   .modes
+      padding: 2em 0
+
+   .func__row
+      margin-bottom: -4vw
+
+   .glide
+      padding-right: 0
+      padding-left: 0
+   .cal:nth-of-type(2)
+      margin-bottom: -5vw
+   .cal:nth-of-type(3) .glide__i img
+      max-width: 15vw
+
+   .safety
+      padding-right: 0
+      padding-left: 0
+   .safety__row
+      gap: 4em
+   .safety__cal
+      gap: 2em
+
+   .allinone__abs
+      top: 4vw
+
+   .warranty
+      padding-right: 0
+      padding-left: 0
+   .warranty__row
+      gap: 4em
+   .warranty__img
+      min-width: unset
+   .warranty__cont
+      max-width: 45vw
+
+@media (max-width: 991px)
+   .tefal .container
+      width: 720px
+
+   .logo__cont
+      margin-top: 1em
+   .logo__title
+      margin-bottom: 1em
+      letter-spacing: -1px
+   .logo__img img
+      min-width: 160%
+      margin-left: -30%
+   .logo__i
+      max-width: 70vw
+
+   .snoska::before, .snoska::after
+      height: 3vw
+      width: 12vw
+
+   .tefal__sub
+      margin-bottom: 1rem
+
+   .iron__img
+      min-width: unset
+      max-width: 70vw
+   .iron__row
+      flex-direction: column-reverse
+      gap: 1em
+   .iron__cont
+      max-width: 100%
+   .iron__img
+      margin-bottom: -3vw
+   .iron__i img
+      max-width: 50vw
+
+   .modes__grid
+      grid-template-columns: 1fr
+      gap: 2em
+   .modes__grid>div
+      padding: 0
+   .modes__grid>div:nth-of-type(2)
+      border: none
+   .modes__title
+      width: 45vw
+      padding: 4vw 0
+   .tefal__title
+      margin-bottom: 1rem
+
+   .func__row
+      margin-bottom: 0
+      flex-direction: column
+      >div
+         max-width: 100% !important
+   .func__i img
+      max-width: 45vw
+   .func__cont
+      padding: 1em 0
+
+   .glide
+      padding-bottom: 1em
+   .cal:nth-of-type(2)
+      margin-bottom: unset
+      img
+         margin-left: -12vw
+   .glide__row
+      flex-direction: column
+      gap: 1em
+   .glide__item .glide__i
+      min-width: unset
+   .cal:nth-of-type(1)
+      margin-right: unset
+      padding-top: 1em
+      margin-bottom: 0
+   .cal:nth-of-type(3)
+      padding-top: 0
+   .cal:nth-of-type(3) .glide__i img
+      max-width: 45vw
+
+   .tefal__line,
+   .tefal__line__two,
+   .tefal__line__three
+      padding-bottom: 8vw
+
+   .tefal__title,
+   .glide__title,
+   .modes__title
+      letter-spacing: -1px
+
+   .safety__row
+      grid-template-columns: 1fr
+      gap: 2em
+   .safety__cal:nth-of-type(even)
+      flex-direction: column
+
+   .protect
+      background-color: #f0f0f2
+   .protect__img img
+      min-width: 190%
+      margin-left: -90%
+   .protect__right .protect__img img
+      margin-left: unset
+   .protect__abs
+      position: unset
+      transform: unset
+      max-width: 100%
+      padding: 1em 0
+   .protect__i img
+      max-width: 45vw
+
+   .allinone
+      background-color: #f0f0f2
+   .allinone__abs
+      position: unset
+      transform: unset
+      padding: 1em 0
+   .allinone__img
+      overflow: hidden
+      img
+         margin-top: -20vw
+         min-width: 120%
+         margin-left: -10%
+
+   .warranty
+      padding: 2em 0
+   .warranty__row
+      flex-direction: column-reverse
+      gap: 1em
+      >div
+         max-width: 100% !important
+   .warranty__img img
+      max-width: 45vw
+
+@media (max-width: 767px)
+   .tefal .container
+      width: 540px
+
+@media (max-width: 576px)
+   .tefal .container
+      width: 100%
+      box-sizing: border-box

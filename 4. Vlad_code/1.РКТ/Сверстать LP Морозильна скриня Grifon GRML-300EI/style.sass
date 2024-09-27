@@ -1,0 +1,349 @@
+//default styles
+
+// body
+//    margin: 0
+
+.grifon
+   width: 100%
+   max-width: 1300px
+   color: #1A2E45
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.grifon .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+.grifon__title
+   font-size: 28px
+   text-transform: uppercase
+   font-weight: bold
+   margin-bottom: 1rem
+
+.grifon__txt
+   font-size: 20px
+
+//model
+
+.model
+   position: relative
+
+.model__abs
+   position: absolute
+   bottom: 50%
+   transform: translateY(50%)
+   left: 30px
+
+.model__txt
+   font-size: 46px
+   color: #fff
+   margin-bottom: 30px
+
+.model__title
+   font-size: 66px
+   text-transform: uppercase
+   color: #215586
+
+//motor
+
+.motor
+   background: #F1F7FA
+
+.motor__row
+   display: flex
+   align-items: center
+   justify-content: space-between
+   gap: 20px
+   padding-left: 80px
+
+.motor__cont
+   max-width: 535px
+
+.motor__reverse
+   .motor__row
+      flex-direction: row-reverse
+      padding-left: 0
+      padding-right: 80px
+
+.img__rev
+   position: relative
+
+.motor__item
+   position: absolute
+   display: flex
+   align-items: center
+   gap: 30px
+   top: 100px
+   left: 300px
+
+.motor__i
+   max-width: 97px
+
+//protect
+
+.protect
+   position: relative
+
+.clr__white
+   .grifon__title
+      color: #DCE9F8
+   .grifon__txt
+      color: #fff
+
+.protect__abs
+   position: absolute
+   left: 0
+   bottom: 50%
+   transform: translateY(50%)
+   padding: 80px 60px 80px 80px
+   background: rgba(2, 30, 42, 0.78)
+   max-width: 750px
+   box-sizing: border-box
+
+.protect__item
+   display: flex
+   align-items: center
+   gap: 30px
+   max-width: 350px
+   margin-top: 25px
+
+.protect__i
+   max-width: 97px
+
+//weather
+
+.weather
+   position: relative
+   background: #F1F7FA
+
+.weather__abs
+   position: absolute
+   top: 95px
+   right: 80px
+   max-width: 540px
+
+.weather__item
+   display: flex
+   align-items: center
+   gap: 30px
+   margin-bottom: 20px
+
+//freezer
+
+.freezer
+   padding-top: 80px
+
+//design
+
+.design
+   .protect__abs
+      left: unset
+      right: 0
+      max-width: 600px
+      padding-top: 50px
+      padding-bottom: 50px
+
+.design__txt
+   font-size: 40px
+   color: #fff
+   position: absolute
+   top: 60px
+   left: 260px
+
+//warranty
+
+.warranty
+   background: linear-gradient(180deg, #011D28 0%, #010A0F 0.01%, #000A0F 100%)
+
+.warranty__row
+   padding-right: 80px
+   padding-left: 115px
+   display: flex
+   align-items: center
+   justify-content: space-between
+   gap: 115px
+
+.warranty__cont
+   max-width: 435px
+
+//economy
+
+.economy
+   position: relative
+
+.economy__abs
+   position: absolute
+   bottom: 50%
+   transform: translateY(50%)
+   max-width: 435px
+   left: 80px
+
+//media*****************************************************
+
+@media (max-width: 1201px)
+   .grifon .container
+      width: 960px
+      padding: 0 15px
+
+   .model__txt
+      font-size: 24px
+      margin-bottom: 1rem
+   .model__title
+      font-size: 42px
+
+   .grifon__title
+      font-size: 20px
+   .grifon__txt
+      font-size: 16px
+
+   .motor__row
+      padding-left: 0 !important
+      padding-right: 0 !important
+   .motor__cont
+      max-width: 435px
+   .motor__item
+      top: 20%
+      left: 40%
+
+   .protect__abs,
+   .design .protect__abs
+      padding: 2em
+      max-width: 500px
+
+   .weather__abs
+      max-width: 435px
+      right: 32px
+
+   .freezer
+      padding-top: 2em
+
+   .design__txt
+      font-size: 28px
+
+   .warranty__row
+      padding-right: 0
+      padding-left: 0
+      gap: 4em
+
+   .economy__abs
+      left: 32px
+
+@media (max-width: 991px)
+   .grifon .container
+      width: 720px
+
+   .model
+      padding-top: 1em
+      background-color: #57758e
+   .model__abs
+      position: unset
+      transform: unset
+      text-align: center
+   .model__img img
+      min-width: 150%
+      margin-left: -50%
+
+   .motor__row
+      flex-direction: column-reverse !important
+      text-align: center
+      gap: 1em
+   .motor__i,
+   .protect__i,
+   .weather__i
+      max-width: 80px
+   .motor__item,
+   .protect__item,
+   .weather__item
+      gap: 10px
+      .grifon__txt
+         text-align: left
+   .motor__reverse
+      padding-top: 2em
+      padding-bottom: 2em
+
+   .protect
+      display: flex
+      flex-direction: column-reverse
+      text-align: center
+   .protect__abs
+      position: unset
+      transform: unset
+      padding: 1em 0 !important
+      background: unset
+
+   .protect .clr__white
+      .grifon__title,
+      .grifon__txt
+         color: inherit
+
+   .weather
+      display: flex
+      flex-direction: column-reverse
+      text-align: center
+   .weather__abs
+      position: unset
+      transform: unset
+      padding: 1em 0
+   .weather__img img
+      min-width: 150%
+
+   .freezer
+      padding-top: unset
+
+   .design
+      margin-top: 1em
+   .design .protect__img img
+      min-width: 150%
+   .design__txt
+      font-size: 20px
+      top: 1em
+      left: 4em
+
+   .warranty
+      padding-bottom: 1em
+   .warranty__row
+      display: flex
+      flex-direction: column
+      gap: 1em
+      text-align: center
+
+   .economy
+      background: linear-gradient(180deg, #011D28 0%, #010A0F 0.01%, #000A0F 100%)
+   .economy__abs
+      position: unset
+      transform: unset
+      text-align: center
+      padding-top: 2em
+      padding-bottom: 1em
+   .economy__img img
+      min-width: 150%
+      margin-left: -50%
+
+@media (max-width: 767px)
+   .grifon .container
+      width: 540px
+
+@media (max-width: 576px)
+   .grifon .container
+      width: 100%
+      box-sizing: border-box

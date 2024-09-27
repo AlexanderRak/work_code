@@ -1,0 +1,189 @@
+//default styles
+
+.indesit
+   width: 100%
+   max-width: 1200px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   color: #434343
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.indesit .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+.indesit__row
+   display: flex
+
+.indesit__title
+   color: #1495d6
+   font-weight: bold
+   font-size: clamp(18px, 3vw, 24px)
+   margin-bottom: 1rem
+
+.indesit__subtitle
+   font-weight: bold
+   font-size: clamp(14px, 1.2vw, 16px)
+   margin-bottom: 1rem
+   color: #1495d6
+
+.indesit__txt
+   font-size: clamp(14px, 1.2vw, 16px)
+
+//model
+
+.model
+   padding: 60px 0
+   text-align: center
+   background: url("https://cdn.comfy.ua/media/x/img3/1613429/bg1.jpg") no-repeat center / contain
+   color: #1495d6
+   font-weight: bold
+
+//func
+
+.func
+   background: url("https://cdn.comfy.ua/media/x/img3/1613429/bg2.jpg") no-repeat center / cover
+   color: #fff
+
+.func__row
+   display: flex
+   align-items: center
+
+.func__i
+   padding: 10px 70px
+   background-color: #fff
+   margin-left: 50px
+   margin-right: 25px
+
+//indesit__bg
+
+.indesit__bg
+   position: relative
+
+.indesit__bg__abs
+   position: absolute
+   bottom: 0
+   right: 0
+
+//programs
+
+.programs
+   padding: 25px 0
+   text-align: center
+
+.programs__grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr
+   grid-template-rows: repeat(13) 1fr
+   .cal
+      padding: 25px 50px
+
+.programs__txt
+   padding-top: 15px
+
+//other
+
+.other
+   padding-top: 2em
+   text-align: center
+
+.other__row
+   display: flex
+   align-items: center
+   >div
+      flex: 1
+      box-sizing: border-box
+      min-width: 50%
+      max-width: 50%
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+      .other__img
+         border-radius: 25px 0 0 25px
+   &:nth-of-type(odd)
+      .other__img
+         border-radius: 0 25px 25px 0
+
+.other__cont
+   padding: 20px 40px
+
+.other__img
+   overflow: hidden
+
+.other__bg
+   padding-top: 2em
+
+//media*****************************************************
+
+@media (max-width: 1201px)
+   .indesit .container
+      width: 960px
+      padding: 0 15px
+
+@media (max-width: 991px)
+   .indesit .container
+      width: 720px
+
+   .indesit__row
+      display: block
+
+   .func
+      background-position: center right
+   .func__i
+      padding: 10px
+      margin-left: 0
+      margin-right: 10px
+      min-width: 76px
+
+   .indesit__bg >img
+      min-width: 300%
+      margin-left: -150%
+   .indesit__bg__abs
+      img
+         max-width: 35vw
+
+   .programs
+      padding: 0
+   .programs__grid
+      grid-template-columns: 1fr
+      grid-template-rows: auto
+      .cal
+         padding-right: 0
+         padding-left: 0
+
+   .other__row
+      display: block !important
+      >div
+         min-width: 100% !important
+   .other__img
+      border-radius: 25px !important
+   .other__cont
+      padding-right: 0
+      padding-left: 0
+
+@media (max-width: 767px)
+   .indesit .container
+      width: 540px
+
+@media (max-width: 576px)
+   .indesit .container
+      width: 100%
+      box-sizing: border-box

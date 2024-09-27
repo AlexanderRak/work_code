@@ -1,0 +1,218 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-ninebot-product
+   font-family: 'Roboto', sans-serif
+   // max-width: 1006px
+   margin: 0 auto
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #000
+   color: #fff
+   h4
+      margin-bottom: 0.5rem
+   h2, h3, h5, h6
+      margin-bottom: 1rem !important
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 32, 24)
+      font-weight: 900
+      text-align: left
+   h4
+      @include adaptiv-value("font-size", 14, 14)
+      font-weight: 900
+      text-align: left
+   p
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 400
+      text-align: left
+
+//design
+
+.design
+   position: relative
+
+.design__abs
+   position: absolute
+   top: 0
+   right: 0
+   left: 0
+   bottom: 0
+   padding-top: 10%
+
+.design__cont
+   display: flex
+   max-width: 50%
+   flex-direction: column
+   align-items: center
+   margin: 0 auto
+   position: relative
+   z-index: 2
+   h2,h4,p
+      text-align: center !important
+
+#rkt-ninebot-product [class*="__img"]
+   filter: saturate(1.5) brightness(.85)
+
+//func
+
+.func
+   padding: 4em
+
+.func__grid
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   gap: 2em 2em
+   p
+      text-align: center !important
+      color: #bfbfbf
+
+.func__i img
+   filter: invert(88%) sepia(65%) saturate(0) hue-rotate(214deg) brightness(109%) contrast(101%)
+   height: 60px
+   margin-bottom: 15px !important
+   width: 60px
+
+//distance
+
+.distance
+   position: relative
+
+.distance__abs
+   position: absolute
+   top: 0
+   bottom: 0
+   right: 0
+   left: 0
+
+.distance__cont
+   position: relative
+   display: flex
+   flex-direction: column
+   align-items: center
+   justify-content: center
+   height: 100%
+   z-index: 2
+   padding: 0 40px
+   h2,p
+      text-align: center !important
+
+.distance__left
+   h2,p
+      text-align: left !important
+      width: 50%
+   .distance__cont
+      align-items: flex-start
+
+.distance__right
+   h2, p
+      text-align: right !important
+      width: 50%
+   .distance__cont
+      align-items: flex-end
+
+//options
+
+.options
+   padding: 40px
+   background-color: #fff
+   color: #000 !important
+   display: flex
+   flex-direction: column
+   gap: 40px
+
+.options__row
+   display: flex
+   align-items: center
+   gap: 40px
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+
+@media (max-width: 1024px)
+   .design__abs
+      position: unset
+      padding: 0
+   .design__cont
+      max-width: 100%
+      padding: 1em
+
+   .func
+      padding: 1em
+   .func__grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: 1em 1em
+
+   .distance__cont
+      padding: 0 1em
+   .distance__left .distance__cont,
+   .distance__right .distance__cont
+      h2, p
+         width: 60%
+
+   .options
+      padding: 1em
+   .options__row
+      gap: 1em
+      flex-direction: column-reverse !important
+      align-items: unset
+   .options__img img
+      width: 100% !important
+
+@media (max-width: 768px)
+   .func__grid
+      grid-template-columns: 1fr 1fr
+      max-width: max-content
+      margin: 0 auto
+      p
+         font-size: 12px !important
+   .func__i img
+      width: 10vw
+      height: 10vw
+      margin-bottom: 10px
+
+   .distance
+      padding-top: 2em
+   .distance__abs
+      position: unset
+   .distance__cont
+      padding: 1em
+   .distance__left .distance__cont,
+   .distance__right .distance__cont
+      align-items: center
+      h2, p
+         width: 100%
+   .distance__right .distance__cont
+      h2, p
+         text-align: center !important

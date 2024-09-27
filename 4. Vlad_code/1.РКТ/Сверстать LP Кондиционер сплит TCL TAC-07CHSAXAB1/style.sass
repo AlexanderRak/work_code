@@ -1,0 +1,104 @@
+//default styles
+
+// body
+//    margin: 0
+
+.tcl
+   // font-family: sans-serif
+   width: 100%
+   max-width: 1500px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.tcl .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//flow
+
+.flow__row
+   display: flex
+   align-items: center
+   gap: 75px
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+      .flow__cont
+         padding-left: 0
+         padding-right: 20px
+
+.flow__cont
+   max-width: 800px
+   padding-left: 20px
+
+.tcl__title
+   font-size: clamp(24px, 3vw, 36px)
+   margin-bottom: 1rem
+
+.tcl__txt
+   font-size: clamp(16px, 1.8vw, 28px)
+
+//sleep
+
+.sleep__cont
+   text-align: center
+   padding: 1em 60px
+
+//media*****************************************************
+
+@media (max-width: 1441px)
+   .flow__cont
+      max-width: 50vw
+
+@media (max-width: 1201px)
+   .tcl .container
+      width: 960px
+      padding: 0 15px
+
+   .flow__cont
+      padding: 0
+   .flow__row
+      gap: 4em
+
+   .sleep__cont
+      padding-right: 0
+      padding-left: 0
+
+@media (max-width: 991px)
+   .tcl
+      padding: 1em 0
+   .tcl .container
+      width: 720px
+
+   .flow__row
+      flex-direction: column !important
+      gap: 1em
+   .flow__cont
+      max-width: 100%
+
+@media (max-width: 767px)
+   .tcl .container
+      width: 540px
+
+@media (max-width: 576px)
+   .tcl .container
+      width: 100%
+      box-sizing: border-box

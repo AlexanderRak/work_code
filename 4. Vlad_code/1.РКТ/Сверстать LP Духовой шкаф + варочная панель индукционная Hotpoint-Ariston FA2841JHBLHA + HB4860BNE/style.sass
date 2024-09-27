@@ -1,0 +1,294 @@
+//default styles
+
+// body
+//    margin: 0
+
+.hotpoint
+   // font-family: sans-serif
+   max-width: 1200px
+   width: 100%
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.hotpoint .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//hotpoint__logo
+
+.hotpoint__logo
+   position: relative
+
+.logo__img
+   position: relative
+
+.logo__i
+   position: absolute
+   top: 20px
+   left: 20px
+   width: 130px
+
+.logo__row
+   display: flex
+   align-items: center
+   // max-height: 285px
+
+.logo__cont
+   align-self: stretch
+   display: flex
+   background: linear-gradient(to right, rgb(218, 124, 67), rgb(178, 76, 36))
+   border-radius: 40px 0 0 40px
+   padding: 30px 20px
+   align-items: center
+   position: relative
+   margin-left: -100px
+
+.logo__txt
+   font-size: 28px
+   color: #fff
+
+//dimensions
+
+.dimensions
+   padding: 25px 0
+
+.hotpoint__sub
+   font-size: 14px
+   font-weight: bold
+   margin-bottom: 15px
+
+.hotpoint__txt
+   font-size: 13px
+
+.dimensions__row
+   display: flex
+   align-items: center
+   gap: 75px
+
+.dimensions__img
+   width: 40%
+
+.dimensions__cont
+   width: 60%
+
+.dimensions__items
+   display: flex
+   flex-direction: column
+   gap: 15px
+   .hotpoint__txt
+      font-weight: bold
+      display: flex
+      align-items: center
+      gap: 30px
+      &::before
+         content: ""
+         display: block
+         width: 30px
+         height: 30px
+         background: url("https://cdn.comfy.ua/media/x/img3/2786149/galka.png") no-repeat center / contain
+
+//options
+
+.options__grid
+   display: grid
+   text-align: center
+   grid-template-columns: repeat(4, 1fr)
+   grid-template-areas: "cal1 cal1 cal1 cal1" "cal2 cal3 cal4 cal5" "line line line line" "cal6 cal6 cal6 cal6"
+   >div
+      padding: 25px
+      border: 1px solid #ededed
+
+.cal1
+   grid-area: cal1
+.cal2
+   grid-area: cal2
+.cal3
+   grid-area: cal3
+.cal4
+   grid-area: cal4
+.cal5
+   grid-area: cal5
+.cal6
+   grid-area: cal6
+
+.grid__line
+   grid-area: line
+
+.options__i
+   max-height: 200px
+   max-width: 200px
+   margin: 0 auto 15px
+
+.grid__line
+   width: 100%
+   background-color: #000
+   padding: 0 0 20px 0 !important
+   border: none !important
+
+.cal6
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   padding: 0 !important
+   >div
+      padding: 25px
+      border: 1px solid #ededed
+
+//mymenu
+
+.mymenu
+   border: 1px solid #ededed
+   padding: 25px
+   text-align: center
+   .hotpoint__sub
+      margin: 0
+      padding: 15px
+
+.red__txt
+   color: #B24C24
+
+//modes
+
+.modes__grid
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   text-align: center
+   >div
+      padding: 25px
+      border: 1px solid #ededed
+
+//func
+
+.func
+   background-color: #F5F5F5
+   padding: 8px
+   text-align: center
+
+.func__wrap
+   display: flex
+   flex-direction: column
+   gap: 16px
+
+.func__row
+   display: flex
+   align-items: center
+   >div
+      max-width: 50%
+      min-width: 50%
+      box-sizing: border-box
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+
+.hotpoint__title
+   font-size: 18px
+   margin-bottom: 5px
+
+.func__txt
+   font-size: 15px
+
+.func__cont
+   padding: 20px 40px
+
+.func__img img
+   border-radius: 25px
+
+//hotpoint__note
+
+.hotpoint__note
+   padding: 30px
+   text-align: center
+
+//media*****************************************************
+
+@media (max-width: 1201px)
+   .hotpoint .container
+      width: 960px
+      padding: 0 15px
+
+   .logo__cont
+      padding-right: 0
+      max-width: 40%
+
+   .mymenu,
+   .func,
+   .hotpoint__note
+      padding-right: 0
+      padding-left: 0
+
+@media (max-width: 991px)
+   .hotpoint .container
+      width: 720px
+
+   .logo__row
+      flex-direction: column
+      max-height: unset
+   .logo__cont
+      margin: 0
+      max-width: 100%
+      border-radius: unset
+      padding-right: 0
+      padding-left: 0
+   .logo__i
+      max-width: 25vw
+      top: .2em
+      left: .2em
+
+   .dimensions__row
+      flex-direction: column
+      gap: 1em
+   .dimensions__img
+      width: 100%
+   .dimensions__cont
+      width: 90%
+   .dimensions__items .hotpoint__txt
+      gap: 1em
+   .dimensions__items .hotpoint__txt::before
+      min-width: 6vw
+      max-width: 6vw
+
+   .options__grid
+      grid-template-columns: 1fr
+      grid-template-areas: "cal1" "cal2" "cal3" "cal4" "cal5" "line" "cal6"
+   .options__grid>div,
+   .modes__grid>div
+      padding: 1em
+   .cal6,
+   .modes__grid
+      grid-template-columns: 1fr
+
+   .func__wrap
+      gap: 2em
+   .func__row
+      flex-direction: column !important
+      >div
+         min-width: unset !important
+         max-width: 100% !important
+   .func__cont
+      padding: 20px 0 0
+
+@media (max-width: 767px)
+   .hotpoint .container
+      width: 540px
+
+@media (max-width: 576px)
+   .hotpoint .container
+      width: 100%
+      box-sizing: border-box

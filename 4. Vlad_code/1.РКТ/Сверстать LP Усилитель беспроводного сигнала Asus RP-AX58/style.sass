@@ -1,0 +1,401 @@
+//default styles
+
+.asus
+   max-width: 1522px
+   width: 100%
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+   ul
+      margin: 0
+      padding: 0
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.asus .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//adapter
+
+.adapter
+   padding: 45px 170px 50px
+
+.adapter__row
+   display: flex
+   align-items: center
+   padding: 0 170px 0 80px
+   gap: 100px
+
+.asus__title
+   font-size: 35px
+   font-weight: bold
+   margin-bottom: 1rem
+
+.asus__txt
+   font-size: 18px
+
+.asus__list
+   list-style-type: disc
+   margin-left: 20px !important
+   margin-top: 1rem !important
+   display: flex
+   flex-direction: column
+   gap: 18px
+   li
+      font-size: 12px
+
+.adapter__cont
+   max-width: 470px
+
+//signal
+
+.signal
+   position: relative
+   color: #fff
+
+.signal__abs
+   position: absolute
+   right: 140px
+   bottom: 100px
+   max-width: 620px
+
+//booster
+
+.booster
+   padding: 0 140px 0 0
+
+.booster__row
+   display: flex
+   align-items: center
+
+.booster__cont
+   max-width: 645px
+
+//power
+
+.center
+   text-align: center
+
+.power
+   padding: 50px 170px
+   background: url("https://cdn.comfy.ua/media/x/img3/2409942/bg1.jpg") no-repeat center bottom
+
+.power__cont
+   max-width: 800px
+   margin: 0 auto
+
+.asus__subtitle
+   font-size: 24px
+   font-weight: bold
+
+.power__grid
+   text-align: center
+   max-width: 650px
+   margin: 30px auto 0
+   display: grid
+   grid-template-columns: 1fr 1fr
+   grid-template-rows: repeat(2, auto)
+   gap: 50px 25px
+   >div
+      border-radius: 10px
+      background-color: #f7f8f8
+      padding: 1em
+   .asus__title
+      color: #366aff
+
+//aimesh
+
+.aimesh
+   padding: 0 140px
+
+.aimesh__row
+   display: flex
+   align-items: center
+   gap: 50px
+
+.aimesh__cont
+   max-width: 620px
+
+//universal
+
+.universal
+   padding: 50px 140px 0
+
+.universal__cont
+   max-width: 800px
+   margin: 0 auto 30px
+
+.clr__white
+   color: #fff
+
+.universal__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   grid-template-areas: "cal1 cal2 cal3" "cal4 cal5 cal6" "cal7 cal8 cal9" "cal10 cal11 cal12" "cal13 cal14 cal15"
+   >div
+      padding: 1em
+      display: flex
+      align-items: center
+   .cal1
+      grid-area: cal1
+      border-radius: 10px 0 0 0
+   .cal2
+      grid-area: cal2
+   .cal3
+      grid-area: cal3
+      border-radius: 0 10px 0 0
+   .cal4
+      grid-area: cal4
+   .cal5
+      grid-area: cal5
+   .cal6
+      grid-area: cal6
+   .cal7
+      grid-area: cal7
+   .cal8
+      grid-area: cal8
+   .cal9
+      grid-area: cal9
+   .cal10
+      grid-area: cal10
+   .cal11
+      grid-area: cal11
+   .cal12
+      grid-area: cal12
+   .cal13
+      grid-area: cal13
+   .cal14
+      grid-area: cal14
+   .cal15
+      grid-area: cal15
+
+   .cal1, .cal2, .cal3
+      background-color: #4369f6
+   .cal5, .cal6
+      background-color: rgba(249, 249, 248, .6)
+   .cal7, .cal8, .cal9, .cal13, .cal14, .cal15
+      background-color: #eaeced
+   .cal8, .cal9, .cal14, .cal15
+      position: relative
+      >div,img
+         position: relative
+         z-index: 1
+      &::before
+         content: ""
+         display: block
+         position: absolute
+         top: 0
+         right: 0
+         left: 0
+         bottom: 0
+         background-color: rgba(249, 249, 248, .6)
+         z-index: 0
+   .cal14, .cal15
+      justify-content: center
+
+//settings
+
+.settings
+   padding: 50px 140px 0
+
+.settings__img
+   border-radius: 40px
+   background-color: #e5f2fe
+   padding: 2em
+   width: max-content
+
+.settings__row
+   display: flex
+   align-items: center
+   gap: 25px
+
+.settings__cont
+   max-width: 600px
+
+.settings__i
+   margin-bottom: 1rem
+   img
+      margin: 0
+
+//modem
+
+.modem
+   padding: 50px 140px
+
+.modem__cont
+   margin: 0 auto 25px
+   max-width: 800px
+
+.modem__row
+   display: flex
+   gap: 50px
+   .asus__subtitle
+      color: #366aff
+      position: absolute
+      right: 50%
+      transform: translateX(50%)
+      top: 1em
+      width: max-content
+
+.modem__cal
+   position: relative
+
+//ethernet
+
+.ethernet
+   background-color: #f1f8fe
+   padding: 50px 170px
+
+//media*****************************************************
+
+@media (max-width: 1441px)
+   .adapter
+      padding: 2em 4em
+   .adapter__row
+      padding: 0
+      justify-content: center
+
+   .signal__abs
+      right: 4em
+
+   .booster
+      padding-right: 4em
+
+   .power,
+   .modem,
+   .ethernet
+      padding: 2em 4em
+
+   .aimesh
+      padding: 0 4em
+
+   .universal,
+   .settings
+      padding: 2em 4em 0
+
+   .asus__title
+      font-size: 24px
+   .asus__subtitle
+      font-size: 18px
+   .asus__txt
+      font-size: 16px
+
+@media (max-width: 1201px)
+   .asus .container
+      width: 960px
+      padding: 0 15px
+
+   .adapter
+      padding: 1em 0
+   .adapter__row
+      gap: 2em
+
+   .signal__abs
+      right: 32px
+
+   .booster
+      padding: 0
+   .booster__cont
+      max-width: 450px
+
+   .power
+      padding: 1em 0
+   .power__grid
+      gap: 1em 1em
+
+   .aimesh
+      padding: 0
+   .aimesh__row
+      gap: 2em
+   .aimesh__cont
+      max-width: 450px
+
+   .universal, .settings
+      padding-right: 0
+      padding-left: 0
+
+   .modem,
+   .ethernet
+      padding-right: 0
+      padding-left: 0
+   .modem__row
+      gap: 2em
+
+@media (max-width: 991px)
+   .asus .container
+      width: 720px
+
+   .adapter__row
+      flex-direction: column-reverse
+      gap: 1em
+
+   .signal__abs
+      position: unset
+      color: #000
+   .signal__img img
+      min-width: 150%
+      margin-left: -25%
+
+   .booster__row
+      flex-direction: column
+
+   .power
+      background-size: cover
+   .power__grid
+      grid-template-columns: 1fr
+
+   .aimesh__row
+      flex-direction: column-reverse
+      gap: 1em
+
+   .universal__grid
+      min-width: 650px
+   .universal__grid__wrap
+      overflow-x: scroll
+
+   .settings__row
+      flex-direction: column
+      gap: 1em
+   .settings__img
+      padding: 1em
+      overflow: hidden
+      box-sizing: border-box
+      img
+         max-width: 50%
+
+   .modem__row
+      flex-direction: column
+      gap: 1em
+
+   .modem__row .asus__subtitle
+      font-size: 3.5vw
+
+   .ethernet
+      padding: 1em 0
+
+@media (max-width: 767px)
+   .asus .container
+      width: 540px
+
+@media (max-width: 576px)
+   .asus .container
+      width: 100%
+      box-sizing: border-box

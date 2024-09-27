@@ -1,0 +1,336 @@
+//default styles
+
+.philips
+   width: 100%
+   max-width: 1536px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+   ul
+      margin: 0
+      padding: 0
+      display: block
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.philips .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//fast
+
+.philips__title
+   font-size: 36px
+   font-weight: bold
+   margin-bottom: 1rem
+
+.philips__txt
+   font-size: 24px
+
+.fast
+   padding: 50px 0 0
+   text-align: center
+
+.fast__cont
+   margin-bottom: 50px
+
+.fast__txt
+   font-size: 36px
+
+.fast__img
+   position: relative
+
+.fast__i
+   position: absolute
+   top: 0
+   left: 50px
+
+//func
+
+.func
+   padding: 56px 160px 0 60px
+
+.func__items
+   display: flex
+   flex-direction: column
+   gap: 45px
+
+.func__item
+   display: flex
+   align-items: center
+   gap: 50px
+
+.txt__center
+   text-align: center
+
+.func__i
+   min-width: 192px
+   max-width: 192px
+
+//philips__block
+
+.philips__block
+   padding: 0 70px
+
+.philips__row
+   display: flex
+   align-items: center
+   gap: 110px
+   padding-top: 50px
+   justify-content: space-between
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+
+.philips__cont
+   max-width: 650px
+   min-width: 650px
+
+//senselq
+
+.senselq
+   padding: 50px 10px 0
+
+.senselq__row
+   display: flex
+   gap: 14px
+
+.senselq__cal
+   flex: 1
+
+.senselq__cont
+   margin-top: 14px
+   margin-right: 5%
+
+//philips__block__two
+
+.philips__block__two
+   .philips__row
+      flex-direction: row-reverse
+      &:nth-of-type(even)
+         flex-direction: row
+
+.philips__list
+   list-style-type: disc
+   list-style-position: inside
+   li
+      font-size: 24px
+      &:nth-of-type(n+2)
+         margin-top: 5px
+
+//productline
+
+.productline
+   padding: 50px 0 0
+   .philips__title
+      text-align: center
+
+.productline__img
+   position: relative
+
+.productline__txt
+   font-size: 24px
+   color: #fff
+   position: absolute
+   &:nth-of-type(1)
+      bottom: 120px
+      left: 300px
+   &:nth-of-type(2)
+      top: 250px
+      right: 38%
+   &:nth-of-type(3)
+      bottom: 125px
+      right: 250px
+
+//philips__table
+
+.philips__vs
+   padding: 55px 10px 40px
+
+.philips__vs__row
+   display: flex
+   gap: 16px
+   text-align: center
+
+.philips__table__title
+   font-size: 28px
+   font-weight: bold
+
+.philips__table
+   margin-top: 25px
+
+.philips__grid
+   display: grid
+   grid-template-columns: 1fr 1fr
+   grid-template-areas: "cal1 cal1" "cal2 cal3"
+   .cal1
+      grid-area: cal1
+      background: #D9D9D9
+   .cal2
+      grid-area: cal2
+   .cal3
+      grid-area: cal3
+   >div
+      padding: 11px 20px
+   .mark
+      width: 10px
+      height: 10px
+      border-radius: 50px
+      background: #000
+      display: flex
+      align-self: center
+      margin: 20px 0 20px 20px
+      padding: 0 !important
+
+.philips__note
+   font-size: 14px
+   margin-top: 50px
+   margin-left: 20px
+
+//media*****************************************************
+
+@media (max-width: 1441px)
+   .productline__txt:nth-of-type(1)
+      left: 15%
+   .productline__txt:nth-of-type(2)
+      right: 35%
+   .productline__txt:nth-of-type(3)
+      right: 15%
+
+@media (max-width: 1201px)
+   .philips .container
+      width: 960px
+      padding: 0 15px
+
+   .fast
+      padding-top: 2em
+
+   .philips__title,
+   .fast__txt
+      font-size: 24px
+   .philips__txt
+      font-size: 16px
+
+   .func
+      padding: 2em 0 0
+
+   .philips__block
+      padding: 0
+   .philips__row
+      gap: 4em
+   .philips__cont
+      min-width: 50%
+      max-width: 50%
+      box-sizing: border-box
+
+   .philips__vs
+      padding-top: 2em
+      padding-bottom: 2em
+
+   .philips__table__title
+      font-size: 20px
+
+   .philips__list li
+      font-size: 16px
+
+   .productline__txt
+      font-size: 16px
+
+   .philips__vs
+      padding-right: 0
+      padding-left: 0
+
+@media (max-width: 991px)
+   .philips .container
+      width: 720px
+
+   .fast
+      padding-top: 1em
+   .fast__img
+      img
+         min-width: 150%
+   .fast__i
+      max-width: 30%
+      left: 1em
+
+   .func__items
+      gap: 1em
+   .func__item
+      gap: 1em
+      .philips__title
+         font-size: 16px
+   .func__i
+      min-width: 92px
+      max-width: 92px
+
+   .philips__row
+      flex-direction: column !important
+      gap: 1em
+      padding-top: 2em
+   .philips__cont
+      min-width: unset
+      max-width: unset
+
+   .senselq__row
+      flex-direction: column
+      gap: 2em
+   .senselq__cont
+      margin-right: unset
+
+   .productline__img img
+      min-width: 130%
+      margin-left: -15%
+   .productline__txt:nth-of-type(1)
+      left: 4%
+      bottom: unset
+      top: 2%
+   .productline__txt:nth-of-type(2)
+      right: 35%
+      bottom: 10%
+      top: unset
+   .productline__txt:nth-of-type(3)
+      right: 15%
+
+   .philips__table
+      overflow-x: scroll
+   .philips__grid
+      min-width: 500px
+      .philips__txt
+         font-size: 12px
+   .philips__table__title
+      font-size: 14px
+   .philips__grid>div
+      padding: 5px 10px
+   .philips__grid .mark
+      margin: 10px 0 10px 10px
+      width: 5px
+      height: 5px
+   .philips__note
+      margin-left: 10px
+      font-size: 12px
+      margin-top: 2em
+
+@media (max-width: 767px)
+   .philips .container
+      width: 540px
+
+@media (max-width: 576px)
+   .philips .container
+      width: 100%
+      box-sizing: border-box

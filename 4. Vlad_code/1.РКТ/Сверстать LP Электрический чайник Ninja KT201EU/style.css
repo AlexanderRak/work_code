@@ -1,0 +1,142 @@
+.ninja {
+  width: 100%;
+  max-width: 1536px;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.ninja img {
+  margin: 0 auto;
+  opacity: 1 !important;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+.ninja img:hover {
+  opacity: 1 !important;
+}
+.ninja div {
+  line-height: normal;
+}
+.ninja ul {
+  margin: 0;
+  padding: 0;
+}
+
+.features-desc__text img {
+  margin-bottom: 0rem;
+}
+
+.ninja .container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.ninja__title {
+  font-size: 36px;
+  margin-bottom: 1rem;
+}
+
+.ninja__txt {
+  font-size: 16px;
+}
+
+.ninja__list {
+  list-style-position: inside;
+  list-style-type: disc;
+  margin-top: 1rem !important;
+}
+.ninja__list li {
+  font-size: 16px;
+}
+.ninja__list li:nth-of-type(n+2) {
+  margin-top: 5px;
+}
+
+.ninja__cont > div, .ninja__cont ul {
+  padding-left: 100px;
+}
+
+.ninja__i {
+  margin-bottom: 45px;
+}
+.ninja__i img {
+  margin: 0;
+}
+
+.ninja__row {
+  display: flex;
+  align-items: center;
+  gap: 95px;
+}
+.ninja__row > div {
+  flex: 1;
+  max-width: 50%;
+  box-sizing: border-box;
+}
+.ninja__row:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+.ninja__row:nth-of-type(even) .ninja__cont > div, .ninja__row:nth-of-type(even) .ninja__cont ul {
+  padding-left: 0;
+  padding-right: 100px;
+}
+
+.ninja__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 145px;
+}
+
+@media (max-width: 1201px) {
+  .ninja .container {
+    width: 960px;
+    padding: 0 15px;
+  }
+  .ninja__cont > div, .ninja__cont ul {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .ninja__title {
+    font-size: 24px;
+  }
+  .ninja__i {
+    max-width: 30%;
+    margin-bottom: 1rem;
+  }
+  .ninja__row {
+    gap: 2em !important;
+    gap: 1em !important;
+  }
+  .ninja__wrap {
+    gap: 2em;
+  }
+  .ninja__wrap {
+    padding: 1em 0;
+  }
+}
+@media (max-width: 991px) {
+  .ninja .container {
+    width: 720px;
+  }
+  .ninja__row {
+    flex-direction: column-reverse !important;
+  }
+  .ninja__row > div {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .ninja .container {
+    width: 540px;
+  }
+}
+@media (max-width: 576px) {
+  .ninja .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

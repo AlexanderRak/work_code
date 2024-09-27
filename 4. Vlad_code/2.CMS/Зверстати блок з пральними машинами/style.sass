@@ -1,0 +1,152 @@
+//default styles
+
+.pralki
+  width: 100%
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    font-size: 20px
+    line-height: 30px
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img
+    margin: 0 auto
+    opacity: 1
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1 !important
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+//end default styles
+
+.pralki
+  padding: 32px
+  box-sizing: border-box
+
+.pralki__title
+  font-size: 16px
+  font-weight: bold
+
+.pralki__flex
+  display: flex
+  margin-top: 12px
+  max-width: max-content
+  a
+    color: #000
+    text-decoration: none
+    display: block
+    flex: 1 1 0
+    max-width: 218px
+    box-sizing: border-box
+    &:nth-of-type(n+2)
+      margin-left: 12px
+    &:hover
+      transition: all .3s
+      .pralki__item
+        border: 1px solid #43B02A !important
+      .pralki__item__title
+        text-decoration: underline
+        color: #43B02A
+
+.pralki__item
+  border: 1px solid #E5E5E5
+  border-radius: 4px
+  padding: 8px
+  display: flex
+  align-items: center
+  transition: all .3s
+
+.pralki__img
+  flex: 1
+  margin-right: 14px
+
+.pralki__cont
+  flex: 1.4
+
+.pralki__item__title
+  font-size: 12px
+  font-weight: bold
+  transition: all .3s
+
+.pralki__item__txt
+  font-size: 12px
+  margin: 4px 0
+
+.pralki__cena
+  i
+    font-style: normal
+    text-decoration: line-through
+    color: #999999
+    font-size: 12px
+    line-height: 18px
+  p
+    font-weight: bold
+    font-size: 24px
+    line-height: 24px
+    strong
+      font-size: 18px
+
+//media*****************************************************
+
+@media (max-width: 1025px)
+  .pralki
+    width: unset
+    background: #fff
+    margin: 0 12px
+    border-radius: 8px
+
+@media (max-width: 576px)
+  .pralki
+    padding: 14px
+  .pralki__flex
+    display: block
+    max-width: 100%
+  .pralki__flex a:nth-of-type(n+2)
+    margin: 0
+  .pralki__flex a:nth-of-type(2)
+    margin: 8px 0
+  .pralki__cena
+    display: flex
+    flex-direction: row-reverse
+    justify-content: start
+  .pralki__cena i
+    margin-left: 8px
+  .pralki__flex a
+    max-width: 100%
+  .pralki__cont
+    flex: 4.2
+  .pralki__img
+    flex: 1
+    margin: 0 14px 0 0
+    img
+      margin: 0

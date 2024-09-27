@@ -1,0 +1,356 @@
+//default styles
+
+// body
+//    margin: 0
+
+.lenovo
+   width: 100%
+   max-width: 1920px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   color: #fff
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.lenovo .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+.lenovo__title
+   font-weight: bold
+   font-size: clamp(22px, 3vw, 52px)
+   margin-bottom: 2.5rem
+
+.lenovo__txt
+   font-size: clamp(15px, 1.5vw, 24px)
+
+//logo
+
+.logo
+   position: relative
+   background: url("https://cdn.comfy.ua/media/x/img/1680323/bg1.jpg") no-repeat center bottom / cover
+   padding: 140px 0 100px 170px
+
+.logo__row
+   display: flex
+
+.logo__cont
+   width: 1000px
+
+.logo__icon
+   position: absolute
+   bottom: 165px
+   right: 0
+
+.logo__title
+   font-weight: bold
+   font-size: clamp(32px, 3.5vw, 84px)
+   margin-top: 80px
+
+.logo__subtitle
+   font-size: clamp(24px, 3vw, 42px)
+
+.logo__img
+   margin-left: -15%
+
+//events
+
+.events
+   padding: 65px 170px 0 170px
+   background: url("https://cdn.comfy.ua/media/x/img/1680323/bg2.jpg") no-repeat center top / cover
+
+.events__cont
+   width: 800px
+   margin: 0 0 0 auto
+
+.events__img img
+   margin: 0
+
+//power
+
+.power
+   padding: 145px 170px 40px 170px
+   background: url("https://cdn.comfy.ua/media/x/img/1680323/bg3.jpg") no-repeat center / cover
+
+.power__row
+   display: flex
+   align-items: center
+   margin-top: 100px
+
+.power__icon
+   min-width: max-content
+   margin-left: 230px
+
+//play
+
+.play
+   padding: 85px 0 0 170px
+   background: url("https://cdn.comfy.ua/media/x/img/1680323/bg4.jpg") no-repeat center bottom / cover
+
+.play__row
+   display: flex
+   align-items: flex-end
+   justify-content: space-between
+
+.play__cont
+   width: 660px
+   padding-bottom: 80px
+
+.play__img img
+   margin: 0 0 0 auto
+
+.play__icon
+   margin-top: 65px
+   img
+      margin: 0
+
+//play__reverse
+
+.play__reverse
+   padding: 85px 170px 0 170px
+   background: url("https://cdn.comfy.ua/media/x/img/1680323/bg5.jpg") no-repeat center top / cover
+   .play__row
+      flex-direction: row-reverse
+      align-items: center
+   .play__img img
+      margin: 0 auto
+   .play__cont
+      width: 930px
+      padding-bottom: 0
+
+//persons
+
+.persons
+   padding: 70px 170px 0 170px
+   background: url("https://cdn.comfy.ua/media/x/img/1680323/bg6.jpg") no-repeat center / cover
+
+.persons__row
+   display: flex
+   align-items: center
+   justify-content: space-between
+
+.persons__cont
+   width: 680px
+
+//comfort
+
+.comfort
+   padding: 0 170px 50px 0
+   background: url("https://cdn.comfy.ua/media/x/img/1680323/bg7.jpg") no-repeat center bottom / cover
+
+.comfort__row
+   display: flex
+   align-items: center
+   justify-content: space-between
+
+.comfort__cont
+   width: 650px
+
+.comfort__img img
+   margin: 0
+
+//design
+
+.design
+   padding: 60px 170px 40px 170px
+   background: url("https://cdn.comfy.ua/media/x/img/1680323/bg8.jpg") no-repeat center top / cover
+
+.design__cont
+   width: 1010px
+   margin: 0 auto 45px auto
+
+//vantage
+
+.vantage
+   background: url("https://cdn.comfy.ua/media/x/img/1680323/bg9.jpg") no-repeat center / cover
+   padding-right: 0
+   padding-top: 80px
+   padding-bottom: 100px
+
+.lenovo [class$="__cont"]
+   max-width: 100%
+
+//media*****************************************************
+
+@media (max-width: 1441px)
+   .logo,
+   .play
+      padding-left: 4em
+
+   .play__reverse,
+   .comfort
+      padding-right: 4em
+
+   .events,
+   .power,
+   .persons,
+   .design
+      padding-right: 4em
+      padding-left: 4em
+
+   .vantage
+      padding-right: 0
+
+   .logo__icon
+      bottom: 6em
+      img
+         max-width: 60%
+         margin: 0 0 0 auto
+
+   .play
+      min-height: 805px
+      box-sizing: border-box
+
+   .play__reverse .play__cont
+      padding-left: 4em
+
+   .comfort,
+   .design
+      min-height: 864px
+      box-sizing: border-box
+
+   .logo,
+   .play
+      min-height: 860px
+      box-sizing: border-box
+
+@media (max-width: 1201px)
+   .lenovo .container
+      width: 960px
+      padding: 0 15px
+
+   .lenovo__title
+      margin-bottom: 1rem
+
+   .logo
+      padding: 2em 0
+      min-height: unset
+   .logo__icon img
+      max-width: 50%
+
+   .events
+      padding: 2em 0 0 0
+
+   .power,
+   .design
+      padding: 2em 0
+
+   .play,
+   .persons
+      padding: 2em 0 0 0
+   .play__reverse
+      padding: 2em 0
+
+   .comfort
+      padding: 0
+
+   .power__row
+      margin-top: 2em
+
+   .comfort__cont
+      padding-left: 4em
+
+   .play__img img,
+   .persons__img img
+      margin-right: -46px
+
+   .comfort__img img
+      margin-left: -46px
+
+   .play
+      min-height: 600px
+
+   .comfort, 
+   .design
+      min-height: 615px
+
+
+@media (max-width: 991px)
+   .lenovo .container
+      width: 720px
+
+   .logo__row
+      display: block
+   .logo__title
+      margin-top: 1em
+      margin-bottom: 1em
+   .logo__icon
+      bottom: 1em
+      img
+         max-width: 40%
+
+   .events__cont
+      margin-bottom: 1em
+
+   .power__row
+      display: block
+   .power__icon
+      margin-left: 0
+      margin-top: 1em
+   .play__cont
+      padding-bottom: 2em
+   .play__reverse .play__cont
+      padding-left: 0
+      padding-bottom: 2em
+
+   .play, 
+   .persons
+      min-height: unset
+
+   .play__row
+      display: block
+   .play__icon
+      margin-top: 2em
+
+   .persons__row
+      display: block
+   .persons__cont
+      padding-bottom: 2em
+
+   .comfort
+      padding-bottom: 2em
+   .comfort__row
+      display: block
+   .comfort__cont
+      padding-left: 0
+      padding-top: 2em
+
+   .comfort, 
+   .design
+      min-height: unset
+
+   .design__cont
+      margin-bottom: 2em
+
+   .play__img img, .persons__img img
+      margin-right: -15px
+
+   .comfort__img img
+      margin-left: -15px
+
+@media (max-width: 767px)
+   .lenovo .container
+      width: 540px
+
+@media (max-width: 576px)
+   .lenovo .container
+      width: 100%
+      box-sizing: border-box

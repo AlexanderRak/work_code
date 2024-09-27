@@ -1,0 +1,331 @@
+//default styles
+
+// body
+//    margin: 0
+
+.asus
+   width: 100%
+   max-width: 1520px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.asus .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//aimlab
+
+.aimlab
+   padding: 85px 200px 70px 135px
+
+.aimlab__row
+   display: flex
+   align-items: center
+   gap: 130px
+
+.aimlab__img
+   min-width: max-content
+
+.aimlab__title
+   font-size: clamp(24px, 3vw, 42px)
+   margin-bottom: 1rem
+
+.aimlab__txt
+   font-size: clamp(16px, 2vw, 22px)
+
+.aimlab__list
+   list-style-type: disc !important
+   display: flex
+   flex-direction: column
+   gap: 20px
+   list-style-position: inside
+   margin-top: 1rem !important
+   li
+      font-size: 15px
+
+.asus__black
+   background-color: #000
+   color: #fff
+
+//control
+
+.control__row
+   display: flex
+   padding: 45px 260px
+   gap: 50px
+
+.control__title
+   text-transform: uppercase
+   font-size: clamp(32px, 3vw, 60px)
+   margin-right: -9vw
+   margin-bottom: 1rem
+
+.asus__txt
+   font-size: clamp(16px, 1.4vw, 20px)
+
+.control__i
+   min-width: max-content
+
+//practice
+
+.practice
+   padding: 175px 0 200px
+   background-color: #272d67
+   background-image: url("https://cdn.comfy.ua/media/x/img3/2369028/bg1.png")
+   background-repeat: no-repeat
+   background-position: center left -700px
+
+.practice__img
+   margin-bottom: 300px
+
+.asus__title
+   text-transform: uppercase
+   font-size: clamp(24px, 3vw, 42px)
+   text-align: center
+   position: relative
+   margin: 0 auto 2rem
+   padding-bottom: .5rem
+   max-width: max-content
+   &::before
+      content: ""
+      display: block
+      background-color: #65e8e2
+      width: 150px
+      position: absolute
+      z-index: 0
+      height: 10px
+      bottom: -15px
+      right: 50%
+      transform: translateX(100%)
+   &::after
+      content: ""
+      display: block
+      background-color: #2331bd
+      position: absolute
+      mix-blend-mode: hard-light
+      z-index: 0
+      width: 200px
+      height: 15px
+      bottom: -10px
+      right: 50%
+      transform: translateX(50%)
+
+.practice__cont
+   padding: 0 385px
+
+.practice__row
+   display: flex
+   padding: 0 50px
+   gap: 35px
+   margin-top: 190px
+
+//moves
+
+.moves
+   padding: 55px 215px 0
+
+.moves__cont
+   padding: 0 160px
+   margin-bottom: 45px
+
+//protect
+
+.protect
+   padding: 160px 160px 0
+   background-image: url("https://cdn.comfy.ua/media/x/img3/2369028/bg2.png")
+   background-repeat: no-repeat
+   background-position: top right -100px
+
+.protect__cont
+   .asus__txt
+      padding: 0 200px
+
+.protect__row
+   display: flex
+   justify-content: center
+   margin-top: 40px
+
+.protect__title
+   text-transform: uppercase
+   font-size: clamp(24px, 3vw, 42px)
+   color: #8ee9ff
+   text-align: center
+   margin-top: 40px
+
+//gum
+
+.gum
+   padding-top: 200px
+
+.gum__cont
+   max-width: 800px
+   margin: 0 auto -60px
+   position: relative
+
+//ace
+
+.ace__wrap
+   position: relative
+
+.ace__abs
+   position: absolute
+   top: 80px
+   left: 150px
+   max-width: 500px
+   .asus__title
+      text-align: left
+      margin: 0 0 2rem
+      &::after
+         left: 0
+         right: unset
+         transform: unset
+      &::before
+         transform: unset
+         right: 40%
+
+//media*****************************************************
+
+@media (max-width: 1441px)
+   .aimlab
+      padding: 4em
+   .aimlab__row
+      gap: 4em
+
+   .control__row
+      padding: 2em 0
+      max-width: 1100px
+      margin: 0 auto
+
+   .practice
+      padding: 4em 0
+   .practice__img
+      margin-bottom: 6em
+   .practice__row
+      margin-top: 4em
+
+   .moves
+      padding: 4em
+   .moves__cont
+      padding: 0 4em
+
+   .protect
+      padding: 4em
+   .protect__cont .asus__txt
+      padding: 0
+
+   .gum
+      padding: 4em 0 0
+
+   .ace__abs
+      left: 4em
+      top: 4em
+
+@media (max-width: 1201px)
+   .asus .container
+      width: 960px
+      padding: 0 15px
+
+   .aimlab,
+   .practice,
+   .moves,
+   .protect
+      padding: 2em 0
+
+   .practice__cont
+      padding: 0
+   .practice__img
+      margin-bottom: 2em
+   .practice__row
+      margin-top: 2em
+      padding: 0
+
+   .moves__cont
+      margin-bottom: 2em
+      padding: 0
+
+   .gum
+      padding: 2em 0 0
+
+   .ace__abs
+      top: 2em
+      left: 2em
+
+   .protect
+      background-image: unset
+   .protect__title
+      margin-top: 1em
+
+   .gum__cont
+      margin-bottom: 1em
+
+@media (max-width: 991px)
+   .asus .container
+      width: 720px
+
+   .aimlab__row
+      flex-direction: column
+      gap: 1em
+   .aimlab__img
+      min-width: unset
+
+   .control__row
+      flex-direction: column
+   .control__i
+      min-width: unset
+
+   .practice__row
+      flex-direction: column
+      gap: 1em
+
+   .asus__title
+      padding-bottom: 0
+   .asus__title::after
+      height: 7px
+      width: 150px
+   .asus__title::before
+      height: 7px
+      width: 100px
+
+   .moves__cont
+      margin-bottom: 1em
+
+   .protect__row
+      flex-direction: column
+      gap: 2em
+
+   .ace__abs
+      position: unset
+      padding: 1em 0
+
+@media (max-width: 767px)
+   .asus .container
+      width: 540px
+
+@media (max-width: 576px)
+   .asus .container
+      width: 100%
+      box-sizing: border-box
