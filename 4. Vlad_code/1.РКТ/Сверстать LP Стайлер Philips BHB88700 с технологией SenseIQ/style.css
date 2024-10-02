@@ -1,3 +1,99 @@
+.rkt-philips-bhb887-00__container {
+  overflow: hidden;
+}
+
+.bc-description__content p:first-letter {
+  padding-left: 0 !important;
+}
+
+#rkt-philips-bhb887-00 {
+  max-width: 1023px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+#rkt-philips-bhb887-00 h2, #rkt-philips-bhb887-00 h3, #rkt-philips-bhb887-00 h4, #rkt-philips-bhb887-00 h5, #rkt-philips-bhb887-00 h6, #rkt-philips-bhb887-00 p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+#rkt-philips-bhb887-00 ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+#rkt-philips-bhb887-00 img {
+  display: block;
+  max-width: 100%;
+  opacity: 1;
+  margin: 0 auto;
+}
+#rkt-philips-bhb887-00 img:hover {
+  opacity: 1;
+}
+#rkt-philips-bhb887-00 h2, #rkt-philips-bhb887-00 .philips__title, #rkt-philips-bhb887-00 .philips__table__title {
+  font-size: 26px;
+  font-weight: 900;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-bhb887-00 h2, #rkt-philips-bhb887-00 .philips__title, #rkt-philips-bhb887-00 .philips__table__title {
+    font-size: calc(20px + 6 * (100vw - 320px) / 703);
+  }
+}
+#rkt-philips-bhb887-00 h3, #rkt-philips-bhb887-00 .fast__txt {
+  font-size: 20px;
+  font-weight: normal;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-bhb887-00 h3, #rkt-philips-bhb887-00 .fast__txt {
+    font-size: calc(18px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-philips-bhb887-00 p, #rkt-philips-bhb887-00 .philips__txt {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-bhb887-00 p, #rkt-philips-bhb887-00 .philips__txt {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-philips-bhb887-00 li {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.2;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-bhb887-00 li {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-philips-bhb887-00 i {
+  line-height: 1.2;
+  font-size: 16px;
+  margin-top: 0.5rem;
+  display: block;
+  font-style: italic;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-bhb887-00 i {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+
 .philips {
   width: 100%;
   max-width: 1536px;
@@ -36,47 +132,23 @@
   margin: 0 auto;
 }
 
-.philips__title {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.philips__txt {
-  font-size: 24px;
-}
-
 .fast {
-  padding: 50px 0 0;
+  padding: 2em 0 0;
   text-align: center;
 }
 
 .fast__cont {
-  margin-bottom: 50px;
-}
-
-.fast__txt {
-  font-size: 36px;
-}
-
-.fast__img {
-  position: relative;
-}
-
-.fast__i {
-  position: absolute;
-  top: 0;
-  left: 50px;
+  margin-bottom: 2em;
 }
 
 .func {
-  padding: 56px 160px 0 60px;
+  padding: 2em 2em 0 2em;
 }
 
 .func__items {
   display: flex;
   flex-direction: column;
-  gap: 45px;
+  gap: 2em;
 }
 
 .func__item {
@@ -86,7 +158,7 @@
 }
 
 .txt__center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .func__i {
@@ -94,28 +166,42 @@
   max-width: 192px;
 }
 
+.invis {
+  padding: 2em;
+}
+.invis iframe {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 30vw;
+  max-height: 100%;
+}
+
+.invis__cont {
+  margin-bottom: 30px;
+}
+
 .philips__block {
-  padding: 0 70px;
+  padding: 0 2em;
 }
 
 .philips__row {
   display: flex;
   align-items: center;
-  gap: 110px;
-  padding-top: 50px;
+  gap: 4em;
+  padding-top: 2em;
   justify-content: space-between;
+}
+.philips__row > div {
+  flex-basis: 50%;
+  box-sizing: border-box;
 }
 .philips__row:nth-of-type(even) {
   flex-direction: row-reverse;
 }
 
-.philips__cont {
-  max-width: 650px;
-  min-width: 650px;
-}
-
 .senselq {
-  padding: 50px 10px 0;
+  padding: 2em 10px 0;
 }
 
 .senselq__row {
@@ -140,47 +226,18 @@
 }
 
 .philips__list {
-  list-style-type: disc;
   list-style-position: inside;
-}
-.philips__list li {
-  font-size: 24px;
-}
-.philips__list li:nth-of-type(n+2) {
-  margin-top: 5px;
 }
 
 .productline {
-  padding: 50px 0 0;
+  padding: 2em 0 0;
 }
 .productline .philips__title {
   text-align: center;
 }
 
-.productline__img {
-  position: relative;
-}
-
-.productline__txt {
-  font-size: 24px;
-  color: #fff;
-  position: absolute;
-}
-.productline__txt:nth-of-type(1) {
-  bottom: 120px;
-  left: 300px;
-}
-.productline__txt:nth-of-type(2) {
-  top: 250px;
-  right: 38%;
-}
-.productline__txt:nth-of-type(3) {
-  bottom: 125px;
-  right: 250px;
-}
-
 .philips__vs {
-  padding: 55px 10px 40px;
+  padding: 2em 10px 2em;
 }
 
 .philips__vs__row {
@@ -190,8 +247,7 @@
 }
 
 .philips__table__title {
-  font-size: 28px;
-  font-weight: bold;
+  margin-bottom: 0 !important;
 }
 
 .philips__table {
@@ -205,49 +261,30 @@
 }
 .philips__grid .cal1 {
   grid-area: cal1;
-  background: #D9D9D9;
+  background: #EABEDB;
 }
 .philips__grid .cal2 {
   grid-area: cal2;
+  text-align: center !important;
 }
 .philips__grid .cal3 {
   grid-area: cal3;
+  text-align: center !important;
 }
 .philips__grid > div {
   padding: 11px 20px;
 }
-.philips__grid .mark {
-  width: 10px;
-  height: 10px;
-  border-radius: 50px;
-  background: #000;
-  display: flex;
-  align-self: center;
-  margin: 20px 0 20px 20px;
-  padding: 0 !important;
-}
 
 .philips__note {
   font-size: 14px;
-  margin-top: 50px;
-  margin-left: 20px;
+  margin: 2em 2em 0;
 }
 
-@media (max-width: 1441px) {
-  .productline__txt:nth-of-type(1) {
-    left: 15%;
-  }
-  .productline__txt:nth-of-type(2) {
-    right: 35%;
-  }
-  .productline__txt:nth-of-type(3) {
-    right: 15%;
-  }
-}
 @media (max-width: 1201px) {
   .philips .container {
-    width: 960px;
+    width: 100%;
     padding: 0 15px;
+    box-sizing: border-box !important;
   }
   .fast {
     padding-top: 2em;
@@ -255,9 +292,6 @@
   .philips__title,
   .fast__txt {
     font-size: 24px;
-  }
-  .philips__txt {
-    font-size: 16px;
   }
   .func {
     padding: 2em 0 0;
@@ -268,17 +302,9 @@
   .philips__row {
     gap: 4em;
   }
-  .philips__cont {
-    min-width: 50%;
-    max-width: 50%;
-    box-sizing: border-box;
-  }
   .philips__vs {
     padding-top: 2em;
     padding-bottom: 2em;
-  }
-  .philips__table__title {
-    font-size: 20px;
   }
   .philips__list li {
     font-size: 16px;
@@ -290,10 +316,19 @@
     padding-right: 0;
     padding-left: 0;
   }
+  .func__i {
+    max-width: 15vw;
+    min-width: 15vw;
+  }
+  .invis {
+    padding: 2em 0;
+  }
 }
-@media (max-width: 991px) {
+@media (max-width: 767.9px) {
   .philips .container {
-    width: 720px;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
   }
   .fast {
     padding-top: 1em;
@@ -335,8 +370,8 @@
     margin-right: unset;
   }
   .productline__img img {
-    min-width: 130%;
-    margin-left: -15%;
+    min-width: 140%;
+    margin-left: -20% !important;
   }
   .productline__txt:nth-of-type(1) {
     left: 4%;
@@ -351,14 +386,8 @@
   .productline__txt:nth-of-type(3) {
     right: 15%;
   }
-  .philips__table {
-    overflow-x: scroll;
-  }
-  .philips__grid {
-    min-width: 500px;
-  }
   .philips__grid .philips__txt {
-    font-size: 12px;
+    font-size: 12px !important;
   }
   .philips__table__title {
     font-size: 14px;
@@ -377,14 +406,38 @@
     margin-top: 2em;
   }
 }
-@media (max-width: 767px) {
-  .philips .container {
-    width: 540px;
+@media (min-width: 320px) and (max-width: 767.9px) {
+  .philips__table__scroll {
+    overflow-x: scroll;
+  }
+  .philips__table__wrap {
+    min-width: 760px;
+  }
+  .philips__note {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .invis iframe {
+    height: 50vw;
   }
 }
-@media (max-width: 576px) {
-  .philips .container {
-    width: 100%;
-    box-sizing: border-box;
+@media (min-width: 1024px) and (max-width: 1201px) {
+  .func__item {
+    gap: 2em;
+  }
+  .philips__row {
+    flex-direction: column !important;
+    align-items: unset;
+    gap: 1em;
+  }
+  .philips__table__scroll {
+    overflow-x: scroll;
+  }
+  .philips__table__wrap {
+    min-width: 760px;
+  }
+  .philips__note {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
