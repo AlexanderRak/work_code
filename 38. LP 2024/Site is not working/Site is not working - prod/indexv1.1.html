@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+   <title>На жаль, сайт тимчасово недоступний</title>
+   <link rel="icon" href="https://cdn.comfy.ua/media/favicon/default/ico.png" type="image/x-icon">
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/vue-the-mask@0.11.1/dist/vue-the-mask.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <link rel="stylesheet" href="style.css">
+   <style type="text/css">
+      
+   </style>
+</head>
+
+<body>
+   <div id="sity-isnot-working" class="sity-isnot-working__wrap">
+      <div class="sity-isnot-working__content-flex">
+         <div class="sity-isnot-working__img">
+            <img src="https://cdn.comfy.ua/media/x/img5/smile.png" alt="">
+         </div>
+         <div class="sity-isnot-working__h2 sity-isnot-working__text">
+            <h1>На жаль, сайт тимчасово недоступний</h1>
+         </div>
+         <div class="sity-isnot-working__h3 sity-isnot-working__text">
+            <h2>Ми вже працюємо над відновленням</h2>
+         </div>
+         <div class="sity-isnot-working__p sity-isnot-working__text">
+            <h3>Залиши свій номер і ми с тобою зв'яжемось</h3>
+         </div>
+         <form v-if="!isFormSubmite" @submit.prevent="submitForm" class="sity-isnot-working__form">
+            <div class="sity-isnot-working__form-content">
+               <div class="sity-isnot-working__form-flex">
+                  <label class="sity-isnot-working__label" for="phone">Номер телефона:</label>
+                  <input
+                     type="tel"
+                     id="phone"
+                     class="sity-isnot-working__input"
+                     :class="{ showError }"
+                     placeholder="+38 (0__) ___ __ __"
+                     v-model="phone"
+                     v-mask="'+38 (0##) ###-##-##'"
+                     @focus="clearError"
+                     @input="updatePhone"
+                  >
+               </div>
+               <p v-if="showError" class="error">
+                  Введіть повний номер.
+               </p>
+            </div>
+            <button type="submit" class="sity-isnot-working__button">
+               Залишити номер
+            </button>
+         </form>
+         <div v-if="isFormSubmite" class="sity-isnot-working__form-status">
+            <div v-if="isFormSubmiteTrue" class="sity-isnot-working__form-status status-sent">
+               <img src="https://cdn.comfy.ua/media/x/img3/foto-vidkrittja/done.svg" alt="">
+               {{ successMsg }}
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script>
+      Vue.use(VueTheMask);
+      new Vue({
+         el: '#sity-isnot-working',
+         data: {
+            phone: '',
+            showError: false,
+            successMsg: '',
+            isFormSubmite: false,
+            isFormSubmiteTrue: false
+         },
+         methods: {
+            clearError(event) {
+               this.showError = false;
+
+               const input = event.target;
+               // Если поле еще не заполнено, установим курсор после +38
+               this.$nextTick(() => {
+                  if (this.phone.length <= 7) {
+                     // Установить курсор после символов +38
+                     input.setSelectionRange(7, 7);
+                  }
+               });
+            },
+            updatePhone(event) {
+               const input = event.target.value;
+               this.phone = input;
+            },
+            async submitForm() {
+               const cleanPhone = this.phone.replace(/\D/g, '');
+
+               if (cleanPhone.length !== 12) {
+                  this.showError = true;
+                  return;
+               }
+
+               this.successMsg = 'Дякуємо! Ми отримали ваші дані.';
+               this.isFormSubmite = true;
+               this.isFormSubmiteTrue = true;
+
+               const data = {
+                  phone: this.phone,
+                  shareName: "Site_is_not_working"
+               };
+
+               $.ajax({
+                  url: "https://main.corezoid.comfy.ua/api/2/json/public/14836/d7be0a228a699628984a90af5707dd3eff04f189",
+                  headers: {
+                     'Content-Type': 'application/x-www-form-urlencoded'
+                  },
+                  type: "POST",
+                  dataType: "json",
+                  data: JSON.stringify(data),
+                  success: console.log('done')
+               });
+            }
+         }
+      });
+   </script>
+</body>
+
+</html>

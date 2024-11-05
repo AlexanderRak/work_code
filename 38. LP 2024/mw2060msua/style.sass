@@ -1,0 +1,74 @@
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 480px
+$bp-tablet: 768px
+$bp-hd-desktop: 1023px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-mw2030msua
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      &:hover
+         opacity: 1
+   p
+      @include adaptiv-value("font-size", 23, 16)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 21, 16)
+      font-weight: 400
+      text-align: left
+.rkt-mw2030msua
+   &__content
+      padding: 2.4rem 1.2rem
+   &__flex
+      display: flex
+      flex-direction: row
+      padding-bottom: 2.4rem
+      align-items: center
+      .rkt-mw2030msua__text
+         padding: 1.2rem
+   &__flex--row-rev
+      display: flex
+      flex-direction: row-reverse
+      align-items: center
+      .rkt-mw2030msua__text
+         padding: 1.2rem 0
+   &__item
+      flex: 1 1 0
+
+@media (max-width: $bp-hd-desktop)
+@media (max-width: $bp-tablet)
+@media (max-width: $bp-mobile)
+   .rkt-mw2030msua
+      &__content
+         padding: 2.4rem 0 0 0
+      &__flex
+         flex-direction: column
+         align-items: flex-start
+      &__flex--row-rev
+         flex-direction: column
+         .rkt-mw2030msua__text
+            padding: 1.2rem

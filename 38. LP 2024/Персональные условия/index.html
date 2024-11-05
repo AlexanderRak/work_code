@@ -1,0 +1,126 @@
+<style>
+
+</style>
+
+<div id="birthday">
+   <div class="birthday-container">
+      <div class="birthday-bgrd"></div>
+      <div class="birthday-img">
+         <picture>
+            <source srcset="https://cdn.comfy.ua/media/x/img5/perumov_mob.svg" media="(max-width: 480px)" />
+            <img src="https://cdn.comfy.ua/media/x/img5/perumov.svg" alt="Персональні умови" />
+         </picture>
+      </div>
+      <div class="birthday-form">
+
+         <div id="wrapper-form-corizoid" class="form-corizoid">
+
+            <div class="bonusy-vijskovim__form-text">
+               <p>Вкажи свої дані для отримання спеціальних вигод</p>
+            </div>
+
+            <div id="form-submit-none" class="text-submit-block-cl">
+
+               <form id="valid_form" method="post" name="valid_form">
+                  <div class="container-flex-form">
+                     <div class="row-flex-form">
+                        <div class="item_fr item_phone">
+                           <input type="tel" id="number_rw" name="youdate" class="item-input-frm item-input-frm-input" placeholder="38(0__)-___-__-__" value="" required />
+                        </div>
+                        <div class="item_fr item_email">
+                           <input type="email" id="email_rw" name="yourmail" class="item-input-frm" placeholder="Email (необов'язково)*" value="" required />
+                        </div>
+                        <div class="item_fr item_submit">
+                           <input type="submit" class="submit-posgo item-input-frm item-input-frm__submit" value="Відправити" name="Submit" />
+                        </div>
+                     </div>
+                  </div>
+               </form>
+               <div class="birthday-form__description">Персональна вигода буде доступна на наступний день після відправки форми з даними за вказаним номером телефона на сайті, в додатку та в магазинах СOMFY</div>
+
+            </div>
+
+            <div id="text-submit-block" class="text-submit-block-cl --doneform">
+               <div class="doneform-flex">
+                  <img style="margin: 0;" src="https://cdn.comfy.ua/media/x/img2/zsu/img8.png" alt="">
+                  <div>Дякуємо! Ми отримали ваші дані.</div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+
+<script>
+
+   let value_params = new URLSearchParams(document.location.search);
+   let value_params_number = value_params.get("poolid");
+
+   $(document).ready(function () {
+      $("fieldset input").click(function () {
+         $("fieldset label.error").remove()
+      });
+
+      $("#valid_form").validate({
+         rules: {
+            youdate: {
+               required: true,
+               number: false
+            },
+            yourmail: {
+               required: false,
+               email: true
+            }
+         },
+         messages: {
+            youdate: {
+               required: "Обов'язкове поле"
+            },
+            yourmail: {
+               email: "Обов'язкові символи @"
+            }
+         },
+         errorPlacement: function (error, element) {
+            if (element.attr("name") == "youdate") error.insertAfter($("input[name=youdate]"));
+            if (element.attr("name") == "yourmail") error.insertAfter($("input[name=yourmail]"));
+         },
+         submitHandler: function (form) {
+            function sendAjaxForm(result_form, ajax_form) {
+               let people = {
+                  date: '',
+                  action: '',
+                  poolid: '',
+                  email: ''
+               };
+               people.date = $('#number_rw').val();
+               people.email = $('#email_rw').val();
+               people.action = "LP - Персональні умови в комфі";
+               people.poolid = value_params_number;
+               console.log(people);
+               $.ajax({
+                  url: "https://main.corezoid.comfy.ua/api/2/json/public/14849/5f550d9497f2aab16ddcea44f271ed7bd5869de9",
+                  headers: {
+                     'Content-Type': 'application/x-www-form-urlencoded'
+                  },
+                  type: "POST",
+                  dataType: "json",
+                  data: JSON.stringify(people),
+                  success: console.log('done')
+               });
+               var none_form = document.getElementById("form-submit-none").style.display = "none";
+               var block_text = document.getElementById("text-submit-block").style.display = "block";
+            }
+            sendAjaxForm();
+         }
+      });
+   })
+
+   $(function () {
+      $("#number_rw").mask("38(099)-999-99-99");
+   });
+
+</script>

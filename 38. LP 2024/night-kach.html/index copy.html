@@ -1,0 +1,162 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-the-mask@0.11.1/dist/vue-the-mask.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style>
+
+</style>
+
+<div id="lp-form">
+   <div class="lp-form-container">
+
+      <!--
+         1. Если данные не заполенные выводить серую кнопку
+         2. Проверить валидность
+         3. переверстать макет на новый
+         4. взять блоки картинок со старого кода
+      -->
+
+      <div id="appform">
+         <div class="lp-app-form">
+            <h2>Залиште свої контакти, щоб ми надіслали вам посилання на фото</h2>
+            <div class="lp-app-form__wrapper">
+               <form @submit.prevent="onSubmit" action="https://comfy.ua/newsletter/subscriber/new?isAjax=1" v-if="formSubmitted" novalidate class="lp-app-form__grid">
+                  <div class="lp-app-form__grid-item">
+                     <input class="lp-app-input" type="text" id="name" v-model="name" placeholder="Ім'я" @input="handleNameInput" />
+                     <span v-if="errors.name" class="lp-app-input-error">Обов'язкове поле</span>
+                  </div>
+                  <div class="lp-app-form__grid-item">
+                     <input class="lp-app-input" type="email" id="email" v-model="email" @input="clearError('email')" placeholder="Email" />
+                     <span v-if="errors.email" class="lp-app-input-error">{{ errors.email }}</span>
+                  </div>
+                  <div class="lp-app-form__grid-item">
+                     <button type="submit" class="lp-app-btn" >
+                        Надіслати
+                     </button>
+                  </div>
+               </form>
+               <div v-else class="form-submitted">
+                  <div class="form-submitted__wrapper">
+                     <img src="https://cdn.comfy.ua/media/x/img3/foto-vidkrittja/done.svg" alt="">
+                     <div class="form-submitted__mess">
+                        Дякуємо! Ми отримали ваші дані. Чекайте лист на вказаний Email
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<script>
+   document.addEventListener("DOMContentLoaded", (event) => {
+
+      new Vue({
+         el: '#appform',
+         data: {
+            name: '',
+            email: '',
+            errors: {
+               name: false,
+               email: '',
+            },
+            formSubmitted: true,
+            initialState: null
+         },
+         mounted() {
+            this.initialState = window.__INITIAL_STATE__;
+         },
+         methods: {
+            onSubmit() {
+               this.errors = {
+                  name: !this.name,
+                  email: '',
+               };
+
+               if (!this.name) {
+                  this.errors.name = true;
+               }
+               if (!this.email) {
+                  this.errors.email = 'Обов\'язкове поле';
+               } else if (!this.validateEmail(this.email)) {
+                  this.errors.email = 'Некоректна адреса пошти';
+               }
+
+               if (!this.errors.name && !this.errors.email) {
+                  
+                  let data = {
+                     header: {
+                        messageType: "ecom_double_opt_in",
+                        event: "created",
+                        system: "ECOM"
+                     },
+                     payload: {
+                        domain: "comfy.ua",
+                        cookie: this.initialState.auth.authInfo.user.ucpSession,
+                        source: window.location.href,
+                        action: "subscribe",
+                        pageType: "cms page",
+                        formName: "night-kach",
+                        clientEmail: this.email.trim(),
+                        firstName: this.name.trim(), // нету
+                        cityId: this.initialState.cities.currentCity.id,
+                        ucp_id: this.initialState.auth.authInfo.user.ucpId
+                     },
+                     tags: {}
+                  }
+                  if (this.initialState.auth.authInfo.user.verified) {
+                     data.payload.ucp_id = this.initialState.auth.authInfo.user.ucpId;
+                  }    
+
+                  const apiUrl = "https://comfy.ua/api/analytics/bloomreach";
+                  const requestOptions = {
+                     method: 'POST',
+                     headers: {
+                        'Content-Type': 'application/json'
+                     },
+                     body: JSON.stringify(data)
+                  };
+
+                  fetch(apiUrl, requestOptions)
+                     .then(response => {
+                        if (!response.ok) {
+                           throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                     })
+                     .then(data => {
+                        console.log('Data sent successfully:', data);
+                     })
+                     .catch(error => {
+                        console.error('There was a problem sending data:', error);
+                     });
+
+                  this.formSubmitted = false;
+               }
+
+            },
+            validateEmail(email) {
+               const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+               return regex.test(email);
+            },
+            clearError(field) {
+               this.errors[field] = false;
+            },
+            clearAllErrors() {
+               this.errors.name = false;
+               this.errors.email = '';
+            },
+            handleNameInput(event) {
+               this.clearError('name');
+
+               const regex = /^[a-zA-Zа-яА-ЯёЁґҐєЄіІїЇ]*$/;
+               if (!regex.test(event.target.value)) {
+                  this.name = this.name.replace(/[^a-zA-Zа-яА-ЯёЁґҐєЄіІїЇ]/g, '');
+               }
+            },
+         },
+      });
+
+   });
+</script>

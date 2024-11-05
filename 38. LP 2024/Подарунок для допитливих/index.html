@@ -1,0 +1,174 @@
+<style>
+
+</style>
+
+<div id="bonusy-vijskovim">
+   <div class="bonusy-vijskovim__container --bgrd">
+
+      <div class="bonusy-vijskovim__content">
+         <div class="bonusy-vijskovim__img onlydesk">
+            <img src="https://cdn.comfy.ua/media/x/img5/pdrdop_img1.png" alt="">
+         </div>
+         <div class="bonusy-vijskovim__img onlymob">
+            <img src="https://cdn.comfy.ua/media/x/img5/pdrdop_img2.png" alt="">
+         </div>
+
+         <div class="bonusy-vijskovim__form">
+            <div class="bonusy-vijskovim__form-top">
+               <div class="bonusy-vijskovim__form-text1">
+                  <h2>Залиш свій номер і ми<br>нарахуємо тобі 200 бонусів</h2>
+               </div>
+               <div class="bonusy-vijskovim__form-wrap">
+                  <div id="wrapper-form-corizoid" class="form-corizoid">
+
+                     <div id="form-submit-none">
+                        <!-- <div class="bonusy-vijskovim__form-text">
+                              <p class="prgrf2">Залиште свій номер, і ми нарахуємо бонуси</p>
+                           </div> -->
+                        <form id="valid_form" method="post" name="valid_form">
+                           <div class="container-flex-form">
+                              <div class="younember__text">
+                                 Номер телефону*
+                              </div>
+                              <div class="row-flex-form">
+                                 <div class="item_fr item_phone">
+                                    <input type="tel" id="number_rw" name="younember" class="item-input-frm item-input-frm-input" placeholder="+38(___)___-__-__" value="" required />
+                                 </div>
+                                 <div class="item_fr item_submit">
+                                    <input type="submit" class="submit-posgo item-input-frm item-input-frm__submit" value="Надіслати" name="Submit" />
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+
+                     <div id="text-submit-block-done" class="text-submit-block-cl">
+                        <img src="https://cdn.comfy.ua/media/x/img2/zsu/img8.png" alt="">
+                        <div>Дякуємо! Ми отримали ваші дані. Чекайте повідомлення на вказаний номер телефону</div>
+                     </div>
+                     <div id="text-submit-block-error" class="text-submit-block-cl">
+                        <img src="https://cdn.comfy.ua/media/x/img2/bonus/img2.png" alt="">
+                        <div>Цей номер вже є у списку для зарахування бонусів</div>
+                     </div>
+                     <div id="text-submit-block-error-server" class="text-submit-block-cl">
+                        <img src="https://cdn.comfy.ua/media/x/img2/error-server.png" alt="">
+                        <div>Йой! Щось пішло не так. Спробуй ще раз!</div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="bonusy-vijskovim__icon">
+            <div class="bonusy-vijskovim__icon__text">
+               Витрачай в додатку
+            </div>
+            <div class="bonusy-vijskovim__icon__grid">
+               <a href="https://play.google.com/store/apps/details?id=ua.comfy.comfystore&hl=uk&gl=US&pli=1" rel="nofollow" target="_blank" class="bonusy-vijskovim__icon__item">
+                  <img src="https://cdn.comfy.ua/media/x/img5/pdrdop_icon_gplay.svg" alt="">
+               </a>
+               <a href="https://apps.apple.com/ua/app/comfy/id674510255?l=uk" rel="nofollow" target="_blank" class="bonusy-vijskovim__icon__item">
+                  <img src="https://cdn.comfy.ua/media/x/img5/pdrdop_icon_astore.svg" alt="">
+               </a>
+            </div>
+         </div>
+         <!-- <div class="linkpravila">
+               З офіційними правилами Акції можна ознайомитись на сайті <a rel="nofollow" target="_blank" href="https://prizy.gift">prizy.gift</a>
+            </div> -->
+
+      </div>
+
+   </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+
+<script>
+
+   $(document).ready(function () {
+
+      let blockNone = document.getElementById("form-submit-none");
+      let blockDone = document.getElementById("text-submit-block-done");
+      let blockError = document.getElementById("text-submit-block-error");
+      let blockErrorServer = document.getElementById("text-submit-block-error-server");
+
+      $("fieldset input").click(function () {
+         $("fieldset label.error").remove()
+      });
+
+      $("#valid_form").validate({
+         rules: {
+            younember: {
+               required: true
+            }
+         },
+         messages: {
+            younember: {
+               required: "Обов'язкове поле"
+            }
+         },
+         errorPlacement: function (error, element) {
+            if (element.attr("name") == "younember") error.insertAfter($("input[name=younember]"));
+         },
+         submitHandler: function (form) {
+
+            let people = {
+               number: $('#number_rw').val(),
+               name_action: 'Подарунок для допитливих'
+            };
+            let inputValue = people.number;
+
+            // Функция для проверки наличия значения в localStorage
+            function checkIfValueExists(value) {
+               let storedValues = JSON.parse(localStorage.getItem("storedValues")) || [];
+               return storedValues.includes(value);
+            }
+
+            // Функция для сохранения значения в localStorage
+            function saveValueToLocalStorage(value, peopleObj) {
+               let storedValues = JSON.parse(localStorage.getItem("storedValues")) || [];
+               storedValues.push(value);
+               localStorage.setItem("storedValues", JSON.stringify(storedValues));
+               sendAjaxForm(peopleObj)
+            }
+
+            function sendAjaxForm(peopleObj) {
+               $.ajax({
+                  url: "https://main.corezoid.comfy.ua/api/2/json/public/14234/1f5e70e8f32c932e21bad97bb4f65a25443bb94e",
+                  headers: {
+                     'Content-Type': 'application/x-www-form-urlencoded'
+                  },
+                  type: "POST",
+                  dataType: "json",
+                  data: JSON.stringify(peopleObj),
+                  success: console.log("dont people")
+               });
+
+               blockError.style.display = "none";
+               blockNone.style.display = "none";
+               blockDone.style.display = "flex";
+               blockErrorServer.style.display = "none";
+            }
+
+            if (checkIfValueExists(inputValue)) {
+               // телефон есть в localStorage, скрываем форму.
+               blockError.style.display = "flex";
+               blockNone.style.display = "none";
+               blockDone.style.display = "none";
+               blockErrorServer.style.display = "none";
+
+            } else {
+               // телефона нет в localStorage сохраняем в масив Storage.
+               saveValueToLocalStorage(inputValue, people);
+            }
+
+         }
+      });
+   })
+
+   $(function () {
+      $("#number_rw").mask("+38(999)999-99-99");
+   });
+
+</script>

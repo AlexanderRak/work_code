@@ -1,0 +1,156 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<style>
+
+</style>
+
+<div id="cms-page-app" class="cms-page-form">
+   <div class="cms-page__container">
+
+      <div class="cms-page-form__picture">
+         <picture>
+            <source srcset="https://cdn.comfy.ua/media/x/img3/actual-email/1.png" media="(max-width: 480px)">
+            <img src="https://cdn.comfy.ua/media/x/img3/actual-email/1.png" alt="Actual email bgrd">
+         </picture>
+      </div>
+
+      <div class="cms-page-form__wrapper">
+
+         <div v-if="formSubmitted">
+            <div class="cms-page-form__text">
+               <h2>Додайте актуальний імейл і ми пришлемо вам найкращу пропозицію зі знижками</h2>
+            </div>
+   
+            <form
+               class="cms-page-form__grid"
+               
+               @submit.prevent="onSubmit"
+               action="https://comfy.ua/newsletter/subscriber/new?isAjax=1"
+               novalidate
+            >
+               <div class="cms-page-form__grid-item">
+                  <input
+                     class="cms-page-form__input"
+                     type="email" id="email"
+                     v-model="email"
+                     placeholder="Email"
+                     @input="clearError('email')"
+                  />
+                  <span v-if="errors.email" class="cms-page-form__input-error">{{ errors.email }}</span>
+               </div>
+               <button type="submit" class="cms-page-form__submit">
+                  Надіслати
+               </button>
+            </form>
+         </div>
+         <div v-else class="cms-page-form__submitted">
+            <img src="https://cdn.comfy.ua/media/x/img3/foto-vidkrittja/done.svg" alt="">
+            <div class="cms-page-form__submitted-text">
+               Дякуємо! Ми отримали ваші дані.<br>Чекайте лист на вказаний Email
+            </div>
+         </div>
+      </div>
+
+   </div>
+</div>
+
+<script>
+   document.addEventListener("DOMContentLoaded", (event) => {
+
+      new Vue({
+         el: '#cms-page-app',
+         data: {
+            email: '',
+            errors: {
+               email: '',
+            },
+            formSubmitted: true,
+            initialState: null
+         },
+         mounted() {
+            this.initialState = window.__INITIAL_STATE__;
+         },
+         methods: {
+            onSubmit() {
+               this.errors = {
+                  email: '',
+               };
+
+               if (!this.email) {
+                  this.errors.email = 'Обов\'язкове поле';
+               } else if (!this.validateEmail(this.email)) {
+                  this.errors.email = 'Некоректна адреса пошти';
+               }
+
+               if (!this.errors.email) {
+                  if (this.initialState) {
+                     const authInfo = this.initialState.auth.authInfo;
+                     const cities = this.initialState.cities;
+                     const href = window.location.href;
+
+                     const data = {
+                        header: {
+                           messageType: "ecom_double_opt_in",
+                           event: "created",
+                           system: "ECOM"
+                        },
+                        payload: {
+                           domain: "comfy.ua",
+                           cookie: authInfo.user.ucpSession,
+                           source: href,
+                           action: "subscribe",
+                           pageType: "cms page",
+                           formName: "actual_email",
+                           clientEmail: this.email.trim(),
+                           cityId: cities.currentCity.id,
+                        },
+                        tags: {}
+                     };
+                     if (authInfo.user.verified) {
+                        data.payload.ucp_id = authInfo.user.ucpId;
+                     }
+
+                     const apiUrl = "https://comfy.ua/api/analytics/bloomreach";
+                     const requestOptions = {
+                        method: 'POST',
+                        headers: {
+                           'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                     };
+
+                     fetch(apiUrl, requestOptions)
+                        .then(response => {
+                           if (!response.ok) {
+                              throw new Error(`Network response was not ok: ${response.statusText}`);
+                           }
+                           return response.json();
+                        })
+                        .then(responseData => {
+                           console.log('Data sent successfully:', responseData);
+                        })
+                        .catch(error => {
+                           console.error('There was a problem sending data:', error);
+                        });
+
+                     this.formSubmitted = false;
+                  } else {
+                     console.error("initialState пустой что то пошло не так");
+                  }
+               }
+            },
+            validateEmail(email) {
+               const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+               return regex.test(email);
+            },
+            clearError(field) {
+               this.errors[field] = false;
+            },
+            clearAllErrors() {
+               this.errors.email = '';
+            }
+         },
+      });
+
+   });
+</script>

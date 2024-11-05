@@ -1,0 +1,134 @@
+.category-cms-content.content
+   max-width: 100%
+.category-cms-template__content.category-cms-template__content--top
+   display: block
+   padding-left: 0
+   padding-right: 0
+   margin-bottom: 0
+.category-info.content
+   display: none
+.category-cms-template__content
+   display: none
+.bottom-content-recommendations
+   display: none
+.common-template__reviews
+   display: none
+.category-cms-template__description
+   display: none
+.category-cms-template__tags
+   display: none
+.category-cms-template__prices
+   display: none
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+.breadcrumbs
+   display: none
+body
+   padding: 0
+   margin: 0
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+#cms-page-wrap
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   box-sizing: border-box
+   display: block
+   background: #fff
+   img
+      display: block
+      max-width: 100%
+      margin: 0 auto
+      padding: 0
+   h2
+      font-family: 'Roboto', sans-serif
+      font-size: 34px
+      font-weight: 700
+      color: #fff
+      line-height: 1.3
+      text-align: center
+      display: block
+      padding: 0
+      margin: 0
+
+//end default styles
+.gift-present
+   &__container
+      position: relative
+   &__content-top
+      background: #43B02A
+   &__content-bottom
+      background: #fff
+   &__bgrd
+      background-position: top center
+      background-repeat: no-repeat
+      width: 100%
+      max-width: 1440px
+      margin: 0 auto
+   &__bgrd-top
+      background-image: url("https://cdn.comfy.ua/media/x/img5/giftpresent/img1.png")
+      height: 480px
+      position: relative
+   &__bgrd-bottom
+      background-image: url("https://cdn.comfy.ua/media/x/img5/giftpresent/img4.png")
+      height: 537px
+   &__img-pos
+      position: absolute
+      right: 15px
+      bottom: 0
+      z-index: 3
+   &__text
+      position: absolute
+      top: 40px
+      left: 50%
+      transform: translateX(-50%)
+      max-width: 550px
+   &__form-wp
+      padding: 0 12px
+   &__form-pos
+      max-width: 680px
+      width: 100%
+      height: 758px
+      border-radius: 24px
+      background: #FFF
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15)
+      overflow: hidden
+      position: absolute
+      top: 152px
+      left: 50%
+      transform: translateX(-50%)
+      z-index: 2
+//media*******************
+@media (max-width: 1366px)
+   .gift-present__img-pos
+      z-index: 1
+@media (max-width: 1024px)
+   #cms-page-wrap h2
+      font-size: 28px
+   .gift-present__text
+      max-width: 100%
+@media (max-width: 812px)
+   #cms-page-wrap h2
+      font-size: 24px
+   .gift-present__form-pos
+      max-width: calc(100% - 24px)
+@media (max-width: 480px)
+   .gift-present__bgrd-top
+      background-image: url(https://cdn.comfy.ua/media/x/img5/giftpresent/img5.png)
+   .gift-present__text
+      display: none
+   .gift-present__img-pos
+      display: none
+   .gift-present__form-pos
+      top: 0
+      position: relative
+      left: 0
+      transform: translateX(0%)
+      max-width: 100%
+      margin-top: -14rem
+      margin-bottom: 140px
+   .gift-present__bgrd-bottom
+      display: none
+// @media (max-width: 320px)
+// @media (max-width: 812px) and (orientation: landscape)
