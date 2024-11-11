@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-<div class="clg-content">
+<div class="clg-content-new">
   <div class="clg-section-animate">
     <div class="clg-section-sticky">
       <div class="section-bg js-bg"></div>
@@ -281,7 +281,8 @@
         targetTwoPosition.top < windowPosition.bottom) {
 
         while (jStop < 1) {
-          targetTwo.play();
+          targetTwo.load();
+          // targetTwo.play();
           jStop++;
         }
       } else {
@@ -325,7 +326,8 @@
       if ($('.js-oled-section').css("opacity") >= 0.2) {
         while (efc < 1) {
           clgVideos.forEach(element => {
-            element.play();
+            element.load();
+            // element.play();
             efc++;
           });
         }
@@ -370,7 +372,8 @@
 
         $(document).on('general-tab-open', () => {
           document.querySelectorAll('.autoplay-video').forEach((element) => {
-            element.play();
+            element.load();
+            // element.play();
           })
         })
 
