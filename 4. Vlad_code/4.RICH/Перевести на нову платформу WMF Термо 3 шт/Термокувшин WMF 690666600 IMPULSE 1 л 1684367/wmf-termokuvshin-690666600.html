@@ -94,7 +94,7 @@
     top: 0;
     left: 0;
     z-index: 2;
-    transform: translateX(85px);
+    transform: translateX(95px);
   }
 
   .wmf-page__header-left-plan1 {
@@ -526,25 +526,36 @@
     }
   }
 
+  @media (min-width: 1024px) {
+    .gen-tab__gallery {
+      position: sticky;
+      top: 0;
+      max-height: 79rem;
+    }
+  }
+
   /* HEADER END */
 </style>
 
 <section class="wmf-page__header">
+  <div :class="['wmf-page__header-bg', canStartAnim ? '' : 'waiting' ]">
+  </div>
+
   <div class="wmf-page__header-content-wr">
     <div class="wmf-page__header-left">
       <div class="wmf-page__header-left-img-anim-wr">
-        <img src="https://skin.comfy.ua/media/x/img/wmf-jug/main-jugM.png" alt="img" class="wmf-page__header-left-img">
-        <img src="https://skin.comfy.ua/media/x/img/wmf-jug/plan-ice.png" alt="" class="wmf-page__header-left-img-plan">
+        <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/1684367/jug-static-bg.png" alt="img" class="wmf-page__header-left-img">
+        <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/1684367/ice.png" alt="" class="wmf-page__header-left-img-plan">
       </div>
 
       <div class="wmf-page__header-left-plan1 anim-levitation">
-        <img src="https://skin.comfy.ua/media/x/img/1684367/plan_01.svg" alt="img">
+        <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/1684367/plan_01.svg" alt="img">
       </div>
       <div class="wmf-page__header-left-plan2 anim-levitation">
-        <img src="https://skin.comfy.ua/media/x/img/1684367/plan_02.svg" alt="img">
+        <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/1684367/plan_02.svg" alt="img">
       </div>
       <div class="wmf-page__header-left-plan3 anim-levitation">
-        <img src="https://skin.comfy.ua/media/x/img/1684367/plan_03.svg" alt="img">
+        <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/1684367/plan_03.svg" alt="img">
       </div>
     </div>
 
@@ -554,24 +565,22 @@
         <div class="wmf-page__header-mobile">
           <div class="wmf-page__header-left-mobile">
             <div class="wmf-page__header-left-img-anim-wr">
-              <img src="https://skin.comfy.ua/media/x/img/wmf-jug/main-jugM.png" alt="img" class="wmf-page__header-left-img">
-              <img src="https://skin.comfy.ua/media/x/img/1684367/ice.png" alt="" class="wmf-page__header-left-img-plan">
+              <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/1684367/jug-static-bg.png" alt="img" class="wmf-page__header-left-img">
+              <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/1684367/ice.png" alt="" class="wmf-page__header-left-img-plan">
             </div>
 
             <div class="wmf-page__header-left-plan1 anim-levitation">
-              <img src="https://skin.comfy.ua/media/x/img/1684367/plan_01.svg" alt="img">
+              <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/1684367/plan_01.svg" alt="img">
             </div>
             <div class="wmf-page__header-left-plan2 anim-levitation">
-              <img src="https://skin.comfy.ua/media/x/img/1684367/plan_02.svg" alt="img">
+              <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/1684367/plan_02.svg" alt="img">
             </div>
             <div class="wmf-page__header-left-plan3 anim-levitation">
-              <img src="https://skin.comfy.ua/media/x/img/1684367/plan_03.svg" alt="img">
+              <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/1684367/plan_03.svg" alt="img">
             </div>
           </div>
         </div>
-
       </div>
-
     </div>
   </div>
 </section>
