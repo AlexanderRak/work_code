@@ -1,0 +1,459 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-lg-pc09sq-nsjr-pc09sq-ua3r__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-lg-pc09sq-nsjr-pc09sq-ua3r
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//design
+
+.design
+   position: relative
+
+.design__abs
+   position: absolute
+   padding: 2em
+   width: 100%
+   box-sizing: border-box
+   h2,p
+      text-align: center !important
+
+//air
+
+.air
+   position: relative
+
+.air__cont
+   padding: 2em
+   h2,p
+      text-align: center !important
+
+.air__note
+   position: absolute
+   bottom: 2em
+   left: 2em
+
+//led
+
+.led
+   display: flex
+   align-items: center
+   gap: 4em
+   padding: 2em
+   box-sizing: border-box
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+//uvnano
+
+.uvnano
+   h2,h3,p
+      text-align: center !important
+
+.uvnano__cont
+   padding: 2em
+   box-sizing: border-box
+
+.uvnano__note
+   padding: 1em 2em 2em
+   p
+      text-align: left !important
+
+//tuv
+
+.tuv
+   padding: 2em
+
+.tuv__icons
+   display: flex
+   align-items: center
+   justify-content: space-between
+
+.tuv__cont
+   margin-top: 2em
+   h2
+      text-align: center !important
+
+//plasmaster
+
+.plasmaster
+   position: relative
+
+.plasmaster__abs
+   position: absolute
+   top: 2em
+   left: 2em
+
+.plasmaster__note
+   padding: 1em 2em 2em
+
+//tuv__row
+
+.tuv__row
+   padding: 2em
+   display: flex
+   align-items: center
+   gap: 4em
+
+.tuv__row__img
+   min-width: max-content
+
+//warranty
+
+.warranty .tuv__row__img
+   min-width: unset
+   flex-basis: 20%
+.warranty .tuv__row__cont
+   flex-basis: 80%
+
+.warranty__note
+   padding: 0 2em 2em
+
+//freshair
+
+.freshair__row
+   display: flex
+   gap: 2em
+   align-items: center
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.freshair__cont
+   padding: 2em
+
+.freshair__note
+   padding: 1em 2em 2em
+
+.freshair__flex
+   display: flex
+   align-items: center
+   gap: 4em
+   padding: 2em
+
+.freshair__i
+   min-width: max-content
+
+//autoclean
+
+.autoclean
+   display: flex
+   align-items: center
+   gap: 2em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.autoclean__cont
+   padding: 2em
+
+//thinq
+
+.thinq__wrap
+   padding: 2em
+
+.thinq__title
+   h3
+      text-align: center !important
+
+.thinq__cont
+   min-height: 100px
+   h2,p
+      text-align: center !important
+
+.lg__slider__btns
+   display: flex
+   align-items: center
+   justify-content: space-between
+   max-width: 80%
+   margin: 4em auto 2em
+   img
+      opacity: .5 !important
+      filter: grayscale(1)
+      max-width: 40px !important
+
+.lg__slider__btn
+   position: relative
+   cursor: pointer
+   &::before,
+   &::after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      border-radius: 50%
+      border: .5px solid #8f8f8f
+      animation: lgPulse 2s infinite
+   &::after
+      animation-delay: .8s
+
+.lg__slider__btn__active
+   img
+      opacity: 1 !important
+      filter: grayscale(0)
+
+@keyframes lgPulse
+   0%
+      transform: scale(1)
+      opacity: 1
+   100%
+      transform: scale(2.5)
+      opacity: 0
+
+.thinq__note
+   padding: 2em 2em 0
+
+//eco
+
+.eco
+   padding: 2em
+
+.eco__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   gap: 2em
+
+.eco__note
+   padding-top: 2em
+
+.eco__txt
+   margin-top: 1em
+   h3,p
+      text-align: center !important
+
+//func
+
+.func
+   padding: 2em
+
+.func__grid
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   gap: 1em
+
+.func__note
+   padding-top: 2em
+
+.func__txt
+   margin-top: 1em
+   h3,p
+      text-align: center !important
+
+.choice__txt
+   padding: 0 2em 2em
+   h2,p
+      text-align: center !important
+
+.choice__img
+   picture
+      display: block
+      max-width: 70% !important
+      margin: 0 auto
+
+//lg__iframes
+
+.lg__iframes
+   display: flex
+   flex-direction: column
+   gap: 2em
+   padding: 2em
+   iframe
+      display: block
+      max-width: 100%
+      width: 100%
+      min-height: 30vw
+      height: auto
+   h2
+      text-align: center !important
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-lg-pc09sq-nsjr-pc09sq-ua3r
+   //    display: block
+
+   .design__abs
+      padding: 1em
+      position: relative
+   .design__img
+      margin-top: -4em
+
+   .air__cont,
+   .led
+      padding: 1em
+
+   .led
+      flex-direction: column
+      gap: 1em
+
+   .uvnano__cont
+      padding: 1em
+
+   .uvnano__note
+      padding: 1em
+
+   .tuv
+      padding: 1em
+   .tuv__icons
+      flex-direction: column
+
+   .plasmaster__abs
+      position: unset
+      padding: 1em
+
+   .plasmaster__note
+      padding: 1em
+
+   .tuv__row
+      padding: 1em
+      flex-direction: column
+      gap: 1em
+
+   .warranty__note
+      padding: 0 1em 1em
+
+   .freshair__row
+      flex-direction: column
+      gap: 1em
+      align-items: unset
+   .freshair__cont
+      padding: 1em
+   .freshair__note
+      padding: 0 1em 1em
+
+   .freshair__flex
+      flex-direction: column
+      gap: 1em
+      padding: 1em
+
+   .autoclean
+      flex-direction: column
+      gap: 1em
+   .autoclean__cont
+      padding: 1em
+
+   .thinq__wrap
+      padding: 1em
+   .lg__slider__btns img
+      max-width: 24px !important
+   .thinq__note
+      padding: 1em 0 0
+   .lg__slider__btns
+      margin-top: 2em
+   .thinq__cont
+      min-height: 150px
+
+   .eco
+      padding: 1em
+   .eco__grid
+      grid-template-columns: 1fr
+      gap: 2em
+   .eco__note
+      padding-top: 1em
+
+   .func
+      padding: 1em
+   .func__grid
+      grid-template-columns: 1fr
+
+   .choice__txt
+      padding: 0 1em 1em
+
+   .lg__iframes
+      padding: 1em
+      iframe
+         min-height: 40vw
+
+// @media (min-width: $bp-tablet) and (max-width: 1023px)
+//    #rkt-lg-pc09sq-nsjr-pc09sq-ua3r
+//       display: block
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   // #rkt-lg-pc09sq-nsjr-pc09sq-ua3r
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .thinq__cont
+      min-height: 150px
+
+   .func__grid
+      grid-template-columns: repeat(2, 1fr)
+
+   .lg__iframes iframe
+      min-height: 30vw

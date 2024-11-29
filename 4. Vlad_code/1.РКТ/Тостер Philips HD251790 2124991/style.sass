@@ -1,0 +1,219 @@
+//default styles
+
+// body
+//    margin: 0
+
+.philips
+   width: 100%
+   max-width: 1520px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.philips .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+.philips__title
+   font-size: clamp(24px, 3vw, 55px)
+   color: #fff
+   font-weight: bold
+
+.philips__subtitle
+   font-size: clamp(20px, 3vw, 42px)
+   color: #fff
+   margin-top: 30px
+
+.philips__txt
+   font-size: clamp(16px, 2vw, 24px)
+   color: #454545
+
+//everyday
+
+.everyday
+   background-image: linear-gradient(-35deg, #076b3b, #009c49)
+   padding-left: 60px
+
+.everyday__row
+   display: flex
+   justify-content: space-between
+
+.everyday__cont
+   max-width: 520px
+   box-sizing: border-box
+
+.logo
+   margin-bottom: 110px
+   img
+      margin: -8px 0 0 0
+
+//options
+
+.options
+   padding: 40px 60px
+   background-color: #d8d4d74d
+
+.options__flex
+   display: flex
+   align-items: center
+   >div
+      flex: 1
+      max-width: 50%
+      min-width: 50%
+      box-sizing: border-box
+
+.options__row
+   margin-left: 50px
+   &:nth-of-type(n+2)
+      margin-top: 50px
+
+.options__row
+   display: flex
+   align-items: center
+
+.options__i
+   margin-right: 20px
+   min-width: 150px
+
+.options__reverse
+   background-color: unset
+   .options__flex
+      flex-direction: row-reverse
+   .options__row
+      margin-left: 0
+      margin-right: 60px
+
+//compare
+
+.compare
+   padding: 80px 60px
+
+.compare__grid
+   display: grid
+   grid-template-columns: repeat(6, 1fr)
+   grid-template-rows: auto auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+   align-items: center
+   >div
+      &:nth-of-type(n+7)
+         padding: 8px 0
+
+.compare__model
+   font-weight: bold
+   font-size: 20px
+   color: #454545
+   &:nth-of-type(n+8)
+      text-align: center
+
+.pos__left
+   text-align: left !important
+   padding-left: 8px !important
+
+.compare__txt
+   font-size: 16px
+   color: #454545
+   text-align: center
+
+.bg__gray
+   background-color: #f4f4f7
+
+//media*****************************************************
+
+// @media (max-width: 1441px)
+//    .options__cont
+//       padding-top: 60px
+//       padding-bottom: 60px
+
+//    .options__img img
+//       min-width: 140%
+//       margin-left: -40%
+
+@media (max-width: 1201px)
+   .philips .container
+      width: 960px
+      padding: 0 15px
+
+   .everyday
+      padding-left: 0
+   .logo
+      margin-bottom: 2em
+   .everyday__img img
+      margin-right: -35px
+
+   .compare
+      padding: 2em 0
+
+   .options
+      padding: 2em 0
+   .options__i
+      min-width: 120px
+
+   .compare
+      overflow: auto
+   .compare__grid
+      min-width: 960px
+      overflow-x: scroll
+   .compare__model
+      font-size: 16px
+   .compare__txt
+      font-size: 14px
+
+@media (max-width: 991px)
+   .philips .container
+      width: 720px
+
+   .everyday__row
+      display: block
+   .logo img
+      max-width: 50%
+   .everyday__img
+      margin-top: 2em
+      img
+         margin: 0 -15px
+         min-width: calc(100% + 30px)
+
+   .options__flex
+      display: block
+      >div
+         max-width: 100%
+   .options__cont
+      margin-top: 1em
+   .options__row
+      display: block
+      text-align: center
+      margin-left: 0 !important
+      margin-right: 0 !important
+   .options__i
+      min-width: unset
+      max-width: 40%
+      margin: 0 auto 1em auto
+
+   .compare__grid
+      padding-right: 15px
+
+@media (max-width: 767px)
+   .philips .container
+      width: 540px
+
+@media (max-width: 576px)
+   .philips .container
+      width: 100%
+      box-sizing: border-box

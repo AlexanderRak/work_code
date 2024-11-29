@@ -1,0 +1,388 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+// .rkt-name-product__container
+//    overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-name-product
+   margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   color: #4D403F
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 30, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      text-transform: uppercase
+      strong
+         color: #E10D16
+         font-weight: 900
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 0
+      text-transform: uppercase
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//logo
+
+.logo
+   position: relative
+
+.logo__i
+   position: absolute
+   padding: 1em
+   box-sizing: border-box
+   top: 0
+   left: 2em
+   width: 50%
+
+.logo__abs
+   position: absolute
+   top: 0
+   left: 0
+   bottom: 0
+
+.logo__cont
+   height: 100%
+   display: flex
+   flex-direction: column
+   padding-top: 100px
+   margin-top: 70px
+   // justify-content: center
+   // margin-top: -70px
+
+.logo__note
+   position: absolute
+   bottom: 1em
+   right: 2em
+   font-size: clamp(14px, 1.4vw, 16px)
+   text-transform: uppercase
+   line-height: normal
+   color: #4D403F
+   font-weight: bold
+
+.logo__cont
+   padding: 2em
+   h2
+      margin-bottom: 0 !important
+      margin-top: 1rem !important
+
+.hide__mob
+   display: block
+.show__mob
+   display: none
+
+//advantages
+
+.advantages__cont
+   display: flex
+   flex-direction: column
+   gap: 1em
+   padding: 1em
+   h3
+      color: #E10D16
+
+.advantages__item
+   background-color: #e5e5e5
+   padding: 1em
+   border-radius: 20px
+
+//faster
+
+.faster
+   position: relative
+   h2
+      color: #E10D16
+
+.faster__abs
+   position: absolute
+   top: 0
+   right: 0
+   width: 50%
+   box-sizing: border-box
+
+.faster__cont
+   padding: 2em 4em
+   box-sizing: border-box
+
+.tefal__note
+   margin-top: 1rem !important
+   font-size: 12px !important
+
+//recipes
+
+.recipes
+   padding: 4em 0
+   .tefal__note
+      margin-top: 0 !important
+
+.recipes__head
+   padding: 0 4em
+   display: flex
+   align-items: center
+   gap: 1em
+   h2
+      margin-bottom: 0 !important
+   h3
+      color: #E10D16
+
+.recipes__i
+   max-width: 140px
+
+.recipes__flex
+   display: flex
+   align-items: center
+   gap: 2em
+   padding: 1em 4em
+   margin: 2em 0
+   border-top: 2px solid #C6C6C6
+   border-bottom: 2px solid #C6C6C6
+   h2
+      margin-bottom: 0 !important
+
+.recipes__ten
+   line-height: normal
+   font-size: clamp(60px, 8vw, 100px)
+   font-weight: bold
+
+.recipes__row
+   display: flex
+   gap: 4em
+   justify-content: space-between
+   padding: 0 4em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+   h3
+      color: #E10D16
+
+.recipes__cal
+   display: flex
+   align-items: center
+   gap: 2em
+
+.recipes__cal__i
+   flex-basis: 20%
+
+.recipes__items
+   display: grid
+   grid-template-rows: repeat(5, 1fr)
+   height: 100%
+   flex-basis: 75%
+   h3
+      display: flex
+      align-items: center
+      font-size: clamp(16px, 2vw, 18px) !important
+
+.recipes__end
+   padding: 2em 4em 0
+   h3
+      text-align: center !important
+
+//warranty
+
+.warranty
+   padding: 0 4em 4em
+   h3
+      text-transform: none !important
+
+.warranty__wrap
+   background-color: rgba(217, 217, 217, .2)
+   border-radius: 0px 0px 60px 60px
+   padding: 4em 2em 0
+
+.warranty__row
+   display: flex
+   gap: 4em
+
+.warranty__cont
+   color: #00304C
+   flex-basis: 50%
+   p
+      text-align: right !important
+      font-weight: bold !important
+
+.warranty__title
+   font-size: clamp(50px, 5vw, 80px)
+   font-weight: bold
+   line-height: normal
+   margin-top: 1rem
+
+.warranty__img
+   flex-basis: 50%
+   margin-bottom: -17%
+
+.warranty__txt
+   width: 50%
+   padding: 2em 0 2em 4em
+   box-sizing: border-box
+   .tefal__note
+      margin-top: 0 !important
+      color: #6E6E6E
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-name-product
+   //    display: block
+
+   .recipes__cal
+      gap: 1em
+   .recipes__cal__i
+      flex-basis: 30% !important
+      max-width: 86px
+   .recipes__flex
+      gap: 1em
+
+   .warranty__wrap
+      padding: 1em !important
+   .warranty__row
+      flex-direction: column
+   .warranty__img
+      margin-bottom: 0 !important
+   .warranty__txt
+      width: 100%
+
+@media (min-width: $bp-mobile) and (max-width: 1201px)
+   .logo__i
+      position: unset
+      width: 70%
+   .logo__abs
+      position: unset
+      br
+         display: none
+   .logo__cont
+      margin-top: 0
+      padding: 1em
+   .logo__img
+      position: relative
+      &::before
+         content: ""
+         display: block
+         position: absolute
+         top: -19px
+         right: -2px
+         left: -2px
+         height: 36px
+         background-color: #fff
+         filter: blur(10px)
+
+   .faster__abs
+      position: unset
+      width: 100%
+   .faster__cont
+      padding: 1em
+
+   .recipes
+      padding: 2em 0
+   .recipes__head
+      padding: 0 1em
+   .recipes__flex,
+   .recipes__row
+      padding-right: 1em
+      padding-left: 1em
+   .recipes__row
+      flex-direction: column
+      gap: 2em
+      align-items: unset
+   .recipes__cal__i
+      flex-basis: 8%
+   .recipes__end
+      padding-right: 1em
+      padding-left: 1em
+   .recipes__items
+      height: unset
+      align-self: stretch
+
+   .warranty
+      padding: 0 0 1em 0
+   .warranty__wrap
+      padding: 2em 2em 0
+      border-radius: 0 0 30px 30px
+   .warranty__row
+      gap: 2em
+   .warranty__txt
+      padding: 1em
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-name-product
+//       display: block
+
+// @media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+//    #rkt-name-product
+//       display: grid
+//       grid-template-columns: calc(100% - 400px) 400px
+
+@media (max-width: 1201px)
+   .hide__mob
+      display: none
+   .show__mob
+      display: block
+
+   .logo__note
+      display: none
+
+@media (max-width: 1441px)
+   .warranty__img
+      margin-bottom: -13%

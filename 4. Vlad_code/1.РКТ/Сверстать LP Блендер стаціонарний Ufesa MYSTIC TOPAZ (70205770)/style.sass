@@ -1,0 +1,220 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-ufesa-mystic-topaz-70205770__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-ufesa-mystic-topaz-70205770
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//ufesa__power
+
+.ufesa__power
+   color: #fff
+   position: relative
+
+.ufesa__power__abs
+   position: absolute
+   width: 40%
+   padding: 1em
+   box-sizing: border-box
+   bottom: 50%
+   transform: translateY(50%)
+   right: 4em
+   background-color: rgba(0, 0, 0, .5)
+
+//ufesa__func
+
+.ufesa__func
+   position: relative
+   color: #211915
+
+.ufesa__func__abs
+   position: absolute
+   top: 0
+   right: 0
+   left: 0
+   bottom: 0
+   box-sizing: border-box
+   display: flex
+   justify-content: space-between
+   align-items: center
+   padding: 0 2em
+
+.ufesa__func__item
+   display: flex
+   align-items: center
+   gap: 1em
+   &::after
+      flex-basis: 120px
+      content: ""
+      display: block
+      width: 120px
+      height: 13px
+      background: url("https://cdn.comfy.ua/media/x/img3/3141916/snoska.svg") no-repeat center / contain
+
+.ufesa__func__cal
+   display: grid
+   grid-template-rows: repeat(4, 1fr)
+   gap: 1em
+   min-height: 475px
+   &:nth-of-type(odd)
+      p
+         text-align: right !important
+      .ufesa__func__i img
+         margin: 0 0 0 auto!important
+   &:nth-of-type(even)
+      .ufesa__func__item
+         flex-direction: row-reverse
+         &::after
+            transform: scale(-1, 1)
+      .ufesa__func__i img
+         margin: 0 !important
+
+.ufesa__func__i
+   margin-bottom: 0.5em
+   img
+      width: 50px
+      max-height: 40px
+
+.ufesa__func__cont
+   flex-basis: 140px
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-ufesa-mystic-topaz-70205770
+   //    display: block
+
+   .ufesa__func__abs
+      position: unset
+
+   .ufesa__func__cal:nth-of-type(odd) .ufesa__func__i img,
+   .ufesa__func__cal:nth-of-type(even) .ufesa__func__i img
+      margin: 0 auto !important
+
+   .ufesa__func__cal p,
+   .ufesa__func__cal:nth-of-type(odd) p
+      text-align: center !important
+
+   .ufesa__func__cont
+      flex-basis: unset !important
+      width: 100%
+
+   .ufesa__func .ufesa__func__cont p
+      font-size: 12px !important
+
+   .ufesa__func__cal
+      height: 48vh !important
+
+   .ufesa__func__abs
+      gap: 1em
+
+   .ufesa__func__img img
+      min-width: 150%
+      margin-left: -25% !important
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-ufesa-mystic-topaz-70205770
+//       display: block
+
+// @media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+//    #rkt-ufesa-mystic-topaz-70205770
+//       display: grid
+//       grid-template-columns: calc(100% - 400px) 400px
+
+@media (max-width: 1201px)
+   .ufesa__power
+      color: #211915
+   .ufesa__power__abs
+      position: unset
+      background-color: unset
+      transform: unset
+      width: 100%
+      h3,p
+         text-align: center !important
+   .ufesa__power__img img
+      min-width: 140%
+
+   .ufesa__func__item::after
+      content: none
+   .ufesa__func__abs
+      padding: 1em
+   .ufesa__func__cont
+      flex-basis: 150px
+      p
+         font-size: 14px !important
+   .ufesa__func__cal
+      min-height: unset
+      height: 100%

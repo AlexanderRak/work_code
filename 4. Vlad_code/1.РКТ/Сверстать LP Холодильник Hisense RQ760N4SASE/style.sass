@@ -1,0 +1,265 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+// .rkt-name-product__container
+//    overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-name-product
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   color: #080808
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      text-transform: uppercase
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h4
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      text-transform: uppercase
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//advantages
+
+.advantages
+   background-color: #121212
+   padding: 2em
+   h2
+      color: #f5f5f5
+      text-align: center !important
+   h4, p
+      text-align: center !important
+
+.advantages__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   grid-template-areas: "cal1 cal2 cal2" "cal1 cal3 cal4"
+   gap: 1em 1em
+   max-width: 80%
+   margin: 0 auto
+   >div
+      background-color: #fefefe
+      border-radius: 1rem
+      padding: 1em
+      display: flex
+      gap: 1em
+      &:nth-of-type(1)
+         grid-area: cal1
+         flex-direction: column
+         justify-content: center
+         gap: 2em
+      &:nth-of-type(2)
+         grid-area: cal2
+         display: flex
+         align-items: center
+         gap: 2em
+         h4,p
+            text-align: left !important
+      &:nth-of-type(3)
+         grid-area: cal3
+         flex-direction: column
+      &:nth-of-type(4)
+         grid-area: cal4
+         flex-direction: column
+
+//fresh
+
+.fresh
+   background-color: #232b2b
+   color: #f5f5f5
+   padding: 2em
+
+.fresh__i
+   margin-bottom: 1rem
+   max-height: 8rem
+   background: #fff
+   padding: .5rem
+   max-width: max-content
+   border-radius: 1rem
+   img
+      margin: 0 !important
+
+//dispenser
+
+.dispenser__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   gap: 4em
+   background-color: #d7d8da
+   padding: 1em
+   h3
+      text-align: center !important
+      color: #080808
+      margin-bottom: 0 !important
+
+//moisture
+
+.moisture
+   background-color: #121212
+   padding: 0
+
+.moisture__wrap
+   padding: 2em
+
+.moisture__green
+   background-color: #232b2b
+
+//func
+
+.func
+   background-color: #232b2b
+   color: #f5f5f5
+   padding: 2em
+   display: flex
+   flex-direction: column
+   gap: 4em
+
+.func__row
+   display: flex
+   align-items: center
+   gap: 4em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+
+.func__i
+   background-color: #fff
+   max-width: max-content
+   padding: 0.5rem
+   border-radius: 1rem
+   img
+      margin: 0 !important
+      max-width: 45px !important
+      max-height: auto
+
+.func__img
+   border-radius: 2rem
+   overflow: hidden
+   img
+      transition: transform 0.3s ease
+      &:hover
+         transform: scale(1.1)
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-name-product
+   //    display: block
+
+   .advantages__grid
+      max-width: 100%
+      grid-template-columns: auto
+      grid-template-areas: "cal1" "cal2" "cal3" "cal4"
+   .advantages__grid > div:nth-of-type(1)
+      gap: 1em
+   .advantages__grid > div:nth-of-type(2)
+      flex-direction: column
+      gap: 1em
+
+   .fresh
+      padding: 2em 1em
+   .moisture
+      padding: 0
+   .moisture__wrap
+      padding: 2em 1em
+
+   .func
+      gap: 3em
+      padding: 2em 1em
+   .func__row
+      flex-direction: column-reverse !important
+      gap: 1em
+   .func__img
+      border-radius: 1em
+
+   .dispenser__grid
+      gap: 1em
+      h3
+         font-size: clamp(10px, 2.9vw, 16px) !important
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-name-product
+//       display: block
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   // #rkt-name-product
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .advantages__grid
+      max-width: 100%
+
+   .func
+      gap: 4em
+   .func__row
+      flex-direction: column-reverse !important
+      gap: 1em

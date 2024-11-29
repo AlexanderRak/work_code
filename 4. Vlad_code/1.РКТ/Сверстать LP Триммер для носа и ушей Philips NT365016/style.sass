@@ -1,0 +1,249 @@
+//default styles
+
+// body
+//    margin: 0
+
+// .philips__container
+//    overflow: hidden
+
+.philips
+   // font-family: sans-serif
+   // max-width: 1406px
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   max-width: 1023px
+   width: 100%
+   margin: 0 auto
+   height: auto
+   // display: block
+   box-sizing: border-box
+   overflow: hidden
+   color: #5d5d5d
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.philips .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+   box-sizing: border-box
+
+//logo
+
+.logo
+   position: relative
+   color: #013378
+
+.logo__i
+   position: absolute
+   top: -8px
+   left: 2em
+   img
+      max-width: 70%
+      margin: 0
+
+.logo__abs
+   position: absolute
+   bottom: 85px
+   right: 2em
+   max-width: 30%
+   // max-width: 400px
+
+.logo__txt
+   font-size: clamp(18px, 1.4vw, 22px)
+
+.logo__title
+   font-size: clamp(20px, 2vw, 32px)
+   margin-top: 85px
+
+//charact
+
+.philips__blue
+   background-color: #013378
+   padding: 1em 2em
+   color: #fff
+   font-size: clamp(20px, 2vw, 32px)
+
+.charact
+   padding: 2em 2em 0
+
+.charact__row
+   display: flex
+   align-items: center
+   gap: 4em
+
+.charact__cont
+   max-width: 45%
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   gap: 2em
+
+.charact__txt
+   font-size: clamp(16px, 1.4vw, 18px)
+
+//hair
+
+.hair
+   padding: 2em 2em 0
+
+.philips__sub
+   font-size: clamp(16px, 1.5vw, 24px)
+   font-weight: bold
+   color: #013378
+   margin-bottom: 1rem
+
+.philips__txt
+   font-size: clamp(16px, 1.4vw, 18px)
+
+.hair__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   gap: 2em
+
+.hair__cont
+   margin-top: 35px
+
+//tech
+
+.tech
+   padding: 2em
+
+.tech__grid
+   display: grid
+   grid-template-columns: 1fr 1fr
+   gap: 2em 2em
+
+.tech__cont
+   margin-top: 1em
+
+//comfort
+
+.comfort
+   position: relative
+   color: #013378
+
+.comfort__abs
+   position: absolute
+   left: 2em
+   bottom: 145px
+   max-width: 40%
+
+.comfort__title
+   font-weight: bold
+   margin-bottom: 15%
+   font-size: clamp(20px, 2vw, 32px)
+
+.comfort__txt
+   font-size: clamp(18px, 2vw, 20px)
+
+//media*****************************************************
+
+@media (max-width: 1441px)
+   .logo__abs
+      right: 2em
+
+@media (max-width: 1201px)
+   .philips .container
+      // width: 960px
+      padding: 0 12px
+      box-sizing: border-box
+
+   .logo__i
+      left: 1em
+      max-width: 20vw
+
+   .logo__abs
+      right: 1em
+      max-width: 30vw
+
+   .charact,
+   .hair
+      padding: 2em 0 0
+
+   .tech
+      padding: 2em 0
+
+   // .comfort__abs
+   //    left: 2em
+   //    max-width: 40vw
+
+@media (max-width: 768px)
+   // .philips .container
+   //    width: 720px
+
+   .logo
+      display: flex
+      flex-direction: column-reverse
+   .logo__abs
+      position: unset
+      max-width: 100%
+      padding: 1em 0
+   .logo__title
+      margin-top: 1rem
+   .logo__i
+      max-width: 35vw
+   // .logo__img img
+   //    min-width: 150%
+
+   .philips__blue
+      padding: 0.5em
+
+   .charact__row
+      // flex-direction: column
+      gap: 1em
+   .charact__cont
+      gap: 1em
+
+   // .hair__grid,
+   // .tech__grid
+   //    grid-template-columns: 1fr
+   //    gap: 2em
+   .hair__cont,
+   .tech__cont
+      margin-top: 1em
+
+   .philips__sub
+      margin-bottom: 1rem
+
+   .comfort__abs
+      position: unset
+      padding: 0 0 1em
+      max-width: 100%
+   .comfort__title
+      margin-bottom: 1rem
+   .comfort__img img
+      min-width: 150%
+      margin-left: -50%
+
+// *****************************************************
+
+@media (min-width: 320px) and (max-width: 767.9px)
+   .charact__row
+      flex-direction: column
+      gap: 1em
+   .charact__cont
+      max-width: 100%
+
+   .hair__grid,
+   .tech__grid
+      grid-template-columns: auto
+
+@media (min-width: 1024px) and (max-width: 1024px)
+   .logo__img img
+      min-width: 150%
+      margin-left: -50%

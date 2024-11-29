@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script src="/amp/smoothScroll.js"></script>
 </head>
 
 <body>
@@ -685,155 +684,17 @@
   </script>
 
   <script type="text/javascript">
-    function initCarousel() {
-      if ($('.slick-initialized').length) {
-        return
-      }
-
-      $('.oppo-page__carousel-slider').slick({
-        infinite: false,
-        dots: true,
-        lazyLoad: 'progressive',
-        dotsClass: 'oppo-page__carousel-controls-dots',
-        arrows: true,
-        appendArrows: $('.oppo-page__carousel-controls'),
-        appendDots: $('.oppo-page__carousel-dots'),
-        prevArrow: `<div class="oppo-page__carousel-controls-button oppo-page__carousel-controls-prev">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7071 5.2924C16.0976 5.68293 16.0976 6.31609 15.7071 6.70662L10.4142 11.9995L15.7071 17.2924C16.0976 17.6829 16.0976 18.3161 15.7071 18.7066C15.3166 19.0971 14.6834 19.0971 14.2929 18.7066L8.29289 12.7066C7.90237 12.3161 7.90237 11.6829 8.29289 11.2924L14.2929 5.2924C14.6834 4.90188 15.3166 4.90188 15.7071 5.2924Z" fill="#F6F6F6"/>
-                                    </svg>
-                                </div>`,
-        nextArrow: `<div class="oppo-page__carousel-controls-button oppo-page__carousel-controls-next">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.29289 5.2924C8.68342 4.90188 9.31658 4.90188 9.70711 5.2924L15.7071 11.2924C16.0976 11.6829 16.0976 12.3161 15.7071 12.7066L9.70711 18.7066C9.31658 19.0971 8.68342 19.0971 8.29289 18.7066C7.90237 18.3161 7.90237 17.6829 8.29289 17.2924L13.5858 11.9995L8.29289 6.70662C7.90237 6.31609 7.90237 5.68293 8.29289 5.2924Z" fill="#F6F6F6"/>
-                                    </svg>
-                                </div>`,
-        responsive: [
-          {
-            breakpoint: 767,
-            settings: {
-              appendArrows: '.oppo-page__carousel-slider',
-            },
-          },
-
-        ],
-      });
-
-      if (window.screen.width < 768) {
-        $('.oppo-page__block-3-item_mobile-img-wr-carousel').each((imdex, item) => $(item).slick({
-          arrows: true,
-          appendArrows: $(item).parent().find('.oppo-page__block-3-item_mobile-img-wr-carousel-item-controls'),
-          prevArrow: `<div class="oppo-page__block-3-item_mobile-img-wr-carousel-item-button oppo-page__block-3-item_mobile-img-wr-carousel-item-prev">
-                                        <svg width="25" height="16" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.73079 4.34027 7.73079 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.97631 4.7308 0.659727 4.53553 0.464465C4.34027 0.269203 4.02369 0.269203 3.82843 0.464465L0.646446 3.64645ZM17 3.5L1 3.5L1 4.5L17 4.5L17 3.5Z" fill="white"/>
-                                        </svg>
-                                    </div>`,
-          nextArrow: `<div class="oppo-page__block-3-item_mobile-img-wr-carousel-item-button oppo-page__block-3-item_mobile-img-wr-carousel-item-next">
-                                        <svg width="25" height="16" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M16.3536 3.64645C16.5488 3.84171 16.5488 4.15829 16.3536 4.35355L13.1716 7.53553C12.9763 7.73079 12.6597 7.73079 12.4645 7.53553C12.2692 7.34027 12.2692 7.02369 12.4645 6.82843L15.2929 4L12.4645 1.17157C12.2692 0.97631 12.2692 0.659727 12.4645 0.464465C12.6597 0.269203 12.9763 0.269203 13.1716 0.464465L16.3536 3.64645ZM-4.37113e-08 3.5L16 3.5L16 4.5L4.37113e-08 4.5L-4.37113e-08 3.5Z" fill="white"/>
-                                        </svg>
-                                    </div>`,
-        }))
-      }
-
-
-      console.log('carousel inited');
-    }
     var vm = new Vue({
       el: '#oppo-page',
       data: {
-        baseUrl: 'https://comfy.ua',
-        sku: '1754329',
-        productId: '2005033',
-        cityId: window.currentCityId ? window.currentCityId.toString() : '506',
-        cityName: '',
-        storeId: document.location.href.includes('/ua/') ? '5' : '4',
-        loading: false,
-        prices: {
-          price: 0,
-          oldPrice: 0,
-          discountPercent: 0,
-          discountValue: 0,
-          bonus: 0
-        },
-        reviews: {
-          count: 0,
-          ratingPercent: 0,
-        },
-        product: {
-          attributeGroups: [],
-          breadcrumbs: [],
-          images: [],
-          urlKey: ''
-        },
-        labels: {
-          items: []
-        },
-        reviewsItems: [],
-        showAllReviews: false,
-        citiesSuggestions: [],
-        selectedCity: {
-          name: '',
-          id: ''
-        },
-        remains: {
-          isPreorder: false,
-          isAvailable: false,
-          isRetail: false,
-          hasNoRemains: false
-        },
-        fromCityName: '',
-        formCityId: '',
-        popupRequestSended: false,
-        selectedAccessoriesGroupId: 0,
-        showAllAccessoriesGroups: false,
-        showAllAccessories: false,
-        showAllCharacteristics: false,
-        accessoriesGroups: [],
         accessories: {
           items: []
         },
-        warehouses: {
-          items: []
-        },
-        scrollByClick: false,
-        block8Switched: false
-
       },
       mounted() {
-        this.loading = true
-
-        Promise.all([
-          this.fetchPrices(),
-          this.fetchReviews(),
-          this.fetchProduct(),
-          this.fetchLabels(),
-          this.fetchReviewsItems(),
-          this.fetchCityName(),
-          this.fetchRemains(),
-          this.fetchAccessoriesGroups(),
-          this.fetchWarehouses()
-        ])
-          .finally(() => {
-            this.loading = false
-          })
-
         $(document).ready(() => {
-          setTimeout(this.initCarousel, 1000);
           this.initGsapAnim()
         });
-
-        this.initPopup();
-      },
-      watch: {
-        fromCityName: function (val) {
-          if (this.fromCityName != this.selectedCity.name) {
-            this.selectedCity.name = '';
-            this.selectedCity.id = '';
-            $('.oppo-page__popup-form-input-city-id').val('')
-            this.fetchCitiesList()
-          }
-        },
       },
       methods: {
         initGsapAnim() {
@@ -944,97 +805,6 @@
 
           document.addEventListener("load", () => setTimeout(() => window.dispatchEvent(new Event('resize')), 100));
         },
-        initCarousel() {
-          if (typeof $('.oppo-page__carousel-slider').slick != 'function') {
-            scriptRequest('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
-              function () {
-                initCarousel()
-              },
-              function (err) {
-                console.error(err)
-              }
-            )
-          } else {
-            initCarousel()
-          }
-        },
-        fetchPrices() {
-          return fetch(this.baseUrl + '/api/prices/expanded?product_id=' + this.productId + '&sku=' + this.sku + '&city_id=' + this.cityId + '&with_bonus=true&with_tradein=false')
-            .then(resp => resp.json())
-            .then(resp => {
-              this.prices.price = resp.specialPrice
-              this.prices.oldPrice = resp.price
-              this.prices.discountPercent = Math.round(100 - this.prices.price / this.prices.oldPrice * 100)
-              this.prices.discountValue = this.prices.oldPrice - this.prices.price
-              this.prices.bonus = resp.bonusPercent ? Math.ceil(resp.price * resp.bonusPercent / 100) : 0
-            })
-            .catch((e) => this.loading = false)
-        },
-        fetchReviews() {
-          return fetch(this.baseUrl + '/api/reviews/' + this.productId + '/' + this.storeId + '/summary')
-            .then(resp => resp.json())
-            .then(resp => {
-              this.reviews.count = resp.count
-              this.reviews.ratingPercent = +(resp.rating.avg / 5 * 100).toFixed(0)
-            })
-            .catch((e) => this.loading = false)
-        },
-        fetchProduct() {
-          return fetch(this.baseUrl + '​/api/products/single/' + this.sku + '?storeId=' + this.storeId)
-            .then(resp => resp.json())
-            .then(resp => {
-              this.product.attributeGroups.splice(0, this.product.attributeGroups.length, ...resp.attributeGroups);
-              this.product.breadcrumbs.splice(0, this.product.breadcrumbs.length, ...resp.breadcrumbs);
-              this.product.images.splice(0, this.product.images.length, ...resp.images);
-              this.product.urlKey = resp.urlKey;
-            })
-        },
-        fetchLabels() {
-          return fetch(this.baseUrl + '/api/labels/list?productId=' + this.productId + '&sku=' + this.sku + '&storeId=' + this.storeId + '&cityId=' + this.cityId + '&useFor=1')
-            .then(resp => resp.json())
-            .then(resp => this.labels = resp)
-        },
-        fetchCityName() {
-          return fetch(this.baseUrl + '/api/cities/single/' + this.cityId + '/' + this.storeId)
-            .then(resp => resp.json())
-            .then(resp => this.cityName = resp.name)
-        },
-        fetchReviewsItems() {
-          return fetch(this.baseUrl + '/api/reviews/' + this.productId + '/' + this.storeId)
-            .then(resp => resp.json())
-            .then(resp => this.reviewsItems.splice(0, this.reviewsItems.length, ...resp.reviews))
-        },
-        fetchRemains() {
-          return fetch(this.baseUrl + '/api/remains/amp/' + this.sku + '?storeId=' + this.storeId + '&cityId=' + this.cityId)
-            .then(resp => resp.json())
-            .then(resp => {
-              this.remains.isPreorder = resp.flags.isPreorder;
-              this.remains.isAvailable = resp.flags.isAvailable;
-              this.remains.isRetail = resp.flags.isRetail;
-              this.remains.hasNoRemains = resp.flags.hasNoRemains
-            })
-        },
-        fetchAccessoriesGroups() {
-          return fetch(this.baseUrl + '/api/accessories/groups?sku=' + this.sku + '&cityId=' + this.cityId + '&storeId=' + this.storeId)
-            .then(resp => resp.json())
-            .then(resp => this.accessoriesGroups.splice(0, this.accessoriesGroups.length, ...resp))
-            .then(() => this.selectedAccessoriesGroupId = this.accessoriesGroups[0].id)
-            .then(() => this.fetchAccessories());
-        },
-        fetchWarehouses() {
-          this.accessories.items = [];
-          return fetch(this.baseUrl + '/api/remains/warehouses?sku=' + this.sku + '&storeId=' + this.storeId + '&cityId=' + this.cityId)
-            .then(resp => resp.json())
-            .then(resp => this.warehouses.items.splice(0, this.warehouses.items.length, ...resp.items))
-        },
-
-        onAuthClick() {
-          $('#headerProfileBlock .js-header-login-link').click()
-        },
-        onBlock8Switch() {
-          this.block8Switched = !this.block8Switched
-        }
-
       }
     })
   </script>

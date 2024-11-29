@@ -1,0 +1,211 @@
+.rkt-aeno-hd2-ahd0002__container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.bc-description__content p:first-letter {
+  padding-left: 0 !important;
+}
+
+#rkt-aeno-hd2-ahd0002 {
+  max-width: 1023px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+#rkt-aeno-hd2-ahd0002 h2, #rkt-aeno-hd2-ahd0002 h3, #rkt-aeno-hd2-ahd0002 h4, #rkt-aeno-hd2-ahd0002 h5, #rkt-aeno-hd2-ahd0002 h6, #rkt-aeno-hd2-ahd0002 p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+#rkt-aeno-hd2-ahd0002 ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+#rkt-aeno-hd2-ahd0002 img {
+  display: block;
+  max-width: 100%;
+  opacity: 1;
+  margin: 0 auto;
+}
+#rkt-aeno-hd2-ahd0002 img:hover {
+  opacity: 1;
+}
+#rkt-aeno-hd2-ahd0002 h2 {
+  font-size: 26px;
+  font-weight: 900;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1023px) {
+  #rkt-aeno-hd2-ahd0002 h2 {
+    font-size: calc(20px + 6 * (100vw - 320px) / 703);
+  }
+}
+#rkt-aeno-hd2-ahd0002 h3 {
+  font-size: 20px;
+  font-weight: normal;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1023px) {
+  #rkt-aeno-hd2-ahd0002 h3 {
+    font-size: calc(18px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-aeno-hd2-ahd0002 p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+@media (max-width: 1023px) {
+  #rkt-aeno-hd2-ahd0002 p {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-aeno-hd2-ahd0002 li {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.2;
+}
+@media (max-width: 1023px) {
+  #rkt-aeno-hd2-ahd0002 li {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-aeno-hd2-ahd0002 i {
+  line-height: 1.2;
+  font-size: 16px;
+  margin-top: 0.5rem;
+  display: block;
+  font-style: italic;
+}
+@media (max-width: 1023px) {
+  #rkt-aeno-hd2-ahd0002 i {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+
+.aeno__green {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-image: linear-gradient(21deg, #7ba49c 0%, #7ba49c 1%, #527a72 100%);
+  padding: 2em;
+  gap: 2em;
+}
+.aeno__green > div {
+  box-sizing: border-box;
+}
+
+.aeno__green__cont {
+  flex-basis: 60%;
+}
+
+.aeno__green__img {
+  flex-basis: 40%;
+}
+
+.aeno__green__row {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.aeno__green__row > div:nth-of-type(1), .aeno__green__row > div:nth-of-type(2) {
+  flex-basis: 40%;
+}
+.aeno__green__row > div:nth-of-type(3) {
+  flex-basis: 20%;
+}
+
+.aeno__green__txt p {
+  font-size: 12px !important;
+  text-align: center !important;
+  margin-top: 0.5rem !important;
+}
+
+.aeno__block {
+  padding: 0 1em;
+}
+
+.aeno__block__cont {
+  padding: 0 0 1em;
+}
+.aeno__block__cont h2, .aeno__block__cont p {
+  text-align: center !important;
+}
+
+.aeno__row,
+.aeno__reverse {
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+  gap: 2em;
+}
+.aeno__row > div,
+.aeno__reverse > div {
+  flex-basis: 50%;
+  box-sizing: border-box;
+}
+
+.aeno__reverse {
+  flex-direction: row-reverse;
+}
+
+@media (min-width: 320px) and (max-width: 767.9px) {
+  .aeno__green {
+    flex-direction: column;
+    align-items: unset;
+    padding: 1em;
+    gap: 1em;
+  }
+  .aeno__green__row {
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: center;
+  }
+  .aeno__green__row > div {
+    flex-basis: unset !important;
+    min-width: 50%;
+    max-width: 50%;
+    padding: 0.5em;
+    box-sizing: border-box;
+  }
+  .aeno__row,
+  .aeno__reverse {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .aeno__row h2, .aeno__row p,
+  .aeno__reverse h2,
+  .aeno__reverse p {
+    text-align: center !important;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1201px) {
+  .aeno__green {
+    flex-direction: column;
+    align-items: unset;
+  }
+  .aeno__row,
+  .aeno__reverse {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .aeno__row h2, .aeno__row p,
+  .aeno__reverse h2,
+  .aeno__reverse p {
+    text-align: center !important;
+  }
+}

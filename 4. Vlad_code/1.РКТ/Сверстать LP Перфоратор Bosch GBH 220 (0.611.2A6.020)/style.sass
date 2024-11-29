@@ -1,0 +1,291 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-bosch-gbh-220-0-611-2a6-020__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-bosch-gbh-220-0-611-2a6-020
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      text-transform: uppercase
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h4
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+// bosch__logo
+
+.bosch__logo__i
+   background: #003e64
+   padding: 2em
+   img
+      margin: 0 !important
+
+//bosch__power
+
+.bosch__power__wrap
+   position: relative
+
+.bosch__power__abs
+   position: absolute
+   top: 2em
+   left: 2em
+   background: #003e64
+   color: #fff
+   padding: 2em
+   width: 60%
+   box-sizing: border-box
+
+.bosch__power__txt
+   padding: 2em
+
+.bosch__power__img
+   img
+      width: 100%
+
+//bosch__func
+
+.bosch__func
+   display: flex
+   flex-direction: column
+   gap: 2em
+   padding: 2em
+
+.bosch__row
+   display: flex
+   align-items: center
+   gap: 2em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+      .bosch__func__item
+         h3,p
+            text-align: right !important
+
+.bosch__cont
+   display: flex
+   flex-direction: column
+   gap: 1em
+   h3
+      margin-bottom: 0.5em !important
+
+.bosch__flex
+   display: flex
+   justify-content: center
+   gap: 2em 0
+   margin-top: 2em
+   >div
+      padding: 0.5em
+      flex-basis: 33.33%
+      box-sizing: border-box
+
+.bosch__flex__txt
+   margin-top: 1em
+   p
+      font-size: 14px !important
+      text-align: center !important
+
+//advantages
+
+.advantages__title
+   padding: 1em 2em
+   background: #003e64
+   color: #fff
+   h2
+      text-align: center !important
+      margin: 0 !important
+
+.advantages__grid
+   padding: 2em
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   gap: 2em
+
+.advantages__txt
+   margin-top: 1em
+
+//warranty
+
+// .warranty
+//    position: relative
+
+// .warranty__abs
+//    position: absolute
+//    top: 2em
+//    left: 2em
+//    padding: 2em 0 0 2em
+//    width: 50%
+//    box-sizing: border-box
+//    background: #003e64
+//    color: #fff
+//    h2,h3
+//       margin: 0 !important
+//    h2
+//       padding-right: 2em !important
+//    h3
+//       text-align: right !important
+//       background: #ed0007
+//       width: max-content
+//       margin: 1em 0 0 auto !important
+//       padding: .5em 1em !important
+
+// .warranty__i
+//    position: absolute
+//    right: 2em
+//    bottom: 2em
+
+// .warranty__img img
+//    width: 100%
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-bosch-gbh-220-0-611-2a6-020
+   //    display: block !important
+
+   .bosch__power__abs
+      position: unset
+      width: 100%
+      margin-top: 1em
+      padding: 1em
+   .bosch__power__txt
+      padding: 1em
+
+   .bosch__func
+      padding: 1em
+   .bosch__row
+      flex-direction: column !important
+      gap: 1em
+   .bosch__row:nth-of-type(even)
+      .bosch__func__item
+         h3,p
+            text-align: left !important
+
+   .bosch__flex
+      flex-wrap: wrap
+      gap: .5em 0
+      >div
+         flex-basis: 50%
+         padding: 0.3em
+
+   .advantages__title
+      padding: 1em
+   .advantages__grid
+      padding: 1em
+      grid-template-columns: 1fr
+
+   // .warranty__i
+   //    right: 1em
+   //    bottom: 1em
+   //    img
+   //       width: 50%
+   //       margin: 0 0 0 auto !important
+   // .warranty__abs
+   //    top: 1em
+   //    left: 1em
+   //    right: 1em
+   //    padding: 1em 0 0 1em
+   //    width: 90%
+   //    box-sizing: border-box
+   // .warranty__abs h2
+   //    padding-right: 1em !important
+   // .warranty__img
+   //    min-width: 150%
+   //    margin-left: -40% !important
+
+// @media (min-width: $bp-tablet) and (max-width: 1023px)
+//    #rkt-bosch-gbh-220-0-611-2a6-020
+//       display: block !important
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   // #rkt-bosch-gbh-220-0-611-2a6-020
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .bosch__power__abs
+      position: unset
+      width: 100%
+      margin-top: 1em
+
+   .bosch__flex
+      flex-wrap: wrap
+      gap: 0
+      >div
+         flex-basis: 25%
+
+   // .warranty__i img
+   //    width: 70%
+   //    margin: 0 0 0 auto !important

@@ -1,0 +1,1393 @@
+//default styles
+
+// body
+//    margin: 0
+
+.philips
+   // font-family: sans-serif
+   width: 100%
+   max-width: 1920px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   color: #fff
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+   ul
+      list-style-type: none
+   video
+      display: block
+      height: auto
+      max-width: 100%
+      margin: 0 auto
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+.philips__title
+   text-transform: uppercase
+   font-size: clamp(28px, 2.7vw, 50px)
+
+//end default styles
+
+.philips .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//modern
+
+.modern
+   padding: 80px 0
+   background-color: #284A5A
+
+.modern__txt
+   text-align: center
+   position: relative
+   margin-bottom: 4em
+   .philips__title
+      position: relative
+      z-index: 2
+
+.philips__opacity
+   text-transform: uppercase
+   font-size: clamp(40px, 4vw, 78px)
+   font-weight: bold
+   background-color: #fff
+   -webkit-background-clip: text
+   background-clip: text
+   -webkit-text-stroke: 2px rgba(255, 255, 255, 0)
+   mix-blend-mode: difference
+   color: #000
+   opacity: .8
+   position: absolute
+   right: 50%
+   transform: translateX(50%)
+   bottom: -12%
+
+// .modern__cont
+//    position: relative
+
+.modern__row
+   display: flex
+   align-items: center
+   justify-content: center
+
+.modern__cont
+   position: relative
+
+.modern__items
+   display: flex
+   flex-direction: column
+   gap: 60px
+   margin-top: 7%
+   margin-left: -11.5%
+   position: relative
+   z-index: 2
+
+.modern__item
+   display: flex
+   align-items: center
+   gap: 1em
+   .modern__tabs__cont__txt
+      max-width: 157px
+
+.modern__img
+   padding-left: 12.55em
+   box-sizing: border-box
+   max-width: 45vw
+   img
+      position: relative
+      z-index: 2
+
+.modern__list
+   li
+      width: 18px
+      height: 18px
+      background-color: #fff
+      border-radius: 50%
+      position: absolute
+      cursor: pointer
+      z-index: 2
+      &::before,
+      &::after
+         content: ""
+         display: block
+         position: absolute
+         border: 1px solid #ffffffa6
+         border-radius: 50%
+         width: 40px
+         height: 40px
+         box-sizing: border-box
+         animation: pulse 2s linear infinite
+         position: absolute
+         right: -11px
+         top: -11px
+      &::after
+         animation-delay: 1s
+      &:nth-of-type(1)
+         top: 7%
+         right: 42%
+      &:nth-of-type(2)
+         top: 24%
+         right: 41%
+      &:nth-of-type(3)
+         top: 22%
+         left: 38.5%
+      &:nth-of-type(4)
+         top: 28%
+         left: 40%
+      &:nth-of-type(5)
+         top: 42%
+         left: 38.5%
+
+.modern__tabs__cont
+   max-width: max-content
+   position: absolute
+   z-index: 1
+   &:nth-of-type(1)
+      top: 6%
+      // top: 42%
+      // right: 20%
+      left: 62%
+      .modern__tabs__cont__txt
+         margin-left: 24px
+         max-width: 200px
+   &:nth-of-type(2)
+      top: 20%
+      // top: 54%
+      // right: 17%
+      left: 60%
+      .modern__tabs__cont__txt
+         margin-left: 24px
+   &:nth-of-type(3)
+      top: 15%
+      // top: 49%
+      left: 20%
+      display: flex
+      flex-direction: row-reverse
+      align-items: center
+      .modern__tabs__cont__txt
+         text-align: right
+         margin-right: 24px
+      .modern__tabs__cont__row
+         align-items: flex-start
+   &:nth-of-type(4)
+      top: 24%
+      // top: 58%
+      left: 18%
+      .modern__tabs__cont__txt
+         text-align: right
+         margin-right: 24px
+   &:nth-of-type(5)
+      top: 43%
+      // top: 79%
+      left: 16%
+      z-index: 2
+      .modern__tabs__cont__txt
+         text-align: right
+         margin-right: 24px
+      .modern__tabs__cont__i
+         bottom: -10%
+
+.modern__tabs__cont__row
+   display: flex
+   align-items: center
+
+.modern__tabs__cont__reverse
+   flex-direction: row-reverse
+
+.modern__tabs__cont__txt
+   font-size: clamp(12px, 1.2vw, 15px)
+   max-width: 230px
+   box-sizing: border-box
+   // margin-top: 25px
+
+@keyframes pulse
+   0%
+      opacity: 0
+   50%
+      opacity: 1
+   100%
+      transform: scale(2)
+      opacity: 0
+
+.hide__cont
+   display: none !important
+
+.show__cont
+   display: block !important
+
+.fade
+   animation-name: fade
+   animation-duration: 1.5s
+
+@keyframes fade
+   0%
+      opacity: 0
+   100%
+      opacity: 1
+
+.modern__tabs__cont__img
+   position: relative
+
+.modern__tabs__cont__i
+   position: absolute
+   right: 50%
+   transform: translateX(50%)
+   bottom: -20%
+
+//philips__home
+
+.philips__home
+   position: relative
+
+.philips__home__txt
+   position: absolute
+   left: 230px
+   top: 64px
+   max-width: 550px
+
+.philips__sub
+   font-size: clamp(24px, 2vw, 40px)
+   text-transform: uppercase
+
+//milk__system
+
+.milk__system
+   background-image: linear-gradient(90deg, #1b2c35 0%, #2d4a59 20%)
+   .philips__title
+      margin-bottom: 24px
+
+.milk__system__row
+   display: flex
+   gap: 55px
+
+.milk__system__img
+   flex-basis: 60%
+   max-width: max-content
+   img
+      margin: 0
+
+.milk__system__cal
+   flex-basis: 40%
+   display: flex
+   align-items: center
+   // min-width: 750px
+
+.milk__system__svg
+   min-width: 273px
+
+.milk__system__txt
+   // margin-top: 35%
+   margin-top: 13vw
+   margin-left: -15%
+   padding: 50px
+   position: relative
+   z-index: 2
+
+.philips__txt
+   font-size: clamp(14px, 1.2vw, 20px)
+
+.milk__system__svg
+   position: relative
+   z-index: 2
+   path
+      stroke: white
+      stroke-width: .8
+      opacity: 0
+      &:nth-of-type(1)
+         stroke-dasharray: 450
+         stroke-width: 1.1
+         stroke-dashoffset: 450
+         fill: rgba(255, 255, 255, 0.2) !important
+      &:nth-of-type(2)
+         opacity: 1 !important
+         stroke-dasharray: 190
+         stroke-dashoffset: 190
+      &:nth-of-type(3)
+         opacity: 1 !important
+         stroke-dasharray: 10
+         stroke-dashoffset: 10
+      &:nth-of-type(4)
+         opacity: 1 !important
+         stroke-dasharray: 10
+         stroke-width: 2.8 !important
+         stroke-dashoffset: 10
+      &:nth-of-type(5)
+         opacity: 1 !important
+         stroke-dasharray: 265
+         stroke-dashoffset: 265
+      &:nth-of-type(6)
+         opacity: 1 !important
+         stroke-dasharray: 35
+         stroke-dashoffset: 35
+      &:nth-of-type(7)
+         opacity: 1 !important
+         stroke-dasharray: 235
+         stroke-dashoffset: 235
+      &:nth-of-type(8)
+         opacity: 1 !important
+         stroke-width: 3.2
+         stroke-dasharray: 370
+         stroke-dashoffset: 370
+      &:nth-of-type(9)
+         opacity: 1 !important
+         stroke-dasharray: 295
+         stroke-dashoffset: 295
+      &:nth-of-type(10)
+         opacity: 1 !important
+         stroke-dasharray: 65
+         stroke-dashoffset: 65
+      &:nth-of-type(11)
+         opacity: 1 !important
+         stroke-dasharray: 80
+         stroke-dashoffset: 80
+      &:nth-of-type(12)
+         opacity: 1 !important
+         stroke-width: 3.2
+         stroke-dasharray: 1070
+         stroke-dashoffset: 1070
+      &:nth-of-type(13)
+         opacity: 1 !important
+         stroke-width: 1.1
+         stroke-dasharray: 130
+         stroke-dashoffset: 130
+         fill: none !important
+      &:nth-of-type(14)
+         opacity: 1 !important
+         stroke-width: 2
+         stroke-dasharray: 152
+         stroke-dashoffset: 152
+         fill: none !important
+      &:nth-of-type(15)
+         // opacity: 1 !important
+         stroke-dasharray: 195
+         stroke-dashoffset: 195
+         fill: rgba(217, 217, 217, .3) !important
+      &:nth-of-type(16)
+         opacity: 1 !important
+         stroke-width: 2.8
+         stroke-dasharray: 90
+         stroke-dashoffset: 90
+      &:nth-of-type(17)
+         fill: rgba(255, 255, 255, .5) !important
+      &:nth-of-type(18)
+         opacity: 1 !important
+         stroke-width: 2.8
+         stroke-dasharray: 95
+         stroke-dashoffset: 95
+
+@keyframes draw
+   0%
+      opacity: 0
+   100%
+      stroke-dashoffset: 0
+      opacity: 1
+
+//recipes
+
+.recipes
+   background-color: #292929
+   padding-top: 85px
+   padding-bottom: 100px
+
+.recipes__wrap
+   position: relative
+
+.recipes__row
+   display: flex
+   padding: 0 230px
+   justify-content: space-between
+   gap: 95px
+
+.recipes__title
+   flex-basis: 450px
+
+.recipes__img
+   flex-basis: 496px
+   margin-right: -80px
+   min-width: max-content
+   img
+      position: relative
+      z-index: 1
+
+.recipes__txt
+   flex-basis: 388px
+
+.recipes__slider
+   background-color: #15303D
+   position: absolute
+   bottom: -100px
+   right: 0
+   left: 0
+   padding-top: 100px
+   .swiper-slide-active
+      transform: translateY(-47%)
+      .philips__txt
+         opacity: 1
+
+.recipes__arrows
+   .swiper-button-prev,
+   .swiper-button-next
+      width: calc(var(--swiper-navigation-size) / 1* 27)
+      max-width: max-content
+      &::after
+         display: none
+   .swiper-button-prev
+      left: var(--swiper-navigation-sides-offset, 30%)
+      img
+         transform: scale(-1, 1)
+   .swiper-button-next
+      right: var(--swiper-navigation-sides-offset, 30%)
+
+.swiper-slide
+   .philips__txt
+      text-align: center
+      opacity: 0
+      position: absolute
+      right: 50%
+      transform: translateX(50%)
+      bottom: -30%
+      max-width: 240px
+      width: 100%
+
+.slide-the-right.swiper-slide-active
+   .recipes__i
+      margin-left: 10%
+      margin-right: -10%
+
+.recipes__i
+   img
+      max-width: 243px
+      width: 100%
+
+//ecran
+
+.ecran
+   background-color: #284A5A
+   padding-top: 80px
+   .philips__title
+      text-align: center
+
+.ecran__video
+   overflow: hidden
+   display: flex
+   justify-content: center
+   width: max-content
+   margin: 64px auto 0
+   video
+      min-width: 101%
+
+//quickstart
+
+.quickstart
+   background-color: #292929
+   padding: 80px 0 0 230px
+
+.quickstart__row
+   display: flex
+   align-items: center
+   gap: 200px
+   justify-content: space-between
+
+.quickstart__cont
+   display: flex
+   flex-direction: column
+   gap: 64px
+
+.quickstart__item
+   display: flex
+   align-items: center
+   gap: 24px
+   .philips__txt
+      max-width: 70%
+
+//easysettings
+
+.easysettings
+   position: relative
+
+.easysettings__row
+   display: grid
+   grid-template-columns: 1fr 1fr
+   gap: 24px
+   position: absolute
+   bottom: 80px
+   right: 50%
+   transform: translateX(50%)
+   width: 75%
+
+.easysettings__item
+   border: solid 5px white
+   overflow: hidden
+   padding: 32px 25px
+   box-sizing: border-box
+   background-color: #284A5A
+   text-align: center
+   display: flex
+   justify-content: center
+   align-items: center
+   border-radius: 100px
+
+//strong__coffee
+
+.strong__coffee
+   position: relative
+
+.coffee__txt
+   position: absolute
+   right: 235px
+   bottom: 50%
+   transform: translateY(50%)
+   max-width: 35%
+   .philips__title
+      margin-bottom: 24px
+
+//silentbrew
+
+.silentbrew
+   position: relative
+
+.silentbrew__percent
+   position: absolute
+   top: 100px
+   right: 230px
+   display: flex
+   flex-direction: column
+   gap: 32px
+   z-index: 10
+   >div
+      display: flex
+      align-items: center
+      gap: 24px
+
+.silentbrew__title
+   font-size: clamp(24px, 5vw, 90px)
+   font-weight: bold
+   min-width: 356px
+   text-align: right
+
+.silentbrew__txt
+   font-size: clamp(20px, 2vw, 30px)
+
+.silentbrew__two,
+.silentbrew__three
+   .silentbrew__title
+      font-size: clamp(24px, 5vw, 80px)
+
+.silentbrew__abs
+   position: absolute
+   bottom: 0
+   right: 0
+   left: 0
+   padding-bottom: 120px
+   &::before
+      content: ""
+      background-color: #292929
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      top: 34%
+      z-index: 0
+
+.silentbrew__row
+   display: flex
+   align-items: flex-end
+   padding: 0 230px
+   position: relative
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+   .philips__title
+      text-align: center
+
+.silentbrew__i
+   margin-top: -9%
+   margin-bottom: 70px
+
+//lattego
+
+.lattego
+   position: relative
+   color: #000
+
+.lattego__i
+   position: absolute
+   width: max-content
+   max-width: 211px
+   top: 95px
+   right: 250px
+   img
+      margin: 0
+
+.lattego__txt
+   position: absolute
+   left: 230px
+   bottom: 50%
+   transform: translateY(50%)
+   width: 100%
+   max-width: 760px
+   .philips__title
+      margin-bottom: 32px
+
+//energy
+
+.energy
+   position: relative
+
+.energy__txt
+   position: absolute
+   bottom: 144px
+   left: 230px
+   max-width: 33%
+   .philips__sub
+      margin-bottom: 30px
+
+//filter
+
+.filter
+   position: relative
+   .philips__sub
+      margin-bottom: 24px
+
+.filter__row
+   position: absolute
+   display: flex
+   align-items: center
+   gap: 130px
+   padding: 0 240px
+   box-sizing: border-box
+   bottom: 50%
+   transform: translateY(50%)
+
+.filter__cont
+   min-width: 289px
+   .silentbrew__txt
+      text-align: center
+
+.philips__sub
+   strong
+      font-size: clamp(28px, 3vw, 50px)
+
+.filter__i
+   margin-bottom: 30px
+
+//philips__app
+
+.philips__app
+   padding: 85px 0 80px 230px
+   background-color: #292929
+   position: relative
+   &::before
+      content: ""
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 50%
+      background-color: #284A5A
+      z-index: 0
+
+.philips__sub__two
+   font-size: clamp(22px, 2vw, 38px)
+   margin: 80px 0 60px
+
+.philips__app__row
+   position: relative
+   display: flex
+   gap: 80px
+
+.philips__app__cont
+   display: flex
+   align-items: center
+   flex-basis: 45%
+
+.philips__app__video
+   max-width: 50%
+   overflow: hidden
+   border-radius: 20px
+
+.philips__app__img
+   margin-left: -4%
+
+.philips__app__cal
+   flex-basis: 55%
+   padding-top: 70px
+   max-width: 55%
+   box-sizing: border-box
+   overflow: hidden
+
+.philips__app__slider__txt
+   font-weight: bold
+   font-size: clamp(18px, 1.5vw, 24px)
+   text-align: center
+   margin-top: 24px
+
+.philips__app__slider__video
+   position: relative
+
+.philips__app__slider__i
+   position: absolute
+   right: 50%
+   bottom: 50%
+   transform: translate(50%, 50%)
+   cursor: pointer
+   z-index: 2
+
+//complete
+
+.complete
+   background-color: #292929
+   padding: 0 230px 130px
+
+.complete__title
+   text-align: center
+   margin-bottom: 70px
+
+.complete__grid
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   grid-template-areas: "cal1 cal2 cal3 cal4" "cal5 cal5 cal6 cal7"
+   gap: 44px 48px
+   >div
+      &:nth-of-type(1)
+         grid-area: cal1
+      &:nth-of-type(2)
+         grid-area: cal2
+      &:nth-of-type(3)
+         grid-area: cal3
+      &:nth-of-type(4)
+         grid-area: cal4
+      &:nth-of-type(5)
+         grid-area: cal5
+      &:nth-of-type(6)
+         grid-area: cal6
+      &:nth-of-type(7)
+         grid-area: cal7
+
+.complete__img
+   padding: 30px 0
+   display: flex
+   z-index: 2
+   align-items: center
+   justify-content: center
+   position: relative
+   &::before
+      content: ""
+      background: #434343
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      z-index: 1
+
+.complete__i
+   img
+      position: relative
+      z-index: 2
+   &::before,
+   &::after
+      content: ""
+      display: block
+      width: 39px
+      height: 39px
+      background-color: #fff
+      position: absolute
+      z-index: 0
+   &::after
+      bottom: -8px
+      left: -8px
+   &::before
+      top: -8px
+      right: -8px
+
+.complete__list
+   margin: 0 0 0 45px !important
+   padding: 0 0 20px !important
+   display: flex
+   flex-direction: column
+   gap: 0.5em
+   list-style-type: disc !important
+   li
+      font-size: clamp(16px, 2vw, 30px)
+
+//philips__gallery
+
+.philips__gallery
+   background: #292929
+
+.philips__gallery__title
+   margin-bottom: 64px
+   text-align: center
+
+.philips__gallery__wrap
+   position: relative
+
+.philips__gallery__arrows
+   .swiper-button-prev,
+   .swiper-button-next
+      width: calc(var(--swiper-navigation-size) / 25* 27)
+      &::after
+         display: none
+   .swiper-button-next
+      right: var(--swiper-navigation-sides-offset, 104px)
+   .swiper-button-prev
+      left: var(--swiper-navigation-sides-offset, 104px)
+      img
+         transform: scale(-1, 1)
+
+//dop__info
+
+.dop__info
+   background-color: #284A5A
+   padding: 80px 230px 40px
+
+.dop__info__title
+   text-align: center
+
+.dop__info__row
+   display: flex
+   gap: 180px
+   margin: 80px 0
+
+.dop__info__txt
+   flex-basis: max-content
+
+.dop__info__note
+   margin-top: 80px
+   border-top: solid #BABABA 1px
+   padding-top: 16px
+   .philips__note:nth-of-type(2)
+      margin-top: 5px
+
+.philips__note
+   font-size: 12px
+
+//media*****************************************************
+
+@media (max-width: 1919px)
+   .modern__tabs__cont:nth-of-type(2)
+      top: 10%
+   .modern__tabs__cont:nth-of-type(3)
+      left: 17%
+   .modern__tabs__cont:nth-of-type(5)
+      left: 12%
+
+   .milk__system__row
+      >div
+         flex-basis: 50%
+         box-sizing: border-box
+   .milk__system__cal
+      align-items: unset
+      padding-top: 1em
+   .milk__system__txt
+      margin-top: 6vw
+
+   .recipes__row
+      padding: 0 4em
+
+   .quickstart
+      padding-left: 4em
+
+   .coffee__txt
+      right: 4em
+
+   .silentbrew__percent
+      right: 4em
+   .silentbrew__row
+      padding: 0 4em
+   .silentbrew__abs
+      padding-bottom: 4em
+   .silentbrew__img img
+      max-width: 50%
+
+   .lattego__txt
+      left: 4em
+      max-width: 50%
+   .lattego__i
+      right: 4em
+      top: 2em
+
+   .energy__txt
+      left: 2em
+      max-width: 40%
+
+   .filter__row
+      padding: 0 4em
+
+   .philips__app
+      padding-left: 4em
+
+   .complete
+      padding: 0 4em 4em
+
+   .dop__info
+      padding: 4em 4em 2em
+
+@media (max-width: 1600px)
+   .modern__img
+      max-width: 54vw
+   .modern__list li:nth-of-type(1)
+      right: 40%
+   .modern__list li:nth-of-type(2)
+      right: 38%
+   .modern__list li:nth-of-type(3)
+      left: 35.5%
+   .modern__list li:nth-of-type(4)
+      left: 38%
+   .modern__list li:nth-of-type(5)
+      left: 35.5%
+
+   .modern__tabs__cont:nth-of-type(1)
+      left: 65%
+   .modern__tabs__cont:nth-of-type(2)
+      left: 62%
+   .modern__tabs__cont:nth-of-type(3)
+      left: 13%
+   .modern__tabs__cont:nth-of-type(4)
+      left: 12%
+   .modern__tabs__cont:nth-of-type(5)
+      left: 8%
+
+   .modern__items
+      margin-left: -14.5%
+
+   .recipes__arrows .swiper-button-next
+      right: var(--swiper-navigation-sides-offset, 24%)
+   .recipes__arrows .swiper-button-prev
+      left: var(--swiper-navigation-sides-offset, 24%)
+
+   .philips__app__row
+      gap: 2em
+   .philips__sub__two
+      margin: 2em 0 1em
+
+@media (max-width: 1541px)
+   .philips__home__txt
+      left: 4em
+
+   .silentbrew__percent
+      top: 3em
+
+@media (max-width: 1441px)
+   .modern__tabs__cont:nth-of-type(3)
+      left: 10%
+   .modern__tabs__cont:nth-of-type(4)
+      left: 9%
+   .modern__tabs__cont:nth-of-type(5)
+      left: 4%
+
+   .modern__list li:nth-of-type(3)
+      left: 36.5%
+   .modern__list li:nth-of-type(5)
+      left: 36.5%
+
+   .milk__system__txt
+      padding: 2em
+      margin-top: 8vw
+
+   .recipes__img
+      min-width: unset
+      margin-right: -4vw
+   .recipes__slider .swiper-slide-active
+      transform: translateY(-51%)
+
+@media (max-width: 1201px)
+   .philips .container
+      width: 960px
+      padding: 0 15px
+
+   .philips__opacity
+      display: none
+
+   .modern
+      padding: 2em 0 4em
+   .modern__list
+      display: none
+   .modern__img
+      max-width: 60vw
+      padding-left: 11em
+   .modern__items
+      display: none
+   .modern__txt
+      margin-bottom: 1em
+   .modern__tabs
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-top: 32px
+   .modern__tabs__cont
+      position: unset
+      &:nth-of-type(3)
+         order: 0
+      &:nth-of-type(4)
+         order: 1
+      &:nth-of-type(5)
+         order: 2
+      &:nth-of-type(1)
+         order: 3
+      &:nth-of-type(2)
+         order: 4
+   .modern__tabs__cont__row
+      gap: 16px
+   .modern__tabs__cont__txt
+      margin: 0 !important
+   .modern__tabs__cont
+      &:nth-of-type(3)
+         .modern__tabs__cont__row
+            flex-direction: row
+            align-items: center
+         .modern__tabs__cont__txt
+            text-align: left
+            margin: 0
+      &:nth-of-type(5)
+         .modern__tabs__cont__reverse
+            flex-direction: row
+         .modern__tabs__cont__txt
+            text-align: left
+      &:nth-of-type(1)
+         .modern__tabs__cont__row
+            flex-direction: row-reverse
+         .modern__tabs__cont__txt
+            text-align: right
+   .modern__tabs__cont__img img
+      max-width: 144px
+
+   .philips__home__txt
+      left: 15px
+      box-sizing: border-box
+      max-width: 50%
+
+   .milk__system
+      padding: 40px 15px
+      background: #2d4a59
+   .milk__system__row
+      display: block
+   .milk__system__cal
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 24px
+      padding: 0
+   .milk__system__txt
+      margin: 0
+   .milk__system__img
+      display: none
+
+   .recipes
+      padding: 2em 0 6em
+      background-color: #15303d
+   .recipes__row
+      padding: 0 15px
+   .recipes__arrows .swiper-button-prev, .recipes__arrows .swiper-button-next
+      width: calc(var(--swiper-navigation-size) / 1*2)
+   .recipes__slider .swiper-slide-active
+      transform: translateY(-65%)
+
+   .ecran
+      padding: 40px 15px 0
+      box-sizing: border-box
+   .ecran__video
+      margin-top: 24px
+      width: unset
+
+   .quickstart
+      padding: 32px 15px
+      box-sizing: border-box
+   .quickstart__video
+      display: none
+   .quickstart__cont
+      gap: 24px
+   .ecran__title .philips__title
+      text-transform: none
+      text-align: left
+      font-size: clamp(14px, 2vw, 28px)
+      br
+         display: none
+
+   .silentbrew
+      background-color: #292929
+   .silentbrew__percent
+      position: unset
+      gap: 32px
+      padding: 40px 15px
+   .silentbrew__title
+      text-align: left
+      min-width: unset
+   .silentbrew__row
+      padding: 0 15px
+   .silentbrew__abs
+      padding-bottom: 40px
+   .silentbrew__img img
+      max-width: 60%
+   .silentbrew__i
+      margin-bottom: 0
+      img
+         max-width: 16%
+   .silentbrew__cont .philips__title
+      display: none
+
+   .lattego__i img
+      max-width: 50%
+      margin: 0 0 0 auto
+   .lattego__txt
+      left: 15px
+
+   .energy__txt
+      left: 15px
+
+   .filter__row
+      padding: 0 15px
+
+   .philips__app
+      padding: 40px 0 40px 15px
+   .philips__app__cal
+      margin-left: -5%
+
+   .complete
+      padding: 40px 15px 0
+   .complete__grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: 30px 30px
+      grid-template-areas: "cal1 cal2 cal3" "cal4 cal6 cal7" "cal5 cal5 cal5"
+
+   .philips__gallery
+      padding: 0 15px 40px
+   .philips__gallery__arrows
+      display: none
+   .philips__gallery__title
+      margin-bottom: 16px
+
+   .dop__info
+      padding: 40px 15px 24px
+   .dop__info__row
+      display: block
+      max-width: max-content
+      margin: 16px auto 24px
+   .dop__info__img img
+      max-width: 60%
+
+@media (max-width: 991px)
+   .philips .container
+      width: 720px
+
+   .modern__txt .philips__title br
+      display: none
+   .modern__img
+      padding-left: 0
+      margin-right: -32%
+      max-width: 100%
+   .modern__tabs
+      gap: 2em
+
+   .philips__home__txt
+      top: 32px
+      max-width: 60%
+
+   .milk__system__svg
+      min-width: unset
+      svg
+         display: block
+         width: 62%
+         margin: 0 auto
+   .milk__system__txt
+      padding: 0
+
+   .recipes
+      padding: 40px 0 4em
+   .recipes__arrows
+      display: none
+   .recipes__row
+      flex-direction: column
+      gap: 16px
+   .recipes__title
+      order: 0
+      flex-basis: unset
+   .recipes__txt
+      order: 1
+      flex-basis: unset
+   .recipes__img
+      order: 2
+      flex-basis: unset
+      padding-top: 16px
+      margin-right: -14%
+      margin-left: 14%
+   .recipes__slider .swiper-slide-active
+      transform: unset
+   .recipes__slider
+      bottom: 4%
+
+   .easysettings
+      padding-bottom: 55%
+      background-color: #292929
+   .easysettings__row
+      grid-template-columns: auto
+      gap: 8px
+      width: 100%
+      padding: 0 15px
+      box-sizing: border-box
+      bottom: 0
+   .easysettings__item
+      padding: 16px 0
+
+   .strong__coffee
+      background-color: #284A5A
+   .coffee__txt
+      position: unset
+      transform: unset
+      max-width: 100%
+      padding: 40px 15px
+      box-sizing: border-box
+   .coffee__txt .philips__title
+      margin-bottom: 16px
+
+   .silentbrew__abs::before
+      display: none
+   .silentbrew__abs
+      position: unset
+      padding-bottom: 40px
+      margin-top: -20%
+   .silentbrew__row
+      flex-direction: column
+      gap: 32px
+   .silentbrew__img > img
+      max-width: 83%
+   .silentbrew__cont
+      margin: 0 auto
+
+   .lattego
+      background-color: #292929
+   .lattego__txt
+      position: unset
+      transform: unset
+      max-width: 100%
+      color: #fff
+      padding: 40px 15px
+      box-sizing: border-box
+   .lattego__txt .philips__title
+      margin-bottom: 16px
+   .lattego__i
+      top: 15px
+      left: 15px
+      img
+         margin: 0
+         max-width: 41%
+
+   .energy
+      background-color: #292929
+   .energy__txt
+      position: unset
+      transform: unset
+      max-width: 100%
+      padding: 40px 15px
+
+   .filter
+      background-color: #292929
+      padding-bottom: 40px
+   .filter__img
+      display: none
+   .filter__row
+      flex-direction: column
+      position: unset
+      transform: unset
+      gap: 40px
+   .filter__cont
+      min-width: unset
+   .filter__cont .silentbrew__txt
+      font-size: clamp(10px, 2vw, 30px)
+      color: #7A7A7B
+      text-align: left
+      margin-top: -13%
+   .filter .philips__sub
+      margin-bottom: 16px
+
+   .philips__app
+      background-color: #284A5A
+      padding: 40px 15px
+   .philips__app::before
+      display: none
+   .philips__app__row
+      display: block
+   .philips__app__cont
+      display: none
+   .philips__app__cal
+      margin-left: 0
+      max-width: 100%
+      padding: 0
+   .philips__app__title
+      margin-bottom: 16px
+      .philips__sub br
+         display: none
+   .philips__sub__two
+      margin-top: 0
+   .philips__app__slider__txt
+      margin-top: 16px
+
+   .complete__title
+      margin-bottom: 16px
+      text-align: left
+   .complete__grid
+      gap: 17px 17px
+   .complete__img
+      padding: 10px 30px
+      min-height: 108px
+      box-sizing: border-box
+   .complete__i::before, .complete__i::after
+      width: 12px
+      height: 12px
+   .complete__i::before
+      top: -5px
+      right: -5px
+   .complete__i::after
+      bottom: -5px
+      left: -5px
+   .complete__list
+      // padding-top: 80px !important
+      margin-left: 15px !important
+
+   .philips__gallery__title
+      text-align: left
+
+   .dop__info__img img
+      max-width: 100%
+   .dop__info__note
+      margin-top: 40px
+
+   .recipes__i img
+      max-width: 81%
+
+   // .slide-the-right.swiper-slide-active
+   //    .recipes__i
+   //       margin-left: 10%
+   //       margin-right: -10%
+
+   .slide-the-right .recipes__i
+      margin-left: 10%
+      margin-right: -10%
+
+   .philips__gallery
+      padding-top: 20px
+
+@media (max-width: 767px)
+   .philips .container
+      width: 540px
+
+@media (max-width: 576px)
+   .philips .container
+      width: 100%
+      box-sizing: border-box

@@ -1,0 +1,362 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-name-product__container
+   overflow: hidden
+   background: #0E0B07
+   border-radius: 14px
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-name-product
+   margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   color: #fff
+   h2, h3
+      background: url("https://cdn.comfy.ua/media/x/img3/1818094/txt.png") no-repeat center 85% / cover
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-color: #EE991A
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 52, 24)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      text-transform: uppercase
+      text-align: center
+   h3
+      @include adaptiv-value("font-size", 32, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      text-transform: uppercase
+   p
+      @include adaptiv-value("font-size", 14, 12)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//stalker
+
+.stalker
+   position: relative
+
+.stalker__abs
+   position: absolute
+   // top: 0
+   bottom: 0
+   right: 0
+   left: 0
+
+.stalker__grid
+   height: 100%
+   padding: 2em 4em 1em
+   box-sizing: border-box
+   display: grid
+   grid-template-columns: repeat(6, 1fr)
+   gap: 1em 1em
+   grid-template-areas: "cal1 cal1 cal1 cal1 cal1 cal1" "cal2 cal2 cal3 cal3 cal4 cal4" "cal5 cal5 cal5 cal6 cal6 cal6"
+   >div
+      p
+         text-align: center !important
+      &:nth-of-type(1)
+         grid-area: cal1
+         padding: 0 5em
+      &:nth-of-type(2)
+         grid-area: cal2
+      &:nth-of-type(3)
+         grid-area: cal3
+      &:nth-of-type(4)
+         grid-area: cal4
+      &:nth-of-type(5)
+         grid-area: cal5
+      &:nth-of-type(6)
+         grid-area: cal6
+      &:nth-of-type(n+2)
+         display: flex
+         gap: .2em
+         p
+            font-size: 12px !important
+            color: #EE991A
+         &::before
+            content: ""
+            display: block
+            background: url("https://cdn.comfy.ua/media/x/img3/1818094/circle.svg") no-repeat center / contain
+            min-width: 8px
+            width: 8px
+            height: 8px
+      &:nth-of-type(n+5)
+         p
+            max-width: 86%
+
+//heart
+
+.heart
+   padding-left: 2em
+
+.heart__row
+   display: flex
+   align-items: center
+
+.heart__cont
+   flex-basis: 52%
+   p
+      &:nth-of-type(n+2)
+         margin-top: 0.3em !important
+
+.heart__img
+   flex-basis: 48%
+
+//edition
+
+.edition
+   padding: 2em 0
+
+.edition__row,
+.edition__flex
+   display: flex
+   align-items: center
+   >div
+      flex-basis: 50%
+
+.edition__row
+   align-items: flex-end
+
+.edition__flex
+   background-color: rgba(255, 255, 255, .05)
+   padding: 1em
+   border-radius: 12px
+   gap: 1em
+
+.edition__cal
+   display: flex
+   flex-direction: column
+   gap: 0.5em
+   &:last-of-type
+      .edition__item
+         &:nth-of-type(2)
+            align-items: unset
+            .edition__i
+               margin-top: 0.3em
+
+.edition__item
+   display: flex
+   align-items: center
+   gap: 0.5em
+
+.edition__i
+   flex-basis: 13px
+   align-items: center
+   img
+      max-width: 80% !important
+
+.edition__cont
+   padding-right: 2em
+
+.edition__none
+   p
+      opacity: 60%
+
+.edition__row:nth-of-type(even)
+   flex-direction: row-reverse
+   padding: 2em 0
+   .edition__cont
+      padding-right: 0
+      padding-left: 2em
+
+.hide__tab
+   display: block
+.show__tab
+   display: none
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   #rkt-name-product p
+      font-size: clamp(12px, 4vw, 16px) !important
+   .stalker__grid
+      padding: 1em
+      gap: clamp(1em, 6vw, 4em)
+      // gap: 1em
+   .stalker__abs
+      bottom: unset
+      // bottom: 20vw
+      top: 25%
+   .stalker__grid > div:nth-of-type(n+2)::before
+      min-width: 12px
+      width: 12px
+      height: 12px
+   .stalker__grid > div:nth-of-type(n+2)
+      gap: 8px
+
+   #rkt-name-product .heart__cont h3
+      font-size: 42px !important
+
+   .heart
+      padding: 2em 1em !important
+   .heart__img
+      margin-bottom: 1rem
+
+   .edition
+      padding: 0 1em 0 !important
+   #rkt-name-product h2
+      font-size: 52px !important
+   #rkt-name-product .edition__cont h3
+      font-size: 32px !important
+      br
+         display: none
+
+   .edition__flex
+      border-radius: 16px
+      flex-direction: column
+      align-items: unset
+      gap: 0.5em
+   #rkt-name-product .edition__item p
+      font-size: clamp(16px, 5vw, 20px) !important
+   .edition__i img
+      max-width: 100% !important
+
+@media (min-width: $bp-mobile) and (max-width: 1201px)
+   // #rkt-name-product
+   //    display: block
+
+   .rkt-name-product__container
+      border-radius: unset
+
+   .stalker__grid
+      grid-template-columns: 1fr
+      grid-template-areas: "cal1" "cal2" "cal3" "cal4" "cal5" "cal6"
+   .stalker__grid > div:nth-of-type(1)
+      padding: 0
+   .stalker__grid > div p
+      text-align: left !important
+
+   .stalker__grid >div:first-of-type p
+      text-align: center !important
+
+   .hide__tab
+      display: none
+   .show__tab
+      display: block
+
+   .heart
+      padding: 2em
+   .heart__row
+      flex-direction: column
+
+   .edition
+      padding: 2em 2em 0
+   .edition__row
+      flex-direction: column !important
+   .edition__cont
+      padding: 0 !important
+
+@media (min-width: $bp-tablet) and (max-width: 1023px)
+   #rkt-name-product .heart__cont h3
+      font-size: 42px !important
+
+   #rkt-name-product h2
+      font-size: 52px !important
+
+   #rkt-name-product .edition__cont h3
+      font-size: 32px !important
+      br
+         display: none
+
+@media (min-width: $bp-tablet) and (max-width: 1201px)
+   // #rkt-name-product
+   //    display: block
+
+   #rkt-name-product p
+      font-size: 20px !important
+
+   #rkt-name-product .edition__item p
+      font-size: 16px !important
+   .edition__i img
+      max-width: 95% !important
+
+   .stalker__grid
+      gap: 8em
+
+   .heart__img
+      margin-bottom: 1em
+      img
+         width: 70%
+
+   .stalker__abs
+      bottom: 5%
+
+   .stalker__grid > div:nth-of-type(n+2)::before
+      min-width: 15px
+      width: 15px
+      height: 15px
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   // #rkt-name-product
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .stalker__grid
+      gap: 4em
+
+   .stalker__abs
+      bottom: 5%
+
+@media (min-width: 1202px) and (max-width: 1341px)
+   .stalker__grid
+      padding: 1em 4em
+
+   #rkt-name-product p
+      font-size: 12px !important

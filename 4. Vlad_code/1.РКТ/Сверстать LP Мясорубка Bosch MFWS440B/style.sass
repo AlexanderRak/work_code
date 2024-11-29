@@ -1,0 +1,462 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+// .rkt-bosch-mfws440b__container
+//    overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-bosch-mfws440b
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      text-align: center
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: normal
+      text-align: left
+      // margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+   div
+      line-height: normal
+
+//bosch__block
+
+.bosch__block
+   display: flex
+   align-items: center
+   >div
+      box-sizing: border-box
+
+.bosch__block__img
+   flex-basis: 55%
+
+.bosch__block__title
+   flex-basis: 45%
+   padding: 1em
+   font-size: clamp(24px, 3vw, 42px)
+   font-weight: bold
+   text-align: center
+
+//bosch__complete
+
+.bosch__complete
+   position: relative
+
+.bosch__complete__item
+   position: absolute
+   max-width: 350px
+   padding: 1em 2em
+   box-sizing: border-box
+   h3
+      font-weight: bold !important
+      text-align: center !important
+   &:nth-of-type(1)
+      top: 5%
+      right: 0
+   &:nth-of-type(2)
+      left: 4%
+      top: 20%
+   &:nth-of-type(3)
+      right: 24%
+      bottom: 2%
+
+//bosch__modes
+
+.bosch__modes
+   position: relative
+
+.bosch__modes__item
+   position: absolute
+   padding: 1em 2em
+   max-width: 350px
+   box-sizing: border-box
+   h3
+      text-align: center !important
+      font-weight: bold !important
+   &:nth-of-type(1)
+      top: 0
+      right: 0
+   &:nth-of-type(2)
+      bottom: 10%
+      left: 0
+      color: #fff
+
+//bosch__warranty
+
+.bosch__warranty
+   position: relative
+   h3,p
+      text-align: center !important
+
+.bosch__warranty__title,
+.bosch__warranty__txt,
+.bosch__warranty__note
+   position: absolute
+   padding: 1em 2em
+   box-sizing: border-box
+   max-width: 400px
+
+.bosch__warranty__title
+   top: 0
+   right: 0
+
+.bosch__warranty__txt
+   bottom: 0
+   left: 0
+
+.bosch__warranty__note
+   bottom: 0
+   right: 0
+
+//bosch__accessories
+
+.bosch__accessories
+   position: relative
+
+.bosch__accessories__title
+   position: absolute
+   top: 0
+   right: 50%
+   transform: translateX(50%)
+   max-width: max-content
+   width: 100%
+   padding: 1em 2em
+   box-sizing: border-box
+   z-index: 1
+
+.bosch__accessories__row
+   display: flex
+   gap: 1em
+
+.bosch__accessories__cal
+   position: relative
+
+.bosch__accessories__txt
+   position: absolute
+   width: 100%
+   bottom: 35%
+   right: 50%
+   transform: translateX(50%)
+   padding: 1em 2em
+   box-sizing: border-box
+   background-color: #ffffff6f
+
+//bosch__accessories__two
+
+.bosch__accessories__two
+   position: relative
+
+.bosch__accessories__two__grid
+   position: absolute
+   display: grid
+   grid-template-columns: 1.3fr 1fr 1fr 1fr
+   padding: 1em 2em
+   max-width: 80%
+   box-sizing: border-box
+   bottom: -.5em
+   left: 1em
+   gap: 2em
+   p
+      font-weight: bold !important
+
+//bosch__nozzles
+
+.bosch__nozzles
+   position: relative
+
+.bosch__nozzles__title
+   position: absolute
+   top: -1em
+   right: 20%
+   max-width: max-content
+   padding: 1em 2em
+   box-sizing: border-box
+   z-index: 1
+   color: #fff
+   h2
+      text-align: center !important
+
+.bosch__nozzles__row
+   display: flex
+
+.bosch__nozzles__cal
+   position: relative
+   &:nth-of-type(1)
+      .bosch__nozzles__txt
+         bottom: 13%
+         left: 0
+   &:nth-of-type(2)
+      .bosch__nozzles__txt
+         bottom: 10%
+         left: 35%
+
+.bosch__nozzles__txt
+   position: absolute
+   padding: 1em 2em
+   h3
+      font-weight: bold !important
+      text-align: center !important
+
+//bosch__pack
+
+.bosch__pack
+   position: relative
+   display: flex
+
+.bosch__pack__title
+   position: absolute
+   z-index: 1
+   max-width: 50%
+   width: 100%
+   box-sizing: border-box
+   top: .5em
+
+.bosch__pack__txt
+   position: absolute
+   padding: 2em
+
+.bosch__pack__cal
+   position: relative
+   &:nth-of-type(2)
+      .bosch__pack__txt
+         top: 30%
+   &:nth-of-type(3)
+      .bosch__pack__txt
+         bottom: 10%
+         right: 50%
+         transform: translateX(50%)
+
+//bosch__saved
+
+.bosch__saved
+   position: relative
+
+.bosch__saved__title
+   position: absolute
+   padding: 1em 2em
+   max-width: max-content
+   width: 100%
+   box-sizing: border-box
+   top: 0
+   right: 28%
+   h2
+      text-align: center !important
+
+.bosch__saved__img
+   display: flex
+   gap: 1em
+
+//bosch__logo
+
+.bosch__logo__txt
+   padding: 0 2em 1em
+   h2
+      margin-bottom: 1rem !important
+   p
+      text-align: center !important
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-bosch-mfws440b
+   //    display: block !important
+
+   .bosch__modes__row
+      grid-template-columns: 1fr !important
+      padding: 1em
+      gap: 1em
+      >div
+         padding: 0 !important
+
+   .bosch__accessories__txt
+      padding: 1em
+
+   .bosch__nozzles__row
+      flex-direction: column
+
+   .bosch__saved__title
+      position: unset
+      transform: unset
+      max-width: 100%
+
+   .bosch__logo__txt
+      padding-right: 1em
+      padding-left: 1em
+
+   .bosch__warranty__note
+      right: unset
+      left: 0
+      padding: .5em
+      p
+         font-size: 10px !important
+
+   .bosch__accessories__two__grid
+      grid-template-columns: 1fr 1fr !important
+
+   .bosch__pack
+      flex-direction: column
+   .bosch__pack__title
+      position: unset
+      max-width: 100%
+      padding: 1em
+
+   .bosch__accessories__row
+      flex-direction: column
+   .bosch__accessories__txt
+      display: block !important
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-bosch-mfws440b
+//       display: block !important
+
+@media (min-width: $bp-mobile) and (max-width: 1201px)
+   // #rkt-bosch-mfws440b
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .bosch__block
+      flex-direction: column-reverse
+   .bosch__block__title
+      padding: 1em !important
+   .bosch__block__img
+      overflow: hidden
+      img
+         margin-top: -10% !important
+
+   .bosch__complete__row
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-template-areas: "cal1 cal3" "cal2 cal2"
+      gap: .5em .5em
+   .bosch__complete__item
+      background-color: #f4f0f0
+      position: unset
+      max-width: 100%
+      padding: 1em
+      &:nth-of-type(1)
+         grid-area: cal1
+      &:nth-of-type(2)
+         grid-area: cal2
+      &:nth-of-type(3)
+         grid-area: cal3
+
+   .bosch__modes__row
+      display: grid
+      grid-template-columns: 1fr 1fr
+   .bosch__modes__item
+      position: unset
+      padding: 1em !important
+      color: #000 !important
+
+   .bosch__warranty__title,
+   .bosch__warranty__txt
+      position: unset
+      max-width: 100%
+      width: 100%
+      padding: 1em !important
+      box-sizing: border-box
+      h2,h3,p
+         text-align: center !important
+         color: #000
+
+   .bosch__accessories__title
+      position: unset
+      max-width: 100%
+      transform: unset
+   .bosch__accessories__txt
+      display: none
+   // .bosch__accessories__row
+      // flex-direction: column
+
+   .bosch__nozzles__title
+      position: unset
+      transform: unset
+      max-width: 100%
+      color: #000
+   .bosch__nozzles__cal:nth-of-type(2) .bosch__nozzles__txt
+      bottom: 7%
+      left: 21%
+
+   .bosch__pack__txt
+      padding: 1em
+   .bosch__pack__cal:nth-of-type(3) .bosch__pack__txt
+      width: max-content
+
+   .bosch__saved__title
+      background: #fffdfd85
+
+   .bosch__accessories__two
+      display: flex
+      flex-direction: column
+   .bosch__accessories__title
+      order: 0
+   .bosch__accessories__two__img
+      order: 1
+   .bosch__accessories__two__grid
+      position: unset
+      max-width: 100%
+      gap: 1em
+      order: 2
+      padding: 1em
+      grid-template-columns: 1fr 1fr 1fr 1fr

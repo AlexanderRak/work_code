@@ -1,0 +1,303 @@
+.bc-description__content p:first-letter {
+  padding-left: 0 !important;
+}
+
+#rkt-philips-product {
+  margin: 0 auto;
+  max-width: 1023px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+#rkt-philips-product h2, #rkt-philips-product h3, #rkt-philips-product h4, #rkt-philips-product h5, #rkt-philips-product h6, #rkt-philips-product p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+#rkt-philips-product ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+#rkt-philips-product img {
+  display: block;
+  max-width: 100%;
+  opacity: 1;
+  margin: 0 auto;
+}
+#rkt-philips-product img:hover {
+  opacity: 1;
+}
+#rkt-philips-product h2 {
+  font-size: 26px;
+  font-weight: 900;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-product h2 {
+    font-size: calc(20px + 6 * (100vw - 320px) / 703);
+  }
+}
+#rkt-philips-product h3 {
+  font-size: 20px;
+  font-weight: 900;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-product h3 {
+    font-size: calc(18px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-philips-product p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-product p {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-philips-product li {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.2;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-product li {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-philips-product i {
+  line-height: 1.2;
+  font-size: 16px;
+  margin-top: 0.5rem;
+  display: block;
+  font-style: italic;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-product i {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+
+.logo__txt {
+  padding: 1em;
+}
+.logo__txt h2, .logo__txt p {
+  text-align: center !important;
+}
+
+.logo__wrap {
+  position: relative;
+}
+
+.logo__abs {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo__i img {
+  max-width: 20% !important;
+  margin: 0 !important;
+}
+
+.logo__cal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 2em;
+  height: 100%;
+}
+
+.advantages {
+  color: #fff;
+}
+
+.advantages__title {
+  padding: 1em 1em 0;
+  color: #000;
+}
+.advantages__title h2 {
+  text-align: center !important;
+}
+
+.advantages__wrap {
+  position: relative;
+}
+
+.advantages__abs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.advantages__flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 2em;
+  gap: 2em;
+  box-sizing: border-box;
+}
+
+.advantages__item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.advantages__i img {
+  max-width: 60px !important;
+  min-width: 60px !important;
+}
+
+.func {
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.func__row {
+  display: flex;
+  align-items: center;
+  gap: 4em;
+}
+.func__row > div {
+  box-sizing: border-box;
+}
+.func__row:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+.func__img {
+  flex-basis: 45%;
+}
+
+.func__cont {
+  flex-basis: 55%;
+}
+
+.philips__table {
+  padding: 1em;
+}
+
+.philips__table__title h2 {
+  text-align: center !important;
+}
+
+.table__grid__two {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2em;
+}
+.table__grid__two h3 {
+  text-align: center !important;
+}
+
+.table__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "cal1 cal1 cal1 cal1 cal1" "cal2 cal3 cal4 cal5 cal6";
+}
+.table__grid > div {
+  padding: 0.5em;
+}
+.table__grid > div:nth-of-type(1) {
+  grid-area: cal1;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.table__grid > div:nth-of-type(2) {
+  grid-area: cal2;
+}
+.table__grid > div:nth-of-type(3) {
+  grid-area: cal3;
+}
+.table__grid > div:nth-of-type(4) {
+  grid-area: cal4;
+}
+.table__grid > div:nth-of-type(5) {
+  grid-area: cal5;
+}
+.table__grid > div:nth-of-type(6) {
+  grid-area: cal6;
+}
+.table__grid p {
+  text-align: center !important;
+}
+
+.table__mark p {
+  font-size: 22px !important;
+  font-weight: bold;
+}
+
+@media (min-width: 320px) and (max-width: 767.9px) {
+  .logo__cal {
+    padding-left: 1em;
+  }
+  .logo__i img {
+    max-width: 25% !important;
+  }
+  .advantages__abs {
+    position: unset;
+    color: #000;
+  }
+  .advantages__i img {
+    filter: invert(1);
+  }
+  .advantages__flex {
+    padding: 1em;
+    gap: 1em;
+  }
+  .advantages__img img {
+    min-width: 150%;
+    margin-left: -40% !important;
+  }
+  .func__row {
+    gap: 1em;
+    flex-direction: column-reverse !important;
+  }
+  .philips__table__scroll {
+    overflow-x: scroll;
+  }
+  .philips__table__wrap {
+    min-width: 960px;
+  }
+}
+@media (min-width: 768px) and (max-width: 768px) {
+  .advantages__img img {
+    min-width: 150%;
+    margin-left: -20% !important;
+  }
+}
+@media (max-width: 1024px) and (min-width: 1024px) {
+  .advantages__img img {
+    min-width: 150%;
+  }
+  .func__row {
+    gap: 2em;
+  }
+  .philips__table__scroll {
+    overflow-x: scroll;
+  }
+  .philips__table__wrap {
+    min-width: 80vw;
+  }
+}

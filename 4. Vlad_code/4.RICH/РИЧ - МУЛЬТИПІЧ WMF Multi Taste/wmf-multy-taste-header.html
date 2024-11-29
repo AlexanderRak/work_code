@@ -1,0 +1,133 @@
+<style>
+   .page-container {
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+      order: 1;
+   }
+
+   .features-general {
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+      order: 1;
+   }
+
+   .common-template__top.page-container {
+      -webkit-box-ordinal-group: -2;
+      -ms-flex-order: -3;
+      order: -3;
+   }
+
+   .common-template__tabs.page-container {
+      -webkit-box-ordinal-group: -1;
+      -ms-flex-order: -2;
+      order: -2;
+   }
+
+   .gen-tab__bottom-content section[class=""] {
+      display: flex;
+      flex-direction: column;
+   }
+
+   @media (max-width: 1023px) {
+      .common-template__top.page-container {
+         -webkit-box-ordinal-group: 0;
+         -ms-flex-order: -1;
+         order: -1;
+      }
+   }
+
+   .gen-tab__gallery {
+      height: 100%;
+      top: 0rem;
+      max-height: 54rem !important;
+      overflow: hidden;
+      position: sticky;
+      position: -webkit-sticky;
+   }
+
+   .bc-description__content {
+      margin: 0;
+   }
+
+   .bc-description__content img {
+      margin-right: 0;
+      margin-left: 0;
+   }
+
+   .bc-description__content img:not(:hover) {
+      opacity: 1;
+   }
+
+   .clg-content__header {
+      width: 100%;
+      /* width: 120%; */
+      /* margin-left: -10%; */
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      overflow: hidden;
+      margin-top: 5%;
+      margin-left: 5%;
+      /* margin-top: -40px; */
+   }
+
+   .clg__video {
+      height: 100%;
+      max-height: 40rem;
+      width: 100%;
+      /* margin-top: -15%; */
+   }
+
+   @media screen and (max-width: 1025px) {
+      .gen-tab__gallery {
+         position: static;
+      }
+
+      .clg-content__header {
+         /* margin-top: -15px; */
+         position: relative;
+         max-width: max-content;
+         /* margin: -15px auto 0 auto; */
+         margin: 0 auto;
+         /* margin-left: -20% !important; */
+      }
+
+      .info-brand {
+         margin: 0 1.2rem 1.6rem;
+      }
+
+      .i-car-wrapper {
+         border: none;
+         border-bottom: none !important;
+      }
+
+      .i-car-wrapper__wr {
+         border: 4px solid #e5e5e5;
+         border-radius: 12px;
+      }
+
+      .bc-description {
+         padding: 0;
+      }
+
+      body {
+         background-color: #f2f2f2;
+      }
+   }
+
+   @media screen and (max-width: 1023px) {
+      .clg__video {
+         /* max-height: 42rem; */
+         width: 100%;
+      }
+
+      .clg-content__header {
+         width: 100%;
+         margin-left: 0% !important;
+      }
+   }
+</style>
+
+<div id="clg-conten" class="clg-content__header">
+   <video muted="true" autoplay loop playsinline="true" class="autoplay-video clg__video lazyload js-spdsize" src="https://cdn.comfy.ua/media/x/img4/2960314/video/1.mp4"></video>
+</div>
