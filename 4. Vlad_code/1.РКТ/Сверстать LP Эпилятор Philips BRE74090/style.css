@@ -1,9 +1,12 @@
+.rkt-philips-bre740-90t__container {
+  overflow: hidden;
+}
+
 .bc-description__content p:first-letter {
   padding-left: 0 !important;
 }
 
-#rkt-name-product {
-  margin: 0 auto;
+#rkt-philips-bre740-90t {
   max-width: 1023px;
   width: 100%;
   height: auto;
@@ -11,12 +14,12 @@
   overflow: hidden;
   background: #fff;
 }
-#rkt-name-product h2, #rkt-name-product h3, #rkt-name-product h4, #rkt-name-product h5, #rkt-name-product h6, #rkt-name-product p {
+#rkt-philips-bre740-90t h2, #rkt-philips-bre740-90t h3, #rkt-philips-bre740-90t h4, #rkt-philips-bre740-90t h5, #rkt-philips-bre740-90t h6, #rkt-philips-bre740-90t p {
   margin: 0;
   padding: 0;
   line-height: 1.2;
 }
-#rkt-name-product ul {
+#rkt-philips-bre740-90t ul {
   margin: 0;
   padding: 0;
   list-style-type: disc;
@@ -26,59 +29,59 @@
   flex-direction: column;
   gap: 1em;
 }
-#rkt-name-product img {
+#rkt-philips-bre740-90t img {
   display: block;
   max-width: 100%;
   opacity: 1;
   margin: 0 auto;
 }
-#rkt-name-product img:hover {
+#rkt-philips-bre740-90t img:hover {
   opacity: 1;
 }
-#rkt-name-product h2 {
+#rkt-philips-bre740-90t h2 {
   font-size: 30px;
   font-weight: 900;
   text-align: left;
   margin-bottom: 1rem;
 }
 @media (max-width: 1023px) {
-  #rkt-name-product h2 {
+  #rkt-philips-bre740-90t h2 {
     font-size: calc(20px + 10 * (100vw - 320px) / 703);
   }
 }
-#rkt-name-product h3 {
+#rkt-philips-bre740-90t h3 {
   font-size: 22px;
   font-weight: 900;
   text-align: left;
   margin-bottom: 1rem;
 }
 @media (max-width: 1023px) {
-  #rkt-name-product h3 {
+  #rkt-philips-bre740-90t h3 {
     font-size: calc(18px + 4 * (100vw - 320px) / 703);
   }
 }
-#rkt-name-product p {
+#rkt-philips-bre740-90t p {
   font-size: 16px;
   font-weight: 400;
   text-align: left;
 }
 @media (max-width: 1023px) {
-  #rkt-name-product p {
+  #rkt-philips-bre740-90t p {
     font-size: calc(14px + 2 * (100vw - 320px) / 703);
   }
 }
-#rkt-name-product li {
+#rkt-philips-bre740-90t li {
   font-size: 16px;
   font-weight: 400;
   text-align: left;
   line-height: 1.2;
 }
 @media (max-width: 1023px) {
-  #rkt-name-product li {
+  #rkt-philips-bre740-90t li {
     font-size: calc(14px + 2 * (100vw - 320px) / 703);
   }
 }
-#rkt-name-product i {
+#rkt-philips-bre740-90t i {
   line-height: 1.2;
   font-size: 16px;
   margin-top: 0.5rem;
@@ -86,7 +89,7 @@
   font-style: italic;
 }
 @media (max-width: 1023px) {
-  #rkt-name-product i {
+  #rkt-philips-bre740-90t i {
     font-size: calc(14px + 2 * (100vw - 320px) / 703);
   }
 }
@@ -184,10 +187,26 @@
   margin-top: 1rem;
 }
 
+.complete {
+  padding-top: 2em;
+}
+
+.complete__title h3 {
+  text-align: center !important;
+}
+
+.complete__wrap {
+  position: relative;
+}
+
+.complete__list {
+  position: absolute;
+  color: #6D1E4A;
+  left: 2em;
+  top: 1em;
+}
+
 @media (min-width: 320px) and (max-width: 767.9px) {
-  #rkt-name-product {
-    display: block;
-  }
   .logo__cont,
   .func,
   .philips__cont,
@@ -224,6 +243,14 @@
     grid-template-columns: 1fr;
     gap: 2em;
   }
+  .complete__list {
+    position: unset;
+    padding: 0 1em 1em;
+  }
+  .complete__img img {
+    min-width: 120%;
+    margin-left: -20% !important;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1201px) {
   .logo__cont,
@@ -243,5 +270,13 @@
   }
   .tech__wrap > .tech__img {
     margin: 0 -1em;
+  }
+  .complete__list {
+    position: unset;
+    padding: 0 1em 1em;
+  }
+  .complete__img img {
+    min-width: 120%;
+    margin-left: -20% !important;
   }
 }

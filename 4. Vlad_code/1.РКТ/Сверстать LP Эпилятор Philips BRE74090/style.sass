@@ -3,8 +3,8 @@
 // body
 //    margin: 0
 
-// .rkt-name-product__container
-//    overflow: hidden
+.rkt-philips-bre740-90t__container
+   overflow: hidden
 
 .bc-description__content p:first-letter
    padding-left: 0 !important
@@ -20,8 +20,8 @@ $maxWidthContainer: 1023
    @media (max-width: #{$maxWidthContainer + px})
       #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
 
-#rkt-name-product
-   margin: 0 auto
+#rkt-philips-bre740-90t
+   // margin: 0 auto
    // display: grid
    // grid-template-columns: calc(100% - 400px) 400px
    // max-width: 1406px
@@ -159,11 +159,29 @@ $maxWidthContainer: 1023
 .accessories__cont
    margin-top: 1rem
 
+//complete
+
+.complete
+   padding-top: 2em
+
+.complete__title
+   h3
+      text-align: center !important
+
+.complete__wrap
+   position: relative
+
+.complete__list
+   position: absolute
+   color: #6D1E4A
+   left: 2em
+   top: 1em
+
 //*********************************media*************************
 
 @media (min-width: $bp-mobile) and (max-width: 767.9px)
-   #rkt-name-product
-      display: block
+   // #rkt-philips-bre740-90t
+   //    display: block
 
    .logo__cont,
    .func,
@@ -196,12 +214,19 @@ $maxWidthContainer: 1023
       grid-template-columns: 1fr
       gap: 2em
 
-// @media (min-width: $bp-tablet) and (max-width: 1023px)
-//    #rkt-name-product
+   .complete__list
+      position: unset
+      padding: 0 1em 1em
+   .complete__img img
+      min-width: 120%
+      margin-left: -20% !important
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-philips-bre740-90t
 //       display: block
 
 @media (min-width: $bp-hd-desktop) and (max-width: 1201px)
-   // #rkt-name-product
+   // #rkt-philips-bre740-90t
    //    display: grid
    //    grid-template-columns: calc(100% - 400px) 400px
 
@@ -219,3 +244,10 @@ $maxWidthContainer: 1023
       padding: 1em
    .tech__wrap > .tech__img
       margin: 0 -1em
+
+   .complete__list
+      position: unset
+      padding: 0 1em 1em
+   .complete__img img
+      min-width: 120%
+      margin-left: -20% !important
