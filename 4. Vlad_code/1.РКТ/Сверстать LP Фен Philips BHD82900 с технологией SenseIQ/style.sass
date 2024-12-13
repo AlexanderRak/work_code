@@ -52,12 +52,12 @@ $maxWidthContainer: 1023
       margin: 0 auto
       &:hover
          opacity: 1
-   h2, .philips__title, .philips__table__title
-      @include adaptiv-value("font-size", 26, 20)
+   h2, .philips__title
+      @include adaptiv-value("font-size", 24, 20)
       font-weight: 900
       text-align: left
       margin-bottom: 1rem
-   h3, .logo__txt
+   h3, .logo__txt, .philips__table__title
       @include adaptiv-value("font-size", 20, 18)
       font-weight: normal
       text-align: left
@@ -110,6 +110,8 @@ $maxWidthContainer: 1023
 
 .txt__center
    text-align: center !important
+   >div
+      text-align: center !important
 
 .char__items
    display: flex
@@ -237,8 +239,8 @@ $maxWidthContainer: 1023
       text-align: center !important
 
 .philips__table__title
-   font-size: clamp(18px, 2vw, 28px)
-   font-weight: bold
+   // font-size: clamp(18px, 2vw, 28px)
+   font-weight: bold !important
    margin-bottom: 0 !important
 
 .philips__grid__two
@@ -343,6 +345,7 @@ $maxWidthContainer: 1023
 
    .philips__table__scroll
       overflow-x: scroll
+      overflow-y: hidden
    .philips__table__wrap
       min-width: 720px
    .philips__note
@@ -359,9 +362,25 @@ $maxWidthContainer: 1023
    .philips__note
       padding: 1em 0 0
 
-// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
-//    #rkt-philips-bhd829-00-s-tehnologiej-senseiq
-//       display: block !important
+   .tech__cont,
+   .hair__cont
+      >div
+         text-align: center !important
+
+   .func .philips__list li
+      text-align: center
+      max-width: max-content
+      margin: 0 auto
+
+@media (min-width: $bp-tablet) and (max-width: 1023.9px)
+   // #rkt-philips-bhd829-00-s-tehnologiej-senseiq
+   //    display: block !important
+
+   .invis iframe
+      height: 46vw
+
+   .philips__grid
+      gap: 100px
 
 @media (min-width: $bp-hd-desktop) and (max-width: 1201px)
    // #rkt-philips-bhd829-00-s-tehnologiej-senseiq
@@ -374,6 +393,7 @@ $maxWidthContainer: 1023
 
    .philips__table__scroll
       overflow-x: scroll
+      overflow-y: hidden
    .philips__table__wrap
       min-width: 760px
    .philips__note
@@ -382,3 +402,13 @@ $maxWidthContainer: 1023
       padding: 2em 0
    .philips__grid
       gap: 4em
+
+   .func .philips__list li
+      text-align: center
+      max-width: max-content
+      margin: 0 auto
+
+@media (max-width: 1201px)
+   .func__cont
+      >div
+         text-align: center !important

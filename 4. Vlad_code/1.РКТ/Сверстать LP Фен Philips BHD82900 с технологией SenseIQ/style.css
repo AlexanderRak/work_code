@@ -38,25 +38,25 @@
 #rkt-philips-bhd829-00-s-tehnologiej-senseiq img:hover {
   opacity: 1;
 }
-#rkt-philips-bhd829-00-s-tehnologiej-senseiq h2, #rkt-philips-bhd829-00-s-tehnologiej-senseiq .philips__title, #rkt-philips-bhd829-00-s-tehnologiej-senseiq .philips__table__title {
-  font-size: 26px;
+#rkt-philips-bhd829-00-s-tehnologiej-senseiq h2, #rkt-philips-bhd829-00-s-tehnologiej-senseiq .philips__title {
+  font-size: 24px;
   font-weight: 900;
   text-align: left;
   margin-bottom: 1rem;
 }
 @media (max-width: 1023px) {
-  #rkt-philips-bhd829-00-s-tehnologiej-senseiq h2, #rkt-philips-bhd829-00-s-tehnologiej-senseiq .philips__title, #rkt-philips-bhd829-00-s-tehnologiej-senseiq .philips__table__title {
-    font-size: calc(20px + 6 * (100vw - 320px) / 703);
+  #rkt-philips-bhd829-00-s-tehnologiej-senseiq h2, #rkt-philips-bhd829-00-s-tehnologiej-senseiq .philips__title {
+    font-size: calc(20px + 4 * (100vw - 320px) / 703);
   }
 }
-#rkt-philips-bhd829-00-s-tehnologiej-senseiq h3, #rkt-philips-bhd829-00-s-tehnologiej-senseiq .logo__txt {
+#rkt-philips-bhd829-00-s-tehnologiej-senseiq h3, #rkt-philips-bhd829-00-s-tehnologiej-senseiq .logo__txt, #rkt-philips-bhd829-00-s-tehnologiej-senseiq .philips__table__title {
   font-size: 20px;
   font-weight: normal;
   text-align: left;
   margin-bottom: 1rem;
 }
 @media (max-width: 1023px) {
-  #rkt-philips-bhd829-00-s-tehnologiej-senseiq h3, #rkt-philips-bhd829-00-s-tehnologiej-senseiq .logo__txt {
+  #rkt-philips-bhd829-00-s-tehnologiej-senseiq h3, #rkt-philips-bhd829-00-s-tehnologiej-senseiq .logo__txt, #rkt-philips-bhd829-00-s-tehnologiej-senseiq .philips__table__title {
     font-size: calc(18px + 2 * (100vw - 320px) / 703);
   }
 }
@@ -114,6 +114,9 @@
 }
 
 .txt__center {
+  text-align: center !important;
+}
+.txt__center > div {
   text-align: center !important;
 }
 
@@ -233,8 +236,7 @@
 }
 
 .philips__table__title {
-  font-size: clamp(18px, 2vw, 28px);
-  font-weight: bold;
+  font-weight: bold !important;
   margin-bottom: 0 !important;
 }
 
@@ -349,6 +351,7 @@
   }
   .philips__table__scroll {
     overflow-x: scroll;
+    overflow-y: hidden;
   }
   .philips__table__wrap {
     min-width: 720px;
@@ -368,6 +371,24 @@
   .philips__note {
     padding: 1em 0 0;
   }
+  .tech__cont > div,
+  .hair__cont > div {
+    text-align: center !important;
+  }
+  .func .philips__list li {
+    text-align: center;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023.9px) {
+  .invis iframe {
+    height: 46vw;
+  }
+  .philips__grid {
+    gap: 100px;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1201px) {
   .func__row {
@@ -376,6 +397,7 @@
   }
   .philips__table__scroll {
     overflow-x: scroll;
+    overflow-y: hidden;
   }
   .philips__table__wrap {
     min-width: 760px;
@@ -388,5 +410,16 @@
   }
   .philips__grid {
     gap: 4em;
+  }
+  .func .philips__list li {
+    text-align: center;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1201px) {
+  .func__cont > div {
+    text-align: center !important;
   }
 }
