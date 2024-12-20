@@ -1,24 +1,84 @@
-//default styles
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
 
 // body
 //    margin: 0
 
-.philips
-   width: 100%
-   max-width: 1520px
-   margin: 0 auto
-   height: auto
-   display: block
-   box-sizing: border-box
+.rkt-philips-series-5000-s5887-10__container
    overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-series-5000-s5887-10
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
    img
-      margin: 0 auto
-      opacity: 1 !important
-      max-width: 100%
       display: block
-      height: auto
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
       &:hover
-         opacity: 1 !important
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+.philips
    div
       line-height: normal
 
@@ -45,78 +105,70 @@
 
 .logo__abs
    position: absolute
-   max-width: 560px
+   max-width: 38%
    bottom: 50%
    transform: translateY(50%)
-   right: 60px
+   right: 2em
    text-align: right
 
 .logo__txt
-   font-size: 32px
+   font-size: 22px
    margin-bottom: 1rem
 
 .logo__title
-   font-size: 42px
+   font-size: 26px
    font-weight: bold
 
 //features
 
 .philips__title
    font-weight: bold
-   font-size: 32px
+   font-size: 26px
    margin-bottom: 1rem
 
 .features
    .philips__title
       margin-bottom: 0
       text-align: center
-      padding: 35px 0
+      padding: 1em 0
 
 .features__img
    position: relative
 
 .philips__txt
-   font-size: 28px
+   font-size: 16px
 
 .features__abs
    color: #fff
    position: absolute
    bottom: 50%
    transform: translateY(50%)
-   left: 60px
-   max-width: 700px
+   left: 2em
+   max-width: 50%
 
 //func
 
 .func
-   padding: 100px 60px
+   padding: 2em
 
 .func__row
    display: flex
    align-items: center
    justify-content: space-between
-   gap: 60px
+   gap: 2em
    >div
-      flex: 1
+      flex-basis: 50%
       box-sizing: border-box
    &:nth-of-type(even)
       flex-direction: row-reverse
 
-.func__img
-   max-width: 640px !important
-
-.func__cont
-   max-width: 50%
-
 //philips__table
 
 .philips__table
-   padding: 80px 60px
+   padding: 2em
    .philips__title
       margin-bottom: 0
-      font-size: 28px
-   .philips__txt
-      font-size: 24px
+      font-size: 20px
 
 .philips__table__head
    text-align: center
@@ -127,7 +179,7 @@
    grid-template-columns: repeat(4, 1fr)
    grid-template-areas: "cal5 cal5 cal5 cal5" "cal1 cal2 cal3 cal4"
    >div
-      padding: 15px 20px
+      padding: 5px 10px
       text-align: center
    .cal1
       grid-area: cal1
@@ -143,23 +195,33 @@
       background-color: #cbcbff
 
 .philips__note
-   font-size: 14px
+   font-size: 12px
    margin-top: 4rem
 
-//media*****************************************************
+//*********************************media*************************
 
-@media (max-width: 1441px)
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-series-5000-s5887-10
+   //    display: block
+
    .logo__txt
-      font-size: 24px
+      font-size: 18px
    .logo__title
-      font-size: 32px
-   .logo__abs
-      max-width: 430px
+      font-size: 20px
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-philips-series-5000-s5887-10
+//       display: block
+
+// @media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+//    #rkt-philips-series-5000-s5887-10
+//       display: grid
+//       grid-template-columns: calc(100% - 400px) 400px
 
 @media (max-width: 1201px)
    .philips .container
-      width: 960px
       padding: 0 15px
+      box-sizing: border-box
 
    .logo
       color: inherit
@@ -171,40 +233,24 @@
       padding: 1em 0
 
    .features__abs
-      left: 15px
-      max-width: 50%
-
-   .philips__txt
-      font-size: 20px !important
-
-   .func
-      padding: 2em 0
-
-   .philips__title
-      font-size: 24px !important
-
-   .philips__table
-      padding: 2em 0
-
-@media (max-width: 991px)
-   .philips .container
-      width: 720px
-
-   .logo__title
-      font-size: 24px
-
-   .features__abs
       color: inherit
       position: unset
       transform: unset
       max-width: unset
+      padding-top: 1em
+      text-align: center
    .features__img img
       min-width: 180%
-      margin-left: -80%
+      margin-left: -80% !important
       margin-bottom: 1em
    .features .philips__title
       padding-bottom: 15px
 
+   .philips__txt
+      font-size: 14px !important
+
+   .func
+      padding: 2em 0
    .func__row
       flex-direction: column !important
       gap: 1em
@@ -212,21 +258,18 @@
          margin-top: 2em
    .func__cont
       max-width: unset
+      text-align: center
+
+   .philips__title
+      font-size: 20px !important
 
    .philips__img img
       min-width: 170%
-      margin-left: -20%
+      margin-left: -20% !important
 
+   .philips__table
+      padding: 2em 0
    .philips__grid__wrap
       overflow-x: scroll
    .philips__grid
       min-width: 800px
-
-@media (max-width: 767px)
-   .philips .container
-      width: 540px
-
-@media (max-width: 576px)
-   .philips .container
-      width: 100%
-      box-sizing: border-box
