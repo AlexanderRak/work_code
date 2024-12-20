@@ -1,25 +1,84 @@
-//default styles
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
 
 // body
 //    margin: 0
 
-.philips
-   // font-family: sans-serif
+.rkt-philips-bt3234-15-series-3000__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-bt3234-15-series-3000
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
    max-width: 1023px
    width: 100%
-   margin: 0 auto
    height: auto
-   display: block
-   box-sizing: border-box
+   position: relative
    overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
    img
-      margin: 0 auto
-      opacity: 1 !important
-      max-width: 100%
       display: block
-      height: auto
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
       &:hover
-         opacity: 1 !important
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+.philips
    div
       line-height: normal
 
@@ -38,10 +97,10 @@
 
 .logo__cont
    text-align: center
-   padding: 2em 4em
+   padding: 2em
 
 .logo__txt
-   font-size: clamp(20px, 2vw, 30px)
+   font-size: clamp(20px, 2vw, 26px)
 
 .logo__wrap
    position: relative
@@ -49,7 +108,10 @@
 .logo__i
    position: absolute
    top: 0
-   left: 70px
+   left: 2em
+   img
+      width: 70%
+      margin: 0 !important
 
 //advantages
 
@@ -60,15 +122,15 @@
       margin-bottom: 0
 
 .advantages__head
-   padding: 2em 4em
+   padding: 2em
 
 .philips__title
-   font-size: clamp(20px, 2vw, 30px)
+   font-size: clamp(20px, 2vw, 26px)
    margin-bottom: 1rem
    font-weight: bold
 
 .advantages__txt
-   font-size: clamp(16px, 1.4vw, 20px)
+   font-size: clamp(14px, 1.3vw, 16px)
    color: #fff
 
 .advantages__row
@@ -102,7 +164,7 @@
    .container
       display: flex
       flex-direction: column
-      gap: 33px
+      gap: 1em
 
 .advantages__img
    flex-basis: 50%
@@ -110,7 +172,7 @@
 .advantages__item
    display: flex
    align-items: center
-   gap: 30px
+   gap: 1em
 
 .advantages__i
    min-width: 30%
@@ -140,7 +202,7 @@
    box-sizing: border-box
 
 .philips__txt
-   font-size: clamp(16px, 1.2vw, 18px)
+   font-size: clamp(14px, 1.2vw, 16px)
 
 //options
 
@@ -158,12 +220,12 @@
 .philips__sub
    font-weight: bold
    margin-bottom: .5rem
-   font-size: clamp(18px, 2vw, 24px)
+   font-size: clamp(18px, 2vw, 22px)
 
 //philips__table
 
 .philips__table
-   padding: 65px 10px 50px
+   padding: 2em 10px
 
 .table__head
    text-align: center
@@ -205,12 +267,75 @@
    font-weight: bold
    font-size: 32px
 
-//media*****************************************************
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-bt3234-15-series-3000
+   //    display: block
+
+   .logo__cont
+      padding: 2em 0 1em !important
+   .logo__i
+      max-width: 35vw !important
+
+   .advantages__head
+      padding: 1em 0 !important
+   .advantages__row
+      flex-direction: column
+      gap: 1em
+   .advantages__cont
+      max-width: 100% !important
+      gap: 1em
+   .advantages__i
+      min-width: 18vw !important
+      max-width: 18vw !important
+   .advantages__img::after
+      top: 26vw
+      bottom: -40vw
+      right: 20vw
+      left: 10vw
+      filter: blur(70px)
+
+   .func__wrap
+      gap: 2em
+   .func__row
+      flex-direction: column !important
+      gap: 1em !important
+   .func__cont
+      min-width: unset !important
+      max-width: 100% !important
+      text-align: center
+
+   .options__grid
+      grid-template-columns: 1fr
+      gap: 2em
+      >div
+         display: flex
+         flex-direction: column-reverse
+         gap: 1em
+   .options__cont
+      text-align: center
+      margin-top: unset
+
+   .table__head
+      margin-bottom: 2em
+   .table__scroll
+      overflow-x: scroll
+   .table__wrap
+      min-width: 920px
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-philips-bt3234-15-series-3000
+//       display: block
+
+// @media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+//    #rkt-philips-bt3234-15-series-3000
+//       display: grid
+//       grid-template-columns: calc(100% - 400px) 400px
 
 @media (max-width: 1201px)
    .philips .container
-      // width: 960px
-      padding: 0 12px
+      padding: 0 15px
       box-sizing: border-box
 
    .logo__cont,
@@ -235,74 +360,9 @@
       padding: 2em 0
    .func__row
       gap: 2em
-   // .func__cont
-   //    min-width: 45vw
-   //    max-width: 45vw
 
    .options
       padding: 0
 
    .philips__table
       padding: 2em 0
-
-@media (max-width: 767px)
-   .philips .container
-      width: 720px
-
-   .logo__cont
-      padding: 2em 0 1em
-   .logo__i
-      max-width: 35vw
-
-   .advantages__head
-      padding: 1em 0
-   .advantages__row
-      flex-direction: column
-      gap: 1em
-   .advantages__cont
-      max-width: 100%
-      gap: 1em
-   .advantages__i
-      min-width: 18vw
-      max-width: 18vw
-   .advantages__img::after
-      top: 26vw
-      bottom: -40vw
-      right: 20vw
-      left: 10vw
-      filter: blur(70px)
-
-   .func__wrap
-      gap: 2em
-   .func__row
-      flex-direction: column !important
-      gap: 1em
-   .func__cont
-      min-width: unset
-      max-width: 100%
-
-   .options__grid
-      grid-template-columns: 1fr
-      gap: 2em
-
-   .table__scroll
-      overflow-x: scroll
-
-@media (max-width: 767px)
-   .philips .container
-      width: 540px
-
-@media (max-width: 576px)
-   .philips .container
-      width: 100%
-      box-sizing: border-box
-
-//*********************************************************
-
-@media (min-width: 320px)
-   .table__wrap
-      min-width: 700px
-
-@media (min-width: 1024px)
-   .table__wrap
-      min-width: unset
