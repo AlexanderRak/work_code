@@ -1,38 +1,87 @@
-//default styles
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
 
 // body
 //    margin: 0
 
-// .philips__container
-//    overflow: hidden
+.rkt-philips-hx6850-47__container
+   overflow: hidden
 
-.philips
-   // font-family: sans-serif
-   // max-width: 1406px
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-hx6850-47
+   // margin: 0 auto
    // display: grid
    // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
    max-width: 1023px
-   margin: 0 auto
    width: 100%
-   margin: 0 auto
    height: auto
-   box-sizing: border-box
+   position: relative
    overflow: hidden
-   color: #5d5d5d
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
    img
-      margin: 0 auto
-      opacity: 1 !important
-      max-width: 100%
       display: block
-      height: auto
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
       &:hover
-         opacity: 1 !important
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+.philips
+   color: #5d5d5d
    div
       line-height: normal
-   ul
-      list-style-type: none
-      padding: 0
-      margin: 0
 
 .features-desc__text
    img
@@ -56,8 +105,8 @@
    top: 0
    left: 1.5em
    img
-      max-width: 60%
-      margin: 0
+      width: 60%
+      margin: 0 !important
 
 .logo__abs
    position: absolute
@@ -75,7 +124,7 @@
 
 .philips__img img
    min-width: 150%
-   margin-left: -50%
+   margin-left: -50% !important
 
 //tech
 
@@ -201,7 +250,7 @@
    overflow-x: scroll
 
 .table__wrap
-   min-width: 150%
+   min-width: 155%
 
 .table__txt
    font-size: clamp(14px, 1.3vw, 16px)
@@ -269,7 +318,81 @@
       &:nth-of-type(4)
          grid-area: "cal4"
 
-//media*****************************************************
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-hx6850-47
+   //    display: block
+
+   .logo
+      display: flex
+      flex-direction: column-reverse
+   .logo__abs
+      position: unset
+      max-width: unset
+      padding: 1em 0
+      text-align: center
+   .logo__img img
+      min-width: 150%
+      margin-left: -40% !important
+   .logo__i
+      left: 1em
+      img
+         width: 100%
+
+   .versus__wrap
+      text-align: center
+   .versus__img img
+      max-height: 140vw !important
+
+   .tech__row
+      flex-direction: column
+      gap: 1em
+   .tech__item
+      gap: 1em
+   .tech__cont
+      max-width: 100%
+      gap: 2em
+   .tech__i
+      min-width: 20vw
+      max-width: 20vw
+
+   .philips__blue
+      padding: 1em
+
+   .philips__title
+      margin-bottom: 1rem
+
+   .func__wrap
+      gap: 2em
+   .func__row
+      flex-direction: column-reverse !important
+      align-items: unset
+      gap: 1em !important
+   .func__cont
+      max-width: 100% !important
+      text-align: center
+
+   .complete
+      padding-bottom: 1em
+   .complete__row
+      flex-direction: column
+      gap: 1em
+
+   .howright iframe
+      height: 58vw
+
+   .table__wrap
+      min-width: 960px
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-philips-hx6850-47
+//       display: block
+
+// @media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+//    #rkt-philips-hx6850-47
+//       display: grid
+//       grid-template-columns: calc(100% - 400px) 400px
 
 @media (max-width: 1201px)
    .philips .container
@@ -299,6 +422,9 @@
       padding: 2em 0
    .versus__cont
       gap: 1em
+   .versus__row
+      flex-direction: column
+      gap: 1em
 
    .func
       padding: 2em 0
@@ -316,76 +442,21 @@
    .table__grid>div
       padding: 15px
    .table__i img
-      max-height: 205px
+      max-height: 205px !important
+   .table__grid .philips__title
+      font-size: 20px
 
    .logo__img img
       min-width: 150%
-      margin-left: -20%
+      margin-left: -20% !important
 
    .tech__row
       gap: 2em
    .tech__cont
       gap: 1em
    .tech__i img
-      max-width: 60%
+      width: 60%
 
-@media (max-width: 767.9px)
-   // .philips .container
-   //    width: 720px
-
-   .logo
-      display: flex
-      flex-direction: column-reverse
-   .logo__abs
-      position: unset
-      max-width: unset
-      padding: 1em 0
-   .logo__img img
-      min-width: 150%
-      margin-left: -40%
-   .logo__i
-      max-width: 30vw
-      left: 1em
-
-   .tech__row
-      flex-direction: column
-      gap: 1em
-   .tech__item
-      gap: 1em
-   .tech__cont
-      max-width: 100%
-      gap: 2em
-   .tech__i
-      min-width: 20vw
-      max-width: 20vw
-
-   .philips__blue
-      padding: 1em
-
-   .philips__title
-      margin-bottom: 1rem
-   .versus__row
-      flex-direction: column
-      gap: 1em
+@media (max-width: 1201px) and (min-width: 768px)
    .versus__img img
-      max-height: 140vw
-
-   .func__wrap
-      gap: 2em
-   .func__row
-      flex-direction: column !important
-      gap: 1em
-   .func__cont
-      max-width: 100%
-
-   .complete
-      padding-bottom: 1em
-   .complete__row
-      flex-direction: column
-      gap: 1em
-
-   .howright iframe
-      height: 58vw
-
-   .table__wrap
-      min-width: 960px
+      max-height: 50vw !important
