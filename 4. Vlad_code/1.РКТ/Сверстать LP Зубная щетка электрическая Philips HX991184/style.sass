@@ -1,37 +1,86 @@
-//default styles
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
 
 // body
 //    margin: 0
 
-// .philips__container
-//    overflow: hidden
+.rkt-philips-hx9911-84__container
+   overflow: hidden
 
-.philips
-   // font-family: sans-serif
-   // max-width: 1406px
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-hx9911-84
+   // margin: 0 auto
    // display: grid
    // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
    max-width: 1023px
    width: 100%
-   margin: 0 auto
    height: auto
-   display: block
-   box-sizing: border-box
+   position: relative
    overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: .5em
    img
-      margin: 0 auto
-      opacity: 1 !important
-      max-width: 100%
       display: block
-      height: auto
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
       &:hover
-         opacity: 1 !important
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+.philips
    div
       line-height: normal
-   ul
-      list-style-type: none
-      padding: 0
-      margin: 0
 
 .features-desc__text
    img
@@ -55,10 +104,12 @@
 
 .philips__title,
 .logo__txt
-   font-size: clamp(20px, 2vw, 30px)
+   font-size: clamp(20px, 2vw, 26px)
 
 .logo__cont
-   padding: 15px 20px 24px
+   padding: 2em 2em 1em
+   .philips__title
+      margin-bottom: 0
 
 .logo__wrap
    position: relative
@@ -68,33 +119,38 @@
    top: 0
    left: 2em
    img
-      max-width: 70%
-      margin: 0
+      width: 70%
+      margin: 0 !important
 
 .logo__grid
    display: grid
    grid-template-columns: repeat(3, 1fr)
    gap: 2em
-   margin-top: 8%
+   margin-top: 2em
    padding: 0 40px
-   .philips__title
-      font-size: clamp(20px, 2vw, 30px)
-      margin-bottom: 0
 
 .logo__g__i
    margin-bottom: 5%
+   img
+      width: 70%
+
+.philips__video
+   padding: 2em 2em 0
+   iframe
+      display: block
+      width: 100%
+      height: auto
+      min-height: 500px
 
 //func
 
 .func
-   padding: 50px 0 0
+   padding: 2em 0 0
 
 .func__head
    text-align: center
-   margin-bottom: 40px
-   padding: 0 150px
-   .philips__title
-      margin-bottom: 26px
+   margin-bottom: 1em
+   padding: 0 2em
 
 .func__items
    display: flex
@@ -119,12 +175,6 @@
    .philips__title
       text-align: center
 
-.philips .twominutes__list
-   list-style-type: disc
-   padding-left: 20px
-   li
-      font-size: clamp(16px, 1.3vw, 18px)
-
 .twominutes__row
    display: flex
    align-items: center
@@ -143,7 +193,7 @@
    padding: 2em 2em 0
 
 .philips__txt
-   font-size: clamp(16px, 1.3vw, 18px)
+   font-size: clamp(14px, 1.3vw, 16px)
 
 .philips__note
    font-size: clamp(12px, 1.2vw, 16px)
@@ -152,7 +202,7 @@
 .tech__wrap
    display: flex
    flex-direction: column
-   gap: 50px
+   gap: 2em
 
 .tech__row
    display: flex
@@ -162,8 +212,6 @@
    justify-content: space-between
    &:nth-of-type(even)
       flex-direction: row
-   // &:last-child
-   //    margin-top: 50px
 
 .tech__img
    flex-basis: 45%
@@ -177,50 +225,11 @@
       &:nth-of-type(even)
          flex-direction: row-reverse
 
-//media*****************************************************
+//*********************************media*************************
 
-@media (max-width: 1441px)
-   // .tech__cont
-   //    max-width: 40vw
-   //    min-width: 40vw
-
-   .logo__grid
-      margin-top: 4vw
-   .logo__g__i
-      margin-bottom: 4vw
-
-@media (max-width: 1201px)
-   .philips .container
-      // width: 960px
-      padding: 0 12px
-      box-sizing: border-box
-
-   .logo__cont
-      padding: 1em 0
-
-   .func__items,
-   .twominutes,
-   .tech
-      padding: 2em 0 0
-
-   // .tech__row
-   //    gap: 4em
-   // .tech__cont
-   //    max-width: 45vw
-   //    min-width: 45vw
-
-   .logo__grid
-      padding: 0
-      gap: 1em
-   // .logo__g__i img
-   //    max-width: 25vw
-
-   .func__head
-      padding: 0
-
-@media (max-width: 767px)
-   // .philips .container
-   //    width: 720px
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-hx9911-84
+   //    display: block
 
    .logo__i
       max-width: 30vw
@@ -257,23 +266,51 @@
 
    .tech__row
       flex-direction: column !important
-      gap: 1em
+      gap: 1em !important
    .tech__cont
       max-width: 100%
+      text-align: center
    .tech__row:last-child
       margin-top: 0
    .philips__note
-      padding-top: 4em
+      padding-top: 2em
 
-// ********************************************************
+   .philips__video iframe
+      min-height: 200px !important
 
-@media (min-width: 320px) and (max-width: 767.9px)
-   // .philips
-   //    display: block
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-philips-hx9911-84
+//       display: block
+
+// @media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+//    #rkt-philips-hx9911-84
+//       display: grid
+//       grid-template-columns: calc(100% - 400px) 400px
+
+@media (max-width: 1201px)
+   .philips .container
+      padding: 0 12px
+      box-sizing: border-box
+
+   .logo__cont
+      padding: 1em 0
+
+   .func__items,
+   .twominutes,
+   .tech
+      padding: 2em 0 0
+
+   .logo__grid
+      padding: 0
+      gap: 1em
 
    .func__head
-      margin-bottom: 0
+      padding: 0
 
-@media (min-width: 768px) and (max-width: 768px)
-   .philips
-      display: block
+   .philips__video
+      padding: 1em 1em 0
+      iframe
+         min-height: 300px
+
+   .tech__row
+      gap: 2em
