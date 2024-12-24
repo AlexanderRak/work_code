@@ -1,22 +1,77 @@
-//default styles
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
 
 // body
 //    margin: 0
 
-// .philips__container
-//    overflow: hidden
+.rkt-philips-sonicare-protective-clean-2-hx6839-28__container
+   overflow: hidden
 
-.philips
-   // font-family: sans-serif
-   // max-width: 1406px
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-sonicare-protective-clean-2-hx6839-28
+   // margin: 0 auto
    // display: grid
    // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
    max-width: 1023px
    width: 100%
-   margin: 0 auto
    height: auto
-   box-sizing: border-box
+   position: relative
    overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: .5em
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+.philips
    img
       margin: 0 auto
       opacity: 1 !important
@@ -27,10 +82,6 @@
          opacity: 1 !important
    div
       line-height: normal
-   ul
-      list-style-type: none
-      padding: 0
-      margin: 0
 
 .features-desc__text
    img
@@ -54,7 +105,7 @@
 
 .philips__title,
 .logo__txt
-   font-size: clamp(20px, 2vw, 30px)
+   font-size: clamp(20px, 2vw, 26px)
 
 .logo__cont
    padding: 15px 20px 24px
@@ -73,7 +124,7 @@
 .logo__grid
    display: grid
    grid-template-columns: repeat(3, 1fr)
-   gap: 4em
+   gap: 2em
    margin-top: 2em
    padding: 0 2em
    .philips__title
@@ -82,6 +133,8 @@
 
 .logo__g__i
    margin-bottom: 2em
+   img
+      width: 70%
 
 //func
 
@@ -91,12 +144,12 @@
 .func__head
    text-align: center
    .philips__title
-      margin-bottom: 26px
+      margin-bottom: 1em
 
 .func__items
    display: flex
    flex-direction: column
-   gap: 50px
+   gap: 2em
    padding: 2em
 
 .func__item
@@ -116,12 +169,6 @@
    .philips__title
       text-align: center
 
-.philips .twominutes__list
-   list-style-type: disc
-   padding-left: 20px
-   li
-      font-size: clamp(16px, 1.4vw, 18px)
-
 .twominutes__row
    display: flex
    align-items: center
@@ -140,16 +187,16 @@
    padding: 2em
 
 .philips__txt
-   font-size: clamp(16px, 1.3vw, 18px)
+   font-size: clamp(14px, 1.3vw, 16px)
 
 .philips__note
-   font-size: clamp(12px, 1.2vw, 16px)
+   font-size: clamp(12px, 1.2vw, 14px)
    padding-top: 2em
 
 .tech__wrap
    display: flex
    flex-direction: column
-   gap: 50px
+   gap: 2em
 
 .tech__row
    display: flex
@@ -173,7 +220,6 @@
    padding: 2em 0
    .philips__title
       text-align: center
-      margin-bottom: 30px
 
 .table__sub
    font-size: clamp(15px, 1.3vw, 18px)
@@ -209,58 +255,11 @@
    font-size: clamp(20px, 1.3vw, 34px)
    line-height: 20px !important
 
-// .table__wrap
-//    min-width: 960px
+//*********************************media*************************
 
-//media*****************************************************
-
-// @media (max-width: 1441px)
-//    .tech__cont
-//       max-width: 40vw
-//       min-width: 40vw
-
-//    .logo__grid
-//       margin-top: 4vw
-//    .logo__g__i
-//       margin-bottom: 4vw
-
-@media (max-width: 1201px)
-   .philips .container
-      // width: 960px
-      padding: 0 15px
-      box-sizing: border-box
-
-   .logo__cont
-      padding: 1em 0
-
-   .func__items,
-   .twominutes,
-   .tech
-      padding: 2em 0 0
-
-   // .tech__row
-   //    gap: 4em
-   // .tech__cont
-   //    max-width: 45vw
-   //    min-width: 45vw
-
-   .tech__wrap
-      gap: 2em
-
-   .logo__grid
-      padding: 0
-      grid-template-columns: 1fr
-      gap: 2em
-   .logo__g__i img
-      max-width: 25vw
-
-   .twominutes__row
-      flex-direction: column
-      gap: 2em
-
-@media (max-width: 767.9px)
-   // .philips .container
-   //    width: 720px
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-sonicare-protective-clean-2-hx6839-28
+   //    display: block
 
    .logo__i
       max-width: 30vw
@@ -272,10 +271,8 @@
       grid-template-columns: 1fr
       gap: 2em
    .logo__g__i img
-      max-width: 40vw
+      max-width: 40vw !important
 
-   .func__item .philips__title
-      font-size: clamp(16px, 2vw, 36px)
    .func__i
       min-width: 24vw
       max-width: 24vw
@@ -299,6 +296,7 @@
       gap: 1em
    .tech__cont
       max-width: 100%
+      text-align: center
    .tech__row:last-child
       margin-top: 0
    .philips__note
@@ -309,3 +307,45 @@
 
    .table__scroll
       overflow-x: scroll
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-philips-sonicare-protective-clean-2-hx6839-28
+//       display: block
+
+// @media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+//    #rkt-philips-sonicare-protective-clean-2-hx6839-28
+//       display: grid
+//       grid-template-columns: calc(100% - 400px) 400px
+
+@media (max-width: 1201px)
+   .philips .container
+      padding: 0 15px
+      box-sizing: border-box
+
+   .logo__cont
+      padding: 1em 0
+
+   .func__items,
+   .twominutes,
+   .tech
+      padding: 2em 0 0
+
+   .tech__wrap
+      gap: 2em
+
+   .logo__grid
+      padding: 0
+      grid-template-columns: 1fr
+      gap: 2em
+      >div
+         display: flex
+         flex-direction: column-reverse
+         gap: 1em
+   .logo__g__i
+      margin-bottom: unset
+      img
+         max-width: 25vw
+
+   .twominutes__row
+      flex-direction: column
+      gap: 2em
