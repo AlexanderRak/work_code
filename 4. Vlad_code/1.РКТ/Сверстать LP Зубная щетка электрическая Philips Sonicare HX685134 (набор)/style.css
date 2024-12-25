@@ -1,12 +1,90 @@
-.philips {
-  width: 100%;
-  max-width: 1536px;
-  margin: 0 auto;
-  height: auto;
-  display: block;
-  box-sizing: border-box;
+.rkt-philips-sonicare-hx6851-34-nabor__container {
   overflow: hidden;
 }
+
+.bc-description__content p:first-letter {
+  padding-left: 0 !important;
+}
+
+#rkt-philips-sonicare-hx6851-34-nabor {
+  max-width: 1023px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+#rkt-philips-sonicare-hx6851-34-nabor h2, #rkt-philips-sonicare-hx6851-34-nabor h3, #rkt-philips-sonicare-hx6851-34-nabor h4, #rkt-philips-sonicare-hx6851-34-nabor h5, #rkt-philips-sonicare-hx6851-34-nabor h6, #rkt-philips-sonicare-hx6851-34-nabor p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+#rkt-philips-sonicare-hx6851-34-nabor ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+#rkt-philips-sonicare-hx6851-34-nabor h2 {
+  font-size: 26px;
+  font-weight: 900;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-sonicare-hx6851-34-nabor h2 {
+    font-size: calc(20px + 6 * (100vw - 320px) / 703);
+  }
+}
+#rkt-philips-sonicare-hx6851-34-nabor h3 {
+  font-size: 20px;
+  font-weight: 900;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-sonicare-hx6851-34-nabor h3 {
+    font-size: calc(18px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-philips-sonicare-hx6851-34-nabor p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-sonicare-hx6851-34-nabor p {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-philips-sonicare-hx6851-34-nabor li {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.2;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-sonicare-hx6851-34-nabor li {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-philips-sonicare-hx6851-34-nabor i {
+  line-height: 1.2;
+  font-size: 16px;
+  margin-top: 0.5rem;
+  display: block;
+  font-style: italic;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-sonicare-hx6851-34-nabor i {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+
 .philips img {
   margin: 0 auto;
   opacity: 1 !important;
@@ -19,10 +97,6 @@
 }
 .philips div {
   line-height: normal;
-}
-.philips ul {
-  margin: 0;
-  padding: 0;
 }
 
 .features-desc__text img {
@@ -40,18 +114,18 @@
 }
 
 .philips__title {
-  font-size: 32px;
+  font-size: 26px;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .philips__txt {
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .logo__cont {
   text-align: center;
-  padding: 40px 50px;
+  padding: 2em 2em 1em;
 }
 .logo__cont .philips__title:last-of-type {
   font-weight: normal;
@@ -65,61 +139,71 @@
 .logo__i {
   position: absolute;
   top: 0;
-  left: 50px;
+  left: 2em;
+}
+.logo__i img {
+  margin: 0;
+  width: 70%;
 }
 
 .tech {
   text-align: center;
-  padding: 130px 10px 0;
+  padding: 4em 10px 0;
 }
 .tech .philips__title {
   margin-bottom: 0;
-  margin-top: 120px;
+  margin-top: 1em;
 }
 
 .tech__row {
   display: flex;
   gap: 10px;
 }
+.tech__row > div {
+  flex-basis: 33.33%;
+  box-sizing: border-box;
+}
+.tech__row .philips__title {
+  font-size: 20px;
+}
 
-.tech__cal {
-  flex: 1;
+.tech__i img {
+  width: 70%;
 }
 
 .func {
-  padding: 0 130px;
+  padding: 0 2em;
 }
 
 .func__row {
-  padding: 50px 0 0;
+  padding: 2em 0 0;
   display: flex;
   align-items: center;
-  gap: 45px;
+  gap: 2em;
 }
 .func__row:nth-of-type(even) {
   flex-direction: row-reverse;
 }
-
-.func__img {
-  min-width: 600px;
+.func__row > div {
+  flex-basis: 50%;
 }
 
 .cleaning {
   text-align: center;
-  padding: 50px 0 0;
+  padding: 2em 0 0;
 }
 
 .cleaning__flex {
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  padding: 50px 130px 0;
+  gap: 2em;
+  padding: 2em 2em 0;
 }
 
 .cleaning__item {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 2em;
 }
 
 .philips__list {
@@ -137,52 +221,9 @@
   padding-bottom: 50px;
 }
 
-@media (max-width: 1441px) {
-  .func__img {
-    min-width: 530px;
-  }
-}
-@media (max-width: 1201px) {
-  .philips .container {
-    width: 960px;
-    padding: 0 15px;
-  }
-  .tech {
-    padding: 2em 0 0;
-  }
-  .tech .philips__title {
-    margin-top: 2em;
-  }
-  .tech__row {
-    gap: 4em;
-  }
+@media (min-width: 320px) and (max-width: 767.9px) {
   .philips__title {
-    font-size: 24px;
-  }
-  .philips__txt {
-    font-size: 16px;
-  }
-  .func {
-    padding: 0;
-  }
-  .func__img {
-    min-width: 480px;
-    max-width: 480px;
-  }
-  .cleaning__flex {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  .func__two {
-    padding-bottom: 50px;
-  }
-  .philips__list li {
-    font-size: 16px;
-  }
-}
-@media (max-width: 991px) {
-  .philips .container {
-    width: 720px;
+    font-size: 20px !important;
   }
   .logo__cont {
     padding: 1em 0;
@@ -191,13 +232,16 @@
     max-width: 35%;
     left: 0.5em;
   }
+  .logo__i img {
+    width: 100%;
+  }
   .logo__img > img {
     min-width: 150%;
     margin-left: -25%;
   }
   .tech__row {
     flex-direction: column;
-    gap: 2em;
+    gap: 2em !important;
   }
   .tech .philips__title {
     margin-top: 1em;
@@ -207,8 +251,9 @@
     min-width: unset;
   }
   .func__row {
-    flex-direction: column !important;
+    flex-direction: column-reverse !important;
     gap: 1em;
+    text-align: center;
   }
   .cleaning__img img {
     min-width: 150%;
@@ -221,18 +266,59 @@
     gap: 1em;
     flex-direction: column;
   }
+  .cleaning__flex .philips__title {
+    text-align: center !important;
+  }
   .func__two {
     padding-bottom: 1em;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1201px) {
   .philips .container {
-    width: 540px;
-  }
-}
-@media (max-width: 576px) {
-  .philips .container {
-    width: 100%;
+    padding: 0 15px;
     box-sizing: border-box;
+  }
+  .logo__cont {
+    padding: 1em 0;
+  }
+  .tech {
+    padding: 2em 0 0;
+  }
+  .tech .philips__title {
+    margin-top: 2em;
+  }
+  .tech__row {
+    flex-direction: column;
+    gap: 4em;
+  }
+  .tech__row .philips__title {
+    margin-top: 1em;
+  }
+  .tech__i img {
+    width: 50%;
+  }
+  .philips__title {
+    font-size: 24px;
+  }
+  .philips__txt {
+    font-size: 16px;
+  }
+  .func {
+    padding: 0;
+  }
+  .cleaning__flex {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .cleaning__flex .philips__title {
+    text-align: left;
+    flex-basis: 70%;
+    margin-bottom: 0;
+  }
+  .cleaning__i {
+    flex-basis: 30%;
+  }
+  .func__two {
+    padding-bottom: 2em;
   }
 }
