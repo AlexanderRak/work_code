@@ -1,11 +1,91 @@
-.philips {
+.rkt-philips-bre710-00__container {
+  overflow: hidden;
+}
+
+.bc-description__content p:first-letter {
+  padding-left: 0 !important;
+}
+
+#rkt-philips-bre710-00 {
   max-width: 1023px;
   width: 100%;
-  margin: 0 auto;
   height: auto;
-  display: block;
-  box-sizing: border-box;
+  position: relative;
   overflow: hidden;
+  background: #fff;
+}
+#rkt-philips-bre710-00 h2, #rkt-philips-bre710-00 h3, #rkt-philips-bre710-00 h4, #rkt-philips-bre710-00 h5, #rkt-philips-bre710-00 h6, #rkt-philips-bre710-00 p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+#rkt-philips-bre710-00 ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+#rkt-philips-bre710-00 h2 {
+  font-size: 26px;
+  font-weight: 900;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-bre710-00 h2 {
+    font-size: calc(20px + 6 * (100vw - 320px) / 703);
+  }
+}
+#rkt-philips-bre710-00 h3 {
+  font-size: 20px;
+  font-weight: 900;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-bre710-00 h3 {
+    font-size: calc(18px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-philips-bre710-00 p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-bre710-00 p {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-philips-bre710-00 li {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.2;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-bre710-00 li {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-philips-bre710-00 i {
+  line-height: 1.2;
+  font-size: 16px;
+  margin-top: 0.5rem;
+  display: block;
+  font-style: italic;
+}
+@media (max-width: 1023px) {
+  #rkt-philips-bre710-00 i {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+
+.philips {
   color: #252525;
 }
 .philips img {
@@ -51,7 +131,7 @@
   left: 2em;
   bottom: 2em;
   position: absolute;
-  max-width: 30%;
+  max-width: 40%;
 }
 
 .logo__txt {
@@ -384,6 +464,219 @@
   max-width: 15%;
 }
 
+@media (min-width: 1024px) {
+  .philips__video iframe {
+    height: 30vw;
+  }
+  .slide__img {
+    max-width: 40%;
+  }
+  .table__wrap {
+    min-width: unset;
+  }
+  .philips__slider {
+    display: flex;
+  }
+  .complete__grid .cal3 .complete__img img {
+    margin-left: -6%;
+  }
+  .complete__grid .cal5 .complete__img img {
+    margin-left: -6%;
+  }
+}
+@media (min-width: 320px) and (max-width: 767.9px) {
+  .philips__video iframe {
+    height: 50vw;
+  }
+  .slide__img {
+    max-width: unset;
+  }
+  .table__wrap {
+    min-width: 900px;
+  }
+  .philips__slider {
+    display: block;
+  }
+  .alldays__grid {
+    grid-template-columns: 1fr;
+  }
+  .complete__grid .cal3 .complete__img img {
+    margin-left: -6%;
+  }
+  .complete__grid .cal4 .philips__txt {
+    margin-top: -18vw;
+  }
+  .complete__grid .cal5 .complete__img img {
+    margin-left: -6%;
+  }
+  .logo {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .logo__abs {
+    position: unset;
+    padding: 1em 0;
+    max-width: 100%;
+    text-align: center;
+  }
+  .logo__txt {
+    margin-bottom: 1rem;
+  }
+  .logo__i {
+    max-width: 35vw !important;
+    left: 1em !important;
+  }
+  .logo__i img {
+    max-width: 100%;
+  }
+  .logo__img img {
+    min-width: 150%;
+    margin-left: -50%;
+  }
+  .philips__pink {
+    padding: 0.5em;
+    text-align: center;
+  }
+  .skin {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .skin__abs {
+    position: unset;
+    max-width: 100% !important;
+    padding: 1em 0;
+    text-align: center;
+  }
+  .skin__item:nth-of-type(2) {
+    padding: 0;
+  }
+  .disks__row {
+    flex-direction: column-reverse;
+  }
+  .disks__cont {
+    max-width: 100%;
+    padding: 1em 0;
+    text-align: center;
+  }
+  .disks__img {
+    margin: 0;
+  }
+  .disks__img img {
+    min-width: 130%;
+    margin-left: -30%;
+  }
+  .alldays__grid {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
+  .alldays__cont {
+    text-align: center;
+  }
+  .design {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .design__abs {
+    position: unset;
+    max-width: 100% !important;
+    padding: 1em 0;
+    text-align: center;
+  }
+  .design__img img {
+    min-width: 150%;
+    margin-left: -50%;
+  }
+  .philips__slider__wrap {
+    padding-bottom: 1em !important;
+  }
+  .philips__slider .swiper .swiper-slide {
+    padding: 0 1em !important;
+  }
+  .philips__slider .swiper-slide {
+    flex-direction: column;
+    gap: 1em !important;
+    text-align: center;
+  }
+  .slide__cont {
+    max-width: 100% !important;
+    padding: 0 2em !important;
+  }
+  .philips__slider .swiper-button-next, .philips__slider .swiper-button-prev {
+    min-width: unset !important;
+    min-height: unset !important;
+    color: #ed4370;
+    top: 20vw !important;
+  }
+  .philips__slider .swiper-button-next img, .philips__slider .swiper-button-prev img {
+    display: none !important;
+  }
+  .philips__slider .swiper-button-next::after, .philips__slider .swiper-button-prev::after {
+    display: block;
+  }
+  .philips__slider .swiper-button-prev {
+    transform: unset;
+  }
+  .complete__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "cal1" "cal2" "cal3" "cal4" "cal5" "cal6" "cal7";
+  }
+  .complete__img img {
+    max-height: 100vw;
+  }
+  .complete__grid .philips__txt {
+    position: unset;
+    transform: unset;
+    margin: 0 auto;
+  }
+  .complete__grid .cal2 .philips__txt,
+  .complete__grid .cal4 .philips__txt {
+    margin-top: -4vw;
+  }
+  .complete__grid .cal3 .philips__txt {
+    margin-top: -10vw;
+  }
+  .complete__grid .cal5 .philips__txt {
+    margin-top: -25vw;
+  }
+  .table__scroll {
+    overflow-x: scroll;
+  }
+  .philips__logo img {
+    max-width: 27vw !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023.9px) {
+  .complete__img img {
+    max-height: 500px;
+  }
+  .complete__grid .cal1 .philips__txt {
+    left: unset;
+  }
+  .complete__grid .cal3 .philips__txt,
+  .complete__grid .cal2 .philips__txt {
+    bottom: 0;
+  }
+  .complete__grid .cal4 .philips__txt,
+  .complete__grid .cal5 .philips__txt {
+    margin-top: -15vw;
+    margin-left: 38%;
+  }
+  .complete__grid .cal4 .philips__txt {
+    bottom: 8% !important;
+  }
+  .complete__grid .cal5 .complete__img img {
+    margin-right: 25%;
+    margin-left: auto;
+  }
+  .complete__grid .cal3 .complete__img img {
+    margin-right: 25%;
+    margin-left: auto;
+  }
+  .alldays__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media (max-width: 1201px) {
   .philips .container {
     padding: 0 12px;
@@ -402,17 +695,18 @@
   .advantages {
     padding: 2em 0;
   }
-  .advantages__grid > div {
+  .advantages__img {
+    margin: 0;
+  }
+  .advantages__grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "cal1" "cal3" "cal4" "cal5" "cal6" "cal7" "cal2";
     gap: 1em;
-    justify-content: center !important;
   }
-  .advantages__grid > div .philips__txt {
-    flex-basis: 50%;
-    box-sizing: border-box;
-  }
-  .advantages__grid .cal6 > div {
-    flex-basis: 50%;
-    box-sizing: border-box;
+  .advantages__grid > div {
+    flex-direction: row !important;
+    text-align: right !important;
+    justify-content: space-between;
   }
   .skin__abs {
     right: 2em;
@@ -483,235 +777,7 @@
     max-width: 12vw;
   }
 }
-@media (max-width: 991px) {
-  .logo {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .logo__abs {
-    position: unset;
-    padding: 1em 0;
-    max-width: 100%;
-  }
-  .logo__txt {
-    margin-bottom: 1rem;
-  }
-  .logo__i {
-    max-width: 35vw;
-    left: 1em;
-  }
-  .logo__img img {
-    min-width: 150%;
-    margin-left: -50%;
-  }
-  .advantages__img {
-    margin: 0;
-  }
-  .advantages__grid {
-    grid-template-columns: 1fr;
-    grid-template-areas: "cal1" "cal3" "cal4" "cal5" "cal6" "cal7" "cal2";
-    gap: 1em;
-  }
-  .advantages__grid > div {
-    flex-direction: row !important;
-    text-align: right !important;
-    justify-content: space-between;
-  }
-  .philips__pink {
-    padding: 0.5em;
-  }
-  .skin {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .skin__abs {
-    position: unset;
-    max-width: 100%;
-    padding: 1em 0;
-  }
-  .skin__item:nth-of-type(2) {
-    padding: 0;
-  }
-  .disks__row {
-    flex-direction: column-reverse;
-  }
-  .disks__cont {
-    max-width: 100%;
-    padding: 1em 0;
-  }
-  .disks__img {
-    margin: 0;
-  }
-  .disks__img img {
-    min-width: 130%;
-    margin-left: -30%;
-  }
-  .alldays__grid {
-    grid-template-columns: 1fr;
-    gap: 2em;
-  }
-  .design {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .design__abs {
-    position: unset;
-    max-width: 100%;
-    padding: 1em 0;
-  }
-  .design__img img {
-    min-width: 150%;
-    margin-left: -50%;
-  }
-  .philips__slider__wrap {
-    padding-bottom: 1em;
-  }
-  .philips__slider .swiper .swiper-slide {
-    padding: 0 1em;
-  }
-  .philips__slider .swiper-slide {
-    flex-direction: column;
-    gap: 1em !important;
-  }
-  .slide__cont {
-    max-width: 100%;
-    padding: 0 2em;
-  }
-  .philips__slider .swiper-button-next, .philips__slider .swiper-button-prev {
-    min-width: unset;
-    min-height: unset;
-    color: #ed4370;
-    top: 20vw;
-  }
-  .philips__slider .swiper-button-next img, .philips__slider .swiper-button-prev img {
-    display: none;
-  }
-  .philips__slider .swiper-button-next::after, .philips__slider .swiper-button-prev::after {
-    display: block;
-  }
-  .philips__slider .swiper-button-prev {
-    transform: unset;
-  }
-  .complete__grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "cal1" "cal2" "cal3" "cal4" "cal5" "cal6" "cal7";
-  }
-  .complete__img img {
-    max-height: 100vw;
-  }
-  .complete__grid .philips__txt {
-    position: unset;
-    transform: unset;
-    margin: 0 auto;
-  }
-  .complete__grid .cal2 .philips__txt,
-  .complete__grid .cal4 .philips__txt {
-    margin-top: -4vw;
-  }
-  .complete__grid .cal3 .philips__txt {
-    margin-top: -10vw;
-  }
-  .complete__grid .cal5 .philips__txt {
-    margin-top: -25vw;
-  }
-  .table__scroll {
-    overflow-x: scroll;
-  }
-  .philips__logo img {
-    max-width: 27vw;
-  }
-}
-@media (max-width: 767px) {
-  .philips .container {
-    width: 540px;
-  }
-}
-@media (max-width: 576px) {
-  .philips .container {
-    width: 100%;
-    box-sizing: border-box;
-  }
-}
-@media (min-width: 320px) {
-  .philips__video iframe {
-    height: 50vw;
-  }
-  .slide__img {
-    max-width: unset;
-  }
-  .table__wrap {
-    min-width: 900px;
-  }
-  .philips__slider {
-    display: block;
-  }
-  .alldays__grid {
-    grid-template-columns: 1fr;
-  }
-  .complete__grid .cal3 .complete__img img {
-    margin-left: -6%;
-  }
-  .complete__grid .cal4 .philips__txt {
-    margin-top: -18vw;
-  }
-  .complete__grid .cal5 .complete__img img {
-    margin-left: -6%;
-  }
-}
-@media (min-width: 768px) {
-  .complete__img img {
-    max-height: 500px;
-  }
-  .complete__grid .cal4 .philips__txt,
-  .complete__grid .cal5 .philips__txt {
-    margin-top: -15vw;
-    margin-left: 38%;
-  }
-  .complete__grid .cal5 .complete__img img {
-    margin-right: 25%;
-    margin-left: auto;
-  }
-  .complete__grid .cal3 .complete__img img {
-    margin-right: 25%;
-    margin-left: auto;
-  }
-  .alldays__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (min-width: 1024px) {
-  .philips__video iframe {
-    height: 30vw;
-  }
-  .slide__img {
-    max-width: 40%;
-  }
-  .table__wrap {
-    min-width: unset;
-  }
-  .philips__slider {
-    display: flex;
-  }
-  .complete__grid .cal3 .complete__img img {
-    margin-left: -6%;
-  }
-  .complete__grid .cal5 .complete__img img {
-    margin-left: -6%;
-  }
-}
 @media (min-width: 1024px) and (max-width: 1024px) {
-  .advantages__grid {
-    grid-template-columns: 1fr;
-    grid-template-areas: "cal1" "cal3" "cal4" "cal5" "cal2";
-    gap: 1em;
-  }
-  .advantages__grid > div {
-    flex-direction: row !important;
-    text-align: right !important;
-    justify-content: space-between;
-    gap: 1em;
-  }
   .skin {
     display: flex;
     flex-direction: column-reverse;
@@ -784,8 +850,8 @@
     margin-top: 15%;
   }
   .complete__grid .cal5 .philips__txt {
-    left: -15%;
-    bottom: 18%;
+    bottom: 17%;
+    left: 24%;
   }
   .complete {
     padding-bottom: 2em;
