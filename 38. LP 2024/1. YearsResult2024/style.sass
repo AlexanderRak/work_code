@@ -1,0 +1,803 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+body
+   padding: 0
+   margin: 0
+   box-sizing: border-box
+   height: 100%
+.content
+   width: 100%
+   max-width: 100%
+.category-cms-template__content
+   order: 0
+   padding-left: 0
+   padding-right: 0
+   padding-bottom: 0
+   margin-bottom: 0
+.category-info
+   display: none
+.category-cms-template .category-cms-template__content .category__main
+   display: none
+.bottom-content-recommendations
+   display: none
+.breadcrumbs
+   display: none
+.common-template__reviews
+   display: none
+.main-container.page
+   padding-left: 0
+   padding-right: 0
+   background: #fff
+.bottom-content-tags .b-sec, .bottom-content-description .b-sec
+   border: 0
+   padding: 0
+.scroll-to-top
+   display: none
+::-webkit-scrollbar
+   width: 12px
+::-webkit-scrollbar-thumb
+   background-color: #ff671f // Цвет ползунка
+   //border-radius: 6px
+::-webkit-scrollbar-track
+   background-color: #fff // Цвет трека (фона)
+*
+   scrollbar-color: #ff671f #fff !important
+   scrollbar-face-color: #ff671f
+
+$mq-desktop: 1025px
+$mq-lg-table: 1024px
+$mq-tablet: 768px
+$mq-mobile: 480px
+$mq-landscape: 812px
+$maxWidth: 1920
+
+=adaptive-font($pcSize, $mobSize)
+   $addSize: $pcSize - $mobSize
+   font-size: #{$mobSize}px
+   @media only screen and (min-width: 320px) and (max-width: #{$maxWidth}px)
+      font-size: calc(#{$mobSize}px + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+   @media only screen and (min-width: 1920px)
+      font-size: #{$pcSize}px
+
+#app-year-results2024
+   font-family: 'Roboto', sans-serif
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #43B02A
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+      display: grid
+      grid-template-columns: 1fr
+      grid-gap: 56px
+      li
+         +adaptive-font(30, 21)
+         font-weight: 400
+         text-align: left
+         position: relative
+         &:first-child
+            b
+               display: inline-block
+         &::before
+            content: ""
+            background-image: url(https://cdn.comfy.ua/media/x/img5/results2024/all_str3.svg)
+            background-repeat: no-repeat
+            position: absolute
+            width: 290px
+            height: 14px
+            left: 50%
+            transform: translateX(-50%)
+            bottom: -28px
+         &:last-child
+            &::before
+               display: none
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      &:hover
+         opacity: 1
+   h2
+      +adaptive-font(40, 21)
+      font-weight: 900
+      text-align: left
+   p
+      +adaptive-font(20, 14)
+      font-weight: 400
+      &.size-p-big
+         +adaptive-font(24, 22)
+         font-weight: 400
+   h3
+      +adaptive-font(56, 31)
+      font-weight: 900
+      text-align: center
+   h4
+      font-size: 70px
+      font-weight: 700
+      text-align: left
+      filter: drop-shadow(0px 0px 1px #000)
+      color: #000
+      position: relative
+.btn--only-desk
+   display: block
+.btn--only-mob
+   display: none
+   width: 100%
+.btn-width-full
+   width: 100%
+
+.year-results2024-share
+   border-radius: 80px
+   border: 2px solid #FFF
+   background: #FF671F
+   position: fixed
+   right: 3.7rem
+   bottom: 3.7rem
+   z-index: 100
+   display: flex
+   flex-direction: row-reverse
+   align-items: center
+   justify-content: center
+   transition: .3s
+   &:hover
+      box-shadow: 0 0 5px 0px #fff
+   &__checkbox
+      display: none
+   &__icon
+      width: 75px
+      height: 75px
+      border-radius: 50%
+      position: relative
+      cursor: pointer
+      &::before
+         content: ""
+         position: absolute
+         top: 50%
+         left: 50%
+         transform: translate(-50%, -50%)
+         width: 32px
+         height: 32px
+         background-image: url('https://cdn.comfy.ua/media/x/img5/results2024/share.svg')
+         background-size: contain
+         background-repeat: no-repeat
+         background-position: center
+         transition: transform 0.1s linear, background 0.1s linear
+   &__text
+      max-width: 0
+      overflow: hidden
+      font-size: 20px
+      color: #fff
+      transition: max-width 0.1s linear
+      cursor: pointer
+      white-space: nowrap
+      &:hover
+         text-decoration: underline
+   &__checkbox:checked ~ &__icon::before
+         background-image: url(https://cdn.comfy.ua/media/x/img5/results2024/close.svg)
+         transform: rotate(90deg) translate(-50%, 50%)
+   &__checkbox:checked ~ &__text
+      max-width: max-content
+      padding-left: 25px
+
+.year-results2024
+   &__container
+      max-width: 1920px
+      margin: 0 auto
+      position: relative
+.year-results2024-banner-cap
+   position: relative
+   &__wrap
+      display: table
+      max-width: calc(70% - 72px)
+      min-width: 500px
+      width: max-content
+      position: absolute
+      z-index: 6
+      left: 50%
+      transform: translateX(-50%)
+      top: 8rem
+      opacity: 0
+      filter: drop-shadow(0px 0px 8px #fff)
+      &::before
+         content: ""
+         width: 3px
+         height: 110px
+         background: #000
+         position: absolute
+         left: 34px
+         top: -100px
+      &::after
+         content: ""
+         width: 3px
+         height: 110px
+         background: #000
+         position: absolute
+         right: 34px
+         top: -100px
+         z-index: -1
+      &.is-visible-banner-cap
+         opacity: 1
+   &__container
+      &::before
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img5/results2024/all_banner_0.png)
+         width: 440px
+         height: 96px
+         position: absolute
+         left: 50%
+         transform: translateX(-50%)
+         top: -82px
+         z-index: 6
+   &.cap-border1
+      border: 2px solid #000
+      border-radius: 16px
+   &.cap-border2
+      border: 4px solid #430006
+      background: #430006
+      border-radius: 8px
+      padding: 0 2px
+   &.cap-border3
+      border: 1px solid #c4b794
+      background: #124300
+      border-radius: 16px
+   &.cap-content
+      padding: 6px 34px
+   &__text
+      color: #FFF
+      text-align: center
+      +adaptive-font(27, 20)
+      font-style: normal
+      font-weight: 700
+      max-width: 890px
+      &.cap-text-pos
+         position: absolute
+         top: -34px
+         left: 50%
+         transform: translateX(-50%)
+         z-index: 6
+.year-results2024-pusheweyk-over
+   overflow: hidden
+   margin: 0 0 47px 0
+.year-results2024-pusheweyk
+   position: relative
+   margin: 0 37px 0 37px
+   padding-top: 22rem
+   display: flex
+   flex-direction: column
+   align-items: center
+   &__bgrd-sity
+      margin: 0 45px
+      position: relative
+      bottom: 30px
+      z-index: 1
+   &__bgrd-ice
+      bottom: 0
+      z-index: 3
+   &__bgrd-gradient
+      background-image: url(https://cdn.comfy.ua/media/x/img5/results2024/gradient.svg)
+      background-position: center bottom
+      background-repeat: no-repeat
+      background-size: cover
+      max-width: 1830px
+      width: 150%
+      height: 100%
+      z-index: 3
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 4
+   &__bgrd-push
+      z-index: 5
+      bottom: 0
+      max-width: 53vw
+      filter: drop-shadow(1px 1px 2px #000)
+   &__bgrd-snow
+      z-index: 2
+      filter: drop-shadow(0px 0px 1px #fff)
+      position: absolute
+      margin: 0 auto
+      top: 0
+      height: 100vh
+      overflow: hidden
+      width: 100%
+      max-width: 1335px
+      margin: 0 auto
+   &__bgrd-push-btn
+      position: absolute
+      bottom: 38%
+      left: 50%
+      transform: translateX(-53%)
+      max-width: 25vw
+      transition: .3s
+      cursor: pointer
+      &:hover
+         filter: drop-shadow(0px 0px 3px #000)
+.results-year-snowflake
+   position: absolute
+   pointer-events: none
+   animation: fall linear infinite
+@keyframes fall
+   to
+      top: 100vh
+.pusheweyk__bgrd
+   position: absolute
+.year-results2024-thanks-year
+   position: relative
+   max-width: 848px
+   width: 100%
+   height: 240px
+   background-image: url(https://cdn.comfy.ua/media/x/img5/results2024/anim1.gif)
+   background-repeat: no-repeat
+   background-position: center
+   background-size: contain
+   margin: 0 auto
+   display: flex
+   flex-direction: column
+   align-items: center
+   justify-content: center
+   &__text
+      color: #FFF
+      text-align: center
+      font-size: 44px
+      font-style: normal
+      font-weight: 700
+      line-height: 1
+      position: relative
+      left: 34px
+.year-results2024__block
+   position: relative
+   padding: 0 37px
+.year-results2024-animation
+   position: absolute
+   top: 0
+   max-width: 1722px
+   display: grid
+   grid-template-columns: repeat(8, 104px)
+   justify-content: space-between
+   width: 100%
+   left: 50%
+   transform: translateX(-50%)
+   &__item
+      position: relative
+      &.item-animatio2
+         transform: rotate(180deg) scaleX(-1)
+         top: 120px
+      &.item-animatio4
+         transform: rotate(180deg)
+      &.item-animatio5
+         transform: rotate(180deg) scaleX(-1)
+      &.item-animatio7
+         transform: rotate(180deg)
+         top: 120px
+      &.item-animatio8
+         transform: scaleX(-1)
+.year-results2024-personal-account
+   border-radius: 40px
+   background: #E5ECF7
+   position: relative
+   height: 320px
+   max-width: 1846px
+   margin: 0 0 8rem 0
+   background-image: url(https://cdn.comfy.ua/media/x/img5/results2024/lgn_bgrd1.png)
+   background-position: right center
+   background-size: cover
+   background-repeat: no-repeat
+   &__grid
+      display: grid
+      grid-template-columns: 35% 1fr
+      gap: 77px
+      padding: 0 40px
+      align-items: center
+      height: inherit
+   &__item-login
+      p
+         padding: 16px 0 24px 0
+      button
+         border-radius: 9px
+         background: #43B02A
+         padding: 16px 20px
+         color: #fff
+         text-align: center
+         border: 0
+         font-size: 20px
+         font-weight: bold
+         cursor: pointer
+         transition: .3s
+         &:hover
+            box-shadow: 0 0 3px 0 #43B02A
+   &__statistic
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-gap: 40px
+      max-width: 935px
+   &__item
+      display: grid
+      gap: 24px
+      text-align: center
+      img
+         margin: 0 auto !important
+.year-results2024-personal-achievements
+   border-radius: 1px
+   background: #FAF8F4
+   box-shadow: 0px 4px 24px 4px rgba(42, 115, 25, 0.46)
+   max-width: 960px
+   margin: 0 auto 36px auto
+   padding: 24px
+   position: relative
+   filter: drop-shadow(1px 1px 6px #E6ECF7)
+   border-radius: 24px
+   &__content
+      position: relative
+      height: 100%
+   &__arch
+      position: absolute
+      z-index: 1
+      &.achievements__arch-lt
+         left: 0
+         top: 0
+      &.achievements__arch-rt
+         right: 0
+         top: 0
+         transform: rotate(90deg)
+      &.achievements__arch-lb
+         left: 0
+         bottom: 0
+         transform: rotate(-90deg)
+      &.achievements__arch-rb
+         right: 0
+         bottom: 0
+         transform: rotate(180deg)
+      &.achievements__arch-ct
+         top: 0
+         left: 50%
+         transform: translateX(-50%)
+      &.achievements__arch-cr
+         top: 50%
+         right: 0
+         transform: translateY(-50%) rotate(90deg)
+      &.achievements__arch-bc
+         bottom: 0
+         left: 50%
+         transform: translateX(-50%)
+      &.achievements__arch-lc
+         top: 50%
+         left: 0
+         transform: translateY(-50%) rotate(90deg)
+   &__content-text
+      padding: 64px 80px
+      position: relative
+      z-index: 2
+   &__h3
+      padding-bottom: 56px
+.year-results2024-personal-account-inlogin
+   max-width: 1920px
+   margin: 0 0 8rem 0
+   &__grid
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-gap: 23px
+   &__item
+      border-radius: 24px
+      position: relative
+      background: linear-gradient(180deg, #C8D8FD 0%, #E6ECF7 39.78%)
+      height: 320px
+      display: grid
+      align-items: end
+      overflow: hidden
+      filter: drop-shadow(1px 1px 6px #E6ECF7)
+      &::before
+         background-position: center
+         background-repeat: no-repeat
+         position: absolute
+         right: 0
+         top: 0
+         width: 600px
+         height: 100%
+      &::after
+         content: ""
+         background: linear-gradient(108deg, #E6ECF7 50.38%, rgba(230, 236, 247, 0.00) 82.38%)
+         position: absolute
+         left: 0
+         top: 0
+         width: 70%
+         height: 320px
+      &.inlogin-bgrd1
+         &::before
+            content: ""
+            background-image: url(https://cdn.comfy.ua/media/x/img5/results2024/lgn_bgrd_item1.png)
+      &.inlogin-bgrd2
+         &::before
+            content: ""
+            background-image: url(https://cdn.comfy.ua/media/x/img5/results2024/lgn_bgrd_item2.png)
+      &.inlogin-bgrd3
+         &::before
+            content: ""
+            background-image: url(https://cdn.comfy.ua/media/x/img5/results2024/lgn_bgrd_item3.png)
+   &__text
+      padding: 0 32px 56px 32px
+      position: relative
+      z-index: 3
+.year-results2024-animation-mob
+   display: none
+@media (min-width: $mq-desktop)
+@media (max-width: $mq-lg-table)
+   .btn--only-desk
+      display: none
+   .year-results2024-personal-account__item-login
+      button
+         font-size: 16px
+   .year-results2024-animation
+      grid-template-columns: repeat(6, 104px)
+      &__item
+         &.item-animatio3, &.item-animatio6
+            display: none
+   .year-results2024-personal-account
+      margin: 0 0 4rem 0
+      height: auto
+      &__grid
+         padding: 35px 25px
+         gap: 20px
+      &__statistic
+         grid-gap: 15px
+   .year-results2024-personal-account-inlogin
+      margin: 0 0 4rem 0
+      &__text
+         padding: 0 16px 40px 23px
+   .year-results2024-personal-account-inlogin
+      &__grid
+         grid-template-columns: 1fr
+   .year-results2024-banner
+      height: 42vh
+   .year-results2024-share
+      bottom: 8.8rem
+      right: 1.2rem
+      &__icon
+         width: 60px
+         height: 60px
+         &::before
+            width: 30px
+            height: 30px
+      &__checkbox:checked ~ &__text
+         padding-left: 15px
+@media (max-width: $mq-tablet)
+   #app-year-results2024
+      ul
+         grid-gap: 40px
+   .year-results2024__block
+      padding: 0 12px
+   .year-results2024-personal-account
+      border-radius: 16px
+      margin: 2.6rem 0 80px 0
+      background-image: url(https://cdn.comfy.ua/media/x/img5/results2024/lgn_bgrd1_mob.png)
+      background-size: contain
+      &__grid
+         grid-template-columns: 1fr
+         gap: 35px
+   .year-results2024-personal-achievements
+      &__content-text
+         padding: 35px 45px
+      &__h3
+         padding-bottom: 24px
+   .year-results2024-thanks-year
+      &__text
+         font-size: 33px
+         left: 16px
+         top: -10px
+   .year-results2024-banner-cap
+      &__wrap
+         max-width: calc(100% - 24px)
+         filter: drop-shadow(0px 0px 3px #fff)
+   .year-results2024-pusheweyk
+      padding-top: 0
+      height: 550px
+      &__bgrd-sity
+         position: absolute
+         width: 135%
+      &__bgrd-ice
+         width: 145%
+   .year-results2024-banner-cap__text
+      &__text
+         font-size: 18px !important
+      &.cap-text-pos
+         top: -28px
+@media (max-width: $mq-mobile)
+   #app-year-results2024
+      h2
+         font-size: 26px !important
+      ul
+         grid-gap: 24px
+         li
+            font-size: 20px !important
+            &::before
+               max-width: 230px
+               background-size: contain
+               bottom: -20px
+      h4
+         font-size: 60px
+         span
+            font-size: 50px
+   .break-word
+      display: block
+   .btn--only-mob
+      display: block
+   .year-results2024-thanks-year
+      &__text
+         font-size: 23px
+         left: 12px
+         top: -5px
+   .year-results2024-thanks-year
+      height: 123px
+   .year-results2024-personal-account
+      margin: 0 0 80px 0
+   .year-results2024-personal-account__grid
+      padding: 40px 24px
+      gap: 24px
+   .year-results2024-personal-account
+      background-size: cover
+      background-position: center
+      &__statistic
+         grid-gap: 20px
+         grid-template-columns: 1fr
+      &__item-login
+         p
+            padding: 16px 0 0 0
+   .year-results2024-personal-achievements
+      padding: 12px
+      margin: 0 auto 80px auto
+      border-radius: 12px
+      &__content-text
+         padding: 24px 18px
+   .year-results2024-personal-achievements__arch
+      &.achievements__arch-lt,
+      &.achievements__arch-rt,
+      &.achievements__arch-lb,
+      &.achievements__arch-rb
+         max-width: 104px
+      &.achievements__arch-ct,
+      &.achievements__arch-cr,
+      &.achievements__arch-bc,
+      &.achievements__arch-lc
+         max-width: 15px
+   .year-results2024-animation
+      display: none
+   .year-results2024-animation-mob
+      display: block
+      &__bgrd
+         position: absolute
+         width: 800px
+         height: 200px
+         &::before
+            content: ""
+            background-image: url(https://cdn.comfy.ua/media/x/img5/results2024/anim2_mob.gif)
+            position: absolute
+            background-size: contain
+            background-repeat: no-repeat
+            height: 200px
+            width: 100%
+         &.mob__bgrd1
+            transform: rotate(-10deg)
+            left: -80px
+            top: 38rem
+         &.mob__bgrd2
+            bottom: 165px
+            transform: scaleY(-1) rotate(-8deg)
+            left: -132px
+         &.mob__bgrd3
+            bottom: -97px
+            transform: scaleY(-1) rotate(-8deg)
+            left: -102px
+   .year-results2024-personal-account-inlogin
+      &__item
+         height: 228px
+         border-radius: 12px
+         &::before
+            background-position: right
+            background-size: contain
+         &::after
+            background: linear-gradient(44deg, #E6ECF7 -26.62%, rgba(230, 236, 247, 0) 82.38%)
+         &.inlogin-bgrd1
+            &::before
+               background-image: url(https://cdn.comfy.ua/media/x/img5/results2024/lgn_bgrd_item1_mob.png)
+         &.inlogin-bgrd2
+            &::before
+               background-image: url(https://cdn.comfy.ua/media/x/img5/results2024/lgn_bgrd_item2_mob.png)
+         &.inlogin-bgrd3
+            &::before
+               background-image: url(https://cdn.comfy.ua/media/x/img5/results2024/lgn_bgrd_item3_mob.png)
+   .year-results2024-pusheweyk
+      height: auto
+      margin: 0 16px 0 16px
+      &__bgrd-sity
+         position: relative
+         width: 100%
+         bottom: 0
+         margin: 0
+      &__bgrd-ice
+         width: 100%
+         bottom: -1px
+      &__bgrd-push
+         bottom: -24px
+         max-width: initial
+         width: 125%
+      &__bgrd-snow
+         filter: none
+         img
+            width: 28px
+            height: 28px
+      &__bgrd-gradient
+         background-image: url(https://cdn.comfy.ua/media/x/img5/results2024/gradient_mob.svg)
+   .year-results2024-banner-cap
+      &.cap-content
+         padding: 6px 12px
+      &.cap-border2
+         border-radius: 12px
+      &__text
+         font-size: 18px !important
+      &__container
+         &::before
+            background-image: url(https://cdn.comfy.ua/media/x/img5/results2024/all_banner_0_mob.png)
+            background-repeat: no-repeat
+            background-size: cover
+            width: 213px
+            height: 90px
+            top: -111px
+            z-index: 8
+      &__wrap
+         top: 12rem
+         min-width: auto
+         &::before
+            height: 150px
+            left: 30%
+            transform: translateX(-50%)
+            top: -140px
+            z-index: 0
+         &::after
+            height: 150px
+            left: 70%
+            transform: translateX(-50%)
+            top: -140px
+            z-index: -1
+            right: 0
+      &__text
+         &.cap-text-pos
+            top: -70px
+            z-index: 8
+   .year-results2024-pusheweyk-over
+      margin: 0 0 2rem 0
+   .year-results2024-share
+      bottom: 10rem
+      &__text
+         font-size: 16px
+      &__icon
+         width: 50px
+         height: 50px
+         &::before
+            width: 25px
+            height: 25px
+@media (max-width: $mq-landscape) and (orientation: landscape)
+   #app-year-results2024
+      h4
+         font-size: 60px
+      ul
+         grid-gap: 40px
+   .year-results2024-pusheweyk
+      padding-top: 23rem
+   .year-results2024-banner-cap
+      &__text
+         font-size: 18px !important
+   .year-results2024-personal-account-inlogin
+      &__item
+         height: 250px
+   .year-results2024-personal-achievements
+      &__h3
+         padding-bottom: 40px
+   .year-results2024-banner-cap
+      &__text
+         &.cap-text-pos
+            top: -28px

@@ -1,0 +1,177 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<style>
+
+</style>
+
+<div id="cms-merry-crisis" class="cms-global-style cms-merry-crisis__style">
+
+   <div class="cms-merry-crisis__snow"></div>
+
+   <div class="cms-merry-crisis__container">
+      <div class="cms-merry-crisis__content">
+         <div class="cms-merry-crisis__banner">
+            <picture>
+               <source srcset="https://cdn.comfy.ua/media/x/img5/mc2024/mc_banner_mob.png" media="(max-width: 480px)" />
+               <img src="https://cdn.comfy.ua/media/x/img5/mc2024/mc_banner_full.png" alt="Баннер ХОХО" />
+            </picture>
+         </div>
+
+         <div class="cms-merry-crisis__category-grid">
+            <a href="https://comfy.ua/ua/christmas-trees/" class="cms-merry-crisis__category-item">
+               <div class="cms-merry-crisis__category-img">
+                  <img src="https://cdn.comfy.ua/media/x/img5/mc2024/mc_item1.png" alt="">
+               </div>
+               <div class="cms-merry-crisis__category-text">
+                  <p>Ялинки</p>
+               </div>
+            </a>
+            <a href="https://comfy.ua/ua/garlands/" class="cms-merry-crisis__category-item">
+               <div class="cms-merry-crisis__category-img">
+                  <img src="https://cdn.comfy.ua/media/x/img5/mc2024/mc_item2.png" alt="">
+               </div>
+               <div class="cms-merry-crisis__category-text">
+                  <p>Новорічні гірлянди</p>
+               </div>
+            </a>
+            <a href="https://comfy.ua/ua/christmas-decorations/" class="cms-merry-crisis__category-item">
+               <div class="cms-merry-crisis__category-img">
+                  <img src="https://cdn.comfy.ua/media/x/img5/mc2024/mc_item3.png" alt="">
+               </div>
+               <div class="cms-merry-crisis__category-text">
+                  <p>Ялинкові прикраси</p>
+               </div>
+            </a>
+            <a href="https://comfy.ua/ua/christmas-compositions/" class="cms-merry-crisis__category-item">
+               <div class="cms-merry-crisis__category-img">
+                  <img src="https://cdn.comfy.ua/media/x/img5/mc2024/mc_item4.png" alt="">
+               </div>
+               <div class="cms-merry-crisis__category-text">
+                  <p>Новорічні вінки та композиції</p>
+               </div>
+            </a>
+            <a href="https://comfy.ua/ua/new-years-decor/" class="cms-merry-crisis__category-item">
+               <div class="cms-merry-crisis__category-img">
+                  <img src="https://cdn.comfy.ua/media/x/img5/mc2024/mc_item5.png" alt="">
+               </div>
+               <div class="cms-merry-crisis__category-text">
+                  <p>Новорічний<br />декор та обручі</p>
+               </div>
+            </a>
+            <a href="https://comfy.ua/ua/candles/" class="cms-merry-crisis__category-item">
+               <div class="cms-merry-crisis__category-img">
+                  <img src="https://cdn.comfy.ua/media/x/img5/mc2024/mc_item6.png" alt="">
+               </div>
+               <div class="cms-merry-crisis__category-text">
+                  <p>Свічки</p>
+               </div>
+            </a>
+            <a href="https://comfy.ua/ua/new-years-textiles/tematuka_chachki__novyj-god/" class="cms-merry-crisis__category-item">
+               <div class="cms-merry-crisis__category-img">
+                  <img src="https://cdn.comfy.ua/media/x/img5/mc2024/mc_item7.png" alt="">
+               </div>
+               <div class="cms-merry-crisis__category-text">
+                  <p>Новорічний текстиль</p>
+               </div>
+            </a>
+         </div>
+
+         <div class="cms-merry-crisis__img-pos img-pos--left">
+            <picture>
+               <source srcset="https://cdn.comfy.ua/media/x/img5/mc2024/mc_banner_f-left__mob.png" media="(max-width: 480px)" />
+               <img src="https://cdn.comfy.ua/media/x/img5/mc2024/mc_banner_f-left.png" alt="Баннер ХОХО" />
+            </picture>
+         </div>
+         <div class="cms-merry-crisis__img-pos img-pos--right">
+            <picture>
+               <source srcset="https://cdn.comfy.ua/media/x/img5/mc2024/mc_banner_f-right__mob.png" media="(max-width: 480px)" />
+               <img src="https://cdn.comfy.ua/media/x/img5/mc2024/mc_banner_f-right.png" alt="Баннер ХОХО" />
+            </picture>
+         </div>
+      </div>
+   </div>
+</div>
+
+<script>
+   document.addEventListener("DOMContentLoaded", (event) => {
+      new Vue({
+         el: '#cms-merry-crisis',
+         data: {
+            snowflakeImages: [
+               'https://cdn.comfy.ua/media/x/img3/resultsyear2023/snow1.png',
+               'https://cdn.comfy.ua/media/x/img3/resultsyear2023/snow2.png',
+               'https://cdn.comfy.ua/media/x/img3/resultsyear2023/snow3.png',
+               'https://cdn.comfy.ua/media/x/img3/resultsyear2023/snow4.png',
+            ],
+            stitchСount: 25,
+         },
+         mounted() {
+            this.generateSnowflakes();
+            if (window.innerWidth >= 1366) {
+               window.addEventListener('resize', this.handleResize);
+            }
+            window.addEventListener('orientationchange', this.handleResize);
+         },
+         destroyed() {
+            window.removeEventListener('resize', this.handleResize);
+            window.removeEventListener('orientationchange', this.handleResize);
+         },
+         methods: {
+            createSnowflake(src) {
+               const animShow = document.querySelector('.cms-merry-crisis__snow');
+               const img = new Image();
+               img.src = src;
+               img.className = 'results-year-snowflake';
+
+               const x = Math.random() * window.innerWidth;
+               const y = Math.random() * (window.innerHeight - 2500);
+
+               img.style.left = `${x}px`;
+               img.style.top = `${y}px`;
+               img.style.animationDuration = `${Math.random() * 6 + 7}s`;
+
+               animShow.appendChild(img);
+            },
+            generateSnowflakes() {
+               const animShow = document.querySelector('.cms-merry-crisis__snow');
+               console.log(document.documentElement.scrollHeight);
+
+               const screenHeight = document.querySelector('.cms-merry-crisis__style').scrollHeight;
+               document.documentElement.style.setProperty('--screen-height', `${screenHeight}px`);
+
+               // Удаление текущих снежинок
+               const existingSnowflakes = document.querySelectorAll('.results-year-snowflake');
+               existingSnowflakes.forEach(snowflake => snowflake.remove());
+
+               // Создание новых снежинок
+               for (let i = 0; i < this.stitchСount; i++) {
+                  const randomSnowflake = this.snowflakeImages[Math.floor(Math.random() * this.snowflakeImages.length)];
+                  this.createSnowflake(randomSnowflake);
+               }
+
+            },
+            handleResize() {
+               const snowflakes = document.querySelectorAll('.results-year-snowflake');
+
+               if (window.innerWidth <= 480) {
+                  this.stitchСount = 10;
+               }
+
+               this.generateSnowflakes();
+
+               snowflakes.forEach((snowflake) => {
+                  const x = Math.random() * window.innerWidth;
+
+                  let y;
+                  if (window.innerWidth <= 480) {
+                     y = Math.random() * (window.innerHeight - 100);
+                  }
+
+                  snowflake.style.left = `${x}px`;
+                  snowflake.style.top = `${y}px`;
+               });
+            }
+         }
+      });
+   });
+</script>

@@ -537,6 +537,12 @@
           getInfoUser(userPhone) {
             let requestURL = `https://comfy.ua/api/customers/${userPhone}/results`;
             // https://comfy.ua/api/customers/380631158878/results
+
+            // const response = await fetch('${options.baseUrl}/v3/gtm/data', { credentials: 'include' });
+            /*
+            1. Заголовки при уходит кууки + токен
+
+            */
             function sendRequest(method, url) {
 
               return fetch(url, {

@@ -1,0 +1,106 @@
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$mq-mobile: 480px
+$mq-tablet: 768px
+$mq-lg-table: 1023px
+$mq-desktop: 1024px
+$maxWidthContainer: 1366
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-vestfrostrkt
+   font-family: 'Roboto', sans-serif
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   max-width: 1100px
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 32, 23)
+      font-weight: 900
+      color: #002C5C
+      text-align: left
+   h3
+      @include adaptiv-value("font-size", 32, 23)
+      font-weight: 900
+      color: #002C5C
+      text-align: center
+   p
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 400
+      text-align: left
+      color: #010101
+      padding: 15px 0
+
+.rkt-vestfrostrkt
+   &__bgrd
+      width: 100%
+      height: 685px
+      position: relative
+      padding: 32px 0 0 32px
+      background-position: right
+      background-repeat: no-repeat
+      background-size: cover
+      &.bgrdimg1
+         background-image: url(https://cdn.comfy.ua/media/x/img5/1056993/nw_img0.png)
+      &.bgrdimg2
+         background-image: url(https://cdn.comfy.ua/media/x/img5/1056993/nw_img1.png)
+   &__text
+      @include adaptiv-value("font-size", 18, 16)
+      text-align: center
+      color: #fff
+      padding: 0 15px
+   &__product
+      display: grid
+      grid-template-columns: 178px 1fr
+      grid-gap: 15px
+      align-items: center
+      padding: 0 15px
+      max-width: 800px
+      margin: 32px auto 0 auto
+   &__content
+      padding: 32px 15px
+   &__teh
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-gap: 15px
+      padding: 0 15px
+   &__teh-item
+      max-width: 253px
+      margin: 0 auto
+
+
+@media (min-width: $mq-desktop)
+@media (max-width: $mq-lg-table)
+@media (max-width: $mq-tablet)
+   .rkt-vestfrostrkt
+      &__bgrd
+         background-position: right
+         height: 500px
+         padding: 32px 0 0 15px
+      &__logo
+         max-width: 300px
+      &__teh
+         grid-template-columns: 1fr
+@media (max-width: $mq-mobile)

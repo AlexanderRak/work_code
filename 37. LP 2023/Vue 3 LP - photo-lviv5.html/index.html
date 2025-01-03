@@ -1,0 +1,159 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-the-mask@0.11.1/dist/vue-the-mask.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style>
+
+</style>
+
+<div id="lp-form">
+   <div class="lp-form-container">
+      <div class="lp-banner">
+         <picture>
+            <source srcset="https://cdn.comfy.ua/media/x/img5/lviv5.png" media="(max-width: 480px)" />
+            <img src="https://cdn.comfy.ua/media/x/img5/lviv5.png" alt="MDN Web Docs" />
+         </picture>
+      </div>
+
+      <div id="appform">
+         <div class="lp-app-form">
+            <h2>Залиште свої контакти, щоб ми надіслали вам посилання на фото</h2>
+            <div class="lp-app-form__wrapper">
+               <form @submit.prevent="submitForm" v-if="formSubmitted" novalidate class="lp-app-form__grid">
+                  <div class="lp-app-form__grid-item">
+                     <input class="lp-app-input" type="text" id="name" v-model="name" placeholder="Ім'я" @input="handleNameInput" />
+                     <span v-if="errors.name" class="lp-app-input-error">Обов'язкове поле</span>
+                  </div>
+                  <div class="lp-app-form__grid-item">
+                     <input class="lp-app-input" type="email" id="email" v-model="email" @input="clearError('email')" placeholder="Email" />
+                     <span v-if="errors.email" class="lp-app-input-error">{{ errors.email }}</span>
+                  </div>
+                  <div class="lp-app-form__grid-item">
+                     <input class="lp-app-input" type="tel" id="phone" v-model="phone" @input="clearError('phone')" placeholder="Телефон" v-mask="'+38 (###) ###-##-##'" />
+                     <span v-if="errors.phone" class="lp-app-input-error">{{ phoneErrorMessage }}</span>
+                  </div>
+                  <div class="lp-app-form__grid-item">
+                     <button class="lp-app-btn" type="submit" :disabled="!isChecked">
+                        Надіслати</button>
+                  </div>
+               </form>
+               <div v-else class="form-submitted">
+                  <div class="form-submitted__wrapper">
+                     <img src="https://cdn.comfy.ua/media/x/img3/foto-vidkrittja/done.svg" alt="">
+                     <div class="form-submitted__mess">
+                        Дякуємо! Ми отримали ваші дані. Чекайте лист на вказаний Email
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="lp-app-checkbox">
+            <input type="checkbox" class="lp-app-checkbox__none" id="checkbox" v-model="isChecked" />
+            <label for="checkbox" class="lp-app-checkbox-custom-label" v-bind:class="{ 'lp-app-checkbox-custom-label__active': isChecked }"></label>
+            <p>
+               Я надаю свою згоду на обробку моїх персональних даних ТОВ «КОМФІ ТРЕЙД» будь-яким способом, включаючи, але не обмежуючись, згоду на збирання, реєстрацію, накопичення, зберігання, адаптування, зміну, поновлення, використання, знеособлення та знищення моїх персональних даних в базі даних ТОВ «КОМФІ ТРЕЙД», з метою формування та підтримання обізнаності про діяльність та проведення рекламних, маркетингових та інших заходів ТОВ «КОМФІ ТРЕЙД», отримання повідомлень рекламного характеру та/або будь-якою іншою метою, що не суперечить законодавству України. Вказана згода надана з врахуванням вимог ст.7, ст. 8 та ст. 11 Закону України «Про захист персональних даних» та діє безстроково та без обмеження території дії. Я засвідчую свою обізнаність про включення моїх персональних даних до бази даних ТОВ «КОМФІ ТРЕЙД», <a target="_blank" rel="nofollow" href="https://zakon.rada.gov.ua/laws/show/2297-17#n65">зміст моїх прав, як суб’єкта персональних даних згідно Закону України «Про захист персональних даних»</a>, мені повідомлено та зрозуміло.
+            </p>
+         </div>
+      </div>
+   </div>
+</div>
+
+<script>
+   new Vue({
+      el: '#appform',
+      data: {
+         name: '',
+         email: '',
+         phone: '',
+         isChecked: false,
+         errors: {
+            name: false,
+            email: '',
+            phone: false,
+         },
+         formSubmitted: true,
+         phoneErrorMessage: '',
+      },
+      watch: {
+         isChecked(newVal) {
+            if (!newVal) {
+               this.clearAllErrors();
+            }
+         },
+      },
+      methods: {
+         submitForm() {
+            this.errors = {
+               name: !this.name,
+               email: '',
+               phone: false,
+            };
+
+            if (this.isChecked) {
+               if (!this.name) {
+                  this.errors.name = true;
+               }
+               if (!this.email) {
+                  this.errors.email = 'Обов\'язкове поле';
+               } else if (!this.validateEmail(this.email)) {
+                  this.errors.email = 'Некоректна адреса пошти';
+               }
+
+               const lengthPhone = !this.phone || this.phone.replace(/\D/g, '').length;
+               if (lengthPhone == true) {
+                  this.phoneErrorMessage = 'Обов\'язкове поле';
+                  this.errors.phone = true;
+               } else if (lengthPhone < 12) {
+                  this.phoneErrorMessage = 'Введіть повний номер';
+                  this.errors.phone = true;
+               } else {
+                  this.errors.phone = false;
+                  this.phoneErrorMessage = '';
+               }
+
+               if (!this.errors.name && !this.errors.email && !this.errors.phone) {
+                  const data = {
+                     name: this.name.trim(),
+                     email: this.email.trim(),
+                     phone: this.phone.trim(),
+                     shareName: "Photo_Lviv_5"
+                  };
+                  console.log(data);
+
+                  $.ajax({
+                     url: "https://main.corezoid.comfy.ua/api/2/json/public/13579/1ab4cd64b6dcd1e53a0d314bf9a349f1abfdafd2",
+                     headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                     },
+                     type: "POST",
+                     dataType: "json",
+                     data: JSON.stringify(data),
+                     success: console.log('done')
+                  });
+                  this.formSubmitted = false;
+               }
+            }
+         },
+         validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+         },
+         clearError(field) {
+            this.errors[field] = false;
+         },
+         clearAllErrors() {
+            this.errors.name = false;
+            this.errors.email = '';
+            this.errors.phone = false;
+         },
+         handleNameInput(event) {
+            this.clearError('name');
+
+            const regex = /^[a-zA-Zа-яА-ЯёЁґҐєЄіІїЇ]*$/;
+            if (!regex.test(event.target.value)) {
+               this.name = this.name.replace(/[^a-zA-Zа-яА-ЯёЁґҐєЄіІїЇ]/g, '');
+            }
+         },
+      },
+   });
+</script>

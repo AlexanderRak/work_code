@@ -1,0 +1,163 @@
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$mq-mobile: 480px
+$mq-tablet: 768px
+$mq-lg-table: 1023px
+$mq-desktop: 1024px
+$maxWidthContainer: 1366
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-krups-series
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 28, 23)
+      font-weight: 900
+      text-align: center
+   h3
+      @include adaptiv-value("font-size", 24, 21)
+      font-weight: 900
+      text-align: left
+      &.text-center
+         text-align: center
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      &.text-center
+         text-align: center
+   ul
+      list-style-type: disc
+      padding-left: 1.2rem
+      margin-left: 1.6rem
+      li
+         @include adaptiv-value("font-size", 16, 14)
+         font-weight: 400
+         text-align: left
+   video
+      width: 100%
+      height: 100%
+      object-fit: cover
+.rkt-global-style
+   max-width: 1050px
+   margin: 0 auto
+
+.rkt-krups-series
+   &__header
+      background-image: url(https://cdn.comfy.ua/media/x/img5/2892542/krups_img00.png)
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+      width: 100%
+      height: 472px
+   &__logo
+      padding: 0 0 0 1.2rem
+      max-width: 350px
+   &__h2
+      padding: 2rem 1.2rem
+      text-align: center
+   &__flex-content
+      padding: 2rem 0
+   &__flex
+      display: flex
+      align-items: center
+      &.flex-rev
+         flex-direction: row-reverse
+   &__item
+      flex: 1 1 0
+   &__text
+      padding: 1.5rem
+   &__h3
+      padding-bottom: 1.2rem
+   &__drinks
+      padding: 2rem 1.2rem
+   &__drinks-flex
+      display: flex
+      flex-wrap: wrap
+      max-width: 780px
+      margin: 0 auto
+      justify-content: center
+   &__drinks-item
+      max-width: 239px
+   &__drinks-p
+      p
+         text-align: center !important
+         color: #F38230
+         text-transform: uppercase
+   &__quality
+      display: flex
+      align-items: center
+   &__quality-item
+      flex: 1 1 0
+      display: flex
+      align-items: center
+      padding: 3rem 1rem
+      gap: 1.2rem
+      img
+         max-width: 120px !important
+      &.bgrd-color1
+         background-color: #F2F2F2
+      &.bgrd-color2
+         background-color: #DDDDDD
+   &__accessories
+      padding: 0 1.2rem 2rem 1.2rem
+   &__accessories-grid
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-gap: 1rem
+   &__accessories-img
+      border: 3px solid #ee7d00
+      border-radius: 40px 40px 0px 40px
+      height: 250px
+      display: flex
+      justify-content: center
+      padding: 1rem
+   &__accessories-item
+      p
+         padding: 1rem !important
+@media (max-width: $mq-tablet)
+   .rkt-krups-series
+      &__accessories-grid
+         grid-template-columns: 1fr 1fr
+@media (max-width: $mq-mobile)
+   .rkt-krups-series
+      &__logo
+         padding: 0
+         max-width: 100%
+      &__flex
+         flex-direction: column
+         &.flex-rev
+            flex-direction: column
+      &__flex-content
+         padding: 0
+      &__drinks
+         padding: 1rem 1.2rem
+      &__drinks-item
+         max-width: 50%
+      &__text
+         padding: 1.2rem
+      &__quality
+         flex-direction: column
+      &__accessories-grid
+         grid-template-columns: 1fr
+      &__accessories-img
+         height: 170px

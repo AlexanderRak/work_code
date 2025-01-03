@@ -1,0 +1,173 @@
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$mq-mobile: 480px
+$mq-tablet: 768px
+$mq-lg-table: 1023px
+$mq-desktop: 1024px
+$maxWidthContainer: 1366
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-na120-00
+   font-family: 'Roboto', sans-serif
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   max-width: 1024px
+   margin: 0 auto
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+   img
+      display: block
+      max-width: 100%
+      margin: 0
+      opacity: 1
+      &:hover
+         opacity: 1
+   p
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 400
+      text-align: left
+   i
+      font-size: 14px
+      color: #000
+      text-align: left
+      padding: 3rem 1rem 3rem 1rem
+      margin: 0
+      display: block
+      line-height: 1.3
+
+#rkt-na120-00
+   .rkt-na120-00
+      &__logo__text-h2
+         @include adaptiv-value("font-size", 48, 23)
+         font-weight: 900
+         text-align: left
+         color: #fff
+         padding-bottom: 15px
+      &__logo__text-i
+         @include adaptiv-value("font-size", 14, 12)
+         font-weight: 400
+         text-align: left
+         color: #fff
+      &__p
+         &.size-one
+            @include adaptiv-value("font-size", 22, 16)
+            color: #000
+            text-align: left
+         &.size-two
+            @include adaptiv-value("font-size", 26, 18)
+            color: #000
+            text-align: center
+         &.size-three
+            @include adaptiv-value("font-size", 20, 16)
+            color: #000
+            text-align: center
+            padding-top: 1rem
+         &.size-four
+            @include adaptiv-value("font-size", 20, 16)
+            color: #000
+            text-align: center
+            padding: 1rem 0 .5rem 0
+            font-weight: bold
+         &.size-five
+            @include adaptiv-value("font-size", 18, 14)
+            color: #000
+            text-align: center
+      &__h3
+         @include adaptiv-value("font-size", 34, 23)
+         color: #004EAA
+         text-align: center
+         padding-bottom: 1rem
+.rkt-na120-00
+   &__bgrd
+      background-image: url(https://cdn.comfy.ua/media/x/img5/3015957/bgrd_1.png)
+      background-position: left
+      background-repeat: no-repeat
+      background-size: cover
+      width: 100%
+      height: auto
+      position: relative
+   &__logo__text
+      max-width: 550px
+      padding: 50px 0 13rem 1.4rem
+   &__logo--position-right-top
+      position: absolute
+      right: 0
+      top: 0
+   &__logo--position-right-bottom
+      position: absolute
+      right: 1.5rem
+      bottom: 0
+.rkt-na120-00
+   &__advantages
+      background: #d7eaff
+      padding: 2rem 1.5rem
+   &__advantages-grid
+      display: grid
+      grid-template-columns: 40% 60%
+      grid-gap: 1.5rem
+      align-items: center
+   &__advantages__icon
+      display: grid
+      grid-template-columns: 1fr
+      grid-gap: 1.5rem
+   &__advantages__icon-item
+      display: grid
+      grid-template-columns: 25% auto
+      align-items: center
+      grid-gap: 1.5rem
+.rkt-na120-00
+   &__content-text
+      padding: 3rem 1rem 2rem 1rem
+.rkt-na120-00
+   &__function
+      padding: 1.5rem
+      background: #d7eaff
+   &__function-grid
+      display: grid
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+      grid-gap: 1.5rem
+.rkt-na120-00
+   &__accessories
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 15px
+      align-items: center
+.rkt-na120-00
+   &__table
+      overflow-x: scroll
+      -webkit-overflow-scrolling: touch
+      touch-action: pan-x
+   &__table-img
+      width: 1536px
+@media (max-width: $mq-mobile)
+   .rkt-na120-00
+      &__advantages-grid
+         grid-template-columns: 1fr
+      &__function-grid
+         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+   .rkt-na120-00__logo.rkt-na120-00__logo--position-left-top
+      max-width: 150px
+      position: relative
+      left: -12px
+   .rkt-na120-00__logo.rkt-na120-00__logo--position-right-top
+      max-width: 150px
+      right: -9px
+      top: 40px
+@media (max-width: $mq-tablet)
+@media (max-width: $mq-lg-table)
+@media (min-width: $mq-desktop)

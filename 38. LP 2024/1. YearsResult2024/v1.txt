@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+   <style>
+
+   </style>
+
+   <div id="app-year-results2024" class="year-results2024__wrap">
+      <div class="year-results2024__container">
+
+         <div v-if="getIsAuthorized" class="year-results2024-banner-cap__wrap">
+            <div class="year-results2024-banner-cap__container">
+               <div class="year-results2024-banner-cap cap-border1">
+                  <div class="year-results2024-banner-cap cap-border2">
+                     <div class="year-results2024-banner-cap cap-content cap-border3">
+                        <div class="year-results2024-banner-cap__text cap-text-pos">
+                           {{ selectedSegment.title }}
+                        </div>
+                        <div class="year-results2024-banner-cap__text">
+                           {{ selectedSegment.description }}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="year-results2024-pusheweyk-over">
+            <div class="year-results2024-pusheweyk">
+               <div class="year-results2024-pusheweyk__bgrd-snow" ref="snowContainer"></div>
+               <div class="year-results2024-pusheweyk__bgrd-sity">
+                  <picture>
+                     <source srcset="https://cdn.comfy.ua/media/x/img5/results2024/all_banner_sity_mob.png" media="(max-width: 480px)" />
+                     <img src="https://cdn.comfy.ua/media/x/img5/results2024/all_banner_sity.png" alt="MDN" />
+                  </picture>
+               </div>
+               <div class="year-results2024-pusheweyk__bgrd-ice pusheweyk__bgrd">
+                  <picture>
+                     <source srcset="https://cdn.comfy.ua/media/x/img5/results2024/all_banner_ice_mob.png" media="(max-width: 480px)" />
+                     <img src="https://cdn.comfy.ua/media/x/img5/results2024/all_banner_ice.png" alt="MDN" />
+                  </picture>
+               </div>
+               <div class="year-results2024-pusheweyk__bgrd-gradient pusheweyk__bgrd"></div>
+               <div class="year-results2024-pusheweyk__bgrd-push pusheweyk__bgrd">
+                  <img v-if="!getIsAuthorized" src="https://cdn.comfy.ua/media/x/img5/results2024/notlgn_push.svg" alt="">
+                  <img v-else :src="selectedSegment.img" alt="" />
+               </div>
+            </div>
+         </div>
+
+         <div class="year-results2024-thanks-year">
+            <div class="year-results2024-thanks-year__text">
+               Дякуємо вам за цей рік!
+            </div>
+         </div>
+
+         <div class="year-results2024__block">
+
+            <div class="year-results2024-animation">
+               <div class="year-results2024-animation__item item-animatio1">
+                  <img src="https://cdn.comfy.ua/media/x/img5/results2024/anim2.gif" alt="">
+               </div>
+               <div class="year-results2024-animation__item item-animatio2">
+                  <img src="https://cdn.comfy.ua/media/x/img5/results2024/anim2.gif" alt="">
+               </div>
+               <div class="year-results2024-animation__item item-animatio3">
+                  <img src="https://cdn.comfy.ua/media/x/img5/results2024/anim2.gif" alt="">
+               </div>
+               <div class="year-results2024-animation__item item-animatio4">
+                  <img src="https://cdn.comfy.ua/media/x/img5/results2024/anim2.gif" alt="">
+               </div>
+               <div class="year-results2024-animation__item item-animatio5">
+                  <img src="https://cdn.comfy.ua/media/x/img5/results2024/anim2.gif" alt="">
+               </div>
+               <div class="year-results2024-animation__item item-animatio6">
+                  <img src="https://cdn.comfy.ua/media/x/img5/results2024/anim2.gif" alt="">
+               </div>
+               <div class="year-results2024-animation__item item-animatio7">
+                  <img src="https://cdn.comfy.ua/media/x/img5/results2024/anim2.gif" alt="">
+               </div>
+               <div class="year-results2024-animation__item item-animatio8">
+                  <img src="https://cdn.comfy.ua/media/x/img5/results2024/anim2.gif" alt="">
+               </div>
+            </div>
+
+            <div class="year-results2024-animation-mob">
+               <div class="year-results2024-animation-mob__bgrd mob__bgrd1"></div>
+               <div class="year-results2024-animation-mob__bgrd mob__bgrd2"></div>
+               <div class="year-results2024-animation-mob__bgrd mob__bgrd3"></div>
+            </div>
+
+            <div v-if="!getIsAuthorized" class="year-results2024-personal-account">
+               <div class="year-results2024-personal-account__grid">
+                  <div class="year-results2024-personal-account__item-login">
+                     <h2>Увійдіть до <span class="break-word">особистого кабінету</span></h2>
+                     <p>Та перегляньте власну історію COMFY за 2024 рік. Ми зібрали статистику з підсумками вашої активності.</p>
+                     <button @click="openModalLogin" type="button" class="btn--only-desk">Увійти до особистого кабінету</button>
+                  </div>
+                  <div class="year-results2024-personal-account__statistic">
+                     <div class="year-results2024-personal-account__item">
+                        <img src="https://cdn.comfy.ua/media/x/img5/results2024/all_grl00.svg" alt="">
+                        <p>Стільки днів ви вже у родині лідера з продажів побутової техніки та електроніки</p>
+                     </div>
+                     <div class="year-results2024-personal-account__item">
+                        <img src="https://cdn.comfy.ua/media/x/img5/results2024/all_grl00.svg" alt="">
+                        <p>Стільки покупок ви зробили<br>в цьому році </p>
+                     </div>
+                     <div class="year-results2024-personal-account__item">
+                        <img src="https://cdn.comfy.ua/media/x/img5/results2024/all_grl00.svg" alt="">
+                        <p>Стільки бонусів<br>ви накопичили цього року</p>
+                     </div>
+                  </div>
+                  <!-- <div class="year-results2024-personal-account__item-login btn--only-mob">
+                     <button @click="openModalLoginMob" type="button" role="button" class="btn-width-full">
+                        Увійти до особистого кабінету
+                     </button>
+                  </div> -->
+               </div>
+            </div>
+
+            <div v-if="getIsAuthorized" class="year-results2024-personal-account-inlogin">
+               <div class="year-results2024-personal-account-inlogin__grid">
+                  <div class="year-results2024-personal-account-inlogin__item inlogin-bgrd1">
+                     <div class="year-results2024-personal-account-inlogin__text">
+                        <h4>{{ getDaysWithComfy }}</h4>
+                        <p class="size-p-big">Ось стільки днів ви вже у<br>родині COMFY</p>
+                     </div>
+                  </div>
+                  <div class="year-results2024-personal-account-inlogin__item inlogin-bgrd2">
+                     <div class="year-results2024-personal-account-inlogin__text">
+                        <h4>{{ getOrders }}</h4>
+                        <p class="size-p-big">Покупки ви зробили<br>в цьому році</p>
+                     </div>
+                  </div>
+                  <div class="year-results2024-personal-account-inlogin__item inlogin-bgrd3">
+                     <div class="year-results2024-personal-account-inlogin__text">
+                        <h4>{{ getBonuses }} <span>₴</span></h4>
+                        <p class="size-p-big">Бонусами ви накопичили<br>цього року</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="year-results2024-personal-achievements">
+               <div class="year-results2024-personal-achievements__content">
+
+                  <div class="year-results2024-personal-achievements__content-text">
+                     <div class="year-results2024-personal-achievements__h3">
+                        <!-- <h3>Досягнення COMFY 2024</h3> -->
+                        <img style="margin: 0 auto;" src="https://cdn.comfy.ua/media/x/img5/results2024/text.svg" alt="">
+                     </div>
+                     <ul class="year-results2024-personal-achievements__ul">
+                        <li v-for="item in getDateApi.companyStats">
+                           <span v-html="item"></span>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div class="year-results2024-personal-achievements__arch achievements__arch-lt">
+                     <img src="https://cdn.comfy.ua/media/x/img5/results2024/all_str1.svg" alt="">
+                  </div>
+                  <div class="year-results2024-personal-achievements__arch achievements__arch-rt">
+                     <img src="https://cdn.comfy.ua/media/x/img5/results2024/all_str1.svg" alt="">
+                  </div>
+                  <div class="year-results2024-personal-achievements__arch achievements__arch-lb">
+                     <img src="https://cdn.comfy.ua/media/x/img5/results2024/all_str1.svg" alt="">
+                  </div>
+                  <div class="year-results2024-personal-achievements__arch achievements__arch-rb">
+                     <img src="https://cdn.comfy.ua/media/x/img5/results2024/all_str1.svg" alt="">
+                  </div>
+                  <div class="year-results2024-personal-achievements__arch achievements__arch-ct">
+                     <img src="https://cdn.comfy.ua/media/x/img5/results2024/all_str2.svg" alt="">
+                  </div>
+                  <div class="year-results2024-personal-achievements__arch achievements__arch-cr">
+                     <img src="https://cdn.comfy.ua/media/x/img5/results2024/all_str2.svg" alt="">
+                  </div>
+                  <div class="year-results2024-personal-achievements__arch achievements__arch-bc">
+                     <img src="https://cdn.comfy.ua/media/x/img5/results2024/all_str2.svg" alt="">
+                  </div>
+                  <div class="year-results2024-personal-achievements__arch achievements__arch-lc">
+                     <img src="https://cdn.comfy.ua/media/x/img5/results2024/all_str2.svg" alt="">
+                  </div>
+               </div>
+            </div>
+
+         </div>
+
+      </div>
+   </div>
+
+   <script>
+      /*
+         STANDARD - універсал
+         GADGET_LOVER - Гаджетоман
+         STRATEGIST - стратег
+         REVIEWER - Відгуки
+         EARLY_ADOPTERREVIEWER - Першовідкривач
+         LOYAL_CUSTOMER - Лояльний кліент
+      */
+      document.addEventListener("DOMContentLoaded", () => {
+         new Vue({
+            el: '#app-year-results2024',
+            data: {
+               snowflake: [
+                  'https://cdn.comfy.ua/media/x/img5/results2024/snow1.svg',
+                  'https://cdn.comfy.ua/media/x/img5/results2024/snow2.svg',
+                  'https://cdn.comfy.ua/media/x/img5/results2024/snow3.svg',
+                  'https://cdn.comfy.ua/media/x/img5/results2024/snow4.svg',
+               ],
+               snowflakes: [],
+               stitchCountDesktop: 25,
+               stitchCountMobile: 10,
+               getIsAuthorized: false,
+               getIsShared: null,
+               getDateApi: null | {},
+               getSegmentId: false | '',
+               getProductName: null | '',
+               getDaysWithComfy: null | 0,
+               getOrders: null | 0,
+               getBonuses: null | 0,
+               getReviews: null | 0,
+               getAvgCheck: null | 0,
+               isDataLoaded: false,
+               animationEnd: Date.now() + 10000, // Для примера 10 секунд анимации
+               duration: 10000, // 10 секунд
+
+            },
+            mounted() {
+               document.addEventListener('userLoggedEvent', this.handleUserLoggedEvent);
+               this.startSnowEffect();
+
+               this.fetchData();
+               // this.generateSnowflakes();
+               // if (window.innerWidth >= 1366) {
+               //    window.addEventListener('resize', this.handleResize);
+               // }
+               // window.addEventListener('orientationchange', this.handleResize);
+            },
+            destroyed() {
+               document.removeEventListener('userLoggedEvent', this.handleUserLoggedEvent);
+
+               // window.removeEventListener('resize', this.handleResize);
+               // window.removeEventListener('orientationchange', this.handleResize);
+            },
+            computed: {
+               stitchCount() {
+                  return this.isMobile ? this.stitchCountMobile : this.stitchCountDesktop;
+               },
+               isMobile() {
+                  return window.innerWidth <= 480;
+               },
+               isDesktop() {
+                  return window.innerWidth > 1024;
+               },
+               selectedSegment() {
+                  return this.isDataLoaded ? this.clientSegment[this.getSegmentId] || false : '';
+               },
+               clientSegment() {
+                  return {
+                     STANDARD: {
+                        title: 'Лояльний клієнт',
+                        description: this.getStandardDescription,
+                        img: "https://cdn.comfy.ua/media/x/img5/results2024/notlgn_push.svg"
+                     },
+                     GADGET_LOVER: {
+                        title: 'Гаджетоман',
+                        description: this.getGadgetLoverDescription,
+                        img: "https://cdn.comfy.ua/media/x/img5/results2024/lgn_gadzhetoman.svg"
+                     },
+                     STRATEGIST: {
+                        title: 'Стратег',
+                        description: this.getStrategistDescription,
+                        img: "https://cdn.comfy.ua/media/x/img5/results2024/lgn_strateg.svg"
+                     },
+                     REVIEWER: {
+                        title: 'Відгукодавач',
+                        description: this.getReviewerDescription,
+                        img: "https://cdn.comfy.ua/media/x/img5/results2024/lgn_v_dgukodavach_2.svg"
+                     },
+                     EARLY_ADOPTERREVIEWER: {
+                        title: 'Першовідкривач',
+                        description: this.getEarlyAdopterReviewerDescription,
+                        img: "https://cdn.comfy.ua/media/x/img5/results2024/lgn_pershov_dkrivach_2.svg"
+                     },
+                     LOYAL_CUSTOMER: {
+                        title: 'Наш намберван',
+                        description: this.getLoyalCustomerDescription,
+                        img: "https://cdn.comfy.ua/media/x/img5/results2024/lgn_nash_nambervan.svg"
+                     }
+                  };
+               },
+               getStandardDescription() {
+                  return `Ви з нами вже ${Math.floor(this.getDaysWithComfy / 365)} роки — дякуємо за вашу відданість!`;
+               },
+               getGadgetLoverDescription() {
+                  return `Ваше середнє замовлення — ${this.getAvgCheck} ₴. Вибираєте техніку преміальної якості!`;
+               },
+               getStrategistDescription() {
+                  return `Частіше за все ви купуєте у сезон розпродажів — ви чудовий стратег!`;
+               },
+               getReviewerDescription() {
+                  return `Дякуємо за ваші ${this.getReviews} відгуки — вони допомагають нам ставати кращими!`;
+               },
+               getEarlyAdopterReviewerDescription() {
+                  return `Ви були серед перших покупців ${this.getProductName}, який став нашим бестселером!`;
+               },
+               getLoyalCustomerDescription() {
+                  return `Ви — частина нашої великої родини COMFY! Дякуємо, що обираєте нас.`;
+               }
+            },
+            methods: {
+               handleUserLoggedEvent(event) {
+                  this.fetchData();
+               },
+               async fetchData() {
+                  const url = 'https://tst.comfy.ua/api/customers/current/year/2024/stats';
+                  const token = 'eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0c3QuY29tZnkudWEiLCJleHAiOjE3NjU1NTQwOTUsInVjaSI6InVjcDIwMjQwMjA1d3ZraXUiLCJtY2kiOiIyMDA4NDQ2MyIsInVzaSI6IjBhZGIwYTMwLWM2ODctNDBjZi04ODc3LTQzZGJjMDRlOWNlNSIsImNnaSI6MSwidWlkIjoiYzMxZjc4Zjc5ZmUwMDJkODlhNmRlZjFiMjlmNTA1MDZjOGI3Y2E4NDUwM2MxMmU1YmEzYmM2ZmMyY2UzZDg0MzlhNTdkZmVlNTU1NTUyMjdlMDAwNjYxYjY3NDY5Nzg1NDJiMDg2MWExMGE5MGE5ZGFjYzczZjQ5NGI0MjBjOWMifQ.UYPFx3yhEXY5YxrWnEPJgzlcs3j8cQ1NqETO7BbeWdGHw3IRkzQFLO1dcwAmHDknG4pdmgfTfGaqAjDhSYqELorE-VKiVj4SI6piCwmeOs1EXUjCa3xd8AUdUZEydKng2AAds5hI7BgSjXfiMqcCCyH13K8aT6LhITT34KpQI5KHcEMXXHb4_rTayfQN46zw4jAtR369jOFQgnPdS1lwWSnMpbhlQK29SVoqZ4vIMLHExHfkYvWounkp5Ycux_Q1MRWfC0RAECo0cHDJZ_t7uD0s9OP9Hi9xfbbZ-_j04_2VfTYtOEgtmPeC6m6xoY19qMdqykusqJjz6sp8LSGcsw';
+
+                  try {
+                     const response = await fetch(url, {
+                        method: 'GET',
+                        headers: {
+                           'Authorization': `Bearer ${token}`,
+                           'Accept': 'application/json',
+                           'Content-Type': 'application/json'
+                        }
+                     });
+
+                     if (response.ok) {
+                        const data = await response.json();
+
+                        this.getDateApi = data;
+                        this.getIsAuthorized = data.isAuthorized;
+
+                        if (data.isAuthorized) {
+                           this.getSegmentId = data.userStats.segmentId
+                           this.getProductName = data.userStats.productName
+                           this.getDaysWithComfy = data.userStats.daysWithComfy
+                           this.getOrders = data.userStats.orders
+                           this.getBonuses = data.userStats.bonuses
+                           this.getReviews = data.userStats.reviews
+                           this.getAvgCheck = data.userStats.avgCheck
+
+                           this.isDataLoaded = true
+                        }
+                        console.log(data)
+
+                     } else {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                     }
+                  } catch (error) {
+                     console.log(error.message)
+                  }
+               },
+               startSnowEffect() {
+                  const container = this.$refs.snowContainer;
+                  const canvas = document.createElement('canvas');
+                  canvas.style.position = 'absolute';
+                  canvas.style.top = '0';
+                  canvas.style.left = '0';
+                  canvas.style.width = '100%';
+                  canvas.style.height = '100%';
+                  container.appendChild(canvas);
+
+                  // Инициализируем confetti для конкретного canvas
+                  const confettiInstance = confetti.create(canvas, {
+                     resize: true, // Автоматическое изменение размеров canvas
+                  });
+
+                  // Запуск анимации снега
+                  this.animateSnow(confettiInstance);
+               },
+               animateSnow(confettiInstance) {
+                  const randomInRange = (min, max) => Math.random() * (max - min) + min;
+
+                  let skew = 1; // Инициализация переменной skew
+
+                  const _this = this; // Сохраняем контекст Vue
+
+                  function frame() {
+                     const timeLeft = _this.animationEnd - Date.now();
+                     const ticks = Math.max(200, 500 * (timeLeft / _this.duration));
+
+                     skew = Math.max(0.8, skew - 0.001);  // Плавное снижение skew
+
+                     const starPath = confetti.shapeFromPath({ path: "M5 0 L6.18 3.09 L10 3.09 L6.91 5.91 L7.82 9.09 L5 7.27 L2.18 9.09 L3.09 5.91 L0 3.09 L3.82 3.09 Z" });
+
+                     // confettiInstance({
+                     //    particleCount: 1,
+                     //    startVelocity: 0,
+                     //    ticks: ticks,
+                     //    spread: 180,
+                     //    origin: {
+                     //       x: Math.random(),
+                     //       y: (Math.random() * skew) - 0.2,
+                     //    },
+                     //    colors: ['#ffffff'],
+                     //    shapes: [starPath],
+                     //    gravity: randomInRange(0.4, 0.6),
+                     //    scalar: randomInRange(0.4, 1),
+                     //    drift: randomInRange(-0.4, 0.4),
+                     //    scalar: 1,
+                     // });
+
+                     confettiInstance({
+                        particleCount: 4,
+                        startVelocity: 0,
+                        ticks: ticks,
+                        shapes: [starPath],
+                        origin: {
+                           x: Math.random(),
+                           y: (Math.random() * skew) - 0.2,
+                        },
+                        colors: ['#ffffff'], // Белые снежинки
+                        gravity: randomInRange(0.6, 0.8),
+                        scalar: randomInRange(0.4, 1),
+                        drift: randomInRange(-0.4, 0.4),
+                     });
+
+                     // Бесконечное падение
+                     requestAnimationFrame(frame);
+                  }
+
+                  frame();
+               },
+               // createSnowflake(src) {
+               //    const animShow = document.querySelector('.year-results2024-pusheweyk__bgrd-snow');
+               //    const img = new Image();
+               //    img.src = src;
+               //    img.className = 'results-year-snowflake';
+
+               //    const x = Math.random() * window.innerWidth;
+               //    const y = Math.random() * (window.innerHeight - 2500);
+
+               //    img.style.left = `${x}px`;
+               //    img.style.top = `${y}px`;
+               //    img.style.animationDuration = `${this.isMobile ? Math.random() * 9 + 10 : Math.random() * 6 + 7}s`;
+
+               //    animShow.appendChild(img);
+               // },
+               // generateSnowflakes() {
+               //    const animShow = document.querySelector('.year-results2024-pusheweyk__bgrd-snow');
+
+               //    const existingSnowflakes = document.querySelectorAll('.results-year-snowflake');
+               //    existingSnowflakes.forEach(snowflake => snowflake.remove());
+
+               //    const stitchCount = this.isMobile ? this.stitchCountMobile : this.stitchCountDesktop
+               //    for (let i = 0; i < stitchCount; i++) {
+               //       const randomSnowflake = this.snowflake[Math.floor(Math.random() * this.snowflake.length)];
+               //       this.createSnowflake(randomSnowflake);
+               //    }
+               // },
+               // handleResize() {
+               //    const snowflakes = document.querySelectorAll('.results-year-snowflake');
+
+               //    this.generateSnowflakes();
+
+               //    snowflakes.forEach((snowflake) => {
+               //       const x = Math.random() * window.innerWidth;
+
+               //       let y;
+               //       if (window.innerWidth <= 480) {
+               //          y = Math.random() * (window.innerHeight - 100);
+               //       }
+
+               //       snowflake.style.left = `${x}px`;
+               //       snowflake.style.top = `${y}px`;
+               //    });
+               // },
+               openModalLogin() {
+                  const element = document.getElementsByClassName('header-bottom-profile__link--login')[0];
+                  if (element) element.click();
+               }
+            }
+         });
+      });
+   </script>
+
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+$mq-mobile: 480px
+$mq-tablet: 768px
+$mq-lg-table: 1023px
+$mq-desktop: 1024px
+$maxWidthContainer: 1366
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+.category-cms-content.content
+   max-width: 100%
+.category-cms-template__content
+   padding-left: 0
+   padding-right: 0
+.breadcrumbs
+   display: none
+#cms-sale-visa-sense
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #43B02A
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      list-style-type: none
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 18)
+      font-weight: 900
+      text-align: left
+      color: #fff
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      color: #fff
+      &.color000
+         color: #000
+   a
+      font-size: 14px
+      font-weight: 400
+      text-align: left
+      display: block
+      color: #fff
+      text-decoration: underline
+      &.color000
+         color: #000
+      &.visa-sense__a--only-mob
+         display: none
+   ul
+      list-style-type: none
+      display: block
+      &.visa-sense__ul--only-mob
+         display: none
+      li
+         position: relative
+         font-size: 14px
+         color: #fff
+         &.color000
+            color: #000
+   i
+      position: relative
+      font-size: 14px
+      color: #000
+
+.cms-sale-visa-sense
+   &__container
+      max-width: 1366px
+      margin: 0 auto
+      padding: 3rem 1rem 0 1rem
+   &__grid
+      display: grid
+      grid-template-columns: 1fr 1fr
+      align-items: flex-end
+      grid-gap: 3rem
+   &__content-text
+      padding: 1rem 0
+      img
+         margin: 0 auto
+   &__link
+      padding: 4rem 0 0 0
+      display: none
+   &__qr
+      border-radius: 20px
+      background: #379424
+      padding: 2rem
+      overflow: hidden
+      display: grid
+      grid-template-columns: 1fr 141px
+      grid-gap: 1rem
+   &__p
+      padding: 1rem 0 2rem 0
+   &__ul
+      padding: 2rem 0 2rem 2rem
+      &.visa-sense__ul--only-desk
+         display: block
+      &.visa-sense__ul--only-mob
+         display: none
+      li
+         position: relative
+         padding: 0 0 0.3rem 1.5rem
+         &::before
+            content: ""
+            background: #E25C1D
+            width: 6px
+            height: 6px
+            border-radius: 50%
+            position: absolute
+            left: 0
+            top: 5px
+         &:last-child
+            padding-bottom: 0
+   &__i
+      border-radius: 18.959px
+      background: rgba(255, 255, 255, 0.30)
+      backdrop-filter: blur(1.791554570198059px)
+      padding: 1rem
+   &__credit-card
+      background: #fff
+      border-radius: 3rem 3rem 0 0
+      overflow: hidden
+      padding: 1.3rem 1.3rem 0 1.3rem
+   &__picture
+      picture
+         img
+            margin: 0 auto !important
+@media (max-width: $mq-mobile)
+@media (max-width: $mq-tablet)
+@media (max-width: $mq-lg-table)
+   .cms-sale-visa-sense
+      &__grid
+         grid-template-columns: 1fr
+         grid-gap: 1rem
+      &__qr
+         display: none
+      &__ul
+         &.visa-sense__ul--only-desk
+            display: none !important
+      &__link
+         display: block
+         padding: 1rem 0 0 0
+      &__credit-card
+         padding: 1.3rem
+         border-radius: 2rem
+         margin-bottom: 2rem
+      &__i
+         padding: 1rem 0 1rem 0
+   #cms-sale-visa-sense a.visa-sense__a--only-mob
+      display: block
+      color: #000
+      padding-bottom: 2rem
+@media (min-width: $mq-desktop)
