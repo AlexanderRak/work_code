@@ -1,0 +1,212 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-lenovo-legion-r24e-67ccgac4ua__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-lenovo-legion-r24e-67ccgac4ua
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 42, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 32, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 18, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+.lenovo__rkt
+   background: url("https://cdn.comfy.ua/media/x/img3/3346197/bg.png") no-repeat center top / cover
+
+//lenovo__logo
+
+.lenovo__logo
+   color: #fff
+   padding: 2em
+
+.lenovo__logo__flex
+   display: flex
+   justify-content: space-between
+
+.lenovo__logo__inline
+   display: flex
+   gap: 1em
+   max-height: 45px
+
+.lenovo__logo__txt
+   line-height: normal
+   font-size: 32px
+   font-weight: bold
+   align-self: flex-end
+
+.lenovo__logo__logo img
+   max-width: 100px !important
+
+.lenovo__logo__i
+   margin-right: -2em
+   img
+      max-width: 50px !important
+
+.lenovo__logo__img
+   padding: 2em 6em 0
+
+//func
+
+.func
+   color: #fff
+   padding: 2em
+
+.func__row
+   display: flex
+   gap: 4em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+   &:nth-of-type(1)
+      .func__cont
+         padding-top: 2em
+   &:nth-of-type(2)
+      flex-direction: row-reverse
+      align-items: flex-end
+      margin-top: -8%
+      .func__cont
+         padding-bottom: 2em
+
+//lenovo__game
+
+.lenovo__game
+   padding: 2em
+   color: #fff
+
+.lenovo__game__cont
+   h3
+      text-align: center !important
+
+.lenovo__game__img
+   padding: 2em 10em 0
+
+//lenovo__blue
+
+.lenovo__blue
+   padding: 1.5em
+   color: #fff
+   background-color: #4b66d3
+   p
+      text-align: center !important
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-lenovo-legion-r24e-67ccgac4ua
+   //    display: block
+
+   .lenovo__logo
+      padding: 1em
+      h2
+         text-align: center !important
+   .lenovo__logo__i
+      margin-right: -1em
+      img
+         max-width: 35px !important
+   .lenovo__logo__txt
+      font-size: 26px
+   .lenovo__logo__img
+      padding: 1em 1em 0
+
+   .func
+      padding: 1em
+      h3,p
+         text-align: center !important
+   .func__row
+      flex-direction: column-reverse !important
+      gap: 1em
+   .func__cont
+      padding: 0 !important
+   .func__row:nth-of-type(2)
+      margin-top: 2em
+
+   .lenovo__game
+      padding: 1em
+   .lenovo__game__cont p
+      text-align: center !important
+   .lenovo__game__img
+      padding: 1em 0 0
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-lenovo-legion-r24e-67ccgac4ua
+//       display: block
+
+@media (min-width: $bp-tablet) and (max-width: 865px)
+   .func__row:nth-of-type(2)
+      margin-top: 0
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   .func__row
+      gap: 2em
+
+   .lenovo__game__img
+      padding-right: 6em
+      padding-left: 6em
