@@ -1,0 +1,85 @@
+.rkt-cecotec-power-espresso-20-coldbrew-cctc-00268__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-cecotec-power-espresso-20-coldbrew-cctc-00268
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 0.5em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      font-size: 26px
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      font-size: 20px
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      font-size: 16px
+      font-weight: 400
+      text-align: left
+   li
+      font-size: 16px
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+      @media (max-width: 1023px)
+         font-size: calc(14px + 2 * (100vw - 320px) / 703)
+   i
+      line-height: 1.2
+      font-size: 16px
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+      @media (max-width: 1023px)
+         font-size: calc(14px + 2 * (100vw - 320px) / 703)
+
+.rkt__cont
+   padding: 1em
+   h2, p
+      text-align: center !important
+
+.rkt__list
+   list-style-type: decimal !important
