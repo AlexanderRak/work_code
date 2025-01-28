@@ -1,0 +1,119 @@
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$mq-mobile: 480px
+$mq-tablet: 768px
+$mq-lg-table: 1023px
+$mq-desktop: 1024px
+$maxWidthContainer: 1366
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#cmsbl-happy-filter
+   height: auto
+   background: #fff
+   max-width: 1366px
+   margin: 2rem 0rem
+   p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   p
+      font-size: 11px
+      color: #fff
+      font-weight: 700
+      text-align: center
+
+.cmsbl-happy-filter
+   &__container
+      background: linear-gradient(105deg, #18044C 10.68%, #3D0188 89.6%)
+      border-radius: 8px
+      height: 75px
+      position: relative
+      &::before
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img5/hf-cms_bgrd.svg)
+         background-repeat: no-repeat
+         background-size: cover
+         position: absolute
+         left: 0
+         top: 0
+         width: 100%
+         max-width: 883px
+         height: 100%
+         z-index: 1
+   &__leptop-desk
+      position: absolute
+      left: 8vw
+      top: 58%
+      z-index: 2
+      transform: translateY(-50%)
+   &__mob-left, &__mob-right
+      display: none
+   &__bgrd
+      display: flex
+      align-items: center
+      height: 100%
+   &__grid
+      display: grid
+      grid-template-columns: 1fr 150px
+      grid-gap: 25px
+      max-width: 545px
+      width: 100%
+      margin: 0 0 0 auto
+      padding: 0 25px
+      position: relative
+      z-index: 2
+      align-items: center
+   &__btn
+      @include adaptiv-value("font-size", 22, 20)
+      border-radius: 10px
+      background: linear-gradient(90deg, #01BAA8 0%, #6F42E1 100%)
+      font-weight: 700
+      text-align: center
+      color: #fff
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 14px
+      cursor: pointer
+      transition: .3s
+      height: 100%
+      &:hover
+         filter: drop-shadow(0 0 2px #01A293) drop-shadow(0 0 2px #5E2CDD)
+
+@media (min-width: $mq-desktop)
+@media (max-width: $mq-lg-table)
+   #cmsbl-happy-filter
+      margin: 2rem 1.2rem
+@media (max-width: $mq-tablet)
+   .cmsbl-happy-filter
+      &__leptop-desk
+         display: none
+      &__grid
+         padding: 10px    
+@media (max-width: $mq-mobile)
+   .cmsbl-happy-filter
+      &__container
+         height: 135px
+         &::before
+            background-image: url(https://cdn.comfy.ua/media/x/img5/hf-cms_bgrd_mob.svg)
+      &__grid
+         grid-template-columns: 1fr
+         grid-gap: 8px
+      &__bgrd
+         align-items: flex-end
+      &__btn
+         padding: 6px 14px
+      &__mob-left, &__mob-right
+         display: block
+         position: absolute
+         top: -20px
+      &__mob-left
+         left: 3rem
+      &__mob-right
+         right: 3rem

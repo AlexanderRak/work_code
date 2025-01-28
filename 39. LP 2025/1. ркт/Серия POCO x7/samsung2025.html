@@ -1,0 +1,118 @@
+<style>
+
+</style>
+<div id="samsung">
+   <div class="samsung__wrap">
+
+      <img src="https://cdn.comfy.ua/media/x/img5/poco_img1.png" alt="">
+
+      <div class="samsung__wrap__form">
+         <div class="form-corizoid" id="wrapper-form-corizoid">
+            <div id="form-submit-none">
+               <div class="txt1">Залиш свої контакти і ми тобі нагадаємо</div>
+               <form name="valid_form" method="post" id="valid_form">
+                  <div class="container-flex-form">
+                     <div class="row-flex-form">
+                        <div class="item_fr item_name"><input class="item-input-frm yourname_rw" name="yourname" id="yourname_rw" type="text" placeholder="Iм'я" /></div>
+                        <div class="item_fr item_phone"><input maxlength="12" minlength="10" class="item-input-frm" name="younember" id="number_rw" type="tel" placeholder="Телефон" /></div>
+                        <div class="item_fr item_email"><input class="item-input-frm" name="yourmail" id="email_rw" type="email" placeholder="Email" /></div>
+                        <div class="item_fr item_submit"><input name="Submit" value="Надіслати" class="submit-posgo item-input-frm item-input-frm__submit" type="submit" /></div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <div class="text-submit-block-cl" id="text-submit-block">
+               <p>Дякуємо! Ми отримали ваші дані. Чекайте повідомлення.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+<script type="text/javascript">// <![CDATA[
+   $(document).ready(function () {
+      $("fieldset input").click(function () {
+         $("fieldset label.error").remove()
+      });
+
+      $("#valid_form").validate({
+         rules: {
+            yourname: {
+               required: true
+            },
+            yourcity: {
+               required: true
+            },
+            yourmail: {
+               required: true,
+               email: true
+            },
+            younember: {
+               required: true,
+               number: true,
+               minlength: 10,
+               maxlength: 12
+            }
+         },
+         messages: {
+            yourname: {
+               required: "*Обов'язкове поле."
+            },
+            younember: {
+               required: "*Обов'язкове поле.",
+               number: "Введіть номер телефону.",
+               minlength: "У полі має бути щонайменше 10 символів",
+               maxlength: "У полі має бути максимум 12 символів"
+            },
+            yourmail: {
+               required: "*Обов'язкове поле.",
+               email: "*Обов'язкові символи @"
+            },
+            yourcity: {
+               required: "*Обов'язкове поле."
+            }
+         },
+         errorPlacement: function (error, element) {
+            if (element.attr("name") == "yourname") error.insertAfter($("input[name=yourname]"));
+            // if (element.attr("name") == "yourcity") error.insertAfter($("input[name=yourcity]"));
+            if (element.attr("name") == "younember") error.insertAfter($("input[name=younember]"));
+            if (element.attr("name") == "yourmail") error.insertAfter($("input[name=yourmail]"));
+         },
+         submitHandler: function (form) {
+            function sendAjaxForm(result_form, ajax_form) {
+               let people = {
+                  numbertel: '',
+                  email: '',
+                  // sity: '',
+                  yourname_rw: '',
+                  nameAction: ''
+               };
+               people.numbertel = $('#number_rw').val();
+               people.email = $('#email_rw').val();
+               // people.sity = $('#city_rw').val();
+               people.yourname_rw = $('#yourname_rw').val();
+               people.nameAction = "POCOx7";
+               $.ajax({
+                  url: "https://main.corezoid.comfy.ua/api/2/json/public/13319/e4b20cf0d45cf8057fc011ac20850ee1cc0b289f",
+                  headers: {
+                     'Content-Type': 'application/x-www-form-urlencoded'
+                  },
+                  type: "POST",
+                  dataType: "json",
+                  data: JSON.stringify(people),
+                  success: console.log('done')
+               });
+               var none_form = document.getElementById("form-submit-none").style.display = "none";
+               var block_text = document.getElementById("text-submit-block").style.display = "block ";
+            }
+            sendAjaxForm();
+         }
+      });
+   })
+
+   $(function () {
+      $("#number_rw").mask("380999999999");
+   });
+   // ]]>
+</script>

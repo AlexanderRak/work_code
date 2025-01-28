@@ -1,0 +1,172 @@
+<style>
+
+</style>
+<div id="samsung">
+   <div class="samsung__wrap">
+      <div class="samsung-img">
+         <div class="samsung-img__content">
+            <div class="samsung-img__logo">
+               <img src="https://cdn.comfy.ua/media/x/img5/samsung_unpacked_2025.svg" alt="">
+            </div>
+            <div class="samsung__wrap__h3">
+               <h3>22 січня 2025 року о 20:00<br>Дивись разом з COMFY</h3>
+            </div>
+            <div class="samsung__wrap__h2">
+               <h2>Не пропусти презентацію новинок Samsung</h2>
+            </div>
+            <div class="samsung__wrap__h2-link">
+               <a target="_blank" rel="nofollow" href="https://youtube.com/live/DhpSJdVf7Fc?feature=share">Дивитися</a>
+            </div>
+         </div>
+      </div>
+      <!-- <div class="samsung__img">
+         <img src="https://cdn.comfy.ua/media/x/img5/star_shadow.png" alt="">
+      </div>
+      <div class="samsung__content">
+         <div class="samsung__wrap__h2">
+            <h2>Не пропусти презентацію <span class="word-wrap">новинок від Samsung</span></h2>
+         </div>
+         <div class="samsung__wrap__h3">
+            <h3>17 січня 2024 року о 20:00</h3>
+         </div>
+         <div class="samsung__wrap__h2-link"><a target="_blank" rel="nofollow" href="https://www.youtube.com/watch?v=QEPDm-DpofU">Дивитися</a></div>
+      </div> -->
+      <div class="samsung__wrap__form">
+         <div class="form-corizoid" id="wrapper-form-corizoid">
+            <div id="form-submit-none">
+               <div class="txt1">Залиш свої контакти і ми тобі нагадаємо</div>
+               <form name="valid_form" method="post" id="valid_form">
+                  <div class="container-flex-form">
+                     <div class="row-flex-form">
+                        <div class="item_fr item_name"><input class="item-input-frm yourname_rw" name="yourname" id="yourname_rw" type="text" placeholder="Iм'я" /></div>
+                        <div class="item_fr item_phone"><input maxlength="12" minlength="10" class="item-input-frm" name="younember" id="number_rw" type="tel" placeholder="Телефон" /></div>
+                        <div class="item_fr item_email"><input class="item-input-frm" name="yourmail" id="email_rw" type="email" placeholder="Email" /></div>
+                        <div class="item_fr item_submit"><input name="Submit" value="Надіслати" class="submit-posgo item-input-frm item-input-frm__submit" type="submit" /></div>
+                     </div>
+                  </div>
+               </form>
+               <div class="txt2">А ще отримай додаткову вигоду 1 500₴ з передзамовленням новинки від Samsung</div>
+            </div>
+            <div class="text-submit-block-cl" id="text-submit-block">
+               <p>Дякуємо! Ми отримали ваші дані. Чекайте повідомлення.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+<script type="text/javascript">// <![CDATA[
+   $(document).ready(function () {
+      $("fieldset input").click(function () {
+         $("fieldset label.error").remove()
+      });
+
+      $("#valid_form").validate({
+         rules: {
+            yourname: {
+               required: true
+            },
+            yourcity: {
+               required: true
+            },
+            yourmail: {
+               required: true,
+               email: true
+            },
+            younember: {
+               required: true,
+               number: true,
+               minlength: 10,
+               maxlength: 12
+            }
+         },
+         messages: {
+            yourname: {
+               required: "*Обов'язкове поле."
+            },
+            younember: {
+               required: "*Обов'язкове поле.",
+               number: "Введіть номер телефону.",
+               minlength: "У полі має бути щонайменше 10 символів",
+               maxlength: "У полі має бути максимум 12 символів"
+            },
+            yourmail: {
+               required: "*Обов'язкове поле.",
+               email: "*Обов'язкові символи @"
+            },
+            yourcity: {
+               required: "*Обов'язкове поле."
+            }
+         },
+         errorPlacement: function (error, element) {
+            if (element.attr("name") == "yourname") error.insertAfter($("input[name=yourname]"));
+            // if (element.attr("name") == "yourcity") error.insertAfter($("input[name=yourcity]"));
+            if (element.attr("name") == "younember") error.insertAfter($("input[name=younember]"));
+            if (element.attr("name") == "yourmail") error.insertAfter($("input[name=yourmail]"));
+         },
+         submitHandler: function (form) {
+            async function sendAjaxForm() {
+               try {
+                  let people = {
+                     numbertel: $('#number_rw').val(),
+                     email: $('#email_rw').val(),
+                     yourname_rw: $('#yourname_rw').val(),
+                     nameAction: "Formtst"
+                  };
+
+                  // const response = await fetch("https://74oibfm0r9.apigw.corezoid.comfy.ua/landing", {
+                  //    method: "POST",
+                  //    headers: {
+                  //       "Content-Type": "application/json"
+                  //    },
+                  //    body: JSON.stringify(people)
+                  // });
+
+                  const response = await fetch("https://comfy.ua/api/corezoid/proxy/462/wr8MRS0gwAPAaSoVRbdEOq7op4Jmn57jHlu0V1xc1sOhj7EHdX", {
+                     method: "POST",
+                     headers: {
+                        "Content-Type": "application/json"
+                     },
+                     body: JSON.stringify({
+                      "ops": [
+                           {
+                              "type": "create",
+                              "obj": "task",
+                              "conv_id": 11691,
+                              "data": {
+                                 people
+                              }
+                           }
+                        ]
+                     })
+                  });
+
+                  if (!response.ok) {
+                     throw new Error(`Ошибка запроса: ${response.status}`);
+                  }
+
+                  const result = await response.json();
+                  console.log('Успешный ответ:', result);
+
+                  if(result == 1) alert(result);
+                  if(result == 2) alert(result);
+                  if(result == 3) alert(result);
+
+                  document.getElementById("form-submit-none").style.display = "none";
+                  document.getElementById("text-submit-block").style.display = "block";
+               } catch (error) {
+                  console.error('Произошла ошибка:', error);
+               }
+            }
+
+            sendAjaxForm();
+         }
+      });
+   })
+
+   $(function () {
+      $("#number_rw").mask("380999999999");
+   });
+   // ]]>
+</script>

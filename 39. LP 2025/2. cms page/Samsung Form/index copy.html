@@ -1,0 +1,563 @@
+<style>
+   @import url("https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap");
+
+   body {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto", sans-serif;
+   }
+
+   #samsung-one-day {
+      width: 100%;
+      height: auto;
+      position: relative;
+      overflow: hidden;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      display: block;
+      background: #F0F0F2;
+   }
+
+   #samsung-one-day img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0;
+   }
+
+   #samsung-one-day h2,
+   #samsung-one-day h3,
+   #samsung-one-day p {
+      display: block;
+      padding: 0;
+      margin: 0;
+      position: relative;
+   }
+
+   #samsung-one-day h2 {
+      font-size: 30px;
+      font-weight: bold;
+      color: #FF671F;
+      line-height: 1.3;
+      text-align: center;
+   }
+
+   #samsung-one-day h3 {
+      font-size: 20px;
+      font-weight: normal;
+      color: #000;
+      line-height: 1.3;
+      text-align: center;
+   }
+
+   #samsung-one-day h3 span {
+      font-size: 30px;
+      color: #FF671F;
+      display: inline-block;
+      font-weight: bold;
+   }
+
+   #samsung-one-day p {
+      font-size: 20px;
+      font-weight: 500;
+      color: #000;
+      line-height: 1;
+      text-align: center;
+      padding: 0;
+   }
+
+   #samsung-one-day p::first-letter {
+      padding-left: 0 !important;
+   }
+
+   .main-container.page {
+      padding-left: 0;
+      padding-right: 0;
+   }
+
+   .breadcrumbs {
+      display: none;
+   }
+
+   .active_block {
+      display: -webkit-box !important;
+      display: -webkit-flex !important;
+      display: -moz-box !important;
+      display: -ms-flexbox !important;
+      display: flex !important;
+   }
+
+   .not-active_block {
+      display: none !important;
+   }
+
+   .samsung-one-day__content {
+      background: #FFFFFF;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      border-radius: 8px;
+      padding: 30px 25px;
+      max-width: 885px;
+      margin: 0 auto;
+      margin-top: 0px;
+      position: relative;
+      height: 272px;
+   }
+
+   .samsung-one-day__content-text h3 {
+      padding: 12px 0 !important;
+   }
+
+   .samsung-one-day__content-form {
+      padding-top: 50px;
+   }
+
+   .samsung-one-day__wrap {
+      padding: 60px 12px;
+   }
+
+   /* form */
+   #wrapper-form-corizoid {
+      width: 100%;
+   }
+
+   #wrapper-form-corizoid form div.error,
+   #wrapper-form-corizoid form label.error {
+      color: #ff090b;
+      left: 0;
+      padding-left: 15px;
+      display: block;
+      position: absolute;
+      margin: 4px 4px 4px 0px;
+      bottom: -22px;
+   }
+
+   #form-submit-none {
+      display: block;
+   }
+
+   #text-submit-block {
+      display: none;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+      -moz-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -moz-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+   }
+
+   #text-submit-block img {
+      margin: 0;
+   }
+
+   .row-flex-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr 230px 1fr;
+      grid-gap: 20px;
+   }
+
+   .row-flex-form .item_fr {
+      display: block;
+      position: relative;
+   }
+
+   .row-flex-form .item_fr:last-child {
+      padding: 0 0 0 0;
+   }
+
+   .row-flex-form .item_fr .item-input-frm {
+      font-size: 16px;
+      margin: 0;
+      padding: 0 12px;
+      text-align: left;
+      line-height: 1;
+      height: 40px;
+      color: #000;
+      border: 1px solid #E5E5E5;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      width: 100%;
+   }
+
+   .row-flex-form .item_fr .item-input-frm:focus {
+      -webkit-box-shadow: inset 0px 0px 10px 0px #e5e5e5;
+      -moz-box-shadow: inset 0px 0px 10px 0px #e5e5e5;
+      box-shadow: inset 0px 0px 10px 0px #e5e5e5;
+   }
+
+   .row-flex-form .item_fr.item_select {
+      position: relative;
+   }
+
+   .row-flex-form .item_fr.item_select::before {
+      content: "";
+      background-image: url(https://cdn.comfy.ua/media/x/img2/samsung_dropdown.png);
+      background-repeat: no-repeat;
+      width: 13px;
+      height: 12px;
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+   }
+
+   .row-flex-form .item_fr.item_select select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      cursor: pointer;
+      background: #fff;
+   }
+
+   .item-input-frm::-webkit-input-placeholder {
+      color: #000;
+   }
+
+   .item-input-frm:-moz-placeholder {
+      color: #000;
+   }
+
+   .item-input-frm::-moz-placeholder {
+      color: #000;
+   }
+
+   .item-input-frm:-ms-input-placeholder {
+      color: #000;
+   }
+
+   .item-input-frm::-ms-input-placeholder {
+      color: #000;
+   }
+
+   .item-input-frm::placeholder {
+      color: #000;
+   }
+
+   .row-flex-form .item_fr .item-input-frm.item-input-frm__submit {
+      background: #43b02a;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      -moz-transition: 0.3s;
+      transition: 0.3s;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      font-weight: 500;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      border-radius: 8px;
+   }
+
+   .row-flex-form .item_fr .item-input-frm.item-input-frm__submit:hover {
+      cursor: pointer;
+   }
+
+   .text-submit-block-cl p {
+      font-size: 20px !important;
+      font-weight: bold !important;
+      padding-left: 12px !important;
+      text-align: left !important;
+   }
+
+   .item_fr_text-pos {
+      position: absolute;
+      top: -20px;
+      left: 0;
+      color: #616161;
+      font-weight: 300;
+      display: block;
+   }
+
+   .item_select select::-ms-expand {
+      display: none;
+   }
+
+   /* form END */
+   @media (max-width: 812px) {
+      .samsung-one-day__content {
+         height: auto;
+      }
+
+      .row-flex-form {
+         grid-template-columns: 1fr 1fr;
+      }
+   }
+
+   @media (max-width: 480px) {
+      .row-flex-form {
+         grid-template-columns: 1fr;
+         grid-gap: 0;
+      }
+
+      #samsung-one-day h3 {
+         line-height: 24px;
+      }
+
+      #samsung-one-day h3 span {
+         display: initial;
+      }
+
+      .samsung-one-day__content {
+         padding: 20px;
+         height: 539px;
+      }
+
+      .samsung-one-day__content-text h3 {
+         padding: 18px 0 !important;
+      }
+
+      #wrapper-form-corizoid form div.error,
+      #wrapper-form-corizoid form label.error {
+         padding-left: 0;
+      }
+
+      .row-flex-form .item_fr {
+         margin-bottom: 50px;
+      }
+
+      .row-flex-form .item_fr:last-child {
+         padding: 0 0 0 0;
+         margin: 0;
+      }
+
+      .row-flex-form .item_fr.item_select {
+         margin-bottom: 20px;
+      }
+
+      #text-submit-block {
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+         -webkit-flex-direction: column;
+         -moz-box-orient: vertical;
+         -moz-box-direction: normal;
+         -ms-flex-direction: column;
+         flex-direction: column;
+         -webkit-box-align: center;
+         -webkit-align-items: center;
+         -moz-box-align: center;
+         -ms-flex-align: center;
+         align-items: center;
+         padding-top: 50px;
+      }
+
+      .text-submit-block-cl p {
+         padding-left: 0 !important;
+         padding-top: 12px !important;
+         text-align: center !important;
+      }
+   }
+
+   @media (max-width: 320px) {
+      #samsung-one-day h3 span {
+         font-size: 23px;
+      }
+
+      #samsung-one-day h2 {
+         font-size: 23px;
+      }
+
+      #samsung-one-day p {
+         font-size: 16px;
+      }
+
+      .samsung-one-day__content {
+         height: 500px;
+      }
+
+      .text-submit-block-cl p {
+         font-size: 17px !important;
+      }
+   }
+
+   @media (max-width: 812px) and (orientation: landscape) {
+      .row-flex-form {
+         grid-gap: 50px 20px;
+      }
+
+      #wrapper-form-corizoid form div.error,
+      #wrapper-form-corizoid form label.error {
+         padding-left: 0;
+      }
+   }
+</style>
+<div id="samsung-one-day">
+   <div class="samsung-one-day__wrap">
+      <div class="samsung-one-day__img">
+         <picture>
+            <source srcset="https://cdn.comfy.ua/media/x/img5/samsung_galaxy_s25_banner_mob.png" media="(max-width: 480px)" />
+            <img src="https://cdn.comfy.ua/media/x/img5/samsung_galaxy_s25_banner.png" alt="MDN" />
+         </picture>
+      </div>
+      <div class="samsung-one-day__content">
+         <div class="samsung-one-day__content-text">
+            <h2>Тільки 1 день!</h2>
+            <h3>Додаткова <span>знижка 1 000 грн</span> до всіх вигод.</h3>
+            <p>Оформи передзамовлення зараз!</p>
+         </div>
+         <div class="samsung-one-day__content-form">
+            <div class="form-corizoid" id="wrapper-form-corizoid">
+               <div id="form-submit-none">
+                  <form name="valid_form" method="post" id="valid_form">
+                     <div class="container-flex-form">
+                        <div class="row-flex-form"><!--
+                           <div class="item_fr item_email"><input type="email" id="email_rw" name="yourmail" class="item-input-frm" placeholder="Email" value="" required /></div>
+                           --> <!--
+                           <div class="item_fr item_sity"><input type="text" id="city_rw" name="yourcity" class="item-input-frm" placeholder="Город" value="" required /></div>
+                           -->
+                           <div class="item_fr item_phone"><span class="item_fr_text-pos">Номер телефону*</span> <input placeholder="+38(___)___-__-__" class="item-input-frm" name="younember" id="number_rw" type="tel" /> <!--minlength="10" maxlength="12"--></div>
+                           <div class="item_fr item_name"><span class="item_fr_text-pos">Ім’я*</span> <input class="item-input-frm yourname_rw" name="yourname" id="yourname_rw" type="text" /></div>
+                           <div class="item_fr item_select"><span class="item_fr_text-pos">Модель</span> <select class="item-input-frm selectbl" name="cc_month_select" id="cc_month_select">
+                                 <option value="Galaxy_s25ultra_512gb">Galaxy S25 Ultra 12/512Gb</option>
+                                 <option value="Galaxy_s25_256gb">Galaxy S25 12/256Gb</option>
+                                 <option value="Galaxy_s25plus_512gb">Galaxy S25+ 12/512Gb</option>
+                                 <option value="Galaxy_s25ultra_1tb">Galaxy S25 Ultra 12/1Tb</option>
+                                 <option value="Galaxy_s25_512gb">Galaxy S25 12/512Gb</option>
+                                 <option value="Galaxy_s25ultra_256gb">Galaxy S25 Ultra 12/256Gb</option>
+                                 <option value="Galaxy_s25_128gb">Galaxy S25 12/128Gb</option>
+                                 <option value="Galaxy_s25plus_256gb">Galaxy S25+ 12/256Gb</option>
+                              </select></div>
+                           <div class="item_fr item_submit">
+                              <!-- <input type="submit" class="submit-posgo item-input-frm item-input-frm__submit" value="Оформити" name="Submit" /> -->
+                              <button class="submit-posgo item-input-frm item-input-frm__submit" type="submit">
+                                 <span>Оформити</span>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <style>
+                  .samsung-one-day__content-link {
+                     max-width: 840px;
+                     margin: 0 auto;
+                     padding-top: 24px;
+                  }
+
+                  .samsung-one-day__content-link a {
+                     font-size: 16px;
+                     color: #fff;
+                     text-decoration: underline;
+                     letter-spacing: .5px;
+                  }
+               </style>
+               <div class="text-submit-block-cl" id="text-submit-block"><img src="https://cdn.comfy.ua/media/x/img2/samsung_done.png" />
+                  <p>Ваше передзамовлення буде опрацьовано контакт-центром, чекайте на дзвінок</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--
+      <div class="samsung-one-day__content-link">
+         <a target="_blank" href="https://cdn.comfy.ua/media/x/pdf/pdf/pravilaaction.pdf">
+            Правила Акції
+         </a>
+      </div>
+      -->
+   </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+<script type="text/javascript">// <![CDATA[
+   $(document).ready(function () {
+
+      $("fieldset input").click(function () {
+         $("fieldset label.error").remove()
+      });
+
+      $("#valid_form").validate({
+         rules: {
+            yourname: {
+               required: true
+            },
+            // yourcity: {
+            //    required: true
+            // },
+            // yourmail: {
+            //    required: true,
+            //    email: true
+            // },
+            younember: {
+               required: true
+               // number: false
+               // minlength: 10,
+               // maxlength: 12
+            },
+            cc_month_select: {
+               required: true
+            }
+         },
+         messages: {
+            yourname: {
+               required: "Обов'язкове поле"
+            },
+            younember: {
+               required: "Обов'язкове поле"
+               // number: "Введите номер телефона."
+               // minlength: "В поле должно быть минимум 10 символов",
+               // maxlength: "В поле должно быть максимум 12 символов"
+            }
+            // yourmail: {
+            //    required: "Обезательное поле.",
+            //    email: "Обезательные символы @"
+            // },
+            // yourcity: {
+            //    required: "Обезательное поле."
+            // }
+         },
+         errorPlacement: function (error, element) {
+            if (element.attr("name") == "yourname") error.insertAfter($("input[name=yourname]"));
+            // if (element.attr("name") == "yourcity") error.insertAfter($("input[name=yourcity]"));
+            if (element.attr("name") == "younember") error.insertAfter($("input[name=younember]"));
+            // if (element.attr("name") == "yourmail") error.insertAfter($("input[name=yourmail]"));
+         },
+         submitHandler: function (form) {
+            function sendAjaxForm(result_form, ajax_form) {
+               var people = {
+                  number: '',
+                  // email: '',
+                  // sity: '',
+                  name: '',
+                  phone: '',
+                  name_action: 'samsung_unpack_s25'
+               };
+
+               people.number = $('#number_rw').val();
+               // people.email = $('#email_rw').val();
+               // people.sity = $('#city_rw').val();
+               people.name = $('#yourname_rw').val();
+               people.phone = $('#cc_month_select').val();
+
+               console.log(people);
+
+               $.ajax({
+                  url: "https://main.corezoid.comfy.ua/api/1/json/public/11228/5f8cf1c5f9650b8b508a4d2006c8bf136510675c",
+                  headers: {
+                     'Content-Type': 'application/x-www-form-urlencoded'
+                  },
+                  type: "POST", //метод отправки
+                  dataType: "json", //формат данных
+                  data: JSON.stringify(people), // Сеарилизуем объект
+                  success: console.log("dont people")
+               });
+               var none_form = document.getElementById("form-submit-none").style.display = "none";
+               var block_text = document.getElementById("text-submit-block").style.display = "flex";
+            }
+            sendAjaxForm();
+         }
+      });
+   })
+
+   $(function () {
+      $("#number_rw").mask("+38(999)999-99-99");
+   });
+</script>

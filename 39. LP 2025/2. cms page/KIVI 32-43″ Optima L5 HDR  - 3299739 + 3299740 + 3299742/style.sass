@@ -1,0 +1,304 @@
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$mq-mobile: 480px
+$mq-tablet: 768px
+$mq-lg-table: 1023px
+$mq-desktop: 1024px
+$maxWidthContainer: 1366
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-kivi-optimal5hdr
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   max-width: 1100px
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      list-style-type: disc
+      color: #fff
+      padding-left: 15px
+      li
+         padding-bottom: 10px
+         &:last-child
+            padding-bottom: 0
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 30, 23)
+      font-weight: 900
+      text-align: left
+      color: #fff
+      text-transform: uppercase
+   h3
+      @include adaptiv-value("font-size", 24, 20)
+      font-weight: 900
+      text-align: left
+      color: #000
+   p
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 400
+      text-align: left
+   i
+      font-size: 14px
+
+.kivi-optimal5hdr-smart,
+.kivi-optimal5hdr-whykivi,
+.kivi-optimal5hdr-funk,
+.kivi-optimal5hdr-comfort,
+.kivi-optimal5hdr-modes,
+.kivi-optimal5hdr-smarttv,
+.kivi-optimal5hdr-smarttv-teh,
+.kivi-optimal5hdr-service,
+.kivi-optimal5hdr-rc45
+   padding: 50px 15px
+
+.kivi-optimal5hdr-smart
+   background: linear-gradient(#060714, #252639)
+
+.kivi-optimal5hdr-whykivi
+   background: #46475C
+   overflow: hidden
+   border-radius: 15px 15px 0 0
+   margin-top: -15px
+   &__h2
+      padding-bottom: 20px
+   &__grid
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 30px
+   &__grid-item
+      display: grid
+      grid-template-columns: 50px 1fr
+      grid-gap: 15px
+   &__p
+      padding-left: 15px
+      position: relative
+      color: #fff
+      &::before
+         content: ""
+         left: 0
+         top: 0
+         width: 1px
+         height: 50px
+         background: #fff
+         position: absolute
+
+.kivi-optimal5hdr-funk
+   margin-top: -15px
+   background: #fff
+   border-radius: 15px 15px 0 0
+   &__grid
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 20px
+      &.grid-three
+         grid-template-columns: 1fr 1fr 1fr
+   &__grid-item
+      display: grid
+      grid-template-columns: 1fr
+      grid-gap: 15px
+      height: fit-content
+   &__content
+      padding: 15px
+   &__h3
+      position: relative
+      &::before
+         content: ""
+         left: -15px
+         top: 0
+         width: 1px
+         height: 50px
+         background: #000
+         position: absolute
+
+.kivi-optimal5hdr-comfort
+   position: relative
+   &::before
+      content: ""
+      background: #8C96BA
+      position: absolute
+      height: 100%
+      width: 30%
+      left: 0
+      top: 0
+   &::after
+      content: ""
+      background: #46475C
+      position: absolute
+      height: 100%
+      width: 70%
+      right: 0
+      top: 0
+   &__img, &__content
+      position: relative
+      z-index: 1
+      color: #fff
+   &__h2
+      padding: 15px 0
+
+.kivi-optimal5hdr-modes
+   &__h2
+      h2
+         color: #000 !important
+         text-align: center !important
+
+.kivi-optimal5hdr-smarttv
+   position: relative
+   &::before
+      content: ""
+      background: #C0C6DD
+      position: absolute
+      height: 70%
+      width: 100%
+      left: 0
+      top: 0
+   &::after
+      content: ""
+      background: #A6AECB
+      position: absolute
+      height: 30%
+      width: 100%
+      left: 0
+      bottom: 0
+   &__img, &__content
+      position: relative
+      z-index: 1
+      max-width: 750px
+      margin: 0 auto
+   &.smarttv2
+      &::before
+         background: #46475C
+      &::after
+         background: #36374B
+   &__content
+      padding-bottom: 20px
+      text-align: center
+      h2
+         text-align: center !important
+.kivi-optimal5hdr-smarttv-teh
+   &__grid
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-gap: 15px
+   &__img
+      padding-bottom: 15px
+      max-width: 250px
+
+.kivi-optimal5hdr-service
+   &__content
+      padding-left: 80px
+      max-width: 500px
+      margin: 0 auto
+      min-height: 80px
+   &__h2
+      position: relative
+      &::before
+         content: ""
+         left: -15px
+         top: 0
+         width: 1px
+         height: 50px
+         position: absolute
+         background: #000326
+      &.icon1
+         &::after
+            background-image: url(https://cdn.comfy.ua/media/x/img5/3299737/img24.png)
+      &.icon2
+         &::after
+            background-image: url(https://cdn.comfy.ua/media/x/img5/3299737/img25.png)
+      &.icon3
+         &::after
+            background-image: url(https://cdn.comfy.ua/media/x/img5/3299737/img26.png)
+      &.icon4
+         &::after
+            background-image: url(https://cdn.comfy.ua/media/x/img5/3299737/img27.png)
+      &::after
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img5/3299737/img22.png)
+         background-size: cover
+         width: 51px
+         height: 51px
+         position: absolute
+         left: -80px
+         top: 0
+      h2
+         color: #000326 !important
+   &__grid
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 15px
+      max-width: 800px
+      margin: 0 auto
+   &__grid-h2
+      padding-bottom: 25px
+   &__grid-clmn
+      display: grid
+      grid-template-columns: 1fr
+      grid-gap: 15px
+   &__grid-h2
+      h2
+         color: #000 !important
+   &__a, &__grid__a
+      padding: 15px 0
+      a
+         background: #000326
+         cursor: pointer
+         color: #fff
+         font-size: 16px
+         text-align: center
+         padding: 8px 16px
+         border-radius: 15px
+         overflow: hidden
+         display: table
+         margin: 0 auto
+         text-decoration: none
+   &__i
+      max-width: 580px
+      margin: 0 auto
+
+.kivi-optimal5hdr-rc45
+   background: #46475C
+   &__flex
+      display: flex
+      align-items: center
+      gap: 15px
+   &__item
+      flex: 1 1 0
+   &__h2
+      padding-bottom: 20px
+   &__i
+      padding-top: 20px
+      i
+         color: #C5CADC !important
+   &__img
+      max-width: 400px
+      margin: 0 auto
+@media (min-width: $mq-desktop)
+@media (max-width: $mq-lg-table)
+@media (max-width: $mq-tablet)
+   .kivi-optimal5hdr-funk__grid.grid-three
+      grid-template-columns: 1fr 1fr
+@media (max-width: $mq-mobile)
+   .kivi-optimal5hdr-whykivi__grid,
+   .kivi-optimal5hdr-funk__grid,
+   .kivi-optimal5hdr-funk__grid.grid-three,
+   .kivi-optimal5hdr-smarttv-teh__grid,
+   .kivi-optimal5hdr-service__grid
+      grid-template-columns: 1fr
+   .kivi-optimal5hdr-rc45__flex
+      flex-direction: column
