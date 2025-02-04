@@ -1,0 +1,194 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-bosch-smv4hmx65q__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-bosch-smv4hmx65q
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//bosch__colors
+
+.bosch__colors
+   position: relative
+
+.bosch__colors__txt
+   position: absolute
+   top: 50%
+   left: 50%
+   transform: translate(-50%, -50%)
+   color: #fff
+   font-size: 1.5rem
+   width: 100%
+   box-sizing: border-box
+   h2
+      color: #fff
+      text-align: center !important
+
+.bosch__colors__txt
+   padding: 0 1em
+
+#rkt-bosch-smv4hmx65q .bosch__colors__txt h2
+   @include adaptiv-value("font-size", 32, 20)
+
+//advantages
+
+.advantages
+   padding: 2em
+   display: flex
+   align-items: center
+   gap: 2em
+   position: relative
+
+.logo__i
+   position: absolute
+   width: max-content
+   right: 0
+   bottom: 0
+   img
+      margin: 0 0 0 auto !important
+      width: 70%
+
+.advantages__grid
+   display: grid
+   grid-template-columns: repeat(6, 1fr)
+   gap: 2px 2px
+   margin-top: 2em
+
+//comfort
+
+.comfort
+   padding: 2em
+   position: relative
+
+.comfort__row
+   display: flex
+   gap: 2em
+   .comfort__txt
+      padding: 1em 0 0
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+      align-items: flex-end
+      margin-top: -3em
+      .comfort__txt
+         padding: 0 0 1em
+
+.comfort__txt
+   flex-basis: 60%
+
+.comfort__img
+   flex-basis: 40%
+
+.bosch__note
+   font-size: 12px !important
+   margin-top: 1em !important
+
+.row__m__top
+   margin-top: 1em !important
+
+//*********************************media*************************
+
+@media (min-width: $bp-tablet) and (max-width: 1023.9px)
+   // #rkt-bosch-smv4hmx65q
+   //    display: block
+
+   .comfort__row:nth-of-type(even)
+      margin-top: 1em
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px), (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   .advantages
+      padding: 2em 1em
+      flex-direction: column
+   .advantages__txt h2
+      text-align: center !important
+
+   .comfort
+      padding: 2em 1em
+   .comfort__row
+      flex-direction: column !important
+      gap: 1em
+      h3,p
+         text-align: center !important
+   .comfort__row:nth-of-type(even)
+      margin-top: 2em
+      align-items: unset
+   .comfort__txt
+      padding: 0 !important
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-bosch-smv4hmx65q
+   //    display: block
+
+   .advantages__grid
+      grid-template-columns: repeat(4, 1fr)
