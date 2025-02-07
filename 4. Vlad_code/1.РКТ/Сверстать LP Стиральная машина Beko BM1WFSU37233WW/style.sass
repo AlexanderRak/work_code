@@ -1,0 +1,314 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-beko-bm1wfsu37233ww__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-beko-bm1wfsu37233ww
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   color: #474646
+
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: normal
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//beco__logo
+
+.beco__logo
+   position: relative
+   color: #fff
+   &::before
+      content: ""
+      display: block
+      position: absolute
+      right: 0
+      left: 0
+      bottom: 0
+      top: 20%
+      background: linear-gradient(0deg, #01426A 15.75%, rgba(1, 66, 106, 0.41) 53.66%, rgba(255, 255, 255, 0) 100%)
+
+.beco__logo__abs
+   position: absolute
+   right: 50%
+   transform: translateX(50%)
+   bottom: 3em
+   h3,h2
+      text-align: center !important
+      margin-bottom: 0 !important
+
+.beco__logo__i
+   margin-bottom: 1em
+   img
+      width: 25%
+
+//beco__anchors
+
+.beco__anchors
+   padding: 2em
+   box-sizing: border-box
+   margin: 0 auto
+   gap: 1em
+
+.beco__anchors__row
+   display: flex
+   gap: 1em
+   justify-content: center
+   &:first-of-type
+      margin-bottom: 1em
+   p
+      font-size: 14px !important
+      border-right: 1px solid #000
+      padding: 0 1em 0 0 !important
+      text-align: center !important
+      cursor: pointer
+      transition: color 0.3s ease
+      &:last-of-type
+         border: none
+      &:hover
+         color: orange
+
+//energy
+
+.beco__row,
+.beco__rev
+   display: flex
+   align-items: center
+   >div
+      box-sizing: border-box
+      flex-basis: 50%
+   [class$="__cont"]
+      padding: 2em
+
+.beco__rev
+   flex-direction: row-reverse
+
+.energy
+   background: #E5E3DD
+
+.energy__i
+   margin-bottom: 1rem
+
+//beco__size
+
+.beco__size
+   padding: 2em 0
+
+.beco__size__cont
+   display: flex
+   flex-direction: column
+   gap: 2em
+
+//ecran
+
+.ecran
+   background: #292929
+   padding: 4em
+   color: #fff
+   gap: 4em
+
+//calibration
+
+.calibration
+   padding: 3em 4em
+
+.calibration__wrap
+   background: rgba(1, 66, 106, 0.11)
+
+.calibration__img
+   margin: -5% 0
+   img
+      width: 80%
+      margin: 0 0 0 auto !important
+
+//motor
+
+.motor
+   background: #e6e3de
+   margin: 2em 0 0
+
+//addxtra
+
+.addxtra
+   padding: 2em 4em 0
+
+//coldwash
+
+.coldwash
+   position: relative
+   color: #fff
+
+.coldwash__abs
+   position: absolute
+   width: 38%
+   box-sizing: border-box
+   left: 2em
+   bottom: 50%
+   transform: translateY(50%)
+
+.b__rad
+   border-radius: 12px
+   overflow: hidden
+
+//aquawave
+
+.aquawave
+   background: #e6e3de
+   margin: 2em 0
+
+//warranty
+
+.warranty
+   background: #97BADE
+   color: #191519
+   padding: 4em
+
+//*********************************media*************************
+
+@media (min-width: $bp-tablet) and (max-width: 1023.9px)
+   // #rkt-beko-bm1wfsu37233ww
+   //    display: block
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px), (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   .beco__logo__img img
+      min-width: 150%
+      margin-left: -25% !important
+
+   .beco__anchors
+      padding: 1em
+   .beco__anchors__row
+      gap: 0.5em
+   .beco__anchors__row p
+      font-size: 12px !important
+      padding-right: 0.5em !important
+
+   .beco__row,
+   .beco__rev
+      flex-direction: column
+   [class$="__cont"]
+      padding: 1em !important
+      h3,p
+         text-align: center !important
+
+   .beco__size,
+   .addxtra
+      padding-top: 1em !important
+
+   .ecran
+      gap: 0
+      padding: 0
+
+   .calibration
+      padding: 0
+   .calibration__img
+      margin: unset
+      img
+         margin: 0 auto !important
+
+   .addxtra
+      padding: 2em 0 0
+
+   .coldwash
+      background: #01416d
+   .coldwash__abs
+      position: unset
+      transform: unset
+      padding: 1em
+      width: 100%
+      h3,p
+         text-align: center !important
+   .coldwash__img img
+      min-width: 160%
+      margin-left: -60% !important
+
+   .warranty
+      padding: 0
+   .warranty__img img
+      width: 70%
+
+   .motor
+      margin-top: 1em
+
+   .aquawave
+      margin: 1em 0
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-beko-bm1wfsu37233ww
+   //    display: block
+
+   .beco__anchors__row
+      flex-wrap: wrap
+
+   .beco__logo__abs
+      width: max-content
+      bottom: 1em
+   .beco__logo__img img
+      min-width: 200%
+      margin-left: -50% !important
