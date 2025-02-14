@@ -10,6 +10,7 @@
   max-width: 1023px;
   width: 100%;
   height: auto;
+  position: relative;
   overflow: hidden;
   background: #fff;
 }
@@ -17,6 +18,7 @@
   margin: 0;
   padding: 0;
   line-height: 1.2;
+  text-align: center;
 }
 #rkt-cecotec-cremmaet-compactccino-connected-cctc-01463 ul {
   margin: 0;
@@ -27,6 +29,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+  align-items: center;
 }
 #rkt-cecotec-cremmaet-compactccino-connected-cctc-01463 img {
   display: block;
@@ -40,8 +43,12 @@
 #rkt-cecotec-cremmaet-compactccino-connected-cctc-01463 h2 {
   font-size: 26px;
   font-weight: 900;
-  text-align: left;
   margin-bottom: 1rem;
+}
+@media (max-width: 1023px) {
+  #rkt-cecotec-cremmaet-compactccino-connected-cctc-01463 h2 {
+    font-size: calc(20px + 6 * (100vw - 320px) / 703);
+  }
 }
 #rkt-cecotec-cremmaet-compactccino-connected-cctc-01463 h3 {
   font-size: 20px;
@@ -49,10 +56,19 @@
   text-align: left;
   margin-bottom: 1rem;
 }
+@media (max-width: 1023px) {
+  #rkt-cecotec-cremmaet-compactccino-connected-cctc-01463 h3 {
+    font-size: calc(18px + 2 * (100vw - 320px) / 703);
+  }
+}
 #rkt-cecotec-cremmaet-compactccino-connected-cctc-01463 p {
   font-size: 16px;
   font-weight: 400;
-  text-align: left;
+}
+@media (max-width: 1023px) {
+  #rkt-cecotec-cremmaet-compactccino-connected-cctc-01463 p {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
 }
 #rkt-cecotec-cremmaet-compactccino-connected-cctc-01463 li {
   font-size: 16px;
@@ -78,13 +94,16 @@
   }
 }
 
-.rkt__cont {
-  padding: 1em;
-}
-.rkt__cont h2, .rkt__cont p {
-  text-align: center !important;
+.cecotec__block {
+  padding-top: 1em;
 }
 
-.rkt__list {
-  list-style-type: decimal !important;
+.cecotec__txt {
+  padding: 1em;
+}
+
+@media (min-width: 320px) and (max-width: 767.9px), (min-width: 1024px) and (max-width: 1201px) {
+  .cecotec__block {
+    padding-top: 0;
+  }
 }
