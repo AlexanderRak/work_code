@@ -1,3 +1,8 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
 .rkt-cecotec-rock-ngrill-blaze-neon-cctc-08054__container
    overflow: hidden
 
@@ -24,12 +29,14 @@ $maxWidthContainer: 1023
    max-width: 1023px
    width: 100%
    height: auto
+   position: relative
    overflow: hidden
    background: #fff
    h2, h3, h4, h5, h6, p
       margin: 0
       padding: 0
       line-height: 1.2
+      text-align: center
    ul
       margin: 0
       padding: 0
@@ -38,7 +45,8 @@ $maxWidthContainer: 1023
       margin: 0.5rem 0
       display: flex
       flex-direction: column
-      gap: 0.5em
+      gap: .5em
+      align-items: center
    img
       display: block
       max-width: 100%
@@ -47,39 +55,49 @@ $maxWidthContainer: 1023
       &:hover
          opacity: 1
    h2
-      font-size: 26px
+      @include adaptiv-value("font-size", 26, 20)
       font-weight: 900
-      text-align: left
+      // text-align: left
       margin-bottom: 1rem
    h3
-      font-size: 20px
+      @include adaptiv-value("font-size", 20, 18)
       font-weight: 900
       text-align: left
       margin-bottom: 1rem
    p
-      font-size: 16px
+      @include adaptiv-value("font-size", 16, 14)
       font-weight: 400
-      text-align: left
+      // text-align: left
    li
-      font-size: 16px
+      @include adaptiv-value("font-size", 16, 14)
       font-weight: 400
       text-align: left
       line-height: 1.2
-      @media (max-width: 1023px)
-         font-size: calc(14px + 2 * (100vw - 320px) / 703)
    i
       line-height: 1.2
-      font-size: 16px
+      @include adaptiv-value("font-size", 16, 14)
       margin-top: 0.5rem
       display: block
       font-style: italic
-      @media (max-width: 1023px)
-         font-size: calc(14px + 2 * (100vw - 320px) / 703)
 
-.rkt__cont
+//cecotec__block
+
+.cecotec__block
+   padding-top: 1em
+
+.cecotec__txt
    padding: 1em
-   h2, p
-      text-align: center !important
 
-.rkt__list
-   list-style-type: decimal !important
+//*********************************media*************************
+
+// @media (min-width: $bp-tablet) and (max-width: 1023px)
+//    #rkt-cecotec-rock-ngrill-blaze-neon-cctc-08054
+//       display: block
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px), (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   .cecotec__block
+      padding-top: 0
+
+// @media (min-width: $bp-mobile) and (max-width: 767.9px)
+//    #rkt-cecotec-rock-ngrill-blaze-neon-cctc-08054
+//       display: block
