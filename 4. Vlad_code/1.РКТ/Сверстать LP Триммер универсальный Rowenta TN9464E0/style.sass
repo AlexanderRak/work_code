@@ -1,0 +1,429 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-rowenta-tn9464e0__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-rowenta-tn9464e0
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      // gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      text-transform: uppercase
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h4
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 0
+      text-transform: none
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//rowenta__logo
+
+.rowenta__logo
+   background: #436579
+   color: #fff
+
+.rowenta__logo__row
+   display: flex
+   align-items: center
+
+.rowenta__logo__cont
+   padding-left: 2em
+
+#rkt-rowenta-tn9464e0 .rowenta__logo__cont
+   h2,h3,h4
+      text-align: center
+   h3
+      text-transform: uppercase
+      font-weight: normal
+   h4
+      color: #343F48
+      padding: 0.5em 1em
+      background: #FBFBFB
+      border-radius: 20px
+      width: max-content
+      margin: 0 auto
+
+.rowenta__logo__i
+   margin-bottom: 1em
+   img
+      width: 80%
+
+.rowenta__logo__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   gap: 1em
+   padding: 1em 2em
+   >div
+      background: #203038
+      border-radius: 12px
+      overflow: hidden
+
+#rkt-rowenta-tn9464e0 .rowenta__logo__grid
+   p
+      font-weight: bold
+      text-align: center
+
+.logo__line
+   height: 3px
+   background-image: linear-gradient(90deg, #18456f 60%, #fcfcfe, #18538b 90%)
+   margin: 10px auto
+   width: 80%
+
+.logo__grid__cont
+   padding: 1em
+
+.logo__grid__cont__row
+   display: flex
+   padding: 1em
+   gap: 1em
+   justify-content: center
+
+#rkt-rowenta-tn9464e0 .logo__grid__cont__img img
+   &:nth-of-type(1)
+      max-width: 150px
+   &:nth-of-type(2)
+      max-width: 230px
+      margin-top: 10px
+
+//blades
+
+.blades
+   background: linear-gradient(180deg, #3B4F60 0%, #333D4B 100%)
+   color: #fff
+   padding-bottom: 2em
+
+.blades__row
+   display: flex
+   align-items: center
+   gap: 2em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.blades__cont
+   display: flex
+   flex-direction: column
+   gap: 4em
+   padding-right: 2em
+
+#rkt-rowenta-tn9464e0 .blades__note p
+   font-size: 12px
+   opacity: 0.5
+   margin-top: 1em
+
+//trims
+
+.trims
+   background: #333D4B
+   color: #fff
+
+.trims__row
+   display: flex
+   align-items: center
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.trims__txt
+   padding-left: 2em
+
+//func
+
+.func
+   display: flex
+   align-items: center
+   padding: 4em 2em
+   gap: 2em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+#rkt-rowenta-tn9464e0 .func
+   h3
+      text-transform: uppercase
+   h3,p
+      text-align: center
+   p
+      color: #25323D
+   img
+      max-width: 220px
+
+.func__txt
+   margin-top: 1em
+
+//accessories
+
+.accessories
+   position: relative
+   color: #fff
+
+.accessories__abs
+   position: absolute
+   bottom: 50%
+   transform: translateY(50%)
+   width: 30%
+   left: 4em
+   box-sizing: border-box
+
+.accessories__i img
+   width: 50%
+   margin: 0 !important
+
+.accessories__cont
+   margin-top: 1em
+
+//battery
+
+.battery
+   padding: 2em
+
+.battery__row
+   display: flex
+   align-items: center
+   gap: 2em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+#rkt-rowenta-tn9464e0 .battery p
+   color: #25323D
+
+#rkt-rowenta-tn9464e0 .battery__note
+   font-size: 12px
+   margin-top: 1em
+
+//rowenta__detail
+
+.rowenta__detail
+   padding: 2em
+
+#rkt-rowenta-tn9464e0 .rowenta__detail
+   h2,p
+      text-align: center
+   p
+      color: #25323D
+
+.rowenta__detail__txt
+   max-width: 70%
+   margin: 2em auto 1em
+
+.rowenta__detail__i img
+   width: 25%
+
+//warranty
+
+.warranty
+   position: relative
+   background: #F3F3F3
+   color: #1D1D1B
+
+.warranty__row
+   display: flex
+   align-items: center
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.warranty__i
+   position: absolute
+   right: 50%
+   transform: translateX(50%)
+   top: 0
+   img
+      width: 500px
+
+.warranty__cont
+   padding: 0 15% 0 2em
+
+.warranty__title
+   line-height: normal
+   text-transform: uppercase
+   font-weight: bold
+   font-size: clamp(1.5rem, 10vw, 65px)
+   margin-top: 16px
+
+#rkt-rowenta-tn9464e0 .warranty__note
+   text-align: right
+   font-size: 12px
+
+#rkt-rowenta-tn9464e0 .rowenta__note
+   font-size: 10px
+   color: #6E6E6E
+   position: absolute
+   width: 40%
+   bottom: 2em
+   left: 2em
+
+//*********************************media*************************
+
+@media (min-width: $bp-tablet) and (max-width: 1023.9px)
+   // #rkt-rowenta-tn9464e0
+   //    display: block
+
+   .warranty__title
+      font-size: clamp(1.5rem, 6vw, 65px)
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px), (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   .rowenta__logo__grid
+      grid-template-columns: auto
+   .logo__grid__img img
+      width: 100%
+
+   .blades__row
+      flex-direction: column-reverse
+   #rkt-rowenta-tn9464e0 .blades
+      h2,p
+         text-align: center
+   .blades__cont
+      padding: 1em
+      gap: 2em
+
+   .accessories
+      background: #474f5a
+   .accessories__abs
+      position: unset
+      transform: unset
+      width: max-content
+      margin: 0 auto
+      padding: 1em
+   #rkt-rowenta-tn9464e0 .accessories__img img
+      min-width: 180%
+      margin-left: -80%
+
+   .warranty__row
+      flex-direction: column
+   #rkt-rowenta-tn9464e0 .rowenta__note
+      position: unset
+      width: 100%
+      margin-top: 1em
+   .warranty__i
+      position: unset
+      transform: unset
+      overflow: hidden
+      display: flex
+      justify-content: center
+      img
+         margin: -18% !important
+   .warranty__cont
+      padding: 1em
+   #rkt-rowenta-tn9464e0 .warranty
+      h2,p
+         text-align: center
+   .warranty__title
+      text-align: center
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-rowenta-tn9464e0
+   //    display: block
+
+   .rowenta__logo__row
+      flex-direction: column
+   .rowenta__logo__cont
+      padding: 1em 1em 0
+   .rowenta__logo__grid
+      padding: 1em
+
+   .trims__row
+      flex-direction: column
+   .trims__txt
+      padding: 1em
+   #rkt-rowenta-tn9464e0 .trims
+      h2,p
+         text-align: center
+
+   .func
+      padding: 2em 1em
+      flex-direction: column
+
+   .accessories__abs
+      width: 100%
+
+   .battery
+      padding: 2em 1em
+   .battery__row
+      flex-direction: column-reverse
+      gap: 1em
+   #rkt-rowenta-tn9464e0 .battery
+      h2,p
+         text-align: center
+
+   .rowenta__detail
+      padding: 1em
+   .rowenta__detail__txt
+      max-width: 100%
+   .rowenta__detail__i img
+      width: 40%
+   .warranty__title
+      font-size: clamp(3.5rem, 10vw, 65px)
+   .warranty__i img
+      margin: -37% !important
+      min-width: 170%
