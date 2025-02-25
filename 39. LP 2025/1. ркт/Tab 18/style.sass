@@ -1,0 +1,113 @@
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+$mq-mobile: 480px
+$mq-tablet: 768px
+$mq-lg-table: 1023px
+$mq-desktop: 1024px
+$maxWidthContainer: 1366
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-tab18
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 30, 20)
+      font-weight: 900
+      text-align: left
+      color: #000
+   h3
+      @include adaptiv-value("font-size", 25, 20)
+      font-weight: 900
+      text-align: left
+      color: #fff
+   p
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 400
+      text-align: left
+      color: #fff
+
+.rkt-tab18-header
+   &__bgrd
+      background-image: url(https://cdn.comfy.ua/media/x/img5/tab18_img1.png)
+      background-position: left
+      background-repeat: no-repeat
+      background-size: cover
+      width: 100%
+      height: 440px
+   &__content
+      padding: 15px
+      max-width: 300px
+   &__h2
+      padding-bottom: 20px
+   &__p p
+      color: #000 !important
+
+.rkt-tab18-grid
+   padding: 20px
+   background: #000
+   display: grid
+   grid-template-columns: 1fr
+   grid-gap: 20px
+
+.rkt-tab18-flex
+   display: flex
+   flex-direction: row
+   align-items: center
+   gap: 20px
+   &.flex-row
+      flex-direction: row-reverse
+   &__item
+      flex: 1 1 0
+   &__content
+      padding: 10px
+   &__h3
+      padding-bottom: 15px
+
+.rkt-tab18-footer
+   background: #000
+   padding: 15px
+   &__txt1
+      @include adaptiv-value("font-size", 30, 20)
+      font-weight: 900
+      text-align: center
+      color: #fff
+   &__txt2
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 400
+      text-align: center
+      color: #fff
+      padding: 15px 0
+@media (min-width: $mq-desktop)
+@media (max-width: $mq-lg-table)
+@media (max-width: $mq-tablet)
+@media (max-width: $mq-mobile)
+   .rkt-tab18-header__bgrd
+      background-position: top
+   .rkt-tab18-flex
+      flex-direction: column
+      &.flex-row
+         flex-direction: column
+   .rkt-tab18-flex__content
+      padding: 0

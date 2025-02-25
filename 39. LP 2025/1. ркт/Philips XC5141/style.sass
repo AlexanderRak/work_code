@@ -1,0 +1,166 @@
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$mq-mobile: 480px
+$mq-tablet: 768px
+$mq-lg-table: 1023px
+$mq-desktop: 1024px
+$maxWidthContainer: 1366
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-xc5141
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   max-width: 1100px
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 48, 23)
+      font-weight: 900
+      text-align: left
+   p
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 400
+      text-align: left
+      color: #000
+
+.rkt-philips-xc5141-banner
+   background-image: url(https://cdn.comfy.ua/media/x/img5/2977636/xc5141_img1.png)
+   background-position: top left
+   background-repeat: no-repeat
+   background-size: cover
+   height: 550px
+   padding: 15px
+   &__logo
+      max-width: 250px
+   &__h2
+      padding: 30px 0
+   &__content
+      max-width: 500px
+
+.rkt-philips-xc5141-description-text
+   padding: 30px 15px
+   &__h2 h2
+      text-align: center !important
+   &__img
+      padding-top: 30px
+   &__p
+      padding-top: 8px
+      p
+         text-align: center !important
+
+.rkt-philips-xc5141-fich
+   background-image: url(https://cdn.comfy.ua/media/x/img5/2977636/xc5141_img2.png)
+   background-position: top left
+   background-repeat: no-repeat
+   background-size: cover
+   min-height: 550px
+   padding: 30px 15px
+   position: relative
+   display: flex
+   align-items: stretch
+   &::before
+      content: ""
+      width: 40%
+      height: 100%
+      background: linear-gradient(90deg, rgba(0,0,0,0.5) 0.5, rgba(255,255,255,0) 1)
+      position: absolute
+      left: 0
+      top: 0
+   &__grid
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 10px
+      position: relative
+      z-index: 2
+   &__item
+      display: flex
+      align-items: center
+      gap: 10px
+   &__img
+      flex: 1 0 100px
+   &__p
+      flex: 1 1 100%
+      p
+         color: #fff !important
+
+.rkt-philips-xc5141-acc
+   background: linear-gradient(90deg, rgba(0,44,119,1) 0, rgba(0,78,170,1) 0.5, rgba(110,173,243,1) 1)
+   padding: 30px 15px
+   position: relative
+   &__img-pos
+      position: absolute
+      right: 0
+      top: 0
+   &__grid
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      align-items: baseline
+   &__item
+      display: flex
+      flex-direction: column
+      align-items: center
+      p
+         color: #fff !important
+         text-align: center !important
+         padding-bottom: 15px !important
+
+.rkt-philips-xc5141-content-flex-clmn
+   display: grid
+   grid-template-columns: 1fr
+   gap: 15px
+   padding: 15px
+.rkt-philips-xc5141-contentbl
+   &__flex
+      display: flex
+      align-items: center
+      &.flex-row
+         flex-direction: row-reverse
+   &__item
+      flex: 1 0 50%
+   &__text
+      padding: 15px
+
+.rkt-philips-xc5141-content-flex-row
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr
+   gap: 15px
+   padding: 15px
+   &__h3
+      padding: 15px 0
+
+@media (min-width: $mq-desktop)
+@media (max-width: $mq-lg-table)
+@media (max-width: $mq-tablet)
+@media (max-width: $mq-mobile)
+   .rkt-philips-xc5141-banner
+      background-position: 28% 100%
+   .rkt-philips-xc5141-fich__grid
+      grid-template-columns: 1fr
+      grid-gap: 20px
+   .rkt-philips-xc5141-contentbl__flex, .rkt-philips-xc5141-contentbl__flex.flex-row
+      flex-direction: column
+   .rkt-philips-xc5141-contentbl__text
+      padding: 15px 0
+   .rkt-philips-xc5141-content-flex-row
+      grid-template-columns: 1fr

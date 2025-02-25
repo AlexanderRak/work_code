@@ -1,0 +1,132 @@
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$mq-mobile: 480px
+$mq-tablet: 768px
+$mq-lg-table: 1023px
+$mq-desktop: 1024px
+$maxWidthContainer: 1366
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#loveis
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #43b02a
+   max-width: 1366px
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 34, 23)
+      color: #FF671F
+      text-align: center
+      font-weight: 700
+      text-transform: uppercase
+   p
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 400
+      text-align: left
+
+.text-green--span
+   color: #43b02a
+
+.loveis
+   &__container
+      position: relative
+      background-image: url(https://cdn.comfy.ua/media/x/img5/sale200grn/img5.png)
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+      height: 601px
+      padding: 0 50px
+   &__img-left
+      z-index: 2
+      flex: 1 1 0
+   &__content
+      max-width: 365px
+      margin: 0 0 0 auto
+      z-index: 2
+      flex: 1 1 0
+   &__h2
+      transform: rotate(-3.298deg)
+      padding: 13.048px
+      background: #fff
+      margin-bottom: 32px
+   &__grid
+      display: grid
+      grid-template-columns: 1fr
+      grid-gap: 30px
+   &__grid-item
+      background: #fff
+      display: flex
+      flex-direction: row
+      gap: 15px
+      align-items: center
+      border-radius: 10px
+      border: 1px solid #C2EEB8
+      background: #FFF
+      padding: 8px
+      box-shadow: 0px 10.705px 7.761px -9.367px rgba(0, 0, 0, 0.07), 0px 16.057px 10.972px -9.367px rgba(0, 0, 0, 0.19)
+   &__grid-item-img
+      flex: 1 0 55px
+
+.loveis__desk
+   display: block
+   width: 100%
+   display: flex
+   align-items: center
+   height: 100%
+.loveis__mobile
+   display: none
+
+.loveis-link
+   color: #fff
+   padding-left: 15px
+   padding-bottom: 15px
+   display: block
+   position: absolute
+   left: 0
+   bottom: 0
+   &:hover
+      text-decoration: underline
+
+@media (min-width: $mq-desktop)
+@media (max-width: $mq-lg-table)
+   .loveis__container
+      padding: 0 15px
+@media (max-width: $mq-tablet)
+@media (max-width: $mq-mobile)
+   .loveis__desk
+      display: none
+   .loveis__mobile
+      display: block
+   .loveis__container
+      background-image: none
+      height: auto
+   .loveis__container
+      padding: 15px
+   #loveis
+      background: #fff
+   .loveis-link
+      color: #000
+      position: relative
+      padding-top: 15px
+      padding-bottom: 0

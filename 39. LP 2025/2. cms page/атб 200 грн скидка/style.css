@@ -1,0 +1,200 @@
+.bc-description__content p:first-letter {
+  padding-left: 0 !important;
+}
+
+#loveis {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background: #43b02a;
+  max-width: 1366px;
+}
+#loveis h2, #loveis h3, #loveis h4, #loveis h5, #loveis h6, #loveis p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+#loveis ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#loveis img {
+  display: block;
+  max-width: 100%;
+  opacity: 1;
+}
+#loveis img:hover {
+  opacity: 1;
+}
+#loveis h2 {
+  font-size: 34px;
+  color: #FF671F;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (max-width: 1366px) {
+  #loveis h2 {
+    font-size: -webkit-calc(23px + 11 * (100vw - 320px) / 1046);
+    font-size: calc(23px + 11 * (100vw - 320px) / 1046);
+  }
+}
+#loveis p {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+}
+@media (max-width: 1366px) {
+  #loveis p {
+    font-size: -webkit-calc(16px + 2 * (100vw - 320px) / 1046);
+    font-size: calc(16px + 2 * (100vw - 320px) / 1046);
+  }
+}
+
+.text-green--span {
+  color: #43b02a;
+}
+
+.loveis__container {
+  position: relative;
+  background-image: url(https://cdn.comfy.ua/media/x/img5/sale200grn/img5.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  height: 601px;
+  padding: 0 50px;
+}
+.loveis__img-left {
+  z-index: 2;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+.loveis__content {
+  max-width: 365px;
+  margin: 0 0 0 auto;
+  z-index: 2;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+     -moz-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+.loveis__h2 {
+  -webkit-transform: rotate(-3.298deg);
+      -ms-transform: rotate(-3.298deg);
+       -o-transform: rotate(-3.298deg);
+          transform: rotate(-3.298deg);
+  padding: 13.048px;
+  background: #fff;
+  margin-bottom: 32px;
+}
+.loveis__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+}
+.loveis__grid-item {
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 15px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  border: 1px solid #C2EEB8;
+  background: #FFF;
+  padding: 8px;
+  -webkit-box-shadow: 0px 10.705px 7.761px -9.367px rgba(0, 0, 0, 0.07), 0px 16.057px 10.972px -9.367px rgba(0, 0, 0, 0.19);
+          box-shadow: 0px 10.705px 7.761px -9.367px rgba(0, 0, 0, 0.07), 0px 16.057px 10.972px -9.367px rgba(0, 0, 0, 0.19);
+}
+.loveis__grid-item-img {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 55px;
+     -moz-box-flex: 1;
+      -ms-flex: 1 0 55px;
+          flex: 1 0 55px;
+}
+
+.loveis__desk {
+  display: block;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.loveis__mobile {
+  display: none;
+}
+
+.loveis-link {
+  color: #fff;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.loveis-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1023px) {
+  .loveis__container {
+    padding: 0 15px;
+  }
+}
+@media (max-width: 480px) {
+  .loveis__desk {
+    display: none;
+  }
+  .loveis__mobile {
+    display: block;
+  }
+  .loveis__container {
+    background-image: none;
+    height: auto;
+  }
+  .loveis__container {
+    padding: 15px;
+  }
+  #loveis {
+    background: #fff;
+  }
+  .loveis-link {
+    color: #000;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 0;
+  }
+}

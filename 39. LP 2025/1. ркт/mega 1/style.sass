@@ -1,0 +1,174 @@
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$mq-mobile: 480px
+$mq-tablet: 768px
+$mq-lg-table: 1023px
+$mq-desktop: 1024px
+$maxWidthContainer: 1366
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-mega1
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   max-width: 1100px
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 25, 20)
+      font-weight: 900
+      text-align: left
+   p
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 400
+      text-align: left
+
+.rkt-mega-grid,
+.rkt-mega1-causes,
+.rkt-mega1-battery
+   margin: 35px 0
+
+.rkt-mega1-banner
+   position: relative
+   background-image: url(https://cdn.comfy.ua/media/x/img5/mega1/img1.png)
+   background-position: left
+   background-repeat: no-repeat
+   background-size: cover
+   height: 430px
+   padding: 15px
+   display: flex
+   align-items: center
+   &__content
+      max-width: 300px
+   &__txt
+      color: #000
+      text-align: left
+      &.banner__txt1
+         @include adaptiv-value("font-size", 30, 23)
+         text-transform: uppercase
+         font-weight: bold
+      &.banner__txt2
+         @include adaptiv-value("font-size", 20, 18)
+         text-transform: uppercase
+
+.rkt-mega-grid
+   display: grid
+   grid-template-columns: 1fr
+   grid-gap: 15px
+   padding: 15px
+
+.rkt-mega1-flex
+   display: flex
+   flex-direction: row
+   gap: 15px
+   &.flex-row
+      flex-direction: row-reverse
+      .rkt-mega1-flex__content
+         padding: 0 0 0 15px
+   &__item
+      flex: 1 1 0
+      display: flex
+      align-items: center
+   &__content
+      padding: 0 15px 0 0
+   &__h2
+      padding-bottom: 15px
+
+.rkt-mega1-causes
+   padding: 15px
+   &__h2
+      padding-bottom: 20px
+      text-align: center
+      h2
+         text-align: center !important
+   &__grid
+      display: grid
+      grid-template-columns: 1fr 1fr
+      max-width: 600px
+      margin: 0 auto
+   &__item
+      height: 250px
+      display: flex
+      align-items: center
+      &:nth-child(1), &:nth-child(3)
+         background: linear-gradient(#CBE0F9, #E0ECFC)
+      &:nth-child(2), &:nth-child(4)
+         background: linear-gradient(#E0ECFC, #CBE0F9)
+   &__content
+      padding: 15px 10px
+      width: 100%
+   &__txt1
+      @include adaptiv-value("font-size", 30, 18)
+      text-align: center
+      font-weight: bold
+      padding-bottom: 15px
+   &__txt2
+      font-size: 14px
+      text-align: center
+
+.rkt-mega1-display
+   &__table
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      padding-top: 20px
+      max-width: 600px
+      margin: 0 auto
+   &__table-item
+      padding: 8px
+      &:nth-child(1),&:nth-child(2),&:nth-child(3)
+         border-bottom: 1px solid #000
+      &:nth-child(1),&:nth-child(2),&:nth-child(4),&:nth-child(5)
+         border-right: 1px solid #000
+   &__txt1
+      font-size: 23px
+      font-weight: bold
+      text-align: center
+   &__txt2
+      font-size: 16px
+      text-align: center
+   &__img
+      max-width: 700px
+      margin: 0 auto
+      padding: 0 15px
+
+.rkt-mega1-battery
+   padding: 0 15px
+   display: flex
+   flex-direction: column
+   align-items: center
+   &__h2
+      padding-bottom: 15px
+@media (min-width: $mq-desktop)
+@media (max-width: $mq-lg-table)
+@media (max-width: $mq-tablet)
+@media (max-width: $mq-mobile)
+   .rkt-mega1-banner
+      background-position: 27% 100%
+      align-items: flex-start
+      height: 550px
+   .rkt-mega1-flex
+      flex-direction: column
+   .rkt-mega1-flex.flex-row
+      flex-direction: column
+   .rkt-mega1-flex.flex-row .rkt-mega1-flex__content
+      padding: 0

@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+body
+   margin: 0
+
+$mq-mobile: 480px
+$mq-tablet: 768px
+$mq-tablet-lg: 1023px
+$mq-desktop: 1024px
+$mq-tablet-min-w: 769px
+$maxWidthContainer: 1366
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#crediting-page
+   font-family: 'Roboto', sans-serif
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #f2f2f2
+   padding: 45px 15px
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      &:hover
+         opacity: 1
+   h1
+      @include adaptiv-value("font-size", 34, 20)
+      font-weight: 900
+      text-align: left
+      margin: 0
+      padding: 0
+   h2
+      @include adaptiv-value("font-size", 24, 20)
+      margin: 0
+      padding-top: 0
+      line-height: 1.1
+      text-align: inherit
+      font-weight: bold
+      color: #000
+   h3
+      @include adaptiv-value("font-size", 24, 20)
+      margin: 0
+      padding-top: 0
+      line-height: 1.1
+      text-align: inherit
+      font-weight: bold
+      color: #000
+   h4
+      @include adaptiv-value("font-size", 16, 14)
+      margin: 0
+      font-weight: 400
+      color: #000
+   p
+      font-size: 14px
+      margin-bottom: 0
+      color: #000
+      line-height: 1.6
+      &.color-green
+         font-size: 16px
+         color: #379424
+      &.color-orange
+         font-size: 16px
+         color: #FF671F
+.active
+   font-weight: bold
+.hidden
+   display: none
+.link-credit
+   color: #43b02a
+.modal
+   display: none
+   position: fixed
+   top: 0
+   left: 0
+   width: 100%
+   height: 100%
+   background: rgba(0, 0, 0, 0.8)
+   z-index: 1000
+   overflow-y: auto
+   &.open
+      display: block
+.modal-content
+   position: relative
+   background: #fff
+   width: 100%
+   min-height: 100vh
+.modal-btn
+   display: flex
+   justify-content: flex-end
+   border-bottom: 1px solid #E5E5E5
+   padding: 12px 8px
+.modal-close
+   display: inline-flex
+   align-items: center
+   background: #FF671F
+   color: #fff
+   font-size: 14px
+   cursor: pointer
+   padding: 11px 16px
+   border-radius: 8px
+   gap: 12px
+.modal-subtabs-list
+   list-style: none
+   padding: 0
+.modal-subtabs-item
+   padding: 14px 12px
+   cursor: pointer
+   border-bottom: 1px solid #ddd
+   position: relative
+   &.active
+      background: #F7FAFD
+      &::before
+         background-image: url(https://cdn.comfy.ua/media/x/img2/creditpage/str_active.svg)
+   &::before
+      content: ""
+      background-image: url(https://cdn.comfy.ua/media/x/img2/creditpage/str_not_active.svg)
+      background-size: cover
+      position: absolute
+      width: 12px
+      height: 12px
+      top: 50%
+      transform: translateY(-50%)
+      right: 15px
+.modal-subtabs-item:hover
+   background: #f5f5f5
+
+.crediting-page
+   &__container
+      max-width: 1316px
+      margin: 0 auto
+   &__header
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+   &__header-h1
+      padding-bottom: 8px
+   &__header-btn-video-consultation
+      border-radius: 8px
+      background: #43B02A
+      color: #fff
+      font-size: 16px
+      text-align: center
+      padding: 11px 16px
+      min-width: 320px
+      span
+         position: relative
+         display: inline-block
+         padding-left: 28px
+         &::before
+            content: ""
+            background-image: url(img/video-consultation.png)
+            background-repeat: no-repeat
+            width: 25px
+            height: 24px
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+   &__tabs-upper
+      max-width: 1050px
+      margin: 0 auto
+      padding-top: 40px
+   &__tabs-upper-list
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-gap: 12px
+      font-family: 'Roboto', sans-serif
+   &__tabs-upper-item
+      @include adaptiv-value("font-size", 18, 16)
+      border-radius: 36px
+      border: 1px solid #E5E5E5
+      background: #FFF
+      color: #000
+      text-align: center
+      height: 72px
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+      transition: .3s
+      &.active
+         background: #000
+         color: #fff
+      &:hover
+         border: 1px solid #000
+   &__subTabs
+      display: flex
+      flex-direction: column
+      grid-gap: 5px
+   &__subTabs-item
+      background: #fff
+      border-radius: 8px
+      cursor: pointer
+      border: 1px solid #fff
+      padding: 16px 48px
+      transition: .3s
+      position: relative
+      &.active
+         border: 1px solid #43B02A
+         &::before
+            background-image: url(https://cdn.comfy.ua/media/x/img2/creditpage/str_active.svg)
+      &::before
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img2/creditpage/str_not_active.svg)
+         background-size: cover
+         position: absolute
+         width: 12px
+         height: 12px
+         top: 50%
+         transform: translateY(-50%)
+         right: 15px
+   &__subTabs-logo
+      padding-top: 15px
+   &__advantages
+      border-radius: 8px
+      border: 1px solid #E5E5E5
+      background: #FFF
+      padding: 24px
+      margin-top: 32px
+      margin-bottom: 24px
+   &__advantages-h3
+      padding-bottom: 16px
+   &__advantages-list
+      display: grid
+      grid-gap: 16px
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      &.row5
+         grid-template-columns: repeat(5, 1fr)
+   &__advantages-h4
+      padding: 16px 0 4px 0
+   &__tabs-grid
+      display: grid
+      grid-template-columns: 390px 1fr
+      grid-gap: 16px
+   &__popular-questions
+      padding: 24px 0
+   &__popular-questions-h2
+      padding-bottom: 16px
+   &__popular-questions-list
+      display: grid
+      grid-template-columns: 1fr
+      grid-gap: 8px
+   &__popular-questions-list-item
+      border-radius: 8px
+      border: 1px solid #E5E5E5
+      background: #FFF
+      padding: 10px
+      cursor: pointer
+      h3
+         margin: 0
+         font-size: 18px
+   &__popular-questions-grid
+      display: grid
+      grid-template-columns: 1fr 25px
+      align-items: center
+   &__popular-questions-title
+      @include adaptiv-value("font-size", 20, 16)
+      font-style: normal
+      font-weight: 500
+      position: relative
+   &__popular-questions-toggle
+      width: 20px
+      height: 20px
+      position: relative
+      &::before
+         content: ""
+         background-image: url(https://cdn.comfy.ua/media/x/img2/delivery/str_active.svg)
+         width: 6px
+         height: 12px
+         position: absolute
+         left: 50%
+         top: 50%
+         transform: translateY(-50%) rotate(90deg)
+         transition: .3s
+      &.questions_active
+         &::before
+            transform: translateY(-50%) rotate(270deg)
+   &__popular-questions-content
+      padding: 10px 0
+      background-color: #fff
+   &__conditions-wrap
+      background: #FFFFFF
+      border-radius: 8px
+      padding: 15px
+   &__conditions-h3
+      text-align: left
+      padding-bottom: 25px
+   &__conditions-grid__wrap
+      position: relative
+   &__conditions-grid
+      display: grid
+      grid-template-columns: 305px 1fr
+      border-bottom: 1px solid #E5E5E5
+      align-items: center
+   &__conditions-item
+      position: relative
+      padding: 16px 0
+      display: flex
+      align-items: center
+      width: 100%
+      display: block
+   &__conditions-text-right
+      max-width: 500px
+   &__conditions-text-left
+      max-width: 270px
+      padding-right: 10px
+   &__form-privat-oche
+      max-width: 430px
+      form
+         display: grid
+         grid-template-columns: 1fr 125px
+         grid-gap: 8px
+         input[type=tel]
+            border: 1px solid #ccc
+            background: none
+            color: #000
+            font-size: 15px
+            font-weight: 400
+            padding: 10px
+            border-radius: 8px
+         input[type=submit]
+            background: #43B02A
+            border-radius: 8px
+            font-size: 15px
+            border: 0
+            color: #fff
+   &__bayprod-wrap
+      background: #FFFFFF
+      border-radius: 8px
+      padding: 15px
+      margin-top: 8px
+   &__bayprod-h3
+      text-align: left
+      padding-bottom: 25px
+   &__bayprod-grid__wrap
+      position: relative
+   &__bayprod-grid
+      display: grid
+      grid-template-columns: 305px 1fr
+      border-bottom: 1px solid #E5E5E5
+      &.borderBottom0
+         border-bottom: 0
+   &__bayprod-item
+      position: relative
+      padding: 25px 0 25px 25px
+      display: flex
+      align-items: flex-start
+      &.align-items__center
+         align-items: center
+   &__bayprod-num
+      color: #43B02A
+      font-size: 18px
+      font-weight: bold
+   &__banks-table-header
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 20px
+      border-radius: 8px
+      border: 1px solid #E5E5E5
+      background: #FFF
+      padding: 12px 24px
+   &__banks-table-cont
+      border-radius: 8px
+      overflow: auto
+      border: 1px solid #E5E5E5
+   &__banks-table
+      width: 1314px
+      border-collapse: collapse
+   &__banks-table tr
+      border-bottom: 1px solid #E5E5E5
+      display: grid
+      grid-template-columns: 275px 240px 160px 1fr 1fr 1fr
+      &:last-child
+         border-bottom: none
+      &.crediting-page__banks-tr-first
+         border-bottom: 1px solid #E5E5E5
+   &__banks-table th,
+   &__banks-table td
+      padding: 12px
+      text-align: left
+      background: #fff
+      font-size: 14px
+      position: relative
+      display: flex
+      align-items: center
+      &::before
+         content: ""
+         width: 1px
+         height: 60%
+         position: absolute
+         right: 0
+         top: 50%
+         transform: translateY(-50%)
+      &:first-child
+         background: #f9fcf8
+         padding: 12px 24px
+         flex-direction: column
+         align-items: flex-start
+         justify-content: center
+         font-size: 16px
+         gap: 8px
+         img
+            margin: 0
+      &:last-child
+         &::before
+            display: none
+      &:nth-child(3),
+      &:nth-child(5),
+      &:nth-child(6)
+         display: flex
+         align-items: center
+         justify-content: center
+      img
+         margin: 0 auto
+   &__banks-table th
+      background: #F7FAFD
+      font-weight: bold
+      &::before
+         background: #607D8B
+   &__banks-table td
+      &::before
+         background: #E5E5E5
+   &__dropdown
+      position: relative
+      display: inline-block
+   &__dropdown-btn
+      color: #616161
+      cursor: pointer
+      font-size: 14px
+      position: relative
+      padding-left: 25px
+      &::before
+         content: ""
+         background-image: url(img/sort.svg)
+         width: 20px
+         height: 20px
+         position: absolute
+         left: 0
+         top: 50%
+         transform: translateY(-50%)
+   &__dropdown-content
+      display: none
+      position: absolute
+      background: #fff
+      min-width: 320px
+      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.30)
+      z-index: 2
+      border-radius: 5px
+      right: 0
+   &__dropdown-content li
+      padding: 10px
+      cursor: pointer
+      list-style: none
+      color: #616161
+   &__dropdown-content li:hover,
+   &__dropdown-content li.active
+         color: #000
+   &__bayprod-grid3clmn
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-gap: 32px
+      padding-top: 25px
+   &__bayprod-grid3clmn-p
+      padding-top: 16px
+@media (min-width: $mq-desktop)
+@media (max-width: $mq-tablet-lg)
+@media (min-width: $mq-tablet-min-w)
+   .crediting-page
+      &__dropdown:hover
+         .crediting-page__dropdown-content
+            display: block
+@media (max-width: $mq-tablet)
+   .crediting-page
+      &__advantages-list
+         grid-template-columns: 1fr 1fr
+         &.row5
+            grid-template-columns: 1fr 1fr
+      &__header
+         flex-direction: column
+         align-items: flex-start
+      &__header-btn-video-consultation
+         margin-top: 16px
+      &__tabs-upper
+         padding-top: 16px
+         overflow: scroll
+      &__tabs-upper-list
+         width: 815px
+         grid-gap: 8px
+      &__tabs-upper-item
+         height: 44px
+      &__advantages
+         padding: 12px
+         margin-top: 24px
+      &__tabs-grid
+         grid-template-columns: 1fr
+      &__subTabs-logo
+         padding-top: 5px
+      &__subTabs-item
+         padding: 16px 12px
+         display: none
+         &.active
+            display: block
+            &::before
+               background-image: url(img/list.svg)
+               width: 20px
+               height: 20px  
+      &__dropdown-content
+         display: none
+         &.open
+            display: block
+      &__banks-table-header-mobile
+         text-align: center
+         margin-bottom: 20px
+         h2
+            margin: 0 0 10px
+      &__dropdown-btn
+         border-radius: 4px
+         border: 1px solid var(--midle-gray, #CCC)
+         background: var(--white, #FFF)
+         width: 36px
+         height: 36px
+         padding: 0
+         &::before
+            left: 50%
+            transform: translate(-50%, -50%)
+      &__banks-table-header
+         padding: 12px
+         gap: 14px
+      &__slide-content
+         background: #fff
+         border-radius: 5px
+         border: 1px solid #E5E5E5
+         overflow: hidden
+      &__swiper-wrap
+         position: relative
+      &__banks-table
+         width: auto
+         display: flex
+         flex-direction: column
+         tr
+            grid-template-columns: 1fr 1fr
+            &.crediting-page__banks-tr-mob
+               grid-template-columns: 1fr
+         th
+            &:first-child
+               background: #F7FAFD
+               padding: 8px 14px
+               display: flex
+               align-items: center
+         td
+            &:first-child
+               background: #fff
+   .swiper-slide
+      max-height: 295px
+      overflow: auto
+      tr td:first-child
+         font-weight: bold
+         font-size: 14px
+         padding: 8px 14px
+   .swiper-slide tr td:nth-child(2)
+      font-size: 14px
+   .swiper-button-custom-prev, .swiper-button-custom-next
+      position: absolute
+      top: 20px
+      width: 24px
+      height: 24px
+      background: #fff
+      fill: #FFF
+      filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.15))
+      transition: .3s
+      z-index: 5
+      border-radius: 50%
+      border: 0
+      &::before
+         content: ""
+         background-image: url(img/str_mob.svg)
+         width: 8px
+         height: 8px
+         position: absolute
+         left: 50%
+         top: 50%
+         transform: translate(-50%, -50%)
+      &.swiper-button-disabled
+         opacity: 0.6
+   .swiper-button-custom-prev
+      left: -12px
+   .swiper-button-custom-next
+      right: -12px
+      &::before
+         transform: translate(-50%, -50%) rotate(180deg)
+@media (max-width: $mq-mobile)
+   .crediting-page
+      &__advantages-list
+         grid-template-columns: 1fr
+         &.row5
+            grid-template-columns: 1fr

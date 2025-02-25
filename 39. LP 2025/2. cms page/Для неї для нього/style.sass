@@ -1,0 +1,162 @@
+$mq-mobile: 480px
+$mq-tablet: 768px
+$mq-lg-table: 1023px
+$mq-desktop: 1024px
+$maxWidthContainer: 1366
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#cms-for-them
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   max-width: 1366px
+   a
+      text-decoration: none
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      &:hover
+         opacity: 1
+
+.cms-for-them-banner
+   background: #43B02A
+
+.cms-for-them__p
+   p
+      color: #616161
+      padding: 15px 0 0 0
+
+.cms-for-them-grid
+   display: grid
+   grid-template-columns: 1fr 1fr
+   grid-gap: 15px
+   padding: 15px 0 15px 0
+   &__for-her, &__for-him
+      border-radius: 10px
+      overflow: hidden
+      position: relative
+      height: 128px
+      display: flex
+      align-items: center
+      justify-content: center
+      transition: .3s
+      &:hover
+         .cms-for-them-grid__text
+            text-shadow: 0 0 2px #fff
+   &__for-her
+      background: linear-gradient(90deg, #ED57B0 0%, #FC6767 100%)
+   &__for-him
+      background: linear-gradient(90deg, #FC6767 0%, #ED57B0 100%)
+   &__img1
+      position: absolute
+      left: 0
+      bottom: 0
+   &__img2
+      position: absolute
+      right: 3%
+      bottom: 0
+   &__img3
+      position: absolute
+      left: 0
+      bottom: 0
+   &__img4
+      position: absolute
+      right: 3%
+      bottom: 0
+   &__text
+      @include adaptiv-value("font-size", 34, 12)
+      font-weight: 900
+      text-align: center
+      color: #fff
+      position: relative
+
+.cms-for-them-price-grid
+   display: grid
+   grid-template-columns: 1fr 1fr 1fr 1fr
+   grid-gap: 8px
+   &__item
+      border-radius: 10px
+      border: 2px solid #ED57B0
+      overflow: hidden
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 128px
+      transition: .3s
+      &:hover
+         .cms-for-them-price-grid__text
+            color: #FF671F
+   &__text
+      @include adaptiv-value("font-size", 24, 12)
+      font-weight: 900
+      text-align: center
+      color: #F05B9F
+      position: relative
+
+@media (min-width: $mq-desktop)
+@media (max-width: $mq-lg-table)
+   .cms-for-them-price-grid
+      padding: 0 15px 15px 15px
+   .cms-for-them-grid
+      padding: 15px
+      &__for-her, &__for-him
+         height: 128px
+      &__img1
+         max-width: 190px
+      &__img2
+         max-width: 120px
+      &__img3
+         max-width: 165px
+      &__img4
+         max-width: 145px
+   .cms-for-them__p
+      p
+         padding: 15px 15px 0 15px
+@media (max-width: $mq-tablet)
+   .cms-for-them-grid
+      &__for-her, &__for-him
+         height: 90px
+      &__img1
+         max-width: 135px
+      &__img2
+         max-width: 90px
+      &__img3
+         max-width: 115px
+      &__img4
+         max-width: 100px
+   .cms-for-them-price-grid__item
+      height: 90px
+@media (max-width: $mq-mobile)
+   .cms-for-them-grid
+      padding: 8px 8px 16px 8px
+      grid-gap: 8px
+      &__for-her, &__for-him
+         height: 105px
+      &__img2
+         max-width: 100%
+         top: 50%
+         transform: translateY(-50%)
+      &__img4
+         right: inherit
+         left: 0
+         bottom: 0
+      &__img3
+         bottom: 0
+         right: 0
+         left: inherit
+   .cms-for-them-price-grid
+      grid-template-columns: 1fr 1fr
+      padding: 0 8px 8px 8px
+   .cms-for-them-banner
+      padding-top: 15px
+   .cms-for-them__p
+      p
+         padding: 8px 8px 0 8px
