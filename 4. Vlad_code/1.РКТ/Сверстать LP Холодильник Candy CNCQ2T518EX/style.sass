@@ -1,0 +1,189 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-candy-cncq2t518ex__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-candy-cncq2t518ex
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   color: #434349
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h4
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 900
+      text-align: center
+      margin-bottom: 0
+      text-transform: none
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//fresco
+
+.fresco
+   padding: 2em
+
+#rkt-candy-cncq2t518ex .fresco__title
+   h2,h3
+      text-align: center
+   h3
+      font-weight: normal
+
+.fresco__flex
+   display: flex
+   flex-wrap: wrap
+   >div
+      flex-basis: 25%
+      padding: 0.5em
+      box-sizing: border-box
+      &:nth-of-type(n+5)
+         flex-basis: 20%
+
+.ocean__sub
+   color: #8bc1c1
+   margin-bottom: 0.5em !important
+
+#rkt-candy-cncq2t518ex .fresco__txt
+   p
+      text-align: center
+
+.fresco__i
+   margin-bottom: .5em
+   img
+      width: 80px
+
+//func
+
+.func
+   padding: 2em
+
+.func__row
+   display: flex
+   align-items: center
+   gap: 2em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+
+.func__txt
+   h3
+      color: #8bc1c1
+
+//design
+
+.design
+   padding-top: 2em
+
+.design__title
+   padding: 0 1em
+
+#rkt-candy-cncq2t518ex .design__title
+   h2
+      text-align: center
+      color: #8bc1c1
+
+//*********************************media*************************
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-candy-cncq2t518ex
+//       display: block
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px), (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   #rkt-candy-cncq2t518ex
+      h2,h3,h4,p
+         text-align: center
+   .fresco
+      padding: 2em 1em
+   .fresco__flex
+      >div
+         flex-basis: 33.33% !important
+   .func
+      display: flex
+      flex-direction: column
+      gap: 2em
+      padding: 2em 1em
+   .func__row
+      flex-direction: column-reverse !important
+      gap: 1em
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-candy-cncq2t518ex
+   //    display: block
+
+   .fresco__flex
+      justify-content: center
+      >div
+         flex-basis: 50% !important
+   .fresco__i img
+      width: 60px
+   .design
+      padding-top: 0
