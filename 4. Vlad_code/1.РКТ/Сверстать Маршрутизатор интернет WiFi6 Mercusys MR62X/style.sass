@@ -1,0 +1,496 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-mercusys-mr62x__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-mercusys-mr62x
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #000
+   color: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h4
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 900
+      text-align: center
+      margin-bottom: 1rem
+      text-transform: none
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//fast
+
+.fast
+   position: relative
+
+.fast__abs
+   position: absolute
+   width: max-content
+   box-sizing: border-box
+   right: 50%
+   transform: translateX(50%)
+   bottom: 10%
+
+#rkt-mercusys-mr62x .fast__abs
+   h2,h3
+      text-align: center
+   h3
+      font-weight: normal
+
+.fast__red
+   text-align: center
+   line-height: normal
+   font-weight: bold
+   font-size: 22px
+   background: #e60012
+   padding: .1em .3em
+   border-radius: 0.3em
+   width: max-content
+   margin: 0 auto
+
+//wifi__grid
+
+.wifi__txt
+   position: absolute
+   z-index: 1
+
+.wifi__grid
+   padding: 2em
+   display: grid
+   grid-template-columns: repeat(6, 1fr)
+   grid-template-areas: "cal1 cal1 cal1 cal2 cal2 cal2" "cal1 cal1 cal1 cal3 cal3 cal3" "cal4 cal5 cal6 cal7 cal8 cal9"
+   gap: 10px 10px
+   >div
+      position: relative
+      &:nth-of-type(1)
+         grid-area: cal1
+         .wifi__txt
+            right: 50%
+            transform: translateX(50%)
+            bottom: 20%
+            max-width: max-content
+            width: 100%
+      &:nth-of-type(2)
+         grid-area: cal2
+         .wifi__txt
+            right: 50%
+            transform: translateX(50%)
+            top: .3em
+      &:nth-of-type(3)
+         grid-area: cal3
+         .wifi__txt
+            left: 0.5em
+            bottom: 50%
+            transform: translateY(50%)
+            width: 50%
+            p
+               text-align: left !important
+      &:nth-of-type(n+4)
+         background: #181414
+         overflow: hidden
+         border-radius: 8px
+         padding: 1em
+         .wifi__txt
+            position: unset
+      &:nth-of-type(4)
+         grid-area: cal4
+      &:nth-of-type(5)
+         grid-area: cal5
+      &:nth-of-type(6)
+         grid-area: cal6
+      &:nth-of-type(7)
+         grid-area: cal7
+      &:nth-of-type(8)
+         grid-area: cal8
+      &:nth-of-type(9)
+         grid-area: cal9
+
+#rkt-mercusys-mr62x .wifi__txt p
+   text-align: center
+
+.wifi__i
+   margin-bottom: 0.5em
+
+#rkt-mercusys-mr62x .wifi__i img
+   max-width: 60px
+   max-height: 60px
+
+//new__speed
+
+.new__speed__txt
+   padding: 2em
+   margin-bottom: -15%
+   position: relative
+
+#rkt-mercusys-mr62x .center__txt
+   h2,h3,p
+      text-align: center
+
+//more__speed
+
+.more__speed
+   padding: 2em
+
+.more__speed__lines
+   display: flex
+   flex-direction: column
+   gap: 1em
+   margin-top: 1em
+
+.more__speed__line
+   width: 85%
+   background: linear-gradient(to right, #000, #ed1707 40%, #fe4c07)
+   line-height: 1.2
+   padding: 0.5em 1em 0.5em 0.5em
+   box-sizing: border-box
+
+#rkt-mercusys-mr62x .more__speed__line p
+   text-align: right
+
+.more__speed__item
+   display: flex
+   align-items: center
+   gap: 1em
+   &:last-of-type
+      // opacity: .7
+      color: #a4a4a4
+      .more__speed__line
+         background: linear-gradient(to right, #000, #960606 40%, #9e0505)
+         width: 60%
+
+.more__speed__row
+   display: flex
+   justify-content: center
+   gap: 1em
+   margin-top: 2em
+   >div
+      display: flex
+      align-items: center
+      gap: .5em
+      &::before
+         content: ""
+         display: block
+         width: 28px
+         height: 45px
+         background: url("https://cdn.comfy.ua/media/x/img5/3285214/galka.jpg") no-repeat center / contain
+
+//faster__upd
+
+.faster__upd
+   padding: 2em
+
+.faster__upd__row
+   display: flex
+   justify-content: center
+   gap: 2em
+
+.faster__upd__cont
+   padding-top: 2em
+
+.faster__upd__flex
+   display: flex
+   gap: 2em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+//effective
+
+.effective
+   padding: 2em
+
+//easymesh
+
+.easymesh
+   padding: 2em
+
+.easymesh__flex
+   max-width: 60%
+   margin: 2em auto
+   display: flex
+   flex-wrap: wrap
+   justify-content: center
+   gap: 1em 0
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+      padding: 0 1em
+      display: flex
+      align-items: center
+      gap: 1em
+
+#rkt-mercusys-mr62x .easymesh__i img
+   max-width: 50px
+   max-height: 50px
+
+.faster__upd__txt
+   margin-top: 1em
+
+//coverage
+
+.coverage
+   padding: 2em
+
+.coverage__row
+   margin-top: 1em
+   display: flex
+   gap: 2em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.col__red
+   color: #ff1d1d
+
+.coverage__txt
+   margin-top: 1em
+
+//smartconnect
+
+.smartconnect
+   padding: 2em
+   .coverage__row
+      align-items: center
+
+//mercusys__app
+
+.mercusys__app
+   position: relative
+   color: #000
+
+.mercusys__app__grid
+   display: grid
+   grid-template-columns: repeat(4, auto)
+   width: max-content
+   gap: 0.5em
+   margin-top: 2em
+   >div
+      >img
+         max-height: 80px !important
+      a
+         display: block
+         >img
+            max-height: 36px
+      &:nth-of-type(2)
+         display: flex
+         flex-direction: column
+         justify-content: space-between
+         gap: 0.5em
+
+.mercusys__app__abs
+   position: absolute
+   width: 40%
+   box-sizing: border-box
+   bottom: 50%
+   transform: translateY(50%)
+   left: 2em
+
+//func
+
+.func
+   padding: 2em
+
+.func__flex
+   display: flex
+   flex-wrap: wrap
+   justify-content: center
+   >div
+      flex-basis: 33.33%
+      padding: 1em
+      box-sizing: border-box
+
+#rkt-mercusys-mr62x .func__i img
+   max-width: 60px
+
+.func__i
+   margin-bottom: 0.5em
+
+//*********************************media*************************
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-mercusys-mr62x
+//       display: block
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px), (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   .fast__abs
+      position: relative
+      transform: unset
+      margin: -10% auto 0
+      right: unset
+      padding: 0 1em
+      width: 100%
+   .fast__img
+      position: relative
+      &::after
+         content: ""
+         display: block
+         position: absolute
+         right: -10%
+         left: -10%
+         bottom: -5%
+         top: 70%
+         background-image: linear-gradient(90deg, #00000000, #000000)
+         filter: blur(12px)
+      img
+         min-width: 150%
+         margin-left: -25% !important
+
+   .wifi__grid
+      padding: 2em 1em
+      grid-template-columns: repeat(3, 1fr)
+      grid-template-areas: "cal1 cal1 cal1" "cal4 cal5 cal6" "cal2 cal2 cal2" "cal3 cal3 cal3" "cal7 cal8 cal9"
+
+   .new__speed__txt,
+   .more__speed,
+   .faster__upd,
+   .effective,
+   .easymesh,
+   .coverage,
+   .smartconnect,
+   .func
+      padding-right: 1em
+      padding-left: 1em
+   .more__speed__row
+      flex-wrap: wrap
+
+   .easymesh__flex
+      max-width: 90%
+
+   .mercusys__app
+      color: inherit
+   .mercusys__app__abs
+      position: unset
+      transform: unset
+      width: 100%
+      padding: 2em 1em 1em
+   .mercusys__app__grid
+      position: absolute
+      bottom: 55%
+   .mercusys__app__img img
+      min-width: 170%
+      margin-left: -70% !important
+
+   .func__flex > div
+      padding: 0.5em
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-mercusys-mr62x
+   //    display: block
+
+   .mercusys__app__grid
+      bottom: 48vw
+      width: 65vw
+      margin: 0
+   .mercusys__app__grid > div > img
+      max-height: 16vw !important
+   .mercusys__app__grid > div a > img
+      max-height: 7.5vw
+   .mercusys__app__grid > div:nth-of-type(2)
+      gap: 0
+
+   .func__flex > div
+      flex-basis: 50%
+
+   #rkt-mercusys-mr62x .wifi__i img
+      max-width: 40px
+      max-height: 40px
+   .wifi__grid > div:nth-of-type(3) .wifi__txt
+      width: 60%
+   .wifi__grid > div:nth-of-type(n+4)
+      padding: 0.5em
+   .wifi__grid > div:nth-of-type(2) .wifi__txt
+      min-width: 200px
+
+   .more__speed__row
+      justify-content: unset
+      gap: 0.5em
+
+   .faster__upd__row
+      flex-direction: column
+      gap: 0
+   .faster__upd__flex
+      flex-direction: column
+
+   .easymesh__flex
+      flex-direction: column
+      justify-content: unset
+
+   .coverage__row
+      flex-direction: column
+      gap: 1em
+      margin: 0
+   #rkt-mercusys-mr62x .smartconnect .coverage__txt
+      margin: 0
+      h2,p
+         text-align: center
+
+   #rkt-mercusys-mr62x .mercusys__app__txt
+      h2,p
+         text-align: center
