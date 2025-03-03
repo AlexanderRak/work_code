@@ -1,0 +1,340 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-philips-na150-00__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-na150-00
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      sup
+         font-size: 16px
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      sup
+         font-size: 10px
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//logo
+
+.logo
+   position: relative
+   color: #fff
+
+.logo__abs
+   position: absolute
+   bottom: 0
+   left: 0
+   width: 50%
+   padding: 2em
+   box-sizing: border-box
+
+.logo__title
+   font-size: clamp(20px, 3vw, 32px)
+   line-height: normal
+   font-weight: bold
+   text-shadow: 1.65px 3.3px 8.24px rgba(0, 0, 0, 0.2)
+   max-width: 70%
+   sup
+      font-size: 16px
+
+.logo__sub
+   line-height: normal
+   font-size: clamp(20px, 2vw, 32px)
+   text-shadow: 1.65px 3.3px 8.24px rgba(0, 0, 0, 0.2)
+
+.logo__small
+   font-size: clamp(14px, 1.5vw, 20px)
+   line-height: normal
+   margin-top: 6em
+   width: 55%
+   color: #507184
+   strong
+      display: block
+
+//advantages
+
+.advantages
+   color: #fff
+   background: linear-gradient(315deg, #6EADF3 0%, #004EAA 49.91%, #002C77 100%)
+   padding: 2em
+
+#rkt-philips-na150-00
+   .center__txt
+      h2,h3,p
+         text-align: center
+   .advantages__title
+      h2
+         font-weight: normal
+         b
+            display: block
+
+.advantages__row
+   display: flex
+   align-items: center
+
+.advantages__cal
+   flex-basis: 20%
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   height: 30vh
+
+.advantages__img
+   flex-basis: 60%
+
+//tech
+
+.tech
+   display: grid
+   grid-template-columns: 1fr 1.6fr 1fr
+   gap: 2em
+   padding: 2em
+   box-sizing: border-box
+
+.tech__img
+   display: flex
+   align-items: center
+
+.tech__cal
+   display: grid
+   grid-template-rows: repeat(4, 1fr)
+   gap: 1em
+   box-sizing: border-box
+
+.tech__item
+   display: flex
+   align-items: center
+   gap: 1em
+
+.tech__i
+   min-width: 50px
+   max-width: 50px
+
+.tech__txt
+   p
+      font-weight: bold !important
+
+//func
+
+.func__txt
+   padding: 2em 2em 1em
+   h2,p
+      text-align: center !important
+
+.func__pad
+   padding: 0 1em
+
+//philips__modes
+
+.philips__modes__wrap
+   background: linear-gradient(315deg, #6EADF3 0%, #004EAA 49.91%, #002C77 100%)
+   padding: 2em
+   color: #fff
+
+.philips__modes__row
+   display: flex
+   justify-content: center
+   gap: 1em
+   width: 70%
+   margin: 0 auto
+   align-items: flex-end
+   margin-bottom: .5em
+   >div
+      flex-basis: calc( 100% / 6 )
+   p
+      font-size: 14px !important
+
+.philips__modes__title
+   padding: 2em 2em 0
+
+//accessories
+
+.accessories
+   padding: 2em
+   h2
+      text-align: center !important
+
+.accessories__row
+   display: flex
+   gap: 2em
+   max-width: 500px
+   margin: 0 auto
+   margin-top: 2em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.accessories__txt
+   margin-top: 1rem
+   p
+      text-align: center !important
+   b
+      display: block
+
+//ovi
+
+.ovi
+   padding-top: 2em
+
+.ovi__note
+   padding: 0 2em 2em
+   p
+      font-size: 14px !important
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-na150-00
+   //    display: block
+
+   .logo__abs
+      position: unset
+      width: 100%
+      text-align: center
+      color: #000
+   .logo__title
+      text-shadow: none
+      max-width: 100%
+   .logo__small
+      width: 100%
+      margin-top: 1em
+
+   .tech
+      gap: 1em 1em
+      grid-template-columns: auto !important
+      grid-template-areas: "cal1" "cal3" "cal2" !important
+
+   .philips__modes__wrap
+      padding: 1em
+   .philips__modes__row
+      width: 100%
+      flex-wrap: wrap
+      align-items: center
+      gap: 10px 1%
+   .philips__modes__row > div
+      flex-basis: 32%
+
+@media (min-width: $bp-tablet) and (max-width: 1023.9px)
+   // #rkt-philips-na150-00
+   //    display: block
+
+   .advantages__cal
+      height: 38vh
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px), (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   .logo__abs
+      padding: 1em
+   .logo__title
+      font-size: clamp(20px, 2vw, 32px)
+
+   .tech
+      padding: 1em
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-areas: "cal1 cal3" "cal2 cal2"
+      >div
+         &:nth-of-type(1)
+            grid-area: cal1
+         &:nth-of-type(2)
+            grid-area: cal2
+         &:nth-of-type(3)
+            grid-area: cal3
+
+   .func__txt
+      padding: 1em
+
+   .philips__modes__title
+      padding: 1em 1em 0
+
+   .accessories
+      padding: 1em
+
+   .ovi
+      padding-top: 1em
+
+   .ovi__note
+      padding: 0 1em 1em
+
+   .advantages
+      padding: 2em 1em
+   .advantages__row
+      flex-direction: column
+      gap: 1em
+   .advantages__cal
+      gap: 1em
+   #rkt-philips-na150-00 .advantages__cal p
+      text-align: center
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   .philips__modes__row
+      gap: .5em
+      width: 75%
+   .philips__modes__row p
+      font-size: 10px !important
