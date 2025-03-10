@@ -1,0 +1,156 @@
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$mq-mobile: 480px
+$mq-tablet: 768px
+$mq-desktop: 1024px
+$mq-desktop-lg: 1366px
+$maxWidthContainer: 1366
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#cms-love-season
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   max-width: 1366px
+   background: #fff
+   margin: 0 auto 24px auto
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      &:hover
+         opacity: 1
+   p
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 400
+      text-align: right
+      color: #fff
+
+.cms-love-season
+   &__banner
+      background-image: url(https://cdn.comfy.ua/media/x/img5/loveseason/love_seasoc_banner.png)
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+      width: 100%
+      height: 434px
+   &__content
+      padding: 16px 0 0 0
+   &__list
+      display: grid
+      grid-template-columns: repeat(6, 1fr)
+      gap: 16px
+   &__list-item
+      text-decoration: none
+      position: relative
+      border-radius: 8px
+      display: block
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      padding: 0 16px 0 0
+      height: 80px
+      transition: background .3s ease-out
+      &.item-bgrd1
+         background: linear-gradient(90deg, #FFB5DA 0%, #FF3EA5 51.5%, #6420AA 100%)
+         &:hover
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), linear-gradient(90deg, #FFB5DA 0%, #FF3EA5 51.5%, #6420AA 100%)
+      &.item-bgrd2
+         background: linear-gradient(90deg, #FEA96A 0%, #B78E8B 51.5%, #204EAA 100%)
+         &:hover
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), linear-gradient(90deg, #FEA96A 0%, #B78E8B 51.5%, #204EAA 100%)
+      &.item-bgrd3
+         background: linear-gradient(90deg, #D63B85 0%, #C54059 51.5%, #C23723 100%)
+         &:hover
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), linear-gradient(90deg, #D63B85 0%, #C54059 51.5%, #C23723 100%)
+      &.item-bgrd4
+         background: linear-gradient(90deg, #B34FE2 0%, #7A83F9 51.5%, #3E3CEF 100%)
+         &:hover
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), linear-gradient(90deg, #B34FE2 0%, #7A83F9 51.5%, #3E3CEF 100%)
+      &.item-bgrd5
+         background: linear-gradient(90deg, #FFC83B 0%, #D2B6FB 51.5%, #9A4BD6 100%)
+         &:hover
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), linear-gradient(90deg, #FFC83B 0%, #D2B6FB 51.5%, #9A4BD6 100%)
+      &.item-bgrd6
+         background: linear-gradient(90deg, #FFACA7 0%, #D678AC 51.5%, #A92FA5 100%)
+         &:hover
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), linear-gradient(90deg, #FFACA7 0%, #D678AC 51.5%, #A92FA5 100%)
+   &__img
+      position: absolute
+      z-index: 1
+      &.img--pos1
+         left: 10px
+         bottom: 0
+      &.img--pos2
+         left: 5px
+         bottom: 0
+      &.img--pos3
+         left: 10px
+         bottom: 0
+      &.img--pos4
+         left: 8px
+         bottom: 15px
+      &.img--pos5
+         left: 0
+         bottom: 0
+      &.img--pos6
+         left: 25px
+         bottom: 0
+   &__p
+      position: relative
+      z-index: 2
+      &.text-maxw1
+         max-width: 120px
+      &.text-maxw2
+         max-width: 110px
+      &.text-maxw3
+         max-width: 120px
+      &.text-maxw6
+         max-width: 120px
+
+@media (max-width: $mq-desktop-lg)
+   .cms-love-season
+      &__content
+         padding: 16px 8px 0 8px
+@media (max-width: $mq-desktop)
+   .cms-love-season
+      &__list
+         grid-template-columns: repeat(3, 1fr)
+@media (max-width: $mq-tablet)
+   .cms-love-season
+      &__list
+         grid-template-columns: repeat(2, 1fr)
+@media (max-width: $mq-mobile)
+   .cms-love-season
+      &__list
+         gap: 8px
+      &__list-item
+         height: 90px
+         overflow: hidden
+      &__img
+         &.img--pos1
+            left: 5px
+            bottom: -8px
+         &.img--pos4
+            bottom: 0
+      &__p
+         &.text-maxw1, &.text-maxw2
+            max-width: 85px
+         &.text-maxw3
+            max-width: 100px
+         &.text-maxw6
+            max-width: 60px
+      &__banner
+         background-image: url(https://cdn.comfy.ua/media/x/img5/loveseason/love_seasoc_banner_mob.png)
+         height: 316px
