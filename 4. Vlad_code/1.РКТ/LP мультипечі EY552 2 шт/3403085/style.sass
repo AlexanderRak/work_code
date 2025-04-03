@@ -1,0 +1,657 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-tefal-ey552de0-easy-fry-silence__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-tefal-ey552de0-easy-fry-silence
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      text-transform: uppercase
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h4
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 0
+      text-transform: none
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//tefal__logo
+
+.tefal__logo__wrap
+   position: relative
+
+.tefal__logo__i
+   width: max(7vw, 60px)
+   padding: 0.5em 2em
+   box-sizing: content-box
+
+.tefal__logo__head
+   position: absolute
+   right: 50%
+   transform: translateX(50%)
+   top: 1em
+   text-align: center
+
+.tefal__logo__title
+   line-height: normal
+   font-size: clamp(32px, 3.5vw, 60px)
+
+.tefal__logo__sub
+   line-height: normal
+   text-transform: uppercase
+   font-weight: bold
+   font-size: clamp(16px, 1.3vw, 20px)
+   color: #fff
+   letter-spacing: -1px
+   background: radial-gradient(circle, rgba(96,96,96,1) 10%, rgba(0,212,255,0) 100%)
+   margin-top: 10px
+
+.tefal__logo__abs
+   position: absolute
+   bottom: 5em
+   left: 1.5em
+   border-radius: 20px
+   background: #fff
+   padding: 2em
+   width: 30%
+   box-sizing: border-box
+   display: flex
+   flex-direction: column
+   gap: 1em
+
+.tefal__logo__item
+   display: flex
+   align-items: center
+   gap: 1em
+   p
+      font-weight: bold !important
+   h3
+      margin: 0 !important
+   h3, h4
+      strong
+         color: #ED1C24
+   &:first-of-type
+      h3
+         &:first-of-type
+            border-bottom: 2px solid black
+
+.tefal__logo__abs__i
+   width: 75px
+   min-width: 75px
+
+.tefal__logo__note
+   position: absolute
+   left: 1em
+   bottom: 1em
+   max-width: max(40%, 320px)
+   p
+      font-size: 10px !important
+
+//func
+
+.func
+   position: relative
+   overflow: hidden
+
+.func__title
+   position: absolute
+   top: 1em
+   right: 50%
+   transform: translateX(50%)
+   width: max-content
+   h2
+      margin-bottom: 0 !important
+   &::before,
+   &::after
+      content: ""
+      display: block
+      width: 90px
+      height: 36px
+      background: url("https://cdn.comfy.ua/media/x/img5/3403085/skobka.svg") no-repeat center / contain
+   &::before
+      margin: 0 0 -2% -10%
+   &::after
+      transform: scale(-1, -1)
+      margin: -2% -10% 0 auto
+   h2
+      text-align: center !important
+
+.func__row
+   position: absolute
+   bottom: 0
+   padding: 2em
+   box-sizing: border-box
+   display: flex
+   gap: 2em
+   justify-content: center
+   width: 100%
+   max-width: max-content
+   right: 50%
+   transform: translateX(50%)
+   &::before
+      content: ""
+      display: block
+      width: 100%
+      height: 6px
+      background: #ED1C24
+      position: absolute
+      border-radius: 10px
+      z-index: 0
+      top: 34%
+      right: 50%
+      transform: translateX(50%)
+
+.func__item
+   position: relative
+
+.func__i
+   max-width: 100px
+   min-width: 80px
+   margin: 0 auto 10px
+
+.func__txt
+   p,h3
+      text-align: center !important
+
+//tefal__panel
+
+.tefal__panel
+   position: relative
+
+.tefal__panel__abs
+   position: absolute
+   border-radius: 20px
+   background: #fff
+   padding: 1em 2em
+   width: max-content
+   max-width: 45%
+   bottom: 50%
+   right: 50%
+   transform: translate(50%, 50%)
+   box-sizing: border-box
+
+//tefal__cup
+
+.tefal__cup
+   position: relative
+
+.tefal__cup__title
+   color: #fff
+   position: absolute
+   top: 6%
+   left: 6%
+   transform: rotate(358deg)
+   h2
+      font-size: clamp(20px, 2.7vw, 40px) !important
+      background: #e30214
+
+.tefal__cup__txt
+   position: absolute
+   top: 15.5%
+   left: 14%
+   transform: rotate(358deg)
+   p
+      font-weight: bold !important
+      font-size: clamp(14px, 2vw, 24px) !important
+
+.tefal__cup__abs
+   position: absolute
+   display: grid
+   grid-template-columns: repeat(2, 1fr)
+   width: 95%
+   height: 80%
+   top: 35%
+   left: 35%
+
+.tefal__cup__item
+   h2
+      margin: 0 !important
+   p
+      font-size: clamp(14px, 1.2vw, 20px) !important
+
+//gold
+
+.gold
+   display: flex
+   align-items: center
+   >div
+      box-sizing: border-box
+
+.gold__img
+   flex-basis: 55%
+
+.gold__txt
+   flex-basis: 45%
+   padding: 2em
+
+.tefal__note
+   font-size: 10px !important
+   margin-top: 5px !important
+
+//tefal__app
+
+.tefal__app
+   position: relative
+
+.tefal__app__abs
+   position: absolute
+   top: 2em
+   left: 2em
+   border-radius: 20px
+   background: #fff
+   padding: 1em 2em
+   max-width: 40%
+   width: max-content
+   box-sizing: border-box
+   h2
+      strong
+         color: #ED1C24
+
+//tefal__discount
+
+.tefal__discount
+   position: relative
+   h2
+      font-size: clamp(20px, 2.3vw, 40px) !important
+
+.tefal__discount__head
+   position: absolute
+   background: #79B027
+   display: flex
+   align-items: center
+   width: 100%
+   gap: 2em
+   padding: 0 2em
+   top: 4em
+   h2
+      margin-bottom: 0 !important
+      color: #fff
+
+.tefal__discount__i
+   width: 9vw
+   margin-top: -2%
+
+.tefal__discount__abs__txt
+   position: absolute
+   display: flex
+   flex-direction: column
+   justify-content: center
+   align-items: center
+   top: 40%
+   left: 30%
+   transform: rotate(-10deg)
+   h3
+      text-align: center !important
+      background: #fff
+      width: max-content
+      margin-bottom: 0.5em !important
+      text-transform: uppercase !important
+      padding: 0.4em !important
+   &::after
+      content: ""
+      display: block
+      width: 90px
+      height: 100px
+      background: url("https://cdn.comfy.ua/media/x/img5/3403085/arrow.svg") no-repeat center / contain
+      transform: rotate(10deg)
+      margin-top: 10px
+      margin-left: 20%
+
+.tefal__discount__black
+   display: flex
+   align-items: center
+   color: #fff
+   background: #000
+   position: absolute
+   bottom: 4em
+   padding: 1em 2em
+   gap: 2em
+
+.tefal__discount__black__i
+   width: 5vw
+   min-width: 50px
+
+.tefal__discount__black__txt
+   h2
+      margin-bottom: 0em !important
+   p
+      font-size: clamp(14px, 1.2vw, 20px) !important
+
+.tefal__discount__wrap
+   .tefal__note
+      position: absolute
+      bottom: 0
+      text-align: center !important
+      max-width: 100%
+      width: max-content
+      right: 50%
+      transform: translateX(50%)
+      color: #fff
+      bottom: 1em
+
+//warranty
+
+.warranty
+   position: relative
+
+.warranty__img
+   padding-left: 30%
+
+.warranty__row
+   display: flex
+   position: absolute
+   align-items: center
+   bottom: 50%
+   transform: translateY(50%)
+   max-width: 80%
+   padding-left: 2em
+
+.warranty__sub
+   font-size: clamp(14px, 1.2vw, 20px) !important
+
+.warranty__txt
+   flex-basis: 45%
+   h2
+      font-size: clamp(20px, 3vw, 60px) !important
+
+.warranty__i
+   flex-basis: 55%
+
+//*********************************media*************************
+
+@media (min-width: $bp-tablet) and (max-width: 1023.9px)
+   // #rkt-tefal-ey552de0-easy-fry-silence
+   //    display: block
+
+   .tefal__logo__abs
+      min-width: 280px
+      padding: 1em
+   .tefal__cup__title h2
+      font-size: clamp(20px, 4vw, 40px) !important
+   .tefal__cup__txt p
+      font-size: clamp(14px, 2.3vw, 24px) !important
+
+   .func__row::before
+      width: 95%
+      top: 39%
+   .func__i
+      max-width: 80px
+      min-width: 80px
+   .func__row
+      padding-bottom: 0
+
+   .tefal__discount h2
+      font-size: clamp(20px, 3.2vw, 40px) !important
+   .tefal__discount__i
+      width: 15vw
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   .tefal__logo__sub
+      max-width: 50%
+      margin: 5px auto 0
+   .tefal__logo__note
+      max-width: 60%
+
+   .func__title::before
+      margin: 0 0 -2% -5%
+   .func__title::after
+      margin: -2% -5% 0 auto
+   .func__i
+      max-width: 60px
+      min-width: 60px
+   .func__row::before
+      height: 3px
+      width: 90%
+      top: 35%
+   .func__row
+      display: grid
+      grid-template-columns: repeat(6, 1fr)
+      gap: 0 1em
+      padding-bottom: 0
+   .func__txt
+      p
+         font-size: 14px !important
+         margin: 0 -10px !important
+      h3
+         font-size: 16px !important
+
+   .tefal__panel__abs
+      max-width: 70%
+
+   .tefal__cup__title h2
+      font-size: clamp(20px, 2.45vw, 40px) !important
+   .tefal__cup__txt p
+      font-size: clamp(14px, 1.5vw, 24px) !important
+
+   .tefal__app__abs
+      left: 1em
+      max-width: 50%
+      padding: 1em
+
+   .tefal__discount__head
+      top: 2em
+   .tefal__discount__abs__txt
+      top: 27%
+      left: 24%
+   .tefal__discount__black
+      bottom: 2.5em
+   .tefal__discount__abs__txt::after
+      height: 80px
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px), (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   .tefal__logo__head
+      position: unset
+      transform: unset
+      margin-bottom: 1em
+   .tefal__logo__abs
+      width: 50%
+      margin: 0 auto
+      padding: 1em
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+   .tefal__logo__item
+      flex-direction: column
+      gap: 0.5em
+   .tefal__logo__txt
+      h3,h4,p
+         text-align: center !important
+
+   .gold
+      flex-direction: column-reverse
+   .gold__txt
+      padding: 1em
+      h2,p
+         text-align: center !important
+
+   .warranty
+      overflow: hidden
+   .warranty__row
+      position: unset
+      transform: unset
+      max-width: 100%
+      padding: 1em
+   .warranty__txt,
+   .warranty__i
+      flex-basis: 50%
+   .warranty__i
+      img
+         margin: -14% -15% !important
+         min-width: 130%
+   .warranty__img
+      padding: 0
+      img
+         min-width: 150%
+         margin-left: -50% !important
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-tefal-ey552de0-easy-fry-silence
+   //    display: block
+
+   .tefal__logo__abs
+      position: unset
+      transform: unset
+      width: 100%
+      padding: 1em
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+   .tefal__logo__item
+      flex-direction: column
+   .tefal__logo__i
+      padding-left: 1em
+   .tefal__logo__note
+      position: unset
+      padding: 1em
+   .tefal__logo__img
+      overflow: hidden
+      img
+         min-width: 150%
+         margin-left: -50% !important
+
+   .func
+      padding-top: 1em
+   .func__title
+      position: unset
+      transform: unset
+      width: 100%
+      padding: 0 1em 1em
+      box-sizing: border-box
+   .func__title::before,
+   .func__title::after
+      width: 70px
+      height: 28px
+   .func__title::before
+      margin: 0 0 -2% 1%
+   .func__title::after
+      margin: -2% 1% 0 auto
+   .func__row
+      position: unset
+      transform: unset
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: 0 1em
+      padding: 1em
+      padding-bottom: 0
+      max-width: 100%
+   .func__row::before
+      display: none
+   .func__i
+      max-width: 80px
+      min-width: 80px
+
+   .tefal__panel__abs,
+   .tefal__app__abs
+      padding: 1em
+      position: unset
+      transform: unset
+      max-width: 100%
+      h2,p
+         text-align: center !important
+   .tefal__cup__title h2,
+   .tefal__cup__item h2
+      font-size: 4vw !important
+   .tefal__cup__txt p
+      font-size: 2.5vw !important
+   .tefal__cup__item p
+      font-size: 3vw !important
+
+   .tefal__discount
+      padding-top: 14%
+   .tefal__discount__head
+      position: unset
+      flex-direction: column
+      align-items: flex-start
+      padding: 1em
+      gap: 1em
+   .tefal__discount__i
+      width: 30vw
+      margin-top: -14%
+   .tefal__discount__wrap .tefal__note
+      position: unset
+      color: #000
+      transform: unset
+      padding: 1em !important
+      width: unset
+   .tefal__discount__black
+      padding: 1em
+      position: unset
+   .tefal__discount__abs__txt
+      top: 40%
+      left: 5%
+   .tefal__discount__abs__txt::after
+      height: 70px
+      margin-top: -4px
+
+   .warranty__row
+      flex-direction: column-reverse
+      p,h2
+         text-align: center !important
