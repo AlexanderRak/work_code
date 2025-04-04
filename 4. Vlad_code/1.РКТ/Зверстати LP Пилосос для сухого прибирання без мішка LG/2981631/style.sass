@@ -1,0 +1,199 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-lg-vc5506nhtcr__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-lg-vc5506nhtcr
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//lg__vacuum
+
+.lg__vacuum
+   color: #fff
+   background: #000
+
+.lg__vacuum__wrap
+   position: relative
+
+.lg__vacuum__abs
+   position: absolute
+   max-width: 40%
+   box-sizing: border-box
+   left: 2em
+   bottom: 50%
+   transform: translateY(50%)
+
+.lg__vacuum__note
+   font-size: 12px !important
+   padding: 1em 2em !important
+
+//lg__filter
+
+.lg__filter
+   position: relative
+
+.lg__filter__abs
+   position: absolute
+   bottom: 50%
+   transform: translateY(50%)
+   left: 2em
+   max-width: 40%
+   box-sizing: border-box
+
+//lg__control
+
+.lg__control__txt
+   padding: 2em
+   h2,p
+      text-align: center !important
+
+//lg__telescop
+
+.lg__telescop
+   display: flex
+   align-items: center
+   background: #f7f7f7
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.lg__telescop__txt
+   padding: 2em
+
+//nozzles
+
+.nozzles
+   padding: 2em 2em 4em
+   h2,p
+      text-align: center !important
+
+.nozzles__grid
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   gap: 1em
+   margin-top: 2em
+
+.nozzles__sub
+   margin-top: 1em
+   p
+      font-size: 12px !important
+
+//lg__img
+
+.lg__img
+   padding: 1em
+
+//*********************************media*************************
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-lg-vc5506nhtcr
+//       display: block
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px), (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   #rkt-lg-vc5506nhtcr
+      h2,p
+         text-align: center
+   .lg__vacuum__abs,
+   .lg__filter__abs
+      position: unset
+      transform: unset
+      max-width: 100%
+      padding: 1em
+
+   .lg__control__txt
+      padding: 1em
+
+   .lg__telescop
+      flex-direction: column-reverse
+   .lg__telescop__txt
+      padding: 1em
+
+   .nozzles
+      padding: 1em
+   .nozzles__grid
+      margin-top: 1em
+      gap: 2em 0
+      grid-template-columns: repeat(2, 1fr)
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-lg-vc5506nhtcr
+   //    display: block
+
+   // .nozzles__grid
+   //    grid-template-columns: auto
+   //    gap: 2em
+
+   .lg__img
+      padding: 0
