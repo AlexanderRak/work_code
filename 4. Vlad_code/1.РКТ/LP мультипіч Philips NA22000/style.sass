@@ -1,0 +1,399 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-philips-na220-00__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-na220-00
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      color: #004EAA
+      sup
+         font-size: 16px
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      sup
+         font-size: 10px
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//logo
+
+.logo
+   position: relative
+   color: #fff
+
+.logo__abs
+   position: absolute
+   bottom: 0
+   left: 0
+   width: 50%
+   padding: 2em
+   box-sizing: border-box
+
+.logo__title
+   font-size: clamp(20px, 3vw, 32px)
+   line-height: normal
+   text-shadow: 1.65px 3.3px 8.24px rgba(0, 0, 0, 0.2)
+   max-width: 70%
+   sup
+      font-size: 16px
+
+.logo__sub
+   line-height: normal
+   font-size: clamp(20px, 2vw, 32px)
+   text-shadow: 1.65px 3.3px 8.24px rgba(0, 0, 0, 0.2)
+
+.logo__small
+   font-size: clamp(12px, 1vw, 14px)
+   line-height: normal
+   margin-top: 6em
+
+//tech
+
+.tech
+   display: grid
+   grid-template-columns: 1fr 1.6fr 1fr
+   // gap: 2em
+   padding: 2em
+   box-sizing: border-box
+   background: rgba(147, 194, 248, 0.2)
+
+.tech__img
+   display: flex
+   align-items: center
+
+.tech__cal
+   display: grid
+   grid-template-rows: repeat(4, 1fr)
+   gap: 1em
+   box-sizing: border-box
+   &:nth-of-type(1)
+      margin-right: -1em
+   &:last-of-type
+      margin-left: -1em
+
+.tech__item
+   display: flex
+   align-items: center
+   gap: 1em
+
+.tech__i
+   min-width: 50px
+   max-width: 50px
+
+.tech__txt
+   p
+      font-weight: bold !important
+
+//func
+
+.func__txt
+   padding: 2em 2em 1em
+   h2,p
+      text-align: center !important
+
+.func__pad
+   padding: 0 1em
+
+//recipes
+
+.recipes
+   padding-top: 2em
+   h2
+      text-align: center !important
+
+.recipes__wrap
+   padding: 2em
+   background: rgba(147, 194, 248, 0.2)
+
+.recipes__grid
+   display: grid
+   grid-template-columns: repeat(8, 1fr)
+   gap: 2em
+   grid-template-areas: "cal1 cal1 cal2 cal2 cal3 cal3 cal4 cal4" "cal5 cal5 cal6 cal6 cal7 cal7 cal8 cal8" ".cal9 cal9 cal10 cal10 cal11 cal11 ." ". . cal12 cal12 cal13 cal13 . ."
+   p
+      text-align: center !important
+      margin-top: 0.5em !important
+   >div
+      @for $i from 1 through 13
+         &:nth-of-type(#{$i})
+            grid-area: cal#{$i}
+
+//accessories
+
+.accessories
+   padding: 2em
+   h2
+      text-align: center !important
+
+.accessories__row
+   display: flex
+   gap: 2em
+   // max-width: 500px
+   margin: 0 auto
+   margin-top: 2em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.accessories__txt
+   margin-top: 1rem
+   p
+      text-align: center !important
+   b
+      display: block
+
+//philips__table
+
+.table__title
+   padding: 2em 2em 0
+   h2
+      text-align: center !important
+
+.philips__grid
+   display: grid
+   grid-template-columns: 100px 1.6fr 1.6fr 1.4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+   // grid-template-columns: 120px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+   grid-template-areas: "cal1 cal2 cal2 cal3 cal3 cal4 cal4 cal4 cal4 cal4 cal4 cal4 cal4 cal4 cal4 cal4"
+   gap: 2px 2px
+   &:nth-of-type(n+2)
+      margin-top: 2px
+   .cal1
+      grid-area: cal1
+   .cal2
+      grid-area: cal2
+   .cal3
+      grid-area: cal3
+   .cal4
+      grid-area: cal4
+   p
+      text-align: center !important
+      font-size: 10px !important
+      i
+         font-style: normal !important
+         font-size: 8px !important
+         margin: 0 !important
+         text-align: center !important
+   >div
+      box-sizing: border-box
+      padding: 1em 0.2em
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      @for $i from 1 through 16
+         &:nth-of-type(#{$i})
+            grid-area: cal#{$i}
+
+.dark__blue
+   background: #004EAA
+   color: #fff
+.blue
+   background: #0072DA
+   color: #fff
+.light__blue
+   background: #6EADF3
+   color: #fff
+
+.philips__grid__one >div
+   display: block
+   padding: 0
+
+#rkt-philips-na332-00 .table__title
+   font-size: 16px !important
+
+.philips__grid__two
+   grid-template-areas: "cal1 cal2 cal3 cal4 cal4 cal5 cal6 cal6 cal7 cal8 cal8 cal9 cal9 cal10 cal11 cal12"
+   >div
+     padding: 0
+     p
+      font-size: 10px !important
+
+.philips__grid__three
+   grid-template-areas: "cal1 cal2 cal2 cal3 cal3 cal3 cal3 cal3 cal3 cal3 cal3 cal3 cal3 cal3 cal3 cal3"
+
+#rkt-philips-na332-00 .table__sub p
+   font-size: 14px !important
+
+.table__i
+   margin-bottom: .5rem
+   img
+      width: 40px
+
+.philips__grid__four
+   grid-template-areas: "cal1 cal2 cal3 cal4 cal4 cal5 cal5 cal5 cal5 cal6 cal6 cal6 cal6 cal6 cal7 cal7"
+
+.philips__grid__five
+   grid-template-areas: "cal1 cal2 cal2 cal3 cal3 cal3 cal4 cal4 cal5 cal6 cal6 cal7 cal7 cal7 cal7 cal8"
+
+.philips__grid__six
+   grid-template-areas: "cal1 cal2 cal3 cal4 cal4 cal5 cal5 cal5 cal5 cal5 cal5 cal5 cal5 cal5 cal5 cal5"
+
+.philips__grid__seven
+   grid-template-areas: "cal1 cal2 cal2 cal2 cal2 cal3 cal3 cal3 cal3 cal3 cal3 cal3 cal3 cal3 cal4 cal4"
+
+.philips__grid__eight
+   grid-template-areas: "cal1 cal2 cal2 cal3 cal3 cal3 cal4 cal4 cal5 cal6 cal6 cal7 cal7 cal7 cal7 cal7"
+
+//ovi
+
+.ovi
+   padding-top: 2em
+
+.ovi__note
+   padding: 0 2em 2em
+   p
+      font-size: 14px !important
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-na220-00
+   //    display: block
+
+   .logo__abs
+      position: unset
+      width: 100%
+      text-align: center
+      color: #000
+   .logo__title
+      text-shadow: none
+      max-width: 100%
+   .logo__small
+      width: 100%
+      margin-top: 1em
+
+   .tech
+      gap: 1em 1em
+      grid-template-columns: auto !important
+      grid-template-areas: "cal1" "cal3" "cal2" !important
+
+   .logo__title br
+      display: none
+
+   .recipes__grid
+      display: flex
+      flex-wrap: wrap
+      gap: 20px 8%
+      justify-content: center
+      >div
+         flex-basis: 25%
+         max-width: 25%
+   .recipes__grid p
+      font-size: 3vw !important
+
+@media (min-width: $bp-tablet) and (max-width: 1023.9px)
+   // #rkt-philips-na220-00
+   //    display: block
+
+   .table__scroll
+      overflow-x: scroll
+   .table__wrap
+      min-width: 990px
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px), (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   .logo__abs
+      padding: 1em
+   .logo__title
+      font-size: clamp(20px, 2vw, 32px)
+
+   .tech
+      padding: 1em
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-areas: "cal1 cal3" "cal2 cal2"
+      >div
+         &:nth-of-type(1)
+            grid-area: cal1
+            margin: 0
+         &:nth-of-type(2)
+            grid-area: cal2
+         &:nth-of-type(3)
+            grid-area: cal3
+            margin: 0
+
+   .func__txt
+      padding: 1em
+
+   .accessories
+      padding: 1em
+
+   .ovi
+      padding-top: 1em
+
+   .ovi__note
+      padding: 0 1em 1em
+
+   .table__scroll
+      overflow-x: scroll
+   .table__wrap
+      min-width: 990px
+
+   .recipes__wrap
+      padding: 1em
