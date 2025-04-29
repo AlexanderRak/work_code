@@ -390,13 +390,13 @@
 
 </div>
 
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
 
-<div id="block-prod">
+<!-- <div id="block-prod">
    <div class="block-prod__h2">
       <h2>Просмотренные товары</h2>
    </div>
@@ -404,16 +404,14 @@
       {{block type="core/template" template="viewed_products/viewed_products.phtml"}}
    </div>
    <div class="your-class-arrow"></div>
-</div>
+</div> -->
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
    function funonload() {
       $(document).ready(function () {
          $('.viewed-products__list').slick({
             dots: false,
             arrows: true,
-            // prevArrow: $('.slick-prev'),
-            // nextArrow: $('.slick-next'),
             appendArrows: $('.your-class-arrow'),
             prevArrow: '<button id="prev" type="button" class="slick-prev"></button>',
             nextArrow: '<button id="next" type="button" class="slick-next"></button>',
@@ -458,7 +456,7 @@
       });
    }
    window.onload = funonload;
-</script>
+</script> -->
 
 <script>
    var acc = document.getElementsByClassName("accordionbl");
@@ -482,134 +480,133 @@
 <!-- <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script> -->
 
 <script>
+document.addEventListener("DOMContentLoaded", (event) => {
 
-   $(document).ready(function () {
-      $("fieldset input").click(function () {
-         $("fieldset label.error").remove()
-      });
+   $("fieldset input").click(function () {
+      $("fieldset label.error").remove()
+   });
 
-      $("#valid_form").validate({
-         rules: {
-            younember: {
-               required: true,
-               // number: true,
-               minlength: 10,
-               maxlength: 17
-            }
-         },
-         messages: {
-            younember: {
-               required: "Обязательное поле.",
-               // number: "Укажите номер.",
-               minlength: "В поле должно быть минимум 10 символов",
-               maxlength: "В поле должно быть максимум 17 символов"
-            }
-         },
-         errorPlacement: function (error, element) {
-            // if (element.attr("name") == "yourname") error.insertAfter($("input[name=yourname]"));
-            // if (element.attr("name") == "yourcity") error.insertAfter($("input[name=yourcity]"));
-            if (element.attr("name") == "younember") error.insertAfter($("input[name=younember]"));
-            // if (element.attr("name") == "yourmail") error.insertAfter($("input[name=yourmail]"));
-         },
-         submitHandler: function (form) {
-            function sendAjaxForm(result_form, ajax_form) {
-               let people = {
-                  numbertel: ''
-                  // email: '',
-                  // sity: '',
-                  // yourname_rw: '',
-                  // log_radio: ''
-               };
-               people.numbertel = $('#number_rw').val();
-               // people.email = $('#email_rw').val();
-               // people.sity = $('#city_rw').val();
-               // people.yourname_rw = $('#yourname_rw').val();
-               // people.log_radio = $('#log_radio_text').text();
-               $.ajax({
-                  url: "https://main.corezoid.comfy.ua/api/1/json/public/9266/cd236be14ac7e8255110259dd2e702cc9cc675bd",
-                  headers: {
-                     'Content-Type': 'application/x-www-form-urlencoded'
-                  },
-                  type: "POST", //метод отправки
-                  dataType: "json", //формат данных
-                  data: JSON.stringify(people), // Сеарилизуем объект
-                  success: console.log('done')
-               });
-               var none_form = document.getElementById("form-submit-none").style.display = "none";
-               var block_text = document.getElementById("text-submit-block").style.display = "block";
-               var none_form2 = document.getElementById("form-submit-none2").style.display = "none";
-               var block_text2 = document.getElementById("text-submit-block2").style.display = "block";
-            }
-            sendAjaxForm();
-            popupmodel();
+   $("#valid_form").validate({
+      rules: {
+         younember: {
+            required: true,
+            // number: true,
+            minlength: 10,
+            maxlength: 17
          }
-      });
-   })
+      },
+      messages: {
+         younember: {
+            required: "Обязательное поле.",
+            // number: "Укажите номер.",
+            minlength: "В поле должно быть минимум 10 символов",
+            maxlength: "В поле должно быть максимум 17 символов"
+         }
+      },
+      errorPlacement: function (error, element) {
+         // if (element.attr("name") == "yourname") error.insertAfter($("input[name=yourname]"));
+         // if (element.attr("name") == "yourcity") error.insertAfter($("input[name=yourcity]"));
+         if (element.attr("name") == "younember") error.insertAfter($("input[name=younember]"));
+         // if (element.attr("name") == "yourmail") error.insertAfter($("input[name=yourmail]"));
+      },
+      submitHandler: function (form) {
+         function sendAjaxForm(result_form, ajax_form) {
+            let people = {
+               numbertel: ''
+               // email: '',
+               // sity: '',
+               // yourname_rw: '',
+               // log_radio: ''
+            };
+            people.numbertel = $('#number_rw').val();
+            // people.email = $('#email_rw').val();
+            // people.sity = $('#city_rw').val();
+            // people.yourname_rw = $('#yourname_rw').val();
+            // people.log_radio = $('#log_radio_text').text();
+            $.ajax({
+               url: "https://main.corezoid.comfy.ua/api/1/json/public/9266/cd236be14ac7e8255110259dd2e702cc9cc675bd",
+               headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded'
+               },
+               type: "POST", //метод отправки
+               dataType: "json", //формат данных
+               data: JSON.stringify(people), // Сеарилизуем объект
+               success: console.log('done')
+            });
+            var none_form = document.getElementById("form-submit-none").style.display = "none";
+            var block_text = document.getElementById("text-submit-block").style.display = "block";
+            var none_form2 = document.getElementById("form-submit-none2").style.display = "none";
+            var block_text2 = document.getElementById("text-submit-block2").style.display = "block";
+         }
+         sendAjaxForm();
+         popupmodel();
+      }
+   });
 
    $(function () {
       $("#number_rw").mask("+38(999)999-99-99");
    });
 
+});
 </script>
 
 <script>
+document.addEventListener("DOMContentLoaded", (event) => {
 
-   $(document).ready(function () {
-      $("fieldset input").click(function () {
-         $("fieldset label.error").remove()
-      });
+   $("fieldset input").click(function () {
+      $("fieldset label.error").remove()
+   });
 
-      $("#valid_form2").validate({
-         rules: {
-            younember2: {
-               required: true,
-               // number: true,
-               minlength: 10,
-               maxlength: 17
-            }
-         },
-         messages: {
-            younember2: {
-               required: "Обезательное поле.",
-               // number: "Укажите номер.",
-               minlength: "В поле должно быть минимум 10 символов",
-               maxlength: "В поле должно быть максимум 17 символов"
-            }
-         },
-         errorPlacement: function (error, element) {
-            if (element.attr("name") == "younember2") error.insertAfter($("input[name=younember2]"));
-         },
-         submitHandler: function (form) {
-            function sendAjaxForm(result_form, ajax_form) {
-               let people = {
-                  numbertel: ''
-               };
-               people.numbertel = $('#number_rw2').val();
-               $.ajax({
-                  url: "https://main.corezoid.comfy.ua/api/1/json/public/9266/cd236be14ac7e8255110259dd2e702cc9cc675bd",
-                  headers: {
-                     'Content-Type': 'application/x-www-form-urlencoded'
-                  },
-                  type: "POST",
-                  dataType: "json",
-                  data: JSON.stringify(people),
-                  success: console.log('done')
-               });
-               var none_form = document.getElementById("form-submit-none").style.display = "none";
-               var block_text = document.getElementById("text-submit-block").style.display = "block";
-               var none_form2 = document.getElementById("form-submit-none2").style.display = "none";
-               var block_text2 = document.getElementById("text-submit-block2").style.display = "block";
-            }
-            sendAjaxForm();
-            popupmodel();
+   $("#valid_form2").validate({
+      rules: {
+         younember2: {
+            required: true,
+            // number: true,
+            minlength: 10,
+            maxlength: 17
          }
-      });
-   })
+      },
+      messages: {
+         younember2: {
+            required: "Обезательное поле.",
+            // number: "Укажите номер.",
+            minlength: "В поле должно быть минимум 10 символов",
+            maxlength: "В поле должно быть максимум 17 символов"
+         }
+      },
+      errorPlacement: function (error, element) {
+         if (element.attr("name") == "younember2") error.insertAfter($("input[name=younember2]"));
+      },
+      submitHandler: function (form) {
+         function sendAjaxForm(result_form, ajax_form) {
+            let people = {
+               numbertel: ''
+            };
+            people.numbertel = $('#number_rw2').val();
+            $.ajax({
+               url: "https://main.corezoid.comfy.ua/api/1/json/public/9266/cd236be14ac7e8255110259dd2e702cc9cc675bd",
+               headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded'
+               },
+               type: "POST",
+               dataType: "json",
+               data: JSON.stringify(people),
+               success: console.log('done')
+            });
+            var none_form = document.getElementById("form-submit-none").style.display = "none";
+            var block_text = document.getElementById("text-submit-block").style.display = "block";
+            var none_form2 = document.getElementById("form-submit-none2").style.display = "none";
+            var block_text2 = document.getElementById("text-submit-block2").style.display = "block";
+         }
+         sendAjaxForm();
+         popupmodel();
+      }
+   });
 
    $(function () {
       $("#number_rw2").mask("+38(999)999-99-99");
    });
-
+});
 </script>
 
 <script>

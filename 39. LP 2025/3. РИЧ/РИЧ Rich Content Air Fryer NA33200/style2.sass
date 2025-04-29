@@ -1,0 +1,1501 @@
+//@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+// body
+//    margin: 0
+
+.word-wrap-only-desk
+   display: block
+
+#rich-na33200
+   //font-family: 'Roboto', sans-serif
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   max-width: 1920px
+   margin: 0 auto
+   box-sizing: border-box
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      &:hover
+         opacity: 1
+
+.rich-na33200
+   &__header
+      position: relative
+   &__header-logo
+      width: 25vw
+      position: absolute
+      top: 0
+      left: 3%
+   &__header-icon
+      position: absolute
+      top: 30px
+      right: 40px
+      width: 25vw
+      display: flex
+      justify-content: end
+   &__header-brand
+      width: 22vw
+      display: flex
+      justify-content: end
+      position: absolute
+      bottom: 0
+      right: 2%
+      max-width: 284px
+   &__header-brand-img
+      position: absolute
+      top: 0
+      left: 0
+      opacity: 1
+      transition: all .3s ease 0s
+   &__header-brand-img-left
+      animation: anim-header 2s ease 0s infinite alternate-reverse
+   &__header-brand-img-right
+      animation: anim-header 2s ease 2s infinite alternate-reverse
+   &__header-text
+      position: absolute
+      bottom: 5%
+      left: 5%
+      right: 45%
+      color: #fff
+      text-shadow: 2px 2px 4px #000
+      max-width: 715px
+   &__header-text-title
+      font-size: clamp(21px, 4vw, 64px)
+      margin-bottom: 10%
+      line-height: 1
+   &__header-text-description
+      font-size: clamp(12px, 4vw, 26px)
+      line-height: 1
+   &__header-text-blue
+      text-shadow: none
+      color: #004eaa
+      font-weight: 700
+
+.fontw-bold
+   font-weight: bold
+   padding: 0 5px
+
+.rich-na33200
+   &__technology
+      padding: 6% 5vw
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      position: relative
+   &__technology-col
+      flex: 0 1 30%
+      display: flex
+      flex-direction: column
+      align-items: stretch
+      gap: clamp(10px, 2vw, 20px)
+      z-index: 2
+      &:nth-child(2)
+         z-index: 1
+   &__technology-col-img
+      position: relative
+      align-self: center
+      flex: 0 1 40%
+      z-index: 3
+   &__technology-row
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: start
+      gap: 5%
+      transition: all .3s ease 0s
+      &:hover
+         .rich-na33200__technology-anim1hover
+            opacity: 1
+         .rich-na33200__technology-item-left--anim
+            transform: translate(-50%, -50%) rotateY(180deg)
+         .rich-na33200__technology-item-text
+            transform: translate(10%, 0) scale(1.1)
+            color: #0072da
+         .rich-na33200__technology-anim-custom
+            animation: anim-technology 2s ease 0s infinite alternate-reverse
+   &__technology-item-left
+      position: relative
+      transition: all .3s ease 0s
+      flex: 0 1 24%
+      img
+         vertical-align: top
+   &__technology-item-left-anim
+      position: absolute
+      left: 48%
+      top: 50%
+      transform: translate(-50%, -50%)
+      z-index: 2
+   &__technology-item-left--anim
+      transition: all 1s ease 0s
+   &__technology-item-text
+      flex: 0 1 76%
+      font-size: clamp(10px, 2vw, 22px)
+      transition: all .3s ease 0s
+      font-weight: bold
+      line-height: 1
+   &__technology-anim1
+      position: relative
+      z-index: 1
+   &__technology-anim1hover
+      transition: all .3s ease-in 0s
+      position: absolute
+      z-index: 2
+      top: 0
+      left: 0
+      opacity: 0
+   &__technology-col-move
+      position: absolute
+      left: 46%
+      top: 50%
+      transform: translate(-50%, -50%)
+      width: 41vw
+      z-index: 3
+   &__technology-img
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+      opacity: 1
+   &__technology-gif
+      clip-path: inset(7% 0 0 0)
+      max-width: 460px
+      opacity: .4
+      z-index: 2
+      position: absolute
+      top: 25%
+      margin: 0 auto
+      left: 17.5%
+      right: 17.5%
+      background: rgba(255, 255, 255, 0)
+   &__technology-bgrd
+      position: relative
+      z-index: 3
+
+.rich-na33200
+   &__rapidair
+      position: relative
+   &__rapidair-content
+      color: #fff
+      position: absolute
+      top: 12%
+      left: 5%
+      right: 50%
+      //text-shadow: 2px 2px 2px #000
+      z-index: 2
+      display: flex
+      flex-direction: column
+      align-items: start
+      gap: clamp(10px, 2vw, 20px)
+      max-width: 630px
+   &__rapidair-content-title
+      font-weight: 700
+      font-size: clamp(21px, 4vw, 57px)
+      line-height: 1
+   &__rapidair-content-description
+      font-weight: 400
+      font-size: clamp(14px, 3vw, 34px)
+      line-height: 1
+   &__rapidair-images
+      position: relative
+   &__rapidair-images-anim
+      position: absolute
+      z-index: 1
+      top: 0
+      left: 0
+      opacity: 0
+      animation: anim-rapidair 3s ease 0s infinite alternate-reverse
+.rich-na33200
+   &__16functions
+      position: relative
+      margin-bottom: 6%
+   &__16functions-content
+      display: flex
+      flex-direction: column
+      align-items: start
+      gap: clamp(10px, 2vw, 20px)
+      text-align: center
+      align-items: center
+      padding: 6% 3% 5% 3%
+   &__16functions-content-title
+      font-weight: 700
+      font-size: clamp(14px, 3vw, 68px)
+      line-height: 1
+   &__16functions-content-description
+      font-weight: 400
+      font-size: clamp(14px, 3vw, 34px)
+      line-height: 1
+   &__16functions-mob
+      display: none
+   &__16functions-row
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: start
+      gap: 5%
+      &:first-child
+         gap: 0
+         padding: 0 12% 0 3%
+         .rich-na33200__16functions-row-col
+            &:nth-child(1)
+               &:hover
+                  .rich-na33200__16functions-row-col-description
+                     transform: scale(1.08) rotate(45deg) translateY(4%)
+               .rich-na33200__16functions-row-col-img
+                  left: 40%
+                  top: -23%
+                  width: 9vw
+                  transform: rotate(330deg)
+            &:nth-child(2)
+               margin: 0 3% 0 3%
+               .rich-na33200__16functions-row-col-img
+                  left: -6%
+                  top: -9%
+                  width: 15vw
+                  transform: rotate(9deg)
+            &:nth-child(3)
+               margin-top: -6%
+               .rich-na33200__16functions-row-col-img
+                  left: 20%
+                  top: -14%
+                  width: 12vw
+      &:last-child
+         gap: 0
+         padding: 0 0 0 16%
+         justify-content: space-between
+         .rich-na33200__16functions-row-col
+            &:nth-child(1)
+               .rich-na33200__16functions-row-col-img
+                  left: 30%
+                  top: -7%
+                  width: 17vw
+                  transform: rotate(380deg)
+            &:nth-child(2)
+               .rich-na33200__16functions-row-col-img
+                  right: 6%
+                  top: -15%
+                  width: 15vw
+                  transform: rotate(48deg)
+            &:nth-child(3)
+               .rich-na33200__16functions-row-col-img
+                  left: 33%
+                  top: -25%
+                  width: 12vw
+                  transform: rotate(25deg)
+   &__16functions-row-col
+      position: relative
+      align-items: center
+      transform-origin: top left
+      &:hover
+         .rich-na33200__16functions-row-col-description
+            transform: scale(1.08) rotate(-45deg)
+         .rich-na33200__16functions-row-col-img-h
+            opacity: 1
+   &__16functions-row-col-title
+      font-size: clamp(14px, 3vw, 44px)
+      text-align: center
+      transition: all .3s ease 0s
+      color: #0072da
+   &__16functions-row-col-description
+      transition: all .6s ease 0s
+      z-index: 1
+      position: relative
+   &__16functions-row-col-img
+      position: absolute
+      z-index: 2
+      opacity: 1
+   &__16functions-row-col-img-h
+      opacity: 0
+      position: absolute
+      left: 0
+      top: 0
+      transition: all .3s ease 0s
+.rich-na33200
+   &__lessfat
+      position: relative
+   &__lessfat-content
+      align-items: end
+      text-align: right
+      position: absolute
+      top: 12%
+      right: 5%
+      left: 40%
+   &__lessfat-title
+      font-weight: 700
+      font-size: clamp(14px, 3vw, 68px)
+      padding-bottom: 2vw
+      line-height: 1
+   &__lessfat-description
+      font-weight: 400
+      font-size: clamp(14px, 3vw, 34px)
+      line-height: 1
+.rich-na33200
+   &__delfat
+      position: relative
+      margin-top: 3%
+   &__delfat-content
+      align-items: flex-start
+      text-align: left
+      position: absolute
+      color: #fff
+      top: 15%
+      left: 5%
+   &__delfat-title
+      font-weight: 700
+      font-size: clamp(14px, 3vw, 68px)
+      line-height: 1
+      padding-bottom: 2vw
+   &__delfat-description
+      font-weight: 400
+      font-size: clamp(14px, 3vw, 34px)
+      line-height: 1
+.rich-na33200
+   &__touch
+      position: relative
+   &__touch-content
+      padding: 3% 5%
+      text-align: center
+   &__touch-title
+      font-weight: bold
+      font-size: clamp(14px, 3vw, 68px)
+      line-height: 1
+.rich-na33200
+   &__control
+      position: relative
+      margin-top: 3%
+   &__control-content
+      align-items: flex-start
+      text-align: left
+      position: absolute
+      color: #fff
+      top: 15%
+      left: 5%
+      right: 45%
+   &__control-move
+      border-radius: 50%
+      width: 32vw
+      height: 32vw
+      position: absolute
+      overflow: hidden
+      top: 7.5%
+      right: 5%
+      border: 6.3px solid #FFF
+      display: flex
+   &__control-title
+      font-weight: 700
+      font-size: clamp(14px, 3vw, 68px)
+      line-height: 1
+      padding-bottom: 2vw
+   &__control-description
+      font-weight: 400
+      font-size: clamp(14px, 3vw, 34px)
+      line-height: 1
+.rich-na33200
+   &__family
+      padding: 5%
+      display: flex
+      flex-direction: row
+      align-items: stretch
+      justify-content: space-around
+      gap: 5%
+   &__family-col
+      flex: 1 1 0
+   &__family-title
+      font-weight: 700
+      font-size: clamp(14px, 3vw, 68px)
+      line-height: 1
+      text-align: center
+      margin-bottom: 5%
+      &.family-title-mob
+         display: none
+      &.family-title-desk
+         display: block
+   &__family-grid
+      display: grid
+      grid-template-columns: 1fr 1fr
+      gap: clamp(20px, 2vw, 40px)
+      max-width: 685px
+      margin: 0 auto
+   &__family-grid-item
+      max-width: 310px
+      position: relative
+      margin: 0 auto
+      overflow: hidden
+      &::before
+         content: ""
+         position: absolute
+         left: 0
+         top: 0
+         width: 100%
+         height: 100%
+         background: rgba(255, 255, 255, 0.2)
+         opacity: 0
+         transition: all .3s ease 0s
+      &:hover
+         &::before
+            opacity: 1
+         .rich-na33200__family-text-hover
+            opacity: 1
+   &__family-text-hover
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      opacity: 0
+      transition: all .3s ease 0s
+      font-size: clamp(18px, 5vw, 64px)
+      color: #fff
+      font-weight: bold
+.rich-na33200
+   &__energy
+      position: relative
+   &__energy-content
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: clamp(10px, 2vw, 20px)
+      padding: 0 5% 3% 5%
+      text-align: center
+   &__energy-title
+      font-size: clamp(14px, 3vw, 68px)
+      line-height: 1
+      font-weight: bold
+   &__energy-description
+      font-weight: 400
+      font-size: clamp(14px, 3vw, 34px)
+      line-height: 1
+   &__energy-wrap
+      position: relative
+   &__energy-icon
+      z-index: 3
+      position: absolute
+      top: 12%
+      left: 5%
+      background: #65a812
+      width: 24vw
+      height: 24vw
+      max-width: 290px
+      max-height: 290px
+      min-width: 60px
+      min-height: 60px
+      border-radius: 50%
+      padding: 2.5%
+      text-align: center
+      color: #fff
+      display: flex
+      justify-content: center
+      align-items: center
+      animation: anim-energy1 1.5s ease 0s infinite alternate-reverse
+   &__energy-icon-content
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+   &__energy-icon-content-text
+      line-height: 1.33
+      text-align: center
+      font-weight: 700
+      font-size: clamp(18px, 5vw, 26px)
+      line-height: 1
+      color: #fff
+   &__energy-bgrd
+      &.energy-bgrd-desk
+         display: block
+      &.energy-bgrd-mob
+         display: none
+   &__energy-bgrd-fade
+      position: absolute
+      z-index: 1
+      top: 0
+      left: 0
+      opacity: 0
+      animation: anim-energy2 1.5s ease 0s infinite alternate-reverse
+.rich-na33200
+   &__homeid
+      position: relative
+      margin: 12% 0
+   &__homeid-content
+      top: 12%
+      right: 5%
+      left: 55%
+      align-items: end
+      text-align: right
+      position: absolute
+      color: #000
+      z-index: 3
+   &__homeid-title
+      font-size: clamp(14px, 3vw, 68px)
+      line-height: 1
+      font-weight: bold
+      margin-bottom: 5%
+   &__homeid-description
+      font-weight: 400
+      font-size: clamp(14px, 3vw, 34px)
+      line-height: 1
+   &__homeid-wrap
+      position: relative
+   &__homeid-hand
+      position: absolute
+      top: -15%
+      right: 0
+      overflow: hidden
+      z-index: 2
+      max-width: 96%
+   &__homeid-gif
+      z-index: -1
+      position: absolute
+      top: 23%
+      left: 25.3%
+      width: 23vw
+      transform: rotate(-20deg)
+   &__homeid-mob
+      display: none
+.rich-na33200
+   &__allremovable
+      position: relative
+   &__allremovable-content
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding: 0 5% 3% 5%
+      text-align: center
+   &__allremovable-title
+      font-size: clamp(18px, 3vw, 50px)
+      line-height: 1
+      font-weight: bold
+   &__allremovable-bgrd
+      position: relative
+   &__allremovable-bgrd-img
+      border-radius: 50%
+      width: 25vw
+      height: 25vw
+      position: absolute
+      overflow: hidden
+      top: 28%
+      right: 19%
+      border: 6.3px solid #FFF
+      display: flex
+.rich-na33200
+   &__accessories-content
+      text-align: center
+      padding: 5% 5% 3% 5%
+   &__accessories-title
+      font-size: clamp(18px, 3vw, 50px)
+      font-weight: bold
+      line-height: 1
+   &__accessories-flex
+      display: flex
+      flex-direction: row
+      align-items: stretch
+      justify-content: center
+      padding: 0 5% 5% 5%
+      gap: 5%
+   &__accessories-flex-col
+      text-align: center
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: clamp(20px, 2vw, 40px)
+   &__accessories-flex-img
+      overflow: hidden
+      border-radius: 50%
+      transition: all .3s ease 0s
+      img
+         transition: all .3s ease 0s
+      &:hover
+         transform: scale(1.1)
+         img
+            transform: scale(1.3)
+   &__accessories-flex-description
+      font-weight: 400
+      font-size: clamp(14px, 3vw, 34px)
+      line-height: 1
+.rich-na33200
+   &__table
+      position: relative
+   &__table-content
+      padding: 0 5% 3% 5%
+      text-align: center
+   &__table-content-title
+      font-weight: 700
+      font-size: clamp(16px, 6vw, 64px)
+      line-height: 1
+   &__table-wp
+      display: table
+      border-collapse: separate
+      border-spacing: 1px
+   &__table-col
+      vertical-align: middle
+      width: 9%
+      text-align: center
+      padding: 1% 1%
+      color: #fff
+      font-size: clamp(8px, 1vw, 18px)
+      line-height: 1.15
+      span
+         font-size: clamp(8px, 1vw, 15px)
+   &__table-color1
+      background: #004eaa
+   &__table-color2
+      background: #0072da
+   &__table-color3
+      background: #6eadf3
+   &__table-textsz1
+      font-weight: 700
+      font-size: clamp(8px, 1vw, 18px)
+      line-height: 1
+   &__table-icon
+      width: 5vw
+      display: flex
+      justify-content: center
+      margin: 0 auto 10px
+   &__table-product
+      font-weight: 700
+      font-size: clamp(8px, 1.5vw, 16px)
+      line-height: 1
+      color: #000
+   &__table-brend
+      font-size: clamp(8px, 1.5vw, 20px)
+      line-height: 1
+      font-weight: 700
+      color: #fff
+.rich-na33200
+   &__colorovi
+      position: relative
+      width: 100%
+      margin-bottom: 10%
+   &__colorovi-content
+      padding: 3% 5% 3% 5%
+      text-align: center
+   &__colorovi-content-title
+      font-weight: 700
+      font-size: clamp(16px, 6vw, 64px)
+      line-height: 1
+   &__colorovi-bgrd
+      background: linear-gradient(315deg, #6EADF3 0%, #004EAA 49.91%, #002C77 100%)
+      width: 100%
+      height: 43vw
+      position: relative
+   &__colorovi-move
+      position: absolute
+      left: 50%
+      top: 65%
+      transform: translate(-50%, -50%)
+      width: 38vw
+      z-index: 3
+   &__colorovi-img-fade
+      position: absolute
+      top: 50%
+      left: 50%
+      max-width: 100%
+      height: auto
+      &.colorovi-img1
+         width: 14vw
+      &.colorovi-img2
+         width: 30vw
+      &.colorovi-img3
+         width: 13vw
+      &.colorovi-img4
+         width: 13vw
+      &.colorovi-img5
+         width: 10vw
+      &.colorovi-img6
+         width: 10vw
+      &.colorovi-img7
+         width: 18vw
+      &.colorovi-img8
+         width: 20vw
+      &.colorovi-img9
+         width: 7vw
+      &.colorovi-img10
+         width: 23vw
+      &.colorovi-img11
+         width: 17vw
+      &.colorovi-img12
+         width: 10vw
+      &.colorovi-img13
+         width: 16vw
+      &.colorovi-img14
+         width: 15vw
+      &.colorovi-img15
+         width: 21vw
+      &.colorovi-img16
+         width: 15vw
+      &.colorovi-img17
+         width: 18vw
+      &.colorovi-img18
+         width: 10vw
+      &.colorovi-img19
+         width: 13vw
+.rich-na33200
+   &__footer-text
+      text-align: left
+      padding: 3% 5% 5% 5%
+      font-size: clamp(14px, 3vw, 18px)
+      line-height: 1.6
+.rich-na33200
+   &__12programs
+      position: relative
+   &__12programs-cnt-mob
+      display: none
+   &__12programs-content
+      padding: 3% 5% 3% 5%
+      text-align: center
+   &__12programs-content-text
+      font-size: clamp(14px, 3vw, 68px)
+      line-height: 1
+      font-weight: bold
+   &__12programs-cnt
+      position: relative
+   &__12programs-text-pos
+      color: #fff
+      font-weight: bold
+      font-size: clamp(8px, 1.2vw, 22px)
+      line-height: 1
+      text-align: center
+      position: absolute
+      z-index: 3
+      &.text-pos-fs
+         bottom: 90.6%
+         left: 0
+         right: 0
+      &.text-pos-sd
+         bottom: 81%
+         left: 61%
+      &.text-pos-td
+         bottom: 64%
+         left: 67%
+      &.text-pos-fr
+         top: 64%
+         left: 67%
+      &.text-pos-fv
+         top: 83%
+         left: 60%
+      &.text-pos-sx
+         top: 90%
+         right: 0
+         left: 0
+      &.text-pos-sv
+         top: 83%
+         right: 60%
+      &.text-pos-et
+         top: 64%
+         right: 67%
+      &.text-pos-nn
+         bottom: 64%
+         right: 67%
+      &.text-pos-tn
+         bottom: 81%
+         right: 61%
+   &__12programs-icon
+      position: absolute
+      z-index: 3
+      max-width: 83px
+      display: flex
+      justify-content: center
+      transition: all .3s ease 0s
+      &:hover
+         transform: scale(1.2)
+         filter: drop-shadow(0em 0em 3px #fff)
+      &.icon-opacity
+         opacity: .2
+         &:hover
+            transform: none
+            filter: none
+            opacity: 1
+      &.icon-opacity-left
+         left: 2%
+         width: 10vw
+         max-width: 128px
+         top: 40%
+         max-height: none
+      &.icon-opacity-right
+         right: 2%
+         width: 10vw
+         max-width: 128px
+         top: 40%
+         max-height: none
+      &.img-icon-fs
+         top: 13%
+         left: 0
+         right: 0
+         margin: 0 auto
+      &.img-icon-sd
+         top: 20%
+         right: 39%
+      &.img-icon-td
+         top: 34%
+         right: 33.5%
+      &.img-icon-fr
+         bottom: 36%
+         right: 33.3%
+      &.img-icon-fv
+         bottom: 20%
+         right: 39%
+      &.img-icon-sx
+         bottom: 13%
+         left: 0
+         right: 0
+         margin: 0 auto
+      &.img-icon-sv
+         bottom: 20%
+         left: 39%
+      &.img-icon-et
+         bottom: 36%
+         left: 34%
+      &.img-icon-nn
+         top: 34%
+         left: 34%
+      &.img-icon-tn
+         top: 20%
+         left: 39%
+      &.img-icon-ev
+         right: 75%
+         top: 15%
+      &.img-icon-tw
+         right: 78%
+         top: 35%
+      &.img-icon-ftn
+         right: 74.3%
+         top: 79%
+      &.img-icon-fvn
+         left: 75%
+         top: 15%
+      &.img-icon-sxn
+         left: 78%
+         top: 35%
+      &.img-icon-svn
+         left: 78%
+         top: 55%
+   &__12programs-cl
+      position: absolute
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 5px
+      transition: all 0.3s ease 0s
+      &.cln-left
+         right: 76.5%
+         top: 55%
+         z-index: 3
+      &.cln-right
+         left: 74%
+         top: 79%
+         z-index: 3
+      &.cln-left, &.cln-right
+         &:hover
+            filter: drop-shadow(0em 0em 3px #fff)
+   &__12programs-cl-text
+      color: #fff
+      font-size: clamp(8px, 1.2vw, 20px)
+      line-height: 1
+      text-align: center
+      position: static
+   &__12programs-bgrd
+      background: linear-gradient(315deg, #6EADF3 0%, #004EAA 49.91%, #002C77 100%)
+      width: 100%
+      height: 45vw
+   &__12programs-bgrd-img,
+   &__12programs-bgrd-img-fade,
+   &__12programs-bgrd-elps
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+   &__12programs-bgrd-img
+      width: 17vw
+      opacity: 1
+      animation: anim-rapidair 2s ease 0s infinite alternate-reverse
+   &__12programs-bgrd-img-fade
+      width: 17vw
+      opacity: 0
+      animation: anim-energy2 2s ease 0s infinite alternate-reverse
+   &__12programs-bgrd-elps
+      width: 35vw
+      height: 35vw
+      border-radius: 50%
+      background: rgba(255, 255, 255, 0.09)
+   &__table-scroll
+      &.table-desk
+         display: block
+      &.table-mob
+         display: none
+@keyframes anim-header
+   0%
+      opacity: 1
+   100%
+      opacity: 0
+@keyframes anim-technology
+   0%
+      opacity: 1
+   100%
+      opacity: 0
+@keyframes anim-rapidair
+   0%
+      opacity: 1
+   100%
+      opacity: 0
+@keyframes anim-energy1
+   0%
+      box-shadow: none
+   100%
+      box-shadow: 2.23px 4.46px 25px 0 #fff
+@keyframes anim-energy2
+   0%
+      opacity: 0
+   100%
+      opacity: 1
+@media (max-width: 1366px)
+   .rich-na33200
+      &__12programs-icon
+         max-width: 60px
+         max-height: 45px
+@media (max-width: 1024px)
+   .rich-na33200
+      &__technology-col-move
+         left: 48%
+   .rich-na33200
+      &__energy-icon-content-text
+         font-size: clamp(18px, 4vw, 3vw)
+      &__energy-icon-content-img
+         width: 18vw
+   .rich-na33200
+      &__table-textsz1
+         font-size: clamp(14px, 1vw, 18px)
+      &__table-col
+         width: 7%
+         font-size: clamp(12px, 1vw, 18px)
+      &__table-icon
+         width: 4vw
+   .rich-na33200
+      &__12programs-icon
+         max-width: 55px
+         max-height: 35px
+      &__technology-row
+         transition: none
+         &:hover
+            .rich-na33200__technology-anim1hover
+               opacity: 1
+            .rich-na33200__technology-item-text
+               transform: none
+               color: #000
+            .rich-na33200__technology-anim-custom
+               animation: none
+   .gen-tab__gallery
+      position: static
+      margin-top: 0
+@media (max-width: 768px)
+   .rich-na33200
+      &__header
+         background: #004eaa
+      &__header-bgrd
+         background-image: url(https://cdn.comfy.ua/media/x/img5/3278619rich/bgrd1.png)
+         width: 100%
+         height: 400px
+         background-position: 57% 100%
+         background-size: cover
+         img
+            display: none !important
+      &__header-logo
+         width: 40vw
+         left: 5%
+      &__header-icon
+         position: static
+         margin: 8% auto 0 auto
+         justify-content: center
+         width: 65vw
+      &__header-text
+         position: relative
+         text-align: center
+         padding: 0 5% 5% 5%
+         left: 0
+         right: 0
+      &__header-text-description
+         font-size: clamp(12px, 6vw, 26px)
+      &__header-text-title
+         font-size: clamp(18px, 6vw, 64px)
+      &__header-text-blue
+         color: #fff
+         text-shadow: inherit
+      &__header-brand
+         position: relative
+         left: auto
+         right: auto
+         top: auto
+         bottom: auto
+         margin: 0 auto
+         justify-content: center
+         width: 65vw
+      &__table-product
+         font-size: clamp(14px, 1.5vw, 16px)
+      &__table-brend
+         font-size: clamp(14px, 1.5vw, 20px)
+      &__colorovi-content-title
+         font-size: clamp(16px, 6vw, 64px)
+      &__colorovi
+         margin-top: 8%
+   .rich-na33200
+      &__technology
+         flex-direction: row
+         flex-wrap: wrap
+         gap: 0px
+         justify-content: space-between
+      &__technology-col
+         flex: 1 1 50%
+         gap: clamp(10px, 8vw, 21px)
+         &:nth-child(2)
+            order: -1
+            flex: 100%
+      &__technology-item-left
+         flex: 0 0 30%
+      // &__technology
+      //    flex-direction: column
+      //    padding: 8% 5%
+      //    align-items: flex-start
+      &__technology-item-text
+         font-size: clamp(14px, 3vw, 20px)
+      // &__technology-item-left
+      //    flex: 0 1 30%
+      //    max-width: 113px
+      &__technology-item-text
+         flex: 0 1 70%
+      &__technology-col-move
+         position: relative
+         left: 0
+         top: 0
+         transform: none
+         width: auto
+   .rich-na33200
+      &__rapidair-content
+         position: relative
+         top: 0
+         left: 0
+         right: 0
+         max-width: 100%
+         color: #000
+         text-align: center
+         align-items: center
+         padding: 8% 5%
+      &__rapidair-content-title
+         font-size: clamp(21px, 6vw, 57px)
+      &__rapidair-content-description
+         font-size: clamp(14px, 5vw, 34px)
+   .rich-na33200
+      &__16functions-content
+         padding: 8% 3% 3% 3%
+      &__16functions-content-description
+         font-size: clamp(14px, 5vw, 34px)
+      &__16functions-content-title
+         font-size: clamp(21px, 6vw, 57px)
+      &__16functions-row-col
+         &:hover
+            .rich-na33200__16functions-row-col-description
+               transform: none
+               transition: none
+      &__16functions-row-col-img-h
+         display: none
+      &__16functions-row
+         padding: 0
+         flex-direction: column
+         max-width: 330px
+         margin: 0 auto 
+         gap: 0
+         &:first-child
+            padding: 0
+            gap: 5rem
+            .rich-na33200__16functions-row-col
+               &:nth-child(1)
+                  .rich-na33200__16functions-row-col-img
+                     left: 12.3rem
+                     top: -6.5rem
+                     width: 111px
+                     transform: rotate(322deg)
+                  &:hover
+                     .rich-na33200__16functions-row-col-description
+                        transform: none
+                        transition: none
+               &:nth-child(2)
+                  margin: 0
+                  .rich-na33200__16functions-row-col-img
+                     left: 1.5rem
+                     top: -5.5rem
+                     width: 188px
+                     transform: rotate(23deg)
+               &:nth-child(3)
+                  margin-top: -6%
+                  .rich-na33200__16functions-row-col-img
+                     left: 16rem
+                     top: -1.5rem
+                     width: 168px
+                     transform: rotate(37deg)
+         &:last-child
+            padding: 0
+            gap: 5rem
+            margin-top: 16%
+            .rich-na33200__16functions-row-col
+               &:nth-child(1)
+                  .rich-na33200__16functions-row-col-img
+                     left: 1rem
+                     top: -3rem
+                     width: 211px
+                     transform: rotate(346deg)
+               &:nth-child(2)
+                  .rich-na33200__16functions-row-col-img
+                     right: 0rem
+                     top: -6rem
+                     width: 210px
+                     transform: rotate(50deg)
+               &:nth-child(3)
+                  .rich-na33200__16functions-row-col-img
+                     left: 0.5rem
+                     top: -9.5rem
+                     width: 200px
+                     transform: rotate(-5deg)
+   .rich-na33200
+      &__lessfat-content
+         align-items: center
+         text-align: center
+         position: relative
+         top: 0
+         right: 0
+         left: 0
+         padding: 5%
+      &__lessfat-title
+         font-size: clamp(21px, 6vw, 57px)
+         padding-bottom: 5vw
+      &__lessfat-description
+         font-size: clamp(14px, 5vw, 34px)
+      &__lessfat-wrap
+         display: block
+   .rich-na33200
+      &__delfat
+         position: relative
+      &__delfat-content
+         align-items: center
+         text-align: center
+         position: relative
+         color: #000
+         top: 0
+         left: 0
+         padding: 5%
+      &__delfat-title
+         font-size: clamp(21px, 6vw, 57px)
+         padding-bottom: 5vw
+      &__delfat-description
+         font-size: clamp(14px, 5vw, 34px)
+   .rich-na33200
+      &__touch-content
+         padding: 5%
+      &__touch-title
+         font-size: clamp(21px, 6vw, 57px)
+   .rich-na33200
+      &__control-content
+         align-items: center
+         text-align: center
+         position: relative
+         color: #000
+         top: 0
+         left: 0
+         right: 0
+         padding: 5%
+      &__control-move
+         border-radius: 50%
+         width: 80vw
+         height: 80vw
+         position: relative
+         overflow: hidden
+         top: 0
+         right: 0
+         border: 0
+         margin: 0 auto 5% auto
+         max-width: 630px
+      &__control-title
+         font-size: clamp(21px, 6vw, 57px)
+         padding-bottom: 2vw
+      &__control-description
+         font-size: clamp(14px, 5vw, 34px)
+   .rich-na33200
+      &__family
+         flex-direction: column
+         padding: 8% 5%
+      &__family-title
+         font-size: clamp(21px, 6vw, 57px)
+      &__family-text-hover
+         font-size: clamp(18px, 8vw, 55px)
+   .rich-na33200
+      &__energy-title
+         font-size: clamp(21px, 6vw, 57px)
+      &__energy-description
+         font-size: clamp(14px, 5vw, 34px)
+      &__energy-icon-content-text
+         font-size: clamp(12px, 4vw, 10px)
+      &__energy-icon-content-img
+         width: 20vw
+   .rich-na33200
+      position: relative
+      &__homeid
+         margin: 8% 0
+         height: 85vw
+      &__homeid-content
+         top: 5%
+         left: 5%
+      &__homeid-title
+         font-size: clamp(21px, 5vw, 57px)
+      &__homeid-description
+         font-size: clamp(14px, 4vw, 34px)
+      &__homeid-hand
+         top: 37%
+      &__homeid-mob
+         display: none
+   .rich-na33200
+      &__allremovable-title
+         font-size: clamp(21px, 6vw, 57px)
+   .rich-na33200
+      &__accessories-content
+         padding: 5% 5% 3% 5%
+      &__accessories-title
+         font-size: clamp(21px, 6vw, 57px)
+      &__accessories-flex-col
+         gap: clamp(20px, 2vw, 40px)
+      &__accessories-flex-img
+         &:hover
+            img
+               transform: scale(1.2)
+      &__accessories-flex-description
+         font-size: clamp(14px, 4vw, 34px)
+   .rich-na33200
+      &__table-scroll
+         overflow: scroll
+      &__table-wp
+         width: 1200px
+      &__table-col
+         padding: 6px 1%
+         font-size: clamp(14px, 1vw, 18px)
+         &.rich-na33200__table-textsz1
+            font-size: clamp(14px, 1vw, 21px)
+      &__table-icon
+         width: 10vw
+         margin: 0 auto 8px
+      &__homeid
+         height: 85vw
+      &__16functions-desk
+         display: none
+      &__16functions-mob
+         display: block
+@media (max-width: 480px)
+   .rich-na33200
+      &__header-bgrd
+         background-image: url(https://cdn.comfy.ua/media/x/img5/3278619rich/mob_img1.png)
+         height: 100vh
+         background-position: center top
+         background-size: cover
+      &__header-icon
+         position: absolute
+         margin: 0
+         display: flex
+         left: 0
+         bottom: 5vw
+         align-items: center
+         height: max-content
+         top: inherit
+         width: 50vw
+      &__header-text
+         position: absolute
+         right: 0
+         bottom: 29%
+         text-align: left
+         padding: 0 16px 0 16px
+         display: flex
+         flex-direction: column-reverse
+         left: 0
+      &__header-text-title
+         margin-bottom: 0
+         margin-top: 8%
+         font-size: clamp(18px, 8vw, 64px)
+      &__colorovi-content
+         padding: 3% 5% 12% 5%
+      &__colorovi-content-title
+         font-size: clamp(18px, 8vw, 64px)
+      &__header-text-description
+         font-size: clamp(12px, 6vw, 26px)
+      &__header-brand
+         position: absolute
+         width: 37vw
+         right: 0
+         bottom: 0%
+      &__rapidair-content
+         position: absolute
+         padding: 8% 16px
+         text-align: left
+         color: #fff
+         align-items: flex-start
+      &__rapidair-content-title
+         font-size: clamp(21px, 8vw, 57px)
+         padding-bottom: 16px
+      &__rapidair-content-description
+         font-size: clamp(14px, 6vw, 34px)
+      &__technology
+         flex-direction: row
+         flex-wrap: wrap
+         gap: 0px
+         justify-content: space-between
+      &__technology-item-text
+         font-size: clamp(12px, 3vw, 36px)
+      &__16functions-content
+         padding: 8% 3% 3% 3%
+      &__12programs-cnt
+         display: none
+      &__12programs-cnt-mob
+         display: block
+         position: relative
+      &__12programs-bgrd
+         height: 465px
+      &__12programs-bgrd-img, &__12programs-bgrd-img-fade
+         width: 50vw
+      &__12programs-content-text
+         font-size: clamp(21px, 6vw, 57px)
+      &__12programs-content
+         padding: 5% 5% 3% 5%
+         position: absolute
+         z-index: 2
+         color: #fff
+      &__delfat-content
+         position: absolute
+         color: #fff
+         text-align: left
+         padding: 8% 5% 5% 5%
+         max-width: 260px
+      &__delfat, &__control
+         margin-top: 0
+      &__touch-content
+         position: absolute
+         text-align: right
+         color: #fff
+         max-width: 250px
+         right: 0
+         padding: 8% 5% 5% 5%
+      &__control-content
+         position: absolute
+         left: 0
+         text-align: left
+         color: #fff
+         padding: 8% 5% 5% 5%
+      &__control-move
+         position: absolute
+         left: 5%
+         top: 28%
+         width: 54vw
+         height: 54vw
+         margin: 0
+         border: 2.3px solid #FFF
+      &__family-text-hover
+         opacity: 1
+      &__family-title
+         &.family-title-mob
+            display: block
+         &.family-title-desk
+            display: none
+      &__energy-bgrd
+         background-image: url(https://cdn.comfy.ua/media/x/img5/3278619rich/img20.png)
+         background-position: center
+         width: 100%
+         height: 208px
+         background-size: cover
+         &.energy-bgrd-desk
+            display: none
+         &.energy-bgrd-mob
+            display: block
+      &__energy-bgrd-fade
+         background-image: url(https://cdn.comfy.ua/media/x/img5/3278619rich/img21.png)
+         background-position: center
+         width: 100%
+         height: 208px
+         background-size: cover
+         position: absolute
+         z-index: 1
+         top: 0
+         left: 0
+         opacity: 0
+         animation: anim-energy2 1.5s ease 0s infinite alternate-reverse
+      &__energy-icon
+         top: 5%
+         left: 5%
+         width: 20vw
+         height: 20vw
+         padding: 3.5%
+      &__energy-icon-content-text
+         font-size: clamp(10px, 4vw, 10px)
+      &__homeid-content
+         position: absolute
+         top: 3%
+      &__homeid-mob
+         display: block
+         height: 140vw
+         position: relative
+      &__homeid-gif
+         top: 22%
+         left: 18.3%
+         width: 33vw
+      &__homeid-hand
+         &.homeid-hand-mob
+            position: absolute
+            bottom: 0
+            display: block
+            top: inherit
+      &__homeid-icon
+         position: absolute
+         top: 32%
+         right: 5%
+         width: 66px
+      &__homeid
+         margin: 23px 0
+         height: auto
+      &__homeid-wrap, &__homeid-hand
+         display: none
+      &__homeid-title
+         font-size: clamp(21px, 6vw, 57px)
+      &__homeid-description
+         font-size: clamp(14px, 5vw, 34px)
+      &__allremovable-bgrd-img
+         left: 5%
+         right: inherit
+         top: inherit
+         bottom: -18%
+         width: 40vw
+         height: 40vw
+      &__accessories
+         margin-top: 12%
+      &__table-wp
+         width: 560px
+      &__table-scroll
+         &.table-desk
+            display: none
+         &.table-mob
+            display: block
+      &__table-col
+         padding: 8px 1%
+         font-size: clamp(12px, 1vw, 18px)
+      &__table-col.rich-na33200__table-textsz1
+         font-size: clamp(14px, 1vw, 21px)
+      &__technology
+         padding: 8% 3%
+   .word-wrap-only-desk
+      display: inline
+// @media (max-width: $mq-tablet)
+// @media (max-width: $mq-lg-table)
+// @media (min-width: $mq-desktop)

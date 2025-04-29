@@ -1,0 +1,965 @@
+<style>
+   #container-page {
+      max-width: 1390px;
+      margin: 0 auto;
+      height: auto;
+      position: relative;
+      overflow: hidden;
+      box-sizing: border-box;
+      display: block;
+      padding: 2.4rem 0 2.4rem 0;
+   }
+
+   #container-page h2 {
+      font-size: 24px;
+      text-align: left;
+      font-weight: 700;
+      color: #000;
+      display: block;
+      padding: 0;
+      margin: 0;
+      line-height: 1.3;
+   }
+
+   #container-page p {
+      font-size: 16px;
+      text-align: left;
+      color: #000;
+      font-weight: 400;
+      display: block;
+      padding: 0;
+      margin: 0;
+      line-height: 20px;
+   }
+
+   #container-page h3 {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: left;
+      color: #000;
+      padding: 0 0 0 36px;
+      margin: 0;
+      line-height: 24px;
+   }
+
+   .main-container.page {
+      padding-left: 0;
+      padding-right: 0;
+   }
+
+   .dib__links {
+      color: #43b02a;
+      text-decoration: underline;
+   }
+
+   .wrap-flex {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -moz-box-orient: horizontal;
+      -moz-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+   }
+
+   .wrap-flex__item.--tabs-left {
+      background: #fff;
+      width: 100%;
+      margin-right: 16px;
+      height: -webkit-max-content;
+      height: -moz-max-content;
+      height: max-content;
+   }
+
+   .wrap-flex__item.--tabs-right {
+      min-width: 215px;
+      width: 215px;
+   }
+
+   .wrap-flex__content {
+      position: relative;
+      padding: 56px 32px;
+      overflow: hidden;
+   }
+
+   .block-h2 {
+      padding-bottom: 2rem;
+   }
+
+   .block-h2.ppdb0 {
+      padding-bottom: 0;
+   }
+
+   .linkbl {
+      color: #43B02A;
+      text-decoration: underline;
+      cursor: pointer;
+   }
+
+   .block-p {
+      font-size: -webkit-calc(14px + 2 * ((100vw - 320px) / 1600));
+      font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+      color: #000;
+      text-align: left;
+      line-height: 1.5;
+      display: block;
+   }
+
+   .block-p a {
+      cursor: pointer;
+      color: #379424;
+      text-decoration: underline;
+   }
+
+   .block-h3 {
+      font-size: -webkit-calc(18px + 2 * ((100vw - 320px) / 1600));
+      font-size: calc(18px + 2 * ((100vw - 320px) / 1600));
+      color: #000;
+      text-align: center;
+      line-height: 1.3;
+      display: block;
+      font-weight: bold;
+   }
+
+   .padding-bottom1 {
+      padding-bottom: 2rem;
+   }
+
+   .padding-bottom2 {
+      padding-top: 2rem;
+   }
+
+   .block-list {
+      padding-bottom: 24px;
+   }
+
+   .block-list-ul {
+      list-style-type: disc;
+      margin: 0;
+      padding: 5px 0 0 8px;
+   }
+
+   .block-list-ul li {
+      font-size: -webkit-calc(14px + 2 * ((100vw - 320px) / 1600));
+      font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+      color: #000;
+      text-align: left;
+      line-height: 1.3;
+      display: block;
+      position: relative;
+      padding-left: 20px;
+   }
+
+   .block-list-ul li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      background: #000;
+      position: absolute;
+      left: 0;
+      top: 7px;
+   }
+
+   .block-img-pos {
+      position: absolute;
+      right: 0;
+      top: 0;
+   }
+
+   .block-img-pos.--vidznaki-ta-nagorodi-img {
+      top: 32px;
+   }
+
+   .wrap-flex__tabs {
+      background: #fff;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+   }
+
+   .wrap-flex__tabs .wrap-flex__tabs-item {
+      background: #fff;
+      cursor: pointer;
+      position: relative;
+      border-bottom: 1px solid #fff;
+   }
+
+   .wrap-flex__tabs .wrap-flex__tabs-item:last-child {
+      border-bottom: 0px solid #fff;
+   }
+
+   .wrap-flex__tabs .wrap-flex__tabs-item.active-tab {
+      background: #43B02A;
+   }
+
+   .wrap-flex__tabs .wrap-flex__tabs-item.active-tab a {
+      color: #fff;
+      font-weight: bold;
+   }
+
+   .wrap-flex__tabs .wrap-flex__tabs-item.active-tab a:hover {
+      background: #43B02A;
+      color: #fff;
+   }
+
+   .wrap-flex__tabs .wrap-flex__tabs-item.pdd-leftcstm a {
+      padding: 13px 0 13px 40px;
+   }
+
+   .wrap-flex__tabs .wrap-flex__tabs-item a {
+      color: #000;
+      font-weight: normal;
+      font-size: 16px;
+      padding: 13px 0 13px 32px;
+      line-height: 20px;
+      display: block;
+      -webkit-transition: 0.1s;
+      -o-transition: 0.1s;
+      transition: 0.1s;
+      text-decoration: none;
+   }
+
+   .wrap-flex__tabs .wrap-flex__tabs-item a:hover {
+      background: #379424;
+      color: #fff;
+   }
+
+   .btnpopup {
+      display: none;
+   }
+
+   .btnpopup-close {
+      display: none;
+   }
+
+   .pro-kompaniju__content {
+      max-width: 758px;
+      position: relative;
+   }
+
+   .pro-kompaniju__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 32px;
+   }
+
+   .pro-kompaniju__fl {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+   }
+
+   .pro-kompaniju__fl-txt1 {
+      font-size: -webkit-calc(32px + 16 * ((100vw - 320px) / 1600));
+      font-size: calc(32px + 16 * ((100vw - 320px) / 1600));
+      color: #000;
+      font-weight: bold;
+      line-height: 1;
+   }
+
+   .pro-kompaniju__fl-txt1 sub {
+      font-size: -webkit-calc(18px + 7 * ((100vw - 320px) / 1600));
+      font-size: calc(18px + 7 * ((100vw - 320px) / 1600));
+      bottom: 0;
+      vertical-align: baseline;
+   }
+
+   .pro-kompaniju__fl-img {
+      padding-left: 8px;
+   }
+
+   .pro-kompaniju__txtbold {
+      padding: 8px 0 0 0;
+      font-size: -webkit-calc(16px + 2 * ((100vw - 320px) / 1600));
+      font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
+      font-weight: 500;
+      color: #000;
+   }
+
+   .pro-kompaniju-info {
+      border-top: 1px solid #D9D9D9;
+      padding-top: 20px;
+      margin-top: 30px;
+   }
+
+   .pro-kompaniju-info .block-p {
+      padding-bottom: 20px;
+   }
+
+   .pro-kompaniju-info .block-p:last-child {
+      padding-bottom: 0;
+   }
+
+   .block-psmall {
+      color: #999999;
+      font-size: -webkit-calc(14px + 2 * ((100vw - 320px) / 1600));
+      font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+      padding-top: 8px;
+   }
+
+   .pro-kompaniju-grid-txt {
+      padding-bottom: 25px;
+   }
+
+   .pro-istoriy__flex {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+      -moz-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      margin-bottom: 56px;
+   }
+
+   .pro-istoriy__flex:last-child {
+      margin-bottom: 0;
+   }
+
+   .pro-istoriy__year {
+      font-size: -webkit-calc(32px + 16 * ((100vw - 320px) / 1600));
+      font-size: calc(32px + 16 * ((100vw - 320px) / 1600));
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #43B02A;
+      padding-right: 16px;
+   }
+
+   .pro-istoriy__title {
+      font-size: -webkit-calc(16px + 4 * ((100vw - 320px) / 1600));
+      font-size: calc(16px + 4 * ((100vw - 320px) / 1600));
+      font-weight: 500;
+      line-height: 1.3;
+      color: #000000;
+      max-width: 690px;
+   }
+
+   .kerivnictvo_list {
+      padding-bottom: 32px;
+   }
+
+   .kerivnictvo_list:last-child {
+      padding-bottom: 0;
+   }
+
+   .kerivnictvo__name {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.3;
+      color: #000000;
+   }
+
+   .kerivnictvo__jobtitle {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1;
+      color: #000000;
+      padding-top: 5px;
+   }
+
+   .vidznaki-ta-nagorodi__wrap {
+      padding-bottom: 48px;
+   }
+
+   .vidznaki-ta-nagorodi__wrap:last-child {
+      padding-bottom: 0;
+   }
+
+   .vidznaki-ta-nagorodi__txt {
+      font-weight: 700;
+      font-size: -webkit-calc(32px + 16 * ((100vw - 320px) / 1600));
+      font-size: calc(32px + 16 * ((100vw - 320px) / 1600));
+      line-height: 1.3;
+      color: #43B02A;
+      padding-bottom: 10px;
+   }
+
+   .vidznaki-ta-nagorodi {
+      list-style-type: none;
+      padding-left: 12px;
+   }
+
+   .vidznaki-ta-nagorodi li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 15px;
+      font-weight: 400;
+      font-size: 16px;
+      color: #000;
+      line-height: 1.3;
+   }
+
+   .vidznaki-ta-nagorodi li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      background: #000;
+      position: absolute;
+      left: 0;
+      top: 7px;
+   }
+
+   .contact__client {
+      margin: 20px 0px;
+      padding: 20px;
+      border: 1px solid #FF671F;
+   }
+
+   .contact__client-grid {
+      display: inline-grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+      padding-top: 18px;
+   }
+
+   @media (max-width: 1200px) {
+      .block-img-pos {
+         max-width: 175px;
+      }
+   }
+
+   @media (max-width: 1024px) {
+      .pro-kompaniju__grid {
+         grid-template-columns: 1fr 1fr 1fr;
+      }
+   }
+
+   @media (max-width: 812px) {
+      .pro-kompaniju__grid {
+         grid-template-columns: 1fr 1fr;
+      }
+
+      .block-img-pos {
+         display: none;
+      }
+   }
+
+   @media (max-width: 480px) {
+      #container-page {
+         padding: 25px 12px 50px 12px;
+      }
+
+      .vidznaki-ta-nagorodi li {
+         padding-left: 20px;
+      }
+
+      .vidznaki-ta-nagorodi__wrap {
+         padding-bottom: 24px;
+      }
+
+      .vidznaki-ta-nagorodi {
+         padding-left: 8px;
+      }
+
+      .wrap-flex__item.--tabs-right {
+         min-width: 100%;
+         width: 100%;
+      }
+
+      .wrap-flex__tabs-wrap {
+         background: #fff;
+         position: fixed;
+         width: 100%;
+         height: 100vh;
+         left: 0;
+         top: 0;
+         z-index: 9999;
+         overflow: scroll;
+         display: none;
+      }
+
+      .wrap-flex__tabs-wrap.activepopup {
+         display: block;
+      }
+
+      .wrap-flex__content {
+         padding: 24px 12px;
+      }
+
+      .block-img-pos {
+         display: none;
+      }
+
+      .block-h2 {
+         padding-bottom: 24px;
+      }
+
+      .padding-bottom1 {
+         padding-bottom: 16px;
+      }
+
+      #container-page h2 {
+         font-size: 18px;
+      }
+
+      .block-psmall {
+         padding-top: 5px;
+      }
+
+      .pro-kompaniju__grid {
+         grid-gap: 32px 15px;
+      }
+
+      .pro-kompaniju__fl-txt1 {
+         font-size: 36px;
+      }
+
+      .pro-kompaniju__fl-img {
+         padding-left: 5px;
+      }
+
+      .pro-kompaniju__fl-txt1 sub {
+         font-size: 15px;
+      }
+
+      .wrap-flex {
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: reverse;
+         -webkit-flex-direction: column-reverse;
+         -moz-box-orient: vertical;
+         -moz-box-direction: reverse;
+         -ms-flex-direction: column-reverse;
+         flex-direction: column-reverse;
+         -webkit-border-radius: 8px;
+         border-radius: 8px;
+         overflow: hidden;
+      }
+
+      .pro-kompaniju__txtbold {
+         font-size: 15px;
+      }
+
+      .btnpopup {
+         display: block;
+         background: #43B02A;
+         text-align: center;
+         color: #fff;
+         padding: 13px 0;
+         -webkit-border-radius: 8px;
+         border-radius: 8px;
+         margin-bottom: 24px;
+         font-size: 16px;
+      }
+
+      .btnpopup-close {
+         display: block;
+         width: 45px;
+         height: 45px;
+         border: 1px solid #E5E5E5;
+         -webkit-border-radius: 50%;
+         border-radius: 50%;
+         margin: 20px auto 20px auto;
+         position: relative;
+         cursor: pointer;
+      }
+
+      .btnpopup-close img {
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         -webkit-transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+      }
+
+      .pro-istoriy__flex {
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+         -webkit-flex-direction: column;
+         -moz-box-orient: vertical;
+         -moz-box-direction: normal;
+         -ms-flex-direction: column;
+         flex-direction: column;
+         margin-bottom: 24px;
+      }
+
+      .pro-istoriy__title {
+         max-width: 100%;
+         padding-top: 5px;
+      }
+
+      .kerivnictvo__name {
+         font-size: 20px;
+      }
+
+      .kerivnictvo__jobtitle {
+         font-size: 14px;
+      }
+   }
+</style>
+
+<style>
+   #wrap-privacy-policy {
+      max-width: 1366px;
+      margin: 3rem auto;
+      width: 100%;
+      height: auto;
+   }
+
+   #wrap-privacy-policy a {
+      cursor: pointer;
+      color: #379424;
+      font-weight: 700;
+   }
+
+   #wrap-privacy-policy h2 {
+      font-weight: 400;
+      margin-bottom: 2.3rem;
+   }
+
+   #wrap-privacy-policy p {
+      font-size: 1.49rem;
+      font-weight: 400;
+      margin: 0;
+      line-height: 2.5rem;
+      padding-bottom: 1.6rem;
+   }
+
+   .chat-inline-block__p {
+      display: inline-block;
+   }
+
+   .accordion__link-title {
+      color: #000;
+      border-bottom: .1rem dotted #000;
+      font-weight: 400;
+   }
+
+   .accordion__item-content {
+     max-height: 0;
+     margin: 0 2rem;
+     overflow: hidden;
+     transition: max-height 0.3s ease, padding 0.3s ease;
+   }
+
+   .accordion__item-content.active {
+     max-height: 1000px;
+   }
+
+   .accordion__link {
+      display: block;
+      text-decoration: none;
+      cursor: pointer;
+      background-color: #f2f2f2;
+      padding: 1rem 6rem 1rem 2rem;
+      position: relative;
+      margin-bottom: 1.2rem;
+   }
+
+   .accordion__link:before {
+      position: absolute;
+       content: "";
+       background: url(https://cdn.comfy.ua/media/x/img5/str_icon.svg);
+       top: 35%;
+       right: 2%;
+       width: 2.1rem;
+       height: 1.3rem;
+       transition: .3s;
+   }
+
+   .accordion__link_active {
+     font-weight: bold;
+     background-color: #f0f0f0;
+   }
+
+   .accordion__link_active:before {
+      transform: rotate(180deg);
+   }
+
+</style>
+
+<div id="container-page">
+   <div class="wrap-flex">
+      <div class="wrap-flex__item --tabs-left">
+         <div class="wrap-flex__content">
+
+            <div class="wrap-page__pro-kompaniju">
+               <div class="block-h2">
+                  <h2>Політика конфіденційності</h2>
+               </div>
+               <div class="block-img-pos">
+                  <img src="https://cdn.comfy.ua/media/x/img2/imgf/img1_2.png" alt="">
+               </div>
+               <div class="politika-konfidencijnosti__wrap">
+                  <div class="block-p padding-bottom1">
+                     ПРАВИЛА КОРИСТУВАННЯ МОБІЛЬНИМ ДОДАТКОМ «COMFY.UA»
+                  </div>
+                  <div class="block-p padding-bottom1">
+                     місто Дніпро, Україна
+                  </div>
+                  <div class="block-p padding-bottom1">
+                     Редакція станом на «27» липня 2022 року
+                  </div>
+                  <div class="block-p padding-bottom1">
+                     Ці ПРАВИЛА КОРИСТУВАННЯМ МОБІЛЬНИМ ДОДАТКОМ COMFY.UA (надалі, - Правила) розроблені відповідно до статей 11, 641, 642, 646, 698-711 Цивільного кодексу України (<a href="https://zakon.rada.gov.ua/laws/show/435-15#n3446" target="_blank" rel="nofollow">https://zakon.rada.gov.ua/laws/show/435-15#n3446</a>), Закону України «Про електронну комерцію» (<a href="https://zakon.rada.gov.ua/laws/show/675-19#n170" target="_blank" rel="nofollow">https://zakon.rada.gov.ua/laws/show/675-19#n170</a>), ст. 12, ст.13 Закону України «Про захист прав споживачів» (<a href="https://zakon.rada.gov.ua/laws/show/1023-12#Text" target="_blank" rel="nofollow">https://zakon.rada.gov.ua/laws/show/1023-12#Text</a> та регулюють взаємовідносини між ТОВАРИСТВОМ З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «КОМФІ ТРЕЙД» (далі по тексту – «Товариство»), як володільцем виключних прав на МОБІЛЬНИЙ ДОДАТОК <a href="https://comfy.ua/">https://comfy.ua/</a>
+                  </div>
+                  <div class="block-p padding-bottom1">
+                     ПРАВИЛА УЧАСТІ У БОНУСНІЙ ПРОГРАМІ ЛОЯЛЬНОСТІ «КЛУБ СУПЕРПОКУПЦІВ», Правила використання подарункової картки COMFY та електронного подарункового сертифікату COMFY, а також інші правила (договори приєднання), у тому числі ті, що стосуються безпеки та застережень, які розміщені у на сайті Товариства (https://comfy.ua), доповнюють дані Правила та є обов’язковими для Користувачів.
+                  </div>
+                  <div class="politika-konfidencijnosti__accordion">
+                     <div class="accordion__item">
+                        <div class="accordion__link js-accordion-link">
+                           <span class="accordion__link-title">ТЕРМІНИ ТА ВИЗНАЧЕННЯ</span>
+                        </div>
+                        <div class="accordion__item-content">
+                           <div class="block-p padding-bottom1">
+                              У цих Правилах, якщо контекст не потребує іншого, нижченаведені терміни мають наступне значення:
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              * Товариство – ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «КОМФІ ТРЕЙД» (ТОВ «КОМФІ ТРЕЙД»), код в Єдиному державному реєстрі юридичних осіб, фізичних осіб-підприємців та громадських формувань 36962487, місцезнаходження: м. Дніпро, 49100, бул. Слави, 6Б, кімн. 413. Після прийняття (акцепту) пропозиції Товариство виступає Продавцем.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              * Колл-центр – фахівці, що підтримують зв’язок з Користувачами за допомогою «гарячої» лінії: вхідна лінія 0800303505, вихідна лінія +38(056)7365656.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              * «МОБІЛЬНИЙ ДОДАТОК COMFY.UA» або МОБІЛЬНИЙ ДОДАТОК – авторський твір, що є програмним забезпеченням, призначеним для приладів з операційною системою Android та операційною системою IOS, всі майнові права інтелектуальної власності на який належать компанії ЛЕДКАН ХОЛДІНГС ЛІМІТЕД (Кіпр) (правовласник). Виключна ліцензія на використання МОБІЛЬНОГО ДОДАТКУ належить Товариству.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              * «Сайт» – сайт Товариства, на якому розміщена інформація про товари, роботи, послуги, умови їх придбання, оплати, доставки, акції, заходи рекламного та маркетингового характеру, інша загальна інформація, інша інформація, що є обов’язковою, в графічному та/або текстовому викладенні, адресована невизначеному колу осіб, на підставі якої будь-яка особа може здійснити свідомий вибір та звернутися до Товариства з офертою про укладення роздрібного договору купівлі-продажу товарів. Умови роботи Сайту викладені в ПРАВИЛАХ КОРИСТУВАННЯ САЙТОМ HTTPS://COMFY.UA.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              * «Користувач» – повнолітня, дієздатна фізична особа, яка завантажила та встановила на свій прилад МОБІЛЬНИЙ ДОДАТОК та користується ним на умовах, визначених в цих Правилах.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              * «Оферта» – вибір Користувачем від однієї позиції із переліку товарів/робіт/послуг, інформація про яких розміщена у МОБІЛЬНОМУ ДОДАТКУ, шляхом додавання обраного товару в «кошик», подальшого введення інформації, необхідної для оформлення замовлення, та натискання кнопки «оформити замовлення» (далі також - оформлення замовлення).
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              * «товар» – цифрова, комп’ютерна, побутова та інша техніка, побутові товари, інші товари, програмне забезпечення, аксесуари, комплектуючі та супроводжувальні предмети, інформація про які розміщена в МОБІЛЬНОМУ ДОДАТКУ.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              * «робота/послуга» – роботи/послуги, що зазвичай споживаються в момент їх виконання чи надання, інформація про які розміщена у МОБІЛЬНОМУ ДОДАТКУ.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              * «Авторизація» – отримання Товариством умовних даних, Користувача, що залишені Користувачем, для визначення Користувача під час встановлення та користування МОБІЛЬНИМ ДОДАТКОМ та/або в процесі направлення оферти (оформлення замовлення). Сторони використовують одноразовий ідентифікатор для підпису правочину. Авторизація під час користуванням МОБІЛЬНИМ ДОДАТКОМ здійснюється Користувачем за бажанням. Авторизація під час оформлення замовлення є обов’язковою. Персоніфікація не здійснюється. Введення таких даних є добровільною згодою Користувача на їх обробку.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              * «Верифікація Користувача» – встановлення (підтвердження) Товариством відповідності особи Користувача через дані, які ним залишені під час авторизації.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              * «Законодавство» – чинне законодавство України, яке може бути застосоване до правовідносин, пов'язаних з виконанням та/або які випливають з виконання описаних в цих Правилах зобов´язань.
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion__item">
+                        <div class="accordion__link js-accordion-link">
+                           <span class="accordion__link-title">ЗАГАЛЬНІ УМОВИ</span>
+                        </div>
+                        <div class="accordion__item-content">
+                           <div class="block-p padding-bottom1">
+                              2.1. Продовжуючи користуватись МОБІЛЬНИМ ДОДАТКОМ Користувач приймає умови та порядок направлення оферти Товариству (оформлення замовлення) та акцептування Товариством оферти, а також надає Товариству згоду на обробку наданих ним персональних даних та інших відомостей, які вважає за необхідне надати, або які є обов’язковими для надання за Законодавством, а також приймає умови відповідальності за недобросовісне використання МОБІЛЬНОГО ДОДАТКУ.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              2.2. Правовласник залишає за собою право здійснювати доопрацювання, модернізацію, оновлення та ін. щодо МОБІЛЬНОГО ДОДАТКУ (надалі, - оновлення). У разі таких оновлень Товариство розміщує нову версію, а Користувач має право отримати та запустити оновлення МОБІЛЬНОГО ДОДАТКУ через Google Play Market або App Store. Оновлювати чи не оновлювати МОБІЛЬНИЙ ДОДАТОК залишається за Користувачем виходячи з технічних параметрів його пристрою, на якому він розміщений (встановлений). Товариство попереджає, що оновлення МОБІЛЬНОГО ДОДАТКУ можуть впливати на його користувацькі властивості.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              2.3. Товариство попереджає, що Користувач для нього є завжди таким, що має дієздатність та є повнолітньою особою. Оцінка повноліття та дієздатності є завжди суб’єктивною. Товариство не вимагає надання документів, що підтверджує відсутність дієздатності або досягнення фізичною особою 18 років. Цивільне законодавство дозволяє укладати правочини щодо придбання товарів для дрібного побуту. Для уникнення ситуацій, коли неповнолітня або недієздатна особа користується МОБІЛЬНИМ ДОДАТКОМ, оформлює замовлення, направляє оферту на умовах, викладених в цих Правилах, та в майбутньому, її законний представник заперечує такі операції, Товариство вважає за необхідне попередити, що для нього такі операції будуть вважатися вчиненими особою без будь-яких обмежень, тобто законні представники мають самостійно забезпечити такі дії, які будуть достатніми для запобігання вчинення неповнолітніми/недієздатними/обмежено дієздатними особами дій, що описані вище.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              2.4. Товариством презюмується, що всі дії, вчинені особою у МОБІЛЬНОМУ ДОДАТКУ, в тому числі направлена оферта, мають на меті укладення договору купівлі-продажу товарів, робіт, послуг для цілей, не пов’язаних з підприємницькою діяльністю і, відповідно, в подальшому така особа не має права вимагати надання їй будь-яких документів, надання яких не передбачено для фізичної особи. За зверненням юридичної особи або фізичної особи-підприємця укладається окремий договір поставки (в тому числі у спрощений спосіб) із оформленням всіх первинних документів та можливістю здійснення розрахунків за допомогою платіжних доручень. Порядок укладення таких договорів регулюється господарським законодавством України.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              2.5. Товариство повідомляє, що опис товарів, розміщений у МОБІЛЬНОМУ ДОДАТКУ, в тому числі ціни, позначені у МОБІЛЬНОМУ ДОДАТКУ, можуть змінюватись. Остаточною є ціна, вказана в акцепті Товариства, направленому у відповідь на оферту Користувача (підтвердження замовлення). Будь-яка інформація про товар, що міститься у МОБІЛЬНОМУ ДОДАТКУ, розміщена, у тому числі, на підставі технічної та іншої інформації, наданої виробником товару. У випадку виявлення розбіжностей в інформації, зазначеній у МОБІЛЬНОМУ ДОДАТКУ та в документах виробника, Користувач має керуватися даними документів виробника товарів. Товариство має право в будь-який час вносити зміни в інформацію, розміщену у МОБІЛЬНОМУ ДОДАТКУ, без попереднього повідомлення Користувачів.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              2.6. Товариство повідомляє Користувача, що обрання та користування товаром, є відповідальною дією. Користувач має впевнитись, що всі вимоги щодо експлуатації товару ним дотримано.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              2.7. Користувач несе відповідальність за достовірність інформації, вказаної при направленні оферти (оформленні замовлення). При цьому, Користувач автоматично надає свою згоду Товариству на обробку своїх персональних даних, які додатково стали або стануть відомими Товариству в результаті прийняття (акцепту) оферти Користувача. Обробка включає, але не обмежується зазначеним: збирання, реєстрацію, накопичення, зберігання, адаптування, зміну, поновлення, використання і поширення (включаючи передачу), знеособлення, знищення персональних даних, з метою ведення бази персональних даних покупців, у тому числі Товариство отримує право здійснювати опитування Користувача через засоби зв’язку, надані Товариству або відомі Товариству, стосовно якості товарів/робіт/послуг, запрошення до участі у рекламних та маркетингових заходах, здійснювати інформування Користувача через засоби зв’язку Користувача, надані Товариству або відомі Товариству, щодо результатів розгляду його звернень, повідомлення щодо акцій, пропозицій, рекламних матеріалів, діяльності Товариства. Користувач погоджується, що Товариство не має отримувати жодної додаткової згоди Користувача для передачі персональних даних Користувача, будь-які інші форми отримання згоди Користувача не передбачаються. Користувач має право в будь-який час відмовитися від розсилок (реклами, маркетингових повідомлень), повідомивши про це на гарячу лінію Товариства за телефонами: безкоштовно по Україні 0-800-303-505 зі стаціонарних та мобільних телефонів, безкоштовно по Києву 044-39-39-505 зі стаціонарних телефонів, або відписавшись від розсилки шляхом направлення у позначеному місті електронного повідомлення зворотного листа з власної адреси електронної пошти. Користувач має право відмовитись від згоди на обробку персональних даних, проте, розуміє, що Товариство буде зберігати таку інформацію в рамках податкового та іншого застосовного законодавства.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              2.8. Товариство не проводить персоніфікацію особи та верифікацію даних (інформації), наданих Користувачем під час користуванням МОБІЛЬНИМ ДОДАТКОМ. Вся інформація, надана Користувачем під час авторизації у МОБІЛЬНОМУ ДОДАТКУ приймається Товариством без будь-якою додаткової перевірки та є підставою для оформлення документів, необхідних в ході акцепту оферти.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              2.9. Текст цих правил є об’єктом авторських прав, майнові права на який належать Товариству, та охороняються згідно з Законодавством.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              2.10. Для отримання інформації щодо окремих розділів МОБІЛЬНОГО ДОДАТКУ або виконання окремих дій можливе автоматичне переадресування Користувача на Сайт. Товариство використовує (cookies) куки, щоб забезпечити надання максимально повної інформації, щоб Користувачі отримали найкращий досвід на Сайті. Якщо Користувач продовжує користуватись Сайтом, це означає його згоду на використання куків (cookies) та отримання Товариством всіх файлів cookie, та можливість надсилати Користувачу найсвіжішу інформацію про найактуальніші пропозиції та акції. Користувач в будь-який час може відмовитись від розсилки або заборонити використовувати куки шляхом персональних налаштувань свого пристрою, за допомогою якого він здійснює користування Сайтом.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              2.11. Використання МОБІЛЬНОГО ДОДАТКУ для перегляду товарів/робіт/послуг, а також для оформлення замовлення є для Користувача безоплатним. Умови доступу до Мережі Інтернет регулюються окремим договором між Користувачем та його Інтернет-провайдером без втручання Товариства.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              2.12. Товариство попереджає, що в роботі МОБІЛЬНОГО ДОДАТКУ можуть виникати тимчасові часткові обмеження в роботі з причин проведення профілактичних, регламентних, інших технічних робіт. Технічна служба Товариства має право без попередження Користувача проводити необхідні профілактичні, регламентні та інші технічні роботи.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              2.13. Товариство залишає за собою право в односторонньому порядку вносити зміни в ці Правила з їх попереднім оприлюдненням.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              2.14. Визнання судом недійсним окремих положень цих Правил не призводить до недійсності цих Правил в цілому.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              2.15. Умови надання певних послуг (страхування, доставка і т.ін) регулюються окремими умовами, що розміщені на Сайті.
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion__item">
+                        <div class="accordion__link js-accordion-link">
+                           <span class="accordion__link-title">ПОРЯДОК УКЛАДЕННЯ ДОГОВОРІВ З ВИКОРИСТАННЯМ МОБІЛЬНОГО ДОДАТКУ</span>
+                        </div>
+                        <div class="accordion__item-content">
+                           <div class="block-p padding-bottom1">
+                              3.1. Інформація про товари/роботи/послуги, розміщена в МОБІЛЬНОМУ ДОДАТКУ є запрошенням робити пропозиції укласти договір щодо придбання товарі/робіт/послуг та не є офертою Товариства, оскільки асортимент та характеристики товарів/робіт/послуг можуть змінюватись, товар може бути знятий з виробництва, товар може бути реалізовано без залишків, на товар може бути проведена переоцінка як в бік зменшення, так й в бік збільшення, щодо товарів/робіт/послуг можуть бути застосовані будь-які акції, розпродажі тощо.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              3.2. Користувач після ознайомлення з розміщеною в МОБІЛЬНОМУ ДОДАТКУ інформацією має право зробити Товариству пропозицію укласти договір (оферту) шляхом заповнення замовлення в МОБІЛЬНОМУ ДОДАТКУ або через Колл-центр Товариства. Оформлення замовлення вважається офертою Користувача Товариству на придбання товару/робіт/послуг на умовах, зазначених у відповідному замовленні.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              3.3. Направлення Користувачем оферти, як це описано в п.3.2. цих Правил, є підтвердженням того, що він ознайомився з описом обраних товарів/робіт/послуг, їх технічними характеристиками та умовами надання; це є також підтвердженням того, що обраний товар/робота/послуга повністю відповідають меті їх придбання; Користувач самостійно несе відповідальність за свідомий вибір товарів/робіт/послуг згідно з цими Правилами.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              3.4. Прийняттям оферти Користувача (акцептом) є вчинення Товариством дій відповідно до вказаних у пропозиції умов договору (відвантаження товарів, надання послуг, виконання робіт), що засвідчують бажання Товариства укласти відповідний договір.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              3.5. Товариство має право запропонувати Користувачу придбати товари/роботи/послуги на інших умовах, ніж вказані в оферті Користувача. В такому випадку така пропозиція Товариства вважається зустрічною офертою, яка може бути прийнята Користувачем. Прийняттям зустрічної оферти Товариства вважається отримання Користувачем товару/робіт/послуг на умовах, передбачених зустрічною офертою. Товариство має право відкликати зустрічну оферту до моменту отримання товару Користувачем.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              3.6. Користувач має право на підтвердження свого наміру вважати себе зобов’язаним за направленою офертою у разі її прийняття Товариством здійснити перерахування коштів в розмірі ціни товарів/робіт/послуг, що вказані в оферті. У випадку акцепту Товариством оферти, як це передбачено умовами цих Правил, перераховані грошові кошти вважаються оплатою Користувача за товар/роботи/послуги.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              3.7. У випадку незгоди Товариства з прийняттям оферти перераховані Користувачем відповідно до п.3.6. цих Правил грошові кошти підлягають поверненню Товариством Користувачу. При цьому грошові кошти підлягають поверненню за тими реквізитами/на той рахунок, з яких був здійснений переказ, а також через ту фінансову компанію, через яку був здійснений переказ.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              3.8. Умови укладених договорів придбання товарі/робіт/послуг регулюються нормами Цивільного кодексу України, Закону України «Про захист прав споживачів».
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              3.9. Умови обміну та повернення товарів/робіт/послуг є загальноприйнятими та регулюються нормами діючого законодавства про захист прав споживачів. Окремі товари не підлягають поверненню та обміну відповідно до правил Постанови Кабінету Міністрів України від 19 березня 1994 р. N 172 «Про реалізацію окремих положень Закону України «Про захист прав споживачів» (<a href="https://zakon.rada.gov.ua/laws/show/172-94-%D0%BF#Text" target="_blank" rel="nofollow">https://zakon.rada.gov.ua/laws/show/172-94-%D0%BF#Text</a>).
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion__item">
+                        <div class="accordion__link js-accordion-link">
+                           <span class="accordion__link-title">ОБСТАВИНИ НЕПЕРЕБОРНОЇ СИЛИ (ФОРС-МАЖОР)</span>
+                        </div>
+                        <div class="accordion__item-content">
+                           <div class="block-p padding-bottom1">
+                              4.1 Товариство та Користувач не несуть відповідальності за невиконання будь-якого з положень, якщо доведуть, що таке невиконання було викликано форс-мажорними обставинами, тобто подіями або обставинами, що дійсно знаходяться поза їх контролем, що носять непередбачений і невідворотний характер.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              4.2 До форс-мажорних обставин належать, зокрема, але не виключно, природні катаклізми, страйки, пожежі, повені, вибухи, обмерзання, війни (як оголошені, так і неоголошені), оголошення воєнного стану або надзвичайних ситуацій, проведення антитерористичних операцій (як оголошених, так і неоголошених), епідемії, епізоотії, введення повного чи обмеженого карантину, режиму надзвичайної ситуації, надзвичайного стану, введення локдаунів, заборон чи обмеження здійснення певних видів господарської діяльності, заколоти, загибель товару, затримки перевізників, викликані аваріями або несприятливими погодними умовами, небезпеки і випадковості на морі, ембарго, катастрофи, обмеження, що накладаються державними органами (включаючи розподілу, пріоритети, офіційні вимоги, квоти і ціновий контроль), якщо ці обставини безпосередньо вплинули на виконання прийнятих зобов’язань.
+                           </div>
+                           <div class="block-p padding-bottom1">
+                              4.3 Особа, для якої стало неможливим виконання зобов'язань через настання форс-мажорних обставин, повинна негайно інформувати іншу сторону.
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion__item">
+                        <div class="accordion__link js-accordion-link">
+                           <span class="accordion__link-title">ВИДАЛЕННЯ АКАУНТУ</span>
+                        </div>
+                        <div class="accordion__item-content">
+                           <div class="block-p padding-bottom1">
+                              5.1 Користувач мобільного додатку має право видалити свій акаунт з додатку на власний розсуд. При повторній авторизації у додатку за тим самим номером мобільного телефону акаунт поновлюється, при цьому у користувача не відновлюється історія його активностей у цьому додатку.
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="block-p padding-bottom2">
+                     <a href="https://cdn.comfy.ua/media/x/img2/pdf/bonusi_mob_dodatok.pdf" target="_blank">Акція "Бонуси"</a>
+                  </div>
+
+               </div>
+            </div>
+
+         </div>
+      </div>
+      <div class="wrap-flex__item --tabs-right">
+
+         <div class="wrap-flex__tabs-wrap">
+            <ul class="wrap-flex__tabs">
+               <li class="wrap-flex__tabs-item">
+                  <a href="https://comfy.ua/ua/landing/aboutus.html"><span>Про компанію</span></a>
+               </li>
+               <li class="wrap-flex__tabs-item pdd-leftcstm">
+                  <a href="https://comfy.ua/ua/landing/istorija_kompanii.html"><span>Історія компанії</span></a>
+               </li>
+               <li class="wrap-flex__tabs-item pdd-leftcstm">
+                  <a href="https://comfy.ua/ua/landing/kerivnictvo.html"><span>Керівництво</span></a>
+               </li>
+               <li class="wrap-flex__tabs-item pdd-leftcstm">
+                  <a href="https://comfy.ua/ua/landing/vidznaki_ta_nagorodu.html"><span>Відзнаки та нагороди</span></a>
+               </li>
+               <!-- <li class="wrap-flex__tabs-item pdd-leftcstm">
+                  <a href="https://comfy.ua/ua/contact-media.html"><span>Прес-центр</span></a>
+               </li> -->
+               <li class="wrap-flex__tabs-item">
+                  <a href="https://comfy.ua/ua/shops.html"><span>Магазини</span></a>
+               </li>
+               <li class="wrap-flex__tabs-item">
+                  <a href="https://comfy.ua/ua/landing/contact.html"><span>Контакти</span></a>
+               </li>
+               <!-- <li class="wrap-flex__tabs-item">
+                  <a href="#"><span>Прес-центр</span></a>
+               </li> -->
+               <li class="wrap-flex__tabs-item">
+                  <a href="https://work.comfy.ua/"><span>Робота в компанії</span></a>
+               </li>
+               <li class="wrap-flex__tabs-item active-tab">
+                  <a href="https://comfy.ua/ua/landing/safety_and_warnings.html"><span>Політіка конфіденційності</span></a>
+               </li>
+               <li class="wrap-flex__tabs-item">
+                  <a href="https://comfy.ua/ua/tender.html"><span>Тендер</span></a>
+               </li>
+               <li class="wrap-flex__tabs-item">
+                  <a href="https://comfy.ua/ua/landing/partners.html"><span>Партнерам</span></a>
+               </li>
+               <li class="wrap-flex__tabs-item">
+                  <a href="https://comfy.ua/ua/landing/garantija.html"><span>Гарантія</span></a>
+               </li>
+            </ul>
+            <div id="btnpopup-close" class="btnpopup-close">
+               <img src="https://cdn.comfy.ua/media/x/img2/close_popup_new.svg" alt="">
+            </div>
+         </div>
+
+      </div>
+   </div>
+</div>
+
+<script type="text/javascript">
+   (function () {
+
+      const accordionLinks = document.querySelectorAll('.js-accordion-link');
+
+      accordionLinks.forEach(link => {
+         link.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const accordionItem = link.closest('.accordion__item');
+            const content = accordionItem.querySelector('.accordion__item-content');
+            const isActive = content.classList.contains('active');
+
+            document.querySelectorAll('.accordion__item-content.active').forEach(activeContent => {
+               activeContent.classList.remove('active');
+               activeContent.closest('.accordion__item').querySelector('.accordion__link').classList.remove('accordion__link_active');
+            });
+
+            if (!isActive) {
+               content.classList.add('active');
+               link.classList.add('accordion__link_active');
+            }
+         });
+      });
+
+   })();
+</script>

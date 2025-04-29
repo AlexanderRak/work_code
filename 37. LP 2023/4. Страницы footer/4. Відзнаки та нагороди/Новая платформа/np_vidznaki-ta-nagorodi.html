@@ -1,0 +1,819 @@
+<style>
+   #container-page {
+      max-width: 1390px;
+      margin: 0 auto;
+      height: auto;
+      position: relative;
+      overflow: hidden;
+      box-sizing: border-box;
+      display: block;
+      padding: 2.4rem 0 2.4rem 0;
+   }
+
+   #container-page h2 {
+      font-size: 24px;
+      text-align: left;
+      font-weight: 700;
+      color: #000;
+      display: block;
+      padding: 0;
+      margin: 0;
+      line-height: 1.3;
+   }
+
+   #container-page p {
+      font-size: 16px;
+      text-align: left;
+      color: #000;
+      font-weight: 400;
+      display: block;
+      padding: 0;
+      margin: 0;
+      line-height: 20px;
+   }
+
+   #container-page h3 {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: left;
+      color: #000;
+      padding: 0 0 0 36px;
+      margin: 0;
+      line-height: 24px;
+   }
+
+   .main-container.page {
+      padding-left: 0;
+      padding-right: 0;
+   }
+
+   .dib__links {
+      color: #43b02a;
+      text-decoration: underline;
+   }
+
+   .wrap-flex {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -moz-box-orient: horizontal;
+      -moz-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+   }
+
+   .wrap-flex__item.--tabs-left {
+      background: #fff;
+      width: 100%;
+      margin-right: 16px;
+      height: -webkit-max-content;
+      height: -moz-max-content;
+      height: max-content;
+   }
+
+   .wrap-flex__item.--tabs-right {
+      min-width: 215px;
+      width: 215px;
+   }
+
+   .wrap-flex__content {
+      position: relative;
+      padding: 56px 32px;
+      overflow: hidden;
+   }
+
+   .block-h2 {
+      padding-bottom: 40px;
+   }
+
+   .block-h2.ppdb0 {
+      padding-bottom: 0;
+   }
+
+   .linkbl {
+      color: #43B02A;
+      text-decoration: underline;
+      cursor: pointer;
+   }
+
+   .block-p {
+      font-size: -webkit-calc(14px + 2 * ((100vw - 320px) / 1600));
+      font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+      color: #000;
+      text-align: left;
+      line-height: 1.3;
+      display: block;
+   }
+
+   .block-p a {
+      cursor: pointer;
+      color: #379424;
+      text-decoration: underline;
+   }
+
+   .block-h3 {
+      font-size: -webkit-calc(18px + 2 * ((100vw - 320px) / 1600));
+      font-size: calc(18px + 2 * ((100vw - 320px) / 1600));
+      color: #000;
+      text-align: center;
+      line-height: 1.3;
+      display: block;
+      font-weight: bold;
+   }
+
+   .padding-bottom1 {
+      padding-bottom: 32px;
+   }
+
+   .padding-bottom2 {
+      padding-top: 32px;
+   }
+
+   .block-list {
+      padding-bottom: 24px;
+   }
+
+   .block-list-ul {
+      list-style-type: disc;
+      margin: 0;
+      padding: 5px 0 0 8px;
+   }
+
+   .block-list-ul li {
+      font-size: -webkit-calc(14px + 2 * ((100vw - 320px) / 1600));
+      font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+      color: #000;
+      text-align: left;
+      line-height: 1.3;
+      display: block;
+      position: relative;
+      padding-left: 20px;
+   }
+
+   .block-list-ul li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      background: #000;
+      position: absolute;
+      left: 0;
+      top: 7px;
+   }
+
+   .block-img-pos {
+      position: absolute;
+      right: 0;
+      top: 0;
+   }
+
+   .block-img-pos.--vidznaki-ta-nagorodi-img {
+      top: 32px;
+   }
+
+   .wrap-flex__tabs {
+      background: #fff;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+   }
+
+   .wrap-flex__tabs .wrap-flex__tabs-item {
+      background: #fff;
+      cursor: pointer;
+      position: relative;
+      border-bottom: 1px solid #fff;
+   }
+
+   .wrap-flex__tabs .wrap-flex__tabs-item:last-child {
+      border-bottom: 0px solid #fff;
+   }
+
+   .wrap-flex__tabs .wrap-flex__tabs-item.active-tab {
+      background: #43B02A;
+   }
+
+   .wrap-flex__tabs .wrap-flex__tabs-item.active-tab a {
+      color: #fff;
+      font-weight: bold;
+   }
+
+   .wrap-flex__tabs .wrap-flex__tabs-item.active-tab a:hover {
+      background: #43B02A;
+      color: #fff;
+   }
+
+   .wrap-flex__tabs .wrap-flex__tabs-item.pdd-leftcstm a {
+      padding: 13px 0 13px 40px;
+   }
+
+   .wrap-flex__tabs .wrap-flex__tabs-item a {
+      color: #000;
+      font-weight: normal;
+      font-size: 16px;
+      padding: 13px 0 13px 32px;
+      line-height: 20px;
+      display: block;
+      -webkit-transition: 0.1s;
+      -o-transition: 0.1s;
+      transition: 0.1s;
+      text-decoration: none;
+   }
+
+   .wrap-flex__tabs .wrap-flex__tabs-item a:hover {
+      background: #379424;
+      color: #fff;
+   }
+
+   .btnpopup {
+      display: none;
+   }
+
+   .btnpopup-close {
+      display: none;
+   }
+
+   .plk-accordion__item {
+      margin-bottom: 0.5rem;
+      position: relative;
+   }
+
+   .plk-accordion__link {
+      background-color: #f2f2f2;
+      padding: 1rem 6rem 1rem 2rem;
+      position: relative;
+      display: block;
+      cursor: pointer;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 2.5rem;
+   }
+
+   .plk-accordion__link::after {
+      position: absolute;
+      content: "";
+      background: url(https://cdn.comfy.ua/media/x/img2/icon_close.svg) no-repeat 50%;
+      top: 35%;
+      right: 2%;
+      width: 2.1rem;
+      height: 1.3rem;
+   }
+
+   .plk-accordion__link_active::after {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+   }
+
+   .plk-accordion__item-content {
+      display: none;
+      padding: 2rem 2rem 0;
+   }
+
+   .plk-accordion__link_active+.plk-accordion__item-content {
+      display: block;
+   }
+
+   .plk-accordion__link-title {
+      color: #000;
+      border-bottom: 0.1rem dotted #000;
+      font-weight: 400;
+   }
+
+   .pro-kompaniju__content {
+      max-width: 758px;
+      position: relative;
+   }
+
+   .pro-kompaniju__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 32px;
+   }
+
+   .pro-kompaniju__fl {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+   }
+
+   .pro-kompaniju__fl-txt1 {
+      font-size: -webkit-calc(32px + 16 * ((100vw - 320px) / 1600));
+      font-size: calc(32px + 16 * ((100vw - 320px) / 1600));
+      color: #000;
+      font-weight: bold;
+      line-height: 1;
+   }
+
+   .pro-kompaniju__fl-txt1 sub {
+      font-size: -webkit-calc(18px + 7 * ((100vw - 320px) / 1600));
+      font-size: calc(18px + 7 * ((100vw - 320px) / 1600));
+      bottom: 0;
+      vertical-align: baseline;
+   }
+
+   .pro-kompaniju__fl-img {
+      padding-left: 8px;
+   }
+
+   .pro-kompaniju__txtbold {
+      padding: 8px 0 0 0;
+      font-size: -webkit-calc(16px + 2 * ((100vw - 320px) / 1600));
+      font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
+      font-weight: 500;
+      color: #000;
+   }
+
+   .pro-kompaniju-info {
+      border-top: 1px solid #D9D9D9;
+      padding-top: 20px;
+      margin-top: 30px;
+   }
+
+   .pro-kompaniju-info .block-p {
+      padding-bottom: 20px;
+   }
+
+   .pro-kompaniju-info .block-p:last-child {
+      padding-bottom: 0;
+   }
+
+   .block-psmall {
+      color: #999999;
+      font-size: -webkit-calc(14px + 2 * ((100vw - 320px) / 1600));
+      font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+      padding-top: 8px;
+   }
+
+   .pro-kompaniju-grid-txt {
+      padding-bottom: 25px;
+   }
+
+   .pro-istoriy__flex {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+      -moz-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      margin-bottom: 56px;
+   }
+
+   .pro-istoriy__flex:last-child {
+      margin-bottom: 0;
+   }
+
+   .pro-istoriy__year {
+      font-size: -webkit-calc(32px + 16 * ((100vw - 320px) / 1600));
+      font-size: calc(32px + 16 * ((100vw - 320px) / 1600));
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #43B02A;
+      padding-right: 16px;
+   }
+
+   .pro-istoriy__title {
+      font-size: -webkit-calc(16px + 4 * ((100vw - 320px) / 1600));
+      font-size: calc(16px + 4 * ((100vw - 320px) / 1600));
+      font-weight: 500;
+      line-height: 1.3;
+      color: #000000;
+      max-width: 690px;
+   }
+
+   .kerivnictvo_list {
+      padding-bottom: 32px;
+   }
+
+   .kerivnictvo_list:last-child {
+      padding-bottom: 0;
+   }
+
+   .kerivnictvo__name {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.3;
+      color: #000000;
+   }
+
+   .kerivnictvo__jobtitle {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1;
+      color: #000000;
+      padding-top: 5px;
+   }
+
+   .vidznaki-ta-nagorodi__wrap {
+      padding-bottom: 48px;
+   }
+
+   .vidznaki-ta-nagorodi__wrap:last-child {
+      padding-bottom: 0;
+   }
+
+   .vidznaki-ta-nagorodi__txt {
+      font-weight: 700;
+      font-size: -webkit-calc(32px + 16 * ((100vw - 320px) / 1600));
+      font-size: calc(32px + 16 * ((100vw - 320px) / 1600));
+      line-height: 1.3;
+      color: #43B02A;
+      padding-bottom: 10px;
+   }
+
+   .vidznaki-ta-nagorodi {
+      list-style-type: none;
+      padding-left: 12px;
+   }
+
+   .vidznaki-ta-nagorodi li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 15px;
+      font-weight: 400;
+      font-size: 16px;
+      color: #000;
+      line-height: 1.3;
+   }
+
+   .vidznaki-ta-nagorodi li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      background: #000;
+      position: absolute;
+      left: 0;
+      top: 7px;
+   }
+
+   .contact__client {
+      margin: 20px 0px;
+      padding: 20px;
+      border: 1px solid #FF671F;
+   }
+
+   .contact__client-grid {
+      display: inline-grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+      padding-top: 18px;
+   }
+
+   @media (max-width: 1200px) {
+      .block-img-pos {
+         max-width: 175px;
+      }
+   }
+
+   @media (max-width: 1024px) {
+      .pro-kompaniju__grid {
+         grid-template-columns: 1fr 1fr 1fr;
+      }
+   }
+
+   @media (max-width: 812px) {
+      .pro-kompaniju__grid {
+         grid-template-columns: 1fr 1fr;
+      }
+
+      .block-img-pos {
+         display: none;
+      }
+   }
+
+   @media (max-width: 480px) {
+      #container-page {
+         padding: 25px 12px 50px 12px;
+      }
+
+      .vidznaki-ta-nagorodi li {
+         padding-left: 20px;
+      }
+
+      .vidznaki-ta-nagorodi__wrap {
+         padding-bottom: 24px;
+      }
+
+      .vidznaki-ta-nagorodi {
+         padding-left: 8px;
+      }
+
+      .wrap-flex__item.--tabs-right {
+         min-width: 100%;
+         width: 100%;
+      }
+
+      .wrap-flex__tabs-wrap {
+         background: #fff;
+         position: fixed;
+         width: 100%;
+         height: 100vh;
+         left: 0;
+         top: 0;
+         z-index: 9999;
+         overflow: scroll;
+         display: none;
+      }
+
+      .wrap-flex__tabs-wrap.activepopup {
+         display: block;
+      }
+
+      .wrap-flex__content {
+         padding: 24px 12px;
+      }
+
+      .block-img-pos {
+         display: none;
+      }
+
+      .block-h2 {
+         padding-bottom: 24px;
+      }
+
+      .padding-bottom1 {
+         padding-bottom: 16px;
+      }
+
+      #container-page h2 {
+         font-size: 18px;
+      }
+
+      .block-psmall {
+         padding-top: 5px;
+      }
+
+      .pro-kompaniju__grid {
+         grid-gap: 32px 15px;
+      }
+
+      .pro-kompaniju__fl-txt1 {
+         font-size: 36px;
+      }
+
+      .pro-kompaniju__fl-img {
+         padding-left: 5px;
+      }
+
+      .pro-kompaniju__fl-txt1 sub {
+         font-size: 15px;
+      }
+
+      .wrap-flex {
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: reverse;
+         -webkit-flex-direction: column-reverse;
+         -moz-box-orient: vertical;
+         -moz-box-direction: reverse;
+         -ms-flex-direction: column-reverse;
+         flex-direction: column-reverse;
+         -webkit-border-radius: 8px;
+         border-radius: 8px;
+         overflow: hidden;
+      }
+
+      .pro-kompaniju__txtbold {
+         font-size: 15px;
+      }
+
+      .btnpopup {
+         display: block;
+         background: #43B02A;
+         text-align: center;
+         color: #fff;
+         padding: 13px 0;
+         -webkit-border-radius: 8px;
+         border-radius: 8px;
+         margin-bottom: 24px;
+         font-size: 16px;
+      }
+
+      .btnpopup-close {
+         display: block;
+         width: 45px;
+         height: 45px;
+         border: 1px solid #E5E5E5;
+         -webkit-border-radius: 50%;
+         border-radius: 50%;
+         margin: 20px auto 20px auto;
+         position: relative;
+         cursor: pointer;
+      }
+
+      .btnpopup-close img {
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         -webkit-transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+      }
+
+      .pro-istoriy__flex {
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+         -webkit-flex-direction: column;
+         -moz-box-orient: vertical;
+         -moz-box-direction: normal;
+         -ms-flex-direction: column;
+         flex-direction: column;
+         margin-bottom: 24px;
+      }
+
+      .pro-istoriy__title {
+         max-width: 100%;
+         padding-top: 5px;
+      }
+
+      .kerivnictvo__name {
+         font-size: 20px;
+      }
+
+      .kerivnictvo__jobtitle {
+         font-size: 14px;
+      }
+   }
+</style>
+
+<div id="container-page">
+   <div class="wrap-flex">
+      <div class="wrap-flex__item --tabs-left">
+         <div class="wrap-flex__content">
+
+            <div class="wrap-page__pro-kompaniju">
+               <div class="block-h2">
+                  <h2>Відзнаки та нагороди</h2>
+               </div>
+               <div class="block-img-pos --vidznaki-ta-nagorodi-img">
+                  <img src="https://cdn.comfy.ua/media/x/img2/imgf/img1_3.png" alt="">
+               </div>
+               <div class="vidznaki-ta-nagorodi__content">
+                  <div class="vidznaki-ta-nagorodi__wrap">
+                     <div class="vidznaki-ta-nagorodi__txt">2024</div>
+                     <ul class="vidznaki-ta-nagorodi">
+                        <li>Forbes Ukraine: COMFY — #2 гравець в українському e-commerce</li>
+                        <li>Індекс найкращих підприємств України від Опендатабот:<br>COMFY увійшов у п’ятірку найбільших за обсягом бізнесів з бездоганною діловою репутацією у сфері роздрібної торгівлі</li>
+                        <li>Рейтинг 200 найбільших компаній України: COMFY займає 44 місце</li>
+                        <li>Репутаційні АКТИВісти: COMFY переможець у номінації "Ритейл - електроніка"</li>
+                        <li>UCXE 2024: COMFY Lovemark-компанія у галузі “Магазин техніки та електроніки”</li>
+                        <li>UCXE 2024: COMFY переможець у номінаціях “Найкращий омніканальний клієнтський досвід”, “Краща практика антикризових CX-рішень”, “Кращий онлайн клієнтський досвід”, “Кращий клієнтський досвід у Контакт-центрі”</li>
+                        <li>UCXE 2024: COMFY займає третє місце у номінації “Краща практика використання зворотного зв’язку”</li>
+                        <li>RAU: COMFY #9 у рейтингу найбільших за оборотом ритейлерів серед членів РАУ у 2023 році</li>
+                        <li>RAU: COMFY #13 у рейтингу найбільших за сумою сплачених податків ритейлерів серед членів РАУ у 2023 році</li>
+                        <li>Dzwinner 2024: COMFY — Контакт-центр року</li>
+                        <li>Рейтинг найкращих роботодавців від NV і Odgers Berndtson: COMFY увійшов до 50 найкращих роботодавців країни</li>
+                        <li>HR Pro Awards: COMFY переможець в номінації "Навчання та розвиток"</li>
+                        <li>RAU Awards: COMFY переможець в номінації “Ритейлер року у сегменті техніки та електроніки”</li>
+                        <li>Effie Awards Ukraine: Маркетинг-команда COMFY переможець в номінації “Найкраща маркетингова команда”</li>
+                        <li>Відзнака European Contact Centre & Customer Service Awards. </li>
+                     </ul>
+                  </div>
+                  <div class="vidznaki-ta-nagorodi__wrap">
+                     <div class="vidznaki-ta-nagorodi__txt">2023</div>
+                     <ul class="vidznaki-ta-nagorodi">
+                        <li>RAU Awards: Генеральний директор COMFY Ігор Хижняк переможець у номінації “Персона року в ритейлі”</li>
+                        <li>RAU Awards: COMFY переможець у номінації “Ритейлер року в сегменті побутової техніки, електроніки та гаджетів”</li>
+                        <li>HR Pro Awards: Генеральний директор COMFY Ігор Хижняк переможець у номінації “СЕО року”</li>
+                        <li>X-Ray Marketing Awards 2023: Переможець у номінації Brand Experience (КРАЩ. Товар топ за свої гроші)</li>
+                        <li>Effie Awards Ukraine 2023: COMFY фіналіст в номінації “Роздрібна торгівля” (КРАЩ — це топ за свої гроші)</li>
+                     </ul>
+                  </div>
+                  <div class="vidznaki-ta-nagorodi__wrap">
+                     <div class="vidznaki-ta-nagorodi__txt">2022</div>
+                     <ul class="vidznaki-ta-nagorodi">
+                        <li>Конкурс DzWinner-2022: 12 нагород та відзнак, зокрема "Контакт-центр року", "Людина року" (Катерина Качуренко), "Консультант року", "Продавець року", "Менеджер року", "Тренер року" та інші</li>
+                        <li>#24 у Рейтингу найкращих роботодавців України 2022 від Forbes Україна та Work.ua</li>
+                     </ul>
+                  </div>
+                  <div class="vidznaki-ta-nagorodi__wrap">
+                     <div class="vidznaki-ta-nagorodi__txt">2021</div>
+                     <ul class="vidznaki-ta-nagorodi">
+                        <li>#38 у рейтингу найбільших приватних компаній України 2021 від Forbes Україна</li>
+                        <li>Премія RAU Award 2021: Перемога в номінаціях "Рітейлер року в сегменті побутової техніки, електроніки і гаджетів" та "E-commerce-рітейлер року в сегменті техніки, електроніки і гаджетів"</li>
+                     </ul>
+                  </div>
+                  <div class="vidznaki-ta-nagorodi__wrap">
+                     <div class="vidznaki-ta-nagorodi__txt">2020</div>
+                     <ul class="vidznaki-ta-nagorodi">
+                        <li>Конкурс DzWinner-2020: Нагорода "Найкраща сервісна команда".</li>
+                        <li>Премія RAU Award 2020: Перемога в номінаціях "Рітейлер року в сегменті побутової техніки, електроніки і гаджетів" та "E-commerce-рітейлер року в сегменті техніки, електроніки і гаджетів"</li>
+                        <li>Forbes Україна: COMFY входить до топ-15 найприбутковіших торгових мереж України за версією видання</li>
+                     </ul>
+                  </div>
+                  <div class="vidznaki-ta-nagorodi__wrap">
+                     <div class="vidznaki-ta-nagorodi__txt">2019</div>
+                     <ul class="vidznaki-ta-nagorodi">
+                        <li>HeadHunter Україна: COMFY у Топ-20 роботодавців України</li>
+                        <li>Виставка Retail Expo: Премія Best Retail Project 2019 в категорії True Omnichannel.</li>
+                        <li>Премія RAU Award 2019: Перемога в номінаціях "Рітейлер року в сегменті побутової техніки, електроніки і гаджетів" та "E-commerce-рітейлер року в сегменті техніки, електроніки і гаджетів"</li>
+                        <li>Премія Retail Awards 2019: Нагорода "Вибір споживача" у категорії "Краща мережа супермаркетів побутової техніки та електроніки"</li>
+                        <li>Премія "Блогосфера 2019": YouTube-канал "COMFY – корисно та lifestyle" — переможець в номінації True Brand</li>
+                        <li>Видання Delo.ua: Генеральний директор COMFY Ігор Хижняк — переможець рейтингу "ТОП-100. Рейтинги найбільших" у номінації "Ефективний керівник" </li>
+                        <li>Премія Effie Awards Ukraine 2019: COMFY — найкраща маркетинг-команда у категорії роздрібної торгівлі.</li>
+                     </ul>
+                  </div>
+                  <div class="vidznaki-ta-nagorodi__wrap">
+                     <div class="vidznaki-ta-nagorodi__txt">2018</div>
+                     <ul class="vidznaki-ta-nagorodi">
+                        <li>Премія Red Dot Design Awards: Фірмовий стиль бренду COMFY відмічений нагородою в категорії Corporate Design</li>
+                        <li>Премія RAU Award 2018: Перемога в номінаціях "Рітейлер року в сегменті побутової техніки, електроніки і гаджетів" та "E-commerce-рітейлер року в сегменті техніки, електроніки і гаджетів"</li>
+                        <li>Конкурс DzWinner 2018: Перемога в номінації "Контакт-центр року"</li>
+                        <li>Виставка Retail Expo: Переможець премії Best Retail Project 2018 у категоріях True Omnichannel і Dream work company.</li>
+                        <li>Премія X-Ray Marketing Awards-2018: Ігор Хижняк — кращий СЕО, орієнтований на маркетинг</li>
+                        <li>Премія X-Ray Marketing Awards-2018: Перемога в категорії "Ре:волюція комунікації"</li>
+                        <li>Премія Retail Awards 2018: Нагорода "Вибір споживача" у категорії "Краща мережа супермаркетів побутової техніки та електроніки"</li>
+                     </ul>
+                  </div>
+                  <div class="vidznaki-ta-nagorodi__wrap">
+                     <div class="vidznaki-ta-nagorodi__txt">2017</div>
+                     <ul class="vidznaki-ta-nagorodi">
+                        <li>Премія X-Ray Marketing Awards 2017: маркетинг-стратегія року.</li>
+                        <li>Премія Retail Awards 2017 "Вибір споживача": переможець в категорії "Мережа супермаркетів електроніки та побутової техніки".</li>
+                        <li>Премія Ukrainian E-commerce Awards 2017: Кращий спеціалізований мультиканальний рітейлер.</li>
+                        <li>Премія Effie Awards Ukraine 2017: Найефективніша компанія-рекламодавець.</li>
+                        <li>Премія HR Brand 2017: III місце за проект "Крутіші крутіших in store".</li>
+                        <li>Премія Retail&Development Award 2017: Перемога в номінації "Реконцепція року в рітейлі".</li>
+                        <li>Журнал "Фокус": Найкращий роботодавець України</li>
+                        <li>Конкурс zWINNER-2017: Перемога у номінації "Найкраща сервісна команда".</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+      <div class="wrap-flex__item --tabs-right">
+
+         <div class="wrap-flex__tabs-wrap">
+            <ul class="wrap-flex__tabs">
+               <li class="wrap-flex__tabs-item">
+                  <a href="https://comfy.ua/ua/landing/aboutus.html"><span>Про компанію</span></a>
+               </li>
+               <li class="wrap-flex__tabs-item pdd-leftcstm">
+                  <a href="https://comfy.ua/ua/landing/istorija_kompanii.html"><span>Історія компанії</span></a>
+               </li>
+               <li class="wrap-flex__tabs-item pdd-leftcstm">
+                  <a href="https://comfy.ua/ua/landing/kerivnictvo.html"><span>Керівництво</span></a>
+               </li>
+               <li class="wrap-flex__tabs-item pdd-leftcstm active-tab">
+                  <a href="https://comfy.ua/ua/landing/vidznaki_ta_nagorodu.html"><span>Відзнаки та нагороди</span></a>
+               </li>
+               <!-- <li class="wrap-flex__tabs-item pdd-leftcstm">
+                  <a href="https://comfy.ua/ua/contact-media.html"><span>Прес-центр</span></a>
+               </li> -->
+               <li class="wrap-flex__tabs-item">
+                  <a href="https://comfy.ua/ua/shops.html"><span>Магазини</span></a>
+               </li>
+               <li class="wrap-flex__tabs-item">
+                  <a href="https://comfy.ua/ua/landing/contact.html"><span>Контакти</span></a>
+               </li>
+               <!-- <li class="wrap-flex__tabs-item">
+                  <a href="#"><span>Прес-центр</span></a>
+               </li> -->
+               <li class="wrap-flex__tabs-item">
+                  <a href="https://work.comfy.ua/"><span>Робота в компанії</span></a>
+               </li>
+               <li class="wrap-flex__tabs-item">
+                  <a href="https://comfy.ua/ua/landing/safety_and_warnings.html"><span>Політіка конфіденційності</span></a>
+               </li>
+               <li class="wrap-flex__tabs-item">
+                  <a href="https://comfy.ua/ua/tender.html"><span>Тендер</span></a>
+               </li>
+               <li class="wrap-flex__tabs-item">
+                  <a href="https://comfy.ua/ua/landing/partners.html"><span>Партнерам</span></a>
+               </li>
+               <li class="wrap-flex__tabs-item">
+                  <a href="https://comfy.ua/ua/landing/garantija.html"><span>Гарантія</span></a>
+               </li>
+            </ul>
+            <div id="btnpopup-close" class="btnpopup-close">
+               <img src="https://cdn.comfy.ua/media/x/img2/close_popup_new.svg" alt="">
+            </div>
+         </div>
+
+
+      </div>
+   </div>
+</div>

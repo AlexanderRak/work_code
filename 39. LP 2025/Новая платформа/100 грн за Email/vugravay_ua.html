@@ -1,0 +1,175 @@
+<style>
+
+</style>
+<!--  -->
+<div id="email100grn">
+
+   <div class="email100grn__bl-img">
+      <div class="email100grn__logo">
+         <img src="https://cdn.comfy.ua/media/x/img2/100grn/img1.png" alt="">
+      </div>
+      <div class="email100grn__img-desk">
+         <img src="https://cdn.comfy.ua/media/x/img2/100grn/img2.png" alt="">
+      </div>
+      <div class="email100grn__img-mob">
+         <img src="https://cdn.comfy.ua/media/x/img2/100grn/img4.png" alt="">
+      </div>
+      <div class="email100grn__img-mobtb">
+         <div class="email100grn__img-mobtb__text2">
+            <img src="https://comfy.ua/media/x/img2/100grn/img7.png" alt="">
+         </div>
+         <div class="email100grn__img-mobtb__text">
+            <img class="imgnonemob" src="https://comfy.ua/media/x/img2/100grn/img8.png" alt="">
+            <img class="imgblmob" src="https://comfy.ua/media/x/img2/100grn/img9.png" alt="">
+         </div>
+      </div>
+   </div>
+
+   <div class="email100grn__wrap-content">
+
+      <div class="email100grn__item item-one">
+         <div class="email100grn__img-text">
+            <img src="https://cdn.comfy.ua/media/x/img2/imglen1.png" alt="">
+         </div>
+      </div>
+      <div class="email100grn__item item-two">
+         <div class="email100grn__form">
+            <div id="wrapper-form-corizoid" class="form-corizoid">
+               <div id="form-submit-none">
+
+                  <div class="email100grn__form-text">
+                     <h2>Залишай свій email</h2>
+                  </div>
+
+                  <form id="valid_form" method="post" name="valid_form">
+                     <div class="container-flex-form">
+                        <div class="row-flex-form">
+                           <!-- <div class="item_fr item_phone">
+                              <input type="tel" id="number_rw" name="younember" class="item-input-frm" placeholder="Номер телефону" minlength="10" maxlength="12" value="" required />
+                           </div> -->
+                           <!-- <div class="item_fr item_sity">
+                              <input type="text" id="city_rw" name="yourcity" class="item-input-frm" placeholder="Город" value="" required />
+                           </div> -->
+                           <div class="item_fr item_email">
+                              <div class="item_fr-test"><span>E-mail*</span></div>
+                              <input type="email" id="email_rw" name="yourmail" class="item-input-frm" placeholder="" value="" required />
+                           </div>
+                           <div class="item_fr item_name">
+                              <div class="item_fr-test"><span>Ім’я*</span></div>
+                              <input type="text" id="yourname_rw" name="yourname" class="item-input-frm yourname_rw" placeholder="" value="" required />
+                           </div>
+                           <div class="item_fr item_submit">
+                              <input type="submit" class="submit-posgo item-input-frm item-input-frm__submit" value="Надіслати" name="Submit" />
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+
+               </div>
+
+               <div id="text-submit-block" class="text-submit-block-cl">
+                  <p><span class="formgoto">100 грн відправлені на ваш email.</span></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="email100grn__item item-one">
+         <div class="email100grn__p">
+            <p>Отримай 100 ₴, якими можно скористатися як знижкою, але не більше 30% від вартості товару</p>
+            <a class="linkpravila" target="_blank" href="https://cdn.comfy.ua/media/x/pdf/offpravila.pdf">Офіційні правила</a>
+         </div>
+      </div>
+   </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+
+<script>
+
+   $(document).ready(function () {
+      $("fieldset input").click(function () {
+         $("fieldset label.error").remove()
+      });
+
+      $("#valid_form").validate({
+         rules: {
+            yourname: {
+               required: true
+            },
+            yourcity: {
+               required: true
+            },
+            yourmail: {
+               required: true,
+               email: true
+            },
+            younember: {
+               required: true,
+               number: true,
+               minlength: 10,
+               maxlength: 12
+            }
+         },
+         messages: {
+            yourname: {
+               required: "*Обязательное поле."
+            },
+            younember: {
+               required: "*Обязательное поле.",
+               number: "Введите номер телефона.",
+               minlength: "В поле должно быть минимум 10 символов",
+               maxlength: "В поле должно быть максимум 12 символов"
+            },
+            yourmail: {
+               required: "*Обязательное поле.",
+               email: "*Обязательные символы @"
+            },
+            yourcity: {
+               required: "*Обязательное поле."
+            }
+         },
+         errorPlacement: function (error, element) {
+            if (element.attr("name") == "yourname") error.insertAfter($("input[name=yourname]"));
+            // if (element.attr("name") == "yourcity") error.insertAfter($("input[name=yourcity]"));
+            // if (element.attr("name") == "younember") error.insertAfter($("input[name=younember]"));
+            if (element.attr("name") == "yourmail") error.insertAfter($("input[name=yourmail]"));
+         },
+         submitHandler: function (form) {
+            function sendAjaxForm(result_form, ajax_form) {
+               let people = {
+                  // numbertel: '',
+                  email: '',
+                  // sity: '',
+                  yourname_rw: '',
+                  nameAction: ''
+               };
+               // people.numbertel = $('#number_rw').val();
+               people.email = $('#email_rw').val();
+               // people.sity = $('#city_rw').val();
+               people.yourname_rw = $('#yourname_rw').val();
+               people.nameAction = "100грн за Email";
+               $.ajax({
+                  url: "https://main.corezoid.comfy.ua/api/1/json/public/9647/e14dbf8b8a23a95a6a7d7c83c8e476337408374d",
+                  headers: {
+                     'Content-Type': 'application/x-www-form-urlencoded'
+                  },
+                  type: "POST", //метод отправки
+                  dataType: "json", //формат данных
+                  data: JSON.stringify(people), // Сеарилизуем объект
+                  success: console.log('done')
+               });
+               var none_form = document.getElementById("form-submit-none").style.display = "none";
+               var block_text = document.getElementById("text-submit-block").style.display = "block";
+            }
+            sendAjaxForm();
+         }
+      });
+   })
+
+   $(function () {
+      $("#number_rw").mask("380999999999");
+   });
+
+</script>

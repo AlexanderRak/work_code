@@ -12,10 +12,10 @@
 
             <div class="mySlides fade">
                <div class="mySlides-only-desk" style="background: #fff;">
-                  <img style="margin: 0 auto;" src="https://cdn.comfy.ua/media/x/img2/Desktop_banner_ua_1.png">
+                  <img style="margin: 0 auto;" src="https://cdn.comfy.ua/media/x/img2/Desktop_banner_ua.png">
                </div>
                <div class="mySlides-only-mob" style="background: #fff;">
-                  <img style="margin: 0 auto; max-width: 70%;" src="https://cdn.comfy.ua/media/x/img2/Desktop_banner_ua_1.png">
+                  <img style="margin: 0 auto; max-width: 70%;" src="https://cdn.comfy.ua/media/x/img2/Mobile_banner_ua.png">
                </div>
             </div>
 
@@ -353,7 +353,7 @@
 </div>
 
 <script>
-
+document.addEventListener("DOMContentLoaded", (event) => {
    var slideIndex = 1;
    showSlides(slideIndex);
    function plusSlides(n) {
@@ -372,10 +372,11 @@
       }
       slides[slideIndex - 1].style.display = "block";
    }
-
+});
 </script>
 
 <script>
+document.addEventListener("DOMContentLoaded", (event) => {
    var acc = document.getElementsByClassName("accordion");
    var i;
 
@@ -390,4 +391,5 @@
          }
       });
    }
+});
 </script>

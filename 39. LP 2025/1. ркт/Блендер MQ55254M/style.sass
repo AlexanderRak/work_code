@@ -1,0 +1,81 @@
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+$mq-mobile: 480px
+$mq-tablet: 768px
+$mq-lg-table: 1023px
+$mq-desktop: 1024px
+$maxWidthContainer: 1366
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-mq55254m
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 24, 20)
+      font-weight: 900
+      text-align: left
+      color: #000
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      color: #000
+
+.rkt-mq55254m
+   &__flex
+      display: flex
+      flex-direction: row
+      align-items: center
+      &.flex-reverse
+         flex-direction: row-reverse
+   &__item
+      flex-grow: 1
+      flex-shrink: 1
+      flex-basis: 0
+      &.maxwimg
+         background-color: #70c13b
+         border-radius: 0 0 50% 50%
+         padding: 0 0 20px 0
+         img
+            max-width: 80px !important
+            margin: 0 auto !important
+   &__content
+      padding: 12px
+   &__h2
+      padding-bottom: 15px
+   &__img
+      padding-top: 24px
+@media (min-width: $mq-desktop)
+@media (max-width: $mq-lg-table)
+@media (max-width: $mq-tablet)
+@media (max-width: $mq-mobile)
+   .rkt-mq55254m
+      &__flex
+         flex-direction: column
+         &.flex-reverse
+            flex-direction: column
+      &__item
+         &.maxwimg
+            width: 100%

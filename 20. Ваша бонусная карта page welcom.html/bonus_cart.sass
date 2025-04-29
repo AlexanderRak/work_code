@@ -23,6 +23,8 @@
       font-size: 64px
       font-weight: bold
       color: #000
+      line-height: 1
+      letter-spacing: 0
    h2
       font-size: 34px
       font-weight: bold
@@ -39,8 +41,9 @@
    h4
       font-size: 36px
       margin: 0
-      font-weight: 500
+      font-weight: 400
       color: #000
+      line-height: 1
 span.word-wrap
    display: block
    word-wrap: break-word
@@ -49,6 +52,8 @@ span.word-wrap
 .main-container.page
    padding-left: 0
    padding-right: 0
+.common-landing-template
+   background-color: #fff
 #bonus-cart
    .header-profile__link
       display: table
@@ -75,6 +80,20 @@ span.word-wrap
 .main-container_gray
    background: #fff
 // default
+
+.bonus-cart__modal-btn
+   font-size: 18px
+   font-weight: 500
+   color: #fff
+   background: #43B02A
+   border-radius: 8px
+   height: auto
+   padding: 12px 20px
+   display: inline-block
+   transition: .3s
+   &:hover
+      background: #399922
+      color: #fff
 
 .bonus-cart-newsprogram
    padding: 58px 58px 0 58px
@@ -204,7 +223,7 @@ span.word-wrap
 .bonus-cart-lk__item
    flex: 1 1 0
 .bonus-cart-lk__p
-   font-weight: bold
+   font-weight: 400
    font-size: 24px
    text-align: center
    padding-top: 40px
@@ -395,7 +414,7 @@ ul.list_ul
 #chat_id .popup
    display: none
    position: absolute
-   z-index: 1000
+   z-index: 2
    width: max-content
 #chat_id .object
    padding: 20px 20px 20px 20px

@@ -2,11 +2,112 @@
 
 </style>
 
+<style>
+   #chat-modalBox a {
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      color: #000;
+      cursor: pointer;
+   }
+
+   #chat-modalBox a.uppercasep {
+      font-size: 16px;
+      text-transform: uppercase;
+   }
+
+   #chat-modalBox p {
+      font-size: 14px;
+      line-height: 1.3;
+      font-weight: 500;
+      color: #797979;
+      padding-top: 5px;
+   }
+
+   .chat-modalBox__list {
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 1.7rem 1.6rem 1.6rem 1.7rem;
+      width: 255px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      position: relative;
+   }
+
+   .chat-modalBox__list::before {
+      content: "";
+      border: 1.4rem solid transparent;
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      opacity: 1;
+      transform: translate(-50%, 0) scale(0.7) rotate(180deg);
+      z-index: 5;
+      border-bottom: 1rem solid #fff;
+   }
+
+   .chat-modalBox__flex {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+   }
+
+   .chat-modalBox__flex.flex_number {
+      align-items: flex-start;
+   }
+
+   .chat-modalBox__item:first-child {
+      flex: 1 0 36px;
+      max-width: 36px;
+   }
+
+   .chat-modalBox__item:last-child {
+      padding-left: 12px;
+   }
+
+   .chat-modalBox__icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .chat-modalBox__icon img {
+      width: 21px;
+      height: 18px;
+   }
+
+   .chat-modalBox__icon.icon_chat {
+      background: #43B02A;
+   }
+
+   .chat-modalBox__icon.icon_messenger {
+      background: #2C98F0;
+   }
+
+   .chat-modalBox__icon.icon_viber {
+      background: #7C42AD;
+   }
+
+   .chat-modalBox__icon.icon_telegram {
+      background: #35A6DE;
+   }
+
+   .chat-modalBox__icon.icon_number {
+      background: #FF671F;
+   }
+
+   .chat-modalBox__icon.icon_centerhelp {
+      background: #3ba724;
+   }
+</style>
+
 <div id="bonus-cart">
 
-   <div class="bonus-cart-newsprogram">
+   <!--    <div class="bonus-cart-newsprogram">
       <div class="bonus-cart-newsprogram__text"><b>Новости Бонусной программы:</b> <span class="word-wrap2">с 22.04.2022 использование бонусов (даже 100% стоимости) доступно для всех чеков от 500 грн.</span></div>
-   </div>
+   </div> -->
 
    <div class="bonus-cart-header">
       <div class="bonus-cart-header__container">
@@ -24,7 +125,16 @@
             <div class="bonus-cart-header__p">
                <p>Вся информация по карте в личном кабинете <span class="emoji">&#128071;</span></p>
             </div>
-            {{block type="core/template" template="staticpage/show_popup_login.phtml"}}
+            <!-- {{block type="core/template" template="staticpage/show_popup_login.phtml"}} -->
+            <!--             <div class="bonus-cart-header__btn-lk">
+               <a href="/account/orders" data-gtm="Interactions-open-authorizationForm" class="header-profile__link header-profile__link_login js-header-login-link">
+                  <span>Увійти в кабінет</span>
+               </a>
+            </div> -->
+
+            <a href="#headerLogin" class="bonus-cart__modal-btn head-bot-prf__link" onclick="openModal()">
+               <span class="head-bot-prf__title">Войти в кабинет</span>
+            </a>
          </div>
          <div class="bonus-cart-header__content">
             <div class="bonus-cart-header__img-pos-desk">
@@ -78,7 +188,7 @@
                </div>
             </div>
          </div>
-<!--          <div class="bonus-cart-adv__content-flex">
+         <!--          <div class="bonus-cart-adv__content-flex">
             <div class="bonus-cart-adv__item">
                <div class="bonus-cart-adv__img bgrd4">
                   <img src="https://cdn.comfy.ua/media/x/img2/bomuscart/img2_item4.svg" alt="">
@@ -214,8 +324,8 @@
             <button class="accordionBtn">Что случится с бонусами, если верну или обменяю товар?</button>
             <div class="panel">
                <div class="panel__txt">
-                  <p>Если товар возвращается, начисленные за эту покупку бонусы снимаются с вашего бонусного счета.</p><br>
-                  <p>При обмене расчет бонусами по старому товару учитывается в расчете по новому.</p><br>
+                  <p>Если товар возвращается, начисленные за эту покупку бонусы снимаются с вашего бонусного счета.</p>
+                  <p>При обмене расчет бонусами по старому товару учитывается в расчете по новому.</p>
                   <p>Если во время покупки вы рассчитывались бонусами, они вернутся на ваш бонусный счет.</p>
                </div>
             </div>
@@ -260,8 +370,8 @@
             <div class="panel">
                <div class="panel__txt">
                   <p>- Использовать можно через 14 дней после покупки и/или начисления бонусов, при условии, что нет предусмотренных других сроков активации в пределах определенной акции.</p>
-                  <br/>
-                  <p>- Минимальная сумма чека/заказа для списания бонусов – 500 грн. Вы можете оплатить вашими бонусами до 100% стоимости товаров как во время покупок в магазине, так и при оформлении онлайн-заказов.</p>
+                  <br />
+                  <p>- Минимальная сумма чека/заказа для списания бонусов – 750 грн. Вы можете оплатить вашими бонусами до 100% стоимости товаров как во время покупок в магазине, так и при оформлении онлайн-заказов.</p>
                </div>
             </div>
 
@@ -291,27 +401,53 @@
                         <div class="content"><a id="show_popup1" class="show_popup">Помощь и консультация</a></div>
                         <div id="popup1" class="popup">
                            <div class="popup__setting">
-                              <!-- cms blok_svjazatsjadljacmsstranic ru -->
-                              {{widget type="cms/widget_block" template="cms/widget/static_block/default.phtml" block_id="35573"}}
+
+                              <div id="chat-modalBox">
+                                 <div class="chat-modalBox__list">
+                                    <div class="chat-modalBox__flex">
+                                       <div class="chat-modalBox__item">
+                                          <div class="chat-modalBox__icon icon_messenger"><img src="https://cdn.comfy.ua/media/x/img2/obmen_vozvrat/chat2.svg" /></div>
+                                       </div>
+                                       <div class="chat-modalBox__item"><a href="https://www.messenger.com/t/comfy.ua">Messenger</a></div>
+                                    </div>
+                                    <div class="chat-modalBox__flex">
+                                       <div class="chat-modalBox__item">
+                                          <div class="chat-modalBox__icon icon_viber"><img src="https://cdn.comfy.ua/media/x/img2/obmen_vozvrat/chat3.svg" /></div>
+                                       </div>
+                                       <div class="chat-modalBox__item"><a href="viber://pa?chatURI=comfy.ua&amp;context=/startChat">Viber</a></div>
+                                    </div>
+                                    <div class="chat-modalBox__flex">
+                                       <div class="chat-modalBox__item">
+                                          <div class="chat-modalBox__icon icon_telegram"><img src="https://cdn.comfy.ua/media/x/img2/obmen_vozvrat/chat4.svg" /></div>
+                                       </div>
+                                       <div class="chat-modalBox__item"><a href="https://t.me/ComfyuaBot?start=startChat">Telegram</a></div>
+                                    </div>
+                                    <div class="chat-modalBox__flex">
+                                       <div class="chat-modalBox__item">
+                                          <div class="chat-modalBox__icon icon_centerhelp"><img src="https://cdn.comfy.ua/media/x/img3/icon-help.svg" /></div>
+                                       </div>
+                                       <div class="chat-modalBox__item"><a href="https://faq.comfy.ua">Центр помощи</a></div>
+                                    </div>
+                                    <div class="chat-modalBox__flex flex_number">
+                                       <div class="chat-modalBox__item">
+                                          <div class="chat-modalBox__icon icon_number"><img src="https://cdn.comfy.ua/media/x/img2/obmen_vozvrat/chat5.svg" /></div>
+                                       </div>
+                                       <div class="chat-modalBox__item"><a class="uppercasep" href="tel:0800303505">0-800-303-505</a><br /> <a class="uppercasep" href="tel:0800600506" style="padding-top: 10px; display: block;">0-800-600-506</a>
+                                          <p><span>с 8:00 до 22:00 (пн-вс)</span> <span>Бесплатно по Украине</span></p>
+                                       </div>
+                                    </div>
+                                    <div class="chat-modalBox__flex flex_number">
+                                       <div class="chat-modalBox__item">
+                                          <div class="chat-modalBox__icon icon_number"><img src="https://cdn.comfy.ua/media/x/img2/obmen_vozvrat/chat5.svg" /></div>
+                                       </div>
+                                       <div class="chat-modalBox__item"><a class="uppercasep" href="tel:0443939505">044-39-39-505</a>
+                                          <p><span>Бесплатно по Киеву</span> <span>со стационарных</span></p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+
                            </div>
-                           <!-- <div class="object">
-                              <ul class="communication">
-                                 <li> <a class="js-siteheart-btn" id="chatBtn1">Чат на сайте</a> </li>
-                                 <li> <a href="https://www.messenger.com/t/comfy.ua">Messenger</a> </li>
-                                 <li> <a href="viber://pa?chatURI=comfy.ua&context=/startChat">Viber</a> <span class="i_icon_1"> </span> </li>
-                                 <li> <a href="https://t.me/ComfyuaBot?start=startChat">Telegram</a> </li>
-                                 <li>
-                                    <div class="telephone"><a href="tel:0800303505" class="header-phone__link header-phone__link_call">0-800-303-505</a>
-                                       <p class="header-phone-popup__note"><span class="header-phone-popup__note-item header-phone-popup__note_bold"> c 8:00 до 21:00 (пн-вс)</span> <span class="header-phone-popup__note-item">Бесплатно по Украине</span></p>
-                                    </div>
-                                 </li>
-                                 <li>
-                                    <div class="telephone"><a href="tel:0443939505" class="header-phone__link header-phone__link_call">044-39-39-505</a>
-                                       <p class="header-phone-popup__note"><span class="header-phone-popup__note-item header-phone-popup__note_bold">Бесплатно по Киеву</span> <span class="header-phone-popup__note-item">со стационарных</span></p>
-                                    </div>
-                                 </li>
-                              </ul>
-                           </div> -->
                         </div>
                      </div>
                   </div>
@@ -322,6 +458,7 @@
             .bonus-cart-tabs__link {
                padding-top: 15px;
             }
+
             .bonus-cart-tabs__link a {
                display: block;
                font-size: 16px;
@@ -329,12 +466,13 @@
                text-decoration: underline;
                padding-bottom: 10px;
             }
+
             .bonus-cart-tabs__link a:last-child {
                padding-bottom: 0px;
             }
          </style>
          <div class="bonus-cart-tabs__link">
-            <a target="_blank" href="https://cdn.comfy.ua/media/x/pdf/programi_lojalnost_.pdf">Правила программы лояльности</a>
+            <!-- <a target="_blank" href="https://cdn.comfy.ua/media/x/pdf/programi_lojalnost_.pdf">Правила программы лояльности</a> -->
             <!--
             <a target="_blank" href="https://cdn.comfy.ua/media/x/pdf/pravila_akcii_imeninnki21.pdf">Правила акции "Именинники"</a>
             -->
@@ -361,27 +499,7 @@
       });
    }
 </script>
-
-<!-- chat1 -->
-<script type="text/javascript">// <![CDATA[
-   var tooltipTimeout1;
-
-   $(".i_icon_1").hover(function () {
-      tooltipTimeout1 = setTimeout(showTooltip1, 100);
-   }, hideTooltip1);
-
-   function showTooltip1() {
-      var tooltip1 = $(
-         "<div id='tooltip_1' class='tooltip_1'>  Для перехода в диалог с оператором должен быть установлен Viber. После установки повторно нажмите на логотип чата.</div>"
-      );
-      tooltip1.appendTo($(".i_icon_1"));
-   }
-   function hideTooltip1() {
-      clearTimeout(tooltipTimeout1);
-      $("#tooltip_1").fadeOut().remove();
-   }// ]]>
-</script>
-<script type="text/javascript">// <![CDATA[
+<script type="text/javascript">
    $("#show_popup1").click(function () {
       $('#popup1').toggle();
    });
@@ -390,29 +508,10 @@
          $('#popup1').hide();
       }
       e.stopPropagation();
-   });// ]]>
+   });
 </script>
-<!-- def  -->
-<script type="text/javascript">// <![CDATA[
-   window.senderCallback = function () {
-      SenderWidget.init({
-         companyId: "i69238662654"
-      });
-      SenderWidget.showWidget();
-   }// ]]>
+<script>
+   function openModal () {
+      const element = document.querySelectorAll('.head-bot-prf__link')[0].click();
+   }
 </script>
-<script type="text/javascript">// <![CDATA[
-   window.callOnlineHelp = function () {
-      (function (d, s, id) {
-         var js, fjs = d.getElementsByTagName(s)[0];
-         js = d.createElement(s);
-         js.id = id;
-         js.src = "https://widget.sender.mobi/build/init.js";
-         fjs.parentNode.insertBefore(js, fjs, 'sender-widget');
-      })(document, 'script');
-   }// ]]>
-</script>
-
-<!-- 
-   {{block type="oggetto_customer/account_welcome" name="oggetto_customer_account_welcome" template="customer/account/welcome.phtml"}}
- -->
