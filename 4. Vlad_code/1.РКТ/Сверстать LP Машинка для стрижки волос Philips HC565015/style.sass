@@ -1,0 +1,449 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-philips-hc5650-15__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-hc5650-15
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+.philips
+   width: 100%
+   max-width: 1520px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   color: #005a8c
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.philips .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//logo
+
+.logo
+   position: relative
+
+.logo__i
+   position: absolute
+   top: -1%
+   left: 2em
+   img
+      width: 70%
+      margin: 0 !important
+
+.logo__abs
+   position: absolute
+   bottom: 2em
+   left: 2em
+   color: #fff
+   max-width: 40%
+
+.logo__txt
+   font-size: 22px
+
+.logo__title
+   font-weight: bold
+   margin-top: 2em
+   font-size: 26px
+
+//features
+
+.features__blue
+   font-size: 26px
+   color: #fff
+   padding: 1em 2em
+   background-color: #013378
+
+.features__row
+   display: flex
+   align-items: center
+   gap: 2em
+   padding: 2em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.features__cont
+   display: flex
+   flex-direction: column
+   gap: 1em
+
+.features__txt
+   font-size: 16px
+   color: #005a8c
+
+//trimflow
+
+.trimflow
+   position: relative
+   color: #fff
+
+.philips__title
+   font-size: 26px
+   margin-bottom: 1rem
+   font-weight: bold
+
+.philips__txt
+   font-size: 16px
+
+.trimflow__abs
+   max-width: 40%
+   position: absolute
+   right: 2em
+   top: 2em
+
+//dualcut
+
+.dualcut
+   .trimflow__abs
+      right: unset
+      top: unset
+      left: 2em
+      bottom: 2em
+
+//turbo
+
+.clr__blue
+   color: #005a8c
+
+.turbo
+   padding: 0 2em
+
+.turbo__row
+   display: flex
+   gap: 110px
+   justify-content: space-between
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.turbo__cont
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   padding: 20% 0 5%
+
+.turbo__i
+   align-self: flex-end
+   img
+      width: 70%
+
+//func
+
+.func
+   background-color: #e4eefb
+
+.func__item
+   display: flex
+   align-items: center
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+
+.func__cont
+   padding: 2em
+
+//philips__table
+.philips__table
+   .features__blue
+      margin-bottom: 2em
+
+.philips__table
+   color: #000
+
+.philips__table__txt
+   font-size: 16px
+   text-align: center
+   margin-bottom: 2em
+   margin-top: 15px
+
+.philips__table__title
+   font-size: 20px
+   font-weight: bold
+   color: #023278
+
+.philips__grid
+   display: grid
+   padding: 0 2em
+   grid-template-columns: repeat(4, 1fr)
+   grid-template-rows: auto
+   grid-template-areas: "cal5 cal5 cal5 cal5" "cal1 cal2 cal3 cal4"
+   >div
+      padding: 10px
+   .cal1
+      grid-area: cal1
+   .cal2
+      grid-area: cal2
+   .cal3
+      grid-area: cal3
+   .cal4
+      grid-area: cal4
+   .cal5
+      grid-area: cal5
+
+.cal1,
+.cal3
+   background-color: #b2c8e6
+.cal2,
+.cal4
+   background-color: #e4eefb
+
+//philips__video
+
+.philips__video
+   padding: 2em
+   video
+      display: block
+      max-width: 100%
+      height: auto
+
+//philips__footer
+
+.philips__footer
+   background-image: linear-gradient(180deg, #0f204b 0%, #0066a1 100%)
+   padding: 2em 0
+   width: 100%
+   img
+      max-width: 100px !important
+
+//complete
+
+.complete
+   color: #000
+   .trimflow__abs
+      top: 200px
+      max-width: 30%
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-hc5650-15
+   //    display: block
+
+   .features__blue
+      padding-right: 15px
+      padding-left: 15px
+      font-size: 20px
+
+   .philips__table__wrap
+      overflow-x: scroll
+   .philips__grid
+      width: 800px
+   .philips__grid>div
+      padding: .5em
+   .philips__table__txt
+      margin-bottom: 1em
+
+   .philips__footer
+      padding: 2em 0
+   .philips__footer__img img
+      max-width: 40%
+
+   .features__blue
+      text-align: center
+      padding: 0.5em 1em
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-philips-hc5650-15
+//       display: block
+
+// @media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+//    #rkt-philips-hc5650-15
+//       display: grid
+//       grid-template-columns: calc(100% - 400px) 400px
+
+@media (max-width: 1201px)
+   .philips .container
+      padding: 0 15px
+      box-sizing: border-box
+
+   .logo__title
+      font-size: 20px
+   .logo__txt
+      font-size: 18px
+   .logo
+      display: flex
+      flex-direction: column-reverse
+   .logo__i
+      max-width: 30%
+      left: 1em
+      img
+         width: 100%
+   .logo__img img
+      min-width: 150%
+      margin-left: -50% !important
+   .logo__abs
+      position: unset
+      text-align: center
+      padding: 1em 0
+      max-width: 100%
+   .logo__txt,
+   .logo__title
+      color: #005a8c
+   .logo__title
+      margin-top: 1rem
+
+   .features__blue
+      padding-right: 1em
+      padding-left: 1em
+      font-size: 20px
+      br
+         display: none
+   .features__cont
+      gap: 1em
+   .features__txt
+      font-size: 16px
+   .features__row
+      flex-direction: column-reverse !important
+      padding: 1em 0
+      gap: 1em
+      text-align: center
+
+   .philips__title
+      font-size: 20px
+   .philips__txt
+      font-size: 14px !important
+   .trimflow
+      display: flex
+      flex-direction: column
+   .trimflow__abs
+      position: unset
+      color: #005a8c
+      padding: 1em 0
+      max-width: 100%
+      text-align: center
+   .trimflow__img img
+      min-width: 150%
+      margin-left: -25% !important
+
+   .turbo
+      padding-right: 0
+      padding-left: 0
+   .turbo__row
+      flex-direction: column
+      gap: 1em
+   .turbo__cont
+      padding: 1em 0 0
+      text-align: center
+   .turbo__i img
+      width: 50%
+   .turbo__img img
+      max-height: 500px
+
+   .func
+      padding: 2em 0
+   .func__item
+      flex-direction: column-reverse !important
+      gap: 1em
+   .func__flex
+      display: flex
+      flex-direction: column
+      gap: 2em
+   .func__cont
+      padding: 0
+      text-align: center
+
+   .philips__table .features__blue
+      margin-bottom: 1em
+   .philips__grid
+      padding-right: 0
+      padding-left: 0
+
+   .philips__video
+      padding: 2em 0
+
+   .complete .trimflow__abs
+      max-width: 100%

@@ -1,0 +1,414 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-philips-bhd829-00-s-tehnologiej-senseiq__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-bhd829-00-s-tehnologiej-senseiq
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2, .philips__title
+      @include adaptiv-value("font-size", 24, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3, .logo__txt, .philips__table__title
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: normal
+      text-align: left
+      margin-bottom: 1rem
+   p, .philips__txt
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//end default styles
+
+.philips .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//logo
+
+.logo__cont
+   padding: 2em 0
+   text-align: center
+   .philips__title,
+   .logo__txt
+      text-align: center !important
+
+// .philips__title
+//    font-size: clamp(22px, 2vw, 36px)
+//    font-weight: bold
+//    margin-bottom: 1rem
+
+// .logo__txt
+//    font-size: clamp(22px, 2vw, 36px)
+
+//char
+
+.char
+   padding: 2em 4em
+   // padding: 55px 110px 0 60px
+
+.txt__center
+   text-align: center !important
+   >div
+      text-align: center !important
+
+.char__items
+   display: flex
+   flex-direction: column
+   gap: 2em
+
+.char__item
+   display: flex
+   align-items: center
+   gap: 50px
+
+.char__i
+   min-width: max-content
+
+//hair
+
+.hair
+   padding: 2em
+   // padding: 50px 70px 0
+
+// .philips__txt
+//    font-size: clamp(16px, 1.2vw, 24px)
+
+.hair__row
+   display: flex
+   align-items: center
+   gap: 4em
+   // gap: 110px
+   margin-top: 30px
+
+.hair__cont
+   max-width: 650px
+
+//invis
+
+.invis
+   padding: 0 2em 2em 2em
+   // padding: 50px 125px 0
+   iframe
+      display: block
+      max-width: 100%
+      width: 100%
+      height: 30vw
+      max-height: 100%
+
+.invis__cont
+   margin-bottom: 30px
+
+//func
+
+.func
+   padding: 2em 2em 0
+   padding-top: 0
+   // padding: 50px 70px 0
+   .container
+      display: flex
+      flex-direction: column
+      gap: 2em
+      // gap: 50px
+
+.func__row
+   display: flex
+   align-items: center
+   // gap: 110px
+   gap: 4em
+   justify-content: space-between
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+
+// .func__cont
+//    max-width: 650px
+//    min-width: 650px
+
+// .func .philips__list
+   // list-style-type: disc
+   // padding-left: 20px
+   // li
+   //    font-size: clamp(16px, 1.2vw, 24px)
+
+//advantage
+
+.advantage
+   padding: 2em 2em 0 2em
+   // padding: 50px 150px 0 60px
+
+.advantage__cont
+   // padding-left: 90px
+   padding-left: 4em
+   margin-bottom: 50px
+
+//tech
+
+.tech
+   padding: 2em .5em
+
+.tech__row
+   display: flex
+   gap: 14px
+
+.tech__item
+   flex: 1
+
+.tech__cont
+   margin-top: 14px
+
+//sense
+
+.sense
+   padding-top: 2em
+
+//philips__table
+
+.philips__table
+   padding: 2em 0
+
+.philips__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   gap: 200px
+   margin-bottom: 50px
+   .philips__txt
+      text-align: center !important
+
+.philips__table__title
+   // font-size: clamp(18px, 2vw, 28px)
+   font-weight: bold !important
+   margin-bottom: 0 !important
+
+.philips__grid__two
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   grid-template-areas: "cal1 cal1 cal1" "cal2 cal3 cal4"
+   >div
+      padding: 10px 20px
+      // text-align: center
+      ul
+         gap: 0.3em !important
+
+.cal1
+   grid-area: cal1
+   background-color: #D9D9D9
+   text-align: left !important
+
+.cal2
+   grid-area: cal2
+   text-align: left !important
+
+.cal3
+   grid-area: cal3
+
+.cal4
+   grid-area: cal4
+
+.philips__marker
+   font-weight: bold
+   font-size: 40px
+   line-height: 24px !important
+
+.philips__note
+   padding: 0 2em
+   padding-top: 2em
+   font-size: 12px
+
+.philips__table__img
+   margin-bottom: 12px
+
+//media*****************************************************
+
+@media (max-width: 1201px)
+   .philips .container
+      width: 100%
+      padding: 0 15px
+      box-sizing: border-box
+
+   .logo__cont
+      padding: 2em 0
+
+   .char,
+   .hair,
+   .invis,
+   .func,
+   .advantage,
+   .tech
+      padding: 2em 0 0
+   .char__i img
+      max-width: 15vw !important
+
+   .hair__row
+      gap: 2em
+
+   .func__row
+      gap: 2em
+
+   .advantage__cont
+      padding: 0
+      margin-bottom: 2em
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-bhd829-00-s-tehnologiej-senseiq
+   //    display: block !important
+
+   .char__item
+      gap: 1em
+      flex-direction: column
+      text-align: center
+   .char__i img
+      max-width: 53vw !important
+
+   .hair__row
+      flex-direction: column
+      gap: 1em
+
+   .philips .container
+      gap: 2em
+   .func__row
+      flex-direction: column !important
+      gap: 1em
+      align-items: unset
+   .func__cont
+      max-width: unset
+
+   .tech__row
+      flex-direction: column
+      gap: 2em
+
+   .philips__grid
+      gap: 2em
+
+   .philips__table__scroll
+      overflow-x: scroll
+      overflow-y: hidden
+   .philips__table__wrap
+      min-width: 720px
+   .philips__note
+      padding-top: 2em
+   .philips__table
+      padding: 2em 0
+
+   .char__item .philips__title
+      text-align: center !important
+
+   .invis iframe
+      height: 50vw
+
+   .philips__note
+      padding: 1em 0 0
+
+   .tech__cont,
+   .hair__cont
+      >div
+         text-align: center !important
+
+   .func .philips__list li
+      text-align: center
+      max-width: max-content
+      margin: 0 auto
+
+@media (min-width: $bp-tablet) and (max-width: 1023.9px)
+   // #rkt-philips-bhd829-00-s-tehnologiej-senseiq
+   //    display: block !important
+
+   .invis iframe
+      height: 46vw
+
+   .philips__grid
+      gap: 100px
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   // #rkt-philips-bhd829-00-s-tehnologiej-senseiq
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .func__row
+      flex-direction: column !important
+      align-items: unset
+
+   .philips__table__scroll
+      overflow-x: scroll
+      overflow-y: hidden
+   .philips__table__wrap
+      min-width: 760px
+   .philips__note
+      padding-top: 2em
+   .philips__table
+      padding: 2em 0
+   .philips__grid
+      gap: 4em
+
+   .func .philips__list li
+      text-align: center
+      max-width: max-content
+      margin: 0 auto
+
+@media (max-width: 1201px)
+   .func__cont
+      >div
+         text-align: center !important

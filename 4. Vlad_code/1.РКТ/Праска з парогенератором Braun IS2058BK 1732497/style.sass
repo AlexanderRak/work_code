@@ -1,0 +1,319 @@
+//default styles
+
+// body
+//    margin: 0
+
+.braun
+   width: 100%
+   max-width: 1520px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   color: #010101
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   ul
+      list-style-type: none
+      padding: 0
+      margin: 0
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.braun .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+.braun__title
+   text-transform: uppercase
+   font-size: clamp(24px, 4vw, 32px)
+.braun__small
+   font-size: clamp(14px, 4vw, 16px)
+   color: #FBC821
+.braun__txt
+   font-size: clamp(16px, 4vw, 18px)
+.braun__note
+   font-size: clamp(14px, 4vw, 16px)
+   color: #4F4F4F
+
+.braun__row
+   display: flex
+   // align-items: center
+   padding: 100px 200px 140px 100px
+.braun__row__img
+   border-radius: 20px
+   overflow: hidden
+   background-color: #E0E0E0
+   margin-right: 130px
+.braun__row__cont
+   max-width: 540px
+   margin-top: 50px
+   .braun__title
+      margin: 10px 0 40px
+.braun__reverse
+   flex-direction: row-reverse
+   padding: 100px 100px 140px 200px
+   .braun__row__cont
+      max-width: 450px
+   .braun__row__img
+      margin-right: 0
+      margin-left: 130px
+.braun__cal
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   height: 50vh
+
+//section design
+
+.design
+   background-color: #E3E3E3
+
+.braun__flex
+   display: flex
+   align-items: center
+   justify-content: space-between
+   padding-right: 100px
+
+.design__leib__title
+   color: #FFD120
+   font-weight: bold
+   font-size: clamp(24px, 4vw, 36px)
+   b
+      color: #fff
+
+.design__leib
+   width: 570px
+   background-color: #010101cf
+   border-radius: 15px
+   overflow: hidden
+   padding: 0 0 50px 20px
+   box-sizing: border-box
+
+.design__leib__icon
+   img
+      margin: 0 0 0 auto
+
+.design__leib__title
+   margin-top: -20px
+
+//section freeglide
+
+.freeglide
+   padding: 0 100px
+
+.freeglide__head
+   display: flex
+   padding: 0 100px
+   margin-bottom: 50px
+   .braun__title
+      flex: 1
+   .braun__txt
+      flex: 1.3
+      margin-left: 120px
+
+.freeglide__img
+   background-color: #E0E0E0
+   border-radius: 20px
+   overflow: hidden
+
+//section vertical
+
+.vertical .braun__row
+   padding-top: 0
+
+//section tech
+
+.tech
+   position: relative
+   padding: 0 100px 100px 100px
+
+.tech__txt
+   max-width: 315px
+   padding: 15px
+   border: solid #8B8686 1px
+   border-radius: 10px
+   background-color: #fff
+   box-sizing: border-box
+   position: absolute
+   b
+      line-height: 30px
+
+   &::after
+      position: absolute
+      content: ""
+      display: block
+      background-color: rgba(73, 126, 195, .6)
+      width: 37px
+      height: 37px
+      border-radius: 50%
+      border: solid 2px #F4F4F4
+      box-sizing: border-box
+   &:nth-of-type(1)
+      left: 15%
+      top: 25%
+      &::after
+         bottom: 50%
+         right: -35%
+         transform: translateY(50%)
+   &:nth-of-type(2)
+      left: 13%
+      top: 57%
+      &::after
+         bottom: 50%
+         right: -60%
+         transform: translateY(50%)
+   &:nth-of-type(3)
+      right: 20%
+      top: 15%
+      &::after
+         bottom: 50%
+         left: -35%
+         transform: translateY(50%)
+   &:nth-of-type(4)
+      right: 15%
+      top: 48%
+      &::after
+         bottom: 50%
+         left: -45%
+         transform: translateY(50%)
+   &:nth-of-type(5)
+      right: 13%
+      top: 70%
+      &::after
+         bottom: 50%
+         left: -65%
+         transform: translateY(50%)
+
+//media*****************************************************
+
+@media (max-width: 1400px)
+   .tech__txt:nth-of-type(1)
+      top: 15%
+   .tech__txt:nth-of-type(3)
+      top: 10%
+   .tech__txt:nth-of-type(4)
+      right: 11%
+   .tech__txt:nth-of-type(5)
+      right: 10%
+
+@media (max-width: 1201px)
+   .braun .container
+      width: 960px
+      padding: 0 15px
+
+   .design
+      padding-bottom: 1em
+
+   .braun__flex
+      display: block
+      padding-right: 0
+   .design__leib
+      margin: 0 auto
+
+   .braun__row
+      padding: 2em 0
+   .braun__row__img
+      margin-right: 2em
+   .braun__reverse .braun__row__img
+      margin-left: 2em
+
+   .freeglide
+      padding-right: 0
+      padding-left: 0
+   .freeglide__head
+      padding: 0 2em
+      margin-bottom: 1em
+   .freeglide__head .braun__txt
+      margin-left: 2em
+      flex: 1
+
+   .tech
+      padding: 0 0 1em 0
+   .tech__txt::after
+      display: none
+   .tech__txt:nth-of-type(1)
+      left: 5%
+   .tech__txt:nth-of-type(2)
+      left: 5%
+   .tech__txt:nth-of-type(3)
+      right: 5%
+   .tech__txt:nth-of-type(4)
+      right: 5%
+      top: 40%
+   .tech__txt:nth-of-type(5)
+      right: 5%
+
+@media (max-width: 991px)
+   .braun .container
+      width: 720px
+
+   .design__leib
+      width: 100%
+      padding-bottom: 1em
+
+   .braun__row
+      display: block
+      padding: 3em 0
+   .braun__row__img
+      margin-right: 0
+   .braun__row__cont
+      margin-top: 1em
+   .braun__reverse .braun__row__img
+      margin-left: 0
+
+   .braun__cal
+      height: unset
+   .braun__note
+      margin-top: 20px
+
+   .freeglide__head .braun__txt
+      margin-left: 0
+      margin-top: 1em
+   .freeglide__img img
+      min-width: 150%
+      margin-left: -25%
+   .freeglide__head
+      padding-right: 0
+      padding-left: 0
+      display: block
+
+   .tech__img
+      overflow: hidden
+      border-radius: 20px
+      margin-bottom: 1em
+      img
+         max-width: 150%
+         margin-left: -25%
+   .tech__txt
+      position: unset
+      max-width: 100%
+      &:nth-of-type(n+2)
+         margin-top: 0.5em
+
+   .design__leib__icon img
+      max-width: 50%
+         
+
+@media (max-width: 767px)
+   .braun .container
+      width: 540px
+
+@media (max-width: 576px)
+   .braun .container
+      width: 100%
+      box-sizing: border-box

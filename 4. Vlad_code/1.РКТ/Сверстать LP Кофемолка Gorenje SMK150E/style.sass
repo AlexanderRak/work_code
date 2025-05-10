@@ -1,0 +1,137 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-gorenje-smk150e__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-gorenje-smk150e
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: center
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+.gorenje
+   display: flex
+   flex-direction: column
+   gap: 1em
+
+.gorenje__txt
+   padding: 1em
+   p
+      text-align: center !important
+
+.gorenje__row,
+.gorenje__reverse
+   display: flex
+   align-items: center
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.gorenje__reverse
+   flex-direction: row-reverse
+
+// .complete .gorenje__txt
+//    h2, p
+//       text-align: left !important
+
+.gorenje__block__main
+   p
+      text-align: left !important
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-gorenje-smk150e
+   //    display: block !important
+
+   .gorenje
+      gap: 1em
+
+   .gorenje__row,
+   .gorenje__reverse
+      display: block
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-gorenje-smk150e
+//       display: block !important
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   // #rkt-gorenje-smk150e
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .gorenje
+      gap: 1em
+
+   .gorenje__row,
+   .gorenje__reverse
+      display: block

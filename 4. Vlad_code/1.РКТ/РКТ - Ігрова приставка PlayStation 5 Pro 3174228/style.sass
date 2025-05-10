@@ -1,0 +1,466 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-playstation-5-pro__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-playstation-5-pro
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      text-transform: uppercase
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+      text-transform: uppercase
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      max-width: unset
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//graphics
+
+.graphics
+   position: relative
+   color: #fff
+
+.graphics__abs
+   position: absolute
+   bottom: 50%
+   transform: translateY(50%)
+   left: 2em
+   width: 50%
+   box-sizing: border-box
+
+.graphics__i
+   margin-bottom: 1em
+   img
+      max-width: 70% !important
+      margin: 0 !important
+
+//nolimit
+
+.nolimit
+   background-color: #000
+   color: #fff
+   padding: 2em
+   h2,p
+      text-align: center !important
+
+.nolimit__txt
+   margin: 0 auto
+   max-width: 70%
+   box-sizing: border-box
+
+//spectral
+
+.spectral
+   background-image: url("https://cdn.comfy.ua/media/x/img3/3174228/bg1.jpg")
+   background-repeat: no-repeat
+   background-size: cover
+   background-position: center top
+   color: #fff
+   padding: 8em 2em 2em
+
+.spectral__row
+   display: flex
+   align-items: center
+   gap: 4em
+   >div
+      box-sizing: border-box
+
+.spectral__cont
+   flex-basis: 45%
+
+.spectral__img
+   flex-basis: 55%
+
+.spectral__i
+   margin-bottom: 16px
+   img
+      margin: 0 !important
+      max-width: 13% !important
+
+//spectral__two
+
+.spectral__two
+   background-image: url("https://cdn.comfy.ua/media/x/img3/3174228/bg2.jpg")
+
+.spectral__reverse
+   flex-direction: row-reverse
+
+//spectral__three
+
+.spectral__three
+   background-image: url("https://cdn.comfy.ua/media/x/img3/3174228/bg3.jpg")
+
+//moreoptions
+
+.moreoptions
+   background-color: #000
+   color: #fff
+   padding-bottom: 1em
+   position: relative
+   .swiper-slide
+      cursor: pointer
+   .swiper-slide-active
+      img
+         border: solid white 3px
+         transform: scale(1.1)
+         border-radius: 18px
+         box-sizing: border-box
+   .swiper-pagination
+      position: relative
+      transform: unset
+      margin-top: 3em
+      display: flex
+      gap: 5px
+      justify-content: center
+   .swiper-pagination-bullet
+      background-color: #fff
+      width: 32px
+      height: 4px
+      border-radius: 80px
+      margin: 0 !important
+   &::after
+      content: ""
+      display: block
+      width: 700px
+      height: 700px
+      background-image: url("https://cdn.comfy.ua/media/x/img3/3174228/radial.png")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center center
+      position: absolute
+      top: 0
+      right: 50%
+      transform: translateX(50%)
+
+.moreoptions__txt
+   padding: 10em 22em 4em
+   background-repeat: no-repeat
+   background-position: top center
+   background-size: cover
+   margin: 0 auto
+   position: relative
+   z-index: 2
+   h2,p
+      text-align: center !important
+   p
+      margin: 0 -8em !important
+
+//func
+
+.func
+   background-color: #000
+   color: #fff
+   padding: 6em 2em 2em
+   h2,p
+      text-align: center !important
+
+.func__img img
+   width: 70%
+
+.func__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   gap: 2em
+
+.func__i img
+   max-width: 20% !important
+
+.func__txt
+   p
+      &:last-of-type
+         margin-top: 0.5rem !important
+
+//especially
+
+.especially
+   position: relative
+   color: #fff
+   background-color: #121316
+   // background-color: #23242B
+
+.especially__head
+   position: absolute
+   right: 50%
+   transform: translateX(50%)
+   width: 50%
+   top: 4em
+   z-index: 2
+   h2,p
+      text-align: center !important
+   p
+      margin: 0 -6em !important
+
+.especially__grid
+   display: grid
+   grid-template-columns: 1fr 1fr
+   grid-template-areas: "cal1 cal1" "cal2 cal3"
+   gap: 2em 2em
+   padding: 6em 6em 0
+   position: absolute
+   bottom: -3em
+   >div
+      position: relative
+      z-index: 1
+      &:nth-of-type(1)
+         grid-area: cal1
+         .especially__txt
+            max-width: 70%
+            margin: 0 auto
+      &:nth-of-type(2)
+         grid-area: cal2
+      &:nth-of-type(3)
+         grid-area: cal3
+
+.especially__txt
+   p
+      text-align: center !important
+      &:last-of-type
+         margin-top: 0.5rem !important
+
+.especially__i
+   margin-bottom: 1em
+
+//tempest
+
+.tempest
+   position: relative
+   color: #fff
+
+.tempest__abs
+   position: absolute
+   top: 30%
+   left: 2em
+   width: 30%
+   box-sizing: border-box
+   p
+      margin-right: -4em !important
+
+//hasnolimits
+
+.hasnolimits
+   background-color: #000
+   padding: 4em 0
+   img
+      max-width: 40% !important
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-playstation-5-pro
+   //    display: block !important
+
+   .nolimit
+      padding-right: 1em
+      padding-left: 1em
+
+   .spectral
+      padding: 4em 1em 0 !important
+   .spectral__row
+      gap: 1em !important
+   .spectral__i img
+      max-width: 20% !important
+
+   .moreoptions
+      padding-top: 2em
+   .moreoptions__txt
+      padding: 4em 2em 4em 2em !important
+   .moreoptions__txt p
+      margin: 0 !important
+   .moreoptions::after
+      width: 100%
+      height: 75%
+      top: -2%
+      margin-top: -11%
+   .moreoptions__wrap
+      margin-top: 4em
+   .moreoptions .swiper-pagination-bullet
+      width: 24px
+      height: 3px
+
+   .func
+      position: relative
+      z-index: 2
+
+   .especially
+      background-color: #000
+      // overflow: hidden
+   .especially__head
+      width: 100% !important
+      padding: 0 1em !important
+      box-sizing: border-box
+      position: relative
+      transform: unset
+      right: unset
+      bottom: unset
+      top: 5em
+      margin-top: -15%
+   .especially__head p
+      margin: 0 !important
+   .especially__grid
+      padding: 1em !important
+      margin-top: -14% !important
+   .especially__grid::before
+      filter: blur(17.799999px) !important
+      bottom: -42% !important
+
+   .tempest__abs
+      padding: 2em 1em 0 !important
+
+   .hasnolimits
+      padding: 2em 1em
+      img
+         max-width: 100% !important
+
+   .func__img img
+      width: 100%
+
+// @media (min-width: $bp-tablet) and (max-width: 1023px)
+//    #rkt-playstation-5-pro
+//       display: block !important
+
+@media (min-width: $bp-mobile) and (max-width: 1201px)
+   // #rkt-playstation-5-pro
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .graphics__abs
+      background: linear-gradient(360deg, #060C3D 14.55%, #000000 61.82%)
+      position: unset
+      transform: unset
+      width: 100%
+      padding: 2em 1em 1em
+   .graphics__i img
+      margin: 0 auto !important
+   .graphics__txt
+      p
+         text-align: center !important
+
+   .nolimit
+      padding-bottom: 0
+   .nolimit__txt
+      max-width: 100%
+
+   .spectral
+      padding-top: 6em
+      padding-bottom: 0
+   .spectral__row
+      flex-direction: column
+      gap: 2em
+   .spectral__i img
+      margin: 0 auto !important
+   .spectral__txt
+      h3,p
+         text-align: center !important
+
+   .moreoptions__txt
+      padding: 16em 10em 10em 10em
+
+   .func
+      padding-top: 4em
+   .func__grid
+      grid-template-columns: 1fr
+
+   .especially__head
+      width: 65%
+   .especially__grid
+      padding: 2em
+      position: relative
+      grid-template-columns: 1fr
+      grid-template-areas: "cal1" "cal2" "cal3"
+      bottom: unset
+      margin-top: -18%
+      >div
+         z-index: 2
+      &::before
+         content: ""
+         display: block
+         position: absolute
+         top: 0
+         bottom: -46%
+         right: -20%
+         left: -20%
+         filter: blur(43.7999992371px)
+         background: #5B6072
+         z-index: 2
+   .especially__grid > div:nth-of-type(1) .especially__txt
+      max-width: 100%
+
+   .tempest__abs
+      position: relative
+      transform: unset
+      width: 100%
+      top: unset
+      left: unset
+      padding: 2em 2em 0
+      z-index: 2
+      h3,p
+         text-align: center !important
+      p
+         margin: 0 !important

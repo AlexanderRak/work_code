@@ -1,0 +1,147 @@
+<style>
+  .page-container {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .features-general {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .common-template__top.page-container {
+    -webkit-box-ordinal-group: -2;
+    -ms-flex-order: -3;
+    order: -3;
+  }
+
+  .common-template__tabs.page-container {
+    -webkit-box-ordinal-group: -1;
+    -ms-flex-order: -2;
+    order: -2;
+  }
+
+  @media (max-width: 1023px) {
+    .common-template__top.page-container {
+      -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+      order: -1;
+    }
+  }
+
+  .gen-tab__gallery {
+    height: 100%;
+    top: 5.6rem;
+    max-height: 64rem;
+    position: sticky;
+    position: -webkit-sticky;
+  }
+
+  .bc-description__content {
+    margin: 0;
+  }
+
+  .bc-description__content img {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .bc-description__content img:not(:hover) {
+    opacity: 1;
+  }
+
+  .clg-content__header {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 0px;
+    position: relative;
+  }
+
+  /* .common-template__tab {
+    overflow: hidden;
+  } */
+
+  .clg__video {
+    /* transform: translateX(-31%); */
+    height: 100%;
+    max-height: 54rem;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 1025px) and (min-width: 1020px) {
+    .clg__video {
+      max-height: 40rem;
+    }
+  }
+
+  @media screen and (max-width: 1025px) {
+
+    .gen-tab__header,
+    .common-template {
+      background: #fff;
+    }
+
+    .gen-tab__header.page-container {
+      margin-bottom: 0;
+    }
+
+    .gen-tab__gallery {
+      position: static;
+    }
+
+    /* .clg__video {
+      max-height: 46rem;
+    } */
+
+
+    .clg-content__header {
+      position: relative;
+      max-width: max-content;
+    }
+
+    .info-brand {
+      margin: 0 1.2rem 1.6rem;
+    }
+
+    .i-car-wrapper {
+      border: none;
+      border-bottom: none !important;
+    }
+
+    .i-car-wrapper__wr {
+      border: 4px solid #E5E5E5;
+      border-radius: 12px;
+    }
+
+    .bc-description {
+      padding: 0;
+    }
+
+    body {
+      background-color: #f2f2f2;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .clg-content__header {
+      margin: 0 auto;
+    }
+
+    .clg__video {
+      max-width: 100%;
+      margin-top: 0;
+      max-height: 32rem;
+      /* transform: translateX(-16%); */
+    }
+  }
+</style>
+
+<div id="clg-conten" class="clg-content__header" v-html="clg-content">
+  <video class="clg__video autoplay-video" muted="true" loop playsinline="true" autoplay src="https://cdn.comfy.ua/media/video/apple_watch/white-s.mp4"></video>
+</div>

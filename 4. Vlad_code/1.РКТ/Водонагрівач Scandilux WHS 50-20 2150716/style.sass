@@ -1,0 +1,222 @@
+//default styles
+
+// body
+//   margin: 0
+
+.scandilux
+  width: 100%
+  max-width: 1440px
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  background-color: #fff
+  background: url("https://cdn.comfy.ua/media/x/img/2150716/bg.png") no-repeat center / cover
+  img
+    margin: 0 auto
+    opacity: 1 !important
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1 !important
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+  div
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+//end default styles
+
+.scandilux .container
+  width: 100%
+  max-width: 100%
+  margin: 0 auto
+
+.scandilux__title
+  text-transform: uppercase
+  font-size: 40px
+  font-weight: bold
+  color: #1564A1
+.scandilux__txt
+  font-size: 32px
+  margin-top: 25px
+.scandilux__center
+  text-align: center
+.scandilux__row
+  display: flex
+  align-items: center
+  justify-content: space-between
+.scandilux__reverse
+  flex-direction: row-reverse
+  .scandilux__row__txt
+    padding-right: unset
+    padding-left: 50px
+.scandilux__row__txt
+  max-width: 700px
+  padding-right: 50px
+  box-sizing: border-box
+.scandilux__row__img
+
+//section 1
+
+.innovation
+  padding-top: 96px
+  position: relative
+.innovation__abs
+  position: absolute
+  top: 160px
+  right: 30px
+  font-size: 65px
+  color: #fff
+  padding: 80px
+  box-sizing: border-box
+  background-color: #56C4DA
+  border-radius: 160.5px
+  max-width: 640px
+  text-align: center
+.innovation__cont
+  padding: 175px 50px 0 50px
+
+//section 2
+
+.power
+  padding: 175px 50px 0
+
+//section 3
+
+.protect
+  padding: 150px 50px 0
+
+//section 4
+
+.scandilux__blue
+  margin: 175px 50px
+  padding: 140px 20% 115px
+  background-color: #56C4DA
+  border-radius: 250px
+.scandilux__blue__txt
+  font-size: 40px
+  font-weight: bold
+  color: #fff
+  strong
+    color: #1564A1
+
+//section 5
+
+.mounting
+  padding: 0 50px
+
+//section 6
+
+.temperature
+  padding: 175px 50px 0
+
+//section 7
+
+.scandilux__total
+  padding: 175px 50px 0
+  position: relative
+  margin-bottom: -7%
+
+//section 8
+
+.scandilux__footer
+  background: url("https://cdn.comfy.ua/media/x/img/2150716/bg2.png") no-repeat center / cover
+  background-color: #e9f5f8
+  background-blend-mode: multiply
+.scandilux__footer__txt
+  padding: 300px 0 200px
+  font-size: 40px
+  font-weight: bold
+  color: #fff
+  text-transform: uppercase
+  position: relative
+  z-index: 2
+
+//media*****************************************************
+
+@media (max-width: 1440px)
+  .scandilux__title,
+  .scandilux__blue__txt,
+  .scandilux__footer__txt
+    font-size: calc(22px +  (30 - 22) * ((100vw - 320px) / (1440 - 320)))
+  .innovation__abs
+    font-size: calc(32px +  (45 - 32) * ((100vw - 320px) / (1440 - 320)))
+  .scandilux__txt
+    font-size: calc(16px +  (22 - 16) * ((100vw - 320px) / (1440 - 320)))
+  .innovation__abs
+    padding: 50px
+  .scandilux .container
+    padding: 0 2em
+    box-sizing: border-box
+
+@media (max-width: 1201px)
+  .scandilux .container
+    width: 960px
+    padding: 0 15px
+  .innovation
+    padding-top: 2em
+  .innovation__abs
+    top: 2em
+  .innovation__cont,
+  .power,
+  .protect,
+  .temperature,
+  .scandilux__total
+    padding: 4em 0 0 0
+  .scandilux__row__txt
+    max-width: 60%
+  .scandilux__blue
+    margin: 4em 15px
+    padding: 8em
+  .mounting
+    padding: 0
+
+@media (max-width: 991px)
+  .scandilux .container
+    width: 720px
+
+@media (max-width: 767px)
+  .scandilux .container
+    width: 540px
+
+@media (max-width: 576px)
+  .scandilux .container
+    width: 100%
+    box-sizing: border-box
+  .innovation__abs
+    font-size: 20px
+    padding: 1em
+    right: 5px
+  .scandilux__txt
+    margin-top: 10px
+  .innovation__cont, .power, .protect, .temperature, .scandilux__total
+    padding-top: 4em
+  .scandilux__row
+    display: block
+  .scandilux__row__txt
+    padding-right: 0
+    max-width: unset
+    margin-bottom: 1em
+  .scandilux__reverse .scandilux__row__txt
+    padding-left: 0
+  .scandilux__blue
+    margin: 2em 15px
+    padding: 1em
+    border-radius: 25px
+  .scandilux__total
+    margin-bottom: -25%

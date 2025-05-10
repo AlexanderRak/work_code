@@ -1,0 +1,131 @@
+//default styles
+
+// body
+//    margin: 0
+.rowenta-krups-tefal
+   // font-family: sans-serif
+   width: 100%
+   max-width: 1366px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   background: #43B02A
+   padding: 13px 22px 32px
+   position: relative
+   // margin: 24px auto
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.rowenta-krups-tefal .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+.bitova__tech__kat
+   display: grid
+   grid-template-columns: repeat(6, 1fr)
+   gap: 20px
+   position: relative
+   z-index: 2
+
+.bitova__tech__kat__item
+   display: flex
+   flex-direction: column
+   justify-content: flex-end
+   align-items: center
+
+.bitova__tech__kat__btn
+   text-decoration: none
+   color: #fff
+   display: flex
+   align-items: center
+   gap: 20px
+   width: 100%
+   max-width: 210px
+   box-sizing: border-box
+   // font-size: 18px
+   font-size: clamp(13px, 1.3vw, 18px)
+   font-weight: 700
+   padding: 12px 0
+   background: #FF671F
+   border-radius: 8px
+   justify-content: center
+   transition: background-color 0.3s
+   &::after
+      content: ""
+      display: block
+      width: 16px
+      height: 16px
+      background: url("https://cdn.comfy.ua/media/x/img3/rowenta-krups-tefal/arrow.svg") no-repeat center / contain
+   &:hover
+      background: #f64e00
+
+.bitova__pusche__abs
+   position: absolute
+   z-index: 1
+   &:nth-of-type(1)
+      top: 0
+      left: 27%
+      img
+         max-width: 25vw
+   &:nth-of-type(2)
+      right: 0
+      bottom: 17%
+      img
+         max-width: 8vw
+
+//media*****************************************************
+
+@media (max-width: 1022.9px)
+   .rowenta-krups-tefal
+      padding: 27px 17px
+
+   .bitova__tech__kat
+      grid-template-columns: repeat(3, auto)
+
+   .bitova__pusche__abs:nth-of-type(1)
+      left: unset
+      right: 10%
+      img
+         max-width: 32vw
+   .bitova__pusche__abs:nth-of-type(2)
+      bottom: 9%
+      img
+         max-width: 15vw
+
+@media (max-width: 767.9px)
+   .bitova__tech__kat
+      grid-template-columns: repeat(2, 1fr)
+      gap: 30px 18px
+   .bitova__tech__kat__btn::after
+      width: 11px
+      height: 11px
+
+   .bitova__pusche__abs:nth-of-type(1)
+      right: unset
+      left: 0
+
+   .bitova__tech__kat__btn
+      padding: 8px 0
+      gap: 10px
+      border-radius: 5.5px
+
+   .bitova__pusche__abs:nth-of-type(2)
+      bottom: 7%
+      img
+         max-width: 23vw

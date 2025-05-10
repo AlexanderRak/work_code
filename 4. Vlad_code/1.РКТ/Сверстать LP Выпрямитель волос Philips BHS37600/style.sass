@@ -1,0 +1,204 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+// .rkt-name-product__container
+//    overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-name-product
+   margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//logo
+
+.logo
+   position: relative
+
+.logo__abs
+   position: absolute
+   top: 0
+   right: 0
+   left: 0
+   bottom: 0
+
+.logo__cont
+   box-sizing: border-box
+   height: 100%
+   padding-left: 4em
+   padding-bottom: 4em
+   max-width: 40%
+   display: flex
+   flex-direction: column
+   justify-content: flex-end
+   color: #fff
+   h2
+      margin-bottom: 3rem !important
+
+//func
+
+.func
+   padding: 2em
+
+.func__grid
+   display: grid
+   grid-template-columns: 1fr 1fr
+   gap: 2em 1em
+
+.func__cont
+   margin-top: 1em
+
+//philips__table
+
+.philips__table
+   padding: 2em
+
+.table__grid
+   display: grid
+   grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr
+   gap: 1em
+   >div
+      padding: .5em
+      border-bottom: 2px solid #ccc
+      p
+         text-align: center !important
+   &:nth-of-type(n+2)
+      >div
+         display: flex
+         &:nth-of-type(1)
+            p
+               text-align: left !important
+         &:nth-of-type(n+2)
+            align-items: center
+            justify-content: center
+
+.table__i
+   margin-bottom: 1rem
+
+.table__mark
+   display: flex
+   align-items: center
+   gap: 0.5em
+   b
+      font-size: 24px
+      line-height: 18px !important
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-name-product
+   //    display: block
+
+   .logo
+      display: flex
+      flex-direction: column-reverse
+   .logo__abs
+      position: unset
+   .logo__cont
+      padding: 1em
+      max-width: 100%
+      color: #000
+      h2
+         margin-bottom: 1rem !important
+         br
+            display: none
+
+   .func,
+   .philips__table
+      padding: 2em 1em
+   .func__grid
+      grid-template-columns: 1fr
+
+   .table__scroll
+      overflow-x: scroll
+   .table__wrap
+      min-width: 960px
+
+@media (min-width: $bp-tablet) and (max-width: 1023px)
+   // #rkt-name-product
+   //    display: block
+
+   .logo__cont
+      padding-left: 3em
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   // #rkt-name-product
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .logo__cont
+      padding-left: 2em
+      padding-bottom: 1em
+
+   .table__scroll
+      overflow-x: scroll
+   .table__wrap
+      min-width: 960px

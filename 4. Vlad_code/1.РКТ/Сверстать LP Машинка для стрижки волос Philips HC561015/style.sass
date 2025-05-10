@@ -1,0 +1,330 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+// .rkt-philips-hc5610-15__container
+//    overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-hc5610-15
+   margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   display: block
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: .5em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 30, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h4
+      @include adaptiv-value("font-size", 16, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 0
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//logo
+
+.logo
+   position: relative
+   color: #fff
+
+.logo__abs
+   position: absolute
+   bottom: 15%
+   left: 3em
+   max-width: 30%
+   h2
+      margin-bottom: 30% !important
+
+//advantsges
+
+.advantsges
+   padding: 4em 0 0
+
+.advantsges__title
+   padding: 0 4em
+   h2
+      text-align: center !important
+
+.advantsges__row
+   background: url("https://cdn.comfy.ua/media/x/img3/2066640/bg1.jpg") no-repeat center right / cover
+   display: flex
+   align-items: center
+   gap: 4em
+   color: #fff
+   padding: 4em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.advantsges__cal
+   display: flex
+   flex-direction: column
+   gap: 2em
+
+.advantsges__item
+   display: flex
+   align-items: center
+   gap: 1em
+
+.advantsges__i img
+   max-width: 80px !important
+   min-width: 80px !important
+
+//trim
+
+.trim
+   padding-top: 4em
+
+.trim__cont
+   padding: 0 4em 1em
+   h2,p
+      text-align: center !important
+
+//func
+
+.func
+   padding-top: 4em
+
+.func__title
+   padding: 0 4em 1em
+   h2,p
+      text-align: center !important
+
+.func__row
+   color: #fff
+   background: url("https://cdn.comfy.ua/media/x/img3/2066640/bg1.jpg") no-repeat center right / cover
+   display: flex
+   align-items: center
+   gap: 4em
+   justify-content: center
+   >div
+      box-sizing: border-box
+   p
+      text-align: center !important
+
+.func__img
+   flex-basis: 40%
+
+.func__cal
+   display: flex
+   flex-wrap: wrap
+   flex-basis: 30%
+   align-items: flex-end
+   gap: 1em 1em
+   justify-content: center
+   >div
+      flex-basis: 47%
+
+//philips__table
+
+.philips__table
+   padding: 4em 1em 1em
+   h2
+      text-align: center !important
+
+.table__grid__two
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   gap: 1em
+   margin-bottom: 0.5em
+   h4
+      text-align: center !important
+
+.table__grid
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   grid-template-areas: "cal1 cal1 cal1 cal1" "cal2 cal3 cal4 cal5"
+   gap: 0 1em
+   >div
+      padding: 0.5em
+      &:nth-of-type(1)
+         grid-area: cal1
+         background-color: #D9D9D9
+      &:nth-of-type(2)
+         grid-area: cal2
+      &:nth-of-type(3)
+         grid-area: cal3
+      &:nth-of-type(4)
+         grid-area: cal4
+      &:nth-of-type(5)
+         grid-area: cal5
+   p
+      text-align: center !important
+      display: flex
+      align-items: center
+      justify-content: center
+      b
+         font-weight: normal
+         font-size: 18px
+         line-height: normal
+
+.table__mark
+   font-size: 24px !important
+   font-weight: bold !important
+   line-height: 18px !important
+
+//philipsLogo
+
+.philipsLogo
+   background: url("https://cdn.comfy.ua/media/x/img3/2066640/bg1.jpg") no-repeat center right / cover
+   padding: 10%
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-hc5610-15
+   //    display: block
+
+   .logo__abs
+      // bottom: 1em
+      position: unset
+      color: #000
+      padding: 1em
+      max-width: 100%
+      // left: 1em
+      h2, p
+         text-align: center !important
+   .logo__abs h2
+      margin-bottom: 1rem !important
+
+   .advantsges,
+   .trim,
+   .func,
+   .philips__table
+      padding-top: 1em
+   .advantsges__title
+      padding: 0 1em
+   .advantsges__row
+      padding: 1em
+      flex-direction: column
+      gap: 1em
+   .advantsges__cal
+      gap: 1em
+
+   .trim__cont,
+   .func__title
+      padding-right: 1em
+      padding-left: 1em
+
+   .func__row
+      padding: 1em 1em 0
+      gap: 1em
+   .func__row
+      flex-direction: column-reverse
+   .func__img img
+      max-height: 340px
+
+   .table__scroll
+      overflow-x: scroll
+   .table__wrap
+      min-width: 960px
+
+@media (min-width: $bp-tablet) and (max-width: 1023px)
+   // #rkt-philips-hc5610-15
+   //    display: block
+
+   .func__cal > div
+      flex-basis: 45%
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   // #rkt-philips-hc5610-15
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .logo__abs
+      bottom: 10%
+      left: 1em
+      max-width: 40%
+
+   .advantsges,
+   .trim,
+   .func
+      padding-top: 2em
+   .advantsges__title
+      padding: 0 1em
+
+   .advantsges__row
+      padding: 2em
+      gap: 1em
+   .advantsges__i img
+      max-width: 70px !important
+      min-width: 70px !important
+
+   .trim__cont,
+   .func__title
+      padding: 0 1em 1em 1em
+
+   .func__cal > div
+      flex-basis: 43%
+   .func__cal p
+      font-size: 12px !important
+
+   .philips__table
+      padding-top: 2em
+   .table__wrap
+      min-width: 960px
+   .table__scroll
+      overflow-x: scroll

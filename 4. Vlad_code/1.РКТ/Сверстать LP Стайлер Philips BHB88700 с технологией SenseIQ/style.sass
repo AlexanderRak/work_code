@@ -1,0 +1,471 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-philips-bhb887-00__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-bhb887-00
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2, .philips__title, .philips__table__title
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3, .fast__txt
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: normal
+      text-align: left
+      margin-bottom: 1rem
+   p, .philips__txt
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+.philips
+   width: 100%
+   max-width: 1536px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+   ul
+      margin: 0
+      padding: 0
+      display: block
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.philips .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//fast
+
+// .philips__title
+//    font-size: 36px
+//    font-weight: bold
+//    margin-bottom: 1rem
+
+// .philips__txt
+//    font-size: 24px
+
+.fast
+   padding: 2em 0 0
+   text-align: center
+
+.fast__cont
+   margin-bottom: 2em
+
+// .fast__txt
+//    font-size: 36px
+
+// .fast__img
+//    position: relative
+
+// .fast__i
+//    position: absolute
+//    top: 0
+//    left: 50px
+
+//func
+
+.func
+   padding: 2em 2em 0 2em
+
+.func__items
+   display: flex
+   flex-direction: column
+   gap: 2em
+
+.func__item
+   display: flex
+   align-items: center
+   gap: 50px
+
+.txt__center
+   text-align: center !important
+
+.func__i
+   min-width: 192px
+   max-width: 192px
+
+//invis
+
+.invis
+   padding: 2em
+   // padding: 50px 125px 0
+   iframe
+      display: block
+      max-width: 100%
+      width: 100%
+      height: 30vw
+      max-height: 100%
+
+.invis__cont
+   margin-bottom: 30px
+
+//philips__block
+
+.philips__block
+   padding: 0 2em
+
+.philips__row
+   display: flex
+   align-items: center
+   gap: 4em
+   padding-top: 2em
+   justify-content: space-between
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+
+// .philips__cont
+//    max-width: 650px
+//    min-width: 650px
+
+//senselq
+
+.senselq
+   padding: 2em 10px 0
+
+.senselq__row
+   display: flex
+   gap: 14px
+
+.senselq__cal
+   flex: 1
+
+.senselq__cont
+   margin-top: 14px
+   margin-right: 5%
+
+//philips__block__two
+
+.philips__block__two
+   .philips__row
+      flex-direction: row-reverse
+      &:nth-of-type(even)
+         flex-direction: row
+
+.philips__list
+   list-style-position: inside
+//    list-style-type: disc
+//    li
+//       font-size: 24px
+//       &:nth-of-type(n+2)
+//          margin-top: 5px
+
+//productline
+
+.productline
+   padding: 2em 0 0
+   .philips__title
+      text-align: center
+
+// .productline__img
+   // position: relative
+
+// .productline__txt
+//    font-size: 24px
+//    color: #fff
+//    position: absolute
+//    &:nth-of-type(1)
+//       bottom: 120px
+//       left: 300px
+//    &:nth-of-type(2)
+//       top: 250px
+//       right: 38%
+//    &:nth-of-type(3)
+//       bottom: 125px
+//       right: 250px
+
+//philips__table
+
+.philips__vs
+   padding: 2em 10px 2em
+
+.philips__vs__row
+   display: flex
+   gap: 16px
+   text-align: center
+
+.philips__table__title
+   margin-bottom: 0 !important
+   // font-size: 28px
+   // font-weight: bold
+
+.philips__table
+   margin-top: 25px
+
+.philips__grid
+   display: grid
+   grid-template-columns: 1fr 1fr
+   grid-template-areas: "cal1 cal1" "cal2 cal3"
+   .cal1
+      grid-area: cal1
+      background: #EABEDB
+   .cal2
+      grid-area: cal2
+      text-align: center !important
+   .cal3
+      grid-area: cal3
+      text-align: center !important
+   >div
+      padding: 11px 20px
+   // .mark
+   //    width: 10px
+   //    height: 10px
+   //    border-radius: 50px
+   //    background: #000
+   //    display: flex
+   //    align-self: center
+   //    margin: 20px 0
+   //    margin-right: auto
+   //    margin-left: auto
+   //    padding: 0 !important
+
+.philips__note
+   font-size: 14px
+   margin: 2em 2em 0
+
+//media*****************************************************
+
+@media (max-width: 1201px)
+   .philips .container
+      width: 100%
+      padding: 0 15px
+      box-sizing: border-box !important
+
+   .fast
+      padding-top: 2em
+
+   .philips__title,
+   .fast__txt
+      font-size: 24px
+   // .philips__txt
+   //    font-size: 16px
+
+   .func
+      padding: 2em 0 0
+
+   .philips__block
+      padding: 0
+   .philips__row
+      gap: 4em
+   // .philips__cont
+   //    min-width: 50%
+   //    max-width: 50%
+   //    box-sizing: border-box
+
+   .philips__vs
+      padding-top: 2em
+      padding-bottom: 2em
+
+   // .philips__table__title
+   //    font-size: 20px
+
+   .philips__list li
+      font-size: 16px
+
+   .productline__txt
+      font-size: 16px
+
+   .philips__vs
+      padding-right: 0
+      padding-left: 0
+
+   .func__i
+      max-width: 15vw
+      min-width: 15vw
+
+   .invis
+      padding: 2em 0
+
+@media (max-width: 767.9px)
+   .philips .container
+      width: 100%
+      padding: 0 15px
+      box-sizing: border-box
+
+   .fast
+      padding-top: 1em
+   .fast__img
+      img
+         min-width: 150%
+   .fast__i
+      max-width: 30%
+      left: 1em
+
+   .func__items
+      gap: 1em
+   .func__item
+      gap: 1em
+      .philips__title
+         font-size: 16px
+   .func__i
+      min-width: 92px
+      max-width: 92px
+
+   .philips__row
+      flex-direction: column !important
+      gap: 1em
+      padding-top: 2em
+   .philips__cont
+      min-width: unset
+      max-width: unset
+
+   .senselq__row
+      flex-direction: column
+      gap: 2em
+   .senselq__cont
+      margin-right: unset
+
+   .productline__img img
+      min-width: 140%
+      margin-left: -20% !important
+   .productline__txt:nth-of-type(1)
+      left: 4%
+      bottom: unset
+      top: 2%
+   .productline__txt:nth-of-type(2)
+      right: 35%
+      bottom: 10%
+      top: unset
+   .productline__txt:nth-of-type(3)
+      right: 15%
+
+   // .philips__table
+   //    overflow-x: scroll
+   .philips__grid
+      // min-width: 500px
+      .philips__txt
+         font-size: 12px !important
+   .philips__table__title
+      font-size: 14px
+   .philips__grid>div
+      padding: 5px 10px
+   .philips__grid .mark
+      margin: 10px 0 10px 10px
+      width: 5px
+      height: 5px
+   .philips__note
+      margin-left: 10px
+      font-size: 12px
+      margin-top: 2em
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-bhb887-00
+   //    display: block !important
+
+   .philips__table__scroll
+      overflow-x: scroll
+   .philips__table__wrap
+      min-width: 760px
+
+   .philips__note
+      margin-right: 0
+      margin-left: 0
+
+   .invis iframe
+      height: 50vw
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-philips-bhb887-00
+//       display: block !important
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   // #rkt-philips-bhb887-00
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .func__item
+      gap: 2em
+
+   .philips__row
+      flex-direction: column !important
+      align-items: unset
+      gap: 1em
+
+   .philips__table__scroll
+      overflow-x: scroll
+   .philips__table__wrap
+      min-width: 760px
+
+   .philips__note
+      margin-right: 0
+      margin-left: 0

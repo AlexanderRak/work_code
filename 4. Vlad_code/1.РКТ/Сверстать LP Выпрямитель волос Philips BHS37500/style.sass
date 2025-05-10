@@ -1,0 +1,281 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-philips-bhs375__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-bhs375
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2, .logo__title
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+.philips
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.philips .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//logo
+
+.logo
+   position: relative
+   color: #fff
+
+.logo__i
+   position: absolute
+   top: 0
+   left: 2em
+   img
+      width: 70%
+      margin: 0 !important
+
+.logo__title
+   margin-bottom: 120px
+
+.logo__txt
+   font-size: clamp(16px, 1.2vw, 18px)
+
+.logo__abs
+   position: absolute
+   bottom: 2em
+   left: 2em
+
+//charact
+
+.charact
+   background-color: #f4f1f8
+   padding: 2em
+
+.charact__title
+   font-size: clamp(20px, 2vw, 26px)
+   font-weight: bold
+   margin-bottom: 35px
+
+.philips__sub
+   font-size: clamp(18px, 1.3vw, 20px)
+   font-weight: bold
+   margin-bottom: 1rem
+
+.philips__txt
+   font-size: clamp(14px, 1.3vw, 16px)
+
+.charact__grid
+   display: grid
+   grid-template-columns: 1fr 1fr
+   gap: 2em 2em
+
+.charact__cont
+   margin-top: 25px
+
+//philips__table
+
+.philips__table
+   padding: 2em
+
+.table__grid
+   display: grid
+   grid-template-columns: 1.1fr 1fr 1fr 1fr 1fr
+   gap: 0 30px
+   color: #3c3c3c !important
+   margin-top: 20px
+   >div
+      border-bottom: 2px solid #e0e0e0
+
+.table__title
+   text-align: center
+   font-weight: bold
+   font-size: 12px
+   margin-top: 30px
+   padding-bottom: 17px
+
+.table__sub
+   font-size: clamp(12px, 1.3vw, 14px)
+   font-weight: bold
+   padding: 10px 0
+
+.table__txt
+   font-size: 14px
+   padding: 10px 0
+   text-align: center
+   display: flex
+   align-items: center
+   justify-content: center
+
+//keratin
+
+.keratin
+   position: relative
+   color: #42145f
+
+.keratin__abs
+   position: absolute
+   top: 2em
+   left: 2em
+
+.keratin__title
+   font-weight: bold
+   font-size: clamp(20px, 2vw, 26px)
+   margin-bottom: 1rem
+
+.keratin__txt
+   font-size: clamp(16px, 1.2vw, 18px)
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-bhs375
+   //    display: block
+
+   .table__scroll
+      overflow-x: scroll
+   .table__wrap
+      min-width: 990px
+
+   .keratin__abs
+      position: unset
+      padding-bottom: 1em
+      br
+         display: none
+      >div
+         text-align: center
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-philips-bhs375
+//       display: block
+
+// @media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+//    #rkt-philips-bhs375
+//       display: grid
+//       grid-template-columns: calc(100% - 400px) 400px
+
+@media (max-width: 1201px)
+   .philips .container
+      padding: 0 15px
+      box-sizing: border-box
+
+   .logo
+      display: flex
+      flex-direction: column-reverse
+      color: #000
+      background-color: #f4f1f8
+   .logo__abs
+      position: unset
+      padding: 1em 0 0
+      >div
+         text-align: center !important
+   .logo__title
+      margin-bottom: 1rem
+      br
+         display: none
+   .logo__txt br
+      display: none
+   .logo__i
+      max-width: 30vw
+      left: unset
+      right: 0.5em
+      img
+         margin: 0 0 0 auto !important
+   .logo__img img
+      min-width: 160%
+      margin-left: -60% !important
+
+   .charact
+      padding: 2em 0
+   .charact__grid
+      grid-template-columns: 1fr
+      gap: 2em
+   .charact__title
+      margin-bottom: 1rem
+      text-align: center
+   .charact__cont
+      margin-top: 1em
+      >div
+         text-align: center
+
+   .philips__table
+      padding: 2em 0
+
+   .keratin__abs
+      left: 1em
+      top: 2em
+
+   .logo__title
+      margin-bottom: 60px

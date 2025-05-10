@@ -1,0 +1,521 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-philips-bhs510-00__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-bhs510-00
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2, .logo__title
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3, .logo__txt
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p, .tech__txt, .func__txt
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+.philips
+   // font-family: sans-serif
+   max-width: 1536px
+   width: 100%
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.philips .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//logo
+
+.logo
+   position: relative
+   color: #fff
+
+.logo__i
+   position: absolute
+   left: 2em
+   top: 0
+   img
+      width: 70%
+      margin: 0 !important
+
+.logo__abs
+   position: absolute
+   left: 2em
+   bottom: 2em
+   max-width: 50%
+
+.logo__txt
+   font-weight: normal !important
+
+.logo__title
+   font-weight: normal !important
+
+//tech
+
+.tech
+   padding: 2em 2em 0
+   .philips__note
+      max-width: 430px
+      margin-top: 100px
+
+.tech__row
+   display: flex
+   gap: 4em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.tech__items
+   display: flex
+   flex-direction: column
+   gap: 1em
+
+.tech__item
+   display: flex
+   align-items: center
+   gap: 1em
+
+.tech__i
+   min-width: 100px
+   max-width: 100px
+
+.tech__txt
+   sup
+      font-size: .7vw
+
+.tech__img
+   img
+      max-height: 800px !important
+
+.philips__note
+   font-size: 15px
+   sup
+      font-size: .5vw
+
+//func
+
+.func
+   background: #F9EFF7
+   padding: 2em
+
+.func__head
+   margin-bottom: 2em
+
+.philips__title
+   margin-bottom: 1rem
+   font-size: clamp(20px, 2vw, 30px)
+   font-weight: bold
+   color: #890B5D
+   sup
+      font-size: .8vw
+
+.philips__sub
+   font-weight: bold
+   font-size: clamp(16px, 1.3vw, 20px)
+   color: #890B5D
+   margin-bottom: 1rem
+   sup
+      font-size: .6vw
+
+.func__row
+   display: flex
+   align-items: center
+   gap: 2em
+   justify-content: space-between
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+   >div
+      flex-basis: 50%
+
+//use
+
+.use
+   padding: 2em
+
+.use__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   gap: 4em
+   margin-top: 2em
+
+.use__i
+   margin-bottom: 50px
+
+//differense
+
+.differense
+   background: linear-gradient(124.91deg, #6D1E4B 0%, #D10077 100%)
+   padding: 2em 0 2em 2em
+   color: #fff
+   .philips__title
+      text-align: center
+      margin-bottom: 60px
+      color: #fff
+
+.differense__grid
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   grid-template-areas: "cal1 cal1 cal2 cal2" "cal3 cal3 cal3 cal3"
+   gap: 0 40px
+
+.differense__item
+   padding-left: 4em
+   .differense__i
+      position: relative
+      img
+         min-width: 100px
+         max-width: 100px !important
+      &::after
+         content: ""
+         display: block
+         position: absolute
+         width: 8px
+         bottom: -100%
+         right: 50%
+         transform: translateX(50%)
+   &:nth-of-type(1)
+      grid-area: cal1
+      display: flex
+      align-items: center
+      gap: 1em
+      .differense__i
+         &::after
+            height: 102px
+            background: url("https://cdn.comfy.ua/media/x/img3/2893191/line1.svg") no-repeat center bottom / contain
+   &:nth-of-type(2)
+      grid-area: cal2
+      display: flex
+      align-items: center
+      gap: 1em
+      .differense__i
+         &::after
+            bottom: -46%
+            height: 48px
+            background: url("https://cdn.comfy.ua/media/x/img3/2893191/line2.svg") no-repeat center bottom / cover
+   &:nth-of-type(n+4)
+      padding-left: 0
+      text-align: center
+      .differense__i
+         &::after
+            bottom: unset
+      .func__txt
+         margin-top: 26px
+   &:nth-of-type(4)
+      .differense__i
+         &::after
+            top: -143%
+            background: url("https://cdn.comfy.ua/media/x/img3/2893191/line3.svg") no-repeat center top / cover
+            width: 28px
+            right: 45%
+            height: 145px
+      .func__txt
+         text-align: center !important
+   &:nth-of-type(5)
+      margin-left: -60px
+      padding-right: 60px
+      .differense__i
+         &::after
+            top: -161%
+            background: url("https://cdn.comfy.ua/media/x/img3/2893191/line4.svg") no-repeat center top / cover
+            width: 10px
+            height: 164px
+   &:nth-of-type(6)
+      margin-left: -90px
+      padding-right: 90px
+      .differense__i
+         &::after
+            top: -177%
+            right: 33%
+            background: url("https://cdn.comfy.ua/media/x/img3/2893191/line5.svg") no-repeat center top / contain
+            width: 100px
+            height: 178px
+   &:nth-of-type(7)
+      padding-right: 100px
+      margin-left: -100px
+      .differense__i
+         &::after
+            top: -189%
+            right: 77%
+            background: url("https://cdn.comfy.ua/media/x/img3/2893191/line6.svg") no-repeat center top / contain
+            width: 130px
+            height: 190px
+
+.differense__img
+   grid-area: cal3
+   margin-top: 50px
+   // margin-bottom: -130px
+
+//complete
+
+.complete
+   position: relative
+
+.complete__head
+   position: absolute
+   top: 0
+   left: 0
+   width: 100%
+   text-align: center
+   padding: 2em 0
+   box-sizing: border-box
+   background: #FFFFFF85
+   .philips__title
+      margin-bottom: 0
+
+.complete__item
+   position: absolute
+   .func__txt
+      position: absolute
+      right: 50%
+      bottom: 60%
+      transform: translate(50%, 50%)
+      width: max-content
+      z-index: 1
+   &::after
+      content: ""
+      display: block
+      background: url("https://cdn.comfy.ua/media/x/img3/2893191/snoska.svg") no-repeat center right / contain
+      width: 288px
+      height: 68px
+   &:nth-of-type(2)
+      top: 45%
+      left: 10%
+   &:nth-of-type(3)
+      top: 20%
+      right: 10%
+      &::after
+         transform: scale(-1, 1)
+         width: 270px
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-bhs510-00
+   //    display: block
+
+   .logo__abs >div
+      text-align: center !important
+   .logo__i
+      max-width: 35vw
+      left: 1em
+
+   .tech__row
+      flex-direction: column
+   .tech__i
+      min-width: 25vw !important
+      max-width: 25vw !important
+   .tech__img img
+      max-height: 500px !important
+
+   .func__head >div
+      text-align: center !important
+   .func__row__wrap
+      display: flex
+      flex-direction: column
+      gap: 2em
+   .func__row
+      flex-direction: column !important
+      gap: 1em
+   .func__cont
+      max-width: 100% !important
+      >div
+         text-align: center !important
+
+   .use__grid
+      grid-template-columns: 1fr
+      gap: 2em
+   .use__i
+      margin-bottom: 1em
+   .use__cont >div
+      text-align: center !important
+
+   .logo
+      display: flex
+      flex-direction: column-reverse
+      color: #000
+   .logo__abs
+      position: unset
+      max-width: 100%
+      padding: 1em 0 0
+   .logo__title
+      margin-bottom: 1em
+
+   .complete__item::after
+      width: 241px
+      height: 48px
+   .complete__item:nth-of-type(2)
+      top: 43%
+      left: 1vw
+   .complete__item .func__txt
+      bottom: 61% !important
+   .complete__item:nth-of-type(3)::after
+      width: 70vw !important
+   .complete__item:nth-of-type(3)
+      right: 3vw !important
+      top: 26%
+   .complete__head
+      padding: 1em 0
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-philips-bhs510-00
+//       display: block
+
+// @media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+//    #rkt-philips-bhs510-00
+//       display: grid
+//       grid-template-columns: calc(100% - 400px) 400px
+
+@media (max-width: 1201px)
+   .philips .container
+      padding: 0 15px
+      box-sizing: border-box
+
+   .logo__i,
+   .logo__abs
+      left: 1.5em
+
+   .tech
+      padding: 2em 0 0
+   .tech .philips__note
+      margin-top: 3em
+   .tech__row
+      align-items: center
+      gap: 2em
+   .tech__i
+      min-width: 10vw
+      max-width: 10vw
+
+   .func
+      padding: 2em 0
+   .func__cont
+      max-width: 45vw
+
+   .use
+      padding: 2em 0
+   .use__grid
+      gap: 2em
+
+   .differense
+      padding: 2em 0
+   .differense__img
+      margin-bottom: 0 !important
+   .differense__item .differense__i::after
+      display: none
+   .differense__grid
+      grid-template-columns: 1fr
+      grid-template-areas: "cal1" "cal2" "cal3"
+      gap: 1em
+   .differense__item
+      padding: 0 !important
+      margin: 0 !important
+      display: flex
+      align-items: center
+      gap: 1em !important
+      .func__txt
+         text-align: left
+   .differense__item:nth-of-type(n+4) .func__txt
+      margin: unset
+   .differense__i img
+      min-width: 15vw !important
+      max-width: 15vw !important
+   .differense__img
+      margin-right: -5vw !important
+
+   .complete__item:nth-of-type(3)::after
+      width: 27vw
+      .complete__head
+         padding: 1em 0
+   .complete__img img
+      min-width: 150%
+      margin-left: -20% !important
+   .complete__item:nth-of-type(2)
+      left: 2vw
+   .complete__item:nth-of-type(3)
+      right: 6vw
+
+   .complete__item .func__txt
+      bottom: 57%

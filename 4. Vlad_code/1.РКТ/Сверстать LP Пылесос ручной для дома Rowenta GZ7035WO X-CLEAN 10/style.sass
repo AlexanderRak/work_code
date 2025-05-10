@@ -1,0 +1,392 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-rowenta-gz7035wo-x-clean-10__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-rowenta-gz7035wo-x-clean-10
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h4
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 900
+      text-align: left
+      margin-bottom: .5rem
+      text-transform: none
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+.rowenta__rkt
+   background: #2f3d4b
+   color: #fff
+
+//rowenta__logo
+
+.rowenta__logo
+   padding: 2em
+   display: flex
+   align-items: center
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.logo__i
+   margin-bottom: 1rem
+
+#rkt-rowenta-gz7035wo-x-clean-10
+   .logo__cont
+      h3
+         text-transform: uppercase
+         text-align: center
+         font-weight: normal
+   .logo__i img
+      max-width: 20vw
+
+//rowenta__video
+
+.rowenta__video
+   padding: 0 2em 2em 2em
+   iframe
+      border-radius: 25px
+      display: block
+      width: 100%
+      height: 45vh
+
+//cleaning
+
+.cleaning
+   padding: 2em
+
+#rkt-rowenta-gz7035wo-x-clean-10
+   .center__txt
+      h2,h3,p
+         text-align: center
+
+.cleaning__txt
+   padding-bottom: 1em
+
+.cleaning__img
+   overflow: hidden
+   border-radius: 25px
+
+//motor
+
+.motor
+   padding: 2em
+
+.motor__head
+   padding-bottom: 1em
+
+.motor__wrap
+   position: relative
+
+.motor__items
+   div
+      position: absolute
+      max-width: 25%
+      // max-width: 12vw
+      &:nth-of-type(1)
+         top: 12%
+         left: 5%
+      &:nth-of-type(2)
+         top: 25%
+         right: 5%
+      &:nth-of-type(3)
+         top: 73%
+         left: 5%
+         // max-width: 14vw
+         max-width: 30%
+      &:nth-of-type(4)
+         top: 65%
+         right: 3%
+         // max-width: 14vw
+         max-width: 30%
+
+#rkt-rowenta-gz7035wo-x-clean-10
+   .motor__items
+      h4
+         font-size: clamp(12px, 1.2vw, 18px)
+      p
+         font-size: clamp(10px, .94vw, 16px)
+
+//allinone
+
+.allinone
+   padding: 2em
+
+.allinone__grid
+   margin-top: 1em
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   gap: 2em
+
+.allinone__txt
+   margin-top: 1em
+
+//func
+
+.func
+   padding: 2em
+
+.func__row
+   display: flex
+   align-items: center
+   justify-content: space-between
+   gap: 4em
+   >div
+      flex-basis: 45%
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+      margin-top: -7%
+      margin-bottom: -3%
+
+.func__txt
+   flex-basis: 55% !important
+
+//rowenta__table
+
+.rowenta__table
+   padding: 2em 2em 2em 0
+
+.rowenta__table__head
+   margin-bottom: 1em
+
+.table__grid
+   display: grid
+   grid-template-columns: 2fr 1fr 1fr 1fr 1fr
+   box-sizing: border-box
+   p
+      font-size: 14px !important
+   >div
+      padding: 0 .5em
+      display: flex
+      flex-direction: column
+      &:nth-of-type(1)
+         justify-content: center
+      &:nth-of-type(n+2)
+         justify-content: flex-end
+
+.table__grid__two
+   display: grid
+   grid-template-columns: 2fr 1fr 1fr 1fr 1fr
+   h2
+      margin: 0 !important
+   p
+      font-size: 12px !important
+   >div
+      box-sizing: border-box
+      display: grid
+      grid-template-rows: 50px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px 35px auto
+      >div
+         display: flex
+         padding: .5em
+         border-bottom: solid 1px #ffffff81
+      &:nth-of-type(1)
+         background: #27afcf
+         border-radius: 0 25px 25px 0
+         padding-left: 1em
+         >div
+            align-items: center
+            &:last-of-type
+               align-items: unset
+               border: none !important
+               // min-height: 8vw
+               min-height: 14vh
+      &:nth-of-type(n+2)
+         >div
+            align-items: center
+            justify-content: center
+            border-right: solid 1px #ffffff81
+            &:first-of-type
+               border-right: none
+            &:last-of-type
+               align-items: unset
+               // max-height: 6vw
+               max-height: 85%
+            img
+               width: 20px
+      &:nth-of-type(3),
+      &:nth-of-type(5)
+         >div
+            &:nth-of-type(n+2)
+               background: #364758
+
+//*********************************media*************************
+
+@media (min-width: $bp-tablet) and (max-width: 1023.9px)
+   // #rkt-rowenta-gz7035wo-x-clean-10
+   //    display: block
+
+   .rowenta__table
+      padding: 1em 1em 1em 0
+   .table__scroll
+      overflow-x: scroll
+   .table__wrap
+      min-width: 920px
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px), (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   .rowenta__logo
+      padding: 1em
+
+   .rowenta__video
+      padding: 0 1em 1em 1em
+      iframe
+         height: 30vw
+
+   .cleaning,
+   .motor,
+   .allinone,
+   .func
+      padding: 1em
+
+   .allinone__grid
+      gap: 1em
+
+   .rowenta__table
+      padding: 1em 1em 1em 0
+   .table__scroll
+      overflow-x: scroll
+   .table__wrap
+      min-width: 920px
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   .motor__items div:nth-of-type(1)
+      top: 8%
+   .motor__items div:nth-of-type(2)
+      top: 20%
+
+   .func__row
+      gap: 2em
+   .func__row:nth-of-type(even)
+      margin-top: 0
+      margin-bottom: 0
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-rowenta-gz7035wo-x-clean-10
+   //    display: block
+
+   .rowenta__logo
+      flex-direction: column
+   #rkt-rowenta-gz7035wo-x-clean-10
+      .logo__i img
+         max-width: 90vw
+      .logo__cont h3 br
+         display: none
+      .logo__img
+         overflow: hidden
+         img
+            margin-top: -10%
+
+   .rowenta__video iframe
+      height: 50vw
+      border-radius: 12px
+
+   .cleaning__img
+      border-radius: 12px
+
+   .motor__items
+      display: flex
+      flex-direction: column
+      gap: 1em
+      margin-bottom: 1em
+      div
+         position: unset
+         max-width: 100% !important
+   #rkt-rowenta-gz7035wo-x-clean-10 .motor__items
+      h4,p
+         text-align: center
+      h4
+         font-size: 16px
+      p
+         font-size: 14px
+
+   .allinone__grid
+      grid-template-columns: auto
+      gap: 2em
+
+   .func
+      display: flex
+      flex-direction: column
+      gap: 2em
+   .func__row
+      flex-direction: column-reverse !important
+      gap: 1em
+      margin: 0 !important
+   #rkt-rowenta-gz7035wo-x-clean-10 .func__row
+      h2,p
+         text-align: center
+
+   .rowenta__table__head
+      padding-left: 1em
+   .table__grid
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr
+   .table__grid__two
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr

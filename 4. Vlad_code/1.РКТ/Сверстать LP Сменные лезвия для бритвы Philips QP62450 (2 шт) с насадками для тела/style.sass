@@ -1,0 +1,275 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-philips-qp624-50-2-sht-s-nasadkami-dlja-tela__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-qp624-50-2-sht-s-nasadkami-dlja-tela
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//philips__logo
+
+.philips__logo
+   display: flex
+   gap: 2em
+   padding: 0 2em
+   background: #C0D000
+   >div
+      box-sizing: border-box
+
+.logo__cont
+   flex-basis: 40%
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   padding-bottom: 2em
+
+.logo__img
+   flex-basis: 60%
+
+.logo__i
+   img
+      margin: 0 !important
+      width: 40%
+
+.logo__txt
+   h2
+      margin-bottom: 2em !important
+
+//hair
+
+.hair
+   padding: 2em
+   display: grid
+   grid-template-columns: repeat(2, 1fr)
+   gap: 2em 4em
+   >div
+      display: flex
+      flex-direction: column
+      gap: 1em
+      align-items: center
+      &:last-of-type
+         justify-content: center
+
+.hair__txt
+   h3,p
+      text-align: center !important
+
+//blades
+
+.blades__title
+   padding: 0 2em
+   h3
+      text-align: center !important
+
+//func
+
+.func
+   padding: 2em
+   display: flex
+   flex-direction: column
+   gap: 2em
+
+.func__row
+   display: flex
+   align-items: center
+   gap: 4em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+
+.func__note
+   padding-top: 1em !important
+   font-size: 12px !important
+
+//oneblade
+
+.oneblade
+   display: flex
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.oneblade__cal
+   position: relative
+
+.oneblade__title
+   position: absolute
+   top: 2em
+   h2
+      text-align: center !important
+      margin: 0 !important
+
+.oneblade__i
+   position: absolute
+   left: 2em
+   top: 2em
+   img
+      width: 60%
+      margin: 0 !important
+
+.oneblade__cont
+   color: #fff
+   position: absolute
+   left: 0
+   right: 0
+   bottom: 0
+   padding: 2em 2em 1em
+   box-sizing: border-box
+   background-image: linear-gradient(0deg, #1E1E1E80, #1E1E1E00)
+   h3,p
+      text-align: center !important
+   h3
+      margin-bottom: 0 !important
+      >img
+         display: inline !important
+
+//complete
+
+.complete
+   padding: 2em
+
+.complete__txt
+   padding-top: 1em
+   p
+      text-align: center !important
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-qp624-50-2-sht-s-nasadkami-dlja-tela
+   //    display: block
+
+   .logo__i img
+      width: 40% !important
+   .logo__txt h2
+      margin-bottom: 1rem !important
+   .logo__cont
+      padding-bottom: 0
+
+   .hair
+      grid-template-columns: 1fr
+      gap: 1em !important
+      >div
+         &:nth-of-type(n+2)
+            .hair__img
+               padding-top: 1em
+
+   .func__row
+      flex-direction: column !important
+      gap: 1em !important
+      h3,p
+         text-align: center !important
+
+   .oneblade__cont
+      padding: 1em
+   .oneblade__i
+      top: 1em
+      left: 1em
+      img
+         width: 12vw
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-philips-qp624-50-2-sht-s-nasadkami-dlja-tela
+//       display: block
+
+// @media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+//    #rkt-philips-qp624-50-2-sht-s-nasadkami-dlja-tela
+//       display: grid
+//       grid-template-columns: calc(100% - 400px) 400px
+
+@media (max-width: 1201px)
+   .philips__logo
+      flex-direction: column
+      padding: 0 1em
+      gap: 1em
+   .logo__i img
+      width: 20%
+
+   .hair
+      padding: 1em
+      gap: 1em 2em
+
+   .func
+      padding: 1em
+   .func__row
+      gap: 2em
+
+   .oneblade
+      flex-direction: column
+
+   .complete
+      padding: 2em 1em 1em

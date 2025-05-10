@@ -1,0 +1,777 @@
+<style>
+  .page-container {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .features-general {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .common-template__top.page-container {
+    -webkit-box-ordinal-group: -2;
+    -ms-flex-order: -3;
+    order: -3;
+  }
+
+  .common-template__tabs.page-container {
+    -webkit-box-ordinal-group: -1;
+    -ms-flex-order: -2;
+    order: -2;
+  }
+
+  @media (max-width: 1023px) {
+    .common-template__top.page-container {
+      -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+      order: -1;
+    }
+  }
+
+  .info-brand__img-wrap {
+    filter: invert(1);
+  }
+
+  /* HEADER */
+
+  .wmf-page__header {
+    height: 78vh;
+    min-height: 730px;
+    position: relative;
+    padding: 0 12px;
+    padding-bottom: 16px;
+    background-color: #000000;
+  }
+
+  .wmf-page .waiting {
+    opacity: 0;
+  }
+
+  .wmf-page__header-right-mobile-bg-wr {
+    position: relative;
+  }
+
+  .wmf-page__header-bg_mobile {
+    display: none;
+  }
+
+  .wmf-page__header-content-wr {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    z-index: 1;
+  }
+
+  .wmf-page__header-left {
+    /* width: 47%; */
+    width: 100%;
+    height: 100%;
+    max-width: 630px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 26px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .wmf-page__header-left {
+      display: none;
+    }
+  }
+
+  .wmf-page__header-left-img-wr {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .wmf-page__header-left-img-wr {
+      height: 400px;
+    }
+  }
+
+  .wmf-page__header-left-img-plan-1-wr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    height: 100%;
+    width: 33%;
+  }
+
+  .wmf-page__header-left-img-plan-1-wr__img-1 {
+    position: absolute;
+    top: 30%;
+    right: 4%;
+  }
+
+  .wmf-page__header-left-img-plan-1-wr__img-2 {
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
+  }
+
+  .wmf-page__header-left-img-plan-1-wr__img-3 {
+    position: absolute;
+    bottom: 10%;
+    right: -40%;
+    z-index: -1;
+  }
+
+  .wmf-page__header-left-img-plan-1-wr__img-4 {
+    position: absolute;
+    bottom: 15%;
+    right: -20%;
+  }
+
+  .wmf-page__header-left-img-plan-1-wr__img-5 {
+    position: absolute;
+    bottom: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .wmf-page__header-left-img-plan-1-wr__img-2 {
+      max-height: 300px;
+    }
+  }
+
+  .wmf-page__header-left-img-plan-2-wr {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 33%;
+    height: 100%;
+  }
+
+
+  .wmf-page__header-left-img-plan-2-wr__img-1 {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .wmf-page__header-left-img-plan-2-wr__img-2 {
+    position: absolute;
+    left: 35%;
+    top: 45%;
+    z-index: 0;
+  }
+
+  .wmf-page__header-left-img-plan-2-wr__img-3 {
+    position: absolute;
+    top: 30%;
+    right: -4%;
+  }
+
+  .wmf-page__header-left-img-plan-2-wr__img-4 {
+    position: absolute;
+    top: 7%;
+    right: -4%;
+  }
+
+  .wmf-page__header-left-img-plan-2 {
+    z-index: 99;
+    position: relative;
+  }
+
+  .wmf-page__header-left-img-plan-back {
+    position: absolute;
+    left: 15%;
+    top: -8%;
+    max-width: 72% !important;
+    z-index: 0;
+  }
+
+  .wmf-page__header-left-img-plan-floating-svg {
+    position: absolute;
+  }
+
+  .wmf-page__header-left-img-plan-3-wr {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 33%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .wmf-page__header-left-img-plan-3-wr__img-1 {
+    position: absolute;
+    left: 6%;
+    bottom: 50%;
+  }
+
+  .wmf-page__header-left-img-plan-3-wr__img-2 {
+    position: absolute;
+    right: 15%;
+    bottom: 35%;
+  }
+
+  .wmf-page__header-left-img-plan-3-wr__img-3 {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+  }
+
+  .wmf-page__header-left-img-plan-3-wr__img-4 {
+    position: absolute;
+    top: 15%;
+    left: 0%;
+  }
+
+  .wmf-page__header-left-img-plan-4-wr {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 33%;
+    height: 120px;
+  }
+
+  .wmf-page__header-left-img-plan-5-wr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+  }
+
+  .wmf-page__header-left-img-plan-4-wr__img-1 {
+    position: absolute;
+    right: -80px;
+  }
+
+  .wmf-page__header-left-img-plan-4-wr__img-2 {
+    position: absolute;
+    left: 0;
+  }
+
+  .wmf-page__header-left-img-plan-7-wr {
+    position: absolute;
+    max-width: 79%;
+    z-index: 1;
+  }
+
+  .wmf-page__header-left-img-plan-8-wr {
+    position: absolute;
+    max-width: 39%;
+    left: 27%;
+    z-index: 3;
+    top: 20%;
+  }
+
+  .wmf-page__header-left-img-plan-9-wr {
+    position: absolute;
+    top: 12%;
+    z-index: 3;
+    max-width: 42%;
+    left: 18%;
+  }
+
+  .wmf-page__header-left-img {
+    position: relative;
+    z-index: 10;
+  }
+
+  .wmf-page__header-left-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    z-index: 1;
+  }
+
+  .wmf-page__content-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12px;
+  }
+
+  .wmf-page__header-right {
+    max-width: 678px;
+    z-index: 1;
+  }
+
+  .wmf-page__header-right-mobile-anim {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .wmf-page__header .wmf-page__header-right-mobile-anim {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .wmf-page__header {
+      height: 100%;
+      padding: 16px 0 0 0;
+      min-height: unset;
+    }
+
+    .i-main__reviews {
+      border-top: unset;
+    }
+
+    .wmf-page__header-right {
+      background-color: #000;
+      width: 100%;
+    }
+
+    .wmf-page__header-right-mobile-bg-wr {
+      padding: 0 12px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .gen-tab__gallery {
+      position: sticky;
+      top: 10rem;
+      max-height: 77rem;
+    }
+  }
+
+  /* HEADER END */
+</style>
+
+<section class="wmf-page__header">
+
+  <div class="wmf-page__header-content-wr">
+    <div class="wmf-page__header-left">
+      <div class="wmf-page__header-left-img-wr">
+        <div class="wmf-page__header-left-img-plan-2-wr">
+          <img class="wmf-page__header-left-img-plan-2-wr__img-1 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/knife-left-bottom-yapi.png" alt="">
+          <img class="wmf-page__header-left-img-plan-2-wr__img-2 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/waterlemon.png" alt="">
+          <img class="wmf-page__header-left-img-plan-2-wr__img-3 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/waterlemon-1.png" alt="">
+        </div>
+
+        <div class="wmf-page__header-left-img-plan-1-wr">
+          <img class="wmf-page__header-left-img-plan-1-wr__img-1 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/kiwi.png" alt="">
+          <img class="wmf-page__header-left-img-plan-1-wr__img-2 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/knife-middle-center-yapi.png" alt="">
+          <img class="wmf-page__header-left-img-plan-1-wr__img-3 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/fish-1.png" alt="">
+          <img class="wmf-page__header-left-img-plan-1-wr__img-4 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/fish.png" alt="">
+          <img class="wmf-page__header-left-img-plan-1-wr__img-5 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/tomat.png" alt="">
+        </div>
+
+        <div class="wmf-page__header-left-img-plan-3-wr">
+          <img class="wmf-page__header-left-img-plan-3-wr__img-1  wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/tomat-1.png" alt="">
+          <img class="wmf-page__header-left-img-plan-3-wr__img-2  wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/lemon.png" alt="">
+          <img class="wmf-page__header-left-img-plan-3-wr__img-3  wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/knife-right-bottom-yapi.png" alt="">
+        </div>
+
+        <div class="wmf-page__header-left-img-plan-4-wr wmf-page__header-left-img-plan-float">
+          <img class="wmf-page__header-left-img-plan-4-wr__img-1 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/cheese.png" alt="">
+          <img class="wmf-page__header-left-img-plan-4-wr__img-2 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/potaito.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="wmf-page__header-right waiting">
+      <div class="wmf-page__header-right-mobile-bg-wr">
+        <div class="wmf-page__header-bg_mobile"></div>
+
+        <div class="wmf-page__header-right-mobile-anim">
+          <div class="wmf-page__header-left-img-wr">
+            <div class="wmf-page__header-left-img-plan-2-wr">
+              <img class="wmf-page__header-left-img-plan-2-wr__img-1 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/knife-left-bottom-yapi.png" alt="">
+              <img class="wmf-page__header-left-img-plan-2-wr__img-2 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/waterlemon.png" alt="">
+              <img class="wmf-page__header-left-img-plan-2-wr__img-3 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/waterlemon-1.png" alt="">
+            </div>
+
+            <div class="wmf-page__header-left-img-plan-1-wr">
+              <img class="wmf-page__header-left-img-plan-1-wr__img-1 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/kiwi.png" alt="">
+              <img class="wmf-page__header-left-img-plan-1-wr__img-2 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/knife-middle-center-yapi.png" alt="">
+              <img class="wmf-page__header-left-img-plan-1-wr__img-3 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/fish-1.png" alt="">
+              <img class="wmf-page__header-left-img-plan-1-wr__img-4 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/fish.png" alt="">
+              <img class="wmf-page__header-left-img-plan-1-wr__img-5 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/tomat.png" alt="">
+            </div>
+
+            <div class="wmf-page__header-left-img-plan-3-wr">
+              <img class="wmf-page__header-left-img-plan-3-wr__img-1 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/tomat-1.png" alt="">
+              <img class="wmf-page__header-left-img-plan-3-wr__img-2 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/lemon.png" alt="">
+              <img class="wmf-page__header-left-img-plan-3-wr__img-3 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/knife-right-bottom-yapi.png" alt="">
+            </div>
+
+            <div class="wmf-page__header-left-img-plan-4-wr wmf-page__header-left-img-plan-float">
+              <img class="wmf-page__header-left-img-plan-4-wr__img-1 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/cheese.png" alt="">
+              <img class="wmf-page__header-left-img-plan-4-wr__img-2 wmf-page__content-section-3-video-plan" src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://skin.comfy.ua/media/x/img/wmf-knife/images/wmf-yapi/potaito.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/MotionPathPlugin.min.js"></script>
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", () => {
+    var vm = new Vue({
+      el: '#wmf-page',
+      data: {
+        reviews: {
+          count: 0,
+          ratingPercent: 0,
+        },
+        canStartAnim: false,
+        showActive: false
+      },
+      mounted() {
+        this.loading = true
+
+        $(document).ready(() => {
+          setTimeout(this.initCarousel, 1000)
+          this.initGsapAnimation();
+        })
+      },
+      methods: {
+        initGsapAnimation() {
+          gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+          this.canStartAnim = true;
+
+          // HEADER MAIN INFO ANIM
+          let headerMainInfoAnim = gsap.timeline({
+            scrollTrigger: {
+              trigger: '.wmf-page__header',
+              delay: '0.3',
+              smoothChildTiming: true,
+            }
+          })
+
+          headerMainInfoAnim.from('.wmf-page__header-bg, .wmf-page__header-bg_mobile', {
+            duration: 2,
+            x: 2000
+          }, 'headerAnimStart')
+
+          headerMainInfoAnim.from('.wmf-page__header-right', {
+            duration: 1.5,
+            y: 150
+          }, '>-1')
+
+          headerMainInfoAnim.to('.wmf-page__header-right', {
+            duration: 1.5,
+            opacity: 1,
+          }, '>-1.2')
+
+          // HEADER MAIN INFO ANIM END 
+
+
+          // POT ANIM
+
+          window.addEventListener('load', () => {
+            let potAnim = gsap.timeline({
+              scrollTrigger: {
+                trigger: '.wmf-page__header',
+                delay: '0.3',
+                smoothChildTiming: true,
+              }
+            })
+
+            potAnim.to(".wmf-page__header-left-img-plan-1", {
+              delay: 0.3,
+              duration: 1.4,
+              motionPath: {
+                path: '.wmf-page__header-left-img-plan-1-path',
+                align: 'self',
+                autoRotate: 90
+              }
+            }, '<0.6')
+
+            potAnim.to(".wmf-page__header-left-img-plan-3", {
+              duration: 1.4,
+              motionPath: {
+                path: '.wmf-page__header-left-img-plan-3-path',
+                align: 'self',
+                autoRotate: 90
+              }
+            }, '<')
+
+            potAnim.to(".wmf-page__header-left-img-plan-4", {
+              duration: 1.2,
+              motionPath: {
+                path: '.wmf-page__header-left-img-plan-4-path',
+                align: 'self',
+                autoRotate: false
+              }
+            }, '<')
+
+            potAnim.to(".wmf-page__header-left-img-plan-5", {
+              duration: 1.2,
+              motionPath: {
+                path: '.wmf-page__header-left-img-plan-5-path',
+                align: 'self',
+                autoRotate: false
+              }
+            }, '<')
+
+            potAnim.to(".wmf-page__header-left-img-plan-6", {
+              duration: 1.2,
+              motionPath: {
+                path: '.wmf-page__header-left-img-plan-6-path',
+                align: 'self',
+                autoRotate: false
+              }
+            }, '<')
+
+            potAnim.to(".wmf-page__header-left-img-plan-7", {
+              duration: 1.5,
+              motionPath: {
+                path: '.wmf-page__header-left-img-plan-7-path',
+                align: 'self',
+                autoRotate: false
+              }
+            }, '<')
+
+            potAnim.to(".wmf-page__header-left-img-plan-8", {
+              duration: 1.5,
+              motionPath: {
+                path: '.wmf-page__header-left-img-plan-8-path',
+                align: 'self',
+                autoRotate: false
+              }
+            }, '<')
+
+            potAnim.to(".wmf-page__header-left-img-plan-9", {
+              duration: 1.5,
+              motionPath: {
+                path: '.wmf-page__header-left-img-plan-9-path',
+                align: 'self',
+                autoRotate: false
+              },
+              onComplete: this.initHeaderFloatAnim
+            }, '<')
+
+          })
+
+
+          // POT ANIM END
+
+          // HOT POT ANIM
+          TweenMax.fromTo(".wmf-page__content-section-2-right-img-plan", { autoAlpha: 0, delay: 1.5, duration: 1.5 }, { autoAlpha: 1, repeat: -1, yoyo: true, repeatDelay: 1.5, duration: 1.5 });
+          TweenMax.fromTo(".wmf-page__content-section-2-right-img", { autoAlpha: 1, delay: 1.5, duration: 1.5 }, { autoAlpha: 0, repeat: -1, yoyo: true, repeatDelay: 1.5, duration: 1.5 });
+          // HOT POT ANIM END
+
+          // TEXT ANIM
+          let textAnim1 = gsap.timeline({
+            scrollTrigger: {
+              trigger: '.wmf-page__content-header',
+              delay: '0.3',
+              start: "top center",
+            }
+          })
+
+          textAnim1.from('.wmf-page__content-header-bg', {
+            duration: 1.5,
+            x: -2000
+          })
+
+          textAnim1.from('.wmf-page__content-header-text-title', {
+            duration: 0.8,
+            autoAlpha: 0,
+            y: 50
+          }, '<1')
+
+          textAnim1.from('.wmf-page__content-header-text-desc', {
+            duration: 0.8,
+            autoAlpha: 0,
+            y: 50
+          }, '<0.4')
+
+
+          let textAnim2 = gsap.timeline({
+            scrollTrigger: {
+              trigger: '.wmf-page__content-section-1',
+              delay: '0.3',
+              start: "center center",
+            }
+          })
+
+          textAnim2.from('.wmf-page__content-section-1-video-title', {
+            duration: 0.8,
+            autoAlpha: 0,
+            y: 50
+          })
+
+          textAnim2.from('.wmf-page__content-section-1-desc', {
+            duration: 0.8,
+            autoAlpha: 0,
+            y: 50
+          }, '<0.4')
+
+
+
+          let textAnim3 = gsap.timeline({
+            scrollTrigger: {
+              trigger: '.wmf-page__content-section-2',
+              delay: '0.3',
+              start: "top center",
+            }
+          })
+
+          textAnim3.from('.wmf-page__content-section-2-left', {
+            duration: 1.2,
+            x: -1000
+          })
+
+          textAnim3.from('.wmf-page__content-section-2-right', {
+            duration: 1.2,
+            x: 1500
+          }, '-=1')
+
+          textAnim3.from('.wmf-page__content-section-2-right-text', {
+            duration: 0.8,
+            autoAlpha: 0,
+            y: 50
+          }, '-=1')
+
+
+          let textAnim4 = gsap.timeline({
+            scrollTrigger: {
+              trigger: '.wmf-page__content-section-3',
+              delay: '0.3',
+              start: "top center",
+            }
+          })
+
+          textAnim1.from('.wmf-page__content-section-3-header-title', {
+            duration: 0.8,
+            autoAlpha: 0,
+            y: 50
+          })
+
+          textAnim1.from('.wmf-page__content-section-3-header-desc', {
+            duration: 0.8,
+            autoAlpha: 0,
+            y: 50
+          }, '<0.4')
+
+
+
+          let textAnim5 = gsap.timeline({
+            scrollTrigger: {
+              trigger: '.wmf-page__content-section-5',
+              delay: '0.3',
+              start: "top center",
+            }
+          })
+
+          textAnim1.from('.wmf-page__content-section-5-content-header-text', {
+            duration: 0.8,
+            autoAlpha: 0,
+            y: 50
+          })
+          // TEXT ANIM END
+
+          // COMMON FLYING ANIMATION
+          const randomX = random(1, 10);
+          const randomY = random(1, 10);
+
+          const plans = gsap.utils.toArray('.wmf-page__content-section-3-video-plan');
+          plans.forEach(plans => {
+            moveX(plans, 1);
+            moveY(plans, -1);
+          });
+
+          function moveX(target, direction) {
+            gsap.to(target, gsap.utils.random(3, 5), {
+              x: randomX(direction),
+              ease: Sine.easeInOut,
+              onComplete: moveX,
+              onCompleteParams: [target, direction * -1]
+            });
+          }
+
+          function moveY(target, direction) {
+            gsap.to(target, gsap.utils.random(3, 5), {
+              y: randomY(direction),
+              ease: Sine.easeInOut,
+              onComplete: moveY,
+              onCompleteParams: [target, direction * -1]
+            });
+          }
+
+          function random(min, max) {
+            const delta = max - min;
+            return (direction = 1) => (min + delta * Math.random()) * direction;
+          }
+          // COMMON FLYING ANIMATION END
+
+        },
+        initHeaderFloatAnim() {
+          gsap.to(".wmf-page__header-left-img-plan-8", {
+            duration: 25,
+            repeat: -1,
+            motionPath: {
+              path: '.wmf-page__header-left-img-plan-floating-path-1',
+              align: 'self',
+              autoRotate: false
+            }
+          })
+
+          gsap.to(".wmf-page__header-left-img-plan-6", {
+            duration: 25,
+            repeat: -1,
+            motionPath: {
+              path: '.wmf-page__header-left-img-plan-floating-path-3',
+              align: 'self',
+              autoRotate: false
+            }
+          })
+
+          gsap.to(".wmf-page__header-left-img-plan-3", {
+            duration: 25,
+            repeat: -1,
+            motionPath: {
+              path: '.wmf-page__header-left-img-plan-floating-path-2',
+              align: 'self',
+              autoRotate: false
+            }
+          })
+
+          gsap.to(".wmf-page__header-left-img-plan-9", {
+            duration: 25,
+            repeat: -1,
+            motionPath: {
+              path: '.wmf-page__header-left-img-plan-floating-path-3',
+              align: 'self',
+              autoRotate: false
+            }
+          })
+
+          gsap.to(".wmf-page__header-left-img-plan-4", {
+            duration: 25,
+            repeat: -1,
+            motionPath: {
+              path: '.wmf-page__header-left-img-plan-floating-path-4',
+              align: 'self',
+              autoRotate: false
+            }
+          })
+        },
+      }
+    })
+  });
+</script>
+<script>
+  $(document).on('general-tab-open', () => {
+    document.querySelectorAll('.autoplay-video').forEach((element) => {
+      element.play();
+    })
+  })
+</script>

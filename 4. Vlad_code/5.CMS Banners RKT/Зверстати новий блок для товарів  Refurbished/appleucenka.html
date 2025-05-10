@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="style.min.css" />
+   </head>
+   <body>
+      <div id="cmsbanner-rkt-wrap" class="cmsbanner-rkt-style-deff">
+         <div class="cmsbanner-rkt__row">
+            <div class="cmsbanner-rkt__cont">
+               <h3>Відновлені iPhone по супер цінам</h3>
+               <p>Refurbished Breezy - це вживані смартфони, які пройшли ремонт, тестування та відновлення у сертифікованому сервісному центрі Breezy до стану, близького до нового.</p>
+               <span class="popup-trigger">Детальніше</span>
+               <div class="popup-overlay">
+                  <div class="popup">
+                     <div class="popup-close">×</div>
+                     <div class="popup-content">
+                        <h2>Refurbished Breezy</h2>
+                        <p>Компанія Breezy, яка відновлює пристрої - №1 провайдер послуги Trade – in в Украйні. Є частиною міжнародного холдингу ASBIS, дистриб’ютора IT продуктів у понад 75 країн.</p>
+                        <p>Відновлені iPhone Breezy можуть мати різний зовнішній стан – від майже нового до незначних слідів експлуатації на корпусі. Такі відмінності регулюються різними грейдами і відповідною ціною. Грейд відображено у назві моделі як (REF, A+) або (REF, A). Ємність акумулятора відновлених iPhone Breezy - 85% +.</p>
+                        <h3>Грейд А+</h3>
+                        <p>Це преміум рівень. Ідеальний стан пристроїв цього грейду практично як в нової техніки. А саме:</p>
+                        <ul>
+                           <li>Можуть бути одиничні мікроподряпини</li>
+                           <li>Можливо була заміна окремих компонентів з метою ремонту</li>
+                        </ul>
+                        <h3>Грейд А</h3>
+                        <p>Відмінний рівень. Виглядає як через тиждень обережного використання. Можуть бути мікроподряпини чи потертості, помітні лише під час ретельного огляду</p>
+                        <ul>
+                           <li>Можуть бути мікроподряпини чи потертості</li>
+                           <li>Можливо була заміна окремих компонентів з метою ремонту</li>
+                        </ul>
+                        <p>Товар з екологічним пакуванням ТМ Breezy.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="cmsbanner-rkt__img">
+               <img src="https://cdn.comfy.ua/media/x/img5/appleucenka-new.png" alt="" />
+            </div>
+         </div>
+         <div class="cmsbanner-rkt__grid">
+            <div>
+               <p>100% функціональність за 55 тестами</p>
+            </div>
+            <div>
+               <p>100% оригінальні пристрої</p>
+            </div>
+            <div>
+               <p>Ємність акумулятора 85%+</p>
+            </div>
+            <div>
+               <p>1 рік гарантії</p>
+            </div>
+         </div>
+      </div>
+
+      <script>
+         document.addEventListener("DOMContentLoaded", () => {
+            const trigger = document.querySelector(".popup-trigger");
+            const overlay = document.querySelector(".popup-overlay");
+            const closeBtn = document.querySelector(".popup-close");
+
+            trigger.addEventListener("click", () => {
+               document.body.classList.add("no-scroll");
+               overlay.style.display = "block";
+            });
+
+            closeBtn.addEventListener("click", () => {
+               document.body.classList.remove("no-scroll");
+               overlay.style.display = "none";
+            });
+
+            overlay.addEventListener("click", (e) => {
+               if (e.target === overlay) {
+                  document.body.classList.remove("no-scroll");
+                  overlay.style.display = "none";
+               }
+            });
+         });
+      </script>
+   </body>
+</html>

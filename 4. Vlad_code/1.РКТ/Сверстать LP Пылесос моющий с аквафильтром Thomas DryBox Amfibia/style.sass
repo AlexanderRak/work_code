@@ -1,0 +1,505 @@
+//default styles
+
+// body
+//    margin: 0
+
+.thomas
+   // width: 100%
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   max-width: 1023px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   color: #455B66
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   ul
+      list-style-type: none
+      padding: 0
+      margin: 0
+   div
+      line-height: normal
+   video
+      display: block
+      margin: 0 auto
+      max-width: 100%
+      height: auto
+
+// .thomas__container
+//    overflow: hidden
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.thomas .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+.thomas__title
+   font-size: clamp(28px, 4vw, 42px)
+   color: #0084C9
+
+.thomas__txt
+   font-size: 16px
+.thomas__txt__big
+   font-size: clamp(16px, 1.4vw, 20px)
+
+//section pet
+
+.pet
+   padding-bottom: 64px
+
+.pet__bg
+   background: url("https://cdn.comfy.ua/media/x/img3/1405707/1bg.jpg") no-repeat center top / cover
+   padding: 64px 40px
+
+.pet__img
+   padding-top: 64px
+
+.pet__txt
+   text-align: center
+   padding: 0 2em
+   .thomas__title
+      margin-bottom: 16px
+
+.pet__grid
+   display: grid
+   grid-template-columns: 1fr 1fr
+   grid-template-rows: 1fr 1fr
+   gap: 32px 16px
+   grid-template-areas: ".." ".."
+   padding: 128px 40px 0 40px
+   div
+      padding: 32px
+      background: #F5F5F6
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25)
+      border-radius: 20px
+      text-align: center
+
+//section filter
+
+.filter
+   padding: 64px 40px
+   .thomas__title
+      text-align: center
+      margin-bottom: 16px
+   .thomas__txt__big
+      text-align: center
+
+.filter__row
+   padding-top: 32px
+   display: grid
+   grid-template-columns: repeat(2, 1fr)
+   align-items: start
+   justify-items: center
+   grid-gap: 32px
+
+.filter__cal
+   padding-top: 32px
+
+.filter__txt
+   padding: 32px 0
+   .thomas__txt__big
+      margin-bottom: 40px
+      text-align: left
+
+.video__btn
+   position: relative
+   display: flex
+   align-items: center
+   background-color: #F5F5F6
+   max-width: max-content
+   border-radius: 50px
+   cursor: pointer
+   transition: background-color 0.6s cubic-bezier(0.22, 1, 0.36, 1)
+   z-index: 1
+   &:hover
+      background-color: #E1E2E1
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.24)
+      .video__btn__i
+         box-shadow: none
+
+.video__btn__i
+   width: 56px
+   height: 56px
+   background-color: #E1E2E1
+   border-radius: 50px
+   position: relative
+   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.24)
+   img
+      max-width: 25px
+      position: absolute
+      bottom: 50%
+      right: 50%
+      transform: translate(50%, 50%)
+
+.video__btn__txt
+   margin-left: 15px
+   margin-right: 20px
+
+.popup
+   display: none
+
+.popup__active
+   display: block
+   position: fixed
+   bottom: 50%
+   right: 50%
+   transform: translate(50%, 50%)
+   background-color: #000000ae
+   width: 100vw
+   height: 100vh
+   box-sizing: border-box
+   z-index: 2
+
+.modal__wrap
+   position: absolute
+   bottom: 50%
+   right: 50%
+   transform: translate(50%, 50%)
+   width: 60vw
+   height: 70vh
+   z-index: 2
+
+.popup__active .close
+   position: absolute
+   font-size: 30px
+   font-weight: bold
+   right: -15px
+   top: -15px
+   // right: 19.3vw
+   // top: 14.5vh
+   z-index: 10
+   cursor: pointer
+   text-align: center
+   background-color: #ff0000
+   height: 30px
+   width: 30px
+   border-radius: 50%
+   box-sizing: border-box
+   transition: background-color 0.6s cubic-bezier(0.22, 1, 0.36, 1)
+   &::after
+      content: "×"
+      position: absolute
+      bottom: 50%
+      right: 50%
+      transform: translate(50%, 50%)
+      color: #fff
+      transition: background-color 0.6s cubic-bezier(0.22, 1, 0.36, 1)
+   &:hover
+      background-color: #ae0303
+
+// .modal__wrap
+//    position: absolute
+//    bottom: 50%
+//    right: 50%
+//    transform: translate(50%, 50%)
+//    width: 60vw
+//    height: 70vh
+//    z-index: 2
+
+//section exploitation
+
+.exploitation
+   padding: 64px 40px
+   .thomas__title
+      text-align: center
+
+.exploitation__grid
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   grid-template-rows: repeat(2)
+   gap: 0px 32px
+   grid-template-areas: "..." "..."
+   padding-top: 32px
+
+.exploitation__txt
+   padding-top: 16px
+
+//section cleaning
+
+.cleaning
+   padding: 64px 40px
+   .thomas__title
+      text-align: center
+
+.cleaning__grid
+   display: grid
+   grid-template-columns: repeat(2, 1fr)
+   grid-template-rows: repeat(2, 1fr)
+   gap: 32px 16px
+   grid-template-areas: ".." ".."
+   padding-top: 32px
+
+.cleaning__video
+   border-radius: 20px
+   overflow: hidden
+   position: relative
+   cursor: pointer
+   transition: box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1)
+   &::before
+      content: ""
+      display: block
+      background: url("https://cdn.comfy.ua/media/x/img3/1405707/play.png") no-repeat center / contain
+      width: 57px
+      height: 41px
+      position: absolute
+      bottom: 50%
+      right: 50%
+      transform: translate(50%, 50%)
+      z-index: 2
+   video
+      width: 100%
+      height: auto
+      // height: 304px
+      display: block
+      position: relative
+      z-index: -1
+   &:hover
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25)
+
+.cleaning__grid
+   >div
+      &:nth-of-type(1)
+         .cleaning__video
+            background: url("https://cdn.comfy.ua/media/x/img3/1405707/8.jpg") no-repeat center / cover
+      &:nth-of-type(2)
+         .cleaning__video
+            background: url("https://cdn.comfy.ua/media/x/img3/1405707/9.jpg") no-repeat center / cover
+      &:nth-of-type(3)
+         .cleaning__video
+            background: url("https://cdn.comfy.ua/media/x/img3/1405707/10.jpg") no-repeat center / cover
+      &:nth-of-type(4)
+         .cleaning__video
+            background: url("https://cdn.comfy.ua/media/x/img3/1405707/11.jpg") no-repeat center / cover
+
+.cleaning__txt
+   padding: 16px 0
+   // text-align: center
+
+.hide__bg
+   background: unset !important
+   &::before
+      display: none
+
+//section wet
+
+.wet
+   background-color: #dbf2fc
+   border-radius: 20px
+   text-align: center
+
+.wet__video
+   max-width: 60%
+   margin: 0 auto
+   .cleaning__video
+      background: url("https://cdn.comfy.ua/media/x/img3/1405707/12.jpg") no-repeat center / cover
+      margin: 2em 0 1em
+
+//clean__wet
+
+.clean__wet
+   .cleaning__grid
+      text-align: center
+      grid-template-areas: "cal1 cal2" "cal3 cal4" "cal5 cal5" !important
+      >div:nth-of-type(1)
+         grid-area: cal1
+         .cleaning__video
+            background: url("https://cdn.comfy.ua/media/x/img3/1405707/13.jpg") no-repeat center / cover
+      >div:nth-of-type(2)
+         grid-area: cal2
+         .cleaning__video
+            background: url("https://cdn.comfy.ua/media/x/img3/1405707/14.jpg") no-repeat center / cover
+      >div:nth-of-type(3)
+         grid-area: cal3
+         .cleaning__video
+            background: url("https://cdn.comfy.ua/media/x/img3/1405707/15.jpg") no-repeat center / cover
+      >div:nth-of-type(4)
+         grid-area: cal4
+         .cleaning__img
+            border-radius: 20px
+            overflow: hidden
+            min-height: 64%
+            background: url("https://cdn.comfy.ua/media/x/img3/1405707/16.jpg") no-repeat center / cover
+      >div:nth-of-type(5)
+         grid-area: cal5
+         max-width: 50%
+         margin: 0 auto
+         .cleaning__video
+            background: url("https://cdn.comfy.ua/media/x/img3/1405707/17.jpg") no-repeat center / cover
+
+//section advantages
+
+.advantages
+   padding: 64px 40px
+   .thomas__title
+      text-align: center
+
+.advantages__grid
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   grid-gap: 32px
+   grid-template-areas: "..."
+   padding-top: 32px
+   justify-items: center
+   align-items: center
+   align-content: stretch
+.advantages__txt
+   .thomas__txt
+      display: flex
+      align-items: center
+      b
+         display: contents
+      &::before
+         content: ""
+         display: block
+         height: 8px
+         min-width: 8px
+         background-color: #0084C9
+         margin-right: 16px
+      &:nth-of-type(n+2)
+         margin-top: 30px
+
+//media*****************************************************
+
+@media (max-width: 1800px) and (max-height: 900px)
+   .modal__wrap
+      bottom: 40%
+
+@media (max-width: 1201px)
+   .thomas .container
+      padding: 0 15px
+      box-sizing: border-box
+
+   .pet__grid
+      padding: 2em 1em 0
+   .pet__grid div
+      padding: 1em
+
+   .filter
+      padding: 0 1em
+
+   .exploitation,
+   .cleaning
+      padding: 2em 1em 0
+   .exploitation__grid
+      grid-template-columns: 1fr 1fr
+
+   .wet
+      padding-bottom: 1em
+
+   .clean__wet .cleaning__grid>div:nth-of-type(4) .cleaning__img
+      min-height: 46%
+
+   .advantages
+      padding: 2em 1em
+   .advantages__grid
+      grid-template-columns: 1fr 1fr
+      grid-template-areas: "cal2 cal2" "cal1 cal3"
+      align-items: unset
+      >div
+         &:nth-of-type(1)
+            grid-area: cal1
+         &:nth-of-type(2)
+            grid-area: cal2
+         &:nth-of-type(3)
+            grid-area: cal3
+   .advantages__txt .thomas__txt:nth-of-type(n+2)
+      margin-top: 1em
+
+@media (max-width: 1023.9px)
+   .clean__wet .cleaning__grid>div:nth-of-type(4) .cleaning__img
+      min-height: 26vw
+
+@media (max-width: 767.9px)
+   .pet
+      padding-bottom: 2em
+
+   .pet__log
+      max-width: 70%
+      margin: 0 auto
+
+   .pet__grid
+      padding: 2em 0
+      grid-template-columns: auto
+      gap: 16px
+      grid-template-areas: "." "." "." "."
+
+   .filter
+      padding: 0
+   .filter__row
+      padding-top: 32px
+      grid-template-columns: repeat(1, 1fr)
+      grid-template-rows: auto
+      grid-gap: 32px
+
+   .exploitation
+      padding: 2em 0
+   .exploitation__grid
+      grid-template-columns: 1fr
+      grid-template-rows: auto
+      gap: 16px
+
+   .cleaning
+      padding: 0
+   .cleaning__grid
+      grid-template-columns: 1fr
+      grid-template-rows: auto
+      gap: 32px
+      grid-template-areas: ".." ".."
+      padding-top: 32px
+   .wet
+      padding: 2em 0
+
+   .advantages
+      padding: 0 0 2em 0
+
+   .advantages__grid
+      grid-template-columns: repeat(1, auto)
+      grid-template-areas: "cal2" "cal1" "cal3"
+      grid-gap: 16px
+      padding-top: 32px
+      gap: 1em
+
+   .popup__active iframe
+      width: 90vw
+      height: 40vh
+
+   .modal__wrap
+      width: 85vw
+      height: unset
+   .popup__active .close
+      font-size: 24px
+      height: 24px
+      width: 24px
+      right: -12px
+      top: -12px
+
+   .wet__video
+      max-width: 100%
+
+   .clean__wet .cleaning__grid
+      grid-template-columns: 1fr !important
+      grid-template-areas: "cal1" "cal2" "cal3" "cal4" "cal5" !important
+
+   .exploitation, .cleaning
+      padding-top: 2em
+
+   .clean__wet .cleaning__grid>div:nth-of-type(4) .cleaning__img
+      min-height: 50vw
+   .clean__wet .cleaning__grid>div:nth-of-type(5)
+      max-width: 100%

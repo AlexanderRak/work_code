@@ -1,0 +1,296 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-philips-sonicare-hx6851-34-nabor__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-sonicare-hx6851-34-nabor
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: .5em
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+.philips
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+.one-col .features-desc__text
+   p:first-letter
+      padding-left: 0rem !important
+
+//end default styles
+
+.philips .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+.philips__title
+   font-size: 26px
+   font-weight: bold
+   margin-bottom: 1rem
+
+.philips__txt
+   font-size: 16px
+
+//logo
+
+.logo__cont
+   text-align: center
+   padding: 2em 2em 1em
+   .philips__title
+      &:last-of-type
+         font-weight: normal
+         margin-bottom: unset
+
+.logo__img
+   position: relative
+
+.logo__i
+   position: absolute
+   top: 0
+   left: 2em
+   img
+      margin: 0
+      width: 70%
+
+//tech
+
+.tech
+   text-align: center
+   padding: 4em 10px 0
+   .philips__title
+      margin-bottom: 0
+      margin-top: 1em
+
+.tech__row
+   display: flex
+   gap: 10px
+   >div
+      flex-basis: 33.33%
+      box-sizing: border-box
+   .philips__title
+      font-size: 20px
+
+.tech__i img
+   width: 70%
+
+//func
+
+.func
+   padding: 0 2em
+
+.func__row
+   padding: 2em 0 0
+   display: flex
+   align-items: center
+   gap: 2em
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+   >div
+      flex-basis: 50%
+
+// .func__img
+//    flex-basis: 55%
+
+// .func__cont
+//    flex-basis: 45%
+
+//cleaning
+
+.cleaning
+   text-align: center
+   padding: 2em 0 0
+
+.cleaning__flex
+   display: flex
+   flex-direction: column
+   gap: 2em
+   padding: 2em 2em 0
+
+.cleaning__item
+   display: flex
+   align-items: center
+   gap: 2em
+
+.philips__list
+   list-style-type: disc
+   list-style-position: inside
+   li
+      font-size: 24px
+      &:nth-of-type(n+2)
+         margin-top: 5px
+
+.func__two
+   padding-bottom: 50px
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-sonicare-hx6851-34-nabor
+   //    display: block
+
+   .philips__title
+      font-size: 20px !important
+
+   .logo__cont
+      padding: 1em 0
+   .logo__i
+      max-width: 35%
+      left: .5em
+      img
+         width: 100%
+   .logo__img >img
+      min-width: 150%
+      margin-left: -25%
+
+   .tech__row
+      flex-direction: column
+      gap: 2em !important
+   .tech .philips__title
+      margin-top: 1em
+
+   .func__img
+      max-width: unset
+      min-width: unset
+   .func__row
+      flex-direction: column-reverse !important
+      gap: 1em
+      text-align: center
+
+   .cleaning__img img
+      min-width: 150%
+      margin-left: -25%
+   .cleaning__flex
+      gap: 2em
+   .cleaning__item
+      gap: 1em
+      flex-direction: column
+   .cleaning__flex .philips__title
+      text-align: center !important
+
+   .func__two
+      padding-bottom: 1em
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-philips-sonicare-hx6851-34-nabor
+//       display: block
+
+// @media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+//    #rkt-philips-sonicare-hx6851-34-nabor
+//       display: grid
+//       grid-template-columns: calc(100% - 400px) 400px
+
+@media (max-width: 1201px)
+   .philips .container
+      padding: 0 15px
+      box-sizing: border-box
+
+   .logo__cont
+      padding: 1em 0
+
+   .tech
+      padding: 2em 0 0
+   .tech .philips__title
+      margin-top: 2em
+   .tech__row
+      flex-direction: column
+      gap: 4em
+   .tech__row .philips__title
+      margin-top: 1em
+   .tech__i img
+      width: 50%
+
+   .philips__title
+      font-size: 24px
+   .philips__txt
+      font-size: 16px
+
+   .func
+      padding: 0
+
+   .cleaning__flex
+      padding-right: 0
+      padding-left: 0
+      .philips__title
+         text-align: left
+         flex-basis: 70%
+         margin-bottom: 0
+   .cleaning__i
+      flex-basis: 30%
+
+   .func__two
+      padding-bottom: 2em

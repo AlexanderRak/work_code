@@ -1,0 +1,409 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-philips-bhd839-00-serii-8000__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-bhd839-00-serii-8000
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: .5em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: .5rem
+   h4
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: normal
+      text-align: left
+      margin-bottom: 1rem
+      text-transform: none
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//philips__logo
+
+.philips__logo
+   color: #fff
+   position: relative
+
+.philips__logo__abs
+   position: absolute
+   left: 2em
+   bottom: 2em
+   width: 40%
+   box-sizing: border-box
+   z-index: 1
+   h4
+      margin: 4em 0 2em !important
+   p
+      font-size: 12px !important
+
+.philips__logo__lg
+   position: absolute
+   left: 2em
+   top: 0
+   z-index: 2
+   img
+      width: 70%
+      margin: 0 !important
+
+.philips__logo__img
+   position: relative
+
+.philips__logo__i
+   position: absolute
+   top: 2em
+   right: 2em
+   img
+      width: 70%
+      margin: 0 0 0 auto !important
+
+//func
+
+.func
+   display: flex
+   align-items: center
+   padding: 2em
+
+.func__items
+   display: flex
+   flex-direction: column
+   gap: 1em
+   margin-right: -30%
+   padding-top: 5%
+
+.func__item
+   display: flex
+   align-items: center
+   gap: 1em
+
+.func__i
+   flex-basis: 17%
+   min-width: 17%
+
+//philips__video
+
+.philips__video
+   padding: 0 2em
+   iframe
+      display: block
+      height: 50vh
+      max-height: 800px
+      width: 100%
+      box-sizing: border-box
+
+//power
+
+.power__cont
+   padding: 2em
+   h3,h4,p
+      text-align: center !important
+
+//philips__tech
+
+.philips__tech
+   display: grid
+   grid-template-columns: repeat(3, 1fr)
+   gap: 0.5em
+   padding: 2em .5em
+
+.philips__tech__cont
+   margin-top: 1em
+   h3,p
+      text-align: center !important
+
+//philips__options
+
+.philips__options
+   padding: 2em
+   display: flex
+   align-items: center
+
+.options__cal
+   display: flex
+   flex-direction: column
+   gap: 2em
+
+.options__item
+   display: flex
+   align-items: center
+   gap: 1em
+
+.options__i
+   flex-basis: 60px
+   min-width: 60px
+
+//complete
+
+.complete__title
+   padding: 0 2em 2em
+   h3
+      text-align: center !important
+
+.complete__wrap
+   position: relative
+
+.complete__txt
+   position: absolute
+   width: 20%
+   &:nth-of-type(1)
+      bottom: 18%
+      left: 20%
+   &:nth-of-type(2)
+      color: #fff
+      bottom: 40%
+      right: 15%
+
+//philips__table
+
+.philips__table
+   padding: 2em .5em
+
+.philips__table__title
+   h3
+      text-align: center !important
+
+.table__grid
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   >div
+      padding: 10px
+      box-sizing: border-box
+      &:nth-of-type(1)
+         background: rgba(138, 10, 94, .06)
+      p
+         text-align: center !important
+
+.table__grid__two
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   grid-template-areas: "cal1 cal1 cal1 cal1" "cal2 cal3 cal4 cal5"
+   >div
+      padding: 10px
+      box-sizing: border-box
+      p,li
+         text-align: center !important
+      li
+         width: auto
+         margin: 0 auto
+      &:nth-of-type(1)
+         grid-area: cal1
+         background: rgba(138, 10, 94, .06)
+         padding: 0
+      &:nth-of-type(2)
+         grid-area: cal2
+         background: rgba(138, 10, 94, .06)
+      &:nth-of-type(3)
+         grid-area: cal3
+      &:nth-of-type(4)
+         grid-area: cal4
+      &:nth-of-type(5)
+         grid-area: cal5
+      &:nth-of-type(n+2)
+         display: flex
+         justify-content: center
+         align-items: center
+
+.table__title
+   background: rgba(138, 10, 94, .06)
+   padding: 10px
+   width: 25%
+   max-width: 25%
+   box-sizing: border-box
+   h4
+      margin: 0 !important
+
+.table__marker
+   width: 10px
+   height: 10px
+   border-radius: 50%
+   background: #000
+
+.table__note
+   padding: 2em 2em 0
+   p
+      font-size: 12px !important
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-bhd839-00-serii-8000
+   //    display: block
+
+   .philips__logo
+      color: #000
+   .philips__logo__lg img,
+   .philips__logo__i img
+      width: 40% !important
+   .philips__logo__abs
+      position: unset
+      padding: 1em
+      width: 100%
+
+   .philips__options
+      flex-direction: column
+      gap: 1em
+   .options__cal
+      width: 100% !important
+
+   .complete .complete__txt
+      width: 33% !important
+      p
+         font-size: 12px !important
+   .complete__txt:nth-of-type(1)
+      left: 4% !important
+   .complete__txt:nth-of-type(2)
+      right: 2% !important
+
+@media (min-width: $bp-tablet) and (max-width: 1023.9px)
+   // #rkt-philips-bhd839-00-serii-8000
+   //    display: block
+
+   .philips__video iframe
+      height: 42vh !important
+
+   .philips__tech
+      grid-template-columns: repeat(3, 1fr) !important
+      gap: 0.5em !important
+
+// @media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+//    #rkt-philips-bhd839-00-serii-8000
+//       display: grid
+//       grid-template-columns: calc(100% - 400px) 400px
+
+@media (max-width: 1201px)
+   .philips__logo__lg,
+   .philips__logo__abs
+      left: 1em
+   .philips__logo__lg img
+      width: 50%
+   .philips__logo__i
+      right: 1em
+      top: 1em
+      img
+         width: 50%
+   .philips__logo__abs h4
+      margin: 1em 0 1em !important
+
+   .func
+      padding: 2em 1em
+      flex-direction: column
+      align-items: unset
+      gap: 1em
+   .func__items
+      margin-right: unset
+      padding-top: unset
+   .func__img img
+      max-height: 600px
+
+   .philips__video
+      padding: 0 1em
+      iframe
+         height: 34vh
+
+   .power__cont
+      padding: 2em 1em 1em
+
+   .philips__tech
+      grid-template-columns: 1fr
+      gap: 2em
+
+   .philips__options
+      flex-wrap: wrap
+      align-items: unset
+      padding: 2em 1em
+   .options__cal
+      width: 50%
+      gap: 1em
+      &:first-child
+         order: 0
+      &:last-child
+         order: 1
+   .options__img
+      order: 2
+      margin: 0 auto
+      img
+         max-height: 500px
+   .options__i
+      flex-basis: 50px
+      min-width: 50px
+
+   .complete__title
+      padding: 0 1em
+   .complete__txt
+      width: 27%
+   .complete__txt:nth-of-type(1)
+      left: 11%
+   .complete__txt:nth-of-type(2)
+      right: 9%
+
+   .table__scroll
+      overflow-x: scroll
+   .table__wrap
+      min-width: 900px
+   .table__note
+      padding: 2em .5em 0

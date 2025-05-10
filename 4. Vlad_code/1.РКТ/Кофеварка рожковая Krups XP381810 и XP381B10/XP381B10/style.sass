@@ -1,0 +1,159 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-krups-xp381b10-opio-grey__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-krups-xp381b10-opio-grey
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//krups__func
+
+.krups__func
+   color: #fff
+   background: #3E3934
+   >div
+      display: flex
+      align-items: center
+      >div
+         box-sizing: border-box
+      &:nth-of-type(even)
+         flex-direction: row-reverse
+         justify-content: space-between
+         .krups__txt
+            flex-basis: 54%
+         .krups__img
+            flex-basis: 42%
+
+.krups__txt
+   flex-basis: 42%
+   padding-left: 2em
+   padding-right: 2em
+   border-left: 6px solid #E7792B
+
+.krups__img
+   flex-basis: 58%
+
+//*********************************media*************************
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-krups-xp381b10-opio-grey
+//       display: block
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px), (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   .krups__func
+      display: flex
+      flex-direction: column
+      gap: 1em
+   .krups__func > div
+      flex-direction: column
+   .krups__func > div:nth-of-type(even)
+      flex-direction: column-reverse
+      padding: 0 15%
+      .krups__img
+         position: relative
+         img
+            position: relative
+         &::before
+            content: ""
+            display: block
+            position: absolute
+            bottom: 50%
+            transform: translateY(50%)
+            left: -40%
+            right: -40%
+            height: 20%
+            background: #E7792B
+      .krups__txt
+         border: none
+         h2,p
+            text-align: center !important
+   .krups__txt
+      padding: 0 1em
+      margin: 1em 0
+
+   .krups__warranty
+      .krups__img
+         padding: 0 !important
+         &::before
+            content: none !important
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-krups-xp381b10-opio-grey
+   //    display: block
+
+   .krups__func > div:nth-of-type(even)
+      padding: 0
+      .krups__img
+         padding: 0 15%

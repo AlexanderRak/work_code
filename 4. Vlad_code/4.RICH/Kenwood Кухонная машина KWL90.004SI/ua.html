@@ -1,482 +1,536 @@
 <style></style>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js" integrity="sha512-tHvUcUQYi35zApvAa5TNR3fNhBQkVtkmWKfacnpxmix4/VTGz1lGjIVyLMp7gLgAvg+aKJjnVKokXJNS5GZ+/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <div class="kenwood">
-  <div class="chef">
-    <div class="chef__txt kenwood__ctxt">
-      <span>Універсальний шеф-повар <br> для найсмачніших страв</span>
-    </div>
-    <div class="chef__video">
-      <video id="chef__vidos" class="autoplay-video" playsinline lazyloaded muted autoplay src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/2c.mp4"></video>
-    </div>
-  </div>
-
-  <div class="titanium">
-    <video id="chef__vidos" class="autoplay-video" playsinline lazyloaded muted autoplay loop playsinline src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/3.mp4"></video>
-  </div>
-
-  <div class="display__nav">
-    <div class="container">
-      <div class="display__nav__flex">
-        <div class="display__nav__flex__abs display__nav__flex__abs__show">
-          <div class="display__nav__flex__img">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/2.png">
-          </div>
-          <ul class="display__nav__flex__list">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-        <div class="display__nav__flex__item">
-          <div class="display__nav__flex__tab">
-            <span class="display__nav__flex__tab__item">Планетарне <br> змішування</span>
-              <span class="display__nav__flex__tab__item">Зручний <br> дисплей</span>
-            <span class="display__nav__flex__tab__item">Вбудовані <br> ваги</span>
-            <span class="display__nav__flex__tab__item">Нагрівання <br> чаші</span>
-            <span class="display__nav__flex__tab__item">Потужність <br> 1400Вт</span>
-          </div>
-          <div class="display__nav__flex__abs display__nav__flex__abs__hide">
-            <div class="display__nav__flex__img">
-              <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/2.png">
-            </div>
-            <ul class="display__nav__flex__list">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-          <div class="display__nav__flex__txt">
-            <div class="display__nav__flex__txt__item">
-              <span>Планетарне <br> змішування</span>
-              <p>Завдяки планетарному змішуванню насадка від Kenwood обертається за годинниковою стрілкою, а привід у протилежному напрямку для найефективнішого покриття чаші, забезпечуючи рівномірне та ретельне перемішування кожного шматочка.</p>
-            </div>
-            <div class="display__nav__flex__txt__item">
-              <span>Зручне <br> управління</span>
-              <p>Налаштуйте режими, ступінь нагріву і таймер, а також контролюйте вагу інгредієнтів для бездоганних результатів приготування - швидко та легко.</p>
-            </div>
-            <div class="display__nav__flex__txt__item">
-              <span>Вбудовані <br> ваги</span>
-              <p>Зручне зважування відразу в чаші дозволяє легко додавати інгредієнти прямо в міксер (і заощаджувати на митті посуду). Функцію зважування можна використовувати з піднятою або опущеною головкою міксера.</p>
-            </div>
-            <div class="display__nav__flex__txt__item">
-              <span>Нагрівання <br> чаші</span>
-              <p>Дев'ять різних температурних режимів дуже корисні при випіканні - від м'якого розм'якшення масла до вистоювання тіста для хліба, розтоплення шоколаду або розігріву ніжної суміші для найсмачніших булочок.</p>
-            </div>
-            <div class="display__nav__flex__txt__item">
-              <span>Потужність <br> 1400Вт</span>
-              <p>Завдяки високій потужності, що дозволяє легко замісити найважчу випічку або тісто для хліба, універсальна кухонна машина від Kenwood приводить в дію вражаючу різноманітність повільних, середніх і високошвидкісних насадок, на ваш вибір. Настільний міксер Kenwood легко перетворюється на багатофункціональну машину «все в одному» для вашого комфорту.</p>
-            </div>
-          </div>
-        </div>
+   <div class="chef">
+      <div class="chef__txt kenwood__ctxt">
+         <span
+            >Універсальний шеф-повар <br />
+            для найсмачніших страв</span
+         >
       </div>
-    </div>
-  </div>
-
-  <div class="simple__display">
-    <div class="container">
-      <div class="simple__display__wrap">
-        <div class="simple__display__txt">
-          <span>Інтуїтивно <br> зрозумілий <b class="kenwood__gtxt">дисплей</b></span>
-          <p>Досягти найкращих результатів при випіканні та приготуванні найсмачніших рецептів стало ще простіше завдяки інтуїтивно зрозумілому сенсорному екрану Bake-Assist™ з діагоналлю 2,4 дюйми.</p>
-        </div>
-        <div class="_parallax__wrap">
-          <div data-speed="400" class="simple__display__parallax _parallax hide__mob__k">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/3.png" alt="">
-          </div>
-          <div data-speed="400" class="simple__display__parallax _parallax__mob show__mob__k">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/16.png" alt="">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/17.png" alt="">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/18.png" alt="">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/19.png" alt="">
-          </div>
-        </div>
+      <div class="chef__video">
+         <video id="chef__vidos" class="autoplay-video" playsinline lazyloaded muted autoplay src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/2c.mp4"></video>
       </div>
-    </div>
-  </div>
+   </div>
 
-  <div class="settings">
-    <div class="container">
-      <div class="settings__wrap">
-        <div class="settings__img show__mob__k">
-          <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/20.png">
-        </div>
-        <div class="settings__head">
-          <i class="kenwood__gtxt">6</i>
-          <span>режимів для <br> миттєвого налаштування</span>
-        </div>
-        <div class="settings__flex">
-          <div class="settings__cont">
-            <div class="settings__icon">
-              <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i1.svg" alt="">
-            </div>
-            <div class="settings__txt kenwood__ctxt">
-              <p>Збити білки</p>
-            </div>
-          </div>
-          <div class="settings__cont">
-            <div class="settings__icon">
-              <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i2.svg" alt="">
-            </div>
-            <div class="settings__txt kenwood__ctxt">
-              <p>Бісквіт</p>
-            </div>
-          </div>
-          <div class="settings__cont">
-            <div class="settings__icon">
-              <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i3.svg" alt="">
-            </div>
-            <div class="settings__txt kenwood__ctxt">
-              <p>Розтопити шоколад</p>
-            </div>
-          </div>
-          <div class="settings__cont">
-            <div class="settings__icon">
-              <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i4.svg" alt="">
-            </div>
-            <div class="settings__txt kenwood__ctxt">
-              <p>Замісити тісто</p>
-            </div>
-          </div>
-          <div class="settings__cont">
-            <div class="settings__icon">
-              <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i5.svg" alt="">
-            </div>
-            <div class="settings__txt kenwood__ctxt">
-              <p>Відстояти тісто</p>
-            </div>
-          </div>
-          <div class="settings__cont">
-            <div class="settings__icon">
-              <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i6.svg" alt="">
-            </div>
-            <div class="settings__txt kenwood__ctxt">
-              <p>Швейцарська меренга</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+   <div class="titanium">
+      <video id="chef__vidos" class="autoplay-video" playsinline lazyloaded muted autoplay loop playsinline src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/3.mp4"></video>
+   </div>
 
-  <div class="easywaigh">
-    <div class="container">
-      <div class="easywaigh__flex">
-        <div class="easywaigh__item _anim-left _animation">
-          <div class="easywaigh__txt">
-            <span>Ваги EasyWeigh™</span>
-            <p>Вбудовані ваги EasyWeigh дозволяють зручно зважувати всі інгредієнти у мисці прямо на ходу.</p>
-          </div>
-          <div class="easywaigh__video">
-            <video class="autoplay-video" playsinline lazyloaded muted autoplay loop src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/5.mp4"></video>
-          </div>
-        </div>
-        <div class="easywaigh__item _anim-right _animation">
-          <div class="easywaigh__txt">
-            <span>BowlBright™ для кращої видимості</span>
-            <p>Вбудована лампа BowlBright™ дозволяє повністю контролювати весь процес приготування і світить в чашу в 14 разів яскравіше за базові моделі кухонних машин Kenwood, забезпечуючи повну видимість усередині.</p>
-          </div>
-          <div class="easywaigh__video">
-            <video class="autoplay-video" playsinline lazyloaded muted autoplay loop src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/6.mp4"></video>
-          </div>
-        </div>
+   <div class="display__nav">
+      <div class="container">
+         <div class="display__nav__flex">
+            <div class="display__nav__flex__abs display__nav__flex__abs__show">
+               <div class="display__nav__flex__img">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/2.png" />
+               </div>
+               <ul class="display__nav__flex__list">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+               </ul>
+            </div>
+            <div class="display__nav__flex__item">
+               <div class="display__nav__flex__tab">
+                  <span class="display__nav__flex__tab__item"
+                     >Планетарне <br />
+                     змішування</span
+                  >
+                  <span class="display__nav__flex__tab__item"
+                     >Зручний <br />
+                     дисплей</span
+                  >
+                  <span class="display__nav__flex__tab__item"
+                     >Вбудовані <br />
+                     ваги</span
+                  >
+                  <span class="display__nav__flex__tab__item"
+                     >Нагрівання <br />
+                     чаші</span
+                  >
+                  <span class="display__nav__flex__tab__item"
+                     >Потужність <br />
+                     1400Вт</span
+                  >
+               </div>
+               <div class="display__nav__flex__abs display__nav__flex__abs__hide">
+                  <div class="display__nav__flex__img">
+                     <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/2.png" />
+                  </div>
+                  <ul class="display__nav__flex__list">
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                     <li></li>
+                  </ul>
+               </div>
+               <div class="display__nav__flex__txt">
+                  <div class="display__nav__flex__txt__item">
+                     <span
+                        >Планетарне <br />
+                        змішування</span
+                     >
+                     <p>Завдяки планетарному змішуванню насадка від Kenwood обертається за годинниковою стрілкою, а привід у протилежному напрямку для найефективнішого покриття чаші, забезпечуючи рівномірне та ретельне перемішування кожного шматочка.</p>
+                  </div>
+                  <div class="display__nav__flex__txt__item">
+                     <span
+                        >Зручне <br />
+                        управління</span
+                     >
+                     <p>Налаштуйте режими, ступінь нагріву і таймер, а також контролюйте вагу інгредієнтів для бездоганних результатів приготування - швидко та легко.</p>
+                  </div>
+                  <div class="display__nav__flex__txt__item">
+                     <span
+                        >Вбудовані <br />
+                        ваги</span
+                     >
+                     <p>Зручне зважування відразу в чаші дозволяє легко додавати інгредієнти прямо в міксер (і заощаджувати на митті посуду). Функцію зважування можна використовувати з піднятою або опущеною головкою міксера.</p>
+                  </div>
+                  <div class="display__nav__flex__txt__item">
+                     <span
+                        >Нагрівання <br />
+                        чаші</span
+                     >
+                     <p>Дев'ять різних температурних режимів дуже корисні при випіканні - від м'якого розм'якшення масла до вистоювання тіста для хліба, розтоплення шоколаду або розігріву ніжної суміші для найсмачніших булочок.</p>
+                  </div>
+                  <div class="display__nav__flex__txt__item">
+                     <span
+                        >Потужність <br />
+                        1400Вт</span
+                     >
+                     <p>Завдяки високій потужності, що дозволяє легко замісити найважчу випічку або тісто для хліба, універсальна кухонна машина від Kenwood приводить в дію вражаючу різноманітність повільних, середніх і високошвидкісних насадок, на ваш вибір. Настільний міксер Kenwood легко перетворюється на багатофункціональну машину «все в одному» для вашого комфорту.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
 
-  <div class="cup">
-    <div class="container">
-      <div class="cup__flex">
-        <div class="cup__cont">
-          <div class="cup__img">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/5.png">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/21.png">
-          </div>
-          <div class="cup__litr">
-            <div class="cup__abs">
-              <span class="kenwood__gtxt">5л</span>
-              <p>1.3 кг готового тіста</p>
-              <i><b></b></i>
+   <div class="simple__display">
+      <div class="container">
+         <div class="simple__display__wrap">
+            <div class="simple__display__txt">
+               <span
+                  >Інтуїтивно <br />
+                  зрозумілий <b class="kenwood__gtxt">дисплей</b></span
+               >
+               <p>Досягти найкращих результатів при випіканні та приготуванні найсмачніших рецептів стало ще простіше завдяки інтуїтивно зрозумілому сенсорному екрану Bake-Assist™ з діагоналлю 2,4 дюйми.</p>
             </div>
-            <div class="cup__abs">
-              <span class="kenwood__gtxt">7л</span>
-              <p>2.56 кг готового тіста</p>
-              <i><b></b></i>
+            <div class="_parallax__wrap">
+               <div class="simple__display__parallax _parallax hide__mob__k">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/3.png" alt="" />
+               </div>
+               <div data-speed="400" class="simple__display__parallax _parallax__mob show__mob__k">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/16.png" alt="" />
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/17.png" alt="" />
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/18.png" alt="" />
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/19.png" alt="" />
+               </div>
             </div>
-          </div>
-        </div>
-        <div class="cup__txt">
-          <span>2 чаші для змішування</span>
-          <p>Зручна система з двома чашами на 5 та 7 л економить час при заміні посуду. Велика місткість основної чаші EasyWarm™ - ідеально підходить для ефективного і швидкого приготування великих порцій. Це не тільки заощаджує час, а ще і знижує потребу у додатковому митті посуду. <br><br>З легкістю комплектуйте одну чашу на 5 л в іншу на 7 л, щоб заощадити простір на вашій кухні.</p>
-          <i>*Чаша на 5 літрів не підігрівається.</i>
-        </div>
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
 
-  <div class="power">
-    <div class="container">
-      <div class="power__flex">
-        <div class="power__item">
-          <div class="power__head">
-            <div class="power__txt">
-              <span>1400 Вт</span>
-              <p>Потужність</p>
+   <div class="settings">
+      <div class="container">
+         <div class="settings__wrap">
+            <div class="settings__img show__mob__k">
+               <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/20.png" />
             </div>
-            <div class="power__txt">
-              <span>14000 об/хв</span>
-              <p>Швидкість обертання</p>
+            <div class="settings__head">
+               <i class="kenwood__gtxt">6</i>
+               <span
+                  >режимів для <br />
+                  миттєвого налаштування</span
+               >
             </div>
-          </div>
-          <div class="power__img">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/7.png">
-          </div>
-        </div>
-        <div class="power__item">
-          <div class="power__head">
-            <div class="power__txt">
-              <span>Метал</span>
-              <p>Матеріал</p>
+            <div class="settings__flex">
+               <div class="settings__cont">
+                  <div class="settings__icon">
+                     <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i1.svg" alt="" />
+                  </div>
+                  <div class="settings__txt kenwood__ctxt">
+                     <p>Збити білки</p>
+                  </div>
+               </div>
+               <div class="settings__cont">
+                  <div class="settings__icon">
+                     <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i2.svg" alt="" />
+                  </div>
+                  <div class="settings__txt kenwood__ctxt">
+                     <p>Бісквіт</p>
+                  </div>
+               </div>
+               <div class="settings__cont">
+                  <div class="settings__icon">
+                     <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i3.svg" alt="" />
+                  </div>
+                  <div class="settings__txt kenwood__ctxt">
+                     <p>Розтопити шоколад</p>
+                  </div>
+               </div>
+               <div class="settings__cont">
+                  <div class="settings__icon">
+                     <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i4.svg" alt="" />
+                  </div>
+                  <div class="settings__txt kenwood__ctxt">
+                     <p>Замісити тісто</p>
+                  </div>
+               </div>
+               <div class="settings__cont">
+                  <div class="settings__icon">
+                     <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i5.svg" alt="" />
+                  </div>
+                  <div class="settings__txt kenwood__ctxt">
+                     <p>Відстояти тісто</p>
+                  </div>
+               </div>
+               <div class="settings__cont">
+                  <div class="settings__icon">
+                     <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i6.svg" alt="" />
+                  </div>
+                  <div class="settings__txt kenwood__ctxt">
+                     <p>Швейцарська меренга</p>
+                  </div>
+               </div>
             </div>
-            <div class="power__txt">
-              <span>8,5 кг</span>
-              <p>Вага без чаші</p>
-            </div>
-          </div>
-          <div class="power__img">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/6.png">
-          </div>
-        </div>
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
 
-  <div class="nasadki">
-    <div class="container">
-      <div class="nasadki__flex">
-        <div class="nasadki__cont">
-          <div class="nasadki__head">
-            <span>Надійні насадки <br> <b class="kenwood__gtxt"> EasyClean™</b></span>
-          </div>
-          <div class="nasadki__head__js">
-            <span>Вінчик</span>
-          </div>
-          <div class="nasadki__head__js">
-            <span>Гнучкий збивач</span>
-          </div>
-          <div class="nasadki__head__js">
-            <span>К-подібна насадка</span>
-          </div>
-          <div class="nasadki__head__js">
-            <span>Гак для тіста</span>
-          </div>
-          <div class="nasadki__list">
-            <img class="nasadki__list__nav" src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i7a.png">
-            <img class="nasadki__list__nav" src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i8a.png">
-            <img class="nasadki__list__nav" src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i9a.png">
-            <img class="nasadki__list__nav" src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i10a.png">
-          </div>
-          <div class="nasadki__txt">
-            <p>Збивайте бісквітне та млинце тісто, яйця, безе, вершки. Готуйте з легкістю улюблені масляні креми та найсмачніше пюре без купочок!</p>
-          </div>
-          <div class="nasadki__txt">
-            <p>Гарно, ідеально та неповторно. Перевага насадки для м'якого змішування в тому, що вона зіскребає тісто-вершки-масло та подібні інгредієнти зі стінок чаші, чого не роблять інші насадки. Змішуйте креми, місіть бісквітне та пісочне тісто швидко та легко без залишків на стінках чаші.</p>
-          </div>
-          <div class="nasadki__txt">
-            <p>Підходить для ефективного замішування тіста для кексу, подрібнення печива в крихту (наприклад, для основи чізкейку), а також для приготування пюре, фаршу, глазурі та улюбленої начинки для смачних страв.</p>
-          </div>
-          <div class="nasadki__txt">
-            <p>Незамінна річ для замішування дріжджового тіста до ідеального однорідного стану. Отримайте бездоганно ніжне тісто для піци, рулетів, пасок, штруделя та інших улюблених страв з легкістю. <br>Беріться за будь-який рецепт впевнено! Всі насадки безпечні для миття в посудомийній машині.</p>
-          </div>
-        </div>
-        <div class="nasadki__img">
-          <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/8.png">
-          <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/9.png">
-          <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/10.png">
-          <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/11.png">
-        </div>
+   <div class="easywaigh">
+      <div class="container">
+         <div class="easywaigh__flex">
+            <div class="easywaigh__item _anim-left _animation">
+               <div class="easywaigh__txt">
+                  <span>Ваги EasyWeigh™</span>
+                  <p>Вбудовані ваги EasyWeigh дозволяють зручно зважувати всі інгредієнти у мисці прямо на ходу.</p>
+               </div>
+               <div class="easywaigh__video">
+                  <video class="autoplay-video" playsinline lazyloaded muted autoplay loop src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/5.mp4"></video>
+               </div>
+            </div>
+            <div class="easywaigh__item _anim-right _animation">
+               <div class="easywaigh__txt">
+                  <span>BowlBright™ для кращої видимості</span>
+                  <p>Вбудована лампа BowlBright™ дозволяє повністю контролювати весь процес приготування і світить в чашу в 14 разів яскравіше за базові моделі кухонних машин Kenwood, забезпечуючи повну видимість усередині.</p>
+               </div>
+               <div class="easywaigh__video">
+                  <video class="autoplay-video" playsinline lazyloaded muted autoplay loop src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/6.mp4"></video>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
 
-  <div class="allinone">
-    <div class="container">
-      <div class="allinone__flex">
-        <div class="allinone__cont">
-          <div class="allinone__cont__txt">
-            <div class="allinone__cont__txt__title">
-              <span class="kenwood__ctxt">Надійний <br> кухонний помічник <br>  <b class="kenwood__gtxt">«все-в-одному»</b></span>
+   <div class="cup">
+      <div class="container">
+         <div class="cup__flex">
+            <div class="cup__cont">
+               <div class="cup__img">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/5.png" />
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/21.png" />
+               </div>
+               <div class="cup__litr">
+                  <div class="cup__abs">
+                     <span class="kenwood__gtxt">5л</span>
+                     <p>1.3 кг готового тіста</p>
+                     <i><b></b></i>
+                  </div>
+                  <div class="cup__abs">
+                     <span class="kenwood__gtxt">7л</span>
+                     <p>2.56 кг готового тіста</p>
+                     <i><b></b></i>
+                  </div>
+               </div>
             </div>
-            <div class="allinone__cont__txt__slider">
-              <div class="allinone__cont__txt__slider__item">
-                <i>Насадка-прес для ягід</i>
-                <p>Ефективна насадка KAX644ME ідеально віджимає і подрібнює м'які фрукти, зберігаючи важливі вітаміни та ферменти для максимального задоволення від найсмачніших морсів.</p>
-              </div>
-              <div class="allinone__cont__txt__slider__item">
-                <i>Насадка для нарізки спіраллю</i>
-                <p>Отримайте задоволення від використання KENWOOD KAX700PL! За допомогою цієї насадки ви можете швидко та легко замінити улюблені страви вашої родини корисними та смачними альтернативами. Наріжте фрукти та овочі різної форми швидко та легко, просто прикріпивши насадку до кухонного комбайна Kenwood.</p>
-              </div>
-              <div class="allinone__cont__txt__slider__item">
-                <i>Насадка цитрус-прес</i>
-                <p>Насолоджуйтесь свіжими цитрусовими соками без особливих зусиль та отримуйте максимальну користь від високого вмісту вітамінів щодня.</p>
-              </div>
-              <div class="allinone__cont__txt__slider__item">
-                <i>М'ясорубка</i>
-                <p>Дозволяє приготувати величезну різноманітність страв у домашніх умовах з використанням трьох сіток: дрібної (3 мм), середньої (4,5 мм) та великої (8 мм).</p>
-              </div>
-              <div class="allinone__cont__txt__slider__item">
-                <i>Універсальний міксер</i>
-                <p>Ідеальний аксесуар для миттєвого подрібнення та змішування невеликих порцій улюблених інгредієнтів. Відмінно підходить для дитячого харчування, спецій, кави, маринадів, заправок, пюре, трав та горіхів. Подрібнюйте набагато швидше і дрібніше, ніж з більшою насадкою-міксером.</p>
-              </div>
-              <div class="allinone__cont__txt__slider__item">
-                <i>Насадка для нарізки кубиками</i>
-                <p>Миттєве подрібнення сиру, м'яса, овочів на кубики по 10х10 мм.</p>
-              </div>
-              <div class="allinone__cont__txt__slider__item">
-                <i>Насадка для пасти Fettuccine</i>
-                <p>Приготуйте ідеальний Fettuccine з шириною локшини 6,5 мм у найкоротший термін, завдяки високоефективній насадці з високоякісної нержавіючої сталі!</p>
-              </div>
-              <div class="allinone__cont__txt__slider__item">
-                <i>Потужна соковижималка <br> безперервної дії</i>
-                <p>Приготуйте ідеальний сік з будь-якого фрукта за секунди, завдяки трубці, чистому носику для розливу і поролоновому фільтру. З цією швидкою соковижималкою сніданок стане набагато цікавішим!</p>
-              </div>
-              <div class="allinone__cont__txt__slider__item">
-                <i>Ролик для пасти</i>
-                <p>Немає нічого кращого, ніж справжній смак свіжоприготовленої пасти, лазаньї, равіолі, тортелліні або коржів та пити, а цей аксесуар дозволяє легко приготувати всі улюблені страви вдома. Використовуйте пасту у свіжому вигляді, охолодіть або заморозьте її, щоб приготувати швидку вечерю зі справжнім італійським колоритом для всієї сім'ї!</p>
-              </div>
-              <div class="allinone__cont__txt__slider__item">
-                <i>Ролик для пасти</i>
-                <p>Немає нічого кращого, ніж справжній смак свіжоприготовленої пасти, лазаньї, равіолі, тортелліні або коржів та пити, а цей аксесуар дозволяє легко приготувати всі улюблені страви вдома. Використовуйте пасту у свіжому вигляді, охолодіть або заморозьте її, щоб приготувати швидку вечерю зі справжнім італійським колоритом для всієї сім'ї!</p>
-              </div>
-              <div class="allinone__cont__txt__slider__item">
-                <i>Насадка для розкочування тіста</i>
-                <p>Швидко та легко формуйте свіжі листи локшини для лазаньї потрібної товщини з італійським професійним валиком для макаронних виробів від Kenwood!</p>
-              </div>
-              <div class="allinone__cont__txt__slider__item">
-                <i>Насадка-млин</i>
-                <p>Завдяки своїй сталевій основі зерновий млин KAX941PL ідеально подрібнює будь-які грубі зерна або борошно тонкого помелу. Підходить для всіх видів зернових (крім кукурудзи), олійних та бобових культур, а також для маку, трав та спецій (крім кмину).</p>
-              </div>
+            <div class="cup__txt">
+               <span>2 чаші для змішування</span>
+               <p>
+                  Зручна система з двома чашами на 5 та 7 л економить час при заміні посуду. Велика місткість основної чаші EasyWarm™ - ідеально підходить для ефективного і швидкого приготування великих порцій. Це не тільки заощаджує час, а ще і знижує потребу у додатковому митті посуду. <br /><br />З легкістю комплектуйте одну чашу на 5 л в іншу на 7 л, щоб заощадити простір на вашій кухні.
+               </p>
+               <i>*Чаша на 5 літрів не підігрівається.</i>
             </div>
-            <p class="snoska">*Насадки купуються окремо</p>
-          </div>
-          <div class="allinone__slider">
-            <div class="allinone__slider__cont">
-              <div class="allinone__slider__cont__item" style="z-index: 2;">
-                <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/1-1.jpg">
-                <a target="_blank" style="left: 40px;" class="allinone__btn allinone__btn__1" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-at644-b.html">До товару</a>
-              </div>
-              <div class="allinone__slider__cont__item">
-                <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/2-1.jpg">
-                <a target="_blank" style="left: 36px;" class="allinone__btn allinone__btn__2" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-kax700pl.html">До товару</a>
-              </div>
-              <div class="allinone__slider__cont__item">
-                <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/3-1.jpg">
-                <a target="_blank" style="left: 0;" class="allinone__btn allinone__btn__3" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-at312-b.html">До товару</a>
-              </div>
-              <div class="allinone__slider__cont__item">
-                <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/5-1.jpg">
-                <a target="_blank" style="left: 14px;" class="allinone__btn allinone__btn__5" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-at950-a-b.html">До товару</a>
-              </div>
-              <div class="allinone__slider__cont__item">
-                <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/6-1.jpg">
-                <a target="_blank" style="left: 0;" class="allinone__btn allinone__btn__6" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-at320-a-b.html">До товару</a>
-              </div>
-              <div class="allinone__slider__cont__item">
-                <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/7-1.jpg">
-                <a target="_blank" style="left: 28px;" class="allinone__btn allinone__btn__7" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-mgx400.html">До товару</a>
-              </div>
-              <div class="allinone__slider__cont__item" style="z-index: 2;">
-                <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/8-1.jpg">
-                <a target="_blank" style="left: 28px;" class="allinone__btn allinone__btn__8" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-kax981me-fettuchchine.html">До товару</a>
-              </div>
-              <div class="allinone__slider__cont__item">
-                <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/9-1.jpg">
-                <a target="_blank" style="left: 0;" class="allinone__btn allinone__btn__9" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-at641-b.html">До товару</a>
-              </div>
-              <div class="allinone__slider__cont__item" style="z-index: 2;">
-                <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/11-1.jpg">
-                <a target="_blank" style="left: 25px;" class="allinone__btn allinone__btn__11" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-at974a.html">До товару</a>
-              </div>
-              <div class="allinone__slider__cont__item" style="z-index: 2;">
-                <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/11-1.jpg">
-                <a target="_blank" style="left: 25px;" class="allinone__btn allinone__btn__11" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-at971a.html">До товару</a>
-              </div>
-              <div class="allinone__slider__cont__item" style="z-index: 2;">
-                <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/12-1.jpg">
-                <a target="_blank" style="left: 25px;" class="allinone__btn allinone__btn__12" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-kax980me.html">До товару</a>
-              </div>
-              <div class="allinone__slider__cont__item" style="z-index: 2;">
-                <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/13-1.jpg">
-                <a target="_blank" style="left: 0;" class="allinone__btn allinone__btn__13" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-a941pk005-p.html">До товару</a>
-              </div>
-            </div>
-          </div>
-          <!-- <a class="allinone__btn allinone__btn__1" href="#">До товару</a> -->
-        </div>
-        <div class="allinone__img">
-          <div class="allinone__img__item">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/1-2.png" alt="">
-          </div>
-          <div class="allinone__img__item">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/2-2.png" alt="">
-          </div>
-          <div class="allinone__img__item">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/3-2.png" alt="">
-          </div>
-          <div class="allinone__img__item">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/5-2.png" alt="">
-          </div>
-          <div class="allinone__img__item">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/6-2.png" alt="">
-          </div>
-          <div class="allinone__img__item">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/7-2.png" alt="">
-          </div>
-          <div class="allinone__img__item">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/8-2.png" alt="">
-          </div>
-          <div class="allinone__img__item">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/9-2.png" alt="">
-          </div>
-          <div class="allinone__img__item">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/11-2.png" alt="">
-          </div>
-          <div class="allinone__img__item">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/11-2.png" alt="">
-          </div>
-          <div class="allinone__img__item">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/12-2.png" alt="">
-          </div>
-          <div class="allinone__img__item">
-            <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/13-2.png" alt="">
-          </div>
-        </div>
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
 
-  <div class="gallery__k">
-    <div class="container">
-      <div class="gallery__k__wrap">
-        <div class="gallery__k__title">
-          <span class="kenwood__ctxt">Галерея</span>
-        </div>
-        <div class="gallery__k__video">
-          <video id="video__a" muted loop playsinline lazyloaded id="video__kenwood" src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/UA.mp4"></video>
-          <!-- <div id="video__kenwood__play"></div> -->
-        </div>
-        <div class="gallery__k__flex">
-          <div><img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/13.png" alt=""></div>
-          <div><img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/14.png"></div>
-          <div><img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/15.png"></div>
-        </div>
+   <div class="power">
+      <div class="container">
+         <div class="power__flex">
+            <div class="power__item">
+               <div class="power__head">
+                  <div class="power__txt">
+                     <span>1400 Вт</span>
+                     <p>Потужність</p>
+                  </div>
+                  <div class="power__txt">
+                     <span>14000 об/хв</span>
+                     <p>Швидкість обертання</p>
+                  </div>
+               </div>
+               <div class="power__img">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/7.png" />
+               </div>
+            </div>
+            <div class="power__item">
+               <div class="power__head">
+                  <div class="power__txt">
+                     <span>Метал</span>
+                     <p>Матеріал</p>
+                  </div>
+                  <div class="power__txt">
+                     <span>8,5 кг</span>
+                     <p>Вага без чаші</p>
+                  </div>
+               </div>
+               <div class="power__img">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/6.png" />
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
+
+   <div class="nasadki">
+      <div class="container">
+         <div class="nasadki__flex">
+            <div class="nasadki__cont">
+               <div class="nasadki__head">
+                  <span
+                     >Надійні насадки <br />
+                     <b class="kenwood__gtxt"> EasyClean™</b></span
+                  >
+               </div>
+               <div class="nasadki__head__js">
+                  <span>Вінчик</span>
+               </div>
+               <div class="nasadki__head__js">
+                  <span>Гнучкий збивач</span>
+               </div>
+               <div class="nasadki__head__js">
+                  <span>К-подібна насадка</span>
+               </div>
+               <div class="nasadki__head__js">
+                  <span>Гак для тіста</span>
+               </div>
+               <div class="nasadki__list">
+                  <img class="nasadki__list__nav" src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i7a.png" />
+                  <img class="nasadki__list__nav" src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i8a.png" />
+                  <img class="nasadki__list__nav" src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i9a.png" />
+                  <img class="nasadki__list__nav" src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/i10a.png" />
+               </div>
+               <div class="nasadki__txt">
+                  <p>Збивайте бісквітне та млинце тісто, яйця, безе, вершки. Готуйте з легкістю улюблені масляні креми та найсмачніше пюре без купочок!</p>
+               </div>
+               <div class="nasadki__txt">
+                  <p>Гарно, ідеально та неповторно. Перевага насадки для м'якого змішування в тому, що вона зіскребає тісто-вершки-масло та подібні інгредієнти зі стінок чаші, чого не роблять інші насадки. Змішуйте креми, місіть бісквітне та пісочне тісто швидко та легко без залишків на стінках чаші.</p>
+               </div>
+               <div class="nasadki__txt">
+                  <p>Підходить для ефективного замішування тіста для кексу, подрібнення печива в крихту (наприклад, для основи чізкейку), а також для приготування пюре, фаршу, глазурі та улюбленої начинки для смачних страв.</p>
+               </div>
+               <div class="nasadki__txt">
+                  <p>Незамінна річ для замішування дріжджового тіста до ідеального однорідного стану. Отримайте бездоганно ніжне тісто для піци, рулетів, пасок, штруделя та інших улюблених страв з легкістю. <br />Беріться за будь-який рецепт впевнено! Всі насадки безпечні для миття в посудомийній машині.</p>
+               </div>
+            </div>
+            <div class="nasadki__img">
+               <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/8.png" />
+               <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/9.png" />
+               <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/10.png" />
+               <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/11.png" />
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="allinone">
+      <div class="container">
+         <div class="allinone__flex">
+            <div class="allinone__cont">
+               <div class="allinone__cont__txt">
+                  <div class="allinone__cont__txt__title">
+                     <span class="kenwood__ctxt"
+                        >Надійний <br />
+                        кухонний помічник <br />
+                        <b class="kenwood__gtxt">«все-в-одному»</b></span
+                     >
+                  </div>
+                  <div class="allinone__cont__txt__slider">
+                     <div class="allinone__cont__txt__slider__item">
+                        <i>Насадка-прес для ягід</i>
+                        <p>Ефективна насадка KAX644ME ідеально віджимає і подрібнює м'які фрукти, зберігаючи важливі вітаміни та ферменти для максимального задоволення від найсмачніших морсів.</p>
+                     </div>
+                     <div class="allinone__cont__txt__slider__item">
+                        <i>Насадка для нарізки спіраллю</i>
+                        <p>Отримайте задоволення від використання KENWOOD KAX700PL! За допомогою цієї насадки ви можете швидко та легко замінити улюблені страви вашої родини корисними та смачними альтернативами. Наріжте фрукти та овочі різної форми швидко та легко, просто прикріпивши насадку до кухонного комбайна Kenwood.</p>
+                     </div>
+                     <div class="allinone__cont__txt__slider__item">
+                        <i>Насадка цитрус-прес</i>
+                        <p>Насолоджуйтесь свіжими цитрусовими соками без особливих зусиль та отримуйте максимальну користь від високого вмісту вітамінів щодня.</p>
+                     </div>
+                     <div class="allinone__cont__txt__slider__item">
+                        <i>М'ясорубка</i>
+                        <p>Дозволяє приготувати величезну різноманітність страв у домашніх умовах з використанням трьох сіток: дрібної (3 мм), середньої (4,5 мм) та великої (8 мм).</p>
+                     </div>
+                     <div class="allinone__cont__txt__slider__item">
+                        <i>Універсальний міксер</i>
+                        <p>Ідеальний аксесуар для миттєвого подрібнення та змішування невеликих порцій улюблених інгредієнтів. Відмінно підходить для дитячого харчування, спецій, кави, маринадів, заправок, пюре, трав та горіхів. Подрібнюйте набагато швидше і дрібніше, ніж з більшою насадкою-міксером.</p>
+                     </div>
+                     <div class="allinone__cont__txt__slider__item">
+                        <i>Насадка для нарізки кубиками</i>
+                        <p>Миттєве подрібнення сиру, м'яса, овочів на кубики по 10х10 мм.</p>
+                     </div>
+                     <div class="allinone__cont__txt__slider__item">
+                        <i>Насадка для пасти Fettuccine</i>
+                        <p>Приготуйте ідеальний Fettuccine з шириною локшини 6,5 мм у найкоротший термін, завдяки високоефективній насадці з високоякісної нержавіючої сталі!</p>
+                     </div>
+                     <div class="allinone__cont__txt__slider__item">
+                        <i
+                           >Потужна соковижималка <br />
+                           безперервної дії</i
+                        >
+                        <p>Приготуйте ідеальний сік з будь-якого фрукта за секунди, завдяки трубці, чистому носику для розливу і поролоновому фільтру. З цією швидкою соковижималкою сніданок стане набагато цікавішим!</p>
+                     </div>
+                     <div class="allinone__cont__txt__slider__item">
+                        <i>Ролик для пасти</i>
+                        <p>Немає нічого кращого, ніж справжній смак свіжоприготовленої пасти, лазаньї, равіолі, тортелліні або коржів та пити, а цей аксесуар дозволяє легко приготувати всі улюблені страви вдома. Використовуйте пасту у свіжому вигляді, охолодіть або заморозьте її, щоб приготувати швидку вечерю зі справжнім італійським колоритом для всієї сім'ї!</p>
+                     </div>
+                     <div class="allinone__cont__txt__slider__item">
+                        <i>Ролик для пасти</i>
+                        <p>Немає нічого кращого, ніж справжній смак свіжоприготовленої пасти, лазаньї, равіолі, тортелліні або коржів та пити, а цей аксесуар дозволяє легко приготувати всі улюблені страви вдома. Використовуйте пасту у свіжому вигляді, охолодіть або заморозьте її, щоб приготувати швидку вечерю зі справжнім італійським колоритом для всієї сім'ї!</p>
+                     </div>
+                     <div class="allinone__cont__txt__slider__item">
+                        <i>Насадка для розкочування тіста</i>
+                        <p>Швидко та легко формуйте свіжі листи локшини для лазаньї потрібної товщини з італійським професійним валиком для макаронних виробів від Kenwood!</p>
+                     </div>
+                     <div class="allinone__cont__txt__slider__item">
+                        <i>Насадка-млин</i>
+                        <p>Завдяки своїй сталевій основі зерновий млин KAX941PL ідеально подрібнює будь-які грубі зерна або борошно тонкого помелу. Підходить для всіх видів зернових (крім кукурудзи), олійних та бобових культур, а також для маку, трав та спецій (крім кмину).</p>
+                     </div>
+                  </div>
+                  <p class="snoska">*Насадки купуються окремо</p>
+               </div>
+               <div class="allinone__slider">
+                  <div class="allinone__slider__cont">
+                     <div class="allinone__slider__cont__item" style="z-index: 2">
+                        <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/1-1.jpg" />
+                        <a target="_blank" style="left: 40px" class="allinone__btn allinone__btn__1" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-at644-b.html">До товару</a>
+                     </div>
+                     <div class="allinone__slider__cont__item">
+                        <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/2-1.jpg" />
+                        <a target="_blank" style="left: 36px" class="allinone__btn allinone__btn__2" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-kax700pl.html">До товару</a>
+                     </div>
+                     <div class="allinone__slider__cont__item">
+                        <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/3-1.jpg" />
+                        <a target="_blank" style="left: 0" class="allinone__btn allinone__btn__3" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-at312-b.html">До товару</a>
+                     </div>
+                     <div class="allinone__slider__cont__item">
+                        <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/5-1.jpg" />
+                        <a target="_blank" style="left: 14px" class="allinone__btn allinone__btn__5" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-at950-a-b.html">До товару</a>
+                     </div>
+                     <div class="allinone__slider__cont__item">
+                        <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/6-1.jpg" />
+                        <a target="_blank" style="left: 0" class="allinone__btn allinone__btn__6" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-at320-a-b.html">До товару</a>
+                     </div>
+                     <div class="allinone__slider__cont__item">
+                        <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/7-1.jpg" />
+                        <a target="_blank" style="left: 28px" class="allinone__btn allinone__btn__7" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-mgx400.html">До товару</a>
+                     </div>
+                     <div class="allinone__slider__cont__item" style="z-index: 2">
+                        <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/8-1.jpg" />
+                        <a target="_blank" style="left: 28px" class="allinone__btn allinone__btn__8" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-kax981me-fettuchchine.html">До товару</a>
+                     </div>
+                     <div class="allinone__slider__cont__item">
+                        <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/9-1.jpg" />
+                        <a target="_blank" style="left: 0" class="allinone__btn allinone__btn__9" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-at641-b.html">До товару</a>
+                     </div>
+                     <div class="allinone__slider__cont__item" style="z-index: 2">
+                        <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/11-1.jpg" />
+                        <a target="_blank" style="left: 25px" class="allinone__btn allinone__btn__11" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-at974a.html">До товару</a>
+                     </div>
+                     <div class="allinone__slider__cont__item" style="z-index: 2">
+                        <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/11-1.jpg" />
+                        <a target="_blank" style="left: 25px" class="allinone__btn allinone__btn__11" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-at971a.html">До товару</a>
+                     </div>
+                     <div class="allinone__slider__cont__item" style="z-index: 2">
+                        <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/12-1.jpg" />
+                        <a target="_blank" style="left: 25px" class="allinone__btn allinone__btn__12" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-kax980me.html">До товару</a>
+                     </div>
+                     <div class="allinone__slider__cont__item" style="z-index: 2">
+                        <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/13-1.jpg" />
+                        <a target="_blank" style="left: 0" class="allinone__btn allinone__btn__13" href="https://comfy.ua/ua/nasadka-dlja-kuhonnoj-mashiny-kenwood-a941pk005-p.html">До товару</a>
+                     </div>
+                  </div>
+               </div>
+               <!-- <a class="allinone__btn allinone__btn__1" href="#">До товару</a> -->
+            </div>
+            <div class="allinone__img">
+               <div class="allinone__img__item">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/1-2.png" alt="" />
+               </div>
+               <div class="allinone__img__item">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/2-2.png" alt="" />
+               </div>
+               <div class="allinone__img__item">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/3-2.png" alt="" />
+               </div>
+               <div class="allinone__img__item">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/5-2.png" alt="" />
+               </div>
+               <div class="allinone__img__item">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/6-2.png" alt="" />
+               </div>
+               <div class="allinone__img__item">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/7-2.png" alt="" />
+               </div>
+               <div class="allinone__img__item">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/8-2.png" alt="" />
+               </div>
+               <div class="allinone__img__item">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/9-2.png" alt="" />
+               </div>
+               <div class="allinone__img__item">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/11-2.png" alt="" />
+               </div>
+               <div class="allinone__img__item">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/11-2.png" alt="" />
+               </div>
+               <div class="allinone__img__item">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/12-2.png" alt="" />
+               </div>
+               <div class="allinone__img__item">
+                  <img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/13-2.png" alt="" />
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="gallery__k">
+      <div class="container">
+         <div class="gallery__k__wrap">
+            <div class="gallery__k__title">
+               <span class="kenwood__ctxt">Галерея</span>
+            </div>
+            <div class="gallery__k__video">
+               <video id="video__a" muted loop playsinline lazyloaded id="video__kenwood" src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/UA.mp4"></video>
+               <!-- <div id="video__kenwood__play"></div> -->
+            </div>
+            <div class="gallery__k__flex">
+               <div><img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/13.png" alt="" /></div>
+               <div><img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/14.png" /></div>
+               <div><img src="https://cdn.comfy.ua/media/x/img/kenwood-titanium-chef/15.png" /></div>
+            </div>
+         </div>
+      </div>
+   </div>
 </div>

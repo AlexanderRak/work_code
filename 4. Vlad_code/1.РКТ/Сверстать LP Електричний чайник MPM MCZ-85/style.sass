@@ -1,0 +1,149 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-mpm-mcz-85__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-mpm-mcz-85
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: center
+      margin-bottom: 1rem
+      text-transform: uppercase
+      color: #f00a0a
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//npm__block
+
+.npm__txt p
+   text-align: center !important
+
+.npm__cont
+   padding: 2em
+
+//npm__func
+
+.npm__func
+   display: flex
+   flex-direction: column
+   gap: 2em
+   padding: 2em 0
+
+.npm__row
+   display: flex
+   align-items: center
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+
+.npm__func__cont
+   padding: 0 2em
+   p
+      text-indent: 20px
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   #rkt-mpm-mcz-85
+      display: block
+      p
+         text-align: center
+
+   .npm__cont
+      padding: 1em
+
+   .npm__func
+      padding: 1em 0
+      gap: 1em
+   .npm__row
+      flex-direction: column-reverse !important
+   .npm__func__cont
+      padding: 1em
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-mpm-mcz-85
+//       display: block
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   // #rkt-mpm-mcz-85
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .npm__cont
+      padding: 1em
+
+   .npm__func
+      padding: 1em 0
+   .npm__row
+      flex-direction: column-reverse !important
+   .npm__func__cont
+      padding: 1em

@@ -1,11 +1,31 @@
 /*default styles*/
 
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//   margin: 0
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+  $addSize: $startSize - $minSize
+  #{$property}: $startSize + px
+  @media (max-width: #{$maxWidthContainer + px})
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
 #philips
-  max-width: 1316px
+  // margin: 0 auto
+  // display: grid
+  // grid-template-columns: calc(100% - 400px) 400px
+  // max-width: 1406px
+  // font-family: 'Roboto', sans-serif
+  max-width: 1023px
   width: 100%
   margin: 0 auto
   height: auto
-  display: block
   box-sizing: border-box
   overflow: hidden
   p
@@ -18,8 +38,8 @@
     text-align: unset
     display: block
     line-height: normal
-    font-size: 40px
-    font-weight: bold
+    // font-size: 40px
+    // font-weight: bold
     padding: 0
     margin: 0
     filter: drop-shadow(0 0 8.5px rgba(0,0,0,0.35))
@@ -27,8 +47,8 @@
     text-align: unset
     display: block
     line-height: normal
-    font-size: 32px
-    font-weight: bold
+    // font-size: 32px
+    // font-weight: bold
     padding: 0
     margin: 0
   img
@@ -45,6 +65,20 @@
   span
     display: block
     line-height: normal
+  h2
+    @include adaptiv-value("font-size", 26, 20)
+    font-weight: 900
+    text-align: left
+    margin-bottom: 1rem
+  h3
+    @include adaptiv-value("font-size", 20, 18)
+    font-weight: 900
+    text-align: left
+    margin-bottom: 1rem
+  span, p, li
+    @include adaptiv-value("font-size", 16, 14)
+    font-weight: 400
+    text-align: left
 
 .features-desc__text
   img
@@ -69,10 +103,7 @@
           margin: -10px 0 0 -9px
       .logo__txt
         margin-top: 100px
-        span
-          font-size: 28px
-          max-width: 400px
-          margin-bottom: 40px
+        max-width: 70%
 
   .func
     background-color: #50037f
@@ -86,14 +117,13 @@
       div
         flex: 1 1 0
       .func__list
+        display: flex
+        flex-direction: column
+        gap: 1.5em
         li
           display: flex
           flex-direction: row
-          align-items: flex-start
-          p
-            font-size: 20px
-          &:nth-of-type(n+2)
-            margin-top: 30px
+          align-items: center
           &::before
             content: ""
             display: block
@@ -107,15 +137,15 @@
       .func__img
         img
           margin: 0 auto
-    .snoska
-      font-size: 16px
+    // .snoska
+    //   font-size: 16px
 
   .brand
     position: relative
     overflow: hidden
     .brand__title
       position: absolute
-      padding: 130px 60px 0 60px
+      padding: 5% 60px 0 60px
       color: #fff
       max-width: 500px
     .brand__icon
@@ -134,65 +164,43 @@
       iframe
         display: block
         width: 100%
-        height: 44vw
+        height: 30vw
 
   .kit
-    padding: 60px
-    position: relative
+    padding: 2em 1em
     box-sizing: border-box
-    .kit__img
-      img
-        margin: 0 auto
-    .kit__list
-      li
-        position: absolute
-        p
-          font-size: 17px
-          strong
-            color: #50037f
+    display: flex
+    flex-direction: row
+  .kit__img
+    flex-basis: 50%
+    img
+      margin: 0 auto
+  .kit__list
+    flex-basis: 50%
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    gap: 1em
+    li
+      p
+        // font-size: 17px
+        strong
+          color: #50037f
+      &:nth-of-type(2)
         .kit__list__row
-          display: flex
-          flex-direction: row
-          align-items: center
-          .kit__list__list
-            margin-left: 2em
-            li
-              display: list-item
-              list-style-type: disc
-              position: unset
-              &:nth-of-type(n+2)
-                margin-top: 0.2em
-        &:nth-of-type(1)
-          left: 0
-          top: 100px
-          max-width: 500px
-        img
-          margin: 0 0 1em 0
-        &:nth-of-type(2)
-          left: 0
-          top: 550px
-          max-width: 550px
-          .kit__list__row
-            margin-top: 1em
-        &:nth-of-type(3)
-          right: 50px
-          top: 55px
-          max-width: 550px
-          .kit__list__row__txt
-            margin-left: 1em
-            max-width: 250px
-        &:nth-of-type(4)
-          top: 320px
-          right: 70px
-          max-width: 300px
-          img
-            margin: 0 0 1em 0
-        &:nth-of-type(5)
-          right: 100px
-          top: 740px
-          max-width: 370px
-          .kit__list__row__txt
-            margin-left: 1em
+          margin-top: 1em
+
+  .kit__list__row
+    display: flex
+    flex-direction: row
+    align-items: center
+    gap: 1em
+    .kit__list__list
+      margin-left: 2em
+      li
+        display: list-item
+        list-style-type: disc
+        position: unset
 
   .philips__list
     background-color: #50037f
@@ -207,12 +215,12 @@
       .philips__list__txt
         padding: 0 60px
         box-sizing: border-box
-        h3
-          margin-bottom: 1em
-        p
-          font-size: 24px
+        // h3
+        //   margin-bottom: 1em
+        // p
+        //   font-size: 24px
         .snoska
-          font-size: 16px
+          // font-size: 16px
           margin-top: 1em
       &:nth-of-type(even)
         flex-direction: row-reverse
@@ -233,7 +241,7 @@
         display: list-item
         list-style-type: disc
         list-style-position: inside
-        font-size: 20px
+        // font-size: 20px
         &:nth-of-type(n+2)
           margin-top: 0.5em
 
@@ -246,45 +254,15 @@
     display: none
   #philips .show__mob
     display: block
-  #philips .kit .kit__list
-    display: flex
-    flex-direction: row
-    flex-wrap: wrap
-    justify-content: center
-  #philips .kit .kit__list li
-    position: unset !important
-    max-width: 50% !important
-    padding: 1em
-    box-sizing: border-box
-    &:nth-of-type(n+2)
-      margin-top: 2em
 
   #philips .kit .kit__img img
     max-height: 700px
-  #philips .kit .kit__list li .kit__list__row .kit__list__list li
-    max-width: unset !important
-    padding: 0
-  #philips .kit .kit__list li:nth-of-type(3) .kit__list__row__txt,
-  #philips .kit .kit__list li:nth-of-type(5) .kit__list__row__txt
-    max-width: unset
-    margin-left: 0
-    margin-top: 1em
-  #philips .kit .kit__list li .kit__list__row
-    display: block
-  #philips .kit .kit__list li .kit__list__row .kit__list__list
-    margin-top: 1em
+
+  .kit__list__row img
+    margin: 0 !important
+
 
 @media (max-width: 812px)
-  #philips h2
-    font-size: 28px
-  #philips h3
-    font-size: 24px
-  #philips p
-    font-size: unset !important
-  #philips .logo .logo__wrap .logo__txt
-    margin-top: 1em
-  #philips .logo .logo__wrap .logo__txt span
-    font-size: 20px
   #philips .logo .logo__wrap,
   #philips .philips__list li .philips__list__txt
     padding: 0 1em
@@ -299,15 +277,6 @@
 @media (max-width: 480px)
   #philips h2
     filter: none
-  #philips .logo .logo__wrap
-    position: unset
-    color: #000
-    padding: 0 1em 1em 1em
-  #philips .logo .logo__wrap .logo__icon img
-    margin: 0 auto
-  #philips .logo .logo__img img
-    min-width: 150%
-    margin-left: -50%
   #philips .func .func__row
     flex-direction: column-reverse
   #philips .func .snoska
@@ -342,8 +311,7 @@
     display: block
   #philips .philips__list li .philips__list__txt
     padding: 1em
-  #philips .recomend .recomend__list li
-    font-size: 16px
+
   #philips .recomend .recomend__txt
     position: unset
     transform: unset
@@ -355,3 +323,113 @@
   #philips .func .func__row .func__list li::before
     min-width: 30px
     height: 30px
+
+@media (min-width: $bp-mobile)
+  // #philips
+  //   display: block
+
+  #philips .exapmle .exapmle__video iframe
+    height: 54vw
+
+  .logo__icon img
+    max-width: 40vw !important
+  .logo__img img
+    min-width: 150%
+    margin-left: -10%
+
+  #philips .logo__txt h3
+    @include adaptiv-value("font-size", 20, 14)
+    >br
+      display: none
+  #philips .logo__txt h2
+    @include adaptiv-value("font-size", 26, 16)
+    >br
+      display: none
+  #philips .logo .logo__wrap .logo__txt
+    margin-top: 15%
+
+  #philips .kit
+    flex-direction: column-reverse
+  #philips .kit__list__row
+    flex-direction: column
+  .kit__list
+    padding: 0 1em !important
+    box-sizing: border-box
+  #philips .kit .kit__img img
+    max-height: 500px
+
+@media (min-width: $bp-tablet)
+  .logo__icon img
+    max-width: 100% !important
+  .logo__img img
+    min-width: unset !important
+    margin-left: unset !important
+
+  #philips .logo__txt h3
+    @include adaptiv-value("font-size", 20, 18)
+    >br
+      display: block
+  #philips .logo__txt h2
+    @include adaptiv-value("font-size", 26, 20)
+    >br
+      display: block
+
+  #philips .kit
+    align-items: center
+
+  #philips .kit__list__row
+    flex-direction: row
+
+@media (max-width: 1024px) and (min-width: $bp-hd-desktop)
+  #philips .logo .logo__wrap
+    padding: 0 1em
+  .logo__icon img
+    max-width: 20vw !important
+  #philips .logo .logo__wrap .logo__txt
+    margin-top: 10%
+
+  #philips .func
+    padding: 2em 1em
+  .func__row
+    margin-bottom: 1em
+
+  .brand__icon img
+    max-width: 15vw !important
+  #philips .brand .brand__title
+    left: 1em
+    padding: 0
+    padding-top: 1em
+  #philips .brand .brand__icon
+    padding-left: 1em
+
+  #philips .exapmle
+    padding: 2em 1em
+
+  #philips .kit
+    flex-direction: column-reverse
+  #philips .kit .kit__img img
+    max-height: 500px
+
+  #philips .philips__list li .philips__list__txt
+    padding: 0 1em
+
+  #philips .recomend .recomend__txt
+    position: unset
+    transform: unset
+    color: #000
+    padding: 1em
+    padding-top: 2em
+
+  #philips .kit
+    flex-direction: column-reverse !important
+
+@media (min-width: $bp-hd-desktop)
+  // #philips
+  //   display: grid
+  //   grid-template-columns: calc(100% - 400px) 400px
+
+  #philips .exapmle .exapmle__video iframe
+    height: 30vw
+
+  #philips .kit
+    flex-direction: row

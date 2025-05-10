@@ -1,0 +1,852 @@
+<style>
+  .page-container {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .features-general {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .common-template__top.page-container {
+    -webkit-box-ordinal-group: -2;
+    -ms-flex-order: -3;
+    order: -3;
+  }
+
+  .common-template__tabs.page-container {
+    -webkit-box-ordinal-group: -1;
+    -ms-flex-order: -2;
+    order: -2;
+  }
+
+  @media (max-width: 1023px) {
+    .common-template__top.page-container {
+      -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+      order: -1;
+    }
+  }
+
+  .info-brand__img-wrap {
+    filter: invert(1);
+  }
+
+  /* HEADER */
+
+  .wmf-page__header {
+    height: 78vh;
+    min-height: 730px;
+    position: relative;
+    padding: 0 12px;
+    background-color: #E3ECF0;
+  }
+
+  .wmf-page .waiting {
+    opacity: 0;
+  }
+
+  .wmf-page__header-right-mobile-bg-wr {
+    position: relative;
+  }
+
+  .wmf-page__header-content-wr {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    z-index: 1;
+  }
+
+  .wmf-page__header-left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 26px;
+    position: relative;
+  }
+
+  .wmf-page__header-left-img-plan-wr {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 41%;
+    width: 60%;
+  }
+
+  .wmf-page__header-left-img-anim-wr {
+    position: relative;
+    z-index: 1;
+  }
+
+  .wmf-page__header-left-img {
+    position: relative;
+    z-index: 1;
+  }
+
+  .wmf-page__header-left-img-plan {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    z-index: 2;
+  }
+
+  .wmf-page__header-left-plan1 {
+    position: absolute;
+    z-index: 4;
+    top: 30%;
+    left: -30%;
+  }
+
+  .wmf-page__header-left-plan2 {
+    position: absolute;
+    z-index: 3;
+    left: -18%;
+    bottom: 5%;
+  }
+
+  .wmf-page__header-left-plan3 {
+    position: absolute;
+    bottom: 10%;
+    left: -45%;
+    z-index: 5;
+  }
+
+  .wmf-page__header-left-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    z-index: 1;
+  }
+
+  .wmf-page__header-left-footer-text {
+    display: inline-block;
+    margin: 0 24px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #43B02A;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .wmf-page__header-left-footer_mobile {
+    display: none;
+  }
+
+  .wmf-page__content-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12px;
+  }
+
+  .wmf-page__content-header-logo-wr {
+    margin: 0 auto;
+    height: 115px;
+    width: 95px;
+  }
+
+  .wmf-page__header-right {
+    z-index: 1;
+  }
+
+  .wmf-page__header-right-mobile-anim {
+    display: none;
+  }
+
+  .wmf-page__header-right-title {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    color: #000;
+    margin-bottom: 16px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .wmf-page__header-right-link {
+    display: inline-block;
+    color: black;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .wmf-page__header-right-labels {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .wmf-page__header-right-labels_mobile {
+    display: none;
+  }
+
+  .wmf-page__header-right-label-item {
+    margin-right: 13px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: #999;
+    background: #fff;
+    border-radius: 12px;
+  }
+
+  .wmf-page__header-right-label-item img {
+    max-height: 30px;
+  }
+
+  .wmf-page__header-right-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .wmf-page__header-right-rating-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .wmf-page__header-right-rating-right {
+    font-size: 10px;
+    line-height: 14px;
+    color: #999999;
+  }
+
+  .wmf-page__header-right-rating-reviews {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+  }
+
+  .wmf-page__header-right-rating-reviews-icon {
+    margin-right: 5px;
+  }
+
+  .wmf-page__header-right-rating-reviews-qty {
+    cursor: pointer;
+  }
+
+  .wmf-page__header-right-rating-reviews-qty {
+    font-size: 12px;
+    line-height: 16px;
+    color: #999999;
+  }
+
+  .wmf-page__header-right-rating-stars {
+    position: relative;
+    display: inline-block;
+    top: -2px;
+  }
+
+  .wmf-page__header-right-rating-fill {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+
+  .wmf-page__header-right-rating-fill svg {
+    max-width: unset;
+  }
+
+  .wmf-page__header-right-price-wr {
+    text-align: end;
+  }
+
+  .wmf-page__header-right-price {
+    display: flex;
+    margin-top: 30px;
+  }
+
+  .wmf-page__header-right-price-old {
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 20px;
+    color: #FF5621;
+  }
+
+  .wmf-page__header-right-price-new {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 45px;
+    color: #000;
+  }
+
+  .wmf-page__top-block-prices-price-dash {
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FF5621;
+  }
+
+  .wmf-page__header-right-price-discount {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 12px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .wmf-page__alternatives {
+    margin-top: 40px;
+  }
+
+  .wmf-page__alternatives-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    margin-bottom: 16px;
+  }
+
+  .wmf-page__alternatives-items {
+    display: flex;
+  }
+
+  .wmf-page__alternatives-item {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+
+  .wmf-page__alternatives-item_grey {
+    background: #CACCCE;
+  }
+
+  .wmf-page__alternatives-item_white {
+    background: #FFFFFF;
+  }
+
+  .wmf-page__alternatives-item_blue {
+    background: #0000FF;
+  }
+
+  .wmf-page__alternatives-item_orange {
+    background: #CD7F32;
+    border: 1px solid #FF671F;
+  }
+
+  .wmf-page__alternatives-item_brown {
+    background: #964B00;
+  }
+
+  .wmf-page__alternatives-item_black {
+    background: #000000;
+  }
+
+  .wmf-page__header-mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 1440px) {
+    /* .wmf-page__header-left {
+      width: 40%;
+    } */
+
+    
+  }
+
+  @media screen and (max-width: 1280px) {
+    .wmf-page__header {
+      height: unset;
+    }
+
+    .wmf-page__header-content-wr {
+      flex-direction: column-reverse;
+    }
+
+    .wmf-page__header-left {
+      margin-top: 60px;
+      margin-right: 0;
+    }
+
+    .wmf-page__header-left-plan1 {
+      top: 0;
+      left: 0;
+    }
+
+    .wmf-page__header-left-plan2 {
+      right: 0;
+      bottom: 10%;
+      max-width: 85%;
+    }
+
+    .wmf-page__header-left-plan3 {
+      top: -10%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .wmf-page__header-left {
+      display: none;
+    }
+
+    .wmf-page__header-left-mobile {
+      margin-top: 60px;
+      margin-right: 0;
+      width: 70%;
+    }
+
+    .wmf-page__header-right-link {
+      padding: 16px 12px;
+    }
+
+    .wmf-page__header-left-plan1 {
+      top: 10%;
+      left: 10%;
+      width: 80%;
+    }
+
+    .wmf-page__header-left-plan2 {
+      right: 20%;
+      bottom: 0;
+      max-width: 55%;
+    }
+
+    .wmf-page__header-left-plan3 {
+      top: 25%;
+      width: 60%;
+    }
+
+    .wmf-page__header-left-footer {
+      display: none;
+    }
+
+    .wmf-page__content-header-logo-wr {
+      margin: 0 auto;
+    }
+
+    .wmf-page__header-right-title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .wmf-page__header-bg {
+      display: none;
+    }
+
+    .wmf-page__header {
+      height: 100%;
+      padding: 16px 0 0 0;
+    }
+
+    .wmf-page__header-right {
+      background-color: #E3ECF0;
+      width: 100%;
+    }
+
+    .wmf-page__header-right-mobile-bg-wr {
+      background-color: #E3ECF0;
+      padding: 0 12px;
+    }
+
+    .wmf-page__header-left-footer_mobile {
+      display: flex;
+      padding: 16px 0 22px 0;
+      margin: 0;
+      background-color: #E3ECF0;
+    }
+
+    .wmf-page__header-right-labels {
+      display: none;
+    }
+
+    .wmf-page__header-right-labels_mobile {
+      display: flex !important;
+      margin: 16px 0 11px 0;
+      padding: 0 12px;
+    }
+
+    .wmf-page__header-right-mobile-anim {
+      display: block;
+      margin-top: 46%;
+    }
+
+    .wmf-page__header-right-buttons-wr {
+      padding: 24px 16px;
+      margin: 16px 12px;
+      background: #FFFFFF;
+      border-radius: 8px;
+    }
+
+    .wmf-page__header-right-price {
+      margin: 0;
+    }
+
+    .wmf-page__header-right-price-new {
+      font-size: 34px;
+      line-height: 40px;
+    }
+
+    .wmf-page__header-right-price-old {
+      font-size: 16px;
+    }
+
+    .wmf-page__header-right-price-discount {
+      font-size: 12px;
+    }
+
+    .wmf-page__header-left-footer-text {
+      margin: 0 12px;
+    }
+
+    .wmf-page__alternatives {
+      padding: 24px 16px;
+      margin: 16px 12px;
+      background: #FFFFFF;
+      border-radius: 8px;
+    }
+
+    .wmf-page__header-mobile {
+      display: flex;
+      justify-content: center;
+      background-color: #E3ECF0;
+    }
+
+    .wmf-page__header {
+      min-height: unset;
+    }
+
+    .wmf-page__header-left-img-plan {
+      max-width: 40% !important;
+      /* transform: translateX(37%); */
+    }
+  }
+
+  /* HEADER END */
+</style>
+
+<section class="wmf-page__header">
+  <div class="wmf-page__header-content-wr">
+    <div class="wmf-page__header-left">
+      <div class="wmf-page__header-left-img-anim-wr">
+        <img src="https://skin.comfy.ua/media/x/img/wmf-jug/main-jug2.png" alt="img" class="wmf-page__header-left-img">
+        <img src="https://skin.comfy.ua/media/x/img/wmf-jug/plan-ice2.png" alt="" class="wmf-page__header-left-img-plan">
+      </div>
+
+      <div class="wmf-page__header-left-plan1 anim-levitation">
+        <img src="https://skin.comfy.ua/media/x/img/1684367/plan_01.svg" alt="img">
+      </div>
+      <div class="wmf-page__header-left-plan2 anim-levitation">
+        <img src="https://skin.comfy.ua/media/x/img/1684367/plan_02.svg" alt="img">
+      </div>
+      <div class="wmf-page__header-left-plan3 anim-levitation">
+        <img src="https://skin.comfy.ua/media/x/img/1684367/plan_03.svg" alt="img">
+      </div>
+    </div>
+
+    <div class="wmf-page__header-right">
+      <div class="wmf-page__header-right-mobile-bg-wr">
+        <div class="wmf-page__header-mobile">
+          <div class="wmf-page__header-left-mobile">
+            <div class="wmf-page__header-left-img-anim-wr">
+              <img src="https://skin.comfy.ua/media/x/img/wmf-jug/main-jug2.png" alt="img" class="wmf-page__header-left-img">
+              <img src="https://skin.comfy.ua/media/x/img/wmf-jug/plan-ice2.png" alt="" class="wmf-page__header-left-img-plan">
+            </div>
+
+            <div class="wmf-page__header-left-plan1 anim-levitation">
+              <img src="https://skin.comfy.ua/media/x/img/1684367/plan_01.svg" alt="img">
+            </div>
+            <div class="wmf-page__header-left-plan2 anim-levitation">
+              <img src="https://skin.comfy.ua/media/x/img/1684367/plan_02.svg" alt="img">
+            </div>
+            <div class="wmf-page__header-left-plan3 anim-levitation">
+              <img src="https://skin.comfy.ua/media/x/img/1684367/plan_03.svg" alt="img">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/MotionPathPlugin.min.js"></script>
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", () => {
+
+    this.loading = true
+
+    gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+    this.canStartAnim = true;
+
+    // PARALLAX
+    gsap.to('.section-3-gallery-col-odd', {
+      yPercent: -40,
+      ease: "none",
+      scrollTrigger: {
+        trigger: '.wmf-page__content-section-3',
+        start: "top bottom", // the default values
+        end: "bottom top",
+        scrub: true
+      },
+    });
+    // PARALLAX END 
+
+    // ICE JUG ANIM
+    TweenMax.fromTo(".wmf-page__header-left-img-plan", { autoAlpha: 0, delay: 1.5, duration: 1.5 }, { autoAlpha: 1, repeat: -1, yoyo: true, repeatDelay: 1.5, duration: 1.5 });
+    // ICE JUG ANIM END
+
+    // TEXT ANIM
+    let textAnim1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.wmf-page__content-section-1',
+        delay: '0.3',
+        start: "top center",
+      }
+    })
+
+    textAnim1.from('.wmf-page__content-header-text-title', {
+      duration: 0.8,
+      autoAlpha: 0,
+      y: 50
+    }, '<1')
+
+    textAnim1.from('.wmf-page__content-header-text-desc', {
+      duration: 0.8,
+      autoAlpha: 0,
+      y: 50
+    }, '<0.4')
+
+    let textAnim2Top = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.wmf-page__content-section-1-footer',
+        delay: '0.3',
+        start: "top center",
+        repeat: 1
+      }
+    })
+
+    textAnim2Top.from('.wmf-page__content-section-1-left', {
+      duration: 1.8,
+      ease: Expo.easeOut,
+      x: -1000
+    })
+
+    textAnim2Top.from('.wmf-page__content-section-1-left', {
+      duration: 2.2,
+      autoAlpha: 0,
+      ease: Expo.easeOut,
+      onComplete: flyingAnim('.jug-levitation')
+    }, '<0.7')
+
+
+    textAnim2Top.from('.wmf-page__content-section-1-icon-wr', {
+      duration: 0.8,
+      autoAlpha: 0,
+      y: 50
+    }, '-=2')
+
+    textAnim2Top.from('.wmf-page__content-section-1-text', {
+      duration: 0.8,
+      autoAlpha: 0,
+      y: 50
+    }, '-=1')
+
+    let textAnimQuote = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.wmf-page__content-section-1-quote',
+        delay: '0.3',
+        start: "top center",
+      }
+    })
+
+    textAnimQuote.from('.wmf-page__content-section-1-quote-2', {
+      duration: 1,
+      y: -350
+    })
+
+    textAnimQuote.from('.wmf-page__content-section-1-quote-3', {
+      duration: 1,
+      y: -350
+    }, '-=0.5')
+
+    let textAnim3 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.wmf-page__content-section-2',
+        delay: '0.3',
+        start: "top center",
+      }
+    })
+    textAnim3.from('.wmf-page__content-section-2-right-text', {
+      duration: 0.8,
+      autoAlpha: 0,
+      y: 50
+    }, '<1')
+    textAnim3.from('.wmf-page__content-section-2-jug', {
+      duration: 1.2,
+      ease: Power2.easeOut,
+      autoAlpha: 0,
+      x: 1000
+    }, '-=0.5')
+
+
+
+    let textAnim4 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.wmf-page__content-section-3-gallery',
+        delay: '0.5',
+        start: "center center",
+      }
+    })
+
+    textAnim4.from('.wmf-page__content-section-3-title', {
+      duration: 0.8,
+      autoAlpha: 0,
+      y: 60
+    }, '<1')
+
+    let textAnim5 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.wmf-page__content-section-4',
+        delay: '0.3',
+        start: "top center",
+      }
+    })
+
+    textAnim5.from('.wmf-page__content-section-4-item2', {
+      duration: 1,
+      y: 350
+    })
+
+    textAnim5.from('.wmf-page__content-section-4-item1', {
+      duration: 1,
+      y: 350
+    }, '-=0.5')
+
+    textAnim5.from('.wmf-page__content-section-4-item3-left', {
+      duration: 0.8,
+      autoAlpha: 0,
+      y: 50
+    }, '<1')
+
+    textAnim5.from('.wmf-page__content-section-4-left', {
+      duration: 1.2,
+      ease: Power2.easeOut,
+      autoAlpha: 0,
+      x: -1000
+    }, '-=0.5')
+
+    let textAnim6 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.wmf-page__content-section-5',
+        delay: '0.3',
+        start: "top center"
+      }
+    })
+    textAnim6.from('.wmf-page__content-section-5-left', {
+      duration: 1.2,
+      ease: Power2.easeOut,
+      autoAlpha: 0,
+      x: -1000
+    })
+    textAnim6.from('.wmf-page__content-section-5-right', {
+      duration: 1.2,
+      ease: Power2.easeOut,
+      autoAlpha: 0,
+      x: 1000
+    }, '-=1')
+
+    let textAnim7 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.wmf-page__content-section-6-item-wr',
+        delay: '0.3',
+        start: "top center",
+      }
+    })
+    textAnim7.from('.wmf-page__content-section-6-item2', {
+      duration: 1,
+      y: 250
+    })
+
+    textAnim7.from('.wmf-page__content-section-6-item1', {
+      duration: 1,
+      y: 250
+    }, '-=0.5')
+
+    textAnim7.from('.wmf-page__content-section-6-right', {
+      duration: 1.8,
+      ease: Expo.easeOut,
+      x: 1000,
+    }, '-=1')
+
+    textAnim7.from('.wmf-page__content-section-6-right', {
+      duration: 2.2,
+      autoAlpha: 0,
+      ease: Expo.easeOut,
+      onComplete: flyingAnim('.jug-levitation')
+    }, '<0.7')
+    // TEXT ANIM END
+
+    // COMMON FLYING ANIMATION
+    const plans = gsap.utils.toArray('.anim-levitation');
+    plans.forEach(plans => {
+      flyingAnim(plans);
+    });
+
+
+    function flyingAnim(className) {
+      const randomX = random(1, 10);
+      const randomY = random(1, 10);
+      moveX(className, 1);
+      moveY(className, -1);
+      function moveX(target, direction) {
+        gsap.to(target, gsap.utils.random(3, 5), {
+          x: randomX(direction),
+          ease: Sine.easeInOut,
+          onComplete: moveX,
+          onCompleteParams: [target, direction * -1]
+        });
+      }
+
+      function moveY(target, direction) {
+        gsap.to(target, gsap.utils.random(3, 5), {
+          y: randomY(direction),
+          ease: Sine.easeInOut,
+          onComplete: moveY,
+          onCompleteParams: [target, direction * -1]
+        });
+      }
+
+      function random(min, max) {
+        const delta = max - min;
+        return (direction = 1) => (min + delta * Math.random()) * direction;
+      }
+    }
+
+    window.onscroll = function () {
+      ScrollTrigger.refresh(true);
+    }
+  });
+</script>
+
+<script>
+  $(document).on('general-tab-open', () => {
+    document.querySelectorAll('.autoplay-video').forEach((element) => {
+      element.play();
+    })
+  })
+</script>

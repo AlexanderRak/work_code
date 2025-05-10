@@ -1,0 +1,92 @@
+//default styles
+
+.ecovacs
+  width: 100%
+  max-width: 1366px
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    font-size: 20px
+    line-height: 30px
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 32px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img
+    margin: 0 auto
+    opacity: 1 !important
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1 !important
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+//end default styles
+
+.ecovacs__flex
+  display: flex
+  align-items: center
+
+.ecovacs__flex__reverse
+  flex-direction: row-reverse
+
+.ecovacs__item
+  flex: 1 1 0
+  box-sizing: border-box
+  min-width: 50%
+  max-width: 50%
+
+.ecovacs__txt
+  padding: 1em
+  text-align: right
+  h2
+    font-weight: bold
+    margin-bottom: 0.5em
+
+.ecovacs__flex__reverse .ecovacs__txt
+  text-align: left
+
+//media*****************************************************
+
+@media (max-width: 1201px)
+  .ecovacs h2
+    font-size: 24px
+  .ecovacs p
+    font-size: 16px
+    line-height: 24px
+
+@media (max-width: 767px)
+  .ecovacs__flex
+    display: block !important
+  .ecovacs__item
+    min-width: unset
+    max-width: 100%
+  .ecovacs__txt
+    text-align: left !important

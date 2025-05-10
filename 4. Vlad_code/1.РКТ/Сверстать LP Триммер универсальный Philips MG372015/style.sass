@@ -1,0 +1,341 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-philips-multigroom-series-3000-mg3720-15__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-multigroom-series-3000-mg3720-15
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+.philips
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.philips .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//logo
+
+.logo
+   position: relative
+   color: #fff
+
+.logo__i
+   position: absolute
+   left: 2em
+   top: -7px
+   img
+      width: 70%
+      margin: 0 !important
+
+.logo__abs
+   position: absolute
+   left: 2em
+   bottom: 70px
+   max-width: 35%
+
+.logo__txt
+   font-size: clamp(16px, 2vw, 18px)
+   margin-top: 1rem
+
+.logo__title
+   font-weight: bold
+   font-size: clamp(20px, 2vw, 26px)
+
+//tools
+
+.philips__title,
+.philips__blue
+   font-size: clamp(20px, 2vw, 26px)
+
+.philips__blue
+   color: #fff
+   margin: 0
+   padding: 1em 2em
+   background-color: #005a8c
+   i
+      display: block
+      font-style: normal
+      font-size: clamp(16px, 1.4vw, 18px)
+      margin-top: 1rem
+
+.tools__wrap
+   padding: 2em
+   .philips__title
+      padding-left: 15%
+
+.tools__row
+   display: flex
+   gap: 65px
+
+.tools__cont
+   max-width: 680px
+   .philips__txt
+      display: flex
+      align-items: center
+      gap: 1em
+      &::before
+         content: ""
+         display: block
+         width: 40px
+         height: 40px
+         background: url("https://cdn.comfy.ua/media/x/img3/1788234/i1.png") no-repeat center / contain
+
+.tools__items
+   display: flex
+   flex-direction: column
+   gap: 1em
+   margin-top: 2em
+
+.philips__txt
+   font-size: clamp(14px, 1.2vw, 16px)
+
+//advantages
+
+.advantages
+   color: #fff
+   background-color: #0066a1
+
+.advantages__wrap
+   padding: 2em
+
+.advantages__grid
+   display: grid
+   grid-template-columns: 1fr 1fr
+   gap: 2em 2em
+
+.advantages__cont
+   margin-top: 1em
+
+.philips__sub
+   font-size: clamp(16px, 1.3vw, 18px)
+   font-weight: bold
+   margin-bottom: 1rem
+
+//philips__table
+
+.table__scroll
+   padding: 2em
+
+// .table__wrap
+//    min-width: 960px
+
+.table__grid__two
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   >div
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      gap: 1em
+      background-color: #e4eefb
+      padding: 20px 0
+      &:nth-of-type(even)
+         background-color: #b2c8e6
+
+.table__sub
+   font-size: clamp(14px, 1.2vw, 16px)
+
+.table__grid
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   grid-template-areas: "cal1 cal1 cal1 cal1"
+   >div
+      padding: 10px
+      background-color: #e4eefb
+      &:nth-of-type(odd)
+         background-color: #b2c8e6
+
+.table__title
+   grid-area: cal1
+   font-size: clamp(18px, 1.4vw, 20px)
+   font-weight: bold
+   color: #005a8c
+   padding-left: 0 !important
+   background-color: unset !important
+
+.table__txt
+   font-size: clamp(14px, 1.2vw, 16px)
+
+//lastlogo
+
+.lastlogo
+   padding: 2em
+   background-image: linear-gradient(106deg, #0f204b 0%, #0066a1 100%)
+   img
+      max-width: 150px !important
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-multigroom-series-3000-mg3720-15
+   //    display: block
+
+   .logo
+      display: flex
+      flex-direction: column-reverse
+      background-image: linear-gradient(115deg, #0f204b -24%, #0066a1 40%)
+   .logo__i
+      max-width: 35vw
+      left: 1em
+      img
+         width: 100% !important
+   .logo__abs
+      position: unset
+      padding: 1em 0
+      max-width: 100%
+      text-align: center
+      .logo__title
+         br
+            display: none
+
+   .philips__blue
+      padding: 0.5em
+      text-align: center
+
+   .advantages__grid
+      grid-template-columns: 1fr
+      gap: 2em
+   .advantages__cont
+      margin-top: 1em
+      text-align: center
+   .philips__sub
+      margin-bottom: 1rem
+
+   .table__scroll
+      overflow-x: scroll
+   .table__wrap
+      min-width: 920px !important
+
+   .lastlogo
+      padding: 2em 0 !important
+      img
+         max-width: 24vw !important
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-philips-multigroom-series-3000-mg3720-15
+//       display: block
+
+// @media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+//    #rkt-philips-multigroom-series-3000-mg3720-15
+//       display: grid
+//       grid-template-columns: calc(100% - 400px) 400px
+
+@media (max-width: 1201px)
+   .philips .container
+      padding: 0 12px
+      box-sizing: border-box
+
+   .tools__wrap,
+   .advantages__wrap,
+   .table__scroll
+      padding: 2em 0
+
+   .lastlogo
+      padding: 4em 0
+
+   .tools__row
+      flex-direction: column-reverse
+      gap: 2em
+   .tools__items
+      gap: 1em
+      margin-top: 1em
+   .tools__cont .philips__txt
+      gap: .5em
+      justify-content: center
+   .tools__cont .philips__txt::before
+      min-width: 20px
+      max-width: 20px
+      height: 20px
+   .tools__wrap .philips__title
+      padding-left: unset
+   .tools__cont
+      text-align: center
+
+   .advantages__grid
+      gap: 2em 2em
+
+   .table__scroll
+      overflow-x: scroll
+   .table__wrap
+      min-width: 100vw

@@ -1,0 +1,534 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-philips-hx6830-35-nabor__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-philips-hx6830-35-nabor
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: normal
+      text-align: left
+      margin-bottom: unset
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+.philips
+   color: #5d5d5d
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+//end default styles
+
+.philips .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+//logo
+
+.logo
+   position: relative
+   color: #023278
+
+.logo__i
+   position: absolute
+   top: 0
+   left: 1.5em
+   img
+      width: 60%
+      margin: 0 !important
+
+.logo__abs
+   position: absolute
+   bottom: 1em
+   left: 2em
+   max-width: 40%
+
+.logo__title
+   font-weight: bold
+   margin-top: 1em
+   font-size: clamp(20px, 2vw, 30px)
+
+.philips__txt
+   font-size: clamp(16px, 1.3vw, 18px)
+
+// .philips__img img
+//    min-width: 150%
+//    margin-left: -50% !important
+
+//tech
+
+.tech
+   padding: 2em
+
+.tech__row
+   display: flex
+   align-items: center
+   gap: 4em
+
+.tech__img
+   min-width: max-content
+
+.tech__cont
+   display: flex
+   flex-direction: column
+   gap: 2em
+
+.tech__item
+   display: flex
+   align-items: center
+   gap: 1em
+
+.tech__i
+   min-width: max-content
+
+.philips__note
+   font-size: clamp(12px, 1.2vw, 16px)
+   margin-top: 35px
+
+//howright
+
+.howright__wrap
+   padding: 2em
+
+.philips__blue
+   padding: 1em 1.5em
+   color: #fff
+   font-size: clamp(20px, 2vw, 30px)
+   background-color: #0f204b
+
+.howright
+   iframe
+      width: 100%
+      max-width: 100%
+      height: 50vh
+      display: block
+
+//versus
+
+.philips__title
+   font-weight: bold
+   color: #1b66a1
+   font-size: clamp(20px, 3vw, 30px)
+   margin-bottom: 3rem
+
+.versus__wrap
+   padding: 2em
+
+.versus__row
+   display: flex
+   align-items: center
+   gap: 1em
+
+.versus__cont
+   display: flex
+   flex-direction: column
+   gap: 1em
+
+.versus__img
+   min-width: max-content
+
+//func
+
+.func
+   padding: 2em
+   background-color: #1b66a1
+   color: #fff
+
+.func__wrap
+   display: flex
+   flex-direction: column
+   gap: 2em
+
+.func__row
+   display: flex
+   align-items: center
+   justify-content: space-between
+   gap: 4em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+   &:nth-of-type(even)
+      flex-direction: row-reverse
+
+//nozzles
+
+.nozzles__wrap
+   padding: 2em
+
+.nozzles__grid
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   gap: 2em
+
+.nozzles__head
+   background-color: #005a8c
+   color: #fff
+   display: flex
+   gap: 1em
+   align-items: center
+   padding: 1em .5em
+   max-height: max-content
+   p
+      flex-basis: 60%
+      min-width: 60%
+      box-sizing: border-box
+      font-size: 14px !important
+
+.nozzles__i
+   flex-basis: 40%
+   min-width: 30%
+   box-sizing: border-box
+
+.nozzles__cal__i
+   p
+      margin-top: 1em !important
+      font-size: 14px !important
+      b
+         display: block
+         color: #005a8c
+
+.nozzles__cal
+   display: grid
+   grid-template-rows: 0.6fr 1fr 0.4fr 1fr 0.3fr 1fr 0.2fr
+   gap: 1em
+   >div
+      box-sizing: border-box
+   &:nth-of-type(2)
+      .nozzles__head
+         background: #91024b
+      .nozzles__cal__i p b
+         color: #91024b
+   &:nth-of-type(3)
+      .nozzles__head
+         background: #5b8f21
+      .nozzles__cal__i p b
+         color: #5b8f21
+   &:nth-of-type(4)
+      .nozzles__head
+         color: #000
+         background: #e0e0e0
+      .nozzles__cal__i p b
+         color: #000
+
+.nozzles__row
+   display: flex
+   gap: 1em
+   p
+      font-size: 12px !important
+
+.nozzles__row__i
+   flex-basis: 30px
+
+.nozzles__cal__i__two p
+   margin-top: 0 !important
+   margin-bottom: 1em !important
+
+.nozzles__note
+   padding: 2em
+   p
+      font-size: 14px !important
+
+//replace__nozzles
+
+.replace__nozzles
+   color: #fff
+   background: #1e9d8a
+   padding: 2em 2em 0
+   display: flex
+   gap: 4em
+   >div
+      box-sizing: border-box
+   h2
+      font-weight: normal !important
+
+.replace__nozzles__cont
+   flex-basis: 45%
+
+.replace__nozzles__img
+   flex-basis: 55%
+
+.replace__nozzles__row
+   display: flex
+   align-items: center
+   gap: 2em
+   padding: 2em 0
+
+.replace__nozzles__i
+   flex-basis: 25%
+
+.replace__nozzles__txt
+   flex-basis: 75%
+
+.replace__nozzles__note
+   padding-top: 2em
+   p
+      font-size: 14px !important
+
+//philips__table
+
+.philips__table
+   color: #3c3c3c
+   .container
+      padding: 2em
+      box-sizing: border-box
+   p
+      font-size: 12px !important
+
+.table__grid__two
+   display: grid
+   grid-template-columns: 1.1fr 1fr 1fr 1fr 1fr 1fr 1fr
+   >div
+      box-sizing: border-box
+
+.table__grid
+   display: grid
+   grid-template-columns: 1.1fr 1fr 1fr 1fr 1fr 1fr 1fr
+   background: #b8efe7
+   >div
+      padding: 0.5em
+      box-sizing: border-box
+      &:nth-of-type(n+2)
+         display: flex
+         align-items: center
+         justify-content: center
+         p
+            text-align: center !important
+   &:nth-of-type(odd)
+      background: unset
+
+.table__marker
+   font-size: 32px !important
+   font-weight: bold !important
+   line-height: 16px !important
+
+.table__grid__last
+   >div
+      display: block !important
+
+//philips__logo
+
+.philips__logo
+   background: #0f204b
+   padding: 2em 0
+   img
+      max-height: 10vw !important
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-philips-hx6830-35-nabor
+   //    display: block
+
+   .logo
+      display: flex
+      flex-direction: column-reverse
+   .logo__abs
+      position: unset
+      max-width: unset
+      padding: 1em 0
+      text-align: center
+   .logo__img img
+      min-width: 150%
+      margin-left: -40% !important
+   .logo__i
+      left: 1em
+      img
+         width: 100%
+
+   .versus__wrap
+      text-align: center
+   .versus__img img
+      max-height: 140vw !important
+
+   .tech__row
+      flex-direction: column
+      gap: 1em
+   .tech__item
+      gap: 1em
+   .tech__cont
+      max-width: 100%
+      gap: 2em
+   .tech__i
+      min-width: 20vw
+      max-width: 20vw
+
+   .philips__blue
+      padding: 1em
+
+   .philips__title
+      margin-bottom: 1rem
+
+   .func__wrap
+      gap: 2em
+   .func__row
+      flex-direction: column-reverse !important
+      align-items: unset
+      gap: 1em !important
+   .func__cont
+      max-width: 100% !important
+      text-align: center
+
+   .howright iframe
+      height: 58vw
+
+   .philips__img img
+      min-width: 150%
+      margin-left: -50% !important
+
+   .nozzles__note p
+      font-size: 12px !important
+
+   .tech__img img
+      max-height: 500px
+
+   .philips__logo img
+      max-height: 30vw !important
+
+@media (min-width: $bp-tablet) and (max-width: 1023.9px)
+   // #rkt-philips-hx6830-35-nabor
+   //    display: block
+
+   .philips__logo img
+      max-height: 15vw !important
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   // #rkt-philips-hx6830-35-nabor
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .logo__img img
+      min-width: 150%
+      margin-left: -20% !important
+
+@media (max-width: 1201px)
+   .philips .container
+      padding: 0 15px
+      box-sizing: border-box
+
+   .logo__i
+      left: 1.2em
+      max-width: 20vw
+   .logo__abs
+      left: 2em
+      bottom: 2em
+   .logo__title
+      margin-top: 1em
+
+   .tech
+      padding: 2em 0
+   .tech__img
+      min-width: unset
+
+   .howright__wrap
+      padding: 2em 0
+   .howright iframe
+      height: 30vh
+
+   .versus__wrap
+      padding: 2em 0
+   .versus__cont
+      gap: 1em
+   .versus__row
+      flex-direction: column
+      gap: 1em
+
+   .func
+      padding: 2em 0
+   .func__row
+      gap: 2em
+   .func__cont
+      max-width: 45vw
+
+   .tech__row
+      gap: 2em
+   .tech__cont
+      gap: 1em
+   .tech__i img
+      width: 60%
+
+   .nozzles__wrap
+      padding: 2em 1em
+      overflow-x: scroll
+   .nozzles__grid
+      min-width: 920px
+   .nozzles__note
+      padding: 0 1em 1em
+
+   .table__scroll
+      overflow-x: scroll
+      padding-top: 2em
+   .table__wrap
+      min-width: 920px
+
+   .replace__nozzles
+      flex-direction: column
+      gap: 2em
+      padding: 1em 1em 0
+
+@media (max-width: 1201px) and (min-width: 768px)
+   .versus__img img
+      max-height: 50vw !important

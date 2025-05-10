@@ -1,0 +1,573 @@
+.rkt-mercusys-mr62x__container {
+  overflow: hidden;
+}
+
+.bc-description__content p:first-letter {
+  padding-left: 0 !important;
+}
+
+#rkt-mercusys-mr62x {
+  max-width: 1023px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+}
+#rkt-mercusys-mr62x h2, #rkt-mercusys-mr62x h3, #rkt-mercusys-mr62x h4, #rkt-mercusys-mr62x h5, #rkt-mercusys-mr62x h6, #rkt-mercusys-mr62x p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+#rkt-mercusys-mr62x ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+#rkt-mercusys-mr62x img {
+  display: block;
+  max-width: 100%;
+  opacity: 1;
+  margin: 0 auto;
+}
+#rkt-mercusys-mr62x img:hover {
+  opacity: 1;
+}
+#rkt-mercusys-mr62x h2 {
+  font-size: 26px;
+  font-weight: 900;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1023px) {
+  #rkt-mercusys-mr62x h2 {
+    font-size: calc(20px + 6 * (100vw - 320px) / 703);
+  }
+}
+#rkt-mercusys-mr62x h3 {
+  font-size: 20px;
+  font-weight: 900;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1023px) {
+  #rkt-mercusys-mr62x h3 {
+    font-size: calc(18px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-mercusys-mr62x h4 {
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: none;
+}
+@media (max-width: 1023px) {
+  #rkt-mercusys-mr62x h4 {
+    font-size: calc(16px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-mercusys-mr62x p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+@media (max-width: 1023px) {
+  #rkt-mercusys-mr62x p {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-mercusys-mr62x li {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.2;
+}
+@media (max-width: 1023px) {
+  #rkt-mercusys-mr62x li {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+#rkt-mercusys-mr62x i {
+  line-height: 1.2;
+  font-size: 16px;
+  margin-top: 0.5rem;
+  display: block;
+  font-style: italic;
+}
+@media (max-width: 1023px) {
+  #rkt-mercusys-mr62x i {
+    font-size: calc(14px + 2 * (100vw - 320px) / 703);
+  }
+}
+
+.fast {
+  position: relative;
+}
+
+.fast__abs {
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  box-sizing: border-box;
+  right: 50%;
+  transform: translateX(50%);
+  bottom: 10%;
+}
+
+#rkt-mercusys-mr62x .fast__abs h2, #rkt-mercusys-mr62x .fast__abs h3 {
+  text-align: center;
+}
+#rkt-mercusys-mr62x .fast__abs h3 {
+  font-weight: normal;
+}
+
+.fast__red {
+  text-align: center;
+  line-height: normal;
+  font-weight: bold;
+  font-size: 22px;
+  background: #e60012;
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.wifi__txt {
+  position: absolute;
+  z-index: 1;
+}
+
+.wifi__grid {
+  padding: 2em;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: "cal1 cal1 cal1 cal2 cal2 cal2" "cal1 cal1 cal1 cal3 cal3 cal3" "cal4 cal5 cal6 cal7 cal8 cal9";
+  gap: 10px 10px;
+}
+.wifi__grid > div {
+  position: relative;
+}
+.wifi__grid > div:nth-of-type(1) {
+  grid-area: cal1;
+}
+.wifi__grid > div:nth-of-type(1) .wifi__txt {
+  right: 50%;
+  transform: translateX(50%);
+  bottom: 20%;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  width: 100%;
+}
+.wifi__grid > div:nth-of-type(2) {
+  grid-area: cal2;
+}
+.wifi__grid > div:nth-of-type(2) .wifi__txt {
+  right: 50%;
+  transform: translateX(50%);
+  top: 0.3em;
+}
+.wifi__grid > div:nth-of-type(3) {
+  grid-area: cal3;
+}
+.wifi__grid > div:nth-of-type(3) .wifi__txt {
+  left: 0.5em;
+  bottom: 50%;
+  transform: translateY(50%);
+  width: 50%;
+}
+.wifi__grid > div:nth-of-type(3) .wifi__txt p {
+  text-align: left !important;
+}
+.wifi__grid > div:nth-of-type(n+4) {
+  background: #181414;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 1em;
+}
+.wifi__grid > div:nth-of-type(n+4) .wifi__txt {
+  position: unset;
+}
+.wifi__grid > div:nth-of-type(4) {
+  grid-area: cal4;
+}
+.wifi__grid > div:nth-of-type(5) {
+  grid-area: cal5;
+}
+.wifi__grid > div:nth-of-type(6) {
+  grid-area: cal6;
+}
+.wifi__grid > div:nth-of-type(7) {
+  grid-area: cal7;
+}
+.wifi__grid > div:nth-of-type(8) {
+  grid-area: cal8;
+}
+.wifi__grid > div:nth-of-type(9) {
+  grid-area: cal9;
+}
+
+#rkt-mercusys-mr62x .wifi__txt p {
+  text-align: center;
+}
+
+.wifi__i {
+  margin-bottom: 0.5em;
+}
+
+#rkt-mercusys-mr62x .wifi__i img {
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.new__speed__txt {
+  padding: 2em;
+  margin-bottom: -15%;
+  position: relative;
+}
+
+#rkt-mercusys-mr62x .center__txt h2, #rkt-mercusys-mr62x .center__txt h3, #rkt-mercusys-mr62x .center__txt p {
+  text-align: center;
+}
+
+.more__speed {
+  padding: 2em;
+}
+
+.more__speed__lines {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.more__speed__line {
+  width: 85%;
+  background: linear-gradient(to right, #000, #ed1707 40%, #fe4c07);
+  line-height: 1.2;
+  padding: 0.5em 1em 0.5em 0.5em;
+  box-sizing: border-box;
+}
+
+#rkt-mercusys-mr62x .more__speed__line p {
+  text-align: right;
+}
+
+.more__speed__item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.more__speed__item:last-of-type {
+  color: #a4a4a4;
+}
+.more__speed__item:last-of-type .more__speed__line {
+  background: linear-gradient(to right, #000, #960606 40%, #9e0505);
+  width: 60%;
+}
+
+.more__speed__row {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+.more__speed__row > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.more__speed__row > div::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 45px;
+  background: url("https://cdn.comfy.ua/media/x/img5/3285214/galka.jpg") no-repeat center/contain;
+}
+
+.faster__upd {
+  padding: 2em;
+}
+
+.faster__upd__row {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.faster__upd__cont {
+  padding-top: 2em;
+}
+
+.faster__upd__flex {
+  display: flex;
+  gap: 2em;
+}
+.faster__upd__flex > div {
+  flex-basis: 50%;
+  box-sizing: border-box;
+}
+
+.effective {
+  padding: 2em;
+}
+
+.easymesh {
+  padding: 2em;
+}
+
+.easymesh__flex {
+  max-width: 60%;
+  margin: 2em auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em 0;
+}
+.easymesh__flex > div {
+  flex-basis: 50%;
+  box-sizing: border-box;
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+#rkt-mercusys-mr62x .easymesh__i img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.faster__upd__txt {
+  margin-top: 1em;
+}
+
+.coverage {
+  padding: 2em;
+}
+
+.coverage__row {
+  margin-top: 1em;
+  display: flex;
+  gap: 2em;
+}
+.coverage__row > div {
+  flex-basis: 50%;
+  box-sizing: border-box;
+}
+
+.col__red {
+  color: #ff1d1d;
+}
+
+.coverage__txt {
+  margin-top: 1em;
+}
+
+.smartconnect {
+  padding: 2em;
+}
+.smartconnect .coverage__row {
+  align-items: center;
+}
+
+.mercusys__app {
+  position: relative;
+  color: #000;
+}
+
+.mercusys__app__grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  width: -moz-max-content;
+  width: max-content;
+  gap: 0.5em;
+  margin-top: 2em;
+}
+.mercusys__app__grid > div > img {
+  max-height: 80px !important;
+}
+.mercusys__app__grid > div a {
+  display: block;
+}
+.mercusys__app__grid > div a > img {
+  max-height: 36px;
+}
+.mercusys__app__grid > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+
+.mercusys__app__abs {
+  position: absolute;
+  width: 40%;
+  box-sizing: border-box;
+  bottom: 50%;
+  transform: translateY(50%);
+  left: 2em;
+}
+
+.func {
+  padding: 2em;
+}
+
+.func__flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.func__flex > div {
+  flex-basis: 33.33%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+#rkt-mercusys-mr62x .func__i img {
+  max-width: 60px;
+}
+
+.func__i {
+  margin-bottom: 0.5em;
+}
+
+@media (min-width: 320px) and (max-width: 767.9px), (min-width: 1024px) and (max-width: 1201px) {
+  .fast__abs {
+    position: relative;
+    transform: unset;
+    margin: -10% auto 0;
+    right: unset;
+    padding: 0 1em;
+    width: 100%;
+  }
+  .fast__img {
+    position: relative;
+  }
+  .fast__img::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -10%;
+    left: -10%;
+    bottom: -5%;
+    top: 70%;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), #000000);
+    filter: blur(12px);
+  }
+  .fast__img img {
+    min-width: 150%;
+    margin-left: -25% !important;
+  }
+  .wifi__grid {
+    padding: 2em 1em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "cal1 cal1 cal1" "cal4 cal5 cal6" "cal2 cal2 cal2" "cal3 cal3 cal3" "cal7 cal8 cal9";
+  }
+  .new__speed__txt,
+  .more__speed,
+  .faster__upd,
+  .effective,
+  .easymesh,
+  .coverage,
+  .smartconnect,
+  .func {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  .more__speed__row {
+    flex-wrap: wrap;
+  }
+  .easymesh__flex {
+    max-width: 90%;
+  }
+  .mercusys__app {
+    color: inherit;
+  }
+  .mercusys__app__abs {
+    position: unset;
+    transform: unset;
+    width: 100%;
+    padding: 2em 1em 1em;
+  }
+  .mercusys__app__grid {
+    position: absolute;
+    bottom: 55%;
+  }
+  .mercusys__app__img img {
+    min-width: 170%;
+    margin-left: -70% !important;
+  }
+  .func__flex > div {
+    padding: 0.5em;
+  }
+}
+@media (min-width: 320px) and (max-width: 767.9px) {
+  .mercusys__app__grid {
+    bottom: 48vw;
+    width: 65vw;
+    margin: 0;
+  }
+  .mercusys__app__grid > div > img {
+    max-height: 16vw !important;
+  }
+  .mercusys__app__grid > div a > img {
+    max-height: 7.5vw;
+  }
+  .mercusys__app__grid > div:nth-of-type(2) {
+    gap: 0;
+  }
+  .func__flex > div {
+    flex-basis: 50%;
+  }
+  #rkt-mercusys-mr62x .wifi__i img {
+    max-width: 40px;
+    max-height: 40px;
+  }
+  .wifi__grid > div:nth-of-type(3) .wifi__txt {
+    width: 60%;
+  }
+  .wifi__grid > div:nth-of-type(n+4) {
+    padding: 0.5em;
+  }
+  .wifi__grid > div:nth-of-type(2) .wifi__txt {
+    min-width: 200px;
+  }
+  .more__speed__row {
+    justify-content: unset;
+    gap: 0.5em;
+  }
+  .faster__upd__row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .faster__upd__flex {
+    flex-direction: column;
+  }
+  .easymesh__flex {
+    flex-direction: column;
+    justify-content: unset;
+  }
+  .coverage__row {
+    flex-direction: column;
+    gap: 1em;
+    margin: 0;
+  }
+  #rkt-mercusys-mr62x .smartconnect .coverage__txt {
+    margin: 0;
+  }
+  #rkt-mercusys-mr62x .smartconnect .coverage__txt h2, #rkt-mercusys-mr62x .smartconnect .coverage__txt p {
+    text-align: center;
+  }
+  #rkt-mercusys-mr62x .mercusys__app__txt h2, #rkt-mercusys-mr62x .mercusys__app__txt p {
+    text-align: center;
+  }
+}

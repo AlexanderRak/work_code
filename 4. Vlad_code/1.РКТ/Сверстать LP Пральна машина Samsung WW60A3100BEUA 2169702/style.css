@@ -1,0 +1,250 @@
+.samsung {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.samsung img {
+  margin: 0 auto;
+  opacity: 1 !important;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.samsung img:hover {
+  opacity: 1 !important;
+}
+
+.samsung div {
+  line-height: normal;
+}
+
+.features-desc__text img {
+  margin-bottom: 0rem;
+}
+
+.samsung .container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.samsung__title {
+  font-weight: bold;
+  font-size: clamp(26px, 3vw, 48px);
+}
+
+.samsung__subtitle {
+  font-weight: bold;
+  font-size: clamp(18px, 2vw, 24px);
+}
+
+.samsung__txt {
+  font-size: clamp(16px, 2vw, 18px);
+}
+
+.samsung__note {
+  color: #313131;
+  font-size: 12px;
+}
+
+.gigiena {
+  position: relative;
+}
+
+.gigiena__abs {
+  position: absolute;
+  top: 80px;
+  left: 88px;
+}
+
+.features .samsung__title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.features .samsung__txt {
+  font-size: 14px;
+  margin-top: 24px;
+}
+
+.features .samsung__note {
+  margin-top: 24px;
+  color: #636363;
+}
+
+.features__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 0 24px;
+  padding: 0 24px;
+}
+
+.features__img {
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.features__txt {
+  padding: 38px 30px;
+}
+
+.longtime__head {
+  padding: 80px 88px;
+  text-align: center;
+}
+
+.longtime__head .samsung__subtitle {
+  margin: 48px 0 32px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
+  max-height: 40px;
+  border-radius: 50%;
+  padding: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  -webkit-transition: background-color 0.1s cubic-bezier(0.4, 0, 0.2, 1), top 300ms ease-in-out;
+  transition: background-color 0.1s cubic-bezier(0.4, 0, 0.2, 1), top 300ms ease-in-out;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.45);
+  position: relative;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #1c1c1c;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 18px !important;
+  color: #fff;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  position: absolute;
+  right: 50%;
+  -webkit-transform: translateX(50%) !important;
+          transform: translateX(50%) !important;
+}
+
+.swiper-pagination {
+  position: unset !important;
+  padding: 4px 8px;
+  border-radius: 16px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: 24px auto 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #000 !important;
+}
+
+.clean .samsung__subtitle {
+  margin: 48px 0 32px;
+}
+
+.clean .samsung__note {
+  width: 88%;
+  margin: 0 auto;
+  padding: 32px 0 80px;
+}
+
+.clean__txt {
+  padding: 80px 88px;
+  text-align: center;
+}
+
+@media (max-width: 1201px) {
+  .samsung .container {
+    width: 960px;
+    padding: 0 15px;
+  }
+  .gigiena__abs {
+    top: 2em;
+    left: 32px;
+  }
+  .features .samsung__title {
+    margin-bottom: 1em;
+  }
+  .features__grid {
+    padding: 0;
+  }
+  .features__txt {
+    padding: 1em;
+  }
+  .features .samsung__txt {
+    margin-top: 1rem;
+  }
+  .longtime__head,
+  .clean__txt {
+    padding: 2em 0;
+  }
+  .longtime__head .samsung__subtitle,
+  .clean .samsung__subtitle {
+    margin: 2rem 0 1rem;
+  }
+  .clean .samsung__note {
+    padding-bottom: 2em;
+  }
+}
+
+@media (max-width: 991px) {
+  .samsung .container {
+    width: 720px;
+  }
+  .gigiena__img img {
+    min-width: 200%;
+    margin-left: -55%;
+  }
+  .gigiena__abs {
+    left: 15px;
+    top: 1em;
+  }
+  .features__grid {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    gap: 15px 0;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+  .samsung {
+    padding-bottom: 1em;
+  }
+}
+
+@media (max-width: 767px) {
+  .samsung .container {
+    width: 540px;
+  }
+}
+
+@media (max-width: 576px) {
+  .samsung .container {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}

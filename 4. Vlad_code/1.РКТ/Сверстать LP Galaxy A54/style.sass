@@ -1,0 +1,616 @@
+//default styles
+
+.samsung
+  width: 100%
+  max-width: 1920px
+  margin: 0 auto
+  height: auto
+  display: block
+  box-sizing: border-box
+  overflow: hidden
+  p
+    font-size: 20px
+    line-height: 30px
+    margin-bottom: 0
+    margin: 0
+    text-align: unset
+    &:first-letter
+      padding-left: 0
+  h2
+    text-align: unset
+    display: block
+    line-height: normal
+    font-size: 34px
+    font-weight: normal
+    padding: 0
+    margin: 0
+  img
+    margin: 0 auto
+    opacity: 1 !important
+    max-width: 100%
+    display: block
+    height: auto
+    &:hover
+      opacity: 1 !important
+  ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+  span
+    display: block
+    line-height: normal
+
+.features-desc__text
+  img
+    margin-bottom: 0rem
+
+.one-col .features-desc__text
+  p:first-letter
+    padding-left: 0rem !important
+
+//end default styles
+
+.samsung .container
+  width: 100%
+  max-width: 100%
+  margin: 0 auto
+
+.samsung__img
+  background: #f4f4f4
+
+.samsung__note
+  font-size: 12px
+  color: #313131
+  text-align: center
+  width: 88%
+  margin: 0 auto
+  padding: 32px 0 80px
+  line-height: 1.3 !important
+
+.samsung__note__gray
+  color: #8f8f8f
+
+// section 2
+
+.spec
+  padding: 48px 84px
+
+.spec__cal__i
+  margin-right: 16px
+  img
+    width: 56px
+    min-width: 56px
+    height: 56px
+
+.samsung__subtitle
+  text-align: center
+  font-weight: bold
+  font-size: 38px
+  line-height: 1.2
+
+.spec__flex
+  display: flex
+  margin-top: 24px
+  justify-content: center
+
+.spec__cal
+  display: flex
+  align-items: center
+  background: rgba(0,0,0,0.1)
+  border: 1px solid rgba(0,0,0,0.26)
+  border-radius: 20px
+  width: 300px
+  padding: 23px 19px 23px 23px
+  &:nth-of-type(n+2)
+    margin-left: 24px
+
+.spec__cal__title
+  font-size: 22px
+  font-weight: bold
+  margin-bottom: 16px
+
+.spec__cal__txt
+  font-size: 14px
+
+// section 3
+
+.samsung__slider__wrap
+  padding: 80px 260px
+  .samsung__txt
+    padding: 32px 0 28px
+
+.samsung__title
+  text-align: center
+  font-weight: bold
+  font-size: 56px
+  line-height: 1.16 !important
+
+.samsung__txt
+  font-size: 18px
+  text-align: center
+  line-height: 1.78 !important
+
+.samsung__slider
+  border: 1px solid rgba(0,0,0,0.2)
+  border-width: 1px 0
+  vertical-align: top
+
+.samsung__slider__flex
+  display: flex
+  justify-content: space-between
+  align-items: center
+  max-width: 1440px
+  margin: 0 auto
+  padding: 40px 0
+
+.samsung__slider__btns
+  li
+    display: flex
+    align-items: center
+    cursor: pointer
+    i
+      display: block
+      width: 40px
+      min-width: 40px
+      height: 40px
+      border-radius: 50%
+      background-color: #dce9be
+      opacity: .7
+      box-sizing: border-box
+    &:nth-of-type(n+2)
+      margin-top: 50px
+    &:nth-of-type(2)
+      i
+        background-color: #8b96c9
+    &:nth-of-type(3)
+      i
+        background-color: #414143
+    &:nth-of-type(4)
+      i
+        background-color: #e9e9e7
+        border: 1px solid #a1a1a1
+
+  i.__active
+    opacity: 1
+
+.samsung__slider__btns__color
+  font-size: 28px
+  font-weight: bold
+  margin-left: 40px
+
+.show__img
+  display: block !important
+
+.hide__img
+  display: none !important
+
+.fade
+  animation-name: fade
+  animation-duration: 1.5s
+
+@keyframes fade
+  from
+    opacity: 0.1
+  to
+    opacity: 1
+
+// section 4
+
+.camera
+  padding: 80px 88px
+  .samsung__title
+    text-align: left
+    max-width: 1440px
+    box-sizing: border-box
+    margin: 0 auto
+  .samsung__note
+    text-align: left
+    margin: 0
+    max-width: 1440px
+    box-sizing: border-box
+    margin: 0 auto
+
+//section 5
+
+.samsung__video
+  .samsung__txt
+    padding: 32px 0 0 0
+  .samsung__note
+    padding: 48px 0 0 0
+
+.samsung__video__cont
+  max-width: 1440px
+  margin: 0 auto
+  padding: 80px 260px
+  box-sizing: border-box
+
+//section 6
+
+.camera__slider__wrap
+  max-width: 1440px
+  margin: 0 auto
+  position: relative
+  padding-bottom: 88px
+  .samsung__title
+    text-align: left
+    box-sizing: border-box
+    margin-bottom: 64px
+    padding: 88px 88px 0
+  .samsung__subtitle
+    text-align: left
+  .samsung__txt
+    text-align: left
+
+.camera__slider,
+.camera__slider__two,
+.camera__slider__three
+  padding: 0 88px
+  box-sizing: content-box
+  margin: 0
+
+.camera__slider__title
+  font-size: 22px
+  font-weight: bold
+  margin: 24px 0 16px
+
+.camera__slider__item
+  box-sizing: content-box
+  padding-right: 60px
+  opacity: .5
+  &:last-of-type
+    padding-right: 0px
+  .samsung__note
+    text-align: left
+    margin-left: 0
+    padding: 0
+    margin-top: 20px
+
+.arrow,
+.arrow__three,
+.arrow__four
+  display: flex
+  align-items: center
+  justify-content: center
+  position: absolute
+  bottom: 58%
+  transform: translateY(50%)
+  z-index: 10
+  width: 40px
+  height: 40px
+  margin-top: 322px
+  padding: 7px
+  border-radius: 50%
+  transition: all .1s cubic-bezier(0.4,0,0.2,1)
+  -webkit-transition: all .1s cubic-bezier(0.4,0,0.2,1)
+  box-sizing: border-box
+  border: 1px solid rgba(0,0,0,0.1)
+  background-color: #fff
+  img
+    filter: invert(1)
+    width: 10px
+    height: 20px
+    margin: 0 auto
+    position: absolute
+    bottom: 50%
+    right: 50%
+    transform: translate(50%, 50%)
+  &:hover
+    background-color: #f7f7f7
+    transition: background-color .1s cubic-bezier(0.4,0,0.2,1)
+    -webkit-transition: background-color .1s cubic-bezier(0.4,0,0.2,1)
+    cursor: pointer
+
+.arrow__three
+  bottom: 55%
+
+.next__arrow,
+.next__arrow__two,
+.next__arrow__three,
+.next__arrow__four
+  left: 1058px
+  left: unset
+  right: 0
+.prev__arrow,
+.prev__arrow__two,
+.prev__arrow__three,
+.prev__arrow__four
+  left: 28px
+  transform: scale(-1, 1)
+  left: 0
+  right: unset
+
+.arrows
+  position: relative
+  bottom: -300px
+  width: 1102px
+  margin: 0
+
+.slick-list
+  padding: 0 20% 0 0 !important
+
+.camera__slider__item.slick-current
+  opacity: 1 !important
+
+.hidden
+  display: none !important
+
+.camera__slider__img
+  margin-bottom: 40px
+
+.slick-slider-dots,
+.slick-slider-dots-two,
+.slick-slider-dots-three,
+.slick-slider-dots-four
+  margin-top: 64px
+  .slick-dots
+    display: flex
+    justify-content: center
+    padding: 4px 8px
+    border-radius: 16px
+    border: 1px solid rgba(0,0,0,0.1)
+    max-width: max-content
+    margin: 0 auto
+    li
+      position: relative
+      cursor: pointer
+      width: 15px
+      height: 15px
+      &::before
+        content: ""
+        display: block
+        position: absolute
+        width: 8px
+        min-width: 8px
+        height: 8px
+        border-radius: 50%
+        background: #00000092
+        bottom: 50%
+        right: 50%
+        transform: translate(50%, 50%)
+      button
+        display: none
+      &:nth-of-type(n+2)
+        margin-left: 5px
+    .slick-active
+      &::before
+        background: #000
+
+//section 7
+//section 8
+
+.sun__cont
+  max-width: 1440px
+  margin: 0 auto
+  padding: 80px 88px
+  box-sizing: border-box
+  .samsung__title
+    margin-bottom: 32px
+
+.sun
+  .samsung__note
+    width: 68%
+
+//section 9
+
+.expirience
+  position: relative
+
+.expirience__slider
+  margin-top: 80px
+  margin-right: auto
+  margin-left: auto
+  max-width: max-content
+  .slick-list
+    padding: 0!important
+    max-width: 1440px !important
+.expirience__item
+  width: 464px
+  box-sizing: border-box
+
+.arrow__four
+  bottom: 30%
+  transform: unset
+  background-color: rgba(0,0,0,0.45)
+  border: 1px solid rgba(255,255,255,0.15)
+  img
+    filter: unset
+  &:hover
+    background-color: #1c1c1c
+
+.arrows__four
+  width: 1440px
+  position: relative
+  margin: 0 auto
+  bottom: -370px
+
+.prev__arrow__four
+  // left: 13%
+  // position: unset
+  left: 0
+  right: unset
+  transform: scale(-1, 1)
+.next__arrow__four
+  // position: unset
+  left: unset
+  right: 0
+  // right: 13%
+  margin: 0 0 0 auto
+
+.expirience__subtitle
+  font-weight: bold
+  font-size: 24px
+  margin-bottom: 24px
+
+.expirience__item__cont
+  padding: 38px 30px
+
+.expirience__txt
+  font-size: 14px
+  line-height: 1.33
+
+.show__mob
+  display: none !important
+
+//media*****************************************************
+
+@media (max-width: 1440px)
+  .samsung__title
+    font-size: calc(26px + (56 - 26) * ((100vw - 320px) / (1440 - 320)))
+  .samsung__subtitle
+    font-size: calc(20px + (38 - 20) * ((100vw - 320px) / (1440 - 320)))
+  .samsung__txt
+    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1440 - 320)))
+  .spec__cal__title
+    font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1440 - 320)))
+
+  .samsung__slider__flex
+    padding-right: 40px
+    padding-left: 40px
+
+  .arrows
+    width: 74%
+    margin-left: 2%
+
+  .arrows__four
+    width: 100%
+    margin: 0
+
+  .expirience__img
+    padding: 0 0.3em
+
+@media (max-width: 1201px)
+  .samsung .container
+    width: 960px
+    padding: 0 15px
+
+  .spec__flex
+    flex-wrap: wrap
+
+  .spec__cal:nth-of-type(n+2)
+    margin: 0
+
+  .spec__cal:nth-of-type(even)
+    margin-left: 1em
+
+  .spec__cal:nth-of-type(n+3)
+    margin-top: 1em
+
+  .samsung__note
+    padding-bottom: 30px
+
+  .samsung__slider__wrap,
+  .samsung__video__cont
+    padding: 0 100px 30px 100px
+
+  .camera,
+  .sun__cont
+    padding-top: 30px
+    padding-bottom: 30px
+
+  .camera__slider__wrap .samsung__title
+    padding-right: 0
+    padding-left: 0
+    margin-bottom: 30px
+    padding-top: 1em
+
+  .arrows
+    display: none
+
+  .arrows__four
+    display: block
+
+  .camera__slider, .camera__slider__two, .camera__slider__three
+    padding: 0
+
+  .camera__slider__item
+    padding-right: 20px
+
+  .slick-slider-dots, .slick-slider-dots-two, .slick-slider-dots-three
+    margin-top: 30px
+
+  .arrow__four
+    width: 28px
+    height: 28px
+    bottom: 75px
+    img
+      width: 7px
+      position: absolute
+      right: 50%
+      bottom: 50%
+      transform: translate(50%, 50%)
+
+  .expirience__item__cont
+    padding: 3em 1em 1em 1em
+
+  .camera__slider__wrap
+    padding-bottom: 30px
+
+@media (max-width: 991px)
+  .samsung .container
+    width: 720px
+
+@media (max-width: 767px)
+  .samsung .container
+    width: 540px
+
+@media (max-width: 576px)
+  .samsung .container
+    width: 100%
+    box-sizing: border-box
+  .spec
+    padding-right: 0
+    padding-left: 0
+    padding-top: 0
+  .spec__cal:nth-of-type(even)
+    margin: 0
+  .spec__cal:nth-of-type(n+2)
+    margin-top: 1em !important
+  .spec__cal
+    padding: 1em
+  .spec__cal__i img
+    width: 42px
+    min-width: 42px
+    height: 42px
+  .hide__mob
+    display: none !important
+  .show__mob
+    display: block !important
+  .samsung__slider__wrap, .samsung__video__cont,
+  .camera, .sun__cont
+    padding-right: 0
+    padding-left: 0
+  .samsung__txt
+    line-height: 1.3 !important
+  .slick-list
+    padding: 0 8% 0 0 !important
+  .sun .samsung__note
+    width: 95%
+  .arrows__four
+    display: none
+  .expirience__item__cont
+    padding-top: 1em
+  .expirience__slider
+    margin-top: 40px
+  .samsung__slider__flex
+    flex-direction: column
+    padding-right: 0
+    padding-left: 0
+  .samsung__slider__btns li:nth-of-type(n+2)
+    margin-top: 1em
+  .samsung__slider__btns__color
+    font-size: 16px
+    margin-left: 1em
+  .samsung__slider__btns li i
+    width: 20px
+    min-width: 20px
+    height: 20px
+    opacity: .4
+  .samsung__slider__btns
+    margin-bottom: 2em !important
+    width: 100%
+  .slick-slider-dots-four
+    margin-top: 30px
+  .samsung__video .samsung__txt
+    padding-right: 1em
+    padding-left: 1em
+  

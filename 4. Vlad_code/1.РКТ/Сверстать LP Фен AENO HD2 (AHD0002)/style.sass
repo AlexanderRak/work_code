@@ -1,0 +1,190 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-aeno-hd2-ahd0002__container
+   overflow: hidden
+   display: flex
+   flex-direction: column
+   gap: 2em
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-aeno-hd2-ahd0002
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: normal
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//aeno__green
+
+.aeno__green
+   display: flex
+   align-items: center
+   color: #fff
+   background-image: linear-gradient(21deg, #7ba49c 0%, #7ba49c 1%, #527a72 100%)
+   padding: 2em
+   gap: 2em
+   >div
+      box-sizing: border-box
+
+.aeno__green__cont
+   flex-basis: 60%
+
+.aeno__green__img
+   flex-basis: 40%
+
+.aeno__green__row
+   display: flex
+   align-items: center
+   gap: 1em
+   >div
+      &:nth-of-type(1),
+      &:nth-of-type(2)
+         flex-basis: 40%
+      &:nth-of-type(3)
+         flex-basis: 20%
+
+.aeno__green__txt p
+   font-size: 12px !important
+   text-align: center !important
+   margin-top: 0.5rem !important
+
+//aeno__block
+
+.aeno__block
+   padding: 0 1em
+
+.aeno__block__cont
+   padding: 0 0 1em
+   h2,p
+      text-align: center !important
+
+//aeno__row
+
+.aeno__row,
+.aeno__reverse
+   display: flex
+   align-items: center
+   padding: 0 1em
+   gap: 2em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.aeno__reverse
+   flex-direction: row-reverse
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-aeno-hd2-ahd0002
+   //    display: block !important
+
+   .aeno__green
+      flex-direction: column
+      align-items: unset
+      padding: 1em
+      gap: 1em
+   .aeno__green__row
+      flex-wrap: wrap
+      gap: 0
+      justify-content: center
+      >div
+         flex-basis: unset !important
+         min-width: 50%
+         max-width: 50%
+         padding: 0.5em
+         box-sizing: border-box
+
+   .aeno__row,
+   .aeno__reverse
+      flex-direction: column
+      gap: 1em
+      h2,p
+         text-align: center !important
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-aeno-hd2-ahd0002
+//       display: block !important
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   // #rkt-aeno-hd2-ahd0002
+   //    display: grid
+   //    grid-template-columns: calc(100% - 400px) 400px
+
+   .aeno__green
+      flex-direction: column
+      align-items: unset
+
+   .aeno__row,
+   .aeno__reverse
+      flex-direction: column
+      gap: 1em
+      h2,p
+         text-align: center !important

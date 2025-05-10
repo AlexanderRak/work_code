@@ -1,0 +1,544 @@
+//default styles
+
+// body
+//    margin: 0
+
+.samsung
+   width: 100%
+   max-width: 1440px
+   margin: 0 auto
+   height: auto
+   display: block
+   box-sizing: border-box
+   overflow: hidden
+   padding-bottom: 88px
+   img
+      margin: 0 auto
+      opacity: 1 !important
+      max-width: 100%
+      display: block
+      height: auto
+      &:hover
+         opacity: 1 !important
+   video
+      display: block
+      max-width: 100%
+      vertical-align: middle
+   div
+      line-height: normal
+
+.features-desc__text
+   img
+      margin-bottom: 0rem
+
+.one-col .features-desc__text
+   p:first-letter
+      padding-left: 0rem !important
+
+//end default styles
+
+.samsung .container
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+
+.samsung__title
+   font-size: clamp(26px, 3vw, 48px)
+   font-weight: bold
+
+.samsung__subtitle
+   font-size: clamp(16px, 2vw, 28px)
+   font-weight: bold
+   margin: 16px 0 24px
+
+.samsung__txt
+   font-size: clamp(16px, 2vw, 18px)
+   font-weight: bold
+
+.show__mob
+   display: none !important
+
+//innovation
+
+.innovation
+   position: relative
+
+.innovation__abs
+   position: absolute
+   max-width: 600px
+   top: 80px
+   left: 80px
+
+//samsung__anchors
+
+.samsung__anchors
+   padding: 48px 84px
+   background-color: #000
+   color: #fff
+
+.samsung__anchors__head
+   font-size: clamp(24px, 2vw, 38px)
+   font-weight: bold
+
+.samsung__anchors__i
+   margin-right: 16px
+   img
+      max-width: 56px
+      min-width: 56px
+
+.samsung__anchors__row
+   display: flex
+   align-items: center
+   background: rgba(255,255,255,0.1)
+   border: 1px solid rgba(255,255,255,0.26)
+   border-radius: 20px
+   padding: 20px
+   &:hover
+      background: rgba(114,114,114,0.72)
+      cursor: pointer
+
+.samsung__anchors__title
+   font-size: clamp(14px, 1.5vw, 22px)
+   font-weight: bold
+   margin-bottom: 16px
+
+.samsung__anchors__txt
+   font-size: 14px
+
+.samsung__anchors__grid
+   display: grid
+   grid-template-columns: repeat(4, 1fr)
+   gap: 0 24px
+   margin-top: 24px
+
+//light
+
+.light
+   color: #fff
+   position: relative
+
+.light__bg
+   position: absolute
+   top: 0
+   left: 0
+   z-index: -1
+
+.light__cont
+   text-align: center
+   max-width: 600px
+   margin: 0 auto
+   padding: 80px
+   box-sizing: content-box
+
+.cpu,
+.hdr
+   background-color: #000
+
+.hdr__drag__img__one
+   position: absolute
+
+.hdr__drag
+   position: relative
+
+.hdr__knob
+   position: absolute
+   top: 0
+   left: 50%
+   border-radius: 50%
+   transform: translate3d(0px, 301px, 0px)
+.knob-handle
+   background-color: #fff
+   width: 50px
+   height: 50px
+   position: absolute
+   transform: translate(-50%, -50%)
+   border-radius: 50%
+.knob-handle__arrows
+   display: flex
+   flex-direction: column
+   justify-content: center
+   align-items: center
+   height: 50px
+   img
+      max-width: 30px
+      &:nth-of-type(1)
+         transform: scale(1, -1)
+
+.hdr__range
+   height: 250px
+   display: flex
+   justify-content: center
+   padding: 30px
+   transition: all .3s
+
+.hdr__bar
+   width: 2px
+   height: 100%
+   background: #fff
+   &:hover
+      .knob-handle
+         background-color: #c1c1c1
+         transition: all .3s
+
+.hdr__drag__nav
+   position: absolute
+   right: 8%
+   bottom: 50%
+   transform: translateY(50%)
+   z-index: 2
+
+.hdr__drag__nav__txt
+   font-size: 18px
+   font-weight: bold
+   text-align: center
+
+.sound
+   overflow: hidden
+   .light__bg
+      top: -18%
+
+//swiper samsung__picture
+
+.samsung__picture
+   position: relative
+
+.swiper,
+.swiper__two
+   width: 100%
+   height: 100%
+
+.swiper-wrapper
+   padding-left: 88px
+   box-sizing: border-box
+
+.swiper-button-next,
+.swiper-button-prev
+   max-width: 24px
+   max-height: 24px
+   padding: 7px
+   box-sizing: content-box
+   background-color: rgba(255,255,255,1)
+   border: 1px solid rgba(0,0,0,0.1)
+   border-radius: 50%
+   top: 34% !important
+   &:hover
+      background-color: #f7f7f7
+
+.swiper__two
+   .swiper-button-next,
+   .swiper-button-prev
+      top: 42% !important
+
+.swiper-button-next
+   right: 26% !important
+
+.swiper-button-disabled
+   display: none !important
+
+.swiper-button-next:after,
+.swiper-button-prev:after
+   font-size: 20px !important
+   color: #000
+
+.swiper-slide
+   width: 70% !important
+   opacity: .5
+
+.swiper-slide-active
+   opacity: 1 !important
+
+.swiper-pagination
+   position: unset !important
+   transform: unset !important
+   margin-top: 64px
+   max-width: max-content
+   margin-right: auto
+   margin-left: auto
+   border-radius: 16px
+   padding: 4px 8px
+   border: 1px solid rgba(0,0,0,0.1)
+   box-sizing: border-box
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+   background-color: #000
+
+.gallery__kivi
+   position: relative
+   overflow: hidden
+   width: 100%
+   max-width: 900px
+   img
+      &:nth-of-type(1)
+         position: absolute
+
+.dragger
+   position: absolute
+   bottom: 50%
+   right: 50%
+   transform: translate(50%, 50%)
+   img
+      min-width: 156px
+      position: absolute
+      z-index: 10
+      right: 50%
+      bottom: 50%
+      transform: translate(50%, 50%)
+   &::before,
+   &::after
+      content: ""
+      display: block
+      position: absolute
+      width: 2px
+      height: 9999px
+      box-shadow: 0 3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5)
+      right: 50%
+      bottom: 50%
+      z-index: 2
+      background: white
+   &::after
+      top: 50%
+
+.clipped
+   clip-path: inset(0px 50% 0px 0px)
+
+.samsung__picture__title
+   font-size: clamp(26px, 4vw, 60px)
+   font-weight: bold
+   margin-bottom: 64px
+   padding: 88px 88px 0
+
+.samsung__picture__cont
+   margin-top: 40px
+   max-width: 900px
+
+.samsung__picture__img
+   overflow: hidden
+   img
+      margin: 0
+   video
+      margin-bottom: -2px
+
+.samsung__picture__img__videos
+   position: relative
+
+.videos__thumb
+   position: absolute
+   top: 80px
+   width: 96px
+   height: 48px
+   right: 55%
+   transform: translateX(50%)
+   &:hover
+      cursor: pointer
+      .videos__thumb__btn
+         background-color: #eee
+
+.videos__thumb__track
+   height: 42px
+   border: 0
+   background: #313131
+   border-radius: 21px
+
+.videos__thumb__wrap
+   width: 48px
+   height: 48px
+   max-height: 48px
+   position: absolute
+   bottom: 54%
+   // bottom: 54%
+   transform: translateY(50%)
+
+.videos__thumb__btn
+   height: 100%
+   border: 2px solid #313131
+   background-color: #fff
+   border-radius: 50%
+   box-sizing: border-box
+
+.videos__thumb__active
+   .videos__thumb__btn
+      transform: translate(100%)
+      border-color: #006bea
+   .videos__thumb__track
+      background: #006bea
+
+//design
+
+.design__video
+   padding: 0 88px
+
+.design
+   .samsung__picture__cont
+      padding: 0 88px
+
+//media*****************************************************
+
+@media (max-width: 1441px)
+   .sound .light__bg
+      top: -17%
+
+@media (max-width: 1341px)
+   .swiper-button-next
+      right: 20.5% !important
+
+@media (max-width: 1201px)
+   .samsung .container
+      width: 960px
+      padding: 0 15px
+
+   .innovation__abs
+      top: 1em
+      left: 32px
+
+   .samsung__anchors
+      padding-right: 0
+      padding-left: 0
+
+   .samsung__anchors__grid
+      gap: 0 15px
+   .samsung__anchors__row
+      padding: 15px
+   .samsung__anchors__i
+      margin-right: 10px
+      img
+         min-width: 40px
+         max-width: 40px
+   .samsung__anchors__title
+      margin-bottom: 10px
+   .samsung__anchors__txt
+      font-size: 12px
+
+   .light__cont
+      padding: 2em 0
+
+   .samsung__picture__title
+      padding: 2em 0 0 50px
+      margin-bottom: 1em
+
+   .swiper-wrapper
+      padding-left: 50px
+
+   .swiper
+      .swiper-button-next
+         right: 19.5% !important
+      .swiper-button-prev
+         left: 0%
+
+   .swiper__two
+      .swiper-button-next
+         right: 21.5% !important
+      .swiper-button-prev
+         left: 3%
+
+   .design__video
+      padding: 0 50px
+   .design .samsung__picture__cont
+      padding: 0 50px
+
+   .samsung
+      padding-bottom: 1em
+
+   .videos__thumb
+      top: 55px
+      right: 50%
+
+@media (max-width: 991px)
+   .samsung .container
+      width: 720px
+
+   .hide__mob
+      display: none !important
+   .show__mob
+      display: block !important
+
+   .innovation__abs
+      left: 15px
+
+   .samsung__anchors
+      padding-bottom: 0
+   .samsung__anchors__grid
+      grid-template-columns: repeat(1, 1fr)
+      grid-template-rows: repeat(4, 1fr)
+      gap: 10px 0
+
+   #light
+      background-color: #000
+      .light__bg
+         display: none
+      .light__video
+         video
+            min-width: 130%
+            margin-left: -20%
+
+   #cpu
+      .light__video
+         video
+            min-width: 140%
+            margin-left: -20%
+
+   .samsung__txt
+      font-weight: normal
+      font-size: 14px
+
+   .hdr__range
+      height: 42vw
+      padding: 1.5em 1em
+   .knob-handle
+      width: 42px
+      height: 42px
+   .knob-handle__arrows
+      height: 42px
+      img
+         max-width: 24px
+   .hdr__drag__nav__txt
+      font-size: 14px
+
+   #sound
+      background-color: #000
+      .light__bg
+         display: none
+
+   .samsung__picture__title,
+   .swiper-wrapper
+      padding-left: 0
+   .swiper-button-next,
+   .swiper-button-prev
+      display: none !important
+   .swiper-slide
+      width: 88% !important
+   .swiper-pagination
+      margin-top: 1em
+   .dragger img
+      min-width: 100px
+
+   .videos__thumb
+      width: max-content
+      height: auto
+      top: 30px
+      right: 50%
+   .videos__thumb__track
+      height: 5.83333333vw
+      width: 13vw
+      border-radius: 5.83333333vw
+   .videos__thumb__wrap
+      height: 6.66666667vw
+      max-height: 6.66666667vw
+   .videos__thumb__btn
+      width: 6.66666667vw
+      height: 6.66666667vw
+
+   .design__video,
+   .design .samsung__picture__cont
+      padding: 0
+   .design__video video
+      min-width: 150%
+      margin-left: -25%
+
+@media (max-width: 767px)
+   .samsung .container
+      width: 540px
+
+@media (max-width: 576px)
+   .samsung .container
+      width: 100%
+      box-sizing: border-box

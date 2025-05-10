@@ -1,0 +1,763 @@
+//default styles
+
+// body
+//     margin: 0
+
+.poco
+    width: 100%
+    max-width: 1920px
+    margin: 0 auto
+    height: auto
+    display: block
+    box-sizing: border-box
+    overflow: hidden
+    color: #fff
+    img
+        margin: 0 auto
+        opacity: 1 !important
+        max-width: 100%
+        display: block
+        height: auto
+        &:hover
+            opacity: 1 !important
+    div
+        line-height: normal
+
+.features-desc__text
+    img
+        margin-bottom: 0rem
+
+//end default styles
+
+.poco .container
+    width: 100%
+    max-width: 100%
+    margin: 0 auto
+
+.poco__subtitle
+    font-size: clamp(22px, 3vw, 36px)
+    font-weight: bold
+    margin-bottom: 1rem
+    b
+        color: #ffcb05
+.poco__title
+    font-size: clamp(28px, 3vw, 52px)
+    font-weight: bold
+    margin-bottom: 1rem
+    b
+        color: #ffcb05
+.poco__txt
+    font-size: clamp(15px, 1.2vw, 20px)
+
+//position
+
+.abs__center
+    position: absolute
+    right: 50%
+    bottom: 50%
+    transform: translate(50%, 50%)
+.abs__hor__center
+    position: absolute
+    right: 50%
+    transform: translateX(50%)
+
+//container *__cont
+
+.poco [class*="__cont"]
+    width: 100%
+    max-width: 1300px
+
+//super
+
+.super
+    position: relative
+    .poco__title
+        margin-bottom: 0
+
+.super__cont
+    bottom: 50%
+    right: 50%
+    transform: translate(50%, 50%)
+
+//cpu
+
+.cpu
+    position: relative
+    .poco__title
+        max-width: 700px
+
+.cpu__cont
+    top: 15%
+
+.cpu__right
+    width: 100%
+    max-width: 1300px
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+
+.cpu__right__panel
+    background: url("https://cdn.comfy.ua/media/x/img3/2496864/panel.png") no-repeat center / contain
+    min-width: 500px
+    min-height: 150px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &:first-of-type
+        margin-bottom: 4em
+
+.cpu__right__panel .poco__subtitle
+    display: flex
+    align-items: center
+    &::after
+        content: ""
+        display: block
+        width: 25px
+        height: 28px
+        background: url("https://cdn.comfy.ua/media/x/img3/2496864/arrow.svg") no-repeat center / contain
+        margin-left: 0.3em
+
+.cpu__panel__two
+    display: flex
+    align-items: center
+    width: 100%
+    max-width: 1100px
+    bottom: 0
+    background: url("https://cdn.comfy.ua/media/x/img3/2496864/panel2.png") no-repeat center / contain
+    padding: 0em 4em
+    min-height: 500px
+    box-sizing: border-box
+    .poco__title
+        min-width: 600px !important
+
+//cooling
+
+.cooling
+    position: relative
+
+.cooling__cont
+    top: 15%
+
+//storage
+
+.storage
+    position: relative
+
+.storage__cont
+    display: flex
+    top: 15%
+    .poco__title
+        flex: 1
+
+.storage__cal
+    padding-left: 10em
+    flex: 2
+    margin-top: 1rem
+
+.storage__row
+    display: flex
+    justify-content: space-between
+    margin-top: 2em
+    >div
+        flex: 1
+        max-width: 40%
+
+.storage__line
+    background-color: #ffcb05
+    border-color: #ffcb05
+    margin: .5em 0
+    max-width: 2px !important
+
+//ram
+
+.ram
+    position: relative
+
+.ram__cont
+    top: 15%
+
+.ram__img
+    img
+        &:first-of-type
+            bottom: 20%
+
+//camera
+
+.camera
+    position: relative
+
+.camera__cont__wrap
+    max-width: 800px !important
+
+.camera__grid
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-areas: ".." "."
+    gap: 6em 0
+    margin-top: 10em
+    >div
+        display: flex
+
+.camera__grid__img
+    margin-right: 1em
+
+//stability
+
+.stability
+    position: relative
+
+.stability__cont
+    top: 15%
+
+//colored
+
+.colored
+    position: relative
+
+.colored__row
+    display: flex
+    margin-top: 4em
+
+.colored__row__img
+    &:first-of-type
+        margin-right: 4em
+
+//film
+
+.film
+    background: url("https://cdn.comfy.ua/media/x/img3/2496864/bg1.jpg") no-repeat center top / cover
+    padding: 4em 0
+
+.film__cont
+    margin: 0 auto
+
+.film__slider
+    max-width: 1300px !important
+    overflow: hidden
+    margin-top: 4em
+    .swiper-pagination
+        position: unset
+        display: flex
+        justify-content: center
+        max-width: 500px
+        margin: 4em auto 0
+    .swiper-pagination-bullet
+        flex: 1
+        border-radius: unset
+        background-color: #909090
+        height: 6px
+        margin: 0 .4em !important
+    .swiper-pagination-bullet-active
+        background-color: #ffcb05
+    .swiper-slide
+        position: relative
+
+.swiper__txt
+    position: absolute
+    bottom: 50%
+    transform: translateY(50%)
+    right: 1em
+    max-width: 320px
+
+//amoled
+
+.amoled
+    background-color: #000
+    padding-top: 4em
+
+.amoled__cont
+    margin: 0 auto
+
+//sun
+
+.sun
+    position: relative
+    color: #000
+
+.sun__cont
+    top: 15%
+
+.sun__cont__wrap
+    max-width: 600px !important
+    margin: 0 0 0 auto
+
+//deep
+
+.deep
+    background: url("https://cdn.comfy.ua/media/x/img3/2496864/bg2.jpg") no-repeat center bottom / cover
+    padding: 4em 0
+    .colored__cont
+        margin: 0 auto
+    .colored__row__img
+        position: relative
+
+.colored__row__txt
+    font-size: clamp(18px, 1.5vw, 28px)
+    font-weight: bold
+    position: absolute
+    top: 15%
+    left: 10%
+
+//hdr
+
+.hdr
+    background: url("https://cdn.comfy.ua/media/x/img3/2496864/bg3.jpg") no-repeat center top / cover
+
+.hdr__row
+    display: flex
+    margin-top: 6em
+
+.hdr__img
+    &:first-of-type
+        margin-right: 4em
+
+//game
+
+.game
+    position: relative
+
+.game__grid
+    margin-top: 4em
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-areas: ".." ".."
+    gap: 4em 4em
+    max-width: max-content
+    .poco__txt
+        max-width: 200px
+
+//brightness
+
+.brightness
+    position: relative
+
+.brightness__cont
+    top: 15%
+
+.brightness__cont__wrap
+    max-width: 600px !important
+
+.brightness__cal
+    bottom: 16%
+    width: 100%
+    max-width: 1300px
+    .poco__subtitle
+        max-width: 600px
+        &:first-of-type
+            padding-bottom: .5em
+
+//design
+
+.design
+    position: relative
+
+.design__cont
+    top: 15%
+
+//battery
+
+.battery
+    background-color: #000
+    padding-top: 4em
+
+.battery__cont
+    margin: 0 auto
+
+.battery__row
+    display: flex
+    margin-top: 4em
+
+.battery__item
+    flex: 1
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    .poco__subtitle
+        margin-bottom: 0
+    &:nth-of-type(n+2)
+        padding-left: 4em
+    &::before
+        content: ""
+        display: block
+        max-width: 100%
+        width: 134px
+        height: 140px
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain
+        background-image: url("https://cdn.comfy.ua/media/x/img3/2496864/i4.svg")
+        margin-right: .5em
+    &:nth-of-type(2)
+        &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img3/2496864/i5.svg")
+    &:nth-of-type(3)
+        &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img3/2496864/i6.svg")
+    &:nth-of-type(4)
+        &::before
+            background-image: url("https://cdn.comfy.ua/media/x/img3/2496864/i5.svg")
+
+//lifeBattery
+
+.lifeBattery
+    position: relative
+
+.lifeBattery__cont
+    top: 15%
+
+.lifeBattery__cont__wrap
+    max-width: 500px !important
+    margin: 0 0 0 auto
+
+//func
+
+.func
+    background-color: #000
+    padding: 4em 0
+
+.func__grid
+    display: grid
+    grid-template-rows: 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-areas: "cal1 cal1 cal1 cal2" "cal3 cal4 cal5 cal6"
+    gap: 1em 1em
+    max-width: 1300px
+    margin: 0 auto
+    .cal1
+        grid-area: cal1
+        .func__txt
+            top: 25%
+            left: 2em
+    .cal2
+        grid-area: cal2
+    .cal3
+        grid-area: cal3
+    .cal4
+        grid-area: cal4
+    .cal5
+        grid-area: cal5
+    .cal6
+        grid-area: cal6
+    >div
+        position: relative
+        &:nth-of-type(n+2)
+            .func__txt
+                bottom: 15%
+                right: 50%
+                transform: translateX(50%)
+                text-align: center
+        &:nth-of-type(n+4)
+            .func__txt
+                bottom: 30%
+
+.func__txt
+    position: absolute
+    font-weight: bold
+    font-size: clamp(14px, 1.5vw, 24px)
+    z-index: 1
+
+//poco__note
+
+.poco__note
+    background-color: #000
+    padding: 4em 0
+    .poco__txt
+        text-align: center
+
+//media*****************************************************
+
+@media (max-width: 1441px)
+    .ram__img
+        img
+            &:nth-of-type(1)
+                max-width: 60%
+
+    .storage__cont
+        top: 10%
+    .storage__cal
+        padding-left: 5em
+
+@media (max-width: 1201px) and (min-width: 1024px)
+    .swiper__txt
+        max-width: 220px
+
+@media (max-width: 1201px)
+    .poco .container
+        width: 960px
+        padding: 0 15px
+
+    .poco [class*=__cont]
+        max-width: 960px
+
+    .cpu__cont
+        top: 10%
+    .cpu__right__panel
+        min-width: 360px
+    .cpu__right
+        max-width: 960px
+    .cpu__right__panel:first-of-type
+        margin-bottom: 0
+    .cpu__panel__two
+        max-width: 960px
+        min-height: unset
+        padding: 8em 2em 4em 2em
+        background-size: cover
+        background-position: top
+        border-bottom: solid 2px #ffcb05
+    .cpu__panel__two .poco__title
+        min-width: 300px !important
+
+    .camera__grid
+        margin-top: 4em
+    .camera__cont__wrap
+        max-width: 600px !important
+
+    .stability__cont
+        top: 10%
+
+    .sun__cont__wrap
+        max-width: 500px !important
+
+    .brightness__cal
+        max-width: 960px
+
+    .battery__row
+        flex-wrap: wrap
+        max-width: 70%
+        margin-right: auto
+        margin-left: auto
+    .battery__item
+        min-width: 50%
+        max-width: 50%
+    .battery__item:nth-of-type(n+2)
+        padding-left: 0
+    .battery__item:nth-of-type(n+3)
+        padding-top: 2em
+
+    .lifeBattery__cont__wrap
+        max-width: 400px !important
+
+    .storage__row
+        margin-top: 1em
+    .storage__cont
+        top: 5%
+
+@media (max-width: 991px)
+    .poco .container
+        width: 720px
+
+    .abs__center,
+    .abs__hor__center
+        position: unset
+        transform: unset
+        right: unset
+        bottom: unset
+
+    .super
+        background-color: #0a192c
+    .super__cont
+        padding: 1em 0
+    .super__img img
+        min-width: 150%
+        margin-left: -50%
+
+    .cpu
+        background-color: #121a27
+        padding: 1em 0 0 0
+    .cpu__right
+        align-items: center
+        margin-top: 2em
+        margin-bottom: -50%
+        position: relative
+    .cpu__img
+        overflow: hidden
+        img
+            min-width: 200%
+            margin-left: -22%
+            margin-bottom: -60%
+    .cpu__panel__two
+        padding: 0
+        display: block
+        background: unset
+        border: unset
+        padding-bottom: 1em
+
+    .cooling
+        background-color: #19283b
+        padding: 1em 0 0 0
+    .cooling__img img
+        min-width: 150%
+        margin-left: -25%
+
+    .storage
+        background-color: #07101f
+        padding-top: 1em
+    .storage__cont
+        display: block
+        .poco__txt
+            padding-left: 0
+    .storage__img
+        overflow: hidden
+        img
+            min-width: 120%
+            margin-left: -10%
+            margin-top: -20%
+    .storage__cal
+        padding-left: 0
+
+    .ram
+        background-color: #182130
+        padding-top: 1em
+    .ram__img
+        overflow: hidden
+    .ram__img img:nth-of-type(1)
+        position: absolute
+        right: 50%
+        transform: translateX(50%)
+        bottom: 10%
+    .ram__img img:nth-of-type(2)
+        margin-top: -15%
+
+    .camera
+        background-color: #1a1b1f
+        padding-top: 1em
+    .camera__grid
+        gap: 2em 2em
+    .camera__grid>div>div
+        flex: 1
+    .camera__img img
+        min-width: 150%
+        margin-left: -50%
+
+    .stability
+        background-color: #07101f
+        padding-top: 1em
+    .stability__img
+        overflow: hidden
+        img
+            min-width: 140%
+            margin-left: -20%
+            margin-top: -20%
+
+    .focus
+        background-color: #141d2c
+
+    .colored
+        background-color: #323e4c
+        padding: 1em 0
+    .colored .colored__img
+        display: none
+    .colored__row__img:first-of-type
+        margin-right: 1em
+
+    .film
+        padding: 1em 0
+    .film__slider
+        margin-top: 2em
+    .film__slider .swiper-pagination
+        margin-top: 1em
+    .film__slider .swiper-slide
+        overflow: hidden
+        img
+            min-width: 140%
+            margin: -2px
+    .swiper__txt
+        text-shadow: 4px 2px 9px black
+        right: 50%
+        transform: translate(50%, 50%)
+        width: 100%
+
+    .amoled
+        padding-top: 1em
+
+    .sun
+        padding-top: 1em
+        background-color: #dce1ca
+    .sun__img
+        padding-top: 1em
+        img
+            min-width: 140%
+
+    .hdr__row
+        margin-top: 2em
+    .colored__row
+        margin-top: 2em
+
+    .game,
+    .brightness
+        background-color: #000
+        padding-top: 1em
+    .game__grid
+        margin-top: 2em
+        margin-bottom: 1em
+        gap: 1em 1em
+    .game__img img,
+    .brightness__img img
+        min-width: 150%
+        margin-left: -50%
+    .brightness__cal
+        margin-top: 1em
+
+    .design
+        background-color: #0d1114
+        padding-top: 1em
+    .design__img
+        overflow: hidden
+        img
+            margin-top: -20%
+            min-width: 130%
+            margin-left: -15%
+
+    .battery
+        padding-top: 1em
+    .battery__row
+        margin-top: 2em
+        max-width: 100%
+    .battery__item
+        padding: 0 1em !important
+        box-sizing: border-box
+        display: block
+        text-align: center
+    .battery__item:nth-of-type(n+3)
+        padding-top: 1em !important
+    .battery__item::before
+        margin: 0 auto
+
+    .lifeBattery
+        background-color: #000
+        padding-top: 1em
+    .lifeBattery__img
+        margin-top: 1em
+        img
+            min-width: 150%
+
+    .func
+        padding: 2em 0
+    .func__grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        grid-template-rows: auto auto auto auto
+        grid-template-areas: "cal1 cal1 cal1 cal1" "cal2 cal2 cal3 cal3" "cal4 cal4 cal5 cal5" "cal6 cal6 cal7 cal7"
+    .func__grid .cal1 .func__txt
+        left: 1em
+    .func__grid>div:nth-of-type(n+2) .func__txt
+        width: 100%
+        padding: 0 1em
+        box-sizing: border-box
+
+    .poco__note
+        padding: 1em 0
+
+@media (max-width: 767px)
+    .poco .container
+        width: 540px
+
+@media (max-width: 576px)
+    .poco .container
+        width: 100%
+        box-sizing: border-box
+
+@media (max-width: 321px)
+    .swiper__txt
+        padding: 0 1em
+        box-sizing: border-box
