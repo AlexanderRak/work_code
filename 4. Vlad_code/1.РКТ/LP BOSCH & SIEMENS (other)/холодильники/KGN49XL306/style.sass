@@ -1,0 +1,219 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-bosch-kgn49xl306__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-bosch-kgn49xl306
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: .5em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//bosch__color
+
+.bosch__color
+   position: relative
+   color: #fff
+
+.bosch__color__abs
+   position: absolute
+   width: 100%
+   right: 50%
+   bottom: 50%
+   transform: translate(50%, 50%)
+   padding: 0 1em
+   box-sizing: border-box
+
+.bosch__color__title
+   font-size: clamp(20px, 2vw, 32px)
+   margin-bottom: 0.5em
+
+.bosch__color__sub
+   font-size: clamp(18px, 2vw, 26px)
+
+.bosch__color__title,
+.bosch__color__sub
+   line-height: normal
+   font-weight: bold
+   text-align: center
+
+//bosch__block
+
+.bosch__block
+   padding: 2em
+   .bosch__row__img
+      width: 100%
+      img
+         max-height: 600px
+
+.bosch__row__two,
+.bosch__row
+   display: flex
+   gap: 2em
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.bosch__row__two
+   align-items: flex-start
+
+.bosch__row
+   padding-top: 2em
+   &:nth-of-type(odd)
+      flex-direction: row-reverse
+      align-items: flex-end
+      // margin-top: -10%
+   .bosch__row__cont
+      flex-basis: 60%
+      p
+         &:nth-of-type(n+2)
+            font-size: 12px !important
+            margin-top: 0.5em !important
+   .bosch__row__img
+      flex-basis: 40%
+
+.bosch__grid
+
+   display: flex
+   flex-wrap: wrap
+   gap: 1em
+   margin-top: 2em
+   width: max-content
+   max-width: 500px
+   justify-content: center
+   >div
+      flex-basis: calc(100% / 6 - 1em)
+
+.bosch__note
+   font-size: 12px !important
+   margin-top: 1em !important
+
+.bosch__reverse
+   flex-direction: row-reverse
+
+.bosch__block__logo
+   width: max(7vw, 90px)
+   box-sizing: content-box
+   margin: 1em 1em 0 auto
+
+.bosch__txt
+   margin: 1em 0
+   p
+      text-align: center !important
+
+.bosch__row__top
+   margin-top: -15%
+
+.bosch__row__center
+   align-items: center
+
+//*********************************media*************************
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-bosch-kgn49xl306
+   //    display: block
+
+   .bosch__block
+      padding: 1em
+
+   .bosch__row__two,
+   .bosch__row
+      flex-direction: column !important
+      gap: 1em
+
+   .bosch__grid
+      gap: 1em 1em
+      margin-top: 1em
+      width: unset
+      >div
+         flex-basis: calc(100% / 3 - 1em)
+
+   .bosch__row:nth-of-type(odd)
+      margin-top: unset
+
+   .bosch__block__title h2
+      text-align: center !important
+   #rkt-bosch-kgn49xl306
+      h3,p
+         text-align: center
+
+// @media (min-width: $bp-tablet) and (max-width: 1023.9px)
+//    #rkt-bosch-kgn49xl306
+//       display: block
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   .bosch__row__two,
+   .bosch__row
+      flex-direction: column !important
+      gap: 1em
+   .bosch__row:nth-of-type(odd)
+      margin-top: unset
