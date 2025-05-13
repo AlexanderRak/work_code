@@ -1,0 +1,689 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-slider-component@latest/dist/vue-slider-component.umd.min.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vue-slider-component@latest/theme/default.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
+
+<style>
+
+</style>
+
+<div id="lego-wrap">
+	<div class="lego-header">
+		<div class="lego-header__banner" style="background-image: url(https://cdn.comfy.ua/media/x/img5/banner-lego2025_ru.png)"></div>
+		<div class="lego-header__banner-mob">
+			<img src="https://cdn.comfy.ua/media/x/img5/banner-lego2025_mob_ru.png" alt="">
+		</div>
+	</div>
+
+	<div class="lego-search_hdr">
+		<div class="lego-search__bgrd">
+			<div class="lego-search__btn">ПОИСК ПОДАРКОВ</div>
+		</div>
+	</div>
+
+	<div id="legoapp">
+		<div class="lego-tooltip-wrap">
+			<div class="lego-tooltip__grid">
+				<div class="lego-tooltip__grid-item --color1">
+					<div class="lego-tooltip__item-content --content-name">Возраст</div>
+					<div class="lego-tooltip__item-content ----content-tooltip">
+						<vue-slider class="slider__one" v-model="value1" v-bind="options" :tooltip="'always'" :tooltip-placement="'top'"></vue-slider>
+					</div>
+				</div>
+				<div class="lego-tooltip__grid-item --color2">
+					<div class="lego-tooltip__item-content --content-name">Цена</div>
+					<div class="lego-tooltip__item-content ----content-tooltip">
+						<vue-slider class="slider__two" v-model="value2" v-bind="options2" :tooltip="'always'" :tooltip-placement="'top'"></vue-slider>
+					</div>
+				</div>
+			</div>
+		</div>
+		<lego-tabs></lego-tabs>
+		<div class="lego-search-link">
+			<div class="lego-search-link__btn" @click="createUrl" :class="{ btnNotActive: isActiveBtn }">
+				поиск
+			</div>
+		</div>
+	</div>
+
+	<div class="lego-search" style="background-image: url(https://cdn.comfy.ua/media/x/img5/img1-lego2025.png)"></div>
+	<div class="lego-age-redesign">
+		<a href="https://comfy.ua/lego/vozrast_igrushek__1,3/" class="lego-age-redesign__item">
+			<div class="lego-age-redesign__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img2-lego2025_ru.png" alt="">
+			</div>
+		</a>
+		<a href="https://comfy.ua/lego/vozrast_igrushek__4,6/" class="lego-age-redesign__item">
+			<div class="lego-age-redesign__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img3-lego2025_ru.png" alt="">
+			</div>
+		</a>
+		<a href="https://comfy.ua/lego/vozrast_igrushek__6,9/" class="lego-age-redesign__item">
+			<div class="lego-age-redesign__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img4-lego2025_ru.png" alt="">
+			</div>
+		</a>
+		<a href="https://comfy.ua/lego/vozrast_igrushek__9,13/" class="lego-age-redesign__item">
+			<div class="lego-age-redesign__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img5-lego2025_ru.png" alt="">
+			</div>
+		</a>
+		<a href="https://comfy.ua/lego/vozrast_igrushek__13,18/" class="lego-age-redesign__item">
+			<div class="lego-age-redesign__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img6-lego2025_ru.png" alt="">
+			</div>
+		</a>
+		<a href="https://comfy.ua/lego-adults/" class="lego-age-redesign__item">
+			<div class="lego-age-redesign__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img7-lego2025_ru.png" alt="">
+			</div>
+		</a>
+		<a href="https://comfy.ua/lego/" class="lego-age-redesign__item">
+			<div class="lego-age-redesign__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img8-lego2025_ru.png" alt="">
+			</div>
+		</a>
+	</div>
+	<div class="lego-search" style="background-image: url(https://cdn.comfy.ua/media/x/img5/img9-lego2025.png)"></div>
+	<div class="lego-temp-grid">
+		<a href="https://comfy.ua/lego/serija_lego__lego-city/" class="lego-temp-grid__item">
+			<div class="lego-temp-grid__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img10-lego2025_ru.png" alt="">
+			</div>
+		</a>
+		<a href="https://comfy.ua/lego/serija_lego__lego-classic/" class="lego-temp-grid__item">
+			<div class="lego-temp-grid__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img11-lego2025_ru.png" alt="">
+			</div>
+		</a>
+		<a href="https://comfy.ua/lego/serija_lego__lego-speed-champions/" class="lego-temp-grid__item">
+			<div class="lego-temp-grid__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img12-lego2025_ru.png" alt="">
+			</div>
+		</a>
+		<a href="https://comfy.ua/lego/serija_lego__lego-disney--lego-disney-princess--lego-frozen-2/" class="lego-temp-grid__item">
+			<div class="lego-temp-grid__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img13-lego2025_ru.png" alt="">
+			</div>
+		</a>
+	</div>
+	<div class="lego-search" style="background-image: url(https://cdn.comfy.ua/media/x/img5/img14-lego2025.png)"></div>
+	<div class="lego-temp-grid">
+		<a href="https://comfy.ua/lego/price_from__100__price_to__250/" class="lego-temp-grid__item">
+			<div class="lego-temp-grid__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img15-lego2025.png" alt="">
+			</div>
+		</a>
+		<a href="https://comfy.ua/lego/price_from__250__price_to__500/" class="lego-temp-grid__item">
+			<div class="lego-temp-grid__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img16-lego2025.png" alt="">
+			</div>
+		</a>
+		<a href="https://comfy.ua/lego/price_from__500__price_to__1000/" class="lego-temp-grid__item">
+			<div class="lego-temp-grid__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img17-lego2025.png" alt="">
+			</div>
+		</a>
+		<a href="https://comfy.ua/lego/price_from__1000__price_to__31999/" class="lego-temp-grid__item">
+			<div class="lego-temp-grid__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img18-lego2025.png" alt="">
+			</div>
+		</a>
+	</div>
+	<div class="lego-search" style="background-image: url(https://cdn.comfy.ua/media/x/img5/img19-lego2025.png)"></div>
+	<div class="lego-temp-grid">
+		<a href="https://comfy.ua/lego/interesi_lego__arhitektura/" class="lego-temp-grid__item">
+			<div class="lego-temp-grid__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img20-lego2025_ru.png" alt="">
+			</div>
+		</a>
+		<a href="https://comfy.ua/lego/interesi_lego__zvjozdnye-vojny--garri-potter--supergeroi--castle--stem/" class="lego-temp-grid__item">
+			<div class="lego-temp-grid__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img21-lego2025_ru.png" alt="">
+			</div>
+		</a>
+		<a href="https://comfy.ua/lego/interesi_lego__stroitelstvo--iskusstvo/" class="lego-temp-grid__item">
+			<div class="lego-temp-grid__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img22-lego2025_ru.png" alt="">
+			</div>
+		</a>
+		<a href="https://comfy.ua/lego/serija_lego__lego-technic--lego-minecraft--lego-creator--lego-icons--lego-ideas--lego-botanicals--lego-iconic/" class="lego-temp-grid__item">
+			<div class="lego-temp-grid__img">
+				<img src="https://cdn.comfy.ua/media/x/img5/img23-lego2025_ru.png" alt="">
+			</div>
+		</a>
+	</div>
+	<div class="lego-age">
+		<div class="lego-age__container">
+			<div class="lego-age__btn btn_style">Игрушки по возрастам</div>
+			<div class="lego-age__grid">
+				<a href="https://comfy.ua/lego/vozrast_igrushek__1,3/" class="lego-age__grid-item">
+					<div class="lego-age__elips-hover"></div>
+					<div class="lego-age__img">
+						<img src="https://cdn.comfy.ua/media/x/img2/lego/prod_1.png" alt="">
+					</div>
+				</a>
+				<a href="https://comfy.ua/lego/vozrast_igrushek__4,6/" class="lego-age__grid-item">
+					<div class="lego-age__elips-hover"></div>
+					<div class="lego-age__img">
+						<img src="https://cdn.comfy.ua/media/x/img2/lego/prod_2.png" alt="">
+					</div>
+				</a>
+				<a href="https://comfy.ua/lego/vozrast_igrushek__6,9/" class="lego-age__grid-item">
+					<div class="lego-age__elips-hover"></div>
+					<div class="lego-age__img">
+						<img src="https://cdn.comfy.ua/media/x/img2/lego/prod_3.png" alt="">
+					</div>
+				</a>
+				<a href="https://comfy.ua/lego/vozrast_igrushek__9,13/" class="lego-age__grid-item">
+					<div class="lego-age__elips-hover"></div>
+					<div class="lego-age__img">
+						<img src="https://cdn.comfy.ua/media/x/img2/lego/prod_4.png" alt="">
+					</div>
+				</a>
+				<a href="https://comfy.ua/lego/vozrast_igrushek__13,18/" class="lego-age__grid-item">
+					<div class="lego-age__elips-hover"></div>
+					<div class="lego-age__img">
+						<img src="https://cdn.comfy.ua/media/x/img2/lego/prod_5.png" alt="">
+					</div>
+				</a>
+				<a href="https://comfy.ua/lego-adults/" class="lego-age__grid-item">
+					<div class="lego-age__elips-hover"></div>
+					<div class="lego-age__img">
+						<img src="https://cdn.comfy.ua/media/x/img2/lego/prod_6.png" alt="">
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="lego-category-sale">
+		<div class="lego-category-sale__grid">
+			<a href="https://comfy.ua/new-lego/" class="lego-category-sale__grid-item">
+				<div class="lego-category-sale__img bgrd1">
+					<img src="https://cdn.comfy.ua/media/x/img2/lego/newimglego.png" alt="">
+				</div>
+				<div class="lego-category-sale__text bgrd1">
+					<h2>НОВИНКИ</h2>
+				</div>
+			</a>
+			<a href="https://comfy.ua/lego-adults/" class="lego-category-sale__grid-item">
+				<div class="lego-category-sale__img bgrd2">
+					<img src="https://cdn.comfy.ua/media/x/img2/lego/img10.svg" alt="">
+				</div>
+				<div class="lego-category-sale__text bgrd2">
+					<h2>Для взрослых фанатов</h2>
+				</div>
+			</a>
+			<a href="https://comfy.ua/lego/label_actions__9/" class="lego-category-sale__grid-item">
+				<div class="lego-category-sale__img bgrd3">
+					<img src="https://cdn.comfy.ua/media/x/img2/lego/img11.svg" alt="">
+				</div>
+				<div class="lego-category-sale__text bgrd3">
+					<h2>АКЦИИ</h2>
+				</div>
+			</a>
+			<a href="https://comfy.ua/lego/" class="lego-category-sale__grid-item">
+				<div class="lego-category-sale__img bgrd1">
+					<img src="https://cdn.comfy.ua/media/x/img2/lego/img12.svg" alt="">
+				</div>
+				<div class="lego-category-sale__text bgrd1">
+					<h2>Все наборы ЛЕГО</h2>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="lego-slider-banners">
+		<div class="swiper-container lego-wrap1">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide lego-slider-banners__item">
+					<a href="https://comfy.ua/lego/serija_lego__lego-friends/" class="lego-slider-banners__img-desk">
+						<picture>
+							<source srcset="https://cdn.comfy.ua/media/x/img5/lego1205_mob.jpg" media="(max-width: 480px)">
+							<img src="https://cdn.comfy.ua/media/x/img5/lego1205.jpg" alt="MDN">
+						</picture>
+					</a>
+				</div>
+				<div class="swiper-slide lego-slider-banners__item">
+					<a href="https://comfy.ua/lego/label_actions__9/" class="lego-slider-banners__img-desk">
+						<picture>
+							<source srcset="https://cdn.comfy.ua/media/x/img5/leog_bnr1_mob.jpg" media="(max-width: 480px)">
+							<img src="https://cdn.comfy.ua/media/x/img5/leog_bnr1.jpg" alt="MDN">
+						</picture>
+					</a>
+				</div>
+				<div class="swiper-slide lego-slider-banners__item">
+					<a href="https://comfy.ua/lego/vozrast_igrushek__9,18/" class="lego-slider-banners__img-desk">
+						<picture>
+							<source srcset="https://cdn.comfy.ua/media/x/brending-bannera/768x945_57.jpg" media="(max-width: 480px)">
+							<img src="https://cdn.comfy.ua/media/x/brending-bannera/1366x384_51.jpg" alt="MDN">
+						</picture>
+					</a>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+	</div>
+	<div class="lego-themed-toys">
+		<div class="lego-themed-toys__container">
+			<div class="lego-themed-toys__btn btn_style">Тематические игрушки</div>
+			<div class="lego-themed-toys__grid">
+				<a v-for="(item, index) in themedToys" :key="index" :href="item.link" class="lego-themed-toys__item" :style="{ display: index < visibleItems || showAll ? 'block' : 'none' }">
+					<div class="lego-themed-toys__img">
+						<img :src="item.img" alt="">
+					</div>
+					<div class="lego-themed-toys__text" v-html="item.text"></div>
+				</a>
+			</div>
+			<div id="showMoreButton" class="btn-clik btn_style" @click="toggleShowMore">
+				{{ showAll ? 'Показать меньше' : 'Показать ещё' }} <span :class="{ 'btn-clik__str': true, 'active-btn': showAll }"></span>
+			</div>
+		</div>
+	</div>
+	<div class="lego-category-prod">
+		<div class="swiper-container lego-wrap2 double-slide">
+			<div class="swiper-wrapper">
+				<a v-for="(item, index) in interests" :key="index" :href="item.link" class="swiper-slide lego-category-prod__item">
+					<div class="lego-category-prod__img">
+						<img :src="item.img" alt="">
+					</div>
+				</a>
+			</div>
+			<div class="swiper-pagination"></div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+	</div>
+	<div class="lego-footer">
+		<div class="lego-footer__grid">
+			<a href="https://comfy.ua/lego-adults/" class="lego-footer__item">
+				<div class="lego-footer__img">
+					<img src="https://cdn.comfy.ua/media/x/brending-bannera/675x337_2_.png" alt="">
+				</div>
+			</a>
+			<a href="https://www.lego.com/cdn/cs/set/assets/blt877d5aa92db6bd90/1HY25_UA.pdf" rel="nofollow" target="_blank" class="lego-footer__item">
+				<div class="lego-footer__img">
+					<img src="https://cdn.comfy.ua/media/x/brending-bannera/lego_cat_675x337_1_.png" alt="">
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="lego-footer-text">
+		<div class="lego-footer-text__container">
+			<div>LEGO, логотип LEGO, Міні-фігурка, DUPLO, логотип DUPLO, NINJAGO, логотип NINJAGO, логотип FRIENDS, логотип HIDDEN SIDE, логотип MINIFIGURES, MINDSTORMS та логотип MINDSTORMS є торговими марками the LEGO Group.</div>
+			<div>©2024 The LEGO Group. Усі права захищені.</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	Vue.component('lego-tabs', {
+		template: `
+		<div class="lego-tabs-wrap">
+			<div class="tab-content">
+				<div class="tabs">
+					<div v-for="(tab, index) in $parent.tabs" :key="index" @click="$parent.selectTab(index)" :class="['tab-button', 'tab-bgrd-' + index, { activetabs: $parent.activeTab === index }]">
+						<h2>{{ tab.title }}</h2>
+					</div>
+				</div>
+				<div class="tab-content">
+					<div v-for="(tab, index) in $parent.tabs" :key="index" :class="['tab-bgrd-' + index, { 'tab': true, 'active': $parent.activeTab === index }]">
+						<div class="tab-content__container" v-if="tab.id === 'tab1'">
+							<div class="swiper-container lego-wrap2 single-slide">
+								<div class="swiper-wrapper">
+									<label v-for="(item, index) in $parent.interests" :key="index" class="swiper-slide lego-category-prod__item radiolist">
+										<input type="radio" v-model="$parent.selectedValue" :value="item.value">
+										<div class="radiolist-label">
+											<div class="lego-category-prod__img">
+												<img :src="item.img" alt="">
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>
+						</div>
+						<div class="tab-content__container" v-else-if="tab.id === 'tab2'">
+							<div class="swiper-container lego-wrap3 single-slide">
+								<div class="swiper-wrapper">
+									<label v-for="(item, index) in $parent.series" :key="index" class="swiper-slide lego-category-prod__item radiolist">
+										<input type="radio" v-model="$parent.selectedValue2" :value="item.value">
+										<div class="radiolist-label">
+											<div class="lego-themed-toys__img">
+												<img :src="item.img" alt="">
+											</div>
+										</div>
+										<div class="lego-themed-toys__text" v-html="item.text"></div>
+									</label>
+								</div>
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	`
+	});
+
+	new Vue({
+		el: '#lego-wrap',
+		components: {
+			'vueSlider': window['vue-slider-component']
+		},
+		data() {
+			return {
+				activeTab: 0,
+				tabs: [
+					{ id: 'tab1', title: 'Интересы' },
+					{ id: 'tab2', title: 'Серия' }
+				],
+				value1: [1, 18],
+				value2: [0, 50000],
+				getPriceFrom: 0,
+				getPriceTo: 50000,
+				getYearFrom: 1,
+				getYearTo: 18,
+				selectedValue: null,
+				selectedValue2: null,
+				isActiveBtn: true,
+				visibleItems: 12,
+				showAll: false,
+				swipers: {}, // Хранилище экземпляров Swiper
+				interests: [
+					{ value: 'dinozavry--priroda--zhivotnye', img: 'https://cdn.comfy.ua/media/x/img5/interests_img1_ru.png', link: 'https://comfy.ua/lego/interesi_lego__dinozavry--priroda--zhivotnye/' },
+					{ value: 'avtomobili--transportnye-sredstva', img: 'https://cdn.comfy.ua/media/x/img5/interests_img2_ru.png', link: 'https://comfy.ua/lego/interesi_lego__avtomobili--transportnye-sredstva/' },
+					{ value: 'stroitelstvo--iskusstvo', img: 'https://cdn.comfy.ua/media/x/img5/interests_img3_ru.png', link: 'https://comfy.ua/lego/interesi_lego__stroitelstvo--iskusstvo/' },
+					{ value: 'kosmos', img: 'https://cdn.comfy.ua/media/x/img5/interests_img4_ru.png', link: 'https://comfy.ua/lego/interesi_lego__kosmos/' },
+					{ value: 'nindzja', img: 'https://cdn.comfy.ua/media/x/img5/interests_img5_ru.png', link: 'https://comfy.ua/lego/interesi_lego__nindzja/' },
+					{ value: 'igry', img: 'https://cdn.comfy.ua/media/x/img5/interests_img6_ru.png', link: 'https://comfy.ua/lego/interesi_lego__igry/' },
+					{ value: 'princessy', img: 'https://cdn.comfy.ua/media/x/img5/interests_img7_ru.png', link: 'https://comfy.ua/lego/interesi_lego__princessy/' },
+					{ value: 'geroi-iz-realnoj-zhizni--pozharnye-mashiny--policija--spasateli', img: 'https://cdn.comfy.ua/media/x/img5/interests_img8_ru.png', link: 'https://comfy.ua/lego/interesi_lego__geroi-iz-realnoj-zhizni--pozharnye-mashiny--policija--spasateli/' },
+					{ value: 'zvjozdnye-vojny--garri-potter--supergeroi--castle--stem', img: 'https://cdn.comfy.ua/media/x/img5/interests_img9_ru.png', link: 'https://comfy.ua/lego/interesi_lego__zvjozdnye-vojny--garri-potter--supergeroi--castle--stem/' },
+					{ value: 'sport', img: 'https://cdn.comfy.ua/media/x/img5/interests_img10_ru.png', link: 'https://comfy.ua/lego/interesi_lego__sport/' },
+					{ value: 'arhitektura', img: 'https://cdn.comfy.ua/media/x/img5/interests_img11_ru.png', link: 'https://comfy.ua/lego/interesi_lego__arhitektura/' },
+					{ value: 'zdanija--zamki', img: 'https://cdn.comfy.ua/media/x/img5/interests_img12_ru.png', link: 'https://comfy.ua/lego/interesi_lego__zdanija--zamki/' }
+				],
+				series: [
+					{ value: 'lego-city', img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_2.png', text: 'LEGO<sup>®</sup> City', link: 'https://comfy.ua/lego/serija_lego__lego-city/' },
+					{ value: 'lego-friends', img: 'https://cdn.comfy.ua/media/x/img2/lego/fr.png', text: 'LEGO<sup>®</sup> Friends', link: 'https://comfy.ua/lego/serija_lego__lego-friends/' },
+					{ value: 'lego-duplo', img: 'https://cdn.comfy.ua/media/x/img2/lego/dp.png', text: 'LEGO<sup>®</sup> DUPLO<sup>®</sup>', link: 'https://comfy.ua/lego/serija_lego__lego-duplo/' },
+					{ value: 'lego-technic', img: 'https://cdn.comfy.ua/media/x/img5/legi_technic.png', text: 'LEGO<sup>®</sup> Technic', link: 'https://comfy.ua/lego/serija_lego__lego-technic/' },
+					{ value: 'lego-animal-crossing', img: 'https://cdn.comfy.ua/media/x/img5/legi_animal_crossing.png', text: 'LEGO<sup>®</sup> Animal Crossing', link: 'https://comfy.ua/lego/serija_lego__lego-animal-crossing/' },
+					{ value: 'lego-dreamzzz', img: 'https://cdn.comfy.ua/media/x/img5/legi_dreams.png', text: 'LEGO<sup>®</sup> Dreamzzz', link: 'https://comfy.ua/lego/serija_lego__lego-dreamzzz/' },
+					{ value: 'lego-ninjago', img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_10.png', text: 'LEGO<sup>®</sup> NINJAGO<sup>®</sup>', link: 'https://comfy.ua/lego/serija_lego__lego-ninjago/' },
+					{ value: 'lego-super-mario', img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_7.png', text: 'LEGO<sup>®</sup> Super Mario<sup>™</sup>', link: 'https://comfy.ua/lego/serija_lego__lego-super-mario/' },
+					{ value: 'lego-minecraft', img: 'https://cdn.comfy.ua/media/x/img5/legi_minecraft.png', text: 'LEGO<sup>®</sup> Minecraft<sup>™</sup>', link: 'https://comfy.ua/lego/serija_lego__lego-minecraft/' },
+					{ value: 'lego-creator', img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_8.png', text: 'LEGO<sup>®</sup> Creator', link: 'https://comfy.ua/lego/serija_lego__lego-creator/' },
+					{ value: 'lego-classic', img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_9.png', text: 'LEGO<sup>®</sup> Classic', link: 'https://comfy.ua/lego/serija_lego__lego-classic/' },
+					{ value: 'lego-star-wars', img: 'https://cdn.comfy.ua/media/x/img5/legi_starwars.png', text: 'LEGO<sup>®</sup> Star Wars<sup>™</sup>', link: 'https://comfy.ua/lego/serija_lego__lego-star-wars/' },
+					{ value: 'lego-super-heroes', img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_11.png', text: 'LEGO<sup>®</sup> Super Heroes', link: 'https://comfy.ua/lego/serija_lego__lego-super-heroes/' },
+					{ value: 'lego-harry-potter', img: 'https://cdn.comfy.ua/media/x/img5/legi_harrypotter.png', text: 'LEGO<sup>®</sup> Harry Potter<sup>™</sup>', link: 'https://comfy.ua/lego/serija_lego__lego-harry-potter/' },
+					{ value: 'lego-architecture', img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_15.png', text: 'LEGO<sup>®</sup> Architecture', link: 'https://comfy.ua/lego/serija_lego__lego-architecture/' },
+					{ value: 'lego-icons', img: 'https://cdn.comfy.ua/media/x/img5/legi_icons.png', text: 'LEGO<sup>®</sup> Icons', link: 'https://comfy.ua/lego/serija_lego__lego-icons/' },
+					{ value: 'lego-art', img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_21.png', text: 'LEGO<sup>®</sup> Art', link: 'https://comfy.ua/lego/serija_lego__lego-art/' },
+					{ value: 'lego-speed-champions', img: 'https://cdn.comfy.ua/media/x/img5/legi_speedchampions.png', text: 'LEGO<sup>®</sup> Speed Champions', link: 'https://comfy.ua/lego/serija_lego__lego-speed-champions/' },
+					{ value: 'lego-disney-princess--lego-disney--lego-frozen-2', img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_13.png', text: 'LEGO<sup>®</sup> Disney<sup>™</sup>', link: 'https://comfy.ua/lego/serija_lego__lego-disney--lego-disney-princess--lego-frozen-2/' },
+					{ value: 'lego-jurassic-world', img: 'https://cdn.comfy.ua/media/x/img5/legi_jurassic_world.png', text: 'LEGO<sup>®</sup> Jurassic World<sup>™</sup>', link: 'https://comfy.ua/lego/serija_lego__lego-jurassic-world/' },
+					{ value: 'lego-dots', img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_17.png', text: 'LEGO<sup>®</sup> DOTS', link: 'https://comfy.ua/lego/serija_lego__lego-dots/' },
+					{ value: 'lego-ideas', img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_23.png', text: 'LEGO<sup>®</sup> Ideas', link: 'https://comfy.ua/lego/serija_lego__lego-ideas/' },
+					{ value: 'lego-gabbys-dollhouse', img: 'https://cdn.comfy.ua/media/x/img3/lego_gabbvdollhouse.png', text: 'LEGO<sup>®</sup> Gabby\'s Dollhouse', link: 'https://comfy.ua/lego/serija_lego__lego-gabbys-dollhouse/' },
+					{ value: 'lego-sonic-the-hedgehog', img: 'https://cdn.comfy.ua/media/x/img5/legi_sonic.png', text: 'LEGO<sup>®</sup> Sonic', link: 'https://comfy.ua/lego/serija_lego__lego-sonic-the-hedgehog/' },
+					{ value: 'lego-spidey', img: 'https://cdn.comfy.ua/media/x/img5/legi_spiderman.png', text: 'LEGO<sup>®</sup> Marvel Spidey', link: 'https://comfy.ua/lego/serija_lego__lego-spidey/' },
+					{ value: 'lego-minifigures', img: 'https://cdn.comfy.ua/media/x/img5/legi_minifigures.png', text: 'LEGO<sup>®</sup> Minifigures', link: 'https://comfy.ua/lego/serija_lego__lego-minifigures/' }
+				],
+				themedToys: [
+					{ img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_2.png', text: 'LEGO<sup>®</sup> City', link: 'https://comfy.ua/lego/serija_lego__lego-city/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img2/lego/fr.png', text: 'LEGO<sup>®</sup> Friends', link: 'https://comfy.ua/lego/serija_lego__lego-friends/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img2/lego/dp.png', text: 'LEGO<sup>®</sup> DUPLO<sup>®</sup>', link: 'https://comfy.ua/lego/serija_lego__lego-duplo/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img5/legi_technic.png', text: 'LEGO<sup>®</sup> Technic', link: 'https://comfy.ua/lego/serija_lego__lego-technic/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img5/legi_animal_crossing.png', text: 'LEGO<sup>®</sup> Animal Crossing', link: 'https://comfy.ua/lego/serija_lego__lego-animal-crossing/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img5/legi_dreams.png', text: 'LEGO<sup>®</sup> Dreamzzz', link: 'https://comfy.ua/lego/serija_lego__lego-dreamzzz/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_10.png', text: 'LEGO<sup>®</sup> NINJAGO<sup>®</sup>', link: 'https://comfy.ua/lego/serija_lego__lego-ninjago/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_7.png', text: 'LEGO<sup>®</sup> Super Mario<sup>™</sup>', link: 'https://comfy.ua/lego/serija_lego__lego-super-mario/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img5/legi_minecraft.png', text: 'LEGO<sup>®</sup> Minecraft<sup>™</sup>', link: 'https://comfy.ua/lego/serija_lego__lego-minecraft/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_8.png', text: 'LEGO<sup>®</sup> Creator', link: 'https://comfy.ua/lego/serija_lego__lego-creator/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_9.png', text: 'LEGO<sup>®</sup> Classic', link: 'https://comfy.ua/lego/serija_lego__lego-classic/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img5/legi_starwars.png', text: 'LEGO<sup>®</sup> Star Wars<sup>™</sup>', link: 'https://comfy.ua/lego/serija_lego__lego-star-wars/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_11.png', text: 'LEGO<sup>®</sup> Super Heroes', link: 'https://comfy.ua/lego/serija_lego__lego-super-heroes/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img5/legi_harrypotter.png', text: 'LEGO<sup>®</sup> Harry Potter<sup>™</sup>', link: 'https://comfy.ua/lego/serija_lego__lego-harry-potter/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_15.png', text: 'LEGO<sup>®</sup> Architecture', link: 'https://comfy.ua/lego/serija_lego__lego-architecture/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img5/legi_icons.png', text: 'LEGO<sup>®</sup> Icons', link: 'https://comfy.ua/lego/serija_lego__lego-icons/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_21.png', text: 'LEGO<sup>®</sup> Art', link: 'https://comfy.ua/lego/serija_lego__lego-art/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img5/legi_speedchampions.png', text: 'LEGO<sup>®</sup> Speed Champions', link: 'https://comfy.ua/lego/serija_lego__lego-speed-champions/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_13.png', text: 'LEGO<sup>®</sup> Disney<sup>™</sup>', link: 'https://comfy.ua/lego/serija_lego__lego-disney--lego-disney-princess--lego-frozen-2/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img5/legi_jurassic_world.png', text: 'LEGO<sup>®</sup> Jurassic World<sup>™</sup>', link: 'https://comfy.ua/lego/serija_lego__lego-jurassic-world/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_17.png', text: 'LEGO<sup>®</sup> DOTS', link: 'https://comfy.ua/lego/serija_lego__lego-dots/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img2/lego/img15_23.png', text: 'LEGO<sup>®</sup> Ideas', link: 'https://comfy.ua/lego/serija_lego__lego-ideas/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img3/lego_gabbvdollhouse.png', text: 'LEGO<sup>®</sup> Gabby\'s Dollhouse', link: 'https://comfy.ua/lego/serija_lego__lego-gabbys-dollhouse/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img5/legi_sonic.png', text: 'LEGO<sup>®</sup> Sonic', link: 'https://comfy.ua/lego/serija_lego__lego-sonic-the-hedgehog/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img5/legi_spiderman.png', text: 'LEGO<sup>®</sup> Marvel Spidey', link: 'https://comfy.ua/lego/serija_lego__lego-spidey/' },
+					{ img: 'https://cdn.comfy.ua/media/x/img5/legi_minifigures.png', text: 'LEGO<sup>®</sup> Minifigures', link: 'https://comfy.ua/lego/serija_lego__lego-minifigures/' }
+				],
+				options: {
+					dotSize: 50,
+					width: 'auto',
+					height: 20,
+					contained: true,
+					direction: 'ltr',
+					min: 1,
+					max: 18,
+					interval: 1,
+					disabled: false,
+					clickable: true,
+					duration: 0.5,
+					tooltip: 'active',
+					tooltipPlacement: 'center',
+					enableCross: true,
+					process: true
+				},
+				options2: {
+					dotSize: 50,
+					width: 'auto',
+					height: 20,
+					contained: true,
+					direction: 'ltr',
+					min: 0,
+					max: 50000,
+					interval: 100,
+					disabled: false,
+					clickable: true,
+					duration: 0.5,
+					tooltip: 'active',
+					tooltipPlacement: 'center',
+					tooltipFormatter: this.formatNumber,
+					enableCross: true,
+					process: true
+				}
+			};
+		},
+		mounted() {
+			this.initSwipers();
+		},
+		watch: {
+			selectedValue(val) {
+				this.isActiveBtn = !val && !this.selectedValue2;
+			},
+			selectedValue2(val) {
+				this.isActiveBtn = !val && !this.selectedValue;
+			},
+			activeTab() {
+				this.selectedValue = null;
+				this.selectedValue2 = null;
+				this.$nextTick(() => this.reinitSwipers());
+			}
+		},
+		methods: {
+			formatNumber(value) {
+				return value.toLocaleString('en-GB').replace(/,/g, ' ');
+			},
+			selectTab(index) {
+				this.activeTab = index;
+			},
+			toggleShowMore() {
+				this.showAll = !this.showAll;
+			},
+			createUrl() {
+				const { activeTab, value1, value2, selectedValue, selectedValue2, getPriceFrom, getPriceTo, getYearFrom, getYearTo } = this;
+				const [priceFrom, priceTo] = value2;
+				const [yearFrom, yearTo] = value1;
+				const interests = selectedValue;
+				const seria = selectedValue2;
+
+				let starUrl = 'https://comfy.ua/lego/';
+				let priceFromToUrl = `price_from__${priceFrom}__price_to__${priceTo}`;
+				let yearFromToUrl = `vozrast_igrushek__${yearFrom},${yearTo}`;
+				let interestsUrl = `interesi_lego__${interests}`;
+				let seriaUrl = `serija_lego__${seria}`;
+				let goToUrl = '';
+
+				if ((priceFrom === getPriceFrom && priceTo === getPriceTo) && (yearFrom === getYearFrom && yearTo === getYearTo)) {
+					goToUrl = activeTab === 0 ? `${starUrl}${interestsUrl}/` : `${starUrl}${seriaUrl}/`;
+				} else if ((priceFrom !== getPriceFrom || priceTo !== getPriceTo) && (yearFrom !== getYearFrom || yearTo !== getYearTo)) {
+					goToUrl = activeTab === 0 ? `${starUrl}${priceFromToUrl}__${interestsUrl}__${yearFromToUrl}/` : `${starUrl}${priceFromToUrl}__${seriaUrl}__${yearFromToUrl}/`;
+				} else if (priceFrom !== getPriceFrom || priceTo !== getPriceTo) {
+					goToUrl = activeTab === 0 ? `${starUrl}${priceFromToUrl}__${interestsUrl}/` : `${starUrl}${priceFromToUrl}__${seriaUrl}/`;
+				} else {
+					goToUrl = activeTab === 0 ? `${starUrl}${interestsUrl}__${yearFromToUrl}/` : `${starUrl}${seriaUrl}__${yearFromToUrl}/`;
+				}
+
+				window.open(goToUrl, '_blank');
+			},
+			destroySwipers() {
+				// Уничтожаем только Swiper с пагинацией
+				['.lego-wrap2.double-slide', '.lego-wrap1'].forEach(selector => {
+					if (this.swipers[selector]) {
+						this.swipers[selector].destroy(true, true);
+						this.swipers[selector] = null;
+					}
+				});
+			},
+			initSwipers() {
+				this.swipers['.lego-wrap2.single-slide'] = new Swiper('.lego-wrap2.single-slide', {
+					slidesPerView: 4,
+					slidesPerGroup: 4,
+					spaceBetween: 16,
+					pagination: { enabled: false },
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev'
+					},
+					breakpoints: {
+						320: {
+							slidesPerView: 2,
+							slidesPerGroup: 2,
+							navigation: { enabled: false },
+						},
+						480: {
+							slidesPerView: 3,
+							slidesPerGroup: 3,
+							navigation: { enabled: true }
+						},
+						812: {
+							slidesPerView: 4,
+							slidesPerGroup: 4,
+						}
+					},
+					loop: true
+				});
+
+				this.swipers['.lego-wrap3.single-slide'] = new Swiper('.lego-wrap3.single-slide', {
+					slidesPerView: 6,
+					slidesPerGroup: 6,
+					spaceBetween: 16,
+					pagination: { enabled: false },
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev'
+					},
+					breakpoints: {
+						320: {
+							slidesPerView: 3,
+							slidesPerGroup: 3,
+							navigation: { enabled: false },
+						},
+						480: {
+							slidesPerView: 4,
+							slidesPerGroup: 4,
+							navigation: { enabled: true }
+						},
+						768: {
+							slidesPerView: 5,
+							slidesPerGroup: 5,
+							navigation: { enabled: true }
+						},
+						1024: {
+							slidesPerView: 6,
+							slidesPerGroup: 6,
+							navigation: { enabled: true }
+						}
+					},
+					loop: true
+				});
+
+				this.swipers['.lego-wrap2.double-slide'] = new Swiper('.lego-wrap2.double-slide', {
+					slidesPerView: 4,
+					slidesPerGroup: 4,
+					spaceBetween: 16,
+					pagination: {
+						el: ".swiper-pagination",
+						clickable: true,
+					},
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev'
+					},
+					breakpoints: {
+						320: {
+							slidesPerView: 2,
+							slidesPerGroup: 2,
+							navigation: { enabled: false }
+						},
+						480: {
+							slidesPerView: 3,
+							slidesPerGroup: 3,
+						},
+						812: {
+							slidesPerView: 4,
+							slidesPerGroup: 4,
+						}
+					},
+					loop: true
+				});
+
+				this.swipers['.lego-wrap1'] = new Swiper('.lego-wrap1', {
+					slidesPerView: 1,
+					slidesPerGroup: 1,
+					pagination: {
+						el: ".swiper-pagination",
+						clickable: true,
+					},
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev'
+					},
+					breakpoints: {
+						320: {
+							navigation: { enabled: false }
+						},
+						480: {
+							navigation: { enabled: true }
+						},
+					},
+					loop: true
+				});
+			},
+			reinitSwipers() {
+				// Уничтожаем только Swiper с пагинацией перед переинициализацией
+				this.destroySwipers();
+				// Переинициализируем все Swiper
+				this.initSwipers();
+			}
+		}
+	});
+</script>
