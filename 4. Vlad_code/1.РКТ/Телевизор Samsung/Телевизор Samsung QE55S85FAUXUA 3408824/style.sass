@@ -1,0 +1,272 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-samsung-qe55s85fauxua__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-samsung-qe55s85fauxua
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #000
+   color: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: 1em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 26, 20)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   h4
+      @include adaptiv-value("font-size", 18, 16)
+      font-weight: 900
+      text-align: left
+      text-transform: none
+      line-height: normal
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//advantages
+
+.advantages
+   padding: 2em
+
+.center__text
+   text-align: center !important
+   h2,h3,h4,p
+      text-align: center !important
+
+//companion
+
+.companion
+   padding-top: 2em
+
+.companion__wrap
+   padding: 2em 4.5em
+   box-sizing: border-box
+   padding-bottom: 4em
+
+.companion__slider
+   position: relative
+   box-sizing: border-box
+   .swiper-slide.swiper-slide-next,
+   .swiper-slide.swiper-slide-prev
+      opacity: .5 !important
+   .swiper-button-disabled
+      display: none
+   .swiper-button-prev,
+   .swiper-button-next
+      background: #ffffff74
+      color: #000
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      --swiper-navigation-size: 32px
+      --swiper-navigation-top-offset: 32%
+      --swiper-navigation-color: var(--swiper-theme-color)
+      &:hover
+         background: #ffffffc9
+   .swiper-button-next
+      --swiper-navigation-sides-offset: 18%
+   .swiper-button-prev
+      --swiper-navigation-sides-offset: -7%
+   .swiper-pagination
+      display: flex
+      background-color: #fff
+      width: max-content !important
+      left: unset !important
+      right: 50%
+      transform: translateX(50%)
+      border-radius: 12px
+      padding: 0.5em
+      --swiper-pagination-color: #000
+      --swiper-pagination-bullet-horizontal-gap: 6px
+      --swiper-pagination-bullet-inactive-color: #757575
+      --swiper-pagination-bullet-inactive-opacity: 1
+      --swiper-pagination-bottom: -3em
+
+.companion__txt
+   margin-top: 2em
+
+.companion__title
+   padding: 0 4.5em
+
+.companion__bg
+   position: relative
+   .companion__title
+      position: absolute
+      right: 50%
+      bottom: 50%
+      transform: translate(50%, 50%)
+      h2
+         margin-bottom: 0 !important
+
+//samsung__ai
+
+.samsung__ai__txt
+   padding: 2em 2em 1em
+
+//samsung__vs
+
+.samsung__vs__txt
+   padding: 2em 2em 0
+
+//samsung__scale
+
+.samsung__scale__txt
+   padding: 2em 2em 1em
+
+//glare
+
+.samsung__contrast
+   padding: 2em
+   display: flex
+   gap: 2em
+   align-items: center
+   >div
+      flex-basis: 50%
+      box-sizing: border-box
+
+.samsung__contrast__rev
+   flex-direction: row-reverse
+
+.samsung__contrast__wrap
+   .samsung__contrast
+      padding-top: 0
+
+//osupgrade
+
+.osupgrade
+   position: relative
+
+.osupgrade__abs
+   position: absolute
+   bottom: 30%
+   left: 4em
+   width: 30%
+
+//*********************************media*************************
+
+@media (min-width: $bp-tablet) and (max-width: 1023.9px)
+   // #rkt-samsung-qe55s85fauxua
+   //    display: block
+
+   .companion__slider .swiper-button-next,
+   .companion__slider .swiper-button-prev
+      --swiper-navigation-sides-offset: -6vw
+      --swiper-navigation-top-offset: 36%
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px), (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   .companion__slider .swiper-button-next,
+   .companion__slider .swiper-button-prev
+      --swiper-navigation-sides-offset: -12%
+      --swiper-navigation-top-offset: 125px
+
+   .samsung__contrast
+      flex-direction: column-reverse
+   .samsung__contrast__txt
+      h2,h4,p
+         text-align: center !important
+
+   .osupgrade__abs
+      width: 50%
+      bottom: unset
+      top: 4em
+      left: 4em
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   // #rkt-samsung-qe55s85fauxua
+   //    display: block
+
+   .advantages
+      padding: 2em 1em
+
+   .companion__title
+      padding: 0 1em
+   .companion__wrap
+      padding: 1em 1em 4em
+   .companion__slider .swiper-button-next,
+   .companion__slider .swiper-button-prev
+      width: 30px
+      height: 30px
+      --swiper-navigation-sides-offset: 0
+      --swiper-navigation-size: 16px
+      --swiper-navigation-top-offset: 23vw
+
+   .samsung__ai__txt,
+   .samsung__scale__txt
+      padding: 1em
+
+   .samsung__vs__txt
+      padding: 1em 1em 0
+
+   .samsung__contrast
+      padding: 2em 1em 1em
+
+   .companion__bg .companion__title
+      width: max-content
+
+   .osupgrade__abs
+      top: 20px
+      left: 9vw
+      width: 60vw
