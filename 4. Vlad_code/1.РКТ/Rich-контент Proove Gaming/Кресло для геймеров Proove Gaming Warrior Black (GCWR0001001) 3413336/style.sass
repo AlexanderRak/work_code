@@ -1,0 +1,423 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
+// body
+//    margin: 0
+
+.rkt-proove-gaming-warrior-black-gcwr0001001__container
+   overflow: hidden
+
+.bc-description__content p:first-letter
+   padding-left: 0 !important
+
+$bp-mobile: 320px
+$bp-tablet: 768px
+$bp-hd-desktop: 1024px
+$maxWidthContainer: 1023
+
+@mixin adaptiv-value($property, $startSize, $minSize)
+   $addSize: $startSize - $minSize
+   #{$property}: $startSize + px
+   @media (max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+#rkt-proove-gaming-warrior-black-gcwr0001001
+   // margin: 0 auto
+   // display: grid
+   // grid-template-columns: calc(100% - 400px) 400px
+   // max-width: 1406px
+   // font-family: 'Roboto', sans-serif
+   max-width: 1023px
+   width: 100%
+   height: auto
+   position: relative
+   overflow: hidden
+   background: #fff
+   h2, h3, h4, h5, h6, p
+      margin: 0
+      padding: 0
+      line-height: 1.2
+   ul
+      margin: 0
+      padding: 0
+      list-style-type: disc
+      padding-left: 20px
+      margin: 0.5rem 0
+      display: flex
+      flex-direction: column
+      gap: .5em
+   img
+      display: block
+      max-width: 100%
+      opacity: 1
+      margin: 0 auto
+      &:hover
+         opacity: 1
+   h2
+      @include adaptiv-value("font-size", 30, 20)
+      font-weight: normal
+      text-align: left
+      position: relative
+      display: inline-block
+      padding-bottom: 0.5em
+      margin-bottom: 2rem
+      &::after
+         display: block
+         content: ""
+         height: 2px
+         position: absolute
+         left: 0
+         bottom: 0
+         right: -20px
+         background: rgb(229, 133, 241)
+         background: linear-gradient(25deg, rgba(229, 133, 241, 1) 0%, rgba(184, 114, 203, 1) 5%, rgba(253, 182, 145, 1) 10%, rgba(93, 235, 246, 1) 15%, rgba(132, 214, 233, 1) 20%, rgba(249, 139, 169, 1) 25%, rgba(252, 121, 228, 1) 30%, rgba(203, 137, 191, 1) 35%, rgba(255, 241, 148, 1) 40%, rgba(254, 214, 138, 1) 45%, rgba(140, 84, 178, 1) 50%, rgba(103, 215, 227, 1) 55%, rgba(54, 214, 233, 1) 60%, rgba(199, 129, 157, 1) 65%, rgba(108, 101, 226, 1) 70%, rgba(132, 198, 255, 1) 75%, rgba(255, 196, 102, 1) 80%, rgba(228, 103, 57, 1) 85%, rgba(233, 255, 219, 1) 90%, rgba(39, 241, 255, 1) 95%, rgba(188, 85, 205, 1) 100%)
+   h3
+      @include adaptiv-value("font-size", 20, 18)
+      font-weight: 900
+      text-align: left
+      margin-bottom: 1rem
+   p
+      @include adaptiv-value("font-size", 20, 16)
+      font-weight: 400
+      text-align: left
+   li
+      @include adaptiv-value("font-size", 16, 14)
+      font-weight: 400
+      text-align: left
+      line-height: 1.2
+   i
+      line-height: 1.2
+      @include adaptiv-value("font-size", 16, 14)
+      margin-top: 0.5rem
+      display: block
+      font-style: italic
+
+//proove__form
+
+.proove__form
+   color: #fff
+
+.proove__body
+   background: linear-gradient(135deg, #655dc6 0%, #6a60e5 100%)
+   display: flex
+   align-items: center
+   padding: 1em 15% 0
+   gap: 4em
+   position: relative
+
+.proove__img,
+.proove__txt
+   position: relative
+   z-index: 1
+
+.proove__img
+   flex-basis: 45%
+
+.proove__txt
+   flex-basis: 55%
+
+.proove__title,
+.proove__sub
+   line-height: normal
+
+.proove__title
+   font-size: clamp(24px, 3vw, 50px)
+   margin-bottom: 8px
+
+.proove__sub
+   text-transform: uppercase
+   font-size: clamp(16px, 1.5vw, 20px)
+
+.proove__bg
+   position: absolute
+   top: 0
+   right: 0
+   left: 0
+   bottom: 0
+   box-sizing: border-box
+   overflow: hidden
+   img
+      position: absolute
+      &:nth-of-type(1)
+         max-width: clamp(100px, 10vw, 15%) !important
+         left: 0
+         top: 0
+      &:nth-of-type(2)
+         max-width: clamp(100px, 15vw, 20%) !important
+         left: 0
+         bottom: 0
+      &:nth-of-type(3)
+         max-width: clamp(100px, 15vw, 23%) !important
+         right: 0
+         top: 0
+
+.proove__bg__txt
+   position: absolute
+   top: 0
+   right: 0
+   left: 0
+   bottom: 0
+   width: 100%
+   display: flex
+   justify-content: space-between
+   padding: 1em
+   box-sizing: border-box
+   img
+      margin: 0 !important
+      &:last-of-type
+         transform: scale(-1, -1)
+
+.proove__top
+   width: 100%
+   background: #000
+   padding: 8px 0
+   overflow: hidden
+
+.proove__bottom
+   width: 100%
+   background: #000
+   padding: 13px 0
+   overflow: hidden
+
+.proove__marquee
+   white-space: nowrap
+   will-change: transform
+   animation: scroll-left 20s linear infinite
+   text-transform: uppercase
+   display: flex
+   font-size: 24px
+
+.proove__marquee-2
+   display: flex
+   align-items: center
+   animation: scroll-left 20s linear infinite
+   will-change: transform
+   font-size: 0
+   img
+      margin-right: 30px !important
+
+@keyframes scroll-left
+   0%
+      transform: translateX(0)
+   100%
+      transform: translateX(-100%)
+
+//proove__gaming
+
+.proove__gaming
+   display: flex
+   align-items: center
+   gap: 4em
+   padding: 4em
+
+.gaming__cont
+   flex-basis: 65%
+
+.gaming__img
+   flex-basis: 35%
+
+.gaming__title
+   font-size: clamp(24px, 3vw, 40px)
+   line-height: normal
+   margin-bottom: 1rem
+   span
+      color: #655dc6
+
+.gaming__icons
+   display: flex
+   margin-top: 1em
+   >div
+      box-sizing: content-box
+      padding: 0 1em
+      height: 57px
+      display: flex
+      align-items: center
+      border-right: 1px solid #000
+      &:first-of-type
+         padding-left: 0
+      &:last-of-type
+         padding-right: 0
+         border: none
+
+//upholstery
+
+.upholstery
+   color: #fff
+
+.upholstery__wrap
+   background: url("https://cdn.comfy.ua/media/x/img5/3413333/bg-1.jpg") no-repeat center / cover
+   clip-path: polygon(0% 0%, 59.1% 0%, 62.8% 4.8%, 83% 4.8%, 88.1% 0, 100% 0, 100% 97%, 62.6% 97%, 60% 100%, 46.8% 100%, 43% 92%, 21.6% 92%, 16.6% 97.6%, 0% 97.6%)
+   position: relative
+   &::after
+      display: block
+      content: ""
+      position: absolute
+      right: 0
+      top: 0
+      background: url("https://cdn.comfy.ua/media/x/img5/3413333/bg-2.png") no-repeat center right / cover
+      width: 600px
+      height: 100%
+
+.upholstery__row
+   display: flex
+   padding: 6em 4em 2em
+   gap: 2em
+   position: relative
+   z-index: 1
+
+.upholstery__img
+   flex-basis: 40%
+
+.upholstery__cont
+   flex-basis: 60%
+   padding-top: 1em
+
+.upholstery__line
+   margin-bottom: -3%
+   position: relative
+   z-index: 1
+   img
+      margin: 0 !important
+      max-width: 40% !important
+
+.upholstery__line__two
+   padding: 0 1em 3em 0
+   img
+      margin: 0 0 0 auto !important
+      max-width: 20% !important
+
+//innovations
+
+.upholstery__rev
+   flex-direction: row-reverse
+
+.innovations
+   .upholstery__line
+      margin-bottom: -5%
+
+//proove__back
+
+.proove__back
+   padding: 6em 4em 4em
+
+.proove__back__txt
+   margin-bottom: 2em
+
+//proove__back__row
+
+.proove__back__row
+   display: flex
+   align-items: center
+   gap: 4em
+   .proove__back__txt
+      flex-basis: 60%
+   .proove__back__img
+      flex-basis: 40%
+
+//upholstery__angle
+
+.upholstery__angle
+   position: relative
+   .upholstery__wrap
+      clip-path: polygon(0% 0%, 63.2% 0, 68% 5.4%, 94.2% 5.4%, 101.3% 0, 100% 100%, 0 100%)
+   .upholstery__line__two
+      position: absolute
+      bottom: 20%
+      right: 0
+      padding: 0
+      img
+         max-width: 50% !important
+
+//*********************************media*************************
+
+@media (min-width: $bp-tablet) and (max-width: 1023.9px)
+   // #rkt-proove-gaming-warrior-black-gcwr0001001
+   //    display: block
+
+   .proove__marquee
+      font-size: 18px
+   .proove__marquee-2 img
+      margin-right: 26px !important
+      max-width: 50px !important
+
+   .proove__gaming
+      padding: 1em
+
+@media (min-width: $bp-hd-desktop) and (max-width: 1201px)
+   .proove__marquee
+      font-size: 18px
+   .proove__marquee-2 img
+      margin-right: 26px !important
+      max-width: 50px !important
+
+   .proove__gaming
+      padding: 1em
+      flex-direction: column
+      gap: 2em
+
+   .upholstery__row
+      padding: 3em 1em 1em
+   #rkt-proove-gaming-warrior-black-gcwr0001001 h2::after
+      right: 0
+
+   .proove__back
+      padding: 2em 1em 1em
+
+@media (min-width: $bp-mobile) and (max-width: 767.9px)
+   #rkt-proove-gaming-warrior-black-gcwr0001001
+      display: block
+      h2
+         margin-bottom: 1rem
+
+   .proove__bg__txt
+      display: none
+
+   .proove__marquee
+      font-size: 18px
+   .proove__marquee-2 img
+      margin-right: 26px !important
+      max-width: 50px !important
+   .proove__body
+      flex-direction: column-reverse
+      text-align: center
+      padding: 1em
+      gap: 2em
+   .proove__bg img:nth-of-type(3)
+      max-width: clamp(222px, 15vw, 23%) !important
+      right: -38vw
+
+   .proove__gaming
+      padding: 1em
+      flex-direction: column
+      gap: 2em
+   .gaming__icons
+      flex-wrap: wrap
+      gap: 1em 0
+      >div
+         width: 33.33%
+         box-sizing: border-box
+         height: 77px
+         &:nth-of-type(3n)
+            border: none
+            padding-right: 0
+
+   .upholstery__row
+      flex-direction: column-reverse
+      padding: 3em 1em 2em
+   .upholstery__wrap
+      clip-path: polygon(0% 0%, 59.1% 0%, 62.8% 2.8%, 83% 2.8%, 88.1% 0, 100% 0, 100% 97%, 62.6% 97%, 60% 100%, 46.8% 100%, 43% 95%, 21.6% 95%, 16.6% 97.6%, 0% 97.6%)
+   .upholstery__line__two img
+      max-width: 45% !important
+   .upholstery__wrap::after
+      width: 1168px
+
+   .proove__back
+      padding: 3em 1em
+
+   .proove__back__row
+      flex-direction: column
+      gap: 0
+
+   .upholstery__angle .upholstery__line__two
+      position: unset
+      padding-bottom: 2em
+      padding-right: 1em
